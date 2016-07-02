@@ -1,0 +1,50 @@
+- **KERNEL_ONLY** (yes|no):
+    - set to "yes" to compile only kernel, u-boot and other packages for installing on existing Armbian system
+    - set to "no" to build complete OS image for writing to SD card
+- **KERNEL_CONFIGURE** (yes|no):
+    - set to "yes" to configure kernel (add or remove modules or features). Kernel configuration menu will be brought up before compilation
+    - set to "no" to compile kernel without changing default or custom provided configuration
+- **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
+    - "make" = execute `make clean` for selected kernel and u-boot sources,
+	- "images" = delete `output/images` (complete OS images),
+	- "debs" = delete packages in `output/debs` for current branch and device family,
+	- "alldebs" = delete all packages in `output/debs`,
+	- "cache" = delete `output/cache` (rootfs cache),
+	- "sources" = delete `sources` (all downloaded sources)
+- **KERNEL\_KEEP\_CONFIG** (yes|no):
+    - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
+    - set to "no" to use default or user-provided config file
+- **BUILD_DESKTOP** (yes|no):
+    - set to "yes" to build image with minimal desktop environment
+    - set to "no" to build image with console interface only
+- **EXTERNAL** (yes|no):
+    - set to "yes" to compile and install some extra applications and drivers (only for **default** kernel branch):
+        - [USB redirector](http://www.incentivespro.com)
+        - Realtek RT8192 wireless driver
+        - Mediatek MT7601U wireless - driver
+        - Sunxi display control
+        - hostapd from sources
+- **DEBUG_MODE** (yes|no)
+	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
+	- set to "no" compilation will run uninterrupted 
+- **FORCE_CHECKOUT** (yes|no):
+    - set to "yes" to force overwrite any changed or manually patched kernel, u-boot and other sources
+    - set to "no" to keep all changes to sources
+- **BUILD_ALL** (yes|no): cycle through all available board and kernel configurations and make images for all combinations
+
+### Hidden options to minimize user input for build automation:
+- **BOARD** (string): you can set name of board manually to skip dialog prompt
+- **BRANCH** (default|next|dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
+- **RELEASE** (wheezy|jessie|trusty|xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
+
+### Hidden options for advanced users (default values are marked **bold**):
+- **USE_CCACHE** (**yes**|no): use a C compiler cache to speed up the build process
+- **PROGRESS_DISPLAY** (none|plain|**dialog**): way to display output of verbose processes - compilation, packaging, debootstrap
+- **PROGRESS_LOG_TO_FILE** (yes|**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
+- **USE_MAINLINE_GOOGLE_MIRROR** (yes|**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
+- **EXTENDED_DEBOOTSTRAP** (**yes**|no): use new debootstrap and image creation process
+- **FORCE_USE_RAMDISK** (yes|no): overrides autodetect for using tmpfs in new debootstrap and image creation process. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
+- **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
+- **COMPRESS_OUTPUTIMAGE** (yes|**no**): create compressed archive with image file and GPG signature for redistribution
+- **SEVENZIP** (yes|**no**): create .7z archive with extreme compression ratio instead of .zip
+- **ROOTFS_TYPE** (**ext4**|f2fs|btrfs|nfs|fel): create image with different root filesystems instead of default ext4. Requires setting FIXED_IMAGE_SIZE to actual size of your SD card for F2FS and BTRFS. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
