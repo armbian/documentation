@@ -1,0 +1,44 @@
+
+
+site_name: Armbian Documentation
+
+repo_url: https://github.com/lanefu/armbianDocsAndProcess
+repo_name: Github
+
+site_author: "Armbian team"
+
+theme: readthedocs
+
+markdown_extensions:
+  - smarty
+  - footnotes
+  - toc:
+      permalink: True
+
+pages:
+  - Home: index.md
+  - 'Hardware' :
+        - 'Allwinner H3' : '[Hardware]-Allwinner-H3.md'
+        - 'Allwinner' : '[Hardware]-Allwinner.md'
+    
+  - 'Process' :
+        - 'Armbian Task Tracking' : '[Process]-Armbian-Task-Tracking.md'
+        - 'Contribute' : '[Process]-Contribute.md'
+    
+  - 'Release' :
+        - 'Changelog' : '[Release]-Changelog.md'
+        - 'Download' : '[Release]-Download.md'
+    
+  - 'Developer Guide' :
+        - 'Feel boot' : '[Developer-Guide]-Feel-boot.md'
+        - 'Build Process' : '[Developer-Guide]-Build-Process.md'
+        - 'User Configurations' : '[Developer-Guide]-User-Configurations.md'
+        - 'Build Options' : '[Developer-Guide]-Build-Options.md'
+        - 'Build Preparation' : '[Developer-Guide]-Build-Preparation.md'
+    
+  - 'User Guide' :
+        - 'Advanced Features' : '[User-Guide]-Advanced-Features.md'
+        - 'Getting Started' : '[User-Guide]-Getting-Started.md'
+        - 'Fine Tuning' : '[User-Guide]-Fine-Tuning.md'
+    
+
