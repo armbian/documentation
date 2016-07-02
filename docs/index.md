@@ -27,6 +27,6 @@ Check [download page](http://www.armbian.com/download/) for recently supported l
 
 # Get Involved! #
 
-* [[Contribute|[Process]-Contribute]]
+* [Contribute]([Process]-Contribute)
 * [Community](http://forum.armbian.com)
 * [Contact](http://www.armbian.com/contact/)
