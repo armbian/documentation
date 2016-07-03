@@ -12,7 +12,9 @@ Armbian Documentation is available in the following formats:
 
 Armbian Documentation relies on a file naming convention:
 
-`_Parent Topic_Child-Topic-Name.md`
+`Parent Topic_Child-Topic-Name.md`
+
+Parent and Child are seperated by underscore `_`.  Hyphens `-` are automatically converted to spaces.
 
 Please try to avoid creating new parent topics unless absoultely necesssary.
 
