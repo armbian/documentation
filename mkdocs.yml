@@ -18,27 +18,28 @@ markdown_extensions:
 pages:
   - Home: index.md
   - 'Hardware' :
-        - 'Allwinner H3' : '[Hardware]-Allwinner-H3.md'
-        - 'Allwinner' : '[Hardware]-Allwinner.md'
+        - 'Allwinner' : '_Hardware_Allwinner.md'
+        - 'Allwinner H3' : '_Hardware_Allwinner-H3.md'
     
   - 'Process' :
-        - 'Armbian Task Tracking' : '[Process]-Armbian-Task-Tracking.md'
-        - 'Contribute' : '[Process]-Contribute.md'
+        - 'Contribute' : '_Process_Contribute.md'
+        - 'Documentation' : '_Process_Documentation.md'
+        - 'Armbian Task Tracking' : '_Process_Armbian-Task-Tracking.md'
     
   - 'Release' :
-        - 'Changelog' : '[Release]-Changelog.md'
-        - 'Download' : '[Release]-Download.md'
+        - 'Changelog' : '_Release_Changelog.md'
+        - 'Download' : '_Release_Download.md'
     
   - 'Developer Guide' :
-        - 'Feel boot' : '[Developer-Guide]-Feel-boot.md'
-        - 'Build Process' : '[Developer-Guide]-Build-Process.md'
-        - 'User Configurations' : '[Developer-Guide]-User-Configurations.md'
-        - 'Build Options' : '[Developer-Guide]-Build-Options.md'
-        - 'Build Preparation' : '[Developer-Guide]-Build-Preparation.md'
+        - 'Build Options' : '_Developer-Guide_Build-Options.md'
+        - 'Build Process' : '_Developer-Guide_Build-Process.md'
+        - 'Feel boot' : '_Developer-Guide_Feel-boot.md'
+        - 'Build Preparation' : '_Developer-Guide_Build-Preparation.md'
+        - 'User Configurations' : '_Developer-Guide_User-Configurations.md'
     
   - 'User Guide' :
-        - 'Advanced Features' : '[User-Guide]-Advanced-Features.md'
-        - 'Getting Started' : '[User-Guide]-Getting-Started.md'
-        - 'Fine Tuning' : '[User-Guide]-Fine-Tuning.md'
+        - 'Fine Tuning' : '_User-Guide_Fine-Tuning.md'
+        - 'Advanced Features' : '_User-Guide_Advanced-Features.md'
+        - 'Getting Started' : '_User-Guide_Getting-Started.md'
     
 

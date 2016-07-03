@@ -12,7 +12,7 @@ Armbian Documentation is available in the following formats:
 
 Armbian Documentation relies on a file naming convention:
 
-`[Parent Topic]-Child-Topic-Name.md`
+`_Parent Topic_Child-Topic-Name.md`
 
 Please try to avoid creating new parent topics unless absoultely necesssary.
 

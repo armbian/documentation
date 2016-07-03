@@ -50,7 +50,7 @@ def parseFiles(validFileList, indir):
 
     parsedFileList = dict()
     tocTree = defaultdict(set)
-    tocRegex = re.compile(r"(?P<parent>(?<=\[)[\w-]+?(?=\]))\]-{1}(?P<child>[\w-].*(?=\.md))")
+    tocRegex = re.compile(r"(?P<parent>(?<=_)[\w-]+?(?=_))_{1}(?P<child>[\w-].*(?=\.md))")
 ##FIXME add Try catch or finaly
     for file in sorted(validFileList):
         filepath = os.path.join(indir,file)
