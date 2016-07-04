@@ -73,7 +73,7 @@ def generateSite(parsedFileList):
 
     mkdocsTemplate = """
 
-site_name: Armbian Documentation
+site_name: Armbian Documentation WIP
 
 repo_url: https://github.com/lanefu/armbianDocsAndProcess
 repo_name: Github
