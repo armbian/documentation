@@ -1,16 +1,16 @@
 # Collaborate on the project #
 
-**How?**
+## How? ##
 
 1. [Fork](http://help.github.com/forking/) the project
-2. Make one or more well commented and clean commits to the repository. 
-3. Perform a [pull request](http://help.github.com/pull-requests/) in github's web interface.
+1. Make one or more well commented and clean commits to the repository. 
+1. Perform a [pull request](http://help.github.com/pull-requests/) in github's web interface.
 
 If it is a new feature request, don't start the coding first. Remember to [open an issue](https://guides.github.com/features/issues/) to discuss the new feature.
 
 If you are struggling, check [this detailed step by step guide on contributing](https://www.exchangecore.com/blog/contributing-concrete5-github/).
 
-**Where are sources?**
+## Where are sources? ##
 
 Build script: 
 
@@ -18,7 +18,21 @@ Build script:
 
 Manual:
 
-	https://github.com/igorpecovnik/lib.wiki
+	http://docs.armbian.com
+
+# Collaborate with Documentation #
+
+## Documentation Workflow ##
+
+1. Contributor clones repo `git@github.com:igorpecovnik/lib.docs.git`
+1. Contributor copies  ex: `templates/howto_template.md` to `docs/howto_new-topic.md`
+1. Contributor creates content within the simple framework provided by template
+1. Contributor commits and pushes to repo
+1. post-commit job runs a more intelligent version of `tools/mkArmbianDocs.py` and generates new mkdocs.yml
+1. post-commit builds new docs site, pushes, builds PDF (maybe--unless extra curation is desired)
+1. Contributor is delighted that creating a single markdown file was all that was needed to impact the community
+1. Contributor is inspired to create more content -- because it was soooooo easy.
+
 
 # Help with donations #
 
