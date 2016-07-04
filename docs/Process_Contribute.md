@@ -14,11 +14,11 @@ If you are struggling, check [this detailed step by step guide on contributing](
 
 Build script: 
 
-	https://github.com/igorpecovnik/lib
+[https://github.com/igorpecovnik/lib](https://github.com/igorpecovnik/lib)
 
 Manual:
 
-	http://docs.armbian.com
+[http://docs.armbian.com](http://docs.armbian.com)
 
 # Collaborate with Documentation #
 
@@ -38,6 +38,6 @@ Manual:
 
 If you find our project useful, then we’d really appreciate it if you’d consider contributing to the project however you can. Donating is the easiest – you can use PayPal and Bitcoin or you can buy us something from our Amazon.de wish list.
 
-http://www.armbian.com/donate/
+[http://www.armbian.com/donate/](http://www.armbian.com/donate/)
 
 Thanks!
