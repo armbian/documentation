@@ -1,3 +1,8 @@
+**v5.16 / 5.7.2016**
+
+- bugfix release
+- small changes 
+
 **v5.15 / 1.7.2016**
 
 - Added [improved camera driver](https://github.com/avafinger/gc2035) for Xunlong's cheap 2MP GC2035 camera
