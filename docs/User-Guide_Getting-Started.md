@@ -83,6 +83,8 @@ and change the autologin user.
 	apt-get update
 	apt-get upgrade
 
+**Update process can take hours in case of using cheap SD card and/or under heavy load.**
+
 This will not only update distribution packages (Debian/Ubuntu) but also updates Armbian kernel, u-boot and board support package if available. So if you've seen in the list of updated packages the names _u-boot_ or _linux_ the following command is required for changes to take effect:
 
 	reboot
