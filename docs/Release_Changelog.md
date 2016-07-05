@@ -1,6 +1,6 @@
 **v5.16 / 5.7.2016**
 
-- bugfix release
+- bugfix release. In 5.15 we accidentaly overwrote default network settings. Check /etc/network/interfaces if you use advanced network settings or fixed ip.
 - small changes 
 
 **v5.15 / 1.7.2016**
