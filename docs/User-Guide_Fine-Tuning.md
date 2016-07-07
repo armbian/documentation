@@ -81,13 +81,20 @@ Check [this site](http://namhuy.net/1085/install-gui-on-debian-7-wheezy.html) fo
 	apt-get --download-only dist-upgrade
 	apt-get dist-upgrade
 
-
 # How to upgrade from Ubuntu Trusty to Xenial?
 
 	apt-get install update-manager-core
 	do-release-upgrade -d
   	# further to xenial
 	apt-get dist-upgrade
+
+# How to downgrade a package via apt-get?
+
+This is useful when you need to fall back to previous kernel version. 
+
+	apt-get install linux-image-sun8i=5.13 
+
+This example is for H3 legacy kernel. Check [this page](http://www.armbian.com/kernel/) for others.
 
 # How to toggle boot output?
 
