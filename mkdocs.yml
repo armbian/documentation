@@ -8,6 +8,7 @@ repo_name: Github
 site_author: "Armbian team"
 
 theme: readthedocs
+theme_dir: readthedocs_custom
 
 markdown_extensions:
   - smarty
