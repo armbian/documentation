@@ -31,7 +31,7 @@ pages:
         - 'Download' : 'Release_Download.md'
     
   - 'Developer Guide' :
-        - 'Feel boot' : 'Developer-Guide_Feel-boot.md'
+        - 'FEL boot' : 'Developer-Guide_FEL-boot.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
