@@ -6,6 +6,7 @@ repo_url: https://github.com/lanefu/armbianDocsAndProcess
 repo_name: Github
 
 site_author: "Armbian team"
+google_analytics: ['UA-284946-9', 'docs.armbian.com']
 
 theme: readthedocs
 
