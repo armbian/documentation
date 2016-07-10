@@ -747,3 +747,12 @@
   margin: 0 auto;
 }
 /** Tuesday 28th of June 2016 06:04:01 PM **/
+
+/** Custom for fixed Armbian navbar in large windows when using readthedocs theme **/
+@media screen and (min-width: 769px) {
+        #mega-menu-wrap-header-menu {
+                position:fixed;
+        }
+}
+
+
