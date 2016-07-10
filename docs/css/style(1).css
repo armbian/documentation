@@ -748,12 +748,18 @@
 }
 /** Tuesday 28th of June 2016 06:04:01 PM **/
 
-/** Custom for fixed Armbian navbar in wide windows (768px as per readthedocs theme) **/
+/** Custom for fixed Armbian navbar in wide windows (>768px and >=1400px as per readthedocs theme) **/
 @media screen and (min-width: 769px) {
         #mega-menu-wrap-header-menu {
                 position:fixed;
 		width: -moz-calc(100% - 300px);
 		width: -webkit-calc(100% - 300px);
 		width: calc(100% - 300px);
+        }
+}
+@media screen and (min-width: 1400px) {
+        #mega-menu-wrap-header-menu {
+                position:fixed;
+		width: 800px;
         }
 }
