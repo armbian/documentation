@@ -750,16 +750,24 @@
 
 /** Custom for fixed Armbian navbar in wide windows (>768px and >=1400px as per readthedocs theme) **/
 @media screen and (min-width: 769px) {
-        #mega-menu-wrap-header-menu {
-                position:fixed;
-		width: -moz-calc(100% - 300px);
-		width: -webkit-calc(100% - 300px);
-		width: calc(100% - 300px);
-        }
+  #mega-menu-wrap-header-menu {
+    position:fixed;
+    width: -moz-calc(100% - 300px);
+    width: -webkit-calc(100% - 300px);
+    width: calc(100% - 300px);
+  }
+  /* Leave space for anchors */
+  *[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -32px;
+    height: 32px;
+    visibility: hidden;
+  }
 }
 @media screen and (min-width: 1400px) {
-        #mega-menu-wrap-header-menu {
-                position:fixed;
-		width: 800px;
-        }
+  #mega-menu-wrap-header-menu {
+    position:fixed;
+    width:800px;
+  }
 }
