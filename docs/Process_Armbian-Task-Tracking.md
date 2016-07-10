@@ -23,14 +23,14 @@ Not all support issues are tasks, but a support issue can generate a task.
     - Use the the naming convention of `[ISSUE_ID] - Issue Name`
     - ![step2](images/taskProcess3.png)
 1. Copy the URL of task subforum topic just created
-1. Create comment on GitHub Issue with the following Content:
-    -
-    ```     
-Please keep all discussion for this issue on the forum topic available below:
+1. Create comment on GitHub Issue with the following Content: 
+        
+        Please keep all discussion for this issue on the forum topic available below:
 
-[URL](URL)
-    ```
+        [URL](URL)
+
     - ![step4](images/taskProcess4.png)
+
 1. Lock comments on GitHub Issue
 
 ## Task tracking with GitHub Issues ##
