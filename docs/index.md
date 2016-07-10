@@ -2,6 +2,17 @@
 
 linux for ARM development boards
 
+<h3>Welcome to the Armbian Documentation!</h3>
+
+If you're **new to Armbian**, the [Getting Started](User-Guide_Getting-Started.md) section 
+provides a tutorial for everything you need to get Armbian running,
+and answers many Frequently Asked Questions.
+It then continues on to more advanced topics.
+
+If you **need help**, and have read through Getting Started, check out [Troubleshooting](User-Guide_Advanced-Features.md#how-to-troubleshoot).
+
+If you still can't find what you need here, visit the [Armbian forum](http://forum.armbian.com/), where your input can help improve this documentation.
+
 # What is Armbian? #
 
 - Lightweight Debian and Ubuntu based distribution specialized for ARM developing boards, 
