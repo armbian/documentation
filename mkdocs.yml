@@ -26,7 +26,9 @@ pages:
 
   - 'Hardware Notes' :
         - 'Allwinner' : 'Hardware_Allwinner.md'
+        - 'Allwinner A10 & A20' : 'Hardware_Allwinner-A20.md'
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
+
     
   - 'Developer Guide' :
         - 'Build Process' : 'Developer-Guide_Build-Process.md'
