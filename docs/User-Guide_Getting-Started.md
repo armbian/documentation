@@ -1,7 +1,7 @@
 # Prerequisites for NEW users
 
 Please, make sure you have:
-- a proper power supply according to the board manufacturer requirements
+- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR thick USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 # What to download?
