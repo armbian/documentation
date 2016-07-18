@@ -1,3 +1,9 @@
+# Prerequisites for NEW users
+
+Please, make sure you have:
+- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR thick USB cable)
+- a reliable SD card (see below "How to prepare a SD card?")
+
 # What to download?
 
 Each board is fully supported with up to **four basic system** options: 
@@ -31,7 +37,7 @@ All our images are digitally signed and therefore it's possible to check theirs 
 
 It is safe to ignore WARNING: This key is not certified with a trusted signature!
 
-# How to prepare SD card?
+# How to prepare a SD card?
 
 **Important note:** Make sure you use a **good & reliable** SD card. If you encounter boot troubles in 95 percent it's either insufficient power supply or a bad SD card or a bad card reader. Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is a must if you run in boot problems.
 
