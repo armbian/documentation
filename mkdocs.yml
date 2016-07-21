@@ -31,10 +31,10 @@ pages:
 
     
   - 'Developer Guide' :
-        - 'Build Process' : 'Developer-Guide_Build-Process.md'
-        - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
+        - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
+        - 'Build Process Explained' : 'Developer-Guide_Build-Process.md'
         - 'FEL boot' : 'Developer-Guide_FEL-boot.md'
     
   - 'Contributor Process' :
