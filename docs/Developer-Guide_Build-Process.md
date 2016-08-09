@@ -2,7 +2,7 @@
 
 Build process summary:
 
-- creates development environment on the top of X86/AMD64 Ubuntu 14.04 LTS,
+- creates development environment on top of AMD64 Ubuntu 16.04 LTS,
 - downloads proven sources, applies patches and uses tested configurations,
 - cross-compiles universal boot loader (u-boot), kernel and other tools and drivers,
 - packs kernel, uboot, dtb and root customizations into debs,
@@ -19,16 +19,6 @@ At first run we are downloading all necessary dependencies.
 
 We need to get some predefined variables about selected board. Which kernel & uboot source to use, modules to load, which is the build number, do we need to have a single partition or dual with boot on fat, which extra drivers to compile out of the kernel tree, ...
 
-**Board configuration example:**
-    
-	BOOTSIZE="16"											# FAT boot partition in MB, 0 for none
-	BOOTCONFIG="udoo_neo_config"							# Which compile config to use		
-	LINUXFAMILY="udoo"										# boards share kernel
-
-Note that in this case, all main config options (kernel and uboot source) are covered within FAMILY. Check [configuration.sh](https://github.com/igorpecovnik/lib/blob/master/configuration.sh) for more config options.
-
-This **isn't ment to be user configurable** but you can alter variables if you know what you are doing.
-
 ## Downloading sources ##
 
 When we know where are the sources and where they need to be the download / update process starts. This might take from several minutes to several hours.
@@ -38,7 +28,7 @@ When we know where are the sources and where they need to be the download / upda
 In patching process we are appling patches to sources. The process is defined in:
 
 	lib/patch/kernel/sun7i-default
-	lib/patch/kernel/sunxi-dev	
+	lib/patch/kernel/sunxi-dev
 	...
 	lib/patch/u-boot/u-boot-default
 	lib/patch/u-boot/u-boot-neo-default
@@ -50,7 +40,7 @@ Patch rules for subdirectories are: **KERNEL_FAMILY-BRANCH** for kernel and **U-
 
 Debootstrap creates fresh Debian / Ubuntu root filesystem templates or use cached under:
 
-	output/cache/rootfs/$DISTRIBUTION.tgz
+	output/cache/rootfs/
 
 To recreate those files you need to remove them manually. 
 
@@ -96,7 +86,6 @@ It will be something like this:
 	lib/README.md			quick manual
 	lib/common.sh			creates environment, compiles, shrink image
 	lib/configuration.sh	boards presets - kernel source, config, modules, ...
-	lib/debootstrap.sh		basic system template creation
 	lib/distributions.sh	system specific installation and fixes
 	lib/main.sh				user input and script calls
 	lib/makeboarddeb.sh		creates board support package .deb

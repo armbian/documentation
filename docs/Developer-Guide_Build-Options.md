@@ -1,4 +1,5 @@
 - **KERNEL_ONLY** (yes|no):
+    - leave empty to display selection dialog each time
     - set to "yes" to compile only kernel, u-boot and other packages for installing on existing Armbian system
     - set to "no" to build complete OS image for writing to SD card
 - **KERNEL_CONFIGURE** (yes|no):
@@ -10,7 +11,8 @@
 	- "debs" = delete packages in `output/debs` for current branch and device family,
 	- "alldebs" = delete all packages in `output/debs`,
 	- "cache" = delete `output/cache` (rootfs cache),
-	- "sources" = delete `sources` (all downloaded sources)
+	- "sources" = delete `sources` (all downloaded sources),
+	- "extras" = delete additional packages for current release in `output/debs/extra`
 - **KERNEL\_KEEP\_CONFIG** (yes|no):
     - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
     - set to "no" to use default or user-provided config file
@@ -24,13 +26,15 @@
         - Mediatek MT7601U wireless - driver
         - Sunxi display control
         - hostapd from sources
-- **DEBUG_MODE** (yes|no)
+- **EXTERNAL_NEW** (yes|no):
+    - set to "yes" to compile extra applications in chroot
+- **DEBUG_MODE** (yes|no):
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
 	- set to "no" compilation will run uninterrupted 
 - **FORCE_CHECKOUT** (yes|no):
     - set to "yes" to force overwrite any changed or manually patched kernel, u-boot and other sources
     - set to "no" to keep all changes to sources
-- **BUILD_ALL** (yes|no): cycle through all available board and kernel configurations and make images for all combinations
+- **BUILD_ALL** (yes|no|demo): cycle through all available board and kernel configurations and make images for all combinations
 
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
@@ -42,9 +46,8 @@
 - **PROGRESS_DISPLAY** (none|plain|**dialog**): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** (yes|**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes|**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
-- **EXTENDED_DEBOOTSTRAP** (**yes**|no): use new debootstrap and image creation process
-- **FORCE_USE_RAMDISK** (yes|no): overrides autodetect for using tmpfs in new debootstrap and image creation process. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
-- **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
+- **FORCE_USE_RAMDISK** (yes|no): overrides autodetect for using tmpfs in new debootstrap and image creation process
+- **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (yes|**no**): create compressed archive with image file and GPG signature for redistribution
 - **SEVENZIP** (yes|**no**): create .7z archive with extreme compression ratio instead of .zip
-- **ROOTFS_TYPE** (**ext4**|f2fs|btrfs|nfs|fel): create image with different root filesystems instead of default ext4. Requires setting FIXED_IMAGE_SIZE to actual size of your SD card for F2FS and BTRFS. Takes effect only if `EXTENDED_DEBOOTSTRAP` is set to "yes"
+- **ROOTFS_TYPE** (**ext4**|f2fs|btrfs|nfs|fel): create image with different root filesystems instead of default ext4. Requires setting FIXED_IMAGE_SIZE to actual size of your SD card for F2FS and BTRFS

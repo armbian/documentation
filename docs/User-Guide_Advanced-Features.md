@@ -164,7 +164,7 @@ Realtek binary and configuration location:
 Since its hard to define when to use which you always try both combinations in case of troubles. To start AP automatically:
 
 1. Edit /etc/init.d/hostapd and add/alter location of your conf file **DAEMON_CONF=/etc/hostapd.conf** and binary **DAEMON_SBIN=/usr/sbin/hostapd**
-2. Link **/etc/network/interfaces.hostapd** to **/etc/network/interfaces**
+2. Copy **/etc/network/interfaces.hostapd** to **/etc/network/interfaces**
 3. Reboot
 4. Predefined network name: "BOARD NAME" password: 12345678
 5. To change parameters, edit /etc/hostapd.conf BTW: You can get WPAPSK the long blob from wpa_passphrase YOURNAME YOURPASS

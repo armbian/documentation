@@ -133,12 +133,12 @@ Copy and past URL of your log to the forum, mail, ...
 There are five predefined configurations, you can find them in those files:
 
 	/etc/network/interfaces.default
-	/etc/network/interfaces.hostapd	
+	/etc/network/interfaces.hostapd
 	/etc/network/interfaces.bonding
 	/etc/network/interfaces.r1
 	/etc/network/interfaces.r1switch
 
-By default **/etc/network/interfaces** is symlinked to **/etc/network/interfaces.default**
+By default **/etc/network/interfaces** is a copy of **/etc/network/interfaces.default**
 
 1. DEFAULT: your network adapters are connected classical way. 
 2. HOSTAPD: your network adapters are bridged together and bridge is connected to the network. This allows you to have your AP connected directly to your router.
@@ -146,10 +146,10 @@ By default **/etc/network/interfaces** is symlinked to **/etc/network/interfaces
 4. Router configuration for Lamobo R1 / Banana R1.
 5. Switch configuration for Lamobo R1 / Banana R1.
 
-You can switch configuration with re-linking.
+You can switch configuration with copying.
 
 	cd /etc/network
-	ln -sf interfaces.x interfaces
+	cp interfaces.x interfaces
 (x = default,hostapd,bonding,r1)
 
 Than check / alter your interfaces:

@@ -24,12 +24,11 @@ NOTE: "hot" switching between kernel branches (default <-> dev/next) is not supp
 ### Build script options
 
 - KERNEL_ONLY=no
-- EXTENDED_DEBOOTSTRAP=yes
 - ROOTFS_TYPE=fel
 
 Example:
 ```
-./compile.sh KERNEL_ONLY=no BOARD=cubietruck BRANCH=next PROGRESS_DISPLAY=plain USE_MAINLINE_GOOGLE_MIRROR=yes RELEASE=jessie BUILD_DESKTOP=no EXTENDED_DEBOOTSTRAP=yes ROOTFS_TYPE=fel
+./compile.sh KERNEL_ONLY=no BOARD=cubietruck BRANCH=next PROGRESS_DISPLAY=plain RELEASE=jessie BUILD_DESKTOP=no ROOTFS_TYPE=fel
 ```
 
 ### Shutdown and reboot
