@@ -1,42 +1,47 @@
 # Allwinner H3 boards
 
-**Important to know**
+**Overview**
 
-- Updating Armbian images prior to 5.13 to 5.15 or higher is **not** recommended -- see below
-- 1st boot takes longer (up to 5 minutes). Please do not interrupt while the red LED is blinking, the board reboots automatically one time and the green LED starts to blink when ready
-- our [User documentation](http://www.armbian.com/documentation/) (one exception currently: use _h3disp_ to adjust display settings)
-- our [Geek documentation](http://www.armbian.com/using-armbian-tools/) (in case you want to build your own images)
-- CPU frequency settings are 240-1200 MHz on BPi M2+, NanoPi M1 and Beelink X2, 480-1200 MHz on OPi One/Lite and 480-1296 MHz on the other boards (cpufreq governor is _interactive_ therefore the boards only increase CPU speed and consumption when needed)
+The H3 SoC from Allwinner is meant for OTT boxes and is therefore _not_ accompanied by a separate PMIC (power management IC) unlike most other Allwinner SoCs. No PMIC support means also that there's no battery charging/monitoring implemented so H3 is not that much suited for mobile devices. On the other hand some pretty cheap H3 boards were released that can be driven with rather low consumption and therefore combining H3 devices with a battery became a real use case with boards like [Orange Pi One/Lite](http://linux-sunxi.org/Orange_Pi_Lite), NanoPi [NEO](http://linux-sunxi.org/FriendlyARM_NanoPi_NEO) or the upcoming NanoPi Air.
+
+As usual [SoC](http://linux-sunxi.org/H3) and [device information](http://linux-sunxi.org/Category:H3_Devices) can be found in linux-sunxi wiki. Same applies to status of [mainlining kernel efforts](http://linux-sunxi.org/Linux_mainlining_effort). Adding to the usual SoC feature set (I2C, SPI, PWM, UART, SDIO, GPIO and so on) H3 has one USB OTG port, 3 real USB host ports (not exposed on all devices), Fast and Gigabit Ethernet capablities (board specific), a Mali400MP2 GPU and Allwinner's video encoding/decoding engine.
+
+When CPU or GPU cores are fully utilized H3 tends to overheat over time like any other popular ARM SoC released within the last 2-3 years. With Armbian we provide sane dvfs settings (dynamic voltage frequency scaling) that help a lot with throttling but in case you plan to operate your H3 device constantly under high load please check Armbian forums first since boards behave differently (related to voltage regulation and PCB size and design -- some use copper layers to spread the heat away from the SoC). Also consider applying a heatsink to the SoC (a fan should not be necessary unless you want to do number crunching on your board and then you obviously chose the wrong device).
+
+You find some [differentiation criteria regarding supported H3 devices as well as an overview/history of H3 software support in our forums](http://forum.armbian.com/index.php/topic/1351-h3-board-buyers-guide/) or use Jean-Luc's [nice comparison table](http://www.cnx-software.com/2016/06/08/allwinner-h3-boards-comparison-tables-with-orange-pi-banana-pi-m2-nanopi-p1-and-h3-olinuxino-nano-boards/#comments) (both slightly outdated since more H3 devices have been released in the meantime)
+
+**Kernel support**
+
+Due to H3's overheating tendencies a working throttling implementation is important when more heavy workloads should run on the board. This is implemented in legacy kernel (settings have been improved a lot by linux-sunxi community and us compared to Allwinner's defaults) but not yet in mainline kernel which is one of the reasons that prevent us from releasing Armbian images with vanilla kernel. The other reason is the Ethernet driver still being WiP in mainline kernel. So while you currently only get legacy images in download area you can already try to build your own images with kernel 4.x using our build system and choosing _dev_ branch.
+
+Armbian legacy images for H3 devices are based on Allwinner's 3.4.39 BSP/Android kernel with +100 patches on top to fix countless security issues and to add features (we're using 3.4.112 at the time of this writing). This kernel supports nearly all SoC features and thanks to the awesome linux-sunxi community we provide also HW accelerated video decoding with desktop images (please use the included mpv player, more app support is WiP). 
+
+Please don't expect most of these features to be available when we provide vanilla kernel images, those are more suited for headless/server operation and will shine in areas like networking or IO performance. Please have a look at what to expect again in [linux-sunxi wiki](http://linux-sunxi.org/Sunxi_devices_as_NAS#New_opportunities_with_mainline_kernel)
+
+**Default settings**
+
+- CPU frequency settings are 240-912 MHz on NanoPi NEO, 240-1200 MHz on BPi M2+, NanoPi M1 and Beelink X2, 480-1200 MHz on OPi One/Lite and 480-1296 MHz on the other boards (cpufreq governor is _interactive_ therefore the boards only increase CPU speed and consumption when needed). The differences are due to different voltage regulators and heat dissipation behaviour.
+- Armbian unlike older/other H3 OS images uses the green led as 'power on' indicator (blinking means 'ready to login' or 'shutting down'), the red led (blue on NanoPis) can be used for your own purpose
+
+**Tips and tricks (general)**
+
+- An insufficient power supply is the root cause of many weird symptoms/problems. Never trust in ratings written on the PSU since they might be wrong, the PSU might be old/dying and cable/contact resistance adds to problems. In other words: Before you blame Armbian for strange behaviour please try at least one second power supply (this applies to both PSU and cable between PSU and board if this is separate -- especially USB cables really suck due to high resistance leading to severe voltage drops)
 - In case you experience instabilities check your SD card using `armbianmonitor -c $HOME` and think about installing [RPi-Monitor for H3](http://www.cnx-software.com/2016/03/17/rpi-monitor-is-a-web-based-remote-monitor-for-arm-development-boards-such-as-raspberry-pi-and-orange-pi/) to get an idea whether you suffer from overheating (`sudo armbianmonitor -r` will install everything needed)
-- In case you're unsure whether to test a desktop or CLI image simply try out the GUI version since you can always get 'CLI behaviour' by running `sudo update-rc.d -f nodm disable` later (this disables the start of X windows and desktop images behave like those made for headless use afterwards. If you're experienced you could also reclaim disk space by removing the `libxfce4util-common` package and doing an `apt-get autoremove` later)
-- especially for desktop images the speed of your SD card matters. If possible try to use our _nand-sata-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](http://forum.armbian.com/index.php/topic/793-moving-to-harddisk/))
+- Especially for desktop images the speed of your SD card matters. If possible try to use our _nand-sata-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](http://forum.armbian.com/index.php/topic/793-moving-to-harddisk/))
 
-**Upgrading from older images**
+**Tips and tricks (H3 specific / lowering consumption)**
 
-Upgrading from any of the H3 pre-built images (read as: all between version 5.03 and 5.12) is **not** recommended. We had one fundamental change while developing/improving H3 board support (switching away from providing one OS image for various boards and trying to rely on _board auto detection_ at first boot) that might cause loads of problems when upgrading.
+Recent research showed that H3 boards operated as wired IoT nodes need way less power compared to Raspberry Pis in the same situation (Ethernet active). If you want to use your H3 device headless (server/IoT) and care about power consumption then there exist a couple of tweaks to get your board being more energy efficient when using legacy kernel (no tests done yet with mainline kernel):
 
-Therefore it's strongly recommended to backup settings and `$HOME` contents, start with a fresh 5.15 OS image from scratch and then copy back stuff. We're sorry for any inconveniences caused by this and [provide a few tips/tweaks in the forum](http://forum.armbian.com/index.php/topic/1400-upgrading-h3-pre-built-armbian-images-to-515-or-above/)
+- Disabling HDMI/GPU saves ~200mW consumption
+- Adjusting DRAM clockspeed is surprisingly another way to control consumption (on NanoPi NEO for example changing DRAM clockspeed between 132 MHz and 672 MHz results in consumption differences of 470mW)
+- Limiting maximum CPU clockspeed will help with lowering maximum consumption (think about scripts running amok or something going terribly wrong), the same applies to limiting the count of active CPU cores
 
-# OS images with legacy Kernel (3.4.112)
+As an example: We chose default Armbian settings for NanoPi NEO to ensure this board is not able to exceed 2W consumption when running with no peripherals connected. This resulted in CPU and DRAM clockspeed of just 480/408 MHz while _booting_ (the first ~20 seconds). In normal operation we limit maximum CPU clockspeed to 912 MHz to stay below the 2W consumption barrier even in worst case scenarios.
 
-Armbian started beginning with release 5.04 to support all available H3 based Orange Pi boards back then and extended the support to a few more H3 devices (also from other vendors) in the meantime. For a board overview you can look through our [buyer's guide](http://forum.armbian.com/index.php/topic/1351-h3-board-buyers-guide/) and/or Jean-Luc's [nice comparison table](http://www.cnx-software.com/2016/06/08/allwinner-h3-boards-comparison-tables-with-orange-pi-banana-pi-m2-nanopi-p1-and-h3-olinuxino-nano-boards/#comments).
+In case you want to have a few more percent maximum CPU performance you would need to adjust `/etc/defaults/cpufrequtils` to allow 1200 MHz instead of 'just' 912 MHz maximum CPU clock. Be warned: this will both heavily increase consumption and SoC temperature since exceeding 912 MHz CPU clockspeed means feeding the SoC with 1.3V instead of 1.1V core voltage (most smaller H3 devices use a voltage regulator only switching between 2 voltages to feed the SoC based on load).
 
-**Known issues with 5.15**
+Walking this route in the other direction is more interesting: In case you want to use an H3 device as IoT node you might want to limit both idle and maximum consumption. That should involve disabling stuff not needed (eg. HDMI/GPU since this saves 200mW) or limiting ressource consumption: Lowering maximum clockspeeds for both CPU and DRAM or even disabling CPU cores (which helps _not_ with idle consumption since ARM cores enter low-power modes if not needed but can help lowering maximum consumption requirements)
 
-- Playing HEVC/H.265 video with 10 bit depth not supported since H3 lacks this feature
-- (still) not possible to upgrade _server_ to _desktop_ images -- better go the other way around if unsure
+Since all of this stuff is based on recent research and being still WiP please consider reading through relevant threads in Armbian forums **and** join development/research/discussions: [Running H3 boards with minimal consumption](http://forum.armbian.com/index.php/topic/1614-running-h3-boards-with-minimal-consumption/), [SBC consumption/performance comparisons](http://forum.armbian.com/index.php/topic/1748-sbc-consumptionperformance-comparisons/) and [Default settings for NanoPi NEO/Air](http://forum.armbian.com/index.php/topic/1728-rfc-default-settings-for-nanopi-neoair/)
 
-**What you can do to improve the situation**
-
-- get back to us with [feedback regarding our OS images](http://forum.armbian.com/index.php/topic/617-wip-orange-pi-one-support-for-the-upcoming-orange-pi-one/?view=getlastpost)
-- fork our repo, fix things and send pull requests
-
-**Known to NOT work (reliably) yet**
-
-- live display resolution switching. Fixes welcome (anyone willing to port the stuff from the [H3 OpenELEC port](https://github.com/jernejsk/OpenELEC-OPi2)?)
-
-#OS images with vanilla Kernel (4.x)
-
-**Important: Currently no thermal readouts and no throttling/cpufreq adjustments are implemented in mainline kernel (THS). Therefore it's possible to permanently damage your H3 when running demanding workloads on it. Keep this in mind especially when you use any of the H3 devices not from Xunlong since they all overheat badly and think about reducing maximum clockspeed in u-boot (816 MHz max for example)**
-
-Mainlining effort for H3 and Orange Pi's is progressing nicely but since Ethernet is still missing some bits and especially THS support isn't ready we currently do not provide OS images with vanilla kernel. Our build system is already prepared, so as soon as THS and Ethernet are fully ready we'll release OS images (in the lab an Orange Pi PC is serving files as NAS since months stable with kernel 4.4 and USB-Ethernet and now 4.6.2 with native Ethernet driver).
