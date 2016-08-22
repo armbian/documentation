@@ -1,6 +1,6 @@
-- [PWM ready](https://github.com/dwilkins/pwm-sunxi) on pin PB2
-- bluetooth working with on-board device / enabled by default
+- [PWM ready](https://github.com/dwilkins/pwm-sunxi) on pin PB2 (legacy)
+- bluetooth working with on-board device. Enabled by default on both kernels.
 - total memory is 2000Mb (disabled all memory reservations for GPU on CLI images)
 - due to bad PCB placement, there is [some crosstalk between Wifi and VGA in certain videomodes](http://linux-sunxi.org/Cubietruck#VGA)
 - make sure you power the board via power connector otherwise your USB port won’t be powered
-- EDID detect video mode will fail on 4k monitor - you might need to [manually set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
+- EDID detect video mode will fail on 4k monitor - you need to [set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
