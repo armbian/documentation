@@ -27,6 +27,7 @@ pages:
   - 'Hardware Notes' :
         - 'Allwinner' : 'Hardware_Allwinner.md'
         - 'Allwinner A10 & A20' : 'Hardware_Allwinner-A20.md'
+		        - 'Cubietruck' : 'boards/cubietruck.md'
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
 
     
