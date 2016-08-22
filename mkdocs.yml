@@ -29,6 +29,7 @@ pages:
         - 'Allwinner A10 & A20' : 'Hardware_Allwinner-A20.md'
         - 'Board specific' :
                 - 'Cubietruck' : 'boards/cubietruck.md'
+                - 'Banana Pi' : 'boards/bananapi.md'
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
