@@ -32,6 +32,7 @@ pages:
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
+        - 'Freescale IMX6' : 'Hardware_Freescale-imx6.md'
     
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
