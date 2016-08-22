@@ -33,14 +33,15 @@ Please don't expect most of these features to be available when we provide vanil
 
 Recent research showed that H3 boards operated as wired IoT nodes need way less power compared to Raspberry Pis in the same situation (Ethernet active). If you want to use your H3 device headless (server/IoT) and care about power consumption then there exist a couple of tweaks to get your board being more energy efficient when using legacy kernel (no tests done yet with mainline kernel):
 
-- Disabling HDMI/GPU saves ~200mW consumption
+- Disabling HDMI/GPU saves ~200mW 
+- Allowing to temporarely only negotiate a Fast Ethernet connection on GbE capable boards saves +350 mW
 - Adjusting DRAM clockspeed is surprisingly another way to control consumption (on NanoPi NEO for example changing DRAM clockspeed between 132 MHz and 672 MHz results in consumption differences of 470mW)
 - Limiting maximum CPU clockspeed will help with lowering maximum consumption (think about scripts running amok or something going terribly wrong), the same applies to limiting the count of active CPU cores
 - Choosing a board with Fast instead of Gigabit Ethernet or disabling GbE on the latter using `ethtool` or `ifconfig` saves at least 150 mW (board specific)
 
 As an example: We chose default Armbian settings for NanoPi NEO to ensure this board is not able to exceed 2W consumption when running with no peripherals connected. This resulted in CPU and DRAM clockspeed of just 480/408 MHz while _booting_ (the first ~20 seconds). In normal operation we limit maximum CPU clockspeed to 912 MHz to stay below the 2W consumption barrier even in worst case scenarios.
 
-In case you want to have a few more percent maximum CPU performance you would need to adjust `/etc/defaults/cpufrequtils` to allow 1200 MHz instead of 'just' 912 MHz maximum CPU clock. Be warned: this will both heavily increase consumption and SoC temperature since exceeding 912 MHz CPU clockspeed means feeding the SoC with 1.3V instead of 1.1V core voltage (most smaller H3 devices use a voltage regulator only switching between 2 voltages to feed the SoC based on load).
+In case you want to have a few more percent maximum CPU performance you would need to set maximum cpufreq to 1200 MHz instead of 'just' 912 MHz maximum CPU clock using our new [h3consumption tool](http://forum.armbian.com/index.php/topic/1878-testers-wanted-h3consumption-to-be-included-into-future-armbian-releases/). Be warned: this will both heavily increase consumption and SoC temperature since exceeding 912 MHz CPU clockspeed means feeding the SoC with 1.3V instead of 1.1V core voltage (most smaller H3 devices use a voltage regulator only switching between 2 voltages to feed the SoC based on load).
 
 Walking this route in the other direction is more interesting: In case you want to use an H3 device as IoT node you might want to limit both idle and maximum consumption. That should involve disabling stuff not needed (eg. HDMI/GPU since this saves 200mW) or limiting ressource consumption: Lowering maximum clockspeeds for both CPU and DRAM or even disabling CPU cores (which helps _not_ with idle consumption since ARM cores enter low-power modes if not needed but can help lowering maximum consumption requirements)
 
