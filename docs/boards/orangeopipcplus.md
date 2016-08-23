@@ -1,0 +1,1 @@
+- vanilla kernel images are in preview / beta state. 
