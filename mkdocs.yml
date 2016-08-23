@@ -38,7 +38,8 @@ pages:
         - 'Freescale' : 'Hardware_Freescale.md'
         - 'imx6' : 'Hardware_Freescale-imx6.md'
         - 'Board specific' :
-                - 'Nanopi Neo' : 'boards/cubox-i.md'
+                - 'Cubox-i' : 'boards/cubox-i.md'
+                - 'Hummingboard' : 'boards/cubox-i.md'
     
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
