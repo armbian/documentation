@@ -1,0 +1,6 @@
+- total memory is 1000Mb (disabled all memory reservations for GPU)
+- EDID detect video mode will fail on 4k monitor - you need to [set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
+- drivers for [LVDS LCD display modules](http://www.lenovator.com/7-inch-LCD) are added. TS module: ft5x_ts, added configuration for 7″ – [other sizes](https://github.com/LeMaker/fex_configuration/tree/master/fex). (legacy kernel / [vanilla](https://github.com/igorpecovnik/lib/blob/master/patch/kernel/sunxi-next/bananapipro_lemaker_lcd.patch.disabled))
+- BCM53125 switch configured as follows – looking at front of ports: |2|1|0|4|(LAN=manual) |3|(WAN=dhcp and bridged to enabled wireless adapter in (theoretical) high throughput mode with SSID lamobo and password 12345678
+- Power issues with R1 when using hard drive, HDMI and wireless altogether. Connecting LiPo battery helps.
+- Gigabit ethernet transfer rate is around 300Mbit
