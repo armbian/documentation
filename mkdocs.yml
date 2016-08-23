@@ -40,6 +40,7 @@ pages:
         - 'Board specific' :
                 - 'Orange Pi PC plus' : 'boards/orangeopipcplus.md'
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
+                - 'Nanopi M1' : 'boards/nanopim1.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
         - 'Freescale' : 'Hardware_Freescale.md'
         - 'imx6' : 'Hardware_Freescale-imx6.md'

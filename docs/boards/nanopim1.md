@@ -1,0 +1,1 @@
+- Known issues with legacy images / testing needed: audio out in all variants
