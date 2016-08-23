@@ -29,6 +29,7 @@ pages:
         - 'A10 and A20' : 'Hardware_Allwinner-A20.md'
         - 'Board specific' :
                 - 'Cubietruck' : 'boards/cubietruck.md'
+                - 'Cubieboard 1' : 'boards/cubieboard1.md'
                 - 'Cubieboard 2' : 'boards/cubieboard2.md'
                 - 'Banana Pi' : 'boards/bananapi.md'
                 - 'Banana Pi+' : 'boards/bananapiplus.md'

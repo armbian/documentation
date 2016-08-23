@@ -1,0 +1,3 @@
+- installation to NAND with root on SATA/USB is not supported. Legacy kernel only, where NAND support exist.
+- total memory is 1000Mb (disabled all memory reservations for GPU on CLI images)
+- EDID detect video mode will fail on 4k monitor - you need to [set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
