@@ -1,1 +1,1 @@
-- images are in preview / beta state. [Feedback is welcomed](http://forum.armbian.com/index.php/topic/1580-nanopi-neo/page-5)!
+- images are in preview / beta state. [Feedback is welcome](http://forum.armbian.com/index.php/topic/1580-nanopi-neo/page-5)!
