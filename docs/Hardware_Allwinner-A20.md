@@ -43,9 +43,10 @@ System images with vanilla kernel
 
 ### Bugs or limitation ###
 
-- No HW accelerated video yet
+- No HW acceleration for desktop and video decoding
 - NAND is not supported yet.
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
+- HDMI audio is not supported yet
 
 ## Desktop ##
 

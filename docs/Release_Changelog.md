@@ -1,29 +1,29 @@
 **v5.18 / x.y.2016**
 
-- added Friendly ARM Neo legacy and vanilla kernel (experimental)
-- added Orange pi PC+ vanilla kernel (experimental)
-- added Pine 64 / Pine 64+ legacy kernel
-- added UUID support for installer
-- WICD was replaced with Netowork manager in desktop images
-- ALSA was replaced with Pulseaudio in desktop images
-- Enable midi sequencer and snd-rawmidi-seq in H3 legacy kernel
+- added FriendlyARM Neo legacy and vanilla images (experimental)
+- added Orange Pi PC+ vanilla kernel (experimental)
+- added Pine 64 / Pine 64+ images with legacy kernel
+- added UUID support for NAND/SATA/USB installer
+- WICD was replaced with NetworkManager in desktop images
+- ALSA was replaced with PulseAudio in desktop images
+- enabled MIDI sequencer and snd-rawmidi-seq in H3 legacy kernel
 - added H3 consumption tool to control board consumtion level on legacy kernel
 - fixed and enabled Bluetooth on Cubietruck desktop, both kernels
 - masked p2p0 wifi direct device on Bluetooth legacy kernel
-- upgrade to accelerated desktop is possible from A10,A20 and H3 CLI images
+- upgrade to accelerated desktop will be possible from A10, A20 and H3 CLI images
 - Odroid C1/C2 upgrade fail fixed
 - wireless enabled by default on Banana Pi PRO
-- added lot's of new screen resolutions to H3 boards with legacy kernel
-- Device Tree Overlay ConfigFS interface for H3 vanilla kernel
+- added new screen resolutions to H3 boards with legacy kernel
+- DeviceTree Overlay ConfigFS interface for H3 vanilla kernel
 
 Build script:
 
 - complete desktop building rework - now packages are built from sources
 - added Lime 2 eMMC as build target
-- added Friendly Arm Neo as build target
+- added FriendlyArm Neo as build target
 - fixed MT7601 wifi driver building
 - github download rework
-- external toolchain rework 
+- external toolchain rework
 
 **v5.17 / 7.7.2016**
 

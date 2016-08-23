@@ -37,7 +37,7 @@ System images with vanilla kernel
 
 ### Bugs or limitation ###
 
-- Serial console only
+- Serial console only - no HDMI video output
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
 
 ## Desktop ##
