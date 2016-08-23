@@ -1,0 +1,1 @@
+- eMMC version of Lime won't work with those images but you can [build them with our tools](https://github.com/igorpecovnik/lib).
