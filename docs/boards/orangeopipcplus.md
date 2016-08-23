@@ -1,1 +1,1 @@
-- vanilla kernel images are in preview / beta state. 
+- vanilla kernel images are in preview / beta state and serial console only, no HDMI 
