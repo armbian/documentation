@@ -31,7 +31,7 @@ pages:
                 - 'Cubietruck' : 'boards/cubietruck.md'
                 - 'Banana Pi' : 'boards/bananapi.md'
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
-        - 'Board specific' :		
+        - 'Board specific' :
                 - 'Orange Pi PC plus' : 'boards/orangeopipcplus.md'
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
