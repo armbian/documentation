@@ -33,6 +33,7 @@ pages:
         - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
+                - 'Nanopi Neo' : 'boards/nanopineo.md'
         - 'Freescale IMX6' : 'Hardware_Freescale-imx6.md'
     
   - 'Developer Guide' :
