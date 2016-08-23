@@ -1,0 +1,1 @@
+- Vanilla kernel images are serial console only, no HDMI.

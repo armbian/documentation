@@ -36,7 +36,9 @@ pages:
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
         - 'Freescale' : 'Hardware_Freescale.md'
-        - 'imx6' : 'Hardware_Freescale-imx6.md'		
+        - 'imx6' : 'Hardware_Freescale-imx6.md'
+        - 'Board specific' :
+                - 'Nanopi Neo' : 'boards/cubox-i.md'
     
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
