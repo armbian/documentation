@@ -26,16 +26,17 @@ pages:
 
   - 'Hardware Notes' :
         - 'Allwinner' : 'Hardware_Allwinner.md'
-        - 'Allwinner A10 & A20' : 'Hardware_Allwinner-A20.md'
+        - 'A10 and A20' : 'Hardware_Allwinner-A20.md'
         - 'Board specific' :
                 - 'Cubietruck' : 'boards/cubietruck.md'
                 - 'Banana Pi' : 'boards/bananapi.md'
-        - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
+        - 'H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
                 - 'Orange Pi PC plus' : 'boards/orangeopipcplus.md'
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
-        - 'Freescale IMX6' : 'Hardware_Freescale-imx6.md'
+        - 'Freescale' : 'Hardware_Freescale.md'
+        - 'imx6' : 'Hardware_Freescale-imx6.md'		
     
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
