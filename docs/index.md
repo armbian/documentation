@@ -21,7 +21,7 @@ If you still can't find what you need here, visit the [Armbian forum](http://for
 
 # Supported chips
 
-- Allwinner A10, A20, A31, H3
+- Allwinner A10, A20, A31, H3, A64
 - Amlogic S805
 - Amlogic S905
 - Actionsemi S500
