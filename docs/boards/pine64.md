@@ -1,1 +1,2 @@
 - images are in preview / beta state. Those images might not be simple upgradable. For experts only.
+- it's recommended to power the board through GPIO header
