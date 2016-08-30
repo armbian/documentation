@@ -25,6 +25,16 @@ Build script:
 - github download rework
 - external toolchain rework
 
+Added additional packages, not installed by default:
+
+- hostapd-realtek: replacement for hostapd with support for several Realtek Wi-Fi adapters
+- fswebcam-gc2035: replacement for fswebcam with support for GC2035 camera driver for H3 based boards
+- libglshim1: shim for OpenGL 1.x acceleration via OpenGL ES (Mali) for Allwinner A10, A20 and H3 based boards
+
+Known problems:
+
+- Mali OpenGL ES does not work on H3 boards with 2GB RAM (Orange Pi Plus 2, Orange Pi Plus 2e)
+
 **v5.17 / 7.7.2016**
 
 - bugfix release on some boards.
