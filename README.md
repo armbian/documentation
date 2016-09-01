@@ -4,7 +4,7 @@
 
 Documentation is written in markdown and stored in the `docs/` subfolder.  Images go in `docs/images`
 
-This repo is meant for storing and quick glances.  Official output is http://docs.armabian.com
+This repo is meant for storing and quick glances.  Official output is http://docs.armbian.com
 
 Armbian Documentation is available in the following formats:
 * mkdocs site http://docs.armbian.com
