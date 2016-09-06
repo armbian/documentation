@@ -26,8 +26,8 @@
         - Mediatek MT7601U wireless - driver
         - Sunxi display control
         - hostapd from sources
-- **EXTERNAL_NEW** (prebuilt|compile):
-    - set to "prebuilt" install extra applications from repository
+- **EXTERNAL_NEW** (no|prebuilt|compile):
+	- set to "prebuilt" to install extra applications from repository
 	- set to "compile" to compile extra applications in chroot
 - **DEBUG_MODE** (yes|no):
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
