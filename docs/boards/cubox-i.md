@@ -1,1 +1,1 @@
-- Vanilla kernel images are serial console only, no HDMI.
+- Vanilla kernel images: audio does not work on all devices, Bluetooth is unstable.
