@@ -4,11 +4,12 @@
 - added Orange Pi PC+ vanilla kernel (experimental)
 - added Pine 64 / Pine 64+ images with legacy kernel
 - added UUID support for NAND/SATA/USB installer
+- added desktop images for Cubox(s) / Hummingboard(s) with vanilla kernel
 - WICD was replaced with NetworkManager in desktop images
 - ALSA was replaced with PulseAudio in desktop images
 - enabled MIDI sequencer and snd-rawmidi-seq in H3 legacy kernel
 - added H3 consumption tool to control board consumtion level on legacy kernel
-- fixed and enabled Bluetooth on Cubietruck desktop, both kernels
+- fixed and enabled Bluetooth on Cubietruck and Cubox(s) / Hummigboard(s) desktop, both kernels
 - masked p2p0 wifi direct device on Bluetooth legacy kernel
 - upgrade to accelerated desktop will be possible from A10, A20 and H3 CLI images
 - Odroid C1/C2 upgrade fail fixed
