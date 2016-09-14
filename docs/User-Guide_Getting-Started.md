@@ -25,7 +25,7 @@ All our images are digitally signed and therefore it's possible to check theirs 
 
 	# download my public key from the database
 	gpg --keyserver pgp.mit.edu --recv-key 9F0E78D5
-	gpg --verify Armbian_4.83_Armada_Debian_jessie_3.10.94.raw.asc
+	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
 	
 	# proper respond
 	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
@@ -44,9 +44,9 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on Mac and 7z on Linux (apt-get install p7zip-full). RAW images can be written with [Rufus](https://rufus.akeo.ie/) (Win) or DD in Linux/Mac:
 
 	# Linux example: /dev/sdx is your sd card device
-	dd bs=1M if=filename.raw of=/dev/sdx
+	dd bs=1M if=filename.img of=/dev/sdx
 	# OS X example: /dev/[r]diskx is your sd card device:
-	diskutil unmountDisk diskx && dd bs=1m if=filename.raw of=/dev/rdiskx && diskutil eject diskx
+	diskutil unmountDisk diskx && dd bs=1m if=filename.img of=/dev/rdiskx && diskutil eject diskx
 
 Image writing takes around 3 minutes on a slow, class 6 SD card.
 
