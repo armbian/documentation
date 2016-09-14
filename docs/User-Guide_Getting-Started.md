@@ -41,7 +41,7 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 
 **Important note:** Make sure you use a **good & reliable** SD card. If you encounter boot troubles in 95 percent it's either insufficient power supply or a bad SD card or a bad card reader. Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is a must if you run in boot problems.
 
-7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on Mac and 7z on Linux (apt-get install p7zip-full). RAW images can be written with [Rufus](https://rufus.akeo.ie/) (Win) or DD in Linux/Mac:
+7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). RAW images can be written with [Rufus](https://rufus.akeo.ie/) (Win), [Etcher](https://www.etcher.io) (Mac) or DD in Linux:
 
 	# Linux example: /dev/sdx is your sd card device
 	dd bs=1M if=filename.img of=/dev/sdx
