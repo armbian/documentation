@@ -2,25 +2,32 @@
 
 - added FriendlyARM Neo legacy and vanilla images (experimental)
 - added Orange Pi PC+ vanilla kernel (experimental)
-- added Pine 64 / Pine 64+ images with legacy kernel
+- added Pine64 / Pine64+ images with legacy kernel
 - added UUID support for NAND/SATA/USB installer
 - added desktop images for Cubox(s) / Hummingboard(s) with vanilla kernel
-- WICD was replaced with NetworkManager in desktop images
-- ALSA was replaced with PulseAudio in desktop images
 - enabled MIDI sequencer and snd-rawmidi-seq in H3 legacy kernel
 - added H3 consumption tool to control board consumtion level on legacy kernel
 - fixed and enabled Bluetooth on Cubietruck and Cubox(s) / Hummigboard(s) desktop, both kernels
 - masked p2p0 wifi direct device on Bluetooth legacy kernel
-- upgrade to accelerated desktop will be possible from A10, A20 and H3 CLI images
 - Odroid C1/C2 upgrade fail fixed
 - wireless enabled by default on Banana Pi PRO
 - added new screen resolutions to H3 boards with legacy kernel
 - DeviceTree Overlay ConfigFS interface for H3 vanilla kernel
+- update of mainline u-boot to 2016.09 should fix boot failures on H3 boards with eMMC
+- uisabled USB keyboard support in mainline u-boot should fix boot failures with connected USB devices
+
+Desktop images:
+
+- WICD was replaced with NetworkManager
+- ALSA was replaced with PulseAudio
+- sunxi boards: [GLshim](https://github.com/ptitSeb/glshim) was added to desktop images with Mali support (except for Orange Pi Plus and Orange Pi Plus 2e)
+- sunxi boards: prebuilt mpv now supports OSD and subtitles, activated by setting environment variable `VDPAU_OSD=1`
 
 Build script:
 
 - complete desktop building rework - now packages are built from sources
-- added Lime 2 eMMC as build target
+- added Lime 2 eMMC as build target (WIP)
+- added Pine64 / Pine64+ vanilla (dev) target (experimental)
 - added FriendlyArm Neo as build target
 - fixed MT7601 wifi driver building
 - github download rework
@@ -30,7 +37,7 @@ Added additional packages, not installed by default:
 
 - hostapd-realtek: replacement for hostapd with support for several Realtek Wi-Fi adapters
 - fswebcam-gc2035: replacement for fswebcam with support for GC2035 camera driver for H3 based boards
-- libglshim1: shim for OpenGL 1.x acceleration via OpenGL ES (Mali) for Allwinner A10, A20 and H3 based boards
+- guvcview: replacement for stock guvcview with support for H3-based Orange Pi CMOS cameras
 
 Known problems:
 
