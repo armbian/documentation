@@ -51,7 +51,7 @@ pages:
         - 'Board specific' :
                 - 'Cubox-i' : 'boards/cubox-i.md'
                 - 'Hummingboard' : 'boards/cubox-i.md'
-    
+        - 'Other boards' : 'Hardware_Other.md'
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
