@@ -1,4 +1,4 @@
-**v5.18 / x.y.2016**
+**v5.20 / 16.9.2016**
 
 - added FriendlyARM Neo legacy and vanilla images (experimental)
 - added Orange Pi PC+ vanilla kernel (experimental)
