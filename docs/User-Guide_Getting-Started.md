@@ -86,8 +86,21 @@ and change the autologin user.
 
 # How to update?
 
+If you are upgrading **to version 5.20** you need to execute those commands:
+
 	apt-get update
 	apt-get upgrade
+	apt-get install -f
+	apt-get upgrade
+	apt-get autoremove -y
+
+Upgrades from 5.20 will go just with:
+
+	apt-get update
+	apt-get upgrade
+
+
+
 
 **Update process can take hours in case of using cheap SD card and/or under heavy load.**
 
