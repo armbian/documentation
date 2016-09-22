@@ -42,6 +42,8 @@ Added additional packages, not installed by default:
 Known problems:
 
 - Mali OpenGL ES does not work on H3 boards with 2GB RAM (Orange Pi Plus 2, Orange Pi Plus 2e)
+- Hardware video decoding on A10/A20 based boards produces dark video
+- Some applications that depend on FFmpeg libraries (i.e. minidlna) may not work on Jessie images
 
 **v5.17 / 7.7.2016**
 
