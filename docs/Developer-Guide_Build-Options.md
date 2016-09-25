@@ -43,7 +43,8 @@
 - **RELEASE** (wheezy|jessie|trusty|xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 
 ### Hidden options for advanced users (default values are marked **bold**):
-- **USE_CCACHE** (**yes**&#124;no): use a C compiler cache to speed up the build process
+- **USE_CCACHE** (**yes**|no): use a C compiler cache to speed up the build process
+- **PRIVATE_CCACHE** (yes|**no**) use `$DEST/ccache` as ccache home directory
 - **PROGRESS_DISPLAY** (none|plain|**dialog**): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** (yes|**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes|**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
