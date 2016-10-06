@@ -1,0 +1,3 @@
+- [Comprehensive device information](http://linux-sunxi.org/Pine64)
+- Idle consumption with legacy image is ~1500 mW on Pine64 (or Pine64+ forced to use Fast Ethernet) and 1870 mW on Pine64+ (if you don't need GbE network transfer speeds switching to Fast Ethernet with `ethtool -s eth0 speed 100 duplex full` saves ~350 mW)
+- It's important to keep in mind that most USB cables have a resistance way too high which leads to undervoltage situations. In case you run into stability problems power your Pine64(+) through the Euler pins
