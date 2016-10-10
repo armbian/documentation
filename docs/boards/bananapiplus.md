@@ -4,7 +4,7 @@
 
 To get full functionality of this board please login as root and execute:
 
-    sed -i '1isetenv fdtfile sun7i-a20-sinovoip-bpi-m1-plus.dtb' /boot/boot.cmd
+    sed -i '1isetenv fdtfile sun7i-a20-bananapi-m1-plus.dtb' /boot/boot.cmd
     mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
     ln -fs bin/bananapim1plus.bin /boot/script.bin
 	reboot
