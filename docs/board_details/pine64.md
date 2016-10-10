@@ -1,7 +1,7 @@
 [![](http://www.armbian.com/wp-content/uploads/2016/06/pine64.png)](http://www.armbian.com/pine64/)
 
 - **Important**: A few Pine64+ devices suffer from a Gbit Ethernet issue related to the GbE PHY leading to a severe amount of packet losses which might render Ethernet unuseable. It's confirmed as [hardware issue](http://forum.pine64.org/showthread.php?tid=835&pid=19773#pid19773) and if you're affected or not can be simply checked by testing network throughput with *iperf3*. Against another GbE capable device you should exceed 900 Mbits/sec with Armbian (only 800 Mbits/sec in RX direction when not using Xenial due to [iperf3 being single-threaded in both directions then and bottlenecked by CPU](http://forum.armbian.com/index.php/topic/1917-armbian-running-on-pine64-and-other-a64h5-devices/?p=14673)). If you see low throughput and high retransmit counts then a work-around is to switch Pine64+ to Fast Ethernet only by adding `ethtool -s eth0 speed 100 duplex full` to `/etc/rc.local`. At the time of this writing a true fix is only possible by letting the defective board being replaced by Pine64.
-- the only led on the board is a power led, it starts to light as soon as power is available and does not indicate anything else. So the only 'DOA or not' indicator on this board is to burn an image, connect Ethernet and wait 20 seconds whether the leds on the Ethernet jack show activity or not.
+- The only led on the board is a power led, it starts to light as soon as power is available and does not indicate anything else. So the only 'DOA or not' indicator on this board is to burn an image, connect Ethernet and wait 20 seconds whether the leds on the Ethernet jack show activity or not.
 - Comprehensive device information available [in linux-sunxi wiki](http://linux-sunxi.org/Pine64)
 - Idle consumption with legacy image is ~1500 mW on Pine64 (or Pine64+ forced to use Fast Ethernet) and 1870 mW on Pine64+ (if you don't need GbE network transfer speeds switching to Fast Ethernet with `ethtool -s eth0 speed 100 duplex full` saves ~350 mW)
 - Since the default DC-IN connector unfortunately is made with a Micro USB jack it's important to keep in mind that most USB cables have a resistance way too high which leads to undervoltage situations. In case you run into stability problems please power your Pine64(+) through the Euler pins (see linux-sunxi wiki link above for details)
@@ -10,3 +10,9 @@
 - Situation with vanilla/mainline kernel can be considered experimental. At the moment only basic functionality is implemented and **no** thermal protection (throttling) is working (no cpufreq scaling also and no access to PMIC too). Therefore also pretty conservative settings are used which negatively impact performance.
 - In case you use mainline kernel already you can adjust cpufreq to 864 MHz for example by adding a line with `mw.l 0x1c20000 0x80001110` to `/boot/boot.cmd` (use `mw.l 0x1c2005c 1` on a separate line to speed up USB and Ethernet). [Reference](http://forum.armbian.com/index.php/topic/1917-armbian-running-on-pine64-and-other-a64h5-devices/?p=15225)
 - It's possible to convert the upper USB port (normally an OTG port) into a full USB host port using an own PHY. Some [magic bits have to be set](https://irclog.whitequark.org/linux-sunxi/2016-09-06#17478535;)
+- To use/configure Wi-Fi (only supported with legacy images) the most simple way is to use `NetworkManager`. Simply follow the steps below (as root):
+
+    modprobe 8723bs && echo 8723bs >>/etc/modules
+    apt-get --no-install-recommends install network-manager
+    sed -i 's/p2p0/p2p0,wlan1/' /etc/NetworkManager/NetworkManager.conf
+    nmtui
