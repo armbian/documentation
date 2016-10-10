@@ -16,4 +16,4 @@
   - `apt-get --no-install-recommends install network-manager`
   - `sed -i 's/p2p0/p2p0,wlan1/' /etc/NetworkManager/NetworkManager.conf`
   - `nmtui`
-
+- You could also use the other Wi-Fi interface for an access point. In this case you want to use `wlan1` and follow [these instructions](https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint). Please note that Armbian already ships with an example default config `/etc/network/interfaces.hostapd` using `wlan0` and that we also ship with an own `hostapd` version (check with `dpkg -l | grep hostapd`)
