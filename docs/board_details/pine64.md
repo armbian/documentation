@@ -10,9 +10,8 @@
 - Situation with vanilla/mainline kernel can be considered experimental. At the moment only basic functionality is implemented and **no** thermal protection (throttling) is working (no cpufreq scaling also and no access to PMIC too). Therefore also pretty conservative settings are used which negatively impact performance.
 - In case you use mainline kernel already you can adjust cpufreq to 864 MHz for example by adding a line with `mw.l 0x1c20000 0x80001110` to `/boot/boot.cmd` (use `mw.l 0x1c2005c 1` on a separate line to speed up USB and Ethernet). [Reference](http://forum.armbian.com/index.php/topic/1917-armbian-running-on-pine64-and-other-a64h5-devices/?p=15225)
 - It's possible to convert the upper USB port (normally an OTG port) into a full USB host port using an own PHY. Some [magic bits have to be set](https://irclog.whitequark.org/linux-sunxi/2016-09-06#17478535;)
-- To use/configure Wi-Fi (only supported with legacy images) the most simple way is to use `NetworkManager`. Simply follow the steps below (as root):
+- To use/configure Wi-Fi (only supported with legacy images) the most simple way is to use `NetworkManager`. Simply follow these steps (as root): `modprobe 8723bs && echo 8723bs >>/etc/modules`
+`apt-get --no-install-recommends install network-manager`
+`sed -i 's/p2p0/p2p0,wlan1/' /etc/NetworkManager/NetworkManager.conf`
+`nmtui`
 
-    modprobe 8723bs && echo 8723bs >>/etc/modules
-    apt-get --no-install-recommends install network-manager
-    sed -i 's/p2p0/p2p0,wlan1/' /etc/NetworkManager/NetworkManager.conf
-    nmtui
