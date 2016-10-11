@@ -1,3 +1,18 @@
+**v5.21 / x.y.2016**
+
+- Fixed eMMC install on Odroid C2
+- Divide firmware into minimal (default) and full version
+- Addded Odroid XU4 vanilla kernel image
+- Added Overlay FS for Cubox, Udoo and Udoo Neo
+- booting problems fixed on more boards
+- updated wireless driver on M2+ (dhd)
+- updated driver for OV5640 on sun8i default kernel
+- UUID support on prebuild images
+
+Build script:
+
+- Rename DEBUG_MODE to CREATE_PATCHES
+
 **v5.20 / 16.9.2016**
 
 - added FriendlyARM Neo legacy and vanilla images (experimental)
