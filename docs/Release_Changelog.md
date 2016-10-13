@@ -1,3 +1,25 @@
+**v5.21 / x.y.2016**
+
+- fixed eMMC install on Odroid C2
+- firmware package was splitted into minimal (default) and full versions
+- added Odroid XU4 vanilla kernel image
+- added Overlay FS for Cubox, Udoo and Udoo Neo
+- booting problems fixed on more boards
+- updated wireless driver on M2+ (dhd)
+- updated driver for OV5640 on sun8i default kernel
+- sunxi-next kernel version updated to 4.8.1
+- BananaPi M1+ now uses upstream DTB file `sun7i-a20-bananapi-m1-plus.dtb`, boot script adjusting may be required for existing images
+
+Desktop images:
+
+- prebuilt mpv and FFmpeg were removed in favor of providing only configuration files
+- fixed an issue with video brightness on A10/A20 based boards
+
+Build script:
+
+- DEBUG_MODE was renamed to CREATE_PATCHES
+- GLshim was moved to a private directory, it can be activated for selected applications by changing `LD_LIBRARY_PATH`
+
 **v5.20 / 16.9.2016**
 
 - added FriendlyARM Neo legacy and vanilla images (experimental)
@@ -14,7 +36,7 @@
 - added new screen resolutions to H3 boards with legacy kernel
 - DeviceTree Overlay ConfigFS interface for H3 vanilla kernel
 - update of mainline u-boot to 2016.09 should fix boot failures on H3 boards with eMMC
-- uisabled USB keyboard support in mainline u-boot should fix boot failures with connected USB devices
+- disabled USB keyboard support in mainline u-boot should fix boot failures with connected USB devices
 
 Desktop images:
 
