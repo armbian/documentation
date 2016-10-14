@@ -58,6 +58,18 @@ System images with vanilla kernel
 - Lightweight XFCE desktop
 - Autologin, when normal user is created – no login manager (/etc/default/nodm)
 
+## Notes ##
+
+### Setting non-standard monitor settings for A10, A20 and A31 based boards in u-boot ###
+
+Following commands (example) needs to be executed in u-boot command prompt:
+```
+setenv video-mode sunxi:1024x768-24@60,monitor=dvi,hpd=0,edid=0,overscan_x=1,overscan_y=2
+saveenv
+```
+
+Since environment is reset after flashing u-boot, you need to do this after every u-boot upgrade or put this to u-boot script
+
 ## Resources ##
 
 [Armbian packages repository](http://www.armbian.com/kernel/)
