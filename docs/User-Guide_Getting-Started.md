@@ -39,7 +39,7 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 
 # How to prepare a SD card?
 
-**Important note:** Make sure you use a **good & reliable** SD card. If you encounter boot troubles in 95 percent it's either insufficient power supply or a bad SD card or a bad card reader. Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is a must if you run in boot problems.
+**Important note:** Make sure you use a **good & reliable** SD card. If you encounter boot or stability troubles in 95 percent it's either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). Raw images can be written with [Etcher](https://www.etcher.io) (all OS):
 
@@ -48,9 +48,9 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 	# OS X example: /dev/[r]diskx is your sd card device:
 	diskutil unmountDisk diskx && dd bs=1m if=filename.img of=/dev/rdiskx && diskutil eject diskx
 
-Image writing takes around 3 minutes on a slow, class 6 SD card.
+Image writing takes up to 2 minutes on a good SD card.
 
-Also important: SD cards are optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. And while you shouldn't buy any card rated less than *class 10* today you should especially take care to choose one that is known to show high random I/O performance since this is way more performance relevant when used with any SBC. Even cards advertised as being 'high speed' show horribly low random IO performance in reality.
+Also important: SD cards are optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. And while you shouldn't buy or use any card rated less than *class 10* you should especially take care to choose one that is known to show high random I/O performance since this is way more performance relevant when used with any SBC. Even cards advertised as being 'high speed' can show horribly low random IO performance in reality.
 
 You won't be wrong picking one of these:
 
@@ -58,7 +58,7 @@ You won't be wrong picking one of these:
 [![Transcend Ultimate 16 GB UHS-I](http://www.armbian.com/wp-content/uploads/2016/03/sdcard-transcend-1.png)](http://www.amazon.com/gp/product/B00BLHWYWS)
 [![SanDisk Extreme Pro 16 GB UHS-I](http://www.armbian.com/wp-content/uploads/2016/03/sdcard-sandisk-1.png)](http://www.amazon.com/dp/B008HK1YAA)
 
-Detailed informations regarding SD cards performance:
+Detailed information regarding SD card performance:
 
 - [SD card performance with Armbian - Thomas Kaiser](http://forum.armbian.com/index.php/topic/954-sd-card-performance/)
 - [Raspberry Pi microSD card performance comparison - Jeff Geerling](http://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-microsd-card)
