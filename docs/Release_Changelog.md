@@ -3,6 +3,7 @@
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
 - added Odroid XU4 vanilla kernel image
+- added Olimex A33 vanilla kernel image 
 - added Overlay FS for Cubox, Udoo and Udoo Neo
 - booting problems fixed on more boards
 - updated wireless driver on M2+ (dhd)
