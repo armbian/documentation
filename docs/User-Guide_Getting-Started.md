@@ -44,7 +44,8 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). Raw images can be written with [Etcher](https://www.etcher.io) (all OS):
 
 	# Linux example: /dev/sdx is your sd card device
-	dd bs=1M if=filename.img of=/dev/sdx
+	sudo dd bs=1M if=filename.img of=/dev/sdx
+	sync
 	# OS X example: /dev/[r]diskx is your sd card device:
 	diskutil unmountDisk diskx && dd bs=1m if=filename.img of=/dev/rdiskx && diskutil eject diskx
 
