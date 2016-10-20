@@ -21,3 +21,4 @@
   - `nmtui` (choose then *Activate a connection*)
 - You could also use the other Wi-Fi interface for an access point. In this case you want to use `wlan1` and follow [these instructions](https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint). Please note that Armbian already ships with an example default config `/etc/network/interfaces.hostapd` using `wlan0` and that we also ship with an own `hostapd` version (check with `dpkg -l | grep hostapd`).
 - Starting with [Armbian 5.21](https://github.com/igorpecovnik/lib/commit/04e6a4d76ad71a9f2117ae8b07c41617bfcb1eae) fixed camera drivers for both SK54EC and OV5640 are included.
+- to get LCD with touchscreen working (not supported by Armbian yet out of the box) please refer to [these instructions](https://github.com/MackPI/Pine64LinuxLCD/issues/1).
