@@ -1,4 +1,4 @@
-**v5.22 / x.y.2016**
+**v5.22 / 22.10.2016**
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
@@ -21,6 +21,10 @@ Build script:
 
 - DEBUG_MODE was renamed to CREATE_PATCHES
 - GLshim was moved to a private directory, it can be activated for selected applications by changing `LD_LIBRARY_PATH`
+
+Known problems:
+- H3 development kernel (4.8.4) update fails to boot
+- C2 upgrade hangs on compiling headers (Jessie)
 
 **v5.20 / 16.9.2016**
 
