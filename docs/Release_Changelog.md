@@ -23,6 +23,7 @@ Build script:
 - GLshim was moved to a private directory, it can be activated for selected applications by changing `LD_LIBRARY_PATH`
 
 Known problems:
+
 - H3 development kernel (4.8.4) update fails to boot
 - C2 upgrade hangs on compiling headers (Jessie)
 
