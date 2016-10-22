@@ -1,14 +1,15 @@
-**v5.21 / x.y.2016**
+**v5.22 / x.y.2016**
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
+- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels 
 - added Odroid XU4 vanilla kernel image
 - added Olimex A33 vanilla kernel image 
 - added Overlay FS for Cubox, Udoo and Udoo Neo
 - booting problems fixed on more boards
 - updated wireless driver on M2+ (dhd)
 - updated driver for OV5640 on sun8i default kernel
-- sunxi-next kernel version updated to 4.8.1
+- sunxi-next kernel version updated to 4.8.4
 - BananaPi M1+ now uses upstream DTB file `sun7i-a20-bananapi-m1-plus.dtb`, boot script adjusting may be required for existing images
 
 Desktop images:
