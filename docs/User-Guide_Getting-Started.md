@@ -121,7 +121,7 @@ Put user to sudo group:
 
 # How to install to eMMC, NAND, SATA & USB?
 
-[su_youtube_advanced url="https:\/\/youtu.be\/6So8MA-qru8" controls="yes" showinfo="no" loop="yes" rel="no" modestbranding="yes"]
+![YOUTUBE](6So8MA-qru8)
 
 Required condition:
 

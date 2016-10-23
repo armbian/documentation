@@ -1,14 +1,15 @@
-**v5.21 / x.y.2016**
+**v5.22 / 22.10.2016**
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
+- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels 
 - added Odroid XU4 vanilla kernel image
 - added Olimex A33 vanilla kernel image 
 - added Overlay FS for Cubox, Udoo and Udoo Neo
 - booting problems fixed on more boards
 - updated wireless driver on M2+ (dhd)
 - updated driver for OV5640 on sun8i default kernel
-- sunxi-next kernel version updated to 4.8.1
+- sunxi-next kernel version updated to 4.8.4
 - BananaPi M1+ now uses upstream DTB file `sun7i-a20-bananapi-m1-plus.dtb`, boot script adjusting may be required for existing images
 
 Desktop images:
@@ -20,6 +21,12 @@ Build script:
 
 - DEBUG_MODE was renamed to CREATE_PATCHES
 - GLshim was moved to a private directory, it can be activated for selected applications by changing `LD_LIBRARY_PATH`
+
+Known problems:
+
+- eMMC install fails (will be fixed in bugfix update)
+- H3 development kernel (4.8.4) update fails to boot
+- C2 upgrade hangs on compiling headers (Jessie)
 
 **v5.20 / 16.9.2016**
 
