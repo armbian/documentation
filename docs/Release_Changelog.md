@@ -24,6 +24,7 @@ Build script:
 
 Known problems:
 
+- eMMC install fails (will be fixed in bugfix update)
 - H3 development kernel (4.8.4) update fails to boot
 - C2 upgrade hangs on compiling headers (Jessie)
 
