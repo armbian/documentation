@@ -1,3 +1,8 @@
+**v5.23 / 23.10.2016**
+
+- fixed bug in nand-sata-install
+- fixed u-boot update bug on Allwinner platform
+
 **v5.22 / 22.10.2016**
 
 - fixed eMMC install on Odroid C2
