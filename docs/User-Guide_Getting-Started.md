@@ -144,6 +144,8 @@ and follow the guide. You can create up to three scenarios:
  * boot from SD, system on SATA / USB
  * boot from eMMC / NAND, system on eMMC/NAND
  * boot from eMMC / NAND, system on SATA / USB
+ 
+On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](http://forum.armbian.com/index.php/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?p=13163) for details).
 
 # How to set fixed IP?
 
