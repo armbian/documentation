@@ -2,3 +2,4 @@
 - using images with legacy kernel is highly recommended, vanilla kernel is for developers only
 - it's recommended to power the board through GPIO header
 - vanilla kernel does not support DVFS, HDMI, onboard analog audio output, onboard IR receiver, CSI, DSI and TP interfaces
+- if you have the official wifi/BT module, use `sudo modprobe 8723bs` to enable it. To make this persistent, add `8723bs` on a new line a the end of `/etc/modules`, the kernel module will be loaded by default.
