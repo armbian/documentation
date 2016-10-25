@@ -45,13 +45,16 @@ pages:
                 - 'Beelink X2' : 'boards/beelinkx2.md'
         - 'H5 / A64' : 'Hardware_Allwinner-H5-A64.md'
         - 'Board specific' :
-                - 'Pine64' : 'boards/pine64.md'
+                - 'Pine64' : 'board_details/pine64.md'
         - 'Freescale' : 'Hardware_Freescale.md'
         - 'imx6' : 'Hardware_Freescale-imx6.md'
         - 'Board specific' :
                 - 'Cubox-i' : 'boards/cubox-i.md'
                 - 'Hummingboard' : 'boards/cubox-i.md'
         - 'Other boards' : 'Hardware_Other.md'
+        - 'Board specific' :
+                 - 'ODROID-C0/C1/C1+' : 'board_details/odroidc1.md'
+                 - 'ODROID-C2' : 'board_details/odroidc2.md'
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
