@@ -3,6 +3,10 @@
 - fixed bug in nand-sata-install
 - fixed u-boot update bug on Allwinner platform
 
+Known problems:
+
+- Lamobo R1 fails to boot upon upgrade
+
 **v5.22 / 22.10.2016**
 
 - fixed eMMC install on Odroid C2
