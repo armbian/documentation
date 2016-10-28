@@ -110,7 +110,7 @@ Check which wireless stations / routers are in range
 
 In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
 
-You need an ODROID XU4 or Allwinner A10, A20 or H3 board with legacy kernel where we added support for overlayfs. We tested it on Ubuntu Xenial but it should work elsewhere too. Login as root and execute:
+You need an ODROID XU4 or Allwinner A10, A20 or H3 board with legacy kernel where we added support for overlayfs. Works only on Ubuntu Xenial. Login as root and execute:
 
 	apt-get install overlayroot
 	echo 'overlayroot="tmpfs"' >> /etc/overlayroot.conf
