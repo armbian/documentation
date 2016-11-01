@@ -42,7 +42,7 @@ pages:
                 - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
                 - 'Nanopi M1' : 'boards/nanopim1.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
-                - 'Nanopi Neo Air' : 'boards/nanopineoair.md'
+                - 'Nanopi Neo Air' : 'boards/nanopiair.md'
                 - 'Beelink X2' : 'boards/beelinkx2.md'
         - 'H5 / A64' : 'Hardware_Allwinner-H5-A64.md'
         - 'Board specific' :
