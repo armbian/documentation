@@ -23,4 +23,5 @@
 - Starting with [Armbian 5.21](https://github.com/igorpecovnik/lib/commit/04e6a4d76ad71a9f2117ae8b07c41617bfcb1eae) fixed camera drivers for both SK54EC and OV5640 are included.
 - to get LCD with touchscreen working (not supported by Armbian yet out of the box) please refer to [these instructions](https://github.com/MackPI/Pine64LinuxLCD/issues/1).
 - Currently BT is not supported out of the box by Armbian. Please read through [this thread in pine64 forum](http://forum.pine64.org/showthread.php?tid=2248&pid=21412#pid21412) to enable it.
-- Starting with Armbian 5.25 in `/boot/armbianEnv.txt` camera support can be activated: `camera_type=none|s5k4ec|ov5640` (defaults to `none`)
+- Starting with Armbian 5.24 in `/boot/armbianEnv.txt` camera support can be activated: `camera_type=none|s5k4ec|ov5640` (defaults to `none`, reboot needed for changes to take effect)
+- Also starting with 5.24 Pine64's own LCD with touchscreen support can simply be activated in `/boot/armbianEnv.txt` by setting `pine64_lcd=on` followed by a reboot.
