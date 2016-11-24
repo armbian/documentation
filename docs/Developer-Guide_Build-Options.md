@@ -48,6 +48,7 @@
 - **PROGRESS_DISPLAY** (none&#124;plain&#124;**dialog**): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** (yes&#124;**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes&#124;**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
+- **USE_GITHUB_UBOOT_MIRROR** (yes&#124;**no**): use unofficial Github mirror for downloading mainline u-boot sources, may be faster than `git.denx.de` depending on your location
 - **FORCE_USE_RAMDISK** (yes&#124;no): overrides autodetect for using tmpfs in new debootstrap and image creation process
 - **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (yes&#124;**no**): create compressed archive with image file and GPG signature for redistribution
