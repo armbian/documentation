@@ -1,4 +1,5 @@
 - images are in preview / beta state
 - using images with legacy kernel is highly recommended, vanilla kernel is for developers only
 - it's recommended to power the board through GPIO header
+- to get Wi-Fi working use 'sudo nmtui'
 - vanilla kernel does not support DVFS, HDMI, onboard analog audio output, onboard IR receiver, CSI, DSI and TP interfaces
