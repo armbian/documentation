@@ -47,6 +47,7 @@ System images with vanilla kernel
 - NAND is not supported yet.
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
 - HDMI audio is not supported yet
+- SATA port multiplier support is disabled by default, can be enabled by adding kernel parameter `ahci_sunxi.enable_pmp=1`
 
 ## Desktop ##
 
