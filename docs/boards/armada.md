@@ -1,1 +1,0 @@
-- There are three different kernels for this boards. None is perfect - check [documentation](http://docs.armbian.com/Hardware_Other/#marvel-armada-clearfog) for more info.
