@@ -1,6 +1,3 @@
-[![](http://www.armbian.com/wp-content/uploads/2016/03/odroidc1.png
-)](http://www.armbian.com/odroid-c1/)
-
 - Please note: From a software point of view ODROID C1, C1+ and C0 are (nearly) identical. For Hardware differences between C1 and C1+ and to see how to use USB OTG on the latter please see [here](http://odroid.com/dokuwiki/doku.php?id=en:c1_hardware#c1_has_below_improvements_from_the_original_c1). C0 is a stripped down and more power efficient C1+ that can be battery powered (see here [how to read out battery voltage](http://odroid.com/dokuwiki/doku.php?id=en:c0_read_battery_voltage))
 - Comprehensive device information and various tips&tricks can be found in [Hardkernel's wiki](http://odroid.com/dokuwiki/doku.php?id=en:odroid-c1). Please be aware that some of the information does not apply to Armbian (eg. we use a different partition table). Schematics can be found [here](http://dn.odroid.com/S805/Schematics/).
 - Idle consumption of an ODROID-C1+ with Armbian defaults varies between 1800 mW (@504 MHz) and 1900 mW (@1728 MHz -- temperature also differs just by 2°C -- for reasons please refer to the ['race to idle' concept](https://en.wikipedia.org/wiki/Dynamic_frequency_scaling#Performance_impact).
