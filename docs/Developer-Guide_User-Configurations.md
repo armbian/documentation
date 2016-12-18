@@ -19,6 +19,11 @@ If file `userpatches/linux-$KERNELFAMILY-$KERNELBRANCH.config` exists, it will b
     [ o.k. ] Compiling dev kernel [ @host ]
     [ o.k. ] Using kernel config file [ lib/config/linux-sunxi-dev.config ]
 
+## User provided sources config	
+If file `userpatches/sources/$LINUXFAMILY.conf` exists, it will be used instead of default one from `lib/config`. Look for the hint at the beginning of compilation process to select proper config file name. Example:
+	
+	[ o.k. ] Adding user provided sun8i overrides
+	
 ## User provided image customization script
 You can run additional commands to customize created image. Edit file:
 
