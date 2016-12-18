@@ -38,7 +38,6 @@ pages:
                 - 'Olimex Lime A10' : 'boards/lime-a10.md'
         - 'H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
-                - 'Orange Pi 2e' : 'boards/orangeopiplus2e.md'
                 - 'Nanopi M1' : 'boards/nanopim1.md'
                 - 'Nanopi Neo' : 'boards/nanopineo.md'
                 - 'Nanopi Neo Air' : 'boards/nanopiair.md'
