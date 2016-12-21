@@ -34,7 +34,7 @@ pages:
                 - 'Banana Pi' : 'boards/bananapi.md'
                 - 'Banana Pi+' : 'boards/bananapiplus.md'
                 - 'Lamobo R1' : 'boards/lamobo-r1.md'
-                - 'Olimex Lime2' : 'boards/lime2.md'
+                - 'Olimex Lime2 eMMC' : 'boards/lime2-emmc.md'
                 - 'Olimex Lime A10' : 'boards/lime-a10.md'
         - 'H3' : 'Hardware_Allwinner-H3.md'
         - 'Board specific' :
