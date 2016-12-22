@@ -121,7 +121,7 @@ Put user to sudo group:
 
 # How to install to eMMC, NAND, SATA & USB?
 
-![Installer](images/nandsata.png)
+![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
 Required condition:
 
@@ -151,6 +151,20 @@ and you can choose the following file system options:
  * btrfs
  
 On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](http://forum.armbian.com/index.php/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?p=13163) for details).
+
+# How to connect to wireless?
+
+If you know what is your wireless SSID:
+
+	nmtui-connect SSID
+
+![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-1.png)
+
+If you don't know, you can browse and then connect
+
+	nmtui-connect
+
+![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-2.png)
 
 # How to set fixed IP?
 
