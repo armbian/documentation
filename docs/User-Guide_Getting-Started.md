@@ -1,18 +1,20 @@
-# Prerequisites for NEW users
+# Prerequisites for new users
 
 Please, make sure you have:
+
 - a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR thick USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 # What to download?
 
-Each board is fully supported with up to **four basic system** options: 
-	
-- Debian Wheezy, Jessie, Ubuntu Trusty, Xenial
+For each board we usually provide:
 
-Some boards also have a desktop version Debian Jessie.
+- CLI Debian Jessie
+- CLI and desktop Ubuntu Xenial
 
-# Legacy or Vanilla?
+Some boards have different options due to their hardware specialities - router or IOT boards.
+
+# Legacy or mainline?
 
 Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differ:
 
@@ -87,37 +89,12 @@ and change the autologin user.
 
 # How to update?
 
-If you are upgrading **to version 5.20** you need to execute those commands:
-
 	apt-get update
 	apt-get upgrade
-	apt-get install -f
-	apt-get upgrade
-	apt-get autoremove -y
-
-Upgrades from 5.20 will go just with:
-
-	apt-get update
-	apt-get upgrade
-
-
-
 
 **Update process can take hours in case of using cheap SD card and/or under heavy load.**
 
-This will not only update distribution packages (Debian/Ubuntu) but also updates Armbian kernel, u-boot and board support package if available. So if you've seen in the list of updated packages the names _u-boot_ or _linux_ the following command is required for changes to take effect:
-
-	reboot
-
-# How to add users?
-
-To create a normal user do this:
-
-	adduser MyNewUsername
-
-Put user to sudo group:
-
-	usermod -aG sudo MyNewUsername
+If kernels was upgraded during this process, you will be prompted to reboot at next login.
 
 # How to install to eMMC, NAND, SATA & USB?
 
@@ -153,6 +130,8 @@ and you can choose the following file system options:
 On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](http://forum.armbian.com/index.php/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?p=13163) for details).
 
 # How to connect to wireless?
+
+Required condition: a board with onboard or supported 3rd party wireless adapter on USB
 
 If you know what is your wireless SSID:
 
