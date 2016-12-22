@@ -19,7 +19,7 @@ Some boards have different options due to their hardware specialities - router o
 Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differ:
 
  - legacy: video acceleration, NAND support, connecting displays 
- - vanilla: headless server, light desktop operations 
+ - mainline: headless server, light desktop operations 
  
 # How to check download authenticity?
 
