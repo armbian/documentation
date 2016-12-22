@@ -1,14 +1,10 @@
 # Preparation
 
-- make sure you have a **good & reliable** SD card and a **proper power supply**
-- 7z archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). 
-- RAW images can be written with [Etcher](https://www.etcher.io) (all OS).
+Make sure you have a **good & reliable** SD card and a **proper power supply**. Archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). RAW images can be written with [Etcher](https://www.etcher.io) (all OS).
 
 # How to boot?
 
-Insert SD card into a slot and power the board. First boot takes around 3 minutes then it might reboot and you will need to wait another one minute to login. This delay is because system creates 128Mb emergency SWAP and expand SD card to it's full capacity.
-
-Normal boot (with DHCP) takes up to 35 seconds with a class 6 SD CARD and cheapest board.
+Insert SD card into a slot and power the board. First boot takes around 3 minutes then it might reboot and you will need to wait another one minute to login. This delay is because system creates 128Mb emergency SWAP and expand SD card to it's full capacity. Normal boot (with DHCP) takes up to 35 seconds with a class 6 SD CARD and cheapest board.
 
 # How to login? 
 
