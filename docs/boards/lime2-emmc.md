@@ -1,4 +1,4 @@
-To get full support with access to eMMC and stable settings, you need to execute those commands:
+To get full lime2-emmc support with access to eMMC and stable settings, you need to execute those commands:
 	
 	apt-get update
 	apt-get upgrade
@@ -8,5 +8,3 @@ To get full support with access to eMMC and stable settings, you need to execute
 	ln -fs bin/lime2-emmc.bin /boot/script.bin
 	echo lime2-emmc > /etc/hostname
 	reboot
-
-After this, your lime2 image becomes full featured lime2-emmc image.
