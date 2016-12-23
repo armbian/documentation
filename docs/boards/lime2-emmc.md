@@ -1,4 +1,4 @@
-To get full functionality of lime2-emmc, you need to execute those commands:
+To get full functionality of this board please login as root and execute:
 	
 	apt-get update
 	apt-get upgrade
