@@ -1,4 +1,4 @@
-To get full functionality of lime2-emmc, you need to execute those commands:
+To get full functionality of orangepi, you need to execute those commands:
 	
 	apt-get update
 	apt-get upgrade
