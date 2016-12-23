@@ -8,3 +8,5 @@ To get full functionality of this board please login as root and execute:
 	ln -fs bin/bananapipro.bin /boot/script.bin
 	echo bananapipro > /etc/hostname
 	reboot
+	
+If you need wireless add ap6211 to /etc/modules
