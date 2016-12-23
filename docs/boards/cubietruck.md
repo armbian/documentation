@@ -3,5 +3,4 @@
 - total memory is 2000Mb (disabled all memory reservations for GPU on CLI images)
 - due to bad PCB placement, there is [some crosstalk between Wifi and VGA in certain videomodes](http://linux-sunxi.org/Cubietruck#VGA)
 - make sure you power the board via power connector otherwise your USB port won’t be powered
-- EDID detect video mode will fail on 4k monitor - you need to [set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
 - Our OS images are only for A20 based Cubietruck and do not work on H8 based so called [Cubietruck Plus](http://linux-sunxi.org/Cubietech_Cubietruck_Plus) (we don't support CT+ anytime soon due too some design flaws like no real SATA and thermal problems) 

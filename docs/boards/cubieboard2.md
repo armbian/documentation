@@ -2,4 +2,3 @@
 - total memory is 1000Mb (disabled all memory reservations for GPU on CLI images)
 - support for dual micro SD card version (since v4.5)
 - make sure you power the board via power connector otherwise your USB port won’t be powered
-- EDID detect video mode will fail on 4k monitor - you need to [set it manually](http://docs.armbian.com/Hardware_Allwinner/#how-to-reconfigure-video-output).
