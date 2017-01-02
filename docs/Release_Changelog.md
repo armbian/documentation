@@ -1,17 +1,20 @@
 **v5.25 / x.y.2017**
 
-- nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS
-- added new boards: Clearfog base, Lime2 eMMC, Lime A33, Nanopi M1+, OrangePi Zero
-- new default kernel for Clearfog(s). Changed kernel family to: mveabi
-- disabled power management to wireless chips to get normal/decent performance
-- added wireless drivers to mainline kernels: Orangepi Zero, Neo Air,
-- loading ramdisk done on all images,
-- all images are booting from ext4 file system by default,
-- changed default wallpaper on desktop builds,
-- added per board patching option,
-- added simplefb video driver and boot logo to H3 based boards,
-- updated MALI driver on H3 platform, fixed problems on 2Gb boards,
-- fixed switch driver on Lamobo R1
+- nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
+- added new boards: Clearfog Base, Lime2 eMMC, Lime A33, Nanopi M1+, OrangePi Zero
+- new default kernel for Clearfog(s), changed kernel family to "mvebu" to avoid conflicts
+- disabled wireless power management by default to improve performance with certain drivers
+- added wireless drivers to mainline kernels: Orangepi Zero, Neo Air
+- implemented initrd loading support for all boards
+- moved all images to single ext4 partition scheme
+- changed default wallpaper on desktop builds
+- added per board patching option
+- added u-boot video driver and boot logo to H3 based boards
+- added simplefb video driver (HDMI only) to mainline H3 kernel
+- updated MALI driver on H3 platform, fixed problems on 2Gb boards
+- fixed switch driver on Lamobo R1 (mainline kernel)
+- fixed soft cursor (CLI) for H3 legacy and Odroid C2
+- expand and adjust multiple kernel configurations based on user requests
 
 **v5.23 / 23.10.2016**
 
@@ -26,7 +29,7 @@ Known problems:
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
-- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels 
+- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
 - added Odroid XU4 vanilla kernel image
 - added Olimex A33 vanilla kernel image 
 - added Overlay FS for Cubox, Udoo and Udoo Neo
