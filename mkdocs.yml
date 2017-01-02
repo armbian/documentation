@@ -31,7 +31,7 @@ pages:
                 - 'Cubietruck' : 'boards/cubietruck.md'
                 - 'Cubieboard' : 'boards/cubieboard.md'
                 - 'Cubieboard 2' : 'boards/cubieboard2.md'
-                - 'Orange Pi' : 'boards/orangepi.md'				
+                - 'Orange Pi' : 'boards/orangepi.md'
                 - 'Banana Pi' : 'boards/bananapi.md'
                 - 'Banana Pi+' : 'boards/bananapiplus.md'
                 - 'Lamobo R1' : 'boards/lamobo-r1.md'
@@ -61,13 +61,13 @@ pages:
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Build Process Explained' : 'Developer-Guide_Build-Process.md'
         - 'FEL boot' : 'Developer-Guide_FEL-boot.md'
-    
+
   - 'Contributor Process' :
         - 'Contribute' : 'Process_Contribute.md'
         - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
         - 'Documentation' : 'Process_Documentation.md'
-    
+
   - 'Release' :
         - 'Download' : 'Release_Download.md'
         - 'Changelog' : 'Release_Changelog.md'
-    
+
