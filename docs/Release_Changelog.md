@@ -1,3 +1,18 @@
+**v5.25 / x.y.2017**
+
+- nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS
+- added new boards: Clearfog base, Lime2 eMMC, Lime A33, Nanopi M1+, OrangePi Zero
+- new default kernel for Clearfog(s). Changed kernel family to: mveabi
+- disabled power management to wireless chips to get normal/decent performance
+- added wireless drivers to mainline kernels: Orangepi Zero, Neo Air,
+- loading ramdisk done on all images,
+- all images are booting from ext4 file system by default,
+- changed default wallpaper on desktop builds,
+- added per board patching option,
+- added simplefb video driver and boot logo to H3 based boards,
+- updated MALI driver on H3 platform, fixed problems on 2Gb boards,
+- fixed switch driver on Lamobo R1
+
 **v5.23 / 23.10.2016**
 
 - fixed bug in nand-sata-install
