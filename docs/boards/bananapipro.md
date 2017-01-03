@@ -1,3 +1,5 @@
+This is a universal image shared with the Banana Pi board.
+
 To get full functionality of this board please login as root and execute:
 	
 	apt-get update

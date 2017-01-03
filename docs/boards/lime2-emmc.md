@@ -1,3 +1,5 @@
+This is a universal image shared with the Lime2 NAND board.
+
 To get full functionality of this board please login as root and execute:
 	
 	apt-get update
