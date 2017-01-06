@@ -16,6 +16,10 @@
 - fixed soft cursor (CLI) for H3 legacy and Odroid C2
 - expand and adjust multiple kernel configurations based on user requests
 
+**v5.24**
+
+- this version is not released, it was used for the nightly or user-built images
+
 **v5.23 / 23.10.2016**
 
 - fixed bug in nand-sata-install
@@ -31,7 +35,7 @@ Known problems:
 - firmware package was splitted into minimal (default) and full versions
 - patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
 - added Odroid XU4 vanilla kernel image
-- added Olimex A33 vanilla kernel image 
+- added Olimex A33 vanilla kernel image
 - added Overlay FS for Cubox, Udoo and Udoo Neo
 - booting problems fixed on more boards
 - updated wireless driver on M2+ (dhd)
@@ -209,12 +213,12 @@ Build script:
 - implemented automatic toolchain selection
 - come cleanup, configurations are subfoldered
 - extended_deboostrap becomes default
- 
+
 Known bugs:
 
 - Udoo Neo reboots takes a while, 1min+
 - headers within sun8i needs some fixing
-- H3 board autodetection fail under certain conditions 
+- H3 board autodetection fail under certain conditions
 
 **v5.06 / 18.3.2016**
 
@@ -272,10 +276,10 @@ Known bugs:
 - Bugfix update for [Allwinner boards](http://forum.armbian.com/index.php/topic/691-banana-pro-testers-wanted-sata-drive-not-working-on-some-boards/)
 - Update [for H3 based boards](https://github.com/igorpecovnik/lib/commit/c93d7dfb3538c36739fb8841bd314d75e7d7cbe5)
 
-**v5.00 / 12.2.2016** 
+**v5.00 / 12.2.2016**
 
 - Vanilla kernel for Allwinner based boards upgraded to 4.4.1
-- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](http://linux-sunxi.org/USB/UAS), USB OTG, battery readings,  
+- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](http://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
 - firstrun does autoreboot only if needed: wheezy and some legacy kernels.
@@ -309,7 +313,7 @@ Known bugs:
 - Bugfix update(apt-get update && apt-get upgrade)
 - small changes and fixes
 
-**v4.6 / 24.11.2015** 
+**v4.6 / 24.11.2015**
 
 - Update only (apt-get update && apt-get upgrade)
 - Vanilla kernel for Allwinner based boards upgraded to 4.2.6
@@ -531,21 +535,21 @@ Build script:
 **v2.5 / 2.8.2014**
 
 - Kernel 3.4.101 and 3.16.0-RC4
-- major build script rewrite     
+- major build script rewrite
 
 **v2.4 / 11.7.2014**
 
 - Kernel 3.4.98
 - default root password (1234) expires at first login
-- build script rewrite, now 100% non-interactive process, time zone as config option       
-- bug fixes: removed non-existing links in /lib/modules     
+- build script rewrite, now 100% non-interactive process, time zone as config option
+- bug fixes: removed non-existing links in /lib/modules
 
 **v2.3 / 2.7.2014**
 
 - Kernel 3.4.96
 - cpuinfo serial number added
-- bug fixes: stability issues - downclocked to factory defaults, root SSH login enabled in Jessie, dedicated core for eth0 fix 
-- disp_vsync kernel patch     
+- bug fixes: stability issues - downclocked to factory defaults, root SSH login enabled in Jessie, dedicated core for eth0 fix
+- disp_vsync kernel patch
 
 **v2.2 / 26.6.2014**
 
