@@ -1,4 +1,4 @@
-# Mainline kernel
+**Mainline kernel**
 
 - no MALI drivers
 - [different GPIO numbering](http://linux-sunxi.org/GPIO)
