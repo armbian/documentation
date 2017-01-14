@@ -12,9 +12,12 @@
 - added u-boot video driver and boot logo to H3 based boards
 - added simplefb video driver (HDMI only) to mainline H3 kernel
 - updated MALI driver on H3 platform, fixed problems on 2Gb boards
-- fixed switch driver on Lamobo R1 (mainline kernel)
+- changed Ethernet switch driver on Lamobo R1 to DSA based one (mainline kernel)
 - fixed soft cursor (CLI) for H3 legacy and Odroid C2
 - expand and adjust multiple kernel configurations based on user requests
+- adjusted sunxi boot script to support booting in SPI fash + USB storage scenario (w/o the SD card)
+- dropped support for Debian Wheezy and Ubuntu Trusty releases
+- sunxi mainline kernel was updated to 4.9.x
 
 **v5.24**
 
