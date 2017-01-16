@@ -19,6 +19,9 @@
 - adjusted sunxi boot script to support booting in SPI fash + USB storage scenario (w/o the SD card)
 - dropped support for Debian Wheezy and Ubuntu Trusty releases
 - sunxi mainline kernel was updated to 4.9.x
+- added log2ram (Ramlog alternative) to default installation
+- changed first run logic, disabled forced automatic reboot
+- changed new user account creation logic, disabled forced reboot on user creation failure
 
 **v5.24**
 
