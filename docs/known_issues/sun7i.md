@@ -1,5 +1,10 @@
+**Legacy kernel** (`default` branches)
+
+- unstable Bluetooth stack
+
 **Mainline kernel** (`next`/`dev` branches)
 
+- stable Bluetooth stack
 - no MALI drivers
 - [different GPIO numbering](http://linux-sunxi.org/GPIO)
 - no video acceleration
