@@ -7,7 +7,8 @@
 - added wireless drivers to mainline kernels: Orangepi Zero, Neo Air
 - implemented initrd loading support for all boards
 - moved all images to single ext4 partition scheme
-- changed default wallpaper on desktop builds
+- changed default wallpaper, startup icon, shadows to windows on desktop builds 
+- Firefox web cache moved to memory 
 - added "Software boutique" application installer on desktop builds (currently not working properly on arm64)  
 - added per board patching option
 - added u-boot video driver and boot logo to H3 based boards
