@@ -1,0 +1,1 @@
+- Arm64 browsers (Firefox, Chromium, Iceweasel) may crash frequently. Armhf versions of these browsers should be used instead (Iceweasel and Firefox preinstalled in desktop images should be of the right architecture out of the box)

@@ -3,6 +3,7 @@
 - HDMI output supports only limited number of predefined resolutions
 - 1-Wire protocol requires setting the minimum CPU frequency to 480MHz or higher
 - Hardware accelerated video decoding supports only limited number of video formats
+- OOM issues are possible due to a kernel bug
 
 **Mainline kernel images (all boards) ** (`next`/`dev` branches)
 
