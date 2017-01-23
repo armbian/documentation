@@ -1,5 +1,2 @@
 - images are in preview / beta state. [Feedback is welcome](http://forum.armbian.com/index.php/topic/1580-nanopi-neo/page-5)! Those images might not be simple upgradable. For experts only.
 - Known issues with legacy images / testing needed: audio out in all variants
-- Vanilla kernel based on megous' [orange-pi-4.6 tree including throttling patches](https://github.com/megous/linux/commits/orange-pi-4.6)
-- Known issues with vanilla OS images: random MAC address after each boot, 912 mhz cpufreq not available, not all features yet available
-- More experimental images based on kernel 4.7.2 with USB OTG support and schedutil cpufreq governor [available at forum](http://forum.armbian.com/index.php/topic/1580-nanopi-neo/page-6)
