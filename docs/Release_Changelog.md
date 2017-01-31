@@ -1,10 +1,10 @@
 **v5.25 / x.y.2017**
 
 - nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
-- added new boards: Clearfog Base, Lime2 eMMC, Lime A33, Nanopi M1+, OrangePi Zero
+- added new boards: Clearfog Base, Lime2 eMMC, Lime A33, NanoPi M1+, OrangePi Zero, OrangePi PC2 (mainline only, experimental)
 - new default kernel for Clearfog(s), changed kernel family to "mvebu" to avoid conflicts
 - disabled wireless power management by default to improve performance with certain drivers
-- added wireless drivers to mainline kernels: Orangepi Zero, Neo Air
+- added wireless drivers to mainline kernels: OrangePi Zero, Neo Air
 - implemented initrd loading support for all boards
 - moved all images to single ext4 partition scheme
 - changed default wallpaper, startup icon, shadows to windows on desktop builds 
@@ -13,13 +13,13 @@
 - added per board patching option
 - added u-boot video driver and boot logo to H3 based boards
 - added simplefb video driver (HDMI only) to mainline H3 kernel
-- updated MALI driver on H3 platform, fixed problems on 2Gb boards
+- updated MALI driver on H3 platform, fixed problems on 2GB boards
 - changed Ethernet switch driver on Lamobo R1 to DSA based one (mainline kernel)
 - fixed soft cursor (CLI) for H3 legacy and Odroid C2
 - expand and adjust multiple kernel configurations based on user requests
-- adjusted sunxi boot script to support booting in SPI fash + USB storage scenario (w/o the SD card)
+- adjusted sunxi boot script to support booting in SPI flash + USB storage scenario (w/o the SD card)
 - dropped support for Debian Wheezy and Ubuntu Trusty releases
-- sunxi mainline kernel was updated to 4.9.x
+- sunxi mainline kernel was updated to 4.9.x, some dev kernels to 4.10
 - added log2ram (Ramlog alternative) to default installation
 - changed first run logic, disabled forced automatic reboot
 - changed new user account creation logic, disabled forced reboot on user creation failure
