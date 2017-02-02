@@ -1,2 +1,2 @@
-- images are in preview / beta state. [Feedback is welcome](http://forum.armbian.com/index.php/topic/1580-nanopi-neo/page-5)! Those images might not be simple upgradable. For experts only.
-- Known issues with legacy images / testing needed: audio out in all variants
+- known issues with legacy images / testing needed: audio out in all variants
+- serial console gadget on the OTG port is avaliable after the system boots up. Please make sure that board is properly powered (i.e. with microUSB Y cable or via GPIO pins) because a standard PC USB port will not provide enough current to the board
