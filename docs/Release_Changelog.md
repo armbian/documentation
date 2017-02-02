@@ -1,4 +1,4 @@
-**v5.25 / x.y.2017**
+**v5.25 / 2.2.2017**
 
 - nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
 - added new boards: Clearfog Base, Lime2 eMMC, Lime A33, NanoPi M1+, OrangePi Zero, OrangePi PC2 (mainline only, experimental)
@@ -9,6 +9,7 @@
 - moved all images to single ext4 partition scheme
 - changed default wallpaper, startup icon, shadows to windows on desktop builds 
 - Firefox web cache moved to memory 
+- added g_serial driver to boards without a network connector, working on both kernel (Opi Zero,Opi Lite,FA Neo Air)
 - added "Software boutique" application installer on desktop builds (currently not working properly on arm64)  
 - added per board patching option
 - added u-boot video driver and boot logo to H3 based boards
@@ -23,6 +24,11 @@
 - added log2ram (Ramlog alternative) to default installation
 - changed first run logic, disabled forced automatic reboot
 - changed new user account creation logic, disabled forced reboot on user creation failure
+
+Known problems:
+
+- Odroid C1 desktop has distorted picture.
+- Bananapi M2 (A31) has broken video output.
 
 **v5.24**
 
