@@ -1,6 +1,6 @@
 **Legacy kernel images (all boards) ** (`default` branch)
 
-- HDMI output supports only limited number of predefined resolutions
+- HDMI output (if exists) supports only limited number of predefined resolutions
 - TV Out doesn't work as expected (only PAL/NTSC resolution, overscanning, no h3disp support)
 - 1-Wire protocol requires setting the minimum CPU frequency to 480MHz or higher
 - Hardware accelerated video decoding supports only limited number of video formats
