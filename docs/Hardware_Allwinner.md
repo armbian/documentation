@@ -7,16 +7,16 @@ In some cases, the procedure is "less than obvious", so we document some basic e
 
 # Generic howto for Allwinner devices
 
-## Legacy or Vanilla kernel ?
+## Legacy or mainline kernel ?
 
-Many Armbian images come in two flavours : Legacy (using an older kernel version) and Vanilla (up-to-date kernel). Depending on kernel version, the procedure to enable/disable features is not the same :
+Many Armbian images come in two flavours : Legacy (using an older kernel version) and mainline (up-to-date kernel). Depending on kernel version, the procedure to enable/disable features is not the same :
 
  * Legacy kernel : FEX
- * Vanilla kernel : DT (Device Tree)
+ * Mainline kernel : DT (Device Tree)
 
 ## How to reconfigure video output? ##
 
-This affect Vanilla kernel only.
+This affect mainline kernel only.
 
 U-Boot supports hdmi and lcd output on Allwinner sunxi SoCs, lcd output requires the `CONFIG_VIDEO_LCD_MODE` Kconfig value to be set.
 
@@ -155,7 +155,7 @@ I2C
 
 ![](http://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-i2c-display1.jpg)
 
-I am using [this code](https://github.com/vvromanov/cb_i2c_lcd) for Vanilla kernel and with [changed line](https://github.com/vvromanov/cb_i2c_lcd/blob/master/i2c_lcd.c#L28): /dev/i2c-%u = /dev/i2c-2 for Legacy kernel.
+I am using [this code](https://github.com/vvromanov/cb_i2c_lcd) for mainline kernel and with [changed line](https://github.com/vvromanov/cb_i2c_lcd/blob/master/i2c_lcd.c#L28): /dev/i2c-%u = /dev/i2c-2 for Legacy kernel.
 
 SPI
 
