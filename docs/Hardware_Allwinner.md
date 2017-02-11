@@ -50,6 +50,9 @@ The sunxi U-Boot driver supports the following video-mode options:
 
 For example to always use the hdmi connector, even if no cable is inserted, using edid info when available and otherwise initalizing it at 1024x768@60Hz, use: `setenv video-mode sunxi:1024x768-24@60,monitor=dvi,hpd=0,edid=1`.
 
+Parameters regarding video must be saved into u-boot environment file since they must be read before reading boot script. You can do this by adding `saveenv` command at the end of boot script (boot.cmd). Remember to recompile boot.cmd to boot.scr and note that changes will come into action after second boot. 
+
+
 ## What flavour am I using ?
 
 Best way to know is by checking your kernel version :
