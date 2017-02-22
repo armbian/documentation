@@ -1,0 +1,1 @@
+- eMMC installation is currently broken.
