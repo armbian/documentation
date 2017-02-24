@@ -125,7 +125,7 @@ Copy and past URL of your log to the forum, mail, ...
 
 # How to change network configuration?
 
-To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found (here)[http://forum.odroid.com/viewtopic.php?f=52&t=25472&). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:
+To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found [here](http://forum.odroid.com/viewtopic.php?f=52&t=25472&)). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:
 
 	/etc/network/interfaces.bonding
 	/etc/network/interfaces.default
