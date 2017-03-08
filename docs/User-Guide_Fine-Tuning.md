@@ -117,7 +117,7 @@ Using Armbian 5.05 to 5.20 you would need to touch/rm `/boot/.force-verbose` to 
 
 # How to provide boot logs for inspection?
 
-When computer behaves strange first step is to check power supply and integrity of boot media (`armbianmonitor -c /`). Then look into kernel logs. We made a tool that grabs info and paste it to an online pasteboard service. Please increase boot verbosity as shown above (`verbosity=7`), reboot and then run
+When computer behaves strange first step is to check power supply and integrity of boot media (`armbianmonitor -c "$HOME"`). Then look into kernel logs. We made a tool that grabs info and paste it to an online pasteboard service. Please increase boot verbosity as shown above (`verbosity=7`), reboot and then run
 
 	sudo armbianmonitor -u
 	
