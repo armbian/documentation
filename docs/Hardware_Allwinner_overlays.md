@@ -1,11 +1,22 @@
 # Device Tree overlays
 
+Most in-circuit and GPIO based interfaces (SPI, I2C, I2S) don't have a mechanism for detecting and identifying devices connected to the bus,
+so Linux kernel has to be told explicitly about the device and its configuration details.
+
+While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
+in order to provide the kernel and kernel drivers with details about external devices or to activate interfaces disabled by default.
+
+From mainline Linux kernel perspective all unused in-circuit type interfaces should be disabled by default
+and all pins muxed with those interfaces should be available as standard GPIOs.
+
 ### Armbian specific notes
 
 - DT overlays are a Work-in-Progress (WIP) feature, present only in the nightly and user made images
 - DT overlay parameters are even more experimental and require extensive testing
 - Currently implemented only for sunxi based devices that use mainline u-boot and kernel
 - Latest versions of the u-boot and the boot script is required
+
+Please note that different SoCs will have different sets of available overlays.
 
 ### Kernel provided vs user provided overlays
 
@@ -47,6 +58,20 @@ Parameters of type `pin` require special format:
 - Numbers should not contain leading zeros
 - Examples: good - `PA9`, `PG12`; bad - `pa2`, `PG08`
 
+### Overlay variants
+
+Some overlays are provided in several variants, i.e. `spi0-spidev` and `spi1-spidev`.
+SoCs may contain multiple bus controllers of the same type, i.e. Allwinner H3 contains 2 SPI controllers and Allwinner A20 contains 4 SPI controllers.
+
+Please refer to your board documentation and schematic to determine what pins are wired to the pin headers and thus what overlay variant should be used in each case.
+
+### Overlay conflicts
+
+Some controllers may share the SoC pins in some configurations. For example on Allwinner H3 UART 3 and SPI 1 use the same pins - `PA13`, `PA14`, `PA15`, `PA16`.
+In this case activating both UART 3 and SPI 1 would result in a conflict, and on practice only one interface (either SPI or UART) will be accessible on these pins.
+
+Please check the SoC specific README, board schematic, SoC datasheet or other documentation if you are unsure about possible conflicts if activating multiple overlays for the controllers that use shared (muxed) pins.
+
 ### Example `/boot/armbianEnv.txt` contents:
 
 	verbosity=1
@@ -57,4 +82,45 @@ Parameters of type `pin` require special format:
 	overlays=w1-gpio uart1 i2c0
 	param_w1_pin=PA20
 	param_uart1_rtscts=1
+
+### Debugging
+
+As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
+
+Serial console on UART 0 is required to debug DT overlay related problems.
+
+Example of serial console log when using several overlays:
+
+    U-boot loaded from SD
+    Boot script loaded from mmc
+    205 bytes read in 182 ms (1000 Bytes/s)
+    5074230 bytes read in 532 ms (9.1 MiB/s)
+    5702664 bytes read in 579 ms (9.4 MiB/s)
+    Found mainline kernel configuration
+    32724 bytes read in 269 ms (118.2 KiB/s)
+    965 bytes read in 277 ms (2.9 KiB/s)
+    Applying kernel provided DT overlay sun8i-h3-w1-gpio.dtbo
+    506 bytes read in 325 ms (1000 Bytes/s)
+    Applying kernel provided DT overlay sun8i-h3-uart1.dtbo
+    374 bytes read in 411 ms (0 Bytes/s)
+    Applying kernel provided DT overlay sun8i-h3-i2c0.dtbo
+    3797 bytes read in 268 ms (13.7 KiB/s)
+    Applying kernel provided DT fixup script (sun8i-h3-fixup.scr)
+    ## Executing script at 44000000
+    tmp_bank=A
+    tmp_pin=20
+    ## Loading init Ramdisk from Legacy Image at 43300000 ...
+        Image Name:   uInitrd
+        Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+        Data Size:    5074166 Bytes = 4.8 MiB
+        Load Address: 00000000
+        Entry Point:  00000000
+        Verifying Checksum ... OK
+    ## Flattened Device Tree blob at 43000000
+        Booting using the fdt blob at 0x43000000
+        reserving fdt memory region: addr=43000000 size=9000
+        Loading Ramdisk to 49b29000, end 49fffcf6 ... OK
+        Loading Device Tree to 49b1d000, end 49b28fff ... OK
+
+    Starting kernel ...
 
