@@ -39,7 +39,7 @@ DT overlays are activated by editing u-boot environment file `/boot/armbianEnv.t
 
 - Kernel provided overlays are activated by adding a name to the `overlays` variable
 - User provided overlays are activated by adding a name to the `user_overlays` variable
-- No more than one `overlays` line and no more than one `user_overlays` line can be present in the environment file
+- No more than one `overlays` line and one `user_overlays` line can be present in the environment file
 - Multiple names should be separated by space
 - Reboot is required for any changes to take effect
 
@@ -65,12 +65,31 @@ SoCs may contain multiple bus controllers of the same type, i.e. Allwinner H3 co
 
 Please refer to your board documentation and schematic to determine what pins are wired to the pin headers and thus what overlay variant should be used in each case.
 
-### Overlay conflicts
+### Overlay pinmux conflicts
 
 Some controllers may share the SoC pins in some configurations. For example on Allwinner H3 UART 3 and SPI 1 use the same pins - `PA13`, `PA14`, `PA15`, `PA16`.
 In this case activating both UART 3 and SPI 1 would result in a conflict, and on practice only one interface (either SPI or UART) will be accessible on these pins.
 
 Please check the SoC specific README, board schematic, SoC datasheet or other documentation if you are unsure about possible conflicts if activating multiple overlays for the controllers that use shared (muxed) pins.
+
+### Overlay device endpoint conflicts
+
+Overlays for devices that use addresses or similar mechanisms (i.e. SPI chip selects) can't be activated simultaneously if addresses (chip selects) are identical.
+
+For example H3 SPI comtrollers have only one hardware chip select, so `spi0-spidev` and `spi0-jedec-nor` overlays cannot be activated both since they would use the same chip select.
+
+### Overlay compatibility
+
+Device Tree overlays for differnet platforms and SoCs are not directly compatible.
+This, for example, means that overlays for H3 may need some changes to work on A20, and that Raspberry Pi overlays will need adjustments in order to be used on Allwinner based boards.
+
+Rework may include changing labels, references (phandles) and pinconf bindings.
+
+### Debugging
+
+As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
+
+Serial console on UART 0 is required to debug DT overlay related problems.
 
 ### Example `/boot/armbianEnv.txt` contents:
 
@@ -83,13 +102,7 @@ Please check the SoC specific README, board schematic, SoC datasheet or other do
 	param_w1_pin=PA20
 	param_uart1_rtscts=1
 
-### Debugging
-
-As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
-
-Serial console on UART 0 is required to debug DT overlay related problems.
-
-Example of serial console log when using several overlays:
+##### Example of serial console log when using several overlays:
 
     U-boot loaded from SD
     Boot script loaded from mmc
