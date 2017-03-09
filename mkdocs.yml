@@ -26,6 +26,7 @@ pages:
 
   - 'Hardware Notes' :
         - 'Allwinner' : 'Hardware_Allwinner.md'
+        - 'Allwinner DT overlays' : 'Hardware_Allwinner_overlays.md'
         - 'A10 and A20' : 'Hardware_Allwinner-A20.md'
         - 'Board specific' :
                 - 'Cubietruck' : 'boards/cubietruck.md'
@@ -55,6 +56,7 @@ pages:
         - 'Board specific' :
                  - 'ODROID-C0/C1/C1+' : 'board_details/odroidc1.md'
                  - 'ODROID-C2' : 'board_details/odroidc2.md'
+
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
