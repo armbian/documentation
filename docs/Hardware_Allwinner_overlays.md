@@ -1,6 +1,6 @@
 # Device Tree overlays
 
-Most in-circuit and GPIO based interfaces (SPI, I2C, I2S) don't have a mechanism for detecting and identifying devices connected to the bus,
+Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, ...) don't have a mechanism for detecting and identifying devices connected to the bus,
 so Linux kernel has to be told explicitly about the device and its configuration details.
 
 While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
@@ -41,11 +41,14 @@ DT overlays are activated by editing u-boot environment file `/boot/armbianEnv.t
 - User provided overlays are activated by adding a name to the `user_overlays` variable
 - No more than one `overlays` line and one `user_overlays` line can be present in the environment file
 - Multiple names should be separated by space
+- If activated overlays have parameters marked as "Required", those parameters have to be set to proper values
 - Reboot is required for any changes to take effect
 
 ### Overlay parameters
 
-Some overlays have additional parameters that can be set. None of the parameters are mandatory to set if default value is suitable.
+Some overlays have additional parameters that can be set.
+
+Parameters marked as "Required" have to be set if overlay with these parameters is activated, other parameters are not mandatory if default value is suitable.
 
 Parameters are set by adding their name and value to `/boot/armbianEnv.txt`, each parameter should be added on a new line.
 
@@ -58,12 +61,11 @@ Parameters of type `pin` require special format:
 - Numbers should not contain leading zeros
 - Examples: good - `PA9`, `PG12`; bad - `pa2`, `PG08`
 
-### Overlay variants
+### Overlay bus selection
 
-Some overlays are provided in several variants, i.e. `spi0-spidev` and `spi1-spidev`.
 SoCs may contain multiple bus controllers of the same type, i.e. Allwinner H3 contains 2 SPI controllers and Allwinner A20 contains 4 SPI controllers.
 
-Please refer to your board documentation and schematic to determine what pins are wired to the pin headers and thus what overlay variant should be used in each case.
+Please refer to your board documentation and schematic to determine what pins are wired to the pin headers and thus what bus number should be used in each case.
 
 ### Overlay pinmux conflicts
 
@@ -76,7 +78,7 @@ Please check the SoC specific README, board schematic, SoC datasheet or other do
 
 Overlays for devices that use addresses or similar mechanisms (i.e. SPI chip selects) can't be activated simultaneously if addresses (chip selects) are identical.
 
-For example H3 SPI comtrollers have only one hardware chip select, so `spi0-spidev` and `spi0-jedec-nor` overlays cannot be activated both since they would use the same chip select.
+For example H3 SPI comtrollers have only one hardware chip select, so `spi-spidev` and `spi-jedec-nor` overlays cannot be activated both if they would use the same bus number and chip select.
 
 ### Overlay compatibility
 
@@ -98,42 +100,48 @@ Serial console on UART 0 is required to debug DT overlay related problems.
 	overlay_prefix=sun8i-h3
 	rootdev=UUID=bd0ded76-1188-4b52-a20a-64f326c1f193
 	rootfstype=ext4
-	overlays=w1-gpio uart1 i2c0
+	overlays=w1-gpio uart1 i2c0 spi-spidev
 	param_w1_pin=PA20
+	param_w1_pin_int_pullup=1
 	param_uart1_rtscts=1
+	param_spidev_spi_bus=0
 
 ##### Example of serial console log when using several overlays:
 
-    U-boot loaded from SD
-    Boot script loaded from mmc
-    205 bytes read in 182 ms (1000 Bytes/s)
-    5074230 bytes read in 532 ms (9.1 MiB/s)
-    5702664 bytes read in 579 ms (9.4 MiB/s)
-    Found mainline kernel configuration
-    32724 bytes read in 269 ms (118.2 KiB/s)
-    965 bytes read in 277 ms (2.9 KiB/s)
-    Applying kernel provided DT overlay sun8i-h3-w1-gpio.dtbo
-    506 bytes read in 325 ms (1000 Bytes/s)
-    Applying kernel provided DT overlay sun8i-h3-uart1.dtbo
-    374 bytes read in 411 ms (0 Bytes/s)
-    Applying kernel provided DT overlay sun8i-h3-i2c0.dtbo
-    3797 bytes read in 268 ms (13.7 KiB/s)
-    Applying kernel provided DT fixup script (sun8i-h3-fixup.scr)
-    ## Executing script at 44000000
-    tmp_bank=A
-    tmp_pin=20
-    ## Loading init Ramdisk from Legacy Image at 43300000 ...
-        Image Name:   uInitrd
-        Image Type:   ARM Linux RAMDisk Image (gzip compressed)
-        Data Size:    5074166 Bytes = 4.8 MiB
-        Load Address: 00000000
-        Entry Point:  00000000
-        Verifying Checksum ... OK
-    ## Flattened Device Tree blob at 43000000
-        Booting using the fdt blob at 0x43000000
-        reserving fdt memory region: addr=43000000 size=9000
-        Loading Ramdisk to 49b29000, end 49fffcf6 ... OK
-        Loading Device Tree to 49b1d000, end 49b28fff ... OK
+	## Executing script at 43100000
+	U-boot loaded from SD
+	Boot script loaded from mmc
+	265 bytes read in 182 ms (1000 Bytes/s)
+	5074230 bytes read in 532 ms (9.1 MiB/s)
+	5702664 bytes read in 579 ms (9.4 MiB/s)
+	Found mainline kernel configuration
+	32724 bytes read in 269 ms (118.2 KiB/s)
+	882 bytes read in 277 ms (2.9 KiB/s)
+	Applying kernel provided DT overlay sun8i-h3-w1-gpio.dtbo
+	506 bytes read in 326 ms (1000 Bytes/s)
+	Applying kernel provided DT overlay sun8i-h3-uart1.dtbo
+	374 bytes read in 377 ms (0 Bytes/s)
+	Applying kernel provided DT overlay sun8i-h3-i2c0.dtbo
+	788 bytes read in 347 ms (2 KiB/s)
+	Applying kernel provided DT overlay sun8i-h3-spi-spidev.dtbo
+	4327 bytes read in 268 ms (15.6 KiB/s)
+	Applying kernel provided DT fixup script (sun8i-h3-fixup.scr)
+	## Executing script at 44000000
+	tmp_bank=A
+	tmp_pin=20
+	## Loading init Ramdisk from Legacy Image at 43300000 ...
+	   Image Name:   uInitrd
+	   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+	   Data Size:    5074166 Bytes = 4.8 MiB
+	   Load Address: 00000000
+	   Entry Point:  00000000
+	   Verifying Checksum ... OK
+	## Flattened Device Tree blob at 43000000
+	   Booting using the fdt blob at 0x43000000
+	   reserving fdt memory region: addr=43000000 size=9000
+	   Loading Ramdisk to 49b29000, end 49fffcf6 ... OK
+	   Loading Device Tree to 49b1d000, end 49b28fff ... OK
 
-    Starting kernel ...
+	Starting kernel ...
+
 
