@@ -1,6 +1,6 @@
 # Device Tree overlays
 
-Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, ...) don't have a mechanism for detecting and identifying devices connected to the bus,
+Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, UART, ...) don't have a mechanism for detecting and identifying devices connected to the bus,
 so Linux kernel has to be told explicitly about the device and its configuration details.
 
 While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
@@ -17,6 +17,22 @@ and all pins muxed with those interfaces should be available as standard GPIOs.
 - Latest versions of the u-boot and the boot script is required
 
 Please note that different SoCs will have different sets of available overlays.
+
+### Quick start
+
+1. Check the README.<soc-id>-overlays in `/boot/dtb/overlay/` (32-bit SoCs) or `/boot/dtb/allwinner/overlay/` (64-bit SoCs) for a list of provided overlays, their required and optional parameters
+2. Add names of overlays you want to activate to `overlays=` line in `/boot/armbianEnv.txt`, separated with spaces
+3. Add required parameters with their values to `/boot/armbianEnv.txt`, one per line
+4. Add optional parameters with their values to `/boot/armbianEnv.txt` if you want to change the default value, one per line
+5. If you didn't find the required overlay or want to change one of provided overlays, place your compiled overlays in `/boot/overlay-user/` directory and list their names to `user_overlays=` line in `/boot/armbianEnv.txt`
+6. Reboot
+
+### armbianEnv.txt entries reference
+
+- `overlay_prefix` - prefix for the DT and overlay file names, set at OS image creation time
+- `overlays` - list of overlays to activate from kernel directory
+- `user_overlays` - list of overlays to activate from `/boot/overlay-user/` directory
+- `param_*` - overlay parameters
 
 ### Kernel provided vs user provided overlays
 
@@ -143,5 +159,4 @@ Serial console on UART 0 is required to debug DT overlay related problems.
 	   Loading Device Tree to 49b1d000, end 49b28fff ... OK
 
 	Starting kernel ...
-
 
