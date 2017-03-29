@@ -7,7 +7,7 @@ You can add your own patches outside build script. Place your patches inside app
 Patch with same file name in `userpatches` directory tree substitutes one in `lib/patch`. To _replace_ a patch provided by Armbian maintainers, copy it from `lib/patch` to corresponding directory in `userpatches` and edit it to your needs. To _disable_ a patch, create empty file in corresponding directory in `userpatches`.
 
 ## User provided configuration
-If file `/userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. It can also add additional packages to be installed, by adding to `PACKAGE_LIST_ADDITIONAL`. For a comprehensive list of available variables, look through  `lib/configuration.sh`. Some examples of what you can change:
+If file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. It can also add additional packages to be installed, by adding to `PACKAGE_LIST_ADDITIONAL`. For a comprehensive list of available variables, look through  `lib/configuration.sh`. Some examples of what you can change:
 
     PACKAGE_LIST_ADDITIONAL="$PACKAGE_LIST_ADDITIONAL python-serial python" # additional packages
     ARMBIAN_MAINLINE_KERNEL_VERSION='4.8' # lock in a particular kernel version
