@@ -21,7 +21,7 @@ System images with patched mainline 4.4.x kernel
 - DFS (Cpufreq) is not supported
 
 ## Mainline ##
-System images with vanilla kernel
+System images with mainline kernel
 
 - [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
@@ -32,4 +32,4 @@ System images with vanilla kernel
 ### Bugs or limitation ###
 
 - DFS (Cpufreq) is not supported
-- SFP cage support ported from 4.4.x and may be removed in the future
+- SFP support ported from 4.4.x and may be removed in the future

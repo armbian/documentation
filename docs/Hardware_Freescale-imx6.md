@@ -1,12 +1,5 @@
 # Cubox and Hummingboard boards #
 
-## Overview ##
-
-Both kernels are stable and production ready, but you should use them for different purpuses since their basic support differ:
-
-- legacy: video acceleration, NAND support, connecting displays
-- vanilla: headless server, **no HDMI output - serial console or remote access only**
-
 ## Legacy ##
 System images with legacy kernel
 
@@ -25,10 +18,10 @@ System images with legacy kernel
 
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
 
-## Vanilla ##
-System images with vanilla kernel
+## Mainline ##
+System images with mainline kernel
 
-- Kernel [4.7.x](http://www.kernel.org/) with large hardware support, headers and some firmware included
+- [Mainline](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker) – [what is Docker](https://www.docker.com/what-docker)?
 - PCI-E operational (Hummingboard Pro, Gate & Edge)
 - mSATA / m2 operational (Hummingboard Pro & Edge)
@@ -37,7 +30,6 @@ System images with vanilla kernel
 
 ### Bugs or limitation ###
 
-- Serial console only - no HDMI video output
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
 
 ## Desktop ##
@@ -70,7 +62,7 @@ LVDS](https://github.com/notro/fbtft/wiki)
 
 # Udoo Quad #
 
-- [Kernel 3.14.72](https://github.com/UDOOboard/linux_kernel) and [4.4.13](https://github.com/patrykk/linux-udoo) with some hardware support, headers and some firmware included
+- [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) and [4.4.x](https://github.com/patrykk/linux-udoo) with some hardware support, headers and some firmware included
 - [Docker ready](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
 - Wireless adapter with DHCP ready but disabled (/etc/network/interfaces, WPA2: normal connect, bonding / notebook or AP mode). It can handle between 40-70Mbit/s.
 - SATA operational
@@ -82,5 +74,5 @@ SATA & USB install not working on legacy kernel
 
 # Udoo Neo #
 
-- [Kernel 3.14.72](https://github.com/UDOOboard/linux_kernel) with some hardware support, headers and some firmware included
+- [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) with some hardware support, headers and some firmware included
 - Wireless adapter with DHCP ready but disabled

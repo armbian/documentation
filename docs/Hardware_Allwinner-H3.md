@@ -12,11 +12,11 @@ You find some [differentiation criteria regarding supported H3 devices as well a
 
 **Kernel support**
 
-Due to H3's overheating tendencies a working throttling implementation is important when more heavy workloads should run on the board. This is implemented in legacy kernel (settings have been improved a lot by linux-sunxi community and us compared to Allwinner's defaults) but not yet in mainline kernel which is one of the reasons that prevent us from releasing Armbian images with vanilla kernel. The other reason is the Ethernet driver still being WiP in mainline kernel. So while you currently only get legacy images in download area you can already try to build your own images with kernel 4.x using our build system and choosing _dev_ branch.
+Due to H3's overheating tendencies a working throttling implementation is important when more heavy workloads should run on the board. This is implemented in legacy kernel (settings have been improved a lot by linux-sunxi community and us compared to Allwinner's defaults) but not yet in mainline kernel which is one of the reasons that prevent us from releasing Armbian images with mainline kernel. The other reason is the Ethernet driver still being WiP in mainline kernel. So while you currently only get legacy images in download area you can already try to build your own images with kernel 4.x using our build system and choosing _dev_ branch.
 
 Armbian legacy images for H3 devices are based on Allwinner's 3.4.39 BSP/Android kernel with +100 patches on top to fix countless security issues and to add features (we're using 3.4.112 at the time of this writing). This kernel supports nearly all SoC features and thanks to the awesome linux-sunxi community we provide also HW accelerated video decoding with desktop images (please use the included mpv player, more app support is WiP). 
 
-Please don't expect most of these features to be available when we provide vanilla kernel images, those are more suited for headless/server operation and will shine in areas like networking or IO performance. Please have a look at what to expect again in [linux-sunxi wiki](http://linux-sunxi.org/Sunxi_devices_as_NAS#New_opportunities_with_mainline_kernel)
+Please don't expect most of these features to be available when we provide mainline kernel images, those are more suited for headless/server operation and will shine in areas like networking or IO performance. Please have a look at what to expect again in [linux-sunxi wiki](http://linux-sunxi.org/Sunxi_devices_as_NAS#New_opportunities_with_mainline_kernel)
 
 **Default settings**
 

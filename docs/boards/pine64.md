@@ -2,5 +2,5 @@
 - using images with legacy kernel is highly recommended, mainline kernel is for developers only
 - it's recommended to power the board through GPIO header
 - to get Wi-Fi working use 'sudo nmtui'
-- vanilla kernel does not support DVFS, onboard analog audio output, onboard IR receiver, CSI, DSI and TP interfaces
+- mainline kernel does not support DVFS, onboard analog audio output, onboard IR receiver, CSI, DSI and TP interfaces
 - SoPine A64 requires different u-boot and Device Tree and for now is supported only as a build script target and nightly CLI images

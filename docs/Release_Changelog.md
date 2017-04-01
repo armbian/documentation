@@ -48,8 +48,8 @@ Known problems:
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
 - patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
-- added Odroid XU4 vanilla kernel image
-- added Olimex A33 vanilla kernel image
+- added Odroid XU4 mainline kernel image
+- added Olimex A33 mainline kernel image
 - added Overlay FS for Cubox, Udoo and Udoo Neo
 - booting problems fixed on more boards
 - updated wireless driver on M2+ (dhd)
@@ -75,11 +75,11 @@ Known problems:
 
 **v5.20 / 16.9.2016**
 
-- added FriendlyARM Neo legacy and vanilla images (experimental)
-- added Orange Pi PC+ vanilla kernel (experimental)
+- added FriendlyARM Neo legacy and mainline images (experimental)
+- added Orange Pi PC+ mainline kernel (experimental)
 - added Pine64 / Pine64+ images with legacy kernel
 - added UUID support for NAND/SATA/USB installer
-- added desktop images for Cubox(s) / Hummingboard(s) with vanilla kernel
+- added desktop images for Cubox(s) / Hummingboard(s) with mainline kernel
 - enabled MIDI sequencer and snd-rawmidi-seq in H3 legacy kernel
 - added H3 consumption tool to control board consumtion level on legacy kernel
 - fixed and enabled Bluetooth on Cubietruck and Cubox(s) / Hummigboard(s) desktop, both kernels
@@ -87,7 +87,7 @@ Known problems:
 - Odroid C1/C2 upgrade fail fixed
 - wireless enabled by default on Banana Pi PRO
 - added new screen resolutions to H3 boards with legacy kernel
-- DeviceTree Overlay ConfigFS interface for H3 vanilla kernel
+- DeviceTree Overlay ConfigFS interface for H3 mainline kernel
 - update of mainline u-boot to 2016.09 should fix boot failures on H3 boards with eMMC
 - disabled USB keyboard support in mainline u-boot should fix boot failures with connected USB devices
 
@@ -102,7 +102,7 @@ Build script:
 
 - complete desktop building rework - now packages are built from sources
 - added Lime 2 eMMC as build target (WIP)
-- added Pine64 / Pine64+ vanilla (dev) target (experimental)
+- added Pine64 / Pine64+ mainline (dev) target (experimental)
 - added FriendlyArm Neo as build target
 - fixed MT7601 wifi driver building
 - github download rework
@@ -198,7 +198,7 @@ Images:
 - added [Armbianmonitor](http://forum.armbian.com/index.php/topic/881-prepare-v51-v201604/?p=7095)
 - added Odroid C1, C2(arm64), Nanopi M1, Banana M2+, Pcduino 2 and Pcduino 3. CLI and desktop
 - added wifi radar to desktop
-- added preview vanilla kernel images for H3 boards (4.6.RC1)
+- added preview mainline kernel images for H3 boards (4.6.RC1)
 - added initrd creation on all Allwinner images
 - added Hummigboard 2 with working PCI and onboard wireless with legacy kernel 3.14.65
 - added eMMC installer for H3
@@ -214,7 +214,7 @@ Images:
 
 Build script:
 
-- GCC 5 support for vanilla and allwinner legacy
+- GCC 5 support for mainline and allwinner legacy
 - RAW images are not compressed by default
 - added arm64 building support
 - added docker as host
@@ -292,7 +292,7 @@ Known bugs:
 
 **v5.00 / 12.2.2016**
 
-- Vanilla kernel for Allwinner based boards upgraded to 4.4.1
+- mainline kernel for Allwinner based boards upgraded to 4.4.1
 - Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](http://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
@@ -301,12 +301,12 @@ Known bugs:
 - fixed temperature reading on Cubox / Hummingboard legacy kernel
 - fixed FB turbo building on Allwinner
 - fixed NAND install on A10 boards (Legacy kernel only)
-- fixed USB boot, added PWM on Vanilla
-- fixed Banana PRO/+ onboard wireless on Vanilla kernel - running with normal Banana DT.
+- fixed USB boot, added PWM on mainline
+- fixed Banana PRO/+ onboard wireless on mainline kernel - running with normal Banana DT.
 - readded USB sound
 - added [A13 Olimex SOM](https://www.olimex.com/Products/SOM/A13/A13-SOM-512/)
 - added [LIRC GPIO receive and send driver](https://github.com/igorpecovnik/lib/issues/135) for legacy Allwinner
-- added LED MMC activity to Vanilla kernels for Cubietruck and Cubieboard A10
+- added LED MMC activity to mainline kernels for Cubietruck and Cubieboard A10
 - build script: option to build images with F2FS root filesystem for Allwinner boards
 - build script: added alternative kernel for Lemaker Guitar (NEXT), Cubox (DEV)
 
@@ -316,10 +316,10 @@ Known bugs:
 - complete build script rework
 - new development kernel package linux-image-dev-sunxi (4.4RC6) for Allwinner boards
 - added Lemaker Guitar, kernel 3.10.55
-- added Odroid XU3/4, kernel 3.10.94 and Vanilla 4.2.8
-- Vanilla kernel for Allwinner based boards upgraded to 4.3.3
-- Udoo vanilla upgraded to 4.2.8, legacy to 3.14.58
-- cubox / hummingboard upgraded to 3.14.58, added Vanilla kernel 4.4
+- added Odroid XU3/4, kernel 3.10.94 and mainline 4.2.8
+- mainline kernel for Allwinner based boards upgraded to 4.3.3
+- Udoo mainline upgraded to 4.2.8, legacy to 3.14.58
+- cubox / hummingboard upgraded to 3.14.58, added mainline kernel 4.4
 - fixed Jessie RTC bug, systemd default on Jessie images
 
 **v4.70 / 30.11.2015**
@@ -330,10 +330,10 @@ Known bugs:
 **v4.6 / 24.11.2015**
 
 - Update only (apt-get update && apt-get upgrade)
-- Vanilla kernel for Allwinner based boards upgraded to 4.2.6
+- mainline kernel for Allwinner based boards upgraded to 4.2.6
 - Legacy kernel for Allwinner based boards upgraded to 3.4.110
 - added new board: Udoo Neo
-- added USB printer, CAN, CMA, ZSWAP, USB video class, CDROM fs, sensor classs, … to Allwinner Vanilla kernel
+- added USB printer, CAN, CMA, ZSWAP, USB video class, CDROM fs, sensor classs, … to Allwinner mainline kernel
 - nand-sata-install scripts rewrite. Now it’s possible to install to any partition.
 - fixed nand install for Allwinner A10 based boards: Cubieboard 1 / Lime A10
 - universal upgrade script bugfix / rewrite.
@@ -345,9 +345,9 @@ Known bugs:
 
 **v4.5 / 14.10.2015**
 
-- vanilla kernel upgraded to 4.2.3 for Allwinner based boards
+- mainline kernel upgraded to 4.2.3 for Allwinner based boards
 - legacy kernel for Allwinner compiled from new sources (linux-sunxi)
-- udoo vanilla upgraded to 4.2.3
+- udoo mainline upgraded to 4.2.3
 - cubox / hummingboard upgraded to 3.14.54
 - changed kernel naming: A10 = linux-image-sun4i, A20 = linux-image-sun7i
 - new boards: Banana M2, Orange+(A31S), Cubieboard 1, Cubieboard 2 Dual SD, Lime A10
@@ -355,7 +355,7 @@ Known bugs:
 - fixed Jessie boot problems by disabling systemd. It’s possible to re-enable within boot scripts
 - added ramlog to Jessie because we don’t have systemd anymore
 - changed wireless driver for Cubietruck and Banana PRO (now it’s ap6210)
-- added ZRAM to vanilla kernel
+- added ZRAM to mainline kernel
 - fixed dvbsky modules
 
 and a bunch of small fixes.
@@ -364,12 +364,12 @@ and a bunch of small fixes.
 
 Images:
 
-- vanilla kernel upgrade to 4.2.2 (Allwinner, Udoo Quad),
+- mainline kernel upgrade to 4.2.2 (Allwinner, Udoo Quad),
 - legacy kernel upgraded to 3.4.109 (Allwinner),
-- added I2C support and bunch of multimedia modules (DVB) (vanilla Allwinner),
+- added I2C support and bunch of multimedia modules (DVB) (mainline Allwinner),
 - Udoo quad images with fixed legacy kernel 3.14.28,
 - Cubox and Hummingboard kernel upgrade to 3.14.53,
-- brcmfmac driver fixes for vanilla kernel (Banana PRO / Cubietruck)
+- brcmfmac driver fixes for mainline kernel (Banana PRO / Cubietruck)
 - performance tweak: choosing a closest Debian mirror (Debian images)
 - added Astrometa DVB firmware and dvb-tools
 - added Nikkov SPDIF / I2S recent patch (legacy Allwinner)

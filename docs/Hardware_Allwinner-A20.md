@@ -5,12 +5,12 @@
 Both kernels are stable and production ready, but you should use them for different purpuses since their basic support differ:
 
 - legacy: video acceleration, NAND support, connecting displays
-- vanilla: headless server, light desktop operations
+- mainline: headless server, light desktop operations
 
 ## Legacy ##
 System images with legacy kernel
 
-- Kernel [3.4.112](https://github.com/linux-sunxi/linux-sunxi) with large hardware support, headers and some firmware included
+- Kernel [3.4.x](https://github.com/linux-sunxi/linux-sunxi) with large hardware support, headers and some firmware included
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - IR functional and preconfigured – tested with LG remote
 - [LIRC GPIO send and receive driver](https://github.com/igorpecovnik/lib/issues/135) – tested but unconfigured
@@ -28,10 +28,10 @@ System images with legacy kernel
 - NAND install sometime fails. Dirty but working workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
 - Shutdown results into reboot under certain conditions.
 
-## Vanilla ##
-System images with vanilla kernel
+## Mainline ##
+System images with mainline kernel
 
-- Kernel [4.6.2](http://www.kernel.org/) with large hardware support, headers and some firmware included
+- [Mainline](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
 - Enabled audio devices: analog & USB playback
 - [USB / UAS](http://linux-sunxi.org/USB/UAS) – more efficient disk access over USB (A20 and H3)
