@@ -23,7 +23,7 @@ pages:
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
-        - 'Allwinner DT overlays' : 'User-Guide_Allwinner_overlays'
+        - 'Allwinner DT overlays' : 'User-Guide_Allwinner_overlays.md'
 
   - 'Hardware Notes' :
         - 'Allwinner (Generic)' : 'Hardware_Allwinner.md'
