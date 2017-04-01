@@ -20,12 +20,20 @@ Please note that different SoCs will have different sets of available overlays.
 
 ### Quick start
 
-1. Check the README.<soc-id>-overlays in `/boot/dtb/overlay/` (32-bit SoCs) or `/boot/dtb/allwinner/overlay/` (64-bit SoCs) for a list of provided overlays, their required and optional parameters
+1. Check the `README.<soc-id>-overlays` in `/boot/dtb/overlay/` (32-bit SoCs) or `/boot/dtb/allwinner/overlay/` (64-bit SoCs) for a list of provided overlays, their required and optional parameters
 2. Add names of overlays you want to activate to `overlays=` line in `/boot/armbianEnv.txt`, separated with spaces
 3. Add required parameters with their values to `/boot/armbianEnv.txt`, one per line
 4. Add optional parameters with their values to `/boot/armbianEnv.txt` if you want to change the default value, one per line
-5. If you didn't find the required overlay or want to change one of provided overlays, place your compiled overlays in `/boot/overlay-user/` directory and list their names to `user_overlays=` line in `/boot/armbianEnv.txt`
+5. If you didn't find the required overlay or want to change one of provided overlays, refer to "Using custom overlays" section
 6. Reboot
+
+### Using custom overlays
+
+1. Check [here](https://github.com/zador-blood-stained/sunxi-DT-overlays-armbian/tree/master/examples) for some example overlays
+2. Copy or create your overlay file (with `.dts` extension) on the device
+3. Change I2C or SPI bus number, GPIO and pinctrl pins, `compatible` string to match your SoC if necessary
+4. Compile and activate the overlay by running `armbian-add-overlay <overlay_file.dts>` as root, i.e. `sudo armbian-add-overlay sht15.dts`
+5. Reboot
 
 ### armbianEnv.txt entries reference
 
