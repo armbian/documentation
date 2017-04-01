@@ -11,8 +11,9 @@ In some cases, the procedure is "less than obvious", so we document some basic e
 
 Many Armbian images come in two flavours : Legacy (using an older kernel version) and mainline (up-to-date kernel). Depending on kernel version, the procedure to enable/disable features is not the same :
 
- * Legacy kernel : FEX
- * Mainline kernel : DT (Device Tree)
+ * Legacy kernel (3.4.x): FEX
+ * Legacy kernel (3.10.x): DT (Device Tree)
+ * Mainline kernel : DT (Device Tree) overlays
 
 ## How to reconfigure video output? ##
 
@@ -106,16 +107,6 @@ The last step is to change the symlink to use your custom BIN :
 
 ```
 ln -sf /boot/bin/custom.bin /boot/script.bin
-```
-
-## Device Tree
-
-### Which file should I edit
-
-I use the following command and try to guess which file to use in `/boot/dtb/` :
-
-```
-cat /proc/device-tree/model
 ```
 
 # H3 based Orange Pi, legacy kernel
