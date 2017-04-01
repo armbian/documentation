@@ -23,15 +23,15 @@ pages:
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
+        - 'Allwinner DT overlays' : 'User-Guide_Allwinner_overlays'
 
   - 'Hardware Notes' :
-        - 'Allwinner' : 'Hardware_Allwinner.md'
-        - 'Allwinner DT overlays' : 'Hardware_Allwinner_overlays.md'
+        - 'Allwinner (Generic)' : 'Hardware_Allwinner.md'
         - 'A10 and A20' : 'Hardware_Allwinner-A20.md'
-        - 'H3' : 'Hardware_Allwinner-H3.md'
-        - 'H5 / A64' : 'Hardware_Allwinner-H5-A64.md'
-        - 'Freescale imx6' : 'Hardware_Freescale-imx6.md'
-        - 'Marvell Armada' : 'Hardware_MArvell.md'
+        - 'H2+ and H3' : 'Hardware_Allwinner-H3.md'
+        - 'H5 and A64' : 'Hardware_Allwinner-H5-A64.md'
+        - 'Freescale i.MX6' : 'Hardware_Freescale-imx6.md'
+        - 'Marvell Armada' : 'Hardware_Marvell.md'
 
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'

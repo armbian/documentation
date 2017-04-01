@@ -34,14 +34,14 @@ screen resolution on other boards:
 	# to 
 	# disp.screen0_output_mode=1280x720p60
 
-	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr	
+	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
 
 screen resolution interactive - only Allwinner boards with A10 and A20 with legacy kernel:
 	
 	# Example to set console framebuffer resolution to 1280 x 720
 	a10disp changehdmimodeforce 4
 
-Other modes:	
+Other modes:
 
 	0 480i
 	1 576i
@@ -65,45 +65,22 @@ Alter **min_speed** or **max_speed** variable.
 
 	service cpufrequtils restart
 
-# How to upgrade into simple desktop environment?
-
-	apt-get -y install xorg lightdm xfce4 tango-icon-theme gnome-icon-theme
-	reboot
-
-Check [this site](http://namhuy.net/1085/install-gui-on-debian-7-wheezy.html) for others and be prepared that some desktop image features currently might not work afterwards (eg. 2D/3D/video HW acceleration, so downgrading a _desktop_ image, removing the `libxfce4util-common` package and doing an `apt-get autoremove` later might be the better idea in such cases)
-
-# How to upgrade Debian from Wheezy to Jessie?
-
-	dpkg -r ramlog	
-	cp /etc/apt/sources.list{,.bak}
-	sed -i -e 's/ \(old-stable\|wheezy\)/ jessie/ig' /etc/apt/sources.list
-	apt-get update
-	apt-get --download-only dist-upgrade
-	apt-get dist-upgrade
-
-# How to upgrade from Ubuntu Trusty to Xenial?
-
-	apt-get install update-manager-core
-	do-release-upgrade -d
-  	# further to xenial
-	apt-get dist-upgrade
-
 # How to downgrade a package via apt-get?
 
 This is useful when you need to fall back to previous kernel version. 
 
-	apt-get install linux-image-sun8i=5.13 
+	apt-get install linux-image-sun8i=5.13
 
 This example is for H3 legacy kernel. Check [this page](http://www.armbian.com/kernel/) for others.
 
 # How to toggle boot output?
 
-Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) in /boot/boot.cmd:
+Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
 
-    - console=ttyS0,115200
-    + console=tty1
+    - console=both
+    + console=serial
 
-and convert it to boot.scr with this command:
+Recompile boot.cmd to boot.scr if it was changed:
 
 	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
 
