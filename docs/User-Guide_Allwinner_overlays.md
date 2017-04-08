@@ -102,11 +102,11 @@ Please check the SoC specific README, board schematic, SoC datasheet or other do
 
 Overlays for devices that use addresses or similar mechanisms (i.e. SPI chip selects) can't be activated simultaneously if addresses (chip selects) are identical.
 
-For example H3 SPI comtrollers have only one hardware chip select, so `spi-spidev` and `spi-jedec-nor` overlays cannot be activated both if they would use the same bus number and chip select.
+For example A20 SPI controller 1 has only one hardware chip select, so `spi-spidev` and `spi-jedec-nor` overlays cannot be activated both if they would use the same bus number and chip select.
 
 ### Overlay compatibility
 
-Device Tree overlays for differnet platforms and SoCs are not directly compatible.
+Device Tree overlays for different platforms and SoCs are not directly compatible.
 This, for example, means that overlays for H3 may need some changes to work on A20, and that Raspberry Pi overlays will need adjustments in order to be used on Allwinner based boards.
 
 Rework may include changing labels, references (phandles) and pinconf bindings.
