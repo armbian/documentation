@@ -124,16 +124,13 @@ Preinstallation requirements:
 
 Execute this as root:
 
-	echo "deb https://packagecloud.io/Hypriot/Schatzkiste/debian/ wheezy main" > /etc/apt/sources.list.d/hypriot.list
-	curl https://packagecloud.io/gpg.key | sudo apt-key add -
-	apt-get update
-	apt-get -y install --no-install-recommends docker-hypriot
-	apt-get -y install cgroupfs-mount
-	reboot
+	curl  https://get.docker.com | sh
 
-Test example:
+Test if Docker works correctly:
 
 	docker run -d -p 80:80 hypriot/rpi-busybox-httpd
+	
+... and point the browser of any device in the same network to `http://<IP OF YOUR DEVICE>/`
 
 [More info in this forum topic](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/)
 
