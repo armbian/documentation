@@ -4,6 +4,10 @@
 - HDMI output supports only limited number of predefined resolutions
 - Hardware accelerated video decoding supports only limited number of video formats
 
+**Mainline kernel images (all boards) ** (`next` and `dev` branch)
+
+- [Check mainlining effort status matrix](http://linux-sunxi.org/Linux_mainlining_effort#Status_Matrix)
+
 **Board: Pine64/Pine64+ **
 
 - Gigabit Ethernet performance: on some boards was confirmed as [hardware issue](http://forum.pine64.org/showthread.php?tid=835&pid=19773#pid19773), though the legacy kernel received a workaround that may help on some boards.
