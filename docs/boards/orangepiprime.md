@@ -1,0 +1,1 @@
+- All OS images are currently in an experimental state and not ready for daily use. Use them only to provide constructive feedback to developers.
