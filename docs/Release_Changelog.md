@@ -1,3 +1,18 @@
+**v5.30 / xx.05.2017**
+
+- mainline kernel updated to 4.11
+- mainline u-boot updated to v2017.05
+- sunxi mainline configuration: added Device Tree overlays support (new images only)
+- sunxi mainline configuration: added `armbian-add-overlay` helper for compiling and activating DT overlays (new images only)
+- log2ram: fixed saving `/var/log` contents on shutdown
+- new hardware support (stable/supported images): Xunlong Orange Pi Zero Plus 2 (H3), ASUS TinkerBoard, MiQi
+- Banana Pi M2: fixed HDMI video output
+
+**v5.26,5.27 / 24.02.2017**
+
+- security update for most kernels (packages only)
+- fixes for hostapd configuration
+
 **v5.25 / 2.2.2017**
 
 - nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
@@ -24,11 +39,6 @@
 - added log2ram (Ramlog alternative) to default installation
 - changed first run logic, disabled forced automatic reboot
 - changed new user account creation logic, disabled forced reboot on user creation failure
-
-Known problems:
-
-- Odroid C1 desktop has distorted picture.
-- Bananapi M2 (A31) has broken video output.
 
 **v5.24**
 
