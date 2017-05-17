@@ -6,7 +6,11 @@
 - sunxi mainline configuration: added `armbian-add-overlay` helper for compiling and activating DT overlays (new images only)
 - log2ram: fixed saving `/var/log` contents on shutdown
 - new hardware support (stable/supported images): Xunlong Orange Pi Zero Plus 2 (H3), ASUS TinkerBoard, MiQi
+- reworked package updates MOTD script to speed up the login process
+- added config file `/etc/default/armbian-motd` for disabling MOTD components
+- added `armbian-config` dialog-based configuration program (WIP)
 - Banana Pi M2: fixed HDMI video output
+- i.MX6 mainline: enabled support for HDMI audio and PCIe bus
 
 **v5.26,5.27 / 24.02.2017**
 
