@@ -4,8 +4,9 @@ Following features should work:
 
 - USB ports
 - Ethernet
-- DVFS and THS
+- THS
 - GPIO sysfs interface
+- CVBS (TV) output
 - SPI and I2C interfaces (activation requires DT patches or overlays)
 - HDMI display output with automatic detection of the resolution based on EDID
 - Analog audio output and onboard microphone input
@@ -14,6 +15,7 @@ Following features should work:
 
 Features that do not work:
 
+- DVFS
 - Proper shutdown - switching off the power is recommended
 - Additional peripherials that are not enabled in the kernel config
 
