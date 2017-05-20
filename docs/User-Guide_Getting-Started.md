@@ -9,8 +9,9 @@ Please, make sure you have:
 
 For each board we usually provide:
 
-- CLI Debian Jessie
-- CLI and desktop Ubuntu Xenial
+- CLI Debian Jessie (server),
+- CLI Ubuntu Xenial (server),
+- desktop Ubuntu Xenial.
 
 Some boards have different options due to their hardware specialities - router or IOT boards.
 
@@ -18,9 +19,20 @@ Some boards have different options due to their hardware specialities - router o
 
 Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differ:
 
- - legacy: video acceleration, NAND support, connecting displays 
- - mainline: headless server, light desktop operations 
+**legacy**: video acceleration, NAND support, connecting displays 
+
+**mainline**: headless server, light desktop operations 
  
+# What are experimental images?
+
+- made from unstable branches,
+- made daily,
+- unstested,
+- unsupported,
+- for experienced users only.
+
+Don’t use them for anything productive but to give constructive [feedback to developers](https://forum.armbian.com/index.php?/forum/4-development/).
+
 # How to check download authenticity?
 
 All our images are digitally signed and therefore it's possible to check theirs authentication. You need to unzip the download package and issue those commands (Linux):
@@ -61,13 +73,11 @@ In case you chose an SD card that was already in use before please consider rese
 
 # How to boot?
 
-Insert SD card into a slot and power the board. First boot takes around 3 minutes then it reboots and you will need to wait another one minute to login. This delay is because system updates package list and creates 128Mb emergency SWAP on the SD card.
-
-Normal boot (with DHCP) takes up to 35 seconds with a class 10 SD Card and cheapest board.
+Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to 35 seconds with a class 10 SD Card and cheapest board.
 
 # How to login? 
 
-Login as **root** on console or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage).
+Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage).
 
 Desktop images starts into desktop without asking for password. To change this add some display manager:
 
@@ -102,7 +112,8 @@ NAND:
 eMMC/SATA/USB:
 
  * any kernel
- * onboard eMMC storage or permanently attached SATA or USB storage
+ * onboard eMMC storage
+ * attached SATA or USB storage
 
 Start the install script: 
 
