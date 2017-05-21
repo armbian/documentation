@@ -4,7 +4,7 @@ Make sure you have a **good & reliable** SD card and a **proper power supply**. 
 
 **Boot**
 
-Insert SD card into a slot and power the board. First boot takes around 3 minutes then it might reboot and you will need to wait another one minute to login. This delay is because system creates 128Mb emergency SWAP and expand SD card to it's full capacity. Worst case scenario boot (with DHCP) takes up to 35 seconds.
+Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to 35 seconds with a class 10 SD Card and cheapest board.
 
 **Login**
 
