@@ -19,6 +19,9 @@ markdown_extensions:
 
 pages:
   - Home: index.md
+
+  - 'Changelog' : 'Release_Changelog.md'
+
   - 'User Guide' :
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
@@ -44,8 +47,3 @@ pages:
         - 'Contribute' : 'Process_Contribute.md'
         - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
         - 'Documentation' : 'Process_Documentation.md'
-
-  - 'Release' :
-        - 'Download' : 'Release_Download.md'
-        - 'Changelog' : 'Release_Changelog.md'
-
