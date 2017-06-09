@@ -10,6 +10,7 @@
 - added config file `/etc/default/armbian-motd` for disabling MOTD components
 - added `armbian-config` dialog-based configuration program (WIP)
 - Banana Pi M2: fixed HDMI video output
+- Clearfog: adjusted temperature readout
 - i.MX6 mainline: enabled support for HDMI audio and PCIe bus
 
 **v5.26,5.27 / 24.02.2017**
