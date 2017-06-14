@@ -14,4 +14,5 @@
 
 **Board: Orange Pi Zero **
 
-- Onboard wireless chip (XR819) has poor software support so wireless connection issues are expected
+- Onboard wireless module (XR819) has poor software support so wireless connection issues are expected
+- Onboard wireless module (XR819) is not supported on mainline releases
