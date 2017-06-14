@@ -2,6 +2,7 @@
 
 - mainline kernel updated to 4.11
 - mainline u-boot updated to v2017.05
+- Firefox was replaced with Chromium (desktop images) 
 - sunxi mainline configuration: added Device Tree overlays support (new images only)
 - sunxi mainline configuration: added `armbian-add-overlay` helper for compiling and activating DT overlays (new images only)
 - log2ram: fixed saving `/var/log` contents on shutdown
