@@ -1,4 +1,4 @@
-**v5.30 / xx.06.2017**
+**v5.30 / 14.06.2017**
 
 - mainline kernel updated to 4.11
 - mainline u-boot updated to v2017.05
