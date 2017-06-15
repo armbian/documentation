@@ -1,3 +1,7 @@
+**v5.31 / 15.06.2017**
+
+- bugfix release [due to network failure](https://forum.armbian.com/index.php?/topic/4498-no-boot-after-upgrade-to-530/) on some A10 / A20 boards
+
 **v5.30 / 14.06.2017**
 
 - mainline kernel updated to 4.11
