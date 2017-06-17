@@ -26,6 +26,7 @@
         - Mediatek MT7601U wireless - driver
         - Sunxi display control
         - hostapd from sources
+- **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb) 
 - **EXTERNAL_NEW** (no&#124;prebuilt&#124;compile):
 	- set to "prebuilt" to install extra applications from repository
 	- set to "compile" to compile extra applications in chroot
