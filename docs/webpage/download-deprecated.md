@@ -8,4 +8,6 @@ Reasons for moving devices to this section:
 Support status:
 
 - images are stable but we don't test updating,
-- images are provided with no support
+- images are provided with no support,
+- most images has frozen kernel and u-boot packages to prevent their upgrades.
+
