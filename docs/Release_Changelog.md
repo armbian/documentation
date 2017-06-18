@@ -2,6 +2,13 @@
 
 - bugfix release [due to network failure](https://forum.armbian.com/index.php?/topic/4498-no-boot-after-upgrade-to-530/) on some A10 / A20 boards
 
+**End of support notice**
+
+Following boards are no longer receiving support and updates since this version:
+- Cubieboard (Allwinner A10) - not enough hardware samples to maintain support
+- Lamobo R1 (Allwinner A20) - hardware design flaws, poor software support for the onboard switch
+- Olimex Lime A10
+
 **v5.30 / 14.06.2017**
 
 - mainline kernel updated to 4.11
@@ -17,6 +24,14 @@
 - Banana Pi M2: fixed HDMI video output
 - Clearfog: adjusted temperature readout
 - i.MX6 mainline: enabled support for HDMI audio and PCIe bus
+
+**End of support notice**
+
+Following boards are no longer receiving support and updates since this version:
+- Orange Pi (Allwinner A20) - no hardware samples, out of stock
+- Orange Pi Mini (Allwinner A20) - no hardware samples, out of stock
+- LeMaker Guitar (Actions S500)
+- Roseapple Pi (Actions S500)
 
 **v5.26,5.27 / 24.02.2017**
 
