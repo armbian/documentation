@@ -5,6 +5,7 @@
 **End of support notice**
 
 Following boards are no longer receiving support and updates since this version:
+
 - Cubieboard (Allwinner A10) - not enough hardware samples to maintain support
 - Lamobo R1 (Allwinner A20) - hardware design flaws, poor software support for the onboard switch
 - Olimex Lime A10
@@ -28,6 +29,7 @@ Following boards are no longer receiving support and updates since this version:
 **End of support notice**
 
 Following boards are no longer receiving support and updates since this version:
+
 - Orange Pi (Allwinner A20) - no hardware samples, out of stock
 - Orange Pi Mini (Allwinner A20) - no hardware samples, out of stock
 - LeMaker Guitar (Actions S500)
