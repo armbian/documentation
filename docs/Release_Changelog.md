@@ -1,3 +1,7 @@
+**v5.32 / 23.06.2017**
+
+- bugfix release [due to broken crypto functions on kernel 4.11.x](https://forum.armbian.com/index.php?/topic/4556-partial-bugfix-update/)
+
 **v5.31 / 15.06.2017**
 
 - bugfix release [due to network failure](https://forum.armbian.com/index.php?/topic/4498-no-boot-after-upgrade-to-530/) on some A10 / A20 boards
