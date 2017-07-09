@@ -3,6 +3,7 @@
     - set to "yes" to compile only kernel, u-boot and other packages for installing on existing Armbian system
     - set to "no" to build complete OS image for writing to SD card
 - **KERNEL_CONFIGURE** (yes&#124;no):
+    - leave empty to display selection dialog each time
     - set to "yes" to configure kernel (add or remove modules or features). Kernel configuration menu will be brought up before compilation
     - set to "no" to compile kernel without changing default or custom provided configuration
 - **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
@@ -33,9 +34,6 @@
 - **CREATE_PATCHES** (yes&#124;no):
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
 	- set to "no" compilation will run uninterrupted 
-- **FORCE_CHECKOUT** (yes&#124;no):
-    - set to "yes" to force overwrite any changed or manually patched kernel, u-boot and other sources
-    - set to "no" to keep all changes to sources
 - **BUILD_ALL** (yes&#124;no&#124;demo): cycle through all available board and kernel configurations and make images for all combinations
 
 ### Hidden options to minimize user input for build automation:
@@ -46,7 +44,7 @@
 ### Hidden options for advanced users (default values are marked **bold**):
 - **USE_CCACHE** (**yes**&#124;no): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** (yes&#124;**no**) use `$DEST/ccache` as ccache home directory
-- **PROGRESS_DISPLAY** (none&#124;plain&#124;**dialog**): way to display output of verbose processes - compilation, packaging, debootstrap
+- **PROGRESS_DISPLAY** (none&#124;**plain**&#124;dialog): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** (yes&#124;**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes&#124;**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
 - **USE_GITHUB_UBOOT_MIRROR** (yes&#124;**no**): use unofficial Github mirror for downloading mainline u-boot sources, may be faster than `git.denx.de` depending on your location
@@ -56,3 +54,4 @@
 - **COMPRESS_OUTPUTIMAGE** (yes&#124;**no**): create compressed archive with image file and GPG signature for redistribution
 - **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting FIXED_IMAGE_SIZE to actual size of your SD card for F2FS and BTRFS
+- **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout
