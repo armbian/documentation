@@ -38,6 +38,7 @@ pages:
 
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
+        - 'Building with Vagrant' : 'Developer-Guide_Using-Vagrant.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Build Process Explained' : 'Developer-Guide_Build-Process.md'
