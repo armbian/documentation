@@ -16,3 +16,4 @@
 
 - Onboard wireless module (XR819) has poor software support so wireless connection issues are expected
 - Onboard wireless module (XR819) is not supported on mainline releases
+- board revision 1.4 report [false high CPU temperatures](https://forum.armbian.com/index.php?/topic/4313-new-opi-zero-yet-another-high-temperature-issue).
