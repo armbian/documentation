@@ -8,14 +8,15 @@
 - installed basic system, OpenSSH and Samba (optional),
 - superuser rights (configured `sudo` or root shell).
 
+Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
+
 # How to start?
 
 Login as root and run:
 
 	apt-get -y -qq install git
-	git clone --depth 1 https://github.com/igorpecovnik/lib
-	cp lib/compile.sh .
-	nano compile.sh # alter if necessary
+	git clone --depth 1 https://github.com/armbian/build
+	cd build
 
 Run the script
 
@@ -23,10 +24,14 @@ Run the script
 
 ![](http://www.armbian.com/wp-content/uploads/2016/01/21.png)
 
-### Supplying options via command line parameters
-Instead of editing compile.sh to set options, you can set them by supplying command line parameters to compile.sh
+# Providing build configuration
+
+After the first run of `compile.sh` a new configuration file `config-default.conf` will be created.
+You may edit it to your needs or create different configuration files using it as a template.
+
+Alternatively you can supply options as command line parameters to compile.sh
 Example:
 
-    ./compile.sh BRANCH=next BOARD=cubietruck KERNEL_ONLY=yes PROGRESS_DISPLAY=plain RELEASE=jessie
+    ./compile.sh BOARD=cubietruck BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
