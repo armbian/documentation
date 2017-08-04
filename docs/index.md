@@ -16,7 +16,7 @@ If you still can't find what you need here, visit the [Armbian forum](http://for
 # What is Armbian? #
 
 - Lightweight Debian or Ubuntu based distribution specialized for ARM developing boards. [Compiled from scratch](https://github.com/igorpecovnik/lib),
-- It has powerfull build and software development tools,
+- It has powerful build and software development tools,
 - A vibrant community.
 
 # Supported chips
@@ -39,7 +39,7 @@ Check [download page](http://www.armbian.com/download/) for recently supported l
 - Debian Jessie or Ubuntu Xenial based. Compiled from scratch,
 - Install images are reduced to actual data size with small reserve and are resized at first boot,
 - Root password is `1234`. You will be prompted to change this password and to create a normal user at first login.
-- First boot takes longer (up to few minutes) than usual (20s) because it updates package list, regenerates SSH keys and expand partition to fit your SD card. It might reboot one time automatically.
+- First boot takes longer (up to a few minutes) than usual (20s) because it updates package list, regenerates SSH keys and expands the partition to fit your SD card. It might reboot one time automatically.
 - [Ready to compile external modules](User-Guide_Advanced-Features/#how-to-build-a-wireless-driver)
 - Ethernet adapter with DHCP and SSH server ready on default port (22)
 - Wireless adapter with DHCP ready if present but disabled (/etc/network/interfaces, WPA2: normal connect or AP mode)
