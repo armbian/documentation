@@ -4,19 +4,20 @@
 
 Documentation is written in markdown and stored in the `docs/` subfolder.  Images go in `docs/images`
 
-This repo is meant for storing and quick glances.  Official output is http://docs.armbian.com
+This repo is meant for storing and quick glances.  Official output is [http://docs.armbian.com](http://docs.armbian.com).
 
 Armbian Documentation is available in the following formats:
-* mkdocs site http://docs.armbian.com
+
+* mkdocs site [http://docs.armbian.com](http://docs.armbian.com).
 * PDF user guides \(in progress\)
 
 Armbian Documentation relies on a file naming convention:
 
-`Parent-Topic_Child-Topic-Name.md`
+`Parent-Topic-Name_Child-Topic-Name.md`
 
-Parent and Child are seperated by underscore `_`.  Hyphens `-` are automatically converted to spaces.
+Parent-Topic-Name and Child-Topic-Name are separated by an underscore `_`.  Hyphens `-` are automatically converted to spaces.
 
-Please try to avoid creating new parent topics unless absoultely necesssary.
+Please try to avoid creating new parent topics unless absolutely necessary.
 
 Current Parent Topics:
 
@@ -32,29 +33,51 @@ For easier testing and commits `.gitignore` is configured to ignore `site/`
 
 `mkdocs.yml` should probably be added, but we can commit for now
 
+## Required Packages ##
+
+The documentation build process will require the following packages:
+
+* git
+* python-jinja2
+* mkdocs
+
+Install these on the development host using:
+
+`sudo apt-get install -y -qq git python-jinja2 mkdocs`
+
+
 ## Tools ##
 
 ### mkArmbianDocs.py ###
 generates mkdocs.yml file based on contents of `docs/`
 
-* option paramters for input and output directories
+* command-line options for input and output directories
+* requires the python-jinja2 module which may not be installed by default
+* not needed unless making changes to the structure of the documentation
 * see `mkArmbianDocs.py -h` for help
 
 ### missing tools ###
+The following capabilities are not yet available.
+
 * html2doc output to PDF user manual
-* automated mkdocs deployment to http://docs.armbian.com
+* automated mkdocs deployment to [http://docs.armbian.com](http://docs.armbian.com)
 
 ## generating ##
 From the parent folder of the repo, run:
 
 `tools/mkArmbianDocs.py && mkdocs build`
 
-This will generate the mkdocs.yml configuration file and then generate the mkdocs site to the `site/` folder
+This will generate the mkdocs.yml configuration file and then generate the mkdocs site to the `site/` folder.
 
 ## testing ##
-To preview locally. Excute the preview server `mkdocs serve`
+To preview locally, execute the preview server `mkdocs serve`. You will be able to make edits to existing files and observe the results in real time.
 
-You will be able to make realtime edits to exist files.  If you add a new file, you will need to rerun `tools/mkArmbianDocs.py`
+After changing text in an existing file, use this command to rebuild and view the documentation:
+
+`mkdocs build --clean && mkdocs serve`
+
+After adding a new file, either hand-edit `mkdocs.yml`, or rerun `tools/mkArmbianDocs.py`.
+
 ## Quick Start ##
 
 ```
