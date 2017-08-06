@@ -6,7 +6,7 @@ Check [this for](http://www.armbian.com/kernel/) more info.
 
 **Important: If you came here since you can't get Armbian running on your board please keep in mind that in 95 percent of all cases it's either a faulty/fraud/counterfeit SD card or an insufficient power supply that's causing these sorts of _doesn't work_ issues!**
 
-If you broke the system you can try to get in this way. You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard (USB support in u-boot currently not enabled on all H3 boards). 
+If you broke the system you can try to get in this way. You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard (USB support in u-boot currently not enabled on all H3 boards).
 
 After switching power on or rebooting, when u-boot loads up, press some key on the keyboard (or send some key presses via terminal) to abort default boot sequence and get to the command prompt:
 
@@ -41,7 +41,7 @@ When something goes terribly wrong and you are not able to boot the system, this
 
 	fsck /dev/sdX -f
 
-Than mount the SD card and download those files (This example is only for Banana R1): 
+Than mount the SD card and download those files (This example is only for Banana R1):
 
 	http://apt.armbian.com/pool/main/l/linux-trusty-root-next-lamobo-r1/linux-trusty-root-next-lamobo-r1_4.5_armhf.deb
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-image-next-sunxi_4.5_armhf.deb
@@ -52,7 +52,7 @@ This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next
 
 Mount SD card and extract all those deb files to it's mount point.
 
-	dpkg -x DEB_FILE /mnt 
+	dpkg -x DEB_FILE /mnt
 
 Go to /mnt/boot and link (or copy) **vmlinuz-4.x.x-sunxi** kernel file to **zImage**.
 
@@ -60,19 +60,22 @@ Unmount SD card, move it to the board and power on.
 
 # How to build a wireless driver?
 
-Recreate kernel headers scripts (optional)
-	
+Install and recreate kernel headers scripts (optional)
+
+	armbian-config -> install kernel headers
+	exit
+
 	cd /usr/src/linux-headers-$(uname -r)
 	make scripts
 
 Go back to root directory and fetch sources (working example, use ARCH=arm64 on 64bit system)
 
-	cd 		
+	cd
 	git clone https://github.com/pvaret/rtl8192cu-fixes.git
 	cd rtl8192cu-fixes
 	make ARCH=arm
 Load driver for test
- 
+
 	insmod 8192cu.ko
 
 Check dmesg and the last entry will be:
@@ -85,20 +88,20 @@ Plug the USB wireless adaptor and issue a command:
 You should see this:
 
 	wlan0   unassociated  Nickname:"<WIFI@REALTEK>"
-			Mode:Auto  Frequency=2.412 GHz  Access Point: Not-Associated   
-			Sensitivity:0/0  
+			Mode:Auto  Frequency=2.412 GHz  Access Point: Not-Associated
+			Sensitivity:0/0
 			Retry:off   RTS thr:off   Fragment thr:off
 			Encryption key:off
 			Power Management:off
 			Link Quality=0/100  Signal level=0 dBm  Noise level=0 dBm
 			Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
-			Tx excessive retries:0  Invalid misc:0   Missed beacon:0		  
+			Tx excessive retries:0  Invalid misc:0   Missed beacon:0
 
 Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-# How to freeze your filesystem? 
+# How to freeze your filesystem?
 
 In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
 
@@ -108,11 +111,11 @@ You need an ODROID XU4 or Allwinner A10, A20 or H3 board with legacy kernel wher
 	echo 'overlayroot="tmpfs"' >> /etc/overlayroot.conf
 	reboot
 
-After your system boots up it will always remain as is. If you want to make any permanent changes, you need to run: 
+After your system boots up it will always remain as is. If you want to make any permanent changes, you need to run:
 
 	overlayroot-chroot
 
-Changes inside this will be preserved.	 
+Changes inside this will be preserved.
 
 # How to run Docker?
 
@@ -129,7 +132,7 @@ Execute this as root:
 Test if Docker works correctly:
 
 	docker run -d -p 80:80 hypriot/rpi-busybox-httpd
-	
+
 ... and point the browser of any device in the same network to `http://<IP OF YOUR DEVICE>/`
 
 [More info in this forum topic](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/)
@@ -144,7 +147,7 @@ Default binary and configuration location:
 
 	/usr/sbin/hostapd
 	/etc/hostapd.conf
-	
+
 Realtek binary and configuration location:
 
 	/usr/sbin/hostapd-rt
@@ -160,18 +163,18 @@ Since its hard to define when to use which you always try both combinations in c
 
 # How to connect IR remote?
 
-Required conditions: 
+Required conditions:
 
 - IR hardware
 - loaded driver
 
 Get your [remote configuration](http://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](http://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands). You are going to need the list of all possible commands which you can map to your IR remote keys:
-	
+
 	irrecord --list-namespace
 
 To start with learning process you need to delete old config:
-		
-	rm /etc/lircd.conf 
+
+	rm /etc/lircd.conf
 
 Than start the process with:
 

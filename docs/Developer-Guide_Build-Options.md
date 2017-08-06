@@ -27,13 +27,14 @@
         - Mediatek MT7601U wireless - driver
         - Sunxi display control
         - hostapd from sources
-- **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb) 
+- **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb)
+- **INSTALL_HEADERS** (no&#124;yes): install kernel headers package
 - **EXTERNAL_NEW** (no&#124;prebuilt&#124;compile):
 	- set to "prebuilt" to install extra applications from repository
 	- set to "compile" to compile extra applications in chroot
 - **CREATE_PATCHES** (yes&#124;no):
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
-	- set to "no" compilation will run uninterrupted 
+	- set to "no" compilation will run uninterrupted
 - **BUILD_ALL** (yes&#124;no&#124;demo): cycle through all available board and kernel configurations and make images for all combinations
 
 ### Hidden options to minimize user input for build automation:
