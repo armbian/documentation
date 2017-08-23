@@ -77,7 +77,7 @@ Insert SD card into a slot and power the board. (First) boot (with DHCP) takes u
 
 # How to login? 
 
-Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage).
+Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](http://angryip.org/), to find your board IP address.
 
 Desktop images starts into desktop without asking for password. To change this add some display manager:
 
