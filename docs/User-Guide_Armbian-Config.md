@@ -1,9 +1,5 @@
 # Armbian configuration utility #
 
-## Overview ##
-
-Configuration tool for:
-
 - software install
 - networking configuration
 - general system settings
@@ -12,6 +8,10 @@ Configuration tool for:
 ![](images/armbian-config-2.png)
 
 ## Software ##
+
+Software installation menu provides you automated install of the following packages. They were tested on Debian Jessie or Ubuntu Xenial. Most of the software will work on newer versions without a problem, but there is no warranty.
+
+![](images/armbian-config-6.png)
 
 - softy	 
 	- [TV headend](https://tvheadend.org/) *(IPTV server)*
@@ -22,44 +22,48 @@ Configuration tool for:
 	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server)*
 	- [PI hole](https://pi-hole.net) *(ad blocker)*
 	- [MiniDLNA](http://minidlna.sourceforge.net/) *(media sharing)*
-- monitor = simple CLI monitoring- 
-- diagnostics = create a log summary and upload to paste.bin
-- headers = install kernel headers
-
-![](images/armbian-config-6.png)
 
 ![](images/armbian-config-7.png)
 
+- monitor = simple CLI monitoring 
+- diagnostics = create a summary of logs and upload them to paste.bin
+- headers = install kernel headers, which are needed for some external module recompilation
+
 ## Networking  ##
 
-- select dynamic or edit static IP address
-- create or manage WiFi access point
-- connect with Wifi
-- pair Bluetooth devices
-- edit network config manually
+Ethernet adapter is managed by Network Manager by default. Setting fixed or dynamic IP here will move its managing away from Network manager to classic way, to /etc/network/interfaces
 
 ![](images/armbian-config-8.png)
+ 
+- choose to select dynamic or set static IP address
+- create WiFi access point. If your wireless adapter is recognized by a kernel, then our utility proceeds with auto mode detection on the selected device. It can detect 802.11n, 802.11a and 802.11ac. It also knows how to handle some special Realtek adapters. 
+- manage WiFi access point. You can alter name, password or channel. If you have more understanding you can edit hostapd.conf directly from this utility
+- connect with Wifi. You can create multiple wireless connections at the same time. They are managed by Network Manager.
+- pair Bluetooth devices without PIN code
+- edit network config manually
+
+There is no need to reboot. All changes are done on the fly.
 
 ![](images/armbian-config-9.png)
 
 ## System  ##
 
 - change timezone
-- reconfigure language
-- toggle desktop
-- toggle login manager
-- toggle RDP
-- manage services
-- enable overlayroot (Ubuntu)   
+- reconfigure language / locales
+- toggle desktop on and off (on desktop images)
+- change login managers from none to lightdm (on desktop images)
+- toggle RDP - remote desktop from Windows (on desktop images)
+- manage stock Debian / Ubuntu services
+- toggle overlayroot (Ubuntu)
 
 ![](images/armbian-config-10.png)
 
 ## Armbian  ##
 
-- Install to SATA, eMMC, NAND or USB
-- Freeze / unfreeze kernel and board support packages
-- Edit boot environment
-- Edit boot script
+- Install to SATA, eMMC, NAND or USB - it gives you an option to install a system to more resilient and faster media
+- Freeze/unfreeze kernel and board support packages. For safer system updates.
+- Edit boot environment. Change boot verbosity level, video mode, etc.
+- Edit boot script.
 - Toggle welcome screen items
 - Switch between nightly and stable builds
 - Switch to alternative kernels
@@ -67,9 +71,6 @@ Configuration tool for:
 
 ![](images/armbian-config-3.png)
 
-![](images/armbian-config-4.png)
-
-![](images/armbian-config-5.png)
 
 ![](images/armbian-config-1.png)
 
