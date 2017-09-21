@@ -1,3 +1,7 @@
+**v5.33 / 21.09.2017**
+
+- Tinkerboard and MiQi images were rebuilt. Rockchip legacy kernel was updated to 4.4.88 and mainline (NEXT) to 4.13.3.
+
 **v5.32 / 23.06.2017**
 
 - bugfix release [due to broken crypto functions on kernel 4.11.x](https://forum.armbian.com/index.php?/topic/4556-partial-bugfix-update/)
@@ -18,7 +22,7 @@ Following boards are no longer receiving support and updates since this version:
 
 - mainline kernel updated to 4.11
 - mainline u-boot updated to v2017.05
-- Firefox was replaced with Chromium (desktop images) 
+- Firefox was replaced with Chromium (desktop images)
 - sunxi mainline configuration: added Device Tree overlays support (new images only)
 - sunxi mainline configuration: added `armbian-add-overlay` helper for compiling and activating DT overlays (new images only)
 - log2ram: fixed saving `/var/log` contents on shutdown
@@ -53,10 +57,10 @@ Following boards are no longer receiving support and updates since this version:
 - added wireless drivers to mainline kernels: OrangePi Zero, Neo Air
 - implemented initrd loading support for all boards
 - moved all images to single ext4 partition scheme
-- changed default wallpaper, startup icon, shadows to windows on desktop builds 
-- Firefox web cache moved to memory 
+- changed default wallpaper, startup icon, shadows to windows on desktop builds
+- Firefox web cache moved to memory
 - added g_serial driver to boards without a network connector, working on both kernel (Opi Zero,Opi Lite,FA Neo Air)
-- added "Software boutique" application installer on desktop builds (currently not working properly on arm64)  
+- added "Software boutique" application installer on desktop builds (currently not working properly on arm64)
 - added per board patching option
 - added u-boot video driver and boot logo to H3 based boards
 - added simplefb video driver (HDMI only) to mainline H3 kernel
