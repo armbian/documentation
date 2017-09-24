@@ -1,3 +1,7 @@
+**v5.33 / 24.09.2017**
+
+- Odroid XU4/HC1 images were rebuilt.
+
 **v5.33 / 21.09.2017**
 
 - Tinkerboard and MiQi images were rebuilt. Rockchip legacy kernel was updated to 4.4.88 and mainline (NEXT) to 4.13.3.
