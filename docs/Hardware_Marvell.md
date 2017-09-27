@@ -33,3 +33,8 @@ System images with mainline kernel
 
 - Switch support (DSA) is broken (will most probably be fixed when switching to 4.11 later)
 - SFP support ported from 4.4.x and may be removed in the future
+
+## Notes
+
+- In case you ever run into troubles and ask for help in the forums please ensure to provide a serial console log (UART adapter on board accessible through Micro USB with 115200/8/N/1 settings)
+- The boards can boot from various sources that are adjustable with a DIP switch. Comprehensive information about the necessary preparations [available here](https://github.com/nightseas/arm_applications/blob/master/doc/getting_started_with_clearfog_base.md).

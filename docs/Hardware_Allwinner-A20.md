@@ -2,7 +2,7 @@
 
 ## Overview ##
 
-Both kernels are stable and production ready, but you should use them for different purpuses since their basic support differ:
+Both kernels are stable and production ready, but you should use them for different purposes since their basic support differ:
 
 - legacy: video acceleration, NAND support, connecting displays
 - mainline: headless server, office desktop operations (not multimedia oriented)
