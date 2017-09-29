@@ -21,7 +21,7 @@ Login as root and run:
 
 Run the script
 
-	./compile.sh
+	sudo ./compile.sh
 
 ![](http://www.armbian.com/wp-content/uploads/2016/01/21.png)
 
