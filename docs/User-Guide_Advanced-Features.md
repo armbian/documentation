@@ -121,7 +121,7 @@ Changes inside this will be preserved.
 
 Preinstallation requirements:
 
-- Armian 5.1 or newer with Kernel 3.10 or higher
+- Armbian 5.1 or newer with Kernel 3.10 or higher
 - Debian Jessie (might work elsewhere with some modifications)
 - root access
 
