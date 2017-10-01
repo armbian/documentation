@@ -22,22 +22,20 @@ With HC1 we're talking about Hardkernel's 4.9 or mainline
 **Unverified matter**
 > derived from comment chain in the review
 
-Mine is not connecting at gigabit - fast ethernet only. Same cable (+few others), same PSU, same SD card, any kernel, while XU4 runs at Gigabit w/o problem
+1. Mine is not connecting at gigabit - fast ethernet only. Same cable (+few others), same PSU, same SD card, any kernel, while XU4 runs at Gigabit w/o problem
 > Possibly a cable quality issue, as a cable swap caused the problem to disappear
-**Notes**
-Based on the XU4 template with exceptions
 
-To avoid 'using up' write cycles on the SD media, once working, move to a RO root
+**Notes**
+1. Based on the XU4 template with exceptions
+
+1. To avoid 'using up' write cycles on the SD media, once working, move to a RO root
 filesystem, and 'chain boot' into the 2.5 in SATA drive (either SSD or spinnnig)
 which do not have the same 'wear' issues
 
 **Boot message chain**
-Made with: 
+1. Made with: 
 > armbianmonitor -u output 
 
-made with external RTL8153 behind internal USB3 hub on XU4
+test run done with external RTL8153 behind internal USB3 hub on XU4
 
 > http://sprunge.us/cOJP
- 
-
-
