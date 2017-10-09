@@ -23,6 +23,8 @@ Run the script
 
 	./compile.sh
 
+Make sure that full path to the build script does not contain spaces.
+
 ![](http://www.armbian.com/wp-content/uploads/2016/01/21.png)
 
 # Providing build configuration
