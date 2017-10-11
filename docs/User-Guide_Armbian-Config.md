@@ -1,5 +1,7 @@
 # Armbian configuration utility #
 
+Is a base utility for configuring your board.
+
 - software install
 - networking configuration
 - general system settings
@@ -9,14 +11,12 @@
 
 ## Software ##
 
-Software installation menu provides you automated install of the following packages. They were tested on Debian Jessie or Ubuntu Xenial. Most of the software will work on newer versions without a problem, but there is no warranty.
-
-![](images/armbian-config-6.png)
+Software installation menu provides automated install of the following packages. Most of the software will work on newer versions without a problem, but there is no warranty.
 
 - softy	 
 	- [TV headend](https://tvheadend.org/) *(IPTV server)*
 	- [Syncthing](https://syncthing.net/) *(personal cloud)*
-	- [SoftEther VPN server](https://www.softether.org/) *(VPN server)*
+	- [SoftEther VPN](https://www.softether.org/) *(VPN server & client)*
 	- [Transmission](https://transmissionbt.com/) *(torrent server)*
 	- [ISPConfig](https://www.ispconfig.org/) *(WEB & MAIL server)*
 	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server)*
@@ -31,7 +31,7 @@ Software installation menu provides you automated install of the following packa
 
 ## Networking  ##
 
-Ethernet adapter is managed by Network Manager by default. Setting fixed or dynamic IP here will move its managing away from Network manager to classic way, to /etc/network/interfaces
+Ethernet adapter is managed by Network Manager by default, while Wireless is handled by IFUPDOWN, from within /etc/network/interfaces
 
 ![](images/armbian-config-8.png)
  
@@ -75,5 +75,7 @@ There is no need to reboot. All changes are done on the fly.
 ![](images/armbian-config-1.png)
 
 ## Resources ##
+
+The configurating utility can be installed to generic Debian system while some Armbian specifics function will not work.
 
 [Sources](https://github.com/armbian/config)

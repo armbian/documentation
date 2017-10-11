@@ -9,9 +9,8 @@ Please, make sure you have:
 
 For each board we usually provide:
 
-- CLI Debian Jessie (server),
-- CLI Ubuntu Xenial (server),
-- desktop Ubuntu Xenial.
+- one CLI Debian **and** one CLI Ubuntu based server image,
+- one desktop Ubuntu Xenial **or** Debian Stretch
 
 Some boards have different options due to their hardware specialities - router or IOT boards.
 
@@ -19,16 +18,20 @@ Some boards have different options due to their hardware specialities - router o
 
 Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differ:
 
-**legacy**: video acceleration, NAND support, connecting displays 
+**legacy**: video acceleration, NAND support, connecting displays
 
-**mainline**: headless server, light desktop operations 
- 
+**mainline**: headless server, light desktop operations
+
+# What are testing images?
+
+- made from stable branches
+- not very well tested
+- for end users
+
 # What are experimental images?
 
 - made from unstable branches,
-- made daily,
 - unstested,
-- unsupported,
 - for experienced users only.
 
 Don’t use them for anything productive but to give constructive [feedback to developers](https://forum.armbian.com/index.php?/forum/4-development/).
@@ -40,11 +43,11 @@ All our images are digitally signed and therefore it's possible to check theirs 
 	# download my public key from the database
 	gpg --keyserver pgp.mit.edu --recv-key 9F0E78D5
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
-	
+
 	# proper respond
 	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
-	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"	
-	
+	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+
 	# wrong repond. Not genuine Armbian image!
 	gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
 	gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
@@ -55,7 +58,7 @@ It is safe to ignore WARNING: This key is not certified with a trusted signature
 
 **Important note:** Make sure you use a **good & reliable** SD card. If you encounter boot or stability troubles in over 95 percent of the time it's either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**. 
+7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**.
 
 Also important: SD cards are optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. And while you shouldn't buy or use any card rated less than *class 10* you should especially take care to choose one that is known to show high random I/O performance since this is way more performance relevant when used with any SBC. Even cards advertised as being 'high speed' can show horribly low random IO performance in reality.
 
@@ -75,7 +78,7 @@ In case you chose an SD card that was already in use before please consider rese
 
 Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to 35 seconds with a class 10 SD Card and cheapest board.
 
-# How to login? 
+# How to login?
 
 Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](http://angryip.org/), to find your board IP address.
 
@@ -98,6 +101,10 @@ and change the autologin user.
 
 If kernels was upgraded during this process, you will be prompted to reboot at next login.
 
+# How to adjust hardware features?
+
+[Use Armbian configuration utility](User-Guide_Armbian-Config.md).
+
 # How to install to eMMC, NAND, SATA & USB?
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
@@ -115,7 +122,7 @@ eMMC/SATA/USB:
  * onboard eMMC storage
  * attached SATA or USB storage
 
-Start the install script: 
+Start the install script:
 
 	nand-sata-install
 
@@ -129,7 +136,7 @@ and you can choose the following file system options:
 
  * ext2,3,4
  * btrfs
- 
+
 On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](http://forum.armbian.com/index.php/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?p=13163) for details).
 
 # How to connect to wireless?
@@ -152,9 +159,11 @@ If you don't know, you can browse and then connect
 
 By default your main network adapter's IP is assigned by your router DHCP server.
 
-	iface eth0 inet dhcp 
+Edit /etc/network/interfaces and change from:
 
-change to - for example:
+	iface eth0 inet dhcp
+
+to - for example:
 
 	iface eth0 inet static
 	 	address 192.168.1.100
