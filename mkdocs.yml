@@ -24,6 +24,8 @@ pages:
 
   - 'User Guide' :
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
+                - 'Migration from Bananian' : 'User-Guide_Migration_from_Bananian.md'
+        - 'Quick facts' : 'Quick_facts.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
         - 'Armbian config' : 'User-Guide_Armbian-Config.md'
