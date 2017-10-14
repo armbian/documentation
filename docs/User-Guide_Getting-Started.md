@@ -39,8 +39,11 @@ Don’t use them for anything productive but to give constructive [feedback to d
 # How to check download authenticity?
 
 All our images are digitally signed and therefore it's possible to check theirs authentication. You need to unzip the download package and issue those commands (Linux):
-
-	# download my public key from the database
+	
+	# download dependencies
+	apt-get install gnupg p7zip
+	
+	# download public key from the database
 	gpg --keyserver pgp.mit.edu --recv-key 9F0E78D5
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
 
