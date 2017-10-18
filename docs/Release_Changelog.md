@@ -1,7 +1,7 @@
 **v5.34 / 18.10.2017**
 
 - bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install) 
-- added La Potato testing image (mainline kernel)
+- added La Potato and Orange Pi Zero testing image (mainline kernel)
 - Tinkerboard, MiQi and Pinebook images rebuilt
 
 **v5.33 / 24.09.2017**
