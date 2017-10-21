@@ -38,3 +38,47 @@ Example:
     ./compile.sh BOARD=cubietruck BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
+
+# Using our automated build system
+
+In case you don't own proper gears to build on your own, you can make use of our automated build system. We recompile all packages every night (starting at 00:01 CEST) and we also produce few testing images - they are accessible on [download server](https://dl.armbian.com/) under board folder, subfolder "Nightly". Packages, when they are successfully built, are published in the beta repository. You can switch to beta repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing apt.armbian.com to beta.armbian.com in /etc/apt/sources.list.d/armbian.list.
+
+Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/master/config/boards). This is how typical board configuration looks like:
+
+	# A20 dual core 1Gb SoC
+	BOARD_NAME="Banana Pi"
+	LINUXFAMILY="sun7i"
+	BOOTCONFIG="Bananapi_defconfig"
+	MODULES="hci_uart gpio_sunxi rfcomm hidp sunxi-ir bonding spi_sun7i 8021q a20_tp #ap6211"
+	MODULES_NEXT="brcmfmac bonding"
+	#
+	KERNEL_TARGET="default,next,dev"
+	CLI_TARGET="jessie,xenial:next"
+	DESKTOP_TARGET="xenial:default,next"
+	
+	CLI_BETA_TARGET=""
+	DESKTOP_BETA_TARGET=""
+	#
+	RECOMMENDED="Ubuntu_xenial_default_desktop:90,Debian_jessie_next:100"
+	#
+	BOARDRATING=""
+	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"
+	HARDWARE="https://linux-sunxi.org/Banana_Pi"
+	FORUMS="http://forum.armbian.com/index.php/forum/7-allwinner-a10a20/"
+	BUY="http://amzn.to/2fToHjR"
+
+If you want that our automated system start making images for this particular board, you need to alter parameters CLI_BETA_TARGET and DESKTOP_BETA_TARGET. Variants are depenendend from KERNEL_TARGET definitions and supported userlands: jessie, xenial, stretch. To edit those parameters you need to push changes to the build script. You need to [fork a project and create a pull request](Process_Contribute.md) and after it's imported by one of the administrators, images will start to show up in appropriate folder.
+
+If you want to enable Debian stretch desktop image with mainline kernel choose the following:
+
+	DESKTOP_BETA_TARGET="stretch:next"
+
+or 
+
+	CLI_BETA_TARGET="xenial:default"
+
+for command line interfaces Ubuntu Xenial based images with legacy kernel 3.4.113 or
+
+	DESKTOP_BETA_TARGET="jessie:dev"
+
+for image with latest upstream development kernel.
