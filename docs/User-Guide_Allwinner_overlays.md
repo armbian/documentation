@@ -110,6 +110,12 @@ This, for example, means that overlays for H3 may need some changes to work on A
 
 Rework may include changing labels, references (phandles) and pinconf bindings.
 
+### Notes regarding SPI and I2S overlays
+
+Activating a device on SPI or I2S bus may require more than one overlay.
+In case a bus overlay like `spi0` or `i2s0` exist for the target SoC they need to be activated in addition to a slave device overlay (provided or custom/user-made).
+Please note that these overlays (`spi0`, `i2s0`) do not enable any slave devices (like spidev or I2S codec).
+
 ### Debugging
 
 As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
