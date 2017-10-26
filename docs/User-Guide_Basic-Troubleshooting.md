@@ -38,6 +38,7 @@ Note that
 #### Connector
 
 - MicroUSB connector is rated for the maximum current of 1.8A. Trying to pass larger current may result in a voltage dropping below USB specifications
+- Most of the boards can also be powered through GPIO pins. This can be used to bypass the microUSB connector and thus to improve stability
 
 ### SD card notes
 
