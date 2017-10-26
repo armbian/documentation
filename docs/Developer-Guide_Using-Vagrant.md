@@ -17,7 +17,7 @@ First, you'll need to [install Vagrant](https://www.vagrantup.com/downloads.html
 Now we'll need to [install git](https://git-scm.com/downloads) and clone the Armbian repo. While this might seem obvious, we rely on it being there when we use Vagrant to bring up our guest-build box.
 
 	# Clone the project.
-	git clone --depth 1 https://github.com/igorpecovnik/lib.git lib
+	git clone --depth 1 https://github.com/armbian/build
 
 	# Make the Vagrant box available. This might take a while but only needs to be done once.
 	vagrant box add ubuntu/xenial64
@@ -28,13 +28,13 @@ Now we'll need to [install git](https://git-scm.com/downloads) and clone the Arm
 
 ### Armbian Directory Structure
 
-Before we bring up the box, take note of the [directory structure]( https://docs.armbian.com/Developer-Guide_Build-Process/#directory-structure) used by the Armbian build tool. When you read the lib/Vagrant file you'll see that Vagrant automatically creates a directory for *output*. This is helpful as it enables you to easily retrieve your images from the host once built. It also speeds-up the build process by caching files used during the build. In addition, Vagrant creates the *userscripts* directory. This is where you'd put any files used to [customize the build process](https://docs.armbian.com/Developer-Guide_User-Configurations/). 
+Before we bring up the box, take note of the [directory structure]( https://docs.armbian.com/Developer-Guide_Build-Process/#directory-structure) used by the Armbian build tool. When you read the Vagrantfile you'll see that Vagrant will mount local *output* and *userpatches* directories. This is helpful as it enables you to easily retrieve your images from the host once built, and [customize the build process](https://docs.armbian.com/Developer-Guide_User-Configurations/).
 
 ### Creating the Vagrant Guest Box Used to Build 
 Let's bring the box up. This might take a minute or two depending on your bandwidth and hardware.
 
 	# We have to be in the same directory as the Vagrant file.
-	cd lib
+	cd build
 
 	# And now we simply let vagrant create our box and bring it up. 
 	vagrant up
@@ -43,16 +43,18 @@ Let's bring the box up. This might take a minute or two depending on your bandwi
 	# (No need for passwords, Vagrant installs the keys we'll need.)
 	vagrant ssh
 
+## Important note
+
+It is strongly recommended to halt and restart the Vagrant box after building an image. Check [this](https://github.com/armbian/build/issues/751) issue for details.
+
 ## Vagrant GUEST Steps
 
 The following steps are all run on the *guest* Vagrant created for us.
 
 Once it's finally up and you're logged in, it works much like any of the other install methods (NOTE: again, these commands are run on the *guest* box).
 
-	# Copy the compile script out of the lib directory to your new home directory.
-	cp lib/compile.sh .
-
 	# Let's get building!
+	cd build
 	sudo ./compile.sh
 
 ## More Vagrant HOST Steps
