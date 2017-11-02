@@ -30,7 +30,7 @@ If you still can't find what you need here, visit the [Armbian forum](http://for
 
 # Supported boards
 
-Beelink X2, Orange Pi PC plus, Orange Pi Plus 2E, Orange Pi Lite, Roseapple Pi, NanoPi M1, pcDuino2, pcDuino3, Odroid C0/C1/C1+, Banana Pi M2+, Hummingboard 2, Odroid C2, Orange Pi 2, Orange Pi One, Orange Pi PC, Orange Pi PC2, Orange Pi Plus 1 & 2, Clearfog, Lemaker Guitar, Odroid XU4, Udoo Neo, Udoo Neo2, Banana Pi M2, Orange Pi A31S, Cubieboard 1, Cubieboard 2, Hummingboard, Lamobo R1, Banana Pi PRO, Orange Pi mini A20, Olimex Lime A10, Olimex Micro, Olimex Lime 2, pcDuino3 nano, Banana Pi Plus A20, Udoo quad, Orange Pi A20, Olimex Lime 1, Banana Pi, Cubox-i, Cubietruck
+Beelink X2, Orange Pi PC plus, Orange Pi Plus 2E, Orange Pi Lite, Roseapple Pi, NanoPi M1, NanoPi M1+, NanoPi Neo, NanoPi Neo2, NanoPi Duo, Le Potato, Espressobin, Pine64, soPine64, Pinebook A64, pcDuino2, pcDuino3, Odroid C0/C1/C1+, Banana Pi M2+, Hummingboard 2, Odroid C2, Orange Pi 2, Orange Pi One, Orange Pi PC, Orange Pi PC2, Orange Pi Prime, Orange Pi Win, Orange Pi Plus 1 & 2, Clearfog, Lemaker Guitar, Odroid XU4, Odroid HC1, Udoo Neo, Banana Pi M2, Orange Pi A31S, Cubieboard 1, Cubieboard 2, Hummingboard, Lamobo R1, Banana Pi PRO, Orange Pi mini A20, Olimex Lime A10, Olimex Micro, Olimex Lime 2, pcDuino3 nano, Banana Pi Plus A20, Udoo quad, Orange Pi A20, Olimex Lime 1, Banana Pi, Cubox-i, Cubietruck, Tinkerboard, Miqi, Rock64
 
 Check [download page](http://www.armbian.com/download/) for recently supported list.
 

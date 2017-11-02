@@ -1,3 +1,25 @@
+**W.I.P.**
+
+- mainline kernel updated to 4.13.y
+- mainline u-boot updated to v2017.09
+
+Desktop images:
+
+- xterm was replaced with full featured xfce terminal
+
+armbian-config:
+
+- managing board hardware configurations
+- managing hotspot
+- installing headers
+- 3rd party software installer
+
+Build script:
+
+- added Stretch
+
+Known problems:
+
 **v5.34 / 18.10.2017**
 
 - bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install) 
