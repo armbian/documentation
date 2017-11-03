@@ -45,7 +45,6 @@ pages:
         - 'Building with Vagrant' : 'Developer-Guide_Using-Vagrant.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
-        - 'Build Process Explained' : 'Developer-Guide_Build-Process.md'
         - 'FEL boot' : 'Developer-Guide_FEL-boot.md'
 
   - 'Contributor Process' :

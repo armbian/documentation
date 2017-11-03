@@ -21,12 +21,7 @@
     - set to "yes" to build image with minimal desktop environment
     - set to "no" to build image with console interface only
 - **EXTERNAL** (yes&#124;no):
-    - set to "yes" to compile and install some extra applications and drivers (only for **default** kernel branch):
-        - [USB redirector](http://www.incentivespro.com)
-        - Realtek RT8192 wireless driver
-        - Mediatek MT7601U wireless - driver
-        - Sunxi display control
-        - hostapd from sources
+    - set to "yes" to compile and install extra applications and firmware
 - **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb)
 - **INSTALL_HEADERS** (no&#124;yes): install kernel headers package
 - **EXTERNAL_NEW** (no&#124;prebuilt&#124;compile):
@@ -49,10 +44,10 @@
 - **PROGRESS_LOG_TO_FILE** (yes&#124;**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes&#124;**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
 - **USE_GITHUB_UBOOT_MIRROR** (yes&#124;**no**): use unofficial Github mirror for downloading mainline u-boot sources, may be faster than `git.denx.de` depending on your location
-- **IGNORE_UPDATES** (yes&#124;**no**): skip updating sources
+- **IGNORE_UPDATES** (yes&#124;**no**): skip downloading and updating sources
 - **FORCE_USE_RAMDISK** (yes&#124;no): overrides autodetect for using tmpfs in new debootstrap and image creation process
 - **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (yes&#124;**no**): create compressed archive with image file and GPG signature for redistribution
 - **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
-- **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout
+- **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching
