@@ -3,23 +3,31 @@
 - mainline kernel updated to 4.13.y
 - mainline u-boot updated to v2017.09
 - added new sunxi Device Tree overlays, fixed and improved old overlays
+- Olimex Lime2 and Micro: merging eMMC and normal versions
 - Odroid C2: next and dev branches migrated to mainline u-boot
 - Odroid XU4: added dev branch, next branch migrated to mainline u-boot
 - Clearfog: added dev branch with mainline u-boot
+- All mainline kernels: added Realtek 8811AU/8812AU/8814AU USB wireless driver with monitor mode and frame injection
 - All boards: added kernel source packages to the repository (Package names `linux-source-${BRANCH}-${LINUXFAMILY}`, i.e. `linux-source-sunxi-next`)
 - Kernel headers are no longer installed by default to new images
 - Additional out of tree drivers and USB Redirector are no longer installed by default to new images
 
 Desktop images:
 
-- xterm was replaced with full featured xfce terminal
+- xterm was replaced with full featured xfce terminal,
+- added memory profile caching for Chromium, 
 
 armbian-config:
 
-- managing board hardware configurations
-- managing hotspot
-- installing headers
-- 3rd party software installer
+- managing board hardware configurations, hotspot, Bluetooth, SSH server 
+- freezing/unfreezing kernel upgrade
+- switching between stable and beta builds,
+- change to alternative kernels,
+- installing/uninstalling kernel headers,
+- changing timezone, locales, hostname,
+- diagnostic tools,
+- enabling/disabling RDP server,
+- 3rd party software installer: Samba, OMV, Pi hole, Transmission, ...
 
 Build script:
 
