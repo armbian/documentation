@@ -2,6 +2,13 @@
 
 - mainline kernel updated to 4.13.y
 - mainline u-boot updated to v2017.09
+- added new sunxi Device Tree overlays, fixed and improved old overlays
+- Odroid C2: next and dev branches migrated to mainline u-boot
+- Odroid XU4: added dev branch, next branch migrated to mainline u-boot
+- Clearfog: added dev branch with mainline u-boot
+- All boards: added kernel source packages to the repository (Package names `linux-source-${BRANCH}-${LINUXFAMILY}`, i.e. `linux-source-sunxi-next`)
+- Kernel headers are no longer installed by default to new images
+- Additional out of tree drivers and USB Redirector are no longer installed by default to new images
 
 Desktop images:
 
@@ -16,7 +23,10 @@ armbian-config:
 
 Build script:
 
-- added Stretch
+- added Debian Stretch
+- most tweaks moved from inline files to separate files in board support package
+- firmware blobs moved to a separate repository
+- disabled distcc in extra software compilation process due to toolchain compatibility issues
 
 Known problems:
 
