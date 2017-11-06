@@ -10,17 +10,16 @@ Both kernels are stable and production ready, but you should use them for differ
 ## Legacy ##
 System images with legacy kernel
 
+##### Please note that upstream support for kernel 3.4.x has ended in 2017 so this kernel will not receive security updates in the future. #####
+
 - Kernel [3.4.x](https://github.com/linux-sunxi/linux-sunxi) with large hardware support, headers and some firmware included
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
-- IR functional and preconfigured – tested with LG remote
-- [LIRC GPIO send and receive driver](https://github.com/igorpecovnik/lib/issues/135) – tested but unconfigured
 - Bluetooth ready (working with supported external keys)
 - [Enabled overlayfs](User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - SPI ready and tested with ILI9341 based 2.4″ TFT LCD display.
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
 - [Clustering / stacking](http://en.wikipedia.org/wiki/Cluster_(computing))
-- [USB redirector](http://www.incentivespro.com/usb-server-usage.html) – for sharing USB over TCP/IP (disabled by default /etc/init.d/rc.usbsrvd)
 - Onboard LED attached to SD card activity (script.bin)
 
 ### Bugs or limitation ###
