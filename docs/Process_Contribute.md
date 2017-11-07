@@ -14,29 +14,19 @@ If you are struggling, check [this detailed step by step guide on contributing](
 
 Build script: 
 
-[https://github.com/igorpecovnik/lib](https://github.com/igorpecovnik/lib)
+[https://github.com/armbian/build](https://github.com/armbian/build)
 
-Manual:
+Documentation:
 
-[http://docs.armbian.com](http://docs.armbian.com)
+[https://github.com/armbian/documentation](https://github.com/armbian/documentation)
 
-# Collaborate with Documentation #
+Armbian-config tool:
 
-## Documentation Workflow ##
-
-1. Contributor clones repo `git@github.com:igorpecovnik/lib.docs.git`
-1. Contributor copies  ex: `templates/howto_template.md` to `docs/howto_new-topic.md`
-1. Contributor creates content within the simple framework provided by template
-1. Contributor commits and pushes to repo
-1. post-commit job runs a more intelligent version of `tools/mkArmbianDocs.py` and generates new mkdocs.yml
-1. post-commit builds new docs site, pushes, builds PDF (maybe--unless extra curation is desired)
-1. Contributor is delighted that creating a single markdown file was all that was needed to impact the community
-1. Contributor is inspired to create more content -- because it was soooooo easy.
-
+[https://github.com/armbian/config](https://github.com/armbian/config)
 
 # Help with donations #
 
-If you find our project useful, then we’d really appreciate it if you’d consider contributing to the project however you can. Donating is the easiest – you can use PayPal and Bitcoin or you can buy us something from our Amazon.de wish list.
+If you find our project useful, then we’d really appreciate it if you’d consider contributing to the project however you can. Donating is the easiest way to help us – you can use PayPal and Bitcoin or you can buy us something from our Amazon.de wish list.
 
 [http://www.armbian.com/donate/](http://www.armbian.com/donate/)
 

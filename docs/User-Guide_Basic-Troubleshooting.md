@@ -12,8 +12,8 @@ and you are using a stable Armbian image, then most likely you have one of two c
 
 Note that
 
-- **"I know that my power supply is good" is not an objective reason to skip powering related diagnostics**
-- **"I know that my SD card is good" is not an objective reason to skip storage related diagnostics**
+- **"I know that my power supply is good", "it worked yesterday", "it works with a different device", etc. are not objective reasons to skip powering related diagnostics**
+- **"I know that my SD card is good", "it worked yesterday", "it works with a different device", etc. are not objective reasons to skip storage related diagnostics**
 - Undervoltage can cause symptoms related to SD card problems such as filesystem corruptions and data loss, so powering has to be checked first
 
 ### Powering notes
@@ -37,7 +37,7 @@ Note that
 
 #### Connector
 
-- MicroUSB connector is rated for the maximum current of 1.8A. Trying to pass larger current may result in a voltage dropping below USB specifications
+- MicroUSB connector is rated for the maximum current of 1.8A, but even this number cannot be guaranteed. Trying to pass larger current (even momentarily) may result in a voltage dropping below USB specifications
 - Most of the boards can also be powered through GPIO pins. This can be used to bypass the microUSB connector and thus to improve stability
 
 ### SD card notes
@@ -47,7 +47,7 @@ Note that
 
 #### SD card brand
 
-- Based on curent prices and performance tests done by Armbian users Samsung Evo and Samsung Evo Plus cards are recommended
+- Based on curent prices and performance tests done by Armbian users Samsung Evo, Samsung Evo Plus and Sandisk Ultra cards are recommended
 - Other good alternatives may be added to this page in the future
 
 #### SD card size and speed class
