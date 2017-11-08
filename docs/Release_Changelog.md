@@ -15,7 +15,12 @@
 Desktop images:
 
 - xterm was replaced with full featured xfce terminal,
-- added memory profile caching for Chromium, 
+- added memory profile caching for Chromium,
+- added OpenVPN connector,
+- shortcuts to armbian-config, support and donate were moved to menu,
+- default icon theme was changed to lighter one (Numix),
+- fixed login greeter theme,
+- changed wallpaper.
 
 armbian-config:
 
