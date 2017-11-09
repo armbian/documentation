@@ -27,10 +27,10 @@ armbian-config:
 - managing board hardware configurations, hotspot, Bluetooth, SSH server 
 - freezing/unfreezing kernel upgrade
 - switching between stable and beta builds,
-- change to alternative kernels,
+- switching between alternative kernels,
 - installing/uninstalling kernel headers,
 - changing timezone, locales, hostname,
-- diagnostic tools,
+- running diagnostic tools,
 - enabling/disabling RDP server,
 - 3rd party software installer: Samba, OMV, Pi hole, Transmission, ...
 
