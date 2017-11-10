@@ -7,6 +7,7 @@
 - Odroid C2: next and dev branches migrated to mainline u-boot
 - Odroid XU4: added dev branch, next branch migrated to mainline u-boot
 - Clearfog: added dev branch with mainline u-boot
+- added supports for [7" RPi display](https://www.raspberrypi.org/products/raspberry-pi-touch-display/) to Tinkerboard with legacy kernel
 - All mainline kernels: added Realtek 8811AU/8812AU/8814AU USB wireless driver with monitor mode and frame injection
 - All boards: added kernel source packages to the repository (Package names `linux-source-${BRANCH}-${LINUXFAMILY}`, i.e. `linux-source-sunxi-next`)
 - Kernel headers are no longer installed by default to new images
