@@ -25,6 +25,7 @@ Desktop images:
 
 armbian-config:
 
+- was splitted from board support packages to a new package `armbian-config`
 - managing board hardware configurations, hotspot, Bluetooth, SSH server 
 - freezing/unfreezing kernel upgrade
 - switching between stable and beta builds,
