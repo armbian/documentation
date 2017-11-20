@@ -44,18 +44,18 @@ All our images are digitally signed and therefore it's possible to check theirs 
 	apt-get install gnupg p7zip
 	
 	# download public key from the database
-	gpg --keyserver pgp.mit.edu --recv-key 9F0E78D5
+	gpg --keyserver pgp.mit.edu --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
 
-	# proper respond
+	# proper response
 	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
 	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
 
-	# wrong repond. Not genuine Armbian image!
+	# wrong reponse. Not genuine Armbian image!
 	gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
 	gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
 
-It is safe to ignore WARNING: This key is not certified with a trusted signature!
+It is safe to ignore the message `WARNING: This key is not certified with a trusted signature!`.
 
 # How to prepare a SD card?
 
