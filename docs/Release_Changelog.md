@@ -3,6 +3,7 @@
 - mainline kernel updated to 4.13.y
 - mainline u-boot updated to v2017.09
 - added new sunxi Device Tree overlays, fixed and improved old overlays
+- USB, [g_serial](https://www.kernel.org/doc/Documentation/usb/gadget_serial.txt) based, console is enabled by default on most small Allwiner based boards
 - Olimex Lime2 and Micro: merging eMMC and normal versions
 - Odroid C2: next and dev branches migrated to mainline u-boot
 - Odroid XU4: added dev branch, next branch migrated to mainline u-boot
