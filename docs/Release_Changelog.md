@@ -23,6 +23,7 @@ Desktop images:
 - default icon theme was changed to lighter one (Numix),
 - fixed login greeter theme,
 - changed wallpaper.
+- changed [CMA handling](https://github.com/armbian/build/issues/744) on Allwinner legacy kernels
 
 armbian-config:
 
