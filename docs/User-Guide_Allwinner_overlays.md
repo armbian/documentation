@@ -3,6 +3,8 @@
 Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, UART, ...) don't have a mechanism for detecting and identifying devices connected to the bus,
 so Linux kernel has to be told explicitly about the device and its configuration details.
 
+Also from the Linux kernel maintainer perspective any interface like USB or analog audio that is wired to soldering pads or a pin header instead of a USB socket or 3.5mm jack should be left disabled by default. 
+
 While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
 in order to provide the kernel and kernel drivers with details about external devices or to activate interfaces disabled by default.
 
