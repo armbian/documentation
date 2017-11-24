@@ -3,13 +3,12 @@
 Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, UART, ...) don't have a mechanism for detecting and identifying devices connected to the bus,
 so Linux kernel has to be told explicitly about the device and its configuration details.
 
-Also from the Linux kernel maintainer perspective any interface like USB or analog audio that is wired to soldering pads or a pin header instead of a USB socket or 3.5mm jack should be left disabled by default. 
-
 While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
 in order to provide the kernel and kernel drivers with details about external devices or to activate interfaces disabled by default.
 
-From mainline Linux kernel perspective all unused in-circuit type interfaces should be disabled by default
-and all pins muxed with those interfaces should be available as standard GPIOs.
+Note: from the Linux kernel maintainer perspective all unused in-circuit type interfaces that use GPIO pins should be disabled by default and all pins on pin headers or soldering pads should be configured as standard GPIOs.
+
+Note: from the Linux kernel maintainer perspective all dedicated interfaces like USB, Ethernet or analog audio that are wired to soldering pads or a pin headers instead of specialized sockets (like USB socket, Ethernet socket or 3.5mm jack) should be left disabled by default.
 
 ### Armbian specific notes
 
@@ -122,7 +121,7 @@ Please note that these overlays (`spi0`, `i2s0`) do not enable any slave devices
 
 As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
 
-Serial console on UART 0 is required to debug DT overlay related problems.
+Serial console on UART 0 is **required** to debug DT overlay related problems.
 
 ### Example `/boot/armbianEnv.txt` contents:
 
