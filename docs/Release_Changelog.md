@@ -48,7 +48,7 @@ Build script:
 - firmware blobs moved to a separate repository
 - disabled distcc in extra software compilation process due to toolchain compatibility issues
 
-Known problems:
+[Known problems](https://forum.armbian.com/topic/5759-535-bug-questions-collection/)
 
 **v5.34 / 18.10.2017**
 
