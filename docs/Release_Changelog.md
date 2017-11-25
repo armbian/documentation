@@ -3,7 +3,7 @@
 - mainline kernel updated to 4.13.y
 - mainline u-boot updated to v2017.09
 - added new sunxi Device Tree overlays, fixed and improved old overlays
-- USB, [g_serial](https://www.kernel.org/doc/Documentation/usb/gadget_serial.txt) based, console is enabled by default on most small Allwiner based boards
+- Micro-USB [g_serial](https://www.kernel.org/doc/Documentation/usb/gadget_serial.txt) console is enabled by default on most small Allwiner based boards
 - Olimex Lime2 and Micro: merging eMMC and normal versions
 - Odroid C2: next and dev branches migrated to mainline u-boot
 - Odroid XU4: added dev branch, next branch migrated to mainline u-boot
@@ -13,6 +13,9 @@
 - All boards: added kernel source packages to the repository (Package names `linux-source-${BRANCH}-${LINUXFAMILY}`, i.e. `linux-source-sunxi-next`)
 - Kernel headers are no longer installed by default to new images
 - Additional out of tree drivers and USB Redirector are no longer installed by default to new images
+- Switching from emergency swap to zram on new Ubuntu Xenial images
+- New hardware support (stable/supported images): NanoPi Duo, Orange Pi R1, Pinebook
+- New hardware support (experimental): Le Potato, NanoPi NEO 2, Orange Pi Zero Plus, Orange Pi Zero Plus 2 (H5)
 
 Desktop images:
 
@@ -50,7 +53,7 @@ Known problems:
 **v5.34 / 18.10.2017**
 
 - bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install) 
-- added La Potato and Orange Pi Zero testing image (mainline kernel)
+- added Le Potato and Orange Pi Zero testing image (mainline kernel)
 - Tinkerboard, MiQi and Pinebook images rebuilt
 
 **v5.33 / 24.09.2017**
