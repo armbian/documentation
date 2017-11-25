@@ -1,4 +1,4 @@
-**W.I.P.**
+**v5.35 / 25.11.2017**
 
 - mainline kernel updated to 4.13.y
 - mainline u-boot updated to v2017.09
