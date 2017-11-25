@@ -50,6 +50,8 @@ Build script:
 
 [Known problems](https://forum.armbian.com/topic/5759-535-bug-questions-collection/)
 
+- Allwinner A20/sun7i legacy boards. Changed CMA settings prevents playing video. [You need to add cma=96M to kernel command line](https://github.com/armbian/build/issues/744)
+
 **v5.34 / 18.10.2017**
 
 - bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install) 
