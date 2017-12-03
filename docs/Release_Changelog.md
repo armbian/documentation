@@ -1,3 +1,7 @@
+**v5.36 / 3.12.2017**
+
+- [bugfix release](https://forum.armbian.com/topic/5759-535-bug-questions-collection)
+
 **v5.35 / 25.11.2017**
 
 - mainline kernel updated to 4.13.y
