@@ -6,9 +6,9 @@ so Linux kernel has to be told explicitly about the device and its configuration
 While Device Tree is a way of describing hardware configuration to the kernel, Device Tree overlays are a way for modifying the DT
 in order to provide the kernel and kernel drivers with details about external devices or to activate interfaces disabled by default.
 
-Note: from the Linux kernel maintainer perspective all unused in-circuit type interfaces that use GPIO pins should be disabled by default and all pins on pin headers or soldering pads should be configured as standard GPIOs.
+Note: from the Linux kernel maintainer perspective all unused in-circuit type interfaces that use GPIO pins should be disabled by default and all pins on pin headers or soldering pads will be configured as standard GPIOs.
 
-Note: from the Linux kernel maintainer perspective all dedicated interfaces like USB, Ethernet or analog audio that are wired to soldering pads or a pin headers instead of specialized sockets (like USB socket, Ethernet socket or 3.5mm jack) should be left disabled by default.
+Note: from the Linux kernel maintainer perspective all dedicated interfaces like USB, Ethernet or analog audio that are wired to soldering pads or a pin headers instead of specialized sockets (like USB socket, Ethernet socket or 3.5mm jack) will be left disabled by default.
 
 ### Armbian specific notes
 
