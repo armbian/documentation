@@ -20,6 +20,7 @@
 - Switching from emergency swap to zram on new Ubuntu Xenial images
 - New hardware support (stable/supported images): NanoPi Duo, Orange Pi R1, Pinebook
 - New hardware support (experimental): Le Potato, NanoPi NEO 2, Orange Pi Zero Plus, Orange Pi Zero Plus 2 (H5)
+- sunxi mainline u-boot: reenabled USB keyboard support and disabled stopping the boot sequence with any key - autoboot now can be aborted with <Ctrl-C> 
 
 Desktop images:
 
