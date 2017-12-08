@@ -54,7 +54,7 @@ The following steps are all run on the *guest* Vagrant created for us.
 Once it's finally up and you're logged in, it works much like any of the other install methods (NOTE: again, these commands are run on the *guest* box).
 
 	# Let's get building!
-	cd build
+	cd armbian
 	sudo ./compile.sh
 
 ## More Vagrant HOST Steps
