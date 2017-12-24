@@ -12,11 +12,11 @@ For each board we usually provide:
 - one CLI Debian **and** one CLI Ubuntu based server image,
 - one desktop Ubuntu Xenial **or** Debian Stretch
 
-Some boards have different options due to their hardware specialities - router or IOT boards.
+Some boards have different options due to their hardware specialities - router or IoT boards.
 
 # Legacy or mainline?
 
-Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differ:
+Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differs:
 
 **legacy**: video acceleration, NAND support, connecting displays
 
@@ -38,10 +38,7 @@ Don’t use them for anything productive but to give constructive [feedback to d
 
 # How to check download authenticity?
 
-All our images are digitally signed and therefore it's possible to check theirs authentication. You need to unzip the download package and issue those commands (Linux):
-	
-	# download dependencies
-	apt-get install gnupg p7zip
+All our images are digitally signed and therefore it's possible to check their authenticity. You need to unzip the download package and issue those commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg p7zip` on Debian/Ubuntu or `brew install gnupg p7zip` on macOS):
 	
 	# download public key from the database
 	gpg --keyserver pgp.mit.edu --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
@@ -56,6 +53,14 @@ All our images are digitally signed and therefore it's possible to check theirs 
 	gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
 
 It is safe to ignore the message `WARNING: This key is not certified with a trusted signature!`.
+
+# How to check download integrity?
+
+Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image. After uncompressing the download you can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows you can use [7-Zip's built-in hash functionality](https://superuser.com/a/1024913) to display the SHA256 hash while on Linux/macOS you would do this
+
+	shasum -a 256 -c sha256sum.sha Armbian_*.img 
+	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
+	^C
 
 # How to prepare a SD card?
 
@@ -85,7 +90,7 @@ Insert SD card into a slot and power the board. (First) boot (with DHCP) takes u
 
 Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](http://angryip.org/), to find your board IP address.
 
-Desktop images starts into desktop without asking for password. To change this add some display manager:
+Desktop images start into desktop without asking for password. To change this add some display manager:
 
 	apt-get install lightdm
 
@@ -102,7 +107,7 @@ and change the autologin user.
 
 **Update process can take hours in case of using cheap SD card and/or under heavy load.**
 
-If kernels was upgraded during this process, you will be prompted to reboot at next login.
+If the kernel was upgraded during this process you will be prompted to reboot at next login.
 
 # How to adjust hardware features?
 
