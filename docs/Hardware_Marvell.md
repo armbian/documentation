@@ -14,7 +14,8 @@ System images with patched mainline 4.4.x kernel
 - Bluetooth ready (working with supported external keys)
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
 - [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
-- [USB redirector](http://www.incentivespro.com/usb-server-usage.html) – for sharing USB over TCP/IP (disabled by default /etc/init.d/rc.usbsrvd)
+- SFP ready and tested with a fibre 1G/1.25G module, requires configuring eth2 - static, DHCP or bridged (not configured by default)
+- SFP DDMI is operational (`sudo ethtool -m eth2`)
 
 ### Bugs or limitation ###
 
@@ -31,8 +32,7 @@ System images with mainline kernel
 
 ### Bugs or limitation ###
 
-- Switch support (DSA) is broken (will most probably be fixed when switching to 4.11 later)
-- SFP support ported from 4.4.x and may be removed in the future
+- SFP is not supported yet
 
 ## Notes
 
