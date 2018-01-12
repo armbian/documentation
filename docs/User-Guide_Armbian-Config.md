@@ -7,6 +7,8 @@ Is a base utility for configuring your board.
 - general system settings
 - board specific functions
 
+The tool (which needs root privileges to work) can be launched by entering ```sudo armbian-config``` at the terminal prompt.
+
 ![](images/armbian-config-2.png)
 
 ## Software ##
