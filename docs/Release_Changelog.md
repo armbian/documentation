@@ -1,3 +1,12 @@
+**v5.37 / 23.1.2018**
+
+- bugfix release
+- armbianmonitor -u fix
+- setting cronjob permissions
+- replace broken u-boot packages on A20 boards
+- updated utilities: hostapd, sunxi-tools, armbian-config
+- updated images: Bananapi, PRO, M2, BeelinkX2, Clearfog,Cubieboard2, Cubietruck, Cubox-i/HB, Espressobin, Helios4
+
 **v5.36 / 3.12.2017**
 
 - [bugfix release](https://forum.armbian.com/topic/5759-535-bug-questions-collection)
@@ -20,7 +29,7 @@
 - Switching from emergency swap to zram on new Ubuntu Xenial images
 - New hardware support (stable/supported images): NanoPi Duo, Orange Pi R1, Pinebook
 - New hardware support (experimental): Le Potato, NanoPi NEO 2, Orange Pi Zero Plus, Orange Pi Zero Plus 2 (H5)
-- sunxi mainline u-boot: reenabled USB keyboard support and disabled stopping the boot sequence with any key - autoboot now can be aborted with <Ctrl-C> 
+- sunxi mainline u-boot: reenabled USB keyboard support and disabled stopping the boot sequence with any key - autoboot now can be aborted with <Ctrl-C>
 
 Desktop images:
 
@@ -36,7 +45,7 @@ Desktop images:
 armbian-config:
 
 - was splitted from board support packages to a new package `armbian-config`
-- managing board hardware configurations, hotspot, Bluetooth, SSH server 
+- managing board hardware configurations, hotspot, Bluetooth, SSH server
 - freezing/unfreezing kernel upgrade
 - switching between stable and beta builds,
 - switching between alternative kernels,
@@ -59,7 +68,7 @@ Build script:
 
 **v5.34 / 18.10.2017**
 
-- bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install) 
+- bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install)
 - added Le Potato and Orange Pi Zero testing image (mainline kernel)
 - Tinkerboard, MiQi and Pinebook images rebuilt
 
