@@ -1,3 +1,12 @@
+**v5.38 / 29.1.2018**
+
+- updated all images
+- added H3/H5 testing images with kernel 4.14.y
+- added Nanopi M3/T3+/Fire testing image
+- fixed Bluetooth on Orangepi Win
+- main repository update with recent kernel on all NEXT builds
+
+
 **v5.37 / 23.1.2018**
 
 - bugfix release
