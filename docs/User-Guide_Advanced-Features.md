@@ -47,6 +47,7 @@ Than mount the SD card and download those files (This example is only for Banana
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-image-next-sunxi_4.5_armhf.deb
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-firmware-image-next-sunxi_4.5_armhf.deb
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-dtb-next-sunxi_4.5_armhf.deb
+	 
 
 This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](http://forum.armbian.com/index.php/topic/211-kernel-update-procedure-has-been-changed/).
 
@@ -55,6 +56,13 @@ Mount SD card and extract all those deb files to it's mount point.
 	dpkg -x DEB_FILE /mnt
 
 Go to /mnt/boot and link (or copy) **vmlinuz-4.x.x-sunxi** kernel file to **zImage**.
+
+If you upgrade from some very old build, you might need to update your boot script. Example goes for Allwinner boards:
+
+	cd /mnt/boot
+	wget https://raw.githubusercontent.com/armbian/build/master/config/bootscripts/boot-sunxi.cmd
+	mv boot-sunxi.cmd boot.cmd
+	mkimage -C none -A arm -T script -d boot.scr boot.cmd # you need a u-boot-tools package on your host system
 
 Unmount SD card, move it to the board and power on.
 
