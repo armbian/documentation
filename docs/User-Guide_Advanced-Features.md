@@ -62,7 +62,7 @@ If you upgrade from some very old build, you might need to update your boot scri
 	cd /mnt/boot
 	wget https://raw.githubusercontent.com/armbian/build/master/config/bootscripts/boot-sunxi.cmd
 	mv boot-sunxi.cmd boot.cmd
-	mkimage -C none -A arm -T script -d boot.scr boot.cmd # you need a u-boot-tools package on your host system
+	mkimage -C none -A arm -T script -d boot.cmd boot.scr # you need a u-boot-tools package on your host system
 
 Unmount SD card, move it to the board and power on.
 
