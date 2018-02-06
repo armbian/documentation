@@ -3,6 +3,6 @@
 - Overclocking to 2.2GHz is possible with quality 3A PSU connected to GPIO pins and (patched) mainline kernel. Enable with:
 
 		echo 1 > /sys/devices/system/cpu/cpufreq/boost		# enable turbo
-		nano /etc/default/cpufrequtils 				# adjust new limit
-		/etc/init.d/cpufrequtils restart 			# restart cpufrequtils
+		nano /etc/default/cpufrequtils 						# adjust new limit
+		service cpufrequtils restart 						# restart cpufrequtils
 
