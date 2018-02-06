@@ -1,3 +1,9 @@
+**v5.40 / 5.2.2018**
+
+- fixed eMMC support on Odroid C2 NEXT, kernel 4.14.y
+- updated PWM driver on Helios4 
+- kernel update for MVEBU next (Clearfog, Helios4) 
+
 **v5.38 / 29.1.2018**
 
 - updated all images
