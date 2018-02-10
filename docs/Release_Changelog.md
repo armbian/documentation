@@ -1,6 +1,7 @@
-**v5.41 / 8.2.2018**
+**v5.41 / 10.2.2018**
 
 - fixed LED driver on Helios4
+- bugfix update on sunxi/sunxi64 kernel. Updated to 4.14.18
 - kernel update for MVEBU next (4.14.18 and default 4.4.115) for Clearfog and Helios4. Upstream fixes,AUFS and Realtek 881yAU drivers update 
 
 **v5.40 / 5.2.2018**
