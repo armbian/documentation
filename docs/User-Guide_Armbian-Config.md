@@ -21,7 +21,7 @@ Software installation menu provides automated install of the following packages.
 	- [SoftEther VPN](https://www.softether.org/) *(VPN server & client)*
 	- [Transmission](https://transmissionbt.com/) *(torrent server)*
 	- [ISPConfig](https://www.ispconfig.org/) *(WEB & MAIL server)*
-	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server)*
+	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server, requires Debian base image)*
 	- [PI hole](https://pi-hole.net) *(ad blocker)*
 	- [MiniDLNA](http://minidlna.sourceforge.net/) *(media sharing)*
 
