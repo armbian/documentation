@@ -1,18 +1,22 @@
 # Prerequisites for new users
 
-Please, make sure you have:
+Headaches the most comon problem, please, make sure you have:
 
 - a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR thick USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 # What to download?
 
-For each board we usually provide:
+For each board we usually provide these images:
 
-- one CLI Debian **and** one CLI Ubuntu based server image,
-- one desktop Ubuntu Xenial **or** Debian Stretch
+- (server)  Debian Jessie  = just text,
+- (server)  Debian Stretch = just text,
+- (server)  Ubuntu Xenial  = just text,
+- (desktop) Debian Stretch = Graphical User Interface 
+- (desktop) Ubuntu Xenial  = Graphical User Interface 
 
-Some boards have different options due to their hardware specialities - router or IoT boards.
+Each board has different option due to its hardware, for example: router or IoT boards.
+
 
 # Legacy or mainline?
 
@@ -20,7 +24,22 @@ Both kernels, where exists, are stable and production ready, but you should use 
 
 **legacy**: video acceleration, NAND support, connecting displays
 
-**mainline**: headless server, light desktop operations
+**mainline**: (mostly) headless server, light desktop operations
+
+# Stable images
+
+- stable receives security updates - high stability
+**update process:**
+1. after 6,7,8,9,10 (to be defined) months a freeze in development -> beta.armbian.com 
+1. the community does tests of the BETA (2 weeks), (still freeze in dev) report bugs
+1. bugfixes period for 3 weeks = ReleaseClient-1
+1. the community does test RC1 (2 weeks), (still freeze in dev) report bugs
+1. another round as in 4.  or ready for stable release update
+
+rollout of the new release:
+
+Only one SBC per SoC receives the update (ie. OPi Zero H2+ | OPi PC H3 | BPi A20 etc.) for one week. We get information on different-update-scenario's (from us untested situations) and SBC usage, diverse/unforeseen feedback.
+
 
 # What are testing images?
 
