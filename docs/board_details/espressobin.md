@@ -13,3 +13,4 @@
 		saveenv
 - If you manage to crash your SPI, proceed with [SATA boot recovery](http://wiki.espressobin.net/tiki-index.php?page=Boot+ESPRESSObin+from+SATA+drive).
 - booting directly from SATA is currently broken.
+- rebooting works with 4.14.y and SD media while it is broken with SATA and USB (always stops)
