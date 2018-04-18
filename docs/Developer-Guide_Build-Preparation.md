@@ -9,7 +9,7 @@
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
 
-Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
+Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, [Docker](User-Guide_Building_with_Docker.md), Virtualbox, native).
 
 # How to start?
 
