@@ -67,4 +67,4 @@ And finally start `sshd`:
 
         # /usr/sbin/sshd
 
-Do **NOT** type exit - that will terminate your container. To leave your container running after starting `sshd`, just type Ctrl-P and Ctrl-P. Now you can ssh to your container.
+Do **NOT** type exit - that will stop your container. To leave your container running after starting `sshd`, just type Ctrl-P and Ctrl-P. Now you can ssh to your container.
