@@ -42,7 +42,29 @@ After your image is created (you can check it with `docker images` command), you
 
         # docker run -v /mnt:/root/armbian/cache armbian_dev
 
+**NOTICE**: It is possible that SELinux might block your access to `/root/armbian/cache` because it lies outside your container. You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
+
 If you want to get a shell in the container, skipping the compile script, you can also run:
 
         # docker run -dit --entrypoint=/bin/bash -v /mnt:/root/armbian/cache armbian_dev
 
+The above command will start the container with a shell. To get the shell session:
+
+        # docker attach <UUID of your container, returned in the above command>
+
+If you want to run SSH in your container, log in and install the `ssh` package:
+
+        # apt-get install -y ssh
+
+Now, define a password and prepare the settings so you `sshd` can run and you can log in as root:
+
+        # passwd
+        # sed -i -e 's/PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+        # mkdir /var/run/sshd
+        # chmod 0755 /var/run/sshd
+
+And finally start `sshd`:
+
+        # /usr/sbin/sshd
+
+Do **NOT** type exit - that will terminate your container. To leave your container running after starting `sshd`, just type Ctrl-P and Ctrl-P. Now you can ssh to your container.
