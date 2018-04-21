@@ -1,12 +1,36 @@
-# Building Armbian using Red Hat or CentOS
+# Officially supported and tested method for building with Docker
 
-## How to build my own kernel?
+This method works for building u-boot and kernel packages as well as building full OS images.
+Building additional packages (`EXTERNAL_NEW`) is not supported.
 
-First of all, it is important to notice that you will be able to build `kernel` and `uBoot`. The container method is not suitable for building full Armbian images (the full SD card image containing the userland packages).
+## Requirements
+
+- x86/x64 Linux host that supports running a recent Docker daemon. Please refer to Docker documentation for details.
+- Docker version 17.06 CE or newer.
+- For launching the process as a non-root user this user needs to be added to the `docker` group. Please refer to Docker documentation for details.
+- Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites, please refer to Docker documentation for details.
+
+## Details
+
+Build process should be started by running `./compile.sh docker` on the host.
+The proces will create and run a Docker container with 2 named volumes `armbian-cache` and `armbian-ccache` and mount local diretories `output` and `userpatches`.
+Additional command line arguments can be passed to `compile.sh` after `docker` like this: `./compile.sh docker KERNEL_ONLY=yes  BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes`.
+A configuration file named `config-docker-guest.conf` can be created to set default values for build options. Passing a custom config file name is currently not implemented.
+
+
+# Creating and running Docker container manually
+
+NOTE: These methods are not supported by Armbian developers. Use them at your own risk.
+
+### Example: Building Armbian using Red Hat or CentOS
+
+Tested by [@rfrht](https://github.com/rfrht)
+
+First of all, it is important to notice that you will be able to build `kernel` and `u-boot` packages. The container method is not suitable for building full Armbian images (the full SD card image containing the userland packages).
 
 This setup procedure was validated to work with Red Hat Enterprise Linux 7.
 
-### Preparing your build host
+#### Preparing your build host
 
 In order to be able to run Docker containers, if you have not done so, just install the Docker package:
 
@@ -30,7 +54,7 @@ And in order to not mistake the newly created `build` directory, I rename it to 
         # mv build build-armbian
         # cd build-armbian
 
-### Preparing the Container
+#### Preparing the Container
 
 Docker will now check out the correct Ubuntu image to your build enviromnent and create a Docker **image** that will used as a template for your containers. This image template will be named `armbian_dev`:
 

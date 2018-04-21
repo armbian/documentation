@@ -43,6 +43,7 @@ pages:
   - 'Developer Guide' :
         - 'Building Armbian' : 'Developer-Guide_Build-Preparation.md'
         - 'Building with Vagrant' : 'Developer-Guide_Using-Vagrant.md'
+        - 'Building with Docker': 'Developer-Guide_Building-with-Docker.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'FEL boot' : 'Developer-Guide_FEL-boot.md'
