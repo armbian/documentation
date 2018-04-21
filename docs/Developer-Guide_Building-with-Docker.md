@@ -1,6 +1,7 @@
 # Officially supported and tested method for building with Docker
 
 This method works for building u-boot and kernel packages as well as building full OS images.
+
 Building additional packages (`EXTERNAL_NEW`) is not supported.
 
 ## Requirements
@@ -12,9 +13,18 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 
 ## Details
 
-Build process should be started by running `./compile.sh docker` on the host.
-The proces will create and run a Docker container with 2 named volumes `armbian-cache` and `armbian-ccache` and mount local diretories `output` and `userpatches`.
-Additional command line arguments can be passed to `compile.sh` after `docker` like this: `./compile.sh docker KERNEL_ONLY=yes  BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes`.
+Build process should be started by running
+
+	./compile.sh docker
+
+on the host.
+
+The proces will create and run a named Docker container `armbian` with 2 named volumes `armbian-cache` and `armbian-ccache` and mount local diretories `output` and `userpatches`.
+
+Additional command line arguments can be passed to `compile.sh` after `docker` like this:
+
+	./compile.sh docker KERNEL_ONLY=yes  BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes
+
 A configuration file named `config-docker-guest.conf` can be created to set default values for build options. Passing a custom config file name is currently not implemented.
 
 
