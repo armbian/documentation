@@ -74,7 +74,7 @@ Give it some minutes, as it downloads a non-neglectible amount of data.
 
 After your image is created (named `armbian`), it will automatically spawn the Armbian build container.
 
-**NOTICE**: In some cases, tt is possible that SELinux might block your access to `/root/armbian/cache` temporary build directory.You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
+**NOTICE**: In some cases, it is possible that SELinux might block your access to `/root/armbian/cache` temporary build directory. You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
 
 Get acquainted with the Build system.
 
@@ -101,4 +101,4 @@ And finally start `sshd`:
 
         # /usr/sbin/sshd
 
-Do **NOT** type exit - that will stop your container. To leave your container running after starting `sshd`, just type Ctrl-P and Ctrl-Q. Now you can ssh to your container.
+**Do NOT** type `exit` - that will stop your container. To leave your container running after starting `sshd`, just type `<Ctrl-P>` and `<Ctrl-Q>`. Now you can ssh to your container.
