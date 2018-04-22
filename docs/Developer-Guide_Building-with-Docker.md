@@ -66,17 +66,17 @@ And in order to not mistake the newly created `build` directory, I rename it to 
 
 #### Preparing the Container
 
-Docker will now check out the correct Ubuntu image to your build enviromnent and create a Docker **image** that will used as a template for your containers. This image template will be named `armbian_dev`:
+Our Build toolchain provides a scripted way to create a container and run the container. Run:
 
-        # docker build -t armbian_dev .
+        # ./compile.sh docker
 
 Give it some minutes, as it downloads a non-neglectible amount of data.
 
-After your image is created (you can check it with `docker images` command), you can now spawn your container. However, by default RHEL provides only 20 GB of disk to your Container, which is not enough to a successful kernel or uBoot. So in order to overcome it, attach a volume that will bind to `/root/armbian/cache`, where the build data will be saved. In the below example, we will export the host `/mnt` to container in `/root/armbian/cache`:
+After your image is created (named `armbian`), it will automatically spawn the Armbian build container.
 
-        # docker run -v /mnt:/root/armbian/cache armbian_dev
+**NOTICE**: In some cases, tt is possible that SELinux might block your access to `/root/armbian/cache` temporary build directory.You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
 
-**NOTICE**: It is possible that SELinux might block your access to `/root/armbian/cache` because it lies outside your container. You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
+Get acquainted with the Build system.
 
 If you want to get a shell in the container, skipping the compile script, you can also run:
 
