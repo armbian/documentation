@@ -34,7 +34,7 @@ Make sure that full path to the build script does not contain spaces.
 After the first run of `compile.sh` a new configuration file `config-default.conf` will be created.
 You may edit it to your needs or create different configuration files using it as a template.
 
-Alternatively you can supply options as command line parameters to compile.sh
+Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
     ./compile.sh BOARD=cubietruck BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
@@ -43,9 +43,14 @@ Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 
 # Using our automated build system
 
-In case you don't own proper gears to build on your own, you can make use of our automated build system. We recompile all packages every night (starting at 00:01 CEST) and we also produce few testing images - they are accessible on [download server](https://dl.armbian.com/) under board folder, subfolder "Nightly". Packages, when they are successfully built, are published in the beta repository. You can switch to beta repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing apt.armbian.com to beta.armbian.com in /etc/apt/sources.list.d/armbian.list.
+If you don't own the proper equipment to build images on your own, you can make use of the automated build system.
+Packages are recompiled every night (starting at 00:01 CEST) and a few testing images are produced.
+These images are accessible on the [download server](https://dl.armbian.com/) under board folder, subfolder "Nightly".
+Packages, when successfully built, are published in the beta repository.
+You can switch to beta repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing apt.armbian.com to beta.armbian.com in /etc/apt/sources.list.d/armbian.list.
 
-Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/master/config/boards). This is how typical board configuration looks like:
+Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/master/config/boards).
+This is a typical board configuration:
 
 	# A20 dual core 1Gb SoC
 	BOARD_NAME="Banana Pi"
@@ -69,7 +74,10 @@ Board beta images are defined in board configuration files which are located [he
 	FORUMS="http://forum.armbian.com/index.php/forum/7-allwinner-a10a20/"
 	BUY="http://amzn.to/2fToHjR"
 
-If you want that our automated system start making images for this particular board, you need to alter parameters CLI_BETA_TARGET and DESKTOP_BETA_TARGET. Variants are depenendend from KERNEL_TARGET definitions and supported userlands: jessie, xenial, stretch. To edit those parameters you need to push changes to the build script. You need to [fork a project and create a pull request](Process_Contribute.md) and after it's imported by one of the administrators, images will start to show up in appropriate folder.
+If you want that our automated system start making images for this particular board, you need to alter parameters CLI_BETA_TARGET and DESKTOP_BETA_TARGET.
+Variants are depenendend from KERNEL_TARGET definitions and supported userlands: jessie, xenial, stretch.
+To edit those parameters you need to push changes to the build script.
+You need to [fork a project and create a pull request](Process_Contribute.md) and after it's imported by one of the administrators, images will start to show up in appropriate folder.
 
 If you want to enable Debian stretch desktop image with mainline kernel choose the following:
 
