@@ -2,6 +2,9 @@
 
 - Espressobin images were rebuilt and moved under stable. Kernel 4.14.40, Stretch, Xenial and Bionic. Fixed bootloader, ath10 wireless card support
 - added initial Bionic storage to the main apt repository
+- Cubox-i / Hummingboard bugfix update to 4.16.y and images rebuild
+- Odroid C2 images rebuild
+
 
 **v5.41 / 10.2.2018**
 
