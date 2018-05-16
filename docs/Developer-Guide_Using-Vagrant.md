@@ -37,6 +37,7 @@ Let's bring the box up. This might take a minute or two depending on your bandwi
 	cd build
 
 	# And now we simply let vagrant create our box and bring it up. 
+	# Don't worry about red colored items that look like errors.
 	vagrant up
 
 	# When the box has been installed we can get access via ssh.
@@ -54,7 +55,7 @@ The following steps are all run on the *guest* Vagrant created for us.
 Once it's finally up and you're logged in, it works much like any of the other install methods (NOTE: again, these commands are run on the *guest* box).
 
 	# Let's get building!
-	cd build
+	cd /home/ubuntu/armbian
 	sudo ./compile.sh
 
 ## More Vagrant HOST Steps
