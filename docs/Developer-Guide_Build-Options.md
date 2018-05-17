@@ -11,8 +11,8 @@
 	- "images" = delete `output/images` (complete OS images),
 	- "debs" = delete packages in `output/debs` for current branch and device family,
 	- "alldebs" = delete all packages in `output/debs`,
-	- "cache" = delete `output/cache` (rootfs cache),
-	- "sources" = delete `sources` (all downloaded sources),
+	- "cache" = delete `cache/rootfs` (rootfs cache),
+	- "sources" = delete `cache/sources` (all downloaded sources),
 	- "extras" = delete additional packages for current release in `output/debs/extra`
 - **KERNEL\_KEEP\_CONFIG** (yes&#124;no):
     - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
@@ -35,7 +35,7 @@
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
 - **BRANCH** (default&#124;next&#124;dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
-- **RELEASE** (wheezy&#124;jessie&#124;trusty&#124;xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
+- **RELEASE** (stretch&#124;jessie&#124;bionic&#124;xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 
 ### Hidden options for advanced users (default values are marked **bold**):
 - **USE_CCACHE** (**yes**&#124;no): use a C compiler cache to speed up the build process
