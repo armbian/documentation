@@ -1,3 +1,7 @@
+**v5.45 / 23.5.2018**
+
+- Orangepi Zero+ images rebuild
+
 **v5.44 / 10.5.2018**
 
 - Espressobin images were rebuilt and moved under stable. Kernel 4.14.40, Stretch, Xenial and Bionic. Fixed bootloader, ath10 wireless card support
