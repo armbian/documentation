@@ -31,9 +31,9 @@
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
 	- set to "no" compilation will run uninterrupted
 - **BUILD_ALL** (yes&#124;no&#124;demo): cycle through all available board and kernel configurations and make images for all combinations
-- **LIB_TAG** (master&#124;development):
-	- set to "master" to compile from the master branch
-	- set to "development" to compile from the development branch (with patches which were not released yet)
+- **LIB_TAG** (master&#124;"branchname"):
+	- set to "master" to compile from the master branch (default)
+	- set to "branchname" to compile from any other branch available ("next" & "second" are deprecated and **not** recommended to use).
 
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
