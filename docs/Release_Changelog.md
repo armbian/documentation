@@ -1,3 +1,11 @@
+**v5.46 / 20.6.2018**
+
+- Added Olimex Teres nightly builds
+
+**v5.46 / 6.6.2018**
+
+- Added Orange Pi Lite 2 and One plus nightly builds
+
 **v5.45 / 23.5.2018**
 
 - Orangepi Zero+ images rebuild
