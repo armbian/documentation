@@ -1,6 +1,7 @@
 **v5.46 / 20.6.2018**
 
 - Added Olimex Teres nightly builds
+- Added FriendlyARM Nanopi K1 plus
 
 **v5.46 / 6.6.2018**
 
