@@ -1,6 +1,7 @@
 **v5.47 / 22.6.2018**
 
 - Odroid C2 images rebuild. Legacy kernel was upgraded to 3.16.57, next to 4.14.51, u-boot to 2018.05
+- Added Tritium H5
 
 **v5.46 / 20.6.2018**
 
