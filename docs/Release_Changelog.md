@@ -1,3 +1,7 @@
+**v5.48 / 26.6.2018**
+
+- added nightly images for Odroid C2 with 4.16.y (NEXT) and 4.18.y (DEV) and hopefully fixed ethernet driver
+
 **v5.47 / 22.6.2018**
 
 - Odroid C2 images rebuild. Legacy kernel was upgraded to 3.16.57, next to 4.14.51, u-boot to 2018.05
