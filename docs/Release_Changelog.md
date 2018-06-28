@@ -1,3 +1,13 @@
+**v5.50 / 28.6.2018**
+
+- Espressobin images rebuild and repository update, default 4.4.138, next 4.17.3, dev 4.18.RC, hardware crypto support in 4.17.y, zram and zswap
+- Odroid C2 bugfix update
+
+**v5.49 / 28.6.2018**
+
+- Amlogic Meson64 family (Odroid C2, Lepotato and FriendlyARM K2 S905) were merged into one kernel. Default images comes with kernel 4.14.52, next with 4.17.3 and DEV with 4.18.RC, updated boot scripts, implemented latest kernel bug fixes
+- updated kernels, desktop packages and armbian config on the stable repository (apt update & upgrade)
+
 **v5.48 / 26.6.2018**
 
 - added nightly images for Odroid C2 with 4.16.y (NEXT) and 4.18.y (DEV) and hopefully fixed ethernet driver
