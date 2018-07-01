@@ -7,7 +7,13 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 ## Requirements
 
 - x86/x64 Linux host that supports running a recent Docker daemon. Please refer to Docker documentation for details.
-- Docker version 17.06 CE or newer.
+- Docker version 17.06 CE or newer. Installation on Ubuntu Bionic:
+
+		apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0EBFCD88 
+		echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" > /etc/apt/sources.list.d/docker.list
+		apt update
+		apt install docker-ce
+
 - For launching the process as a non-root user this user needs to be added to the `docker` group. Please refer to Docker documentation for details.
 - Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites, please refer to Docker documentation for details.
 
