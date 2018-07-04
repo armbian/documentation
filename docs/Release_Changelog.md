@@ -1,3 +1,7 @@
+**v5.51 / 4.7.2018**
+
+- Helios4 Stretch and Bionic images update
+
 **v5.50 / 28.6.2018**
 
 - Espressobin images rebuild and repository update, default 4.4.138, next 4.17.3, dev 4.18.RC, hardware crypto support in 4.17.y, zram and zswap
