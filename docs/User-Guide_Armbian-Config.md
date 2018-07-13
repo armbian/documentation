@@ -1,83 +1,78 @@
 # Armbian configuration utility #
 
-Is a base utility for configuring your board.
+![](https://raw.githubusercontent.com/armbian/config/master/images/animated-888.gif)
 
-- software install
-- networking configuration
-- general system settings
-- board specific functions
+Is a base utility for configuring your board, divided into four main sections:
 
-The tool (which needs root privileges to work) can be launched by entering ```sudo armbian-config``` at the terminal prompt.
+- **S**ystem - system and security settings,
+- **N**etwork - wired, wireless, Bluetooth, access point,
+- **P**ersonal - timezone, language, hostname,
+- **S**oftware - system and 3rd party software install.
 
-![](images/armbian-config-2.png)
+The tool needs root privileges to work and can be launched by entering ```sudo armbian-config``` at the terminal prompt or by clicking to the armbian-config menu item on desktop images.
+
+## System ##
+
+- **I**nstall - installs to SATA, eMMC, NAND or USB. It gives you an option to install the system to more resilient and faster internal or external media. You can also change filesystem type to ext2,3,4 or BTRFS (if supported),
+- **F**reeze - freeze or unfreeze kernel and board support packages, to avoid upgrading,
+- **N**ightly - switch between nightly automated beta and stable builds,
+- **B**ootenv - edit boot environment and alter kernel boot parameters,
+- **H**ardware - toggle board low level functions: UART, I2C, SPI, ...
+- **S**witch - switch to/between alternative kernels: default, next, dev,
+- **S**SH - reconfigure SSH dameon. Permit root login, toggle ssh key and mobile phone authetication,
+- **F**irmware - execute apt update and upgrade to update your system,
+- **E**nable - toggle desktop on and off (on desktop images)
+- **L**ightdm - change login managers from none to lightdm (on desktop images)
+- **R**DP - toggle remote desktop from Windows (on desktop images)
+- **O**verlayroot - toggle overlayroot (Ubuntu images)
+- **M**inimal - install minimal Armbian XFCE powered desktop,
+- **D**efault - install Armbian XFCE powered desktop with web browser and extras.
+
+## Network  ##
+
+
+- **I**P - choose to select dynamic or edit static IP address,
+- **H**otspot - create or manage wireless access point. If your wireless adapter is recognized by a kernel, then armbian-config utility auto selects best mode on the selected device. It can detect 802.11n, 802.11a and 802.11ac. It also knows how to handle some special Realtek adapters,
+- **I**PV6 - toggle IPV6 for apt and system,
+- **I**perf3 - toogle network troughput tests daemon,
+- **W**iFi - manage wireless networking. Connect with Wifi network. You can create multiple wireless connections at the same time. They are managed by Network Manager,
+- **B**T install - pair Bluetooth devices without PIN code,
+- **A**dvanced - edit network config manually,
+- **F**orget - disconnets and clear all wireless connections.
+
+## Personal settings ##
+
+- **T**imezone - change timezone,
+- **L**ocales - reconfigure language and character set,
+- **K**eyboard - change console keyboaard settings,
+- **H**ostname - change hostname,
+- **M**irror - change to backup APT repository mirror in case of troubles,
+- **W**elcome - toggle welcome screen items.
 
 ## Software ##
 
-Software installation menu provides automated install of the following packages. Most of the software will work on newer versions without a problem, but there is no warranty.
+Software installation menu provides automated install of the following packages.
 
-- softy	 
+- **s**ofty
 	- [TV headend](https://tvheadend.org/) *(IPTV server)*
 	- [Syncthing](https://syncthing.net/) *(personal cloud)*
-	- [SoftEther VPN](https://www.softether.org/) *(VPN server & client)*
+	- [SoftEther VPN server](https://www.softether.org/) *(VPN server)*
+	- [ExaGear desktop](https://eltechs.com/product/exagear-desktop) *(x86 emulator)*
+	- [Plex](https://www.plex.tv/) *(Plex media server)*
+	- [Radarr](https://radarr.video/) *(Movie downloading server)*
+	- [Sonarr](https://sonarr.tv/) *(TV shows downloading server)*
 	- [Transmission](https://transmissionbt.com/) *(torrent server)*
 	- [ISPConfig](https://www.ispconfig.org/) *(WEB & MAIL server)*
-	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server, requires Debian base image)*
+	- [NCP](https://ownyourbits.com/nextcloudplus/) *(Nextcloud personal cloud)*
+	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server)*
 	- [PI hole](https://pi-hole.net) *(ad blocker)*
+	- [UrBackup](https://www.urbackup.org/) *(client/server backup system)*
 	- [MiniDLNA](http://minidlna.sourceforge.net/) *(media sharing)*
-
-![](images/armbian-config-7.png)
-
-- monitor = simple CLI monitoring 
-- diagnostics = create a summary of logs and upload them to paste.bin
-- headers = install kernel headers, which are needed for some external module recompilation
-
-## Networking  ##
-
-Ethernet adapter is managed by Network Manager by default, while Wireless is handled by IFUPDOWN, from within /etc/network/interfaces
-
-![](images/armbian-config-8.png)
- 
-- choose to select dynamic or set static IP address
-- create WiFi access point. If your wireless adapter is recognized by a kernel, then our utility proceeds with auto mode detection on the selected device. It can detect 802.11n, 802.11a and 802.11ac. It also knows how to handle some special Realtek adapters. 
-- manage WiFi access point. You can alter name, password or channel. If you have more understanding you can edit hostapd.conf directly from this utility
-- connect with Wifi. You can create multiple wireless connections at the same time. They are managed by Network Manager.
-- pair Bluetooth devices without PIN code
-- edit network config manually
-
-There is no need to reboot. All changes are done on the fly.
-
-![](images/armbian-config-9.png)
-
-## System  ##
-
-- change timezone
-- reconfigure language / locales
-- toggle desktop on and off (on desktop images)
-- change login managers from none to lightdm (on desktop images)
-- toggle RDP - remote desktop from Windows (on desktop images)
-- manage stock Debian / Ubuntu services
-- toggle overlayroot (Ubuntu)
-
-![](images/armbian-config-10.png)
-
-## Armbian  ##
-
-- Install to SATA, eMMC, NAND or USB - it gives you an option to install a system to more resilient and faster media
-- Freeze/unfreeze kernel and board support packages. For safer system updates.
-- Edit boot environment. Change boot verbosity level, video mode, etc.
-- Edit boot script.
-- Toggle welcome screen items
-- Switch between nightly and stable builds
-- Switch to alternative kernels
-- Toggle board functions: UART, I2C, SPI, ...
-
-![](images/armbian-config-3.png)
+- **M**onitor = simple CLI monitoring 
+- **D**iagnostics = create a summary of logs and upload them to paste.bin
+- **T**oggle kernel headers, RDP service, Thunderbird and Libreoffice (desktop builds)
 
 
-![](images/armbian-config-1.png)
+## Sources ##
 
-## Resources ##
-
-The configurating utility can be installed to generic Debian system while some Armbian specifics function will not work.
-
-[Sources](https://github.com/armbian/config)
+[https://github.com/armbian/config](https://github.com/armbian/config)
