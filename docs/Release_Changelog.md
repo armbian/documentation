@@ -1,3 +1,8 @@
+**v5.53 / 23.7.2018**
+
+- Z28PRO images updated. Fixed wireless and Bluetooth
+- FriendlyARM Nanopi K2 S905 images updated. Fixed ethernet problems.
+
 **v5.51 / 4.7.2018**
 
 - Helios4 Stretch and Bionic images update
