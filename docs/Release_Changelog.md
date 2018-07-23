@@ -2,6 +2,7 @@
 
 - Z28PRO images updated. Fixed wireless and Bluetooth
 - FriendlyARM Nanopi K2 S905 images updated. Fixed ethernet problems.
+- FriendlyARM Nanopi K1+ images updated. Fixed HDMI out and wireless
 
 **v5.51 / 4.7.2018**
 
