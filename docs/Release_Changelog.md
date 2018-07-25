@@ -1,3 +1,8 @@
+**v5.54 / 25.7.2018**
+
+- updated images for Odroid C2, Nanopi M3, Nanopi Fire 3 and NanoPC T3+, Espressobin, Cubox-i/HB and Le potato
+- added preview images without end user support for [Bananapi M3](https://dl.armbian.com/bananapim3/),[Cubietruck+](https://dl.armbian.com/cubietruckplus/) and [Bananapi M2 Berry](https://dl.armbian.com/bananapim2ultra/).
+
 **v5.53 / 23.7.2018**
 
 - Z28PRO images updated. Fixed wireless and Bluetooth
