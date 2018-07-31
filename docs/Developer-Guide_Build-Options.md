@@ -52,6 +52,6 @@
 - **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (yes&#124;**no**): create compressed archive with image file and GPG signature for redistribution
 - **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
-- **BUILD_KSRC** (**yes**&#124;no): create kernel sorce packages 
+- **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
 - **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching
