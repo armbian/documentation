@@ -1,3 +1,8 @@
+**v5.55 / 3.8.2018**
+
+- added Stretch and Bionic mainline kernel images for Odroid C1 (testing), 
+- rebuilt images for Bananapi M3 (fixed ethernet)
+
 **v5.54 / 25.7.2018**
 
 - updated images for Odroid C2, Nanopi M3, Nanopi Fire 3 and NanoPC T3+, Espressobin, Cubox-i/HB and Le potato
