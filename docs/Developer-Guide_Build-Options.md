@@ -34,6 +34,8 @@
 - **LIB_TAG** (master&#124;"branchname"):
 	- set to "master" to compile from the master branch (default)
 	- set to "branchname" to compile from any other branch available ("next" & "second" are deprecated and **not** recommended to use).
+- **CARD_DEVICE** (/dev/sdx) set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
+	
 
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
