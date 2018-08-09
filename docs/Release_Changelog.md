@@ -1,3 +1,6 @@
+**v5.55 / 9.8.2018**
+- rebuilt images for Orangepi One+, Orangepi Lite 2 and Pine H64. Enabled USB3, network, THS, DVFS, higher frequencies, HDMI on 4.18.y DEV branch images.
+
 **v5.55 / 3.8.2018**
 
 - added Stretch and Bionic mainline kernel images for Odroid C1 (testing), 
