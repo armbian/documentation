@@ -1,3 +1,7 @@
+**v5.57 / 11.8.2018**
+
+- added Bionic desktop and Stretch CLI images for RK3399 powered Nanopc T4
+
 **v5.56 / 10.8.2018**
 
 - rebuilt images for Pinebook. Added Bionic build
