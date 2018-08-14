@@ -1,6 +1,11 @@
 **v5.58 / 13.8.2018**
 
-- rebuilt images for Bananapi Pro
+- rebuilt images for Bananapi, Bananapi Pro, Bananapi+, Odroid C2, Odroid XU4
+- updated repository for Odroid C2/XU4, changed NEXT from 4.9.y to 4.14.y
+
+**v5.58 / 13.8.2018**
+
+- rebuilt images for Bananapi, Bananapi Pro, Bananapi+
 
 **v5.57 / 11.8.2018**
 
