@@ -1,3 +1,7 @@
+**v5.59 / 18.8.2018**
+
+- rebuilt images for Espressobin with kernel 4.18.y, Nanopc T4
+
 **v5.58 / 13.8.2018**
 
 - rebuilt images for Bananapi, Bananapi Pro, Bananapi+, Odroid C2, Odroid XU4
