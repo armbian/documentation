@@ -9,16 +9,16 @@ General:
 - RAM logging uses compressed memory ZRAM device and it rotates logs automagically,
 - all images were rebuilt, except boards which support ended,
 - fixed hanging on headers installation,
-- install boot script (BSP package) if not present. This fixes upgrade or kernel switching problems
-- Proper bind mount directory when installing to SATA/USB and booting from SD.
+- install boot script (BSP package) if not present. This fixes upgrade or kernel switching problems,
+- Proper bind mount directory when installing to SATA/USB and booting from SD,
 - update for wireless drivers 8812/11/14AU, 8188EU and AUFS,
-- Bugfix when a temperature is not present or readings are invalid
-- Also showing bridge IP addresses in MOTD
-- storing package list compressed - save 50-70Mb
-- enlarging automated apt-get update and purge intervals
-- a smaller overhead for CLI images.
-- improved alternative kernel switching
-- use Cloudflare DNS server for privacy reasons
+- Bugfix when a temperature is not present or readings are invalid,
+- Also showing bridge IP addresses in MOTD,
+- storing package list compressed - save 50-70Mb,
+- enlarging automated apt-get update and purge intervals,
+- a smaller overhead for CLI images,
+- improved alternative kernel switching,
+- use Cloudflare DNS server for privacy reasons.
 
 Family:
 
@@ -28,16 +28,16 @@ Family:
 - odroidc2 kernel was merged with meson64 on the source level,
 - meson64 u-boot was pushed to 2018.05, a default was updated to the latest 4.14.y, NEXT to 4.18.y,
 - rk3288, u-boot was pushed to 2018.05, legacy kernel cleaned and fixed after upstream troubles, NEXT branch was updated to the latest 4.14.y,
-- rk3399, switched to Ayufan repository, WIP,
+- rockchip64, rk3399 was split into rk3399 for Friendly ARM boards and rockchip64 for Rock64 and RockPro, Ayufan repository. Merging is postponed for the future,
 - s5p6818 family support added NEXT branch was updated to the latest 4.14.y,
 - mvebu, NEXT branch was updated to latest 4.14.y, DEV attached to 4.18.y,
 - fixed randomly failing X server on imx6 family,
 
 Board:
 
-- added WIP support for Firefly RK3399, Lime A64, Renegade, Rockpro64
-- added experimental images for Bananapi M3 and Cubietruck+
-- adeed support for: Tinkerboard S, Rock64, Orangepi Zero Plus, Nanopi Neo Core2,
+- added WIP support for Firefly RK3399, Lime A64, Renegade, Rockpro64,
+- added experimental images for Bananapi M3 and Cubietruck+,
+- adeed support for: Tinkerboard S, Rock64, Orangepi Zero Plus, Nanopi Neo Core2, Nanopi M4,
 - added NEO 1.1 regulator overlay,
 - added Helios4 device tree with FAN control for modern kernel,
 - enabled SPI access on Espressobin,
@@ -49,10 +49,11 @@ Board:
 - added eMMC and DVFS support on Espressobin mainline kernel, 
 - ported Tinkerboard UMS to modern u-boot,
 - enabled 1392 MHz cpufreq OPP on all RK3328 devices,
+- enabled 1992/1512MHz cpufreq OPP on all RK3399 devices,
 - added eMMC to OlinuXino A64 kernel and u-boot,
-- added Sunvell R69 CSC target
-- OrangepiWin: fixed BT
-- fixed ethernet on (unsupported) Bananapi M64
+- added Sunvell R69 CSC target,
+- OrangepiWin: fixed BT,
+- fixed ethernet on (unsupported) Bananapi M64.
 
 Build script:
 
@@ -60,19 +61,20 @@ Build script:
 - added support for burning image directly to SD card when your build is done by using Etcher for CLI,
 - fixed building under Docker, bumped to Bionic host,
 - added building Bionic and block building it for images with too old kernels,
-- added multibranch support (LIB_TAG)
+- added multibranch support (LIB_TAG).
 
 Infrastructure:
 
 - build machine main SSD and memory upgrade, switched from bare metal Ubuntu Xenial to fully optimsed Debian KVM server, free build capacity is avaliable for any armbian related activity upon request,
-- download server drive capacity and download speed upgrade, IPV6
+- download server drive capacity and download speed upgrade, IPV6,
+- geo load balancing for repository and download server is under testing,
 - improved repository management. Possibility to add packages via Github,
 - introducing new internal parameter, example: BUILD_ALL="yes" REBUILD_IMAGES="bananapi,udoo,rock64" to specify which images need rebuilding,
 - main torrent server cleanup, removed deprecated images,
-- creatiing report https://beta.armbian.com/buildlogs/report.html when building all kernels. Prepared to include simple per board testing report if exists https://github.com/armbian/testings
+- creating report https://beta.armbian.com/buildlogs/report.html when building all kernels. Prepared to include simple per board testing report where exists https://github.com/armbian/testings.
 
 Known bugs:
-- modern kernel support on A64 boards is mainly broken
+- modern kernel support on A64 boards is mainly broken.
 
 **v5.59 / 18.8.2018**
 
