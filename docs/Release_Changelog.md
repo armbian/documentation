@@ -8,6 +8,7 @@ General:
 - SWAP creation is disabled by default since we use compressed memory (ZSWAP) as an alternative,
 - RAM logging uses compressed memory ZRAM device and it rotates logs automagically,
 - all images were rebuilt, except boards which support ended,
+- significantly lighter - browser only - desktop images (< 1.5G),
 - fixed hanging on headers installation,
 - install boot script (BSP package) if not present. This fixes upgrade or kernel switching problems,
 - Proper bind mount directory when installing to SATA/USB and booting from SD,
