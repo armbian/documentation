@@ -36,7 +36,7 @@ Family:
 
 Board:
 
-- added WIP support for Firefly RK3399, Lime A64, Renegade, Rockpro64,
+- added WIP support for Firefly RK3399, Lime A64, Renegade, Rockpro64, Olimex Teres
 - added experimental images for Bananapi M3 and Cubietruck+,
 - adeed support for: Tinkerboard S, Rock64, Orangepi Zero Plus, Nanopi Neo Core2, Nanopi M4,
 - added NEO 1.1 regulator overlay,
