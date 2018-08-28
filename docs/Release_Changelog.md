@@ -46,6 +46,7 @@ Board:
 - fixed clock drift on Bananapi boards,
 - enabled concurrent AP/STA mode on Tinkerboard,
 - improved support for NanoPi Fire 3 (added SPU1705, DVFS, thermal tables, etc.),
+- fixed network crashing on high load. Affected: Odroid C1/C2, Le Potato kernel 4.18.y,
 - fixed wireless, eMMC and Bluetooth on (unsupported) Z28 PRO and changed boot order,
 - added eMMC and DVFS support on Espressobin mainline kernel, 
 - ported Tinkerboard UMS to modern u-boot,
