@@ -43,6 +43,7 @@ Board:
 - added Helios4 device tree with FAN control for modern kernel,
 - enabled SPI access on Espressobin,
 - added Tinkerboard S DC-IN voltage to armbianmonitor,
+- fixed network interface initialization,
 - fixed clock drift on Bananapi boards,
 - enabled concurrent AP/STA mode on Tinkerboard,
 - improved support for NanoPi Fire 3 (added SPU1705, DVFS, thermal tables, etc.),
