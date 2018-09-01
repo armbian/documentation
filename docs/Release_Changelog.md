@@ -63,6 +63,7 @@ Build script:
 
 - changed recommended build host to Bionic, Xenial still supported for everything except building Bionic images,
 - added support for burning image directly to SD card when your build is done by using Etcher for CLI,
+- added support for making LUKS encrypted root images, parameters: CRYPTROOT_ENABLE=yes, CRYPTROOT_PASSPHRASE=unlockpass,
 - fixed building under Docker, bumped to Bionic host,
 - added building Bionic and block building it for images with too old kernels,
 - added multibranch support (LIB_TAG).
