@@ -42,7 +42,7 @@ Board:
 - added NEO 1.1 regulator overlay,
 - added Helios4 device tree with FAN control for modern kernel,
 - enabled SPI access on Espressobin,
-- updated boot firmware (u-boot 17.10.3, atf 17.10.8, A3700utils 17.10.5) for Espressobin,
+- updated SPI boot firmware on Espressobin (18.09.1) with many fixes and support for booting from USB, SATA, eMMC or SD,
 - added Tinkerboard S DC-IN voltage to armbianmonitor,
 - fixed network interface initialization,
 - fixed clock drift on Bananapi boards,
