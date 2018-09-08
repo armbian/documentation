@@ -35,6 +35,7 @@
 	- set to "master" to compile from the master branch (default)
 	- set to "branchname" to compile from any other branch available ("next" & "second" are deprecated and **not** recommended to use).
 - **CARD_DEVICE** (/dev/sdx) set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
+- **CRYPTROOT_ENABLE** (yes&#124;no): set to enable LUKS encrypted rootfs. You must also provide unlock password CRYPTROOT_PASSPHRASE="MYSECRECTPASS" and optional CRYPTROOT_SSH_UNLOCK=yes CRYPTROOT_SSH_PORT=2222 Function **is under testing** and works only when building in native environment, Stretch and Bionic targets only, some kernels might lack dependencies
 	
 
 ### Hidden options to minimize user input for build automation:
