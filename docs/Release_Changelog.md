@@ -5,6 +5,7 @@ Changes overview:
 General:
 
 - Ubuntu Xenial was replaced with Bionic unless kernel was too old for the change,
+- Debian Jessie becomes EOL and its building is not maintained anymore while you will still receive kernel updates,
 - SWAP creation is disabled by default since we use compressed memory (ZSWAP) as an alternative,
 - RAM logging uses compressed memory ZRAM device and it rotates logs automagically,
 - all images were rebuilt, except boards which support ended,
