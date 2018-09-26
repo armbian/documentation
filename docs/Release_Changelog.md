@@ -6,9 +6,10 @@ General:
 
 - Ubuntu Xenial was replaced with Bionic unless kernel was too old for the change,
 - Debian Jessie becomes EOL and its building is not maintained anymore while you will still receive kernel updates,
-- SWAP creation is disabled by default since we use compressed memory (ZSWAP) as an alternative,
-- RAM logging uses compressed memory ZRAM device and it rotates logs automagically,
-- all images were rebuilt, except boards which support ended,
+- Emergency swap file creation is disabled by default since we use compressed memory (ZRAM) as an alternative,
+- `vm.swappiness` has been changed from 0 to 100 (if you run databases on your board you might want to revert this change in `/etc/sysctl.conf`),
+- RAM logging also uses ZRAM now and rotates logs automagically,
+- all images were rebuilt, except boards for which support ended,
 - significantly lighter - browser only - desktop images (< 1.5G),
 - fixed hanging on headers installation,
 - install boot script (BSP package) if not present. This fixes upgrade or kernel switching problems,
@@ -16,11 +17,11 @@ General:
 - update for wireless drivers 8812/11/14AU, 8188EU and AUFS,
 - Bugfix when a temperature is not present or readings are invalid,
 - Also showing bridge IP addresses in MOTD,
-- storing package list compressed - save 50-70Mb,
+- storing package list compressed - saves 50-70Mb,
 - enlarging automated apt-get update and purge intervals,
-- a smaller overhead for CLI images,
+- smaller overhead for CLI images,
 - improved alternative kernel switching,
-- use Cloudflare DNS server for privacy reasons.
+- stop setting Google's DNS server as default for privacy reasons.
 
 Family:
 
@@ -81,6 +82,7 @@ Infrastructure:
 - creating report https://beta.armbian.com/buildlogs/report.html when building all kernels. Prepared to include simple per board testing report where exists https://github.com/armbian/testings.
 
 Known bugs:
+
 - modern kernel support on A64 boards is mainly broken.
 
 **v5.59 / 18.8.2018**
