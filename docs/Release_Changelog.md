@@ -1,3 +1,8 @@
+**v5.61 / 26.9.2018**
+
+- updated armbian-config,
+- fixed Chromium on Debian builds with a workaround. We are overwriting package with last known working one. It will show some error on startup which is safe to ignore. This workaround will fade out with Chromium upstream update.
+
 **v5.60 / 19.9.2018**
 
 Changes overview:
