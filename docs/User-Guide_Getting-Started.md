@@ -68,7 +68,7 @@ Since it might happen that your download got somehow corrupted we integrate a ch
 
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**.
 
-Also important: Most SD cards are only optimised for sequential reads/writes as it's common in digital cameras. this is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+Also important: Most SD cards are only optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
 |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
 |---|---|---|---|---|
@@ -169,7 +169,7 @@ If you don't know, you can browse and then connect
 By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
 
 	user@boardname:~$ nmcli con show
-	NAME				UUID								TYPE			DEVICE 
+	NAME	UUID	TYPE	DEVICE 
 	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
 
 The conncetion can now be edited with the following:
