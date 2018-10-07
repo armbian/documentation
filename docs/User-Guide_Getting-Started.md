@@ -166,15 +166,21 @@ If you don't know, you can browse and then connect
 
 # How to set fixed IP?
 
-By default your main network adapter's IP is assigned by your router DHCP server.
+By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
 
-Edit /etc/network/interfaces and change from:
+	user@boardname:~$ nmcli con show
+	NAME				UUID								TYPE			DEVICE 
+	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
 
-	iface eth0 inet dhcp
+The conncetion can now be edited with the following:
 
-to - for example:
+	nmcli con mod "Wired connection 1"
+	  ipv4.addresses "HOST_IP_ADDRESS"
+	  ipv4.gateway "IP_GATEWAY"
+	  ipv4.dns "DNS_SERVER(S)"
+	  ipv4.dns-search "DOMAIN_NAME"
+	  ipv4.method "manual"
 
-	iface eth0 inet static
-	 	address 192.168.1.100
-        netmask 255.255.255.0
-		gateway 192.168.1.1
+The same changes can also be done with NetworkManagers text user interface:
+
+	sudo nmtui
