@@ -4,7 +4,7 @@
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 20GB hard disk space for the virtual disk image)**,
 - Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
-- **The only supported** compilation environment is [Ubuntu Xenial 16.04 x64](http://archive.ubuntu.com/ubuntu/dists/xenial-updates/main/installer-amd64/current/images/netboot/mini.iso) (**no other releases are supported**! It has to be exactly 16.04 otherwise default compiler versions might not match so if you're on an older Ubuntu release upgrade to 16.04 now, if you use a newer Ubuntu version start with 16.04 from scratch),
+- **The only supported** compilation environment is [Ubuntu Xenial 18.04 x64](http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/mini.iso) (**no other releases are supported**! It has to be exactly 18.04 otherwise default compiler versions might not match so if you're on an older Ubuntu release upgrade to 18.04 now, if you use a newer Ubuntu version start with 18.04 from scratch),
 - installed basic system, OpenSSH and Samba (optional),
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
