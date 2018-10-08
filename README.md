@@ -82,7 +82,7 @@ After adding a new file, either hand-edit `mkdocs.yml`, or rerun `tools/mkArmbia
 
 ```
 pip install mkdocs
-git clone git@github.com:igorpecovnik/lib.docs.git
+git clone https://github.com/armbian/documentation
 #vim docs/[Parent Topic Example]-child-topic-example.md
 #generate config, build, launch local preview server
 tools/mkArmbianDocs.py && mkdocs build --clean && mkdocs serve
