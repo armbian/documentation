@@ -72,16 +72,14 @@ Also important: Most SD cards are only optimised for sequential reads/writes as 
 
 |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
 |---|---|---|---|---|
-|Class 1 (A1)|![a1-logo](images/a1-logo.png)|1500 IOPS|500 IOPS|10MBytes/sec|
-|Class 2 (A2)|![a2-logo](images/a2-logo.png)|4000 IOPS|2000 IOPS|10MBytes/sec|
+|Class 1 (A1)|![a1-logo](https://github.com/armbian/documentation/blob/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
+|Class 2 (A2)|![a2-logo](https://github.com/armbian/documentation/blob/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
 
 At the time of this writing A1 and A2 cards were only widely available from SanDisk. Armbian **only** recommends Class A1 or Class A2 SD-Cards. For example:
 
-![a1-16gb-card](images/sandisk-ultra-a1.png) ![a1-32gb-card](images/sandisk-extremepro-a1.png) ![a2-64gb-card](images/sandisk-extreme-a2.png)
+![a1-16gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extreme-a2.png)
 
-In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/index.php?/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding 'factory default' SD card performance:
-
-- [SD card performance with Armbian - Thomas Kaiser](https://forum.armbian.com/topic/954-sd-card-performance/?page=3&tab=comments#comment-49811)
+In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/index.php?/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/?page=3&tab=comments#comment-49811).
 
 # How to boot?
 
