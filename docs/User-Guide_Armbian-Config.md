@@ -21,6 +21,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **S**witch - switch to/between alternative kernels: default, next, dev,
 - **S**SH - reconfigure SSH dameon. Permit root login, toggle ssh key and mobile phone authetication,
 - **F**irmware - execute apt update and upgrade to update your system,
+- **Z**shell - toogle stock BASH and ZSH with [Oh My ZSH](https://ohmyz.sh/) and [tmux](https://en.wikipedia.org/wiki/Tmux)
 - **E**nable - toggle desktop on and off (on desktop images)
 - **L**ightdm - change login managers from none to lightdm (on desktop images)
 - **R**DP - toggle remote desktop from Windows (on desktop images)
@@ -35,6 +36,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **H**otspot - create or manage wireless access point. If your wireless adapter is recognized by a kernel, then armbian-config utility auto selects best mode on the selected device. It can detect 802.11n, 802.11a and 802.11ac. It also knows how to handle some special Realtek adapters,
 - **I**PV6 - toggle IPV6 for apt and system,
 - **I**perf3 - toogle network troughput tests daemon,
+- **L**TE - 3G/4G LTE modem management
 - **W**iFi - manage wireless networking. Connect with Wifi network. You can create multiple wireless connections at the same time. They are managed by Network Manager,
 - **B**T install - pair Bluetooth devices without PIN code,
 - **A**dvanced - edit network config manually,
@@ -67,6 +69,8 @@ Software installation menu provides automated install of the following packages.
 	- [Openmediavault NAS](http://www.openmediavault.org/) *(NAS server)*
 	- [PI hole](https://pi-hole.net) *(ad blocker)*
 	- [UrBackup](https://www.urbackup.org/) *(client/server backup system)*
+	- [Docker](https://www.docker.com) *(Docker CE engine)*
+	- [Mayan EDMS](https://www.mayan-edms.com/) *(Document management system within Docker)*
 	- [MiniDLNA](http://minidlna.sourceforge.net/) *(media sharing)*
 - **M**onitor = simple CLI monitoring 
 - **D**iagnostics = create a summary of logs and upload them to paste.bin
