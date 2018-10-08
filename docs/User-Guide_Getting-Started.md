@@ -68,19 +68,18 @@ Since it might happen that your download got somehow corrupted we integrate a ch
 
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**.
 
-Also important: Almost all SD cards are only optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. And while you shouldn't buy or use any card rated less than *class 10* you should especially take care to choose one that is known to show high random I/O performance since this is way more performance relevant when used with any SBC. Even cards advertised as being 'high speed' can show horribly low random IO performance in reality.
+Also important: Most SD cards are only optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
-You won't be wrong picking one of these:
+|Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
+|---|---|---|---|---|
+|Class 1 (A1)|![a1-logo](https://github.com/armbian/documentation/blob/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
+|Class 2 (A2)|![a2-logo](https://github.com/armbian/documentation/blob/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
 
-[![Samsung EVO 16GB UHS-I](http://www.armbian.com/wp-content/uploads/2016/03/sdcard-samsung-1.png)](http://www.amazon.com/dp/B00IVPU7KE)
-[![Transcend Ultimate 16 GB UHS-I](http://www.armbian.com/wp-content/uploads/2016/03/sdcard-transcend-1.png)](http://www.amazon.com/gp/product/B00BLHWYWS)
-[![SanDisk Extreme Pro 16 GB UHS-I](http://www.armbian.com/wp-content/uploads/2016/03/sdcard-sandisk-1.png)](http://www.amazon.com/dp/B008HK1YAA)
+At the time of this writing A1 and A2 cards were only widely available from SanDisk. Armbian **only** recommends Class A1 or Class A2 SD-Cards. For example:
 
-In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/index.php?/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding 'factory default' SD card performance:
+![a1-16gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extreme-a2.png)
 
-- [SD card performance with Armbian - Thomas Kaiser](http://forum.armbian.com/index.php/topic/954-sd-card-performance/)
-- [Raspberry Pi microSD card performance comparison - Jeff Geerling](http://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-microsd-card)
-- [The Best microSD Card - Kimber Streams](http://thewirecutter.com/reviews/best-microsd-card/)
+In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/index.php?/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/?page=3&tab=comments#comment-49811).
 
 # How to boot?
 
@@ -165,15 +164,21 @@ If you don't know, you can browse and then connect
 
 # How to set fixed IP?
 
-By default your main network adapter's IP is assigned by your router DHCP server.
+By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
 
-Edit /etc/network/interfaces and change from:
+	user@boardname:~$ nmcli con show
+	NAME	UUID	TYPE	DEVICE 
+	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
 
-	iface eth0 inet dhcp
+The conncetion can now be edited with the following:
 
-to - for example:
+	nmcli con mod "Wired connection 1"
+	  ipv4.addresses "HOST_IP_ADDRESS"
+	  ipv4.gateway "IP_GATEWAY"
+	  ipv4.dns "DNS_SERVER(S)"
+	  ipv4.dns-search "DOMAIN_NAME"
+	  ipv4.method "manual"
 
-	iface eth0 inet static
-	 	address 192.168.1.100
-        netmask 255.255.255.0
-		gateway 192.168.1.1
+The same changes can also be done with NetworkManagers text user interface:
+
+	sudo nmtui
