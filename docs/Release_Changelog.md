@@ -1,3 +1,12 @@
+**v5.63 / 8.10.2018**
+
+- updated images for Helios4 with SPI booting support,
+- updated armbian-config. Added advanced ZSH shell install with most used plugins and tmux.
+
+**v5.62 / 1.10.2018**
+
+- updated armbian-config
+
 **v5.61 / 26.9.2018**
 
 - updated armbian-config,
