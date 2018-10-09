@@ -1,6 +1,11 @@
+**v5.64 / 9.10.2018**
+
+- updated armbian-sbc dpkg postinst script to update bootscript files during dpkg upgrade. Script will create backup of bootscript files in /usr/share/armbian and maintain a history of max 5 versions.
+- updated images and packages for Helios4.
+
 **v5.63 / 8.10.2018**
 
-- updated images for Helios4 with SPI booting support,
+- updated images for Helios4 with SPI booting support.
 - updated armbian-config. Added advanced ZSH shell install with most used plugins and tmux.
 
 **v5.62 / 1.10.2018**
