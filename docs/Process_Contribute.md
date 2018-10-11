@@ -8,7 +8,7 @@
 
 If it is a new feature request, don't start the coding first. Remember to [open an issue](https://guides.github.com/features/issues/) to discuss the new feature.
 
-If you are struggling, check [this detailed step by step guide on contributing](https://www.exchangecore.com/blog/contributing-concrete5-github/).
+If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributing-concrete5-github/) or [CLI](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) step by step guide on contributing.
 
 ## Where are sources? ##
 
