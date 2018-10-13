@@ -68,16 +68,16 @@ Since it might happen that your download got somehow corrupted we integrate a ch
 
 7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**.
 
-Also important: Most SD cards are only optimised for sequential reads/writes as it's common in digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+Also important: Most SD cards are only optimised for sequential reads/writes as it's common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
 |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
 |---|---|---|---|---|
-|Class 1 (A1)|![a1-logo](https://github.com/armbian/documentation/blob/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
-|Class 2 (A2)|![a2-logo](https://github.com/armbian/documentation/blob/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
+|Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
+|Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
 
-At the time of this writing A1 and A2 cards were only widely available from SanDisk. Armbian **only** recommends Class A1 or Class A2 SD-Cards. For example:
+At the time of this writing A1 and A2 cards are only widely available from SanDisk. Armbian **only** recommends Class A1 SD-Cards now ([A2 rated cards show lower random IO performance with ext4 on Linux for yet unknown reasons](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
 
-![a1-16gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://github.com/armbian/documentation/blob/master/docs/images/sandisk-extreme-a2.png)
+![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
 
 In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/index.php?/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/?page=3&tab=comments#comment-49811).
 
