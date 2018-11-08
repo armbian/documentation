@@ -1,3 +1,19 @@
+**v5.66 / 8.11.2018**
+
+- added Mediatek MT7623 family
+- added images for Bananapi R2 with kernek 4.19.y without official support
+
+**v5.66 / 7.11.2018**
+
+- removing Odroid C2 official support, drop its default 3.16.y kernel from build engine and merge with the meson64 family.
+- attach meson64 dev to 4.19.y
+- drop Udoo Neo completly, drop Udoo Quad default and dev kernel
+- Odroid XU4: drop kernel 3.10.y, default branch is upgraded to offical 4.14.y, next becomes vanilla 4.19.y
+
+**v5.65 / 6.11.2018**
+
+- Cubox-i/Hummigboard: drop kernel 3.14.y and move 4.14.y to default, next becomes 4.19.y, dev 4.19.y with a mainline u-boot
+
 **v5.64 / 9.10.2018**
 
 - updated images and packages for Helios4.
