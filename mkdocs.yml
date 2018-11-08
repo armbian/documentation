@@ -2,7 +2,7 @@
 
 site_name: Armbian Documentation
 
-repo_url: https://github.com/lanefu/armbianDocsAndProcess
+repo_url: https://github.com/armbian/documentation
 repo_name: Github
 
 site_author: "Armbian team"
