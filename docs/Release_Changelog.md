@@ -1,3 +1,7 @@
+**v5.67 / 12.11.2018**
+
+- updated images for Bananapi R2 with eMMC install support.
+
 **v5.66 / 8.11.2018**
 
 - added Mediatek MT7623 family.
