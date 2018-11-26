@@ -1,3 +1,7 @@
+**v5.67 / 26.11.2018**
+- updated Helios4 images
+- added experimental mainline kernel images for Pinebook and Pinebook 1080p
+
 **v5.67 / 12.11.2018**
 
 - updated images for Bananapi R2 with eMMC install support.
