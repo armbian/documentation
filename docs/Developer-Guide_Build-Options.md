@@ -58,3 +58,4 @@
 - **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
 - **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching
+- **FORCE_BOOTSCRIPT_UPDATE** (yes&#124;no): set to "yes" to force bootscript to get updated during bsp package upgrade
