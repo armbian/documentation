@@ -1,3 +1,6 @@
+**v5.68 / 30.12.2018**
+- updated Espressobin images, kernel updated to 4.19.y
+
 **v5.67 / 26.11.2018**
 - updated Helios4 images
 - added experimental mainline kernel images for Pinebook and Pinebook 1080p
