@@ -1,3 +1,17 @@
+**v5.68 / x.1.2019**
+- sunxi-next and sunxi64-next were moved from 4.14.y to 4.19.y (remake of all AW images)
+- better DVFS on H3/H5/A64, enabled higher cpu speed.
+- fixed poweroff on H5
+- H5/A64 lost experimental status, 
+- upgraded images and upstream/bugfix kernel upgrade for Rock64, Renegade, 
+- u-boot update is moved from automated to manual (armbian-config) to minimize boot related troubles
+- added two repisotory mirrors: China and France (armbian-config -> Personal -> Mirror)
+- changed switching to alternative kernels from armbian-config. It is possible to select a direct version and it only replaces kernel (safer)
+- first official build for Olimex Teres
+- mainline kernel builds for: Pine64, Pine64so, Olinuxino A64, OrangepiWin
+- added more download variants for Rock64, Renegade, Tritium H3&H5
+- updated images for Z28PRO, Bananapi PRO, Espressobin, Olimex Micro, Lime, Udoo, Bananapi M2, Bananapi M2U, 
+
 **v5.68 / 30.12.2018**
 - updated Espressobin images, kernel updated to 4.19.y
 
