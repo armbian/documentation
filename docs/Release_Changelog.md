@@ -1,4 +1,5 @@
 **v5.70 / 12.1.2019**
+
 - sunxi-next and sunxi64-next were moved from 4.14.y to 4.19.y (remake of all AW images)
 - better DVFS on H3/H5/A64, enabled higher cpu speed.
 - added overlay support for Tinkerboard/rockchip next and kernel upped to 4.19.y
@@ -16,9 +17,11 @@
 - updated images for Z28PRO, Bananapi PRO, Espressobin, Olimex Micro, Lime, Udoo, Bananapi M2, Bananapi M2U, 
 
 **v5.68 / 30.12.2018**
+
 - updated Espressobin images, kernel updated to 4.19.y
 
 **v5.67 / 26.11.2018**
+
 - updated Helios4 images
 - added experimental mainline kernel images for Pinebook and Pinebook 1080p
 
