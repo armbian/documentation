@@ -1,6 +1,9 @@
-**v5.68 / x.1.2019**
+**v5.70 / 12.1.2019**
 - sunxi-next and sunxi64-next were moved from 4.14.y to 4.19.y (remake of all AW images)
 - better DVFS on H3/H5/A64, enabled higher cpu speed.
+- added overlay support for Tinkerboard/rockchip next and kernel upped to 4.19.y
+- updated next kernel for Odroid XU4 to 4.19.y
+- updated next kernel for Odroid C2, Lepotato and Nanopik2-S905 to 4.19.y with overlay support
 - fixed poweroff on H5
 - H5/A64 lost experimental status, 
 - upgraded images and upstream/bugfix kernel upgrade for Rock64, Renegade, 
