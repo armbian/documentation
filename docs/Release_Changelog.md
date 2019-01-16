@@ -1,3 +1,7 @@
+**v5.71 / 16.1.2019**
+
+- updated images for Odroid C2, Lepotato and Nanopik2-S905 due to [this bug](https://github.com/armbian/build/commit/01571c0a4c6c3e7cdb1fec8c99465d8fc00c8c90)
+
 **v5.70 / 12.1.2019**
 
 - sunxi-next and sunxi64-next were moved from 4.14.y to 4.19.y (remake of all AW images)
