@@ -1,3 +1,7 @@
+**v5.72 / 16.1.2019**
+
+- added additional repository mirror (updated armbian-config)
+
 **v5.71 / 16.1.2019**
 
 - updated images for Odroid C2, Lepotato and Nanopik2-S905 due to [this bug](https://github.com/armbian/build/commit/01571c0a4c6c3e7cdb1fec8c99465d8fc00c8c90)
