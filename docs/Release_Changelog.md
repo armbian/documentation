@@ -1,7 +1,7 @@
 **v5.72 / 16.1.2019**
 
 - added additional repository mirror (updated armbian-config)
-- fixed Tinkerboard DTB in repository and images rebuild
+- [fixed Tinkerboard DTB](https://forum.armbian.com/topic/9312-tinkerboard-ss-bricked-after-570-upgrade/?tab=comments#comment-69964) in repository and images rebuild
 
 **v5.71 / 16.1.2019**
 
