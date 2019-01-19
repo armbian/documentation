@@ -18,7 +18,7 @@
 - H5/A64 lost experimental status, 
 - upgraded images and upstream/bugfix kernel upgrade for Rock64, Renegade, 
 - u-boot update is moved from automated to manual (armbian-config) to minimize boot related troubles
-- added two repisotory mirrors: China and France (armbian-config -> Personal -> Mirror)
+- added two repository mirrors: China and France (armbian-config -> Personal -> Mirror)
 - changed switching to alternative kernels from armbian-config. It is possible to select a direct version and it only replaces kernel (safer)
 - first official build for Olimex Teres
 - mainline kernel builds for: Pine64, Pine64so, Olinuxino A64, OrangepiWin
