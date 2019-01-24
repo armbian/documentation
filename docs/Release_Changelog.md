@@ -1,3 +1,16 @@
+**v5.73 / XX.1.2019**
+
+- much faster nand-sata-install operations. Thanks to @dedalodaelus
+- fixed drivers for popular DVB tuner S960 (all kernels)
+- fixed AP mode on Orangepi PC+, Prime, One, .. when using kernel 4.19.y
+- added MD raid support for SUNXI64
+- upgrade bugfix for Helios4
+- updated hostapd to 2.7
+- fixed wireless on Bananapi M1+
+- fixed 1512MHz OPP on Renegade
+- fixed DRM crashing for rockchip64
+- mainline u-boot bumped to 2018.11 (update goes manually from nand-sata-install utility)
+
 **v5.72 / 16.1.2019**
 
 - added additional repository mirror (updated armbian-config)
