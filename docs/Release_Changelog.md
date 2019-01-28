@@ -3,6 +3,7 @@
 - much faster nand-sata-install operations. Thanks to @dedalodaelus
 - added support for @wireguard on all kernels higher than 3.10.y
 - fixed drivers for popular DVB tuner S960 (all kernels)
+- fixed bug in wireless drivers on Cubietruck, BananpiPRO, Bananapi+
 - fixed AP mode on Orangepi PC+, Prime, One, .. when using kernel 4.19.y
 - added MD raid support for SUNXI64
 - upgrade bugfix for Helios4
