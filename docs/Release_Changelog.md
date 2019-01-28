@@ -1,6 +1,7 @@
 **v5.73 / XX.1.2019**
 
 - much faster nand-sata-install operations. Thanks to @dedalodaelus
+- added support for @wireguard on all kernels higher than 3.10.y
 - fixed drivers for popular DVB tuner S960 (all kernels)
 - fixed AP mode on Orangepi PC+, Prime, One, .. when using kernel 4.19.y
 - added MD raid support for SUNXI64
@@ -10,6 +11,7 @@
 - fixed 1512MHz OPP on Renegade
 - fixed DRM crashing for rockchip64
 - mainline u-boot bumped to 2018.11 (update goes manually from nand-sata-install utility)
+- added testing images for Orangepi RK3399 and Radxa Rockpi 4B
 
 **v5.72 / 16.1.2019**
 
