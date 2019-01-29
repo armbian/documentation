@@ -1,4 +1,4 @@
-**v5.73 / XX.1.2019**
+**v5.73 / 29.1.2019**
 
 - much faster nand-sata-install operations. Thanks to @dedalodaelus
 - added support for @wireguard on all kernels higher than 3.10.y
@@ -10,7 +10,6 @@
 - added MD raid support for SUNXI64
 - upgrade bugfix for Helios4
 - updated hostapd to 2.7
-- fixed wireless on Bananapi M1+
 - fixed 1512MHz OPP on Renegade
 - fixed DRM crashing for rockchip64
 - mainline u-boot bumped to 2018.11 (update goes manually from nand-sata-install utility)
