@@ -5,6 +5,8 @@
 - fixed drivers for popular DVB tuner S960 (all kernels)
 - fixed bug in wireless drivers on Cubietruck, BananpiPRO, Bananapi+
 - fixed AP mode on Orangepi PC+, Prime, One, .. when using kernel 4.19.y
+- added prolific USB-to-USB bridges in mvebu-next/dev
+- added nftables masquerade in mvebu64-next
 - added MD raid support for SUNXI64
 - upgrade bugfix for Helios4
 - updated hostapd to 2.7
