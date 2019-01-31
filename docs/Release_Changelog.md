@@ -1,3 +1,7 @@
+**v5.74 / 31.1.2019**
+
+- fixing systemd related [bug found](https://forum.armbian.com/topic/9289-ssh-not-working-after-upgrade-orange-pi-lite-armbian_ubuntu_xenial/) in sunxi legacy 3.4.y kernels
+
 **v5.73 / 29.1.2019**
 
 - much faster nand-sata-install operations. Thanks to @dedalodaelus
