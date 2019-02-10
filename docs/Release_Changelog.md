@@ -1,3 +1,9 @@
+**v5.75 / 10.2.2019**
+
+- added updated driver for Realtek 8811, 8812, 8814 and 8821 chipsets
+- added Wireguard support to remaining kernels (except lower than 3.10)
+- images rebuild with latest upstream sources, mainline u-boot was bumped to 2018.11
+
 **v5.74 / 31.1.2019**
 
 - fixing systemd related [bug found](https://forum.armbian.com/topic/9289-ssh-not-working-after-upgrade-orange-pi-lite-armbian_ubuntu_xenial/) in sunxi legacy 3.4.y kernels
