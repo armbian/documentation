@@ -1,3 +1,7 @@
+**v5.76 / 11.2.2019**
+
+- remove Exagear Desktop
+
 **v5.75 / 10.2.2019**
 
 - added updated driver for Realtek 8811, 8812, 8814 and 8821 chipsets
