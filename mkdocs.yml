@@ -25,7 +25,7 @@ pages:
   - 'User Guide' :
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
         - 'Quick facts' : 'Quick_facts.md'
-        - 'Troubleshooting FAQ' : 'User-Guide_Basic-Troubleshooting.md'
+        - 'Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
         - 'Armbian config' : 'User-Guide_Armbian-Config.md'
