@@ -37,7 +37,9 @@ If you still can't find what you need here, visit the [Armbian forum](http://for
 
 **Performance tweaks**
 
-- /tmp and /var/log are mounted as tmpfs, log2ram service saves logs to disk daily and on shutdown
+- /var/log is mounted as compressed device (zram, lzo), log2ram service saves logs to disk daily and on shutdown
+- half of memory is alocatted/extended for/with compressed swap
+- /tmp is mounted as tmpfs (optional compressed)
 - browser profile memory caching
 - optimized IO scheduler. (check /etc/init.d/armhwinfo)
 - journal data writeback enabled. (/etc/fstab)
