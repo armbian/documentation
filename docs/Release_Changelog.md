@@ -1,3 +1,38 @@
+**v5.86 / WIP**
+
+- added support for Odroid N2, Nanopi R1, Nanopi Duo2
+- enabled nightly images for Orangepi3, One+, Lite2, PineH64, Rock64pro, RockPi4b
+- recompiled all images and pushed update where updates are known to work (sunxi, sunxi64, meson64, ...)
+- improved SATA write speed on A20 chips for up to 300%
+- fixed thermal throtling for H5 devices
+- mainline u-boot moved 2019.04
+- most development kernels moved to 5.1.y
+- added separate DT for espressobinv7
+- enable WoL for eth0 on Helios4
+
+Build script:
+
+- added Debian Buster and Ubuntu Disco (WIP)
+- improved building under Docker. Source code is not copied to docker image, caching image
+- Linaro compilers update to 2019.02
+- fixed incomplete cleaning of the source code
+
+Armbian-config:
+
+- fixed kernel changing
+- fixed sources download
+- fixed Hass.IO and TVheadend install
+- added menu driven CPU frequency/governor adjustement
+- improved two-factor authentication
+- added meson64 and rockchip to overlay/hardware configuration
+- improved hostapd management
+
+Infrastructure:
+
+- main download server has been hooked to 10GbE connection.
+- major forum upgrade
+- added another IPV6 capable EU mirror https://mirrors.dotsrc.org
+
 **v5.76 / 11.2.2019**
 
 - remove Exagear Desktop
