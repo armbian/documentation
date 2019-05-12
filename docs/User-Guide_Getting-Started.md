@@ -108,6 +108,12 @@ and change the autologin user.
 
 If the kernel was upgraded during this process you will be prompted to reboot at next login.
 
+# How to update u-boot?
+
+First you need to update packages described in a previous "How to update" step. Then run armbian-config utility, go to system settings and proceed to:
+
+**"Install" "Install to/update boot loader"** -> **Install/Update the bootloader on SD/eMMC**
+
 # How to adjust hardware features?
 
 [Use Armbian configuration utility](User-Guide_Armbian-Config.md).
