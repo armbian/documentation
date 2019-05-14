@@ -2,6 +2,7 @@
 
 - added support for Odroid N2, Nanopi R1, Nanopi Duo2
 - enabled nightly images for Orangepi3, One+, Lite2, PineH64, Rock64pro, RockPi4b
+- enabled nigtly Buster and Disco images for Le Potato
 - recompiled all images and pushed update where updates are known to work (sunxi, sunxi64, meson64, ...)
 - improved SATA write speed on A20 chips for up to 300%
 - fixed thermal throtling for H5 devices
@@ -12,8 +13,8 @@
 
 Build script:
 
-- added option to select Linux, Debian and build engine compiler mirrors located in China
-- reworked BTRFS images creation
+- added [option to select](https://docs.armbian.com/Developer-Guide_Build-Options/) source mirrors located in China
+- added btrfs filesystem compression method and compression level selection
 - added Debian Buster and Ubuntu Disco (WIP)
 - improved building under Docker. Source code is not copied to docker image, caching image
 - Linaro compilers update to 2019.02
