@@ -57,6 +57,14 @@
 - **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
+- **BTRFS_COMPRESSION** (**lzo**|zlib:3|zstd) select btrfs filesystem compression method and compression level. By default the compression is `lzo`, user must ensure kernel version is above `4.14` when selecting `zstd` or setting zlib compression level(`zlib:[1-9]`). Both the host and the target kernel version must above `5.1` when selecting zstd compression level (`zstd:[1-15]`), since kernel start supporting zstd compression ratio from `5.1`. The script does not check the legality of input variable(compression ratio), input like `zlib:1234` is legal to script, but illegal to kernel. When using microsd card, `zstd` is preferred because of the poor 4k I/O performance of microsd card.
 - **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching
 - **FORCE_BOOTSCRIPT_UPDATE** (yes&#124;no): set to "yes" to force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** (ipv4 address): the DNS resolver used inside the build chroot. Does not affect the final image. Default: 1.0.0.1
+- **DOWNLOAD_MIRROR** select download mirror for `toolchain` and `debian/ubuntu packages`.
+	- set to `china` to use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to tsinghua university.
+	- leave it empty to use official source.
+- **MAINLINE_MIRROR** select mainline mirror of `linux-stable.git`
+	- set to `google` to use mirror provided by Google, the same as `MAINLINE_MIRROR=yes`.
+	- set to `tuna` to use mirror provided by tsinghua university.
+	- leave it empty to use offical `git.kernel.org`, it may be very slow for mainland china users.
