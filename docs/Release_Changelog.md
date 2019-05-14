@@ -12,10 +12,13 @@
 
 Build script:
 
+- added option to select Linux, Debian and build engine compiler mirrors located in China
+- reworked BTRFS images creation
 - added Debian Buster and Ubuntu Disco (WIP)
 - improved building under Docker. Source code is not copied to docker image, caching image
 - Linaro compilers update to 2019.02
 - fixed incomplete cleaning of the source code
+
 
 Armbian-config:
 
