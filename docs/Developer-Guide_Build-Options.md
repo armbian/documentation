@@ -65,6 +65,6 @@
 	- set to `china` to use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to tsinghua university.
 	- leave it empty to use official source.
 - **MAINLINE_MIRROR** select mainline mirror of `linux-stable.git`
-	- set to `google` to use mirror provided by Google, the same as `MAINLINE_MIRROR=yes`.
+	- set to `google` to use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`.
 	- set to `tuna` to use mirror provided by tsinghua university.
 	- leave it empty to use offical `git.kernel.org`, it may be very slow for mainland china users.
