@@ -1,4 +1,4 @@
-**v5.87 / 26.5.2019
+**v5.87 / 26.5.2019**
 
 - added support for [Odroid N2](https://www.armbian.com/odroid-n2/), [Nanopi R1](https://www.armbian.com/nanopi-r1/), [Nanopi Duo2](https://www.armbian.com/nanopi-duo-2/)
 - enabled nightly images for Orangepi3, One+, Lite2, PineH64, Rock64pro, RockPi4b
