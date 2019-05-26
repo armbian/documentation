@@ -31,7 +31,7 @@ Armbian-config:
 Infrastructure:
 
 - main download server has been hooked to 10GbE connection.
-- added web/http seeds to torrent download. Torrent download could/should fully utilize your download capacity.
+- added [web/http seeds](https://forum.armbian.com/topic/4198-seed-our-torrents) to torrent download. Torrent download could/should fully utilize your download capacity.
 - major forum upgrade ([v4.4.3](https://invisioncommunity.com/release-notes/))
 - added another IPV6 capable EU mirror https://mirrors.dotsrc.org
 
