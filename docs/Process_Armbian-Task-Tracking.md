@@ -19,7 +19,7 @@ Not all support issues are tasks, but a support issue can generate a task.
 1. Create issue in [Armbian GitHub Repo](https://github.com/igorpecovnik/lib/issues) under appropriate milestone
     - ![step1](images/taskProcess1.png)
 1. Copy the numeric ID of issue created
-1. Create new topic under the Tasks subforum on the [Armbian Forums](http://forum.armbian.com/index.php/forum/15-tasks/)
+1. Create new topic under the Tasks subforum on the [Armbian Forums](https://forum.armbian.com/forum/15-tasks/)
     - Use the the naming convention of `[ISSUE_ID] - Issue Name`
     - ![step2](images/taskProcess3.png)
 1. Copy the URL of task subforum topic just created

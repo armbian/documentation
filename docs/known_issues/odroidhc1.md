@@ -2,7 +2,7 @@
 
 Based on a review from @tkaiser, 
 
-> https://forum.armbian.com/index.php?/topic/4983-odroid-hc1/
+> https://forum.armbian.com/topic/4983-odroid-hc1/
 
 1. Use next kernel, 
 1. don't think about USB3 issues any more (that's a XU4 problem), 

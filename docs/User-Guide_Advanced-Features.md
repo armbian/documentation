@@ -49,7 +49,7 @@ Than mount the SD card and download those files (This example is only for Banana
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-dtb-next-sunxi_4.5_armhf.deb
 	 
 
-This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](http://forum.armbian.com/index.php/topic/211-kernel-update-procedure-has-been-changed/).
+This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](https://forum.armbian.com/topic/211-kernel-update-procedure-has-been-changed/).
 
 Mount SD card and extract all those deb files to it's mount point.
 
@@ -143,7 +143,7 @@ Test if Docker works correctly:
 
 ... and point the browser of any device in the same network to `http://<IP OF YOUR DEVICE>/`
 
-[More info in this forum topic](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/)
+[More info in this forum topic](https://forum.armbian.com/topic/490-docker-on-armbian/)
 
 # How to set wireless access point?
 

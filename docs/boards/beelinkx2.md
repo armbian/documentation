@@ -1,1 +1,1 @@
-- Device has [different wireless chips](http://forum.armbian.com/index.php/topic/872-beelink-x2-with-armbian-possible) so wlan0 (WIFI connection) might not work out of the box.
+- Device has [different wireless chips](https://forum.armbian.com/topic/872-beelink-x2-with-armbian-possible) so wlan0 (WIFI connection) might not work out of the box.

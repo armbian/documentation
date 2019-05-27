@@ -71,7 +71,7 @@ This is a typical board configuration:
 	BOARDRATING=""
 	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"
 	HARDWARE="https://linux-sunxi.org/Banana_Pi"
-	FORUMS="http://forum.armbian.com/index.php/forum/7-allwinner-a10a20/"
+	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"
 	BUY="http://amzn.to/2fToHjR"
 
 If you want that our automated system start making images for this particular board, you need to alter parameters CLI_BETA_TARGET and DESKTOP_BETA_TARGET.
