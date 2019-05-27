@@ -4,7 +4,7 @@
 System images with legacy kernel
 
 - Kernel [3.14.x](https://github.com/linux4kix/linux-linaro-stable-mx6) with large hardware support, headers and some firmware included
-- [Docker ready](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
 - PCI-E operational (Hummingboard Pro, Gate & Edge)
 - mSATA / m2 operational (Hummingboard Pro & Edge)
 - Enabled audio devices: HDMI, spdif, analogue
@@ -63,7 +63,7 @@ LVDS](https://github.com/notro/fbtft/wiki)
 # Udoo Quad #
 
 - [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) and [4.4.x](https://github.com/patrykk/linux-udoo) with some hardware support, headers and some firmware included
-- [Docker ready](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
 - Wireless adapter with DHCP ready but disabled (/etc/network/interfaces, WPA2: normal connect, bonding / notebook or AP mode). It can handle between 40-70Mbit/s.
 - SATA operational
 - Enabled analogue (VT1613) and HDMI audio device

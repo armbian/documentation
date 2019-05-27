@@ -404,7 +404,7 @@ Build script:
 
 **v5.34 / 18.10.2017**
 
-- bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/index.php?/topic/5413-odroid-hc1-sata-install)
+- bugfix Odroid XU4/HC1 image rebuild [due to broken USB install on kernel 4.9.x](https://forum.armbian.com/topic/5413-odroid-hc1-sata-install)
 - added Le Potato and Orange Pi Zero testing image (mainline kernel)
 - Tinkerboard, MiQi and Pinebook images rebuilt
 
@@ -418,11 +418,11 @@ Build script:
 
 **v5.32 / 23.06.2017**
 
-- bugfix release [due to broken crypto functions on kernel 4.11.x](https://forum.armbian.com/index.php?/topic/4556-partial-bugfix-update/)
+- bugfix release [due to broken crypto functions on kernel 4.11.x](https://forum.armbian.com/topic/4556-partial-bugfix-update/)
 
 **v5.31 / 15.06.2017**
 
-- bugfix release [due to network failure](https://forum.armbian.com/index.php?/topic/4498-no-boot-after-upgrade-to-530/) on some A10 / A20 boards
+- bugfix release [due to network failure](https://forum.armbian.com/topic/4498-no-boot-after-upgrade-to-530/) on some A10 / A20 boards
 
 **End of support notice**
 
@@ -635,7 +635,7 @@ Known problems:
 
 Images:
 
-- all 3.10+ kernels [are Docker ready](http://forum.armbian.com/index.php/topic/490-docker-on-armbian/)
+- all 3.10+ kernels [are Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/)
 - all A10/A20/H3 comes with HW accelerated video playback in desktop build
 - [fixed root exploit on H3 boards](https://github.com/igorpecovnik/lib/issues/282)
 - [fixed kswapd 100% bug on H3 boards](https://github.com/igorpecovnik/lib/issues/219)
@@ -654,7 +654,7 @@ Images:
 - kernel for H3/sun8i legacy come from new Allwinner updated source (friendlyarm)
 - [added support for Olimex Lime2 eMMC](https://github.com/igorpecovnik/lib/issues/258)
 - [increased MALI clockspeed on sun8i/legacy](https://github.com/igorpecovnik/lib/issues/265)
-- added [Armbianmonitor](http://forum.armbian.com/index.php/topic/881-prepare-v51-v201604/?p=7095)
+- added [Armbianmonitor](https://forum.armbian.com/topic/881-prepare-v51-v201604/?p=7095)
 - added Odroid C1, C2(arm64), Nanopi M1, Banana M2+, Pcduino 2 and Pcduino 3. CLI and desktop
 - added wifi radar to desktop
 - added preview mainline kernel images for H3 boards (4.6.RC1)
@@ -709,8 +709,8 @@ Known bugs:
 - Mali acceleration works for all users not only root
 - verbose boot logging on 1st boot and after crashes (you can toggle verbose logging using `sudo armbianmonitor -b`)
 - more WiFi dongles supported due to backported firmware loader patch
-- all 3 USB ports on Orange Pi One (Lite) available ([2 of them need soldering](http://forum.armbian.com/index.php/topic/755-tutorial-orange-pi-one-adding-usb-analog-audio-out-tv-out-mic-and-ir-receiver/))
-- I2S possible on all Orange Pis (compare with the [mini tutorial](http://forum.armbian.com/index.php/topic/759-tutorial-i2s-on-orange-pi-h3/) since you need to tweak script.bin)
+- all 3 USB ports on Orange Pi One (Lite) available ([2 of them need soldering](https://forum.armbian.com/topic/755-tutorial-orange-pi-one-adding-usb-analog-audio-out-tv-out-mic-and-ir-receiver/))
+- I2S possible on all Orange Pis (compare with the [mini tutorial](https://forum.armbian.com/topic/759-tutorial-i2s-on-orange-pi-h3/) since you need to tweak script.bin)
 - default display resolution set to 720p60 to fix possible overscan issues on 1st boot
 - HW accelerated video decoding works for most formats
 - Booting from eMMC on OPi Plus now possible
@@ -721,7 +721,7 @@ Known bugs:
 - HDMI/DVI works (bug in boot.cmd settings)
 - Reboot issues fixed (bug in fex settings)
 - 1-Wire useable (we chose to stay compatible to loboris' images so the data pin is 37 by default. You're able to change this in the [fex file](https://github.com/igorpecovnik/lib/blob/6d995e31583e5361c758b401ea44634d406ac3da/config/orangepiplus.fex#L1284-L1286))
-- changing display resolution and choosing between HDMI and DVI is now possible with the included _h3disp_ tool (should also work in the [stand-alone version](http://forum.armbian.com/index.php/topic/617-wip-orange-pi-one-support-for-the-upcoming-orange-pi-one/?p=5480) with Debian based OS images from loboris/Xunlong). Use `sudo h3disp` in a terminal to get the idea.
+- changing display resolution and choosing between HDMI and DVI is now possible with the included _h3disp_ tool (should also work in the [stand-alone version](https://forum.armbian.com/topic/617-wip-orange-pi-one-support-for-the-upcoming-orange-pi-one/?p=5480) with Debian based OS images from loboris/Xunlong). Use `sudo h3disp` in a terminal to get the idea.
 - Ethernet issues fixed (combination of kernel and fex fixes)
 - USB-to-SATA bridge on the Orange Pi Plus works
 - stability problems on Orange Pi One fixed (due to undervoltage based on wrong fex settings)
@@ -746,7 +746,7 @@ Known bugs:
 
 **v5.01 / 17.2.2016**
 
-- Bugfix update for [Allwinner boards](http://forum.armbian.com/index.php/topic/691-banana-pro-testers-wanted-sata-drive-not-working-on-some-boards/)
+- Bugfix update for [Allwinner boards](https://forum.armbian.com/topic/691-banana-pro-testers-wanted-sata-drive-not-working-on-some-boards/)
 - Update [for H3 based boards](https://github.com/igorpecovnik/lib/commit/c93d7dfb3538c36739fb8841bd314d75e7d7cbe5)
 
 **v5.00 / 12.2.2016**
@@ -756,7 +756,7 @@ Known bugs:
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
 - firstrun does autoreboot only if needed: wheezy and some legacy kernels.
-- [added motd](http://forum.armbian.com/index.php/topic/602-new-motd-for-ubuntudebian/#entry4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
+- [added motd](https://forum.armbian.com/topic/602-new-motd-for-ubuntudebian/#entry4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
 - fixed temperature reading on Cubox / Hummingboard legacy kernel
 - fixed FB turbo building on Allwinner
 - fixed NAND install on A10 boards (Legacy kernel only)

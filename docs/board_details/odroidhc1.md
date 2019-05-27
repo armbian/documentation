@@ -1,7 +1,7 @@
 -  a stripped down XU4 version dropping the internal USB hub, display and GPIO support but adding instead a great performing and UAS capable USB-to-SATA bridge (JMS578) directly to the PCB so no more cable/contact issues, no more underpowering and no more UAS hassles with some disk enclosures (that contain a broken SATA bridge or combine a working UAS capable chip with a branded/broken firmware)
 
 from Review:
-> https://forum.armbian.com/index.php?/topic/4983-odroid-hc1/
+> https://forum.armbian.com/topic/4983-odroid-hc1/
 
 1. Software support efforts needed for HC1 (or the other variants MC1 or HC2) are zero since Hardkernel kept everything 100% compatible to ODROID XU4
 1. HC1 is a very nice design addressing a few of XU3/XU4 former USB3 issues (mostly related to 'hardware' issues like cable/contact problems with USB3-A or underpowering)
