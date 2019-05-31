@@ -1,12 +1,12 @@
 # What is Armbian Linux? #
 
-Armbian Linux provides optimized Debian and Ubuntu Linux images for ARM-based SBCs.   There's an incredible ecosystem of small computing platforms that are powerful alternatives to the Raspberry Pi.   Armbian's mission is to provide a uniform system offering that is trustworthy to run on any of the dozens of OS-neglated ARM SBCs.
+Armbian Linux provides optimized Debian and Ubuntu Linux images for ARM-based SBCs.   There's an incredible ecosystem of small computing platforms that are powerful alternatives to the Raspberry Pi.   Armbian's mission is to provide a uniform system offering that is trustworthy to run on any of the dozens of OS-negleted ARM SBCs.
 
 # Challenges
 
-## Armbian is the opposite of Raspian
+## Armbian is the opposite of Raspbian
 
-Raspian has dozens of contributors to focus on a single SBC platform.    Armbian has a dozen contributors to focus on 100+ SBCs in over 30 platforms.   
+Raspbian has dozens of contributors to focus on a single SBC platform.    Armbian has a dozen contributors to focus on 100+ SBCs in over 30 platforms.   
 
 ## Balancing Development and Support
 
@@ -14,7 +14,7 @@ Given the point above, resources are thin.   Armbian developers have to focus on
 
 ## More SBCs Continuously Coming to Market
 
-SBC and TV Box manufactures love to design and ship new products.   Unfortunately they do not like to spend time on software and instead rely community projects such as Armbian to fill in the gaps.  
+SBC and TV Box manufacturers love to design and ship new products.   Unfortunately they do not like to spend time on software and instead rely on community projects such as Armbian to fill in the gaps.  
 
 # Benefits
 
@@ -32,11 +32,11 @@ A distributed image is compacted to real data size and starts at around 1G. Size
 
 ## Fast
 
-Boards are optimized on kernel and userspace level. DVFS optimization, memory log caching, browser profile memory caching, swap usage tuning, garbage commit delay. Our system runs almost read-only and it is one of the the fastest Linux for many development boards in just about every case.
+Boards are optimized on kernel and userspace level. DVFS optimization, memory log caching, browser profile memory caching, swap usage tuning, garbage commit delay. Our system runs almost read-only and is one of the the fastest Linux for many development boards in just about every case.
 
 ## Secure
 
-Security level is on a stock Debian level and can be hardened with the configuration utility. It provides a good starting point for industrial or home usage. A system is regularly inspected by professionals within a community. Each official stable build is thoroughly tested. Images are a direct base for all 3rd party builders.
+Security level is on a stock Debian level and can be hardened with the configuration utility. It provides a good starting point for industrial or home usage. The system is regularly inspected by professionals within a community. Each official stable build is thoroughly tested. Images are a direct base for all 3rd party builders.
 
 ## Supported
 
