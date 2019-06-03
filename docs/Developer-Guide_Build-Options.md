@@ -12,6 +12,7 @@
 	- "debs" = delete packages in `output/debs` for current branch and device family,
 	- "alldebs" = delete all packages in `output/debs`,
 	- "cache" = delete `cache/rootfs` (rootfs cache),
+	- "oldcache" = remove old `cache/rootfs` except for the newest 8 files,
 	- "sources" = delete `cache/sources` (all downloaded sources),
 	- "extras" = delete additional packages for current release in `output/debs/extra`
 - **KERNEL\_KEEP\_CONFIG** (yes&#124;no):
