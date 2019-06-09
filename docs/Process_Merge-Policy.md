@@ -1,7 +1,7 @@
 # Merge Policy #
 
 ## Overview ##
-_Note: This document is a Work In Progress and is subject to change._
+_Note: This document is a Work In Progress and is subject to change.  Definitions may be relocated to a seperate document in the future._
 
 This policy is targeted for Maintainers for Lead Maintainers who have commit access to `master` branch.   This document describes the tags needed for different mege types.  See Definitions.
 
@@ -38,9 +38,32 @@ This pertains to code used to build system images, OS configuration, and support
 ### lib scripts ###
 * Requires at least one _Reviewed-by_
 
+### configuration ###
+
+#### board promotion ####
+
+Boards have different levels of commitment / support.  EOL, CSC, WIP, Supported.  To promote a board from WIP to Supported an Acked-by from a Lead Maintainer is required.
+
+#### kernel config ####
+
+* Changes in default & next kernel config should provide at least _tested-by_  with `armbianmonitor -u`
+* Changes in dev are at the discretion of maintainer.  No constraints
+
+#### kernel sources ####
+Change kernel source repos, branches, versions can be very disruptive to stable builds.  Sufficient communication should occur stable changes.
+
+* u-boot and kernel version bump for default and next requires _tested-by_ from Maintainers and/or testers on at least two different boards for the impacted platform. 
+*  kernelsources switch (next default) needs a discussion on forum or github documented in PR and _Acked-by_  Lead Maintainer. These changes are risky and things can go terrible wrong here...
+* dev source changes are at the discretion of the Lead Maintainer
+* Boardfamily tweaks require at least _reviewed-by_
+
+#### packages ####
+* minimum require _Acked-by_
+
 ## Definitions ##
 
 ### Code Review Terms ###
+[click here for attribution to terms used below](https://lists.x.org/archives/xorg-devel/2009-October/003036.html)
 #### Signed-off-by ####
 Certifies that you wrote it or otherwise have the right to pass it on as a open-source patch.  
 
