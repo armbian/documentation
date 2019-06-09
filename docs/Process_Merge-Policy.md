@@ -33,24 +33,39 @@ Constraints are at the discretion of the SoC mantainer.   This builds are not ex
 
 ## Armbian Build Scripts ##
 
+This pertains to code used to build system images, OS configuration, and supporting packages.   (Basically Anything not U-Boot or Kernel source)
+
 ### lib scripts ###
 * Requires at least one _Reviewed-by_
 
-
-
 ## Definitions ##
 
-### Signed-off-by ###
+### Code Review Terms ###
+#### Signed-off-by ####
 Certifies that you wrote it or otherwise have the right to pass it on as a open-source patch.  
 
-### Acked-by ###
+#### Acked-by ####
 
  If a person was not directly involved in the preparation or handling of a patch but wishes to signify and record their approval of it then they can arrange to have an Acked-by: line. Acked-by: does not necessarily indicate acknowledgement of the entire patch.  
 
-### Tested-by ###
+#### Tested-by ####
 
 A Tested-by: tag indicates that the patch has been successfully tested (in some environment) by the person named. This tag informs maintainers that some testing has been performed, provides a means to locate testers for future patches, and ensures credit for the testers.  
 
-### Reviewed-by ###
+#### Reviewed-by ####
 
 A Reviewed-by tag is a statement of opinion that the patch is an appropriate modification of the kernel without any remaining serious technical issues. Any interested reviewer (who has done the work) can offer a Reviewed-by tag for a patch. 
+
+### Other ###
+
+### Maintainer ###
+
+An Individual designated to moderate, support and make decisions for a codebase or component.   There can be multiple maintainers assigned to any given thing.
+
+### Lead Maintainer ###
+
+A more experienced maintainer that will decide on high-impact and stategic changes and have final say in disputes.   A lead maintainer may share or designiate responsibility to some or all components within their domain of responsibility.
+
+#### SoC ###
+
+System on-a-Chip.
