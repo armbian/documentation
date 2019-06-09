@@ -53,4 +53,6 @@ pages:
         - 'Merge Policy' : 'Process_Merge-Policy.md'
         - 'Documentation' : 'Process_Documentation.md'
 
-#  - 'Governance':
+  - 'Governance':
+        - 'Administration' : 'Governance_Administration.md'
+        - 'Maintainers'  : 'Governance_Maintainers.md'
