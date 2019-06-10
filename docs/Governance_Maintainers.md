@@ -27,6 +27,7 @@
 | Release Management | @igorpecovnik |                  |                     |                 |
 | Testing and Code Quality |  |                         |                     |                 |
 | Security  |                 |                         |                     |                 |
+| Documentation  |                 |                         |                     |                 |
 | Community Engagement  |     | @NicoD, @tido           |                     |                 |
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
 
