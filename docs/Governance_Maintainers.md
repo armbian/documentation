@@ -17,6 +17,7 @@
 |-----------|-----------------|-------------------------|---------------------|-----------------|
 | Build Scripts   | @igorpecovnik   |  @martinayotte, @lanefu  | `/lib/*.sh`           | code responsible for building images |
 | Armbian-Tools   | @igorpecovnik   |  @botfap         | armbian-config, armbian-monitor | userland tools provided by Armbian    |
+| Armbian-Tools: armbian-config   | @gprovst   |          | armbian-config  |     |
 | Armbian-Tools: OMV   | @tkaiser   |          | armbian-config  | OMV installer    |
 | Multimedia   |  | @JMCC, @jernejsk, @Miouyouyou |            |                 |
 
