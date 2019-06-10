@@ -8,7 +8,7 @@
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte | meson, meson64   |                 |
 | Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte | rockchip, rockchip64, rk3399 |  |
 | Mediatek   |@chwe17        |                         | mt7623              |                 |
-| Marvell   | @gprovost      |                  | mvebu,mvebu64       |                 |
+| Marvell   | @gprovost      | @ebin-dev               | mvebu,mvebu64       |                 |
 | Samsung   | @igorpecovnik   |                         | odroidxu4           |                 |
 
 ## Armbian Base Maintainers ##
