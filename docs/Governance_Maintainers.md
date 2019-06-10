@@ -30,6 +30,7 @@
 | Documentation  |                 |                         |                     |                 |
 | Community Engagement  |     | @NicoD, @tido           |                     |                 |
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
+| Web and Infrastucture | @lauri			|		      |                 |
 
 ## Hackers Emeritus ##
 
