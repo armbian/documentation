@@ -12,3 +12,27 @@
 | Marvell   | @igorpecovnik   | @lanefu                 | mvebu,mvebu64       |                 |
 | Samsung   | @igorpecovnik   |                         | odroidxu4           |                 |
 
+## Armbian Base Maintainers ##
+
+| Area      | Lead Maintainer | Maintainers             | Acronyms, Codenames | additional info |
+|-----------|-----------------|-------------------------|---------------------|-----------------|
+| Build Scripts   | @igorpecovnik   |  @martinayotte,@lanefu  | `/lib/*.sh`           | code responsible for building images |
+| Armbian-Tools   | @igorpecovnik   |  @botfap         | armbian-config, armbian-monitor | userland tools provided by Armbian    |
+| Multimedia   |  | @JMCC,@jernejsk,@Miouyouyou |            |                 |
+
+## Other Roles ##
+
+| Area      | Lead Maintainer | Maintainers             | Acronyms, Codenames | additional info |
+|-----------|-----------------|-------------------------|---------------------|-----------------|
+| Release Management | @igorpecovnik |                  |                     |                 |
+| Testing and Code Quality |  |                         |                     |                 |
+| Security  |                 |                         |                     |                 |
+| Community Engagement  |     | @NicoD, @tido           |                     |                 |
+| Legal and Financial | @igorpecovnik |                 |                     |                 |
+
+## Hackers Emeritus ##
+
+Members who have stepped away from the project, but had a huge impact.  We always welcome their contributions and wisdom.
+
+* @tkaiser
+* @zador.blood.stained
