@@ -7,8 +7,8 @@
 | Allwinner | @martinayotte   | @igorpecovnik, @jernejsk | sunxi, sunxi64       |                 |
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte | meson, meson64   |                 |
 | Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte | rockchip, rockchip64, rk3399 |  |
-| Mediatek   | @chwe17         |                         | mt7623              |                 |
-| Marvell   | @igorpecovnik   | @lanefu                 | mvebu,mvebu64       |                 |
+| Mediatek   |@chwe17        |                         | mt7623              |                 |
+| Marvell   | @gprovost      |                  | mvebu,mvebu64       |                 |
 | Samsung   | @igorpecovnik   |                         | odroidxu4           |                 |
 
 ## Armbian Base Maintainers ##
@@ -17,6 +17,7 @@
 |-----------|-----------------|-------------------------|---------------------|-----------------|
 | Build Scripts   | @igorpecovnik   |  @martinayotte, @lanefu  | `/lib/*.sh`           | code responsible for building images |
 | Armbian-Tools   | @igorpecovnik   |  @botfap         | armbian-config, armbian-monitor | userland tools provided by Armbian    |
+| Armbian-Tools: OMV   | @tkaiser   |          | armbian-config  | OMV installer    |
 | Multimedia   |  | @JMCC, @jernejsk, @Miouyouyou |            |                 |
 
 ## Other Roles ##
