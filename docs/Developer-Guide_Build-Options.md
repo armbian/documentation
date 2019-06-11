@@ -69,3 +69,5 @@
 	- set to `google` to use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`.
 	- set to `tuna` to use mirror provided by tsinghua university.
 	- leave it empty to use offical `git.kernel.org`, it may be very slow for mainland china users.
+- **USE_TORRENT** (**yes**&#124;no): use torrent to download toolchains and rootfs
+- **ROOT_FS_CREATE_ONLY** set to `FORCE` to skip rootfs download and create locally
