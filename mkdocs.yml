@@ -50,4 +50,9 @@ pages:
 
   - 'Contributor Process' :
         - 'Contribute' : 'Process_Contribute.md'
+        - 'Merge Policy' : 'Process_Merge-Policy.md'
         - 'Documentation' : 'Process_Documentation.md'
+
+  - 'Governance':
+        - 'Administration' : 'Governance_Administration.md'
+        - 'Maintainers'  : 'Governance_Maintainers.md'
