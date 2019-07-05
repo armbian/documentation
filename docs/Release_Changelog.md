@@ -1,3 +1,13 @@
+**v5.90 / **
+
+- added Debian Buster images for all boards
+- Fixed Bluetooth on Nanopi M4/Neo4/T4 and Rockpi4
+- clocked RK3399 back to normal CPU speed 1.5/1.8Ghz to minimise thermal throttling
+- added wireless [drivers for 88x2bu](https://forum.armbian.com/topic/10549-rtl88x2bu-support-in-armbian/)
+- updated wireless [drivers for Realtek 8811, 8812, 8814 and 8821](https://github.com/aircrack-ng/rtl8812au)
+- updated wireless [drivers for rtl8188eus & rtl8188eu & rtl8188etv](https://github.com/aircrack-ng/rtl8188eus)
+- added latest [Wireguard driver](https://www.wireguard.com/)
+
 **v5.87 / 26.5.2019**
 
 - added support for [Odroid N2](https://www.armbian.com/odroid-n2/), [Nanopi R1](https://www.armbian.com/nanopi-r1/), [Nanopi Duo2](https://www.armbian.com/nanopi-duo-2/)
