@@ -1,23 +1,53 @@
-**v5.90 / **
+**v5.90 / _.7.2019**
 
 - added Debian Buster images for all boards
-- Fixed Bluetooth on Nanopi M4/Neo4/T4 and Rockpi4
-- clocked RK3399 back to normal CPU speed 1.5/1.8Ghz to minimise thermal throttling
+- added Macchiatobin Doubleshot
+- fixed Bluetooth on Nanopi M4/Neo4/T4 and Rockpi4
+- boards with RK3399 were clocked back to normal CPU speed 1.5/1.8Ghz to minimise thermal throttling
+- added images with test kernel for: Orangepi3, Lite2, One+, PineH64, Odroid C1, Teres, Pinebook
 - added wireless [drivers for 88x2bu](https://forum.armbian.com/topic/10549-rtl88x2bu-support-in-armbian/)
+- added eMMC support for Nanopi K2
+- added dual w1 overlay for meson64
 - updated wireless [drivers for Realtek 8811, 8812, 8814 and 8821](https://github.com/aircrack-ng/rtl8812au)
 - updated wireless [drivers for rtl8188eus & rtl8188eu & rtl8188etv](https://github.com/aircrack-ng/rtl8188eus)
 - added latest [Wireguard driver](https://www.wireguard.com/)
-- fix temperature readout on Allwinner H5 boards
-- fix SPI related bug on Allwinner 5.1.y kernel
+- enable eMMC on OrangepiWin
+- enable BT on Tinkerboard,Nanopi4,Rockpi 4 CLI images as well
+- improved ALSA config on Tinkerboard
+- fixed wireless drivers on OPi3 & Lite2
+- fixed temperature readout on Allwinner H5 boards
+- fixed SPI related bug on Allwinner 5.1.y kernel
 - fixed HDMI output and bump kernel to 5.1.y on imx6 boards
+- fixed eMMC install, add rootdev= to armbianEnv if missing
+- fixed A10/A20 [SATA write speed](https://twitter.com/armbian/status/1127638533630459904)
 - set defealt build target from Debian Stretch to Buster for all boards
 - changed motd console welcome text to: Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi
 - changed display manager to lightdm by default and remove nodm completly
+- changed u-boot for A64 to upstream sources
+- changed RK3399 to U-boot 2019.04
 - added URL to the build script and commit hash to /etc/armbian-release file
 - added synaptic package manager and onboard keyboard to the desktop base
 - added "logout" to the panel/menu
 - added normal users to additional groups: disk tty users games
-- Enable BT on Tinkerboard CLI images as well
+- updated all kernels with upstream
+- updated ATF and bootloader on Espressobin, supporting all versions
+
+build script
+- added mirros for speed-up building in China mainland
+- added support for download compilers and rootfs cache via torrent network
+- added new output image compression option (xz)
+- enabled Debian Buster and Ubuntu Disco (unsupported) targets
+- few Docker building imrovements, caching image
+- replace curl with aria2
+- Linaro compilers update to 2019.02
+
+armbian-config
+
+- added Gimp installation
+- enable/disable Avahi
+- updated OMV installer, OMV5 preparations
+- enable screen resolution changer for Odroid N2
+- enable CPU speed and governor adjustement
 
 **v5.87 / 26.5.2019**
 
