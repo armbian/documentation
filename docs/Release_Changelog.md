@@ -2,10 +2,10 @@
 
 - added Armbian Buster images for all boards
 - added [Macchiatobin Doubleshot](https://www.armbian.com/macchiatobin-double-shot/) CSS target and images
-- added images with test kernel for: Orangepi3, Lite2, One+, PineH64, Odroid C1, Teres, Pinebook
+- added images with test kernel v5.1.y for: Orangepi3, Lite2, One+, PineH64, Odroid C1, Teres, Pinebook
 - added wireless [drivers for 88x2bu](https://forum.armbian.com/topic/10549-rtl88x2bu-support-in-armbian/)
-- added eMMC support for Nanopi K2
-- added dual w1 overlay for meson64
+- added eMMC support for Nanopi K2 (booting from doesn't work yet)
+- added dual w1 overlay for meson64 family
 - updated wireless [drivers for Realtek 8811, 8812, 8814 and 8821](https://github.com/aircrack-ng/rtl8812au)
 - updated wireless [drivers for rtl8188eus & rtl8188eu & rtl8188etv](https://github.com/aircrack-ng/rtl8188eus)
 - added latest [Wireguard driver](https://www.wireguard.com/)
@@ -21,7 +21,7 @@
 - fixed A10/A20 [SATA write speed](https://twitter.com/armbian/status/1127638533630459904)
 - set defealt build target from Debian Stretch to Buster for all boards
 - changed CPU clock back to 1.5/1.8Ghz defaults on boards with RK3399 to minimise thermal throttling
-- changed motd console welcome text to: Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi
+- changed motd console welcome text to: "Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi"
 - changed display manager to lightdm by default and remove nodm completly
 - changed u-boot for A64 to upstream sources
 - changed RK3399 to U-boot 2019.04
@@ -35,6 +35,7 @@
 Build script:
 
 - added mirros for speed-up building in China mainland
+- added [webseeds support](http://www.bittorrent.org/beps/bep_0019.html) for torrent download network
 - added support for download compilers and rootfs cache via torrent network
 - added new output image compression option (xz)
 - enabled Debian Buster and Ubuntu Disco (unsupported) targets
@@ -45,7 +46,7 @@ Build script:
 Armbian-config:
 
 - added Gimp installation
-- enable/disable Avahi
+- added enable/disable Avahi
 - updated OMV installer, OMV5 preparations
 - enable screen resolution changer for Odroid N2
 - enable CPU speed and governor adjustement
