@@ -1,4 +1,4 @@
-**v5.90 / _.7.2019**
+**v5.90 / 7.7.2019**
 
 - added Armbian Buster images for all boards
 - added [Macchiatobin Doubleshot](https://www.armbian.com/macchiatobin-double-shot/) CSS target and images
@@ -35,7 +35,6 @@
 Build script:
 
 - added mirros for speed-up building in China mainland
-- added [webseeds support](http://www.bittorrent.org/beps/bep_0019.html) for torrent download network
 - added support for download compilers and rootfs cache via torrent network
 - added new output image compression option (xz)
 - enabled Debian Buster and Ubuntu Disco (unsupported) targets
