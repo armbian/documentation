@@ -1,9 +1,7 @@
 **v5.90 / _.7.2019**
 
-- added Debian Buster images for all boards
-- added Macchiatobin Doubleshot
-- fixed Bluetooth on Nanopi M4/Neo4/T4 and Rockpi4
-- boards with RK3399 were clocked back to normal CPU speed 1.5/1.8Ghz to minimise thermal throttling
+- added Armbian Buster images for all boards
+- added [Macchiatobin Doubleshot](https://www.armbian.com/macchiatobin-double-shot/) CSS target and images
 - added images with test kernel for: Orangepi3, Lite2, One+, PineH64, Odroid C1, Teres, Pinebook
 - added wireless [drivers for 88x2bu](https://forum.armbian.com/topic/10549-rtl88x2bu-support-in-armbian/)
 - added eMMC support for Nanopi K2
@@ -11,9 +9,10 @@
 - updated wireless [drivers for Realtek 8811, 8812, 8814 and 8821](https://github.com/aircrack-ng/rtl8812au)
 - updated wireless [drivers for rtl8188eus & rtl8188eu & rtl8188etv](https://github.com/aircrack-ng/rtl8188eus)
 - added latest [Wireguard driver](https://www.wireguard.com/)
-- enable eMMC on OrangepiWin
-- enable BT on Tinkerboard,Nanopi4,Rockpi 4 CLI images as well
+- enable eMMC on Orangepi Win Plus
+- enable Bluetooth on Tinkerboard, Nanopi4, Rockpi 4 CLI images
 - improved ALSA config on Tinkerboard
+- fixed Bluetooth on Nanopi M4/Neo4/T4 and Rockpi4
 - fixed wireless drivers on OPi3 & Lite2
 - fixed temperature readout on Allwinner H5 boards
 - fixed SPI related bug on Allwinner 5.1.y kernel
@@ -21,6 +20,7 @@
 - fixed eMMC install, add rootdev= to armbianEnv if missing
 - fixed A10/A20 [SATA write speed](https://twitter.com/armbian/status/1127638533630459904)
 - set defealt build target from Debian Stretch to Buster for all boards
+- changed CPU clock back to 1.5/1.8Ghz defaults on boards with RK3399 to minimise thermal throttling
 - changed motd console welcome text to: Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi
 - changed display manager to lightdm by default and remove nodm completly
 - changed u-boot for A64 to upstream sources
@@ -32,7 +32,8 @@
 - updated all kernels with upstream
 - updated ATF and bootloader on Espressobin, supporting all versions
 
-build script
+Build script:
+
 - added mirros for speed-up building in China mainland
 - added support for download compilers and rootfs cache via torrent network
 - added new output image compression option (xz)
@@ -41,7 +42,7 @@ build script
 - replace curl with aria2
 - Linaro compilers update to 2019.02
 
-armbian-config
+Armbian-config:
 
 - added Gimp installation
 - enable/disable Avahi
