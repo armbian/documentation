@@ -7,6 +7,17 @@
 - updated wireless [drivers for Realtek 8811, 8812, 8814 and 8821](https://github.com/aircrack-ng/rtl8812au)
 - updated wireless [drivers for rtl8188eus & rtl8188eu & rtl8188etv](https://github.com/aircrack-ng/rtl8188eus)
 - added latest [Wireguard driver](https://www.wireguard.com/)
+- fix temperature readout on Allwinner H5 boards
+- fix SPI related bug on Allwinner 5.1.y kernel
+- fixed HDMI output and bump kernel to 5.1.y on imx6 boards
+- set defealt build target from Debian Stretch to Buster for all boards
+- changed motd console welcome text to: Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi
+- changed display manager to lightdm by default and remove nodm completly
+- added URL to the build script and commit hash to /etc/armbian-release file
+- added synaptic package manager and onboard keyboard to the desktop base
+- added "logout" to the panel/menu
+- added normal users to additional groups: disk tty users games
+- Enable BT on Tinkerboard CLI images as well
 
 **v5.87 / 26.5.2019**
 
