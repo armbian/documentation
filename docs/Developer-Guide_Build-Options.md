@@ -54,7 +54,12 @@
 - **IGNORE_UPDATES** (yes&#124;**no**): skip downloading and updating sources
 - **FORCE_USE_RAMDISK** (yes&#124;no): overrides autodetect for using tmpfs in new debootstrap and image creation process
 - **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
-- **COMPRESS_OUTPUTIMAGE** (yes&#124;**no**): create compressed archive with image file and GPG signature for redistribution
+- **COMPRESS_OUTPUTIMAGE** (comma-separated list): create compressed archive with image file and GPG signature for redistribution
+	- *sha* - generate SHA256 hash for image,
+	- *gpg* - sign image using gpg,
+	- *7z* - compress image, hash and signature to 7z archive,
+	- *gz* - compress image only using gz format,
+	- *yes* - compatibility shorcut for sha,gpg,7z.
 - **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
