@@ -31,7 +31,7 @@ Make sure that full path to the build script does not contain spaces.
 
 # Providing build configuration
 
-After the first run of `compile.sh` a new configuration file `config-default.conf` will be created.
+After the first run of `compile.sh` a new configuration file `config-example.conf` and symlink `config-default.conf` will be created.
 You may edit it to your needs or create different configuration files using it as a template.
 
 Alternatively you can supply options as command line parameters to compile.sh.
@@ -40,6 +40,16 @@ Example:
     ./compile.sh BOARD=cubietruck BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
+
+## Base and descendant configuration
+
+You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (BRANCH, RELEASE, COMPRESS_OUTPUTIMAGE) will be overwritten.
+
+	. ./config-base.conf
+	
+	BRANCH="dev"
+	RELEASE="buster"
+	COMPRESS_OUTPUTIMAGE="sha,gz"
 
 # Using our automated build system
 
