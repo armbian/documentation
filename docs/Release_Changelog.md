@@ -19,14 +19,14 @@
 - fixed HDMI output and bump kernel to 5.1.y on imx6 boards
 - fixed eMMC install, add rootdev= to armbianEnv if missing
 - fixed A10/A20 [SATA write speed](https://twitter.com/armbian/status/1127638533630459904)
-- set defealt build target from Debian Stretch to Buster for all boards
+- set default build target from Debian Stretch to Buster for all boards
 - changed CPU clock back to 1.5/1.8Ghz defaults on boards with RK3399 to minimise thermal throttling
 - changed motd console welcome text to: "Welcome to Debian Stretch with Armbian Linux 5.1.6-sunxi"
-- changed display manager to lightdm by default and remove nodm completly
+- changed display manager to lightdm by default and remove nodm completely
 - changed u-boot for A64 to upstream sources
 - changed RK3399 to U-boot 2019.04
 - added URL to the build script and commit hash to /etc/armbian-release file
-- added synaptic package manager and onboard keyboard to the desktop base
+- added synaptic package manager and on-board keyboard to the desktop base
 - added "logout" to the panel/menu
 - added normal users to additional groups: disk tty users games
 - updated all kernels with upstream
@@ -34,11 +34,11 @@
 
 Build script:
 
-- added mirros for speed-up building in China mainland
+- added mirrors for speed-up building in China mainland
 - added support for download compilers and rootfs cache via torrent network
 - added new output image compression option (xz)
 - enabled Debian Buster and Ubuntu Disco (unsupported) targets
-- few Docker building imrovements, caching image
+- few Docker building improvements, caching image
 - replace curl with aria2
 - Linaro compilers update to 2019.02
 
@@ -48,7 +48,7 @@ Armbian-config:
 - added enable/disable Avahi
 - updated OMV installer, OMV5 preparations
 - enable screen resolution changer for Odroid N2
-- enable CPU speed and governor adjustement
+- enable CPU speed and governor adjustment
 
 **v5.87 / 26.5.2019**
 
