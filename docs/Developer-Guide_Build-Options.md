@@ -45,6 +45,7 @@
 - **RELEASE** (stretch&#124;jessie&#124;bionic&#124;xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 
 ### Hidden options for advanced users (default values are marked **bold**):
+- **USERPATCHES_PATH** (**userpatches/**): set alternate path for location of `userpatches` folder
 - **USE_CCACHE** (**yes**&#124;no): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** (yes&#124;**no**) use `$DEST/ccache` as ccache home directory
 - **PROGRESS_DISPLAY** (none&#124;**plain**&#124;dialog): way to display output of verbose processes - compilation, packaging, debootstrap
