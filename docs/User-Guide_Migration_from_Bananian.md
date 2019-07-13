@@ -10,7 +10,7 @@ Only reasonable base for an migration to Armbian would be an updated Bananian in
 
 ### All hardware will die eventually
 
-A lot of Bananian installations today run 24/7 for 3 years or even longer. While these little SBC are well suited for light-weight server tasks the hardware can't exactly be called 'server grade'. Please keep this in mind if you're about to spend some time on a manual migration attempt that once you're done maybe your hardware will stop working few weeks/months later if it already runs +24 months.
+A lot of Bananian installations today have been running 24/7 for 3 years or even longer. While these little SBC are well suited for light-weight server tasks, the hardware can't exactly be called 'server grade'. Please keep this in mind if you're about to spend some time on a manual migration attempt that once you're done maybe your hardware will stop working few weeks/months later if it already runs +24 months.
 
 ### Hardware up to the task?
 
@@ -32,7 +32,7 @@ Once you bought a new, fast and hopefully reliable SD card, you should [test it 
 
 ### Replacing the hardware
 
-If your Bananian installation runs since years better think about evaluating new hardware now. As explained above A20's SATA implementation is [awfully slow](https://forum.armbian.com/topic/1925-some-storage-benchmarks-on-sbcs/&do=findComment&comment=34192) compared to good SATA implementations (Espressobin, Clearfog, Helios4) or even recent USB3 solutions, also Banana Pis can not saturate Gigabit Ethernet. It's almost 2018 now and we can choose from a variety of energy efficient boards more suited for the job.
+If your Bananian installation has been running for years, you better think about evaluating new hardware now. As explained above, A20's SATA implementation is [awfully slow](https://forum.armbian.com/topic/1925-some-storage-benchmarks-on-sbcs/&do=findComment&comment=34192) compared to good SATA implementations (Espressobin, Clearfog, Helios4) or even recent USB3 solutions, also Banana Pis can not saturate Gigabit Ethernet. It's almost 2018 now and we can choose from a variety of energy efficient boards more suited for the job.
 
 [My](https://forum.armbian.com/profile/7-tkaiser/) personal strategy was turning the various A20 servers into backup devices now receiving btrfs snapshots from better suited ARM servers in the meantime. New installation on new board, carefully migrating settings from Bananas, Cubietrucks or Lime boards to new server, testing, testing, testing, new installation on A20 device, setting up btrfs send|receive, testing, testing, testing, done.
 
