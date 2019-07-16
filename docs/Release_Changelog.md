@@ -1,3 +1,7 @@
+**v5.91 / 16.7.2019**
+
+- recreated Armbian Buster images due to a bug in Network manager which in some cases failed to initiate network connection
+
 **v5.90 / 7.7.2019**
 
 - added Armbian Buster images for all boards
