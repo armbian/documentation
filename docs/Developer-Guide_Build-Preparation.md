@@ -102,3 +102,7 @@ for command line interfaces Ubuntu Xenial based images with legacy kernel 3.4.11
 	DESKTOP_BETA_TARGET="jessie:dev"
 
 for image with latest upstream development kernel.
+
+# Using alternate armbian builder repos and branches
+
+By default, armbian-builder assumes working from `master` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
