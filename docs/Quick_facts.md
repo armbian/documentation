@@ -1,6 +1,6 @@
 # What is Armbian Linux? #
 
-Armbian Linux provides optimized Debian and Ubuntu Linux images for ARM-based SBCs.   There's an incredible ecosystem of small computing platforms that are powerful alternatives to the Raspberry Pi.   Armbian's mission is to provide a uniform system offering that is trustworthy to run on any of the dozens of OS-negleted ARM SBCs.
+Armbian Linux provides optimized Debian and Ubuntu Linux images for ARM-based SBCs.   There's an incredible ecosystem of small computing platforms that are powerful alternatives to the Raspberry Pi.   Armbian's mission is to provide a uniform system offering that is trustworthy to run on any of the dozens of OS-neglected ARM SBCs.
 
 # Challenges
 
