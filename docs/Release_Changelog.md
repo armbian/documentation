@@ -1,5 +1,9 @@
-**v5.91 / 16.7.2019**
+**v5.91 / 31.7.2019**
 
+- create new images for Helios4 and Clearfog Pro/Base
+- move mvebu DEFAULT, NEXT and DEV branch to next kernel (LTS) and U-boot version
+- fixed armada_thermal sensor reading, adjusted Helios4 fancontrol configuration
+- Fix ODT on data signals of DDR RAM for Armada A388 SOMs
 - recreated Armbian Buster images due to a bug in Network manager which in some cases failed to initiate network connection
 
 **v5.90 / 7.7.2019**
@@ -139,15 +143,15 @@ Infrastructure:
 - updated next kernel for Odroid XU4 to 4.19.y
 - updated next kernel for Odroid C2, Lepotato and Nanopik2-S905 to 4.19.y with overlay support
 - fixed poweroff on H5
-- H5/A64 lost experimental status, 
-- upgraded images and upstream/bugfix kernel upgrade for Rock64, Renegade, 
+- H5/A64 lost experimental status,
+- upgraded images and upstream/bugfix kernel upgrade for Rock64, Renegade,
 - u-boot update is moved from automated to manual (armbian-config) to minimize boot related troubles
 - added two repository mirrors: China and France (armbian-config -> Personal -> Mirror)
 - changed switching to alternative kernels from armbian-config. It is possible to select a direct version and it only replaces kernel (safer)
 - first official build for Olimex Teres
 - mainline kernel builds for: Pine64, Pine64so, Olinuxino A64, OrangepiWin
 - added more download variants for Rock64, Renegade, Tritium H3&H5
-- updated images for Z28PRO, Bananapi PRO, Espressobin, Olimex Micro, Lime, Udoo, Bananapi M2, Bananapi M2U, 
+- updated images for Z28PRO, Bananapi PRO, Espressobin, Olimex Micro, Lime, Udoo, Bananapi M2, Bananapi M2U,
 
 **v5.68 / 30.12.2018**
 
@@ -252,7 +256,7 @@ Board:
 - fixed network crashing on high load. Affected: Odroid C1/C2, Le Potato kernel 4.18.y,
 - fixed wireless, eMMC and Bluetooth on (unsupported) Z28 PRO and changed boot order,
 - fixed eMMC install on NanoPC T3+ and Docker dependencies on Fire3, M3, NanoPC T3+,
-- added eMMC and DVFS support on Espressobin mainline kernel, 
+- added eMMC and DVFS support on Espressobin mainline kernel,
 - ported Tinkerboard UMS to modern u-boot,
 - enabled 1392 MHz cpufreq OPP on all RK3328 devices,
 - enabled 1992/1512MHz cpufreq OPP on all RK3399 devices,
@@ -311,7 +315,7 @@ Known bugs:
 
 **v5.55 / 3.8.2018**
 
-- added Stretch and Bionic mainline kernel images for Odroid C1 (testing), 
+- added Stretch and Bionic mainline kernel images for Odroid C1 (testing),
 - rebuilt images for Bananapi M3 (fixed ethernet)
 
 **v5.54 / 25.7.2018**
@@ -373,13 +377,13 @@ Known bugs:
 
 - fixed LED driver on Helios4
 - bugfix update on sunxi/sunxi64 kernel. Updated to 4.14.18
-- kernel update for MVEBU next (4.14.18 and default 4.4.115) for Clearfog and Helios4. Upstream fixes,AUFS and Realtek 881yAU drivers update 
+- kernel update for MVEBU next (4.14.18 and default 4.4.115) for Clearfog and Helios4. Upstream fixes,AUFS and Realtek 881yAU drivers update
 
 **v5.40 / 5.2.2018**
 
 - fixed eMMC support on Odroid C2 NEXT, kernel 4.14.y
-- updated PWM driver on Helios4 
-- kernel update for MVEBU next (Clearfog, Helios4) 
+- updated PWM driver on Helios4
+- kernel update for MVEBU next (Clearfog, Helios4)
 
 **v5.38 / 29.1.2018**
 
