@@ -1,3 +1,8 @@
+**v5.92 / 2.8.2019**
+
+- updated sunxi NEXT (4.19.63) and DEV (5.2.5) kernels
+- updated htop application to show cpu speed and temperature (buster / disco)
+
 **v5.91 / 31.7.2019**
 
 - create new images for Helios4 and Clearfog Pro/Base
