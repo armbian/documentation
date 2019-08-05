@@ -5,11 +5,17 @@
 
 **v5.91 / 31.7.2019**
 
-- create new images for Helios4 and Clearfog Pro/Base
-- move mvebu DEFAULT, NEXT and DEV branch to next kernel (LTS) and U-boot version
+- created new images for Helios4 and Clearfog Pro/Base
+- moved mvebu DEFAULT, NEXT and DEV branch to next kernel (LTS) and U-boot version
 - fixed armada_thermal sensor reading, adjusted Helios4 fancontrol configuration
-- Fix ODT on data signals of DDR RAM for Armada A388 SOMs
+- fixed ODT on data signals of DDR RAM for Armada A388 SOMs
 - recreated Armbian Buster images due to a bug in Network manager which in some cases failed to initiate network connection
+
+Armbian-config:
+
+- added Emby installation
+- updated Plex install to use official repo
+- added netmask-to-CIDR function for manual IP configuration
 
 **v5.90 / 7.7.2019**
 
