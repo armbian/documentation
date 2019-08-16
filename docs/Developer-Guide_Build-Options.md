@@ -18,6 +18,8 @@
 - **KERNEL\_KEEP\_CONFIG** (yes&#124;no):
     - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
     - set to "no" to use default or user-provided config file
+- **BUILD_MINIMAL** (yes&#124;no):
+    - set to "yes" to build bare CLI image suitable for application deployment.	This option is not compatible with BUILD_DESKTOP="yes" and BUILD_EXTERNAL="yes"
 - **BUILD_DESKTOP** (yes&#124;no):
     - set to "yes" to build image with minimal desktop environment
     - set to "no" to build image with console interface only
