@@ -1,3 +1,18 @@
+**x.xx / x.9.2019**
+
+- changed ntptime with chrony
+- bumped RK3399 boards to latest kernel
+- merged odroidxu4 down to default since we only have one kernel
+- fixed Cubox images, move them to stock kernel
+- fixed low Synaptic search speed
+
+Build script:
+
+- added option to create minimal images with around 500Mb in size BUILD_MINIMAL="yes"
+- refactor build all images scripting that images can be build in full parallel mode
+- added one file for storing which combinations shell be made for each board
+- cleaned initial config and remove confusing advanced options out
+
 **v5.92 / 2.8.2019**
 
 - updated sunxi NEXT (4.19.63) and DEV (5.2.5) kernels
