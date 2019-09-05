@@ -41,7 +41,7 @@ Don’t use them for anything productive but to give constructive [feedback to d
 All our images are digitally signed and therefore it's possible to check their authenticity. You need to unzip the download package and issue those commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg p7zip` on Debian/Ubuntu or `brew install gnupg p7zip` on macOS):
 	
 	# download public key from the database
-	gpg --keyserver pgp.mit.edu --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
 
 	# proper response
