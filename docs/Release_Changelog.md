@@ -10,6 +10,7 @@
 
 Build script:
 
+- script configurations were migrated to userpatches
 - added option to create minimal images with around 500Mb in size BUILD_MINIMAL="yes"
 - added initial support of MCIMX7SABRE board (CSC)
 - updates for xt-q8l-v10 (CSC)
