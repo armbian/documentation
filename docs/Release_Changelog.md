@@ -1,9 +1,10 @@
-**x.xx / x.9.2019**
+**5.58 / 9.10.2019**
 
 - changed ntptime with chrony
 - fixed serial console on several hosts
 - added FriendlyARM ZeroPi
-- bumped RK3399 boards to latest kernel
+- enabled gadgets on rockchip64
+- bumped RK3399 boards to latest kernel, recreate images and repository
 - merged odroidxu4 down to default since we only have one kernel
 - fixed Cubox images, move them to stock kernel
 - fixed low Synaptic search speed
@@ -14,7 +15,8 @@ Build script:
 - added option to create minimal images with around 500Mb in size BUILD_MINIMAL="yes"
 - added initial support of MCIMX7SABRE board (CSC)
 - updates for xt-q8l-v10 (CSC)
-- vagrant-disksize determined automatically
+- vagrant-disksize is beeing determined automatically
+- Docker is installed automatically if one want use it (Debian based build host only)
 - refactor build all images scripting that images can be build in full parallel mode
 - added one file for storing which combinations shell be made for each board
 - replaced Etcher with dd + verify for directly burning images when done
