@@ -1,4 +1,4 @@
-**5.58 / 9.10.2019**
+**5.98 / 9.10.2019**
 
 - changed ntptime with chrony
 - fixed serial console on several hosts
