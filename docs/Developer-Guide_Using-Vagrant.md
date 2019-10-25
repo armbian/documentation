@@ -21,6 +21,9 @@ Now we'll need to [install git](https://git-scm.com/downloads) and clone the Arm
 
 	# Make the Vagrant box available. This might take a while but only needs to be done once.
 	vagrant box add ubuntu/bionic64
+	
+	# Create the Vagrant environment
+	vagrant init ubuntu/bionic64
 
 	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.
 	# This only needs done once and a while.
