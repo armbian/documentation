@@ -30,14 +30,13 @@ Tags are used in ad-hoc manner.
 
 # Release Naming
 
- 19.11 Vaquita
  
- 20.02 Chiru
- 
- 20.05 Kagu
- 
- 20.08 Caple
- 
- 20.11 Tamandua
+|version| codename | release month | work |
+|:--|:--|:--|:--|
+|19.11 | Vaquita| November| [done](https://armbian.atlassian.net/projects/AR/versions/10000/tab/release-report-all-issues)
+|20.02 | Chiru| February| [planned](https://armbian.atlassian.net/projects/AR/versions/10001/tab/release-report-all-issues)
+| 20.05 | Kagu|May | [planned](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
+| 20.08 | Caple|August|
+| 20.11 |Tamandua|November|
  
  by http://www.codenamegenerator.com/
