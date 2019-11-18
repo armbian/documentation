@@ -30,11 +30,14 @@ Tags are used in ad-hoc manner.
 
 # Release Naming
 
- 19.11 Kuza
+ 19.11 Vaquita
  
- 20.01 Muca
+ 20.02 Chiru
  
- 20.05 Riba
+ 20.05 Kagu
  
- 20.11 Zaba
+ 20.08 Caple
  
+ 20.11 Tamandua
+ 
+ by http://www.codenamegenerator.com/
