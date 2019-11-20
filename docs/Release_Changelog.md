@@ -1,6 +1,6 @@
 **19.11.3 / 20.11.2019**
 
-Task
+Tasks
 
 - [<a href='https://armbian.atlassian.net/browse/AR-1'>AR-1</a>] -         Adding support category for distributions
 - [<a href='https://armbian.atlassian.net/browse/AR-4'>AR-4</a>] -         Remove Allwinner legacy
@@ -39,7 +39,7 @@ Task
 - [<a href='https://armbian.atlassian.net/browse/AR-60'>AR-60</a>] -         Modified logrotate.service
 - [<a href='https://armbian.atlassian.net/browse/AR-63'>AR-63</a>] -         Docker maintenance features
 
-Bug
+Bugs
 
 - [<a href='https://armbian.atlassian.net/browse/AR-25'>AR-25</a>] -         Armbian resize stopped working in Ubuntu 19.10 or higher
 - [<a href='https://armbian.atlassian.net/browse/AR-40'>AR-40</a>] -         When changing console layout it does not change
@@ -54,7 +54,7 @@ Bug
 - [<a href='https://armbian.atlassian.net/browse/AR-64'>AR-64</a>] -         Docker require root
 - [<a href='https://armbian.atlassian.net/browse/AR-68'>AR-68</a>] -         Broken Ethernet on Pine64+
      
-Story
+Stories
 
 - [<a href='https://armbian.atlassian.net/browse/AR-61'>AR-61</a>] -         Adding support for LOCAL_MIRROR
 - [<a href='https://armbian.atlassian.net/browse/AR-65'>AR-65</a>] -         Moving configs under userpatches
