@@ -1,8 +1,68 @@
 **19.11.3 / 20.11.2019**
 
-Tasks:
+Task
 
-- [<a href="https://armbian.atlassian.net/browse/AR-1" rel="external nofollow">AR-1</a>] - Adding support category for distributions
+- [<a href='https://armbian.atlassian.net/browse/AR-1'>AR-1</a>] -         Adding support category for distributions
+- [<a href='https://armbian.atlassian.net/browse/AR-4'>AR-4</a>] -         Remove Allwinner legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-5'>AR-5</a>] -         Drop Udoo family and move Udoo board into newly created imx6 family
+- [<a href='https://armbian.atlassian.net/browse/AR-9'>AR-9</a>] -         Rename sunxi-next to sunxi-legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-10'>AR-10</a>] -         Rename sunxi-dev to sunxi-current
+- [<a href='https://armbian.atlassian.net/browse/AR-11'>AR-11</a>] -         Adding Radxa Rockpi S support
+- [<a href='https://armbian.atlassian.net/browse/AR-13'>AR-13</a>] -         Rename rockchip64-default to rockchip64-legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-14'>AR-14</a>] -         Add rockchip64-current as mainline source
+- [<a href='https://armbian.atlassian.net/browse/AR-15'>AR-15</a>] -         Drop Rockchip 4.19.y NEXT, current become 5.3.y
+- [<a href='https://armbian.atlassian.net/browse/AR-16'>AR-16</a>] -         Rename RK3399 default to legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-17'>AR-17</a>] -         Rename Odroid XU4 next and default to legacy 4.14.y, add DEV 5.4.y
+- [<a href='https://armbian.atlassian.net/browse/AR-18'>AR-18</a>] -         Add Odroid N2 current mainline
+- [<a href='https://armbian.atlassian.net/browse/AR-19'>AR-19</a>] -         Move Odroid C1 to meson family
+- [<a href='https://armbian.atlassian.net/browse/AR-20'>AR-20</a>] -         Rename mvebu64-default to mvebu64-legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-21'>AR-21</a>] -         Rename mvebu-default to mvebu-legacy
+- [<a href='https://armbian.atlassian.net/browse/AR-22'>AR-22</a>] -         Rename mvebu-next to mvebu-current
+- [<a href='https://armbian.atlassian.net/browse/AR-23'>AR-23</a>] -         Drop meson64 default and next, current becomes former DEV 5.3.y
+- [<a href='https://armbian.atlassian.net/browse/AR-24'>AR-24</a>] -         Drop cubox family and move Cubox/Hummingboard boards under imx6
+- [<a href='https://armbian.atlassian.net/browse/AR-26'>AR-26</a>] -         Adjust motd
+- [<a href='https://armbian.atlassian.net/browse/AR-27'>AR-27</a>] -         Enabling distribution release status
+- [<a href='https://armbian.atlassian.net/browse/AR-28'>AR-28</a>] -         Added new GCC compilers
+- [<a href='https://armbian.atlassian.net/browse/AR-29'>AR-29</a>] -         Implementing Ubuntu Eoan
+- [<a href='https://armbian.atlassian.net/browse/AR-30'>AR-30</a>] -         Add desktop packages per board or family
+- [<a href='https://armbian.atlassian.net/browse/AR-31'>AR-31</a>] -         Remove (Ubuntu/Debian) distribution name from image filename
+- [<a href='https://armbian.atlassian.net/browse/AR-32'>AR-32</a>] -         Move arch configs from configuration.sh to separate arm64 and armhf config files
+- [<a href='https://armbian.atlassian.net/browse/AR-33'>AR-33</a>] -         Revision numbers for beta builds changed to day_in_the_year
+- [<a href='https://armbian.atlassian.net/browse/AR-34'>AR-34</a>] -         Patches support linked patches
+- [<a href='https://armbian.atlassian.net/browse/AR-35'>AR-35</a>] -         Break meson64 family into gxbb and gxl 
+- [<a href='https://armbian.atlassian.net/browse/AR-36'>AR-36</a>] -         Add Nanopineo2 Black
+- [<a href='https://armbian.atlassian.net/browse/AR-38'>AR-38</a>] -         Upgrade option from old branches to new one via armbian-config
+- [<a href='https://armbian.atlassian.net/browse/AR-41'>AR-41</a>] -         Show full timezone info
+- [<a href='https://armbian.atlassian.net/browse/AR-43'>AR-43</a>] -         Merge Odroid N2 to meson64
+- [<a href='https://armbian.atlassian.net/browse/AR-44'>AR-44</a>] -         Enable FORCE_BOOTSCRIPT_UPDATE for all builds
+- [<a href='https://armbian.atlassian.net/browse/AR-57'>AR-57</a>] -         New kernel feature requested CONFIG_BLK_DEV_DRBD
+- [<a href='https://armbian.atlassian.net/browse/AR-60'>AR-60</a>] -         Modified logrotate.service
+- [<a href='https://armbian.atlassian.net/browse/AR-63'>AR-63</a>] -         Docker maintenance features
+
+Bug
+
+- [<a href='https://armbian.atlassian.net/browse/AR-25'>AR-25</a>] -         Armbian resize stopped working in Ubuntu 19.10 or higher
+- [<a href='https://armbian.atlassian.net/browse/AR-40'>AR-40</a>] -         When changing console layout it does not change
+- [<a href='https://armbian.atlassian.net/browse/AR-51'>AR-51</a>] -         Prevent configuring locale
+- [<a href='https://armbian.atlassian.net/browse/AR-52'>AR-52</a>] -         Broken desktop install
+- [<a href='https://armbian.atlassian.net/browse/AR-54'>AR-54</a>] -         Upstream package name changed
+- [<a href='https://armbian.atlassian.net/browse/AR-55'>AR-55</a>] -         Wireless driver remove patch for Odroid XU4 broke down
+- [<a href='https://armbian.atlassian.net/browse/AR-56'>AR-56</a>] -         Missing CPU regulator
+- [<a href='https://armbian.atlassian.net/browse/AR-58'>AR-58</a>] -         Troubles with wireless on Nanopi DUO &amp; Opi Zero
+- [<a href='https://armbian.atlassian.net/browse/AR-59'>AR-59</a>] -         Compressed files are getting back to /var/log
+- [<a href='https://armbian.atlassian.net/browse/AR-62'>AR-62</a>] -         No HDMI sound on various meson64 boards
+- [<a href='https://armbian.atlassian.net/browse/AR-64'>AR-64</a>] -         Docker require root
+- [<a href='https://armbian.atlassian.net/browse/AR-68'>AR-68</a>] -         Broken Ethernet on Pine64+
+     
+Story
+
+- [<a href='https://armbian.atlassian.net/browse/AR-61'>AR-61</a>] -         Adding support for LOCAL_MIRROR
+- [<a href='https://armbian.atlassian.net/browse/AR-65'>AR-65</a>] -         Moving configs under userpatches
+- [<a href='https://armbian.atlassian.net/browse/AR-66'>AR-66</a>] -         Enable build system torrent download by default
+- [<a href='https://armbian.atlassian.net/browse/AR-67'>AR-67</a>] -         Install Docker when we want to build under Docker
+- [<a href='https://armbian.atlassian.net/browse/AR-69'>AR-69</a>] -         Use kernel command line instead of a patch
+- [<a href='https://armbian.atlassian.net/browse/AR-70'>AR-70</a>] -         Enable Lima kernel driver on meson64
+- [<a href='https://armbian.atlassian.net/browse/AR-73'>AR-73</a>] -         Enable PCI on Rockpi 4 and overlay for GEN2 speed    
 
 **5.98 / 9.10.2019**
 
