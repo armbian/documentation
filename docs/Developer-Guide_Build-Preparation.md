@@ -106,3 +106,20 @@ for image with latest upstream development kernel.
 # Using alternate armbian builder repos and branches
 
 By default, armbian-builder assumes working from `master` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
+
+# Executing any bash statement
+
+Currently, invoking compile.sh will run a monotonous task of building all the components into a final image.
+
+In some situation, especially when developing with Kernel or U-Boot, it is handy to run a portion of that great task like:
+
+        # using default profile
+        ./compile.sh 'fetch_from_repo "$BOOTSOURCE" "$BOOTDIR" "$BOOTBRANCH" "yes"'
+        ./compile.sh 'compile_uboot'
+
+You can also dump the variable:
+
+        # using profile of `userpatches/config-my.conf`
+        ./compile.sh my 'echo $SRC/cache/sources/$BOOTSOURCEDIR'
+
+NOTE: please use single quotes to keep the `$VAR` from early expansion in the command line shell.
