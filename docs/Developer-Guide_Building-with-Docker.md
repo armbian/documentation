@@ -6,7 +6,7 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 
 ## Requirements
 
-- x86/x64 Linux host that supports running a recent Docker daemon. Please refer to Docker documentation for details.
+- x86/x64 Linux host that supports running a recent Docker daemon. Refer to [Docker documentation](https://docs.docker.com/) for details.
 - Docker version 17.06 CE or newer. Installation on Ubuntu Bionic:
 
 		apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0EBFCD88 
@@ -14,25 +14,23 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 		apt update
 		apt install docker-ce
 
-- For launching the process as a non-root user this user needs to be added to the `docker` group. Please refer to Docker documentation for details.
-- Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites, please refer to Docker documentation for details.
+- Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites,
+  refer to Docker documentation for details.
 
 ## Details
 
-Build process should be started by running
+There are 2 options to start build process:
 
-	./compile.sh docker
+1. By passing configuration file name (`config-<conf_name>.conf`), stored in `userpatches` directory, as an argument:
 
-on the host.
+		# ./compile.sh docker <conf_name>
 
-The proces will create and run a named Docker container `armbian` with 2 named volumes `armbian-cache` and `armbian-ccache` and mount local diretories `output` and `userpatches`.
+2. By passing addtional line arguments to `compile.sh` after `docker`:
 
-Additional command line arguments can be passed to `compile.sh` after `docker` like this:
+		# ./compile.sh docker KERNEL_ONLY=yes BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes
 
-	./compile.sh docker KERNEL_ONLY=yes  BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes
-
-A configuration file named `config-docker-guest.conf` can be created to set default values for build options. Passing a custom config file name is currently not implemented.
-
+The process creates and runs a named Docker container `armbian` with 2 named volumes `armbian-cache` and `armbian-ccache`,
+and mount local directories `output` and `userpatches`.
 
 # Creating and running Docker container manually
 
