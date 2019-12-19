@@ -22,24 +22,25 @@ Now we'll need to [install git](https://git-scm.com/downloads) and clone the Arm
 	# Make the Vagrant box available. This might take a while but only needs to be done once.
 	vagrant box add ubuntu/bionic64
 	
-	# Create the Vagrant environment
-	vagrant init ubuntu/bionic64
-
 	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.
 	# This only needs done once and a while.
 	vagrant box update
 
 ### Armbian Directory Structure
 
-Before we bring up the box, take note of the [directory structure]( https://docs.armbian.com/Developer-Guide_Build-Process/#directory-structure) used by the Armbian build tool. When you read the Vagrantfile you'll see that Vagrant will mount local *output* and *userpatches* directories. This is helpful as it enables you to easily retrieve your images from the host once built, and [customize the build process](https://docs.armbian.com/Developer-Guide_User-Configurations/).
+Before we bring up the box, take note of the [directory structure]( https://docs.armbian.com/Developer-Guide_Build-Process/#directory-structure) used by the Armbian build tool. When you read the Vagrantfile (which is in the build/config/templates directory)  you'll see that Vagrant will mount local *output* and *userpatches* directories. This is helpful as it enables you to easily retrieve your images from the host once built, and [customize the build process](https://docs.armbian.com/Developer-Guide_User-Configurations/).
 
 ### Creating the Vagrant Guest Box Used to Build 
 Let's bring the box up. This might take a minute or two depending on your bandwidth and hardware.
 
-	# We have to be in the same directory as the Vagrant file.
-	cd build
-
+	# We have to be in the same directory as the Vagrant file, which is in the build/config/templates directory. 
+	
+	cd build/config/templates
+	
+	#  Note that you can edit the Vagrant  file to specify the number of cpus and amount of memory you want Vagrant to 	   use.  
+	
 	# And now we simply let vagrant create our box and bring it up. 
+	
 	vagrant up
 
 	# When the box has been installed we can get access via ssh.
