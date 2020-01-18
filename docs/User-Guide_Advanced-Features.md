@@ -41,7 +41,7 @@ When something goes terribly wrong and you are not able to boot the system, this
 
 	fsck /dev/sdX -f
 
-Than mount the SD card and download those files (This example is only for Banana R1):
+Then mount the SD card and download those files (This example is only for Banana R1):
 
 	http://apt.armbian.com/pool/main/l/linux-trusty-root-next-lamobo-r1/linux-trusty-root-next-lamobo-r1_4.5_armhf.deb
 	http://apt.armbian.com/pool/main/l/linux-upstream/linux-image-next-sunxi_4.5_armhf.deb
