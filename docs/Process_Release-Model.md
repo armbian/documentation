@@ -41,6 +41,12 @@ Tags are used in ad-hoc manner.
  
  by http://www.codenamegenerator.com/
 
+# Release Planning
+
+FIXME 
+
+* meet on irc, name off things, add to jira?
+
 # Release Coordinating
 
 ## 1. Forum Communication
