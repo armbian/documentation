@@ -64,7 +64,8 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 ## 2. Release Candidate Branch Management
 
-- For code freeze -- create a branch in the format `(vYY.MM-rcX)  ex: `v20.02-rc1`
+- For code freeze -- create a branch in the format `(vYY.MM-rcX)`  ex: `v20.02-rc1`
+- If Possible, create Jira tickets for major changes in github that were not tracked in Jira
 - Begin Testing Process
 - Do not modify branch directy.  Only accept PRs
 - Only accept PRs for Bugfixes. No features
