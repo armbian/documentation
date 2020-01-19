@@ -40,6 +40,12 @@
 - **CARD_DEVICE** (/dev/sdx) set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 - **CRYPTROOT_ENABLE** (yes&#124;no): set to enable LUKS encrypted rootfs. You must also provide unlock password CRYPTROOT_PASSPHRASE="MYSECRECTPASS" and optional CRYPTROOT_SSH_UNLOCK=yes CRYPTROOT_SSH_UNLOCK_PORT=2222 CRYPTROOT_PARAMETERS="custom cryptsetup options" Function might not work well with all distributions. Debian Buster and Stretch were tested. For building under the Docker you have to use privilege mode which can be enable in userpatches/config-docker.	
 
+More info:
+
+[1] https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330
+
+[2] https://github.com/armbian/build/issues/1183
+
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
 - **BRANCH** (default&#124;next&#124;dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
