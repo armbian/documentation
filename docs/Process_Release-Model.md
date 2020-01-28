@@ -57,28 +57,30 @@ A release starts as a RC Branch cut from master at freeze time.  Once a RC Branc
 
 - Create a new thread in the [Armbian Build Framework Subforum](http://forum.armbian.com/forum/12-armbian-build-framework/)
   - Ex topic name: `Ambian 20.02 (Chiru) Release Thread`
-  - Tag the post with relase, release version, and codename
+- Tag the post with relase, release version, and codename
 - Use the following template to begin the body of the release thread:
+
 ```
 Release Candidate Code Freeze Date: YYYY-MM-DD
 Release Date: YYYY-MM-DD
 Release Candidate Branch Link: URL
 Release Changelog: URL
 Release Coordinator: @yourname
-
+Testing Tracking Sheet: https://example.com/link  (google sheets)
 
 The goal of this thread is to discuss testing, bugfixes, and the overall quality of the release.  Once the release is complete, this thread should be locked and unpinned. 
 ```
 - Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](http://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?do=findComment&comment=93245)
- - After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](http:///github.com/armbian/autotests)
+- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](http:///github.com/armbian/autotests)
 
 ## 2. Release Candidate Branch Management
 
 - For code freeze -- create a RC branch in the format `(vYY.MM-rcX)`  ex: `v20.02-rc1`
 - If Possible, create Jira tickets for major changes in github that were not tracked in Jira
-- Begin Testing Process
+- Begin Testing Process.  See [Release Testing](#Release_Teting)
 - Do not modify branch directy.  Only accept PRs
 - Only accept PRs for Bugfixes. No features
+- Update master branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc1 Master bacomes v20.05.0-trunk
 - FIXME ? Coordinate with Igor or other Admins generate test build from branch ?
 - Repeat build, test, and bugfix process until release is stable
 - Cherry-pick bugfixes back into master
@@ -92,4 +94,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 - Point Armbian build system to new release
 - Update armbian documentation to reflect current release
 - Celebrate
+
+# Release Testing
+
 
