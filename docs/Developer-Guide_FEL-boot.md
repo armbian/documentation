@@ -28,7 +28,7 @@ NOTE: "hot" switching between kernel branches (default <-> dev/next) is not supp
 
 Example:
 ```
-./compile.sh KERNEL_ONLY=no BOARD=cubietruck BRANCH=next PROGRESS_DISPLAY=plain RELEASE=jessie BUILD_DESKTOP=no ROOTFS_TYPE=fel
+./compile.sh KERNEL_ONLY=no BOARD=cubietruck BRANCH=current PROGRESS_DISPLAY=plain RELEASE=jessie BUILD_DESKTOP=no ROOTFS_TYPE=fel
 ```
 
 ### Shutdown and reboot

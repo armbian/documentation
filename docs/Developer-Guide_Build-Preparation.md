@@ -37,7 +37,7 @@ You may edit it to your needs or create different configuration files using it a
 Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
-    ./compile.sh BOARD=cubietruck BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
+    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=yes RELEASE=xenial
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 

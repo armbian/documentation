@@ -48,7 +48,7 @@ More info:
 
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
-- **BRANCH** (default&#124;next&#124;dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
+- **BRANCH** (legacy&#124;current&#124;dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
 - **RELEASE** (stretch&#124;jessie&#124;bionic&#124;xenial): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 
 ### Hidden options for advanced users (default values are marked **bold**):

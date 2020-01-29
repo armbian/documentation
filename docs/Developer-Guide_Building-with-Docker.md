@@ -27,7 +27,7 @@ There are 2 options to start build process:
 
 2. By passing addtional line arguments to `compile.sh` after `docker`:
 
-		# ./compile.sh docker KERNEL_ONLY=yes BOARD=cubietruck BRANCH=next KERNEL_CONFIGURE=yes
+		# ./compile.sh docker KERNEL_ONLY=yes BOARD=cubietruck BRANCH=current KERNEL_CONFIGURE=yes
 
 The process creates and runs a named Docker container `armbian` with 2 named volumes `armbian-cache` and `armbian-ccache`,
 and mount local directories `output` and `userpatches`.
