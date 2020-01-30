@@ -45,7 +45,7 @@ System images with mainline 4.14.x kernel and u-boot 2018.1
 
 - [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
-- Both mPCIe are operational and [convertible to mSATA](Hardware_Marvell/#converting-mpcie-to-msata), M2 operational
+- Both mPCIe are operational and [convertible to mSATA](#converting-mpcie-to-msata), M2 operational
 - Added patch to unlock Atheros regulatory restrictions which unlock 5Ghz AP mode in cheap Atheros cards (ath9 driver)
 - Bluetooth ready (working with supported external keys)
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
@@ -60,7 +60,7 @@ System images with mainline 4.19.x kernel and u-boot 2018.1
 
 - [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
-- Both mPCIe are operational and [convertible to mSATA](Hardware_Marvell/#converting-mpcie-to-msata), M2 operational
+- Both mPCIe are operational and [convertible to mSATA](#converting-mpcie-to-msata), M2 operational
 - Added patch to unlock Atheros regulatory restrictions which unlock 5Ghz AP mode in cheap Atheros cards (ath9 driver)
 - Bluetooth ready (working with supported external keys)
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
