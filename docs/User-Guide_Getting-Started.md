@@ -58,7 +58,7 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 
 Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image. After uncompressing the download you can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows you can use [7-Zip's built-in hash functionality](https://superuser.com/a/1024913) to display the SHA256 hash while on Linux/macOS you would do this
 
-	shasum -a 256 -c sha256sum.sha Armbian_*.img 
+	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img 
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
 	^C
 
