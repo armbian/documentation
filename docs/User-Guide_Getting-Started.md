@@ -116,7 +116,7 @@ First you need to update packages described in a previous "How to update" step. 
 
 # How to adjust hardware features?
 
-[Use Armbian configuration utility](User-Guide_Armbian-Config.md).
+[Use Armbian configuration utility](User-Guide_Armbian-Config.md) - armbian-config.
 
 # How to install to eMMC, NAND, SATA & USB?
 
