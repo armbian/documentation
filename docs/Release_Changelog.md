@@ -1,3 +1,8 @@
+**20.02.3 / 21.2.2020** 
+
+- Updating images for Le potato, Khadas Vim1,La Frite, Nanopik2 S905, Odroid N2/C2 - fixing audio
+- Updating images for Orangepi 4 - boot loader problem
+
 **20.02.2 / 18.2.2020** Chiru
 
 Tasks

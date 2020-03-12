@@ -1,6 +1,6 @@
 [![](http://www.armbian.com/wp-content/uploads/2016/06/logo_middle.png)](http://www.armbian.com)
 
-linux for ARM development boards
+Linux for ARM development boards
 
 <h3>Welcome to the Armbian Documentation!</h3>
 
@@ -18,15 +18,16 @@ If you still can't find what you need here, visit the [Armbian forum](http://for
 *Armbian is a base operating system platform for single board computers that other projects can trust to build upon.*
 
 
-- Lightweight Debian or Ubuntu based distribution specialized for ARM developing boards. 
+- Lightweight Debian or Ubuntu based linux distribution specialized for ARM development boards. 
 - Each system is compiled, assembled and optimized by [Armbian Build Tools](https://github.com/armbian/build) 
 - It has powerful build and software development tools to make [custom builds](Developer-Guide_Build-Preparation.md)
 - A vibrant community.
 
 
+
 **Common features**
 
-- Debian or Ubuntu based. Compiled from scratch,
+- Armbian Linux is availble as Debian and Ubuntu based images. Compiled from scratch,
 - Install images are reduced to actual data size and resized at first boot,
 - Root password is `1234`. You are forced to change this password and create a normal user at first login,
 - Ethernet adapter with DHCP and SSH server ready on default port (22)

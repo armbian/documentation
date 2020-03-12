@@ -36,7 +36,7 @@ Find more details about hardware support and configuration on [Helios4 Wiki](htt
 
 ## Overview
 
-None of the builds provides 100% hardware support, so you need to try out which is best for your case.
+Both builds provide close to 100% hardware support, some slight differences are listed below.
 
 ## Build Version Status
 
@@ -50,10 +50,7 @@ System images with mainline 4.14.x kernel and u-boot 2018.1
 - Bluetooth ready (working with supported external keys)
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
 - [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
-
-#### Bugs or limitation
-
-- SFP is not supported, might work when compiling your own image with the sfp modules.
+- SFP is working at up to 1GB/s even with faster fiber modules
 
 ### Next
 System images with mainline 4.19.x kernel and u-boot 2018.1
@@ -70,7 +67,7 @@ System images with mainline 4.19.x kernel and u-boot 2018.1
 
 #### Bugs or limitation
 
-- some combination of mPCIe devices leads to incorrect/no detection, this has been observed with multiple SATA and WiFi Cards, [see here for a test matrix](https://docs.google.com/spreadsheets/d/1VggzrfFibH0cmpSGW2FyoJW-d936Y2amwwKutUwX4-8).
+- all builds suffer from minor problems with specific mPCIe combinations. If you run into problems check [this test matrix](https://docs.google.com/spreadsheets/d/1izPD5XUzQC0ZZWb8FMBMkofN73w-m_6bjrtZK-zr_b4) for some known working/not working combinations.
 
 #### Converting mPCIe to mSATA
 

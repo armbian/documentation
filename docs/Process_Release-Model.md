@@ -97,4 +97,27 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 # Release Testing
 
+See [Opportunties for improvement](#Opportunities_for_Improvement)
 
+# Reflection on Prior Releases
+## Opportunities for Improvement
+
+## wireless driver testing
+
+* wireless is a particularly sensitive issue.  We need to test, fix, or at least be able to inform others of what is broken
+
+### Bug Tracking
+
+
+
+### Testing
+
+### Image Downloads
+
+## Positive Observations
+
+* Good response from community for testing assistance
+* Release was on time
+
+
+# 
