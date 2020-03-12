@@ -2,33 +2,33 @@
 
 If you are experiencing at least one of these problems:
 
-- Board does not boot
-- Board freezes, crashes or reboots randomly or when connecting USB devices
-- Plugged in USB devices are not detected (not listed in `lsusb` output)
-- Error changing the root password at first boot (Authentication token manipulation error)
-- Error installing or updating packages due to read-only file system
+- board does not boot
+- board freezes, crashes or reboots randomly or when connecting USB devices
+- plugged in USB devices are not detected (not listed in `lsusb` output)
+- error changing the root password at first boot (Authentication token manipulation error)
+- error installing or updating packages due to read-only file system
 
-and you are using a stable Armbian image, then most likely you have one of two common problems - **powering issue** or **SD card issue**
+and you are using a stable Armbian image, then most likely you have one of two common problems - **powering issue** or **SD card issue**.
 
 Note that
 
-- **"I know that my power supply is good", "it worked yesterday", "it works with a different device", etc. are not objective reasons to skip powering related diagnostics**
-- **"I know that my SD card is good", "it worked yesterday", "it works with a different device", etc. are not objective reasons to skip storage related diagnostics**
-- Undervoltage can cause symptoms related to SD card problems such as filesystem corruptions and data loss, so powering has to be checked first
+- _"I know that my power supply is good", "it worked yesterday", "it works with a different device",_ etc. are **not objective reasons** to skip powering related diagnostics
+- _"I know that my SD card is good", "it worked yesterday", "it works with a different device",_ etc. are **not objective reasons** to skip storage related diagnostics
+- undervoltage can cause symptoms related to SD card problems such as filesystem corruptions and data loss, so powering has to be checked first
 
 ### Powering notes
 
-- Most boards (even ones fitted with PMIC - power management integrated circuit) don't have any measures to react to undervoltage that could prevent instability
-- It doesn't matter what voltage your power supply outputs, it matters what voltage will reach the onboard voltage regulators
+- Most boards, even ones fitted with PMIC (power management integrated circuit) do not have any measures to react to undervoltage that could prevent instability
+- It does not matter what voltage your power supply outputs, it matters what voltage will reach the onboard voltage regulators
 - Peak power consumption of popular boards can vary from 0.9A at 5V (H3 based Orange Pi PC) to 1.7A at 5V (RK3288 based Tinkerboard), both without any attached peripherials like USB devices
-- Due to the Ohm's Law voltage drop due to cable and connector resistance will be proportional to the electric current, so most of the time problems will be experienced at current spikes caused by CPU load or peripherials like spinning up HDDs
+- Due to the Ohm's law voltage drop due to cable and connector resistance will be proportional to the electric current, so most of the time problems will be experienced at current spikes caused by CPU load or peripherials like spinning up HDDs
 
 #### Power supply
 
 - Cheap phone chargers may not provide the current listed on their label, especially for long time periods
 - Some cheap phone chargers don't have proper feedback based stabilization, so output voltage may change depending on load
 - Power supplies will degrade over time (especially when working 24/7)
-- Some problems like degraded output filtering capacitors can't be diagnosed even with a multimeter because of the non-linear voltage form
+- Some problems like degraded output filtering capacitors cannot be diagnosed even with a multimeter because of the non-linear voltage form
 
 #### Cable
 
