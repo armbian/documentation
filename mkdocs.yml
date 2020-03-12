@@ -37,6 +37,7 @@ pages:
         - 'A10 and A20' : 'Hardware_Allwinner-A20.md'
         - 'H2+ and H3' : 'Hardware_Allwinner-H3.md'
         - 'H5 and A64' : 'Hardware_Allwinner-H5-A64.md'
+        - 'H6' : 'Hardware_Allwinner-H6.md'
         - 'Freescale i.MX6' : 'Hardware_Freescale-imx6.md'
         - 'Marvell Armada' : 'Hardware_Marvell.md'
 
