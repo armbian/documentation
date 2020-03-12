@@ -2,7 +2,7 @@
 
 Please, make sure you have:
 
-- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR thick USB cable)
+-  a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR **thick** USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 # What to download?
@@ -10,17 +10,19 @@ Please, make sure you have:
 For each board we usually provide:
 
 - one CLI Debian **and** one CLI Ubuntu based server image,
-- one desktop Ubuntu Xenial **or** Debian Stretch
+- one desktop Ubuntu Bionic **or** Debian Buster
+
+Other builds (like Debian Stretch/Bullseye Ubuntu Disco/Eoan) are experimental and are unsupported.
 
 Some boards have different options due to their hardware specialities - router or IoT boards.
 
-# Legacy or mainline?
+# Legacy or current?
 
 Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differs:
 
 **legacy**: video acceleration, NAND support, connecting displays
 
-**mainline**: headless server, light desktop operations
+**current**: headless server, light desktop operations
 
 # What are testing images?
 
@@ -28,17 +30,17 @@ Both kernels, where exists, are stable and production ready, but you should use 
 - not very well tested
 - for end users
 
-# What are experimental images?
+# What are experimental/dev images?
 
-- made from unstable branches,
-- unstested,
-- for experienced users only.
+- made from unstable branches
+- unstested
+- for experienced users only
 
-Don’t use them for anything productive but to give constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
+Do not use them in a productive environment but your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/) is highly appreciated.
 
 # How to check download authenticity?
 
-All our images are digitally signed and therefore it's possible to check their authenticity. You need to unzip the download package and issue those commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg p7zip` on Debian/Ubuntu or `brew install gnupg p7zip` on macOS):
+All our images are digitally signed and therefore it is possible to check their authenticity. You need to unzip the download package and issue those commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg p7zip` on Debian/Ubuntu or `brew install gnupg p7zip` on macOS):
 	
 	# download public key from the database
 	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
@@ -64,18 +66,18 @@ Since it might happen that your download got somehow corrupted we integrate a ch
 
 # How to prepare a SD card?
 
-**Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it's either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
+**Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates  burning results **saving you from corrupted SD card contents**.
+7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates burning results **saving you from corrupted SD card contents**.
 
-Also important: Most SD cards are only optimised for sequential reads/writes as it's common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
 |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
 |---|---|---|---|---|
 |Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
 |Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
 
-At the time of this writing A1 and A2 cards are only widely available from SanDisk. Armbian **only** recommends A1 rated SD-Cards now ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
+At the time of this writing A1 and A2 cards are only widely available from SanDisk. Armbian recommends A1 rated SD-Cards **only** now ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
 
 ![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
 
@@ -83,7 +85,7 @@ In case you chose an SD card that was already in use before please consider rese
 
 # How to boot?
 
-Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to 35 seconds with a class 10 SD Card and cheapest board.
+Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.
 
 # How to login?
 
@@ -101,8 +103,8 @@ and change the autologin user.
 
 # How to update?
 
-	apt-get update
-	apt-get upgrade
+	apt update
+	apt upgrade
 
 **Update process can take hours in case of using cheap SD card and/or under heavy load.**
 
@@ -162,7 +164,7 @@ If you know what is your wireless SSID:
 
 ![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-1.png)
 
-If you don't know, you can browse and then connect
+If you do not know, you can browse and then connect
 
 	nmtui-connect
 
