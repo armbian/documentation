@@ -7,19 +7,20 @@ In some cases, the procedure is "less than obvious", so we document some basic e
 
 # Generic howto for Allwinner devices
 
-## Legacy or mainline kernel ?
+## Legacy or current kernel ?
 
-Many Armbian images come in two flavours : Legacy (using an older kernel version) and mainline (up-to-date kernel). Depending on kernel version, the procedure to enable/disable features is not the same :
+Many Armbian images come in two flavours : _Legacy_ (using an older kernel version) and _current_ (up-to-date LTS kernel). Depending on kernel version, the procedure to enable/disable features is not the same.
 
- * Legacy kernel (3.4.x): FEX
- * Legacy kernel (3.10.x): DT (Device Tree)
- * Mainline kernel : DT (Device Tree) overlays
+ * _Legacy_ kernel (4.19.x): DT (Device Tree) overlays
+ * _Current_ kernel (5.4.x) : DT (Device Tree) overlays
+
+**Note:** Support for older kernel versiones (like 3.4.x or 3.10.x) has been dropped.
 
 ## How to reconfigure video output? ##
 
-This affect mainline kernel only.
+This affect _current_ kernel only.
 
-U-Boot supports hdmi and lcd output on Allwinner sunxi SoCs, lcd output requires the `CONFIG_VIDEO_LCD_MODE` Kconfig value to be set.
+U-Boot supports HDMI and LCD output on Allwinner sunxi SoCs, LCD output requires the `CONFIG_VIDEO_LCD_MODE` Kconfig value to be set.
 
 The sunxi U-Boot driver supports the following video-mode options:
 
@@ -32,12 +33,12 @@ The sunxi U-Boot driver supports the following video-mode options:
  -  `composite-pal/composite-ntsc/composite-pal-m/composite-pal-nc`: Selects composite video output, note the specified resolution is ignored with composite video output.
  -  Defaults to `monitor=dvi`.
 
-- `hpd=[0|1]` - Enable use of the hdmi HotPlug Detect feature
- 0: Disabled. Configure dvi/hdmi output even if no cable is detected
- 1: Enabled.  Fallback to the lcd / vga / none in that order (if available)
+- `hpd=[0|1]` - Enable use of the HDMI HotPlug Detect feature
+ 0: Disabled. Configure DVI/HDMI output even if no cable is detected
+ 1: Enabled.  Fallback to the LCD / VGA / none in that order (if available)
  Defaults to `hpd=1`.
 
-- `hpd_delay=<int>` - How long to wait for the hdmi HPD signal in milliseconds
+- `hpd_delay=<int>` - How long to wait for the HDMI HPD signal in milliseconds
  When the monitor and the board power up at the same time, it may take some time for the monitor to assert the HPD signal. This configures how long to wait for the HPD signal before assuming no cable is connected.
  Defaults to `hpd_delay=500`.
 
@@ -49,9 +50,9 @@ The sunxi U-Boot driver supports the following video-mode options:
 - `overscan_x/overscan_y=<int>` - Set x/y overscan value
  This configures a black border on the left and right resp. top and bottom to deal with overscanning displays. Defaults to `overscan_x=32` and `overscan_y=20` for composite monitors, 0 for other monitors.
 
-For example to always use the hdmi connector, even if no cable is inserted, using edid info when available and otherwise initalizing it at 1024x768@60Hz, use: `setenv video-mode sunxi:1024x768-24@60,monitor=dvi,hpd=0,edid=0`.
+For example to always use the HDMI connector, even if no cable is inserted, using edid info when available and otherwise initalizing it at 1024x768@60Hz, use: `setenv video-mode sunxi:1024x768-24@60,monitor=dvi,hpd=0,edid=0`.
 
-Parameters regarding video must be saved into u-boot environment file since they must be read before reading boot script. You can do this by adding `saveenv` command at the end of boot script (boot.cmd). Remember to recompile boot.cmd to boot.scr and note that changes will come into action after second boot. 
+Parameters regarding video must be saved into U-Boot environment file since they must be read before reading boot script. You can do this by adding `saveenv` command at the end of boot script (boot.cmd). Remember to recompile boot.cmd to boot.scr and note that changes will come into action after second boot. 
 
 
 ## What flavour am I using ?
@@ -70,7 +71,7 @@ root@orangepiplus2e:~# uname -a
 Linux orangepiplus2e 3.4.112-sun8i #10 SMP PREEMPT Wed Jun 1 19:43:08 CEST 2016 armv7l GNU/Linux
 ```
 
-## FEX
+## FEX (outdated/unsupported, informational only)
 
 ### Which file should I edit
 
