@@ -32,8 +32,8 @@ Note that
 
 #### Cable
 
-- The longer and thinner is the cable - the higher its resistance - the more voltage will drop under the load
-- Even thick looking cable can have thin wires inside, so don't trust the outside cable diameter
+- The longer and thinner the cable - the higher its resistance - the greater the voltage drop will be under load
+- Even thick looking cable can have thin wires inside, so do not trust the outside cable diameter
 
 #### Connector
 
@@ -42,22 +42,21 @@ Note that
 
 ### SD card notes
 
-- SD card is a complex storage device with an embedded controller that processes read, erase and write operations, wear leveling, error detection and corruption, but it doesn't provide any diagnostic protocols like S.M.A.R.T.
-- SD cards will degrade over time and in the end may fail in different ways - become completely or partially read-only or cause a silent data corruption
+- A SD card is a complex storage device with an embedded controller that processes read, erase and write operations, wear leveling, error and corruption detection, but it does not provide any diagnostic protocols like S.M.A.R.T.
+- SD cards will degrade over time and may fail in the end in different ways - become completely or partially read-only or cause a silent data corruption
 
 #### SD card brand
 
-- Based on curent prices and performance tests done by Armbian users Samsung Evo, Samsung Evo Plus and Sandisk Ultra cards are recommended
+- Based on current prices and performance tests done by Armbian users Samsung Evo, Samsung Evo Plus and Sandisk Ultra cards are recommended
 - Other good alternatives may be added to this page in the future
 
 #### SD card size and speed class
 
-- SD card speed class and size doesn't influence the reliability directly, but larger size means larger amount of lifetime data written, even if you are using 10-20% of the cards space
+- SD card speed class and size does not influence the reliability directly, but larger size means larger amount of lifetime data written, even if you are using 10-20% of the cards space
 
 #### Writing images to the SD card
 
-- If you wrote an image to the card it doesn't mean that it was written successfully without any errors
-- While it's possible to verify images after write using some tools, currently Etcher is the only popular and cross-platform tool that does mandatory verify on write
-- More lightweight alternatives may be added to this page in the future
+- If you wrote an image to the card it does not mean that it was written successfully without any errors
+- so always verify images after write using some tools like _balenaEtcher_ which is currently the only popular and cross-platform tool that does mandatory verify on write (more lightweight alternatives may be added to this page in the future)
 - "Check for bad blocks" function available in some tools is mostly useless when dealing with SD cards
-- Note that Etcher verifies only 1-2GB that is occupied by the initial unresized image, it doesn't verify the whole card
+- Note that _balenaEtcher_ verifies only 1-2GB that are occupied by the initial unresized image, it does not verify the whole SD card
