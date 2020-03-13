@@ -23,11 +23,6 @@
 ### Time zone: 
 
 	dpkg-reconfigure tzdata
-	
-### Screen settings on H3 devices:
-
-	# Example to set resolution to 1920 x 1080, full colour-range and DVI
-	h3disp -m 1080p60 -d -c 1
 
 ### Screen resolution on other boards: 
 
