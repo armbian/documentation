@@ -18,11 +18,8 @@ Some boards have different options due to their hardware specialities - router o
 
 # Legacy or current?
 
-Both kernels, where exists, are stable and production ready, but you should use them for different purpuses since their basic support differs:
-
-**legacy**: video acceleration, NAND support, connecting displays
-
-**current**: headless server, light desktop operations
+Only _current_ kernel branch is considered fully supported and can bring up video acceleration for example. NAND support is there but is still experimental.
+On the bottom line it depends on the board family. If in your specific case something does not work well you are always free to try an image with _legacy_ kernel included.
 
 # What are testing images?
 
