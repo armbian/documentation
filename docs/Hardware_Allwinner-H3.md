@@ -25,7 +25,7 @@ Almost all features of the H3 SoC are supported on Armbian's _current_ branch. P
 - In case you experience instabilities check your SD card using `armbianmonitor -c $HOME` and think about installing [RPi-Monitor for H3](http://www.cnx-software.com/2016/03/17/rpi-monitor-is-a-web-based-remote-monitor-for-arm-development-boards-such-as-raspberry-pi-and-orange-pi/) to get an idea whether you suffer from overheating (`sudo armbianmonitor -r` will install everything needed).
 - Especially for desktop images the speed of your SD card matters. If possible try to use our _nand-sata-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](https://forum.armbian.com/topic/793-moving-to-harddisk/)).
 
-### Tips and tricks (H3 specific / lowering consumption)
+### Tips and tricks (H3 specific / lowering consumption) (outdated)
 
 Recent research showed that H3 boards operated as wired IoT nodes need way less power compared to Raspberry Pis in the same situation (ethernet active). If you want to use your H3 device headless (server/IoT) and care about power consumption then there exist a couple of tweaks to get your board being more energy efficient when using in the meantime unsupported 3.x kernel (no tests done yet with up-to-date _legacy_/_current_ kernel):
 
@@ -41,5 +41,5 @@ In case you want to have a few more percent maximum CPU performance you would ne
 
 Walking this route in the other direction is more interesting: In case you want to use an H3 device as IoT node you might want to limit both idle and maximum consumption. That should involve disabling stuff not needed (eg. HDMI/GPU since this saves 200mW) or limiting ressource consumption: Lowering maximum clockspeeds for both CPU and DRAM or even disabling CPU cores (which helps _not_ with idle consumption since ARM cores enter low-power modes if not needed but can help lowering maximum consumption requirements).
 
-Since all of this stuff is based on recent research and being still WiP please consider reading through relevant threads in Armbian forums **and** join development/research/discussions: [Running H3 boards with minimal consumption](https://forum.armbian.com/topic/1614-running-h3-boards-with-minimal-consumption/), [SBC consumption/performance comparisons](https://forum.armbian.com/topic/1748-sbc-consumptionperformance-comparisons/) and [Default settings for NanoPi NEO/Air](https://forum.armbian.com/topic/1728-rfc-default-settings-for-nanopi-neoair/).
+Since all of this stuff is based on recent research and being still WiP please consider reading through relevant threads in Armbian forums **and** join development/research/discussions: [SBC consumption/performance comparisons](https://forum.armbian.com/topic/1748-sbc-consumptionperformance-comparisons/) and [Default settings for NanoPi NEO/Air](https://forum.armbian.com/topic/1728-rfc-default-settings-for-nanopi-neoair/).
 
