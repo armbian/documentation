@@ -1,5 +1,10 @@
 # How to customize keyboard, time zone?
 
+
+## Attention:
+**The preferred method to change most of this stuff is by using the interactive _armbian-config_ tool which is shipped with all Armbian images.**
+
+
 ### Keyboard: 
 
 	dpkg-reconfigure keyboard-configuration
