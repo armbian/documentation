@@ -1,10 +1,10 @@
-# How to switch kernels?
+### How to switch kernels?
 
-Check [this for](http://www.armbian.com/kernel/) more info.
+Check [_this_](http://www.armbian.com/kernel/) for more info.
 
-# How to troubleshoot?
+### How to troubleshoot?
 
-**Important: If you came here since you can't get Armbian running on your board please keep in mind that in 95 percent of all cases it's either a faulty/fraud/counterfeit SD card or an insufficient power supply that's causing these sorts of _doesn't work_ issues!**
+**Important: If you came here since you cannot get Armbian running on your board please keep in mind that in 95 percent of all cases it is either a faulty/fraud/counterfeit SD card or an insufficient power supply that is causing these sorts of _does not work_ issues!**
 
 If you broke the system you can try to get in this way. You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard (USB support in u-boot currently not enabled on all H3 boards).
 
@@ -33,11 +33,9 @@ System should eventually boot to bash shell:
 Now you can try to fix your broken system.
 
 
-- [Fix a Jessie systemd problem due to upgrade from 3.4 to 4.x](https://github.com/igorpecovnik/lib/issues/111)
+### How to unbrick the system? (outdated)
 
-# How to unbrick the system?
-
-When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some linux machine, where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It's recommended to issue a filesystem check before mounting:
+When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
 
 	fsck /dev/sdX -f
 
@@ -66,7 +64,7 @@ If you upgrade from some very old build, you might need to update your boot scri
 
 Unmount SD card, move it to the board and power on.
 
-# How to build a wireless driver?
+### How to build a wireless driver?
 
 Install and recreate kernel headers scripts (optional)
 
@@ -109,7 +107,7 @@ Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-# How to freeze your filesystem?
+#### How to freeze your filesystem? (outdated)
 
 In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
 
@@ -125,7 +123,7 @@ After your system boots up it will always remain as is. If you want to make any 
 
 Changes inside this will be preserved.
 
-# How to run Docker?
+# How to run Docker? (outdated)
 
 Preinstallation requirements:
 
@@ -147,7 +145,7 @@ Test if Docker works correctly:
 
 # How to set wireless access point?
 
-There are two different hostap daemons. One is **default** and the other one is for some **Realtek** wifi cards. Both have their own basic configurations and both are patched to gain maximum performances.
+There are two different HostAP daemons. One is **default** and the other one is for some **Realtek** wifi cards. Both have their own basic configurations and both are patched to gain maximum performances.
 
 Sources: [https://github.com/igorpecovnik/hostapd](https://github.com/igorpecovnik/hostapd "https://github.com/igorpecovnik/hostapd")
 
