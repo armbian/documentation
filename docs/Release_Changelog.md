@@ -1,7 +1,10 @@
+**20.02.5 / 19.3.2020** 
+
+- Updated images for Orangepi 4, Bananapi and Rockpi S
+
 **20.02.4 / 18.3.2020** 
 
 - Added images for Nanopi R2S and Bananapi M2 Zero
-- Updated images and kernel for Rockpi S
 - Kernel update for Odroud XU4
 
 **20.02.3 / 21.2.2020** 
