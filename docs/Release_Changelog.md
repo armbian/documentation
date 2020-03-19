@@ -1,3 +1,8 @@
+**20.02.4 / 18.3.2020** 
+
+- Added images for Nanopi R2S and Bananapi M2 Zero
+- Kernel update for Odroud XU4
+
 **20.02.3 / 21.2.2020** 
 
 - Updating images for Le potato, Khadas Vim1,La Frite, Nanopik2 S905, Odroid N2/C2 - fixing audio
