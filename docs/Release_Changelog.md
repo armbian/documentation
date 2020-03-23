@@ -1,3 +1,7 @@
+**20.02.6 / 23.3.2020**
+
+- Updated images Rockpi S
+
 **20.02.5 / 19.3.2020** 
 
 - Updated images for Orangepi 4, Bananapi and Rockpi S
