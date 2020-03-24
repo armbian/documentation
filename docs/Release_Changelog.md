@@ -1,6 +1,6 @@
 **20.02.6 / 23.3.2020**
 
-- Updated images Rockpi S
+- Updated images for Rockpi S and Orangepi 4
 - Updated armbian-config (fixed OMV installer)
 
 **20.02.5 / 19.3.2020** 
