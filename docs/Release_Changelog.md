@@ -1,3 +1,7 @@
+**20.02.7 / 26.3.2020**
+
+- Updated images for Rockpi S and FriendlyARM Nanopc T3, T3+, M3, Fire3
+
 **20.02.6 / 23.3.2020**
 
 - Updated images for Rockpi S and Orangepi 4
