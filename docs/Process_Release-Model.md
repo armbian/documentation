@@ -49,7 +49,8 @@ Agenda:
 
 - present things they are working on
 - adjust their task progress in Jira
-- meeting participants define priorities
+- define priorities
+- board statuses update (WIP, SUPPORTED, EOL)
 - misc
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 9am GMT.
