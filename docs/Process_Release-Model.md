@@ -43,9 +43,16 @@ Tags are used in ad-hoc manner.
 
 # Release Planning
 
-FIXME 
+A release planning starts with an public IRC meeting where developers and interested users come together in **first Saturday, one month before the release month**. Dates for **2020??: April 4th, July 4th and October 3rd.**
 
-* meet on irc, name off things, add to jira?
+Agenda:
+
+- present things they are working on
+- adjust their task progress in Jira
+- meeting participants define priorities
+- misc
+
+Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 9am GMT.
 
 # Release Coordinating
 
