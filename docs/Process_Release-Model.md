@@ -47,13 +47,17 @@ A release planning starts with an public IRC meeting where developers and intere
 
 Agenda:
 
+- check who is present
+- define best meetings hours
+- choose next release leader
 - present things they are working on
 - adjust their task progress in Jira
 - define priorities
 - board statuses update (WIP, SUPPORTED, EOL)
+- choose next release meeting leader
 - misc
 
-Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 9am GMT.
+Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 1pm GMT.
 
 # Release Coordinating
 
