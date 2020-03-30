@@ -1,3 +1,7 @@
+**20.02.8 / 26.3.2020**
+
+- update kernels with upstream versions, synchronise and test kernel sources download
+
 **20.02.7 / 26.3.2020**
 
 - Updated images for Rockpi S, Odroid XU4 and FriendlyARM Nanopc T3, T3+, M3, Fire3
