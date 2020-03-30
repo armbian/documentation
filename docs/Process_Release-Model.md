@@ -34,7 +34,7 @@ Tags are used in ad-hoc manner.
 |version| codename | release month | work |
 |:--|:--|:--|:--|
 |19.11 | Vaquita| November| [done](https://armbian.atlassian.net/projects/AR/versions/10000/tab/release-report-all-issues)
-|20.02 | Chiru| February| [planned](https://armbian.atlassian.net/projects/AR/versions/10001/tab/release-report-all-issues)
+|20.02 | Chiru| February| [done](https://armbian.atlassian.net/projects/AR/versions/10001/tab/release-report-all-issues)
 | 20.05 | Kagu|May | [planned](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
 | 20.08 | Caple|August|
 | 20.11 |Tamandua|November|
@@ -43,7 +43,13 @@ Tags are used in ad-hoc manner.
 
 # Release Planning
 
-A release planning starts with an public IRC meeting where developers and interested users come together in **first Saturday, one month before the release month**. Dates for **2020??: April 4th, July 4th and October 3rd.**
+A release planning starts with an public IRC meeting where developers and interested users come together in **first Saturday, one month before the release month**. 
+
+Dates for **2020**: 
+
+ * April 4th
+ * July 4th 
+ * October 3rd
 
 Agenda:
 
