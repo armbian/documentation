@@ -59,6 +59,7 @@ Agenda:
 - add or adjust task progress in [our Jira](https://armbian.atlassian.net/browse/AR)
 - define task priorities
 - board status update on download pages and build engine (WIP, SUPPORTED, EOL)
+- go away from 7zip ?
 - choose upcoming release officer
 - misc
 
