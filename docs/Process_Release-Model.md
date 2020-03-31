@@ -57,7 +57,7 @@ Agenda:
 - decide upon best meetings hours
 - present tasks and project you are working on (presented in IRC nick alphabetical order)
 - add or adjust task progress in [our Jira](https://armbian.atlassian.net/browse/AR)
-- define task priorities
+- define task priorities and asign people to their tasks
 - board status update on download pages and build engine (WIP, SUPPORTED, EOL)
 - go away from 7zip ?
 - choose upcoming release officer
