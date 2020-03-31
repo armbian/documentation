@@ -65,7 +65,7 @@ Agenda:
 
 Meeting tips:
 
-- when you got a voice, be concise and make it clear when you stop. (That's it from me)
+- when you got a voice, be concise (1-2min) and make it clear when you stop. ("No more. I'm done")
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 1pm GMT.
 
