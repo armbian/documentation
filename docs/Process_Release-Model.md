@@ -61,7 +61,11 @@ Agenda:
 - board status update on download pages and build engine (WIP, SUPPORTED, EOL)
 - go away from 7zip ?
 - choose upcoming release officer
-- misc
+- misc / open discussion
+
+Meeting tips:
+
+- when you got a voice, be concise and make it clear when you stop. (That's it from me)
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 1pm GMT.
 
