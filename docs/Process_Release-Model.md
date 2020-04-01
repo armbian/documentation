@@ -60,6 +60,8 @@ Agenda:
 - define task priorities and asign people to their tasks
 - board status update on download pages and build engine (WIP, SUPPORTED, EOL)
 - go away from 7zip ?
+- change (build) branch protection rule to "Require pull request reviews before merging"
+- check open issues an PR on build engine
 - choose upcoming release officer
 - misc / open discussion
 
