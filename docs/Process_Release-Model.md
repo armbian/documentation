@@ -47,7 +47,7 @@ A release planning starts with an public IRC meeting where developers and intere
 
 Dates for **2020**: 
 
- * **April 4th**
+ * [April 4th](https://freenode.irclog.whitequark.org/armbian/2020-04-04)
  * July 4th 
  * October 3rd
 
@@ -71,7 +71,7 @@ Tips:
 - when you got a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")
 - channel is recorded so a summary and adjustments to Jira can made afterwards, ideally along with the meeting
 
-Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 1pm GMT.
+Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **at 2pm GMT**.
 
 # Release Coordinating
 
