@@ -53,13 +53,13 @@ Dates for **2020**:
 
 Agenda:
 
-- check meeting attendees (if nick is not self explanatory, add your forum/github handle. Just say hi or somthing)
+- check meeting attendees (if nick is not self explanatory, add your forum/github handle. Just say hi or something)
 - choose upcoming release officer (so far it was me and Lane)
-- present tasks and project you are working on (open discussion if there will not be much people, otherwise I call you out)
+- present tasks and project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out)
 - cycle Jira backlog:
- - discuss task / bug (one at a time)
- - assign to person / release / tag
- - re-prioritise
+   - discuss task / bug (one at a time)
+   - assign to person / release / tag
+   - re-prioritise
 - cycle open issues and PR on build engine
 - board status update on download pages and build engine (wip, supported, eol)
 - change (build) branch protection rule to "Require pull request reviews before merging"
