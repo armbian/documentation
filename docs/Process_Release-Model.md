@@ -53,21 +53,23 @@ Dates for **2020**:
 
 Agenda:
 
-- check meeting attendees
-- decide upon best meetings hours
-- present tasks and project you are working on (presented in IRC nick alphabetical order)
-- add or adjust task progress in [our Jira](https://armbian.atlassian.net/browse/AR)
-- define task priorities and asign people to their tasks
-- board status update on download pages and build engine (WIP, SUPPORTED, EOL)
-- go away from 7zip ?
+- check meeting attendees (if nick is not self explanatory, add your forum/github handle. Just say hi or somthing)
+- choose upcoming release officer (so far it was me and Lane)
+- present tasks and project you are working on (open discussion if there will not be much people, otherwise I call you out)
+- cycle Jira backlog:
+ - discuss task / bug (one at a time)
+ - assign to person / release / tag
+ - re-prioritise
+- cycle open issues and PR on build engine
+- board status update on download pages and build engine (wip, supported, eol)
 - change (build) branch protection rule to "Require pull request reviews before merging"
-- check open issues an PR on build engine
-- choose upcoming release officer
+- decide upon best meetings hours
 - misc / open discussion
 
-Meeting tips:
+Tips:
 
-- when you got a voice, be concise (1-2min) and make it clear when you stop. ("No more. I'm done")
+- when you got a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")
+- channel is recorded so a summary and adjustments to Jira can made afterwards, ideally along with the meeting
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts at 1pm GMT.
 
