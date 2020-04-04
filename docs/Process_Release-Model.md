@@ -55,7 +55,7 @@ Agenda:
 
 - check meeting attendees (if nick is not self explanatory, add your forum/github handle. Just say hi or something)
 - choose upcoming release officer (so far it was me and Lane)
-- present tasks and project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out)
+- present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out). Jira should be open in not already.
 - cycle Jira backlog:
    - discuss task / bug (one at a time)
    - assign to person / release / tag
