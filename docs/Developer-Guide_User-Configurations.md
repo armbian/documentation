@@ -11,6 +11,7 @@ If file `userpatches/lib.config` exists, it will be called and can override the 
 
     PACKAGE_LIST_ADDITIONAL="$PACKAGE_LIST_ADDITIONAL python-serial python" # additional packages
     [[ $LINUXFAMILY == sunxi64 && $BRANCH == dev ]] && BOOTBRANCH='tag:v2017.09' # conditionally change u-boot git branch/tag
+    KERNELBRANCH="tag:v5.4.28" #always change to this kernel tag
 
 ## User provided kernel config
 If file `userpatches/linux-$KERNELFAMILY-$KERNELBRANCH.config` exists, it will be used instead of default one from `config`. Look for the hint at the beginning of kernel compilation process to select proper config file name. Example:
