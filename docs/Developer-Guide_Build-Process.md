@@ -15,7 +15,7 @@ Check this image [compiling example](https://youtu.be/zeShf12MNLg) with partial 
 ### Build process details:
 
 ## Creating compile environment ##
-First things first. All necessary dependencies are downloaded and installed. This happens though both http and torrent network. Btw. having too much unused traffic? Help us to reduce ours :) https://forum.armbian.com/topic/4198-seed-our-torrents/
+First things first. All necessary dependencies are downloaded and installed. This happens though both http and torrent network. Btw. having too much unused traffic? [Help us to reduce ours :)](https://forum.armbian.com/topic/4198-seed-our-torrents/)
 
 ## Using board configuration ##
 We need to get some predefined variables about selected the board. Which kernel & uboot source to use, modules to load, which is the build number, do we need to have a single partition or dual with boot on fat, which extra drivers to compile out of the kernel tree ...
