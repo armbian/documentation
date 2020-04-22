@@ -71,7 +71,7 @@ Tips:
 - when you got a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")
 - channel is recorded so a summary and adjustments to Jira can made afterwards, ideally along with the meeting
 
-Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **at 2pm GMT**.
+Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
 
 # Release Coordinating
 
