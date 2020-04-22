@@ -4,7 +4,7 @@
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**,
 - Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
-- **The officially supported** compilation environment is [Ubuntu Bionic 18.04 x64](http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/mini.iso) **only!** (Support for Ubuntu 20.04 is implemented but experimental, no support!),
+- **The officially supported** compilation environment is [Ubuntu Focal 20.04 x64](http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/mini.iso) **only!** (Support for Ubuntu 18.04 will be there until either we run into issues we do not want to waste time on or upstream support ends),
 - installed basic system, OpenSSH and Samba (optional),
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
@@ -70,13 +70,13 @@ This is a typical board configuration:
 	MODULES_NEXT="brcmfmac bonding"
 	#
 	KERNEL_TARGET="legacy,current,dev"
-	CLI_TARGET="buster,bionic:current"
+	CLI_TARGET="buster,bionic,focal:current"
 	DESKTOP_TARGET="stretch:legacy,current"
 	
 	CLI_BETA_TARGET=""
 	DESKTOP_BETA_TARGET=""
 	#
-	RECOMMENDED="Ubuntu_bionic_legacy_desktop:90,Debian_stretch_current:100"
+	RECOMMENDED="Ubuntu_bionic_legacy_desktop:90,Debian_buster_current:100"
 	#
 	BOARDRATING=""
 	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"
