@@ -1,31 +1,31 @@
-# What is behind the build process?
+# What happens behind the build process?
 
-Build process summary:
+### Build process summary:
 
-- creates development environment on top of AMD64 Ubuntu 16.04 LTS,
-- downloads proven sources, applies patches and uses tested configurations,
-- cross-compiles universal boot loader (u-boot), kernel and other tools and drivers,
-- packs kernel, uboot, dtb and root customizations into debs,
-- debootstraps minimalistic Debian Wheezy, Jessie and Ubuntu Trusty into SD card image,
+- creates development environment on top of amd64 Ubuntu 20.04 LTS,
+- downloads proven sources, applies patches on top and uses tested configurations,
+- cross-compiles universal boot loader (***U-Boot***), kernel and other tools and drivers,
+- packs kernel, U-Boot, dtb and root customizations into Debian packages,
+- debootstraps minimalistic Debian Buster and Ubuntu Focal into SD card images,
 - installs additional packets, applies customizations and shrinks image to its actual size.
 
 Check this image [compiling example](https://youtu.be/zeShf12MNLg) with partial cache.
 
-## Creating compile environment ##
 
-At first run we are downloading all necessary dependencies. 
+### Build process details:
+
+## Creating compile environment ##
+First things first. All necessary dependencies are downloaded and installed. This happens though both http and torrent network. Btw. having too much unused traffic? [Help us to reduce ours :)](https://forum.armbian.com/topic/4198-seed-our-torrents/)
 
 ## Using board configuration ##
-
-We need to get some predefined variables about selected board. Which kernel & uboot source to use, modules to load, which is the build number, do we need to have a single partition or dual with boot on fat, which extra drivers to compile out of the kernel tree, ...
+We need to get some predefined variables about selected the board. Which kernel & uboot source to use, modules to load, which is the build number, do we need to have a single partition or dual with boot on fat, which extra drivers to compile out of the kernel tree ...
+All this stuff is predefined for each and every single supported board.
 
 ## Downloading sources ##
-
-When we know where are the sources and where they need to be the download / update process starts. This might take from several minutes to several hours.
+When we know which sources to use and where they need to be the download or updated this process starts. This might take from several minutes to several hours.
 
 ## Patching ##
-
-In patching process we are appling patches to sources. The process is defined in:
+In the patching process we are applying patches to the used sources. The process is - depending on selected board - defined in:
 
 	lib/patch/kernel/sun7i-default
 	lib/patch/kernel/sunxi-dev
@@ -34,46 +34,39 @@ In patching process we are appling patches to sources. The process is defined in
 	lib/patch/u-boot/u-boot-neo-default
 	...
 
-Patch rules for subdirectories are: **KERNEL_FAMILY-BRANCH** for kernel and **U-BOOT-SOURCE-BRANCH** for U-boot.
+Patch rules for subdirectories are: **KERNEL_FAMILY-BRANCH** for kernel and **U-BOOT-SOURCE-BRANCH** for U-Boot.
 
 ## Debootstrap ##
-
 Debootstrap creates fresh Debian / Ubuntu root filesystem templates or use cached under:
 
 	output/cache/rootfs/
 
 To recreate those files you need to remove them manually. 
+From time to time they will be recreated anyway if Armbian updates their rootfs cache.
 
 ## Kernel install ##
-
-When root filesystem is ready we need to install kernel image with modules, board definitions, firmwares. Along with this we set the CPU frequency min/max, hostname, modules, network interfaces templates. Here is also the place to install headers and fix + native compile them on the way.
+When the root filesystem is ready we need to install the kernel image with modules, board definitions and firmwares. Along with this we set the CPU frequency min/max, hostname, modules, network interfaces templates. Here is also the place to install headers and fix + native compile them on the way.
 
 ## Distribution fixes ##
-
-Each distributin has it's own way of doing things:
+Each distribution has it's own way of doing things:
 
 - serial console
 - different packets
 - configuration locations
 
 ## Board fixes ##
-
 Each board has their own tricks: **different device names, firmware loaders, configuration (de)compilers, hardware configurators**
 
 ## Desktop installation ##
-
-You can build a desktop withing the image. Consider this feature as experimental. Hardware acceleration on Allwinner boards is working within kernel 3.4.x only.
+You can build a desktop environment withing the image. Consider this feature as experimental. Do not expect to have working hardware acceleration since this is a very complicated task and needs individial care for different boards.
 
 ## External applications ##
-
-This place is reserved for custom applications. There is one example of application - USB redirector.
+This place is reserved for custom applications. There is one example of application: USB redirector.
 
 ## Closing image ##
-
 There is an option to add some extra commands just before closing an image which is also automaticaly shrink to it's actual size with some small reserve.
 
 ## Directory structure ##
-
 It will be something like this:
 
     compile.sh				compile execution script
