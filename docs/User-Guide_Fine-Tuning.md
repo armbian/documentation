@@ -36,7 +36,8 @@
 
 	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
 	
-### Screen resolution within Xorg
+### Screen resolution within Xorg <sub>[Thx @maxlinux2000](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/)</sub>
+
 	Find matching HDMI output:
 		xrandr --listmonitors 
 	Calculate VESA CVT mode lines (example for 1440x900)
@@ -60,7 +61,7 @@
 		Option "PreferredMode" "1440x900"
 		EndSection
 	
-	Restart Xorg or reboot [Thx @maxlinux2000](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/)
+	Restart Xorg or reboot 
 	
 
 ### How to alter CPU frequency?
