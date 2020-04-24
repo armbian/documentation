@@ -81,7 +81,7 @@ This is a typical board configuration:
 	HARDWARE="https://linux-sunxi.org/Banana_Pi"
 	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"
 	BUY="http://amzn.to/2fToHjR"
-You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md)
+You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
 Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `buster`, `bionic`, `stretch`.
