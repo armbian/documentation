@@ -1,3 +1,7 @@
+**20.02.12 / 27.4.2020**
+
+- Added preview images for Odroid C4
+
 **20.02.8 / 26.3.2020**
 
 - update kernels with upstream versions, synchronise and test kernel sources download
