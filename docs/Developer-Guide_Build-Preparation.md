@@ -17,7 +17,7 @@ Please note that system requirements (both hardware and OS/software) may differ 
 
 Login as root and run:
 
-	apt-get -y -qq install git
+	apt-get -y -qq install git gpg
 	git clone --depth 1 https://github.com/armbian/build
 	cd build
 
