@@ -15,6 +15,9 @@
 	- "oldcache" = remove old `cache/rootfs` except for the newest 8 files,
 	- "sources" = delete `cache/sources` (all downloaded sources),
 	- "extras" = delete additional packages for current release in `output/debs/extra`
+- **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
+    - "u-boot", "kernel", "bsp", "armbian-config", "armbian-firmware"
+    - "" = packages will be built from sources or use the one from local cache
 - **KERNEL\_KEEP\_CONFIG** (yes&#124;no):
     - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
     - set to "no" to use default or user-provided config file
