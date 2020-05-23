@@ -5,7 +5,7 @@ Make sure you have a **good & reliable** SD card and a **proper power supply**. 
 **Approved Imaging Tools**
 
 * [USBImager](https://gitlab.com/bztsrc/usbimager) a lightweight cross-platform imaging tool 
-* [Balena Etcher](https://www.balena.io/etcher/) an electron / node.js based cross-platform imaging tool (may contain spyware)
+* [Balena Etcher](https://www.balena.io/etcher/) an electron / node.js based cross-platform imaging tool [(may contain spyware)](https://github.com/balena-io/etcher/issues?q=is%3Aissue+spyware)
 
 **Boot**
 
