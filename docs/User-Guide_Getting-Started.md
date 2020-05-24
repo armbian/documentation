@@ -37,7 +37,7 @@ Do not use them in a productive environment but your constructive [feedback to d
 
 ### How to check download authenticity?
 
-All our images are digitally signed and therefore it is possible to check their authenticity. You need to unzip the download package and issue those commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg p7zip` on Debian/Ubuntu or `brew install gnupg p7zip` on macOS):
+All our images are digitally signed and therefore it is possible to check their authenticity.  You meed to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS):
 	
 	# download public key from the database
 	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
