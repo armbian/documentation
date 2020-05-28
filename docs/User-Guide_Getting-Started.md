@@ -7,19 +7,22 @@ Please, make sure you have:
 
 ### What to download?
 
+The download for each image consists of three separate files:  The xz compressed image file, The sha file for download verification and the asc file for image authentication.  
+
 For each board we usually provide:
 
 - one CLI Debian **and** one CLI Ubuntu based server image,
 - one desktop Ubuntu Bionic **or** Debian Buster
 
-Other builds (like Debian Stretch/Bullseye Ubuntu Disco/Eoan) are experimental and are unsupported.
+Other unsupported builds may also be available(like Debian Stretch/Bullseye Ubuntu Disco/Eoan).
 
 Some boards have different options due to their hardware specialities - router or IoT boards.
 
 ### Legacy or current?
 
 Only _current_ kernel branch is considered fully supported and can bring up video acceleration for example. NAND support is there but is still experimental.
-On the bottom line it depends on the board family. If in your specific case something does not work well you are always free to try an image with _legacy_ kernel included.
+
+The level of kernel support does depend on the board family. If in your specific case something does not work well, you are always free to try an image with _legacy_ kernel included.
 
 ### What are testing images?
 
@@ -33,7 +36,7 @@ On the bottom line it depends on the board family. If in your specific case some
 - unstested
 - for experienced users only
 
-Do not use them in a productive environment but your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/) is highly appreciated.
+Do not use testing or dev images in a productive environment. We do appreciate  your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 ### How to check download authenticity?
 
@@ -41,7 +44,7 @@ All our images are digitally signed and therefore it is possible to check their 
 	
 	# download public key from the database
 	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
-	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.asc
+	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
 
 	# proper response
 	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
@@ -55,9 +58,10 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 
 ### How to check download integrity?
 
-Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image. After uncompressing the download you can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows you can use [7-Zip's built-in hash functionality](https://superuser.com/a/1024913) to display the SHA256 hash while on Linux/macOS you would do this
+Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows, xxxxxxx-Marti identifying tool that works with Windows-xxx
+to display the SHA256 hash while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
-	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img 
+	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img.xz
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
 	^C
 
@@ -65,7 +69,7 @@ Since it might happen that your download got somehow corrupted we integrate a ch
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-7z and zip archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux. Images shall only be written with [Etcher](https://www.etcher.io) on all platforms since unlike other tools Etcher validates burning results **saving you from corrupted SD card contents**.
+Write the xz compressed image   with [Etcher](https://balena.io/etcher) or  [USBImager](https://gitlab.com/bztsrc/usbimager) on all platforms since unlike other tools, either can validate  burning results **saving you from corrupted SD card contents**.
 
 Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
