@@ -7,7 +7,7 @@ Please, make sure you have:
 
 ### What to download?
 
-The download for each image consists of three separate files:  The xz compressed image file, The sha file for download verification and the asc file for image authentication.  
+The download for each image consists of three separate files:  An **xz-compressed image file**, a **sha file** for download verification and an **asc file** for image authentication.  
 
 For each board we usually provide:
 
@@ -58,8 +58,8 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 
 ### How to check download integrity?
 
-Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows, xxxxxxx-Marti identifying tool that works with Windows-xxx
-to display the SHA256 hash while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
+Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows, you can use the Get-Filehash program in Windows Powershell
+to display the SHA256 hash, while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
 	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img.xz
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
