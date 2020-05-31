@@ -63,7 +63,7 @@ More info:
 - **PROGRESS_LOG_TO_FILE** (yes&#124;**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** (yes&#124;**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
 - **USE_GITHUB_UBOOT_MIRROR** (yes&#124;**no**): use unofficial Github mirror for downloading mainline u-boot sources, may be faster than `git.denx.de` depending on your location
-- **IGNORE_UPDATES** (yes&#124;**no**): skip downloading and updating sources
+- **OFFLINE_WORK** (yes&#124;**no**): skip downloading and updating sources, time and host will not be checked. Set to "yes" and you can collect packages without accessing the Internet.
 - **FORCE_USE_RAMDISK** (yes&#124;no): overrides autodetect for using tmpfs in new debootstrap and image creation process
 - **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (comma-separated list): create compressed archive with image file and GPG signature for redistribution
@@ -76,7 +76,6 @@ More info:
 - **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
 - **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
 - **BTRFS_COMPRESSION** (**lzo**|zlib:3|zstd) select btrfs filesystem compression method and compression level. By default the compression is `lzo`, user must ensure kernel version is above `4.14` when selecting `zstd` or setting zlib compression level(`zlib:[1-9]`). Both the host and the target kernel version must above `5.1` when selecting zstd compression level (`zstd:[1-15]`), since kernel start supporting zstd compression ratio from `5.1`. The script does not check the legality of input variable(compression ratio), input like `zlib:1234` is legal to script, but illegal to kernel. When using microsd card, `zstd` is preferred because of the poor 4k I/O performance of microsd card.
-- **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching.. Note: you will also need to create a file in your build directory called `.ignore_changes`
 - **FORCE_BOOTSCRIPT_UPDATE** (yes&#124;no): set to "yes" to force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** (ipv4 address): the DNS resolver used inside the build chroot. Does not affect the final image. Default: 1.0.0.1
 - **DOWNLOAD_MIRROR** select download mirror for `toolchain` and `debian/ubuntu packages`.
