@@ -1,6 +1,6 @@
 **20.05.1 / 31.05.2020** Kagu
 
-<h2>Finished projects</h2>
+Finished projects
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-108">AR-108</a>] - Upgrade remaining kernels to 5.4.y</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-158">AR-158</a>] - Update 3rd party wireless drivers</li>
@@ -32,7 +32,7 @@
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-278">AR-278</a>] - Add snap free Chromium to Ubuntu Focal</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-279">AR-279</a>] - Add Hardkernel Odroid C4 stock kernel</li>
 </ul>    
-<h2>Solved bugs</h2>
+Solved bugs
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-109">AR-109</a>] - Upgrade is not done properly on some boards</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-165">AR-165</a>] - Instability with Rock64 and Rock PRO</li>
@@ -61,7 +61,7 @@
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-286">AR-286</a>] - Armbian-resize-filesystem fails on first run due to missing fdisk in Bullseye</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-287">AR-287</a>] - Make sure cryptsetup-initramfs is installed in any case</li>
 </ul>
-<h2>Closed tasks</h2>
+Closed tasks
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-150">AR-150</a>] - Disable Stretch image creation for Helios4 and Clearfog</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-157">AR-157</a>] - Add Ubuntu Focal 20.04 as a supported build host</li>
