@@ -40,10 +40,12 @@ Do not use testing or dev images in a productive environment. We do appreciate  
 
 ### How to check download authenticity?
 
-All our images are digitally signed and therefore it is possible to check their authenticity.  You meed to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS):
+All our images are digitally signed and therefore it is possible to check their authenticity.  You meed to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
 	
 	# download public key from the database
 	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+	
+	# perform verification 
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
 
 	# proper response
@@ -58,12 +60,25 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 
 ### How to check download integrity?
 
-Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. On Windows, you can use the Get-Filehash program in Windows Powershell
-to display the SHA256 hash, while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
+Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. 
+
+On Windows, you can use the Get-Filehash program in Windows Powershell
+to calculate  the SHA256 hash  and then compare it to the hash in the .sha file you have downloaded.
+ 	
+	get-filehash Armbian_20.05.0_Cubox-i_focal_current_5.6.15.img.xz
+	
+	# response
+	Algorithm       Hash                                                                   Path
+	---------       ----                                                                   ----
+	SHA256          B32B65E4E7E06FE042B74ED05433CE97055952721277E38FC766E7F035A93892       C:\Users\....
+	
+
+while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
 	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img.xz
+	#good response
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
-	^C
+
 
 ### How to prepare a SD card?
 
