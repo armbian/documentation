@@ -32,7 +32,10 @@ Finished projects
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-278">AR-278</a>] - Add snap free Chromium to Ubuntu Focal</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-279">AR-279</a>] - Add Hardkernel Odroid C4 stock kernel</li>
 </ul>    
+
 Solved bugs
+<p>
+ 
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-109">AR-109</a>] - Upgrade is not done properly on some boards</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-165">AR-165</a>] - Instability with Rock64 and Rock PRO</li>
