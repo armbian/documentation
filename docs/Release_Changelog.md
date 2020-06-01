@@ -1,3 +1,95 @@
+**20.05.1 / 31.05.2020** Kagu
+
+<h2>Finished projects</h2>
+<ul>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-108">AR-108</a>] - Upgrade remaining kernels to 5.4.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-158">AR-158</a>] - Update 3rd party wireless drivers</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-159">AR-159</a>] - Switch fake-hwclock to hardware RTC on mvebu family</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-168">AR-168</a>] - Add NanoPi R2S board support</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-180">AR-180</a>] - Update Wireguard drivers on kernels below 5.4.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-184">AR-184</a>] - Improve slow booting on Rockchip RK3399 devices</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-185">AR-185</a>] - Change download images compression format</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-190">AR-190</a>] - Update wireless driver for RTL88x2BU</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-196">AR-196</a>] - Upgrade u-boot to 2020.04 where possible</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-201">AR-201</a>] - Introduce CI autotest facility</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-207">AR-207</a>] - Merge rockpis-dev into rockchip64</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-208">AR-208</a>] - Consolidate u-boot variants for mvebu family</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-210">AR-210</a>] - Add support for more HDMI resolutions on Rockchip RK3288 devices</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-215">AR-215</a>] - Move meson64 dev branch to 5.6.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-221">AR-221</a>] - Upgrade imx6 current to 5.6.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-222">AR-222</a>] - Port Docker image building to Ubuntu 20.04</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-226">AR-226</a>] - Add Hardkernel Odroid C4 mainline u-boot / kernel</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-236">AR-236</a>] - Attach Meson64 CURRENT to 5.6.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-238">AR-238</a>] - Updating hostapd, PSD and theme package in repository</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-247">AR-247</a>] - Revitalise Udoo board</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-250">AR-250</a>] - Improve usage of external patches</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-253">AR-253</a>] - Add prerm script for headers</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-254">AR-254</a>] - Add Banana Pi M2 Zero</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-257">AR-257</a>] - Bring Odroid C1 back from the EOL with latest upstream kernel</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-260">AR-260</a>] - Add Nanopi A64 board support</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-261">AR-261</a>] - Add Rockpi S mainline board support</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-262">AR-262</a>] - Move Allwinner development branch to 5.6.y</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-278">AR-278</a>] - Add snap free Chromium to Ubuntu Focal</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-279">AR-279</a>] - Add Hardkernel Odroid C4 stock kernel</li>
+</ul>    
+<h2>Solved bugs</h2>
+<ul>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-109">AR-109</a>] - Upgrade is not done properly on some boards</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-165">AR-165</a>] - Instability with Rock64 and Rock PRO</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-177">AR-177</a>] - No serial gadget console on Nanopi Neo2 black</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-181">AR-181</a>] - Odroid N2 crashes during USB rsync backups</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-198">AR-198</a>] - Olimex Lime 2 doesn't boot from eMMC</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-204">AR-204</a>] - CPUfreq defaults missing on update</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-205">AR-205</a>] - No sound output with OrangePi 4 in dev and current</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-211">AR-211</a>] - Chrony fails to start on Ubuntu Focal</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-212">AR-212</a>] - Random MAC on Nanopi R2S</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-220">AR-220</a>] - Disable 3D support in Bionic due to broken mesa packages</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-231">AR-231</a>] - Unstable stmmac network driver on Meson64</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-237">AR-237</a>] - Desktop install on Ubuntu Focal installs Gnome3 desktop</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-239">AR-239</a>] - Chrony fails to start on Focal</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-240">AR-240</a>] - Broken VFAT kernel upgrade</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-244">AR-244</a>] - Thermal throttling on H5 doesn't work properly</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-245">AR-245</a>] - Hostapd doesn't go up</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-248">AR-248</a>] - Odroid C4 CPU speed is limited to 1.5Ghz</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-249">AR-249</a>] - Problems with CI testings</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-251">AR-251</a>] - Fix kernel 5.7.y packages patch</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-255">AR-255</a>] - Fix Debian mirrors URL</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-263">AR-263</a>] - Fix audio on Renegade</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-269">AR-269</a>] - Add correct CPU regulator configuration for the NanoPI R1</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-274">AR-274</a>] - Add missing iozone3 package to the minimal image</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-277">AR-277</a>] - Distinguish nightly and stable images at the download pages</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-286">AR-286</a>] - Armbian-resize-filesystem fails on first run due to missing fdisk in Bullseye</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-287">AR-287</a>] - Make sure cryptsetup-initramfs is installed in any case</li>
+</ul>
+<h2>Closed tasks</h2>
+<ul>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-150">AR-150</a>] - Disable Stretch image creation for Helios4 and Clearfog</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-157">AR-157</a>] - Add Ubuntu Focal 20.04 as a supported build host</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-186">AR-186</a>] - Blacklist 3D engine on headless images</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-189">AR-189</a>] - Move wireless driver for 8189ES from patch to git</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-195">AR-195</a>] - Adding Ubuntu 20.04 to all builds</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-209">AR-209</a>] - Disable CONFIG_VIDEO_DE2 in u-boot for Allwinner devices</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-213">AR-213</a>] - Make manual for .xz images and check their authentication</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-228">AR-228</a>] - Enable audio and USB on Nanopi A64</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-229">AR-229</a>] - Bump with AUFS for DEV kernels</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-232">AR-232</a>] - Switch Odroid XU4 DEV branch to Libreelec branch</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-234">AR-234</a>] - Disable ZSH update prompt on every two weeks</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-242">AR-242</a>] - Enable SELinux</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-252">AR-252</a>] - Improve source code cleaning</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-258">AR-258</a>] - Enables PCIE PHY with Mezzanine NVME</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-259">AR-259</a>] - Add mp8859 regulator to current for RK3399-ROC-PC</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-264">AR-264</a>] - Enable RTL8723DS WiFI driver</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-265">AR-265</a>] - Remove Xenial from supported host OS</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-266">AR-266</a>] - Fix dependency for native building on Linux Mint and Debian Buster</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-267">AR-267</a>] - Enable Cedrus video acceleration on Allwinner kernels</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-268">AR-268</a>] - Add higher clock for Allwinner H6</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-270">AR-270</a>] - Add support for alternate console UARTs in Allwinner H3 u-boot</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-271">AR-271</a>] - Lower DDR clock rate to 504MHz for H5 boards</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-280">AR-280</a>] - Update CONF, CSC and WIP statuses according to support level</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-285">AR-285</a>] - Improve thermal throttling on Allwinner H6</li>
+ 	<li>[<a href="https://armbian.atlassian.net/browse/AR-288">AR-288</a>] - Add vendor name to the board config files</li>
+</ul>
+
 **20.02.12 / 27.4.2020**
 
 - Added preview images for Odroid C4
