@@ -61,7 +61,9 @@ Solved bugs
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-286">AR-286</a>] - Armbian-resize-filesystem fails on first run due to missing fdisk in Bullseye</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-287">AR-287</a>] - Make sure cryptsetup-initramfs is installed in any case</li>
 </ul>
-Closed tasks
+
+Closed tasks<p>
+
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-150">AR-150</a>] - Disable Stretch image creation for Helios4 and Clearfog</li>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-157">AR-157</a>] - Add Ubuntu Focal 20.04 as a supported build host</li>
