@@ -40,7 +40,7 @@ Do not use testing or dev images in a productive environment. We do appreciate  
 
 ### How to check download authenticity?
 
-All our images are digitally signed and therefore it is possible to check their authenticity.  You meed to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
+All our images are digitally signed and therefore it is possible to check their authenticity.  You need to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
 	
 	# download public key from the database
 	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
@@ -62,15 +62,7 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 
 Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. 
 
-On Windows, you can use the Get-Filehash program in Windows Powershell
-to calculate  the SHA256 hash  and then compare it to the hash in the .sha file you have downloaded.
- 	
-	get-filehash Armbian_20.05.0_Cubox-i_focal_current_5.6.15.img.xz
-	
-	# response
-	Algorithm       Hash                                                                   Path
-	---------       ----                                                                   ----
-	SHA256          B32B65E4E7E06FE042B74ED05433CE97055952721277E38FC766E7F035A93892       C:\Users\....
+On Windows, you can download and use the [QuickHash GUI](https://quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui.
 	
 
 while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
@@ -84,7 +76,7 @@ while on Linux/macOS, in the directory in which you have downloaded the files ,y
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-Write the xz compressed image   with [Etcher](https://balena.io/etcher) or  [USBImager](https://gitlab.com/bztsrc/usbimager) on all platforms since unlike other tools, either can validate  burning results **saving you from corrupted SD card contents**.
+Write the xz compressed image  with [USBImager](https://gitlab.com/bztsrc/usbimager) or [Etcher](https://balena.io/etcher) on all platforms since unlike other tools, either can validate  burning results **saving you from corrupted SD card contents**.
 
 Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
