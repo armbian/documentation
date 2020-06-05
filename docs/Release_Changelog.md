@@ -1,3 +1,7 @@
+**20.05.2 / 05.05.2020**
+
+- [<a href="https://armbian.atlassian.net/browse/AR-294">AR-294</a>] - Initrd on Focal can get corrupted</li>
+
 **20.05.1 / 31.05.2020** Kagu
 
 Finished projects
