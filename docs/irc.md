@@ -3,17 +3,19 @@
 
 ### Overview
 
-As [announced earlier](https://forum.armbian.com/topic/12803-armbian-irc-channel/) in the forums Armbian members can communicate in realtime using the [internet relay chat (or *IRC* in short)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
-Well known clients for CLI are [Weechat](https://weechat.org/) and [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/).
+As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) Armbian members and everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
+Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/). 
 
 
 ### Connect
 
-If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian`  
+If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links :confused:)  
 Or put the data in your client manually:
 - Server: **chat.freenode.net**
 - Ports: **6697** / non-SSL: 6667
 - Channel: **#armbian**
+
+Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
 
 
 ### Channels
