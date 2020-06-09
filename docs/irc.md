@@ -32,9 +32,16 @@ We may or may not add more channels in future depending on the needs.
 ## :cop: --------------- Services
 
 Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
-- Armbianhelper
-- Armbiangithub
-- Armbiantwitter
+- **ArmbianGithub**  
+Has the purpose to fill #armbian-commits and #armbian-rss like described above
+- **ArmbianTwitter**  
+Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*
+- **ArmbianHelper**  
+    - Allows to search for Issues and Task on [Jira](https://armbian.atlassian.net/projects/AR/issues)
+        - If you know the actual task id simply write it to the channel and the bot will look it up. Like `AR-123`
+        - Search issue by keyword/s in the summary. Like `,searchissue Allwinner H6`
+    - Allows to query the Armbian apt repository
+
 
 Purpose and commands
 Commands needs to be consolidated before making a list public. Would be too messy ^^
