@@ -23,6 +23,8 @@ Probably there is nobody around at the time. Keep in mind that all users are spr
 It is common habit to simply stated your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributions can only cover a specific board family for example.
 - *Is the chat history public as well?*  
 Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
+- *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
+These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: (link to freenode info about cloaks)
 
 
 - channels and their purpose
