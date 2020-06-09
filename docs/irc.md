@@ -66,7 +66,7 @@ It is a common habit to simply state your question or issue and then wait patien
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
 - *How can I protect my nickname so nobody can spoof me?*  
     - Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)  
-    Even though it is not mandatory you should register and identify yourself with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
+    Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
 <br/><br/>
 
 ## :point_right: --------------- Bottom line
