@@ -45,7 +45,7 @@ Commands needs to be consolidated before making a list public. Would be too mess
     - It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
 - *I wrote 'Hi' but nobody answered. How do I get support there?*  
     - Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.  
-It is a common habit to simply state your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributions can only cover a specific board family for example.
+It is a common habit to simply state your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributors have detailed knowledge in a specific board family only.
 - *Is the chat history public as well?*  
     - Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
 - *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
