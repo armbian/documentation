@@ -55,3 +55,7 @@ Yes. An Armbian affiliation cloak can be requested from Werner either via forums
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
 - *How can I protect my nickname so nobody can spoof me?*  
 Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
+
+
+## :point_right: Bottom line
+If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with Werner either via forums or IRC.
