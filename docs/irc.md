@@ -41,8 +41,8 @@ Commands needs to be consolidated before making a list public. Would be too mess
 <br/><br/>
 
 ## :grey_question: --------------- FAQ
-- *Why are there so many people in the channel and nobody is talking?*  
-It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
+Why are there so many people in the channel and nobody is talking?
+- ###### It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
 - *I wrote 'Hi' but nobody answered. How do I get support there?*  
 Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.
 It is common habit to simply stated your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributions can only cover a specific board family for example.
