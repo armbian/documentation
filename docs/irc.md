@@ -9,11 +9,11 @@ Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https:
 
 ## :electric_plug: Connect
 
-If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links :confused:)  
+If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
 Or put the data in your client manually:
-- Server: **chat.freenode.net**
-- Ports: **6697** / non-SSL: 6667
-- Channel: **#armbian**
+- Server: `chat.freenode.net`
+- Ports: `6697` / non-encrypted: 6667
+- Channel: `#armbian`
 
 Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
 
@@ -21,10 +21,11 @@ Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=a
 ## :speech_balloon: Channels
 
 - The main project's channel is **#armbian**. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
-- **#armbian-commits** is a moderated channel. Whenever a new interaction with the build repository on Github happens it will be announced. Also newly added issues on Jira will be pasted.
-- #armbian-rss is a live forum feed. Whenever a new post in the Armbian Forums is made it will be announced here.
+- **#armbian-commits** is a moderated channel. Whenever a new interaction with the build repository on Github happens it will be announced. Also newly added issues on Jira will be pasted. User chat is not possible.
+- **#armbian-rss** is a live forum feed. Whenever a new post in the Armbian Forums is made it will be announced here. User chat is not possible.
+Of course you can also enable desktop notification in your favorite browser for the forums.
 
-You are free to join any of these channels.
+Everybody is free to join any of these channels.
 We may or may not add more channels in future depending on the needs.
 
 ## :cop: Services
@@ -54,10 +55,3 @@ Yes. An Armbian affiliation cloak can be requested from Werner either via forums
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
 - *How can I protect my nickname so nobody can spoof me?*  
 Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
-
-
-- channels and their purpose
-- irc modes
-- identifying with services (freenode documentation and bot help)
-- cloaks
-- bots
