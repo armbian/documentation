@@ -51,11 +51,11 @@ It is a common habit to simply state your question or issue and then wait patien
 - *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
     - These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: [https://freenode.net/kb/answer/cloaks](https://freenode.net/kb/answer/cloaks)
 - *Can I have that too?*  
-    - Yes. An Armbian affiliation cloak can be requested from Werner either via forums or IRC. They usually will be granted if you are a well known member in forums, a contributor via Github or donated to the project. Make sure you identified yourself to Nickserv beforehand.
+    - Yes. An Armbian affiliation cloak can be requested from *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC. They usually will be granted if you are a well known member in forums, a contributor via Github or donated to the project. Make sure you identified yourself to Nickserv beforehand.
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
 - *How can I protect my nickname so nobody can spoof me?*  
     - Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
 <br/><br/>
 
 ## :point_right: --------------- Bottom line
-If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with Werner either via forums or IRC.
+If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC.
