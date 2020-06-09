@@ -47,6 +47,8 @@ Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter
         - Get the packages description. `,package description linux-image-current-sunxi`
     - Allows to search forums via Google API (not very precise though)
         - Example: `,g Allwinner H6 panfrost`
+    - A few more minor commands, mostly used by staff or do not need introduction
+        - `.nonprofit` `.contribute` `.rtfm` `.fortune` `.sunxi` `.meson`
 
 Purpose and commands
 Commands needs to be consolidated before making a list public. Would be too messy ^^
