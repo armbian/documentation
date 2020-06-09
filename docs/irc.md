@@ -1,13 +1,13 @@
 # IRC Channel
 
 
-## :clap: Overview
+## :clap: --------------- Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/). 
 
 
-## :electric_plug: Connect
+## :electric_plug: --------------- Connect
 
 If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
 Or put the data in your client manually:
@@ -18,7 +18,7 @@ Or put the data in your client manually:
 Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
 
 
-## :speech_balloon: Channels
+## :speech_balloon: --------------- Channels
 
 - The main project's channel is **#armbian**. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 - **#armbian-commits** is a moderated channel. Whenever a new interaction with the build repository on Github happens it will be announced. Also newly added issues on Jira will be pasted. User chat is not possible.
@@ -28,7 +28,7 @@ Of course you can also enable desktop notification in your favorite browser for 
 Everybody is free to join any of these channels.
 We may or may not add more channels in future depending on the needs.
 
-## :cop: Services
+## :cop: --------------- Services
 
 Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
 - Armbianhelper
@@ -40,7 +40,7 @@ Commands needs to be consolidated before making a list public. Would be too mess
 
 
 
-## :grey_question: FAQ
+## :grey_question: --------------- FAQ
 - *Why are there so many people in the channel and nobody is talking?*  
 It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
 - *I wrote 'Hi' but nobody answered. How do I get support there?*  
@@ -57,5 +57,5 @@ If you cannot find yourself in the list above you are free to request an unaffil
 Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
 
 
-## :point_right: Bottom line
+## :point_right: --------------- Bottom line
 If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with Werner either via forums or IRC.
