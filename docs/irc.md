@@ -5,8 +5,8 @@
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/). 
-
-
+  <br/><br/>
+  
 ## :electric_plug: --------------- Connect
 
 If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
@@ -16,7 +16,7 @@ Or put the data in your client manually:
 - Channel: `#armbian`
 
 Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
-
+<br/><br/>
 
 ## :speech_balloon: --------------- Channels
 
@@ -27,6 +27,7 @@ Of course you can also enable desktop notification in your favorite browser for 
 
 Everybody is free to join any of these channels.
 We may or may not add more channels in future depending on the needs.
+<br/><br/>
 
 ## :cop: --------------- Services
 
@@ -37,8 +38,7 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
 
 Purpose and commands
 Commands needs to be consolidated before making a list public. Would be too messy ^^
-
-
+<br/><br/>
 
 ## :grey_question: --------------- FAQ
 - *Why are there so many people in the channel and nobody is talking?*  
@@ -55,7 +55,7 @@ Yes. An Armbian affiliation cloak can be requested from Werner either via forums
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
 - *How can I protect my nickname so nobody can spoof me?*  
 Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
-
+<br/><br/>
 
 ## :point_right: --------------- Bottom line
 If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with Werner either via forums or IRC.
