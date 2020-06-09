@@ -54,6 +54,9 @@ pages:
         - 'Merge Policy' : 'Process_Merge-Policy.md'
         - 'Documentation' : 'Process_Documentation.md'
 
+  - 'Release management' :
+        - 'Model' : 'Process_Release-Model.md'
+        - 'Changelog' : 'Release_Changelog.md'
 # Disable temporaly until those pages are up-to-date
 #  - 'Governance' :
 #        - 'Administration' : 'Governance_Administration.md'

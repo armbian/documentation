@@ -35,8 +35,8 @@ Tags are used in ad-hoc manner.
 |:--|:--|:--|:--|
 |19.11 | Vaquita| November| [done](https://armbian.atlassian.net/projects/AR/versions/10000/tab/release-report-all-issues)
 |20.02 | Chiru| February| [done](https://armbian.atlassian.net/projects/AR/versions/10001/tab/release-report-all-issues)
-| 20.05 | Kagu|May | [planned](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
-| 20.08 | Caple|August|
+| 20.05 | Kagu|May | [done](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
+| 20.08 | Caple|August| [planned](https://armbian.atlassian.net/projects/AR/versions/10003/tab/release-report-all-issues)
 | 20.11 |Tamandua|November|
  
  by http://www.codenamegenerator.com/

@@ -1,6 +1,11 @@
 **Preparation**
 
-Make sure you have a **good & reliable** SD card and a **proper power supply**. Archives can be uncompressed with [7-Zip](http://www.7-zip.org/) on Windows, [Keka](http://www.kekaosx.com/en/) on OS X and 7z on Linux (apt-get install p7zip-full). RAW images can be written with [Etcher](https://www.etcher.io) (all OS).
+Make sure you have a **good & reliable** SD card and a **proper power supply**. The XZ-compressed  should be written with an approved imaging tool capable of validating the burn.
+
+**Approved Imaging Tools**
+
+* [USBImager](https://gitlab.com/bztsrc/usbimager) a lightweight cross-platform imaging tool 
+* [Balena Etcher](https://www.balena.io/etcher/) an electron / node.js based cross-platform imaging tool [(may contain spyware)](https://github.com/balena-io/etcher/issues?q=is%3Aissue+spyware)
 
 **Boot**
 

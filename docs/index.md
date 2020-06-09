@@ -22,6 +22,8 @@ If you still cannot find what you need here, visit the [_Armbian forum_](http://
 - Each system is compiled, assembled and optimized by [_Armbian Build Tools_](https://github.com/armbian/build) 
 - It has powerful build and software development tools to make [_custom builds_](Developer-Guide_Build-Preparation.md)
 - A vibrant community
+- What is the [difference between](https://forum.armbian.com/topic/7787-what-is-the-difference-between-armbian-and-debian-linux/?tab=comments#comment-58689) Armbian and Debian Linux
+
 
 
 

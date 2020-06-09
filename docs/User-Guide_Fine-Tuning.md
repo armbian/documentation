@@ -35,7 +35,34 @@
 	# disp.screen0_output_mode=1280x720p60
 
 	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+	
+### Screen resolution within Xorg <sub>[Thx @maxlinux2000](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/)</sub>
 
+	Find matching HDMI output:
+		xrandr --listmonitors 
+	Calculate VESA CVT mode lines (example for 1440x900)
+		cvt 1440 900
+	Sample output: 
+		1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
+		Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync ) 
+	Create new mode (example):
+		xrandr --newmode "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync 
+	Add resolution (example):
+		xrandr --addmode HDMI-1 1440x900_60.00 
+	Set current resolution (example):
+		xrandr --output HDMI-1 --mode 1440x900_60.00
+	
+	If it works as expected add it to Xorg by editing
+	/etc/X11/xorg.conf.d/40-monitor.conf
+	add (example)
+		Section "Monitor"
+		Identifier "HDMI-1"
+		Modeline "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
+		Option "PreferredMode" "1440x900"
+		EndSection
+	
+	Restart Xorg or reboot 
+	
 
 ### How to alter CPU frequency?
 
