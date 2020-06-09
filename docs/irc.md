@@ -29,8 +29,12 @@ We may or may not add more channels in future depending on the needs.
 
 ### :cop: Services
 
-nickserv, chanserv
-Armbianhelper, github, twitter
+Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
+- Armbianhelper
+- Armbiangithub
+- Armbiantwitter
+
+Purpose and commands
 Commands needs to be consolidated before making a list public. Would be too messy ^^
 
 
@@ -44,7 +48,12 @@ It is common habit to simply stated your question or issue and then wait patient
 - *Is the chat history public as well?*  
 Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
 - *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
-These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: (link to freenode info about cloaks)
+These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: [https://freenode.net/kb/answer/cloaks](https://freenode.net/kb/answer/cloaks)
+- *Can I have that too?*  
+Yes. An Armbian affiliation cloak can be requested from Werner either via forums or IRC. They usually will be granted if you are a well known member in forums, a contributor via Github or donated to the project. Make sure you identified yourself to Nickserv beforehand.
+If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
+- *How can I protect my nickname so nobody can spoof me?*  
+Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)
 
 
 - channels and their purpose
