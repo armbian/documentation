@@ -1,13 +1,13 @@
 # IRC Channel
 
 
-## :clap: --------------- Overview
+## 👏 --------------- Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/). 
   <br/><br/>
   
-## :electric_plug: --------------- Connect
+## 🔌 --------------- Connect
 
 If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
 Or put the data in your client manually:
@@ -18,7 +18,7 @@ Or put the data in your client manually:
 Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
 <br/><br/>
 
-## :speech_balloon: --------------- Channels
+## 💬 --------------- Channels
 
 - **#armbian** is the project's main channel. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 - **#armbian-commits** is a moderated channel. Whenever a new interaction with the build repository on Github happens it will be announced. Also newly added issues on Jira will be pasted. User chat is not possible.
@@ -29,7 +29,7 @@ Everybody is free to join any of these channels.
 We may or may not add more channels in future depending on the needs.
 <br/><br/>
 
-## :cop: --------------- Services
+## 👮 --------------- Services
 
 Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
 - **ArmbianGithub**  
@@ -51,7 +51,7 @@ Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter
         - `.nonprofit` `.contribute` `.rtfm` `.fortune` `.sunxi` `.meson`
 <br/><br/>
 
-## :grey_question: --------------- FAQ
+## ❔ --------------- FAQ
 - *Why are there so many people in the channel and nobody is talking?*
     - It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
 - *I wrote 'Hi' but nobody answered. How do I get support there?*  
@@ -69,5 +69,5 @@ If you cannot find yourself in the list above you are free to request an unaffil
     Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
 <br/><br/>
 
-## :point_right: --------------- Bottom line
+## 👉 --------------- Bottom line
 If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC.
