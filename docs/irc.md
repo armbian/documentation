@@ -1,13 +1,13 @@
 # IRC Channel
 
 
-### Overview
+### :clap: Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) Armbian members and everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/). 
 
 
-### Connect
+### :electric_plug: Connect
 
 If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links :confused:)  
 Or put the data in your client manually:
@@ -18,7 +18,7 @@ Or put the data in your client manually:
 Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
 
 
-### Channels
+### :speech_balloon: Channels
 
 - The main project's channel is **#armbian**. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 - **#armbian-commits** is a moderated channel. Whenever a new interaction with the build repository on Github happens it will be announced. Also newly added issues on Jira will be pasted.
@@ -27,7 +27,7 @@ Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=a
 You are free to join any of these channels.
 We may or may not add more channels in future depending on the needs.
 
-### Services
+### :cop: Services
 
 nickserv, chanserv
 Armbianhelper, github, twitter
@@ -35,7 +35,7 @@ Commands needs to be consolidated before making a list public. Would be too mess
 
 
 
-### FAQ
+### :grey_question: FAQ
 - *Why are there so many people in the channel and nobody is talking?*  
 It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
 - *I wrote 'Hi' but nobody answered. How do I get support there?*  
