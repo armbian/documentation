@@ -9,7 +9,7 @@ Well known clients for CLI are [Weechat](https://weechat.org/) and [Irssi](https
 
 ### Connect
 
-If you have a desktop environment with properly installed IRC client simply click this link: [irc://chat.freenode.net/armbian](irc://chat.freenode.net/armbian)
+If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian`
 Or put the data in your client manually:
 - Server: **chat.freenode.net**
 - Ports: **6697** / non-SSL: 6667
