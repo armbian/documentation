@@ -16,14 +16,13 @@ We may or may not add more channels in future depending on the needs.
 
 
 ### FAQ
-- *Why are there so many people in the channel and nobody is talking?*
-- - It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
-- *I wrote 'Hi' but nobody answered. How do I get support there?*
-- - Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.
+- *Why are there so many people in the channel and nobody is talking?*  
+It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers https://en.wikipedia.org/wiki/BNC_(software) that keeps their connection to the channel alive.
+- *I wrote 'Hi' but nobody answered. How do I get support there?*  
+Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.
 It is common habit to simply stated your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributions can only cover a specific board family for example.
-
-- *Is the chat history public as well?*
-- - Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
+- *Is the chat history public as well?*  
+Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
 
 
 - channels and their purpose
