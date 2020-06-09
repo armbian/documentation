@@ -47,7 +47,7 @@ Commands needs to be consolidated before making a list public. Would be too mess
     - Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.  
 It is a common habit to simply state your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributors have detailed knowledge in a specific board family only.
 - *Is the chat history public as well?*  
-    - Yes. The channel is redundantly logged. All logs are open to the public and can be read here: http://irc.armbian.com
+    - Yes. All conversation is redundantly logged. These logs are open to the public. You can find them here: http://irc.armbian.com
 - *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
     - These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: [https://freenode.net/kb/answer/cloaks](https://freenode.net/kb/answer/cloaks)
 - *Can I have that too?*  
