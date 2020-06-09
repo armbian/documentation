@@ -42,7 +42,7 @@ Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter
         - Search issue by keyword/s in the summary. Like `,searchissue Allwinner H6` (Take note of the `,`)  
         Will output up to three results
     - Allows to query the Armbian apt repository
-        - Search for package names with wildcards. Like `,package search linux-image*sunxi*
+        - Search for package names with wildcards. Like `,package search linux-image*sunxi*`
         - Get info about a package like version and size. `,package info linux-image-current-sunxi`
         - Get the packages description. `,package description linux-image-current-sunxi`
     - Allows to search forums via Google API (not very precise though)
