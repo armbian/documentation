@@ -57,6 +57,9 @@ pages:
   - 'Release management' :
         - 'Model' : 'Process_Release-Model.md'
         - 'Changelog' : 'Release_Changelog.md'
+
+  - 'Community' :
+        - 'IRC' : 'Community_IRC.md'
 # Disable temporaly until those pages are up-to-date
 #  - 'Governance' :
 #        - 'Administration' : 'Governance_Administration.md'
