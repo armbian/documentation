@@ -36,13 +36,13 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
 - **ArmbianGithub**  
     - Has the purpose to fill #armbian-commits and #armbian-rss like described above
 - **ArmbianTwitter**  
-    - Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*
+    - Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*  
 
 - **ArmbianHelper**  
     - Allows to search for Issues and Task on [Jira](https://armbian.atlassian.net/projects/AR/issues)
         - If you know the actual task id simply write it to the channel and the bot will look it up. Like `AR-123`  
         - Search issue by keyword/s in the summary. Like `,searchissue Allwinner H6` (Take note of the `,`)  
-Will output up to three results
+          Will output up to three results
 
     - Allows to query the Armbian apt repository
         - Search for package names with wildcards. Like `,package search linux-image*sunxi*`  
@@ -50,7 +50,7 @@ Will output up to three results
         - Get the packages description. `,package description linux-image-current-sunxi`  
 
     - Allows to search forums via Google API (not very precise though)
-        - Example: `,g Allwinner H6 panfrost`
+        - Example: `,g Allwinner H6 panfrost`  
         
     - A few more minor commands, mostly used by staff or do not need introduction
         - `.nonprofit` `.contribute` `.rtfm` `.fortune` `.sunxi` `.meson`  
