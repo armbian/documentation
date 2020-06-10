@@ -1,3 +1,14 @@
+**20.05.3 / 10.06.2020**
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-300'>AR-300</a>] -         Enable HDMI audio for OrangePi 4
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-305'>AR-305</a>] -         K-worker creates load on Allwinner devices
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-282'>AR-282</a>] -         Rockpi 4B 1Gb doesn&#39;t boot modern kernel / u-boot
+</li>
+</ul>
+
 **20.05.2 / 05.06.2020**
 
 - [<a href="https://armbian.atlassian.net/browse/AR-294">AR-294</a>] - Initrd on Focal can get corrupted</li>
