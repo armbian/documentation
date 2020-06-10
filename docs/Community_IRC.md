@@ -41,7 +41,7 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
     - Allows to search for Issues and Task on [Jira](https://armbian.atlassian.net/projects/AR/issues)
         - If you know the actual task id simply write it to the channel and the bot will look it up. Like `AR-123`
         - Search issue by keyword/s in the summary. Like `,searchissue Allwinner H6`  
-          > Take note of the `,`. Will output up to three results
+          Take note of the `,`. Will output up to three results.
     - Allows to query the Armbian apt repository
         - Search for package names with wildcards. Like `,package search linux-image*sunxi*`
         - Get info about a package like version and size. `,package info linux-image-current-sunxi`
