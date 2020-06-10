@@ -34,8 +34,8 @@ We may or may not add more channels in future depending on the needs.
 Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
 
 - **ArmbianGithub**  
-    - Has the purpose to fill #armbian-commits and #armbian-rss like described above
-- **ArmbianTwitter**  
+    - Has the purpose to fill #armbian-commits and #armbian-rss like described above  
+- **ArmbianTwitter**
     - Recurringly searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*
 
 - **ArmbianHelper**  
