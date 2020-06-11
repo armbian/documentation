@@ -49,7 +49,7 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
     - Allows to search forums via Google API (not very precise though)
         - Example: `,g Allwinner H6 panfrost`
     - A few more minor commands, mostly used by staff or do not need introduction
-        - `.nonprofit` `.contribute` `.rtfm` `.fortune` `.sunxi` `.meson`
+        - `.nonprofit`, `.contribute`, `.rtfm`, `.fortune`, `.sunxi`, `.meson`, `help`, `help irc`
 <br/><br/>
 
 ## ❔ --------------- FAQ
