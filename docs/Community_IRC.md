@@ -16,7 +16,7 @@ Or put the data in your client manually:
 + Ports: `6697` / non-encrypted: 6667  
 + Channel: `#armbian`  
 
-Or simply use Freenode's webirc client: https://webchat.freenode.net/?channels=armbian
+Or simply use Freenode's webirc client: [https://webchat.freenode.net/?channels=armbian](https://webchat.freenode.net/?channels=armbian)
 <br/><br/>
 
 ## 💬 --------------- Channels
