@@ -13,7 +13,7 @@ If you have a desktop environment with properly installed IRC client simply put 
 Or put the data in your client manually:
 
 + Server: `chat.freenode.net`  
-+ Ports: `6697` / non-encrypted: 6667  
++ Ports: `6697` / non-encrypted: `6667`  
 + Channel: `#armbian`  
 
 Or simply use Freenode's webirc client: [https://webchat.freenode.net/?channels=armbian](https://webchat.freenode.net/?channels=armbian)
