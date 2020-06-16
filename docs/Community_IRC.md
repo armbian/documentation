@@ -10,7 +10,8 @@ Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https:
 ## 🔌 --------------- Connect
 
 If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
-Or put the data in your client manually:  
+Or put the data in your client manually:
+
 + Server: `chat.freenode.net`  
 + Ports: `6697` / non-encrypted: 6667  
 + Channel: `#armbian`  
