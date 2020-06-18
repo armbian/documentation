@@ -73,3 +73,5 @@ If you cannot find yourself in the list above you are free to request an unaffil
 
 ## 👉 --------------- Bottom line
 If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC.
+
+By the way if you like to have a free IRC bouncer to always be up-to-date and never miss a conversation again you should check out [this thread](https://forum.armbian.com/topic/13943-irc-bouncer-giveaway/).
