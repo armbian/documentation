@@ -4,8 +4,9 @@
 
 [See the generic Allwinner page](https://docs.armbian.com/Hardware_Allwinner/)
 
-The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing
-`/etc/default/cpufrequtils` and set `MAX_SPEED` to `1810000`.
+~~The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing
+`/etc/default/cpufrequtils` and set `MAX_SPEED` to `1810000`.~~
+With the release of Armbian 20.05 "Kagu" new thermal zones have been added making this limitation obsolete and therefore has been removed. All H6 boards now clocking at the highest possible value OOB.
 
 **Warning**
 Adding proper cooling is highly recommended.
