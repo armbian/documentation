@@ -1,3 +1,10 @@
+**20.05.4 / 16.06.2020**
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-311'>AR-311</a>] -         Initrd on Focal can get corrupted followup fix
+</li>
+</ul>
+
 **20.05.3 / 10.06.2020**
 
 <ul>
