@@ -14,6 +14,8 @@ Adding proper cooling is highly recommended.
 
 ### PCIe (un-)supported
 
-Some H6 SoC based boards (like Pine H64 Model a, discontinued) are shipped with a PCIe slot. This slot can and will **not be supported** by Armbian as it has to be considered as broken by design. [Linux-Sunxi](https://linux-sunxi.org/H6#Errata) writes about this: 
+Some H6 SoC based boards (like Pine H64 Model a, discontinued) are shipped with a PCIe slot. This slot **cannot** work out of the box as it has to be considered as broken by design. [Linux-Sunxi](https://linux-sunxi.org/H6#Errata) writes about this: 
 
-> Allwinner H6 has a quirky PCIe controller that doesn't map the PCIe address space properly (only 64k accessible at one time) to CPU, and accessing the PCIe config space, I/O space or memory space will need to be wrapped. As Linux doesn't wrap PCIe memory space access, it's not possible to do a proper PCIe controller driver for H6. The BSP kernel modifies the driver to wrap the access, so it's also not generic, and only devices with modified driver will work. 
+> Allwinner H6 has a quirky PCIe controller that doesn't map the PCIe address space properly (only 64k accessible at one time) to CPU, and accessing the PCIe config space, I/O space or memory space will need to be wrapped. As Linux doesn't wrap PCIe memory space access, it's not possible to do a proper PCIe controller driver for H6. The BSP kernel modifies the driver to wrap the access, so it's also not generic, and only devices with modified driver will work.
+
+Icenowy is working on a wrapper to make PCIe work. Check [forums](https://forum.armbian.com/topic/13529-a-try-on-utilizing-h6-pcie-with-virtualization/).
