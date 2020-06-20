@@ -26,13 +26,13 @@
 | Area      | Lead Maintainer | Maintainers             | Acronyms, Codenames | additional info |
 |-----------|-----------------|-------------------------|---------------------|-----------------|
 | Release Management | @igorpecovnik |                  |                     |                 |
-| Testing and Code Quality |  | @lanefu                 |                     |                 |
+| Testing and Code Quality, CI | @lanefu | @igorpecovnik |                     |                 |
 | Security  |                 |                         |                     |                 |
 | Documentation  |                 | @Werner                       |                     |                 |
 | Community Engagement  |     | @NicoD, @tido           |                     |                 |
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
 | Web and Infrastucture | @lauri			|		      |                 |
-| IRC | @Werner			|		      |                 |
+| IRC & Services | @Werner			|		      |                 |
 
 ## Hackers Emeritus ##
 
