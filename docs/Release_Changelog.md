@@ -1,3 +1,10 @@
+**20.05.6 / 19.06.2020**
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-324'>AR-324</a>] -         Add Rockchip RK322X SoC support
+</li>
+</ul>
+
 **20.05.4 / 16.06.2020**
 
 <ul>
