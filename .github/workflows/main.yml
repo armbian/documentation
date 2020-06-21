@@ -46,7 +46,7 @@ jobs:
     - name: Upload artefact 
       uses: actions/upload-artifact@v2
       with:
-        name: docu-${{ GITHUB_SHA }}
+        name: docu-$GITHUB_SHA
         path: site/ 
         
 
