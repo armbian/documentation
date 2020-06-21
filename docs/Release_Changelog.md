@@ -3,6 +3,10 @@
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-324'>AR-324</a>] -         Add Rockchip RK322X SoC support
 </li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-320'>AR-320</a>] -         Initial support for Rockpi E
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-323'>AR-323</a>] -         Allow install to SD NAND for Rockpi S
+</li>
 </ul>
 
 **20.05.4 / 16.06.2020**
