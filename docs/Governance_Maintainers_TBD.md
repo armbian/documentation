@@ -7,10 +7,10 @@
 | Allwinner | @martinayotte   | @igorpecovnik, @jernejsk | sunxi, sunxi64       |                 |
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte | meson, meson64   |                 |
 | Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte, @JMCC | rockchip, rockchip64, rk3399 | @JMCC: Renegade only |
-| Mediatek  | @chwe17        |                         | mt7623              |                 |
+| Mediatek  | @chwe          |                         | mt7623              |                 |
 | Marvell   | @gprovost      | @ebin-dev               | mvebu,mvebu64       |                 |
 | Samsung   |                |                         | odroidxu4           |                 |
-| Pine64    | @Tido          |                         |                     |                 |
+| Pine64    |                |                         |                     |                 |
 
 ## Armbian Base Maintainers ##
 
