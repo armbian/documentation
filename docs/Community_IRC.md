@@ -69,7 +69,7 @@ If you cannot find yourself in the list above you are free to request an unaffil
 - *How can I protect my nickname so nobody can spoof me?*  
     - Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)  
     Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
-- *Why do some users have voice (+) in channel?*  
+- *Why do some users have voice (+v) in channel?*  
     - As mentioned in [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/?do=findComment&comment=96828) "all contributors to the project, regardless if forums staff, contributor on Github or well known and longtime active user" may get voice on request.
 <br/><br/>
 
