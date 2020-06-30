@@ -3,7 +3,9 @@
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-308'>AR-308</a>] -         Disable HDMI in u-boot for rk3399 boards
 </li>
- <li>Update images for: NanoPC T4, Nanopi M4,Nanopi M4v2, Nanopi Neo4, Orangepi 4, Firefly RK3399
+<li>[<a href='https://armbian.atlassian.net/browse/AR-338'>AR-338</a>] -         Bananapi R2 does not boot at all
+</li> 
+<li>Update images for: NanoPC T4, Nanopi M4,Nanopi M4v2, Nanopi Neo4, Orangepi 4, Firefly RK3399, Bananapi R2
 </li>
 </ul>
 
