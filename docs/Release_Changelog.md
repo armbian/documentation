@@ -5,7 +5,9 @@
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-338'>AR-338</a>] -         Bananapi R2 does not boot at all
 </li> 
-<li>Update images for: NanoPC T4, Nanopi M4,Nanopi M4v2, Nanopi Neo4, Orangepi 4, Firefly RK3399, Bananapi R2
+<li>[<a href='https://armbian.atlassian.net/browse/AR-337'>AR-337</a>] -         Odroid XU4 Memcopy Slow on all Kernel 5.x 80MB/sec instead of 370+MB/sec
+</li>
+<li>Update images for: NanoPC T4, Nanopi M4,Nanopi M4v2, Nanopi Neo4, Orangepi 4, Firefly RK3399, Bananapi R2, Odroid XU4
 </li>
 </ul>
 
