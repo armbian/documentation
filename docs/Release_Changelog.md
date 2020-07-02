@@ -1,4 +1,4 @@
-**20.05.7 / 29.06.2020**
+**20.05.7 / 02.07.2020**
 
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-308'>AR-308</a>] -         Disable HDMI in u-boot for rk3399 boards
