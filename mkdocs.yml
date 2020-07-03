@@ -55,6 +55,7 @@ pages:
   - 'Release management' :
         - 'Model' : 'Process_Release-Model.md'
         - 'Changelog' : 'Release_Changelog.md'
+        - 'Workflow (Jira)' : 'Process_Managing_Workflow.md'
 
   - 'Community' :
         - 'IRC' : 'Community_IRC.md'

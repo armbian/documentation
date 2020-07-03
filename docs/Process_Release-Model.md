@@ -76,7 +76,7 @@ Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channel
 # Release Coordinating
 
 ## Summary
-A release starts as a RC Branch cut from master at freeze time.  Once a RC Branch is cut, master can be unfrozen and development can continue.  RC Branches accept bug fixes.  The bug fixes should be cherry-picked back to master branch.  Once the RC Is stable. A Final release is made.  A release is *never* merged to master.  Once a release is complete, it only should be updated for severe bugs and severe security vulnerabilities.  A release is only maintained until the next release.
+A release starts as a RC Branch cut from master at freeze time.  Once a RC Branch is cut, master can be unfrozen and development can continue.  RC Branch is a rolling release that accepts bug fixes.  The bug fixes should be cherry-picked back to master branch.  Once the RC Is stable, A Final release as a branch named after its version.  A release is *never* merged to master.  Once a release is complete, it only should be updated for severe bugs and severe security vulnerabilities.  A release is only maintained until the next release.
 
 
 ## 1. Forum Communication
@@ -101,13 +101,14 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 ## 2. Release Candidate Branch Management
 
-- For code freeze -- create a RC branch in the format `(vYY.MM-rcX)`  ex: `v20.02-rc1`
+- For code freeze -- create a RC branch as `version-rc` ex: `v20.02.0-rc`
 - If Possible, create Jira tickets for major changes in github that were not tracked in Jira
-- Begin Testing Process.  See [Release Testing](#Release_Teting)
+- Begin Testing Process.  See [Release Testing](#Release_Testing)
 - Do not modify branch directy.  Only accept PRs
 - Only accept PRs for Bugfixes. No features
-- Update master branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc1 Master bacomes v20.05.0-trunk
-- FIXME ? Coordinate with Igor or other Admins generate test build from branch ?
+- Update master branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc Master bacomes v20.05.0-trunk
+- CI Testing should pass on PR
+- Test images should automatically be built via Igor's script
 - Repeat build, test, and bugfix process until release is stable
 - Cherry-pick bugfixes back into master
 - Create Final Release branch from RC
