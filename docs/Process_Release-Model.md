@@ -54,15 +54,17 @@ Dates for **2020**:
 Agenda:
 
 - 00:00 - 00:02 Meeting coordinator (MC) calls meeting to order. 
-- 00:02 - 00:05 MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle. Just say hi.
+- 00:02 - 00:05 MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
 - 00:05 - 00:07 MC [points out to agenda](https://github.com/armbian/documentation/blob/agenda/docs/Process_Release-Model.md#release-planning) and asks if there is any late topic to add.
 - 00:07 - 00:09 MC presents meeting relevant news and rules of engagement:
   - news #1: IRC translator. If your English is poor, simply write in your native language. Start your sentence with .. at the beginning.
   - news #2: A document [how to use Jira](https://docs.armbian.com/Process_Managing_Workflow/)
   - rule #1: When you get a voice, be quick and concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
-  - ruke #2: If meeting is going out of desired agenda, MC will use "STOP STOP STOP", wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
-- 00:09 - 00:10 MC is calling out on by [Github defined team](https://github.com/orgs/armbian/teams) sections. Speak out if you are a part of it or if you are working something relevant to that area.
+  - rule #2: If meeting is going out of desired agenda, MC will use "STOP STOP STOP", wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
+- 00:09 - 00:10 MC is calling out on by [Github defined team](https://github.com/orgs/armbian/teams) sections. 
   - board Maintainers: Allwinner, Amlogic, Marvell, Rockchip, others. Present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise MC calls people out). Ideally, all those tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2) prior to the meeting.
+  - [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
+  - [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
 - 00:40 - 00:50 [Cycle Jira backlog](https://armbian.atlassian.net/browse/AR) and:
    - discuss task / bug (one at a time)
    - assign to person / release / tag
