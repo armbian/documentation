@@ -48,7 +48,7 @@ A release planning starts with an public IRC meeting where developers and intere
 Dates for **2020**: 
 
  * [April 4th](https://freenode.irclog.whitequark.org/armbian/2020-04-04)
- * July 4th 
+ * [July 4th](https://freenode.irclog.whitequark.org/armbian/2020-07-04)
  * October 3rd
 
 Agenda:
