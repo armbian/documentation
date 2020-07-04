@@ -12,16 +12,20 @@ When creating issues, try to assign issue type most approprate.   Issue type _ca
 
 The easiest way to follow the work queue [Upcoming Release Kanban Board](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2&projectKey=AR&atlOrigin=eyJpIjoiM2JlNTliN2ZkNTJiNDYzNGI4YzEzOGE4YjhmOWU3MDQiLCJwIjoiaiJ9).  This Board lists only work select for the upcoming release.
 
-Work state are listed in 3 columns, and sorted by priority.
+![kanban screenshot](images/kanban.png)
+
+Use the filter buttons at top to quickly see unassigned work, work assigned to you, bugs, and work recently updated.
+
+Work is listed in 3 columns, and sorted by priority.
 
 Columns:
 * Todo
-    * Work prioritized to be done next
-    * Pick up any task from this column
+  * Work prioritized to be done next
+  * Pick up any task from this column
 * In Progress
-    * Work In Progress
+  * Work In Progress
 * Done
-    * Shows **recently** completed work.  Has time limit to keep board clean
+  * Shows **recently** completed work.  Has time limit to keep board clean
 
 # Managing Work
 
