@@ -61,8 +61,9 @@ Agenda:
   - news #2: A document [how to use Jira](https://docs.armbian.com/Process_Managing_Workflow/)
   - rule #1: When you get a voice, be quick and concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - rule #2: If meeting is going out of desired agenda, MC will use "STOP STOP STOP", wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
-- 00:09 - 00:10 MC is calling out on by [Github defined team](https://github.com/orgs/armbian/teams) sections. 
-  - board Maintainers: Allwinner, Amlogic, Marvell, Rockchip, others. Present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise MC calls people out). Ideally, all those tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2) prior to the meeting.
+- 00:09 - 00:40 MC is calling out on by team sections as defined at GitHub: Allwinner, Amlogic, Marvell, Rockchip, others.
+  - tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2). If they are not there, please add them during or right after the meeting
+  - board Maintainers present tasks, bugs or projects they are working on (open discussion for each section if possible, otherwise MC calls people out).
   - [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
   - [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
 - 00:40 - 00:50 [Cycle Jira backlog](https://armbian.atlassian.net/browse/AR) and:
