@@ -53,23 +53,23 @@ Dates for **2020**:
 
 Agenda:
 
-- 00:00 - 00:02 Meeting coordinator calls meeting to order. 
-- 00:02 - 00:05 Meeting coordinator gives control to participant to check in, wait for latecomers. If your handle is not self explanatory, add your forum/github handle. Just say hi, I am Joe at forums, but here I like to be somebody else.)
-- 00:05 - 00:07 Meeting coordinator [points out to agenda](https://github.com/armbian/documentation/blob/agenda/docs/Process_Release-Model.md#release-planning) and asks if there is any late topic to add.
-- 00:07 - 00:09 Meeting coordinator presents meeting relevant news and rules of engagement:
-  - news #1: IRC translator. If your English is poor, write in your native language. Simply start your sentence with .. at the beginning.
+- 00:00 - 00:02 Meeting coordinator (MC) calls meeting to order. 
+- 00:02 - 00:05 MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle. Just say hi.
+- 00:05 - 00:07 MC [points out to agenda](https://github.com/armbian/documentation/blob/agenda/docs/Process_Release-Model.md#release-planning) and asks if there is any late topic to add.
+- 00:07 - 00:09 MC presents meeting relevant news and rules of engagement:
+  - news #1: IRC translator. If your English is poor, simply write in your native language. Start your sentence with .. at the beginning.
   - news #2: A document [how to use Jira](https://docs.armbian.com/Process_Managing_Workflow/)
-  - rule #1: When you get a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
-  - ruke #2: If things goes out of control, meeting coordinator can use "STOP STOP STOP" to get attention. Please stop chatting and listen.
-- 00:09 - 00:10 Meeting coordinator is calling out on https://github.com/orgs/armbian/teams sections. Speak out if you are a part of it.
-  - board Maintainers: Allwinner, Amlogic, Marvell, Rockchip, others. Present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out). Ideally, all those tasks should be tracked by Jira: https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2
-- 00:40 - 00:50 cycle Jira backlog https://armbian.atlassian.net/browse/AR and move things to this or next release
+  - rule #1: When you get a voice, be quick and concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
+  - ruke #2: If meeting is going out of desired agenda, MC will use "STOP STOP STOP", wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
+- 00:09 - 00:10 MC is calling out on by [Github defined team](https://github.com/orgs/armbian/teams) sections. Speak out if you are a part of it or if you are working something relevant to that area.
+  - board Maintainers: Allwinner, Amlogic, Marvell, Rockchip, others. Present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise MC calls people out). Ideally, all those tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2) prior to the meeting.
+- 00:40 - 00:50 [Cycle Jira backlog](https://armbian.atlassian.net/browse/AR) and:
    - discuss task / bug (one at a time)
    - assign to person / release / tag
    - re-prioritise
-- 00:50 - 00:55 cycle open issues https://github.com/armbian/build/issues and PR https://github.com/armbian/build/pulls on build engine
-- 00:55 - 00:56 board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
-- 00:56 - 00:57 choose upcoming release officer and next meeting organiser
+- 00:50 - 00:55 Cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
+- 00:55 - 00:56 Board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
+- 00:56 - 00:57 Choose upcoming release officer and next meeting organiser. We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support, so no need to worry about.
 - 00:57 - misc / open discussion
 
 Tips:
