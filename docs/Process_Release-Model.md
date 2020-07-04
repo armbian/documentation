@@ -53,11 +53,12 @@ Dates for **2020**:
 
 Agenda:
 
-- 00:00 - 00:02 Meeting coordinator: Welcome
-- 00:02 - 00:05 Everyone: Check meeting attendees, wait for latecomers (if nick is not self explanatory, add your forum/github handle. Just say hi)
-- 00:05 - 00:07 Meeting coordinator points to agenda: https://github.com/armbian/documentation/edit/agenda/docs/Process_Release-Model.md and asks if there is any late topic to discuss?
+- 00:00 - 00:02 Meeting coordinator calls meeting to order. 
+- 00:02 - 00:05 Meeting coordinator gives control to participant to check in, wait for latecomers. If your handle is not self explanatory, add your forum/github handle. Just say hi, I am Joe at forums, but here I like to be somebody else.)
+- 00:05 - 00:07 Meeting coordinator [points out to agenda](https://github.com/armbian/documentation/blob/agenda/docs/Process_Release-Model.md#release-planning) and asks if there is any late topic to add.
 - 00:07 - 00:09 Meeting coordinator presents meeting relevant news and rules of engagement:
   - news #1: IRC translator. If your English is poor, write in your native language. Simply start your sentence with .. at the beginning.
+  - news #2: A document [how to use Jira](https://docs.armbian.com/Process_Managing_Workflow/)
   - rule #1: When you get a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - ruke #2: If things goes out of control, meeting coordinator can use "STOP STOP STOP" to get attention. Please stop chatting and listen.
 - 00:09 - 00:10 Meeting coordinator is calling out on https://github.com/orgs/armbian/teams sections. Speak out if you are a part of it.
