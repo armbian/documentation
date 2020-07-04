@@ -72,7 +72,7 @@ Agenda:
    - re-prioritise
 - 00:50 - 00:55 Check and cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
 - 00:55 - 00:56 Discuss (last 10-15) board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
-- 00:56 - 00:57 Choose upcoming release officer and next meeting organiser (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support, so no need to worry about.
+- 00:56 - 00:57 Choose upcoming release officer and next meeting organiser (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support / backup, so no need to worry about anything.
 - 00:57 - misc / open discussion
 
 Tips:
