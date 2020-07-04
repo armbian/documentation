@@ -63,15 +63,15 @@ Agenda:
   - rule #2: If meeting is going out of desired agenda, MC will use "STOP STOP STOP", wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
 - 00:09 - 00:40 MC is calling out on by team sections as defined at GitHub: Allwinner, Amlogic, Marvell, Rockchip, others.
   - tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2). If they are not there, please add them during or right after the meeting
-  - board Maintainers present tasks, bugs or projects they are working on (open discussion for each section if possible, otherwise MC calls people out).
+  - board maintainers present tasks, bugs or projects they are working on (open discussion for each section if possible, otherwise MC calls people out).
   - [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
   - [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
 - 00:40 - 00:50 [Cycle Jira backlog](https://armbian.atlassian.net/browse/AR) and:
    - discuss task / bug (one at a time)
    - assign to person / release / tag
    - re-prioritise
-- 00:50 - 00:55 Cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
-- 00:55 - 00:56 Board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
+- 00:50 - 00:55 Check and cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
+- 00:55 - 00:56 Discuss (last 10-15) board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
 - 00:56 - 00:57 Choose upcoming release officer and next meeting organiser (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support, so no need to worry about.
 - 00:57 - misc / open discussion
 
