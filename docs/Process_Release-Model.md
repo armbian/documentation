@@ -53,22 +53,26 @@ Dates for **2020**:
 
 Agenda:
 
-- check meeting attendees (if nick is not self explanatory, add your forum/github handle. Just say hi or something)
-- choose upcoming release officer (so far it was me and Lane)
-- present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out). Jira should be open in not already.
-- cycle Jira backlog:
+- 00:00 - 00:02 Meeting coordinator: Welcome
+- 00:02 - 00:05 Everyone: Check meeting attendees, wait for latecomers (if nick is not self explanatory, add your forum/github handle. Just say hi)
+- 00:05 - 00:07 Meeting coordinator points to agenda: https://github.com/armbian/documentation/edit/agenda/docs/Process_Release-Model.md and asks if there is any late topic to discuss?
+- 00:07 - 00:09 Meeting coordinator presents meeting relevant news and rules of engagement:
+  - news #1: IRC translator. If your English is poor, write in your native language. Simply start your sentence with .. at the beginning.
+  - rule #1: When you get a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")  
+  - ruke #2: If things goes out of control, meeting coordinator can use "STOP STOP STOP" to get attention. Please stop chatting and listen.
+- 00:09 - 00:10 Meeting coordinator is calling out on https://github.com/orgs/armbian/teams sections. Speak out if you are a part of it.
+  - board Maintainers: Allwinner, Amlogic, Marvell, Rockchip, others. Present tasks, bugs or project you are working on (open discussion if there will not be much people, otherwise meeting officer call people out). Ideally, all those tasks should be tracked by Jira: https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2
+- 00:40 - 00:50 cycle Jira backlog https://armbian.atlassian.net/browse/AR and move things to this or next release
    - discuss task / bug (one at a time)
    - assign to person / release / tag
    - re-prioritise
-- cycle open issues and PR on build engine
-- board status update on download pages and build engine (wip, supported, eol)
-- change (build) branch protection rule to "Require pull request reviews before merging"
-- decide upon best meetings hours
-- misc / open discussion
+- 00:50 - 00:55 cycle open issues https://github.com/armbian/build/issues and PR https://github.com/armbian/build/pulls on build engine
+- 00:55 - 00:56 board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
+- 00:56 - 00:57 choose upcoming release officer and next meeting organiser
+- 00:57 - misc / open discussion
 
 Tips:
 
-- when you got a voice, be concise (1-2 min) and make it clear when you stop. ("No more, I'm done")
 - channel is recorded so a summary and adjustments to Jira can made afterwards, ideally along with the meeting
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
