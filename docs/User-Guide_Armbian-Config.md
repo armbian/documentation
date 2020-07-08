@@ -19,7 +19,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **B**ootenv - edit boot environment and alter kernel boot parameters,
 - **H**ardware - toggle board low level functions: UART, I2C, SPI, ...
 - **S**witch - switch to/between alternative kernels: legacy, current, dev
-- **S**SH - reconfigure SSH dameon. Permit root login, toggle ssh key and mobile phone authetication,
+- **S**SH - reconfigure SSH daemon. Permit root login, toggle ssh key and mobile phone authentication,
 - **F**irmware - execute apt update and upgrade to update your system,
 - **Z**shell - toogle stock BASH and ZSH with [Oh My ZSH](https://ohmyz.sh/) and [tmux](https://en.wikipedia.org/wiki/Tmux)
 - **E**nable - toggle desktop on and off (on desktop images)
