@@ -5,6 +5,7 @@
 - Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
 - **The officially supported** compilation environment is [Ubuntu Focal 20.04 x64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!** (Support for Ubuntu 18.04 will be there until either we run into issues we do not want to waste time on or upstream support ends),
+- `binfmt_misc` kernel module.  Some ubuntu-cloud images do not have this module.  Switch to a generic kernel if that is the case.
 - installed basic system, OpenSSH and Samba (optional),
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
