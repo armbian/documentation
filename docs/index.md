@@ -1,4 +1,4 @@
-[![](http://www.armbian.com/wp-content/uploads/2016/06/logo_middle.png)](http://www.armbian.com)
+[![](images/logo_middle.png)](http://www.armbian.com)
 
 Linux for ARM development boards
 
