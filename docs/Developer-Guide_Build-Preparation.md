@@ -19,9 +19,9 @@ Please note that system requirements (both hardware and OS/software) may differ 
 Login as root and run:
 
 ```
-apt-get -y -qq install git
-git clone --depth 1 https://github.com/armbian/build
-cd build
+apt-get -y -qq install git  
+git clone --depth 1 https://github.com/armbian/build  
+cd build  
 ```
 
 Run the script
@@ -49,11 +49,11 @@ Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (BRANCH, RELEASE, COMPRESS_OUTPUTIMAGE) will be overwritten.
 
 ```
-. ./config-base.conf
-
-BRANCH="dev"
-RELEASE="buster"
-COMPRESS_OUTPUTIMAGE="sha,gz"
+. ./config-base.conf  
+  
+BRANCH="dev"  
+RELEASE="buster"  
+COMPRESS_OUTPUTIMAGE="sha,gz"  
 ```
 
 ### Using our automated build system
@@ -68,25 +68,25 @@ Board beta images are defined in board configuration files which are located [he
 This is a typical board configuration:
 
 ```
-	# A20 dual core 1Gb SoC
-	BOARD_NAME="Banana Pi"
-	LINUXFAMILY="sun7i"
-	BOOTCONFIG="Bananapi_defconfig"
-	MODULES="hci_uart gpio_sunxi rfcomm hidp sunxi-ir bonding spi_sun7i 8021q a20_tp #ap6211"
-	MODULES_NEXT="brcmfmac bonding"
-	#
-	KERNEL_TARGET="legacy,current,dev"
-	CLI_TARGET="buster,bionic,focal:current"
-	DESKTOP_TARGET="stretch:legacy,current"
-	
-	CLI_BETA_TARGET=""
-	DESKTOP_BETA_TARGET=""
-	#
-	BOARDRATING=""
-	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"
-	HARDWARE="https://linux-sunxi.org/Banana_Pi"
-	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"
-	BUY="http://amzn.to/2fToHjR"
+	# A20 dual core 1Gb SoC  
+	BOARD_NAME="Banana Pi"  
+	LINUXFAMILY="sun7i"  
+	BOOTCONFIG="Bananapi_defconfig"  
+	MODULES="hci_uart gpio_sunxi rfcomm hidp sunxi-ir bonding spi_sun7i 8021q a20_tp #ap6211"  
+	MODULES_NEXT="brcmfmac bonding"  
+	#  
+	KERNEL_TARGET="legacy,current,dev"  
+	CLI_TARGET="buster,bionic,focal:current"  
+	DESKTOP_TARGET="stretch:legacy,current"  
+	  
+	CLI_BETA_TARGET=""  
+	DESKTOP_BETA_TARGET=""  
+	#  
+	BOARDRATING=""  
+	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"  
+	HARDWARE="https://linux-sunxi.org/Banana_Pi"  
+	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"  
+	BUY="http://amzn.to/2fToHjR"  
 ```
 
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
@@ -120,16 +120,16 @@ Currently, invoking compile.sh will run a monotonous task of building all the co
 In some situation, especially when developing with Kernel or U-Boot, it is handy to run a portion of that great task like:
 
 ```
-        # using default profile
-        ./compile.sh 'fetch_from_repo "$BOOTSOURCE" "$BOOTDIR" "$BOOTBRANCH" "yes"'
-        ./compile.sh 'compile_uboot'
+        # using default profile  
+        ./compile.sh 'fetch_from_repo "$BOOTSOURCE" "$BOOTDIR" "$BOOTBRANCH" "yes"'  
+        ./compile.sh 'compile_uboot'  
 ```
 
 You can also dump the variable:
 
 ```
-        # using profile of `userpatches/config-my.conf`
-        ./compile.sh my 'echo $SRC/cache/sources/$BOOTSOURCEDIR'
+        # using profile of `userpatches/config-my.conf`  
+        ./compile.sh my 'echo $SRC/cache/sources/$BOOTSOURCEDIR'  
 ```
 
 NOTE: please use single quotes to keep the `$VAR` from early expansion in the command line shell.
