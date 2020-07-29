@@ -16,15 +16,15 @@ First, you'll need to [install Vagrant](https://www.vagrantup.com/downloads.html
 
 Now we'll need to [install git](https://git-scm.com/downloads) and clone the Armbian repo. While this might seem obvious, we rely on it being there when we use Vagrant to bring up our guest-build box.
 
-	# Clone the project.
-	git clone --depth 1 https://github.com/armbian/build
+	# Clone the project.  
+	git clone --depth 1 https://github.com/armbian/build  
 
-	# Make the Vagrant box available. This might take a while but only needs to be done once.
-	vagrant box add ubuntu/bionic64
+	# Make the Vagrant box available. This might take a while but only needs to be done once.  
+	vagrant box add ubuntu/bionic64  
 	
-	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.
-	# This only needs done once and a while.
-	vagrant box update
+	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.  
+	# This only needs done once and a while.  
+	vagrant box update  
 
 ### Armbian Directory Structure
 
@@ -33,19 +33,19 @@ Before we bring up the box, take note of the [directory structure]( https://docs
 ### Creating the Vagrant Guest Box Used to Build 
 Let's bring the box up. This might take a minute or two depending on your bandwidth and hardware.
 
-	# We have to be in the same directory as the Vagrant file, which is in the build/config/templates directory. 
+	# We have to be in the same directory as the Vagrant file, which is in the build/config/templates directory.   
 	
-	cd build/config/templates
+	cd build/config/templates  
 	
-	#  Note that you can edit the Vagrant  file to specify the number of cpus and amount of memory you want Vagrant to 	   use.  
+	#  Note that you can edit the Vagrant  file to specify the number of cpus and amount of memory you want Vagrant to use.  
 	
 	# And now we simply let vagrant create our box and bring it up. 
 	
-	vagrant up
+	vagrant up  
 
 	# When the box has been installed we can get access via ssh.
 	# (No need for passwords, Vagrant installs the keys we'll need.)
-	vagrant ssh
+	vagrant ssh  
 
 ## Important note
 
@@ -57,16 +57,16 @@ The following steps are all run on the *guest* Vagrant created for us.
 
 Once it's finally up and you're logged in, it works much like any of the other install methods (NOTE: again, these commands are run on the *guest* box).
 
-	# Let's get building!
-	cd armbian
-	sudo ./compile.sh
+	# Let's get building!  
+	cd armbian  
+	sudo ./compile.sh  
 
 ## More Vagrant HOST Steps
 
 Wrap up your vagrant box when no longer needed (log out of the guest before running these commands on the *host* system):
 
-	# Shutdown, but leave the box around for more building at a later time:
-	vagrant halt
+	# Shutdown, but leave the box around for more building at a later time:  
+	vagrant halt  
 
-	# Trash the box and remove all the related storage devices.
-	vagrant destroy
+	# Trash the box and remove all the related storage devices.  
+	vagrant destroy  
