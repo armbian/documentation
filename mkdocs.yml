@@ -9,7 +9,7 @@ site_author: "Armbian team"
 google_analytics: ["UA-284946-9", "docs.armbian.com"]
 
 theme: readthedocs
-#theme_dir: readthedocs_custom
+theme_dir: readthedocs_custom
 
 markdown_extensions:
   - smarty
