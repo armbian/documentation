@@ -79,11 +79,13 @@ After adding a new file, either hand-edit `mkdocs.yml`, or rerun `tools/mkArmbia
 
 ## Quick Start ##
 
-    pip install mkdocs
-    git clone https://github.com/armbian/documentation
-    #vim docs/[Parent Topic Example]-child-topic-example.md
-    #generate config, build, launch local preview server
-    tools/mkArmbianDocs.py && mkdocs build --clean && mkdocs serve
-    git add docs/*.md
-    git commit -m "added new howto on exampling"
-    git push
+```bash
+pip install mkdocs
+git clone https://github.com/armbian/documentation
+#vim docs/[Parent Topic Example]-child-topic-example.md
+#generate config, build, launch local preview server
+tools/mkArmbianDocs.py && mkdocs build --clean && mkdocs serve
+git add docs/*.md
+git commit -m "added new howto on exampling"
+git push
+```
