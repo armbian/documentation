@@ -4,13 +4,13 @@
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the project
 1. Make one or more well commented and clean commits to the repository. 
-1. Perform a [pull request](https://help.github.com/articles/creating-a-pull-request/) in github's web interface.
+1. Perform a [pull request](https://help.github.com/articles/creating-a-pull-request/) in Github's web interface.
 
-If it is a new feature request, don't start the coding first. Remember to [open an issue](https://guides.github.com/features/issues/) to discuss the new feature.
+If it is a new feature request, do not start the coding first. Remember to [open an issue](https://guides.github.com/features/issues/) to discuss the new feature.
 
-If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributing-concrete5-github/) or [CLI](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) step by step guide on contributing.
+If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributing-concrete5-github/) or [CLI](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) step-by-step guide on contributing.
 
-## Where are sources? ##
+## Where are the sources? ##
 
 Build script: 
 
