@@ -2,17 +2,10 @@
 
 ## Overview ##
 
-Both kernels are stable and production ready, but you should use them for different purposes since their basic support differ:
+Both *legacy* and *current* kernels are stable and production ready and mostly sharing the same features through backports.
 
-- legacy: video acceleration, NAND support, connecting displays
-- mainline: headless server, office desktop operations (not multimedia oriented)
+##### Kernel 3.4.x has been dropped due to lacking upstream support which has ended in 2017.
 
-## Legacy ##
-System images with legacy kernel
-
-##### Please note that upstream support for kernel 3.4.x has ended in 2017 so this kernel will not receive security updates in the future. #####
-
-- Kernel [3.4.x](https://github.com/linux-sunxi/linux-sunxi) with large hardware support, headers and some firmware included
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - Bluetooth ready (working with supported external keys)
 - [Enabled overlayfs](User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
@@ -21,16 +14,6 @@ System images with legacy kernel
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
 - [Clustering / stacking](http://en.wikipedia.org/wiki/Cluster_(computing))
 - Onboard LED attached to SD card activity (script.bin)
-
-### Bugs or limitation ###
-
-- NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
-- Shutdown results into reboot under certain conditions.
-
-## Mainline ##
-System images with mainline kernel
-
-- [Mainline](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
 - Enabled audio devices: analog, SPDIF (if available) & USB
 - [USB / UAS](http://linux-sunxi.org/USB/UAS) – more efficient disk access over USB (A20 and H3)
@@ -42,11 +25,11 @@ System images with mainline kernel
 
 ### Bugs or limitation ###
 
-- No HW acceleration for desktop and video decoding
-- NAND is not supported yet
-- Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
-- HDMI audio is not supported yet
+- NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
+- Shutdown results into reboot under certain conditions.
 - SATA port multiplier support is disabled by default, can be enabled by adding kernel parameter `ahci_sunxi.enable_pmp=1`
+- Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
+
 
 ## Desktop ##
 
