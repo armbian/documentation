@@ -87,3 +87,5 @@ More info:
 	- leave it empty to use offical `git.kernel.org`, it may be very slow for mainland china users.
 - **USE_TORRENT** (**yes**&#124;no): use torrent to download toolchains and rootfs
 - **ROOT_FS_CREATE_ONLY** set to `FORCE` to skip rootfs download and create locally
+- **EXTRAWIFI** (**yes**&#124;no) include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507). Default is yes.
+- **WIREGUARD** (**yes**&#124;no) include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon. Default is yes.
