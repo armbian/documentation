@@ -6,17 +6,17 @@ All builds provide 100% hardware support for Helios4.
 
 ## Build Version Status
 
-### Default
-
-- U-Boot : 2018.11
-- Linux Kernel : Mainline 4.14.y
-- OS : Debian 9 Stretch
-
-### Next
+### Legacy
 
 - U-Boot : Mainline 2019.04
 - Linux Kernel : Mainline 4.19.y
-- OS : Debian 10 Buster or Ubuntu Bionic
+
+
+### Current
+
+- U-Boot : Mainline 2019.04
+- Linux Kernel : Mainline 5.4.y
+
 
 ### Known Limitations
 
@@ -40,8 +40,7 @@ Both builds provide close to 100% hardware support, some slight differences are 
 
 ## Build Version Status
 
-### Default
-System images with mainline 4.14.x kernel and u-boot 2018.1
+### Legacy/Current
 
 - [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
@@ -51,18 +50,6 @@ System images with mainline 4.14.x kernel and u-boot 2018.1
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
 - [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
 - SFP is working at up to 1GB/s even with faster fiber modules
-
-### Next
-System images with mainline 4.19.x kernel and u-boot 2018.1
-
-- [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
-- [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
-- Both mPCIe are operational and [convertible to mSATA](#converting-mpcie-to-msata), M2 operational
-- Added patch to unlock Atheros regulatory restrictions which unlock 5Ghz AP mode in cheap Atheros cards (ath9 driver)
-- Bluetooth ready (working with supported external keys)
-- [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
-- [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
-- SFP ready and tested with a copper 1G module
 - SFP DDMI is operational (`sudo ethtool -m eth2`)
 
 #### Bugs or limitation
