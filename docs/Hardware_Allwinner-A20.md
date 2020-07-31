@@ -50,10 +50,10 @@ System images with mainline kernel
 
 ## Desktop ##
 
-![YOUTUBE](hsthqj90vTU)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/hsthqj90vTU/0.jpg)](http://www.youtube.com/watch?v=hsthqj90vTU "Armbian Desktop")
 
-- HW accelerated video playback (legacy kernel only)
-- MALI Open GLES (legacy kernel only)
+- HW accelerated video playback (if available)
+- MALI Open GLES (if available)
 - Pre-installed: Firefox, LibreOffice Writer, Thunderbird
 - Lightweight XFCE desktop
 - Autologin, when normal user is created – no login manager (/etc/default/nodm)
