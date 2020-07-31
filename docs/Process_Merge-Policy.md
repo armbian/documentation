@@ -3,13 +3,13 @@
 ## Overview ##
 _Note: This document is a Work In Progress and is subject to change.  Definitions may be relocated to a seperate document in the future._
 
-This policy is targeted for Maintainers for Lead Maintainers who have commit access to `master` branch.   This document describes the tags needed for different mege types.  See Definitions.
+This policy is targeted for Maintainers for Lead Maintainers who have commit access to `master` branch. This document describes the tags needed for different merge types.  See Definitions.
 
 The types of code maintained fall into the following categories:
 
 * Kernel
 * U-Boot
-* Build Scripts
+* Build scripts
 
 Kernel and U-Boot maintainers are usually grouped by SoC Architecture.
 
@@ -17,19 +17,19 @@ Supported boards will have the most scrunity with code review.
 
 ## U-Boot Patches ##
 
-- Standard Contributors provide _tested-by_ submitter (`armbianmonitor -u` with a fresh build)
+- Standard contributors provide _tested-by_ submitter (`armbianmonitor -u` with a fresh build)
 - SoC maintainer maybe submit a PR with only a reviewed by of the lead SoC maintainer
 
 ## Kernel Related Patches ##
 
-### default and next branches ###
+### legacy and current branches ###
 
 - DT changes reviewed by at least one person familiar with this SoC (lead maintainer or deputy), _tested-by_ the contributor who sends it (armbianmonitor)..
 - trivial module activation doesn't matter
 
 ### dev branches ###
 
-Constraints are at the discretion of the SoC mantainer.   This builds are not expected to be stable.
+Constraints are at the discretion of the SoC mantainer. This builds are not expected to be stable.
 
 ## Armbian Build Scripts ##
 
@@ -38,7 +38,7 @@ This pertains to code used to build system images, OS configuration, and support
 ### lib scripts ###
 * Requires at least one _Reviewed-by_
 
-### configuration ###
+### Configuration ###
 
 #### board promotion ####
 
@@ -46,16 +46,16 @@ Boards have different levels of commitment / support.  EOL, CSC, WIP, Supported.
 
 #### kernel config ####
 
-* Changes in default & next kernel config should provide at least _tested-by_  with `armbianmonitor -u`
+* Changes in legacy & current kernel config should provide at least _tested-by_  with `armbianmonitor -u`
 * Changes in dev are at the discretion of maintainer.  No constraints
 
 #### kernel sources ####
 Change kernel source repos, branches, versions can be very disruptive to stable builds.  Sufficient communication should occur stable changes.
 
-* u-boot and kernel version bump for default and next requires _tested-by_ from Maintainers and/or testers on at least two different boards for the impacted platform. 
-*  kernelsources switch (next default) needs a discussion on forum or github documented in PR and _Acked-by_  Lead Maintainer. These changes are risky and things can go terrible wrong here...
+* U-Boot and kernel version bump for legacy and current requires _tested-by_ from Maintainers and/or testers on at least two different boards for the impacted platform. 
+*  kernel sources switch (legacy current) needs a discussion on forum or github or IRC and documented in PR and _Acked-by_  Lead Maintainer. These changes are risky and things can go terrible wrong here...
 * dev source changes are at the discretion of the Lead Maintainer
-* Boardfamily tweaks require at least _reviewed-by_
+* Board family tweaks require at least _reviewed-by_
 
 #### packages ####
 * minimum require _Acked-by_
