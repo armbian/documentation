@@ -2,13 +2,13 @@
 
 ## Overview ##
 
-Documentation is written in markdown and stored in the `docs/` subfolder.  Images go in `docs/images`
+Documentation is written in [markdown](https://www.markdownguide.org/basic-syntax/) and stored in the `docs/` subfolder.  Images go in `docs/images`.
 
-This repo is meant for storing and quick glances.  Official output is [http://docs.armbian.com](http://docs.armbian.com).
+This repo is meant for storing and quick glances.  Official output is [https://docs.armbian.com](https://docs.armbian.com).
 
 Armbian Documentation is available in the following formats:
 
-* mkdocs site [http://docs.armbian.com](http://docs.armbian.com).
+* mkdocs site [https://docs.armbian.com](https://docs.armbian.com).
 * PDF user guides \(in progress\)
 
 Armbian Documentation relies on a file naming convention:
@@ -21,25 +21,25 @@ Please try to avoid creating new parent topics unless absolutely necessary.
 
 Current Parent Topics:
 
-* Hardware
-* Process
-* Release
-* Developer Guide
 * User Guide
-* Howto
+* Hardware notes
+* Developer Guide
+* Contributor Process
+* Release management
+* Community
 
 ### .gitignore ###
 For easier testing and commits `.gitignore` is configured to ignore `site/`
 
 `mkdocs.yml` should probably be added, but we can commit for now
 
-## Required Packages ##
+## Required packages ##
 
 The documentation build process will require the following packages:
 
-* git
-* python-jinja2
-* mkdocs
+* `git`
+* `python-jinja2`
+* `mkdocs`
 
 Install these on the development host using:
 
@@ -52,25 +52,24 @@ Install these on the development host using:
 generates mkdocs.yml file based on contents of `docs/`
 
 * command-line options for input and output directories
-* requires the python-jinja2 module which may not be installed by default
+* requires the `python-jinja2` module which may not be installed by default
 * not needed unless making changes to the structure of the documentation
 * see `mkArmbianDocs.py -h` for help
 
-### missing tools ###
-The following capabilities are not yet available.
+### Missing tools ###
+The following capabilities are not yet available:
 
 * html2doc output to PDF user manual
-* automated mkdocs deployment to [http://docs.armbian.com](http://docs.armbian.com)
 
-## generating ##
+## Generating ##
 From the parent folder of the repo, run:
 
 `tools/mkArmbianDocs.py && mkdocs build`
 
 This will generate the mkdocs.yml configuration file and then generate the mkdocs site to the `site/` folder.
 
-## testing ##
-To preview locally, execute the preview server `mkdocs serve`. You will be able to make edits to existing files and observe the results in real time.
+## Testing ##
+To preview locally, execute the preview server: `mkdocs serve`. You will be able to make edits to existing files and observe the results in real time.
 
 After changing text in an existing file, use this command to rebuild and view the documentation:
 
@@ -85,7 +84,7 @@ pip install mkdocs
 git clone https://github.com/armbian/documentation
 #vim docs/[Parent Topic Example]-child-topic-example.md
 #generate config, build, launch local preview server
-tools/mkArmbianDocs.py && mkdocs build --clean && mkdocs serve
+tools/mkArmbianDocs.py && mkdocs build \--clean && mkdocs serve
 git add docs/*.md
 git commit -m "added new howto on exampling"
 git push
