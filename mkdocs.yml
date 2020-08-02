@@ -12,7 +12,7 @@ theme: readthedocs
 theme_dir: readthedocs_custom
 
 plugins:
-    - with-pdf
+    - with-pdf:
         author: Armbian documentation team
         copyright: 2020 by Armbian
         #
