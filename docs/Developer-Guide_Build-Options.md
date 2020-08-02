@@ -1,8 +1,8 @@
-- **KERNEL_ONLY** (yes&#124;no):
+- **KERNEL_ONLY** (yes|no):
     - leave empty to display selection dialog each time
     - set to "yes" to compile only kernel, u-boot and other packages for installing on existing Armbian system
     - set to "no" to build complete OS image for writing to SD card
-- **KERNEL_CONFIGURE** (yes&#124;no):
+- **KERNEL_CONFIGURE** (yes|no):
     - leave empty to display selection dialog each time
     - set to "yes" to configure kernel (add or remove modules or features). Kernel configuration menu will be brought up before compilation
     - set to "no" to compile kernel without changing default or custom provided configuration
