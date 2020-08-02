@@ -30,9 +30,6 @@ plugins:
         #    - 'appendix/contribute/'
         #output_path: any-place/document.pdf
         #enabled_if_env: ENABLE_PDF_EXPORT
-        #
-        debug_html: true
-        verbose: true
 
 markdown_extensions:
   - smarty
