@@ -30,14 +30,14 @@ jobs:
         ls
         mkdocs build --clean
 
-    - name: Upload artefact 
+    - name: Upload artifact 
       uses: actions/upload-artifact@v2
       with:
-        name: artefact
+        name: artifact
         path: site/pdf/document.pdf
 
 
-    - name: Download artefact
+    - name: Download artifact
       uses: actions/download-artifact@v2
       with:
         name: artifact
