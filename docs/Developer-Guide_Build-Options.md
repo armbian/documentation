@@ -30,42 +30,52 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
     - Available options: `u-boot`, `kernel`, `bsp`, `armbian-config`, `armbian-firmware`
     - Set to "" to use packages one from local output or build if not available  
-  
+<br />
+
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
     - yes: use kernel config file from previous compilation for the same branch, device family and version
     - no: use default or user-provided config file  
-  
+<br />
+
 - **BUILD_MINIMAL** ( yes ):
     - yes: build bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"` and `BUILD_EXTERNAL="yes"`
     - leave empty to install default CLI package selection  
-  
+<br />
+
 - **BUILD_DESKTOP** ( yes | no ):
     - yes: build image with minimal desktop environment
     - no: build image with console interface only  
-  
+<br />
+
 - **EXTERNAL** ( yes | no ):
     - yes: compile and install extra applications and firmware  
-  
+<br />
+
 - **BSPFREEZE** ( yes | no ): 
     - yes: freeze (from update) armbian packages when building images (U-Boot, kernel, DTB)  
-  
+<br />
+
 - **INSTALL_HEADERS** (no&#124;yes):
     - yes: install kernel headers  
-  
+<br />
+
 - **EXTERNAL_NEW** ( no | prebuilt | compile ):
     - prebuilt: install extra applications from repository
     - compile: compile extra applications in chroot  
-  
+<br />
+
 - **CREATE_PATCHES** ( yes | no ):
     - yes: prompt right before the compilation starts to make changes to the source code, separate for U-Boot and kernel, and will create patch files out of this. If you want these patches are included in the normal run, you need to copy them to their appropriate directories.
     - no: will not do what is described above and simply builds without interruption   
-  
+<br />
+
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 
 - **LIB_TAG** ( master | "branchname" ):
     - set to `master` to compile from the master branch (default)
     - set to another "branchname" to compile from any other branch available. Check [here](https://github.com/armbian/build/branches) for available branches  
- 
+<br />
+
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
