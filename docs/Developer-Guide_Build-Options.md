@@ -1,38 +1,55 @@
-- **KERNEL_ONLY** (yes|no):
+## Build options
+
+These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.
+
+
+- **KERNEL_ONLY** ( yes | no ):
+    - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
+    - no: build complete OS image for writing to SD card
     - leave empty to display selection dialog each time
-    - set to "yes" to compile only kernel, u-boot and other packages for installing on existing Armbian system
-    - set to "no" to build complete OS image for writing to SD card
-- **KERNEL_CONFIGURE** (yes|no):
+
+- **KERNEL_CONFIGURE** ( yes | no ):
+    - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
+    - no: Use provided kernel configuration provided by Armbian
     - leave empty to display selection dialog each time
-    - set to "yes" to configure kernel (add or remove modules or features). Kernel configuration menu will be brought up before compilation
-    - set to "no" to compile kernel without changing default or custom provided configuration
+
 - **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
-    - "make" = execute `make clean` for selected kernel and u-boot sources,
-	- "images" = delete `output/images` (complete OS images),
-	- "debs" = delete packages in `output/debs` for current branch and device family,
-	- "alldebs" = delete all packages in `output/debs`,
-	- "cache" = delete `cache/rootfs` (rootfs cache),
-	- "oldcache" = remove old `cache/rootfs` except for the newest 8 files,
-	- "sources" = delete `cache/sources` (all downloaded sources),
-	- "extras" = delete additional packages for current release in `output/debs/extra`
+    - make: execute `make clean` for selected kernel and U-Boot sources
+    - images: delete `output/images` (complete OS images)
+    - debs: delete packages in `output/debs` for current branch and device family
+    - alldebs: delete all packages in `output/debs`
+    - cache: delete `cache/rootfs` (rootfs cache)
+    - oldcache: remove old `cache/rootfs` except for the newest eight files
+    - sources: delete `cache/sources` (all downloaded sources)
+    - extras: delete additional packages for current release in `output/debs/extra`
+	
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
-    - "u-boot", "kernel", "bsp", "armbian-config", "armbian-firmware"
-    - "" = packages will be built from sources or use the one from local cache
-- **KERNEL\_KEEP\_CONFIG** (yes&#124;no):
-    - set to "yes" to use kernel config file from previous compilation for the same branch, device family and version
-    - set to "no" to use default or user-provided config file
-- **BUILD_MINIMAL** (yes&#124;no):
-    - set to "yes" to build bare CLI image suitable for application deployment.	This option is not compatible with BUILD_DESKTOP="yes" and BUILD_EXTERNAL="yes"
-- **BUILD_DESKTOP** (yes&#124;no):
-    - set to "yes" to build image with minimal desktop environment
-    - set to "no" to build image with console interface only
+    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-config`, `armbian-firmware`
+    - Set to "" to use packages one from local output or build if not availabe
+    
+- **KERNEL\_KEEP\_CONFIG** ( yes | no ):
+    - yes: use kernel config file from previous compilation for the same branch, device family and version
+    - no: use default or user-provided config file
+    
+- **BUILD_MINIMAL** ( yes ):
+    - yes: build bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"` and `BUILD_EXTERNAL="yes"`
+    - leave empty to install default CLI package selection
+    
+- **BUILD_DESKTOP** ( yes | no ):
+    - yes: build image with minimal desktop environment
+    - no: build image with console interface only
+    
 - **EXTERNAL** (yes&#124;no):
     - set to "yes" to compile and install extra applications and firmware
+    
 - **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb)
+
 - **INSTALL_HEADERS** (no&#124;yes): install kernel headers package
+
 - **EXTERNAL_NEW** (no&#124;prebuilt&#124;compile):
 	- set to "prebuilt" to install extra applications from repository
 	- set to "compile" to compile extra applications in chroot
+	
 - **CREATE_PATCHES** (yes&#124;no):
 	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
 	- set to "no" compilation will run uninterrupted
