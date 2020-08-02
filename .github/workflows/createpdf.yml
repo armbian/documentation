@@ -35,3 +35,11 @@ jobs:
       with:
         name: artefact
         path: site/pdf/document.pdf
+
+
+    - name: Download artefact
+    - uses: actions/download-artifact@v2
+      with:
+        name: artifact
+    - name: Display structure of downloaded files
+      run: ls -R
