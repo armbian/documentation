@@ -5,7 +5,7 @@
 - Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
 - **The officially supported** compilation environment is [Ubuntu Focal 20.04 x64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!** (Support for Ubuntu 18.04 will be there until either we run into issues we do not want to waste time on or upstream support ends),
-- `binfmt_misc` kernel module.  Some ubuntu-cloud images do not have this module.  Switch to a generic kernel if that is the case.
+- `binfmt_misc` kernel module.  Some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.
 - installed basic system, OpenSSH and Samba (optional),
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
@@ -14,11 +14,11 @@ Please note that system requirements (both hardware and OS/software) may differ 
 
 # How to start?
 
-### Native and Virtualbox environments:
+### Native and VirtualBox environments:
 
 Login as root and run:
 
-```
+```bash
 apt-get -y -qq install git  
 git clone --depth 1 https://github.com/armbian/build  
 cd build  
@@ -46,7 +46,7 @@ Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 
 ## Base and descendant configuration
 
-You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (BRANCH, RELEASE, COMPRESS_OUTPUTIMAGE) will be overwritten.
+You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (*BRANCH*, *RELEASE*, *COMPRESS_OUTPUTIMAGE*) will be overwritten.
 
 ```
 . ./config-base.conf  
@@ -60,9 +60,9 @@ COMPRESS_OUTPUTIMAGE="sha,gz"
 
 If you do not own the proper equipment to build images on your own, you can make use of the automated build system.
 Packages are recompiled every night (starting at 00:01 CEST) and a few testing images are produced.
-These images are accessible on the [download server](https://dl.armbian.com/) under board folder, subfolder "Nightly".
-Packages, when successfully built, are published in the beta repository.
-You can switch to beta repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing apt.armbian.com to beta.armbian.com in /etc/apt/sources.list.d/armbian.list.
+These images are accessible on the [download server](https://dl.armbian.com/) under board folder, subfolder "*Nightly*".
+Packages, when successfully built, are published in the *beta* repository.
+You can switch to *beta* repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing *apt.armbian.com* to *beta.armbian.com* in /etc/apt/sources.list.d/armbian.list.
 
 Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/master/config/boards).
 This is a typical board configuration:
@@ -92,7 +92,7 @@ This is a typical board configuration:
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
-Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `buster`, `bionic`, `stretch`.
+Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `focal`, `buster`, `bionic`, `stretch`.
 To edit those parameters you need to push changes to the build script.
 You need to [fork a project and create a pull request](Process_Contribute.md) and after it is imported by one of the administrators, images will start to show up in appropriate folder.
 
