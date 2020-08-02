@@ -1,8 +1,8 @@
-## Build options
+# Build options
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.
 
-### Main options
+## Main options
 
 - **KERNEL_ONLY** ( yes | no ):
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
@@ -74,43 +74,45 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)
 
 
-### Hidden options to minimize user input for build automation:
-- **BOARD** (string): you can set name of board manually to skip dialog prompt
-- **BRANCH** (legacy&#124;current&#124;dev): you can set kernel and u-boot branch manually to skip dialog prompt; some options may not be available for all devices
-- **RELEASE** (stretch&#124;buster&#124;bionic&#124;focal): you can set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
+## Hidden options to minimize user input for build automation:
+- **BOARD** ( `string` ): set name of board manually to skip dialog prompt
+- **BRANCH** ( legacy | current | dev ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
+- **RELEASE** ( stretch | buster | bionic | focal | bullseye ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 
-### Hidden options for advanced users (default values are marked **bold**):
-- **EXPERT** (yes&#124;**no**): Show development features in interactive mode
-- **USERPATCHES_PATH** (**userpatches/**): set alternate path for location of `userpatches` folder
-- **USE_CCACHE** (**yes**&#124;no): use a C compiler cache to speed up the build process
-- **PRIVATE_CCACHE** (yes&#124;**no**) use `$DEST/ccache` as ccache home directory
-- **PROGRESS_DISPLAY** (none&#124;**plain**&#124;dialog): way to display output of verbose processes - compilation, packaging, debootstrap
-- **PROGRESS_LOG_TO_FILE** (yes&#124;**no**): duplicate output, affected by previous option, to log files `output/debug/*.log`
-- **USE_MAINLINE_GOOGLE_MIRROR** (yes&#124;**no**): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
-- **USE_GITHUB_UBOOT_MIRROR** (yes&#124;**no**): use unofficial Github mirror for downloading mainline u-boot sources, may be faster than `git.denx.de` depending on your location
-- **OFFLINE_WORK** (yes&#124;**no**): skip downloading and updating sources as well as time and host check. Set to "yes" and you can collect packages without accessing the internet.
-- **FORCE_USE_RAMDISK** (yes&#124;no): overrides autodetect for using tmpfs in new debootstrap and image creation process
-- **FIXED_IMAGE_SIZE** (integer): create image file of this size (in megabytes) instead of minimal
+## Hidden options for advanced users (default values are marked **bold**):
+- **EXPERT** ( yes | **no** ): Show development features in interactive mode
+- **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for location of `userpatches` folder
+- **USE_CCACHE** ( **yes** | no ): use a C compiler cache to speed up the build process
+- **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
+- **PROGRESS_DISPLAY** ( none | **plain** | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap
+- **PROGRESS_LOG_TO_FILE** ( yes | **no** ): duplicate output, affected by previous option, to log files `output/debug/*.log`
+- **USE_MAINLINE_GOOGLE_MIRROR** ( yes | **no** ): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
+- **USE_GITHUB_UBOOT_MIRROR** ( yes | **no** ): use unofficial Github mirror for downloading mainline U-Boot sources, may be faster than `git.denx.de` depending on your location
+- **OFFLINE_WORK** ( yes | **no** ): skip downloading and updating sources as well as time and host check. Set to "yes" and you can collect packages without accessing the internet
+- **FORCE_USE_RAMDISK** ( yes | no ): overrides autodetect for using tmpfs in new debootstrap and image creation process
+- **FIXED_IMAGE_SIZE** ( `integer` ): create image file of this size (in megabytes) instead of minimal
 - **COMPRESS_OUTPUTIMAGE** (comma-separated list): create compressed archive with image file and GPG signature for redistribution
-	- *sha* - generate SHA256 hash for image,
-	- *gpg* - sign image using gpg,
-	- *7z* - compress image, hash and signature to 7z archive,
-	- *gz* - compress image only using gz format,
-	- *yes* - compatibility shorcut for sha,gpg,7z.
-- **SEVENZIP** (yes&#124;**no**): create .7z archive with extreme compression ratio instead of .zip
-- **BUILD_KSRC** (**yes**&#124;no): create kernel source packages 
-- **ROOTFS_TYPE** (**ext4**&#124;f2fs&#124;btrfs&#124;nfs&#124;fel): create image with different root filesystems instead of default ext4. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for F2FS
-- **BTRFS_COMPRESSION** (**lzo**|zlib:3|zstd) select btrfs filesystem compression method and compression level. By default the compression is `lzo`, user must ensure kernel version is above `4.14` when selecting `zstd` or setting zlib compression level(`zlib:[1-9]`). Both the host and the target kernel version must above `5.1` when selecting zstd compression level (`zstd:[1-15]`), since kernel start supporting zstd compression ratio from `5.1`. The script does not check the legality of input variable(compression ratio), input like `zlib:1234` is legal to script, but illegal to kernel. When using microsd card, `zstd` is preferred because of the poor 4k I/O performance of microsd card.
-- **FORCE_BOOTSCRIPT_UPDATE** (yes&#124;no): set to "yes" to force bootscript to get updated during bsp package upgrade
-- **NAMESERVER** (ipv4 address): the DNS resolver used inside the build chroot. Does not affect the final image. Default: 1.0.0.1
-- **DOWNLOAD_MIRROR** select download mirror for `toolchain` and `debian/ubuntu packages`.
-	- set to `china` to use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to tsinghua university.
-	- leave it empty to use official source.
-- **MAINLINE_MIRROR** select mainline mirror of `linux-stable.git`
-	- set to `google` to use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`.
-	- set to `tuna` to use mirror provided by tsinghua university.
-	- leave it empty to use offical `git.kernel.org`, it may be very slow for mainland china users.
-- **USE_TORRENT** (**yes**&#124;no): use torrent to download toolchains and rootfs
-- **ROOT_FS_CREATE_ONLY** set to `FORCE` to skip rootfs download and create locally
-- **EXTRAWIFI** (**yes**&#124;no) include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507). Default is yes.
-- **WIREGUARD** (**yes**&#124;no) include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon. Default is yes.
+    - sha: generate SHA256 hash for image
+    - gpg: sign image using gpg
+    - 7z: compress image, hash and signature to 7z archive
+    - gz: compress image only using gz format
+    - yes: compatibility shorcut for `sha,gpg,7z`
+- **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
+- **BUILD_KSRC** ( **yes** | no ): create kernel source packages 
+- **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | nfs | fel ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
+- **BTRFS_COMPRESSION** ( **lzo** | zlib:3 | zstd ) select `btrfs` filesystem compression method and compression level. By default the compression is `lzo`, user must ensure kernel version is **>=4.14.x** when selecting `zstd` or setting zlib compression level(`zlib:[1-9]`). Both the host and the target kernel version must be **>=5.1.x** when selecting zstd compression level (`zstd:[1-15]`), since kernel start supporting zstd compression ratio from 5.1.x. The script does not check the legality of input variable (compression ratio), input like `zlib:1234` is legal to script, but illegal to kernel. When using microSD card, `zstd` is preferred because of the poor 4k I/O performance of microsd card.
+- **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ): 
+    - yes: force bootscript to get updated during bsp package upgrade
+- **NAMESERVER** ( `IPv4 address` ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: `1.0.0.1`
+- **DOWNLOAD_MIRROR** ( `china` ): select download mirror for `toolchain` and `debian/ubuntu packages`
+	- `china`: use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to Tsinghua University
+	- leave empty to use official source
+- **MAINLINE_MIRROR** ( `google` | `tuna` ): select mainline mirror of `linux-stable.git`
+	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
+	- `tuna`: use mirror provided by Tsinghua University
+	- leave empty to use offical `git.kernel.org`, may be very slow for mainland china users
+- **USE_TORRENT** ( **yes** | no ): use torrent to download toolchains and rootfs
+- **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally
+- **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
+- **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
+- **AUFS** ( **yes** | no ): Include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
