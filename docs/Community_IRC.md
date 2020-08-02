@@ -55,7 +55,6 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
         - Simply start your sentence with `..` at the beginning and the bot will translate your message regardless of the source language into English.  
           *Note*: This services will be activated manually on demand (like planned meetings for example) since its backend generates cost.
         
-        
 <br/><br/>
 
 ## ❔ --------------- FAQ
