@@ -2,6 +2,7 @@
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.
 
+### Main options
 
 - **KERNEL_ONLY** ( yes | no ):
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
@@ -39,32 +40,39 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - yes: build image with minimal desktop environment
     - no: build image with console interface only
     
-- **EXTERNAL** (yes&#124;no):
-    - set to "yes" to compile and install extra applications and firmware
+- **EXTERNAL** ( yes | no ):
+    - yes: compile and install extra applications and firmware
     
-- **BSPFREEZE** (no&#124;yes): freeze (from update) armbian packages when building images (u-boot, kernel, dtb)
+- **BSPFREEZE** ( yes | no ): 
+    - yes: freeze (from update) armbian packages when building images (U-Boot, kernel, DTB)
 
-- **INSTALL_HEADERS** (no&#124;yes): install kernel headers package
+- **INSTALL_HEADERS** (no&#124;yes):
+    - yes: install kernel headers
 
-- **EXTERNAL_NEW** (no&#124;prebuilt&#124;compile):
-	- set to "prebuilt" to install extra applications from repository
-	- set to "compile" to compile extra applications in chroot
+- **EXTERNAL_NEW** ( no | prebuilt | compile ):
+    - prebuilt: install extra applications from repository
+    - compile: compile extra applications in chroot
 	
-- **CREATE_PATCHES** (yes&#124;no):
-	- set to "yes" will prompt you right before the compilation starts to make changes to the source code. Separate for u-boot and kernel. It will also create a patch out of this. If you want that this patch is included in the normal run, you need to copy it to appropriate directory
-	- set to "no" compilation will run uninterrupted
-- **BUILD_ALL** (yes&#124;no&#124;demo): cycle through all available board and kernel configurations and make images for all combinations
-- **LIB_TAG** (master&#124;"branchname"):
-	- set to "master" to compile from the master branch (default)
-	- set to "branchname" to compile from any other branch available ("next" & "second" are deprecated and **not** recommended to use).
-- **CARD_DEVICE** (/dev/sdx) set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
-- **CRYPTROOT_ENABLE** (yes&#124;no): set to enable LUKS encrypted rootfs. You must also provide unlock password CRYPTROOT_PASSPHRASE="MYSECRECTPASS" and optional CRYPTROOT_SSH_UNLOCK=yes CRYPTROOT_SSH_UNLOCK_PORT=2222 CRYPTROOT_PARAMETERS="custom cryptsetup options" Function might not work well with all distributions. Debian Buster and Stretch were tested. For building under the Docker you have to use privilege mode which can be enable in userpatches/config-docker. **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental.
+- **CREATE_PATCHES** ( yes | no ):
+    - yes: prompt right before the compilation starts to make changes to the source code, separate for U-Boot and kernel, and will create patch files out of this. If you want these patches are included in the normal run, you need to copy them to their appropriate directories.
+    - no: will not do what is described above and simply builds without interruption
+    
+- **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations
 
-More info:
+- **LIB_TAG** ( master | "branchname" ):
+	- set to `master` to compile from the master branch (default)
+	- set to another "branchname" to compile from any other branch available. Check [here](https://github.com/armbian/build/branches) for available branches.
+	
+- **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 
-[1] https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330
+- **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
+    - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
+    - `CRYPTROOT_SSH_UNLOCK=yes` optional
+    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` optional
+    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` optional
+    - **Note:** This function might not work well with all distributions. Debian Buster and Stretch were tested. For building under Docker you have to use privileged mode which can be enable in `userpatches/config-docker`.
+    - **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)
 
-[2] https://github.com/armbian/build/issues/1183
 
 ### Hidden options to minimize user input for build automation:
 - **BOARD** (string): you can set name of board manually to skip dialog prompt
