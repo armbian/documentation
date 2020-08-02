@@ -29,3 +29,9 @@ jobs:
       run: |
         ls
         mkdocs build --clean
+
+    - name: Upload artefact 
+      uses: actions/upload-artifact@v2
+      with:
+        name: artefact
+        path: site/pdf/document.pdf
