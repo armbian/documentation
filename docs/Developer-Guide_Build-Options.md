@@ -7,15 +7,11 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **KERNEL_ONLY** ( yes | no ):
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
     - no: build complete OS image for writing to SD card
-    - leave empty to display selection dialog each time  
-<br />
-
+    - leave empty to display selection dialog each time
 - **KERNEL_CONFIGURE** ( yes | no ):
     - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
     - no: Use provided kernel configuration provided by Armbian
-    - leave empty to display selection dialog each time  
-<br />
-
+    - leave empty to display selection dialog each time
 - **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
     - make: execute `make clean` for selected kernel and U-Boot sources
     - images: delete `output/images` (complete OS images)
@@ -24,12 +20,10 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - cache: delete `cache/rootfs` (rootfs cache)
     - oldcache: remove old `cache/rootfs` except for the newest eight files
     - sources: delete `cache/sources` (all downloaded sources)
-    - extras: delete additional packages for current release in `output/debs/extra`  
-<br />
-
+    - extras: delete additional packages for current release in `output/debs/extra`
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
     - Available options: `u-boot`, `kernel`, `bsp`, `armbian-config`, `armbian-firmware`
-    - Set to "" to use packages one from local output or build if not available  
+    - Set to "" to use packages one from local output or build if not available
 <br />
 
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
