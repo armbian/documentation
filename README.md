@@ -1,1 +1,1 @@
-Generated documentation is hosted here: [https://evilolaf.github.io/docutest/](https://evilolaf.github.io/docutest/)
+On PUSH documentation will be rebuilt and pushed to [https://github.com/EvilOlaf/docutest](https://github.com/EvilOlaf/docutest)
