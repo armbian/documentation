@@ -83,7 +83,8 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - gz: compress image only using gz format
     - yes: compatibility shorcut for `sha,gpg,7z`
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
-- **BUILD_KSRC** ( **yes** | no ): create kernel source packages 
+- **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
+- **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
 - **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | nfs | fel ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
 - **BTRFS_COMPRESSION** ( **lzo** | zlib:3 | zstd ) select `btrfs` filesystem compression method and compression level. By default the compression is `lzo`, user must ensure kernel version is **>=4.14.x** when selecting `zstd` or setting zlib compression level(`zlib:[1-9]`). Both the host and the target kernel version must be **>=5.1.x** when selecting zstd compression level (`zstd:[1-15]`), since kernel start supporting zstd compression ratio from 5.1.x. The script does not check the legality of input variable (compression ratio), input like `zlib:1234` is legal to script, but illegal to kernel. When using microSD card, `zstd` is preferred because of the poor 4k I/O performance of microsd card.
 - **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ): 
