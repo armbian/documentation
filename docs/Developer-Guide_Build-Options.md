@@ -37,7 +37,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - yes: compile and install extra applications and firmware  
 - **BSPFREEZE** ( yes | no ): 
     - yes: freeze (from update) armbian packages when building images (U-Boot, kernel, DTB)  
-- **INSTALL_HEADERS** (no&#124;yes):
+- **INSTALL_HEADERS** ( no | yes ):
     - yes: install kernel headers  
 - **EXTERNAL_NEW** ( no | prebuilt | compile ):
     - prebuilt: install extra applications from repository
