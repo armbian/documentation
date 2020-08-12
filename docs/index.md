@@ -74,14 +74,14 @@ If you still cannot find what you need here visit the [_Armbian forum_](http://f
 1. Paid engagements, long-term sponsorship to the Armbian Project or volunteer developers
 1. Vendor or 3rd party has a **designated** resource providing support for a SBC or platform ON BEHALF OF THE COMMUNITY and is contributing to the project
 
-### Supported chips
+### Supported SoCs
 
 - Allwinner A10, A20, A31, H2+, H3, H5, H6, A64
 - Amlogic S805 and S905 (Odroid boards), S802/S812, S805, S905, S905X and S912 (fork by `@balbes150`)
 - Actionsemi S500
 - Freescale / NXP iMx6
 - Marvell Armada A380
-- Rockchip RK3288
+- Rockchip RK3288/RK3328/RK3399
 - Samsung Exynos 5422
 
 ### Supported boards
