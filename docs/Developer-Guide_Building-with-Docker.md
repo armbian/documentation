@@ -98,7 +98,7 @@ apt-get install -y ssh
 ```
 Now, define a password and prepare the settings so you `sshd` can run and you can log in as root:
 ```
-üasswd
+passwd
 sed -i -e 's/PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 mkdir /var/run/sshd
 chmod 0755 /var/run/sshd
