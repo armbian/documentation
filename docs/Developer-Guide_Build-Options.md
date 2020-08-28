@@ -76,6 +76,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **OFFLINE_WORK** ( yes | **no** ): skip downloading and updating sources as well as time and host check. Set to "yes" and you can collect packages without accessing the internet
 - **FORCE_USE_RAMDISK** ( yes | no ): overrides autodetect for using tmpfs in new debootstrap and image creation process
 - **FIXED_IMAGE_SIZE** ( `integer` ): create image file of this size (in megabytes) instead of minimal
+- **BOOTSIZE** ( `integer` **96** ): set size (in megabytes) for separate /boot filesystem. Used if **ROOTFS_TYPE** set to non-ext4
 - **COMPRESS_OUTPUTIMAGE** (comma-separated list): create compressed archive with image file and GPG signature for redistribution
     - sha: generate SHA256 hash for image
     - gpg: sign image using gpg
