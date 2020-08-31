@@ -56,10 +56,10 @@ Note that
 
 #### SD card testing
 
-- There are many fake SD card around. eBay and amazon marketplace is notorious for selling fakes, but sometimes even reputable retailers get fooled.
-- Most commonly low capacity cards will be reprogrammed to appear as higher capacity, but any files written beyond the true capacity will be lost or corrupted.
-- We recommend that you always [test the capacity of each new SD cards using f3](https://fight-flash-fraud.readthedocs.io/en/latest/usage.html).
-- Note that the speed of your reader will affect the reported speed of any SD card. Desktop USB readers are much slower than the fastest SD cards currently available.
+- There are many fake SD card around. eBay and Amazon Marketplace are notorious for selling fakes, but sometimes even reputable retailers get fooled.
+- Most commonly low capacity cards will be reprogrammed to appear as bigger, but any files written beyond the true capacity will be lost or corrupted.
+- We recommend to always [test the capacity of each new SD cards using f3](https://fight-flash-fraud.readthedocs.io/en/latest/usage.html).
+
 
 #### Writing images to the SD card
 
