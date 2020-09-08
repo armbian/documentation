@@ -16,7 +16,7 @@ Almost all features of the H3 SoC are supported on Armbian's _current_ branch. P
 
 ### Default settings
 
-- CPU frequency settings are 240-912 MHz on NanoPi NEO, 240-1200 MHz on BPi M2+, NanoPi M1 and Beelink X2, 480-1200 MHz on OPi One/Lite and 480-1296 MHz on the other boards (cpufreq governor is _interactive_ therefore the boards only increase CPU speed and consumption when needed). The differences are due to different voltage regulators and heat dissipation behaviour.
+- CPU frequency settings are 480 MHz to 1.37 GHz on most boards (cpufreq governor is _interactive_ therefore the boards only increase CPU speed and consumption when needed). Varity might occur due to different voltage regulators and heat dissipation behaviour.
 - Armbian unlike older/other H3 OS images uses the green led as 'power on' indicator (blinking means 'ready to login' or 'shutting down'), the red led (blue on NanoPis) can be used for your own purpose.
 
 ### Tips and tricks (general)
