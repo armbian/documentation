@@ -8,7 +8,7 @@
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte | meson, meson64   |                 |
 | Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte, @JMCC, @paolosabatino | rockchip, rockchip64, rk3399 | @JMCC: Renegade only |
 | Mediatek  | @chwe          |                         | mt7623              |                 |
-| Marvell   | @gprovost      | @ebin-dev               | mvebu,mvebu64       |                 |
+| Marvell   | @gprovost      |                         | mvebu,mvebu64       |                 |
 | Samsung   |                |                         | odroidxu4           |                 |
 | Pine64    |                |                         |                     |                 |
 
