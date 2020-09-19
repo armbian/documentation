@@ -1,6 +1,36 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.08.3 / UNRELEASED.09.2020**
+
+- updated mainline based images to kernel 5.8.10
+- all other kernels updated to respective latest version
+- improved htop with showing network status dynamically, GPU temp, improved CPU speed
+- updated usbip – sharing usb over network
+- fixed Odroid C4 boot script bug; adding normal and higher CPU speeds
+- added many imrovements for Helios64
+- enabled GPU temperatures in htop for XU4, meson64 and rockchip64/32
+- fixed initial configuration for Firefox
+- fixed tx offloading for Rockchip64 NIC’s
+- move rockchip32 to 5.8.y
+- improved RK3399 stability by mingling OPP
+- fixed a bunch of Cryptoroot bugs
+- enabled hardware watchdog support for mvebu64 / Espressobin
+- cosmetic fixes to motd
+- enabling I2S and spdif on Nanopi Neo3 by default
+- fixes wrong memory calculation on ZRAM display
+- fixing firstlogin bug preventing running xrdp 
+- move Espressobin to 5.8.y
+- adjust / fix Kali Linux wifi injections patches
+
+Known bugs:
+
+- Some rockpro64 boards have troubles with upgrade
+- Bananapi M3 eMMC can’t boot from eMMC (solution is available)
+- H6 stability issues
+- RockpiS shows some error on upgrade but upgrade suceeds
+- 4K and audio on mainline based meson64 boards
+
 **20.08 / 20.08.2020**
 
 Finished projects
