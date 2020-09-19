@@ -6,7 +6,6 @@
 - updated mainline kernel based images to Linux 5.8.10
 - all other kernels updated to respective latest version
 - improved htop with showing network status dynamically, GPU temp, improved CPU speed display
-- added updated / improved images for Pinebook PRO
 - fixed usbip for sharing usb over network
 - fixed Odroid C4 boot script bug; adding normal and higher CPU speeds
 - added many improvements for Helios64
