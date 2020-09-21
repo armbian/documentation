@@ -1,7 +1,7 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-**20.08.3 / UNRELEASED.09.2020**
+**20.08.3 / 21.09.2020**
 
 - updated mainline kernel based images to Linux 5.8.10
 - all other kernels updated to respective latest version
