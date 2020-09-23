@@ -59,7 +59,4 @@ nav:
 
   - "Community" :
         - "IRC" : "Community_IRC.md"
-# Disable temporaly until those pages are up-to-date
-#  - "Governance" :
-#        - "Administration" : "Governance_Administration.md"
-#        - "Maintainers"  : "Governance_Maintainers.md"
+        - "Governance" : "Community_Governance.md"
