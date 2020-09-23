@@ -10,8 +10,8 @@
 | Mediatek  | @chwe          |                         | mt7623              |                 |
 | Marvell   | @gprovost      |                         | mvebu,mvebu64       |                 |
 | Samsung   |                |                         | odroidxu4           |                 |
-| Pine64    |                |                         |                     |                 |
-
+| Pine64    |                |                         |                     |                 |  
+  
 ## Armbian Base Maintainers ##
 
 | Area      | Lead Maintainer | Maintainers             | Acronyms, Codenames | additional info |
@@ -19,8 +19,8 @@
 | Build Scripts   | @igorpecovnik   |  @martinayotte, @lanefu  | `/lib/*.sh`           | code responsible for building images |
 | Armbian-Tools   | @igorpecovnik   |  @botfap         | armbian-config, armbian-monitor | userland tools provided by Armbian    |
 | Armbian-Tools: armbian-config   | @gprovst   |          | armbian-config  |     |
-| Multimedia   |  | @JMCC, @jernejsk, @Miouyouyou |            |                 |
-
+| Multimedia   |  | @JMCC, @jernejsk, @Miouyouyou |            |                 |  
+  
 ## Other Roles ##
 
 | Area      | Lead Maintainer | Maintainers             | Acronyms, Codenames | additional info |
@@ -33,8 +33,8 @@
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
 | Web and Infrastucture | @lauri			|		      |                 |
 | Forums moderation |  |	[click](https://forum.armbian.com/members/2-moderators/)	      |                 |
-| IRC & Services | @Werner			|		      |                 |
-
+| IRC & Services | @Werner			|		      |                 |  
+  
 ## Hackers Emeritus ##
 
 Members who have stepped away from the project, but had a huge impact.  We always welcome their contributions and wisdom.
