@@ -28,7 +28,6 @@ nav:
         - "Fine Tuning" : "User-Guide_Fine-Tuning.md"
         - "Armbian config" : "User-Guide_Armbian-Config.md"
         - "Allwinner DT overlays" : "User-Guide_Allwinner_overlays.md"
-        - "Migration from Bananian" : "User-Guide_Migration_from_Bananian.md"
 
   - "Hardware Notes" :
         - "Allwinner (Generic)" : "Hardware_Allwinner.md"

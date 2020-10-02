@@ -1,5 +1,7 @@
 # Migration from Bananian to Armbian
 
+*NOTE: THIS IS DEPRECATED*
+
 While technically possible to do an **in-place** upgrade/crossgrade from latest Bananian release (or similar SBC distros) to Armbian currently there exists no tool helping with this and most probably will never exist. At the bottom is explained where to find ressources that help with a manual in-place upgrade but we start with outlining the problems and our recommendations:
 
 ## The challenges:
