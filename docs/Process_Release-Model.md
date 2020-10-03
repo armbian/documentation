@@ -88,8 +88,9 @@ Agenda:
   - Check and cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
 - 00:55 - 00:56 `#topic board support status updates`
   - Discuss (last 10-15) board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
-- 00:56 - 00:57 `#topic release officer and meeting organizer`
+- 00:56 - 00:57 `#topic release officer and meeting organizer and goverance`
   - Choose upcoming release officer and next meeting organizer (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support / backup, so no need to worry about anything.
+  - Check if [https://docs.armbian.com/Community_Governance/](https://docs.armbian.com/Community_Governance/) is up to date
 - 00:57 - 1:00 `#topic questions about Jira usage`
   - Answer questions relating to [**how to use Jira**](https://docs.armbian.com/Process_Managing_Workflow/) (if any)
 - 01:00 - `#topic misc / open discussion`
