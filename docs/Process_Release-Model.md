@@ -61,7 +61,8 @@ Agenda:
   - note #1: **IRC translator**: If your English is poor, simply write in your native language. Start your sentence with `..` at the beginning.
   - rule #1: When you get a voice, please *be quick and concise* (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - rule #2: If meeting is going out of desired agenda, MC will use *"STOP STOP STOP"*, wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
-  
+  - rule #3: Add *meetbot* keyword (`#info, #action, #idea...`) to your message **whenever important information is said** to automatically highlight it in the meeting summary later. See [Meetbot documentation](https://wiki.debian.org/MeetBot)
+
 - 00:09 - 00:30 **Board maintainers/development**: MC is calling out on by team sections as defined at GitHub: Allwinner, Amlogic, Marvell, Rockchip, others.
   - tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2).
     If they are not there, please add them during or right after the meeting
@@ -77,6 +78,7 @@ Agenda:
    - discuss task / bug (one at a time)
    - assign to person / release / tag
    - re-prioritise
+
 - 00:50 - 00:55 Check and cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
 - 00:55 - 00:56 Discuss (last 10-15) board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
 - 00:56 - 00:57 Choose upcoming release officer and next meeting organiser (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support / backup, so no need to worry about anything.
