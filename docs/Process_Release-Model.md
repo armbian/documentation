@@ -67,11 +67,11 @@ Agenda:
   - tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2).
     If they are not there, please add them during or right after the meeting
   - board maintainers present tasks, bugs or projects they are working on (open discussion for each section if possible, otherwise MC calls people out).
-- 00:30 - 00:40 **build system**
+- 00:30 - 00:40 topic: **build system**
   - [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
   - [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
-- 00:40 - 00:45 **Infrastructure**
-  - Servers / CI
+- 00:40 - 00:45 topic: **Infrastructure**
+  - help: **nicname** Servers / CI
   - planned/unplanned changes on forums
   - IRC: new channel and pushes to commits
 - 00:45 - 00:50 [**Cycle Jira backlog**](https://armbian.atlassian.net/browse/AR):
