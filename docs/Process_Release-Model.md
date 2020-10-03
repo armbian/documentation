@@ -54,10 +54,10 @@ Dates for **2020**:
 
 Agenda:
 
-- 00:00 - 00:02 #startmeeting: Meeting coordinator (MC) calls meeting to order. 
-- 00:02 - 00:05 #topic check-in: MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
-- 00:05 - 00:07 #topic late topics: MC [points out to agenda](https://docs.armbian.com/Process_Release-Model/#release-planning) and asks if there is any late topic to add.
-- 00:07 - 00:09 #topic FYI: Stuff to know beforehand - MC presents meeting relevant news and rules of engagement:
+- 00:00 - 00:02 `#startmeeting Tamandua`: Meeting coordinator (MC) calls meeting to order. 
+- 00:02 - 00:05 `#topic check-in`: MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
+- 00:05 - 00:07 `#topic late topics`: MC [points out to agenda](https://docs.armbian.com/Process_Release-Model/#release-planning) and asks if there is any late topic to add.
+- 00:07 - 00:09 `#topic FYI`: Stuff to know beforehand - MC presents meeting relevant news and rules of engagement:
   - note #1: **IRC translator**: If your English is poor, simply write in your native language. Start your sentence with `..` at the beginning.
   - rule #1: When you get a voice, please *be quick and concise* (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - rule #2: If meeting is going out of desired agenda, MC will use *"STOP STOP STOP"*, wait to get attention and then proceed with the meeting agenda. **Please stop chatting and listen.**
@@ -67,32 +67,32 @@ Agenda:
   - *Note:* tasks should be [tracked by Jira](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2).
     If they are not there, please add them during or right after the meeting
   - *Note:* board maintainers present tasks, bugs or projects they are working on (open discussion for each section if possible, otherwise MC calls people out).
-  - #topic development Allwinner
-  - #topic development Amlogic
-  - #topic development Marvell
-  - #topic development Rockchip
-  - #topic development others
+  - `#topic development Allwinner`
+  - `#topic development Amlogic`
+  - `#topic development Marvell`
+  - `#topic development Rockchip`
+  - `#topic development others`
 - 00:30 - 00:40 **build system**
-  - #topic buildsystem enhancements: [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
-  - #topic buildsystem desktop: [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
+  - `#topic buildsystem enhancements`: [build script enhancements](https://armbian.atlassian.net/browse/AR-339?filter=10004)
+  - `#topic buildsystem desktop`: [desktop and multimedia](https://armbian.atlassian.net/browse/AR-284?filter=10005)
 - 00:40 - 00:45 **Infrastructure**
-  - #topic Infrastructure - Servers / CI
-  - #topic Infrastructure - planned/unplanned changes on forums
-  - #topic Infrastructure - IRC: new channel and pushes to commits
-- 00:45 - 00:50 #topic Jira Backlog: [**Cycle Jira backlog**](https://armbian.atlassian.net/browse/AR):
+  - `#topic Infrastructure - Servers / CI`
+  - `#topic Infrastructure - planned/unplanned changes on forums`
+  - `#topic Infrastructure - IRC: new channel and pushes to commits`
+- 00:45 - 00:50 `#topic Jira Backlog`: [**Cycle Jira backlog**](https://armbian.atlassian.net/browse/AR):
    - discuss task / bug (one at a time)
    - assign to person / release / tag
    - re-prioritise
 
-- 00:50 - 00:55 #topic open issues
+- 00:50 - 00:55 `#topic open issues`
   - Check and cycle [open issues](https://github.com/armbian/build/issues) and [pull requests](https://github.com/armbian/build/pulls) on a build engine
-- 00:55 - 00:56 #topic board support status updates
+- 00:55 - 00:56 `#topic board support status updates`
   - Discuss (last 10-15) board status update on download pages and build engine (wip, supported, eol) https://www.armbian.com/download/
-- 00:56 - 00:57 #topic release officer and meeting organizer
+- 00:56 - 00:57 `#topic release officer and meeting organizer`
   - Choose upcoming release officer and next meeting organizer (1 or 2 roles). We need someone that is not well acquiented with the process to see if our documentation is good enough. He will get full support / backup, so no need to worry about anything.
-- 00:57 - 1:00 #topic questions about Jira usage
+- 00:57 - 1:00 `#topic questions about Jira usage`
   - Answer questions relating to [**how to use Jira**](https://docs.armbian.com/Process_Managing_Workflow/) (if any)
-- 01:00 - #topic misc / open discussion
+- 01:00 - `#topic misc / open discussion`
 
 Tips:
 
