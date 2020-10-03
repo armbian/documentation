@@ -57,9 +57,9 @@ Agenda:
 - 00:00 - 00:02 Meeting coordinator (MC) calls meeting to order. 
 - 00:02 - 00:05 MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
 - 00:05 - 00:07 MC [points out to agenda](https://docs.armbian.com/Process_Release-Model/#release-planning) and asks if there is any late topic to add.
-- 00:07 - 00:09 MC presents meeting relevant news and rules of engagement:
+- 00:07 - 00:09 **FYI** - Stuff to know beforehand: MC presents meeting relevant news and rules of engagement:
   - note #1: **IRC translator**: If your English is poor, simply write in your native language. Start your sentence with `..` at the beginning.
-  - note #2: Answer questions relating to [how to use Jira](https://docs.armbian.com/Process_Managing_Workflow/)
+  - note #2: Answer questions relating to [**how to use Jira**](https://docs.armbian.com/Process_Managing_Workflow/) (if any)
   - rule #1: When you get a voice, please *be quick and concise* (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - rule #2: If meeting is going out of desired agenda, MC will use *"STOP STOP STOP"*, wait to get attention and then proceed with the meeting agenda. Please stop chatting and listen.
   
