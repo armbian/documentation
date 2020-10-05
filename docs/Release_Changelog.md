@@ -1,7 +1,15 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-**20.08.3 / 23.09.2020**
+**20.08.8 / 5.10.2020**
+
+<ul>
+<li>Updated Helios64 images
+</li>
+</ul>
+
+
+**20.08.4 / 23.09.2020**
 
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-399'>AR-399</a>] -         Improve Pinebook PRO support, updated images
