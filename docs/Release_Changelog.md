@@ -4,7 +4,9 @@
 **20.08.8 / 5.10.2020**
 
 <ul>
-<li>Updated Helios64 images
+<li>[<a href='https://armbian.atlassian.net/browse/AR-463'>AR-463</a>] -         Improve Helios64 Stability, updated images
+</li>
+<li>Adapt Helios64 devicetree name to match upstream Linux
 </li>
 </ul>
 
