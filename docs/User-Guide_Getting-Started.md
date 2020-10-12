@@ -2,19 +2,19 @@
 
 <iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Mentioned links:
-- [https://gitlab.com/bztsrc/usbimager/](https://gitlab.com/bztsrc/usbimager/)
-- [https://forum.armbian.com/topic/4767-powering-through-micro-usb/](https://forum.armbian.com/topic/4767-powering-through-micro-usb/)
-- [https://docs.armbian.com/](https://docs.armbian.com/)
-- [https://forum.armbian.com/profile/9032-werner/](https://forum.armbian.com/profile/9032-werner/)
-- [https://forum.armbian.com/topic/12803-armbian-irc-chat/](https://forum.armbian.com/topic/12803-armbian-irc-chat/)
+Mentioned links:  
+- [https://gitlab.com/bztsrc/usbimager/](https://gitlab.com/bztsrc/usbimager/)  
+- [https://forum.armbian.com/topic/4767-powering-through-micro-usb/](https://forum.armbian.com/topic/4767-powering-through-micro-usb/)  
+- [https://docs.armbian.com/](https://docs.armbian.com/)  
+- [https://forum.armbian.com/profile/9032-werner/](https://forum.armbian.com/profile/9032-werner/)  
+- [https://forum.armbian.com/topic/12803-armbian-irc-chat/](https://forum.armbian.com/topic/12803-armbian-irc-chat/)  
 
 
 # Prerequisites for new users
 
 Please, make sure you have:
 
--  a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR **thick** USB cable)
+- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR **thick** USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 ### What to download?
