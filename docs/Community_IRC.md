@@ -51,7 +51,7 @@ Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has
     - Allows to search forums via Google API (not very precise though)
         - Example: `,g Allwinner H6 panfrost`
     - A few more minor commands, mostly used by staff or do not need introduction
-        - `.nonprofit`, `.sed`, `.contribute`, `.rtfm`, `.fortune`, `.sunxi`, `.meson`, `help`, `help irc`
+        - `.nonprofit`, `.sed`, `.contribute`, `.rtfm`, `.fortune`, `.sunxi`, `.meson`, `help`, `help irc`, `.tvboxes`
     - Translation for non-native English speakers
         - Simply start your sentence with `..` at the beginning and the bot will translate your message regardless of the source language into English.  
           *Note*: This services will be activated manually on demand (like planned meetings for example) since its backend generates cost.
