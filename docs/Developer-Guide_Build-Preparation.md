@@ -2,13 +2,16 @@
 
 - x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**,
-- Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
-- [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
 - **The officially supported** compilation environment is [Ubuntu Focal 20.04 x64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!** (Support for Ubuntu 18.04 will be there until either we run into issues we do not want to waste time on or upstream support ends),
 - `binfmt_misc` kernel module.  Some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.
 - installed basic system, OpenSSH and Samba (optional),
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
+
+Not officially supported build environments from community contributions:  
+- Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
+- [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
+- [Multipass](https://gist.github.com/atomic77/7633fcdbf99dca80f31fd6d64bfd0565)
 
 Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
 
