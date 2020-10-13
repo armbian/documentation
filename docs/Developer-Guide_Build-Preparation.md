@@ -8,7 +8,8 @@
 - no spaces in full path to the build script location allowed,
 - superuser rights (configured `sudo` or root shell).
 
-Not officially supported build environments from community contributions:  
+Not officially supported build environments from community contributions:
+
 - Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
 - [Multipass](https://gist.github.com/atomic77/7633fcdbf99dca80f31fd6d64bfd0565)
