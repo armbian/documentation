@@ -1,6 +1,16 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.08.11 / 16.10.2020**
+
+<ul>
+<li>enable Ubuntu 20.10 Groovy as a CSC build option (need build parameter EXPERT="yes")</li>
+<li>update u-boot loader to 2020.10 on Allwinner platform</li>
+<li>update all kernels</li>
+<li>update images for Helios 64</li>
+<li>add option to build images from prebuild packages from repository which drastically improves build time in case you don't need to rebuild kernel</li>
+</ul>
+
 **20.08.8 / 5.10.2020**
 
 <ul>
