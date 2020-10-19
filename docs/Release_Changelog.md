@@ -1,6 +1,24 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.08.13 / 19.10.2020**
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-363'>AR-363</a>] -         Switch mvebu current to K5.8.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-413'>AR-413</a>] -         Improve reliability of Helios64&#39;s eMMC module
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-415'>AR-415</a>] -         Improve reboot reliability for Helios64
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-416'>AR-416</a>] -         Move Rockchip 32bit to 5.8.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-476'>AR-476</a>] -         Add sound to Odroid N2
+</li>
+<li>update all kernels</li>
+<li>Rebuild images for Helios4, Helios64 and Odroid N2</li>
+</ul>
+
+
 **20.08.11 / 16.10.2020**
 
 <ul>
