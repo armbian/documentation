@@ -6,9 +6,7 @@
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-363'>AR-363</a>] -         Switch mvebu current to K5.8.y
 </li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-413'>AR-413</a>] -         Improve reliability of Helios64&#39;s eMMC module
-</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-415'>AR-415</a>] -         Improve reboot reliability for Helios64
+<li>[<a href='https://armbian.atlassian.net/browse/AR-466'>AR-466</a>] -         Enable Recovery button on Helios64
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-416'>AR-416</a>] -         Move Rockchip 32bit to 5.8.y
 </li>
@@ -22,6 +20,8 @@
 **20.08.11 / 16.10.2020**
 
 <ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-465'>AR-465</a>] -         Helios64 cannot boot from eMMC
+</li>
 <li>enable Ubuntu 20.10 Groovy as a CSC build option (need build parameter EXPERT="yes")</li>
 <li>update u-boot loader to 2020.10 on Allwinner platform</li>
 <li>update all kernels</li>
