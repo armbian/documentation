@@ -75,6 +75,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for location of `userpatches` folder
 - **USE_CCACHE** ( **yes** | no ): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
+- **LOCAL_MIRROR** ( `URL` ): use your own armbian package repository
 - **PROGRESS_DISPLAY** ( none | **plain** | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** ( yes | **no** ): duplicate output, affected by previous option, to log files `output/debug/*.log`
 - **USE_MAINLINE_GOOGLE_MIRROR** ( yes | **no** ): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
