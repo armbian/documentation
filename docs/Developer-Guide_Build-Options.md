@@ -66,9 +66,9 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 
 ## Hidden options to minimize user input for desktop build automation
 - **DESKTOP_ENVIRONMENT** (Xfce/Budgie/Cinnamon/DDE/Enlightenment/Gnome3/Lxde/Mate)
-- **DESKTOP_ENVIRONMENT_CONFIG_NAME** (config_basic config_full): select for minimal no frills desktop or for Full Functional Desktop
-- **DESKTOP_APPGROUPS_SELECTED** (browsers chat desktop_tools editors email internet multimedia office programming remote_desktop): Select what application groups to add to build.
-- **DESKTOP_APT_FLAGS_SELECTED** (reccomends/suggests): Select to install suggeted and reccomended addons
+- **DESKTOP_ENVIRONMENT_CONFIG_NAME** (config_basic config_full): select for minimal no frills desktop or for full functional desktop
+- **DESKTOP_APPGROUPS_SELECTED** (browsers chat desktop_tools editors email internet multimedia office programming remote_desktop): Select what application groups to add to build
+- **DESKTOP_APT_FLAGS_SELECTED** (recommends/suggests): Select to install suggested and recommended addons
 
 ## Hidden options for advanced users (default values are marked **bold**)
 - **EXPERT** ( yes | **no** ): Show development features in interactive mode
