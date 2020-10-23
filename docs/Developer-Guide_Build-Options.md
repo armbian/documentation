@@ -63,7 +63,13 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
 - **BRANCH** ( legacy | current | dev ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
 - **RELEASE** ( stretch | buster | bionic | focal | bullseye ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
-  
+
+## Hidden options to minimize user input for desktop build automation
+- **DESKTOP_ENVIRONMENT** (Xfce/Budgie/Cinnamon/DDE/Enlightenment/Gnome3/Lxde/Mate)
+- **DESKTOP_ENVIRONMENT_CONFIG_NAME** (config_basic config_full): select for minimal no frills desktop or for Full Functional Desktop
+- **DESKTOP_APPGROUPS_SELECTED** (browsers chat desktop_tools editors email internet multimedia office programming remote_desktop): Select what application groups to add to build.
+- **DESKTOP_APT_FLAGS_SELECTED** (reccomends/suggests): Select to install suggeted and reccomended addons
+
 ## Hidden options for advanced users (default values are marked **bold**)
 - **EXPERT** ( yes | **no** ): Show development features in interactive mode
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for location of `userpatches` folder
