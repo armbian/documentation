@@ -2,7 +2,8 @@
 
 <iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Mentioned links:  
+Mentioned links:
+
 - [https://gitlab.com/bztsrc/usbimager/](https://gitlab.com/bztsrc/usbimager/)  
 - [https://forum.armbian.com/topic/4767-powering-through-micro-usb/](https://forum.armbian.com/topic/4767-powering-through-micro-usb/)  
 - [https://docs.armbian.com/](https://docs.armbian.com/)  
