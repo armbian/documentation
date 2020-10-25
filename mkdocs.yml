@@ -10,7 +10,13 @@ google_analytics: ["UA-284946-9", "docs.armbian.com"]
 
 theme: 
   name: readthedocs
-  custom_dir: readthedocs_custom/
+#  custom_dir: readthedocs_custom/
+
+markdown_extensions:
+  - smarty
+  - footnotes
+  - toc:
+      permalink: True
 
 plugins:
     - with-pdf:
