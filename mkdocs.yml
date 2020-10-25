@@ -19,6 +19,7 @@ markdown_extensions:
       permalink: True
 
 plugins:
+    - search:
     - with-pdf:
         author: Armbian documentation team
         copyright: 2020 by Armbian
