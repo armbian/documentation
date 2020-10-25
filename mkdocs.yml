@@ -8,8 +8,9 @@ repo_name: Github
 site_author: "Armbian team"
 google_analytics: ["UA-284946-9", "docs.armbian.com"]
 
-theme: readthedocs
-theme_dir: readthedocs_custom
+theme: 
+  name: readthedocs
+  custom_dir: readthedocs_custom/
 
 plugins:
     - with-pdf:
