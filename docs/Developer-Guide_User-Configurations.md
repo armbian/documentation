@@ -36,6 +36,8 @@ and place your code here. You may test values of variables noted in the file to 
 
 To add files to image easily, put them in `userpatches/overlay` and access them in `/tmp/overlay` from `customize-image.sh`
 
+Be advised that even though you are compiling an image on an amd64 machine, any additional apt packages you configure or commands you run in customize-image.sh should be correctly installed/executed/virtualized for the architecture of the build target SBC. 
+
 ## Partitioning of the SD card
 
 In case you define `$FIXED_IMAGE_SIZE` at build time the partition containing the rootfs will be made of this size. Default behaviour when this is not defined is to shrink the partition to minimum size at build time and expand it to the card's maximum capacity at boot time (leaving an unpartitioned spare area of ~5% when the size is 4GB or less to help the SD card's controller with wear leveling and garbage collection on old/slow cards).
