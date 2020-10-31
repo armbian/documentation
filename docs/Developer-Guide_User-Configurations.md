@@ -36,7 +36,7 @@ and place your code here. You may test values of variables noted in the file to 
 
 To add files to image easily, put them in `userpatches/overlay` and access them in `/tmp/overlay` from `customize-image.sh`
 
-Be advised that even though you are compiling an image on an amd64 machine, any additional apt packages you configure or commands you run in customize-image.sh should be correctly installed/executed/virtualized for the architecture of the build target SBC. 
+Be advised that even though you are compiling an image on an amd64 machine, any additional apt packages you configure or commands you run in customize-image.sh will be automatically installed/executed/virtualized for the architecture of the build target SBC. 
 
 ## Partitioning of the SD card
 
