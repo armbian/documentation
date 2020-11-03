@@ -39,15 +39,18 @@ When something goes terribly wrong and you are not able to boot the system, this
 
 	fsck /dev/sdX -f
 
-Then mount the SD card and download those files (This example is only for Banana R1):
+Then mount the SD card and download the Linux root, kernel, firmware and dtb packages for your board and currently used OS. This example is only for **Nanopi Neo 2** and **Ubuntu Focal** with **"current" kernel** (mainline) and **Armbian 20.08.13** firmware:
 
-	http://apt.armbian.com/pool/main/l/linux-trusty-root-current-lamobo-r1/linux-trusty-root-current-lamobo-r1_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-image-current-sunxi_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-firmware-image-current-sunxi_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-dtb-current-sunxi_4.5_armhf.deb
-	 
+	Root:
+	https://apt.armbian.com/pool/main/l/linux-focal-root-current-nanopineo2/linux-focal-root-current-nanopineo2_20.08.13_arm64.deb
+	Kernel:
+	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-image-current-sunxi64_20.08.13_arm64.deb
+	Firmware:
+	https://apt.armbian.com/pool/main/a/armbian-firmware/armbian-firmware_20.08.13_all.deb
+	DTB:
+	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-dtb-current-sunxi64_20.08.13_arm64.deb
 
-This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](https://forum.armbian.com/topic/211-kernel-update-procedure-has-been-changed/).
+Alter packages naming according to your device name, SOC-family, kernel and firmware version.
 
 Mount SD card and extract all those deb files to it's mount point. "/mnt" is used in this example. Yours is probably different.
 
