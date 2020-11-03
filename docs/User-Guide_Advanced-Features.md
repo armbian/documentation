@@ -33,9 +33,9 @@ System should eventually boot to bash shell:
 Now you can try to fix your broken system.
 
 
-### How to unbrick the system? (outdated)
+### How to unbrick the system?
 
-When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
+When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Debian based Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
 
 	fsck /dev/sdX -f
 
@@ -49,7 +49,7 @@ Then mount the SD card and download those files (This example is only for Banana
 
 This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](https://forum.armbian.com/topic/211-kernel-update-procedure-has-been-changed/).
 
-Mount SD card and extract all those deb files to it's mount point.
+Mount SD card and extract all those deb files to it's mount point. "/mnt" is used in this example. Yours is probably different.
 
 	dpkg -x DEB_FILE /mnt
 
@@ -62,7 +62,7 @@ If you upgrade from some very old build, you might need to update your boot scri
 	mv boot-sunxi.cmd boot.cmd
 	mkimage -C none -A arm -T script -d boot.cmd boot.scr # you need a u-boot-tools package on your host system
 
-Unmount SD card, move it to the board and power on.
+Unmount SD card, move it to the board and power on. Check serial output for errors if problems persist.
 
 ### How to build a wireless driver?
 
