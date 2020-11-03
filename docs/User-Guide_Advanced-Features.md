@@ -56,7 +56,11 @@ Mount SD card and extract all those deb files to it's mount point. "/mnt" is use
 
 	dpkg -x DEB_FILE /mnt
 
-Go to /mnt/boot and link (or copy) **vmlinuz-4.x.x-sunxi** kernel file to **zImage**.
+Go to /mnt/boot and link **vmlinuz-5.8.16-sunxi64** kernel file to **Image**, **uInitrd-5.8.16-sunxi64** to **uInitrd**and **dtb-5.8.16** to **dtb**:
+
+	ln -s vmlinuz-5.8.16-sunxi64 Image
+	ln -s uInitrd-5.8.16-sunxi64 uInitrd
+	ln -s dtb-5.8.16 dtb
 
 If you upgrade from some very old build, you might need to update your boot script. Example goes for Allwinner boards:
 
