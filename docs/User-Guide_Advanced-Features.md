@@ -33,27 +33,34 @@ System should eventually boot to bash shell:
 Now you can try to fix your broken system.
 
 
-### How to unbrick the system? (outdated)
+### How to unbrick the system?
 
-When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
+When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Debian based Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
 
 	fsck /dev/sdX -f
 
-Then mount the SD card and download those files (This example is only for Banana R1):
+Then mount the SD card and download the Linux root, kernel, firmware and dtb packages for your board and currently used OS. This example is only for **Nanopi Neo 2** and **Ubuntu Focal** with **"current" kernel** (mainline) and **Armbian 20.08.13** firmware:
 
-	http://apt.armbian.com/pool/main/l/linux-trusty-root-current-lamobo-r1/linux-trusty-root-current-lamobo-r1_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-image-current-sunxi_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-firmware-image-current-sunxi_4.5_armhf.deb
-	http://apt.armbian.com/pool/main/l/linux-upstream/linux-dtb-current-sunxi_4.5_armhf.deb
-	 
+	Root:
+	https://apt.armbian.com/pool/main/l/linux-focal-root-current-nanopineo2/linux-focal-root-current-nanopineo2_20.08.13_arm64.deb
+	Kernel:
+	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-image-current-sunxi64_20.08.13_arm64.deb
+	Firmware:
+	https://apt.armbian.com/pool/main/a/armbian-firmware/armbian-firmware_20.08.13_all.deb
+	DTB:
+	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-dtb-current-sunxi64_20.08.13_arm64.deb
 
-This is just an example for: **Ubuntu Trusty, Lamobo R1, mainline kernel** (next). Alter packages naming according to [this](https://forum.armbian.com/topic/211-kernel-update-procedure-has-been-changed/).
+Alter packages naming according to your device name, SOC-family, kernel and firmware version.
 
-Mount SD card and extract all those deb files to it's mount point.
+Mount SD card and extract all those deb files to it's mount point. "/mnt" is used in this example. Yours is probably different.
 
 	dpkg -x DEB_FILE /mnt
 
-Go to /mnt/boot and link (or copy) **vmlinuz-4.x.x-sunxi** kernel file to **zImage**.
+Go to /mnt/boot and link **vmlinuz-5.8.16-sunxi64** kernel file to **Image**, **uInitrd-5.8.16-sunxi64** to **uInitrd**and **dtb-5.8.16** to **dtb**:
+
+	ln -s vmlinuz-5.8.16-sunxi64 Image
+	ln -s uInitrd-5.8.16-sunxi64 uInitrd
+	ln -s dtb-5.8.16 dtb
 
 If you upgrade from some very old build, you might need to update your boot script. Example goes for Allwinner boards:
 
@@ -62,7 +69,7 @@ If you upgrade from some very old build, you might need to update your boot scri
 	mv boot-sunxi.cmd boot.cmd
 	mkimage -C none -A arm -T script -d boot.cmd boot.scr # you need a u-boot-tools package on your host system
 
-Unmount SD card, move it to the board and power on.
+Unmount SD card, move it to the board and power on. Check serial output for errors if problems persist.
 
 ### How to build a wireless driver?
 
