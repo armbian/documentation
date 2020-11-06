@@ -134,17 +134,45 @@ Changes inside this will be preserved.
 
 Preinstallation requirements:
 
-- Armbian 5.1 or newer with Kernel 3.10 or higher
-- Debian Jessie (might work elsewhere with some modifications)
+- Armbian 20.08.17 or newer with Kernel 3.10 or higher
+- Debian Buster (might work elsewhere with some modifications)
 - root access
 
-Execute this as root:
+This method is based on Docker Debian installation [documentation](https://docs.docker.com/engine/install/debian/). Execute this as root:
 
-	curl  https://get.docker.com | sh
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo apt update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+``` 
 
 Test if Docker works correctly:
 
-	docker run -d -p 80:80 hypriot/rpi-busybox-httpd
+```bash
+sudo docker run hello-world
+```
+
+If you get that kind of output, then Docker install went fine:
+
+```bash
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+```
+
+If you would like to use Docker as a non-root user, you should now consider adding your user to the `docker` group with something like:
+
+```bash
+sudo usermod -aG docker your-user
+``` 
+
+Let's try a last test to see if a Docker container can be seen outside of your Armbian machine:
+
+```bash
+docker run -d -p 80:80 hypriot/rpi-busybox-httpd
+```
 
 ... and point the browser of any device in the same network to `http://<IP OF YOUR DEVICE>/`
 
