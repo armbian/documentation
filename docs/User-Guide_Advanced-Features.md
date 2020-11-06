@@ -114,7 +114,7 @@ Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-#### How to freeze your filesystem?
+#### How to freeze your filesystem? (outdated)
 
 In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
 
