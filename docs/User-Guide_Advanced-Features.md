@@ -141,18 +141,18 @@ Preinstallation requirements:
 This method is based on Docker Debian installation [documentation](https://docs.docker.com/engine/install/debian/). Execute this as root:
 
 ```bash
-sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-sudo apt update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+apt-get remove docker docker-engine docker.io containerd runc
+apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+apt update
+apt-get install docker-ce docker-ce-cli containerd.io
 ``` 
 
 Test if Docker works correctly:
 
 ```bash
-sudo docker run hello-world
+docker run hello-world
 ```
 
 If you get that kind of output, then Docker install went fine:
@@ -165,8 +165,10 @@ This message shows that your installation appears to be working correctly.
 If you would like to use Docker as a non-root user, you should now consider adding your user to the `docker` group with something like:
 
 ```bash
-sudo usermod -aG docker your-user
+usermod -aG docker your-user
 ``` 
+
+You will have to log out, and log in once more in order to be able to run Docker without being root.
 
 Let's try a last test to see if a Docker container can be seen outside of your Armbian machine:
 
