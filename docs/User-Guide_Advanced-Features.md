@@ -130,7 +130,7 @@ After your system boots up it will always remain as is. If you want to make any 
 
 Changes inside this will be preserved.
 
-### How to run Docker? (outdated)
+### How to run Docker? 
 
 Preinstallation requirements:
 
