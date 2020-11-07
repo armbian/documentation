@@ -1,11 +1,11 @@
 # What do I need?
 
 - x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**,
-- **The officially supported** compilation environment is [Ubuntu Focal 20.04 x64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!** (Support for Ubuntu 18.04 will be there until either we run into issues we do not want to waste time on or upstream support ends),
-- `binfmt_misc` kernel module.  Some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.
-- installed basic system, OpenSSH and Samba (optional),
-- no spaces in full path to the build script location allowed,
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
+- **The officially supported** compilation environment is [Ubuntu Focal 20.04.x amd64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!**
+- `binfmt_misc` kernel module (some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.)
+- installed basic system, OpenSSH and Samba (optional)
+- no spaces in full path to the build script location allowed
 - superuser rights (configured `sudo` or root shell).
 
 Not officially supported build environments from community contributions:
