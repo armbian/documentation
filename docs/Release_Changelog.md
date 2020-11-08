@@ -1,6 +1,12 @@
 
 #### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.08.22 / 8.11.2020**
+<ul>
+<li>Added WIP images for Odroid HC4</li>
+<li>Updated images for Odroid C4, N2, C2, Lafrite, Lepotato, KVIM1</li>
+</ul>
+
 **20.08.13 / 19.10.2020**
 
 <ul>
