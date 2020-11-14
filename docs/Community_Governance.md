@@ -32,8 +32,8 @@
 | Community Engagement  |     | @NicoD, @tido           |                     |                 |
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
 | Web and Infrastucture | @lauri			|		      |                 |
-| Forums moderation |  |	[click](https://forum.armbian.com/members/2-moderators/)	      |                 |
-| IRC & Services | @Werner			|		      |                 |  
+| Forums moderation | @Werner |	[click](https://forum.armbian.com/members/2-moderators/)	      |                 |
+| IRC & Services | @Werner |		      |                 |  
   
 ## Hackers Emeritus ##
 
