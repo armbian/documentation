@@ -6,7 +6,7 @@
 |-----------|-----------------|-------------------------|---------------------|-----------------|
 | Allwinner | @martinayotte   | @igorpecovnik, @jernejsk | sunxi, sunxi64       |                 |
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte | meson, meson64   |                 |
-| Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte, @JMCC, @paolosabatino | rockchip, rockchip64, rk3399 | @JMCC: Renegade only |
+| Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte, @JMCC, @paolosabatino, @piter75 | rockchip, rockchip64, rk3399 | @JMCC: Renegade only |
 | Mediatek  | @chwe          |                         | mt7623              |                 |
 | Marvell   | @gprovost      |                         | mvebu,mvebu64       |                 |
 | Samsung   |                |                         | odroidxu4           |                 |
@@ -32,7 +32,7 @@
 | Community Engagement  |     | @NicoD, @tido           |                     |                 |
 | Legal and Financial | @igorpecovnik |                 |                     |                 |
 | Web and Infrastucture | @lauri			|		      |                 |
-| Forums moderation |  |	[click](https://forum.armbian.com/members/2-moderators/)	      |                 |
+| Forums moderation | |	[click](https://forum.armbian.com/members/2-moderators/)	      |                 |
 | IRC & Services | @Werner			|		      |                 |  
   
 ## Hackers Emeritus ##
