@@ -2,6 +2,11 @@
 
 Check [_this_](http://www.armbian.com/kernel/) for more info.
 
+### How to troubleshoot?
+### How to unbrick the system?
+
+Both of above headings have been moved to a new page and expanded upon: [User-Guide_Recovery.md](Recovery)
+
 ### How to build a wireless driver?
 
 Install and recreate kernel headers scripts (optional)
