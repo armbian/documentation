@@ -5,7 +5,7 @@ Check [_this_](http://www.armbian.com/kernel/) for more info.
 ### How to troubleshoot?
 ### How to unbrick the system?
 
-Both of above headings have been moved to a new page and expanded upon: [User-Guide_Recovery.md](Recovery)
+Both of above headings have been moved to a new page and expanded upon: [Recovery](User-Guide_Recovery.md)
 
 ### How to build a wireless driver?
 
