@@ -52,6 +52,7 @@ nav:
         - "Getting Started" : "User-Guide_Getting-Started.md"
         - "Quick facts" : "Quick_facts.md"
         - "Troubleshooting" : "User-Guide_Basic-Troubleshooting.md"
+        - "Recovery" : "User-Guide_Recovery.md"
         - "Advanced Features" : "User-Guide_Advanced-Features.md"
         - "Fine Tuning" : "User-Guide_Fine-Tuning.md"
         - "Armbian config" : "User-Guide_Armbian-Config.md"
