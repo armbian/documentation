@@ -3,73 +3,9 @@
 Check [_this_](http://www.armbian.com/kernel/) for more info.
 
 ### How to troubleshoot?
-
-**Important: If you came here since you cannot get Armbian running on your board please keep in mind that in 95 percent of all cases it is either a faulty/fraud/counterfeit SD card or an insufficient power supply that is causing these sorts of _does not work_ issues!**
-
-If you broke the system you can try to get in this way. You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard (USB support in u-boot currently not enabled on all H3 boards).
-
-After switching power on or rebooting, when u-boot loads up, press some key on the keyboard (or send some key presses via terminal) to abort default boot sequence and get to the command prompt:
-
-	U-Boot SPL 2015.07-dirty (Oct 01 2015 - 15:05:21)
-	...
-	Hit any key to stop autoboot:  0
-	sunxi#
-
-Enter these commands, replacing root device path if necessary. Select setenv line with ttyS0 for serial, tty1 for keyboard+monitor (these are for booting with mainline kernel, check boot.cmd for your device for commands related to legacy kernel):
-
-	setenv bootargs init=/bin/bash root=/dev/mmcblk0p1 rootwait console=ttyS0,115200
-	# or
-	setenv bootargs init=/bin/bash root=/dev/mmcblk0p1 rootwait console=tty1
-
-	ext4load mmc 0 0x49000000 /boot/dtb/${fdtfile}
-	ext4load mmc 0 0x46000000 /boot/zImage
-	env set fdt_high ffffffff
-	bootz 0x46000000 - 0x49000000
-
-System should eventually boot to bash shell:
-
-	root@(none):/#
-
-Now you can try to fix your broken system.
-
-
 ### How to unbrick the system?
 
-When something goes terribly wrong and you are not able to boot the system, this is the way to proceed. You need some Debian based Linux machine where you can mount the failed SD card. With this procedure you will reinstall the u-boot, kernel and hardware settings. In most cases this should be enough to unbrick the board. It is recommended to issue a filesystem check before mounting:
-
-	fsck /dev/sdX -f
-
-Then mount the SD card and download the Linux root, kernel, firmware and dtb packages for your board and currently used OS. This example is only for **Nanopi Neo 2** and **Ubuntu Focal** with **"current" kernel** (mainline) and **Armbian 20.08.13** firmware:
-
-	Root:
-	https://apt.armbian.com/pool/main/l/linux-focal-root-current-nanopineo2/linux-focal-root-current-nanopineo2_20.08.13_arm64.deb
-	Kernel:
-	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-image-current-sunxi64_20.08.13_arm64.deb
-	Firmware:
-	https://apt.armbian.com/pool/main/a/armbian-firmware/armbian-firmware_20.08.13_all.deb
-	DTB:
-	https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-dtb-current-sunxi64_20.08.13_arm64.deb
-
-Alter packages naming according to your device name, SOC-family, kernel and firmware version.
-
-Mount SD card and extract all those deb files to it's mount point. "/mnt" is used in this example. Yours is probably different.
-
-	dpkg -x DEB_FILE /mnt
-
-Go to /mnt/boot and link **vmlinuz-5.8.16-sunxi64** kernel file to **Image**, **uInitrd-5.8.16-sunxi64** to **uInitrd**and **dtb-5.8.16** to **dtb**:
-
-	ln -s vmlinuz-5.8.16-sunxi64 Image
-	ln -s uInitrd-5.8.16-sunxi64 uInitrd
-	ln -s dtb-5.8.16 dtb
-
-If you upgrade from some very old build, you might need to update your boot script. Example goes for Allwinner boards:
-
-	cd /mnt/boot
-	wget https://raw.githubusercontent.com/armbian/build/master/config/bootscripts/boot-sunxi.cmd
-	mv boot-sunxi.cmd boot.cmd
-	mkimage -C none -A arm -T script -d boot.cmd boot.scr # you need a u-boot-tools package on your host system
-
-Unmount SD card, move it to the board and power on. Check serial output for errors if problems persist.
+Both of above headings have been moved to a new page and expanded upon: [Recovery](User-Guide_Recovery.md)
 
 ### How to build a wireless driver?
 
