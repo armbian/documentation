@@ -13,7 +13,7 @@ If you **need help** and have read through _Getting Started_ check out [_Trouble
 
 If you still cannot find what you need here visit the [_Armbian forum_](http://forum.armbian.com/) where your input can help to improve this documentation.
 
-# What is Armbian?
+## What is Armbian?
 
 *Armbian is a base operating system platform for single board computers (SBCs) that other projects can trust to build upon.*
 
@@ -63,7 +63,7 @@ If you still cannot find what you need here visit the [_Armbian forum_](http://f
     - 600-2000Mhz @Exynos & S905
 - eth0 interrupts are using dedicated core (Allwinner based boards)
 
-# What is supported?
+## What is supported?
 
 "Supported" is not a guarantee. "Supported" implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.  Supported boards do receive preferential treatment to bugfix, improve, or add additional functionality based on any of the following, **non-exclusive** criteria:
 

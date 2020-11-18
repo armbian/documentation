@@ -1,18 +1,18 @@
 # Release model
 
-**Release Dates**
+## Release Dates
 
 Armbian runs "train" based releases. Whatever is ready to board the train, does so. Whatever isn't ready, has to wait for the next train. This enables us to have a predictable release cycles making it easy to plan. It also puts the responsibility on developers to make sure they have features ready on time. 
 
 Armbian releases quarterly at the end of **February, May, August, November**. Offset is because we all know that nothing happens for half of December. At the beginning of a release cycle, we have a planning meeting and **two weeks before the end of the release we freeze integration of new features**.
 
-**Release Cycle**
+## Release Cycle
 
 Releases last 3 months. Each release starts with a planning meeting. After planning, developers and development teams build their deliverable using whatever methods (scrum, kanban, waterfall, ... ) they want but shall commit their code frequently, leading **up to the last 2 weeks**. The project does not accept "dumps" of code at the end. **Commit early and often** on master. Two weeks before the release date, we halt feature integration and only allow bug fixes. At some point during those two weeks, we start the release candidate process. This process starts by pulling a branch off master that will become the release branch. That frees up master for development on the next release. On the release candidate branch we work on bug fixes, and choose "release candidate", RC, tags. The software at that tag is a candidate for release, and it is submitted to automated and manual tests on real hardware. If automated tests are passing, we can officially tag it as the release. If it doesn't, we enter another bug fix cycle and create a new release candidate. We iterate until we have a candidate that can be the formal release. Usually, this takes 2-3 cycles and 1-3 weeks of time.
 
 Development epics, stories and bugs for each release are tracked through [Jira](https://armbian.atlassian.net/).
 
-# Release Branching, Versioning and Tags
+## Release Branching, Versioning and Tags
 
 Branches in Armbian follow this convention: 
 
@@ -28,7 +28,7 @@ Each Armbian release will have the following version format:
 
 Tags are used in ad-hoc manner.
 
-# Release Naming
+## Release Naming
 
  
 |version| codename | release month | work |
@@ -42,7 +42,7 @@ Tags are used in ad-hoc manner.
  
  by http://www.codenamegenerator.com/
 
-# Release Planning
+## Release Planning
 
 A release planning starts with an public IRC meeting where developers and interested users come together in **first Saturday, one month before the release month**. 
 
@@ -52,7 +52,7 @@ Dates for **2020**:
  * [July 4th](https://freenode.irclog.whitequark.org/armbian/2020-07-04)
  * October 3rd
 
-Agenda:
+### Agenda:
 
 - 00:00 - 00:02 `#startmeeting Tamandua`: Meeting coordinator (MC) calls meeting to order. 
 - 00:02 - 00:05 `#topic check-in`: MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
@@ -95,7 +95,7 @@ Agenda:
   - Answer questions relating to [**how to use Jira**](https://docs.armbian.com/Process_Managing_Workflow/) (if any)
 - 01:00 - `#topic misc / open discussion`
 
-Tips:
+### Tips:
 
 - channel is recorded so a summary and adjustments to Jira can made afterwards, ideally along with the meeting
 - A *meetbot* will create a meeting summary at the end of the meeting. This however **heavily relys on user input**. So if you have important information to share please put a appropriate keyword in front of your message:
@@ -108,13 +108,13 @@ Tips:
 
 Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
 
-# Release Coordinating
+## Release Coordinating
 
-## Summary
+### Summary
 A release starts as a RC Branch cut from master at freeze time.  Once a RC Branch is cut, master can be unfrozen and development can continue.  RC Branch is a rolling release that accepts bug fixes.  The bug fixes should be cherry-picked back to master branch.  Once the RC Is stable, A Final release as a branch named after its version.  A release is *never* merged to master.  Once a release is complete, it only should be updated for severe bugs and severe security vulnerabilities.  A release is only maintained until the next release.
 
 
-## 1. Forum Communication
+### 1. Forum Communication
 
 - Create a new thread in the [Armbian Build Framework Subforum](http://forum.armbian.com/forum/12-armbian-build-framework/)
   - Ex topic name: `Ambian 20.02 (Chiru) Release Thread`
@@ -134,7 +134,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 - Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](http://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?do=findComment&comment=93245)
 - After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](http:///github.com/armbian/autotests)
 
-## 2. Release Candidate Branch Management
+### 2. Release Candidate Branch Management
 
 - For code freeze -- create a RC branch as `version-rc` ex: `v20.02.0-rc`
 - If Possible, create Jira tickets for major changes in github that were not tracked in Jira
@@ -148,7 +148,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 - Cherry-pick bugfixes back into master
 - Create Final Release branch from RC
 
-## 3. Release
+### 3. Release
 
 - In Github create a Release from final release branch
 - Copy Release notes generated by Jira Release into Github form
@@ -157,29 +157,25 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 - Update armbian documentation to reflect current release
 - Celebrate
 
-# Release Testing
+## Release Testing
 
 See [Opportunties for improvement](#Opportunities_for_Improvement)
 
-# Reflection on Prior Releases
-## Opportunities for Improvement
+## Reflection on Prior Releases
 
-## wireless driver testing
+### Opportunities for Improvement
+
+#### wireless driver testing
 
 * wireless is a particularly sensitive issue.  We need to test, fix, or at least be able to inform others of what is broken
 
-### Bug Tracking
+#### Bug Tracking
 
+#### Testing
 
+#### Image Downloads
 
-### Testing
-
-### Image Downloads
-
-## Positive Observations
+### Positive Observations
 
 * Good response from community for testing assistance
 * Release was on time
-
-
-# 

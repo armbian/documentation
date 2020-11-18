@@ -47,6 +47,16 @@ Let's bring the box up. This might take a minute or two depending on your bandwi
 	# (No need for passwords, Vagrant installs the keys we'll need.)
 	vagrant ssh  
 
+### Shut down, clean up
+
+Wrap up your vagrant box when no longer needed (log out of the guest before running these commands on the *host* system):
+
+	# Shutdown, but leave the box around for more building at a later time:  
+	vagrant halt  
+
+	# Trash the box and remove all the related storage devices.  
+	vagrant destroy  
+
 ## Important note
 
 It is strongly recommended to halt and restart the Vagrant box after building an image. Check [this](https://github.com/armbian/build/issues/751) issue for details.
@@ -63,10 +73,4 @@ Once it's finally up and you're logged in, it works much like any of the other i
 
 ## More Vagrant HOST Steps
 
-Wrap up your vagrant box when no longer needed (log out of the guest before running these commands on the *host* system):
-
-	# Shutdown, but leave the box around for more building at a later time:  
-	vagrant halt  
-
-	# Trash the box and remove all the related storage devices.  
-	vagrant destroy  
+Moved [here](Developer-Guide_Using-Vagrant.md#shut-down-clean-up).

@@ -1,8 +1,8 @@
 # Allwinner H6
 
-### CPU frequency
+See also [generic Allwinner page](https://docs.armbian.com/Hardware_Allwinner/),
 
-[See the generic Allwinner page](https://docs.armbian.com/Hardware_Allwinner/)
+## CPU frequency
 
 <del>The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing
 `/etc/default/cpufrequtils` and set `MAX_SPEED` to `1810000`.</del>  
@@ -11,8 +11,7 @@ With the release of Armbian 20.05 "Kagu" new thermal zones have been added makin
 **Warning**
 Adding proper cooling is highly recommended.
 
-
-### PCIe (un-)supported
+## PCIe (un-)supported
 
 Some H6 SoC based boards (like Pine H64 Model a, discontinued) are shipped with a PCIe slot. This slot **cannot** work out of the box as it has to be considered as broken by design. [Linux-Sunxi](https://linux-sunxi.org/H6#Errata) writes about this: 
 
@@ -20,6 +19,6 @@ Some H6 SoC based boards (like Pine H64 Model a, discontinued) are shipped with 
 
 Icenowy is working on a wrapper to make PCIe work. Check [forums](https://forum.armbian.com/topic/13529-a-try-on-utilizing-h6-pcie-with-virtualization/).
 
-### Networking
+## Networking
 
 Trouble getting ethernet connection? Check [here](https://forum.armbian.com/topic/9368-orangepi-3-h6-allwiner-chip/?do=findComment&comment=105682)

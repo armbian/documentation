@@ -1,5 +1,6 @@
-
-#### Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
+# Changelog
+	
+- Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
 **20.08.22 / 8.11.2020**
 <ul>
@@ -258,7 +259,6 @@ Finished projects
 </ul>    
 
 Solved bugs
-<p>
  
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-109">AR-109</a>] - Upgrade is not done properly on some boards</li>
@@ -289,7 +289,7 @@ Solved bugs
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-287">AR-287</a>] - Make sure cryptsetup-initramfs is installed in any case</li>
 </ul>
 
-Closed tasks<p>
+Closed tasks
 
 <ul>
  	<li>[<a href="https://armbian.atlassian.net/browse/AR-150">AR-150</a>] - Disable Stretch image creation for Helios4 and Clearfog</li>

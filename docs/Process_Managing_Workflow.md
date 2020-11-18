@@ -1,6 +1,8 @@
+# Jira
+
 Jira where development work is entered and prioritized.
 
-# Issue Types
+## Issue Types
 
 When creating issues, try to assign issue type most appropriate.   Issue type _can_ be changed later so don't worry too much.  If possible assign to a "Fix Version" aka Release.
 
@@ -8,7 +10,7 @@ When creating issues, try to assign issue type most appropriate.   Issue type _c
 * **Task** -- Work that is clearly defined
 * **Story** -- Large scope of work. Can be for work with subtasks, or vague work such as "A User should be able to XYZ"
 
-# Work Queue
+## Work Queue
 
 The easiest way to follow the work queue [Upcoming Release Kanban Board](https://armbian.atlassian.net/secure/RapidBoard.jspa?rapidView=2&projectKey=AR&atlOrigin=eyJpIjoiM2JlNTliN2ZkNTJiNDYzNGI4YzEzOGE4YjhmOWU3MDQiLCJwIjoiaiJ9).  This board lists only work select for the upcoming release.
 
@@ -27,11 +29,11 @@ Columns:
 * **Done**
     * Shows **recently** completed work.  Has time limit to keep board clean
 
-# Managing Work
+## Managing Work
 
 All issues for an upcoming release are assigned a "Fix Version" to indicate release number.
 
-## Backlog
+### Backlog
 
 With the Kanban Board, there are 2 states for the Upcoming Release backlog.
 

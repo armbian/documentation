@@ -1,6 +1,6 @@
-# Cubox and Hummingboard boards #
+# Cubox and Hummingboard boards
 
-## Legacy ##
+## Legacy
 System images with legacy kernel
 
 - Kernel [3.14.x](https://github.com/linux4kix/linux-linaro-stable-mx6) with large hardware support, headers and some firmware included
@@ -14,11 +14,11 @@ System images with legacy kernel
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
 - [USB redirector](http://www.incentivespro.com/usb-server-usage.html) – for sharing USB over TCP/IP (disabled by default /etc/init.d/rc.usbsrvd)
 
-### Bugs or limitation ###
+### Bugs or limitation
 
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
 
-## Mainline ##
+## Mainline
 System images with mainline kernel
 
 - [Mainline](http://www.kernel.org/) with large hardware support, headers and some firmware included
@@ -28,17 +28,17 @@ System images with mainline kernel
 - Enabled audio devices
 - Bluetooth ready (working with supported external keys)
 
-### Bugs or limitation ###
+### Bugs or limitation
 
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
 
-## Desktop ##
+## Desktop
 
 - Pre-installed: Firefox, LibreOffice Writer, Thunderbird
 - Lightweight XFCE desktop
 - Autologin, when normal user is created – no login manager (/etc/default/nodm)
 
-## Connect your LCD display ##
+## Connect your LCD display
 
 I tried two different display connection types: I2C and SPI. Both are working perfectly with my image 2.6 or higher.
 
@@ -55,12 +55,11 @@ I tried two different display connection types: I2C and SPI. Both are working pe
 - [Troubleshooting and settings for other displays
 LVDS](https://github.com/notro/fbtft/wiki)
 
-# GPIO #
+## GPIO
 
 [How to control HummingBoard GPIO from kernel space?](http://www.solid-run.com/community/topic2345.html)
 
-
-# Udoo Quad #
+## Udoo Quad
 
 - [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) and [4.4.x](https://github.com/patrykk/linux-udoo) with some hardware support, headers and some firmware included
 - [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
@@ -68,11 +67,11 @@ LVDS](https://github.com/notro/fbtft/wiki)
 - SATA operational
 - Enabled analogue (VT1613) and HDMI audio device
 
-# Bugs #
+### Bugs
 
 SATA & USB install not working on legacy kernel
 
-# Udoo Neo #
+## Udoo Neo
 
 - [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) with some hardware support, headers and some firmware included
 - Wireless adapter with DHCP ready but disabled

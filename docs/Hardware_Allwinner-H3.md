@@ -1,6 +1,6 @@
 # Allwinner H3 boards
 
-### Overview
+## Overview
 
 The H3 SoC from Allwinner is meant for OTT boxes and therefore its reference design is _not_ accompanied by a separate PMIC (power management IC) unlike _A series_ Allwinner SoCs (like A10, A20, A64, ...). No PMIC means also that there is no battery charging/monitoring implemented so H3 is not that much suited for mobile devices. On the other hand some pretty cheap H3 boards were released that can be driven with rather low consumption and therefore combining H3 devices with a battery became a real use case with boards like [Orange Pi One/Lite](http://linux-sunxi.org/Orange_Pi_Lite), NanoPi [NEO and Neo AIR](http://linux-sunxi.org/FriendlyARM_NanoPi_NEO).
 
@@ -10,22 +10,22 @@ When CPU or GPU cores are fully utilized H3 tends to overheat over time like any
 
 You find some [differentiation criteria regarding supported H3 devices as well as an overview/history of H3 software support in our forums](https://forum.armbian.com/topic/1351-h3-board-buyers-guide/) or use Jean-Luc's [nice comparison table](http://www.cnx-software.com/2016/06/08/allwinner-h3-boards-comparison-tables-with-orange-pi-banana-pi-m2-nanopi-p1-and-h3-olinuxino-nano-boards/#comments) (both slightly outdated since more H3 devices have been released in the meantime).
 
-### Kernel support
+## Kernel support
 
 Almost all features of the H3 SoC are supported on Armbian's _current_ branch. Please refer to the [Linux sunxi support sheet](https://linux-sunxi.org/Linux_mainlining_effort).
 
-### Default settings
+## Default settings
 
 - CPU frequency settings are 480 MHz to 1.37 GHz on most boards (cpufreq governor is _interactive_ therefore the boards only increase CPU speed and consumption when needed). Varity might occur due to different voltage regulators and heat dissipation behaviour. Theoretically lower frequencies are possible but disabled by default due to known stability issues.
 - Armbian unlike older/other H3 OS images uses the green led as 'power on' indicator (blinking means 'ready to login' or 'shutting down'), the red led (blue on NanoPis) can be used for your own purpose.
 
-### Tips and tricks (general)
+## Tips and tricks (general)
 
 - An insufficient power supply **is the root cause of many weird symptoms/problems**. Never trust in ratings written on the PSU since they might be wrong, the PSU might be old/dying and cable/contact resistance adds to problems. In other words: Before you blame Armbian for strange behaviour please try at least one second power supply (this applies to both PSU and cable between PSU and board if this is separate -- especially USB cables really suck due to high resistance leading to severe voltage drops).
 - In case you experience instabilities check your SD card using `armbianmonitor -c $HOME` and think about installing [RPi-Monitor for H3](http://www.cnx-software.com/2016/03/17/rpi-monitor-is-a-web-based-remote-monitor-for-arm-development-boards-such-as-raspberry-pi-and-orange-pi/) to get an idea whether you suffer from overheating (`sudo armbianmonitor -r` will install everything needed).
 - Especially for desktop images the speed of your SD card matters. If possible try to use our _nand-sata-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](https://forum.armbian.com/topic/793-moving-to-harddisk/)).
 
-### Tips and tricks (H3 specific / lowering consumption) (outdated)
+## Tips and tricks (H3 specific / lowering consumption) (outdated)
 
 Recent research showed that H3 boards operated as wired IoT nodes need way less power compared to Raspberry Pis in the same situation (ethernet active). If you want to use your H3 device headless (server/IoT) and care about power consumption then there exist a couple of tweaks to get your board being more energy efficient when using in the meantime unsupported 3.x kernel (no tests done yet with up-to-date _legacy_/_current_ kernel):
 

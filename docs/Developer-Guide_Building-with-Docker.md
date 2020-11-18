@@ -1,10 +1,12 @@
-# Officially supported and tested method for building with Docker
+# Building with Docker
+
+## Officially supported and tested method for building with Docker
 
 This method works for building u-boot and kernel packages as well as building full OS images.
 
 Building additional packages (`EXTERNAL_NEW`) is not supported.
 
-## Requirements
+### Requirements
 
 - x86/x64 Linux host that supports running a recent Docker daemon. Refer to [Docker documentation](https://docs.docker.com/) for details.
 - Docker version 17.06 CE or newer. Installation on Ubuntu Bionic:
@@ -17,7 +19,7 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 - Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites,
   refer to Docker documentation for details.
 
-## Details
+### Details
 
 There are 2 options to start build process:
 
@@ -32,7 +34,7 @@ There are 2 options to start build process:
 The process creates and runs a named Docker container `armbian` with two named volumes `armbian-cache` and `armbian-ccache`,
 and mount local directories `output` and `userpatches`.
 
-# Creating and running Docker container manually
+## Creating and running Docker container manually
 
 NOTE: These methods are **not** supported by Armbian developers. Use them at your own risk.
 
