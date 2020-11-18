@@ -1,9 +1,11 @@
+# Recovery
+
 **Important: If you came here since you cannot get Armbian running on your board please keep in mind that in 95 percent of all cases it is either a faulty/fraud/counterfeit [SD card or an insufficient power supply](User-Guide_Basic-Troubleshooting.md) that is causing these sorts of _does not work_ issues!**
 
 The following are presented in (more or less) increasing levels of despair.  But keep heart!  :)  And proceed in order.
 
 
-### U-Boot Shell Access
+## U-Boot Shell Access
 
 If you broke the system you can try to get in this way.  You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard.
 
@@ -52,7 +54,7 @@ root@host:/#
 Now you can try to fix your broken system.
 
 
-### Replacing /boot
+## Replacing /boot
 
 When something goes terribly wrong and you are not able to boot the system (and cannot gain access via u-boot as outlined above), this is the way to proceed.  You will need some Debian based Linux machine where you can mount the failed SD card.  With this procedure you will reinstall the kernel and hardware settings.  In most cases this should be enough to unbrick the board.
 
