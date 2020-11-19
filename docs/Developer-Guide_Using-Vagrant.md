@@ -20,7 +20,7 @@ Now we'll need to [install git](https://git-scm.com/downloads) and clone the Arm
 	git clone --depth 1 https://github.com/armbian/build  
 
 	# Make the Vagrant box available. This might take a while but only needs to be done once.  
-	vagrant box add ubuntu/bionic64  
+	vagrant box add ubuntu/focal64  
 	
 	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.  
 	# This only needs done once and a while.  
