@@ -1,8 +1,10 @@
-# What is Armbian Linux? #
+# Quick Facts
+
+## What is Armbian Linux?
 
 Armbian Linux provides optimized Debian and Ubuntu Linux images for ARM-based SBCs. There is an incredible ecosystem of small computing platforms that are powerful alternatives to the Raspberry Pi. Armbian's mission is to provide a uniform system offering that is trustworthy to run on any of the dozens of OS-neglected ARM single board computers.
 
-# Challenges
+## Challenges
 
 ### Armbian is the opposite of Raspbian
 
@@ -12,11 +14,11 @@ Raspbian has dozens of contributors to focus on a single SBC platform. Armbian h
 
 Given the point above, resources are thin. Armbian developers have to focus on the core mission of maintaining the [Armbian Build Platform](https://github.com/armbian/build). We heavily rely on other members of the community to support each other.  Although Armbian does provide a lot of [user friendly features](https://github.com/armbian/config), the reality is that Armbian is for more advanced users. If you are really struggling with your SBC, you may want to consider first getting more comfortable with Raspbian Linux on the Raspberry Pi.  
 
-## More SBCs continuously coming to market
+### More SBCs continuously coming to market
 
 SBC and TV Box manufacturers love to design and ship new products. Unfortunately they do not like to spend time on software and instead rely on community projects such as Armbian to fill in the gaps.
 
-# Benefits
+## Benefits
 
 ### Simple
 

@@ -1,4 +1,6 @@
-# What do I need?
+# Building Armbian
+
+## What do I need?
 
 - x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
@@ -16,7 +18,7 @@ Not officially supported build environments from community contributions:
 
 Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
 
-# How to start?
+## How to start?
 
 ### Native and VirtualBox environments:
 
@@ -36,7 +38,7 @@ Make sure that full path to the build script **does not contain spaces**.
 
 ![](http://www.armbian.com/wp-content/uploads/2016/01/21.png)
 
-### Providing build configuration
+## Providing build configuration
 
 After the first run of `compile.sh` a new configuration file `config-example.conf` and symlink `config-default.conf` will be created.
 You may edit it to your needs or create different configuration files using it as a template.
@@ -48,7 +50,7 @@ Example:
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 
-## Base and descendant configuration
+### Base and descendant configuration
 
 You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (*BRANCH*, *RELEASE*, *COMPRESS_OUTPUTIMAGE*) will be overwritten.
 
@@ -60,7 +62,7 @@ RELEASE="buster"
 COMPRESS_OUTPUTIMAGE="sha,gz"  
 ```
 
-### Using our automated build system
+## Using our automated build system
 
 If you do not own the proper equipment to build images on your own, you can make use of the automated build system.
 Packages are recompiled every night (starting at 00:01 CEST) and a few testing images are produced.
@@ -113,11 +115,11 @@ or for image with latest upstream development kernel.
 	DESKTOP_BETA_TARGET="buster:dev"
 
 
-### Using alternate armbian builder repos and branches
+## Using alternate armbian builder repos and branches
 
 By default, armbian-builder assumes working from `master` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
 
-### Executing any bash statement
+## Executing any bash statement
 
 Currently, invoking compile.sh will run a monotonous task of building all the components into a final image.
 

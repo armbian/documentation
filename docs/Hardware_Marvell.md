@@ -1,22 +1,22 @@
-# Helios4
+# Marvell Armada
 
-## Overview
+## Helios4
+
+### Overview
 
 All builds provide 100% hardware support for Helios4.
 
-## Build Version Status
+### Build Version Status
 
-### Legacy
+#### Legacy
 
 - U-Boot : Mainline 2019.04
 - Linux Kernel : Mainline 4.19.y
 
-
-### Current
+#### Current
 
 - U-Boot : Mainline 2019.04
 - Linux Kernel : Mainline 5.4.y
-
 
 ### Known Limitations
 
@@ -28,19 +28,19 @@ Can be manually enable, refer to the following [page](https://wiki.kobol.io/sdca
 Temporary workaround : Disable SPI NOR flash.</br>
 Can be manually enable, refer to the following [page](https://wiki.kobol.io/spi).
 
-## Notes
+### Notes
 
 Find more details about hardware support and configuration on [Helios4 Wiki](https://wiki.kobol.io).
 
-# Clearfog Pro/Base
+## Clearfog Pro/Base
 
-## Overview
+### Overview
 
 Both builds provide close to 100% hardware support, some slight differences are listed below.
 
-## Build Version Status
+### Build Version Status
 
-### Legacy/Current
+#### Legacy/Current
 
 - [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
@@ -52,15 +52,15 @@ Both builds provide close to 100% hardware support, some slight differences are 
 - SFP is working at up to 1GB/s even with faster fiber modules
 - SFP DDMI is operational (`sudo ethtool -m eth2`)
 
-#### Bugs or limitation
+### Bugs or limitation
 
 - all builds suffer from minor problems with specific mPCIe combinations. If you run into problems check [this test matrix](https://docs.google.com/spreadsheets/d/1izPD5XUzQC0ZZWb8FMBMkofN73w-m_6bjrtZK-zr_b4) for some known working/not working combinations.
 
-#### Converting mPCIe to mSATA
+### Converting mPCIe to mSATA
 
 - To convert mPCIe to mSATA you have to enable the corresponding patches in [u-boot-mvebu](https://github.com/armbian/build/tree/master/patch/u-boot/u-boot-mvebu). Afterwards rebuild u-boot with our build system and write the new u-boot to your boot medium. If you need assistance ask in the forum.
 
-## Notes
+### Notes
 
 - In case you ever run into troubles and ask for help in the forums please ensure to provide a serial console log (UART adapter on board accessible through Micro USB with 115200/8/N/1 settings)
 - The boards can boot from various sources that are adjustable with a DIP switch. Comprehensive information about the necessary preparations [available here](https://github.com/nightseas/arm_applications/blob/master/doc/getting_started_with_clearfog_base.md).

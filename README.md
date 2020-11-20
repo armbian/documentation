@@ -1,6 +1,6 @@
-# Armbian Documentation #
+# Armbian Documentation
 
-## Overview ##
+## Overview
 
 Documentation is written in [markdown](https://www.markdownguide.org/basic-syntax/) and stored in the `docs/` subfolder.  Images go in `docs/images`.
 
@@ -28,12 +28,12 @@ Current Parent Topics:
 * Release management
 * Community
 
-### .gitignore ###
+## .gitignore
 For easier testing and commits `.gitignore` is configured to ignore `site/`
 
 `mkdocs.yml` should probably be added, but we can commit for now
 
-## Required packages ##
+## Required packages
 
 The documentation build process will require the following packages:
 
@@ -46,9 +46,9 @@ Install these on the development host using:
 `sudo apt-get install -y -qq git python-jinja2 mkdocs`
 
 
-## Tools ##
+## Tools
 
-### mkArmbianDocs.py ###
+### mkArmbianDocs.py
 generates mkdocs.yml file based on contents of `docs/`
 
 * command-line options for input and output directories
@@ -56,19 +56,19 @@ generates mkdocs.yml file based on contents of `docs/`
 * not needed unless making changes to the structure of the documentation
 * see `mkArmbianDocs.py -h` for help
 
-### Missing tools ###
+### Missing tools
 The following capabilities are not yet available:
 
 * html2doc output to PDF user manual
 
-## Generating ##
+## Generating
 From the parent folder of the repo, run:
 
 `tools/mkArmbianDocs.py && mkdocs build`
 
 This will generate the mkdocs.yml configuration file and then generate the mkdocs site to the `site/` folder.
 
-## Testing ##
+## Testing
 To preview locally, execute the preview server: `mkdocs serve`. You will be able to make edits to existing files and observe the results in real time.
 
 After changing text in an existing file, use this command to rebuild and view the documentation:
@@ -77,7 +77,7 @@ After changing text in an existing file, use this command to rebuild and view th
 
 After adding a new file, either hand-edit `mkdocs.yml`, or rerun `tools/mkArmbianDocs.py`.
 
-## Quick Start ##
+## Quick Start
 
 ```bash
 pip install mkdocs

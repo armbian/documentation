@@ -10,15 +10,14 @@ Mentioned links:
 - [https://forum.armbian.com/profile/9032-werner/](https://forum.armbian.com/profile/9032-werner/)  
 - [https://forum.armbian.com/topic/12803-armbian-irc-chat/](https://forum.armbian.com/topic/12803-armbian-irc-chat/)  
 
-
-# Prerequisites for new users
+## Prerequisites for new users
 
 Please, make sure you have:
 
 - a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR **thick** USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
-### What to download?
+## What to download?
 
 The download for each image consists of three separate files:  An **xz-compressed image file**, a **sha file** for download verification and an **asc file** for image authentication.  
 
@@ -76,7 +75,6 @@ It is safe to ignore the message `WARNING: This key is not certified with a trus
 Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. 
 
 On Windows, you can download and use the [QuickHash GUI](https://quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui.
-	
 
 while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
@@ -84,8 +82,7 @@ while on Linux/macOS, in the directory in which you have downloaded the files ,y
 	#good response
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
 
-
-### How to prepare a SD card?
+## How to prepare a SD card?
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](http://oss.digirati.com.br/f3/) or [H2testw](http://www.heise.de/download/h2testw.html) is mandatory if you run in problems. Since [counterfeit SD cards](http://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
@@ -104,11 +101,11 @@ At the time of this writing A1 and A2 cards are only widely available from SanDi
 
 In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/?page=3&tab=comments#comment-49811).
 
-### How to boot?
+## How to boot?
 
 Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.
 
-### How to login?
+## How to login?
 
 Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](http://angryip.org/), to find your board IP address.
 
@@ -122,7 +119,7 @@ Desktop images start into desktop without asking for password. To change this ad
 
 and change the autologin user.
 
-### How to update?
+## How to update?
 
 	apt update
 	apt upgrade
@@ -131,17 +128,17 @@ and change the autologin user.
 
 If the kernel was upgraded during this process you will be prompted to reboot at next login.
 
-### How to update u-boot?
+## How to update u-boot?
 
 First you need to update packages described in a previous "How to update" step. Then run armbian-config utility, go to system settings and proceed to:
 
 **"Install" "Install to/update boot loader"** -> **Install/Update the bootloader on SD/eMMC**
 
-### How to adjust hardware features?
+## How to adjust hardware features?
 
 [Use the Armbian configuration utility `armbian-config`](User-Guide_Armbian-Config.md)
 
-### How to install to eMMC, NAND, SATA & USB?
+## How to install to eMMC, NAND, SATA & USB?
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
@@ -175,7 +172,7 @@ and you can choose the following file system options:
 
 On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?p=13163) for details).
 
-### How to connect to wireless?
+## How to connect to wireless?
 
 Required condition: a board with onboard or supported 3rd party wireless adapter on USB
 
@@ -191,7 +188,7 @@ If you do not know, you can browse and then connect
 
 ![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-2.png)
 
-### How to set fixed IP?
+## How to set fixed IP?
 
 By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
 

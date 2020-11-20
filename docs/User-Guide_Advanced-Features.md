@@ -1,13 +1,15 @@
-### How to switch kernels?
+# Advanced Features
+
+## How to switch kernels?
 
 Check [_this_](http://www.armbian.com/kernel/) for more info.
 
-### How to troubleshoot?
-### How to unbrick the system?
+## How to troubleshoot?
+## How to unbrick the system?
 
 Both of above headings have been moved to a new page and expanded upon: [Recovery](User-Guide_Recovery.md)
 
-### How to build a wireless driver?
+## How to build a wireless driver?
 
 Install and recreate kernel headers scripts (optional)
 
@@ -50,23 +52,7 @@ Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-#### How to freeze your filesystem? (outdated)
-
-In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
-
-You need an ODROID XU4 or Allwinner A10, A20 or H3 board with legacy kernel where we added support for overlayfs. Works only on Ubuntu Xenial. Login as root and execute:
-
-	apt-get install overlayroot
-	echo 'overlayroot="tmpfs"' >> /etc/overlayroot.conf
-	reboot
-
-After your system boots up it will always remain as is. If you want to make any permanent changes, you need to run:
-
-	overlayroot-chroot
-
-Changes inside this will be preserved.
-
-### How to run Docker? 
+## How to run Docker? 
 
 Preinstallation requirements:
 
@@ -116,7 +102,7 @@ docker run -d -p 80:80 hypriot/rpi-busybox-httpd
 
 [More info in this forum topic](https://forum.armbian.com/topic/490-docker-on-armbian/)
 
-# How to set wireless access point?
+## How to set wireless access point?
 
 There are two different HostAP daemons. One is **default** and the other one is for some **Realtek** wifi cards. Both have their own basic configurations and both are patched to gain maximum performances.
 
@@ -140,7 +126,7 @@ Since its hard to define when to use which you always try both combinations in c
 4. Predefined network name: "BOARD NAME" password: 12345678
 5. To change parameters, edit /etc/hostapd.conf BTW: You can get WPAPSK the long blob from wpa_passphrase YOURNAME YOURPASS
 
-# How to connect IR remote?
+## How to connect IR remote?
 
 Required conditions:
 
@@ -166,4 +152,22 @@ And finally start your service when done with learning:
 Test your remote:
 
 	irw /dev/lircd
-****
+
+## Outdated
+
+### How to freeze your filesystem? (outdated)
+
+In certain situations it is desirable to have a virtual read-only root filesystem. This prevents any changes from occurring on the root filesystem that may alter system behavior and it allows a simple reboot to restore a system to its clean state.
+
+You need an ODROID XU4 or Allwinner A10, A20 or H3 board with legacy kernel where we added support for overlayfs. Works only on Ubuntu Xenial. Login as root and execute:
+
+	apt-get install overlayroot
+	echo 'overlayroot="tmpfs"' >> /etc/overlayroot.conf
+	reboot
+
+After your system boots up it will always remain as is. If you want to make any permanent changes, you need to run:
+
+	overlayroot-chroot
+
+Changes inside this will be preserved.
+

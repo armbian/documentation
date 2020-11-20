@@ -1,10 +1,12 @@
-# Allwinner A10 & A20 boards #
+# Allwinner A10 & A20 boards
 
-## Overview ##
+## Overview
 
 Both *legacy* and *current* kernels are stable and production ready and mostly sharing the same features through backports.
 
-##### Kernel 3.4.x has been dropped due to lacking upstream support which has ended in 2017.
+- Note: Kernel 3.4.x has been dropped due to lacking upstream support which has ended in 2017.
+
+### Features
 
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - Bluetooth ready (working with supported external keys)
@@ -23,7 +25,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 - [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - Onboard LED attached to SD card activity (not enabled on all boards yet)
 
-### Bugs or limitation ###
+### Bugs or limitation
 
 - NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
 - Shutdown results into reboot under certain conditions.
@@ -31,7 +33,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
 
 
-## Desktop ##
+## Desktop
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/hsthqj90vTU/0.jpg)](http://www.youtube.com/watch?v=hsthqj90vTU "Armbian Desktop")
 
@@ -41,9 +43,9 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 - Lightweight XFCE desktop
 - Autologin, when normal user is created – no login manager (/etc/default/nodm)
 
-## Notes ##
+## Notes
 
-### Setting non-standard monitor settings for A10, A20 and A31 based boards in u-boot ###
+### Setting non-standard monitor settings for A10, A20 and A31 based boards in u-boot
 
 Following commands (example) needs to be executed in u-boot command prompt:
 ```
@@ -53,6 +55,6 @@ saveenv
 
 Since environment is reset after flashing u-boot, you need to do this after every u-boot upgrade or put this to u-boot script
 
-## Resources ##
+## Resources
 
 [Armbian packages repository](http://www.armbian.com/kernel/)

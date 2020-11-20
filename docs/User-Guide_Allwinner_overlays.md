@@ -10,7 +10,7 @@ Note: from the Linux kernel maintainer perspective all unused in-circuit type in
 
 Note: from the Linux kernel maintainer perspective all dedicated interfaces like USB, Ethernet or analog audio that are wired to soldering pads or a pin headers instead of specialized sockets (like USB socket, Ethernet socket or 3.5mm jack) will be left disabled by default.
 
-### Armbian specific notes
+## Armbian specific notes
 
 - DT overlays are a Work-in-Progress (WIP) feature, present **only in fresh images starting with 5.30**, nightly and user made images
 - For older images (even upgraded to 5.30 or later) manual update of the u-boot and the boot script is required
@@ -18,7 +18,7 @@ Note: from the Linux kernel maintainer perspective all dedicated interfaces like
 
 Please note that different SoCs will have different sets of available overlays.
 
-### Quick start
+## Quick start
 
 1. Check the `README.<soc-id>-overlays` in `/boot/dtb/overlay/` (32-bit SoCs) or `/boot/dtb/allwinner/overlay/` (64-bit SoCs) for a list of provided overlays, their required and optional parameters
 2. Add names of overlays you want to activate to `overlays=` line in `/boot/armbianEnv.txt`, separated with spaces
@@ -27,7 +27,7 @@ Please note that different SoCs will have different sets of available overlays.
 5. If you didn't find the required overlay or want to change one of provided overlays, refer to "Using custom overlays" section
 6. Reboot
 
-### Using custom overlays
+## Using custom overlays
 
 1. Check [here](https://github.com/zador-blood-stained/sunxi-DT-overlays-armbian/tree/master/examples) for some example overlays
 2. Copy or create your overlay file (with `.dts` extension) on the device
@@ -35,14 +35,14 @@ Please note that different SoCs will have different sets of available overlays.
 4. Compile and activate the overlay by running `armbian-add-overlay <overlay_file.dts>` as root, i.e. `sudo armbian-add-overlay sht15.dts`
 5. Reboot
 
-### armbianEnv.txt entries reference
+## armbianEnv.txt entries reference
 
 - `overlay_prefix` - prefix for the DT and overlay file names, set at OS image creation time
 - `overlays` - list of overlays to activate from kernel directory
 - `user_overlays` - list of overlays to activate from `/boot/overlay-user/` directory
 - `param_*` - overlay parameters
 
-### Kernel provided vs user provided overlays
+## Kernel provided vs user provided overlays
 
 Overlays can be loaded from 2 locations:
 
@@ -57,7 +57,7 @@ Main differences between these locations:
 - User provided overlays directory is empty by default and is meant for storing and using user created overlays that are not present in the kernel packages or modified stock overlays
 - User provided overlays are activated by the file name (excluding the extension), i.e. for file `adafruit13m.dtbo` overlay name would be `adafruit13m`
 
-### Activation
+## Activation
 
 DT overlays are activated by editing u-boot environment file `/boot/armbianEnv.txt`
 
@@ -68,7 +68,7 @@ DT overlays are activated by editing u-boot environment file `/boot/armbianEnv.t
 - If activated overlays have parameters marked as "Required", those parameters have to be set to proper values
 - Reboot is required for any changes to take effect
 
-### Overlay parameters
+## Overlay parameters
 
 Some overlays have additional parameters that can be set.
 
@@ -85,45 +85,45 @@ Parameters of type `pin` require special format:
 - Numbers should not contain leading zeros
 - Examples: good - `PA9`, `PG12`; bad - `pa2`, `PG08`
 
-### Overlay bus selection
+## Overlay bus selection
 
 SoCs may contain multiple bus controllers of the same type, i.e. Allwinner H3 contains 2 SPI controllers and Allwinner A20 contains 4 SPI controllers.
 
 Please refer to your board documentation and schematic to determine what pins are wired to the pin headers and thus what bus number should be used in each case.
 
-### Overlay pinmux conflicts
+## Overlay pinmux conflicts
 
 Some controllers may share the SoC pins in some configurations. For example on Allwinner H3 UART 3 and SPI 1 use the same pins - `PA13`, `PA14`, `PA15`, `PA16`.
 In this case activating both UART 3 and SPI 1 would result in a conflict, and on practice only one interface (either SPI or UART) will be accessible on these pins.
 
 Please check the SoC specific README, board schematic, SoC datasheet or other documentation if you are unsure about possible conflicts if activating multiple overlays for the controllers that use shared (muxed) pins.
 
-### Overlay device endpoint conflicts
+## Overlay device endpoint conflicts
 
 Overlays for devices that use addresses or similar mechanisms (i.e. SPI chip selects) can't be activated simultaneously if addresses (chip selects) are identical.
 
 For example A20 SPI controller 1 has only one hardware chip select, so `spi-spidev` and `spi-jedec-nor` overlays cannot be activated both if they would use the same bus number and chip select.
 
-### Overlay compatibility
+## Overlay compatibility
 
 Device Tree overlays for different platforms and SoCs are not directly compatible.
 This, for example, means that overlays for H3 may need some changes to work on A20, and that Raspberry Pi overlays will need adjustments in order to be used on Allwinner based boards.
 
 Rework may include changing labels, references (phandles) and pinconf bindings.
 
-### Notes regarding SPI and I2S overlays
+## Notes regarding SPI and I2S overlays
 
 Activating a device on SPI or I2S bus may require more than one overlay.
 In case a bus overlay like `spi0` or `i2s0` exist for the target SoC they need to be activated in addition to a slave device overlay (provided or custom/user-made).
 Please note that these overlays (`spi0`, `i2s0`) do not enable any slave devices (like spidev or I2S codec).
 
-### Debugging
+## Debugging
 
 As overlays and overlay parameters are applied by the u-boot, it is impossible to get any debugging information (such as error messages) from the OS.
 
 Serial console on UART 0 is **required** to debug DT overlay related problems.
 
-### Example `/boot/armbianEnv.txt` contents:
+## Example `/boot/armbianEnv.txt` contents:
 
 	verbosity=1
 	console=serial
@@ -136,7 +136,7 @@ Serial console on UART 0 is **required** to debug DT overlay related problems.
 	param_uart1_rtscts=1
 	param_spidev_spi_bus=0
 
-##### Example of serial console log when using several overlays:
+## Example of serial console log when using several overlays:
 
 	## Executing script at 43100000
 	U-boot loaded from SD

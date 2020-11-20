@@ -1,4 +1,4 @@
-# Armbian configuration utility #
+# Armbian configuration utility
 
 ![](https://raw.githubusercontent.com/armbian/config/master/images/animated-888.gif)
 
@@ -11,7 +11,7 @@ Is a base utility for configuring your board, divided into four main sections:
 
 The tool needs root privileges to work and can be launched by entering ```sudo armbian-config``` at the terminal prompt or by clicking to the armbian-config menu item on desktop images.
 
-## System ##
+## System
 
 - **I**nstall - installs to SATA, eMMC, NAND or USB. It gives you an option to install the system to more resilient and faster internal or external media. You can also change filesystem type to ext2,3,4 or BTRFS (if supported),
 - **F**reeze - freeze or unfreeze kernel and board support packages, to avoid upgrading,
@@ -29,8 +29,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **M**inimal - install minimal Armbian XFCE powered desktop,
 - **D**efault - install Armbian XFCE powered desktop with web browser and extras.
 
-## Network  ##
-
+## Network
 
 - **I**P - choose to select dynamic or edit static IP address,
 - **H**otspot - create or manage wireless access point. If your wireless adapter is recognized by a kernel, then armbian-config utility auto selects best mode on the selected device. It can detect 802.11n, 802.11a and 802.11ac. It also knows how to handle some special Realtek adapters,
@@ -42,7 +41,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **A**dvanced - edit network config manually,
 - **F**orget - disconnets and clear all wireless connections.
 
-## Personal settings ##
+## Personal settings
 
 - **T**imezone - change timezone,
 - **L**ocales - reconfigure language and character set,
@@ -51,7 +50,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **M**irror - change to backup APT repository mirror in case of troubles,
 - **W**elcome - toggle welcome screen items.
 
-## Software ##
+## Software
 
 Software installation menu provides automated install of the following packages.
 
@@ -75,7 +74,6 @@ Software installation menu provides automated install of the following packages.
 - **D**iagnostics = create a summary of logs and upload them to paste.bin
 - **T**oggle kernel headers, RDP service, Thunderbird and Libreoffice (desktop builds)
 
-
-## Sources ##
+## Sources
 
 [https://github.com/armbian/config](https://github.com/armbian/config)
