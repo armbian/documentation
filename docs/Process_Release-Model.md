@@ -37,10 +37,11 @@ Tags are used in ad-hoc manner.
 | 20.02 | Chiru | February| [done](https://armbian.atlassian.net/projects/AR/versions/10001/tab/release-report-all-issues)
 | 20.05 | Kagu | May | [done](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
 | 20.08 | Caple | August| [done](https://armbian.atlassian.net/projects/AR/versions/10003/tab/release-report-all-issues)
-| 20.11 | Tamandua | November | planned
+| 20.11 | Tamandua | November | [done](https://armbian.atlassian.net/projects/AR/versions/10004/tab/release-report-in-progress)
 | 21.02 | Urubu | January | planned
+| 21.05 | Jerboa | May | planned
  
- by http://www.codenamegenerator.com/
+ by http://www.codenamegenerator.com/ from unusual animals
 
 ## Release Planning
 
@@ -50,7 +51,11 @@ Dates for **2020**:
 
  * [April 4th](https://freenode.irclog.whitequark.org/armbian/2020-04-04)
  * [July 4th](https://freenode.irclog.whitequark.org/armbian/2020-07-04)
- * October 3rd
+ * [October 3rd](https://freenode.irclog.whitequark.org/armbian/2020-10-03)
+ 
+ Dates for **2021**: 
+ 
+ * January 2nd
 
 ### Agenda:
 
