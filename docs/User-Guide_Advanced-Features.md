@@ -2,7 +2,7 @@
 
 ## How to switch kernels?
 
-Check [_this_](http://www.armbian.com/kernel/) for more info.
+Check [_this_](https://www.armbian.com/kernel/) for more info.
 
 ## How to troubleshoot?
 ## How to unbrick the system?
@@ -133,7 +133,7 @@ Required conditions:
 - IR hardware
 - loaded driver
 
-Get your [remote configuration](http://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](http://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands). You are going to need the list of all possible commands which you can map to your IR remote keys:
+Get your [remote configuration](https://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](https://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands). You are going to need the list of all possible commands which you can map to your IR remote keys:
 
 	irrecord --list-namespace
 

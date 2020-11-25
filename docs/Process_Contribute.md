@@ -28,6 +28,6 @@ Armbian-config tool:
 
 If you find our project useful, then we’d really appreciate it if you’d consider contributing to the project however you can. Donating is the easiest way to help us – you can use PayPal and Bitcoin or you can buy us something from our Amazon.de wish list.
 
-[http://www.armbian.com/donate/](http://www.armbian.com/donate/)
+[https://www.armbian.com/donate/](https://www.armbian.com/donate/)
 
 Thanks!

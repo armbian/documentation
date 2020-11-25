@@ -36,7 +36,7 @@ Run the script
 
 Make sure that full path to the build script **does not contain spaces**.
 
-![](http://www.armbian.com/wp-content/uploads/2016/01/21.png)
+![](https://www.armbian.com/wp-content/uploads/2016/01/21.png)
 
 ## Providing build configuration
 
@@ -89,10 +89,10 @@ This is a typical board configuration:
 	DESKTOP_BETA_TARGET=""  
 	#  
 	BOARDRATING=""  
-	CHIP="http://docs.armbian.com/Hardware_Allwinner-A20/"  
+	CHIP="https://docs.armbian.com/Hardware_Allwinner-A20/"  
 	HARDWARE="https://linux-sunxi.org/Banana_Pi"  
 	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"  
-	BUY="http://amzn.to/2fToHjR"  
+	BUY="https://amzn.to/2fToHjR"  
 ```
 
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).

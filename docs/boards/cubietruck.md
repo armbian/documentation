@@ -1,6 +1,6 @@
 - [PWM ready](https://github.com/dwilkins/pwm-sunxi) on pin PB2 (legacy)
 - bluetooth working with on-board device. Enabled by default on both kernels.
 - total memory is 2000Mb (disabled all memory reservations for GPU on CLI images)
-- due to bad PCB placement, there is [some crosstalk between Wifi and VGA in certain videomodes](http://linux-sunxi.org/Cubietruck#VGA)
+- due to bad PCB placement, there is [some crosstalk between Wifi and VGA in certain videomodes](https://linux-sunxi.org/Cubietruck#VGA)
 - make sure you power the board via power connector otherwise your USB port won’t be powered
-- Our OS images are only for A20 based Cubietruck and do not work on H8 based so called [Cubietruck Plus](http://linux-sunxi.org/Cubietech_Cubietruck_Plus) (we don't support CT+ anytime soon due too some design flaws like no real SATA and thermal problems) 
+- Our OS images are only for A20 based Cubietruck and do not work on H8 based so called [Cubietruck Plus](https://linux-sunxi.org/Cubietech_Cubietruck_Plus) (we don't support CT+ anytime soon due too some design flaws like no real SATA and thermal problems) 

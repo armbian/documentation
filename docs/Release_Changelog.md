@@ -1200,7 +1200,7 @@ Known problems:
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
-- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
+- patched [Dirty COW exploit](https://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
 - added Odroid XU4 mainline kernel image
 - added Olimex A33 mainline kernel image
 - added Overlay FS for Cubox, Udoo and Udoo Neo
@@ -1446,7 +1446,7 @@ Known bugs:
 **v5.00 / 12.2.2016**
 
 - mainline kernel for Allwinner based boards upgraded to 4.4.1
-- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](http://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
+- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](https://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
 - firstrun does autoreboot only if needed: wheezy and some legacy kernels.

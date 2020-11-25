@@ -42,13 +42,13 @@ Both builds provide close to 100% hardware support, some slight differences are 
 
 #### Legacy/Current
 
-- [Mainline kernel](http://www.kernel.org/) with large hardware support, headers and some firmware included
+- [Mainline kernel](https://www.kernel.org/) with large hardware support, headers and some firmware included
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
 - Both mPCIe are operational and [convertible to mSATA](#converting-mpcie-to-msata), M2 operational
 - Added patch to unlock Atheros regulatory restrictions which unlock 5Ghz AP mode in cheap Atheros cards (ath9 driver)
 - Bluetooth ready (working with supported external keys)
-- [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
-- [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) ready. Basic i2c tools included.
+- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) ready but untested.
 - SFP is working at up to 1GB/s even with faster fiber modules
 - SFP DDMI is operational (`sudo ethtool -m eth2`)
 

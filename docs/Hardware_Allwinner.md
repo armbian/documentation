@@ -73,16 +73,16 @@ I tried three different display connection types: I2C, (4bit) parallel and SPI. 
 
 I2C
 
-![](http://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-i2c-display1.jpg)
+![](https://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-i2c-display1.jpg)
 
 I am using [this code](https://github.com/vvromanov/cb_i2c_lcd) for mainline kernel and with [changed line](https://github.com/vvromanov/cb_i2c_lcd/blob/master/i2c_lcd.c#L28): /dev/i2c-%u = /dev/i2c-2 for Legacy kernel.
 
 SPI
 
-![](http://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-spi-display.jpg)
+![](https://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-spi-display.jpg)
 
-- I am using [2.4″ 240×320 SPI TFT LCD Serial Port Module+5/3.3V Pbc Adapter Micro SD ILI9341](http://www.google.com/search?q=2.4%E2%80%B3+240%C3%97320+SPI+TFT+LCD+Serial+Port+Module%2B5%2F3.3V+Pbc+Adapter+Micro+SD+ILI9341&oq=2.4%E2%80%B3+240%C3%97320+SPI+TFT+LCD+Serial+Port+Module%2B5%2F3.3V+Pbc+Adapter+Micro+SD+ILI9341)
-- Wire according to [this map](http://blog.riyas.org/2014/07/quickly-test-il9341-22-inch-22-spi-tft-raspbmc-fbtft.html).
+- I am using [2.4″ 240×320 SPI TFT LCD Serial Port Module+5/3.3V Pbc Adapter Micro SD ILI9341](https://www.google.com/search?q=2.4%E2%80%B3+240%C3%97320+SPI+TFT+LCD+Serial+Port+Module%2B5%2F3.3V+Pbc+Adapter+Micro+SD+ILI9341&oq=2.4%E2%80%B3+240%C3%97320+SPI+TFT+LCD+Serial+Port+Module%2B5%2F3.3V+Pbc+Adapter+Micro+SD+ILI9341)
+- Wire according to [this map](https://blog.riyas.org/2014/07/quickly-test-il9341-22-inch-22-spi-tft-raspbmc-fbtft.html).
 - You have to use Armbian 1.5 or newer. Currently working only under Legacy kernel.
 - Add this to your /etc/modules:
 `fbtft_device name=adafruit22a rotate=90 speed=48000000 fps=50 gpios=reset:25,led:19,dc:24`
@@ -92,7 +92,7 @@ SPI
 - [Troubleshooting and settings for other displays
 LVDS](https://github.com/notro/fbtft/wiki)
 
-![](http://www.armbian.com/wp-content/uploads/2015/09/lvdsbanana.png)
+![](https://www.armbian.com/wp-content/uploads/2015/09/lvdsbanana.png)
 
 Currently working only under Legacy kernel.
 

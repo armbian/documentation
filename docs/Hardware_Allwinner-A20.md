@@ -11,23 +11,23 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - Bluetooth ready (working with supported external keys)
 - [Enabled overlayfs](User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
-- [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - SPI ready and tested with ILI9341 based 2.4″ TFT LCD display.
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
-- [Clustering / stacking](http://en.wikipedia.org/wiki/Cluster_(computing))
+- [Clustering / stacking](https://en.wikipedia.org/wiki/Cluster_(computing))
 - Onboard LED attached to SD card activity (script.bin)
 - [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
 - Enabled audio devices: analog, SPDIF (if available) & USB
-- [USB / UAS](http://linux-sunxi.org/USB/UAS) – more efficient disk access over USB (A20 and H3)
+- [USB / UAS](https://linux-sunxi.org/USB/UAS) – more efficient disk access over USB (A20 and H3)
 - [CAN bus](https://en.wikipedia.org/wiki/CAN_bus) – Controller Area Network
-- [USB OTG connector](http://linux-sunxi.org/USB_Gadget) – OTG or host mode
+- [USB OTG connector](https://linux-sunxi.org/USB_Gadget) – OTG or host mode
 - Bluetooth ready (working with supported external keys)
-- [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - Onboard LED attached to SD card activity (not enabled on all boards yet)
 
 ### Bugs or limitation
 
-- NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
+- NAND install sometime fails. Workaround: install [Lubuntu to NAND](https://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
 - Shutdown results into reboot under certain conditions.
 - SATA port multiplier support is disabled by default, can be enabled by adding kernel parameter `ahci_sunxi.enable_pmp=1`
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
@@ -35,7 +35,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 
 ## Desktop
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/hsthqj90vTU/0.jpg)](http://www.youtube.com/watch?v=hsthqj90vTU "Armbian Desktop")
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/hsthqj90vTU/0.jpg)](https://www.youtube.com/watch?v=hsthqj90vTU "Armbian Desktop")
 
 - HW accelerated video playback (if available)
 - MALI Open GLES (if available)
@@ -57,4 +57,4 @@ Since environment is reset after flashing u-boot, you need to do this after ever
 
 ## Resources
 
-[Armbian packages repository](http://www.armbian.com/kernel/)
+[Armbian packages repository](https://www.armbian.com/kernel/)
