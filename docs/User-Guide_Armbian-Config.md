@@ -63,7 +63,7 @@ Software installation menu provides automated install of the following packages.
 	- [Sonarr](https://sonarr.tv/) *(TV shows downloading server)*
 	- [Transmission](https://transmissionbt.com/) *(torrent server)*
 	- [ISPConfig](https://www.ispconfig.org/) *(WEB & MAIL server)*
-	- [NCP](https://nextcloudpi.com) *(Nextcloud personal cloud)*
+	- [NCP](https://ownyourbits.com/nextcloudpi/) *(Nextcloud personal cloud)*
 	- [Openmediavault NAS](https://www.openmediavault.org/) *(NAS server)*
 	- [PI hole](https://pi-hole.net) *(ad blocker)*
 	- [UrBackup](https://www.urbackup.org/) *(client/server backup system)*

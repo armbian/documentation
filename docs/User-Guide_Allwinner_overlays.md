@@ -29,7 +29,7 @@ Please note that different SoCs will have different sets of available overlays.
 
 ## Using custom overlays
 
-1. Check [here](https://github.com/zador-blood-stained/sunxi-DT-overlays-armbian/tree/master/examples) for some example overlays
+1. Check [here](https://github.com/armbian/sunxi-DT-overlays/tree/master/examples) for some example overlays
 2. Copy or create your overlay file (with `.dts` extension) on the device
 3. Change I2C or SPI bus number, GPIO and pinctrl pins, `compatible` string to match your SoC if necessary
 4. Compile and activate the overlay by running `armbian-add-overlay <overlay_file.dts>` as root, i.e. `sudo armbian-add-overlay sht15.dts`

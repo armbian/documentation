@@ -4,7 +4,7 @@
 System images with legacy kernel
 
 - Kernel [3.14.x](https://github.com/linux4kix/linux-linaro-stable-mx6) with large hardware support, headers and some firmware included
-- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/why-docker)?
 - PCI-E operational (Hummingboard Pro, Gate & Edge)
 - mSATA / m2 operational (Hummingboard Pro & Edge)
 - Enabled audio devices: HDMI, spdif, analogue
@@ -22,7 +22,7 @@ System images with legacy kernel
 System images with mainline kernel
 
 - [Mainline](https://www.kernel.org/) with large hardware support, headers and some firmware included
-- [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](/User-Guide_Advanced-Features/#how-to-run-docker) – [what is Docker](https://www.docker.com/what-docker)?
 - PCI-E operational (Hummingboard Pro, Gate & Edge)
 - mSATA / m2 operational (Hummingboard Pro & Edge)
 - Enabled audio devices

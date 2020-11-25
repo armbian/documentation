@@ -47,7 +47,9 @@ Because kernel and .bin/.dtb file are loaded from rootfs each time, it's possibl
 
 ## Advanced configuration
 
-If you don't have DHCP server in your local network or if you need to alter kernel command line, use `lib/scripts/fel-boot.cmd.template` as a template and save modified script as `userpatches/fel-boot.cmd`. Check [this](https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/plain/Documentation/filesystems/nfs/nfsroot.txt) for configuring static IP for NFS root
+If you don't have DHCP server in your local network or if you need to alter kernel command line, use `lib/scripts/fel-boot.cmd.template` as a template and save modified script as `userpatches/fel-boot.cmd`. Check [this](https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/plain/Documentation/filesystems/nfs/nfsroot.txt) for configuring static IP for NFS root.
+
+- Note: As of 2020-11-25, the above link is broken.  However I am not sure what to replace it with.  If you know (or find out) please [submit a PR](/Process_Contribute/).  - TRS-80
 
 Set `FEL_DTB_FILE` to relative path to .dtb or .bin file if it can't be obtained from u-boot config (mainline kernel) or boot/script.bin (legacy kernel)
 

@@ -10,13 +10,13 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - Bluetooth ready (working with supported external keys)
-- [Enabled overlayfs](User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
+- [Enabled overlayfs](/User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
 - [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - SPI ready and tested with ILI9341 based 2.4″ TFT LCD display.
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
 - [Clustering / stacking](https://en.wikipedia.org/wiki/Cluster_(computing))
 - Onboard LED attached to SD card activity (script.bin)
-- [Docker ready](User-Guide_Advanced-Features/#how-to-run-docker)
+- [Docker ready](/User-Guide_Advanced-Features/#how-to-run-docker)
 - Enabled audio devices: analog, SPDIF (if available) & USB
 - [USB / UAS](https://linux-sunxi.org/USB/UAS) – more efficient disk access over USB (A20 and H3)
 - [CAN bus](https://en.wikipedia.org/wiki/CAN_bus) – Controller Area Network

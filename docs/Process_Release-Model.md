@@ -136,8 +136,8 @@ Testing Tracking Sheet: https://example.com/link  (google sheets)
 
 The goal of this thread is to discuss testing, bugfixes, and the overall quality of the release.  Once the release is complete, this thread should be locked and unpinned. 
 ```
-- Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](https://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?do=findComment&comment=93245)
-- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](https:///github.com/armbian/autotests)
+- Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](https://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?tab=comments#comment-93245)
+- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](https://github.com/armbian/autotests)
 
 ### 2. Release Candidate Branch Management
 
@@ -164,7 +164,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 ## Release Testing
 
-See [Opportunties for improvement](#Opportunities_for_Improvement)
+See [Opportunties for improvement](#opportunities-for-improvement)
 
 ## Reflection on Prior Releases
 

@@ -69,15 +69,15 @@ Parameters regarding video must be saved into U-Boot environment file since they
 
 ### Connect your LCD display
 
-I tried three different display connection types: I2C, (4bit) parallel and SPI. All of them are working perfectly with my image. I didn’t took a picture of the third one. It’s a standard Hitachi HD44780 based 20×4 LCD, wired and tested [according to Wiring(B)PI example](https://github.com/LeMaker/WiringBPi).
+I tried three different display connection types: I2C, (4bit) parallel and SPI. All of them are working perfectly with my image. I didn’t took a picture of the third one. It’s a standard Hitachi HD44780 based 20×4 LCD, wired and tested [according to wiringBP example](https://github.com/LeMaker/WiringBP).
 
-I2C
+#### I2C
 
 ![](https://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-i2c-display1.jpg)
 
 I am using [this code](https://github.com/vvromanov/cb_i2c_lcd) for mainline kernel and with [changed line](https://github.com/vvromanov/cb_i2c_lcd/blob/master/i2c_lcd.c#L28): /dev/i2c-%u = /dev/i2c-2 for Legacy kernel.
 
-SPI
+#### SPI
 
 ![](https://www.igorpecovnik.com/wp-content/uploads/2014/09/banana-spi-display.jpg)
 
@@ -89,10 +89,13 @@ SPI
 - Reboot
 - Test – display some picture on the screen:
 `fbi -d /dev/fb2 -T 1 -noverbose -a yourimage.jpg`
-- [Troubleshooting and settings for other displays
-LVDS](https://github.com/notro/fbtft/wiki)
 
-![](https://www.armbian.com/wp-content/uploads/2015/09/lvdsbanana.png)
+#### LVDS
+
+<!---
+2020-11-25 link broken, but I did not want to remove fully -TRS-80
+![](https://www.armbian.com/wp-content/uploads/2015/09/lvdsbanana.jpg)
+-->
 
 Currently working only under Legacy kernel.
 
@@ -109,6 +112,10 @@ To enable 5 inch.
 If you need touch screen support, add this module to your /etc/modules
 
 `ft5x_ts`
+
+#### Framebuffer
+
+[Linux Framebuffer drivers for small TFT LCD display modules.](https://github.com/notro/fbtft/wiki)
 
 ## FEX (outdated/unsupported, informational only)
 
