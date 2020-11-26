@@ -20,14 +20,14 @@ markdown_extensions:
 
 plugins:
     - search:
-    # - with-pdf:
-    #     author: Armbian documentation team
-    #     copyright: 2020 by Armbian
-    #     #
-    #     #cover: false
-    #     cover_title: Armbian documentation
-    #     cover_subtitle: Linux for ARM development boards
-    #     #heading_shift: false
+    - with-pdf:
+        author: Armbian documentation team
+        copyright: 2020 by Armbian
+        #
+        #cover: false
+        cover_title: Armbian documentation
+        cover_subtitle: Linux for ARM development boards
+        #heading_shift: false
         #toc_level: 3
         #ordered_chapter_level: 2
         #excludes_children:
