@@ -26,6 +26,6 @@ Optional Bullet Points for Clarity:
 
 ## Resources ##
 
-[hyperlink to code](http://example.com)
-[hyperlink to other documentation](http://example.com)
-[hyperlink to discussion](http://example.com)
+[hyperlink to code](https://example.com)
+[hyperlink to other documentation](https://example.com)
+[hyperlink to discussion](https://example.com)

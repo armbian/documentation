@@ -1,4 +1,4 @@
-[![](images/logo_middle.png)](http://www.armbian.com)
+[![](images/logo_middle.png)](https://www.armbian.com)
 
 Linux for ARM development boards
 
@@ -11,7 +11,7 @@ It then continues on to more advanced topics.
 
 If you **need help** and have read through _Getting Started_ check out [_Troubleshooting_](User-Guide_Advanced-Features.md#how-to-troubleshoot).
 
-If you still cannot find what you need here visit the [_Armbian forum_](http://forum.armbian.com/) where your input can help to improve this documentation.
+If you still cannot find what you need here visit the [_Armbian forum_](https://forum.armbian.com/) where your input can help to improve this documentation.
 
 ## What is Armbian?
 
@@ -86,11 +86,11 @@ If you still cannot find what you need here visit the [_Armbian forum_](http://f
 
 ### Supported boards
 
-Check [download page](http://www.armbian.com/download/) for recently supported list.
+Check [download page](https://www.armbian.com/download/) for recently supported list.
 # Get Involved! #
 
-* [Contribute](Process_Contribute)
-* [Community](http://forum.armbian.com)
-* [Contact](http://www.armbian.com/contact/)
+* [Contribute](Process_Contribute/)
+* [Community](https://forum.armbian.com/)
+* [Contact](https://www.armbian.com/contact/)
 
 Our IRC channel is [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). More details [here](https://docs.armbian.com/Community_IRC/)

@@ -8,7 +8,7 @@ The following steps are performed on the *host* that runs Vagrant.
 
 #### Virtualbox Version
 
-**WARNING:** We'll be using [Virtualbox as a virtualization provider for Vagrant](https://www.vagrantup.com/docs/virtualbox/). Virtualbox has [documented issues running Xenial under heavy disk IO](https://bugs.launchpad.net/cloud-images/+bug/1616794). Please make sure your version of Virtualbox is >= 5.1.12 where the issue, ["Storage: fixed a problem with the LsiLogic SCSI controller where requests could be lost with SMP guests"](https://www.virtualbox.org/wiki/Changelog), appears to have been resolved.
+**WARNING:** We'll be using [Virtualbox as a virtualization provider for Vagrant](https://www.vagrantup.com/docs/providers/virtualbox/). Virtualbox has [documented issues running Xenial under heavy disk IO](https://bugs.launchpad.net/cloud-images/+bug/1616794). Please make sure your version of Virtualbox is >= 5.1.12 where the issue, ["Storage: fixed a problem with the LsiLogic SCSI controller where requests could be lost with SMP guests"](https://www.virtualbox.org/wiki/Changelog), appears to have been resolved.
 
 First, you'll need to [install Vagrant](https://www.vagrantup.com/downloads.html) on your host box. Next, you'll need to install a plug-in that will enable us to resize the primary storage device. Without it, the default Vagrant images are too small to build Armbian.
 

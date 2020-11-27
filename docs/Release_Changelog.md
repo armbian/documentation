@@ -955,7 +955,7 @@ Known bugs:
 **v5.54 / 25.7.2018**
 
 - updated images for Odroid C2, Nanopi M3, Nanopi Fire 3 and NanoPC T3+, Espressobin, Cubox-i/HB and Le potato
-- added preview images without end user support for [Bananapi M3](https://dl.armbian.com/bananapim3/),[Cubietruck+](https://dl.armbian.com/cubietruckplus/) and [Bananapi M2 Berry](https://dl.armbian.com/bananapim2ultra/).
+- added preview images without end user support for [Bananapi M3](https://www.armbian.com/bananapi-m3/),Cubietruck+ and [Bananapi M2 Berry](https://www.armbian.com/bananapi-m2u/).
 
 **v5.53 / 23.7.2018**
 
@@ -1200,7 +1200,7 @@ Known problems:
 
 - fixed eMMC install on Odroid C2
 - firmware package was splitted into minimal (default) and full versions
-- patched [Dirty COW exploit](http://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
+- patched [Dirty COW exploit](https://thehackernews.com/2016/10/linux-kernel-exploit.html) on all kernels
 - added Odroid XU4 mainline kernel image
 - added Olimex A33 mainline kernel image
 - added Overlay FS for Cubox, Udoo and Udoo Neo
@@ -1248,7 +1248,7 @@ Desktop images:
 
 - WICD was replaced with NetworkManager
 - ALSA was replaced with PulseAudio
-- sunxi boards: [GLshim](https://github.com/ptitSeb/glshim) was added to desktop images with Mali support (except for Orange Pi Plus and Orange Pi Plus 2e)
+- sunxi boards: [GLshim](https://github.com/ptitSeb/gl4es) was added to desktop images with Mali support (except for Orange Pi Plus and Orange Pi Plus 2e)
 - sunxi boards: prebuilt mpv now supports OSD and subtitles, activated by setting environment variable `VDPAU_OSD=1`
 
 Build script:
@@ -1331,24 +1331,24 @@ Images:
 
 - all 3.10+ kernels [are Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/)
 - all A10/A20/H3 comes with HW accelerated video playback in desktop build
-- [fixed root exploit on H3 boards](https://github.com/igorpecovnik/lib/issues/282)
-- [fixed kswapd 100% bug on H3 boards](https://github.com/igorpecovnik/lib/issues/219)
+- [fixed root exploit on H3 boards](https://github.com/armbian/build/issues/282)
+- [fixed kswapd 100% bug on H3 boards](https://github.com/armbian/build/issues/219)
 - fixed SPDIF / I2S audio driver in legacy kernel
 - fixed Udoo Neo wireless
 - fixed slow SD cards boot
 - fixed Allwinner SS driver
 - fixed bluetooth on Cubietruck, both kernels
 - fixed wireless driver on H3 boards
-- [fixed R1 switch driver](https://github.com/igorpecovnik/lib/commit/94194dc06529529015bfd04767865bbd04d29d9b)
+- [fixed R1 switch driver](https://github.com/armbian/build/commit/94194dc06529529015bfd04767865bbd04d29d9b)
 - kernel for Allwinner boards was upgraded to 3.4.112 & 4.5.2
 - kernel for iMx6 boards was upgraded to 3.14.67 & 4.5.2
 - kernel for Armada (Clearfog) was upgraded to 3.10.101 & 4.5.2
 - kernel for Udoo boards was updated to 3.14.67 & 4.4.8
 - kernel for Guitar (Lemaker) was upgraded to 3.10.101
 - kernel for H3/sun8i legacy come from new Allwinner updated source (friendlyarm)
-- [added support for Olimex Lime2 eMMC](https://github.com/igorpecovnik/lib/issues/258)
-- [increased MALI clockspeed on sun8i/legacy](https://github.com/igorpecovnik/lib/issues/265)
-- added [Armbianmonitor](https://forum.armbian.com/topic/881-prepare-v51-v201604/?p=7095)
+- [added support for Olimex Lime2 eMMC](https://github.com/armbian/build/issues/258)
+- [increased MALI clockspeed on sun8i/legacy](https://github.com/armbian/build/issues/265)
+- added [Armbianmonitor](https://forum.armbian.com/topic/881-prepare-v51-v201604/?tab=comments#comment-7095)
 - added Odroid C1, C2(arm64), Nanopi M1, Banana M2+, Pcduino 2 and Pcduino 3. CLI and desktop
 - added wifi radar to desktop
 - added preview mainline kernel images for H3 boards (4.6.RC1)
@@ -1414,8 +1414,8 @@ Known bugs:
 
 - HDMI/DVI works (bug in boot.cmd settings)
 - Reboot issues fixed (bug in fex settings)
-- 1-Wire useable (we chose to stay compatible to loboris' images so the data pin is 37 by default. You're able to change this in the [fex file](https://github.com/igorpecovnik/lib/blob/6d995e31583e5361c758b401ea44634d406ac3da/config/orangepiplus.fex#L1284-L1286))
-- changing display resolution and choosing between HDMI and DVI is now possible with the included _h3disp_ tool (should also work in the [stand-alone version](https://forum.armbian.com/topic/617-wip-orange-pi-one-support-for-the-upcoming-orange-pi-one/?p=5480) with Debian based OS images from loboris/Xunlong). Use `sudo h3disp` in a terminal to get the idea.
+- 1-Wire useable (we chose to stay compatible to loboris' images so the data pin is 37 by default. You're able to change this in the [fex file](https://github.com/armbian/build/blob/6d995e31583e5361c758b401ea44634d406ac3da/config/orangepiplus.fex#L1284-L1286))
+- changing display resolution and choosing between HDMI and DVI is now possible with the included _h3disp_ tool (should also work in the [stand-alone version](https://forum.armbian.com/topic/617-wip-orange-pi-one-support-for-the-upcoming-orange-pi-one/page/6/?tab=comments#comment-5480) with Debian based OS images from loboris/Xunlong). Use `sudo h3disp` in a terminal to get the idea.
 - Ethernet issues fixed (combination of kernel and fex fixes)
 - USB-to-SATA bridge on the Orange Pi Plus works
 - stability problems on Orange Pi One fixed (due to undervoltage based on wrong fex settings)
@@ -1441,16 +1441,16 @@ Known bugs:
 **v5.01 / 17.2.2016**
 
 - Bugfix update for [Allwinner boards](https://forum.armbian.com/topic/691-banana-pro-testers-wanted-sata-drive-not-working-on-some-boards/)
-- Update [for H3 based boards](https://github.com/igorpecovnik/lib/commit/c93d7dfb3538c36739fb8841bd314d75e7d7cbe5)
+- Update [for H3 based boards](https://github.com/armbian/build/commit/c93d7dfb3538c36739fb8841bd314d75e7d7cbe5)
 
 **v5.00 / 12.2.2016**
 
 - mainline kernel for Allwinner based boards upgraded to 4.4.1
-- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](http://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
+- Allwinner audio driver playback and capture on kernel 4.4.1, [UAS](https://linux-sunxi.org/USB/UAS), USB OTG, battery readings,
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
 - firstrun does autoreboot only if needed: wheezy and some legacy kernels.
-- [added motd](https://forum.armbian.com/topic/602-new-motd-for-ubuntudebian/#entry4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
+- [added motd](https://forum.armbian.com/topic/602-new-motd-for-ubuntudebian/?do=findComment&comment=4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
 - fixed temperature reading on Cubox / Hummingboard legacy kernel
 - fixed FB turbo building on Allwinner
 - fixed NAND install on A10 boards (Legacy kernel only)
@@ -1458,7 +1458,7 @@ Known bugs:
 - fixed Banana PRO/+ onboard wireless on mainline kernel - running with normal Banana DT.
 - readded USB sound
 - added [A13 Olimex SOM](https://www.olimex.com/Products/SOM/A13/A13-SOM-512/)
-- added [LIRC GPIO receive and send driver](https://github.com/igorpecovnik/lib/issues/135) for legacy Allwinner
+- added [LIRC GPIO receive and send driver](https://github.com/armbian/build/issues/135) for legacy Allwinner
 - added LED MMC activity to mainline kernels for Cubietruck and Cubieboard A10
 - build script: option to build images with F2FS root filesystem for Allwinner boards
 - build script: added alternative kernel for Lemaker Guitar (NEXT), Cubox (DEV)

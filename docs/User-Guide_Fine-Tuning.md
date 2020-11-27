@@ -88,11 +88,11 @@ This is useful when you need to fall back to previous kernel version.
 
 	apt install linux-image-sun8i=5.13
 
-This example is for H3 legacy kernel. Check [this page](http://www.armbian.com/kernel/) for others.
+This example is for H3 legacy kernel. Check [this page](https://www.armbian.com/kernel/) for others.
 
 ## How to toggle boot output?
 
-Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
+Edit and change [boot parameters](https://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
 
     - console=both
     + console=serial
@@ -119,7 +119,7 @@ Copy and past URL of your log to the forum, mail, ...
 
 ## How to change network configuration?
 
-To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found [here](http://forum.odroid.com/viewtopic.php?f=52&t=25472&)). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:
+To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found [here](https://forum.odroid.com/viewtopic.php?f=52&t=25472&)). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:
 
 	/etc/network/interfaces.bonding
 	/etc/network/interfaces.default

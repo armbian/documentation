@@ -21,4 +21,4 @@ Icenowy is working on a wrapper to make PCIe work. Check [forums](https://forum.
 
 ## Networking
 
-Trouble getting ethernet connection? Check [here](https://forum.armbian.com/topic/9368-orangepi-3-h6-allwiner-chip/?do=findComment&comment=105682)
+Trouble getting ethernet connection? Check [here](https://forum.armbian.com/topic/9368-orangepi-3-h6-allwiner-chip/page/32/?tab=comments#comment-105682)

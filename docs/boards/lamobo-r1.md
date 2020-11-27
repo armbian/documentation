@@ -1,4 +1,4 @@
 - total memory is 1000Mb (disabled all memory reservations for GPU)
-- drivers for [LVDS LCD display modules](http://www.lenovator.com/7-inch-LCD) are added. TS module: ft5x_ts, added configuration for 7″ – [other sizes](https://github.com/LeMaker/fex_configuration/tree/master/fex).
+- drivers for [LVDS LCD display modules](https://www.lenovator.com/7-inch-LCD) are added. TS module: ft5x_ts, added configuration for 7″ – [other sizes](https://github.com/LeMaker/fex_configuration/tree/master/fex).
 - legacy kernel: BCM53125 switch configured as follows – looking at front of ports: |2|1|0|4|(LAN=manual) |3|(WAN=dhcp and bridged to enabled wireless adapter in (theoretical) high throughput mode with SSID lamobo and password 12345678
 - mainline kernel: please check the "Known issues" tab.

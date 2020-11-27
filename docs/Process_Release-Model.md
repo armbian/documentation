@@ -41,7 +41,7 @@ Tags are used in ad-hoc manner.
 | 21.02 | Urubu | January | planned
 | 21.05 | Jerboa | May | planned
  
- by http://www.codenamegenerator.com/ from unusual animals
+ by https://www.codenamegenerator.com/ from unusual animals
 
 ## Release Planning
 
@@ -121,7 +121,7 @@ A release starts as a RC Branch cut from master at freeze time.  Once a RC Branc
 
 ### 1. Forum Communication
 
-- Create a new thread in the [Armbian Build Framework Subforum](http://forum.armbian.com/forum/12-armbian-build-framework/)
+- Create a new thread in the [Armbian Build Framework Subforum](https://forum.armbian.com/forum/12-armbian-build-framework/)
   - Ex topic name: `Ambian 20.02 (Chiru) Release Thread`
 - Tag the post with relase, release version, and codename
 - Use the following template to begin the body of the release thread:
@@ -136,8 +136,8 @@ Testing Tracking Sheet: https://example.com/link  (google sheets)
 
 The goal of this thread is to discuss testing, bugfixes, and the overall quality of the release.  Once the release is complete, this thread should be locked and unpinned. 
 ```
-- Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](http://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?do=findComment&comment=93245)
-- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](http:///github.com/armbian/autotests)
+- Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](https://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?tab=comments#comment-93245)
+- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](https://github.com/armbian/autotests)
 
 ### 2. Release Candidate Branch Management
 
@@ -164,7 +164,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 ## Release Testing
 
-See [Opportunties for improvement](#Opportunities_for_Improvement)
+See [Opportunties for improvement](#opportunities-for-improvement)
 
 ## Reflection on Prior Releases
 

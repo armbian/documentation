@@ -1,6 +1,6 @@
 # What happens behind the build process?
 
-### Build process summary:
+## Build process summary:
 
 - creates development environment on top of amd64 Ubuntu 20.04 LTS,
 - downloads proven sources, applies patches on top and uses tested configurations,
@@ -12,19 +12,23 @@
 Check this image [compiling example](https://youtu.be/zeShf12MNLg) with partial cache.
 
 
-### Build process details:
+## Build process details:
 
-## Creating compile environment ##
+### Creating compile environment
+
 First things first. All necessary dependencies are downloaded and installed. This happens though both http and torrent network. Btw. having too much unused traffic? [Help us to reduce ours :)](https://forum.armbian.com/topic/4198-seed-our-torrents/)
 
-## Using board configuration ##
+### Using board configuration
+
 We need to get some predefined variables about selected the board. Which kernel & uboot source to use, modules to load, which is the build number, do we need to have a single partition or dual with boot on fat, which extra drivers to compile out of the kernel tree ...
 All this stuff is predefined for each and every single supported board.
 
-## Downloading sources ##
+### Downloading sources
+
 When we know which sources to use and where they need to be the download or updated this process starts. This might take from several minutes to several hours.
 
-## Patching ##
+### Patching
+
 In the patching process we are applying patches to the used sources. The process is - depending on selected board - defined in:
 
 	lib/patch/kernel/sun7i-default
@@ -36,7 +40,8 @@ In the patching process we are applying patches to the used sources. The process
 
 Patch rules for subdirectories are: **KERNEL_FAMILY-BRANCH** for kernel and **U-BOOT-SOURCE-BRANCH** for U-Boot.
 
-## Debootstrap ##
+### Debootstrap
+
 Debootstrap creates fresh Debian / Ubuntu root filesystem templates or use cached under:
 
 	output/cache/rootfs/
@@ -44,29 +49,36 @@ Debootstrap creates fresh Debian / Ubuntu root filesystem templates or use cache
 To recreate those files you need to remove them manually. 
 From time to time they will be recreated anyway if Armbian updates their rootfs cache.
 
-## Kernel install ##
+### Kernel install
+
 When the root filesystem is ready we need to install the kernel image with modules, board definitions and firmwares. Along with this we set the CPU frequency min/max, hostname, modules, network interfaces templates. Here is also the place to install headers and fix + native compile them on the way.
 
-## Distribution fixes ##
+### Distribution fixes
+
 Each distribution has it's own way of doing things:
 
 - serial console
 - different packets
 - configuration locations
 
-## Board fixes ##
+### Board fixes
+
 Each board has their own tricks: **different device names, firmware loaders, configuration (de)compilers, hardware configurators**
 
-## Desktop installation ##
+### Desktop installation
+
 You can build a desktop environment withing the image. Consider this feature as experimental. Do not expect to have working hardware acceleration since this is a very complicated task and needs individial care for different boards.
 
-## External applications ##
+### External applications
+
 This place is reserved for custom applications. There is one example of application: USB redirector.
 
-## Closing image ##
+### Closing image
+
 There is an option to add some extra commands just before closing an image which is also automaticaly shrink to it's actual size with some small reserve.
 
-## Directory structure ##
+### Directory structure
+
 It will be something like this:
 
     compile.sh				compile execution script
@@ -95,6 +107,6 @@ It will be something like this:
 	userpatches/			put your kernel config here
 
 
-## Additional info ##
+## Additional info
 
-- [Allwinner SBC community](https://linux-sunxi.org/)
+- [Allwinner SBC community](https://linux-sunxi.org/Main_Page)

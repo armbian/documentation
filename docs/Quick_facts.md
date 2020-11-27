@@ -50,4 +50,4 @@ Deep understanding how boards work, how operating system work and how hardware s
 
 ### Open
 
-Open source build script and kernel development, maintenance and distribution for more than [30 different ARM and ARM64 Linux kernels](https://www.armbian.com/kernel). Powerful build and software development tools. Can run in fully parallel mode. Can run under Docker.
+Open source build script and kernel development, maintenance and distribution for more than [30 different ARM and ARM64 Linux kernels](https://www.armbian.com/kernel/). Powerful build and software development tools. Can run in fully parallel mode. Can run under Docker.
