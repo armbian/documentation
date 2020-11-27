@@ -22,7 +22,7 @@ System images with legacy kernel
 System images with mainline kernel
 
 - [Mainline](https://www.kernel.org/) with large hardware support, headers and some firmware included
-- [Docker ready](/User-Guide_Advanced-Features/#how-to-run-docker) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](/User-Guide_Advanced-Features/#how-to-run-docker) – [what is Docker](https://www.docker.com/why-docker)?
 - PCI-E operational (Hummingboard Pro, Gate & Edge)
 - mSATA / m2 operational (Hummingboard Pro & Edge)
 - Enabled audio devices
@@ -57,12 +57,12 @@ LVDS](https://github.com/notro/fbtft/wiki)
 
 ## GPIO
 
-[How to control HummingBoard GPIO from kernel space?](https://www.solid-run.com/community/topic2345.html)
+[How to control HummingBoard GPIO from kernel space?](http://forum.solid-run.com/viewtopic.php?forum_uri=&t=2345&start=)
 
 ## Udoo Quad
 
 - [Kernel 3.14.x](https://github.com/UDOOboard/linux_kernel) and [4.4.x](https://github.com/patrykk/linux-udoo) with some hardware support, headers and some firmware included
-- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/what-docker)?
+- [Docker ready](https://forum.armbian.com/topic/490-docker-on-armbian/) – [what is Docker](https://www.docker.com/why-docker)?
 - Wireless adapter with DHCP ready but disabled (/etc/network/interfaces, WPA2: normal connect, bonding / notebook or AP mode). It can handle between 40-70Mbit/s.
 - SATA operational
 - Enabled analogue (VT1613) and HDMI audio device

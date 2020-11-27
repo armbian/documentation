@@ -1450,7 +1450,7 @@ Known bugs:
 - added Marvel Armada kernel 3.10.96, 4.4.1 and patches for changing mPCI to SATA
 - added Cubox / Hummingboard kernel 4.4.1 (serial console only)
 - firstrun does autoreboot only if needed: wheezy and some legacy kernels.
-- [added motd](https://forum.armbian.com/topic/602-new-motd-for-ubuntudebian/?do=findComment&comment=4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
+- [added motd](https://forum.armbian.com/topic/602-new-motd-for-ubuntudebian/?tab=comments#comment-4223) to /etc/updated.motd ... redesign, added battery info for Allwinner boards, bugfix, coloring
 - fixed temperature reading on Cubox / Hummingboard legacy kernel
 - fixed FB turbo building on Allwinner
 - fixed NAND install on A10 boards (Legacy kernel only)

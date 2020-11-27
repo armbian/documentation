@@ -143,7 +143,7 @@ The goal of this thread is to discuss testing, bugfixes, and the overall quality
 
 - For code freeze -- create a RC branch as `version-rc` ex: `v20.02.0-rc`
 - If Possible, create Jira tickets for major changes in github that were not tracked in Jira
-- Begin Testing Process.  See [Release Testing](#Release_Testing)
+- Begin Testing Process.  See [Release Testing](#release-testing)
 - Do not modify branch directy.  Only accept PRs
 - Only accept PRs for Bugfixes. No features
 - Update master branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc Master bacomes v20.05.0-trunk

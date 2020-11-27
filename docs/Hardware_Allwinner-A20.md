@@ -10,7 +10,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 
 - Enabled audio devices: analog, 8 channel HDMI, spdif and I2S (if wired and enabled in HW configuration)
 - Bluetooth ready (working with supported external keys)
-- [Enabled overlayfs](/User-Guide_Advanced-Features/#how-to-freeze-your-filesystem)
+- [Enabled overlayfs](/User-Guide_Advanced-Features/#how-to-freeze-your-filesystem-outdated) (outdated)
 - [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) ready and tested with small 16×2 LCD. Basic i2c tools included.
 - SPI ready and tested with ILI9341 based 2.4″ TFT LCD display.
 - [Drivers for small TFT LCD](https://github.com/notro/fbtft) display modules.
@@ -27,7 +27,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 
 ### Bugs or limitation
 
-- NAND install sometime fails. Workaround: install [Lubuntu to NAND](https://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
+- NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again.
 - Shutdown results into reboot under certain conditions.
 - SATA port multiplier support is disabled by default, can be enabled by adding kernel parameter `ahci_sunxi.enable_pmp=1`
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
