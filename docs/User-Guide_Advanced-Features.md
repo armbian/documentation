@@ -133,7 +133,7 @@ Required conditions:
 - IR hardware
 - loaded driver
 
-Get your [remote configuration](https://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](https://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands).
+Get your [remote configuration](http://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](https://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands).
 
 - Note: As of 2020-11-25, the above (Kodi / learn) link is broken.  However I am not sure what to replace it with.  If you know (or find out) please [submit a PR](/Process_Contribute/).  - TRS-80
 

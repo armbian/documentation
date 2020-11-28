@@ -92,7 +92,7 @@ This example is for H3 legacy kernel. Check [this page](https://www.armbian.com/
 
 ## How to toggle boot output?
 
-Edit and change [boot parameters](https://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
+Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
 
     - console=both
     + console=serial

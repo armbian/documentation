@@ -91,6 +91,6 @@ Check [download page](https://www.armbian.com/download/) for recently supported 
 
 * [Contribute](Process_Contribute/)
 * [Community](https://forum.armbian.com/)
-* [Contact](https://www.armbian.com/contact/)
+* [Contact](https://www.armbian.com/#contact)
 
 Our IRC channel is [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). More details [here](https://docs.armbian.com/Community_IRC/)
