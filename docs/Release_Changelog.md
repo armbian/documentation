@@ -2,6 +2,15 @@
 	
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.11.1 / 28.11.2020**
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer
+</li>
+<li>Updated Helios64 images and rockchip64 kernels
+</li>
+</ul>	
+
 **20.11 / 24.11.2020**
 
 Finished projects
