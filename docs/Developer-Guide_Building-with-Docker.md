@@ -9,10 +9,10 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 ### Requirements
 
 - x86/x64 Linux host that supports running a recent Docker daemon. Refer to [Docker documentation](https://docs.docker.com/) for details.
-- Docker version 17.06 CE or newer. Installation on Ubuntu Bionic:
+- Docker version 17.06 CE or newer. Installation on Ubuntu Focal:
 
 		apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0EBFCD88 
-		echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" > /etc/apt/sources.list.d/docker.list
+		echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/docker.list
 		apt update
 		apt install docker-ce
 
