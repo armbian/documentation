@@ -7,7 +7,7 @@
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer
 </li>
-<li>Updated Helios64 images and rockchip64 kernels
+<li>Updated Helios64, Rockpi 4* images and rockchip64 kernels
 </li>
 </ul>	
 
