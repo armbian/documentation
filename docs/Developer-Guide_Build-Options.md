@@ -98,6 +98,7 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **DOWNLOAD_MIRROR** ( `china` ): select download mirror for `toolchain` and `debian/ubuntu packages`
 	- `china`: use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to Tsinghua University
 	- leave empty to use official source
+- **ARMBIAN_MIRROR** (auto): override automated mirror selection, example 'ARMBIAN_MIRROR="https://yourlocalmirror.com"'
 - **MAINLINE_MIRROR** ( `google` | `tuna` ): select mainline mirror of `linux-stable.git`
 	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 	- `tuna`: use mirror provided by Tsinghua University
