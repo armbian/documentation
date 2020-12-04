@@ -2,12 +2,12 @@
 	
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-**20.11.1 / 28.11.2020**
+**20.11.1 / 4.12.2020**
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer
-</li>
-<li>Updated Helios64, Rockpi 4* images and rockchip64 kernels
+<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] -         SATA on HC4 is not recognized</li>
+<li>Updated Odroid C4/HC4, Helios64, Rockpi 4* images and rockchip64 kernels
 </li>
 </ul>	
 
