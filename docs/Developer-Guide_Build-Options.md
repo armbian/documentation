@@ -27,9 +27,9 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
     - yes: use kernel config file from previous compilation for the same branch, device family and version
     - no: use default or user-provided config file  
-- **BUILD_MINIMAL** ( yes ):
+- **BUILD_MINIMAL** ( yes | no ):
     - yes: build bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"` and `BUILD_EXTERNAL="yes"`
-    - leave empty to install default CLI package selection  
+    - no: default CLI package selection
 - **BUILD_DESKTOP** ( yes | no ):
     - yes: build image with minimal desktop environment
     - no: build image with console interface only  
