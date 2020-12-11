@@ -2,6 +2,65 @@
 	
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+**20.11.3 / 12.12.2020**
+
+Bugfix release
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-559'>AR-559</a>] -         First login script - not all locales have UTF8 encoding
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-163'>AR-163</a>] -         Systematically cleanup distribution defaults
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-206'>AR-206</a>] -         Improve memory performance on Renegade (roc-rk3328-cc) in current
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-472'>AR-472</a>] -         Added support for Ubuntu 20.10 Groovy
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-476'>AR-476</a>] -         Add sound to Odroid N2
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-485'>AR-485</a>] -         Improve multicore compilation
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-487'>AR-487</a>] -         Rework download pages
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-508'>AR-508</a>] -         Add Odroid HC4
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-514'>AR-514</a>] -         Download and verify not fully reliable
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-517'>AR-517</a>] -         Mark Bionic builds host as deprecated
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-525'>AR-525</a>] -         Bump Rockchip 32bit to 5.9.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-526'>AR-526</a>] -         Move mvebu-dev kernel to 5.9+
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-546'>AR-546</a>] -         Added Pine64 Pinecube
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-547'>AR-547</a>] -         First login: adding a non-existing keyboard variant
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-548'>AR-548</a>] -         mvebu DFS seems to cause system hang under high I/O
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-552'>AR-552</a>] -         Re-enable UHS SDR104 mode for Helios64 and roc-rk3399-pc
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-553'>AR-553</a>] -         Update builder to retrieve web seeds from mirrors api
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-556'>AR-556</a>] -         Adding vnstat and ZFS support to MOTD
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-557'>AR-557</a>] -         GCC compatibility issues
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-558'>AR-558</a>] -         Switch mvebu current to K5.9
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-563'>AR-563</a>] -         Improve headers compilation
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] -         SATA on HC4 is not recognized
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-568'>AR-568</a>] -         Add Orangepizero 2 WIP target
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-570'>AR-570</a>] -         Improper order in getty override.conf
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-571'>AR-571</a>] -         Move Meson64 DEV to 5.10.y
+</li>
+</ul>
+
 **20.11.1 / 4.12.2020**
 
 <ul>
