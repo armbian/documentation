@@ -12,11 +12,8 @@ Note: from the Linux kernel maintainer perspective all dedicated interfaces like
 
 ## Armbian specific notes
 
-- DT overlays are a Work-in-Progress (WIP) feature, present **only in fresh images starting with 5.30**, nightly and user made images
-- For older images (even upgraded to 5.30 or later) manual update of the u-boot and the boot script is required
-- Currently implemented only for sunxi based devices that use mainline u-boot and kernel
-
-Please note that different SoCs will have different sets of available overlays.
+- DT overlays are a Work-in-Progress (WIP) feature, present **only in certain images**.
+- Please note that different SoCs will have different sets of available overlays.
 
 ## Quick start
 
