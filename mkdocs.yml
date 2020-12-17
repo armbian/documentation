@@ -56,7 +56,7 @@ nav:
         - "Advanced Features" : "User-Guide_Advanced-Features.md"
         - "Fine Tuning" : "User-Guide_Fine-Tuning.md"
         - "Armbian config" : "User-Guide_Armbian-Config.md"
-        - "Allwinner DT overlays" : "User-Guide_Allwinner_overlays.md"
+        - "Armbian DT overlays" : "User-Guide_Armbian_overlays.md"
 
   - "Hardware Notes" :
         - "Allwinner (Generic)" : "Hardware_Allwinner.md"
