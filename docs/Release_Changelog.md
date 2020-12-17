@@ -38,8 +38,8 @@ Bugfix release
 ## v20.11.1 (2020-12-04)
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] -         SATA on HC4 is not recognized</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] - Update fan configuration, enable network LED and enable UPS timer</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] - SATA on HC4 is not recognized</li>
 <li>Updated Odroid C4/HC4, Helios64, Rockpi 4* images and rockchip64 kernels</li>
 </ul>	
 
@@ -138,6 +138,7 @@ Closed tasks
 </ul>
 
 ## v20.08.22 (2020-11-8)
+
 <ul>
 <li>Added WIP images for Odroid HC4</li>
 <li>Updated images for Odroid C4, N2, C2, Lafrite, Lepotato, KVIM1</li>
@@ -212,6 +213,7 @@ Known bugs:
 ## v20.08 (2020-08-20)
 
 Finished projects
+
 <ul>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-45'>AR-45</a>] - Make first login more user friendly</li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-71'>AR-71</a>] - Create a document: How we will use Jira</li>
@@ -284,18 +286,18 @@ Closed tasks
 ## v20.05.7 (2020-07-02)
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-308'>AR-308</a>] -         Disable HDMI in u-boot for rk3399 boards</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-338'>AR-338</a>] -         Bananapi R2 does not boot at all</li> 
-<li>[<a href='https://armbian.atlassian.net/browse/AR-337'>AR-337</a>] -         Odroid XU4 Memcopy Slow on all Kernel 5.x 80MB/sec instead of 370+MB/sec</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-308'>AR-308</a>] - Disable HDMI in u-boot for rk3399 boards</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-338'>AR-338</a>] - Bananapi R2 does not boot at all</li> 
+<li>[<a href='https://armbian.atlassian.net/browse/AR-337'>AR-337</a>] - Odroid XU4 Memcopy Slow on all Kernel 5.x 80MB/sec instead of 370+MB/sec</li>
 <li>Update images for: NanoPC T4, Nanopi M4,Nanopi M4v2, Nanopi Neo4, Orangepi 4, Firefly RK3399, Bananapi R2, Odroid XU4</li>
 </ul>
 
 ## v20.05.6 (2020-06-19)
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-324'>AR-324</a>] -         Add Rockchip RK322X SoC support</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-320'>AR-320</a>] -         Initial support for Rockpi E</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-323'>AR-323</a>] -         Allow install to SD NAND for Rockpi S</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-324'>AR-324</a>] - Add Rockchip RK322X SoC support</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-320'>AR-320</a>] - Initial support for Rockpi E</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-323'>AR-323</a>] - Allow install to SD NAND for Rockpi S</li>
 </ul>
 
 ## v20.05.5
@@ -305,15 +307,15 @@ never released/skipped
 ## v20.05.4 (2020-06-16)
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-311'>AR-311</a>] -         Initrd on Focal can get corrupted followup fix</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-311'>AR-311</a>] - Initrd on Focal can get corrupted followup fix</li>
 </ul>
 
 ## v20.05.3 (2020-06-10)
 
 <ul>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-300'>AR-300</a>] -         Enable HDMI audio for OrangePi 4</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-305'>AR-305</a>] -         K-worker creates load on Allwinner devices</li>
-<li>[<a href='https://armbian.atlassian.net/browse/AR-282'>AR-282</a>] -         Rockpi 4B 1Gb doesn&#39;t boot modern kernel / u-boot</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-300'>AR-300</a>] - Enable HDMI audio for OrangePi 4</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-305'>AR-305</a>] - K-worker creates load on Allwinner devices</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-282'>AR-282</a>] - Rockpi 4B 1Gb doesn&#39;t boot modern kernel / u-boot</li>
 </ul>
 
 ## v20.05.2 (2020-06-05)
@@ -1692,7 +1694,7 @@ Build script:
 - Automatic Debian system updates
 - VGA output is now default but if HDMI is attached at first boot than it switch to HDMI for good. After first restart!
 - Fixed NAND install script. /boot is mounted by default. Kernel upgrade is now the same as on SD systems.
- Cubieboard2 - disabled Cubietruck dedicated scripts (BT firmware, LED disable)
+- Cubieboard2 - disabled Cubietruck dedicated scripts (BT firmware, LED disable)
 - Added network bonding and configuration for "notebook" mode (/etc/network/interfaces.bonding)
 - IR receiver is preconfigured with default driver and LG remote (/etc/lirc/lircd.conf), advanced driver is present but disabled
 - Added SPI and LVM functionality
