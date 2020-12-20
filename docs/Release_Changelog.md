@@ -2,6 +2,14 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.4 (2020-12-15)
+
+- <a href=https://forum.armbian.com/topic/16476-eth1-25-vanished-upgrade-to-20113-5914-rockchip64/>Re-adding accidentally removed network driver on Helios64</a>
+- added OpenHab 3 to the armbian-config software installer
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-587'>AR-587</a>] - Fix kernel switching for rk3399 family</li>
+</ul>
+
 ## v20.11.3 (2020-12-12)
 
 Bugfix release
