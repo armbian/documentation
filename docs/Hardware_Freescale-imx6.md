@@ -28,6 +28,30 @@ System images with mainline kernel
 - Enabled audio devices
 - Bluetooth ready (working with supported external keys)
 
+### Set board type
+By default the mainline Hummingboard / Cubox-i Armbian images are configured for the Cubox-I with a dual or quad core 
+SOM. 
+
+To run the image on another platform or SOM the correct device tree file needs to be specified. These files are stored in
+`/boot/dtb`. To set the correct device tree blow a `fdt_file=` parameter needs to be added to `/boot/armbianEnv.txt`. 
+
+Set the `fdt_file=` parameter according to the list below:
+
+IMX6 Solo / DualLite:
+
+- [Hummingboard] `fdt_file=imx6dl-hummingboard.dtb`
+- [Hummingboard v2] `fdt_file=imx6dl-hummingboard2.dtb`
+- [Cubox-I] `fdt_file=imx6dl-cubox-i.dtb`
+
+IMX6 Dual / Quad:
+
+- [Hummingboard] `fdt_file=imx6q-hummingboard.dtb`
+- [Hummingboard v2] `fdt_file=imx6q-hummingboard2.dtb`
+- [Cubox-I] `fdt_file=imx6q-cubox-i.dtb` (Default)
+  
+If a v1.5 SOM (with eMMC) is used the device tree names need to be changed, e.g.: `imx6q-cubox-i-som-v15.dtb` or 
+`imx6q-cubox-i-emmc-som-v15.dtb`.
+
 ### Bugs or limitation
 
 - Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
