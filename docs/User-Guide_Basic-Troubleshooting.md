@@ -60,10 +60,13 @@ Note that
 - Most commonly low capacity cards will be reprogrammed to appear as bigger, but any files written beyond the true capacity will be lost or corrupted.
 - We recommend to always [test the capacity of each new SD cards using f3](https://fight-flash-fraud.readthedocs.io/en/latest/usage.html).
 
-
 ### Writing images to the SD card
 
 - If you wrote an image to the card it does not mean that it was written successfully without any errors
 - so always verify images after write using some tools like _balenaEtcher_ which is currently the only popular and cross-platform tool that does mandatory verify on write (more lightweight alternatives may be added to this page in the future)
 - "Check for bad blocks" function available in some tools is mostly useless when dealing with SD cards
 - Note that _balenaEtcher_ verifies only 1-2GB that are occupied by the initial unresized image, it does not verify the whole SD card
+
+## Configuration
+
+- Some boards require the setup of the correct device tree file or they will not boot. Check the board specific documentation for details.
