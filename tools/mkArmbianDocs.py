@@ -64,8 +64,8 @@ def parseFiles(validFileList, indir):
             tocPair = (tocChild, file)
             tocTree[tocParent].add(tocPair)
             log.info("added %s %s %s", tocParent, tocChild, file)
-            
-    log.info(tocTree)    
+
+    log.info(tocTree)
     return tocTree
 
 #generte  mkdocs.yml using jinja template and dict of markdown files
@@ -115,11 +115,10 @@ def main():
     args = parse_arguments()
 
     if args.verbose:
-	log.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
-	log.info("Verbose output.")
+        log.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
+        log.info("Verbose output.")
     else:
-	log.basicConfig(format="%(levelname)s: %(message)s")
-
+        log.basicConfig(format="%(levelname)s: %(message)s")
 
     log.info("mkArmbianDocs version 0.100002, created by Lane Jennison.")
 
