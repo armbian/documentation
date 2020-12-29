@@ -80,7 +80,15 @@ Some boards allow to adjust CPU speed
 
 Alter **min_speed** or **max_speed** variable.
 
-	service cpufrequtils restart
+	systemctl restart cpufrequtils
+
+## Swap for experts
+
+By default Armbian implements ZRAM (writing nothing to 'disk' but compressing memory pages in RAM) but in case you often run into out of memory errors and your device has some capable storage (e.g. a securely attached NVMe or SATA SSD) you might want to use ZSWAP instead. 
+
+Check whether your kernel has zswap enabled (`dmesg | grep zswap` should output something) and if so create a swapfile or swap partition the traditional way, edit/uncomment `/etc/default/armbian-zram-config` so that it reads `SWAP=false`, reboot and you're done.
+
+Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in parallel.
 
 ## How to downgrade a package via apt?
 
