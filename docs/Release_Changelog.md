@@ -5,7 +5,7 @@
 ## v20.11.5 (2020-12-31)
 
 <ul>
- <li>[<a href='https://armbian.atlassian.net/browse/AR-566'>AR-566</a>] - Add Nanopi R4S images</li>
+ <li>[<a href='https://armbian.atlassian.net/browse/AR-566'>AR-566</a>] - Add Nanopi R4S preview images</li>
 </ul>
 
 ## v20.11.4 (2020-12-15)
