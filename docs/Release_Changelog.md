@@ -2,6 +2,12 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.5 (2020-12-31)
+
+<ul>
+ <li>[<a href='https://armbian.atlassian.net/browse/AR-566'>AR-566</a>] - Add Nanopi R4S images</li>
+</ul>
+
 ## v20.11.4 (2020-12-15)
 
 <ul>
