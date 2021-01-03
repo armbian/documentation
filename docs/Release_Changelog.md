@@ -2,6 +2,33 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.6 (2021-01-03)
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-601'>AR-601</a>] -         Move sunxi-current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-235'>AR-235</a>] -         Implement Device Tree Editor in armbian-config
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-589'>AR-589</a>] -         Add armbian-zsh package
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-590'>AR-590</a>] -         ZRAM Enhancements - decouple swap config from tmp
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-554'>AR-554</a>] -         Fix Odroid N2 Ethernet Failure
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-556'>AR-556</a>] -         Adding vnstat and ZFS support to MOTD
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-579'>AR-579</a>] -         Improve (oh-my)ZSH loading speed
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-512'>AR-512</a>] -         Fix Ethernet for Opi3 and other devices with phymode for kernel 5.10
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-547'>AR-547</a>] -         First login: adding a non-existing keyboard variant
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] -         Fix SATA on HC4 is not recognized
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-595'>AR-595</a>] -         Fix Rockpi 4B 1GB not booting
+</li>
+</ul>
+
 ## v20.11.5 (2020-12-31)
 
 <ul>
