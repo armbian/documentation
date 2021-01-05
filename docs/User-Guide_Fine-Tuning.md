@@ -163,10 +163,14 @@ Armbian has its own apt repository and mirrors for armbian-specific packages.  T
 Do the following:
 
 Assure `jq` is installed
+
 `apt install -y jq`
 
 Get a list of available mirrors from our `https://apt.armbian.com/mirrors` endpoint.
-`curl -s http://apt.armbian.com/mirrors|jq`
+
+```bash
+curl -s http://apt.armbian.com/mirrors|jq
+````
 
 You will see a result set similar to this, listing mirrors by region:
 ```json
