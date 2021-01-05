@@ -170,7 +170,7 @@ Get a list of available mirrors from our `https://apt.armbian.com/mirrors` endpo
 
 ```bash
 curl -s http://apt.armbian.com/mirrors|jq
-````
+```
 
 You will see a result set similar to this, listing mirrors by region:
 ```json
