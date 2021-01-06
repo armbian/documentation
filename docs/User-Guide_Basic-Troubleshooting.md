@@ -70,3 +70,7 @@ Note that
 ## Configuration
 
 - Some boards require the setup of the correct device tree file or they will not boot. Check the board specific documentation for details.
+
+## How to report bugs properly
+
+- Follow instructions on [https://armbian.com/bugs](https://armbian.com/bugs)
