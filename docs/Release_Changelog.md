@@ -2,6 +2,15 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.7 (2021-01-06)
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-605'>AR-605</a>] -         Booting troubles on Odroid C4 / HC4
+</li>
+<li>all images were rebuilt - we had a few corrupted ones in previous build
+</li>
+</ul>
+
 ## v20.11.6 (2021-01-03)
 
 <ul>
