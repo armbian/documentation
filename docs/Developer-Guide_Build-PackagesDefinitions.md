@@ -186,14 +186,57 @@ directory.
 The most basic setup is to add a `packages` file containing the list of
 packages to install when selecting this appgroup.
 
-Once done, you can also :
-* Add a **board** specific **packages list directory architecture**
+Once done, you can also add a :
+* **board** specific **packages list directory architecture**
   inside a `custom/board/${BOARD}/` subdirectory.
-* You can add a **destkop environment** specific
+* **destkop environment** specific
   **packages list directory architecture** inside a
   `custom/desktops/${DESKTOP_ENVIRONMENT}/` subdirectory.
-* You can add a **board and desktop environment** specific
+* **board and desktop environment** specific
   **packages list directory architecture** inside a
   `custom/boards/${BOARD}/custom/desktops/${DESKTOP_ENVIRONMENT}/`
   subdirectory.
 
+
+## CLI configurations ##
+
+The new build system allows you to have different minimal
+configurations, also called CLI configurations. These configurations
+are basically limited to a set of packages, added after a debootstrap.
+
+Only the packages files are supported in this configuration. Other
+files (`only_for`, `debian/*`, `armbian/*`, `sources/*`, ...) are not
+supported.
+
+### Adding a CLI configuration ###
+
+* Create a directory with the codename of the configuration, prefixed
+  by `config_` inside `config/cli/${RELEASE}/main`.  
+  For example, if you creating a `server` CLI configuration for Ubuntu
+  `focal`, create the directory `config/cli/focal/main/config_server`.
+
+* Add a `packages` file into this directory, containing the list of
+  packages that should be installed when this configuration is chosen.
+  You can also add `packages.uninstall` and `packages.remove` files too.
+
+Once done, you can also add :
+* **board** specific packages files inside a `custom/board/${BOARD}`
+  subdirectory.
+
+## Debootstrap configuration ##
+
+You can also configure the debootstrap packages list. The customization
+though is pretty limited.
+The debootstrap configuration files for a specific distribution,
+referenced as `RELEASE` are stored in
+`config/cli/${RELEASE}/debootstrap`.
+
+In this directory, the following files **need** to be added :
+
+* `packages`  
+  The list of packages to install during the debootstrap phase.
+* `components`
+  The list of components passed to the
+  [debootstrap](https://linux.die.net/man/8/debootstrap) command.
+
+### TODO : Debootstrap CLI configuration specific folders ###
