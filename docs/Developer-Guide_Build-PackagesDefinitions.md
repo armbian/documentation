@@ -239,4 +239,13 @@ In this directory, the following files **need** to be added :
   The list of components passed to the
   [debootstrap](https://linux.die.net/man/8/debootstrap) command.
 
-### TODO : Debootstrap CLI configuration specific folders ###
+You can also add :
+* **CLI configuration specific** packages files and componennts
+inside a `config_${SELECTED_CONFIGURATION}` subdirectory.
+* **board** specific packages files and components inside a
+`custom/board/${BOARD}` subdirectory.
+* **CLI configuration and board specific** package files and
+components inside a
+`config_${SELECTED_CONFIGURATION}/custom/board/${BOARD}`
+subdirectory.
+
