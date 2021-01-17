@@ -2,6 +2,12 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.8 (2021-01-17)
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-614'>AR-614</a>] -         Upgrade ZFS on Focal and Buster (64bit only) to v2.0.1
+</ul>
+
 ## v20.11.7 (2021-01-06)
 
 <ul>
