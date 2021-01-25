@@ -2,6 +2,18 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v20.11.10 (2021-01-25)
+
+<ul>
+<li>All images rebuild due to torrent system corruption
+</ul>
+
+## v20.11.9 (2021-01-23)
+
+<ul>
+<li>Broken Nanopi Neo buster image rebuild, adding Station M1 and P1 legacy images, Odroid XU4 update
+</ul>
+
 ## v20.11.8 (2021-01-17)
 
 <ul>
