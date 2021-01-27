@@ -27,7 +27,7 @@ Both *legacy* and *current* kernels are stable and production ready and mostly s
 
 ### Bugs or limitation
 
-- NAND install sometime fails. Workaround: install [Lubuntu to NAND](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [Phoenix tools](http://docs.cubieboard.org/downloads) and run install again. (Links no longer available - 27/01/21 Werner)
+- NAND install sometime fails. Workaround: install [~~Lubuntu to NAND~~](http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/) with [~~Phoenix tools~~](http://docs.cubieboard.org/downloads) and run install again. (Links no longer available - 27/01/21 Werner)
 - Shutdown results into reboot under certain conditions.
 - SATA port multiplier support is disabled by default, can be enabled by adding kernel parameter `ahci_sunxi.enable_pmp=1`
 - Screen output from kernel is set to HDMI by default. Boot loader can detect and switch, kernel not.
