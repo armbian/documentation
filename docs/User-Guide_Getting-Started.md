@@ -23,9 +23,9 @@ The download for each image consists of three separate files:  An **xz-compresse
 
 For each board we usually provide:
 
-- one CLI server image with Debian Buster
-- one CLI server image with Ubuntu Focal
-- one desktop image with Ubuntu Focal **or** Debian Buster
+- one CLI server image with Debian Buster userspace
+- one CLI server image with Ubuntu Focal userspace
+- one desktop image with Ubuntu Focal userspace **or** Debian Buster userspace
 
 Other unsupported builds may also be available (like Debian Stretch/Bullseye or Ubuntu Disco/Eoan/Hirsute).
 
