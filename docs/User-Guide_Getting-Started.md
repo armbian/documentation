@@ -23,10 +23,11 @@ The download for each image consists of three separate files:  An **xz-compresse
 
 For each board we usually provide:
 
-- one CLI Debian **and** one CLI Ubuntu based server image,
-- one desktop Ubuntu Bionic **or** Debian Buster
+- one CLI server image with Debian Buster
+- one CLI server image with Ubuntu Focal
+- one desktop image with Ubuntu Focal **or** Debian Buster
 
-Other unsupported builds may also be available(like Debian Stretch/Bullseye Ubuntu Disco/Eoan).
+Other unsupported builds may also be available (like Debian Stretch/Bullseye or Ubuntu Disco/Eoan/Hirsute).
 
 Some boards have different options due to their hardware specialities - router or IoT boards.
 
