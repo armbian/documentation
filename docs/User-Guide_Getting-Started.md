@@ -14,12 +14,16 @@ Mentioned links:
 
 Please, make sure you have:
 
-- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel OR **thick** USB cable)
+- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel or **thick** USB cable)
 - a reliable SD card (see below "How to prepare a SD card?")
 
 ## What to download?
 
-The download for each image consists of three separate files:  An **xz-compressed image file**, a **sha file** for download verification and an **asc file** for image authentication.  
+The download for each image consists of three separate files:
+
+- a **xz-compressed image file**,
+- a **sha file** for download verification
+- and an **asc file** for image authentication.  
 
 For each board we usually provide:
 
