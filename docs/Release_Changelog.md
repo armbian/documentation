@@ -2,6 +2,161 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v21.02.1 (2021-02-03)
+
+Finished projects
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-235'>AR-235</a>] -         Implement Device Tree Editor
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-476'>AR-476</a>] -         Add sound to Odroid N2
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-485'>AR-485</a>] -         Improve multicore compilation
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-487'>AR-487</a>] -         Rework download pages
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-508'>AR-508</a>] -         Add Odroid HC4
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-546'>AR-546</a>] -         Added Pine64 Pinecube
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-566'>AR-566</a>] -         Add Nanopi R4S
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-568'>AR-568</a>] -         Add Orangepizero 2 WIP target
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-571'>AR-571</a>] -         Move Meson64 DEV to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-589'>AR-589</a>] -         Add ZShell via armbian-zsh package
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-590'>AR-590</a>] -         ZRAM Enhancements - decouple swap config from tmp
+</li>
+</ul>
+
+Solved bugs
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-365'>AR-365</a>] -         4k not detected properly on Amlogic, Rockchip devices
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-440'>AR-440</a>] -         Errors shown at 1st login under certain conditions
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-512'>AR-512</a>] -         Fix Ethernet for Opi3 and other devices with phymode for kernel 5.10
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-514'>AR-514</a>] -         Download and verify not fully reliable
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-547'>AR-547</a>] -         First login: adding a non-existing keyboard variant
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-548'>AR-548</a>] -         mvebu DFS seems to cause system hang under high I/O
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-557'>AR-557</a>] -         GCC compatibility issues
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-559'>AR-559</a>] -         First login script - not all locales have UTF8 encoding
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-565'>AR-565</a>] -         SATA on HC4 is not recognized
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-570'>AR-570</a>] -         Improper order in getty override.conf
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-584'>AR-584</a>] -         Nanopi M4V2 hangs on bluetooth loading
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-595'>AR-595</a>] -         Rockpi 4B 1GB not booting
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-605'>AR-605</a>] -         Booting troubles on Odroid C4 / HC4
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-606'>AR-606</a>] -         Force boot script update throws out some error
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-608'>AR-608</a>] -         Broken building out-of-tree modules
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-610'>AR-610</a>] -         Nanopi Neo2 black sometimes nic doesn&#39;t init
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-616'>AR-616</a>] -         Ubuntu Bionic ZSH / BASH changing issue
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-617'>AR-617</a>] -         Locales detection doesn&#39;t work properly in some cases
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-627'>AR-627</a>] -         Ubuntu update is overwriting our welcome screen
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-629'>AR-629</a>] -         Odroid HC4 SATA failure
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-631'>AR-631</a>] -         Orangepi Zero2 broken network
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-632'>AR-632</a>] -         Desktop fails to load at second run
+</li>
+</ul>
+
+Closed task
+
+<ul>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-163'>AR-163</a>] -         Systematically cleanup distribution defaults
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-206'>AR-206</a>] -         Improve memory performance on Renegade (roc-rk3328-cc) in current
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-399'>AR-399</a>] -         Improve Pinebook PRO support
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-467'>AR-467</a>] -         Enable AUFS support back
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-472'>AR-472</a>] -         Added support for Ubuntu 20.10 Groovy
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-517'>AR-517</a>] -         Mark Bionic builds host as deprecated
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-520'>AR-520</a>] -         Move Rock64 to CSC in build script
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-525'>AR-525</a>] -         Bump Rockchip 32bit to 5.9.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-526'>AR-526</a>] -         Move mvebu-dev kernel to 5.9+
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-551'>AR-551</a>] -         Update fan configuration, enable network LED and enable UPS timer
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-552'>AR-552</a>] -         Re-enable UHS SDR104 mode for Helios64 and roc-rk3399-pc
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-553'>AR-553</a>] -         Update builder to retrieve web seeds from mirrors api
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-554'>AR-554</a>] -         OdroidN2 Ethernet Failure Pt2
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-556'>AR-556</a>] -         Adding vnstat and ZFS support to MOTD
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-558'>AR-558</a>] -         Switch mvebu current to K5.9
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-563'>AR-563</a>] -         Improve headers compilation
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-576'>AR-576</a>] -         Enabled debug on RockpiS
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-579'>AR-579</a>] -         Improve (oh-my)ZSH loading speed
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-587'>AR-587</a>] -         Fix kernel switching for rk3399 family
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-594'>AR-594</a>] -         Upgrade Meson64 u-boot to 2020.10
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-598'>AR-598</a>] -         Switch rockchip64 u-boot to 2020.10
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-601'>AR-601</a>] -         Move sunxi-current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-603'>AR-603</a>] -         Enable SPI boot option for roc-rk3399-pc
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-607'>AR-607</a>] -         Move Meson64 Current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-609'>AR-609</a>] -         Move Mvebu Current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-611'>AR-611</a>] -         Switch rockchip64-current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-614'>AR-614</a>] -         Upgrade ZFS packages
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-618'>AR-618</a>] -         Upgrade mvebu64 current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-619'>AR-619</a>] -         Bump rockchip current to 5.10.y
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-620'>AR-620</a>] -         Enable network link leds for NanoPi R4S by default
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-622'>AR-622</a>] -         Enable DMC for Station-M1 in current and dev
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-623'>AR-623</a>] -         Enable RTC (hym8563) for Station P1 in dev and current
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-624'>AR-624</a>] -         Provide an option to skip autodetection at first login
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-628'>AR-628</a>] -         Bump Meson64 u-boot to 2021.01
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-630'>AR-630</a>] -         Bump Odroid XU4 DEV to 5.10.y
+</li>
+</ul>
+    
+
+
 ## v20.11.10 (2021-01-25)
 
 <ul>
