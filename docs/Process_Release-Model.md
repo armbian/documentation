@@ -38,7 +38,7 @@ Tags are used in ad-hoc manner.
 | 20.05 | Kagu | May | [done](https://armbian.atlassian.net/projects/AR/versions/10002/tab/release-report-all-issues)
 | 20.08 | Caple | August| [done](https://armbian.atlassian.net/projects/AR/versions/10003/tab/release-report-all-issues)
 | 20.11 | Tamandua | November | [done](https://armbian.atlassian.net/projects/AR/versions/10004/tab/release-report-all-issues)
-| 21.02 | Urubu | January | planned
+| 21.02 | Urubu | February | [done](https://armbian.atlassian.net/projects/AR/versions/10005/tab/release-report-all-issues)
 | 21.05 | Jerboa | May | planned
  
  by https://www.codenamegenerator.com/ from unusual animals
