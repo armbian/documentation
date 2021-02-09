@@ -66,6 +66,8 @@ Solved bugs
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-610'>AR-610</a>] -         Nanopi Neo2 black sometimes nic doesn&#39;t init
 </li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-615'>AR-615</a>] -         Helios64 unstable 2.5Gbps Interface on LK5.x
+</li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-616'>AR-616</a>] -         Ubuntu Bionic ZSH / BASH changing issue
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-617'>AR-617</a>] -         Locales detection doesn&#39;t work properly in some cases
