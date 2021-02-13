@@ -18,5 +18,5 @@
 - Starting with [Armbian 5.21](https://github.com/igorpecovnik/lib/commit/04e6a4d76ad71a9f2117ae8b07c41617bfcb1eae) fixed camera drivers for both SK54EC and OV5640 are included.
 - Currently BT is not supported out of the box by Armbian. Please read through [this thread in pine64 forum](https://forum.pine64.org/showthread.php?tid=2248&pid=21412#pid21412) to enable it.
 - Starting with Armbian 5.24 in `/boot/armbianEnv.txt` camera support can be activated: `camera_type=none|s5k4ec|ov5640` (defaults to `none`, reboot needed for changes to take effect)
-- Also starting with 5.24 Pine64's own LCD with touchscreen support can simply be activated in `/boot/armbianEnv.txt` by setting `pine64_lcd=on` and adding `gt9xxf_ts` to `/etc/modules` followed by a reboot. Please note that current `gt9xxf_ts` driver seems to be buggy and crashes on shutdown.
+- Pine64's own LCD with touchscreen support can simply be activated in `/boot/armbianEnv.txt` by setting `overlays=pine64-7inch-lcd`.
 - Starting with 5.25 in `/boot/armbianEnv.txt` two more parameters can be set: `gmac-tx-delay` (defaults to `3`) and `gmac-rx-delay` (defaults to `0`). Adjusting this parameters should not be necessary but in case you are curious or experience bad Gigabit Ethernet performance please read through [the appropriate github issue](https://github.com/igorpecovnik/lib/issues/546).
