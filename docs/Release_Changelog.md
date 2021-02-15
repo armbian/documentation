@@ -2,10 +2,10 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v21.02.2 (2021-02-03)
+## v21.02.2 (2021-02-16)
 
 <ul>
-<li> - All kernels received upstream updates
+<li> All kernels received upstream updates
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-633'>AR-633</a>] -         Enable  hardware PRNG/TRNG/SHA on sun8i-ce platform
 </li>
