@@ -40,7 +40,7 @@ Tags are used in ad-hoc manner.
 | 20.11 | Tamandua | November | [done](https://armbian.atlassian.net/projects/AR/versions/10004/tab/release-report-all-issues)
 | 21.02 | Urubu | February | [done](https://armbian.atlassian.net/projects/AR/versions/10005/tab/release-report-all-issues)
 | 21.05 | Jerboa | May | planned
-| 21.08 | Caracal | May | planned
+| 21.08 | Caracal | August | planned
  
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
