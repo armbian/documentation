@@ -40,8 +40,9 @@ Tags are used in ad-hoc manner.
 | 20.11 | Tamandua | November | [done](https://armbian.atlassian.net/projects/AR/versions/10004/tab/release-report-all-issues)
 | 21.02 | Urubu | February | [done](https://armbian.atlassian.net/projects/AR/versions/10005/tab/release-report-all-issues)
 | 21.05 | Jerboa | May | planned
+| 21.08 | Caracal | May | planned
  
- by https://www.codenamegenerator.com/ from unusual animals
+ by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
 ## Release Planning
 
@@ -57,6 +58,7 @@ Dates for **2020**:
  
  * January [2nd](https://freenode.irclog.whitequark.org/armbian/2021-01-02)
  * April 3rd
+ * July 3th
 
 ### Agenda:
 
