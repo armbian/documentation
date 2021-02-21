@@ -54,6 +54,8 @@ Check which wireless stations / routers are in range
 
 ## How to run Docker? 
 
+Docker works reliably with the distrubtion-provided builds of docker.  It's as simple as `apt-get install docker.io`.   If you prefer to use the latest docker builds provided directly by doctor.  Please follow the guide bellow.
+
 Preinstallation requirements:
 
 - Armbian 20.08.17 or newer with Kernel 3.10 or higher
