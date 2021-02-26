@@ -52,9 +52,9 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
     - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
-    - `CRYPTROOT_SSH_UNLOCK=yes` optional
-    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` optional
-    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` optional
+    - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
+    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` Default: `2022`
+    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` Default: `--pbkdf pbkdf2` (May not contain `=`; separate with spaces)
     - **Note:** This function might not work well with all distributions. Debian Buster and Stretch were tested. For building under Docker you have to use privileged mode which can be enable in `userpatches/config-docker`.
     - **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)  
   
