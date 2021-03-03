@@ -96,12 +96,12 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ): 
     - yes: force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** ( `IPv4 address` ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: `1.0.0.1`
-- **DOWNLOAD_MIRROR** ( `china` ): select download mirror for `toolchain` and `debian/ubuntu packages`
+- **DOWNLOAD_MIRROR** ( `china` | `bfsu` ): select download mirror for `toolchain` and `debian/ubuntu packages`
 	- `china`: use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to Tsinghua University
 	- `bfsu`: use `mirrors.bfsu.edu.cn`, mirror of Beijing Foreign Studies University  
 	- leave empty to use official source
 - **ARMBIAN_MIRROR** (auto): override automated mirror selection, example 'ARMBIAN_MIRROR="https://yourlocalmirror.com"'
-- **MAINLINE_MIRROR** ( `google` | `tuna` ): select mainline mirror of `linux-stable.git`
+- **MAINLINE_MIRROR** ( `google` | `tuna` | `bfsu` ): select mainline mirror of `linux-stable.git`
 	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 	- `tuna`: use mirror provided by Tsinghua University
 	- `bfsu`: use mirror provided by Beijing Foreign Studies University which is similar to `tuna`
