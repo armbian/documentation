@@ -13,6 +13,10 @@
 </li>
 <li>ZSH upgrade fixed
 </li>
+<li>Type-C DP support for the NanoPC T4
+</li>
+<li>NanoPi M4V2 stability fix for current and dev
+</li>
 <li>Allwinner a20 fail to init hdmi in many cases / fixed (all images need to be rebuilt)
 </li>
 <li>[<a href='https://armbian.atlassian.net/browse/AR-660'>AR-660</a>] -         Attempt to improve stability on Helios64
