@@ -28,7 +28,7 @@ Supported boards will have the most scrunity with code review.
 - DT changes reviewed by at least one person familiar with this SoC (lead maintainer or deputy), _tested-by_ the contributor who sends it (armbianmonitor).
 - Trivial module activation doesn't matter.
 
-### dev branches
+### dev/edge branches
 
 Constraints are at the discretion of the SoC mantainer.  This builds are not expected to be stable.
 
@@ -49,7 +49,7 @@ Boards have different levels of commitment / support.  EOL, CSC, WIP, Supported.
 #### kernel config
 
 * Changes in legacy & current kernel config should provide at least _tested-by_  with `armbianmonitor -u`.
-* Changes in dev are at the discretion of maintainer.  No constraints.
+* Changes in edge are at the discretion of maintainer.  No constraints.
 
 #### kernel sources
 
@@ -57,7 +57,7 @@ Change kernel source repos, branches, versions can be very disruptive to stable 
 
 * U-Boot and kernel version bump for legacy and current requires _tested-by_ from Maintainers and/or testers on at least two different boards for the impacted platform. 
 * Kernel sources switch (legacy current) needs a discussion on forum or github or IRC and documented in PR and _Acked-by_  Lead Maintainer.  These changes are risky and things can go terrible wrong here...
-* Dev source changes are at the discretion of the Lead Maintainer.
+* edge source changes are at the discretion of the Lead Maintainer.
 * Board family tweaks require at least _reviewed-by_.
 
 #### packages

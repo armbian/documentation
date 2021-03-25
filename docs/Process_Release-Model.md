@@ -18,7 +18,7 @@ Branches in Armbian follow this convention:
 
  - **Master branch (master):** Main development will happen on the master branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
  - **Maintenance branch (support):** This is the long-term maintenance branch per release.
- - **Development branch (dev)**: This is a branch created for lengthy and/or involved feature development that could destabilize master.
+ - **Bleeding edge branch (edge)**: This is a branch created for lengthy and/or involved feature development that could destabilize master.
 
 Each Armbian release will have the following version format:
 

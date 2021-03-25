@@ -4,8 +4,8 @@
 
 You can add your own patches outside build script. Place your patches inside appropriate directory, for kernel or u-boot. There are no limitations except all patches must have file name extension `.patch`. User patches directory structure mirrors directory structure of `patch`. Look for the hint at the beginning of patching process to select proper directory for patches. Example:
 
-    [ o.k. ] Started patching process for [ kernel sunxi-dev 4.4.0-rc6 ]
-    [ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-dev ]
+    [ o.k. ] Started patching process for [ kernel sunxi-edge 4.4.0-rc6 ]
+    [ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-edge ]
 
 Patch with same file name in `userpatches` directory tree substitutes one in `patch`. To _replace_ a patch provided by Armbian maintainers, copy it from `patch` to corresponding directory in `userpatches` and edit it to your needs. To _disable_ a patch, create empty file in corresponding directory in `userpatches`.
 
@@ -14,15 +14,15 @@ Patch with same file name in `userpatches` directory tree substitutes one in `pa
 If file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. It can also add additional packages to be installed, by adding to `PACKAGE_LIST_ADDITIONAL`. For a comprehensive list of available variables, look through  `lib/configuration.sh`. Some examples of what you can change:
 
     PACKAGE_LIST_ADDITIONAL="$PACKAGE_LIST_ADDITIONAL python-serial python" # additional packages
-    [[ $LINUXFAMILY == sunxi64 && $BRANCH == dev ]] && BOOTBRANCH='tag:v2017.09' # conditionally change u-boot git branch/tag
+    [[ $LINUXFAMILY == sunxi64 && $BRANCH == edge ]] && BOOTBRANCH='tag:v2017.09' # conditionally change u-boot git branch/tag
     KERNELBRANCH="tag:v5.4.28" #always change to this kernel tag
 
 ## User provided kernel config
 
 If file `userpatches/linux-$KERNELFAMILY-$KERNELBRANCH.config` exists, it will be used instead of default one from `config`. Look for the hint at the beginning of kernel compilation process to select proper config file name. Example:
 
-    [ o.k. ] Compiling dev kernel [ @host ]
-    [ o.k. ] Using kernel config file [ config/linux-sunxi-dev.config ]
+    [ o.k. ] Compiling edge kernel [ @host ]
+    [ o.k. ] Using kernel config file [ config/linux-sunxi-edge.config ]
 
 ## User provided sources config overrides
 
