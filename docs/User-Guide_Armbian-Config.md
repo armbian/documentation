@@ -18,7 +18,7 @@ The tool needs root privileges to work and can be launched by entering ```sudo a
 - **N**ightly - switch between nightly automated beta and stable builds,
 - **B**ootenv - edit boot environment and alter kernel boot parameters,
 - **H**ardware - toggle board low level functions: UART, I2C, SPI, ...
-- **S**witch - switch to/between alternative kernels: legacy, current, dev
+- **S**witch - switch to/between alternative kernels: legacy, current, edge
 - **S**SH - reconfigure SSH daemon. Permit root login, toggle ssh key and mobile phone authentication,
 - **F**irmware - execute apt update and upgrade to update your system,
 - **Z**shell - toogle stock BASH and ZSH with [Oh My ZSH](https://ohmyz.sh/) and [tmux](https://en.wikipedia.org/wiki/Tmux)
