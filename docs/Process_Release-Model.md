@@ -57,8 +57,8 @@ Dates for **2020**:
  Dates for **2021**: 
  
  * January [2nd](https://freenode.irclog.whitequark.org/armbian/2021-01-02)
- * April 3rd
- * July 3th
+ * April [3rd](http://meeting.armbian.de/)
+ * July 3rd
 
 ### Agenda:
 
