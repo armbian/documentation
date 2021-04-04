@@ -2,6 +2,15 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v21.02.4 (2021-04-04)
+
+<ul>
+<li> Added Nvidia Jetson Nano (community supported target)
+</li>
+<li>Rebuild images for Odroid N2, H4, HC4
+</li>
+</ul>
+
 ## v21.02.3 (2021-03-09)
 
 <ul>
