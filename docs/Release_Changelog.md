@@ -2,6 +2,36 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v21.02.4 (2021-04-04)
+
+<ul>
+<li> Added Nvidia Jetson Nano (community supported target)
+</li>
+<li>Rebuild images for Odroid N2, H4, HC4
+</li>
+</ul>
+
+## v21.02.3 (2021-03-09)
+
+<ul>
+<li> All kernels received upstream updates
+</li>
+<li> All images has been rebuilt
+</li>
+<li>Fixed reboot troubles on meson64 family (Odroid N2, C2, H4, HC4)
+</li>
+<li>ZSH upgrade fixed
+</li>
+<li>Type-C DP support for the NanoPC T4
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-654'>AR-654</a>] -         NanoPi M4V2 stability fix for current and dev
+</li>
+<li>Allwinner a20 fail to init hdmi in many cases / fixed (all images need to be rebuilt)
+</li>
+<li>[<a href='https://armbian.atlassian.net/browse/AR-660'>AR-660</a>] -         Attempt to improve stability on Helios64
+</li>
+</ul>
+
 ## v21.02.2 (2021-02-16)
 
 <ul>

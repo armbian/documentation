@@ -47,13 +47,13 @@ The level of kernel support does depend on the board family. If in your specific
 - not very well tested
 - for end users
 
-### What are experimental/dev images?
+### What are experimental/bleeding edge images?
 
 - made from unstable branches
-- unstested
+- untested
 - for experienced users only
 
-Do not use testing or dev images in a productive environment. We do appreciate  your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
+Do not use testing or edge images in a productive environment. We do appreciate  your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 ### How to check download authenticity?
 

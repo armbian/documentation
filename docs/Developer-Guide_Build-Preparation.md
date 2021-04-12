@@ -46,18 +46,18 @@ You may edit it to your needs or create different configuration files using it a
 Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
-    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=yes RELEASE=bionic
+    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=focal
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
 
 ### Base and descendant configuration
 
-You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-dev.conf`). Three parameters (*BRANCH*, *RELEASE*, *COMPRESS_OUTPUTIMAGE*) will be overwritten.
+You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-edge.conf`). Three parameters (*BRANCH*, *RELEASE*, *COMPRESS_OUTPUTIMAGE*) will be overwritten.
 
 ```
 . ./config-base.conf  
   
-BRANCH="dev"  
+BRANCH="edge"  
 RELEASE="buster"  
 COMPRESS_OUTPUTIMAGE="sha,gz"  
 ```
@@ -81,7 +81,7 @@ This is a typical board configuration:
 	MODULES="hci_uart gpio_sunxi rfcomm hidp sunxi-ir bonding spi_sun7i 8021q a20_tp #ap6211"  
 	MODULES_NEXT="brcmfmac bonding"  
 	#  
-	KERNEL_TARGET="legacy,current,dev"  
+	KERNEL_TARGET="legacy,current,edge"  
 	CLI_TARGET="buster,bionic,focal:current"  
 	DESKTOP_TARGET="stretch:legacy,current"  
 	  
@@ -110,9 +110,9 @@ or for command line interfaces Ubuntu Bionic based images with legacy kernel 4.1
 
 	CLI_BETA_TARGET="bionic:legacy"
 
-or for image with latest upstream development kernel.
+or for image with latest upstream development/bleeding edge kernel.
 
-	DESKTOP_BETA_TARGET="buster:dev"
+	DESKTOP_BETA_TARGET="buster:edge"
 
 
 ## Using alternate armbian builder repos and branches

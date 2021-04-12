@@ -52,11 +52,12 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
     - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
-    - `CRYPTROOT_SSH_UNLOCK=yes` optional
-    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` optional
-    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` optional
+    - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
+    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` Default: `2022`
+    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` Default: `--pbkdf pbkdf2` (May not contain `=`; separate with spaces)
     - **Note:** This function might not work well with all distributions. Debian Buster and Stretch were tested. For building under Docker you have to use privileged mode which can be enable in `userpatches/config-docker`.
-    - **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)  
+    - **Warning:** This feature was added as community contribution and mostly functional. Under some circumstances though the prompt will not be shown. Therefore it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)
+    - **Hint:** If you want to do the encryption part from scratch check out [this](https://forum.armbian.com/topic/15618-full-root-filesystem%C2%A0encryption%C2%A0on-an-armbian-system-new-replaces-2017-tutorial-on-this-topic/) forum post.  
   
   
 ## Hidden options to minimize user input for build automation
@@ -95,13 +96,15 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ): 
     - yes: force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** ( `IPv4 address` ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: `1.0.0.1`
-- **DOWNLOAD_MIRROR** ( `china` ): select download mirror for `toolchain` and `debian/ubuntu packages`
+- **DOWNLOAD_MIRROR** ( `china` | `bfsu` ): select download mirror for `toolchain` and `debian/ubuntu packages`
 	- `china`: use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast thanks to Tsinghua University
+	- `bfsu`: use `mirrors.bfsu.edu.cn`, mirror of Beijing Foreign Studies University  
 	- leave empty to use official source
 - **ARMBIAN_MIRROR** (auto): override automated mirror selection, example 'ARMBIAN_MIRROR="https://yourlocalmirror.com"'
-- **MAINLINE_MIRROR** ( `google` | `tuna` ): select mainline mirror of `linux-stable.git`
+- **MAINLINE_MIRROR** ( `google` | `tuna` | `bfsu` ): select mainline mirror of `linux-stable.git`
 	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 	- `tuna`: use mirror provided by Tsinghua University
+	- `bfsu`: use mirror provided by Beijing Foreign Studies University which is similar to `tuna`
 	- leave empty to use offical `git.kernel.org`, may be very slow for mainland china users
 - **USE_TORRENT** ( **yes** | no ): use torrent to download toolchains and rootfs
 - **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally

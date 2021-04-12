@@ -18,7 +18,7 @@ Branches in Armbian follow this convention:
 
  - **Master branch (master):** Main development will happen on the master branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
  - **Maintenance branch (support):** This is the long-term maintenance branch per release.
- - **Development branch (dev)**: This is a branch created for lengthy and/or involved feature development that could destabilize master.
+ - **Bleeding edge branch (edge)**: This is a branch created for lengthy and/or involved feature development that could destabilize master.
 
 Each Armbian release will have the following version format:
 
@@ -57,8 +57,8 @@ Dates for **2020**:
  Dates for **2021**: 
  
  * January [2nd](https://freenode.irclog.whitequark.org/armbian/2021-01-02)
- * April 3rd
- * July 3th
+ * April [3rd](http://meeting.armbian.de/)
+ * July 3rd
 
 ### Agenda:
 
@@ -66,7 +66,7 @@ Dates for **2020**:
 - 00:02 - 00:05 `#topic check-in`: MC gives control to participant to check-in and wait for latecomers. If your handle is not self explanatory, add your forum/github handle and just say hi.
 - 00:05 - 00:07 `#topic late topics`: MC [points out to agenda](https://docs.armbian.com/Process_Release-Model/#release-planning) and asks if there is any late topic to add.
 - 00:07 - 00:09 `#topic FYI`: Stuff to know beforehand - MC presents meeting relevant news and rules of engagement:
-  - note #1: **IRC translator**: If your English is poor, simply write in your native language. Start your sentence with `..` at the beginning.
+  - note #1: **IRC translator**: If your English is poor, simply write in your native language. Start your sentence with `--` at the beginning.
   - rule #1: When you get a voice, please *be quick and concise* (1-2 min) and make it clear when you stop. ("No more, I'm done")  
   - rule #2: If meeting is going out of desired agenda, MC will use *"STOP STOP STOP"*, wait to get attention and then proceed with the meeting agenda. **Please stop chatting and listen.**
   - rule #3: Please **highlight** important information appropriately by putting a keyword in front of your message: `#info` `#action` `#idea` `#help` check tips below.

@@ -1,4 +1,5 @@
 # FEL/NFS boot explanation
+**Warning: Armbian has dropped support for old legacy 3.x kernels. Therefore FEL is no longer supported/available. This page is archived and not maintained.**
 
 ## What is FEL/NFS boot?
 
