@@ -4,7 +4,8 @@
 
 - x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
-- **The officially supported** compilation environment is [Ubuntu Focal 20.04.x amd64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso) **only!**
+- **The officially supported** compilation environment is [Ubuntu Hirsute 21.04.x amd64](https://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.iso) **only!**
+  - Ubuntu Focal can be used for building Bionic, Focal and Buster images as well, unsupported though
 - `binfmt_misc` kernel module (some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.)
 - installed basic system, OpenSSH and Samba (optional)
 - no spaces in full path to the build script location allowed

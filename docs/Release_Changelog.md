@@ -2,6 +2,116 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v21.05 (2021-05-09)
+
+Solved Bugs
+<ul>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-730">AR-730</a>] -          Duplicate packages error when updating repository
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-729">AR-729</a>] -          Fix Partition Alignment for resizes and nand-sata-install
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-711">AR-711</a>] -          Network troubles on Nanopi K2 / Odroids
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-709">AR-709</a>] -          Tinkerboard AP crash on client connect
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-708">AR-708</a>] -          Missing library for compiling u-boot
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-707">AR-707</a>] -          Wrong keyboard code detected
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-705">AR-705</a>] -          Compilation issues when building old u-boot
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-698">AR-698</a>] -          XU4 - current kernel oddness with docker
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-697">AR-697</a>] -          Fix Meson64 Default Governor
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-688">AR-688</a>] -          Firefly boot broken
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-674">AR-674</a>] -          Users can't change desktop wallpaper on Gnome
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-666">AR-666</a>] -          ZSH is disabled on upgrade
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-662">AR-662</a>] -          Distribution support status is not written to the /etc/armbian-release
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-659">AR-659</a>] -          Rootfs image runs out of inodes during build
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-653">AR-653</a>] -          builder issue with gnome
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-647">AR-647</a>] -          Wireless driver 8811CU is broken on 5.11.y
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-646">AR-646</a>] -          Bootsplash breaks compilation on 5.11.y
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-644">AR-644</a>] -          Wireless driver 8188 EU broken and disabled since 5.9.y
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-636">AR-636</a>] -          Odroid N2+ lost additional freq values
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-585">AR-585</a>] -          HDMI-CEC not working on rockchip64 Legacy
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-88">AR-88</a>] -          Banana Pi M3 does not boot
+</ul>
+ 
+Finished projects
+
+<ul>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-694">AR-694</a>] -          Create Jira-based checklist for Desktop Testing
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-457">AR-457</a>] -          Enable native arm/arm64 building
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-454">AR-454</a>] -          Additional Desktop Configurations for use with new framework
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-444">AR-444</a>] -          Improving download infrastructure Phase 2
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-200">AR-200</a>] -          Improving Desktop images
+</ul>
+
+Closed Tasks
+
+<ul>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-714">AR-714</a>] -          Adjusting support status
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-710">AR-710</a>] -          Create imx edge branch
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-706">AR-706</a>] -          Bump Allwinner u-boot to 2021.04
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-704">AR-704</a>] -          Distinguish between edge and normal image in motd
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-696">AR-696</a>] -          Improve Nvidia Jetson Nano support
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-673">AR-673</a>] -          Add few missing packages
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-670">AR-670</a>] -          Add additonal mirros for linux-firmware beside kernel source
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-667">AR-667</a>] -          Move Meson64 DEV to 5.10.y
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-657">AR-657</a>] -          Add instructions how to manual flash boot loader
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-656">AR-656</a>] -          Implement timeout on cache download
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-654">AR-654</a>] -          Fix stability issues of NanoPi M4V2 in current and dev
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-651">AR-651</a>] -          NanoPC-T4 legacy: enable USB-C DisplayPort & eDP outs
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-648">AR-648</a>] -          Resolve GPIO & PWM patches on mvebu
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-645">AR-645</a>] -          Detach rtl8812au from fixed commit ID if it builds from master
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-643">AR-643</a>] -          Bump DEV kernels to 5.11.y
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-634">AR-634</a>] -          Add Orangepi R1 Plus
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-633">AR-633</a>] -          Enable  hardware PRNG/TRNG/SHA on sun8i-ce platform
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-613">AR-613</a>] -          test/beta img auto builder
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-612">AR-612</a>] -          Update pine64 install instructions
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-600">AR-600</a>] -          RK3399's: Add multimedia and OC overlays
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-599">AR-599</a>] -          Enable HDMI-CEC and ISP1 camera support for rk3399 and rockchip64 legacy
+</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-369">AR-369</a>] -          Check kernel config changes
+</ul>
+
+
 ## v21.02.4 (2021-04-04)
 
 <ul>
