@@ -22,7 +22,7 @@ plugins:
     - search:
     - with-pdf:
         author: Armbian documentation team
-        copyright: 2020 by Armbian
+        copyright: © 2021 by Armbian
         #
         #cover: false
         cover_title: Armbian documentation
