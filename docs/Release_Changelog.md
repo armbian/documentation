@@ -2,6 +2,18 @@
 
 - Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+
+# Release notes - Armbian - Version 21.08
+
+## v21.05.2 (2021-05-19)
+
+Solved Bugs
+
+<ul>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-748">AR-748</a>] - Headers install broken</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-740">AR-740</a>] - Vnstat throws out garbage</li>
+</ul>
+ 
 ## v21.05 (2021-05-09)
 
 Solved Bugs
