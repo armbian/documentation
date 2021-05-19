@@ -12,6 +12,7 @@ Solved Bugs
 <ul>
 <li>[<a href="https://armbian.atlassian.net/browse/AR-748">AR-748</a>] - Headers install broken</li>
 <li>[<a href="https://armbian.atlassian.net/browse/AR-740">AR-740</a>] - Vnstat throws out garbage</li>
+<li>ZFS updated to v2.0.4 (tested on 32bit Odroid HC1 and 64bit N2, Focal userland)</li>
 </ul>
  
 ## v21.05 (2021-05-09)
