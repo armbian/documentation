@@ -67,6 +67,35 @@ Note that
 - "Check for bad blocks" function available in some tools is mostly useless when dealing with SD cards
 - Note that _balenaEtcher_ verifies only 1-2GB that are occupied by the initial unresized image, it does not verify the whole SD card
 
+## Network
+
+### MAC Address Conflicts
+
+If you experience strange network problems, especially if you are running several of these SOC-boards with the same operating system, then the problems may be sourced by not having a real hardware MAC address. The operating systems try to generate a hardware MAC address from the CPUid, but what if that SOC has no CPUid either?
+
+Then you have to do it manually. Depending on system and network installation, there are several possibilities:
+
+- the preferred way: change `/boot/armbianEnv.txt` and add a line:
+
+        ethaddr=XX:XX:XX:XX:XX:XX
+
+but that file is interpreted by u-boot, which happens early in boot process, but not every u-boot is able to read that file.
+
+- next possibility to set mac-address is changing network configuration. On systems with **ifupdown** you can do that by changing `/etc/network/interfaces`. Add these lines:
+
+        auto eth0
+        iface eth0 inet dhcp
+            hwaddress ether XX:XX:XX:XX:XX:XX
+
+- if the above does not work, than your network is probabely controlled by **Network-manager** . In directory `/etc/Networkmanager/system-connections` is a file `Wired connection 1.nmconnection`. Change entry _cloned-mac-address_ of group **[ethernet]** :
+
+        [connection]
+        id=Wired connection 1
+        type=ethernet
+
+        [ethernet]
+        cloned-mac-address=XX:XX:XX:XX:XX:XX
+
 ## Configuration
 
 - Some boards require the setup of the correct device tree file or they will not boot. Check the board specific documentation for details.
