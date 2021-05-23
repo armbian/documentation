@@ -5,14 +5,21 @@
 
 # Release notes - Armbian - Version 21.08
 
-## v21.05.2 (2021-05-19)
+## v21.05.2 (2021-05-24)
 
 Solved Bugs
 
 <ul>
 <li>[<a href="https://armbian.atlassian.net/browse/AR-748">AR-748</a>] - Headers install broken</li>
 <li>[<a href="https://armbian.atlassian.net/browse/AR-740">AR-740</a>] - Vnstat throws out garbage</li>
-<li>ZFS updated to v2.0.4 (tested on 32bit Odroid HC1 and 64bit N2, Focal userland)</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-764">AR-764</a>] - Fixing Htop security issue</li> 
+</ul> 
+ 
+Closed Tasks 
+
+<ul>
+<li>ZFS updated to v2.0.4 (tested on 32bit Odroid HC1 and 64bit N2, Focal and Bionic userland)</li>
+<li>Added Hirsute CLI images with EDGE Linux 5.12.y for most of the boards</li>
 </ul>
  
 ## v21.05 (2021-05-09)
