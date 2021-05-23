@@ -9,10 +9,10 @@ Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https:
   
 ## 🔌 --------------- Connect
 
-If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://chat.freenode.net/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
+If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://irc.libera.chat/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
 Or put the data in your client manually:
 
-+ Server: `chat.freenode.net`  
++ Server: `irc.libera.chat`  
 + Ports: `6697` / non-encrypted: `6667`  
 + Channel: `#armbian`  
 
@@ -33,7 +33,7 @@ We may or may not add more channels in future depending on the needs.
 
 ## 👮 --------------- Services
 
-Besides the services offered by Freenode (like Nickserv or Chanserv) Armbian has set up some own services.  
+Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has set up some own services.  
 
 - **ArmbianGithub**
     - Has the purpose to fill #armbian-commits and #armbian-rss like described above
@@ -63,12 +63,12 @@ It is a common habit to simply state your question or issue and then wait patien
 - *Is the chat history public as well?*  
     - Yes. All conversation is redundantly logged. These logs are open to the public. You can find them here: [http://irc.armbian.com](http://irc.armbian.com)
 - *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
-    - These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there. You can find more information about that here: [https://freenode.net/kb/answer/cloaks](https://freenode.net/kb/answer/cloaks)
+    - These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there.
 - *Can I have that too?*  
     - Yes. An Armbian affiliation cloak can be requested from *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC. They usually will be granted if you are a well known member in forums, a contributor via Github or donated to the project. Make sure you identified yourself to Nickserv beforehand.
-If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Freenode staff. Check the link above for information.
+If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Libera staff. Join #libera for that.
 - *How can I protect my nickname so nobody can spoof me?*  
-    - Register your nick with Freenode's Nickserv service. Check [https://freenode.net/kb/answer/registration](https://freenode.net/kb/answer/registration)  
+    - Register your nick with Libera's Nickserv service. Check [https://libera.chat/guides/registration](https://libera.chat/guides/registration)  
     Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
 - *Why do some users have voice (+v) in channel?*  
     - As mentioned in [forums](https://forum.armbian.com/topic/12803-armbian-irc-chat/?tab=comments#comment-96828) "all contributors to the project, regardless if forums staff, contributor on Github or well known and longtime active user" may get voice on request.
