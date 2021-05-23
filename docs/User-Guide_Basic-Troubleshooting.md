@@ -69,6 +69,8 @@ Note that
 
 ## Network
 
+### MAC Address Conflicts
+
 If you experience strange network problems, especially if you are running several of these SOC-boards with the same operating system, then the problems may be sourced by not having a real hardware MAC address. The operating systems try to generate a hardware MAC address from the CPUid, but what if that SOC has no CPUid either?
 
 Then you have to do it manually. Depending on system and network installation, there are several possibilities:
