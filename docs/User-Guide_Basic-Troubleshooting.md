@@ -87,7 +87,7 @@ but that file is interpreted by u-boot, which happens early in boot process, but
         iface eth0 inet dhcp
             hwaddress ether XX:XX:XX:XX:XX:XX
 
-- if the above does not work, than your network is probabely controlled by **Network-manager** . In directory `/etc/Networkmanager/system-connections` is a file `Wired connection 1.nmconnection`. Change entry _cloned-mac-address_ of group **[ethernet]** :
+- if the above does not work, then your network is probably controlled by **Network-manager** . In directory `/etc/Networkmanager/system-connections` is a file `Wired connection 1.nmconnection`. Change entry _cloned-mac-address_ of group **[ethernet]** :
 
         [connection]
         id=Wired connection 1
