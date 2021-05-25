@@ -9,6 +9,9 @@ Is a base utility for configuring your board, divided into four main sections:
 - **P**ersonal - timezone, language, hostname,
 - **S**oftware - system and 3rd party software install.
 
+
+<iframe width="607" height="342" src="https://www.youtube.com/watch?v=i9KyATAmfwQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The tool needs root privileges to work and can be launched by entering ```sudo armbian-config``` at the terminal prompt or by clicking to the armbian-config menu item on desktop images.
 
 ## System
