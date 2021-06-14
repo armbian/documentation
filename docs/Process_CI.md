@@ -1,24 +1,26 @@
 # Continuous integration
 
-## Variants we use
+They are a combination of Github Actions scrips and scripts that run on our servers.
 
-1. Build
+# Build pipelines
 
-Trigger: cronjob at 6am CET
+## Build 
 
 - stable repository: EDGE kernels + board support packages are updated if there are any upstream sources, patches or config changes for EDGE kernels.
 - beta repository:  all kernels + board support packages are updated if there are any upstream sources, patches or config changes
 - rootfs cache: if some package in userland is changed, respective caches are recreated
 
+Trigger: **every day at 6am CET**
+
 In case any files are created in the process, they are uploaded to CDN, torrents recreated.
 
-2. Beta images
+## Beta images
 
 Trigger: right after build
 
 All beta images are rebuild.
 
-3. Stable images
+## Stable images
 
 Trigger: manually
 
