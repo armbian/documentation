@@ -24,7 +24,7 @@ Trigger: automatically right after nightly / edge build is done or manually.
 
 ## Updating selected stable images
 
-You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is going to be populated with newly created u-boot, kernel and **all newly created BSP packages** under (patched) stable version (21.10.**x+1**) which is incremented automatically if process succeeds.
+You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (21.10.**x+1**) which is incremented automatically if process succeeds.
 
 ![kanban screenshot](images/selected-images.png)
 
