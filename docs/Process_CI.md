@@ -1,6 +1,6 @@
 # Continuous integration
 
-They are a combination of Github Actions scrips and scripts that run on our servers.
+They are a combination of Github Actions scrips and scripts that run on our servers. Armbian is providing big number of turnkey binaries which builds are distributed over our build farm.
 
 # Build pipelines
 
