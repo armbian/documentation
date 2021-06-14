@@ -18,17 +18,14 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 ## Beta images
 
-Trigger: right after build
+Trigger: automatically right after nightly / edge build is done or manually.
 
 ![kanban screenshot](images/beta-images.png)
-
-All beta images are rebuild.
 
 ## Selected stable images
 
 Trigger: manually
 
-You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is getting 
-populated with the u-boot, kernel and all newly created BSP packages under the version (21.10.x+1) which is read from a file in our internal repository. 
+You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is going to be populated with newly created u-boot, kernel and **all newly created BSP packages** under (patched) stable version (21.10.**x+1**) which is incremented automatically if process succeeds.
 
 ![kanban screenshot](images/selected-images.png)
