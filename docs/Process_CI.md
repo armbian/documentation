@@ -20,7 +20,7 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 ![kanban screenshot](images/beta-images.png)
 
-Trigger: automatically right after nightly / edge build is done or manually.
+Builds are triggered automatically after nightly / edge build is finished. It is also possible to run it manually. Builds are always done by using packages from repository.
 
 ## Updating selected stable images
 
@@ -28,4 +28,4 @@ You can recreate image(s) from sources or from packages that are already in repo
 
 ![kanban screenshot](images/selected-images.png)
 
-Trigger: manually
+Build are triggered manually.
