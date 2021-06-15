@@ -20,7 +20,9 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 ![kanban screenshot](images/beta-images.png)
 
-Builds are triggered automatically after nightly / edge build is finished. It is also possible to run it manually. Builds are always done by using packages from repository.
+Builds are triggered automatically after nightly / edge build is finished. It is also possible to run it manually. 
+
+* Builds in this pipeline are always using packages from repository.
 
 ## Updating selected stable images
 
