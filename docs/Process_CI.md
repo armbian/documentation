@@ -28,10 +28,10 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 If you have a commit rights to the repository, go to [Armbian build system actions](https://github.com/armbian/build/actions) and select *Build selected*:
 
-![Updating selected stable images](images/build-selected.png)
+![Updating selected stable images](images/build-selected-blured.png)
 
-You can recreate image(s) from sources (set packages from repository to *no*) or from packages that are already in repository. In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
+You can recreate image(s) from sources - set packages from repository to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
 
-![kanban screenshot](images/selected-images.png)
+![kanban screenshot](images/stable-images.png)
 
-Build are triggered manually.
+Indexes are updated after content is uploaded to CDN which usually happens in 24 - 48h.
