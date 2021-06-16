@@ -22,13 +22,15 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 - triggered automatically after nightly / edge build is finished,
 - running the job manual is possible,
-- pipeline is always using packages from repository.
+- pipeline is always using packages from https://beta.armbian.com repository.
 
 ## Updating selected stable images
 
-![Updating selected stable images](images/buildselected.png)
+If you have a commit rights to the repository, go to [Armbian build system actions](https://github.com/armbian/build/actions) and select *Build selected*:
 
-You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
+![Updating selected stable images](images/build-selected.png)
+
+You can recreate image(s) from sources (set packages from repository to *no*) or from packages that are already in repository. In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
 
 ![kanban screenshot](images/selected-images.png)
 
