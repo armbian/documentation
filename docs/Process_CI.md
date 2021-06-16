@@ -6,7 +6,7 @@ They are a combination of Github Actions scrips and scripts that run on our serv
 
 ## Build 
 
-![kanban screenshot](images/nightly-edge-build.png)
+![Build](images/nightly-edge-build.png)
 
 - stable repository: EDGE kernels + board support packages are updated if there are any upstream sources, patches or config changes for EDGE kernels.
 - beta repository:  all kernels + board support packages are updated if there are any upstream sources, patches or config changes
@@ -18,7 +18,7 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 ## Updating all beta images
 
-![kanban screenshot](images/beta-images.png)
+![Updating all beta images](images/beta-images.png)
 
 - triggered automatically after nightly / edge build is finished,
 - running the job manual is possible,
@@ -26,7 +26,7 @@ In case any files are created in the process, they are uploaded to CDN, torrents
 
 ## Updating selected stable images
 
-![Updating selected stable images](images/build-selected.png)
+![Updating selected stable images](images/buildselected.png)
 
 You can recreate image(s) from sources or from packages that are already in repository. In case you choose to build from sources, stable repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
 
