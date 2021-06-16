@@ -34,4 +34,4 @@ You can recreate image(s) from sources - set packages from repository to *no* - 
 
 ![kanban screenshot](images/stable-images.png)
 
-Indexes are updated after content is uploaded to CDN which usually happens in 24 - 48h.
+Download and repository indexes are updated after content is uploaded to CDN which usually happens in 24 - 48h. With exception of beta repository, which update is instant.
