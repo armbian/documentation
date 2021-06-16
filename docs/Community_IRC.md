@@ -24,7 +24,7 @@ Or simply use Freenode's webirc client: [https://web.libera.chat/#armbian](https
 - **#armbian** is the project's main channel. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 - **#armbian-devel** is the project's channel dedicated for build engine development topics.
 - **#armbian-commits** is a moderated channel. Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Also newly added issues on [Jira](https://armbian.atlassian.net/projects/AR/issues/?filter=allissues) will be pasted. User chat is not possible.
-- **#armbian-rss** is a live forum feed. Whenever a new post in the Armbian Forums is made it will be announced here. User chat is not possible.
+- **#armbian-rss** is a live forum and Twitter feed. Whenever a new post in the Armbian Forums is made or somebody mentions Armbian on Twitter it will be announced here. User chat is not possible.
 Of course you can also enable desktop notification in your favorite browser for the forums.
 
 Everybody is free to join any of these channels.
@@ -62,7 +62,7 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 It is a common habit to simply state your question or issue and then wait patiently for an answer. Depending how complex this may take up to a few hours because most Armbian contributors have detailed knowledge in a specific board family only.
 - *Is the chat history public as well?*  
     - Yes. All conversation is redundantly logged. These logs are open to the public. You can find them here: [http://irc.armbian.com](http://irc.armbian.com)
-- *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@unaffiliated/username'?*  
+- *Why do some people have odd hostnames like '@armbian/staff/lanefu' or '@user/username'?*  
     - These *hostnames* are so called project affiliation cloaks. These are meant to show a users affiliation to a specific project and their role there.
 - *Can I have that too?*  
     - Yes. An Armbian affiliation cloak can be requested from *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/) or IRC. They usually will be granted if you are a well known member in forums, a contributor via Github or donated to the project. Make sure you identified yourself to Nickserv beforehand.
