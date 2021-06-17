@@ -79,6 +79,7 @@ nav:
   - "Contributor Process" :
         - "Contribute" : "Process_Contribute.md"
         - "Merge Policy" : "Process_Merge-Policy.md"
+        - "Continuous integration" : "Process_CI.md"
         - "Documentation" : "Process_Documentation.md"
 
   - "Release management" :
