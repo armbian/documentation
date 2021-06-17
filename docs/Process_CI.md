@@ -50,7 +50,7 @@ If you have a commit rights to the repository, go to [Armbian build system actio
 
 ![Updating selected stable images](images/build-selected-blured.png)
 
-You can recreate image(s) from sources - set `packages from repository` to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
+You can recreate image(s) at main [download location](https://www.armbian.com/download/) from sources - set `packages from repository` to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
 
 ![kanban screenshot](images/stable-images.png)
 
