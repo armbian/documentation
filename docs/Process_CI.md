@@ -2,7 +2,7 @@
 
 <br>
 
-They are a combination of Github Actions and scripts that run on our servers. Armbian is providing a large quantity of compiled binaries and images which builds are distributed over our build farm.
+Armbian Build pipelines are combination of Github Actions and scripts that run on our servers.  Armbian is providing a large quantity of compiled binaries and images which builds are distributed over our self-hosted build farm.
 
 <br>
 
