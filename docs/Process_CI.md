@@ -12,6 +12,8 @@ Armbian Build pipelines are combination of Github Actions and scripts that run o
 
 ![Build](images/main-pipeline.png)
 
+What is affected by this pipeline?
+
 - edge branch in https://apt.armbian.com
 - all branches in https://beta.armbian.com
 - rootfs cache
