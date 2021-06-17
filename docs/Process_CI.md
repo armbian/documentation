@@ -14,8 +14,8 @@ Armbian Build pipelines are combination of Github Actions and scripts that run o
 
 What is affected by this pipeline?
 
-- edge branch in https://apt.armbian.com
-- all branches in https://beta.armbian.com
+- edge branch in stable repository https://apt.armbian.com
+- all branches in beta repository https://beta.armbian.com
 - rootfs cache
 <br>
  The repository indexes for BETA are updated immediately.
