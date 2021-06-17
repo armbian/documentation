@@ -2,7 +2,7 @@
 
 <br>
 
-They are a combination of Github Actions scrips and scripts that run on our servers. Armbian is providing big number of turnkey binaries which builds are distributed over our build farm.
+They are a combination of Github Actions and scripts that run on our servers. Armbian is providing a large quantity of compiled binaries and images which builds are distributed over our build farm.
 
 <br>
 
@@ -16,13 +16,13 @@ They are a combination of Github Actions scrips and scripts that run on our serv
 - all branches in https://beta.armbian.com
 - rootfs cache
 <br>
-In case new files are created, download and repository indexes are updated after content is uploaded to CDN which usually happens in 24 - 48h. With exception of beta repository, which update is instant.
+ The repository indexes for BETA are updated immediately.
 
 <br>
 <br>
 Trigger: every day at 6am CET
 <br>
-Condition: changes in packages relations, upstream sources, patches or configurations
+Condition: change in packages, upstream sources, patches or configuration
 
 ## Updating all beta images
 
@@ -32,7 +32,7 @@ Condition: changes in packages relations, upstream sources, patches or configura
 
 <br>
 
-- triggered manually or automatically after nightly / edge build is finished,
+- triggered manually or uppon completion of nightly / edge builds;
 - running the job manual is possible,
 - pipeline is always using packages from https://beta.armbian.com repository.
 
@@ -48,10 +48,10 @@ If you have a commit rights to the repository, go to [Armbian build system actio
 
 ![Updating selected stable images](images/build-selected-blured.png)
 
-You can recreate image(s) from sources - set packages from repository to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
+You can recreate image(s) from sources - set `packages from repository` to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
 
 ![kanban screenshot](images/stable-images.png)
 
 <br>
 
-Download and repository indexes are updated after content is uploaded to CDN which usually happens in 24 - 48h. With exception of beta repository, which update is instant.
+When new artifacts are created for stable builds, content is uploaded to CDN, then download and repository indexes are updated.  The process is typically complete in 1 to 2 days for major releases.
