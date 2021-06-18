@@ -93,4 +93,4 @@ Check [download page](https://www.armbian.com/download/) for recently supported 
 * [Community](https://forum.armbian.com/)
 * [Contact](https://www.armbian.com/#contact)
 
-Our IRC channel is [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). More details [here](https://docs.armbian.com/Community_IRC/)
+Our IRC channel is [#armbian](https://web.libera.chat/#armbian) on [freenode](https://libera.chat/). More details [here](https://docs.armbian.com/Community_IRC/)
