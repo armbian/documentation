@@ -5,6 +5,24 @@
 
 # Release notes - Armbian - Version 21.08
 
+## v21.05.6 (2021-06-21)
+
+Solved Bugs
+
+<ul>
+<li>Updated images for Orangepi Zero</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-593">AR-593</a>] - Rockpi S doesn't boot mainline kernel</li>
+</ul>
+ 
+## v21.05.3 (2021-05-24)
+
+Solved Bugs
+
+<ul>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-780">AR-780</a>] - Nanopi R4S USB broken</li>
+<li>[<a href="https://armbian.atlassian.net/browse/AR-780">AR-816</a>] - ZRAM is missing in Jeston Nano legacy</li>
+</ul>
+ 
 ## v21.05.2 (2021-05-24)
 
 Solved Bugs
