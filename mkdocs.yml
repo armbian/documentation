@@ -88,5 +88,5 @@ nav:
         - "Workflow (Jira)" : "Process_Managing_Workflow.md"
 
   - "Community" :
-        - "IRC" : "Community_IRC.md"
+        - "IRC/Discord/Matrix" : "Community_IRC.md"
         - "Governance" : "Community_Governance.md"
