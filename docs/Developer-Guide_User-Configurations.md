@@ -19,7 +19,7 @@ If file `userpatches/lib.config` exists, it will be called and can override the 
 
 ## User provided kernel config
 
-If file `userpatches/linux-$KERNELFAMILY-$KERNELBRANCH.config` exists, it will be used instead of default one from `config`. Look for the hint at the beginning of kernel compilation process to select proper config file name. Example:
+If file `userpatches/linux-$LINUXFAMILY-$RANCH.config` exists, it will be used instead of default one from `config`. Look for the hint at the beginning of kernel compilation process to select proper config file name. Example:
 
     [ o.k. ] Compiling edge kernel [ @host ]
     [ o.k. ] Using kernel config file [ config/linux-sunxi-edge.config ]
