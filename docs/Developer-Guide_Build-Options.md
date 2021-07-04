@@ -43,8 +43,8 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - prebuilt: install extra applications from repository
     - compile: compile extra applications in chroot  
 - **CREATE_PATCHES** ( yes | no ):
-    - yes: prompt right before the compilation starts to make changes to the source code, separate for U-Boot and kernel, and will create patch files out of this. If you want these patches are included in the normal run, you need to copy them to their appropriate directories.
-    - no: will not do what is described above and simply builds without interruption   
+    - yes: prompt right before the compilation starts to make changes to the source code, separate for U-Boot and kernel, and will create patch files out of this. If you want these patches applied while CREATE_PATCHES=no, you need to copy them to their appropriate directories.
+    - no: do not use user patches and build armbian without extra interruption.
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 - **LIB_TAG** ( master | "branchname" ):
     - set to `master` to compile from the master branch (default)
