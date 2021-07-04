@@ -1,8 +1,9 @@
 # Build options
 
-These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](/Developer-Guide_Build-Preparation/#providing-build-configuration) to save time.
+These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](/Developer-Guide_Build-Preparation/#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
 ## Main options
+
 
 - **KERNEL_ONLY** ( yes | no ):
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
@@ -37,14 +38,13 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - yes: compile and install extra applications and firmware  
 - **BSPFREEZE** ( yes | no ): 
     - yes: freeze (from update) armbian packages when building images (U-Boot, kernel, DTB)  
-- **INSTALL_HEADERS** ( no | yes ):
+- **INSTALL_HEADERS** ( **no** | yes ):
     - yes: install kernel headers  
 - **EXTERNAL_NEW** ( no | prebuilt | compile ):
     - prebuilt: install extra applications from repository
     - compile: compile extra applications in chroot  
-- **CREATE_PATCHES** ( yes | no ):
-    - yes: prompt right before the compilation starts to make changes to the source code, separate for U-Boot and kernel, and will create patch files out of this. If you want these patches are included in the normal run, you need to copy them to their appropriate directories.
-    - no: will not do what is described above and simply builds without interruption   
+- **CREATE_PATCHES** ( yes | **no** ):
+    - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes patch files will be created and placed in `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say) these files need to be copied to the appropriate directories. Also see [user provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches).
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 - **LIB_TAG** ( master | "branchname" ):
     - set to `master` to compile from the master branch (default)
