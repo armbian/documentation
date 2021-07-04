@@ -23,6 +23,7 @@ If file `userpatches/linux-$KERNELFAMILY-$KERNELBRANCH.config` exists, it will b
 
     [ o.k. ] Compiling edge kernel [ @host ]
     [ o.k. ] Using kernel config file [ config/linux-sunxi-edge.config ]
+Where KERNELBRANCH is BRANCH and KERNELFAMILY is LINUXFAMILY from https://docs.armbian.com/Developer-Guide_Build-Preparation/
 
 ## User provided sources config overrides
 
