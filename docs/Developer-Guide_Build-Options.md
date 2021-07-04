@@ -87,7 +87,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - yes: compatibility shorcut for `sha,gpg,7z`
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
-- **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
+- **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image. You can find your kernel sources in archive in /usr/src/ on installed armbian system. It may helps users of your system to reconfigure kernel. 
 - **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | xfs | nfs | fel ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
 - **BTRFS_COMPRESSION** ( lzo | none | **zlib** | zstd ): when choosing `ROOTFS_TYPE=btrfs` select `btrfs` filesystem compression method and compression level. By default the compression is `zlib`.  
 When selecting `zstd` or setting zlib compression level(`zlib:[1-9]`) user must ensure kernel version is **>=4.14.x**.  
