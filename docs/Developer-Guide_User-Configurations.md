@@ -21,8 +21,8 @@ If file `userpatches/lib.config` exists, it will be called and can override the 
 
 If file `userpatches/linux-$LINUXFAMILY-$RANCH.config` exists, it will be used instead of default one from `config`. Look for the hint at the beginning of kernel compilation process to select proper config file name. Example:
 
-    [ o.k. ] Compiling edge kernel [ @host ]
-    [ o.k. ] Using kernel config file [ config/linux-sunxi-edge.config ]
+    [ o.k. ] Compiling curent kernel [ 5.10.47 ]
+    [ o.k. ] Using kernel config provided by user [ userpatches/linux-rockchip64-current.config ]
 
 ## User provided sources config overrides
 
