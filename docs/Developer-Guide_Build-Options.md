@@ -63,7 +63,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 ## Hidden options to minimize user input for build automation
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
 - **BRANCH** ( `legacy` | `current` | `dev` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
-- **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `groovy` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
+- **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `hirsute` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
   
 ## Hidden options for advanced users (default values are marked **bold**)
 - **EXPERT** ( yes | **no** ): Show development features in interactive mode
