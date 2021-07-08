@@ -83,7 +83,7 @@ This is a typical board configuration:
 	MODULES_NEXT="brcmfmac bonding"  
 	#  
 	KERNEL_TARGET="legacy,current,edge"  
-	CLI_TARGET="buster,bionic,focal:current"  
+	CLI_TARGET="buster,bionic,focal,hirsute:current"  
 	DESKTOP_TARGET="stretch:legacy,current"  
 	  
 	CLI_BETA_TARGET=""  
@@ -99,7 +99,7 @@ This is a typical board configuration:
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
-Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `focal`, `buster`, `bionic`, `stretch`.
+Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `hirsute`, `focal`, `buster`, `bionic`, `stretch`.
 To edit those parameters you need to push changes to the build script.
 You need to [fork a project and create a pull request](Process_Contribute.md) and after it is imported by one of the administrators, images will start to show up in appropriate folder.
 
