@@ -34,7 +34,7 @@ Note: from the Linux kernel maintainer perspective all dedicated interfaces like
 
 ## armbianEnv.txt entries reference
 
-Armbian build script produce special U-Boot file armbianEnv.txt (named uEnv.txt in [another](https://www.linuxjournal.com/content/handy-u-boot-trick) docs). It contains values of enviroment variables of U-Boot. Armbian build script generate armbianEnv.txt using one of file placed in /build/config/bootenv. For example if you build armbian for RK3399 (Orange Pi 4), so armbian will use rockchip.txt. You can edit this file to change U-Boot enviroment variables. If you want change U-Boot's enviroment variables after armbian building see [How to toggle boot output?](https://docs.armbian.com/User-Guide_Fine-Tuning/#how-to-toggle-boot-output)
+Armbian build script produce special U-Boot file armbianEnv.txt (named uEnv.txt in [another](https://www.linuxjournal.com/content/handy-u-boot-trick) docs). It contains values of environment variables of U-Boot. Armbian build script generate armbianEnv.txt using one of file placed in /build/config/bootenv. For example if you build armbian for RK3399 (Orange Pi 4), so armbian will use rockchip.txt. You can edit this file to change U-Boot environment variables. If you want change U-Boot's environment variables after armbian building see [How to toggle boot output?](https://docs.armbian.com/User-Guide_Fine-Tuning/#how-to-toggle-boot-output) Full list of U-Boot environment variables [here](https://www.denx.de/wiki/view/DULG/UBootCmdGroupEnvironment)
 
 - `overlay_prefix` - prefix for the DT and overlay file names, set at OS image creation time
 - `overlays` - list of overlays to activate from kernel directory
