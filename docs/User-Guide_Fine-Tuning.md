@@ -111,7 +111,13 @@ Recompile boot.cmd to boot.scr if it was changed:
 
 Reboot.
 
-Serial console on imx6 boards are ttymxc0 (Hummingboard, Cubox-i) or ttymxc1 (Udoo).
+Serial console on imx6 boards are ttymxc0 (Hummingboard, Cubox-i) or ttymxc1 (Udoo); ttyS2 for Orange Pi 4.
+If you want switch off Linux System Serial Port for Console Management:
+    - console=both
+    + console=none
+In this case U-boot does not pass bootargs variable with console parameters to Linux kernel.
+
+Note: If you just edit armbianEnv.txt or boot.cmd on your microSD then no effect for U-Boot because U-Boot use boot.scr. To get new boot.scr you need use mkimage, see above.
 
 ## How to toggle verbose boot?
 
