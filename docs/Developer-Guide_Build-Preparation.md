@@ -49,7 +49,8 @@ Example:
 
     ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=focal
 
-Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.
+Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.  
+Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/master/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
 
 ### Base and descendant configuration
 
