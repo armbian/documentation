@@ -105,6 +105,8 @@ Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-paramet
     - console=both
     + console=serial
 
+To disable console entirely (not recommended) set console to `none`.  
+
 Recompile boot.cmd to boot.scr if it was changed:
 
 	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
