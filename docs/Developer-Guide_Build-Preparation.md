@@ -84,8 +84,8 @@ This is a typical board configuration:
 	MODULES_NEXT="brcmfmac bonding"  
 	#  
 	KERNEL_TARGET="legacy,current,edge"  
-	CLI_TARGET="buster,bionic,focal:current"  
-	DESKTOP_TARGET="stretch:legacy,current"  
+	CLI_TARGET="buster,focal:current"  
+	DESKTOP_TARGET="buster:legacy,current"  
 	  
 	CLI_BETA_TARGET=""  
 	DESKTOP_BETA_TARGET=""  
@@ -100,7 +100,7 @@ This is a typical board configuration:
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
-Variants are depenendend from `KERNEL_TARGET` definitions and supported userlands: `focal`, `buster`, `bionic`, `stretch`.
+Variants are dependent from `KERNEL_TARGET` definitions and supported userlands: `hirsute`, `focal`, `buster`.
 To edit those parameters you need to push changes to the build script.
 You need to [fork a project and create a pull request](Process_Contribute.md) and after it is imported by one of the administrators, images will start to show up in appropriate folder.
 
@@ -108,9 +108,9 @@ If you want to enable Debian buster desktop image with _current_ kernel choose t
 
 	DESKTOP_BETA_TARGET="buster:current"
 
-or for command line interfaces Ubuntu Bionic based images with legacy kernel 4.19.x
+or for command line interfaces Ubuntu Focal based images with legacy kernel 4.19.x
 
-	CLI_BETA_TARGET="bionic:legacy"
+	CLI_BETA_TARGET="focal:legacy"
 
 or for image with latest upstream development/bleeding edge kernel.
 
