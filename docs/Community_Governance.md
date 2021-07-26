@@ -8,9 +8,8 @@
 | Amlogic   | @Tonymac32      | @igorpecovnik, @martinayotte                                  | meson, meson64               |                      |
 | Rockchip  | @Tonymac32      | @igorpecovnik, @martinayotte, @JMCC, @paolosabatino, @piter75 | rockchip, rockchip64, rk3399 | @JMCC: Renegade only |
 | Mediatek  | @chwe           |                                                               | mt7623                       |                      |
-| Marvell   | @gprovost       |                                                               | mvebu,mvebu64                |                      |
+| Marvell   | @gprovost       | @aprayoga                                                     | mvebu,mvebu64                |                      |
 | Samsung   |                 |                                                               | odroidxu4                    |                      |
-| Pine64    |                 |                                                               |                              |                      |
 
 ## Armbian Base Maintainers
 
@@ -19,7 +18,7 @@
 | Build Scripts                 | @igorpecovnik   | @martinayotte, @lanefu        | `/lib/*.sh`                     | code responsible for building images |
 | Armbian-Tools                 | @igorpecovnik   | @botfap                       | armbian-config, armbian-monitor | userland tools provided by Armbian   |
 | Armbian-Tools: armbian-config | @gprovst        |                               | armbian-config                  |                                      |
-| Multimedia                    |                 | @JMCC, @jernejsk, @Miouyouyou |                                 |                                      |
+| Multimedia/Desktops           |                 | @JMCC, @jernejsk, @Miouyouyou, @rneese |                                 |                                      |
 
 ## Other Roles
 
