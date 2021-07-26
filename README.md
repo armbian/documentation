@@ -1,5 +1,7 @@
 # Armbian Documentation
 
+[![Create offline documentation](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml)
+
 ## Overview
 
 Documentation is written in [markdown](https://www.markdownguide.org/basic-syntax/) and stored in the `docs/` subfolder.  Images go in `docs/images`.
