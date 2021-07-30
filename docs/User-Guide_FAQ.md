@@ -18,7 +18,7 @@ Shortly explain difference between ARM and Intel architecure. Bus system, device
 
 - WIP: Work in progress
   - Basic functions can be tested but not ready for production yet
-- CSC: community supported configuration
+- CSC: Community supported configuration
   - Community contributed support. No official support from Armbian development team
 - EOS: End of life
   - Support ended
