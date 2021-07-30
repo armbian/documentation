@@ -16,7 +16,7 @@ There is more and more positions, where it is nearly impossible to get a reliabl
 
 Each question that is directed toward our team is generating us costs. We waste time and energy, which we don't want. Especially because questions are repeating and users comodity is preventing them to invest 5 seconds into the search.
  
-Those costs go sky high when someone expets personal dedication - answering in hard technical questions can easily cost us additional 10 hours per day of totally wasted time. Private technical communition on public project is most wasted time since its most ineffective way to share knowledge. Which we would like to share as much as possible, but we can't due lack of the with and levels of our comm channels. We can only afford to provide forums, docs, IRC/discord.
+Those costs go sky high when someone expets personal dedication - answering in hard technical questions can easily cost us additional 10 hours per day of totally wasted time. Private technical communition on public project is most wasted time since its most ineffective way to share knowledge. Which we would like to share as much as possible, but all have to work elsewhere to cover for our family and to cover for your pleasere you have with this project. We can only afford to cover provide forums, docs, IRC/discord.
 
 ## Why does Armbian not support RaspberryPi?
 
