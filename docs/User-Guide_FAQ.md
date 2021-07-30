@@ -8,9 +8,11 @@ Shortly explain difference between ARM and Intel architecure. Bus system, device
 	
 ## Why is Armbian constantly asking for money? Free software should be free.
 
-Keeping this service up costs maintainers between 30 and 60 hours every day. This means we have to invest let's say 3.000 EUR of our time into this service every day just to keep it up. Without developing any serious feature which development can easily cost exactly the same. This software public is using for free, nobody needs to buy licence for using it, nobody pays for best effort support.
+tl;dr; That developers and project maintainers doesn't loose their generocity and humanity which are the driving force that generates a value. For you! Great deal of our work represent a big pressure to our private resources.
 
-We have to maintain our infrastructure where biggest costs is - once again - peoples time, followed by electricity, then hardware itself. Sometimes we get free hardware and very rare break even with electricity costs and with people that would maintain this for us. A new free box usually brings us more costs then benefit. Since benefit is anyway public.
+Keeping this service up costs maintainers between 30 and 60 hours every day. When releases are approaching and a lot of testing and fixing is going on, this gets doubled. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling your wishes would costs millions, which we don't have and which we can't get back, since you expect that software is free. Nobody needs to buy licence for using it, nobody pays for best effort support.
+
+We have to maintain our infrastructure where biggest costs is - once again - people's time, followed by electricity, then hardware itself. Sometimes we get free hardware and very rare break even with electricity costs and with people that would maintain this for us. A new free box usually brings us more costs then benefit. Since benefit is anyway public.
 
 There are more and more positions where it is nearly impossible to get a reliable volunteer, but resource such as project management, documentation editor or marketing communication is critical for project development in general. It is needed to keep up and to secure service users expect to have.
 
