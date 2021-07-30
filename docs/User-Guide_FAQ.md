@@ -8,7 +8,9 @@ Shortly explain difference between ARM and Intel architecure. Bus system, device
 	
 ## Why is Armbian constantly asking for money? Free software should be free.
 
-tl;dr; That developers and project maintainers doesn't loose their generocity and humanity which are the driving force that generates a value. For all of us! Great deal of our work represent a big pressure to our private resources - we ask you to share that burden.
+Making free licence software also require best people, expensive infrastructure, tooling. It has as much or more costs as propriatery while generating no income from the licence.
+
+tl;dr; We are asking for help that developers and project maintainers doesn't loose their generocity and humanity which are the driving force that generates a value. For all of us! Great deal of our work represent a big pressure to our very limited private resources. We ask you to share that burden with us.
 
 Keeping this service up costs maintainers between 30 and 60 hours every day. When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling your wishes would costs millions, which we don't have and which we can't get back, since you expect that software is free. Nobody needs to buy licence for using it, just a few people decides to [respect time and attention](https://forum.armbian.com/subscriptions/) that are receiving from developers on forums. 
 
