@@ -23,4 +23,8 @@ Shortly explain difference between ARM and Intel architecure. Bus system, device
 - EOS: End of life
   - Support ended
 
+## Why are old-stable distributions like Ubuntu Bionic or Debian Stretch not supported?
+
+The Armbian project has very limited human and financial ressources so it can focus on just a few up-to-date operating systems only.
+
 ## Add more....
