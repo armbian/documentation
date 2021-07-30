@@ -27,4 +27,8 @@ Shortly explain difference between ARM and Intel architecure. Bus system, device
 
 The Armbian project has very limited human and financial ressources so it can focus on just a few up-to-date operating systems only.
 
+## Why does Armbian not support TV boxes? The market is hugh!
+
+...
+
 ## Add more....
