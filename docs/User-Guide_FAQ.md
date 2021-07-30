@@ -6,6 +6,21 @@
 
 Shortly explain difference between ARM and Intel architecure. Bus system, device tree....that reasons.
 	
-## Other possible question
+## Why is Armbian constantly asking for money? Free software should be free.
 
 ...
+
+## Why does Armbian not support RaspberryPi?
+
+...
+
+## What does WIP/EOS/CSC mean?
+
+- WIP: Work in progress
+  - Basic functions can be tested but not ready for production yet
+- CSC: community supported configuration
+  - Community contributed support. No official support from Armbian development team
+- EOS: End of life
+  - Support ended
+
+## Add more....
