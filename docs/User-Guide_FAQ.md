@@ -14,6 +14,10 @@ We have to maintain our infrastructure, where biggest costs is our time, then el
 
 There is more and more positions, where it is nearly impossible to get a reliable voolonteer, but resource is critical for project development. It is needed to keep up and to secure service you are wishing.
 
+Each question that is directed toward our team is generating us costs. We waste time and energy, which we don't want. Especially because questions are repeating and users comodity is preventing them to invest 5 seconds into the search.
+ 
+Those costs go sky high when someone expets personal dedication - answering in hard technical questions can easily cost us additional 10 hours per day of totally wasted time. Private technical communition on public project is most wasted time since its most ineffective way to share knowledge. Which we would like to share as much as possible, but we can't due lack of the with and levels of our comm channels. We can only afford to provide forums, docs, IRC/discord.
+
 ## Why does Armbian not support RaspberryPi?
 
 ...
@@ -39,6 +43,6 @@ The Armbian project has very limited human and financial ressources so it can fo
 
 Single board computer vendors are making their computers on as cheap as possible principle. To be honest, there are some exceptions, which in fact produce better quality then the others. In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there. Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hw functioniong trought the time.
 
-TV boxes lakcs of any docuentation, there are frequent changes of components without any notice, boot mechanism is closed source and almost all Armbian builds that exist in the wild are community hacks.
+TV boxes lakcs of any docuentation, there are frequent changes of components without any notice, boot mechanism is closed source and almost all Armbian builds that exist in the wild are community hacks. Market is huge, but since public doesn't have interest to cover costs of support, which are here only much bigger, our involvement to provide support is simply insane and stupid. It only eats our personal time and finances.
 
 ## Add more....
