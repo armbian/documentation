@@ -18,6 +18,8 @@ Each question that is directed toward our team is generating us costs. We waste 
  
 Those costs go sky high when someone expets personal dedication - answering in hard technical questions can easily cost us additional 10 hours per day of totally wasted time. Private technical communition on public project is most wasted time since its most ineffective way to share knowledge. Which we would like to share as much as possible, but all have to work elsewhere to cover for our family and to cover for your pleasere you have with this project. We can only afford to cover provide forums, docs, IRC/discord.
 
+All our work is done in public and we provide all sources which we are changing in the process. All our work is patent free and released under the free licence so anyone can re-use it further. Since we are ahead of many other projects, we loose a lot more since most of projects that are repacking our work don't even try to deal with the support we do and can focus on sales only.
+
 ## Why does Armbian not support RaspberryPi?
 
 ...
