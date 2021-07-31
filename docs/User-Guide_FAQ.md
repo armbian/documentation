@@ -2,6 +2,10 @@
 
 - **This information is mainly for new/inexperienced users but could be useful for others too.**
 
+## Is Armbian an operating system?
+
+Not per se. Armbian is a collection of scripts that allows users to create images for SBCs with working kernels in various userspace configurations. Armbian does provide prebuild images but mostly for users convenience.
+
 ## Why I cannot simply shove a random image into my board to work like on my PC?
 
 Shortly explain difference between ARM and Intel architecure. Bus system, device tree....that reasons.
