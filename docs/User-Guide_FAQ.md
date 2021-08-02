@@ -9,6 +9,12 @@ Not per se. Armbian is a collection of scripts that allows users to create image
 ## Why I cannot simply shove a random image into my board to work like on my PC?
 
 Shortly explain difference between ARM and Intel architecure. Bus system, device tree....that reasons.
+
+x86 architecture always has a traditional BIOS or UEFI.   This provides a standard framework for operating systems to interact with the hardware.  Most SBCs do not.   ARM is improving the siutation with ARM Server Ready and ARM System Ready certificates, but most SBC vendors are not yet incentivized to meet these standards.
+
+Without such standards, many vendors quickly fork low-level bootloaders such as u-boot and make the bare minimum modifications needed.
+
+[great reference here](https://bootlin.com/pub/conferences/2017/lca/petazzoni-arm-introduction/petazzoni-arm-introduction.pdf)
 	
 ## Why is Armbian constantly asking for money? Free software should be free.
 
@@ -32,7 +38,7 @@ All our work is done in public and we provide all sources which we are changing 
 
 ## Why does Armbian not support RaspberryPi?
 
-...
+Historically the Raspberry Pi has had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support. 
 
 ## What does WIP/EOS/CSC mean?
 
