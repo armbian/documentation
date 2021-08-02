@@ -10,7 +10,7 @@ Not per se. Armbian is a collection of scripts that allows users to create image
 
 Shortly explain difference between ARM and Intel architecure. Bus system, device tree....that reasons.
 
-x86 architecture always has a traditional BIOS or UEFI.   This provides a standard framework for operating systems to interact with the hardware.  Most SBCs do not.   ARM is improving the siutation with ARM Server Ready and ARM System Ready certificates, but most SBC vendors are not yet incentivized to meet these standards.
+x86 architecture always has a traditional BIOS or UEFI.   This provides a standard framework for operating systems to interact with the hardware.  Most SBCs do not.   ARM is improving the situation with *ARM Server Ready* and *ARM System Ready certificates*, but most SBC vendors are not yet incentivized to meet these standards.
 
 Without such standards, many vendors quickly fork low-level bootloaders such as u-boot and make the bare minimum modifications needed.
 
@@ -38,7 +38,8 @@ All our work is done in public and we provide all sources which we are changing 
 
 ## Why does Armbian not support RaspberryPi?
 
-Historically the Raspberry Pi has had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support. 
+Historically the Raspberry Pi has had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support.  
+There are other reasons as well. If you are interested there is a years-long conversation going on in forums: https://forum.armbian.com/topic/483-support-of-raspberry-pi/
 
 ## What does WIP/EOS/CSC mean?
 
