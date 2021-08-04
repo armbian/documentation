@@ -41,6 +41,11 @@ All our work is done in public and we provide all sources which we are changing 
 Historically the Raspberry Pi has had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support.  
 There are other reasons as well. If you are interested there is a years-long conversation going on in forums: https://forum.armbian.com/topic/483-support-of-raspberry-pi/
 
+## Why does hardware feature XY work in old kernel but not in more recent one?
+
+Vendors tend to fork old kernel and U-Boot versions and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed to mainline they usually do not update their sources (if available at all) and kernels as well.  
+Armbian moves things forward and follows mainline kernel as much as possible to provide both its features as well as security updates. The downside is that some features do not work since nobody ported specific drivers to mainline and they can also break. Armbian can only afford to do a brief testing of images and check if basic functions (boot-up, network, USB...) work due to lack of both human and financial ressources.
+
 ## What does WIP/EOS/CSC mean?
 
 - WIP: Work in progress
