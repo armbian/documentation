@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-- **This information is mainly for new/inexperienced users but could be useful for others too.**
+**This information is mainly for new/inexperienced users but could be useful for others too.**
 
 ## Is Armbian an operating system?
 
@@ -69,4 +69,7 @@ Single board computer vendors are making their computers on as cheap as possible
 
 TV boxes lacking of any docuentation. There are frequent changes of components without any notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are community hacks. Market is huge but since public does not have interest in covering of support - which in this case are even bigger - our involvement to provide support is simply insane and stupid. It only eats our personal time and finances.
 
-## Add more....
+## There is a new board on the market. Will Armbian officially support it?
+
+Maybe. It depends on things like available documentation from both the vendor as well as SoC manufactur, production samples to play with, available BSP and last but not least human ressource, maintainer within the Armbian development team to say. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+
