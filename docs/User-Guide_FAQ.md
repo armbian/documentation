@@ -22,7 +22,7 @@ tl;dr; We are asking for help that developers and project maintainers doesn't lo
 
 ### Development Time
 
-We are covering large area of diversed custom designed ARM hardware they way, size and under conditions nobody else does. Keeping this service up, keeping those low end hardware functional is laborious.  When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling your wishes would costs millions, which we don't have and which we can't get back, since you expect that software is free. Nobody needs to buy licence for using it, just a few people decides to [respect time and attention](https://forum.armbian.com/subscriptions/) that are receiving from developers on forums. 
+We are covering large area of diversed custom designed ARM hardware they way, size and under conditions nobody else does. Keeping this service up, keeping those low end hardware functional is laborious.  When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling many of these wishes would easily cost tens of thousands in development time, which we don't have and which we can't get back due to it being free software. Nobody needs to buy licence for using it, just a few people decides to [respect time and attention](https://forum.armbian.com/subscriptions/) that are receiving from developers on forums. 
 
 ### Infrastructure and Operations.
 
@@ -34,7 +34,7 @@ Each question that is directed towards our team is generating opportunity costs 
 
 Questions associated with missing features represent another hit and miss for us. Complicated and critical upstream functions (like video acceleration withing a web browser, supporting a board that have very poor initial support and no community backing, ...) are missing. This functionality is unique to hardware and implementing is extremely labor intensive and requires unique expertise. Our team is 10-15 volunteers that maintain this project in their free time. We cannot cover the job of Google Chromium team, Collabora, ARM, Rockchip and others vendors which have not provided sufficient support for their products.
 
-All our work is done in public and we provide all sources which we are changing in the process. All our work is patent free and released under a free licence so anyone can re-use it further. The scale of SBCs Armbian supports is hard to beat, and consequently our work is repackaged and reused by other projects and vendors, but the burden of support is still directed to us, while they focus on revenue.
+All our work is done in public and we provide all sources which we are changing in the process. All our work is patent free and released under a free licence so anyone can re-use it further. The scale of SBCs Armbian supports is hard to beat, and consequently our work is repackaged and reused by other projects and vendors. Unfortunately the burden of support is often directed to us, while they focus on revenue.
 
 ## Why does Armbian not support RaspberryPi?
 
