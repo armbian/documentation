@@ -43,7 +43,7 @@ There are other reasons as well. If you are interested there is a years-long con
 
 ## Why does hardware feature XY work in old kernel but not in more recent one?
 
-Vendors develops hardware specific support on fixed (usually old LTS) kernel fork and U-Boot and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and kernels as well.  
+Vendors develops hardware specific support on fixed (usually old LTS) kernel and U-Boot fork and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and kernels as well.  
 Armbian moves things forward and follows mainline kernel as much as possible to provide both its features as well as security updates. The downside is that some features do not work since nobody ported specific drivers to recent mainline and they can also break. Armbian can only afford to do a brief testing of images and check if basic functions (boot-up, network, USB...) work due to lack of both human and financial resources.
 
 ## What does WIP/EOS/CSC mean?
