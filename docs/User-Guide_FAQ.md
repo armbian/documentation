@@ -4,7 +4,7 @@
 
 ## Is Armbian an operating system?
 
-Not per se. Armbian is a collection of scripts that allows users to create images for SBCs with working kernels in various userspace configurations. Armbian does provide prebuild images but mostly for users convenience.
+Not per se. Armbian is a collection of scripts that allows users to create images for various single board computers (SBCs) with working kernels in variable userspace configurations. Armbian does provide prebuild images but mostly for users convenience.
 
 ## Why I cannot simply shove a random image into my board to work like on my PC?
 
@@ -12,23 +12,23 @@ x86 architecture always has a traditional BIOS or UEFI.   This provides a standa
 
 Without such standards, many vendors quickly fork low-level bootloaders such as u-boot and make the bare minimum modifications needed.
 
-[great reference here](https://bootlin.com/pub/conferences/2017/lca/petazzoni-arm-introduction/petazzoni-arm-introduction.pdf)
+[Great reference here](https://bootlin.com/pub/conferences/2017/lca/petazzoni-arm-introduction/petazzoni-arm-introduction.pdf)
 	
 ## Why is Armbian constantly asking for money? Free software should be free.
 
 Making free licence software also require best people, expensive infrastructure, tooling. It has as much or more costs as propriatery while generating no income from the licence.
 
-tl;dr; We are asking for help that developers and project maintainers doesn't loose their generocity and humanity which are the driving force that generates a value. For all of us! Great deal of our work represent a big pressure to our very limited private resources. We ask you to share that burden with us.
+tl;dr: We are asking for help that developers and project maintainers does not loose their generocity and humanity which are the driving force that generates a value. For all of us! Great deal of our work represent a big pressure to our very limited private resources. We ask you to share that burden with us.
 
-### Development Time
+### Development time
 
 We are covering large area of diversed custom designed ARM hardware they way, size and under conditions nobody else does. Keeping this service up, keeping those low end hardware functional is laborious.  When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling many of these wishes would easily cost tens of thousands in development time, which we don't have and which we can't get back due to it being free software. Nobody needs to buy licence for using it, just a few people decides to [respect time and attention](https://forum.armbian.com/subscriptions/) that are receiving from developers on forums. 
 
-### Infrastructure and Operations
+### Infrastructure and operations
 
 We have to maintain our infrastructure where biggest costs is - once again - people's time, followed by electricity, then hardware itself. Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us. A new sponsored box usually brings us more costs then benefits. Since benefit is anyway public.
 
-### Support Time
+### Support time
 
 Each question that is directed towards our team is generating opportunity costs and taking away from development time. Some we are happy to cover, but not all. Especially when it goes for repetitive questions and demands.  
 
@@ -38,22 +38,19 @@ All our work is done in public and we provide all sources which we are changing 
 
 ## Why does Armbian not support RaspberryPi?
 
-Historically the Raspberry Pi has had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support.  
+Historically Raspberry Pi SBCs have had a strong community and its own support. Armbian's development effort is better spent focusing on other ARM-based SBCs with less support.  
 There are other reasons as well. If you are interested there is a years-long conversation going on [in forums](https://forum.armbian.com/topic/483-support-of-raspberry-pi/). 
 
 ## Why does hardware feature XY work in old kernel but not in more recent one?
 
-Vendors develops hardware specific support on fixed (usually old LTS) kernel and U-Boot fork and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and kernels as well.  
+Vendors develop hardware specific support on fixed (usually old LTS) kernel and U-Boot fork and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and pre-made kernels/boot loaders as well.  
 Armbian moves things forward and follows mainline kernel as much as possible to provide both its features as well as security updates. The downside is that some features do not work since nobody ported specific drivers to recent mainline and they can also break. Armbian can only afford to do a brief testing of images and check if basic functions (boot-up, network, USB...) work due to lack of both human and financial resources.
 
 ## What does WIP/EOS/CSC mean?
 
-- WIP: Work in progress
-  - Basic functions can be tested but not ready for production yet
-- CSC: Community supported configuration
-  - Community contributed support. No official support from Armbian development team
-- EOS: End of life
-  - Support ended
+- WIP: Work in progress: Basic functions can be tested but not ready for production yet
+- CSC: Community supported configuration: Community contributed support. No official support from Armbian development team
+- EOS: End of life: Support ended
 
 ## I have no technical knowledge. How can I help?
 
