@@ -24,7 +24,7 @@ tl;dr; We are asking for help that developers and project maintainers doesn't lo
 
 We are covering large area of diversed custom designed ARM hardware they way, size and under conditions nobody else does. Keeping this service up, keeping those low end hardware functional is laborious.  When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies. This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up. Without developing any serious features [you wish to have](https://forum.armbian.com/forum/38-feature-requests/). Fulfilling many of these wishes would easily cost tens of thousands in development time, which we don't have and which we can't get back due to it being free software. Nobody needs to buy licence for using it, just a few people decides to [respect time and attention](https://forum.armbian.com/subscriptions/) that are receiving from developers on forums. 
 
-### Infrastructure and Operations.
+### Infrastructure and Operations
 
 We have to maintain our infrastructure where biggest costs is - once again - people's time, followed by electricity, then hardware itself. Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us. A new sponsored box usually brings us more costs then benefits. Since benefit is anyway public.
 
@@ -44,7 +44,7 @@ There are other reasons as well. If you are interested there is a years-long con
 ## Why does hardware feature XY work in old kernel but not in more recent one?
 
 Vendors tend to fork old kernel and U-Boot versions and only do minimal adjustments to make board features work. Besides the fact that those adjustments are almost never pushed to mainline they usually do not update their sources (if available at all) and kernels as well.  
-Armbian moves things forward and follows mainline kernel as much as possible to provide both its features as well as security updates. The downside is that some features do not work since nobody ported specific drivers to mainline and they can also break. Armbian can only afford to do a brief testing of images and check if basic functions (boot-up, network, USB...) work due to lack of both human and financial ressources.
+Armbian moves things forward and follows mainline kernel as much as possible to provide both its features as well as security updates. The downside is that some features do not work since nobody ported specific drivers to mainline and they can also break. Armbian can only afford to do a brief testing of images and check if basic functions (boot-up, network, USB...) work due to lack of both human and financial resources.
 
 ## What does WIP/EOS/CSC mean?
 
@@ -71,5 +71,5 @@ TV boxes lacking of any docuentation. There are frequent changes of components w
 
 ## There is a new board on the market. Will Armbian officially support it?
 
-Maybe. It depends on things like available documentation from both the vendor as well as SoC manufactur, production samples to play with, available BSP and last but not least human ressource, maintainer within the Armbian development team to say. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+Maybe. It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but not least human ressource, maintainer within the Armbian development team to say. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
 
