@@ -70,8 +70,7 @@ TV boxes lacking of any docuentation. There are frequent changes of components w
 
 Maybe. It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but not least human ressource, maintainer within the Armbian development team to say. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
 
-## How can I compile my kernel?
+## How can I compile my own kernel?
 
-### Normally on debian or ubuntu you'd do `sudo apt-get build-dep linux linux-image-$(uname -r)` ###
-
-Armbian's way of building kernels is slightly different that the standard distribution method.  It's best to follow the procedures in the [Developer Guide](Developer-Guide_BuildDeveloper-Guide_Build-Preparation.md).
+Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.  
+However Armbian's way of building kernel images is slightly different than the standard distribution method. The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
