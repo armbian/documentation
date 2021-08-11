@@ -64,7 +64,7 @@ The Armbian project has very limited human and financial ressources so it can fo
 
 Single board computer vendors are making their computers on as cheap as possible principle. There are some exceptions to be honest, which in fact produce better quality then the others. In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there. Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
-TV boxes lacking of any docuentation. There are frequent changes of components without any notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are community hacks. Market is huge but since public does not have interest in covering of support - which in this case are even bigger - our involvement to provide support is simply insane and stupid. It only eats our personal time and finances.
+TV boxes lacking of any docuentation. There are frequent changes of components without further notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are community hacks. Market is huge but since public does not have interest in covering of support - which in this case is even bigger -  involvement in providing support is simply insane and stupid. It only eats our personal time and finances.
 
 ## There is a new board on the market. Will Armbian officially support it?
 
