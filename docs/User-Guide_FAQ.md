@@ -74,3 +74,8 @@ Maybe. It depends on things like available documentation from both the vendor as
 
 Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.  
 However Armbian's way of building kernel images is slightly different than the standard distribution method. The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
+
+## How do I control the on board LEDs?
+
+This cannot be answered easily. Armbian supports a white variity of SBCs which different SoCs which change frequently. Most board families have their own unique path to LED control files.
+Until a proper way, like via `armbian-config` is possible, you can search /sys for the correct path.
