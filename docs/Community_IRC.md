@@ -31,6 +31,12 @@ Simply join this room with our Matrix client: `#armbian:libera.chat`
 Channel names are the same as for IRC mentioned below.
 
 <br/><br/>
+
+## 🛑 --------------- Rules
+Forums registration terms and rules apply for our chats: [https://forum.armbian.com/terms](https://forum.armbian.com/terms)
+
+  <br/><br/>
+
 ## 💬 --------------- Channels
 
 - **#armbian** is the project's main channel. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
