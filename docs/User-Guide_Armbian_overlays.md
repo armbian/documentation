@@ -112,7 +112,8 @@ Rework may include changing labels, references (phandles) and pinconf bindings.
 
 Activating a device on SPI or I2S bus may require more than one overlay.
 In case a bus overlay like `spi0` or `i2s0` exist for the target SoC they need to be activated in addition to a slave device overlay (provided or custom/user-made).
-Please note that these overlays (`spi0`, `i2s0`) do not enable any slave devices (like spidev or I2S codec).
+Please note that these overlays (`spi0`, `i2s0`) do not enable any slave devices (like spidev or I2S codec).  
+In [some cases](https://forum.armbian.com/topic/18824-spi-communication-nonfunctional-no-data-received/) it might be necessary to change `param_spidev_spi_bus` to `1`.
 
 ## Debugging
 
