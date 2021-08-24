@@ -48,9 +48,8 @@ jobs:
       - name: Add
         run: |
           ls -l
-          #unzip artifacts.zip
-          #git pull
-          #git add document.pdf
+          git pull
+          git add document.pdf
       - name: Commit files
         run: |
           git config --local user.email "info@armbian.com"
