@@ -45,6 +45,7 @@ jobs:
       - uses: actions/download-artifact@v2
       - name: Add
         run: |
+          ls -l
           unzip artifacts.zip
           git pull
           git add document.pdf
