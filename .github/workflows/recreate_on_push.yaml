@@ -43,12 +43,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
+        with:
+          name: artifact
       - name: Add
         run: |
           ls -l artifacts
-          unzip artifacts.zip
-          git pull
-          git add document.pdf
+          ls -l
+          #unzip artifacts.zip
+          #git pull
+          #git add document.pdf
       - name: Commit files
         run: |
           git config --local user.email "info@armbian.com"
