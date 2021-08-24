@@ -37,7 +37,7 @@ jobs:
         name: artifact
         path: site/pdf/document.pdf
         
-  Finish:
+  Deploy:
     needs: [ build ]
     runs-on: ubuntu-20.04
     steps:
@@ -60,24 +60,3 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-        
-        
-        
-#    - name: Push to documentation repository
-#      uses: cpina/github-action-push-to-another-repository@master
-#      env:
-#          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-#      with:
-#          source-directory: 'site'
-#          destination-github-username: 'EvilOlaf'
-#          destination-repository-name: 'docutest'
-#          user-email: werner@armbian.de
-        
-        
-#    - name: Upload artifact 
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: artifact
-#        path: site/ 
-        
-
