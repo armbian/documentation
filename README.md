@@ -11,7 +11,7 @@ This repo is meant for storing and quick glances.  Official output is [https://d
 Armbian Documentation is available in the following formats:
 
 * mkdocs site [https://docs.armbian.com](https://docs.armbian.com).
-* PDF user guides \(in progress\)
+* [PDF user guides](https://github.com/igorpecovnik/documentation/raw/master/document.pdf)
 
 Armbian Documentation relies on a file naming convention:
 
