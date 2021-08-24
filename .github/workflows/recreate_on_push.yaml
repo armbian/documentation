@@ -47,7 +47,6 @@ jobs:
           name: artifact
       - name: Add
         run: |
-          ls -l artifacts
           ls -l
           #unzip artifacts.zip
           #git pull
