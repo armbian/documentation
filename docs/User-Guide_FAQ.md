@@ -60,6 +60,12 @@ We need many different profiles of people to run this project and just about any
 
 The Armbian project has very limited human and financial ressources so it can focus on just a few up-to-date operating systems only.
 
+## I have a TV Box from [insert random vendor]. Can I use Armbian on it?
+
+No.  
+However some community members are commited in tinkering with these devices. They discuss their findings in a dedicated spaces in [our forums](https://forum.armbian.com/clubs/1-tv-boxes/).  
+Take note that there is no support from the Armbian development team whatsoever.
+
 ## Why does Armbian not support TV boxes? The market is huge!
 
 Single board computer vendors are making their computers on as cheap as possible principle. There are some exceptions to be honest, which in fact produce better quality then the others. In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there. Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
