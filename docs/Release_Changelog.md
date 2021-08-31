@@ -1,114 +1,114 @@
 # Changelog
 
-- Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
+* Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
 
 ## v21.08 (2021-08-31)
 
 ### Solved Bug
 
-- [AR-886](https://armbian.atlassian.net/browse/AR-886) - u-boot package naming
-- [AR-885](https://armbian.atlassian.net/browse/AR-885) - Odroid C4 / HC4 boot failure
-- [AR-881](https://armbian.atlassian.net/browse/AR-881) - First login shows "degraded"
-- [AR-879](https://armbian.atlassian.net/browse/AR-879) - RK3328 5.10 \+ GPU failure
-- [AR-875](https://armbian.atlassian.net/browse/AR-875) - Homepage fix
-- [AR-874](https://armbian.atlassian.net/browse/AR-874) - Add SATA fix for eBin
-- [AR-873](https://armbian.atlassian.net/browse/AR-873) - khadas vim3 no sound
-- [AR-872](https://armbian.atlassian.net/browse/AR-872) - When reverting u-boot to last known, some boards are broken
-- [AR-867](https://armbian.atlassian.net/browse/AR-867) - H6 Freezing
-- [AR-863](https://armbian.atlassian.net/browse/AR-863) - Unstable u-boot also noticed on H3 based boards
-- [AR-862](https://armbian.atlassian.net/browse/AR-862) - normalize RK3399 xorg configs
-- [AR-857](https://armbian.atlassian.net/browse/AR-857) - Qemu custom hook executing on non-targeted images
-- [AR-854](https://armbian.atlassian.net/browse/AR-854) - Pinebook PRO desktop doesn't build in CI
-- [AR-853](https://armbian.atlassian.net/browse/AR-853) - Missing folder when making BSP file
-- [AR-852](https://armbian.atlassian.net/browse/AR-852) - Error when placing wallpaper
-- [AR-850](https://armbian.atlassian.net/browse/AR-850) - Disable XFWM compositor on XFCE4 desktop to make it run smoother
-- [AR-844](https://armbian.atlassian.net/browse/AR-844) - CI is picking up wrong kernel
-- [AR-835](https://armbian.atlassian.net/browse/AR-835) - Amlogic GLX desktop fails
-- [AR-834](https://armbian.atlassian.net/browse/AR-834) - edge v network weirdness
-- [AR-833](https://armbian.atlassian.net/browse/AR-833) - Khadas Edge V no HDMI audio
-- [AR-830](https://armbian.atlassian.net/browse/AR-830) - CI needs to rsync cache before start to building new images.
-- [AR-829](https://armbian.atlassian.net/browse/AR-829) - CI pipeline could not find some files when signing rootfs cache
-- [AR-825](https://armbian.atlassian.net/browse/AR-825) - Fixing I2S related errors on RK3399
-- [AR-824](https://armbian.atlassian.net/browse/AR-824) - Broken wifi on Station boards and kernel 5.12.y
-- [AR-823](https://armbian.atlassian.net/browse/AR-823) - Pine H64 doesn't boot kernel 5.12.y
-- [AR-822](https://armbian.atlassian.net/browse/AR-822) - Motd false reporting of unsupported
-- [AR-821](https://armbian.atlassian.net/browse/AR-821) - Docker creation failed to load repository keys
-- [AR-820](https://armbian.atlassian.net/browse/AR-820) - Broken Odroid C2 audio patch
-- [AR-819](https://armbian.atlassian.net/browse/AR-819) - Wireguard repo errors
-- [AR-818](https://armbian.atlassian.net/browse/AR-818) - When building selected images via CI, status is changed to user-built
-- [AR-816](https://armbian.atlassian.net/browse/AR-816) - ZRAM is missing in Jeston Nano legacy
-- [AR-780](https://armbian.atlassian.net/browse/AR-780) - Nanopi R4S USB broken
-- [AR-779](https://armbian.atlassian.net/browse/AR-779) - New bsp package is common. Per branch changes doesn't work anymore
-- [AR-777](https://armbian.atlassian.net/browse/AR-777) - Docker doesn't install on Hirsute host
-- [AR-776](https://armbian.atlassian.net/browse/AR-776) - Tinkerboard legacy have some troubles booting
-- [AR-774](https://armbian.atlassian.net/browse/AR-774) - Orangepi Lite 2 EDGE is failing
-- [AR-770](https://armbian.atlassian.net/browse/AR-770) - U-boot fails to install when switching kernel to EDGE
-- [AR-764](https://armbian.atlassian.net/browse/AR-764) - Htop configuration exploit / vulnerability
-- [AR-749](https://armbian.atlassian.net/browse/AR-749) - Allwinner A20 bootloops on 5.12.y / 2021.04
-- [AR-748](https://armbian.atlassian.net/browse/AR-748) - Headers install broken
-- [AR-747](https://armbian.atlassian.net/browse/AR-747) - Deeping Desktop doesn't want to reboot / poweroff
-- [AR-744](https://armbian.atlassian.net/browse/AR-744) - Nanopi K2 S905 network is broken
-- [AR-741](https://armbian.atlassian.net/browse/AR-741) - Pinebook pro desktop missing tweaks
-- [AR-740](https://armbian.atlassian.net/browse/AR-740) - Vnstat throws out garbage
-- [AR-737](https://armbian.atlassian.net/browse/AR-737) - Jetson nano throws out some error on boot loader compilation
-- [AR-736](https://armbian.atlassian.net/browse/AR-736) - Rockpi S u-boot doesn't build on GCC.-10
-- [AR-713](https://armbian.atlassian.net/browse/AR-713) - Board specific desktop things are going into common desktop package
-- [AR-593](https://armbian.atlassian.net/browse/AR-593) - Rockpi S doesn't boot mainline based kernel
+* [AR-886](https://armbian.atlassian.net/browse/AR-886) - u-boot package naming
+* [AR-885](https://armbian.atlassian.net/browse/AR-885) - Odroid C4 / HC4 boot failure
+* [AR-881](https://armbian.atlassian.net/browse/AR-881) - First login shows "degraded"
+* [AR-879](https://armbian.atlassian.net/browse/AR-879) - RK3328 5.10 \+ GPU failure
+* [AR-875](https://armbian.atlassian.net/browse/AR-875) - Homepage fix
+* [AR-874](https://armbian.atlassian.net/browse/AR-874) - Add SATA fix for eBin
+* [AR-873](https://armbian.atlassian.net/browse/AR-873) - khadas vim3 no sound
+* [AR-872](https://armbian.atlassian.net/browse/AR-872) - When reverting u-boot to last known, some boards are broken
+* [AR-867](https://armbian.atlassian.net/browse/AR-867) - H6 Freezing
+* [AR-863](https://armbian.atlassian.net/browse/AR-863) - Unstable u-boot also noticed on H3 based boards
+* [AR-862](https://armbian.atlassian.net/browse/AR-862) - normalize RK3399 xorg configs
+* [AR-857](https://armbian.atlassian.net/browse/AR-857) - Qemu custom hook executing on non-targeted images
+* [AR-854](https://armbian.atlassian.net/browse/AR-854) - Pinebook PRO desktop doesn't build in CI
+* [AR-853](https://armbian.atlassian.net/browse/AR-853) - Missing folder when making BSP file
+* [AR-852](https://armbian.atlassian.net/browse/AR-852) - Error when placing wallpaper
+* [AR-850](https://armbian.atlassian.net/browse/AR-850) - Disable XFWM compositor on XFCE4 desktop to make it run smoother
+* [AR-844](https://armbian.atlassian.net/browse/AR-844) - CI is picking up wrong kernel
+* [AR-835](https://armbian.atlassian.net/browse/AR-835) - Amlogic GLX desktop fails
+* [AR-834](https://armbian.atlassian.net/browse/AR-834) - edge v network weirdness
+* [AR-833](https://armbian.atlassian.net/browse/AR-833) - Khadas Edge V no HDMI audio
+* [AR-830](https://armbian.atlassian.net/browse/AR-830) - CI needs to rsync cache before start to building new images.
+* [AR-829](https://armbian.atlassian.net/browse/AR-829) - CI pipeline could not find some files when signing rootfs cache
+* [AR-825](https://armbian.atlassian.net/browse/AR-825) - Fixing I2S related errors on RK3399
+* [AR-824](https://armbian.atlassian.net/browse/AR-824) - Broken wifi on Station boards and kernel 5.12.y
+* [AR-823](https://armbian.atlassian.net/browse/AR-823) - Pine H64 doesn't boot kernel 5.12.y
+* [AR-822](https://armbian.atlassian.net/browse/AR-822) - Motd false reporting of unsupported
+* [AR-821](https://armbian.atlassian.net/browse/AR-821) - Docker creation failed to load repository keys
+* [AR-820](https://armbian.atlassian.net/browse/AR-820) - Broken Odroid C2 audio patch
+* [AR-819](https://armbian.atlassian.net/browse/AR-819) - Wireguard repo errors
+* [AR-818](https://armbian.atlassian.net/browse/AR-818) - When building selected images via CI, status is changed to user-built
+* [AR-816](https://armbian.atlassian.net/browse/AR-816) - ZRAM is missing in Jeston Nano legacy
+* [AR-780](https://armbian.atlassian.net/browse/AR-780) - Nanopi R4S USB broken
+* [AR-779](https://armbian.atlassian.net/browse/AR-779) - New bsp package is common. Per branch changes doesn't work anymore
+* [AR-777](https://armbian.atlassian.net/browse/AR-777) - Docker doesn't install on Hirsute host
+* [AR-776](https://armbian.atlassian.net/browse/AR-776) - Tinkerboard legacy have some troubles booting
+* [AR-774](https://armbian.atlassian.net/browse/AR-774) - Orangepi Lite 2 EDGE is failing
+* [AR-770](https://armbian.atlassian.net/browse/AR-770) - U-boot fails to install when switching kernel to EDGE
+* [AR-764](https://armbian.atlassian.net/browse/AR-764) - Htop configuration exploit / vulnerability
+* [AR-749](https://armbian.atlassian.net/browse/AR-749) - Allwinner A20 bootloops on 5.12.y / 2021.04
+* [AR-748](https://armbian.atlassian.net/browse/AR-748) - Headers install broken
+* [AR-747](https://armbian.atlassian.net/browse/AR-747) - Deeping Desktop doesn't want to reboot / poweroff
+* [AR-744](https://armbian.atlassian.net/browse/AR-744) - Nanopi K2 S905 network is broken
+* [AR-741](https://armbian.atlassian.net/browse/AR-741) - Pinebook pro desktop missing tweaks
+* [AR-740](https://armbian.atlassian.net/browse/AR-740) - Vnstat throws out garbage
+* [AR-737](https://armbian.atlassian.net/browse/AR-737) - Jetson nano throws out some error on boot loader compilation
+* [AR-736](https://armbian.atlassian.net/browse/AR-736) - Rockpi S u-boot doesn't build on GCC.-10
+* [AR-713](https://armbian.atlassian.net/browse/AR-713) - Board specific desktop things are going into common desktop package
+* [AR-593](https://armbian.atlassian.net/browse/AR-593) - Rockpi S doesn't boot mainline based kernel
 
 
 ### Epic
 
 
-- [AR-788](https://armbian.atlassian.net/browse/AR-788) - Add Official Support for Some Khadas devices
+* [AR-788](https://armbian.atlassian.net/browse/AR-788) - Add Official Support for Some Khadas devices
 
 
 ### Story
 
 
-- [AR-877](https://armbian.atlassian.net/browse/AR-877) - build\_all needs separate logs per image
-- [AR-847](https://armbian.atlassian.net/browse/AR-847) - Tinkerboard 2 Support
-- [AR-746](https://armbian.atlassian.net/browse/AR-746) - Upgrade EDGE to 5.12.y
-- [AR-734](https://armbian.atlassian.net/browse/AR-734) - CSC Support for Avnet MicroZed
-- [AR-214](https://armbian.atlassian.net/browse/AR-214) - CI improvements
-- [AR-202](https://armbian.atlassian.net/browse/AR-202) - Drop packaging patches and introduce own packaging
-- [AR-42](https://armbian.atlassian.net/browse/AR-42) - Merge packaging patches
+* [AR-877](https://armbian.atlassian.net/browse/AR-877) - build\_all needs separate logs per image
+* [AR-847](https://armbian.atlassian.net/browse/AR-847) - Tinkerboard 2 Support
+* [AR-746](https://armbian.atlassian.net/browse/AR-746) - Upgrade EDGE to 5.12.y
+* [AR-734](https://armbian.atlassian.net/browse/AR-734) - CSC Support for Avnet MicroZed
+* [AR-214](https://armbian.atlassian.net/browse/AR-214) - CI improvements
+* [AR-202](https://armbian.atlassian.net/browse/AR-202) - Drop packaging patches and introduce own packaging
+* [AR-42](https://armbian.atlassian.net/browse/AR-42) - Merge packaging patches
 
 
 ### Closed tasks
 
 
-- [AR-892](https://armbian.atlassian.net/browse/AR-892) - Promoting Bullseye to supported
-- [AR-890](https://armbian.atlassian.net/browse/AR-890) - Desktop analysis with 3D enabled
-- [AR-887](https://armbian.atlassian.net/browse/AR-887) - Re-enable Debian Stretch repository update
-- [AR-882](https://armbian.atlassian.net/browse/AR-882) - Optimise image compression
-- [AR-876](https://armbian.atlassian.net/browse/AR-876) - Make package lists in one row
-- [AR-869](https://armbian.atlassian.net/browse/AR-869) - Upgrade ZFS on Linux to v2.1.0 \(Focal / Bionic only\)
-- [AR-865](https://armbian.atlassian.net/browse/AR-865) - Updating driver for 2.5G NIC on Helios64
-- [AR-864](https://armbian.atlassian.net/browse/AR-864) - Upgrading EDGE to K5.13.y
-- [AR-859](https://armbian.atlassian.net/browse/AR-859) - set - [apt.armbian.com](http://apt.armbian.com) - redirect default to http instead of https
-- [AR-856](https://armbian.atlassian.net/browse/AR-856) - Basic RC Branch build support
-- [AR-846](https://armbian.atlassian.net/browse/AR-846) - Add Ubuntu 21.10 Impish
-- [AR-794](https://armbian.atlassian.net/browse/AR-794) - Khadas Edge-V support
-- [AR-793](https://armbian.atlassian.net/browse/AR-793) - Khadas VIM3L support
-- [AR-792](https://armbian.atlassian.net/browse/AR-792) - Preliminary Khadas VIM3 support
-- [AR-791](https://armbian.atlassian.net/browse/AR-791) - Khadas VIM2 support
-- [AR-790](https://armbian.atlassian.net/browse/AR-790) - Preliminary Khadas VIM1 support
-- [AR-785](https://armbian.atlassian.net/browse/AR-785) - Move mainline boot console to UART0 on Rockpi S
-- [AR-784](https://armbian.atlassian.net/browse/AR-784) - Add Nvidia Jetson Nano legacy kernel
-- [AR-782](https://armbian.atlassian.net/browse/AR-782) - Provides NFS mount functionality out of the box on CLI images
-- [AR-778](https://armbian.atlassian.net/browse/AR-778) - Do not pre-install obsolete apt-transport-https
-- [AR-768](https://armbian.atlassian.net/browse/AR-768) - Move Odroid XU4 EDGE to mainline source
-- [AR-745](https://armbian.atlassian.net/browse/AR-745) - chroot packaging: build script as separate function
-- [AR-743](https://armbian.atlassian.net/browse/AR-743) - Delay first-run autologin
-- [AR-732](https://armbian.atlassian.net/browse/AR-732) - Unlock Ubuntu Hirsute as supported target
-- [AR-714](https://armbian.atlassian.net/browse/AR-714) - Adjusting support status
-- [AR-665](https://armbian.atlassian.net/browse/AR-665) - rk3399 patch failure
-- [AR-649](https://armbian.atlassian.net/browse/AR-649) - Adding Rockchip VPU support for 5.11.y
-- [AR-635](https://armbian.atlassian.net/browse/AR-635) - Add legacy kernel for Zero2
-- [AR-537](https://armbian.atlassian.net/browse/AR-537) - Create Armbian “virtual” build target to run as VM
-- [AR-519](https://armbian.atlassian.net/browse/AR-519) - Odroid N2 Mainline u-boot for edge kernel
-- [AR-315](https://armbian.atlassian.net/browse/AR-315) - Add support for GPT table inside nand-sata-install
+* [AR-892](https://armbian.atlassian.net/browse/AR-892) - Promoting Bullseye to supported
+* [AR-890](https://armbian.atlassian.net/browse/AR-890) - Desktop analysis with 3D enabled
+* [AR-887](https://armbian.atlassian.net/browse/AR-887) - Re-enable Debian Stretch repository update
+* [AR-882](https://armbian.atlassian.net/browse/AR-882) - Optimise image compression
+* [AR-876](https://armbian.atlassian.net/browse/AR-876) - Make package lists in one row
+* [AR-869](https://armbian.atlassian.net/browse/AR-869) - Upgrade ZFS on Linux to v2.1.0 \(Focal / Bionic only\)
+* [AR-865](https://armbian.atlassian.net/browse/AR-865) - Updating driver for 2.5G NIC on Helios64
+* [AR-864](https://armbian.atlassian.net/browse/AR-864) - Upgrading EDGE to K5.13.y
+* [AR-859](https://armbian.atlassian.net/browse/AR-859) - set - [apt.armbian.com](http://apt.armbian.com) - redirect default to http instead of https
+* [AR-856](https://armbian.atlassian.net/browse/AR-856) - Basic RC Branch build support
+* [AR-846](https://armbian.atlassian.net/browse/AR-846) - Add Ubuntu 21.10 Impish
+* [AR-794](https://armbian.atlassian.net/browse/AR-794) - Khadas Edge-V support
+* [AR-793](https://armbian.atlassian.net/browse/AR-793) - Khadas VIM3L support
+* [AR-792](https://armbian.atlassian.net/browse/AR-792) - Preliminary Khadas VIM3 support
+* [AR-791](https://armbian.atlassian.net/browse/AR-791) - Khadas VIM2 support
+* [AR-790](https://armbian.atlassian.net/browse/AR-790) - Preliminary Khadas VIM1 support
+* [AR-785](https://armbian.atlassian.net/browse/AR-785) - Move mainline boot console to UART0 on Rockpi S
+* [AR-784](https://armbian.atlassian.net/browse/AR-784) - Add Nvidia Jetson Nano legacy kernel
+* [AR-782](https://armbian.atlassian.net/browse/AR-782) - Provides NFS mount functionality out of the box on CLI images
+* [AR-778](https://armbian.atlassian.net/browse/AR-778) - Do not pre-install obsolete apt-transport-https
+* [AR-768](https://armbian.atlassian.net/browse/AR-768) - Move Odroid XU4 EDGE to mainline source
+* [AR-745](https://armbian.atlassian.net/browse/AR-745) - chroot packaging: build script as separate function
+* [AR-743](https://armbian.atlassian.net/browse/AR-743) - Delay first-run autologin
+* [AR-732](https://armbian.atlassian.net/browse/AR-732) - Unlock Ubuntu Hirsute as supported target
+* [AR-714](https://armbian.atlassian.net/browse/AR-714) - Adjusting support status
+* [AR-665](https://armbian.atlassian.net/browse/AR-665) - rk3399 patch failure
+* [AR-649](https://armbian.atlassian.net/browse/AR-649) - Adding Rockchip VPU support for 5.11.y
+* [AR-635](https://armbian.atlassian.net/browse/AR-635) - Add legacy kernel for Zero2
+* [AR-537](https://armbian.atlassian.net/browse/AR-537) - Create Armbian “virtual” build target to run as VM
+* [AR-519](https://armbian.atlassian.net/browse/AR-519) - Odroid N2 Mainline u-boot for edge kernel
+* [AR-315](https://armbian.atlassian.net/browse/AR-315) - Add support for GPT table inside nand-sata-install
 
 
 ## v21.05.6 (2021-06-21)
