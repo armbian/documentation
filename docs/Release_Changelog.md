@@ -5,7 +5,7 @@
 
 ## v21.08 (2021-08-31)
 
-### Solved Bug
+### Solved Bugs
 
 * [AR-886](https://armbian.atlassian.net/browse/AR-886) - u-boot package naming
 * [AR-885](https://armbian.atlassian.net/browse/AR-885) - Odroid C4 / HC4 boot failure
