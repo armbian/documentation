@@ -22,7 +22,7 @@ SBC and TV Box manufacturers love to design and ship new products. Unfortunately
 
 ### Simple
 
-BASH shell, standard Debian/Ubuntu utilities. Common and specific features can be with minimalistic menu-driven utility. Login is possible via serial, HDMI/VGA or SSH. 
+BASH or ZSH shell, standard Debian/Ubuntu utilities. Common and specific features can be with minimalistic menu-driven utility. Login is possible via serial, HDMI/VGA or SSH. 
 
 ### Light
 
