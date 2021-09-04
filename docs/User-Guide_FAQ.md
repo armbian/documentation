@@ -30,9 +30,11 @@ We have to maintain our infrastructure where biggest costs is - once again - peo
 
 ### Support time
 
+The software is given, released free, however support, development and documentation, costs time, effort, hardware and technical ability, which incurs costs.
+
 Each question that is directed towards our team is generating opportunity costs and taking away from development time. Some we are happy to cover, but not all. Especially when it goes for repetitive questions and demands.  
 
-Questions associated with missing features represent another hit and miss for us. Complicated and critical upstream functions (like video acceleration withing a web browser, supporting a board that have very poor initial support and no community backing, ...) are missing. This functionality is unique to hardware and implementing is extremely labor intensive and requires unique expertise. Our team is 10-15 volunteers that maintain this project in their free time. We cannot cover the job of Google Chromium team, Collabora, ARM, Rockchip and others vendors which have not provided sufficient support for their products.
+Questions associated with missing features represent another hit and miss for us. Complicated and critical upstream functions (like video acceleration withing a web browser, supporting a board that have very poor initial support and no community backing, ...) are missing. This functionality is unique to hardware and implementing is extremely labor intensive and requires unique expertise. Our team is 10-15 volunteers that maintain this project during their own time. We cannot cover the job of Google Chromium team, Collabora, ARM, Rockchip and others vendors which have not provided sufficient support for their products.
 
 All our work is done in public and we provide all sources which we are changing in the process. All our work is patent free and released under a free licence so anyone can re-use it further. The scale of SBCs Armbian supports is hard to beat, and consequently our work is repackaged and reused by other projects and vendors. Unfortunately the burden of support is often directed to us, while they focus on revenue.
 
