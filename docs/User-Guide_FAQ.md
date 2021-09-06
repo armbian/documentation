@@ -83,7 +83,7 @@ Maybe. It depends on things like available documentation from both the vendor as
 Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.  
 However Armbian's way of building kernel images is slightly different than the standard distribution method. The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
 
-## How do I upgrade from Armbian Buster to Armbian Bullseye?
+## How do I upgrade from Armbian Buster to Bullseye?
 
 Armbian does not offer a standardized way nor do you encourage users to upgrade their userspace like Bionic to Focal, Stretch to Buster or mentioned above Buster to Bullseye. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.  
 You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also you will not receive any help from Armbian if something goes wrong or other issues with an upgraded system.
