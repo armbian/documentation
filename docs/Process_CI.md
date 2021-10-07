@@ -3,9 +3,8 @@
 On each merge reqest we are running:
 
 - shell script analysis
-- build x86 Docker image
-- finding changed kernels
-- build kernel
+- creating Docker image
+- building changed kernels
 
 Those runs are for security reasons executed on public Github runners servers which are [very limited](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources). One build cycle takes around one hour and it produces two types of artefacts:
 
