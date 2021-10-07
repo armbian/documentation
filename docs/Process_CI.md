@@ -1,8 +1,23 @@
-# Build pipelines
+# Merge request pipelines
+
+On each merge reqest we are running:
+
+- shell script analysis
+- build x86 Docker image
+- finding changed kernels
+- build kernel
+
+Those runs are for security reasons executed on public Github runners servers which are [very limited](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources). One build cycle takes around one hour and it produces two types of artefacts:
+
+- script anylysis report
+- debian packages for kernel, device treee, headers, sources
+
+Those build artefacts are available up to 14 days.
+
+![Build](images/mr-pipeline.png)
 
 <br>
 
-Armbian Build pipelines are combination of Github Actions and scripts that run on our servers.  Armbian is providing a large quantity of compiled binaries and images which builds are distributed over our self-hosted build farm.
 
 <br>
 
