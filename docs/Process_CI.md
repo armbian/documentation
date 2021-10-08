@@ -20,33 +20,23 @@ Those build artefacts are available up to 14 days.
 
 <br>
 
-## Nightly builds 
+## Build beta kernel packages 
 
 <br>
 
-![Build](images/main-pipeline.png)
+Pipeline is extended version of merge requests pipeline. Pipeline is scheduled to run every day at 6am CET. It builds all changed kernels and update package repository in case it succeeds. 
 
 What is affected by this pipeline?
 
 - edge branch in stable repository https://apt.armbian.com
 - all branches in beta repository https://beta.armbian.com
-- rootfs cache
-<br>
- The repository indexes for BETA are updated immediately.
 
-<br>
 <br>
 Trigger: every day at 6am CET
 <br>
 Condition: change in packages, upstream sources, patches or configuration
 
-## Updating all beta images
-
-<br>
-
-![Updating all beta images](images/betaimages.png)
-
-<br>
+## Build all beta images
 
 - triggered manually or uppon completion of nightly / edge builds;
 - running the job manual is possible,
@@ -54,7 +44,7 @@ Condition: change in packages, upstream sources, patches or configuration
 
 <br>
 
-## Updating selected stable images
+## Build selected stable images
 <br>
 <br>
 
