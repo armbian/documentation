@@ -40,7 +40,7 @@ Tags are used in ad-hoc manner.
 | 20.11 | Tamandua | November | [done](https://armbian.atlassian.net/projects/AR/versions/10004/tab/release-report-all-issues)
 | 21.02 | Urubu | February | [done](https://armbian.atlassian.net/projects/AR/versions/10005/tab/release-report-all-issues)
 | 21.05 | Jerboa | May | [done](https://armbian.atlassian.net/projects/AR/versions/10006/tab/release-report-all-issues)
-| 21.08 | Caracal | August | planned
+| 21.08 | Caracal | August | [done](https://armbian.atlassian.net/projects/AR/versions/10007/tab/release-report-all-issues)
 | 21.11 | Sambar | November | planned
 | 22.02 | Ratel | February | planned
 | 22.05 | Jade | May | planned
@@ -61,7 +61,8 @@ Dates for **2020**:
  
  * January [2nd](https://freenode.irclog.whitequark.org/armbian/2021-01-02)
  * April [3rd](http://meeting.armbian.de/)
- * July 3rd
+ * July [3rd](https://libera.irclog.whitequark.org/armbian/2021-07-10)
+ * October [16th]
 
 ### Agenda:
 
