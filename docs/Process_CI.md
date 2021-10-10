@@ -1,38 +1,42 @@
-# Build pipelines
+# Merge request pipelines
+
+On each merge reqest we are running:
+
+- shell script analysis
+- creating Docker image
+- building changed kernels
+
+Those runs are for security reasons executed on public Github runners servers which are [very limited](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources). One build cycle takes around one hour and it produces two types of artefacts:
+
+- script anylysis report
+- debian packages for kernel, device treee, headers, sources
+
+Those build artefacts are available up to 14 days.
+
+![Build](images/mr-pipeline.png)
 
 <br>
 
-Armbian Build pipelines are combination of Github Actions and scripts that run on our servers.  Armbian is providing a large quantity of compiled binaries and images which builds are distributed over our self-hosted build farm.
 
 <br>
 
-## Nightly builds 
+## Build beta kernel packages 
 
 <br>
 
-![Build](images/main-pipeline.png)
+Pipeline is extended version of merge requests pipeline. Pipeline is scheduled to run every day at 6am CET. It builds all changed kernels and update package repository in case it succeeds. 
 
 What is affected by this pipeline?
 
 - edge branch in stable repository https://apt.armbian.com
 - all branches in beta repository https://beta.armbian.com
-- rootfs cache
-<br>
- The repository indexes for BETA are updated immediately.
 
-<br>
 <br>
 Trigger: every day at 6am CET
 <br>
 Condition: change in packages, upstream sources, patches or configuration
 
-## Updating all beta images
-
-<br>
-
-![Updating all beta images](images/betaimages.png)
-
-<br>
+## Build all beta images
 
 - triggered manually or uppon completion of nightly / edge builds;
 - running the job manual is possible,
@@ -40,7 +44,7 @@ Condition: change in packages, upstream sources, patches or configuration
 
 <br>
 
-## Updating selected stable images
+## Build selected stable images
 <br>
 <br>
 
