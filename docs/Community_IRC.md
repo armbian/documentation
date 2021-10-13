@@ -12,8 +12,6 @@ Besides that communication is also possible via Matrix or our (unofficial) Disco
   
 ## 🔌 --------------- Connect
 ### IRC
-If you have a desktop environment with properly installed IRC client simply put this URL into your internet browser: `irc://irc.libera.chat/armbian` (Unfortunately Markdown does not allow to create clickable irc:// links)  
-Or put the data in your client manually:
 
 + Server: `irc.libera.chat`  
 + Ports: `6697` / non-encrypted: `6667`  
