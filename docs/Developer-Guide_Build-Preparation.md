@@ -37,7 +37,8 @@ Run the script
 
 Make sure that full path to the build script **does not contain spaces**.
 
-![](https://www.armbian.com/wp-content/uploads/2016/01/21.png)
+
+<iframe width="607" height="342" src="https://www.youtube.com/embed/0K0vtUg_cgo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Providing build configuration
 
