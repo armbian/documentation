@@ -1,14 +1,20 @@
 # Jira
 
-Jira where development work is entered and prioritized.
+Jira where development work is entered and prioritized. https://armbian.atlassian.net/
 
 ## Issue Types
 
 When creating issues, try to assign issue type most appropriate.   Issue type _can_ be changed later so don't worry too much.  If possible assign to a "Fix Version" aka Release.
 
-* **Bug** -- Work to solve a bug
-* **Task** -- Work that is clearly defined
-* **Story** -- Large scope of work. Can be for work with subtasks, or vague work such as "A User should be able to XYZ"
+* **Epic** - useful as placeholders for large requirements. Common objective, overall goals, contains several stories.
+* **Story** - Smallest units of functionality that can be achieved in one or two weeks. Non-technical language.
+* **Task** - Work that is clearly defined usually by people that will do the work. Specific, technical language.
+* **Bug** - malfunction of the system, an error, flaw, or a default in the system, that causes an incorrect result.
+&nbsp;
+
+&nbsp;
+
+![Theme vs Epic vs User Story vs Task](images/product-backlog-structure.png)
 
 ## Work Queue
 
