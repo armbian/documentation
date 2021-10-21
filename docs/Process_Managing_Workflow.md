@@ -9,12 +9,16 @@ When creating issues, try to assign issue type most appropriate.   Issue type _c
 * **Epic** - useful as placeholders for large requirements. Common objective, overall goals, contains several stories.
 * **Story** - Smallest units of functionality that can be achieved in one or two weeks. Non-technical language.
 * **Task** - Work that is clearly defined usually by people that will do the work. Specific, technical language.
-* **Bug** - malfunction of the system, an error, flaw, or a default in the system, that causes an incorrect result.
+
 &nbsp;
 
 &nbsp;
 
 ![Theme vs Epic vs User Story vs Task](images/product-backlog-structure.png)
+
+## Special Issue Type
+
+* **Bug** - malfunction of the system, an error, flaw, or a default in the system, that causes an incorrect result.
 
 ## Work Queue
 
