@@ -10,9 +10,6 @@ When creating issues, try to assign issue type most appropriate.   Issue type _c
 * **Story** - Smallest units of functionality that can be achieved in one or two weeks. Non-technical language.
 * **Task** - Work that is clearly defined usually by people that will do the work. Specific, technical language.
 
-&nbsp;
-
-&nbsp;
 
 ![Theme vs Epic vs User Story vs Task](images/product-backlog-structure.png)
 
