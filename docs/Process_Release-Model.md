@@ -41,7 +41,7 @@ Tags are used in ad-hoc manner.
 | 21.02 | Urubu | February | [done](https://armbian.atlassian.net/projects/AR/versions/10005/tab/release-report-all-issues)
 | 21.05 | Jerboa | May | [done](https://armbian.atlassian.net/projects/AR/versions/10006/tab/release-report-all-issues)
 | 21.08 | Caracal | August | [done](https://armbian.atlassian.net/projects/AR/versions/10007/tab/release-report-all-issues)
-| 21.11 | Sambar | November | planned
+| 21.11 | Sambar | November | [cancelled](http://meeting.armbian.de/armbian.2021-10-16-14.01.txt)
 | 22.02 | Ratel | February | planned
 | 22.05 | Jade | May | planned
  
