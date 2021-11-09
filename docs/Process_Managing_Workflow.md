@@ -50,7 +50,5 @@ With the Kanban Board, there are 2 states for the Upcoming Release backlog.
 All issues for an upcoming release are assigned a "Fix Version" to indicate release number.
 
 ## Mobile access
-
 You can download the app for [Android](https://play.google.com/store/apps/details?id=com.atlassian.jira.server) or [iOS](https://apps.apple.com/us/app/id1405353949).
-
 ![Jira mobile](images/jira-dark-revised.png)
