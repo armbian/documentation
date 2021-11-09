@@ -46,3 +46,9 @@ With the Kanban Board, there are 2 states for the Upcoming Release backlog.
 
 * **Todo** - These tasks are visible the **Todo** column of the Kanban board. To keep things simple, there shouldnt be more than 5-10 issues in Todo
 * **Backlog** -- Other tasks seleceted for release, but not are not visible on the Kanban board.  The purpose of this is to keep the **Todo** column clean and easy to work from.  As the **Todo** column clears, prioritize next tasks in backlog by moving them to todo.
+
+All issues for an upcoming release are assigned a "Fix Version" to indicate release number.
+
+## Mobile access
+You can download the app for [Android](https://play.google.com/store/apps/details?id=com.atlassian.jira.server) or [iOS](https://apps.apple.com/us/app/id1405353949).
+![Jira mobile](images/jira-dark-revised.png)
