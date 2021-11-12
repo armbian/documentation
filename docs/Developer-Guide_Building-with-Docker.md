@@ -8,20 +8,16 @@ Building additional packages (`EXTERNAL_NEW`) is not supported.
 
 ### Requirements
 
-- x86/x64 Linux host that supports running a recent Docker daemon. Refer to [Docker documentation](https://docs.docker.com/) for details.
-- Docker version 17.06 CE or newer. Installation on Ubuntu Focal:
-
-		apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0EBFCD88 
-		echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/docker.list
-		apt update
-		apt install docker-ce
-
+- x86/x64/aarch64/armhf Linux host that supports running a recent Docker daemon. Refer to [Docker documentation](https://docs.docker.com/) for details.
+- Docker version 17.06 CE or newer. 
 - Enough free disk space on the storage used for Docker containers and named volumes. Named volumes path can be changed using standard Docker utilites,
   refer to Docker documentation for details.
+  
+Installation (https://docs.docker.com/engine/install/)
 
 ### Details
 
-There are 2 options to start build process:
+There are 3 options to start build process:
 
 1. By passing configuration file name (`config-<conf_name>.conf`), stored in `userpatches` directory, as an argument:
 ```
@@ -31,82 +27,52 @@ There are 2 options to start build process:
 ```
 ./compile.sh docker KERNEL_ONLY=yes BOARD=cubietruck BRANCH=current KERNEL_CONFIGURE=yes
 ```
+3. Interactively run inside docker container
+```
+./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=focal
+```
+
 The process creates and runs a named Docker container `armbian` with two named volumes `armbian-cache` and `armbian-ccache`,
 and mount local directories `output` and `userpatches`.
 
-## Creating and running Docker container manually
+1 and 2 docker modes uses same as no docker, but runs in separated builder environment, with minimal intervention to base system.
 
-NOTE: These methods are **not** supported by Armbian developers. Use them at your own risk.
+Dockerfile of container placed in `userpatches` directory, all container-related tunes can be changed
+in `userpatches/config-docker.conf` file. Templates of both files located in `config/templates` directory.
 
-### Example: Building Armbian using Red Hat or CentOS
+### docker-shell interactive mode
 
-Tested by [@rfrht](https://github.com/rfrht)
+Interactive mode of a docker usable when you need more than "just make an image". You may look to u-boot or
+kernel sources before and after applying patches, investigate compilation errors, and so on.
 
-First of all, it is important to notice that you will be able to build `kernel` and `u-boot` packages. The container method is **not suitable** for building full Armbian images (the full SD card image containing the userland packages).
+And you can manual run separate steps of build process.
 
-This setup procedure was validated to work with Red Hat Enterprise Linux 7.
+First, start docker-shell on a build system itself:
+```
+@droid:~/armbian$ ./compile.sh docker-shell RELEASE=buster BOARD=rockpi-4a BRANCH=edge
+```
+There `RELEASE=buster BOARD=rockpi-4a BRANCH=edge` just passed into shell and will be set into
+envirounment variables. 
 
-#### Preparing your build host
+Then, we can simply start build image:
+```
+root@75ec76203b65:~/armbian# ./compile.sh
+```
+Or, you can run any function defined in the compile.sh script.
 
-In order to be able to run Docker containers, if you have not done so, just install the Docker package:
+For example, to compile the U-Boot, prepare the environment first with:
 ```
-yum install -y docker
+./compile.sh default prepare_host compile_sunxi_tools install_rkbin_tools
 ```
-By default, the `docker` service is not started upon system reboot. If you wish to do so:
+Then build U-Boot for example:
 ```
-systemctl enable docker
+./compile.sh default compile_uboot
 ```
-Ensure that you have the `docker` service running:
+To compile only the source code as it is without patching, run:
 ```
-systemctl start docker`
+./compile.sh default COMPILE_ONLY=yes compile_uboot
 ```
-Next step, chdir to a directory where you will be checking out the Armbian `build` repository. I use `/usr/src`. And then, check out using git (with shallow tree, using `--depth 1`, in order to speed up the process):
-```
-cd /usr/src
-git clone --depth 1 https://github.com/armbian/build
-```
-And in order to not mistake the newly created `build` directory, I rename it to `build-armbian`. `cd` to the directory:
-```
-mv build build-armbian
-cd build-armbian
-```
+Note that you must enter docker-shell after a docker build, which will
+download all the required toolchains and sourcecodes first.
 
-
-#### Preparing the Container
-
-Our Build toolchain provides a scripted way to create a container and run the container. Run:
-```
-./compile.sh docker
-```
-Give it some minutes, as it downloads a non-neglectible amount of data.
-
-After your image is created (named `armbian`), it will automatically spawn the Armbian build container.
-
-**NOTICE**: In some cases, it is possible that SELinux might block your access to `/root/armbian/cache` temporary build directory. You can fix it by either adding the correct SELinux context to your **host** cache directory, or, disabling SELinux.
-
-Get acquainted with the Build system.
-
-If you want to get a shell in the container, skipping the compile script, you can also run:
-```
-docker run -dit --entrypoint=/bin/bash -v /mnt:/root/armbian/cache armbian_dev
-```
-The above command will start the container with a shell. To get the shell session:
-```
-docker attach <UUID of your container, returned in the above command>
-```
-If you want to run SSH in your container, log in and install the `ssh` package:
-```
-apt-get install -y ssh
-```
-Now, define a password and prepare the settings so you `sshd` can run and you can log in as root:
-```
-passwd
-sed -i -e 's/PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
-mkdir /var/run/sshd
-chmod 0755 /var/run/sshd
-```
-And finally start `sshd`:
-```
-/usr/sbin/sshd
-```
-**Do NOT** type `exit` - that will stop your container. To leave your container running after starting `sshd`, just type `<Ctrl-P>` and `<Ctrl-Q>`. Now you can ssh to your container.
+you can set `KERNEL_ONLY=yes` to build atf&u-boot&kernel only.
