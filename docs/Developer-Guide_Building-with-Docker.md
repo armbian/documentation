@@ -3,6 +3,10 @@
 ## Officially supported and tested method for building with Docker
 
 This method works for building u-boot and kernel packages as well as building full OS images.
+Note! 
+To write fresh-builded image directly to sdcard or other block device you have to enable 
+Docker run in `privileged` mode.
+Uncomment line `DOCKER_FLAGS+=(--privileged)` in file `userpatches\config-docker.conf` or your own docker-config file.
 
 Building additional packages (`EXTERNAL_NEW`) is not supported.
 
