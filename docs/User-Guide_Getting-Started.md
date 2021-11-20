@@ -60,7 +60,7 @@ Do not use testing or edge images in a productive environment. We do appreciate 
 All our images are digitally signed and therefore it is possible to check their authenticity.  You need to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
 	
 	# download public key from the database
-	gpg --keyserver ha.pool.sks-keyservers.net --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+	gpg --keyserver keys.openpgp.org --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
 	
 	# perform verification 
 	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
