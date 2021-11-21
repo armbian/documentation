@@ -58,6 +58,7 @@ nav:
         - "Fine Tuning" : "User-Guide_Fine-Tuning.md"
         - "Armbian config" : "User-Guide_Armbian-Config.md"
         - "Armbian DT overlays" : "User-Guide_Armbian_overlays.md"
+        - "Board Support Rules" : "User-Guide_Board-Support-Rules.md"
 
   - "Hardware Notes" :
         - "Allwinner (Generic)" : "Hardware_Allwinner.md"
