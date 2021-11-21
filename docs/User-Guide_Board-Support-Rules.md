@@ -24,6 +24,7 @@ EOL devices are not under active development by any entity or community. Can be 
 Community Support SBCs are exclusively supported by the community.
 
 **No Images** are provided for Community Supported SBCs 
+
 * no stable
 * no periodic / nightly
 * users must use Armbian Build Framework to produce an image
