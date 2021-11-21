@@ -65,7 +65,7 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
 
 ## What is supported?
 
-Armbian will publish and distribute “stable” CLI images for Supported boards through its mirror network.  "Supported" is not a guarantee. "Supported" has a named maintainer and implies a particular SBC is at a high level of software maturity.  Due to the complexity and lack-of-openness in the ecosystem, it is unlikely that all accelerated and specialized functionalities will be available.
+Armbian will publish and distribute “stable” CLI images for supported boards through its mirror network. *Supported* is not a guarantee. *Supported* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
 
 For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules)
 
