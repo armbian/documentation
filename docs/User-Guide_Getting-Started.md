@@ -169,7 +169,8 @@ First boot will log you automatically on HDMI or serial console while for SSH lo
 
 	Generating locales: sl_SI.UTF-8
 
-	You selected ZSH as your default shell. If you want to use it right away, please logout and login! 
+	You selected ZSH as your default shell. 
+	If you want to use it right away, please logout and login! 
 
 	root@odroidxu4:~# 
 
