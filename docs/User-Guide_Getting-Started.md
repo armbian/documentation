@@ -112,17 +112,66 @@ Insert SD card into a slot and power the board. (First) boot (with DHCP) takes u
 
 ## How to login?
 
-Login as **root** on console (HDMI / serial) or via SSH and use password **1234**. You will be prompted to change this password at first login. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
+First boot will log you automatically on HDMI or serial console while for SSH login you need to login as **root** and use password **1234**. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
 
-Desktop images start into desktop without asking for password. To change this add some display manager:
 
-	apt-get install lightdm
+	odroidxu4 login: root (automatic login)
 
-... or edit the contents of file:
+	  ___      _           _     _  __  ___   _ _  _
+	 / _ \  __| |_ __ ___ (_) __| | \ \/ / | | | || |
+	| | | |/ _` | '__/ _ \| |/ _` |  \  /| | | | || |_
+	| |_| | (_| | | | (_) | | (_| |  /  \| |_| |__   _|
+	 \___/ \__,_|_|  \___/|_|\__,_| /_/\_\\___/   |_|
 
-	/etc/default/nodm
+	Welcome to Armbian 21.11 Jammy with Linux 5.4.160-odroidxu4
 
-and change the autologin user.
+	No end-user support: built from trunk
+
+	System load:   13%              Up time:       0 min
+	Memory usage:  7% of 1.94G      IP:            10.0.10.112
+	CPU temp:      48°C             Usage of /:    6% of 29G
+
+	[ 0 security updates available, 45 updates total: apt upgrade ]
+	Last check: 2021-11-21 10:32
+
+	[ General system configuration (beta): armbian-config ]
+
+	Last login: Sun Nov 21 10:32:42 UTC 2021 on tty1
+
+	Waiting for system to finish booting ...
+
+	New to Armbian? Documentation: https://docs.armbian.com Support: https://forum.armbian.com
+
+	New root password: ********
+	Repeat password: ********
+
+	Choose default system command shell:
+
+	1) bash
+	2) zsh
+
+	Shell: ZSH
+
+	Creating a new user account. Press <Ctrl-C> to abort
+
+	Please provide a username (eg. your forename): igorp
+	Create password: ********
+	Repeat password: ********
+
+	Please provide your real name: Igor
+
+	Dear Igor, your account igorp has been created and is sudo enabled.
+	Please use this account for your daily work from now on.
+
+	Detected timezone: Europe/Ljubljana
+
+	Set user language based on your location? [Y/n] 
+
+	Generating locales: sl_SI.UTF-8
+
+	You selected ZSH as your default shell. If you want to use it right away, please logout and login! 
+
+	root@odroidxu4:~# 
 
 ## How to update?
 
