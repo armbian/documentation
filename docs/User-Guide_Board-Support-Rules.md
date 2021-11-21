@@ -90,4 +90,4 @@ Additional Caveats:
 
 ## Gold and Platinum Support
 
-Gold and Platinum Support are intended to be business relationships with the Armbian project or team and are out of scope of this document. Please connect with Armbian team for more information.
+Gold and Platinum Support are intended to be business relationships with the Armbian project or team and are out of scope of this document. Please [connect with Armbian team](https://www.armbian.com/contact) for more information.
