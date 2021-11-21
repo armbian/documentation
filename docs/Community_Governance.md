@@ -12,7 +12,7 @@ See individual board configuration files for named maintainer of SBC.
 |-------------------------------|-----------------|-------------------------------|---------------------------------|--------------------------------------|
 | Build Scripts                 | @igorpecovnik   | @lanefu        | `/lib/*.sh`                     | code responsible for building images |
 | Armbian-Tools                 | @igorpecovnik   |                               | armbian-config, armbian-monitor | userland tools provided by Armbian   |
-| Armbian-Tools: armbian-config | @gprovst        |                               | armbian-config                  |                                      |
+| Armbian-Tools: armbian-config |                 |                               | armbian-config                  |                                      |
 | Multimedia/Desktops           |                 | @JMCC, @jernejsk, @Miouyouyou |                                 |                                      |
 
 ## Other Roles
@@ -25,7 +25,7 @@ See individual board configuration files for named maintainer of SBC.
 | Documentation                |                 | @Werner                                                  |                     |                 |
 | Community Engagement         |                 | @NicoD, @tido                                            |                     |                 |
 | Legal and Financial          | @igorpecovnik   |                                                          |                     |                 |
-| Web and Infrastucture        | @lauri          |                                                          |                     |                 |
+| Web and Infrastucture        | @lanefu         | @[TheBug]                                                |                     |                 |
 | Forums moderation            | @Werner         | [click](https://forum.armbian.com/members/2-moderators/) |                     |                 |
 | IRC & Services               | @Werner         |                                                          |                     |                 |
 
