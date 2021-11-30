@@ -83,7 +83,7 @@ On Windows, you can download and use the [QuickHash GUI](https://www.quickhash-g
 
 while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
-	shasum -a 256 -c Armbian_*.img.sha Armbian_*.img.xz
+	shasum -a 256 -c Armbian_*.img.sha
 	#good response
 	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
 
