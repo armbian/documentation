@@ -55,6 +55,7 @@ nav:
         - "Build Options" : "Developer-Guide_Build-Options.md"
         - "User Configurations" : "Developer-Guide_User-Configurations.md"
         - "FEL boot" : "Developer-Guide_FEL-boot.md"
+        - "Extensions" : "Developer-Guide_Extensions.md"
 
   - "Contributor Process" :
         - "Contribute" : "Process_Contribute.md"
