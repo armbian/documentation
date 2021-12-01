@@ -1,43 +1,21 @@
-
-
 site_name: Armbian Documentation
-
 repo_url: https://github.com/armbian/documentation
 repo_name: Github
 
 site_author: "Armbian team"
 google_analytics: ["UA-284946-9", "docs.armbian.com"]
 
-theme: 
+theme:
   name: readthedocs
-#  custom_dir: readthedocs_custom/
-
-markdown_extensions:
-  - smarty
-  - footnotes
-  - toc:
-      permalink: True
+  highlightjs: true # enable syntax highlight for code blocks
 
 plugins:
     - search:
     - with-pdf:
         author: Armbian documentation team
         copyright: © 2021 by Armbian
-        #
-        #cover: false
         cover_title: Armbian documentation
         cover_subtitle: Linux for ARM development boards
-        #heading_shift: false
-        #toc_level: 3
-        #ordered_chapter_level: 2
-        #excludes_children:
-        #    - 'release-notes/:upgrading'
-        #    - 'release-notes/:changelog'
-        #exclude_pages:
-        #    - 'bugs/'
-        #    - 'appendix/contribute/'
-        #output_path: any-place/document.pdf
-        #enabled_if_env: ENABLE_PDF_EXPORT
 
 markdown_extensions:
   - smarty
