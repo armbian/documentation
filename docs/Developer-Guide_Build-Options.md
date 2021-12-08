@@ -105,7 +105,19 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 	- `tuna`: use mirror provided by Tsinghua University
 	- `bfsu`: use mirror provided by Beijing Foreign Studies University which is similar to `tuna`
-	- leave empty to use offical `git.kernel.org`, may be very slow for mainland china users
+	- leave empty to use offical `git.kernel.org`, may be very slow for mainland China users
+- **UBOOT_MIRROR** （ `github` | `gitee` : select mainline mirror of `u-boot.git`
+	- `github`: use mirror provided by github, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
+	- `gitee`: use mirror provided by Gitee, a Chinese git services
+	- leave empty to use offical `source.denx.de`, may be very slow for mainland China users
+- **GITHUB_MIRROR** ( `fastgit` | `gitclone` | `cnpmjs` ): select download mirror for GitHub hosted repository
+	- `fastgit`: use mirror provided by fastgit.org
+	- `gitclone`: use mirror provided by gitclone.com
+	- `cnpmjs`: use mirror provided by cnpmjs.org
+	- leave empty to connect directly to GitHub, may be very slow for mainland China users
+- **REGIONAL_MIRROR** ( `china` ): select mirrors based on regional setting, will not overwrite explicitly specified mirror option
+	- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
+	- leave empty to use default settings
 - **USE_TORRENT** ( **yes** | no ): use torrent to download toolchains and rootfs
 - **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
