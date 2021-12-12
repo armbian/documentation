@@ -64,6 +64,8 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
 - **BRANCH** ( `legacy` | `current` | `dev` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
 - **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `hirsute` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
+- **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
+- **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
 ## Hidden options for advanced users (default values are marked **bold**)
 - **EXPERT** ( yes | **no** ): Show development features in interactive mode
