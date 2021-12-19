@@ -23,7 +23,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - sources: delete `cache/sources` (all downloaded sources)
     - extras: delete additional packages for current release in `output/debs/extra`
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
-    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-config`, `armbian-firmware`
+    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-bsp-cli`,`armbian-bsp-desktop`,`armbian-desktop`,`armbian-config`, `armbian-firmware`
     - Set to "" to use packages one from local output or build if not available
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
     - yes: use kernel config file from previous compilation for the same branch, device family and version
