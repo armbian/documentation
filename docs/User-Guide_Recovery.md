@@ -132,7 +132,7 @@ Move it to the board and power on.  Check serial output for errors if problems p
 
 ## Flashing boot loader
 
-Sometimes we need to flash boot loader from some other Linux. Attache SD card reader with your SD card and proceed this way:
+Sometimes we need to flash boot loader from some other Linux. Attach an SD card reader with your SD card and proceed this way:
 
 ``` console
 /mnt $ cd
