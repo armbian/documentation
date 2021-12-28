@@ -54,7 +54,7 @@ Check which wireless stations / routers are in range
 
 ## How to run Docker? 
 
-Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt-get install docker.io`.   If you prefer to use the latest docker builds provided directly by Docker.  Please follow the guide bellow.
+Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt-get install docker.io`.   If you prefer to use the latest docker builds provided directly by Docker.  Please follow the guide below.
 
 Preinstallation requirements:
 
