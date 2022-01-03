@@ -4,8 +4,8 @@
 
 Many Armbian images come in two flavours : _Legacy_ (using an older kernel version) and _current_ (up-to-date LTS kernel). Depending on kernel version, the procedure to enable/disable features is not the same.
 
- * _Legacy_ kernel (4.19.x): DT (Device Tree) overlays
- * _Current_ kernel (5.4.x) : DT (Device Tree) overlays
+ * _Legacy_ kernel (5.4.x): DT (Device Tree) overlays
+ * _Current_ kernel (5.10.x) : DT (Device Tree) overlays
 
 **Note:** Support for older kernel versiones (like 3.4.x or 3.10.x) has been dropped.
 
@@ -22,7 +22,7 @@ In this example the kernel version is 4.5.2 so you can use DT to tweak some sett
 
 ```
 root@orangepiplus2e:~# uname -a
-Linux orangepiplus2e 3.4.112-sun8i #10 SMP PREEMPT Wed Jun 1 19:43:08 CEST 2016 armv7l GNU/Linux
+Linux orangepiplus2e 5.4.45-sun8i #10 SMP PREEMPT Wed Jun 1 19:43:08 CEST 2016 armv7l GNU/Linux
 ```
 
 ## Enable Hardware Features

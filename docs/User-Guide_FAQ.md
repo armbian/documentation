@@ -4,7 +4,7 @@
 
 ## Is Armbian an operating system?
 
-Not per se. Armbian is a build framework that allows users to create ready-to-use images with working kernels in variable userspace configurations for various single board computers (SBCs). We does provide various prebuild images for some boards but mostly for users convenience.
+Not per se. Armbian is a build framework that allows users to create ready-to-use images with working kernels in variable userspace configurations for various single board computers (SBCs). We do provide various prebuild images for some boards but mostly for users convenience.
 
 ## Why I cannot simply shove a random image into my board to work like on my PC?
 
@@ -62,7 +62,7 @@ We need many different profiles of people to run this project and just about any
 
 The Armbian project has very limited human and financial ressources so it can focus on just a few up-to-date operating systems only.
 
-## I have a TV Box from [insert random vendor]. Can I use Armbian on it?
+## I have a TV Box/tablet from [insert random vendor]. Can I use Armbian on it?
 
 No.  
 However some community members are commited in tinkering with these devices. They discuss their findings in a dedicated spaces in [our forums](https://forum.armbian.com/clubs/1-tv-boxes/).  

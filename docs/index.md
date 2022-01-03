@@ -65,24 +65,9 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
 
 ## What is supported?
 
-"Supported" is not a guarantee. "Supported" implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.  Supported boards do receive preferential treatment to bugfix, improve, or add additional functionality based on any of the following, **non-exclusive** criteria:
+Armbian will publish and distribute “stable” CLI images for supported boards through its mirror network. *Supported* is not a guarantee. *Supported* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
 
-1. The discretion of the "Armbian Development Team"
-1. The availability of the "Armbian Development Team"
-1. The availability of sample boards and ease of testing
-1. The mainline kernel maturity for the particular SoC or SBC platform
-1. Paid engagements, long-term sponsorship to the Armbian Project or volunteer developers
-1. Vendor or 3rd party has a **designated** resource providing support for a SBC or platform ON BEHALF OF THE COMMUNITY and is contributing to the project
-
-### Supported SoCs
-
-- Allwinner A10, A20, A31, H2+, H3, H5, H6, A64
-- Amlogic S805 and S905 (Odroid boards), S802/S812, S805, S905, S905X and S912 (fork by `@balbes150`)
-- Actionsemi S500
-- Freescale / NXP iMx6
-- Marvell Armada A380
-- Rockchip RK3288/RK3328/RK3399
-- Samsung Exynos 5422
+For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules)
 
 ### Supported boards
 

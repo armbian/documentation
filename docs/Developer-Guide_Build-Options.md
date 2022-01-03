@@ -23,7 +23,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - sources: delete `cache/sources` (all downloaded sources)
     - extras: delete additional packages for current release in `output/debs/extra`
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
-    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-config`, `armbian-firmware`
+    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-bsp-cli`,`armbian-bsp-desktop`,`armbian-desktop`,`armbian-config`, `armbian-firmware`
     - Set to "" to use packages one from local output or build if not available
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
     - yes: use kernel config file from previous compilation for the same branch, device family and version
@@ -64,6 +64,8 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
 - **BRANCH** ( `legacy` | `current` | `dev` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
 - **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `hirsute` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
+- **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
+- **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
 ## Hidden options for advanced users (default values are marked **bold**)
 - **EXPERT** ( yes | **no** ): Show development features in interactive mode
@@ -105,7 +107,19 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 	- `google`: use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 	- `tuna`: use mirror provided by Tsinghua University
 	- `bfsu`: use mirror provided by Beijing Foreign Studies University which is similar to `tuna`
-	- leave empty to use offical `git.kernel.org`, may be very slow for mainland china users
+	- leave empty to use offical `git.kernel.org`, may be very slow for mainland China users
+- **UBOOT_MIRROR** （ `github` | `gitee` : select mainline mirror of `u-boot.git`
+	- `github`: use mirror provided by github, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
+	- `gitee`: use mirror provided by Gitee, a Chinese git services
+	- leave empty to use offical `source.denx.de`, may be very slow for mainland China users
+- **GITHUB_MIRROR** ( `fastgit` | `gitclone` | `cnpmjs` ): select download mirror for GitHub hosted repository
+	- `fastgit`: use mirror provided by fastgit.org
+	- `gitclone`: use mirror provided by gitclone.com
+	- `cnpmjs`: use mirror provided by cnpmjs.org
+	- leave empty to connect directly to GitHub, may be very slow for mainland China users
+- **REGIONAL_MIRROR** ( `china` ): select mirrors based on regional setting, will not overwrite explicitly specified mirror option
+	- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
+	- leave empty to use default settings
 - **USE_TORRENT** ( **yes** | no ): use torrent to download toolchains and rootfs
 - **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
