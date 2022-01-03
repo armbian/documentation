@@ -82,6 +82,8 @@ For an SBC to be considered supported:
 
 Additional Caveats:
 
+* R&D bills paid. Failsafe in case Armbian members or a team was hired
+* support bills covered by vendor or end users with crowdfunding campaign
 * supported is **not** applied to a "board family" or group of related SBCs. It is per SBC
 * a maintainer can support multiple devices but must satisfy all requirements above per SBC
 * any individual can be a maintainer for a standard support SBC
