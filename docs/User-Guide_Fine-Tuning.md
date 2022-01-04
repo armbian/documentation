@@ -2,10 +2,18 @@
 
 - **Attention: The preferred method to change most of this stuff is by using the interactive _armbian-config_ tool which is shipped with all Armbian images.**
 
-## Keyboard: 
+## Keyboard:
 
 	dpkg-reconfigure keyboard-configuration
-	
+
+In some cases, e.g. when your keyboard standard is not available in previous command, you may also need to set your keymap config:
+
+	# Check your actual keymap config
+	localectl status | grep -i keymap
+
+	# Set the desired keymap config. Example below to 'br-abnt2'
+	localectl set-keymap br-abnt2
+
 ## System language:
 
 	# Debian --> https://wiki.debian.org/ChangeLanguage
@@ -17,46 +25,65 @@
 
 	dpkg-reconfigure console-setup
 
-## Time zone: 
+## Time zone:
 
 	dpkg-reconfigure tzdata
 
-## Screen resolution on other boards: 
+## Sound output:
 
-	nano /boot/boot.cmd 
+	# Check the available sound output options:
+	pacmd list-sinks | less
+	# The default will be marked with "*"
+	# Press "q" to close
+
+
+	# Define the new default sound output
+	pacmd set-default-sink <NAME-OF-DESIRED-OPTION>
+
+
+The name of HDMI sound output may change accordingly to the device. If you don't wanna deal with different names you can:
+
+	pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $2}')
+
+The command to define the default sound output is not persistent, to make it persistent add him to the file `~/.bashrc`
+
+
+## Screen resolution on other boards:
+
+	nano /boot/boot.cmd
 
 	# example:
-	# change example from 
-	# disp.screen0_output_mode=1920x1080p60 
-	# to 
+	# change example from
+	# disp.screen0_output_mode=1920x1080p60
+	# to
 	# disp.screen0_output_mode=1280x720p60
 
 	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
-	
+
 ## Screen resolution within Xorg
 
 - Thanks to user @maxlinux2000 in [this](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/) forum post.
 
 Find matching HDMI output:
 
-	xrandr --listmonitors 
+	xrandr --listmonitors
 
 Calculate VESA CVT mode lines (example for 1440x900)
 
 	cvt 1440 900
 
-Sample output: 
+Sample output:
 
 	1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
-	Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync ) 
+	Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync )
 
 Create new mode (example):
 
-	xrandr --newmode "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync 
+	xrandr --newmode "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
 
 Add resolution (example):
 
-	xrandr --addmode HDMI-1 1440x900_60.00 
+	xrandr --addmode HDMI-1 1440x900_60.00
 
 Set current resolution (example):
 
@@ -70,7 +97,7 @@ If it works as expected add it to Xorg by editing `/etc/X11/xorg.conf.d/40-monit
 	Option "PreferredMode" "1440x900"
 	EndSection
 
-Restart Xorg or reboot 
+Restart Xorg or reboot
 
 ## How to alter CPU frequency?
 
@@ -84,7 +111,7 @@ Alter **min_speed** or **max_speed** variable.
 
 ## Swap for experts
 
-By default Armbian implements ZRAM (writing nothing to 'disk' but compressing memory pages in RAM) but in case you often run into out of memory errors and your device has some capable storage (e.g. a securely attached NVMe or SATA SSD) you might want to use ZSWAP instead. 
+By default Armbian implements ZRAM (writing nothing to 'disk' but compressing memory pages in RAM) but in case you often run into out of memory errors and your device has some capable storage (e.g. a securely attached NVMe or SATA SSD) you might want to use ZSWAP instead.
 
 Check whether your kernel has zswap enabled (`dmesg | grep zswap` should output something) and if so create a swapfile or swap partition the traditional way, edit/uncomment `/etc/default/armbian-zram-config` so that it reads `SWAP=false`, reboot and you're done.
 
@@ -92,7 +119,7 @@ Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in p
 
 ## How to downgrade a package via apt?
 
-This is useful when you need to fall back to previous kernel version. 
+This is useful when you need to fall back to previous kernel version.
 
 	apt install linux-image-sun8i=5.13
 
@@ -124,7 +151,7 @@ Using Armbian 5.05 to 5.20 you would need to touch/rm `/boot/.force-verbose` to 
 When your SBC behaves strange first step is to check power supply and integrity of boot media (`armbianmonitor -c "$HOME"`). Then look into your kernel logs. We made a tool that grabs info and pastes it to an online pasteboard service. Please increase boot verbosity as shown above (`verbosity=7`), reboot and then run
 
 	sudo armbianmonitor -u
-	
+
 Copy and past URL of your log to the forum, mail, ...
 
 ## How to change network configuration?
@@ -141,9 +168,9 @@ To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-m
 By default **/etc/network/interfaces** is a copy of **/etc/network/interfaces.default**
 
 1. BONDING: your network adapters are bonded in fail safe / "notebook" way.
-2. DEFAULT: your network adapters are connected classical way. 
+2. DEFAULT: your network adapters are connected classical way.
 3. HOSTAPD: your network adapters are bridged together and bridge is connected to the network. This allows you to have your AP connected directly to your router.
-4. All interfaces are handled by network-manager (`nmtui`/`nmcli` or using the GUI) 
+4. All interfaces are handled by network-manager (`nmtui`/`nmcli` or using the GUI)
 4. Router configuration for Lamobo R1 / Banana R1.
 5. Switch configuration for Lamobo R1 / Banana R1.
 
@@ -151,7 +178,7 @@ You can switch configuration with copying.
 
 	cd /etc/network
 	cp interfaces.x interfaces
-	
+
 (x = default,hostapd,bonding,r1)
 
 Then check / alter your interfaces:
