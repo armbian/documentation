@@ -45,8 +45,7 @@ The name of HDMI sound output may change accordingly to the device. If you don't
 
 	pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $2}')
 
-The command to define the default sound output is not persistent, to make it persistent add him to the file `~/.bashrc`
-
+The command to define the default sound output is not persistent, to make it persistent add it to the file `~/.bashrc`
 
 ## Screen resolution on other boards:
 
