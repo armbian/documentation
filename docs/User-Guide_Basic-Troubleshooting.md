@@ -96,6 +96,18 @@ but that file is interpreted by u-boot, which happens early in boot process, but
         [ethernet]
         cloned-mac-address=XX:XX:XX:XX:XX:XX
 
+## Video
+
+### No Screen on 4k Resolution
+
+Some combination of boards/kernel versions does not support 4k resolution. This may cause black screen on connecting the board to 4k resolution devices. A workaround to solve this without changing the kernel is forcing the video mode to 1080p. Add this directive to the `/boot/armbianEnv.txt` and reboot your system:
+
+    extraargs=video=HDMI-A-1:1920x1080@60
+
+ - Despite of this config, some apps may try to use 4k resolution, example: _Retroarch_. In this case you have to change app configuration to use the 1080p resolution.
+
+ - To edit files without video you could connect to the board using ssh. Other option is mount the sd card in another device.
+
 ## Configuration
 
 - Some boards require the setup of the correct device tree file or they will not boot. Check the board specific documentation for details.
