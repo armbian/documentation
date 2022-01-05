@@ -62,7 +62,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
   
 ## Hidden options to minimize user input for build automation
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
-- **BRANCH** ( `legacy` | `current` | `dev` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
+- **BRANCH** ( `legacy` | `current` | `dev` | `edge` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
 - **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `hirsute` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
 - **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
 - **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
@@ -74,6 +74,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
 - **PROGRESS_DISPLAY** ( none | **plain** | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** ( yes | **no** ): duplicate output, affected by previous option, to log files `output/debug/*.log`
+- **NO_APT_CACHER** ( **yes** | no ): disable usage of apt cache. Default `yes` in containers, but can be overridden
 - **USE_MAINLINE_GOOGLE_MIRROR** ( yes | **no** ): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
 - **USE_GITHUB_UBOOT_MIRROR** ( yes | **no** ): use unofficial Github mirror for downloading mainline U-Boot sources, may be faster than `git.denx.de` depending on your location
 - **SYNC_CLOCK** ( **yes** | no ): sync system clock on builder before start image creation process
