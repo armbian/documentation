@@ -74,7 +74,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
 - **PROGRESS_DISPLAY** ( none | **plain** | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap
 - **PROGRESS_LOG_TO_FILE** ( yes | **no** ): duplicate output, affected by previous option, to log files `output/debug/*.log`
-- **NO_APT_CACHER** ( **yes** | no ): disable usage of apt cache. Default `yes` in containers, but can be overridden
+- **NO_APT_CACHER** ( **yes** | no ): disable usage of APT cache. Default `yes` in containers, but can be overridden
 - **USE_MAINLINE_GOOGLE_MIRROR** ( yes | **no** ): use `googlesource.com` mirror for downloading mainline kernel sources, may be faster than `git.kernel.org` depending on your location
 - **USE_GITHUB_UBOOT_MIRROR** ( yes | **no** ): use unofficial Github mirror for downloading mainline U-Boot sources, may be faster than `git.denx.de` depending on your location
 - **SYNC_CLOCK** ( **yes** | no ): sync system clock on builder before start image creation process
