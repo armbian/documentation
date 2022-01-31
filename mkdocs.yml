@@ -68,6 +68,7 @@ nav:
         - "Model" : "Process_Release-Model.md"
         - "Changelog" : "Release_Changelog.md"
         - "Workflow (Jira)" : "Process_Managing_Workflow.md"
+        - "Board Maintainers" : "Release_Board-Maintainers.md"
 
   - "Community" :
         - "IRC/Discord/Matrix" : "Community_IRC.md"
