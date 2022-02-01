@@ -82,7 +82,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | radxa-n10            |                |                    |
 | radxa-zero           | RadxaYuntian   | [3](#n3)           |
 | renegade             | Tonymac32      |                    |
-| rock-3a              | catalinii      | [3](#n3)           |
+| rock-3a              | catalinii      |                    |
 | "                    | ZazaBr         | [3](#n3)           |
 | rockpi-4a            |                |                    |
 | rockpi-4b            |                |                    |
@@ -123,7 +123,7 @@ Please make a forum post in the appropriate place instead.
 | adeepv ?     | adeepn         |
 | ?            | antondeveloper |
 | 150balbes    | balbes150      |
-| ?            | catalinii      |
+| catalinii    | catalinii      |
 | heisath      | Heisath        |
 | igorpecovnik | Igor           |
 | joekhoobyar  | joekhoobyar    |
