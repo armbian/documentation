@@ -2,7 +2,7 @@
 
 Where more than one Maintainer is listed, the first (top line) person may be considered the 'lead' and others as co-maintainers / helpers.
 
-Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#Forum Name Cross Reference) (below).
+Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
 | BOARDCONF            | Maintainer     | Note(s)   |
 |----------------------|----------------|-----------|
