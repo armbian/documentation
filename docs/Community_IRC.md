@@ -17,7 +17,7 @@ Besides that communication is also possible via Matrix or our (unofficial) Disco
 + Ports: `6697` / non-encrypted: `6667`  
 + Channel: `#armbian`  
 
-Or simply use Libera.Chat's webirc client: [https://web.libera.chat/#armbian](https://web.libera.chat/#armbian)
+In order to enter main #armbian channel registration with Nickserv is mandatory. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
 
 
 ### Discord
