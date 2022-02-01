@@ -4,6 +4,11 @@ Where more than one Maintainer is listed, the first (top line) person may be con
 
 Maintainer column, in this table, is forum name.  For cross reference to GitHub ID, see [Forum Name Cross Reference](#Forum Name Cross Reference) (below).
 
+**Do not contact Maintainers via Personal Messages (PMs) on the forums for private support.  Such behavior is considered harassment and may result in a ban.**
+
+Instead, please make a forum post in the appropriate place instead.
+
+
 | BOARDCONF            | Maintainer     | Note(s)   |
 |----------------------|----------------|-----------|
 | bananapi             | yang           |           |
@@ -199,10 +204,6 @@ Maintainer column, in this table, is forum name.  For cross reference to GitHub 
 ## Forum Name Cross Reference
 
 Rather than update many different cells above, please maintain name/handle cross-references here.
-
-**Do not contact Maintainers via Personal Messages (PMs) on the forums for private support.  Such behavior is considered harassment and may result in a ban.**
-
-Instead, please make a forum post in the appropriate place instead.
 
 If you have a question mark next to, or in place of, your name, please update by sending a PR or contact TRS-80 on IRC.
 
