@@ -1,6 +1,6 @@
 # Board Maintainers
 
-Where more than one Maintainer is listed, the first (top line) person may be considered the 'primary' and the other(s) as co-maintainers / helpers.
+Where more than one Maintainer is listed, the first (top line, with BOARDCONF) person may be considered the 'primary' and the other(s) (on following line(s) with '"') as co-maintainers / helpers.
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
@@ -105,14 +105,14 @@ Notes (for above):
 <ol>
 <li id="n1"><p>rpardini would take this if he could get a board ;-)</p></li>
 <li id="n2"><p>I'd donate mine -Werner</p></li>
-<li id="n3"><p>Maintainer is forum name, we need to update to GitHub name!  Please submit PR or contact TRS-80 in IRC or via PM.</p></li>
+<li id="n3"><p>Maintainer is forum name, we need to update to GitHub name!  Please submit PR or contact TRS-80 in IRC or via PM on forums.</p></li>
 </ol>
 
 ## Forum Name Cross Reference
 
 Rather than update many different cells above, please maintain name/handle cross-references here.
 
-If you have a question mark next to, or in place of, your name, please update by sending a PR or contact TRS-80 on IRC or via PM.
+If you have a question mark next to, or in place of, your name, please update by sending a PR or contact TRS-80 on IRC or via PM on forums.
 
 **Do not contact Maintainers via Personal Messages (PMs) on the forums for private support.  Such behavior is considered harassment and may result in a ban.**
 
