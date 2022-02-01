@@ -46,7 +46,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopineo3           |                |                    |
 | nanopineo4           |                |                    |
 | nanopineocore2       |                |                    |
-| nanopineoplus2       |                |                    |
+| nanopineoplus2       | teknoid        |                    |
 | odroidc2             | NicoD-SBC      | [1](#n1)           |
 | odroidc4             |                | [1](#n1)           |
 | odroidhc4            | rpardini       |                    |
@@ -132,6 +132,7 @@ Please make a forum post in the appropriate place instead.
 | NicoD-SBC    | NicoD          |
 | ?            | RadxaYuntian   |
 | seclorum     | seclorum       |
+| teknoid      | teknoid        |
 | Tonymac32    | TonyMac32      |
 | TRSx80       | TRS-80         |
 | ?            | yang           |
