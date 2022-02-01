@@ -101,9 +101,12 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | station-m2           | 150balbes      |                    |
 | station-p2           | 150balbes      |                    |
 
-[1]: rpardini would take this if he could get a board ;-)
-[2]: I'd donate mine -Werner
-[3]: Name is forum name, we need GitHub name to update!  Please submit PR or contact TRS-80 in IRC or via PM.
+Notes (for above):
+<ol>
+<li id="n1"><p>rpardini would take this if he could get a board ;-)</p></li>
+<li id="n2"><p>I'd donate mine -Werner</p></li>
+<li id="n3"><p>Maintainer is forum name, we need to update to GitHub name!  Please submit PR or contact TRS-80 in IRC or via PM.</p></li>
+</ol>
 
 ## Forum Name Cross Reference
 
