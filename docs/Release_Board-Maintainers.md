@@ -6,7 +6,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 
 | BOARDCONF            | Maintainer     | Note(s)            |
 |----------------------|----------------|--------------------|
-| bananapi             | yang           | [3](#n3)           |
+| bananapi             | janprunk       |                    |
 | bananapim2plus       | igorpecovnik   |                    |
 | bananapim64          | antondeveloper | [3](#n3)           |
 | bananapipro          | igorpecovnik   |                    |
@@ -17,8 +17,8 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | cubox-i              | igorpecovnik   |                    |
 | firefly-rk3399       | 150balbes      |                    |
 | helios4              | heisath        |                    |
-| jethubj100           | adeepn         | [3](#n3)           |
-| jethubj80            | adeepn         | [3](#n3)           |
+| jethubj100           |                |                    |
+| jethubj80            |                |                    |
 | jetson-nano          | 150balbes      |                    |
 | khadas-edge          | igorpecovnik   |                    |
 | khadas-vim1          |                | [1](#n1)           |
@@ -46,7 +46,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopineo3           |                |                    |
 | nanopineo4           |                |                    |
 | nanopineocore2       |                |                    |
-| nanopineoplus2       |                |                    |
+| nanopineoplus2       | teknoid        |                    |
 | odroidc2             | NicoD-SBC      | [1](#n1)           |
 | odroidc4             |                | [1](#n1)           |
 | odroidhc4            | rpardini       |                    |
@@ -75,14 +75,14 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepizeroplus     | igorpecovnik   |                    |
 | orangepizeroplus2-h3 |                |                    |
 | orangepizeroplus2-h5 |                |                    |
-| pine64               | yang           | [3](#n3)           |
+| pine64               | janprunk       |                    |
 | pinebook-a64         | igorpecovnik   |                    |
 | pinebookpro          | seclorum       |                    |
 | pineh64-b            |                |                    |
 | radxa-n10            |                |                    |
 | radxa-zero           | RadxaYuntian   | [3](#n3)           |
 | renegade             | Tonymac32      |                    |
-| rock-3a              | catalinii      | [3](#n3)           |
+| rock-3a              | catalinii      |                    |
 | "                    | ZazaBr         | [3](#n3)           |
 | rockpi-4a            |                |                    |
 | rockpi-4b            |                |                    |
@@ -120,19 +120,19 @@ Please make a forum post in the appropriate place instead.
 
 | GitHub       | Forum Name     |
 |--------------|----------------|
-| adeepv ?     | adeepn         |
 | ?            | antondeveloper |
 | 150balbes    | balbes150      |
-| ?            | catalinii      |
+| catalinii    | catalinii      |
 | heisath      | Heisath        |
 | igorpecovnik | Igor           |
+| janprunk     | yang           |
 | joekhoobyar  | joekhoobyar    |
 | krachlatte   | krachlatte     |
 | lbmendes     | LucasM         |
 | NicoD-SBC    | NicoD          |
 | ?            | RadxaYuntian   |
 | seclorum     | seclorum       |
+| teknoid      | teknoid        |
 | Tonymac32    | TonyMac32      |
 | TRSx80       | TRS-80         |
-| ?            | yang           |
 | ?            | ZazaBr         |
