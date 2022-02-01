@@ -17,8 +17,8 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | cubox-i              | igorpecovnik   |                    |
 | firefly-rk3399       | 150balbes      |                    |
 | helios4              | heisath        |                    |
-| jethubj100           | adeepn         | [3](#n3)           |
-| jethubj80            | adeepn         | [3](#n3)           |
+| jethubj100           |                |                    |
+| jethubj80            |                |                    |
 | jetson-nano          | 150balbes      |                    |
 | khadas-edge          | igorpecovnik   |                    |
 | khadas-vim1          |                | [1](#n1)           |
@@ -120,7 +120,6 @@ Please make a forum post in the appropriate place instead.
 
 | GitHub       | Forum Name     |
 |--------------|----------------|
-| adeepv ?     | adeepn         |
 | ?            | antondeveloper |
 | 150balbes    | balbes150      |
 | catalinii    | catalinii      |
