@@ -11,11 +11,14 @@ theme:
 
 plugins:
     - search:
-    - with-pdf:
-        author: Armbian documentation team
-        copyright: © 2021 by Armbian
-        cover_title: Armbian documentation
-        cover_subtitle: Linux for ARM development boards
+    # NOTE: See https://github.com/armbian/documentation/issues/171
+    # (TRS-80 2022-02-01)
+    #
+    # - with-pdf:
+    #     author: Armbian documentation team
+    #     copyright: © 2021 by Armbian
+    #     cover_title: Armbian documentation
+    #     cover_subtitle: Linux for ARM development boards
 
 markdown_extensions:
   - smarty
