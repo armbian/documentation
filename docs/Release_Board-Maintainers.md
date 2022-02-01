@@ -6,7 +6,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 
 | BOARDCONF            | Maintainer     | Note(s)            |
 |----------------------|----------------|--------------------|
-| bananapi             | yang           | [3](#n3)           |
+| bananapi             | janprunk       |                    |
 | bananapim2plus       | igorpecovnik   |                    |
 | bananapim64          | antondeveloper | [3](#n3)           |
 | bananapipro          | igorpecovnik   |                    |
@@ -75,7 +75,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepizeroplus     | igorpecovnik   |                    |
 | orangepizeroplus2-h3 |                |                    |
 | orangepizeroplus2-h5 |                |                    |
-| pine64               | yang           | [3](#n3)           |
+| pine64               | janprunk       |                    |
 | pinebook-a64         | igorpecovnik   |                    |
 | pinebookpro          | seclorum       |                    |
 | pineh64-b            |                |                    |
@@ -125,6 +125,7 @@ Please make a forum post in the appropriate place instead.
 | catalinii    | catalinii      |
 | heisath      | Heisath        |
 | igorpecovnik | Igor           |
+| janprunk     | yang           |
 | joekhoobyar  | joekhoobyar    |
 | krachlatte   | krachlatte     |
 | lbmendes     | LucasM         |
@@ -134,5 +135,4 @@ Please make a forum post in the appropriate place instead.
 | teknoid      | teknoid        |
 | Tonymac32    | TonyMac32      |
 | TRSx80       | TRS-80         |
-| ?            | yang           |
 | ?            | ZazaBr         |
