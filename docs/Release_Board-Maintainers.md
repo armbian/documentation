@@ -129,6 +129,7 @@ Please make a forum post in the appropriate place instead.
 | joekhoobyar  | joekhoobyar    |
 | krachlatte   | krachlatte     |
 | lbmendes     | LucasM         |
+| piter75      | piter75        |
 | NicoD-SBC    | NicoD          |
 | ?            | RadxaYuntian   |
 | seclorum     | seclorum       |
