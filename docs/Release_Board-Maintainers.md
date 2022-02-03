@@ -32,6 +32,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopct4             | 150balbes    |                    |
 | nanopi-r1            | igorpecovnik |                    |
 | nanopi-r2s           | igorpecovnik |                    |
+| nanopi-r2c           | igorpecovnik |                    |
 | nanopi-r4s           | piter75      |                    |
 | nanopiair            |              |                    |
 | nanopiduo            |              |                    |
