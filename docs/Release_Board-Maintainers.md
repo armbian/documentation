@@ -17,8 +17,8 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | cubox-i              | igorpecovnik |                    |
 | firefly-rk3399       | 150balbes    |                    |
 | helios4              | heisath      |                    |
-| jethubj100           |              |                    |
-| jethubj80            |              |                    |
+| jethubj100           | jethome-ru   |                    |
+| jethubj80            | jethome-ru   |                    |
 | jetson-nano          | 150balbes    |                    |
 | khadas-edge          | igorpecovnik |                    |
 | khadas-vim1          |              | [1](#n1)           |
@@ -127,6 +127,7 @@ Please make a forum post in the appropriate place instead.
 | heisath      | Heisath        |
 | igorpecovnik | Igor           |
 | janprunk     | yang           |
+| jethome-ru   | jethome        |
 | joekhoobyar  | joekhoobyar    |
 | krachlatte   | krachlatte     |
 | lbmendes     | LucasM         |
