@@ -70,7 +70,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepiplus         |              |                    |
 | orangepiplus2e       | igorpecovnik |                    |
 | orangepiprime        | igorpecovnik |                    |
-| orangepiwin          | igorpecovnik |                    |
+| orangepiwin          |              |                    |
 | orangepizero         | igorpecovnik |                    |
 | orangepizero2        | krachlatte   |                    |
 | orangepizeroplus     | igorpecovnik |                    |
