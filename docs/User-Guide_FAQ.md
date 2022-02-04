@@ -40,10 +40,6 @@ Questions associated with missing features represent another hit and miss for us
 
 All our work is done in public and we provide all sources which we are changing in the process.  All our work is patent free and released under a free licence so anyone can re-use it further.  The scale of SBCs Armbian supports is hard to beat, and consequently our work is repackaged and reused by other projects and vendors.  Unfortunately the burden of support is often directed to us, while they focus on revenue.
 
-## Why does Armbian not support RaspberryPi?
-
-Historically Raspberry Pi SBCs have had a strong community and its own support.  Armbian's development effort is better spent focusing on other ARM-based SBCs with less support.  There are other reasons as well.  If you are interested there is a years-long conversation going on [in forums](https://forum.armbian.com/topic/483-support-of-raspberry-pi/).
-
 ## Why does hardware feature XY work in old kernel but not in more recent one?
 
 Vendors develop hardware specific support on fixed (usually old LTS) kernel and U-Boot fork and only do minimal adjustments to make board features work.  Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and pre-made kernels/boot loaders as well.
