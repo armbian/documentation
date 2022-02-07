@@ -49,8 +49,9 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopineocore2       |              |                    |
 | nanopineoplus2       | teknoid      |                    |
 | odroidc2             | NicoD-SBC    | [1](#n1)           |
-| odroidc4             | Tracy        | [1](#n1)           |
+| odroidc4             | Technicavolous | [1](#n1)         |
 | odroidhc4            | rpardini     |                    |
+|                      | Technicavolous |                  |
 | odroidn2             | rpardini     |                    |
 | odroidxu4            | igorpecovnik |                    |
 | "                    | joekhoobyar  |                    |
