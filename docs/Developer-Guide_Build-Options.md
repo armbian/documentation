@@ -68,7 +68,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
 ## Hidden options for advanced users (default values are marked **bold**)
-- **EXPERT** ( yes | **no** ): Show development features in interactive mode
+- **EXPERT** ( yes | **no** ): Show development features and boards regardless of its status in interactive mode
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for location of `userpatches` folder
 - **USE_CCACHE** ( **yes** | no ): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
