@@ -64,6 +64,10 @@ Dates for **2020**:
  * July [3rd](https://libera.irclog.whitequark.org/armbian/2021-07-10)
  * October [16th]
 
+Dates for **2022**: 
+
+ *  January [29th](http://meeting.armbian.de/armbian.2022-01-29-13.02.html)
+
 ### Agenda:
 
 - 00:00 - 00:02 `#startmeeting Tamandua`: Meeting coordinator (MC) calls meeting to order. 
