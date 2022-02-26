@@ -73,7 +73,7 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | orangepiplus         |                |          |
 | orangepiplus2e       | igorpecovnik   |          |
 | orangepiprime        | igorpecovnik   |          |
-| orangepi-r1plus-lts  | schwar3kat     | [2](#n2) |
+| orangepi-r1plus-lts  | schwar3kat     |          |
 | orangepiwin          |                |          |
 | orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
@@ -140,7 +140,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | piter75        | piter75        |
 | NicoD-SBC      | NicoD          |
 | RadxaYuntian   | RadxaYuntian   |
-| ?              | schwar3kat     |
+| schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |
 | teknoid        | teknoid        |
