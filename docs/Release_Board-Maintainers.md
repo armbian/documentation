@@ -75,7 +75,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
 | orangepizeroplus     | igorpecovnik   |          |
-| orangepizeroplus2-h3 |                |          |
+| orangepizeroplus2-h3 | Kalobok        | [2](#n2) |
 | orangepizeroplus2-h5 |                |          |
 | pine64               | janprunk       |          |
 | pinebook-a64         | igorpecovnik   |          |
@@ -129,6 +129,7 @@ Please make a forum post in the appropriate place instead.
 | janprunk       | yang           |
 | jethome-ru     | jethome        |
 | joekhoobyar    | joekhoobyar    |
+| ?              | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
 | piter75        | piter75        |
