@@ -1,10 +1,12 @@
 # Board Maintainers
 
-Where more than one Maintainer is listed, the first (top line, with BOARDCONF) person may be considered the 'primary' and the other(s) (on following line(s) with '"') as co-maintainers / helpers.
+Where more than one Maintainer is listed, the top line person may be considered the 'primary' and the other(s) on following line(s) as co-maintainers / helpers.
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
-| BOARDCONF            | Maintainer     | Note(s)  |
+The authoratitative list of board.conf can be found [here](https://github.com/armbian/build/tree/master/config/boards).  Eventually we may automatically generate this list from there, in the mean time we are still maintaining it manually.
+
+| board.conf           | Maintainer     | Note(s)  |
 |----------------------|----------------|----------|
 | bananapi             | janprunk       |          |
 | bananapim2plus       | igorpecovnik   |          |
@@ -112,13 +114,15 @@ Notes (for above):
 
 ## Forum Name Cross Reference
 
-Rather than update many different cells above, please maintain name/handle cross-references here.
+Rather than update many different cells above, please maintain GitHub <-> forum handle cross-reference below.
 
 If you have a question mark next to, or in place of, your name, please update by sending a PR or contact TRS-80 on IRC or via PM on forums.
 
+**Important note for people seeking support:**
+
 **Do not contact Maintainers via Personal Messages (PMs) on the forums for private support.  Such behavior is considered harassment and may result in a ban.**
 
-Please make a forum post in the appropriate place instead.
+Please make a forum post in the appropriate place instead, where more people may see it, and ultimately everyone may benefit.
 
 | GitHub         | Forum Name     |
 |----------------|----------------|
