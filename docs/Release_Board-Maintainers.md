@@ -82,7 +82,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | pinebookpro          | seclorum       |                    |
 | pineh64-b            |                |                    |
 | radxa-n10            |                |                    |
-| radxa-zero           | RadxaYuntian   | [3](#n3)           |
+| radxa-zero           | RadxaYuntian   |                    |
 | renegade             | Tonymac32      |                    |
 | rock-3a              | catalinii      |                    |
 | "                    | ZazaBr         | [3](#n3)           |
@@ -134,7 +134,7 @@ Please make a forum post in the appropriate place instead.
 | lbmendes       | LucasM         |
 | piter75        | piter75        |
 | NicoD-SBC      | NicoD          |
-| ?              | RadxaYuntian   |
+| RadxaYuntian   | RadxaYuntian   |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |
 | teknoid        | teknoid        |
