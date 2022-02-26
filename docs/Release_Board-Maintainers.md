@@ -71,6 +71,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepiplus         |                |          |
 | orangepiplus2e       | igorpecovnik   |          |
 | orangepiprime        | igorpecovnik   |          |
+| orangepi-r1plus-lts  | schwar3kat     | [2](#n2) |
 | orangepiwin          |                |          |
 | orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
@@ -135,6 +136,7 @@ Please make a forum post in the appropriate place instead.
 | piter75        | piter75        |
 | NicoD-SBC      | NicoD          |
 | RadxaYuntian   | RadxaYuntian   |
+| ?              | schwar3kat     |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |
 | teknoid        | teknoid        |
