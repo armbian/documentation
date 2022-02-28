@@ -3,6 +3,47 @@
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
 
+## v22.02 (2022-02-28)
+
+### Solved Bugs
+
+* [AR-1101](https://armbian.atlassian.net/browse/AR-1101) - DRM patch is failing on Rockchip
+* [AR-1079](https://armbian.atlassian.net/browse/AR-1079) - Ubuntu archive redirector is not providing best service
+* [AR-1077](https://armbian.atlassian.net/browse/AR-1077) - Fix RPi4 userland audio
+* [AR-1069](https://armbian.atlassian.net/browse/AR-1069) - First login doesn't pick up correct shell
+* [AR-1065](https://armbian.atlassian.net/browse/AR-1065) - Twitter forum registration is not working
+* [AR-1063](https://armbian.atlassian.net/browse/AR-1063) - X86 desktop images are not enabled in CI
+* [AR-1062](https://armbian.atlassian.net/browse/AR-1062) - When selecting repository install u-boot might not be flashed
+* [AR-1055](https://armbian.atlassian.net/browse/AR-1055) - Aptly repository seems to be out of business
+* [AR-1048](https://armbian.atlassian.net/browse/AR-1048) - Rpi kernel image is not updated on upgrade
+* [AR-1043](https://armbian.atlassian.net/browse/AR-1043) - linux-firmware repository change branch from "master"  to "main"
+* [AR-973](https://armbian.atlassian.net/browse/AR-973) - boot building is failing after update to 2021.10
+* [AR-871](https://armbian.atlassian.net/browse/AR-871) - Debian SID broken wallpaper
+
+
+### Story
+
+
+* [AR-1074](https://armbian.atlassian.net/browse/AR-1074) - Switch all CURRENT to 5.15.y and EDGE to 5.16.y
+* [AR-1009](https://armbian.atlassian.net/browse/AR-1009) - Armbian Framework extensions and UEFI support
+
+
+### Closed tasks
+
+
+* [AR-1100](https://armbian.atlassian.net/browse/AR-1100) - Support for Orange Pi R1 Plus LTS, Drivers for YT8531 and other Motorcomm chips. Linux-5.10y and Linux-5.15y.
+* [AR-1084](https://armbian.atlassian.net/browse/AR-1084) - 3D support on Debian desktop
+* [AR-1078](https://armbian.atlassian.net/browse/AR-1078) - Add additional forum plugins and adjust settings
+* [AR-1068](https://armbian.atlassian.net/browse/AR-1068) - Add gnome-system-monitor to Focal and Jammy
+* [AR-1049](https://armbian.atlassian.net/browse/AR-1049) - Add ZFS that supports kernel 5.15.y
+* [AR-1044](https://armbian.atlassian.net/browse/AR-1044) - Improve Raspberry Pi support
+* [AR-1041](https://armbian.atlassian.net/browse/AR-1041) - JetHome: fix brcm \(AP6255\) firmware links
+* [AR-1040](https://armbian.atlassian.net/browse/AR-1040) - Refactor armbian-bsp-cli package creation
+* [AR-931](https://armbian.atlassian.net/browse/AR-931) - Using Docker image for building kernels
+* [AR-893](https://armbian.atlassian.net/browse/AR-893) - Cleanup rockchip64 u-boot scenarios
+* [AR-757](https://armbian.atlassian.net/browse/AR-757) - Adding Raspberry Pi
+* [AR-586](https://armbian.atlassian.net/browse/AR-586) - Implement fan controller for Nanopi M2V2
+
 ## v21.08 (2021-08-31)
 
 ### Solved Bugs
