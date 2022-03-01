@@ -31,7 +31,7 @@
 ### Closed tasks
 
 
-* [AR-1100](https://armbian.atlassian.net/browse/AR-1100) - Support for Orange Pi R1 Plus LTS, Drivers for YT8531 and other Motorcomm chips. Linux-5.10y and Linux-5.15y.
+* [AR-1100](https://armbian.atlassian.net/browse/AR-1100) - Support for Orange Pi R1 Plus LTS
 * [AR-1084](https://armbian.atlassian.net/browse/AR-1084) - 3D support on Debian desktop
 * [AR-1078](https://armbian.atlassian.net/browse/AR-1078) - Add additional forum plugins and adjust settings
 * [AR-1068](https://armbian.atlassian.net/browse/AR-1068) - Add gnome-system-monitor to Focal and Jammy
