@@ -251,7 +251,7 @@ By default your main network adapter's IP is assigned by your router DHCP server
 	NAME	UUID	TYPE	DEVICE 
 	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
 
-The conncetion can now be edited with the following:
+The connection can now be edited with the following:
 
 	nmcli con mod "Wired connection 1"
 	  ipv4.addresses "HOST_IP_ADDRESS"
