@@ -57,8 +57,9 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | odroidn2             | rpardini       |          |
 | odroidxu4            | igorpecovnik   |          |
 | "                    | joekhoobyar    |          |
-| orangepi-r1          | igorpecovnik   |          |
+| orangepi-r1          | schwar3kat     |          |
 | orangepi-r1plus      |                |          |
+| orangepi-r1plus-lts  | schwar3kat     |          |
 | orangepi-rk3399      |                |          |
 | orangepi2            |                |          |
 | orangepi3            | igorpecovnik   |          |
@@ -73,9 +74,8 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | orangepiplus         |                |          |
 | orangepiplus2e       | igorpecovnik   |          |
 | orangepiprime        | igorpecovnik   |          |
-| orangepi-r1plus-lts  | schwar3kat     |          |
 | orangepiwin          |                |          |
-| orangepizero         | igorpecovnik   |          |
+| orangepizero         | schwar3kat     |          |
 | orangepizero2        | krachlatte     |          |
 | orangepizeroplus     | igorpecovnik   |          |
 | orangepizeroplus2-h3 | Kalobok        | [2](#n2) |
