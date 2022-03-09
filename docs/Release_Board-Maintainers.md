@@ -75,9 +75,9 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | orangepiplus2e       | igorpecovnik   |          |
 | orangepiprime        | igorpecovnik   |          |
 | orangepiwin          |                |          |
-| orangepizero         | schwar3kat     |          |
+| orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
-| orangepizeroplus     | igorpecovnik   |          |
+| orangepizeroplus     | schwar3kat     |          |
 | orangepizeroplus2-h3 | Kalobok        | [2](#n2) |
 | orangepizeroplus2-h5 |                |          |
 | pine64               | janprunk       |          |
