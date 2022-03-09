@@ -85,7 +85,8 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | pinebookpro          | seclorum       |          |
 | pineh64-b            |                |          |
 | radxa-n10            |                |          |
-| radxa-zero           | RadxaYuntian   |          |
+| radxa-zero           |                |          |
+| radxa-zero2          |                |          |
 | renegade             | Tonymac32      |          |
 | rock-3a              | catalinii      |          |
 | "                    | ZazaBr         | [2](#n2) |
@@ -139,7 +140,6 @@ Please make a forum post in the appropriate place instead, where more people may
 | lbmendes       | LucasM         |
 | piter75        | piter75        |
 | NicoD-SBC      | NicoD          |
-| RadxaYuntian   | RadxaYuntian   |
 | schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |
