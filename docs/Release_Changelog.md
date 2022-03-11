@@ -42,7 +42,7 @@
 * [AR-931](https://armbian.atlassian.net/browse/AR-931) - Using Docker image for building kernels
 * [AR-893](https://armbian.atlassian.net/browse/AR-893) - Cleanup rockchip64 u-boot scenarios
 * [AR-757](https://armbian.atlassian.net/browse/AR-757) - Adding Raspberry Pi
-* [AR-586](https://armbian.atlassian.net/browse/AR-586) - Implement fan controller for Nanopi M2V2
+* [AR-586](https://armbian.atlassian.net/browse/AR-586) - Implement fan controller for Nanopi M4V2
 
 ## v21.08 (2021-08-31)
 
