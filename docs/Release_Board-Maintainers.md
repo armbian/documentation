@@ -11,7 +11,7 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | bananapi             | janprunk       |          |
 | bananapim2plus       | igorpecovnik   |          |
 | bananapim64          | devdotnetorg   |          |
-| bananapipro          | igorpecovnik   |          |
+| bananapipro          | teknoid        |          |
 | clearfogbase         | heisath        |          |
 | clearfogpro          | heisath        |          |
 | cubieboard           |                |          |
