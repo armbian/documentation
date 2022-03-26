@@ -17,7 +17,10 @@ On each merge reqest we are running:
 
 - shell script analysis
 - creating Docker image
-- creating desktop variants if PR is labelled with "Desktop"
+- creating desktop variants 
+  - if label is set to "desktop"
+  - when PR is switched between "draft" and "ready for review"
+  - when PR is approved
 - building changed kernels
 
 Those runs are for security reasons executed on public Github runners servers which are [very limited](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources). One build cycle takes around one hour and it produces two types of artefacts:
