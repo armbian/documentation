@@ -23,15 +23,15 @@ Installation (https://docs.docker.com/engine/install/)
 
 There are 3 options to start build process:
 
-1. By passing configuration file name (`config-<conf_name>.conf`), stored in `userpatches` directory, as an argument:
+1\. By passing configuration file name (`config-<conf_name>.conf`), stored in `userpatches` directory, as an argument:
 ```
 ./compile.sh docker <conf_name>
 ```
-2. By passing addtional line arguments to `compile.sh` after `docker`:
+2\. By passing addtional line arguments to `compile.sh` after `docker`:
 ```
 ./compile.sh docker KERNEL_ONLY=yes BOARD=cubietruck BRANCH=current KERNEL_CONFIGURE=yes
 ```
-3. Interactively run inside docker container
+3\. Interactively run inside docker container
 ```
 ./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=focal
 ```
