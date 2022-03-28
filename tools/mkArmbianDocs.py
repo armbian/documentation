@@ -74,21 +74,19 @@ def parseFiles(validFileList, indir):
 # generate mkdocs.yml using jinja template and dict of markdown files
 def generateSite(parsedFileList):
     mkdocsTemplate = """
-
 site_name: Armbian Documentation
-
-repo_url: https://github.com/armbian/documentation
-repo_name: Github
-
 site_author: "Armbian team"
-extra:
-  analytics:
-    provider: google
-    property: UA-284946-9
+
+copyright: Copyright &copy; 2015 - 2022 Armbian team
+repo_url: https://github.com/armbian/documentation
+repo_name: armbian/documentation
 
 theme: 
     name: material
+    custom_dir: overrides
     logo: images/logo.svg
+    icon:
+      repo: fontawesome/brands/github-alt
     palette:
         - scheme: default
           primary: red
@@ -108,6 +106,16 @@ theme:
         - navigation.top
         - toc.integrate
 
+extra:
+  analytics:
+    provider: google
+    property: UA-284946-9
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/armbian
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/armbian
+
 plugins:
    - with-pdf:
        author: Armbian documentation team
@@ -120,6 +128,11 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: True
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      use_pygments: true
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
