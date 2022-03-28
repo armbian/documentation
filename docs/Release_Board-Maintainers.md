@@ -85,7 +85,7 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | pinebookpro          | seclorum       |          |
 | pineh64-b            |                |          |
 | radxa-n10            |                |          |
-| radxa-zero           |                |          |
+| radxa-zero           | engineer-80    |          |
 | radxa-zero2          |                |          |
 | renegade             | Tonymac32      |          |
 | rock-3a              | catalinii      |          |
@@ -147,3 +147,4 @@ Please make a forum post in the appropriate place instead, where more people may
 | Tonymac32      | TonyMac32      |
 | TRSx80         | TRS-80         |
 | ?              | ZazaBr         |
+| engineer-80    | Yakov          |
