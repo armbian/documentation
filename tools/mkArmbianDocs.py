@@ -108,12 +108,12 @@ theme:
         - navigation.top
         - toc.integrate
 
-#plugins:
-#    - with-pdf:
-#        author: Armbian documentation team
-#        copyright: © 2021 by Armbian
-#        cover_title: Armbian documentation
-#        cover_subtitle: Linux for ARM development boards
+plugins:
+   - with-pdf:
+       author: Armbian documentation team
+       copyright: © 2021 by Armbian
+       cover_title: Armbian documentation
+       cover_subtitle: Linux for ARM development boards
 
 markdown_extensions:
   - smarty
