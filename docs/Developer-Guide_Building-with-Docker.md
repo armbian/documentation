@@ -37,46 +37,44 @@ There are 3 options to start build process:
 ```
 
 The process creates and runs a named Docker container `armbian` with two named volumes `armbian-cache` and `armbian-ccache`,
-and mount local directories `output` and `userpatches`.
+and mounts local directories `output` and `userpatches`.
 
-1 and 2 docker modes uses same as no docker, but runs in separated builder environment, with minimal intervention to base system.
+Options 1 and 2 compile the same as without Docker but in separate environment to prevent changes to the base system.
 
-Dockerfile of container placed in `userpatches` directory, all container-related tunes can be changed
-in `userpatches/config-docker.conf` file. Templates of both files located in `config/templates` directory.
+The dockerfile of the created container is placed in `userpatches` directory, and all container-related options can be changed
+in `userpatches/config-docker.conf` file. Templates of both files are located in the `config/templates` directory.
 
 ### docker-shell interactive mode
 
-Interactive mode of a docker usable when you need more than "just make an image". You may look to u-boot or
-kernel sources before and after applying patches, investigate compilation errors, and so on.
+The docker-shell interactive mode is useful for when you need to do more than just "make an image." This mode allows you to edit
+U-Boot and kernel sources before and after applying patches, investigate compilation errors, and so on.
 
-And you can manual run separate steps of build process.
+This mode also allows you to manually run individual steps of the build process.
 
-First, start docker-shell on a build system itself:
+First, start docker-shell on the host build system:
 ```
 @droid:~/armbian$ ./compile.sh docker-shell RELEASE=buster BOARD=rockpi-4a BRANCH=edge
 ```
-There `RELEASE=buster BOARD=rockpi-4a BRANCH=edge` just passed into shell and will be set into
+From there, `RELEASE=buster BOARD=rockpi-4a BRANCH=edge` are passed into shell and will be set into
 envirounment variables. 
 
-Then, we can simply start build image:
+Next, we can simply start building an image:
 ```
 root@75ec76203b65:~/armbian# ./compile.sh
 ```
-Or, you can run any function defined in the compile.sh script.
+Alternatively, you can run any function defined in the compile.sh script.
 
-For example, to compile the U-Boot, prepare the environment first with:
+For example, to compile U-Boot, prepare the environment with:
 ```
 ./compile.sh default prepare_host compile_sunxi_tools install_rkbin_tools
 ```
-Then build U-Boot for example:
+Then, build U-Boot:
 ```
 ./compile.sh default compile_uboot
 ```
-To compile only the source code as it is without patching, run:
+To compile only the source code as it is without patching or modifications, run:
 ```
 ./compile.sh default COMPILE_ONLY=yes compile_uboot
 ```
-Note that you must enter docker-shell after a docker build, which will
-download all the required toolchains and sourcecodes first.
-
-you can set `KERNEL_ONLY=yes` to build atf&u-boot&kernel only.
+Note that you must enter docker-shell after a docker build, as you must
+download all of the required toolchains and sourcecodes beforehand.
