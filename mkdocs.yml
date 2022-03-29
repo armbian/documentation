@@ -1,16 +1,46 @@
 site_name: Armbian Documentation
-repo_url: https://github.com/armbian/documentation
-repo_name: Github
-
 site_author: "Armbian team"
-google_analytics: ["UA-284946-9", "docs.armbian.com"]
 
-theme:
-  name: readthedocs
-  highlightjs: true # enable syntax highlight for code blocks
+copyright: Copyright &copy; 2015 - 2022 Armbian team
+repo_url: https://github.com/armbian/documentation
+repo_name: armbian/documentation
+
+theme: 
+    name: material
+    custom_dir: overrides
+    logo: images/logo.svg
+    icon:
+      repo: fontawesome/brands/github-alt
+    palette:
+        - scheme: default
+          primary: red
+          accent: red
+          toggle:
+            icon: material/toggle-switch-off-outline 
+            name: Switch to dark mode
+        - scheme: slate
+          primary: red
+          accent: red
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to light mode
+    favicon: images/logo.png
+    features:
+        - navigation.tabs
+        - navigation.top
+        - toc.integrate
+
+extra:
+  analytics:
+    provider: google
+    property: UA-284946-9
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/armbian
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/armbian
 
 plugins:
-    - search:
     - with-pdf:
         author: Armbian documentation team
         copyright: © 2021 by Armbian
@@ -22,6 +52,11 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: True
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      use_pygments: true
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
