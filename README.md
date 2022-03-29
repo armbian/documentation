@@ -2,6 +2,12 @@
 
 [![Create offline documentation](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml)
 
+<p align="center">
+  <a target="_blank" href="https://docs.armbian.com">
+    <img alt="logo" src="./docs/images/logo.png">
+  </a>
+</p>
+
 ## Overview
 
 Documentation is written in [markdown](https://www.markdownguide.org/basic-syntax/) and stored in the `docs/` subfolder.  Images go in `docs/images`.
@@ -10,14 +16,18 @@ This repo is meant for storing and quick glances.  Official output is [https://d
 
 Armbian Documentation is available in the following formats:
 
-* mkdocs site [https://docs.armbian.com](https://docs.armbian.com),
-* [PDF user guide](https://github.com/armbian/documentation/raw/master/document.pdf).
+* [Official document website](https://docs.armbian.com),
+* [PDF document](https://github.com/armbian/documentation/raw/master/document.pdf)
 
-Armbian Documentation relies on a file naming convention:
+## Contributing
 
-`Parent-Topic-Name_Child-Topic-Name.md`
+This site is built with [mkdocs](https://github.com/mkdocs/mkdocs/) and depends on [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
 
-Parent-Topic-Name and Child-Topic-Name are separated by an underscore `_`.  Hyphens `-` are automatically converted to spaces.
+Armbian Documentation naming of document files follows this rules:
+
+`[Parent-Topic-Example]_[Child-Topic]-example.md`
+
+`Parent-Topic-Name` and `Child-Topic-Name` are separated by an underscore `_`.  Hyphens `-` are automatically converted to space.
 
 Please try to avoid creating new parent topics unless absolutely necessary.
 
@@ -30,64 +40,36 @@ Current Parent Topics:
 * Release management
 * Community
 
-## .gitignore
-For easier testing and commits `.gitignore` is configured to ignore `site/`
+See the [document template](.github/DOCUMENT_TEMPLATE.md) before you writing any content.
 
-`mkdocs.yml` should probably be added, but we can commit for now
+## Working on the content
 
-## Required packages
+```bash
+git clone https://github.com/armbian/documentation
+pip install -r requirements.txt
+mkdocs build --clean && mkdocs serve
+```
 
-The documentation build process will require the following packages:
-
-* `git`
-* `python-jinja2`
-* `mkdocs`
-
-Install these on the development host using:
-
-`sudo apt-get install -y -qq git python-jinja2 mkdocs`
-
-
-## Tools
-
-### mkArmbianDocs.py
-generates mkdocs.yml file based on contents of `docs/`
-
-* command-line options for input and output directories
-* requires the `python-jinja2` module which may not be installed by default
-* not needed unless making changes to the structure of the documentation
-* see `mkArmbianDocs.py -h` for help
-
-### Missing tools
-The following capabilities are not yet available:
-
-* html2doc output to PDF user manual
-
-## Generating
-From the parent folder of the repo, run:
-
-`tools/mkArmbianDocs.py && mkdocs build`
-
-This will generate the mkdocs.yml configuration file and then generate the mkdocs site to the `site/` folder.
-
-## Testing
-To preview locally, execute the preview server: `mkdocs serve`. You will be able to make edits to existing files and observe the results in real time.
+You will be able to make edits to existing files and observe the results in real time.
 
 After changing text in an existing file, use this command to rebuild and view the documentation:
 
 `mkdocs build --clean && mkdocs serve`
 
-After adding a new file, either hand-edit `mkdocs.yml`, or rerun `tools/mkArmbianDocs.py`.
+After adding a new file, either hand-edit `mkdocs.yml`, or re-run `tools/mkArmbianDocs.py` **unless making changes to the structure of the `docs/` folder**. (See below)
 
-## Quick Start
+## Generate tools
 
-```bash
-pip install mkdocs
-git clone https://github.com/armbian/documentation
-#vim docs/[Parent Topic Example]-child-topic-example.md
-#generate config, build, launch local preview server
-tools/mkArmbianDocs.py && mkdocs build --clean && mkdocs serve
-git add docs/*.md
-git commit -m "added new howto on exampling"
-git push
-```
+### mkArmbianDocs.py
+Generate `mkdocs.yml` based on the contents of `docs/` folder
+
+* Command-line options for input and output directories
+* Requires install requirement
+* You don't need to run it every time unless making changes to the structure of the `docs/` folder
+* See `mkArmbianDocs.py -h` for help
+
+From the parent folder of the repo, run:
+
+`python3 tools/mkArmbianDocs.py && mkdocs build`
+
+This will generate the `mkdocs.yml` and publish built HTML to the `site/` folder.

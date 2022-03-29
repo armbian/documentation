@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-    Copyright Armbian (c) 2021
+    Copyright Armbian (c) 2022
 """
 
 import fnmatch
@@ -18,7 +18,8 @@ def parse_arguments():
     import argparse
     parser = argparse.ArgumentParser(
         description='generate mkdocs.yml based on file naming covention: [ParentCategory]-Subtopic.md')
-    parser.add_argument('-v', '--verbose', action='store_true', help='increase output verbosity')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help='increase output verbosity')
     parser.add_argument('-i', '--indir', metavar='INPUT_DIRECTORY', default='./docs',
                         help='directory containing markdown files [default: ./docs]')
     parser.add_argument('-o', '--outdir', metavar='OUTPUT_DIRECTORY', default='./',
@@ -52,8 +53,9 @@ def parseFiles(validFileList, indir):
 
     parsedFileList = dict()
     tocTree = defaultdict(set)
-    tocRegex = re.compile(r"(?P<parent>[\w-]+?(?=_))_(?P<child>[\w-].*(?=\.md))")
-    ##FIXME add Try catch or finaly
+    tocRegex = re.compile(
+        r"(?P<parent>[\w-]+?(?=_))_(?P<child>[\w-].*(?=\.md))")
+    # FIXME add Try catch or finaly
     for file in sorted(validFileList):
         filepath = os.path.join(indir, file)
         log.info("trying to match %s ", file)
@@ -147,7 +149,8 @@ nav:
 
 
 def writeSiteFile(content, outdir):
-    assert os.path.isdir(outdir), "Provided output directory path is not a directory"
+    assert os.path.isdir(
+        outdir), "Provided output directory path is not a directory"
 
     file = "mkdocs.yml"
     filepath = os.path.join(outdir, file)
