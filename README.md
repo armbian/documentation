@@ -4,7 +4,7 @@
 
 <p align="center">
   <a target="_blank" href="https://docs.armbian.com">
-    <img alt="sponsors" src="./docs/images/logo.png">
+    <img alt="logo" src="./docs/images/logo.png">
   </a>
 </p>
 
