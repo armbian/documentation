@@ -140,8 +140,9 @@ Please make a forum post in the appropriate place instead, where more people may
 | ?              | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
-| piter75        | piter75        |
+| littlecxm      | littlecxm      |
 | NicoD-SBC      | NicoD          |
+| piter75        | piter75        |
 | schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |
