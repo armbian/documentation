@@ -14,6 +14,7 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | bananapipro          | teknoid        |          |
 | clearfogbase         | heisath        |          |
 | clearfogpro          | heisath        |          |
+| clockworkpi          | littlecxm      |          |
 | cubieboard           |                |          |
 | cubietruck           |                |          |
 | cubox-i              | igorpecovnik   |          |
@@ -35,7 +36,8 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | nanopi-r1            | igorpecovnik   |          |
 | nanopi-r2s           | igorpecovnik   |          |
 | nanopi-r2c           | igorpecovnik   |          |
-| nanopi-r4s           | piter75        |          |
+| nanopi-r4s           | littlecxm      |          |
+| "                    | piter75        |          |
 | nanopiair            |                |          |
 | nanopiduo            |                |          |
 | nanopiduo2           |                |          |
@@ -138,8 +140,9 @@ Please make a forum post in the appropriate place instead, where more people may
 | ?              | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
-| piter75        | piter75        |
+| littlecxm      | littlecxm      |
 | NicoD-SBC      | NicoD          |
+| piter75        | piter75        |
 | schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
 | Technicavolous | Technicavolous |

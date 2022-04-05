@@ -91,3 +91,7 @@ You can try to upgrade your userspace by following official ways from Debian/Ubu
 ## Why I cannot choose a specific kernel version (5.11.5 for example)?
 
 Each kernel Armbian offers has a custom patchset on top which would be impossible to maintain compatibility to each and every kernel version out there.  Therefore the choice is usually limited to up to three branches: legacy, current and edge.  Depending on board/family the versions behind these branches may differ.  You can lookup them in the [source code](https://github.com/armbian/build/tree/master/config/sources/families).
+
+## Can I upgrade my userspace, like Buster to Bullseye or Focal to Jammy?
+
+Userspace upgrades are neither tested nor supported. The reason behind is simply the lacking of (human) ressources to test different scenarios on different boards. A dist-upgrade may work but as stated if something goes wrong Armbian cannot provide assistance. You are on your own to fix issues.
