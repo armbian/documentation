@@ -2,15 +2,13 @@
 
 ## Board / Platform / Maintainers
 
-
 See individual board configuration files for named maintainer of SBC.
-
 
 ## Armbian Base Maintainers
 
 | Area                          | Lead Maintainer | Maintainers                   | Acronyms, Codenames             | additional info                      |
 |-------------------------------|-----------------|-------------------------------|---------------------------------|--------------------------------------|
-| Build Scripts                 | @igorpecovnik   | @lanefu        | `/lib/*.sh`                     | code responsible for building images |
+| Build Scripts                 | @igorpecovnik   | @lanefu                       | `/lib/*.sh`                     | code responsible for building images |
 | Armbian-Tools                 | @igorpecovnik   |                               | armbian-config, armbian-monitor | userland tools provided by Armbian   |
 | Armbian-Tools: armbian-config |                 |                               | armbian-config                  |                                      |
 | Multimedia/Desktops           |                 | @JMCC, @jernejsk, @Miouyouyou |                                 |                                      |
