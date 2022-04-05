@@ -1,0 +1,88 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Create offline documentation to release
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel
+          pip install -r requirements.txt
+      - name: Run mkdocs --clean
+        run: |
+          mkdocs build --clean
+
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: site/pdf/document.pdf
+
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-20.04
+    env:
+      TZ: GMT
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      # - name: Add
+      #   run: |
+      #     ls -l
+      #     git pull
+      #     git add document.pdf
+      # - name: Commit files
+      #   run: |
+      #     git config --local user.email "info@armbian.com"
+      #     git config --local user.name "Armbianworker"
+      #     git commit --allow-empty -m "Update github actions" -a
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ github.ref }}
+      - name: Declare vars
+        id: vars
+        shell: bash
+        run: |
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          echo "::set-output name=timenow::$(date +'%Y-%m-%d')"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.vars.outputs.sha_short }}
+          release_name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
+          draft: false
+          prerelease: false
+      - name: Upload PDF to releases
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: document.pdf
+          asset_name: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
+          asset_content_type: application/pdf
