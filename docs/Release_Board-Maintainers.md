@@ -18,6 +18,7 @@ The authoratitative list of board.conf can be found [here](https://github.com/ar
 | cubieboard           |                |          |
 | cubietruck           |                |          |
 | cubox-i              | igorpecovnik   |          |
+| espressobin          | ManoftheSea    |          |
 | firefly-rk3399       | 150balbes      |          |
 | helios4              | heisath        |          |
 | jethubj100           | jethome-ru     |          |
