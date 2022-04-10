@@ -25,7 +25,7 @@ See individual board configuration files for named maintainer of SBC.
 | Legal and Financial          | @igorpecovnik   |                                                          |                     |                 |
 | Web and Infrastucture        | @lanefu         | @[TheBug]                                                |                     |                 |
 | Forums moderation            | @Werner         | [click](https://forum.armbian.com/members/2-moderators/) |                     |                 |
-| IRC & Services               | @Werner         |                                                          |                     |                 |
+| IRC, Discord                 | @Werner         |                                                          |                     |                 |
 
 ## Hackers Emeritus
 
