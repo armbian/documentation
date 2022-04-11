@@ -14,7 +14,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | bananapipro          | teknoid        |          |
 | clearfogbase         | heisath        |          |
 | clearfogpro          | heisath        |          |
-| clockworkpi          | littlecxm      |          |
+| clockworkpi-a06      | littlecxm      |          |
 | cubieboard           |                |          |
 | cubietruck           |                |          |
 | cubox-i              | igorpecovnik   |          |
