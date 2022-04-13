@@ -1,6 +1,6 @@
 # Armbian Documentation
 
-[![Create offline documentation](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/recreate_on_push.yaml)
+[![Create offline documentation to release](https://github.com/armbian/documentation/actions/workflows/release.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/release.yaml)
 
 <p align="center">
   <a target="_blank" href="https://docs.armbian.com">
