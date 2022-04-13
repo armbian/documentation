@@ -66,7 +66,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepi-rk3399      |                |          |
 | orangepi2            |                |          |
 | orangepi3            | igorpecovnik   |          |
-| orangepi3lts         | afaulkner420   |          |
+| orangepi3-lts        | afaulkner420   |          |
 | orangepi4            | igorpecovnik   |          |
 | orangepilite         | igorpecovnik   |          |
 | orangepilite2        | igorpecovnik   |          |
