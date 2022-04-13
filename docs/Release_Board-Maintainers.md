@@ -66,6 +66,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepi-rk3399      |                |          |
 | orangepi2            |                |          |
 | orangepi3            | igorpecovnik   |          |
+| orangepi3lts         | afaulkner420   |          |
 | orangepi4            | igorpecovnik   |          |
 | orangepilite         | igorpecovnik   |          |
 | orangepilite2        | igorpecovnik   |          |
@@ -130,6 +131,7 @@ Please make a forum post in the appropriate place instead, where more people may
 
 | GitHub         | Forum Name     |
 |----------------|----------------|
+| afaulkner420   | Ukhellfire     |
 | devdotnetorg   | antondeveloper |
 | 150balbes      | balbes150      |
 | catalinii      | catalinii      |
