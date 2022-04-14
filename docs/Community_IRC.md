@@ -89,7 +89,7 @@ It is a common habit to simply state your question or issue and then wait patien
 If you cannot find yourself in the list above you are free to request an unaffiliated cloak from Libera staff. Join #libera for that.
 + How can I protect my nickname so nobody can spoof me?  
   + Register your nick with Libera's Nickserv service. Check [https://libera.chat/guides/registration](https://libera.chat/guides/registration)  
-    Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure. If the situation demands Armbian will enforce this as well.
+    Even though it is not mandatory you should register and identify with the services as other channels for example may not allow unregistered users to chat or join at all as anti-spam measure.
 + Why do some users have voice (+v) in channel?
   + As mentioned in [forums](https://forum.armbian.com/topic/12803-armbian-irc-chat/?tab=comments#comment-96828) "all contributors to the project, regardless if forums staff, contributor on Github or well known and longtime active user" may get voice on request.
 + Should I add **away** to my nick if I am AFK? Like **Werner|away**
