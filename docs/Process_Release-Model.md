@@ -132,7 +132,7 @@ A release starts as a RC Branch cut from master at freeze time.  Once a RC Branc
 
 ### 1. Forum Communication
 
-- Create a new thread in the [Armbian Build Framework Subforum](https://forum.armbian.com/forum/12-armbian-build-framework/)
+- Create a new thread in the [Armbian Project Administration forum](https://forum.armbian.com/forum/39-armbian-project-administration/)
   - Ex topic name: `Ambian 20.02 (Chiru) Release Thread`
 - Tag the post with relase, release version, and codename
 - Use the following template to begin the body of the release thread:
