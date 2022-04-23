@@ -100,6 +100,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | rockpi-e             |                |          |
 | rockpi-s             |                |          |
 | rockpro64            | joekhoobyar    |          |
+| sopine-a64           | joshaspinall   |          |
 | station-m1           | 150balbes      |          |
 | station-p1           | 150balbes      |          |
 | teres-a64            |                |          |
@@ -140,6 +141,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | janprunk       | yang           |
 | jethome-ru     | jethome        |
 | joekhoobyar    | joekhoobyar    |
+| joshaspinall   | joshaspinall   |
 | ?              | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
