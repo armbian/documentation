@@ -67,6 +67,7 @@ Dates for **2020**:
 Dates for **2022**: 
 
  *  January [29th](http://meeting.armbian.de/armbian.2022-01-29-13.02.html)
+ *  April [23th](http://meeting.armbian.de/armbian.2022-04-23-14.00.html)
 
 ### Agenda:
 
