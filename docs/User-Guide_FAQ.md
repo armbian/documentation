@@ -98,6 +98,5 @@ Userspace upgrades are neither tested nor supported. The reason behind is simply
 
 ## Where do I ship a board so that Armbian will add support?
 
-Unless you have an exisiting arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.  
-
+Unless you have an exisiting arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
 You may also add support by yourself if critera is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
