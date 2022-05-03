@@ -68,6 +68,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepi3            | igorpecovnik   |          |
 | orangepi3-lts        | afaulkner420   |          |
 | orangepi4            | igorpecovnik   |          |
+| orangepi4-lts        | jock           |          |
 | orangepilite         | igorpecovnik   |          |
 | orangepilite2        | igorpecovnik   |          |
 | orangepione          | igorpecovnik   |          |
@@ -105,6 +106,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | station-p1           | 150balbes      |          |
 | teres-a64            |                |          |
 | tinkerboard          | Tonymac32      |          |
+| "                    | jock           |          |
 | tritium-h3           |                |          |
 | tritium-h5           |                |          |
 | udoo                 |                |          |
@@ -147,6 +149,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | lbmendes       | LucasM         |
 | littlecxm      | littlecxm      |
 | NicoD-SBC      | NicoD          |
+| paolosabatino  | jock           |
 | piter75        | piter75        |
 | schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
