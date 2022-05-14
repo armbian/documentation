@@ -82,6 +82,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepiwin          |                |          |
 | orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
+| "                    | qiurui         |          |
 | orangepizeroplus     | schwar3kat     |          |
 | orangepizeroplus2-h3 | Kalobok        | [2](#n2) |
 | orangepizeroplus2-h5 |                |          |
@@ -159,3 +160,4 @@ Please make a forum post in the appropriate place instead, where more people may
 | TRSx80         | TRS-80         |
 | ?              | ZazaBr         |
 | engineer-80    | Yakov          |
+| qiurui144      | qiurui         |
