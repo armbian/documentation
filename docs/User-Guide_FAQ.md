@@ -100,3 +100,7 @@ Userspace upgrades are neither tested nor supported. The reason behind is simply
 
 Unless you have an exisiting arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
 You may also add support by yourself if critera is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
+
+## What WiFi adapters will most likely work out of the box?
+
+Check [here](https://github.com/morrownr/USB-WiFi/blob/main/home/The_Short_List.md).
