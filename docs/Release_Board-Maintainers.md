@@ -96,7 +96,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | renegade             | Tonymac32      |          |
 | rock-3a              | catalinii      |          |
 | "                    | ZazaBr         | [2](#n2) |
-| rock 64              | clee           |          |
+| rock64               | clee           |          |
 | rockpi-4a            | clee           |          |
 | rockpi-4b            |                |          |
 | rockpi-4c            |                |          |
