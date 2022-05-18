@@ -109,8 +109,8 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | teres-a64            |                |          |
 | tinkerboard          | Tonymac32      |          |
 | "                    | jock           |          |
-| tritium-h3           |                |          |
-| tritium-h5           |                |          |
+| tritium-h3           | Tonymac32      |          |
+| tritium-h5           | Tonymac32      |          |
 | udoo                 |                |          |
 | zeropi               | igorpecovnik   |          |
 | station-m2           | 150balbes      |          |
