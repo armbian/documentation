@@ -17,7 +17,7 @@ This repo is meant for storing and quick glances.  Official output is [https://d
 Armbian Documentation is available in the following formats:
 
 * [Official document website](https://docs.armbian.com),
-* [PDF document]([https://github.com/armbian/documentation/releases/latest)
+* [PDF document](https://github.com/armbian/documentation/releases/latest)
 
 ## Contributing
 
