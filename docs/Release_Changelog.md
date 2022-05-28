@@ -2,6 +2,68 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.05 (2022-05-28)
+
+### Solved Bugs
+
+* [AR-1199](https://armbian.atlassian.net/browse/AR-1199) - Orangepizero2 legacy images doesn't boot
+* [AR-1197](https://armbian.atlassian.net/browse/AR-1197) - Support status shows unsupported even distro variant is supported (random Focal image)
+* [AR-1196](https://armbian.atlassian.net/browse/AR-1196) - Mainline Kernel patch breaks spidev in 5.15+
+* [AR-1195](https://armbian.atlassian.net/browse/AR-1195) - Odroid N2 legacy kernel image does not build on Jammy
+* [AR-1194](https://armbian.atlassian.net/browse/AR-1194) - Legacy kernels doesn't want to be added to repository
+* [AR-1193](https://armbian.atlassian.net/browse/AR-1193) - Images without device tree blobs fails to build via CI
+* [AR-1192](https://armbian.atlassian.net/browse/AR-1192) - Allwinner H5 boards fails on ATF compilation
+* [AR-1190](https://armbian.atlassian.net/browse/AR-1190) - Docker image creation fails on Jammy host
+* [AR-1189](https://armbian.atlassian.net/browse/AR-1189) - U-boot xt-q8l-v10 legacy fails to build at CI
+* [AR-1185](https://armbian.atlassian.net/browse/AR-1185) - Remmina is missing RDP and VNC options
+* [AR-1178](https://armbian.atlassian.net/browse/AR-1178) - Docker images creation is broken
+* [AR-1173](https://armbian.atlassian.net/browse/AR-1173) - Github action for generating desktops does not start
+* [AR-1172](https://armbian.atlassian.net/browse/AR-1172) - Load induced RX bug in the r8152 driver on 5.15 and 5.17
+* [AR-1171](https://armbian.atlassian.net/browse/AR-1171) - Budgie desktop fails to build on Jammy
+* [AR-1170](https://armbian.atlassian.net/browse/AR-1170) - Switching to beta repository at images sometimes failed
+* [AR-1169](https://armbian.atlassian.net/browse/AR-1169) - Chromium does not install on Jammy desktops
+* [AR-1167](https://armbian.atlassian.net/browse/AR-1167) - Update config to support Linux 5.15.36
+* [AR-1160](https://armbian.atlassian.net/browse/AR-1160) - When seeking changed kernels two are always marked as changed
+* [AR-1151](https://armbian.atlassian.net/browse/AR-1151) - Kernel 5.10.y need patch adjustment for boot splash
+* [AR-1149](https://armbian.atlassian.net/browse/AR-1149) - Current build failure due to packages
+* [AR-1141](https://armbian.atlassian.net/browse/AR-1141) - Ubuntu Budgie on Focal Jammy / Focal fails
+* [AR-1135](https://armbian.atlassian.net/browse/AR-1135) - fix armbian ramlog instability
+* [AR-1129](https://armbian.atlassian.net/browse/AR-1129) - Gnome desktop on Jammy fails to start
+* [AR-1115](https://armbian.atlassian.net/browse/AR-1115) - Package discrepancy in Jammy
+* [AR-1102](https://armbian.atlassian.net/browse/AR-1102) - Missing wallpapers in desktop packages
+* [AR-1097](https://armbian.atlassian.net/browse/AR-1097) - net: stmmac: dwmac-meson8b: interface sometimes does not come up at boot.
+* [AR-1091](https://armbian.atlassian.net/browse/AR-1091) - Wireless driver for 8822bs is not compatible with 5.15.y and up
+* [AR-1061](https://armbian.atlassian.net/browse/AR-1061) - udev HDMI rules are causing flickering
+* [AR-1033](https://armbian.atlassian.net/browse/AR-1033) - U-boot packages doesn't want to be assembled with Docker
+* [AR-1015](https://armbian.atlassian.net/browse/AR-1015) - Toolchain download only from a single source
+* [AR-712](https://armbian.atlassian.net/browse/AR-712) - Broken framebuffer on A20
+* [AR-583](https://armbian.atlassian.net/browse/AR-583) - RK3328 DMC driver needs small (hopefully) update for kernel 5.10
+* [AR-191](https://armbian.atlassian.net/browse/AR-191) - SATA doesn't show up on Banana
+
+### Story
+
+* [AR-988](https://armbian.atlassian.net/browse/AR-988) - Add support for running x86_64 applications
+* [AR-775](https://armbian.atlassian.net/browse/AR-775) - Bring Marvell A3700-utils-marvell and mv-ddr-marvell.git to follow master
+* [AR-273](https://armbian.atlassian.net/browse/AR-273) - Improve CI autotests facility
+
+### Closed tasks
+
+* [AR-1180](https://armbian.atlassian.net/browse/AR-1180) - Merge rk35xx-edge into rockchip64-edge
+* [AR-1177](https://armbian.atlassian.net/browse/AR-1177) - Update only supported repositories
+* [AR-1175](https://armbian.atlassian.net/browse/AR-1175) - Temperature monitoring for Jetson nano
+* [AR-1166](https://armbian.atlassian.net/browse/AR-1166) - Add box86 package from 3rd party repository
+* [AR-1165](https://armbian.atlassian.net/browse/AR-1165) - Update JetHub D1 u-boot patches
+* [AR-1164](https://armbian.atlassian.net/browse/AR-1164) - Upgrade mvebu64 kernel to 5.17.y
+* [AR-1159](https://armbian.atlassian.net/browse/AR-1159) - Upgrade UEFI EDGE kernels to 5.17.y
+* [AR-1150](https://armbian.atlassian.net/browse/AR-1150) - Adjust hash calculating method
+* [AR-1132](https://armbian.atlassian.net/browse/AR-1132) - Update meson64 edge¤t kernels
+* [AR-1126](https://armbian.atlassian.net/browse/AR-1126) - Enable desktop compilation at merge request
+* [AR-1120](https://armbian.atlassian.net/browse/AR-1120) - Sync beta repository in the CI process
+* [AR-1108](https://armbian.atlassian.net/browse/AR-1108) - Missing images in download section for following boards
+* [AR-959](https://armbian.atlassian.net/browse/AR-959) - Unifying TAGS as much as possible - as universal as possible
+* [AR-628](https://armbian.atlassian.net/browse/AR-628) - Bump Meson64 u-boot
+* [AR-296](https://armbian.atlassian.net/browse/AR-296) - Remove compressed indexes for apt?
+
 ## v22.02 (2022-02-28)
 
 ### Solved Bugs
