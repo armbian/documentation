@@ -6,9 +6,11 @@
 
 ### Solved Bugs
 
+* [AR-1204](https://armbian.atlassian.net/browse/AR-1204) - Orangepi R1plus-lts - USB3 Ethernet not working
+* [AR-1202](https://armbian.atlassian.net/browse/AR-1202) - Tinkerboard has only one recommended image on the download page
 * [AR-1199](https://armbian.atlassian.net/browse/AR-1199) - Orangepizero2 legacy images doesn't boot
-* [AR-1197](https://armbian.atlassian.net/browse/AR-1197) - Support status shows unsupported even distro variant is supported (random Focal image)
-* [AR-1196](https://armbian.atlassian.net/browse/AR-1196) - Mainline Kernel patch breaks spidev in 5.15+
+* [AR-1197](https://armbian.atlassian.net/browse/AR-1197) - Support status shows unsupported even distro variant is supported \(random Focal image\)
+* [AR-1196](https://armbian.atlassian.net/browse/AR-1196) - Mainline Kernel patch breaks spidev in 5.15\+
 * [AR-1195](https://armbian.atlassian.net/browse/AR-1195) - Odroid N2 legacy kernel image does not build on Jammy
 * [AR-1194](https://armbian.atlassian.net/browse/AR-1194) - Legacy kernels doesn't want to be added to repository
 * [AR-1193](https://armbian.atlassian.net/browse/AR-1193) - Images without device tree blobs fails to build via CI
@@ -26,6 +28,7 @@
 * [AR-1160](https://armbian.atlassian.net/browse/AR-1160) - When seeking changed kernels two are always marked as changed
 * [AR-1151](https://armbian.atlassian.net/browse/AR-1151) - Kernel 5.10.y need patch adjustment for boot splash
 * [AR-1149](https://armbian.atlassian.net/browse/AR-1149) - Current build failure due to packages
+* [AR-1148](https://armbian.atlassian.net/browse/AR-1148) - radxa zero 512MB \(no eMMC\) does not load img from SD
 * [AR-1141](https://armbian.atlassian.net/browse/AR-1141) - Ubuntu Budgie on Focal Jammy / Focal fails
 * [AR-1135](https://armbian.atlassian.net/browse/AR-1135) - fix armbian ramlog instability
 * [AR-1129](https://armbian.atlassian.net/browse/AR-1129) - Gnome desktop on Jammy fails to start
@@ -37,12 +40,12 @@
 * [AR-1033](https://armbian.atlassian.net/browse/AR-1033) - U-boot packages doesn't want to be assembled with Docker
 * [AR-1015](https://armbian.atlassian.net/browse/AR-1015) - Toolchain download only from a single source
 * [AR-712](https://armbian.atlassian.net/browse/AR-712) - Broken framebuffer on A20
-* [AR-583](https://armbian.atlassian.net/browse/AR-583) - RK3328 DMC driver needs small (hopefully) update for kernel 5.10
+* [AR-583](https://armbian.atlassian.net/browse/AR-583) - RK3328 DMC driver needs small \(hopefully\) update for kernel 5.10
 * [AR-191](https://armbian.atlassian.net/browse/AR-191) - SATA doesn't show up on Banana
 
 ### Story
 
-* [AR-988](https://armbian.atlassian.net/browse/AR-988) - Add support for running x86_64 applications
+* [AR-988](https://armbian.atlassian.net/browse/AR-988) - Add support for running x86\_64 applications
 * [AR-775](https://armbian.atlassian.net/browse/AR-775) - Bring Marvell A3700-utils-marvell and mv-ddr-marvell.git to follow master
 * [AR-273](https://armbian.atlassian.net/browse/AR-273) - Improve CI autotests facility
 
@@ -56,10 +59,14 @@
 * [AR-1164](https://armbian.atlassian.net/browse/AR-1164) - Upgrade mvebu64 kernel to 5.17.y
 * [AR-1159](https://armbian.atlassian.net/browse/AR-1159) - Upgrade UEFI EDGE kernels to 5.17.y
 * [AR-1150](https://armbian.atlassian.net/browse/AR-1150) - Adjust hash calculating method
-* [AR-1132](https://armbian.atlassian.net/browse/AR-1132) - Update meson64 edge¤t kernels
+* [AR-1132](https://armbian.atlassian.net/browse/AR-1132) - Update meson64 edge&current kernels
+* [AR-1128](https://armbian.atlassian.net/browse/AR-1128) - Add Nvidia driver to the x86 desktop images
 * [AR-1126](https://armbian.atlassian.net/browse/AR-1126) - Enable desktop compilation at merge request
 * [AR-1120](https://armbian.atlassian.net/browse/AR-1120) - Sync beta repository in the CI process
 * [AR-1108](https://armbian.atlassian.net/browse/AR-1108) - Missing images in download section for following boards
+* [AR-1076](https://armbian.atlassian.net/browse/AR-1076) - Add support for Orangepi 3 LTS
+* [AR-1057](https://armbian.atlassian.net/browse/AR-1057) - Advertise recommended targets at download pages
+* [AR-1008](https://armbian.atlassian.net/browse/AR-1008) - Update vars in amlogic u-boot script to match names of default u-boot vars
 * [AR-959](https://armbian.atlassian.net/browse/AR-959) - Unifying TAGS as much as possible - as universal as possible
 * [AR-628](https://armbian.atlassian.net/browse/AR-628) - Bump Meson64 u-boot
 * [AR-296](https://armbian.atlassian.net/browse/AR-296) - Remove compressed indexes for apt?
