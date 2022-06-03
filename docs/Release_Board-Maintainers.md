@@ -4,6 +4,8 @@ Where more than one Maintainer is listed, the top line person may be considered 
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
+How to become a maintainer? Simply by [applying here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and waiting for acceptance.
+
 The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/master/config/boards).  Eventually we may automatically generate this list from there, in the mean time we are still maintaining it manually.
 
 | board.conf           | Maintainer     | Note(s)  |
