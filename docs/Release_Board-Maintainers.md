@@ -94,6 +94,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | pineh64-b            |                |          |
 | radxa-n10            |                |          |
 | radxa-zero           | engineer-80    |          |
+| "                    | clee           |          |
 | radxa-zero2          |                |          |
 | renegade             | Tonymac32      |          |
 | rock-3a              | catalinii      |          |
