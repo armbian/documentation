@@ -19,7 +19,7 @@ Supported boards will have the most scrunity with code review.
 ## U-Boot Patches
 
 - Standard contributors provide _tested-by_ submitter (`armbianmonitor -u` with a fresh build).
-- SoC maintainer maybe submit a PR with only a reviewed by of the lead SoC maintainer.
+- SoC maintainer may submit a PR with only a reviewed by of the lead SoC maintainer.
 
 ## Kernel Related Patches
 
