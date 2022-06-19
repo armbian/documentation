@@ -11,6 +11,10 @@ to trigger the action
 - [Advantages of Git Rebase](https://itnext.io/advantages-of-git-rebase-af3b5f5448c6),
 - [Automatic Rebase Action origin](https://github.com/marketplace/actions/automatic-rebase).
 
+# Integrity testings
+
+By executing "Check images integrity" you can test package integrity of images at download sections.
+
 # Merge request pipelines
 
 On each merge reqest we are running:
