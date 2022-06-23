@@ -2,6 +2,13 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.05.3 (2022-06-23)
+
+* All board images have been rebuilt due to corruption found in certain images
+* Added board images for Orange Pi 4 LTS
+* Fixed Orange Pi 3 LTS bluetooth support
+* Upgrdaded bootloader to 22.04 on Rockchip family boards
+
 ## v22.05 (2022-05-28)
 
 ### Solved Bugs
