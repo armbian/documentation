@@ -7,7 +7,7 @@
 * All board images have been rebuilt due to corruption found in certain images
 * Added board images for Orange Pi 4 LTS
 * Fixed Orange Pi 3 LTS bluetooth support
-* Upgrdaded bootloader to 22.04 on Rockchip family boards
+* Upgraded bootloader to 22.04 on Rockchip family boards
 
 ## v22.05 (2022-05-28)
 
