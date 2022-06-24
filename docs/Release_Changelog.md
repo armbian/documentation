@@ -5,9 +5,9 @@
 ## v22.05.3 (2022-06-23)
 
 * All board images have been rebuilt due to corruption found in certain images
-* Added board images for Orange Pi 4 LTS
 * Fixed Orange Pi 3 LTS bluetooth support
-* Upgraded bootloader to 22.04 on Rockchip family boards
+* [AR-1182](https://armbian.atlassian.net/browse/AR-1182) - Added board images for Orange Pi 4 LTS
+* [AR-1228](https://armbian.atlassian.net/browse/AR-1228) - Upgraded bootloader to 22.04 for Rockchip family boards
 
 ## v22.05 (2022-05-28)
 
