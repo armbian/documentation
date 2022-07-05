@@ -125,7 +125,7 @@ Dates for **2022**:
 #help - Add a "Call for Help" to the minutes. Use this command when you need to recruit someone to do a task.
 ```
 
-Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
+Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera](https://libera.chat/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
 
 ## Release Coordinating
 
