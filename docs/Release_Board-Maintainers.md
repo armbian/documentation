@@ -104,7 +104,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | rockpi-4b            |                |          |
 | rockpi-4c            |                |          |
 | rockpi-e             |                |          |
-| rockpi-s             |                |          |
+| rockpi-s             | brentr         |          |
 | rockpro64            | joekhoobyar    |          |
 | sopine-a64           | joshaspinall   |          |
 | station-m1           | 150balbes      |          |
