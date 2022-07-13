@@ -166,3 +166,4 @@ Please make a forum post in the appropriate place instead, where more people may
 | ?              | ZazaBr         |
 | engineer-80    | Yakov          |
 | qiurui144      | qiurui         |
+| brentr         | brentr         |
