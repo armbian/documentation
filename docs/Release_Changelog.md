@@ -2,6 +2,9 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.05.4 (2022-07-14)
+* Started producing more desktop flavors for all boards which support desktop images (Budgie, Gnome, KDE Plasma, Xfce and Cinnamon)
+
 ## v22.05.3 (2022-06-23)
 
 * All board images have been rebuilt due to corruption found in certain images
