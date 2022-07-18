@@ -6,11 +6,22 @@ The following steps are performed on the *host* that runs Vagrant.
 
 ### Installing Vagrant and Downloading Armbian
 
-#### Virtualbox Version
+First, you'll need to [install Vagrant](https://www.vagrantup.com/downloads.html) on your host box. Then you have to choose if you want to run Virtualbox or Libvirt.
 
-First, you'll need to [install Vagrant](https://www.vagrantup.com/downloads.html) on your host box. Next, you'll need to install a plug-in that will enable us to resize the primary storage device. Without it, the default Vagrant images are too small to build Armbian.
+#### Virtualbox
+
+[Install Virtualbox](https://www.virtualbox.org/manual/UserManual.html#installation), then you'll need to install a plug-in that will enable us to resize the primary storage device. Without it, the default Vagrant images are too small to build Armbian.
 
 	vagrant plugin install vagrant-disksize
+
+#### Libvirt
+
+[Installing libvirt](https://libvirt.org/downloads.html) is a little bit more complex as you have to install an hypervisor too (like KVM/Qemu but others are available). Discussing about which one choosing and how to install it is out of scope. Once you have libvirt and an hypervisor installed, you'll need [vagrant-libvirt](https://github.com/vagrant-libvirt/vagrant-libvirt/blob/master/README.md#installation).
+Finally, you need to tell vagrant to use libvirt and not default to Virtualbox.
+
+	export VAGRANT_DEFAULT_PROVIDER=libvirt
+
+#### Common steps
 
 Now we'll need to [install git](https://git-scm.com/downloads) and clone the Armbian repo. While this might seem obvious, we rely on it being there when we use Vagrant to bring up our guest-build box.
 
@@ -18,7 +29,7 @@ Now we'll need to [install git](https://git-scm.com/downloads) and clone the Arm
 	git clone --depth 1 https://github.com/armbian/build  
 
 	# Make the Vagrant box available. This might take a while but only needs to be done once.  
-	vagrant box add ubuntu/focal64  
+	vagrant box add generic/ubuntu2204
 	
 	# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.  
 	# This only needs done once and a while.  
