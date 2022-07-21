@@ -4,7 +4,11 @@ Where more than one Maintainer is listed, the top line person may be considered 
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
-How to become a maintainer? Simply by [applying here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and waiting for acceptance.
+How to become a maintainer?
+
+If you are interested in being a maintainer please review our documentation before applying: [Board Maintainers Procedures and Guidelines](https://docs.armbian.com/Board_Maintainers_Procedures_and_Guidelines/)
+
+Then, you can [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance.  Once accepted you will be added to our various systems and asked to fill out the [Maintainer Registry Form](https://www.armbian.com/maintainer-registry/) to complete your Registration process.
 
 The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/master/config/boards).  Eventually we may automatically generate this list from there, in the mean time we are still maintaining it manually.
 
@@ -20,7 +24,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | cubieboard           |                |          |
 | cubietruck           |                |          |
 | cubox-i              | igorpecovnik   |          |
-| espressobin          | ManoftheSea    |          |
+| espressobin          | ManoftheSea    | v5 & v7  |
 | firefly-rk3399       | 150balbes      |          |
 | helios4              | heisath        |          |
 | jethubj100           | jethome-ru     |          |
@@ -40,7 +44,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | nanopi-r2s           | igorpecovnik   |          |
 | nanopi-r2c           | igorpecovnik   |          |
 | nanopi-r4s           | littlecxm      |          |
-| "                    | piter75        |          |
+| nanopi-r4s           | piter75        |          |
 | nanopiair            |                |          |
 | nanopiduo            |                |          |
 | nanopiduo2           |                |          |
@@ -94,15 +98,15 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | pineh64-b            |                |          |
 | radxa-n10            |                |          |
 | radxa-zero           | engineer-80    |          |
-| "                    | clee           |          |
 | radxa-zero2          |                |          |
 | renegade             | Tonymac32      |          |
 | rock-3a              | catalinii      |          |
-| "                    | ZazaBr         | [2](#n2) |
+| rock-3a              | ZazaBr         |          |
+| rock-3a              | vamzii         |          |
 | rock64               | clee           |          |
 | rockpi-4a            | clee           |          |
 | rockpi-4b            |                |          |
-| rockpi-4c            |                |          |
+| rockpi-4c            | clee           |          |
 | rockpi-e             |                |          |
 | rockpi-s             |                |          |
 | rockpro64            | joekhoobyar    |          |
@@ -111,7 +115,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | station-p1           | 150balbes      |          |
 | teres-a64            |                |          |
 | tinkerboard          | Tonymac32      |          |
-| "                    | jock           |          |
+| tinkerboard          | jock           |          |
 | tritium-h3           | Tonymac32      |          |
 | tritium-h5           | Tonymac32      |          |
 | udoo                 |                |          |
@@ -163,6 +167,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | teknoid        | teknoid        |
 | Tonymac32      | TonyMac32      |
 | TRSx80         | TRS-80         |
+| vamzii         | vamzi          |
 | ?              | ZazaBr         |
 | engineer-80    | Yakov          |
 | qiurui144      | qiurui         |
