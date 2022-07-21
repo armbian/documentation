@@ -105,6 +105,8 @@ nav:
         - "Changelog" : "Release_Changelog.md"
         - "Workflow (Jira)" : "Process_Managing_Workflow.md"
         - "Board Maintainers" : "Release_Board-Maintainers.md"
+        - "Board Maintainers Procedures and Guidelines" : "Board_Maintainers_Procedures_and_Guidelines.md"
+
 
   - "Community" :
         - "IRC/Discord/Matrix" : "Community_IRC.md"
