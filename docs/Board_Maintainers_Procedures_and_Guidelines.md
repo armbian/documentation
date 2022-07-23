@@ -65,7 +65,7 @@
         </ul><br>
         If something does not work, this is fine also and totally normal. The important part is that it is documented and we get notified about the issues.
         
-During each release you will be expected to fill out  the following form: <a href="https://github.com/EvilOlaf/rc-testing/issues/new?assignees=&amp;labels=for+review&amp;template=form.yml&amp;title=%5BRC%5D%3A+" ipsnoembed="true" rel="external nofollow">Release Testing Form</a>
+During each release you will be expected to fill out  the following form: <a href="[https://github.com/EvilOlaf/rc-testing/issues/new?assignees=&amp;labels=for+review&amp;template=form.yml&amp;title=%5BRC%5D%3A+](https://www.armbian.com/rc-testing/)" ipsnoembed="true" rel="external nofollow">Release Testing Form</a>
     </li>
 </ul>
 <ul>
