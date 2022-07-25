@@ -27,13 +27,14 @@ a) Installation with installing Transmission server
 
 Leave armbian-config and after a few minutes check your torrent server status with the following command:
 
-transmission-remote -n 'transmission:transmission' -l
+`transmission-remote -n 'transmission:transmission' -l`
 
 and you should see some progress:
 
- 
-Spoiler
-
+<details>
+  <summary>Details</summary>
+  
+```
 ID     Done       Have  ETA           Up    Down  Ratio  Status       Name
    1     0%       None  Unknown      0.0     0.0   None  Idle         Armbian_5.25_Bananapi_Debian_jessie_default_3.4.113.7z
    2    19%   40.62 MB  10 min       0.0  1085.0    0.0  Downloading  Armbian_5.25_Bananapi_Debian_jessie_next_4.9.7.7z
@@ -196,15 +197,19 @@ ID     Done       Have  ETA           Up    Down  Ratio  Status       Name
  159     0%       None  Unknown      0.0     0.0   None  Queued       Armbian_5.27_Tinkerboard_Ubuntu_xenial_next_4.11.0.7z
  160     0%       None  Unknown      0.0     0.0   None  Queued       Armbian_5.27_Tinkerboard_Ubuntu_xenial_next_4.11.0_desktop.7z
 Sum:          40.62 MB               0.0  1085.0
+```
 
+  
+  ```javascript
+  console.log("I'm a code block!");
+  ```
+  
+</details>
 
 Note:
 Torrent server installed this way is auto updating - it checks daily for new images, adds new and purge old ones.
 
  
-
- 
-
  
 
 b.) Installation to the existing Transmission server
@@ -215,12 +220,11 @@ You only need to install a cron job script that your client serve only most rece
 
 Create file:
 
-sudo nano /etc/cron.daily/seed-armbian-torrent
+`sudo nano /etc/cron.daily/seed-armbian-torrent`
 
 with this content:
- 
-Spoiler
 
+```
 #!/bin/bash
 #
 # armbian torrents auto update
@@ -248,14 +252,16 @@ done
 while read i; do
         [[ $i == *Armbian_* || $i == *gcc-linaro-* || $i == *tar.lz4 ]] && transmission-remote -n 'transmission:transmission' -t $(echo "$i" | awk '{print $1}';) --remove-and-delete
 done < ${TEMP_DIR}/torrent-tmp/active.torrents
-
+```
 
  
 
 Change username(transmission) and password(transmission) if have something else than stock, save and exit, then run:
 
+```
 sudo chmod +x /etc/cron.daily/seed-armbian-torrent
 sudo /etc/cron.daily/seed-armbian-torrent
+```
 
 Optional:
 
@@ -265,7 +271,7 @@ If you use GUI, you can install desktop front end for simple torrent server moni
 
  
 
-apt install transmission-remote-gtk
+`apt install transmission-remote-gtk`
 
 Host: localhost
 Username: transmission
@@ -274,12 +280,6 @@ Password: transmission
 
 Confirm and click connect.
 
- 
-Spoiler
-
-Screenshot_2017-05-05_07-04-37.pngScreenshot_2017-05-05_06-59-36.png
-
- 
 
 How to stop seeding torrents?
 
