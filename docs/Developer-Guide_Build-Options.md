@@ -125,7 +125,7 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 	- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
 	- leave empty to use default settings
 - **USE_TORRENT** ( yes | **no** ): use torrent to download toolchains and rootfs
-- **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally
+- **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
 - **AUFS** ( **yes** | no ): Include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
