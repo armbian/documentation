@@ -1,20 +1,16 @@
 # Board Maintainers
 
-Where more than one Maintainer is listed, the first ('1' in '#' column) may be considered the 'primary' and the other(s) on following line(s) as co-maintainers / helpers.
-
 ## How to become a maintainer?
 
 If you are interested in being a maintainer please review our documentation before applying: [Board Maintainers Procedures and Guidelines](https://docs.armbian.com/Board_Maintainers_Procedures_and_Guidelines/)
 
 Then, you can [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance.  Once accepted you will be added to our various systems and asked to fill out the [Maintainer Registry Form](https://www.armbian.com/maintainer-registry/) to complete your registration process.
 
-## Maintaining this document
+## Table of Board Maintainers
 
-To add additional Maintainer(s) (beyond the first), copy line with board name to following line, and add a number in '#' column.  This makes sorting the table possible (and clearly delineates primary from secondary maintainers).  This is not necessary when only one Maintainer is listed.
+Where more than one Maintainer is listed, the first ('1' in '#' column) may be considered the 'primary' and the other(s) on following line(s) as co-maintainers / helpers.
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
-
-The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/master/config/boards).  Eventually we may automatically generate this list from there, in the mean time we are still maintaining it manually.
 
 | board.conf           | # | Maintainer     | Note(s)  |
 |----------------------|---|----------------|----------|
@@ -172,3 +168,11 @@ Please make a forum post in the appropriate place instead, where more people may
 | ZazaBr         | ZazaBr         |
 | engineer-80    | Yakov          |
 | qiurui144      | qiurui         |
+
+## Maintaining this document
+
+To add additional Maintainer(s) (beyond the first), copy line with board name to following line, and add number(s) in '#' column.  This makes sorting the [Table of Board Maintainers](#table-of-board-maintainers) possible (and clearly delineates primary from secondary maintainers).  This is not necessary when only one Maintainer is listed.
+
+When adding a new GitHub user name to the [Table of Board Maintainers](#table-of-board-maintainers), please also add corresponding forum name to the [Forum Name Cross Reference](#forum-name-cross-reference) table.  This keeps maintenance to a minimum.
+
+The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/master/config/boards).  Eventually we may automatically generate the [Table of Board Maintainers](#table-of-board-maintainers) from there, in the mean time we are still maintaining it here manually.
