@@ -90,7 +90,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepizero2        | krachlatte     |          |
 | "                    | qiurui         |          |
 | orangepizeroplus     | schwar3kat     |          |
-| orangepizeroplus2-h3 | Kalobok        | [2](#n2) |
+| orangepizeroplus2-h3 | agolubchyk     |          |
 | orangepizeroplus2-h5 |                |          |
 | pine64               | janprunk       |          |
 | pinebook-a64         | igorpecovnik   |          |
@@ -126,14 +126,11 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 Notes (for above):
 <ol>
 <li id="n1"><p>rpardini would take this if he could get a board ;-)</p></li>
-<li id="n2"><p>Maintainer is forum name, we need to update to GitHub name!  Please submit PR or contact TRS-80 in IRC or via PM on forums.</p></li>
 </ol>
 
 ## Forum Name Cross Reference
 
 Rather than update many different cells above, please maintain GitHub <-> forum handle cross-reference below.
-
-If you have a question mark next to, or in place of, your name, please update by sending a PR or contact TRS-80 on IRC or via PM on forums.
 
 **Important note for people seeking support:**
 
@@ -154,7 +151,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | jethome-ru     | jethome        |
 | joekhoobyar    | joekhoobyar    |
 | joshaspinall   | joshaspinall   |
-| ?              | Kalobok        |
+| agolubchyk     | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
 | littlecxm      | littlecxm      |
