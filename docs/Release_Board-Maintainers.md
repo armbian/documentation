@@ -62,7 +62,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | odroidc2             | NicoD-SBC      | [1](#n1) |
 | odroidc4             | Technicavolous | [1](#n1) |
 | odroidhc4            | rpardini       |          |
-|                      | Technicavolous |          |
+| "                    | Technicavolous |          |
 | odroidn2             | rpardini       |          |
 | odroidxu4            | igorpecovnik   |          |
 | "                    | joekhoobyar    |          |
@@ -115,7 +115,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | station-p1           | 150balbes      |          |
 | teres-a64            |                |          |
 | tinkerboard          | Tonymac32      |          |
-| tinkerboard          | jock           |          |
+| "                    | paolosabatino  |          |
 | tritium-h3           | Tonymac32      |          |
 | tritium-h5           | Tonymac32      |          |
 | udoo                 |                |          |
