@@ -19,23 +19,25 @@ Install and recreate kernel headers scripts (optional)
 	cd /usr/src/linux-headers-$(uname -r)
 	make scripts
 
-Go back to root directory and fetch sources (working example, use ARCH=arm64 on 64bit system)
+Go back to root directory and fetch sources (working example, use `ARCH=arm64` on 64bit system)
 
 	cd
 	git clone https://github.com/pvaret/rtl8192cu-fixes.git
 	cd rtl8192cu-fixes
 	make ARCH=arm
+
 Load driver for test
 
 	insmod 8192cu.ko
 
-Check dmesg and the last entry will be:
+Check `dmesg` and the last entry will be:
 
 	usbcore: registered new interface driver rtl8192cu
 
 Plug the USB wireless adaptor and issue a command:
 
 	iwconfig wlan0
+
 You should see this:
 
 	wlan0   unassociated  Nickname:"<WIFI@REALTEK>"
@@ -52,9 +54,9 @@ Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-## How to run Docker? 
+## How to run Docker?
 
-Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt-get install docker.io`.   If you prefer to use the latest docker builds provided directly by Docker.  Please follow the guide below.
+Docker works reliably with the distribution-provided builds of docker. It's as simple as `apt-get install docker.io`. If you prefer to use the latest docker builds provided directly by Docker. Please follow the guide below.
 
 Preinstallation requirements:
 
@@ -71,7 +73,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 apt update
 apt-get install docker-ce docker-ce-cli containerd.io
-``` 
+```
 
 Test if Docker works correctly:
 
@@ -90,7 +92,7 @@ If you would like to use Docker as a non-root user, you should now consider addi
 
 ```bash
 usermod -aG docker your-user
-``` 
+```
 
 You will have to log out, and log in once more in order to be able to run Docker without being root.
 
@@ -147,7 +149,7 @@ To start with learning process you need to delete old config:
 
 	rm /etc/lircd.conf
 
-Than start the process with:
+Then start the process with:
 
 	irrecord --driver=default --device=/dev/lirc0 /etc/lircd.conf
 
