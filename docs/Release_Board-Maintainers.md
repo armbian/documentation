@@ -1,6 +1,6 @@
 # Board Maintainers
 
-Where more than one Maintainer is listed, the top line person may be considered the 'primary' and the other(s) on following line(s) as co-maintainers / helpers.
+Where more than one Maintainer is listed, the first may be considered the 'primary' and the other(s) on following line(s) as co-maintainers / helpers.
 
 Maintainer column, in this table, is GitHub user name.  For cross reference to forum handle, see [Forum Name Cross Reference](#forum-name-cross-reference) (below).
 
@@ -62,10 +62,10 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | odroidc2             | NicoD-SBC      | [1](#n1) |
 | odroidc4             | Technicavolous | [1](#n1) |
 | odroidhc4            | rpardini       |          |
-| "                    | Technicavolous |          |
+| odroidhc4            | Technicavolous |          |
 | odroidn2             | rpardini       |          |
 | odroidxu4            | igorpecovnik   |          |
-| "                    | joekhoobyar    |          |
+| odroidxu4            | joekhoobyar    |          |
 | orangepi-r1          | schwar3kat     |          |
 | orangepi-r1plus      |                |          |
 | orangepi-r1plus-lts  | schwar3kat     |          |
@@ -88,7 +88,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | orangepiwin          |                |          |
 | orangepizero         | igorpecovnik   |          |
 | orangepizero2        | krachlatte     |          |
-| "                    | qiurui         |          |
+| orangepizero2        | qiurui         |          |
 | orangepizeroplus     | schwar3kat     |          |
 | orangepizeroplus2-h3 | agolubchyk     |          |
 | orangepizeroplus2-h5 |                |          |
@@ -115,7 +115,7 @@ The authoritative list of `board.conf` can be found [here](https://github.com/ar
 | station-p1           | 150balbes      |          |
 | teres-a64            |                |          |
 | tinkerboard          | Tonymac32      |          |
-| "                    | paolosabatino  |          |
+| tinkerboard          | paolosabatino  |          |
 | tritium-h3           | Tonymac32      |          |
 | tritium-h5           | Tonymac32      |          |
 | udoo                 |                |          |
