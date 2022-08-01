@@ -168,6 +168,6 @@ Please make a forum post in the appropriate place instead, where more people may
 | Tonymac32      | TonyMac32      |
 | TRSx80         | TRS-80         |
 | vamzii         | vamzi          |
-| ?              | ZazaBr         |
+| ZazaBr         | ZazaBr         |
 | engineer-80    | Yakov          |
 | qiurui144      | qiurui         |
