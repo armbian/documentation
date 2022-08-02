@@ -6,25 +6,25 @@ You can see the current list of supported boards and their maintainers <a href="
 
 ## Armbian Platform Maintainers
 
-| Area                          | Lead Maintainer | Maintainers                   | Acronyms, Codenames             | additional info                      |
+| Area                          | Lead Maintainers | Maintainers                   | Acronyms, Codenames             | additional info                      |
 |-------------------------------|-----------------|-------------------------------|---------------------------------|--------------------------------------|
-| Build Scripts                 | @igorpecovnik   | @lanefu                       | `/lib/*.sh`                     | code responsible for building images |
-| Armbian-Tools                 | @igorpecovnik   |                               | armbian-config, armbian-monitor | userland tools provided by Armbian   |
+| Build Scripts                 | @Igorpecovnik   | @Lanefu @The-going @iav @Miouyouyou @rpardini @150balbes | `/lib/*.sh`                     | code responsible for building images |
+| Armbian-Tools                 | @Igorpecovnik   | @Miouyouyou @sgjava @Lanefu @TheLinuxBug | armbian-config, armbian-monitor | userland tools provided by Armbian   |
 | Armbian-Tools: armbian-config |                 |                               | armbian-config                  |                                      |
-| Multimedia/Desktops           |                 | @JMCC, @jernejsk, @Miouyouyou |                                 |                                      |
+| Multimedia/Desktops           |                 | @JMCC @jernejsk @Miouyouyou |                                 |                                      |
 
 ## Additional Armbian Roles
 
-| Area                         | Lead Maintainer | Maintainers                                              | Acronyms, Codenames | additional info |
+| Area                         | Lead Maintainers | Maintainers                                              | Acronyms, Codenames | additional info |
 |------------------------------|-----------------|----------------------------------------------------------|---------------------|-----------------|
-| Release Management           | @igorpecovnik   |                                                          |                     |                 |
-| Testing and Code Quality, CI | @lanefu         | @igorpecovnik                                            |                     |                 |
+| Release Management           | @Igorpecovnik @Heisath @TonyMac32 @TRS-80 | [Click to view the full list of Maintainers](https://docs.armbian.com/Release_Board-Maintainers/) |                     |                 |
+| Testing and Code Quality, CI | @Lanefu         | @Igorpecovnik                                            |                     |                 |
 | Security                     |                 |                                                          |                     |                 |
-| Documentation                | @TheLinuxBug    | @Werner                                                  |                     |                 |
-| Community Engagement         | @TheLinuxBug    | @NicoD, @tido, @Werner                                   |                     |                 |
-| Legal and Financial          | @igorpecovnik   |                                                          |                     |                 |
-| Web and Infrastucture        | @lanefu         | @TheLinuxBug                                             |                     |                 |
-| Forums moderation            | @Werner         | [Click to view full moderators list](https://forum.armbian.com/members/2-moderators/) |                     |                 |
+| Documentation                | @TheLinuxBug    | @Werner @TRS-80                                          |                     |                 |
+| Community Engagement         | @TheLinuxBug    | @NicoD @Tido @Werner @TRS-80                             |                     |                 |
+| Legal and Financial          | @Igorpecovnik   |                                                          |                     |                 |
+| Web and Infrastucture        | @Lanefu         | @TheLinuxBug @cats                                       |                     |                 |
+| Forums moderation            | @Werner         | [Click to view the full list of Moderators](https://forum.armbian.com/members/2-moderators/) |                     |                 |
 | IRC, Discord                 | @Werner         |                                                          |                     |                 |
 
 ## Community Governance Charters and Documentation
@@ -34,6 +34,6 @@ You can see the current list of supported boards and their maintainers <a href="
 
 Members who have stepped away from the project, but had a huge impact.  We always welcome their contributions and wisdom.
 
-* @tkaiser
+* @TKaiser
 * @zador.blood.stained
-* @rneese
+* @RNeese
