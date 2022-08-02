@@ -28,7 +28,7 @@ We are covering a large swath of diverse, custom designed ARM hardware in ways, 
 
 ### Infrastructure and operations
 
-We have to maintain our infrastructure where biggest costs are - once again - people's time, followed by electricity, then hardware itself.  Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us.  A new sponsored box usually brings us more costs then benefits -- since benefit is anyway public.
+We have to maintain our infrastructure where biggest costs are - once again - people's time, followed by electricity, then hardware itself.  Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us.  A new sponsored board usually brings us more costs then benefits -- since benefit is anyway public.
 
 ### Support time
 
