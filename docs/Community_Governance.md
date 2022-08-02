@@ -1,10 +1,10 @@
-# Maintainers
+# Armbian Governance
 
-## Board / Platform / Maintainers
+## Armbian Board Maintainers
 
-See individual board configuration files for named maintainer of SBC.
+You can see the current list of supported boards and their maintainers <a href="https://docs.armbian.com/Release_Board-Maintainers/">here</a>
 
-## Armbian Base Maintainers
+## Armbian Platform Maintainers
 
 | Area                          | Lead Maintainer | Maintainers                   | Acronyms, Codenames             | additional info                      |
 |-------------------------------|-----------------|-------------------------------|---------------------------------|--------------------------------------|
@@ -13,19 +13,22 @@ See individual board configuration files for named maintainer of SBC.
 | Armbian-Tools: armbian-config |                 |                               | armbian-config                  |                                      |
 | Multimedia/Desktops           |                 | @JMCC, @jernejsk, @Miouyouyou |                                 |                                      |
 
-## Other Roles
+## Additional Armbian Roles
 
 | Area                         | Lead Maintainer | Maintainers                                              | Acronyms, Codenames | additional info |
 |------------------------------|-----------------|----------------------------------------------------------|---------------------|-----------------|
 | Release Management           | @igorpecovnik   |                                                          |                     |                 |
 | Testing and Code Quality, CI | @lanefu         | @igorpecovnik                                            |                     |                 |
 | Security                     |                 |                                                          |                     |                 |
-| Documentation                |                 | @Werner                                                  |                     |                 |
-| Community Engagement         |                 | @NicoD, @tido                                            |                     |                 |
+| Documentation                | @TheLinuxBug    | @Werner                                                  |                     |                 |
+| Community Engagement         | @TheLinuxBug    | @NicoD, @tido, @Werner                                   |                     |                 |
 | Legal and Financial          | @igorpecovnik   |                                                          |                     |                 |
-| Web and Infrastucture        | @lanefu         | @[TheBug]                                                |                     |                 |
-| Forums moderation            | @Werner         | [click](https://forum.armbian.com/members/2-moderators/) |                     |                 |
+| Web and Infrastucture        | @lanefu         | @TheLinuxBug                                             |                     |                 |
+| Forums moderation            | @Werner         | [Click to view full moderators list](https://forum.armbian.com/members/2-moderators/) |                     |                 |
 | IRC, Discord                 | @Werner         |                                                          |                     |                 |
+
+## Community Governance Charters and Documentation
+<b>Coming soon!</b>
 
 ## Hackers Emeritus
 
