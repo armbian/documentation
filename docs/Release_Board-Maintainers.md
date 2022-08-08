@@ -98,7 +98,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | pineh64-b            |   |                |          |
 | radxa-n10            |   |                |          |
 | radxa-zero           |   | engineer-80    |          |
-| radxa-zero2          |   |                |          |
+| radxa-zero2          |   | monkaBlyat     |          |
 | renegade             |   | Tonymac32      |          |
 | rock-3a              | 1 | catalinii      |          |
 | rock-3a              | 2 | ZazaBr         |          |
@@ -168,6 +168,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | ZazaBr         | ZazaBr         |
 | engineer-80    | Yakov          |
 | qiurui144      | qiurui         |
+| monkaBlyat     | monkaBlyat     |
 
 ## Maintaining this document
 
