@@ -70,7 +70,7 @@ Dates for **2022**:
 
  *  January [29th](http://meeting.armbian.de/armbian.2022-01-29-13.02.html)
  *  April [23th](http://meeting.armbian.de/armbian.2022-04-23-14.00.html)
- *  August [13](http://meeting.armbian.de/armbian.2022-08-13-14.00.html)
+ *  August [13th](http://meeting.armbian.de/armbian.2022-08-13-14.00.html)
 
 ### Agenda:
 
