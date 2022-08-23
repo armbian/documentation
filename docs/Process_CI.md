@@ -84,9 +84,9 @@ Manual Executing rights: [Armbian project member](https://github.com/orgs/armbia
 
 # Lint On Scripts
 
-Run ShellCheck on all scripts and generates report as build artefact. Since our scripts are full of shellcheck problems we don't stop on errors. For now, a report is generated. One has to download artefacts to see where the problems are.
+Run [ShellCheck](https://github.com/koalaman/shellcheck) on all scripts and generates report as a build artefact. Since our scripts are full of shellcheck problems we don't stop this action on errors. Not yet. For now, a report is generated. One has to download artefacts to see where the problems are.
 
-Linting is run automatically on every push - pull requests included.
+Linting is run automatically on every push, including pull requests.
 
 # Scorecards Security Scan
 
