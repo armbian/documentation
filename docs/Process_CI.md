@@ -37,7 +37,7 @@ Generates all desktops for arm64 and x86 arhitecture to verify if they build cor
 
 [![Build Images](https://github.com/armbian/build/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-images.yml)
 
-![Build](images/build-images.png)
+![Build](images/build-all-images.png)
 
 - automatically generates all beta images upon kernel code change,
 - it also builds release candidate or stable images upon manual trigger by [release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/),
