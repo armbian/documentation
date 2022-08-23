@@ -56,7 +56,7 @@ Generates kernels at Push if their code, patches or config was changed in any wa
 
 ![Build](images/build-train.png)
 
-Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. They are placed to the https://beta.armbian.com package repository by default. 
+Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. They are pushed to the https://beta.armbian.com package repository by default.
 
 - generates all changed kernels,
 - generate all boot loaders for all supported hardware,
