@@ -32,6 +32,18 @@ Automatically generates all beta images after firmware compilation was succesful
 
 Manual executing rights: [Armbian release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/)
 
+# Smoke tests on hardware devices
+
+Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is conducted of three steps:
+
+![Smoke](images/smoke-tests.png)
+
+- powering test equipment, consistent from several network switches, power supplies and dosents of hardware
+- running upgrade, reboot, repository switch, reboot, ... tests in parallel
+- uploading a test report as build artefact following by powering the devices off.
+
+Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
+
 # Automatic Pull Requests Labeler
 
 [![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
@@ -93,15 +105,3 @@ Linting is run automatically on every push, including pull requests.
 Scorecards is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
 
 https://github.com/ossf/scorecard#what-is-scorecards
-
-# Smoke tests on hardware devices
-
-Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is conducted of three steps:
-
-![Smoke](images/smoke-tests.png)
-
-- powering test equipment, consistent from several network switches, power supplies and dosents of hardware
-- running upgrade, reboot, repository switch, reboot, ... tests in parallel
-- uploading a test report as build artefact following by powering the devices off.
-
-Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
