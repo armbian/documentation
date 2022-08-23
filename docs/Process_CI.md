@@ -1,3 +1,37 @@
+# Automatic or Manual Firmware Compilation
+
+[![Build train](https://github.com/armbian/build/actions/workflows/build-train.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-train.yml)
+
+Generates kernels at code push if their code, patches or config was changed in any way. It is also triggered via cron in the middle of CET night.
+
+![Build](images/build-train.png)
+
+Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If build succeeds it pushes packages to the package repository and increments trunk build version.
+
+- generates all changed kernels,
+- generate all boot loaders for all supported hardware,
+- generate desktop pacakages,
+- generates armbian-firmware, armbian-zsh, armbian-config.
+
+You can change source repository and you can change destination package repository to https://beta.armbian.com (default) or https://apt.armbian.com
+
+Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
+
+# Automatic or Manual Images Compilation
+
+[![Build Images](https://github.com/armbian/build/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-images.yml)
+
+![Build](images/build-all-images.png)
+
+Automatically generates all beta images after firmware compilation was succesfull. It only rebuild images if changes were made.
+
+- can build release candidate or stable images,
+- can select build source repository,
+- can choose packages source repository apt.armbian.com or beta.armbian.com,
+- can build images for one or more boards with targets defined in [this configuration](https://github.com/armbian/build/blob/master/config/targets.conf).
+
+Manual executing rights: [Armbian release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/)
+
 # Automatic Pull Requests Labeler
 
 [![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
@@ -33,49 +67,15 @@ Generates all desktops for arm64 and x86 arhitecture to verify if they build cor
 - included applications paths are "3dsupport browsers",
 - builds are done with [Docker image](https://github.com/orgs/armbian/packages?repo_name=build) on public runners.
 
-# Automatic or Manual Images Compilation
+# Automatic Kernel Build at Pull Requests
 
-[![Build Images](https://github.com/armbian/build/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-images.yml)
-
-![Build](images/build-all-images.png)
-
-- automatically generates all beta images upon kernel code change,
-- it also builds release candidate or stable images upon manual trigger by [release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/),
-- can select runners infrastructure: ours or public,
-- can select source repository, release branch or leave defaults to "nightly",
-- can choose between apt.armbian.com or beta.armbian.com packages source,
-- can build single board with targets defined in [this configuration](https://github.com/armbian/build/blob/master/config/targets.conf).
-
-# Automatic or Kernel Build at Pull Requests
-
-Generates kernels at Pull Requests if their code, patches or config was changed in any way. Build starts when label of Pull Request is set to "Ready"
-
-# Automatic or Manual Firmware Compilation
-
-Generates kernels at Push if their code, patches or config was changed in any way. It is triggered via cron (in the middle of CET night) and can also be run by [any member of Armbian project](https://github.com/orgs/armbian/people)
-
-![Build](images/build-train.png)
-
-Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If build succeeds it pushes packages to the package repository and increments trunk build version.
-
-- generates all changed kernels,
-- generate all boot loaders for all supported hardware,
-- generate desktop pacakages,
-- generates armbian-firmware, armbian-zsh, armbian-config.
-
-You can change source repository and you can change destination package repository, https://beta.armbian.com (default) or https://apt.armbian.com
-
-# Manual boot loader and BSP Compilation
-
-[Any member of Armbian project](https://github.com/orgs/armbian/people) can build boot loaders and board support packages. They need to be pushed to repository by a release manager.
-
-# Bump version
-
-[Any member of Armbian project](https://github.com/orgs/armbian/people) can increment trunk build version.
+Generates kernels at Pull Requests if their code, patches or config was changed. Build starts when label of Pull Request is set to "Ready"
 
 # Integrity testings
 
-By executing "Check images integrity" you can test package integrity of images at download sections.
+This action tests package integrity from all stable images at download section.
+
+Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
 
 # Forked Helper
 
