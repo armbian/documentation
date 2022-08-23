@@ -33,6 +33,23 @@ This Action automatically generates all desktops for arm64 and x86 arhitecture t
 - included applications paths are "3dsupport browsers",
 - builds are done with Docker on public runners.
 
+# Automatic or Manual Images Compilation
+
+[![Build Images](https://github.com/armbian/build/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-images.yml)
+
+![Build](images/build-images.png)
+
+- automatically generates all beta images upon kernel code change,
+- it also builds release candidate or stable images upon manual trigger by [release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/),
+- can select runners infrastructure: ours or public,
+- can select source repository, release branch or leave defaults to "nightly",
+- can choose between apt.armbian.com or beta.armbian.com packages source,
+- can build single board with targets defined in [this configuration](https://github.com/armbian/build/blob/master/config/targets.conf).
+
+# Automatic or Kernel Build at Pull Requests
+
+Generates kernels at Pull Requests if their code, patches or config was changed in any way. Build starts when label of Pull Request is set to "Ready"
+
 # Integrity testings
 
 By executing "Check images integrity" you can test package integrity of images at download sections.
