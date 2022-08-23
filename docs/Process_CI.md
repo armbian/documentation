@@ -50,6 +50,21 @@ This Action automatically generates all desktops for arm64 and x86 arhitecture t
 
 Generates kernels at Pull Requests if their code, patches or config was changed in any way. Build starts when label of Pull Request is set to "Ready"
 
+# Automatic or Manual Firmware Compilation
+
+Generates kernels at Push if their code, patches or config was changed in any way. It is triggered via cron (in the middle of CET night) and can also be run by [any member of Armbian project](https://github.com/orgs/armbian/people)
+
+![Build](images/buildtrain.png)
+
+Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. They are placed to the https://beta.armbian.com package repository by default. 
+
+- generates all changed kernels,
+- generate all boot loaders for all supported hardware,
+- generate desktop pacakages,
+- generates armbian-firmware, armbian-zsh, armbian-config.
+
+You can change source repository and you can change destination package repository, https://beta.armbian.com (default) or https://apt.armbian.com
+
 # Integrity testings
 
 By executing "Check images integrity" you can test package integrity of images at download sections.
