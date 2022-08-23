@@ -2,7 +2,7 @@
 
 [![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
 
-Automatically label new pull requests based on the paths of files being changed. Configuration file can be found in:
+Automatically label new pull requests based on the paths of files which are being changed. Configuration file can be found in:
 
         .github/labeler.yml
 
@@ -25,13 +25,13 @@ to trigger the action
 
 [![Build All Desktops](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml)
 
-This Action automatically generates all desktops for arm64 and x86 arhitecture to verify if they build correctly. Build is triggered every day, manually (by [any member of Armbian project](https://github.com/orgs/armbian/people)) or in pull requests if label "Desktop" is set.
+Generates all desktops for arm64 and x86 arhitecture to verify if they build correctly. Build is triggered every day, manually (by [any member of Armbian project](https://github.com/orgs/armbian/people)) or in pull requests if label "Desktop" is set. Aim of this test case is to find out if there are troubles in packages relations.
 
 - releases: bullseye, sid, jammy, focal,
 - desktop environments: xfce, gnome, mate, cinnamon, budgie, kde-plasma,
 - builds are not using cached rootfs to force packages assembly,
 - included applications paths are "3dsupport browsers",
-- builds are done with Docker on public runners.
+- builds are done with [Docker image](https://github.com/orgs/armbian/packages?repo_name=build) on public runners.
 
 # Automatic or Manual Images Compilation
 
