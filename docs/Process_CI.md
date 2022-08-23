@@ -54,7 +54,7 @@ Generates kernels at Pull Requests if their code, patches or config was changed 
 
 Generates kernels at Push if their code, patches or config was changed in any way. It is triggered via cron (in the middle of CET night) and can also be run by [any member of Armbian project](https://github.com/orgs/armbian/people)
 
-![Build](images/buildtrain.png)
+![Build](images/build-train.png)
 
 Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. They are placed to the https://beta.armbian.com package repository by default. 
 
