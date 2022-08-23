@@ -56,7 +56,7 @@ Generates kernels at Push if their code, patches or config was changed in any wa
 
 ![Build](images/build-train.png)
 
-Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. They are pushed to the https://beta.armbian.com package repository by default.
+Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If build succeeds it pushes packages to the package repository and increments trunk build version.
 
 - generates all changed kernels,
 - generate all boot loaders for all supported hardware,
@@ -65,74 +65,43 @@ Build train is executed only if there are changed kernels. When this happens, it
 
 You can change source repository and you can change destination package repository, https://beta.armbian.com (default) or https://apt.armbian.com
 
+# Manual boot loader and BSP Compilation
+
+[Any member of Armbian project](https://github.com/orgs/armbian/people) can build boot loaders and board support packages. They need to be pushed to repository by a release manager.
+
+# Bump version
+
+[Any member of Armbian project](https://github.com/orgs/armbian/people) can increment trunk build version.
+
 # Integrity testings
 
 By executing "Check images integrity" you can test package integrity of images at download sections.
 
-# Merge request pipelines
+# Forked Helper
 
-On each merge reqest we are running:
+- Run repository dispatch to default fork branch
+- Dispatch event on forked repostitory
 
-- shell script analysis
-- creating Docker image
-- creating desktop variants 
-  - if label is set to "desktop"
-  - when PR is switched between "draft" and "ready for review"
-  - when PR is approved
-- building changed kernels
+# Lint On Scripts
 
-Those runs are for security reasons executed on public Github runners servers which are [very limited](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources). One build cycle takes around one hour and it produces two types of artefacts:
+Run ShellCheck on all scripts and generates report as build artefact. Since our scripts are full of shellcheck problems we don't stop on errors. For now, a report is generated. One has to download artefacts to see where the problems are.
 
-- script anylysis report
-- debian packages for kernel, device treee, headers, sources
+Linting is run automatically on every push - pull requests included.
 
-Those build artefacts are available up to 14 days.
+# Scorecards Security Scan
 
-![Build](images/mr-pipeline.png)
+Scorecards is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
 
-<br>
+https://github.com/ossf/scorecard#what-is-scorecards
 
+# Smoke tests on hardware devices
 
-<br>
+Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is conducted of three steps:
 
-## Build beta kernel packages 
+![Smoke](images/smoke-tests.png)
 
-<br>
+- powering test equipment, consistent from several network switches, power supplies and dosents of hardware
+- running upgrade, reboot, repository switch, reboot, ... tests in parallel
+- uploading a test report as build artefact following by powering the devices off.
 
-Pipeline is extended version of merge requests pipeline. Pipeline is scheduled to run every day at 6am CET. It builds all changed kernels and update package repository in case it succeeds. 
-
-What is affected by this pipeline?
-
-- edge branch in stable repository https://apt.armbian.com
-- all branches in beta repository https://beta.armbian.com
-
-<br>
-Trigger: every day at 6am CET
-<br>
-Condition: change in packages, upstream sources, patches or configuration
-
-## Build all beta images
-
-- triggered manually or uppon completion of nightly / edge builds;
-- running the job manual is possible,
-- pipeline is always using packages from https://beta.armbian.com repository.
-
-<br>
-
-## Build selected stable images
-<br>
-<br>
-
-If you have a commit rights to the repository, go to [Armbian build system actions](https://github.com/armbian/build/actions) and select *Build selected*:
-
-<br>
-
-![Updating selected stable images](images/build-selected-blured.png)
-
-You can recreate image(s) at main [download location](https://www.armbian.com/download/) from sources - set `packages from repository` to *no* - or from packages that are already in repository (default). In case you choose to build from sources, stable https://apt.armbian.com repository is going to be populated with newly created u-boot, kernel and **BSP packages for all boards** under (patched) stable version (yy.mm.**x+1**) which is incremented automatically if process succeeds.
-
-![kanban screenshot](images/stable-images.png)
-
-<br>
-
-When new artifacts are created for stable builds, content is uploaded to CDN, then download and repository indexes are updated.  The process is typically complete in 1 to 2 days for major releases.
+Executing rights: [Any member of Armbian project](https://github.com/orgs/armbian/people)
