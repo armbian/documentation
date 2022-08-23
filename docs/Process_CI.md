@@ -1,15 +1,37 @@
-# Automatic rebase of Pull requests
+# Automatic Pull Requests Labeler
 
-Pull most recent code from master branch and put your work on top within your pull request.
+[![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
 
-How to use it? Make a comment 
+Automatically label new pull requests based on the paths of files being changed. Configuration file can be found in:
 
-/rebase 
+        .github/labeler.yml
+
+# Manual Pull Requests rebase
+
+[![Automatic Rebase](https://github.com/armbian/build/actions/workflows/rebase.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/rebase.yml)
+
+Pull most recent code from master branch and put your work on top of your pull request.
+
+How to use it? Simply comment 
+
+       /rebase
 
 to trigger the action
 
 - [Advantages of Git Rebase](https://itnext.io/advantages-of-git-rebase-af3b5f5448c6),
 - [Automatic Rebase Action origin](https://github.com/marketplace/actions/automatic-rebase).
+
+# Automatic or Manual Desktops Test Builds
+
+[![Build All Desktops](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml)
+
+This Action automatically generates all desktops for arm64 and x86 arhitecture to verify if they build correctly. Build is triggered every day, manually (by [any member of Armbian project](https://github.com/orgs/armbian/people)) or in pull requests if label "Desktop" is set.
+
+- releases: bullseye, sid, jammy, focal,
+- desktop environments: xfce, gnome, mate, cinnamon, budgie, kde-plasma,
+- builds are not using cached rootfs to force packages assembly,
+- included applications paths are "3dsupport browsers",
+- builds are done with Docker on public runners.
 
 # Integrity testings
 
