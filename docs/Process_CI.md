@@ -2,11 +2,11 @@
 
 [![Build train](https://github.com/armbian/build/actions/workflows/build-train.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-train.yml)
 
-Generates kernels at code push if their code, patches or config was changed in any way. It is also triggered via cron in the middle of CET night.
+Generates kernels at code push if the code, patches or config were changed in any way. It is also triggered via cron in the middle of Central European Time (CET) night.
 
 ![Build](images/build-train.png)
 
-Build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If build succeeds it pushes packages to the package repository and increments trunk build version.
+The build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If the build succeeds it pushes packages to the package repository and increments trunk build version.
 
 - generates all changed kernels,
 - generate all boot loaders for all supported hardware,
@@ -23,7 +23,7 @@ Manual Executing rights: [Armbian project member](https://github.com/orgs/armbia
 
 ![Build](images/build-all-images.png)
 
-Automatically generates all beta images after firmware compilation was succesfull. It only rebuild images if changes were made.
+Automatically generates all beta images if firmware compilation was succesfull. It only rebuilds images if changes were made.
 
 - can build release candidate or stable images,
 - can select build source repository,
@@ -34,11 +34,11 @@ Manual executing rights: [Armbian release manager](https://forum.armbian.com/sta
 
 # Smoke tests on hardware devices
 
-Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is conducted of three steps:
+Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is constructed of three steps:
 
 ![Smoke](images/smoke-tests.png)
 
-- powering test equipment, consistent from several network switches, power supplies and dosents of hardware
+- powering test equipment, consistent from several network switches, power supplies and dozens of hardware platofrms
 - running upgrade, reboot, repository switch, reboot, ... tests in parallel
 - uploading a test report as build artefact following by powering the devices off.
 
