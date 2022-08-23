@@ -104,4 +104,4 @@ Smoke testing is preliminary testing to reveal simple failures severe enough to,
 - running upgrade, reboot, repository switch, reboot, ... tests in parallel
 - uploading a test report as build artefact following by powering the devices off.
 
-Executing rights: [Any member of Armbian project](https://github.com/orgs/armbian/people)
+Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
