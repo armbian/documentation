@@ -2,7 +2,7 @@
 
 [![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
 
-Automatically label new pull requests based on the paths of files which are being changed. Configuration file can be found in:
+Automatically label new pull request based on the paths of files which are being changed. Configuration file can be found in:
 
         .github/labeler.yml
 
