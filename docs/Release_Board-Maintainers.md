@@ -121,6 +121,8 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | tritium-h3           |   | Tonymac32      |          |
 | tritium-h5           |   | Tonymac32      |          |
 | udoo                 |   |                |          |
+| uefi-arm64           |   | igorpecovnik   |          |
+| uefi-x86             |   | igorpecovnik   |          |
 | zeropi               |   | igorpecovnik   |          |
 
 Notes (for above):
