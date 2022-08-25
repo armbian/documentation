@@ -23,7 +23,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | clockworkpi-a06      |   | littlecxm      |          |
 | cubieboard           |   |                |          |
 | cubietruck           |   |                |          |
-| cubox-i              |   | igorpecovnik   |          |
+| cubox-i              |   |                |          |
 | espressobin          |   | ManoftheSea    | v5 & v7  |
 | firefly-rk3399       |   | 150balbes      |          |
 | helios4              |   | heisath        |          |
@@ -93,7 +93,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | orangepizeroplus2-h3 |   | agolubchyk     |          |
 | orangepizeroplus2-h5 |   |                |          |
 | pine64               |   | janprunk       |          |
-| pinebook-a64         |   | igorpecovnik   |          |
+| pinebook-a64         |   |                |          |
 | pinebookpro          |   | seclorum       |          |
 | pineh64-b            |   |                |          |
 | radxa-n10            |   |                |          |
