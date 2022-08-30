@@ -2,12 +2,18 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v22.08 (2022-08-28)
+## v22.08 (2022-08-30)
 
 ### Solved Bugs
 
+* [AR-1304](https://armbian.atlassian.net/browse/AR-1304) Boot splash is broken due to changes in kernel source
+* [AR-1299](https://armbian.atlassian.net/browse/AR-1299) Debian throws out locale garbage at 1st login
+* [AR-1296](https://armbian.atlassian.net/browse/AR-1296) JetHub D1 u-boot 2022.07\+ bug
+* [AR-1295](https://armbian.atlassian.net/browse/AR-1295) Switch KDE plasma to Wayland
+* [AR-1294](https://armbian.atlassian.net/browse/AR-1294) Remove broken packages from Debian SID
 * [AR-1291](https://armbian.atlassian.net/browse/AR-1291) Several wireless drivers break down starting with 5.19.2
 * [AR-1287](https://armbian.atlassian.net/browse/AR-1287) Debian SID package deprecation
+* [AR-1285](https://armbian.atlassian.net/browse/AR-1285) Primary interface problem
 * [AR-1282](https://armbian.atlassian.net/browse/AR-1282) Upstream wireless driver is broken
 * [AR-1270](https://armbian.atlassian.net/browse/AR-1270) RockPi cannot host a desktop because it outputs no video
 * [AR-1266](https://armbian.atlassian.net/browse/AR-1266) Media EDGE and media CURRENT are not compiling
@@ -25,7 +31,9 @@
 
 ### Story
 
+* [AR-1303](https://armbian.atlassian.net/browse/AR-1303) Merging download target
 * [AR-1288](https://armbian.atlassian.net/browse/AR-1288) Move DUT ip addresses to the database
+* [AR-1284](https://armbian.atlassian.net/browse/AR-1284) Improve GitHub UX
 * [AR-1277](https://armbian.atlassian.net/browse/AR-1277) Refactor rootfs cache system
 * [AR-1248](https://armbian.atlassian.net/browse/AR-1248) Add support for month offset when creating cache
 * [AR-1239](https://armbian.atlassian.net/browse/AR-1239) Wrong board status report at first login
@@ -34,7 +42,6 @@
 * [AR-1230](https://armbian.atlassian.net/browse/AR-1230) Refactor rootfs cache system
 * [AR-1229](https://armbian.atlassian.net/browse/AR-1229) Enable code security analysis
 * [AR-1220](https://armbian.atlassian.net/browse/AR-1220) Create nightly images directly on Github
-* [AR-1136](https://armbian.atlassian.net/browse/AR-1136) Add ClockworkPi DT-A06
 * [AR-1130](https://armbian.atlassian.net/browse/AR-1130) Improve Pull request review culture and participation
 * [AR-1081](https://armbian.atlassian.net/browse/AR-1081) Setup own mirror for kernel.org git
 * [AR-580](https://armbian.atlassian.net/browse/AR-580) Generate CONTRIBUTION.md at build script repository
@@ -46,6 +53,9 @@
 
 ### Closed Task
 
+* [AR-1300](https://armbian.atlassian.net/browse/AR-1300) Add patches to support PiKVM
+* [AR-1292](https://armbian.atlassian.net/browse/AR-1292) Conduct forum upgrade to latest version
+* [AR-1279](https://armbian.atlassian.net/browse/AR-1279) Upgrade Rockchip \(32 bit\) edge kernel to v5.19
 * [AR-1272](https://armbian.atlassian.net/browse/AR-1272) Move CSC targets that doesn't build to EOS
 * [AR-1251](https://armbian.atlassian.net/browse/AR-1251) When generating rootfs cache also store package versions
 * [AR-1249](https://armbian.atlassian.net/browse/AR-1249) Enable Debian Sid Gnome, Budgie and Cinnamon to some powerful boards
