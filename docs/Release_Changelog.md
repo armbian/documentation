@@ -2,6 +2,77 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.08 (2022-08-30)
+
+### Solved Bugs
+
+* [AR-1304](https://armbian.atlassian.net/browse/AR-1304) Boot splash is broken due to changes in kernel source
+* [AR-1299](https://armbian.atlassian.net/browse/AR-1299) Debian throws out locale garbage at 1st login
+* [AR-1296](https://armbian.atlassian.net/browse/AR-1296) JetHub D1 u-boot 2022.07\+ bug
+* [AR-1295](https://armbian.atlassian.net/browse/AR-1295) Switch KDE plasma to Wayland
+* [AR-1294](https://armbian.atlassian.net/browse/AR-1294) Remove broken packages from Debian SID
+* [AR-1291](https://armbian.atlassian.net/browse/AR-1291) Several wireless drivers break down starting with 5.19.2
+* [AR-1287](https://armbian.atlassian.net/browse/AR-1287) Debian SID package deprecation
+* [AR-1285](https://armbian.atlassian.net/browse/AR-1285) Primary interface problem
+* [AR-1282](https://armbian.atlassian.net/browse/AR-1282) Upstream wireless driver is broken
+* [AR-1270](https://armbian.atlassian.net/browse/AR-1270) RockPi cannot host a desktop because it outputs no video
+* [AR-1266](https://armbian.atlassian.net/browse/AR-1266) Media EDGE and media CURRENT are not compiling
+* [AR-1263](https://armbian.atlassian.net/browse/AR-1263) Fix armbian-led-state-save.sh wrong behavior on boards without gpio leds.
+* [AR-1235](https://armbian.atlassian.net/browse/AR-1235) Fix NanoPi \(rk3399\) boards missing correct device tree files in rk3399-legacy
+* [AR-1224](https://armbian.atlassian.net/browse/AR-1224) AUFS breaks on 5.15.y
+* [AR-1206](https://armbian.atlassian.net/browse/AR-1206) Firefox from Mozilla team is n/a on Focal
+* [AR-1203](https://armbian.atlassian.net/browse/AR-1203) Rock3a only has one recommended target
+* [AR-1202](https://armbian.atlassian.net/browse/AR-1202) Tinkerboard has only one recommended image on the download page
+* [AR-1092](https://armbian.atlassian.net/browse/AR-1092) Docker is not working on some 5.15.y. / 5.16.y
+* [AR-1037](https://armbian.atlassian.net/browse/AR-1037) Missing some repository install options
+* [AR-1025](https://armbian.atlassian.net/browse/AR-1025) Samba timeouts and throws out error
+* [AR-982](https://armbian.atlassian.net/browse/AR-982) Broken / invisible fonts on KDE plasma
+* [AR-932](https://armbian.atlassian.net/browse/AR-932) HDMI rules could make troubles on some boards
+
+### Story
+
+* [AR-1303](https://armbian.atlassian.net/browse/AR-1303) Merging download target
+* [AR-1288](https://armbian.atlassian.net/browse/AR-1288) Move DUT ip addresses to the database
+* [AR-1284](https://armbian.atlassian.net/browse/AR-1284) Improve GitHub UX
+* [AR-1277](https://armbian.atlassian.net/browse/AR-1277) Refactor rootfs cache system
+* [AR-1248](https://armbian.atlassian.net/browse/AR-1248) Add support for month offset when creating cache
+* [AR-1239](https://armbian.atlassian.net/browse/AR-1239) Wrong board status report at first login
+* [AR-1238](https://armbian.atlassian.net/browse/AR-1238) Github Actions fine tuning
+* [AR-1236](https://armbian.atlassian.net/browse/AR-1236) Add images integrity checking script
+* [AR-1230](https://armbian.atlassian.net/browse/AR-1230) Refactor rootfs cache system
+* [AR-1229](https://armbian.atlassian.net/browse/AR-1229) Enable code security analysis
+* [AR-1220](https://armbian.atlassian.net/browse/AR-1220) Create nightly images directly on Github
+* [AR-1130](https://armbian.atlassian.net/browse/AR-1130) Improve Pull request review culture and participation
+* [AR-1081](https://armbian.atlassian.net/browse/AR-1081) Setup own mirror for kernel.org git
+* [AR-580](https://armbian.atlassian.net/browse/AR-580) Generate CONTRIBUTION.md at build script repository
+
+### Closed Sub-task
+
+* [AR-1231](https://armbian.atlassian.net/browse/AR-1231) update meson64 edge kernel to 5.19
+* [AR-686](https://armbian.atlassian.net/browse/AR-686) Migrate beta.armiban.com to redirect
+
+### Closed Task
+
+* [AR-1300](https://armbian.atlassian.net/browse/AR-1300) Add patches to support PiKVM
+* [AR-1292](https://armbian.atlassian.net/browse/AR-1292) Conduct forum upgrade to latest version
+* [AR-1279](https://armbian.atlassian.net/browse/AR-1279) Upgrade Rockchip \(32 bit\) edge kernel to v5.19
+* [AR-1272](https://armbian.atlassian.net/browse/AR-1272) Move CSC targets that doesn't build to EOS
+* [AR-1251](https://armbian.atlassian.net/browse/AR-1251) When generating rootfs cache also store package versions
+* [AR-1249](https://armbian.atlassian.net/browse/AR-1249) Enable Debian Sid Gnome, Budgie and Cinnamon to some powerful boards
+* [AR-1237](https://armbian.atlassian.net/browse/AR-1237) Add a small tool to help with unifying kernel configs
+* [AR-1232](https://armbian.atlassian.net/browse/AR-1232) JetHome: add JetHub D1p support
+* [AR-1223](https://armbian.atlassian.net/browse/AR-1223) Desktops are missing calculator
+* [AR-1211](https://armbian.atlassian.net/browse/AR-1211) add rock-3a emmc support
+* [AR-1210](https://armbian.atlassian.net/browse/AR-1210) add spi boot support for rock-3a
+* [AR-1182](https://armbian.atlassian.net/browse/AR-1182) Orange Pi 4 LTS support
+* [AR-1132](https://armbian.atlassian.net/browse/AR-1132) Update meson64 edge&current kernels
+* [AR-1127](https://armbian.atlassian.net/browse/AR-1127) Change build train runners to use our runners
+* [AR-1073](https://armbian.atlassian.net/browse/AR-1073) Remove /lib/build-all.sh
+* [AR-1042](https://armbian.atlassian.net/browse/AR-1042) Sum important information in CONTRIBUTION.md
+* [AR-1028](https://armbian.atlassian.net/browse/AR-1028) Add support for rootfs / toolchain bind mount
+* [AR-984](https://armbian.atlassian.net/browse/AR-984) Integrate Khadas boards related fixes
+* [AR-668](https://armbian.atlassian.net/browse/AR-668) Using extlinux.conf instead of the legacy set of boot.scr \+ text files.
+
 ## v22.05.4 (2022-07-14)
 * Added more desktop flavors for boards which are capable (Budgie, Gnome, KDE Plasma, Xfce and Cinnamon)
 
