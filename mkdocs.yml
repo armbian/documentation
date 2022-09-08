@@ -112,3 +112,4 @@ nav:
   - "Community" :
         - "IRC/Discord/Matrix" : "Community_IRC.md"
         - "Governance" : "Community_Governance.md"
+        - "Seed our torrents" : "Community_Torrent.md"
