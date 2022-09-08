@@ -5,15 +5,14 @@ To secure top download speed around the globe, we need to have as many torrent s
 
  
 
-Prerequisite:
+## Prerequisite:
 
- 
+- Armbian or any Debian or Ubuntu based distribution (check instructions how to run `armbian-config` on a generic Debian/Ubuntu)
+- `wget` and `unzip` packages installed
+- 1TB of free space
 
-- Armbian or any Debian or Ubuntu based distribution (check instructions how to run armbian-config on a generic Debian/Ubuntu),
-- 1TB of free space.
 
-
-a) Installation with installing Transmission server
+a) Installation and auto-config with armbian-config:
 
  
 
@@ -25,14 +24,14 @@ a) Installation with installing Transmission server
 
  
 
-Leave armbian-config and after a few minutes check your torrent server status with the following command:
+Leave `armbian-config` and after a few minutes check your torrent server status with the following command:
 
 `transmission-remote -n 'transmission:transmission' -l`
 
 and you should see some progress:
 
 <details>
-  <summary>Details</summary>
+  <summary>Details (click)</summary>
   
 ```
 ID     Done       Have  ETA           Up    Down  Ratio  Status       Name
@@ -200,23 +199,16 @@ Sum:          40.62 MB               0.0  1085.0
 ```
 
   
-  ```javascript
-  console.log("I'm a code block!");
-  ```
-  
 </details>
 
-Note:
+_Note:_
 Torrent server installed this way is auto updating - it checks daily for new images, adds new and purge old ones.
 
  
  
 
-b.) Installation to the existing Transmission server
+b) Installation to an existing Transmission daemon (manual configuration)
 
- 
-
-You only need to install a cron job script that your client serve only most recent files.
 
 Create file:
 
@@ -263,23 +255,6 @@ sudo chmod +x /etc/cron.daily/seed-armbian-torrent
 sudo /etc/cron.daily/seed-armbian-torrent
 ```
 
-Optional:
-
- 
-
-If you use GUI, you can install desktop front end for simple torrent server monitoring.
-
- 
-
-`apt install transmission-remote-gtk`
-
-Host: localhost
-Username: transmission
-Password: transmission
-
-
-Confirm and click connect.
-
 
 How to stop seeding torrents?
 
@@ -287,12 +262,10 @@ How to stop seeding torrents?
 
     sudo rm /etc/cron.daily/seed-armbian-torrent
 
-     
+
     Remove torrents: 
 
     transmission-remote -n transmission:transmission -t all --remove-and-delete
 
-    This command will remove all files on your torrent server! If you seed other stuff do a cherry pick.
+    This command will remove ALL files on your torrent server! If you seed other stuff do a cherry pick.
 
- 
-​
