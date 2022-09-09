@@ -46,9 +46,6 @@ ID     Done       Have  ETA           Up    Down  Ratio  Status       Name
 Sum:          40.62 MB               0.0  1085.0
 ```
 
-  
-</details>
-
 _Note:_
 Torrent server installed this way is auto updating - it checks daily for new images, adds new and purge old ones.
 
