@@ -1,5 +1,7 @@
 # Armbian configuration utility
 
+### Note: armbian-config is undergoing major rewrite and therefore is not receiving much attention. So functions might not be available or even broken, especially on more recent boards.
+
 ![](https://raw.githubusercontent.com/armbian/config/master/images/animated-888.gif)
 
 Is a base utility for configuring your board, divided into four main sections:
