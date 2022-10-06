@@ -288,7 +288,7 @@
 * [AR-635](https://armbian.atlassian.net/browse/AR-635) - Add legacy kernel for Zero2
 * [AR-537](https://armbian.atlassian.net/browse/AR-537) - Create Armbian “virtual” build target to run as VM
 * [AR-519](https://armbian.atlassian.net/browse/AR-519) - Odroid N2 Mainline u-boot for edge kernel
-* [AR-315](https://armbian.atlassian.net/browse/AR-315) - Add support for GPT table inside nand-sata-install
+* [AR-315](https://armbian.atlassian.net/browse/AR-315) - Add support for GPT table inside armbian-install
 
 ## v21.05.6 (2021-06-21)
 
@@ -324,7 +324,7 @@ Solved Bugs
 
 * [AR-730](https://armbian.atlassian.net/browse/AR-730) -          Duplicate packages error when updating repository
 
-* [AR-729](https://armbian.atlassian.net/browse/AR-729) -          Fix Partition Alignment for resizes and nand-sata-install
+* [AR-729](https://armbian.atlassian.net/browse/AR-729) -          Fix Partition Alignment for resizes and armbian-install
 
 * [AR-711](https://armbian.atlassian.net/browse/AR-711) -          Network troubles on Nanopi K2 / Odroids
 
@@ -1365,7 +1365,7 @@ Infrastructure:
 
 ## v5.73 (2019-01-29)
 
-* much faster nand-sata-install operations. Thanks to @dedalodaelus
+* much faster armbian-install operations. Thanks to @dedalodaelus
 * added support for @wireguard on all kernels higher than 3.10.y
 * fixed drivers for popular DVB tuner S960 (all kernels)
 * fixed bug in wireless drivers on Cubietruck, BananpiPRO, Bananapi+
@@ -1377,7 +1377,7 @@ Infrastructure:
 * updated hostapd to 2.7
 * fixed 1512MHz OPP on Renegade
 * fixed DRM crashing for rockchip64
-* mainline u-boot bumped to 2018.11 (update goes manually from nand-sata-install utility)
+* mainline u-boot bumped to 2018.11 (update goes manually from armbian-install utility)
 * added testing images for Orangepi RK3399 and Radxa Rockpi 4B
 
 ## v5.72 (2019-01-16)
@@ -1776,7 +1776,7 @@ Following boards are no longer receiving support and updates since this version:
 
 ## v5.25 (2017-02-02)
 
-* nand-sata-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
+* armbian-install expanded functionality: you can partition destination and choose file-system type: ext2, ext3, ext4 and BTRFS (BTRFS requires kernel 4.4+)
 * added new boards: Clearfog Base, Lime2 eMMC, Lime A33, NanoPi M1+, OrangePi Zero, OrangePi PC2 (mainline only, experimental)
 * new default kernel for Clearfog(s), changed kernel family to "mvebu" to avoid conflicts
 * disabled wireless power management by default to improve performance with certain drivers
@@ -1807,7 +1807,7 @@ Following boards are no longer receiving support and updates since this version:
 
 ## v5.23 (2016-10-23)
 
-* fixed bug in nand-sata-install
+* fixed bug in armbian-install
 * fixed u-boot update bug on Allwinner platform
 
 Known problems:
@@ -1909,7 +1909,7 @@ Known problems:
 * Finally got rid of (broken) board auto detection. We do not ship any more one image for several devices that tries to detect/fix things on 1st boot but provide one dedicated image per board (Plus and Plus 2 and both NanoPi M1 variants being handled as the same device since only size of DRAM/eMMC differs)
 * Tried to improve user experience with better/unified led handling (light directly after boot, communicate booting states through blinking)
 * Improve partitioning and filesystem resize on 1st boot making it easier to clone every installation media afterwards
-* fully support installation on eMMC on all H3 devices (`u-boot` and `nand-sata-install.sh` fixes)
+* fully support installation on eMMC on all H3 devices (`u-boot` and `armbian-install.sh` fixes)
 * Improved performance/thermal/throttling behaviour on all H3 boards (especially newer Oranges)
 * Prevent HDMI screen artefacts (disabling interfering TV Out by default)
 * Enhanced 8189ETV driver for older Oranges
@@ -2104,7 +2104,7 @@ Known bugs:
 * Legacy kernel for Allwinner based boards upgraded to 3.4.110
 * added new board: Udoo Neo
 * added USB printer, CAN, CMA, ZSWAP, USB video class, CDROM fs, sensor classs, … to Allwinner mainline kernel
-* nand-sata-install scripts rewrite. Now it’s possible to install to any partition.
+* armbian-install scripts rewrite. Now it’s possible to install to any partition.
 * fixed nand install for Allwinner A10 based boards: Cubieboard 1 / Lime A10
 * universal upgrade script bugfix / rewrite.
 * 8 channel HDMI support for legacy Allwinner kernel
