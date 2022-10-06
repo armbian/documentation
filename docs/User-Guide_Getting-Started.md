@@ -193,7 +193,7 @@ First you need to update packages described in a previous "How to update" step. 
 
 [Use the Armbian configuration utility `armbian-config`](User-Guide_Armbian-Config.md)
 
-## How to install to eMMC, NAND, SATA & USB?
+## How to install to eMMC, NAND, SATA, NVME & USB?
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
@@ -204,21 +204,26 @@ NAND:
  * kernel 3.4.x and NAND storage
  * pre-installed system on NAND (stock Android or other Linux)
 
-eMMC/SATA/USB:
+eMMC/SATA/USB/NVME:
 
  * any kernel
  * onboard eMMC storage
- * attached SATA or USB storage
+ * attached SATA, NVME or USB storage
 
 Start the install script:
 
 	armbian-install
 
-and follow the guide. You can create up to three scenarios:
+and follow the guide. Theose are all possible scenarios:
 
  * boot from SD, system on SATA / USB
  * boot from eMMC / NAND, system on eMMC/NAND
- * boot from eMMC / NAND, system on SATA / USB
+ * boot from eMMC / NAND, system on SATA / USB / NVME
+ * Boot from SPI  - system on SATA, USB or NVMe
+ * Install/Update the bootloader on SD/eMMC
+ * Install/Update the bootloader on special eMMC partition'
+ * Install/Update the bootloader on SPI Flash
+ * Install system to UEFI disk
 
 and you can choose the following file system options:
 
