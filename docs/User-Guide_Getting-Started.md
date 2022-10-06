@@ -219,9 +219,9 @@ and follow the guide. Theose are all possible scenarios:
  * boot from SD, system on SATA / USB
  * boot from eMMC / NAND, system on eMMC/NAND
  * boot from eMMC / NAND, system on SATA / USB / NVME
- * Boot from SPI  - system on SATA, USB or NVMe
+ * Boot from SPI - system on SATA, USB or NVMe
  * Install/Update the bootloader on SD/eMMC
- * Install/Update the bootloader on special eMMC partition'
+ * Install/Update the bootloader on special eMMC partition
  * Install/Update the bootloader on SPI Flash
  * Install system to UEFI disk
 
