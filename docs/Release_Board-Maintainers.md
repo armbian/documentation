@@ -110,7 +110,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | rockpi-4b            |   |                |          |
 | rockpi-4c            |   | clee           |          |
 | rockpi-e             |   |                |          |
-| rockpi-s             |   |                |          |
+| rockpi-s             |   | brentr         |          |
 | rockpro64            |   | joekhoobyar    |          |
 | sopine-a64           |   | joshaspinall   |          |
 | station-m1           |   | 150balbes      |          |
@@ -147,6 +147,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | afaulkner420   | Ukhellfire     |
 | devdotnetorg   | antondeveloper |
 | 150balbes      | balbes150      |
+| brentr         | brentr         |
 | clee           | clee           |
 | catalinii      | catalinii      |
 | heisath        | Heisath        |
