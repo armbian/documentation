@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.08 (2022-10-14)
+
+* Regenerated images for arm64 and x86 UEFI with improved installer
+
 ## v22.08 (2022-08-30)
 
 ### Solved Bugs
@@ -74,6 +78,7 @@
 * [AR-668](https://armbian.atlassian.net/browse/AR-668) Using extlinux.conf instead of the legacy set of boot.scr \+ text files.
 
 ## v22.05.4 (2022-07-14)
+
 * Added more desktop flavors for boards which are capable (Budgie, Gnome, KDE Plasma, Xfce and Cinnamon)
 
 ## v22.05.3 (2022-06-23)
