@@ -103,4 +103,4 @@ You may also add support by yourself if critera is satisfied. See [Board Support
 
 ## What WiFi adapters will most likely work out of the box?
 
-Check [here](https://github.com/morrownr/USB-WiFi/blob/main/home/The_Short_List.md).
+Check [here](https://github.com/morrownr/USB-WiFi).
