@@ -9,7 +9,7 @@
 * [AR-1268](https://armbian.atlassian.net/browse/AR-1268) RockPI-S WiFi throughput only 300K bytes/second
 * [AR-1265](https://armbian.atlassian.net/browse/AR-1265) Rock PI-S images will not boot from internal EMMC (SDNAND)
 
-## v22.08 (2022-10-14)
+## v22.08.5 (2022-10-14)
 
 * Regenerated images for arm64 and x86 UEFI with improved installer
 
