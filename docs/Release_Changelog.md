@@ -2,6 +2,17 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.08.7 (2022-10-20)
+
+* Regenerated images for Rockpi S, Bananapi M1, PRO, M2+, M5, M64
+* [AR-1269](https://armbian.atlassian.net/browse/AR-1269) RockPI WiFi assigned different MAC address on each boot
+* [AR-1268](https://armbian.atlassian.net/browse/AR-1268) RockPI-S WiFi throughput only 300K bytes/second
+* [AR-1265](https://armbian.atlassian.net/browse/AR-1265) Rock PI-S images will not boot from internal EMMC (SDNAND)
+
+## v22.08.5 (2022-10-14)
+
+* Regenerated images for arm64 and x86 UEFI with improved installer
+
 ## v22.08 (2022-08-30)
 
 ### Solved Bugs
@@ -74,6 +85,7 @@
 * [AR-668](https://armbian.atlassian.net/browse/AR-668) Using extlinux.conf instead of the legacy set of boot.scr \+ text files.
 
 ## v22.05.4 (2022-07-14)
+
 * Added more desktop flavors for boards which are capable (Budgie, Gnome, KDE Plasma, Xfce and Cinnamon)
 
 ## v22.05.3 (2022-06-23)
