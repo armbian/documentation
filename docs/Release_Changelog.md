@@ -4,7 +4,7 @@
 
 ## v22.08.7 (2022-10-20)
 
-* Regenerated images for Rockpi S, Bananapi M1, PRO, M2+, M5, M64, UEFI, Rpi4, Clockworkpi
+* Regenerated images for Rockpi S, Bananapi M1, PRO, M2+, M5, M64, UEFI, RPi4, ClockworkPi
 * [AR-1269](https://armbian.atlassian.net/browse/AR-1269) RockPI WiFi assigned different MAC address on each boot
 * [AR-1268](https://armbian.atlassian.net/browse/AR-1268) RockPI-S WiFi throughput only 300K bytes/second
 * [AR-1265](https://armbian.atlassian.net/browse/AR-1265) Rock PI-S images will not boot from internal EMMC (SDNAND)
