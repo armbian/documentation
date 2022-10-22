@@ -57,7 +57,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopineo            |   | igorpecovnik   |          |
 | nanopineo2           |   | igorpecovnik   |          |
 | nanopineo2black      |   | igorpecovnik   |          |
-| nanopineo3           |   |                |          |
+| nanopineo3           |   | lpirl          |          |
 | nanopineo4           |   |                |          |
 | nanopineocore2       |   |                |          |
 | nanopineoplus2       |   | teknoid        |          |
@@ -159,6 +159,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | agolubchyk     | Kalobok        |
 | krachlatte     | krachlatte     |
 | lbmendes       | LucasM         |
+| lpirl          | lpirl          |
 | littlecxm      | littlecxm      |
 | NicoD-SBC      | NicoD          |
 | paolosabatino  | jock           |
