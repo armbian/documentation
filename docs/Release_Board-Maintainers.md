@@ -112,6 +112,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | rockpi-e             |   |                |          |
 | rockpi-s             |   | brentr         |          |
 | rockpro64            |   | joekhoobyar    |          |
+| rpi4b                |   | igorpecovnik   |          |
 | sopine-a64           |   | joshaspinall   |          |
 | station-m1           |   | 150balbes      |          |
 | station-m2           |   | 150balbes      |          |
