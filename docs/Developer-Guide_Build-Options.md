@@ -130,3 +130,4 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
 - **AUFS** ( **yes** | no ): Include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
 - **SKIP_BOOTSPLASH** ( yes | **no** ): Use kernel bootsplash. Disable in case of troubles
+- **CONSOLE_AUTOLOGIN** ( **yes** | no ): Automatically login as root for local consoles. Disable if your security threat model requires.
