@@ -1,1 +1,1 @@
-- eMMC install might be broken if you don't have recent uboot on your eMMC card - you must update it. Boot from SD card, run nand-sata-install and choose "Update bootloader on a special eMMC partition". After that, you can use eMMC as boot device. You only need to do this once.
+- eMMC install might be broken if you don't have recent uboot on your eMMC card - you must update it. Boot from SD card, run armbian-install and choose "Update bootloader on a special eMMC partition". After that, you can use eMMC as boot device. You only need to do this once.

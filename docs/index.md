@@ -43,7 +43,7 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
 - Root password is `1234`. You are forced to change this password and (optional) create a normal user at first login
 - Ethernet adapter with DHCP and SSH server ready on default port (22)
 - Wireless adapter with DHCP ready (if present) but disabled. You can use `armbian-config` to connect to your router or create an access point
-- NAND, SATA, eMMC and USB install script is included (`nand-sata-install`)
+- NAND, SATA, eMMC and USB install script is included (`armbian-install`)
 - Upgrades are done via standard `apt upgrade` method
 - Login script shows: board name with large text, distribution base, kernel version, system load, uptime, memory usage, IP address, CPU  and drive temperature, ambient temperature from Temper if exits, SD card usage, battery conditions and number of updates to install
 
