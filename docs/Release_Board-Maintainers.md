@@ -101,7 +101,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | radxa-n10            |   |                |          |
 | radxa-zero           |   | engineer-80    |          |
 | radxa-zero2          |   | monkaBlyat     |          |
-| rpi4b            |   |   | igorpecovnik   |          |
+| rpi4b                |   | igorpecovnik   |          |
 | renegade             |   | Tonymac32      |          |
 | rock-3a              | 1 | catalinii      |          |
 | rock-3a              | 2 | ZazaBr         |          |
