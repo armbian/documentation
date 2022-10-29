@@ -2,6 +2,12 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.08.8 (2022-10-29)
+
+* update rockchip64 kernels
+* Regenerated images for Rockpro64, Rock64, Nanopi M4, Nanopi M4V2, Bananapi, Bananapi PRO, Bananapi M2Plus
+
+
 ## v22.08.7 (2022-10-20)
 
 * Regenerated images for Rockpi S, Bananapi M1, PRO, M2+, M5, M64, UEFI, RPi4, ClockworkPi
