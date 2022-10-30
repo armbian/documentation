@@ -4,6 +4,7 @@
 
 ## v22.08.8 (2022-10-29)
 
+* added test images for Odroid M1
 * update rockchip64 kernels
 * Regenerated images for Rockpro64, Rock64, Nanopi M4, Nanopi M4V2, Bananapi, Bananapi PRO, Bananapi M2Plus
 
