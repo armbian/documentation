@@ -16,6 +16,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 |----------------------|---|----------------|----------|
 | bananapi             |   | janprunk       |          |
 | bananapim2plus       |   | igorpecovnik   |          |
+| bananapim3           |   | AaronNGray     |          |
 | bananapim5           |   | igorpecovnik   |          |
 | bananapim2pro        |   | igorpecovnik   |          |
 | bananapim64          |   | devdotnetorg   |          |
