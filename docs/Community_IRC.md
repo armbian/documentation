@@ -42,7 +42,7 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 + **`#armbian-broadcom`** Broadcom SoC talk
 + **`#armbian-rockchip`** Rockchip SoC talk
 + **`#armbian-commits`** is a moderated channel. Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Also newly added issues on [Jira](https://armbian.atlassian.net/projects/AR/issues/?filter=allissues) will be pasted. User chat is not possible.
-+ **`#armbian-rss`** is a live forum and Twitter feed. Whenever a new post in the Armbian Forums is made or somebody mentions Armbian on Twitter it will be announced here. User chat is not possible.
++ **`#armbian-rss`** is a live forum feed. Whenever a new post in the Armbian Forums is made it will be announced here. User chat is not possible.
 Of course, you can also enable desktop notification in your favorite browser for the forums.
 
 Everybody is free to join any of these channels.
