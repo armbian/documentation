@@ -5,6 +5,9 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 ## Main options
 
 
+- **UBOOT_ONLY** (yes | **no** ):
+    - yes: compiles U-Boot only, implies KERNEL_ONLY=yes to make any default option validation happy
+    - no: no impact - build according to the subsequent options
 - **KERNEL_ONLY** ( yes | no ):
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
     - no: build complete OS image for writing to SD card
