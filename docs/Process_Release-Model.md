@@ -44,8 +44,14 @@ Tags are used in ad-hoc manner.
 | 21.11 | Sambar | November | [cancelled](http://meeting.armbian.de/armbian.2021-10-16-14.01.txt)
 | 22.02 | Pig | February | [done](https://armbian.atlassian.net/projects/AR/versions/10009/tab/release-report-all-issues)
 | 22.05 | Jade | May | [done](https://armbian.atlassian.net/projects/AR/versions/10010/tab/release-report-all-issues)
-| 22.08 | Yapok | August | planned
+| 22.08 | Yapok | August | [done](https://armbian.atlassian.net/projects/AR/versions/10011/tab/release-report-all-issues)
 | 22.11 | Goral | November | planned
+| 23.02 | Quoll | February | planned
+| 23.05 | Suni | May | planned
+| 23.08 | Colobus | August | planned
+| 23.11 | Topi | November | planned
+
+ 
  
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
