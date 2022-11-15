@@ -96,6 +96,8 @@ Manual Executing rights: [Armbian project member](https://github.com/orgs/armbia
 
 # Lint On Scripts
 
+![Lint](images/linterror.png)
+
 Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell scripts and report problems within. Since our scripts are full of shellcheck problems we don't block merging on those errors. Not yet.
 
 Linting is run automatically on pull requests change.
