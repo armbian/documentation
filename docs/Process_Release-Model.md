@@ -81,10 +81,10 @@ Dates for **2022**:
 
 Dates for **2023**:
 
- *  January [7th](http://meeting.armbian.de/armbian.2022-01-29-13.02.html)
- *  April [1st](http://meeting.armbian.de/armbian.2022-04-23-14.00.html)
- *  August [5th](http://meeting.armbian.de/armbian.2022-08-13-14.00.html)
- *  October [7th](http://meeting.armbian.de/armbian.2022-08-13-14.00.html)
+ *  January [7th]
+ *  April [1st]
+ *  August [5th]
+ *  October [7th]
 
 
 ### Agenda:
