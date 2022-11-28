@@ -5,9 +5,21 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 ## Main options
 
 
-- **KERNEL_ONLY** ( yes | no ):
-    - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
-    - no: build complete OS image for writing to SD card
+- **BUILD_ONLY** (comma-separated list): defines what artifacts should be built. Default value is empty string - will build all artifacts. Changing this option can be useful to build partial artifacts only.
+    - u-boot: build U-Boot
+    - kernel: build Kernel
+    - armbian-config: build Armbian config
+    - armbian-zsh: build Armbian zsh
+    - plymouth-theme-armbian: build Armbian Plymouth theme
+    - armbian-firmware: build Armbian firmware
+    - armbian-bsp: build Armbian board support package
+    - chroot: build additional packages
+    - bootstrap: build bootstrap package
+- **KERNEL_ONLY** ( yes | no ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use **BUILD_ONLY** instead
+    - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system<br>
+      **Note:** This will enforce **BUILD_ONLY** being set as `"u-boot,kernel,armbian-config,armbian-zsh,plymouth-theme-armbian,armbian-firmware,armbian-bsp"`
+    - no: build complete OS image for writing to SD card<br>
+      **Note:** This will enforce **BUILD_ONLY** being cleared to empty string.
     - leave empty to display selection dialog each time
 - **KERNEL_CONFIGURE** ( yes | no ):
     - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
