@@ -2,6 +2,81 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.11.1 (2022-11-30)
+
+## Story
+* [AR-1278](https://armbian.atlassian.net/browse/AR-1278) Implement plymouth for kernel > 5.19.y
+* [AR-1319](https://armbian.atlassian.net/browse/AR-1319) Upgrade Allwinner boot loader to 2022.08
+* [AR-1335](https://armbian.atlassian.net/browse/AR-1335) Add gpiod library to armhf and arm64 server \+ desktop images
+* [AR-1346](https://armbian.atlassian.net/browse/AR-1346) Grub optimisations
+* [AR-1355](https://armbian.atlassian.net/browse/AR-1355) Add support for UEFI install to the nand-sata-install
+* [AR-1362](https://armbian.atlassian.net/browse/AR-1362) Add Bananapi M5 to the build system
+* [AR-1389](https://armbian.atlassian.net/browse/AR-1389) Refactor u-boot patches
+* [AR-1390](https://armbian.atlassian.net/browse/AR-1390) Add Riscv64 support
+* [AR-1399](https://armbian.atlassian.net/browse/AR-1399) Enable BASH linter at PR on changed files
+* [AR-1402](https://armbian.atlassian.net/browse/AR-1402) Enable ES8316 audio properly on Radxa Rock Pi 4
+
+## Task
+* [AR-668](https://armbian.atlassian.net/browse/AR-668) Using extlinux.conf instead of the legacy set of boot.scr \+ text files.
+* [AR-949](https://armbian.atlassian.net/browse/AR-949) Initial board setup
+* [AR-977](https://armbian.atlassian.net/browse/AR-977) Add package version number to the rootfs cache
+* [AR-1034](https://armbian.atlassian.net/browse/AR-1034) Add missing Docker dependencies
+* [AR-1112](https://armbian.atlassian.net/browse/AR-1112) Add ZFS repository
+* [AR-1301](https://armbian.atlassian.net/browse/AR-1301) Add Rockpi 4C plus
+* [AR-1312](https://armbian.atlassian.net/browse/AR-1312) Clean bootlogo patches
+* [AR-1317](https://armbian.atlassian.net/browse/AR-1317) Remove nfs-kernel-server from default install
+* [AR-1325](https://armbian.atlassian.net/browse/AR-1325) Deploy Chromium repo and keys to CLI images too
+* [AR-1326](https://armbian.atlassian.net/browse/AR-1326) Add SKEL distribution to all existing users to the postinst script
+* [AR-1336](https://armbian.atlassian.net/browse/AR-1336) Fix wallpaper not showing correct in virtual desktop
+* [AR-1337](https://armbian.atlassian.net/browse/AR-1337) Re-enable Thunderbird email client for Debian Sid
+* [AR-1338](https://armbian.atlassian.net/browse/AR-1338) Add Codium to Debian builds
+* [AR-1342](https://armbian.atlassian.net/browse/AR-1342) Switch Codium with Code on x86
+* [AR-1343](https://armbian.atlassian.net/browse/AR-1343) Update UEFI configs with latest Ubuntu desktop 22.04
+* [AR-1349](https://armbian.atlassian.net/browse/AR-1349) Add Intel sound firmware to the desktops
+* [AR-1350](https://armbian.atlassian.net/browse/AR-1350) Deprecating Buster and Focal
+* [AR-1351](https://armbian.atlassian.net/browse/AR-1351) Adjust desktop support status
+* [AR-1352](https://armbian.atlassian.net/browse/AR-1352) Add initial configuration for Terminator
+* [AR-1353](https://armbian.atlassian.net/browse/AR-1353) Define panel shortcuts for Gnome x64 per appgroup
+* [AR-1373](https://armbian.atlassian.net/browse/AR-1373) Port legacy kernel Rockchip Hardware Random Number Generator forward into Edge
+* [AR-1376](https://armbian.atlassian.net/browse/AR-1376) Replace Ubuntu PRO advertisement
+* [AR-1377](https://armbian.atlassian.net/browse/AR-1377) Add plymouth package to base images except minimal
+* [AR-1388](https://armbian.atlassian.net/browse/AR-1388) Change purge releases action
+* [AR-1404](https://armbian.atlassian.net/browse/AR-1404) Updated box86 and box64
+
+## Bug
+* [AR-577](https://armbian.atlassian.net/browse/AR-577) Fix USB port on Rockpi S
+* [AR-1060](https://armbian.atlassian.net/browse/AR-1060) Freshly build image doesn't have BRANCH info in /etc/armbian-release
+* [AR-1186](https://armbian.atlassian.net/browse/AR-1186) Screen power savings does not work
+* [AR-1265](https://armbian.atlassian.net/browse/AR-1265) Rock PI-S images will not boot from internal EMMC \(SDNAND\)
+* [AR-1268](https://armbian.atlassian.net/browse/AR-1268) RockPI-S WiFi throughput only 300K bytes/second
+* [AR-1269](https://armbian.atlassian.net/browse/AR-1269) RockPI WiFi assigned different MAC address on each boot
+* [AR-1305](https://armbian.atlassian.net/browse/AR-1305) CI build wrong images in cron
+* [AR-1309](https://armbian.atlassian.net/browse/AR-1309) Some images doesn't want to be built, some are corrupted
+* [AR-1310](https://armbian.atlassian.net/browse/AR-1310) Update JetHub D1 \(j100\) u-boot patchset
+* [AR-1318](https://armbian.atlassian.net/browse/AR-1318) Replace expired GPG key for Github CLI
+* [AR-1330](https://armbian.atlassian.net/browse/AR-1330) CLI images can ran out of space
+* [AR-1332](https://armbian.atlassian.net/browse/AR-1332) Missing dependency in Docker images
+* [AR-1334](https://armbian.atlassian.net/browse/AR-1334) Nanopi Neo3 does not have DT file in  EDGE
+* [AR-1340](https://armbian.atlassian.net/browse/AR-1340) Disable event debugging on UEFI builds
+* [AR-1341](https://armbian.atlassian.net/browse/AR-1341) Missing wallpaper in XFCE login screen Armbian Sid
+* [AR-1344](https://armbian.atlassian.net/browse/AR-1344) Wrong location of package uninstall
+* [AR-1345](https://armbian.atlassian.net/browse/AR-1345) Thunderbird 32b is no more, refactoring - provide it only for 64b
+* [AR-1348](https://armbian.atlassian.net/browse/AR-1348) Pine64H b and NPI R1 does not build u-boot
+* [AR-1363](https://armbian.atlassian.net/browse/AR-1363) Kernel freezing in armbian-kernel might not work correctly
+* [AR-1374](https://armbian.atlassian.net/browse/AR-1374) Hostapd needs to be workarounded
+* [AR-1381](https://armbian.atlassian.net/browse/AR-1381) XU4: On a fresh install, after moving root to f2fs eMMC, it fails to boot
+* [AR-1384](https://armbian.atlassian.net/browse/AR-1384) Fix RTL8822CS driver. Update build config
+* [AR-1385](https://armbian.atlassian.net/browse/AR-1385) Ambian's password rules are annoying
+* [AR-1391](https://armbian.atlassian.net/browse/AR-1391) MOTD is not displaying messages correctly
+* [AR-1392](https://armbian.atlassian.net/browse/AR-1392) Error triggered when changing BSP package
+* [AR-1393](https://armbian.atlassian.net/browse/AR-1393) Converting to u-boot fails on riscv
+* [AR-1394](https://armbian.atlassian.net/browse/AR-1394) Update kernel meson mmc driver to set phase clock from dts
+* [AR-1395](https://armbian.atlassian.net/browse/AR-1395) Don't add PPA's to the CLI images
+* [AR-1398](https://armbian.atlassian.net/browse/AR-1398) nand-sata-install must fail with a proper error message if the chosen mkfs.xyz is not installed
+* [AR-1400](https://armbian.atlassian.net/browse/AR-1400) Raspberry Pi is unbootable
+* [AR-1403](https://armbian.atlassian.net/browse/AR-1403) Wrong post install handling on install
+* [AR-1405](https://armbian.atlassian.net/browse/AR-1405) When using PPA sources we need to run install\_ppa\_prerequisites
+
 ## v22.08.8 (2022-10-29)
 
 * added test images for Odroid M1
