@@ -2,7 +2,7 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v22.11.1 (2022-11-30)
+## v22.11.1 (2022-12-03)
 
 ## Story
 * [AR-1278](https://armbian.atlassian.net/browse/AR-1278) Implement plymouth for kernel > 5.19.y
