@@ -4,7 +4,7 @@
 
 ## v22.11.1 (2022-12-03)
 
-## Story
+## Closed projects
 * [AR-1278](https://armbian.atlassian.net/browse/AR-1278) Implement plymouth for kernel > 5.19.y
 * [AR-1319](https://armbian.atlassian.net/browse/AR-1319) Upgrade Allwinner boot loader to 2022.08
 * [AR-1335](https://armbian.atlassian.net/browse/AR-1335) Add gpiod library to armhf and arm64 server \+ desktop images
@@ -16,7 +16,7 @@
 * [AR-1399](https://armbian.atlassian.net/browse/AR-1399) Enable BASH linter at PR on changed files
 * [AR-1402](https://armbian.atlassian.net/browse/AR-1402) Enable ES8316 audio properly on Radxa Rock Pi 4
 
-## Task
+## Closed Task
 * [AR-668](https://armbian.atlassian.net/browse/AR-668) Using extlinux.conf instead of the legacy set of boot.scr \+ text files.
 * [AR-949](https://armbian.atlassian.net/browse/AR-949) Initial board setup
 * [AR-977](https://armbian.atlassian.net/browse/AR-977) Add package version number to the rootfs cache
@@ -43,7 +43,7 @@
 * [AR-1388](https://armbian.atlassian.net/browse/AR-1388) Change purge releases action
 * [AR-1404](https://armbian.atlassian.net/browse/AR-1404) Updated box86 and box64
 
-## Bug
+## Solved Bugs
 * [AR-577](https://armbian.atlassian.net/browse/AR-577) Fix USB port on Rockpi S
 * [AR-1060](https://armbian.atlassian.net/browse/AR-1060) Freshly build image doesn't have BRANCH info in /etc/armbian-release
 * [AR-1186](https://armbian.atlassian.net/browse/AR-1186) Screen power savings does not work
