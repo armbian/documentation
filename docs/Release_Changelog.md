@@ -2,6 +2,11 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.11.2 (2022-12-09)
+
+* Re-added image for Nanopi Duo
+* Regenerated images Rock 5b (updated kernel)
+
 ## v22.11.1 (2022-12-03)
 
 ## Closed projects
