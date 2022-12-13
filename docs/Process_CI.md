@@ -81,7 +81,7 @@ Generates all desktops for arm64 and x86 arhitecture to verify if they build cor
 
 # Automatic Kernel Build at Pull Requests
 
-Generates kernels at Pull Requests if their code, patches or config was changed. Build starts when label of Pull Request is set to "Ready"
+Generates kernels at Pull Requests if their code, patches or config was changed. Build starts when label of Pull Request is set to "Ready to review"
 
 # Integrity testings
 
