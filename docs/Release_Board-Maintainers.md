@@ -49,7 +49,7 @@ Maintainer column, in this table, is GitHub user name.  For cross reference to f
 | nanopi-r4s           | 1 | littlecxm      |          |
 | nanopi-r4s           | 2 | piter75        |          |
 | nanopiair            |   |                |          |
-| nanopiduo            |   |                |          |
+| nanopiduo            |   | sgjava         |          |
 | nanopiduo2           |   |                |          |
 | nanopik1plus         |   | igorpecovnik   |          |
 | nanopik2-s905        |   |                |          |
@@ -169,6 +169,7 @@ Please make a forum post in the appropriate place instead, where more people may
 | piter75        | piter75        |
 | schwar3kat     | schwar3kat     |
 | seclorum       | seclorum       |
+| sgjava         | sgjava         | 
 | Technicavolous | Technicavolous |
 | teknoid        | teknoid        |
 | Tonymac32      | TonyMac32      |
