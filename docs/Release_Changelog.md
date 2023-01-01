@@ -4,7 +4,7 @@
 
 ## v22.11.3 (2022-12-31)
 
-* Added image for Orange Pi 5 (WIP)
+* [Added image for Orange Pi 5](https://www.armbian.com/orangepi-5/) (WIP)
 
 ## v22.11.2 (2022-12-09)
 
