@@ -35,6 +35,10 @@
 </table><p>Armbian Organization Members are required to have:</p><ul>
 <li>An account on Armbian Community Forums</li>
 <li>An account on Armbian Jira</li>
+        <ol>
+        <li><a href=https://id.atlassian.com>Register Atlassian account</a></li>
+        <li><a href=https://armbian.atlassian.net/login.jsp>Request R/W access to Armbian Jira</a></li>
+        </ol>
 <li>Enabled 2FA for their GitHub account</li>
 </ul><p>You <strong>should </strong>know development basics like how to get an Armbian image running on your hardware, do basic debugging, building a kernel and how to use the Armbian build system.</p><p>
 </p><h2 id="Code-Review"><strong>Code Review:</strong></h2><p></p><p>
