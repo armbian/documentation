@@ -6,6 +6,7 @@
 
 * [Added image for Orange Pi 5](https://www.armbian.com/orangepi-5/) (WIP)
 * [Updated images for Bananapi M5/M2P](https://www.armbian.com/bananapi-m5/)
+* [Updated images for Orangepi Zero 2](https://www.armbian.com/orange-pi-zero-2/)
 
 ## v22.11.2 (2022-12-09)
 
