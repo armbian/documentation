@@ -81,7 +81,7 @@ Dates for **2022**:
 
 Dates for **2023**:
 
- *  January [7th]
+ *  January [7th](http://meeting.armbian.de/armbian.2023-01-07-15.04.html)
  *  April [1st]
  *  August [5th]
  *  October [7th]
