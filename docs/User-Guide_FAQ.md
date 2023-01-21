@@ -56,7 +56,7 @@ Armbian moves things forward and follows mainline kernel as much as possible, to
 
 We need many different profiles of people to run this project and just about any help is appreciated, not just help on development.  Since otherwise developers have to fix web pages, developers have to run projects, developers have to seek for money, developers have to maintain servers, developers have to maintain forum, developers have to moderate forums, developers have to maintain infrastructure, developers have to maintain relations with partners, developers have to waste time on repeated support question, developers have to deal with "customers", ...
 
-## Why are old-stable distributions like Ubuntu Bionic or Debian Stretch not supported?
+## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
 
 The Armbian project has very limited human and financial ressources so it can focus only on a few up-to-date operating system releases.
 
@@ -64,13 +64,13 @@ The Armbian project has very limited human and financial ressources so it can fo
 
 No.
 
-However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/clubs/1-tv-boxes/).  Take note that there is no support from the Armbian development team whatsoever.
+However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/forum/24-tv-boxes/).  Take note that there is no support from the Armbian development team whatsoever.
 
-## Why does Armbian not support TV boxes?  The market is huge!
+## Why does Armbian not support TV boxes in general? The market is huge!
 
-There are some manufacturers who produce better quality then the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development.  With proper documentation and minimal support, costs of software development are significantly lower.  This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
+There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development.  With proper documentation and minimal support, costs of software development are significantly lower.  This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
-However, in vast majority of cases, TV boxes are lacking any docuentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
+However, in vast majority of cases, TV boxes are lacking any docuentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
 
 ## There is a new board on the market. Will Armbian officially support it?
 
