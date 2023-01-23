@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v22.11.4 (2023-01-23)
+
+* [Added image for Bananapi R2 PRO](https://www.armbian.com/bananapi-r2-pro/)
+
 ## v22.11.3 (2022-12-31)
 
 * [Added image for Orange Pi 5](https://www.armbian.com/orangepi-5/) (WIP)
