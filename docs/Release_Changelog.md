@@ -5,6 +5,7 @@
 ## v22.11.4 (2023-01-23)
 
 * [Added image for Bananapi R2 PRO](https://www.armbian.com/bananapi-r2-pro/)
+* kernel(s) update
 
 ## v22.11.3 (2022-12-31)
 
