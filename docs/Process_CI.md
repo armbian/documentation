@@ -107,3 +107,11 @@ Linting is run automatically on pull requests change.
 Scorecards is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
 
 https://github.com/ossf/scorecard#what-is-scorecards
+
+# Kernel hardening analysis
+
+This analysis checks kernel config if changed.
+
+There are plenty of security hardening options for the Linux kernel. A lot of them are not enabled by the major distros. We have to enable these options ourselves to make our systems more secure.
+
+https://github.com/a13xp0p0v/kconfig-hardened-check/blob/master/README.md
