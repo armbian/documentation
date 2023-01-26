@@ -15,6 +15,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - armbian-bsp: build Armbian board support package
     - chroot: build additional packages
     - bootstrap: build bootstrap package
+    - default: build full OS Image for flashing
 - **KERNEL_ONLY** ( yes | no ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use **BUILD_ONLY** instead
     - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system<br>
       **Note:** This will enforce **BUILD_ONLY** being set as `"u-boot,kernel,armbian-config,armbian-zsh,plymouth-theme-armbian,armbian-firmware,armbian-bsp"`
