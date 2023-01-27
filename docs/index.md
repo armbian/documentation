@@ -76,7 +76,7 @@ Check [download page](https://www.armbian.com/download/) for recently maintained
 
 ## How to report bugs
 
-Due to lack of manpower we unfortunately have to be very picky about bug reports. Make sure to follow the bug reporting form available [here](https://armbian.com/bugs) to learn how to collect necessary information and where to put your report depending on type of issue. Reports lacking fundamental diagnostings may be ignored.
+Due to lack of manpower we unfortunately have to be very picky about bug reports. Make sure to follow the bug reporting form available [here](https://armbian.com/bugs) to learn how to collect necessary information and where to put your report depending on type of issue. Reports lacking fundamental diagnostics may be ignored.
 
 # Get Involved! #
 
