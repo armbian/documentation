@@ -63,20 +63,20 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
     - 600-2000Mhz @Exynos & S905
 - eth0 interrupts are using dedicated core (Allwinner based boards)
 
-## What is supported?
+## What is _supported/maintained_?
 
-Armbian will publish and distribute “stable” CLI images for supported boards through its mirror network. *Supported* is not a guarantee. *Supported* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
+Armbian will publish and distribute “stable” CLI images for maintained boards through its mirror network. *Supported/maintained* is not a guarantee. *Supported/maintained* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
 
 For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules)
 
-### Supported boards
+### Maintained boards
 
-Check [download page](https://www.armbian.com/download/) for recently supported list.
+Check [download page](https://www.armbian.com/download/) for recently maintained list.
 
 
 ## How to report bugs
 
-Due to lack of manpower we unfortunately have to be very picky about bug reports. Make sure to follow the bug reporting form available [here](https://armbian.com/bugs) to learn how to collect necessary information and where to put your report depending on type of issue.  
+Due to lack of manpower we unfortunately have to be very picky about bug reports. Make sure to follow the bug reporting form available [here](https://armbian.com/bugs) to learn how to collect necessary information and where to put your report depending on type of issue. Reports lacking fundamental diagnostings may be ignored.
 
 # Get Involved! #
 
