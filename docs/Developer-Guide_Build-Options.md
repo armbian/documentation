@@ -21,7 +21,8 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - no: build complete OS image for writing to SD card<br>
       **Note:** This will enforce **BUILD_ONLY** being cleared to empty string.
     - leave empty to display selection dialog each time
-- **KERNEL_CONFIGURE** ( yes | no ):
+- **KERNEL_CONFIGURE** ( string or boolean ):
+    - prebuilt: Use precompiled packages (only for maintained hardware)
     - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
     - no: Use provided kernel configuration provided by Armbian
     - leave empty to display selection dialog each time
