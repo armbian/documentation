@@ -27,7 +27,7 @@ Login as root and run:
 
 ```bash
 apt-get -y -qq install git  
-git clone --depth=1 --branch=master https://github.com/armbian/build  
+git clone --depth=1 --branch=main https://github.com/armbian/build  
 cd build  
 ```
 
