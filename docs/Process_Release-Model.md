@@ -46,7 +46,7 @@ Tags are used in ad-hoc manner.
 | 22.05 | Jade | May | [done](https://armbian.atlassian.net/projects/AR/versions/10010/tab/release-report-all-issues)
 | 22.08 | Yapok | August | [done](https://armbian.atlassian.net/projects/AR/versions/10011/tab/release-report-all-issues)
 | 22.11 | Goral | November | [done](https://armbian.atlassian.net/projects/AR/versions/10012/tab/release-report-all-issues)
-| 23.02 | Quoll | February | planned
+| 23.02 | Quoll | February | [done](https://armbian.atlassian.net/projects/AR/versions/10013/tab/release-report-all-issues)
 | 23.05 | Suni | May | planned
 | 23.08 | Colobus | August | planned
 | 23.11 | Topi | November | planned
