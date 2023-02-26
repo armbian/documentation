@@ -2,6 +2,66 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.02.1 (2023-02-25)
+
+## Story
+
+* [AR-1281](https://armbian.atlassian.net/browse/AR-1281) Armbian community automated build
+* [AR-1360](https://armbian.atlassian.net/browse/AR-1360) Bump Rockchip64 u-boot to 2022.07
+* [AR-1408](https://armbian.atlassian.net/browse/AR-1408) Enable EDGE branch on RK3588
+* [AR-1424](https://armbian.atlassian.net/browse/AR-1424) Refactor release index generation
+* [AR-1432](https://armbian.atlassian.net/browse/AR-1432) Adjust 3rd party drivers for kernel 6.1
+* [AR-1435](https://armbian.atlassian.net/browse/AR-1435) Generate CODEOWNER on GitHub
+* [AR-1444](https://armbian.atlassian.net/browse/AR-1444) Move repo management from the build system
+* [AR-1449](https://armbian.atlassian.net/browse/AR-1449) Adjust action scripts to adjusted logic
+* [AR-1457](https://armbian.atlassian.net/browse/AR-1457) Create kernel config security analysis 
+* [AR-1458](https://armbian.atlassian.net/browse/AR-1458) Enable AUFS on 6.1.y
+* [AR-1460](https://armbian.atlassian.net/browse/AR-1460) Address corner case when looking for default route
+* [AR-1461](https://armbian.atlassian.net/browse/AR-1461) Move hostapd from packages list
+* [AR-1470](https://armbian.atlassian.net/browse/AR-1470) Improve new issue / request handling
+* [AR-1484](https://armbian.atlassian.net/browse/AR-1484) Move meson64 CURRENT to 6.1.y
+* [AR-1531](https://armbian.atlassian.net/browse/AR-1531) Add support for various HID game controllers and Waydroid
+* [AR-1532](https://armbian.atlassian.net/browse/AR-1532) Split Bananapi M2PRO from M5
+
+## Task
+
+* [AR-1313](https://armbian.atlassian.net/browse/AR-1313) Mvebu EDGE needs to be bumped to 6.1.y
+* [AR-1507](https://armbian.atlassian.net/browse/AR-1507) Move UWE5622 from kernel patches to misc
+* [AR-1379](https://armbian.atlassian.net/browse/AR-1379) Add support for minimal images build in CI
+* [AR-1412](https://armbian.atlassian.net/browse/AR-1412) Move btrfs-progs to the minimal images
+* [AR-1413](https://armbian.atlassian.net/browse/AR-1413) Port meson sm1 emmc related patches from edge to current
+* [AR-1414](https://armbian.atlassian.net/browse/AR-1414) Move Bananapi M5 to the previous u-boot version
+* [AR-1417](https://armbian.atlassian.net/browse/AR-1417) Add gnome-disk-utility to the desktops
+* [AR-1418](https://armbian.atlassian.net/browse/AR-1418) Replace nand-sata-install with symlink to armbian-install
+* [AR-1419](https://armbian.atlassian.net/browse/AR-1419) Limit automated swap creation to 16Gb
+* [AR-1421](https://armbian.atlassian.net/browse/AR-1421) Add  nfs-common package too all except minimal
+* [AR-1429](https://armbian.atlassian.net/browse/AR-1429) Switch to better 882xbu wireless driver
+* [AR-1431](https://armbian.atlassian.net/browse/AR-1431) Improve audio config script
+* [AR-1433](https://armbian.atlassian.net/browse/AR-1433) Change error reporting when linting scripts
+* [AR-1434](https://armbian.atlassian.net/browse/AR-1434) Bump EDGE kernels to 6.1.y
+* [AR-1448](https://armbian.atlassian.net/browse/AR-1448) Update u-boot patches for JetHub D1/D1\+
+* [AR-1495](https://armbian.atlassian.net/browse/AR-1495) Change old not supported releases to EOS
+* [AR-1509](https://armbian.atlassian.net/browse/AR-1509) Orange Pi R1 Plus LTS add 2 device tree overlays for rk3328 uart1 and i2C0. Network and LED's enhancements.
+* [AR-1521](https://armbian.atlassian.net/browse/AR-1521) Add next Debian Bookworm
+* [AR-1533](https://armbian.atlassian.net/browse/AR-1533) Disable event debugging
+* [AR-1534](https://armbian.atlassian.net/browse/AR-1534) Add wpasupplicant to bookworm
+
+## Bug
+
+* [AR-1367](https://armbian.atlassian.net/browse/AR-1367) PCIe is stuck at Gen1 speed even tho overlay pcie-gen2 is specificed
+* [AR-1416](https://armbian.atlassian.net/browse/AR-1416) Missing font in Bullseye desktop cause strange fonts in Terminator
+* [AR-1437](https://armbian.atlassian.net/browse/AR-1437) Change to GitHub workflow badge routes
+* [AR-1438](https://armbian.atlassian.net/browse/AR-1438) rockPi-S patchset overwriting mainline device tree
+* [AR-1439](https://armbian.atlassian.net/browse/AR-1439) Rockchip64 NanoPi patches overwriting mainline DTS
+* [AR-1450](https://armbian.atlassian.net/browse/AR-1450) MOTD shows error on some devices
+* [AR-1463](https://armbian.atlassian.net/browse/AR-1463) Remove code was added to the sources, which creates a mess in rk3399-rock-pi-4.dts
+* [AR-1467](https://armbian.atlassian.net/browse/AR-1467) Raspberry Pi 3 is unbootable, 4 boots
+* [AR-1476](https://armbian.atlassian.net/browse/AR-1476) Missing firmware on Nanopi R2S
+* [AR-1482](https://armbian.atlassian.net/browse/AR-1482) Do not generate swap larger the 16Gb
+* [AR-1522](https://armbian.atlassian.net/browse/AR-1522) Fix SDIO port irq level bug found in 6.0\+ kernel
+* [AR-1524](https://armbian.atlassian.net/browse/AR-1524) Cracklib check library must be present in all
+* [AR-1527](https://armbian.atlassian.net/browse/AR-1527) Update patches for RTL8822CS
+
 ## v22.11.4 (2023-01-23)
 
 * [Added image for Bananapi R2 PRO](https://www.armbian.com/bananapi-r2-pro/)
