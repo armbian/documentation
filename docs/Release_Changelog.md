@@ -4,7 +4,7 @@
 
 ## v23.02.1 (2023-02-25)
 
-## Story
+## Closed projects
 
 * [AR-1281](https://armbian.atlassian.net/browse/AR-1281) Armbian community automated build
 * [AR-1360](https://armbian.atlassian.net/browse/AR-1360) Bump Rockchip64 u-boot to 2022.07
@@ -23,7 +23,7 @@
 * [AR-1531](https://armbian.atlassian.net/browse/AR-1531) Add support for various HID game controllers and Waydroid
 * [AR-1532](https://armbian.atlassian.net/browse/AR-1532) Split Bananapi M2PRO from M5
 
-## Task
+## Closed Task
 
 * [AR-1313](https://armbian.atlassian.net/browse/AR-1313) Mvebu EDGE needs to be bumped to 6.1.y
 * [AR-1507](https://armbian.atlassian.net/browse/AR-1507) Move UWE5622 from kernel patches to misc
@@ -46,7 +46,7 @@
 * [AR-1533](https://armbian.atlassian.net/browse/AR-1533) Disable event debugging
 * [AR-1534](https://armbian.atlassian.net/browse/AR-1534) Add wpasupplicant to bookworm
 
-## Bug
+## Solved Bugs
 
 * [AR-1367](https://armbian.atlassian.net/browse/AR-1367) PCIe is stuck at Gen1 speed even tho overlay pcie-gen2 is specificed
 * [AR-1416](https://armbian.atlassian.net/browse/AR-1416) Missing font in Bullseye desktop cause strange fonts in Terminator
