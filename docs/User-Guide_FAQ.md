@@ -58,7 +58,7 @@ We need many different profiles of people to run this project and just about any
 
 ## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
 
-The Armbian project has very limited human and financial ressources so it can focus only on a few up-to-date operating system releases.
+The Armbian project has very limited human and financial resources so it can focus only on a few up-to-date operating system releases.
 
 ## I have a TV Box/tablet from [insert random vendor]. Can I use Armbian on it?
 
@@ -70,11 +70,11 @@ However some community members are commited to tinkering with these devices.  Th
 
 There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development.  With proper documentation and minimal support, costs of software development are significantly lower.  This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
-However, in vast majority of cases, TV boxes are lacking any docuentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
+However, in vast majority of cases, TV boxes are lacking any documentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
 
 ## There is a new board on the market. Will Armbian officially support it?
 
-Maybe.  It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human ressources.  A Maintainer within the Armbian development team to say yes.  Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+Maybe.  It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human resources.  A Maintainer within the Armbian development team to say yes.  Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
 
 ## How can I compile my own kernel?
 
@@ -98,8 +98,8 @@ Userspace upgrades are neither tested nor supported. The reason behind is simply
 
 ## Where do I ship a board so that Armbian will add support?
 
-Unless you have an exisiting arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
-You may also add support by yourself if critera is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
+Unless you have an existing arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
+You may also add support by yourself if criteria is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
 
 ## What WiFi adapters will most likely work out of the box?
 
