@@ -61,7 +61,7 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 
 + Has the purpose to relay messages from and to our Discord server in certain channels
 
-<!--**`ArmbianTwitter`**
+<!---**`ArmbianTwitter`**
 
 + Recurring searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*-->
 
