@@ -19,7 +19,7 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 
 ### Discord
 
-Simply click here: [http://discord.armbian.com](http://discord.armbian.com)  
+Simply click here: [https://discord.gg/armbian](https://discord.gg/armbian)  
 Channels starting with `#armbian-` are relayed between Discord and IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
 
 ### Matrix
@@ -57,13 +57,13 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 
 + Has the purpose to fill #armbian-commits and #armbian-rss like described above
 
-**`Armbian-Discord`**
+**`DC-IRC`**
 
-+ Has the purpose to relay messages from and to our Discord server in certain channels
++ Has the purpose to relay messages between IRC and Discord. Applies for all channels beginning with `#armbian-`.
 
-**`ArmbianTwitter`**
+<!---**`ArmbianTwitter`**
 
-+ Recurring searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*
++ Recurring searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*-->
 
 **`ArmbianHelper`**
 
