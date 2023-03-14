@@ -57,9 +57,9 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 
 + Has the purpose to fill #armbian-commits and #armbian-rss like described above
 
-**`Armbian-Discord`**
+**`DC-IRC`**
 
-+ Has the purpose to relay messages from and to our Discord server in certain channels
++ Has the purpose to relay messages between IRC and Discord in channels beginning with `#armbian-` prefix.
 
 <!---**`ArmbianTwitter`**
 
