@@ -59,7 +59,7 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 
 **`DC-IRC`**
 
-+ Has the purpose to relay messages between IRC and Discord in channels beginning with `#armbian-` prefix.
++ Has the purpose to relay messages between IRC and Discord. Applies for all channels beginning with `#armbian-`.
 
 <!---**`ArmbianTwitter`**
 
