@@ -91,7 +91,7 @@ while on Linux/macOS, in the directory in which you have downloaded the files ,y
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run in problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-Write the xz compressed image  with [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://balena.io/etcher/) on all platforms since unlike other tools, either can validate burning results **saving you from corrupted SD card contents**.
+Write the xz compressed image  with [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://www.balena.io/etcher/) on all platforms since unlike other tools, either can validate burning results **saving you from corrupted SD card contents**.
 
 Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 

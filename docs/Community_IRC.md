@@ -19,7 +19,7 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 
 ### Discord
 
-Simply click here: [https://discord.gg/armbian](https://discord.gg/armbian)  
+Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)
 Channels starting with `#armbian-` are relayed between Discord and IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
 
 ### Matrix
