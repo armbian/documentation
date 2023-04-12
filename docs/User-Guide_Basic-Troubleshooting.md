@@ -114,4 +114,4 @@ Some combination of boards/kernel versions does not support 4k resolution. This 
 
 ## How to report bugs properly
 
-- Follow instructions on [https://armbian.com/bugs](https://armbian.com/bugs)
+- Follow instructions on [https://armbian.com/bugs/](https://armbian.com/bugs)
