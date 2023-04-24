@@ -27,9 +27,9 @@ The download for each image consists of three separate files:
 
 For each board we usually provide:
 
-- one CLI server image with Debian Buster userspace
-- one CLI server image with Ubuntu Focal userspace
-- one desktop image with Ubuntu Focal userspace **or** Debian Buster userspace
+- one CLI server image with Debian Bullseye userspace
+- one CLI server image with Ubuntu Jammy userspace
+- one desktop image with Ubuntu Jammy userspace **or** Debian Bullseye userspace
 
 Other unsupported builds may also be available (like Debian Stretch/Bullseye or Ubuntu Disco/Eoan/Hirsute).
 
