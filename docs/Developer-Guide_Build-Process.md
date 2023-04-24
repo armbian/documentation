@@ -2,11 +2,11 @@
 
 ## Build process summary:
 
-- creates development environment on top of amd64 Ubuntu 20.04 LTS,
+- creates development environment on top of amd64 Ubuntu 22.04 LTS,
 - downloads proven sources, applies patches on top and uses tested configurations,
 - cross-compiles universal boot loader (***U-Boot***), kernel and other tools and drivers,
 - packs kernel, U-Boot, dtb and root customizations into Debian packages,
-- debootstraps minimalistic Debian Buster and Ubuntu Focal into SD card images,
+- debootstraps minimalistic Debian Bullseye and Ubuntu Jammy into SD card images,
 - installs additional packets, applies customizations and shrinks image to its actual size.
 
 Check this image [compiling example](https://youtu.be/zeShf12MNLg) with partial cache.
