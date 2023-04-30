@@ -73,7 +73,7 @@ to trigger the action.
 
 Generates all desktops for arm64 and x86 arhitecture to verify if they build correctly. Build is triggered every day, manually (by [any member of Armbian project](https://github.com/orgs/armbian/people)) or in pull requests if label "Desktop" is set. Aim of this test case is to find out if there are troubles in packages relations.
 
-- releases: bullseye, sid, jammy, focal,
+- releases: bullseye, bookworm, jammy,
 - desktop environments: xfce, gnome, mate, cinnamon, budgie, kde-plasma,
 - builds are not using cached rootfs to force packages assembly,
 - included applications paths are "3dsupport browsers",
