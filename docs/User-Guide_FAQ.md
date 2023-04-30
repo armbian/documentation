@@ -84,7 +84,7 @@ However Armbian's way of building kernel images is slightly different than the s
 
 ## How do I upgrade from Armbian Buster to Bullseye?
 
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Bionic to Focal, Stretch to Buster, or Buster to Bullseye.  We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
+Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Bionic to Focal, Focal to Jammy, Stretch to Buster, or Buster to Bullseye.  We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
 
 You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand.  Also you will not receive any help from Armbian if something goes wrong or have other issues with an upgraded system.
 

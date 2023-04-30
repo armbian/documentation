@@ -48,7 +48,7 @@ You may edit it to your needs or create different configuration files using it a
 Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
-    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=focal
+    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=jammy
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.  
 Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/master/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
@@ -61,7 +61,7 @@ You can create one base configuration (`config-base.conf`) and use this in desce
 . ./config-base.conf  
   
 BRANCH="edge"  
-RELEASE="buster"  
+RELEASE="bullseye"  
 COMPRESS_OUTPUTIMAGE="sha,gz"  
 ```
 
@@ -85,8 +85,8 @@ This is a typical board configuration:
 	MODULES_NEXT="brcmfmac bonding"  
 	#  
 	KERNEL_TARGET="legacy,current,edge"  
-	CLI_TARGET="buster,focal:current"  
-	DESKTOP_TARGET="buster:legacy,current"  
+	CLI_TARGET="bullseye,jammy:current"  
+	DESKTOP_TARGET="bullseye:legacy,current"  
 	  
 	CLI_BETA_TARGET=""  
 	DESKTOP_BETA_TARGET=""  
@@ -101,13 +101,13 @@ This is a typical board configuration:
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
-Variants are dependent from `KERNEL_TARGET` definitions and supported userlands: `hirsute`, `focal`, `buster`.
+Variants are dependent from `KERNEL_TARGET` definitions and supported userlands: `jammy`, `bullseye`.
 To edit those parameters you need to push changes to the build script.
 You need to [fork a project and create a pull request](Process_Contribute.md) and after it is imported by one of the administrators, images will start to show up in appropriate folder.
 
-If you want to enable Debian buster desktop image with _current_ kernel choose the following:
+If you want to enable Debian Bullseye desktop image with _current_ kernel choose the following:
 
-	DESKTOP_BETA_TARGET="buster:current"
+	DESKTOP_BETA_TARGET="bullseye:current"
 
 or for command line interfaces Ubuntu Focal based images with legacy kernel 4.19.x
 
@@ -115,7 +115,7 @@ or for command line interfaces Ubuntu Focal based images with legacy kernel 4.19
 
 or for image with latest upstream development/bleeding edge kernel.
 
-	DESKTOP_BETA_TARGET="buster:edge"
+	DESKTOP_BETA_TARGET="bullseye:edge"
 
 
 ## Using alternate armbian builder repos and branches
