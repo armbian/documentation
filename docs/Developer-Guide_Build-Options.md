@@ -64,6 +64,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - set to `master` to compile from the master branch (default)
     - set to another "branchname" to compile from any other branch available. Check [here](https://github.com/armbian/build/branches) for available branches  
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
+- **EXT=rkdevflash** to flash Rockchip images to eMMC either during image build or separately with flash CLI command ([only works bare Linux, not Docker](https://github.com/armbian/build/pull/5058))
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
     - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
     - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
