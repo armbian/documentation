@@ -91,11 +91,7 @@ This is a typical board configuration:
 	CLI_BETA_TARGET=""  
 	DESKTOP_BETA_TARGET=""  
 	#  
-	BOARDRATING=""  
-	CHIP="https://docs.armbian.com/Hardware_Allwinner-A20/"  
-	HARDWARE="https://linux-sunxi.org/Banana_Pi"  
-	FORUMS="https://forum.armbian.com/forum/7-allwinner-a10a20/"  
-	BUY="https://amzn.to/2fToHjR"  
+	BOARDRATING=""    
 ```
 
 You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
