@@ -17,18 +17,14 @@ You can change source repository and you can change destination package reposito
 
 Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
 
-# Automatic or Manual Images Compilation
+# Official Images Compilation
 
-[![Build Images](https://github.com/armbian/build/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-images.yml)
+[![Build Official Images](https://github.com/armbian/os/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/build-images.yml)
 
-![Build](images/build-all-images.png)
 
-Automatically generates all beta images if firmware compilation was succesfull. It only rebuilds images if changes were made.
+![Build](images/build-images-ci.png)
 
-- can build release candidate or stable images,
-- can select build source repository,
-- can choose packages source repository apt.armbian.com or beta.armbian.com,
-- can build images for one or more boards with targets defined in [this configuration](https://github.com/armbian/build/blob/master/config/targets.conf).
+Regenerate predefined stable images with incrementing patch version for selected board.
 
 Manual executing rights: [Armbian release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/)
 
