@@ -13,11 +13,10 @@
 
 Not officially supported build environments from community contributions:
 
-- Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
 - [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
 - [Multipass](https://gist.github.com/atomic77/7633fcdbf99dca80f31fd6d64bfd0565)
 
-Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
+Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Docker, Virtualbox, native).
 
 ## How to start?
 
