@@ -2273,7 +2273,6 @@ Build script:
 * added docker as host
 * Added Belink X2 (H3 based media player), and Roseapple (S500) as WIP target
 * introducted CLI_TARGET per board
-* prepared FEL boot
 * prepared Xenial target
 * fixed USB redirector building on all kernels
 * support for Xenial as a build host is 95% ready.
