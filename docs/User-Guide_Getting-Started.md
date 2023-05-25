@@ -174,7 +174,7 @@ First boot will log you automatically on HDMI or serial console while for SSH lo
 
 	root@odroidxu4:~# 
 
-## How to update?
+## How to update firmware and packages?
 
 	apt update
 	apt upgrade
@@ -188,6 +188,14 @@ If the kernel was upgraded during this process you will be prompted to reboot at
 First you need to update packages described in a previous "How to update" step. Then run armbian-config utility, go to system settings and proceed to:
 
 **"Install" "Install to/update boot loader"** -> **Install/Update the bootloader on SD/eMMC**
+
+## How to upgrade distribution?
+
+Fire up `armbian-config` to freeze your firmware packages (select `System` and `Freeze`) and then follow generic upgrade instructions specific to your userspace.  
+Like for Debian: [https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html]
+Or Ubuntu: launch `do-release-upgrade`
+
+User spaces distribution upgrades, like Ubuntu Focal to Jammy or Debian Bullseye to Bookworm, are neither tested nor supported. Therefore we cannot provide support if something goes wrong.  
 
 ## How to adjust hardware features?
 
