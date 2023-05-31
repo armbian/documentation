@@ -2,6 +2,115 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.05.1 (2023-05-31)
+
+## Closed projects
+
+* [AR-1516](https://armbian.atlassian.net/browse/AR-1516) Clean base desktops
+* [AR-1536](https://armbian.atlassian.net/browse/AR-1536) Cleanup CLI packages list
+* [AR-1543](https://armbian.atlassian.net/browse/AR-1543) Update RK35xx legacy kernel to 5.10
+* [AR-1546](https://armbian.atlassian.net/browse/AR-1546) Merge all RK3588 under one kernel
+* [AR-1549](https://armbian.atlassian.net/browse/AR-1549) Unify architecture definitions
+* [AR-1557](https://armbian.atlassian.net/browse/AR-1557) Cleaning and adjusting CLI packages base
+* [AR-1567](https://armbian.atlassian.net/browse/AR-1567) Generating JSON matrix
+* [AR-1625](https://armbian.atlassian.net/browse/AR-1625) Extending JSON generation to support build matrix\(es\)
+* [AR-1639](https://armbian.atlassian.net/browse/AR-1639) Enable armbian-config ORAS cache
+* [AR-1693](https://armbian.atlassian.net/browse/AR-1693) Test as many images for upcoming 23.05 release as possible
+* [AR-1700](https://armbian.atlassian.net/browse/AR-1700) Add support for most recent memory chips on BPi M5
+* [AR-1748](https://armbian.atlassian.net/browse/AR-1748) Generate a sticky topic with instructions how to upgrade to Bookworm
+
+## Closed Task
+
+* [AR-241](https://armbian.atlassian.net/browse/AR-241) Remove NAND hacks from packaging 
+* [AR-345](https://armbian.atlassian.net/browse/AR-345) Label trigger/workflow issue to jira
+* [AR-773](https://armbian.atlassian.net/browse/AR-773) Add support and bug report URL to /etc/os-release
+* [AR-1512](https://armbian.atlassian.net/browse/AR-1512) Switch Docker pull to armbian/cache repository
+* [AR-1526](https://armbian.atlassian.net/browse/AR-1526) UWE5622 driver consolidation for rockchip64
+* [AR-1542](https://armbian.atlassian.net/browse/AR-1542) Add architecture property for distributions
+* [AR-1573](https://armbian.atlassian.net/browse/AR-1573) Move UEFI kernels to 6.2, move current to legacy
+* [AR-1574](https://armbian.atlassian.net/browse/AR-1574) Move Rpi kernels to 6.2, move current to legacy
+* [AR-1575](https://armbian.atlassian.net/browse/AR-1575) Move Odroid M1 to 6.2.y
+* [AR-1577](https://armbian.atlassian.net/browse/AR-1577) Move mvebu edge kernels to 6.2, current to 6.1, current to legacy
+* [AR-1590](https://armbian.atlassian.net/browse/AR-1590) Add another package to minimal images
+* [AR-1591](https://armbian.atlassian.net/browse/AR-1591) Armbian buster xfce image build fails at installing package numix-icon-theme-circle
+* [AR-1593](https://armbian.atlassian.net/browse/AR-1593) Add & adjust \(c\) in files
+* [AR-1598](https://armbian.atlassian.net/browse/AR-1598) Minimal builds are missing apt-utils package
+* [AR-1601](https://armbian.atlassian.net/browse/AR-1601) Add sudo, wget and htop to minimal packages
+* [AR-1602](https://armbian.atlassian.net/browse/AR-1602) add \`fonts-noto-color-emoji\` for terminal Emoji support
+* [AR-1620](https://armbian.atlassian.net/browse/AR-1620) Effectively remove Ubuntu PRO ads
+* [AR-1627](https://armbian.atlassian.net/browse/AR-1627) Automatically clean docker images
+* [AR-1642](https://armbian.atlassian.net/browse/AR-1642) Could not create a username containing a number 
+* [AR-1645](https://armbian.atlassian.net/browse/AR-1645) Installer should handle input in the same way everywhere
+* [AR-1651](https://armbian.atlassian.net/browse/AR-1651) Change Debian Bookworm into supported target
+* [AR-1655](https://armbian.atlassian.net/browse/AR-1655) Enable CONFIG\_EXFAT\_FS on remaining kernels
+* [AR-1656](https://armbian.atlassian.net/browse/AR-1656) Execute build train if kernel config changes
+* [AR-1660](https://armbian.atlassian.net/browse/AR-1660) Enable OrangePi Zero \(LTS\) TV output
+* [AR-1663](https://armbian.atlassian.net/browse/AR-1663) Add NanoPi R6S / R6C
+* [AR-1664](https://armbian.atlassian.net/browse/AR-1664) Rebuild board selection for generating official images
+* [AR-1669](https://armbian.atlassian.net/browse/AR-1669) Optimise PNG images we are using
+* [AR-1674](https://armbian.atlassian.net/browse/AR-1674) Bump rockchip 32 bit edge to kernel 6.3
+* [AR-1679](https://armbian.atlassian.net/browse/AR-1679) Drop kernel-jetson-nano-legacy
+* [AR-1680](https://armbian.atlassian.net/browse/AR-1680) Drop kernel-rockchip-legacy
+* [AR-1681](https://armbian.atlassian.net/browse/AR-1681) Drop kernel-rk3399-legacy
+* [AR-1682](https://armbian.atlassian.net/browse/AR-1682) Drop kernel-rockchip64-legacy
+* [AR-1683](https://armbian.atlassian.net/browse/AR-1683) Enable H616 CPU freq scaling
+* [AR-1695](https://armbian.atlassian.net/browse/AR-1695) Bump rockchip64 current to 6.1.y
+* [AR-1697](https://armbian.atlassian.net/browse/AR-1697) Add support for FriendlyElec NanoPi R4SE
+* [AR-1698](https://armbian.atlassian.net/browse/AR-1698) Add NILFS2 fs support
+* [AR-1699](https://armbian.atlassian.net/browse/AR-1699) Improve SD card compatibility on Radxa E25
+* [AR-1706](https://armbian.atlassian.net/browse/AR-1706) Disable SKEL update mechanism from postinst
+* [AR-1708](https://armbian.atlassian.net/browse/AR-1708) Improve i3-wm support
+* [AR-1713](https://armbian.atlassian.net/browse/AR-1713) Introduce armbian-base-files artefact
+* [AR-1717](https://armbian.atlassian.net/browse/AR-1717) Disable debug for postinst
+* [AR-1747](https://armbian.atlassian.net/browse/AR-1747) Orangepi-r1plus-lts Network Interface logical names have changed and broken networking
+* [AR-1760](https://armbian.atlassian.net/browse/AR-1760) Move Khadas Edge 2 to supported build targets
+* [AR-1586](https://armbian.atlassian.net/browse/AR-1586) Consolidate RTL8723CS driver for all families
+
+## Solved Bug
+
+* [AR-1443](https://armbian.atlassian.net/browse/AR-1443) NanoPi R4S patch overwriting mainline base DTS, needs refactored
+* [AR-1474](https://armbian.atlassian.net/browse/AR-1474) Emoji not shown 
+* [AR-1523](https://armbian.atlassian.net/browse/AR-1523) UEFI install seems to be broken to some degree
+* [AR-1528](https://armbian.atlassian.net/browse/AR-1528) Nanopi Neo stuck in boot loop
+* [AR-1537](https://armbian.atlassian.net/browse/AR-1537) Missing man-db in images
+* [AR-1541](https://armbian.atlassian.net/browse/AR-1541) UEFI swap problem and missing UUID for EFI partition
+* [AR-1545](https://armbian.atlassian.net/browse/AR-1545) Update jethub prepackages python modules to install via apt
+* [AR-1547](https://armbian.atlassian.net/browse/AR-1547) Jetson Nano legacy fails do build kernel
+* [AR-1548](https://armbian.atlassian.net/browse/AR-1548) Odroid XU4 kernel compilation is failing current / edge
+* [AR-1556](https://armbian.atlassian.net/browse/AR-1556) "No space left on device" while rsync root files to image
+* [AR-1569](https://armbian.atlassian.net/browse/AR-1569) APT cache needs to be cleaned before closing image
+* [AR-1578](https://armbian.atlassian.net/browse/AR-1578) Missing blobs for Riscv
+* [AR-1588](https://armbian.atlassian.net/browse/AR-1588) Linter checking for bash shebang is incorrect
+* [AR-1589](https://armbian.atlassian.net/browse/AR-1589) Kernel analysis is checking too many files
+* [AR-1603](https://armbian.atlassian.net/browse/AR-1603) Broken wireless driver  8821cu-20210118 
+* [AR-1611](https://armbian.atlassian.net/browse/AR-1611) Armbian install broken when installing to USB
+* [AR-1615](https://armbian.atlassian.net/browse/AR-1615) Bad links Orangepizero2
+* [AR-1621](https://armbian.atlassian.net/browse/AR-1621) Raspberry Pi does not build
+* [AR-1623](https://armbian.atlassian.net/browse/AR-1623) Armbian install fails to start on minimal images
+* [AR-1628](https://armbian.atlassian.net/browse/AR-1628) Orange Pi Zero 2 doesn't work
+* [AR-1644](https://armbian.atlassian.net/browse/AR-1644) armbian-audio-config fails in minimal images; alsa-utils missing
+* [AR-1648](https://armbian.atlassian.net/browse/AR-1648) Debian SID also split non-free firmware packages
+* [AR-1650](https://armbian.atlassian.net/browse/AR-1650) Remote Desktop doesn't work on desktop images
+* [AR-1653](https://armbian.atlassian.net/browse/AR-1653) Both Firefox and Chromium are not installing from our repo
+* [AR-1658](https://armbian.atlassian.net/browse/AR-1658) Wrong artefacts creation
+* [AR-1666](https://armbian.atlassian.net/browse/AR-1666) File with unexpected execution rights
+* [AR-1667](https://armbian.atlassian.net/browse/AR-1667) RockPI-S audio support is gone
+* [AR-1671](https://armbian.atlassian.net/browse/AR-1671) Packages are being downgraded to their repo versions
+* [AR-1673](https://armbian.atlassian.net/browse/AR-1673) uboot v2018.05-sun50iw9 compile error
+* [AR-1675](https://armbian.atlassian.net/browse/AR-1675) Nezha has wrong manufactur attached
+* [AR-1676](https://armbian.atlassian.net/browse/AR-1676) Can't build linux-u-boot-radxa-e25-legacy and edge
+* [AR-1677](https://armbian.atlassian.net/browse/AR-1677) Fix building rk322x with vendor 4.4 kernel
+* [AR-1678](https://armbian.atlassian.net/browse/AR-1678) Can't build Macchiatobin-doubleshot
+* [AR-1685](https://armbian.atlassian.net/browse/AR-1685) Rock 3A is missing current kernel def
+* [AR-1692](https://armbian.atlassian.net/browse/AR-1692) Raspberry Pi does not boot
+* [AR-1705](https://armbian.atlassian.net/browse/AR-1705) Jethome repository missing Lunar and Bookworm index
+* [AR-1714](https://armbian.atlassian.net/browse/AR-1714) Our packages md hash files contains temporally path
+* [AR-1715](https://armbian.atlassian.net/browse/AR-1715) Permission problem when building with GHA
+* [AR-1733](https://armbian.atlassian.net/browse/AR-1733) Base files does not work for riscv64 due to anomaly
+* [AR-1750](https://armbian.atlassian.net/browse/AR-1750) Missing information in BSP about repository and build FW commit
+* [AR-1751](https://armbian.atlassian.net/browse/AR-1751) Ubuntu Advantage is not completely removed
+
+
 ## v23.02.1 (2023-02-25)
 
 ## Closed projects
