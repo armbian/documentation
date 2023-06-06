@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.05.2 (2023-06-06)
+
+* [AR-1765](https://armbian.atlassian.net/browse/AR-1765) Recreate images that are broken/missing in 23.05 release
+
 ## v23.05.1 (2023-05-31)
 
 ## Closed projects
