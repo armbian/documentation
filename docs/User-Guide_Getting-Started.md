@@ -21,39 +21,35 @@ Please, make sure you have:
 
 The download for each image consists of three separate files:
 
-- a **xz-compressed image file**,
-- a **sha file** for download verification
-- and an **asc file** for image authentication.  
+- **.xz**-compressed image file
+- **.sha file** for download verification
+- **.asc file** for image authentication  
 
-For each board we usually provide:
+For each board we usually provide various image types:
 
-- one CLI server image with Debian Bullseye userspace
-- one CLI server image with Ubuntu Jammy userspace
-- one desktop image with Ubuntu Jammy userspace **or** Debian Bullseye userspace
+- **CLI** - server variant without desktop environment
+- **minimal** - very lightweight server variant with just the bare minimum, not even includes `armbian-config`. Everything can be installed via `apt`.
+- **Desktop** full featured desktop image with either Ubuntu Jammy userspace **or** Debian Bookworm userspace
 
-Other unsupported builds may also be available (like Debian Stretch/Bullseye or Ubuntu Disco/Eoan/Hirsute).
-
+Other (unsupported) builds may also be available (like Debian Bullseye/Sid or Ubuntu Lunar/Mantic).
 Some boards have different options due to their hardware specialities - router or IoT boards.
 
-### Legacy or current?
+### Legacy, current or edge?
 
-Only _current_ kernel branch is considered fully supported and can bring up video acceleration for example. NAND support is there but is still experimental.
+- **legacy** is either a vendor provided kernel or an old LTS mainline kernel. Use if either _current_ is not available or something does not work well.
+- **current** is usually following current mainline LTS kernel and considered fully supported and can bring up features video acceleration for example
+- **edge** is as the name implies cutting-edge and usually following the latest mainline kernel or 3rd party development branch. Untested, unstable, can break at any time, for experienced users only.
 
-The level of kernel support does depend on the board family. If in your specific case something does not work well, you are always free to try an image with _legacy_ kernel included.
+The level of kernel support however always depends on the board family. 
+If in your specific case something does not work well, you are always free to try an image with an other kernel included.
 
-### What are testing images?
+### What are testing images *(WIP)*?
 
 - made from stable branches
 - not very well tested
 - for end users
 
-### What are experimental/bleeding edge images?
-
-- made from unstable branches
-- untested
-- for experienced users only
-
-Do not use testing or edge images in a productive environment. We do appreciate  your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
+**Do not use** testing or edge images in a productive environment. We do appreciate your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 ### How to check download authenticity?
 
