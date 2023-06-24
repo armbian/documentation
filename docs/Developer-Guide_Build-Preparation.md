@@ -42,8 +42,9 @@ Make sure that full path to the build script **does not contain spaces**.
 
 ## Providing build configuration
 
-After the first run of `compile.sh` a new configuration file `config-example.conf` and symlink `config-default.conf` will be created.
-You may edit it to your needs or create different configuration files using it as a template.
+After the first run of `compile.sh` a new configuration file `config-example.conf` and symlink `config-default.conf` will be created in `userpatches`.
+You may edit it to your needs or create different configuration files using it as a template. To start a build with a specific configuration file, e.g. for `config-foo.conf`
+	./compile.sh foo
 
 Alternatively you can supply options as command line parameters to compile.sh.
 Example:
