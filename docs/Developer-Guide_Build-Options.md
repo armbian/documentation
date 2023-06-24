@@ -57,7 +57,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **EXTERNAL_NEW** ( no | prebuilt | compile ):
     - prebuilt: install extra applications from repository
     - compile: compile extra applications in chroot  
-- **CREATE_PATCHES** ( yes | **no** ):
+- **CREATE_PATCHES** ( yes | **no** ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use the new `kernel-patch` / `uboot-patch` / `atf-patch` CLI commands instead.
     - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes patch files will be created and placed in `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say) these files need to be copied to the appropriate directories. Also see [user provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches).
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 - **LIB_TAG** ( master | "branchname" ):
