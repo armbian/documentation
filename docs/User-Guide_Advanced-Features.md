@@ -54,29 +54,13 @@ Check which wireless stations / routers are in range
 
 ## How to run Docker? 
 
-Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt-get install docker.io`.   If you prefer to use the latest docker builds provided directly by Docker.  Please follow the guide below.
+Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt install docker.io`.   
 
-Preinstallation requirements:
-
-- Armbian 20.08.17 or newer with Kernel 3.10 or higher
-- Debian Buster (might work elsewhere with some modifications)
-- root access
-
-This method is based on Docker Debian installation [documentation](https://docs.docker.com/engine/install/debian/). Execute this as root:
-
-```bash
-apt-get remove docker docker-engine docker.io containerd runc
-apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
-add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-apt update
-apt-get install docker-ce docker-ce-cli containerd.io
-``` 
 
 Test if Docker works correctly:
 
 ```bash
-docker run hello-world
+docker run --rm hello-world
 ```
 
 If you get that kind of output, then Docker install went fine:
@@ -97,7 +81,7 @@ You will have to log out, and log in once more in order to be able to run Docker
 Let's try a last test to see if a Docker container can be seen outside of your Armbian machine:
 
 ```bash
-docker run -d -p 80:80 hypriot/rpi-busybox-httpd
+docker run --rm -d -p 80:80 hypriot/rpi-busybox-httpd
 ```
 
 ... and point the browser of any device in the same network to `http://<IP OF YOUR DEVICE>/`
