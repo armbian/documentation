@@ -21,39 +21,35 @@ Please, make sure you have:
 
 The download for each image consists of three separate files:
 
-- a **xz-compressed image file**,
-- a **sha file** for download verification
-- and an **asc file** for image authentication.  
+- **.xz**-compressed image file
+- **.sha file** for download verification
+- **.asc file** for image authentication  
 
-For each board we usually provide:
+For each board we usually provide various image types:
 
-- one CLI server image with Debian Buster userspace
-- one CLI server image with Ubuntu Focal userspace
-- one desktop image with Ubuntu Focal userspace **or** Debian Buster userspace
+- **CLI** - server variant without desktop environment
+- **minimal** - very lightweight server variant with just the bare minimum, not even includes `armbian-config`. Everything can be installed via `apt`.
+- **Desktop** full featured desktop image with either Ubuntu Jammy userspace **or** Debian Bookworm userspace
 
-Other unsupported builds may also be available (like Debian Stretch/Bullseye or Ubuntu Disco/Eoan/Hirsute).
-
+Other (unsupported) builds may also be available (like Debian Bullseye/Sid or Ubuntu Lunar/Mantic).
 Some boards have different options due to their hardware specialities - router or IoT boards.
 
-### Legacy or current?
+### Legacy, current or edge?
 
-Only _current_ kernel branch is considered fully supported and can bring up video acceleration for example. NAND support is there but is still experimental.
+- **legacy** is either a vendor provided kernel or an old LTS mainline kernel. Use if either _current_ is not available or something does not work well.
+- **current** is usually following current mainline LTS kernel and considered fully supported and can bring up features video acceleration for example
+- **edge** is as the name implies cutting-edge and usually following the latest mainline kernel or 3rd party development branch. Untested, unstable, can break at any time, for experienced users only.
 
-The level of kernel support does depend on the board family. If in your specific case something does not work well, you are always free to try an image with _legacy_ kernel included.
+The level of kernel support however always depends on the board family. 
+If in your specific case something does not work well, you are always free to try an image with an other kernel included.
 
-### What are testing images?
+### What are testing images *(WIP)*?
 
 - made from stable branches
 - not very well tested
 - for end users
 
-### What are experimental/bleeding edge images?
-
-- made from unstable branches
-- untested
-- for experienced users only
-
-Do not use testing or edge images in a productive environment. We do appreciate  your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
+**Do not use** testing or edge images in a productive environment. We do appreciate your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 ### How to check download authenticity?
 
@@ -91,7 +87,7 @@ while on Linux/macOS, in the directory in which you have downloaded the files ,y
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run in problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
-Write the xz compressed image  with [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://balena.io/etcher/) on all platforms since unlike other tools, either can validate burning results **saving you from corrupted SD card contents**.
+Write the xz compressed image  with [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://www.balena.io/etcher/) on all platforms since unlike other tools, either can validate burning results **saving you from corrupted SD card contents**.
 
 Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
@@ -174,7 +170,7 @@ First boot will log you automatically on HDMI or serial console while for SSH lo
 
 	root@odroidxu4:~# 
 
-## How to update?
+## How to update firmware and packages?
 
 	apt update
 	apt upgrade
@@ -189,11 +185,21 @@ First you need to update packages described in a previous "How to update" step. 
 
 **"Install" "Install to/update boot loader"** -> **Install/Update the bootloader on SD/eMMC**
 
+## How to upgrade distribution (like Focal to Jammy or Bullseye to Bookworm)?
+
+Fire up `armbian-config` to freeze your firmware packages (if not frozen already, select `System` and `Freeze`).  
+Then follow generic upgrade instructions specific to your userspace:  
+
+- Like for Debian: [https://www.debian.org/releases/bookworm/arm64/release-notes/ch-upgrading.en.html](https://www.debian.org/releases/bookworm/arm64/release-notes/ch-upgrading.en.html)  
+- Or Ubuntu: launch `do-release-upgrade`
+
+__Attention:__ Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  
+
 ## How to adjust hardware features?
 
 [Use the Armbian configuration utility `armbian-config`](User-Guide_Armbian-Config.md)
 
-## How to install to eMMC, NAND, SATA & USB?
+## How to install to eMMC, NAND, SATA, NVME & USB?
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
@@ -204,28 +210,33 @@ NAND:
  * kernel 3.4.x and NAND storage
  * pre-installed system on NAND (stock Android or other Linux)
 
-eMMC/SATA/USB:
+eMMC/SATA/USB/NVME:
 
  * any kernel
  * onboard eMMC storage
- * attached SATA or USB storage
+ * attached SATA, NVME or USB storage
 
 Start the install script:
 
-	nand-sata-install
+	armbian-install
 
-and follow the guide. You can create up to three scenarios:
+and follow the guide. Theose are all possible scenarios:
 
  * boot from SD, system on SATA / USB
  * boot from eMMC / NAND, system on eMMC/NAND
- * boot from eMMC / NAND, system on SATA / USB
+ * boot from eMMC / NAND, system on SATA / USB / NVME
+ * Boot from SPI - system on SATA, USB or NVMe
+ * Install/Update the bootloader on SD/eMMC
+ * Install/Update the bootloader on special eMMC partition
+ * Install/Update the bootloader on SPI Flash
+ * Install system to UEFI disk
 
 and you can choose the following file system options:
 
  * ext2,3,4
  * btrfs
 
-On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `nand-sata-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?tab=comments#comment-13163) for details).
+On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `armbian-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?tab=comments#comment-13163) for details).
 
 ## How to connect to wireless?
 

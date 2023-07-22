@@ -1,5 +1,7 @@
 # Armbian configuration utility
 
+### Note: armbian-config is undergoing major rewrite and therefore is not receiving much attention. So functions might not be available or even broken, especially on more recent boards.
+
 ![](https://raw.githubusercontent.com/armbian/config/master/images/animated-888.gif)
 
 Is a base utility for configuring your board, divided into four main sections:
@@ -72,7 +74,7 @@ Software installation menu provides automated install of the following packages.
 	- [UrBackup](https://www.urbackup.org/) *(client/server backup system)*
 	- [Docker](https://www.docker.com) *(Docker CE engine)*
 	- [Mayan EDMS](https://www.mayan-edms.com/) *(Document management system within Docker)*
-	- [MiniDLNA](http://minidlna.sourceforge.net/) *(media sharing)*
+	- [MiniDLNA](https://minidlna.sourceforge.net/) *(media sharing)*
 - **M**onitor = simple CLI monitoring 
 - **D**iagnostics = create a summary of logs and upload them to paste.bin
 - **T**oggle kernel headers, RDP service, Thunderbird and Libreoffice (desktop builds)

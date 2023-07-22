@@ -44,8 +44,14 @@ Tags are used in ad-hoc manner.
 | 21.11 | Sambar | November | [cancelled](http://meeting.armbian.de/armbian.2021-10-16-14.01.txt)
 | 22.02 | Pig | February | [done](https://armbian.atlassian.net/projects/AR/versions/10009/tab/release-report-all-issues)
 | 22.05 | Jade | May | [done](https://armbian.atlassian.net/projects/AR/versions/10010/tab/release-report-all-issues)
-| 22.08 | Yapok | August | planned
-| 22.11 | Goral | November | planned
+| 22.08 | Yapok | August | [done](https://armbian.atlassian.net/projects/AR/versions/10011/tab/release-report-all-issues)
+| 22.11 | Goral | November | [done](https://armbian.atlassian.net/projects/AR/versions/10012/tab/release-report-all-issues)
+| 23.02 | Quoll | February | [done](https://armbian.atlassian.net/projects/AR/versions/10013/tab/release-report-all-issues)
+| 23.05 | Suni | May | [done](https://armbian.atlassian.net/projects/AR/versions/10014/tab/release-report-all-issues)
+| 23.08 | Colobus | August | planned
+| 23.11 | Topi | November | planned
+
+ 
  
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
@@ -70,6 +76,16 @@ Dates for **2022**:
 
  *  January [29th](http://meeting.armbian.de/armbian.2022-01-29-13.02.html)
  *  April [23th](http://meeting.armbian.de/armbian.2022-04-23-14.00.html)
+ *  August [13th](http://meeting.armbian.de/armbian.2022-08-13-14.00.html)
+ *  October (canceled)
+
+Dates for **2023**:
+
+ *  January [7th](http://meeting.armbian.de/armbian.2023-01-07-15.04.html)
+ *  April [1st](http://meeting.armbian.de/armbian.2023-04-01-14.57.html)
+ *  August [5th]
+ *  October [7th]
+
 
 ### Agenda:
 
@@ -125,7 +141,7 @@ Dates for **2022**:
 #help - Add a "Call for Help" to the minutes. Use this command when you need to recruit someone to do a task.
 ```
 
-Meeting location is IRC channel [#armbian](https://webchat.freenode.net/?channels=armbian) on [freenode](https://freenode.net/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
+Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera](https://libera.chat/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
 
 ## Release Coordinating
 

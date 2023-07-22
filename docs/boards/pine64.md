@@ -1,1 +1,1 @@
-- it's recommended to power the board through GPIO header
+See the [board details](../board_details/pine64.md).

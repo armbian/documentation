@@ -23,7 +23,7 @@ Almost all features of the H3 SoC are supported on Armbian's _current_ branch. P
 
 - An insufficient power supply **is the root cause of many weird symptoms/problems**. Never trust in ratings written on the PSU since they might be wrong, the PSU might be old/dying and cable/contact resistance adds to problems. In other words: Before you blame Armbian for strange behaviour please try at least one second power supply (this applies to both PSU and cable between PSU and board if this is separate -- especially USB cables really suck due to high resistance leading to severe voltage drops).
 - In case you experience instabilities check your SD card using `armbianmonitor -c $HOME` and think about installing [RPi-Monitor for H3](https://www.cnx-software.com/2016/03/17/rpi-monitor-is-a-web-based-remote-monitor-for-arm-development-boards-such-as-raspberry-pi-and-orange-pi/) to get an idea whether you suffer from overheating (`sudo armbianmonitor -r` will install everything needed).
-- Especially for desktop images the speed of your SD card matters. If possible try to use our _nand-sata-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](https://forum.armbian.com/topic/793-moving-to-harddisk/)).
+- Especially for desktop images the speed of your SD card matters. If possible try to use our _armbian-install_ script to move the rootfs away from SD card. The script also works with USB disks flawlessly ([some background information](https://forum.armbian.com/topic/793-moving-to-harddisk/)).
 
 ## Tips and tricks (H3 specific / lowering consumption) (outdated)
 

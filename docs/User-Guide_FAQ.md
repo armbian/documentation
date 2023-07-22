@@ -28,7 +28,7 @@ We are covering a large swath of diverse, custom designed ARM hardware in ways, 
 
 ### Infrastructure and operations
 
-We have to maintain our infrastructure where biggest costs are - once again - people's time, followed by electricity, then hardware itself.  Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us.  A new sponsored box usually brings us more costs then benefits -- since benefit is anyway public.
+We have to maintain our infrastructure where biggest costs are - once again - people's time, followed by electricity, then hardware itself.  Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us.  A new sponsored board usually brings us more costs then benefits -- since benefit is anyway public.
 
 ### Support time
 
@@ -56,25 +56,25 @@ Armbian moves things forward and follows mainline kernel as much as possible, to
 
 We need many different profiles of people to run this project and just about any help is appreciated, not just help on development.  Since otherwise developers have to fix web pages, developers have to run projects, developers have to seek for money, developers have to maintain servers, developers have to maintain forum, developers have to moderate forums, developers have to maintain infrastructure, developers have to maintain relations with partners, developers have to waste time on repeated support question, developers have to deal with "customers", ...
 
-## Why are old-stable distributions like Ubuntu Bionic or Debian Stretch not supported?
+## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
 
-The Armbian project has very limited human and financial ressources so it can focus only on a few up-to-date operating system releases.
+The Armbian project has very limited human and financial resources so it can focus only on a few up-to-date operating system releases.
 
 ## I have a TV Box/tablet from [insert random vendor]. Can I use Armbian on it?
 
 No.
 
-However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/clubs/1-tv-boxes/).  Take note that there is no support from the Armbian development team whatsoever.
+However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/forum/24-tv-boxes/).  Take note that there is no support from the Armbian development team whatsoever.
 
-## Why does Armbian not support TV boxes?  The market is huge!
+## Why does Armbian not support TV boxes in general? The market is huge!
 
-There are some manufacturers who produce better quality then the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development.  With proper documentation and minimal support, costs of software development are significantly lower.  This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
+There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development.  With proper documentation and minimal support, costs of software development are significantly lower.  This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
-However, in vast majority of cases, TV boxes are lacking any docuentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
+However, in vast majority of cases, TV boxes are lacking any documentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
 
 ## There is a new board on the market. Will Armbian officially support it?
 
-Maybe.  It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human ressources.  A Maintainer within the Armbian development team to say yes.  Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+Maybe.  It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human resources.  A Maintainer within the Armbian development team to say yes.  Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
 
 ## How can I compile my own kernel?
 
@@ -84,7 +84,7 @@ However Armbian's way of building kernel images is slightly different than the s
 
 ## How do I upgrade from Armbian Buster to Bullseye?
 
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Bionic to Focal, Stretch to Buster, or Buster to Bullseye.  We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
+Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Bionic to Focal, Focal to Jammy, Stretch to Buster, or Buster to Bullseye.  We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
 
 You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand.  Also you will not receive any help from Armbian if something goes wrong or have other issues with an upgraded system.
 
@@ -98,5 +98,9 @@ Userspace upgrades are neither tested nor supported. The reason behind is simply
 
 ## Where do I ship a board so that Armbian will add support?
 
-Unless you have an exisiting arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
-You may also add support by yourself if critera is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
+Unless you have an existing arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
+You may also add support by yourself if criteria is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
+
+## What WiFi adapters will most likely work out of the box?
+
+Check [here](https://github.com/morrownr/USB-WiFi).

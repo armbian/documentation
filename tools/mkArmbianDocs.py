@@ -135,6 +135,9 @@ markdown_extensions:
       linenums: true
       use_pygments: true
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
   - Home: index.md

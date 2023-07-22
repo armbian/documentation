@@ -19,23 +19,25 @@ Install and recreate kernel headers scripts (optional)
 	cd /usr/src/linux-headers-$(uname -r)
 	make scripts
 
-Go back to root directory and fetch sources (working example, use ARCH=arm64 on 64bit system)
+Go back to root directory and fetch sources (working example, use `ARCH=arm64` on 64bit system)
 
 	cd
 	git clone https://github.com/pvaret/rtl8192cu-fixes.git
 	cd rtl8192cu-fixes
 	make ARCH=arm
+
 Load driver for test
 
 	insmod 8192cu.ko
 
-Check dmesg and the last entry will be:
+Check `dmesg` and the last entry will be:
 
 	usbcore: registered new interface driver rtl8192cu
 
 Plug the USB wireless adaptor and issue a command:
 
 	iwconfig wlan0
+
 You should see this:
 
 	wlan0   unassociated  Nickname:"<WIFI@REALTEK>"
@@ -52,7 +54,8 @@ Check which wireless stations / routers are in range
 
 	iwlist wlan0 scan | grep ESSID
 
-## How to run Docker? 
+## How to run Docker?
+
 
 Docker works reliably with the distribution-provided builds of docker.  It's as simple as `apt install docker.io docker-compose`.   
 
@@ -74,7 +77,7 @@ If you would like to use Docker as a non-root user, you should now consider addi
 
 ```bash
 usermod -aG docker your-user
-``` 
+```
 
 You will have to log out, and log in once more in order to be able to run Docker without being root.
 
@@ -119,7 +122,7 @@ Required conditions:
 - IR hardware
 - loaded driver
 
-Get your [remote configuration](http://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](https://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands).
+Get your [remote configuration](https://lirc.sourceforge.net/remotes/) (lircd.conf) or [learn](https://kodi.wiki/view/HOW-TO:Setup_Lirc#Learning_Commands).
 
 - Note: As of 2020-11-25, the above (Kodi / learn) link is broken.  However I am not sure what to replace it with.  If you know (or find out) please [submit a PR](/Process_Contribute/).  - TRS-80
 
@@ -131,7 +134,7 @@ To start with learning process you need to delete old config:
 
 	rm /etc/lircd.conf
 
-Than start the process with:
+Then start the process with:
 
 	irrecord --driver=default --device=/dev/lirc0 /etc/lircd.conf
 

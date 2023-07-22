@@ -16,9 +16,9 @@ jobs:
         python-version: [3.8]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
@@ -31,7 +31,7 @@ jobs:
           mkdocs build --clean
 
       - name: Upload pdf
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artifact
           path: site/pdf/document.pdf
@@ -42,8 +42,8 @@ jobs:
     env:
       TZ: GMT
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
         with:
           name: artifact
       # - name: Add
@@ -65,24 +65,19 @@ jobs:
         id: vars
         shell: bash
         run: |
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          echo "::set-output name=timenow::$(date +'%Y-%m-%d')"
+          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          echo "timenow=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: Rename release artifact
+        shell: bash
+        run: |
+          mv -v document.pdf armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ steps.vars.outputs.sha_short }}
-          release_name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
+          tag: ${{ steps.vars.outputs.sha_short }}
+          name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
           draft: false
           prerelease: false
-      - name: Upload PDF to releases
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: document.pdf
-          asset_name: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
-          asset_content_type: application/pdf
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
+          artifactContentType: application/pdf

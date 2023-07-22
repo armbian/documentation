@@ -5,11 +5,25 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 ## Main options
 
 
-- **KERNEL_ONLY** ( yes | no ):
-    - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system
-    - no: build complete OS image for writing to SD card
+- **BUILD_ONLY** (comma-separated list): defines what artifacts should be built. Default value is empty string - will build all artifacts. Changing this option can be useful to build partial artifacts only.
+    - u-boot: build U-Boot
+    - kernel: build Kernel
+    - armbian-config: build Armbian config
+    - armbian-zsh: build Armbian zsh
+    - plymouth-theme-armbian: build Armbian Plymouth theme
+    - armbian-firmware: build Armbian firmware
+    - armbian-bsp: build Armbian board support package
+    - chroot: build additional packages
+    - bootstrap: build bootstrap package
+    - default: build full OS image for flashing
+- **KERNEL_ONLY** ( yes | no ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use **BUILD_ONLY** instead
+    - yes: compiles only kernel, U-Boot and other packages for installation on existing Armbian system<br>
+      **Note:** This will enforce **BUILD_ONLY** being set as `"u-boot,kernel,armbian-config,armbian-zsh,plymouth-theme-armbian,armbian-firmware,armbian-bsp"`
+    - no: build complete OS image for writing to SD card<br>
+      **Note:** This will enforce **BUILD_ONLY** being cleared to empty string.
     - leave empty to display selection dialog each time
-- **KERNEL_CONFIGURE** ( yes | no ):
+- **KERNEL_CONFIGURE** ( string or boolean ):
+    - prebuilt: Use precompiled packages (only for maintained hardware)
     - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
     - no: Use provided kernel configuration provided by Armbian
     - leave empty to display selection dialog each time
@@ -43,13 +57,14 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **EXTERNAL_NEW** ( no | prebuilt | compile ):
     - prebuilt: install extra applications from repository
     - compile: compile extra applications in chroot  
-- **CREATE_PATCHES** ( yes | **no** ):
+- **CREATE_PATCHES** ( yes | **no** ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use the new `kernel-patch` / `uboot-patch` / `atf-patch` CLI commands instead.
     - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes patch files will be created and placed in `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say) these files need to be copied to the appropriate directories. Also see [user provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches).
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 - **LIB_TAG** ( master | "branchname" ):
     - set to `master` to compile from the master branch (default)
     - set to another "branchname" to compile from any other branch available. Check [here](https://github.com/armbian/build/branches) for available branches  
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
+- **EXT=rkdevflash** to flash Rockchip images to eMMC either during image build or separately with flash CLI command ([only works bare Linux, not Docker](https://github.com/armbian/build/pull/5058))
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
     - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
     - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
@@ -63,7 +78,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 ## Hidden options to minimize user input for build automation
 - **BOARD** ( `string` ): set name of board manually to skip dialog prompt
 - **BRANCH** ( `legacy` | `current` | `edge` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
-- **RELEASE** ( `stretch` | `buster` | `bullseye` | `bionic` | `focal` | `hirsute` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package  
+- **RELEASE** ( `bullseye` | `bookworm` | `jammy` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 - **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
 - **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
@@ -94,7 +109,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
-- **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | xfs | nfs | fel ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
+- **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | nilfs2 | xfs | nfs | fel ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
 - **BTRFS_COMPRESSION** ( lzo | none | **zlib** | zstd ): when choosing `ROOTFS_TYPE=btrfs` select `btrfs` filesystem compression method and compression level. By default the compression is `zlib`.  
 When selecting `zstd` or setting zlib compression level(`zlib:[1-9]`) user must ensure kernel version is **>=4.14.x**.  
 When selecting zstd compression level (`zstd:[1-15]`) both the host and the target kernel version must be **>=5.1.x** since kernel started supporting zstd compression ratio only from 5.1 on.  
@@ -125,8 +140,11 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 	- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
 	- leave empty to use default settings
 - **USE_TORRENT** ( yes | **no** ): use torrent to download toolchains and rootfs
-- **ROOT_FS_CREATE_ONLY** ( `FORCE` ): set to skip rootfs download and create locally
+- **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
 - **AUFS** ( **yes** | no ): Include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
 - **SKIP_BOOTSPLASH** ( yes | **no** ): Use kernel bootsplash. Disable in case of troubles
+- **CONSOLE_AUTOLOGIN** ( **yes** | no ): Automatically login as root for local consoles. Disable if your security threat model requires.
+- **EXT** (`fake-vcgencmd`): execute [extension](/Developer-Guide_Extensions/) during the build
+	- `fake-vcgencmd`: include [fake vcgencmd](https://github.com/clach04/fake_vcgencmd) to monitor and control boards from [Android](https://eidottermihi.github.io/rpicheck/)

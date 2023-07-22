@@ -19,7 +19,7 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 
 ### Discord
 
-Simply click here: [https://discord.gg/gNJ2fPZKvc](https://discord.gg/gNJ2fPZKvc)  
+Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)
 Channels starting with `#armbian-` are relayed between Discord and IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
 
 ### Matrix
@@ -33,7 +33,7 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 
 ## 💬 Channels
 
-+ **`#armbian`** is the project's main channel. As for now all user interaction happens there, regardless if chit-chat, issue tracking, peer-to-peer user support or even [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
++ **`#armbian`** is the project's main channel. Issue tracking, peer-to-peer user support or [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 + **`#armbian-devel`** : build engine development topics
 + **`#armbian-desktop`** : desktop environment development
 + **`#armbian-csc`** unsupported/deprecated board talk
@@ -41,8 +41,9 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 + **`#armbian-amlogic`** Amlogic SoC talk
 + **`#armbian-broadcom`** Broadcom SoC talk
 + **`#armbian-rockchip`** Rockchip SoC talk
++ **`#armbian-offtopic`** General chit chat
 + **`#armbian-commits`** is a moderated channel. Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Also newly added issues on [Jira](https://armbian.atlassian.net/projects/AR/issues/?filter=allissues) will be pasted. User chat is not possible.
-+ **`#armbian-rss`** is a live forum and Twitter feed. Whenever a new post in the Armbian Forums is made or somebody mentions Armbian on Twitter it will be announced here. User chat is not possible.
++ **`#armbian-rss`** is a live forum feed. Whenever a new post in the Armbian Forums is made it will be announced here. User chat is not possible.
 Of course, you can also enable desktop notification in your favorite browser for the forums.
 
 Everybody is free to join any of these channels.
@@ -56,13 +57,13 @@ Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has s
 
 + Has the purpose to fill #armbian-commits and #armbian-rss like described above
 
-**`Armbian-Discord`**
+**`DC-IRC`**
 
-+ Has the purpose to relay messages from and to our Discord server in certain channels
++ Has the purpose to relay messages between IRC and Discord. Applies for all channels beginning with `#armbian-`.
 
-**`ArmbianTwitter`**
+<!---**`ArmbianTwitter`**
 
-+ Recurring searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*
++ Recurring searches on Twitter for new Tweets from [*@armbian*](https://twitter.com/armbian) and when people are actually mentioning *Armbian*-->
 
 **`ArmbianHelper`**
 
