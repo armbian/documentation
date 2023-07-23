@@ -105,8 +105,8 @@ access to the rootfs (`${SDCARD}`) in its pristine state after packages are inst
 
 > *run before customize-image.sh*
 
-This hook is called after `customize-image.sh` is called, but before the overlay is mounted. It thus can be used
-for the same purposes as `customize-image.sh`.
+This hook is called before `customize-image.sh` is executed and before the overlay is mounted. It thus can be used
+for the same purposes as `customize-image.sh` without the overlay.
 
 Also known as (for backwards compatibility only):
 
