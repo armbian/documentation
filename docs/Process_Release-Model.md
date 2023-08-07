@@ -49,7 +49,10 @@ Tags are used in ad-hoc manner.
 | 23.02 | Quoll | February | [done](https://armbian.atlassian.net/projects/AR/versions/10013/tab/release-report-all-issues)
 | 23.05 | Suni | May | [done](https://armbian.atlassian.net/projects/AR/versions/10014/tab/release-report-all-issues)
 | 23.08 | Colobus | August | planned
-| 23.11 | Topi | November | planned
+| 23.11 | Kereru | November | planned
+| 24.02 | Havier | February | planned
+| 24.05 | Gaur | May | planned
+
 
  
  
