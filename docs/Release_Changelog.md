@@ -2,6 +2,68 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.08.1 (2023-09-01)
+
+### Closed projects
+
+* [AR-1690](https://armbian.atlassian.net/browse/AR-1690) Add Crust to Allwinner boards to enable power management functions
+* [AR-1700](https://armbian.atlassian.net/browse/AR-1700) Add support for most recent memory chips on BPi M5
+* [AR-1723](https://armbian.atlassian.net/browse/AR-1723) Backport Bananapi CM4 to kernel 6.1 LTS
+* [AR-1744](https://armbian.atlassian.net/browse/AR-1744) Provide official distro upgrades
+* [AR-1838](https://armbian.atlassian.net/browse/AR-1838) Adding armbian-gaming as extension
+* [AR-1841](https://armbian.atlassian.net/browse/AR-1841) Introduce grub-with-dtb extension
+* [AR-1842](https://armbian.atlassian.net/browse/AR-1842) Add Lenovo X13S as WIP board
+* [AR-1843](https://armbian.atlassian.net/browse/AR-1843) Khadas VIM3/VIM3L u-boot 23.07-rc4 \+ SPI-NOR/MTD booting support
+* [AR-1850](https://armbian.atlassian.net/browse/AR-1850) Odroid M1 de-infest Petitboot & use Kwiboo's 2023.10-rc2\+gmac u-boot
+
+### Closed Tasks
+
+* [AR-1647](https://armbian.atlassian.net/browse/AR-1647) Enable missing modules in sunxi64
+* [AR-1718](https://armbian.atlassian.net/browse/AR-1718) Optimise images download build lists
+* [AR-1719](https://armbian.atlassian.net/browse/AR-1719) Add and test 4G PCI modem on Bananapi CM4
+* [AR-1722](https://armbian.atlassian.net/browse/AR-1722) Adjust Bananapi WiKi Pages
+* [AR-1725](https://armbian.atlassian.net/browse/AR-1725) Update CM4 download pages
+* [AR-1726](https://armbian.atlassian.net/browse/AR-1726) Add CM4 to auto-testing facility
+* [AR-1728](https://armbian.atlassian.net/browse/AR-1728) Check if appropriate build targets has been generating
+* [AR-1730](https://armbian.atlassian.net/browse/AR-1730) Make a hires photo of CM4 with modules placed on
+* [AR-1780](https://armbian.atlassian.net/browse/AR-1780) Adjust u-boot patches to apply correctly
+* [AR-1803](https://armbian.atlassian.net/browse/AR-1803) Enable wireless driver for MT7921U on all kernels
+* [AR-1806](https://armbian.atlassian.net/browse/AR-1806) Generate all images that are declared in targets.yaml for single device
+* [AR-1807](https://armbian.atlassian.net/browse/AR-1807) Test data visualisation JSON / PHP / HTML
+* [AR-1824](https://armbian.atlassian.net/browse/AR-1824) Move Debian riscv64 from ports as its not 1st class citizen
+* [AR-1826](https://armbian.atlassian.net/browse/AR-1826) Timezone select is too closed on status of the countries
+* [AR-1834](https://armbian.atlassian.net/browse/AR-1834) Add gnome-calculator back to the default package base
+* [AR-1836](https://armbian.atlassian.net/browse/AR-1836) Add SPI boot support for Rock5A
+* [AR-1837](https://armbian.atlassian.net/browse/AR-1837) Add Orange Pi Plus
+* [AR-1839](https://armbian.atlassian.net/browse/AR-1839) Introduce PASTE\_URL to make easy to change paste service used
+* [AR-1840](https://armbian.atlassian.net/browse/AR-1840) Add pwm-fan support to Nanopi R4S
+* [AR-1844](https://armbian.atlassian.net/browse/AR-1844) NanoPi Duo2: enable powerbutton and ethernet
+* [AR-1845](https://armbian.atlassian.net/browse/AR-1845) Add bluetooth-hciattach extension to Orange Pi 5
+* [AR-1846](https://armbian.atlassian.net/browse/AR-1846) Add Collabora rockchip-rk3588 mainline based branch
+* [AR-1847](https://armbian.atlassian.net/browse/AR-1847) Add Radxa CM5 with I/O board
+* [AR-1848](https://armbian.atlassian.net/browse/AR-1848) Fix thermal monitoring in 6.1 kernel
+* [AR-1849](https://armbian.atlassian.net/browse/AR-1849) NanoPC-T6 Collabora: add PCIe 3
+* [AR-1851](https://armbian.atlassian.net/browse/AR-1851) Add Debian Trixie host and target support
+
+### Solved Bugs
+
+* [AR-1539](https://armbian.atlassian.net/browse/AR-1539) XFCE image Rpi is missing from web download
+* [AR-1570](https://armbian.atlassian.net/browse/AR-1570) Incomplete information in /etc/armbian-\(image\)-release
+* [AR-1684](https://armbian.atlassian.net/browse/AR-1684) Synaptic search is super slow
+* [AR-1707](https://armbian.atlassian.net/browse/AR-1707) Nightly images are not build with beta repository
+* [AR-1724](https://armbian.atlassian.net/browse/AR-1724) CM4: Onboard WiFi and Bluetooth does not work
+* [AR-1729](https://armbian.atlassian.net/browse/AR-1729) Userpatches support for series.conf seems broken
+* [AR-1764](https://armbian.atlassian.net/browse/AR-1764) Some Allwinner 32bit boards hangs at boot
+* [AR-1765](https://armbian.atlassian.net/browse/AR-1765) Recreate images that are missing in 23.05 release
+* [AR-1771](https://armbian.atlassian.net/browse/AR-1771) Rockpi4c\+ link on download page broken
+* [AR-1772](https://armbian.atlassian.net/browse/AR-1772) RockPI-S serial console drops keystrokes
+* [AR-1787](https://armbian.atlassian.net/browse/AR-1787) Installing Khadas Vim3 image directly to eMMC fails
+* [AR-1798](https://armbian.atlassian.net/browse/AR-1798) Orangepi 3 / LTS and Nanopi Black 5 does not boot
+* [AR-1802](https://armbian.atlassian.net/browse/AR-1802) Possible bug in image assembly process
+* [AR-1814](https://armbian.atlassian.net/browse/AR-1814) Installing M2PRO to eMMC fails to boot from eMMC
+* [AR-1817](https://armbian.atlassian.net/browse/AR-1817) Enable wireless driver for MT7915E on all kernels
+* [AR-1835](https://armbian.atlassian.net/browse/AR-1835) mkfs.vfat command is missing in minimal images
+
 ## v23.05.24 (2023-08-02)
 
 * Recreated images for: Banana M2S, Odroid C2, Khadas VIM3
