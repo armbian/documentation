@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.08.2 (2023-09-11)
+
+* Recreated images for Orangepi 5 Plus, Bananapi M1
+
 ## v23.08.1 (2023-09-01)
 
 ### Closed projects
