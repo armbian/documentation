@@ -2,6 +2,20 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.08.3 (2023-09-20)
+
+* Recreated images for NanoPi Duo, Orange Pi Zero, Orange Pi Zero 2, Orange Pi 3 LTS
+
+### Closed Tasks
+
+* [AR-1506](https://armbian.atlassian.net/browse/AR-1506) Reworked AC200 support for Allwinner current and edge kernels
+
+### Solved Bugs
+
+* [AR-1280](https://armbian.atlassian.net/browse/AR-1280) Xradio xr819 wireless driver not available in Allwinner current and edge kernels
+* [AR-1833](https://armbian.atlassian.net/browse/AR-1833) Slow network speed reported by iperf3 and nuttcp on Allwinner boards with Gigabit NIC
+* [AR-1866](https://armbian.atlassian.net/browse/AR-1866) Unisoc UWE5622 wireless driver not available in Allwinner legacy, current and edge kernels
+
 ## v23.08.2 (2023-09-11)
 
 * Recreated images for Orangepi 5 Plus, Bananapi M1
