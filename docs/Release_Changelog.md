@@ -2,6 +2,24 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.08.5 (2023-10-11)
+
+* Recreated images for Khadas VIM4
+
+### Solved Bugs
+
+* [AR-1887](https://armbian.atlassian.net/browse/AR-1887) Add fan support (fan.service) for VIM4.
+* [AR-1893](https://armbian.atlassian.net/browse/AR-1893) Fix wifi not working on VIM4N.
+
+## v23.08.4 (2023-10-09)
+
+* Recreated images for Khadas VIM1S, Khadas VIM4
+
+### Solved Bugs
+
+* [AR-1894](https://armbian.atlassian.net/browse/AR-1894) HDMI not working in Armbian Image on VIM1S and VIM4. Its fixed and works on most monitor now in Debian based images, Ubuntu images will also be fixed soon.
+* [AR-1895](https://armbian.atlassian.net/browse/AR-1895) Fix HDMI monitor does not work after its turned off and on again on VIM1S
+
 ## v23.08.3 (2023-09-20)
 
 * Recreated images for NanoPi Duo, Orange Pi Zero, Orange Pi Zero 2, Orange Pi 3 LTS
