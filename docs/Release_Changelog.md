@@ -2,6 +2,15 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.08.6 (2023-10-22)
+
+* Recreated images for Lenovo X13s (Trixie Gnome is recommended)
+
+### Changes
+* [Bump to 6.6-rcX; support trixie/sid/mantis userspace sans PPA](https://github.com/armbian/build/commit/4d9cae0645d9b3805428cc7ce035a9dfefd35e93)
+
+### Solved Bugs
+
 ## v23.08.5 (2023-10-11)
 
 * Recreated images for Khadas VIM4
