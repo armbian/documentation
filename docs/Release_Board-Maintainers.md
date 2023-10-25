@@ -10,4 +10,4 @@ Then, you can [apply here](https://forum.armbian.com/staffapplications/applicati
 
 https://www.armbian.com/authors/
 
-The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/master/config/boards).
+The authoritative list of `board.conf` can be found [here](https://github.com/armbian/build/tree/main/config/boards).
