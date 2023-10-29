@@ -51,7 +51,7 @@ Example:
     ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=jammy
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.  
-Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/master/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
+Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/main/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
 
 ### Base and descendant configuration
 
@@ -73,7 +73,7 @@ These images are accessible on the [download server](https://dl.armbian.com/) un
 Packages, when successfully built, are published in the *beta* repository.
 You can switch to *beta* repository in [armbian-config](User-Guide_Armbian-Config.md) or by changing *apt.armbian.com* to *beta.armbian.com* in /etc/apt/sources.list.d/armbian.list.
 
-Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/master/config/boards).
+Board beta images are defined in board configuration files which are located [here](https://github.com/armbian/build/tree/main/config/boards).
 This is a typical board configuration:
 
 ```
@@ -94,7 +94,7 @@ This is a typical board configuration:
 	BOARDRATING=""    
 ```
 
-You can find more information about those variables [here](https://github.com/armbian/build/blob/master/config/boards/README.md).
+You can find more information about those variables [here](https://github.com/armbian/build/blob/main/config/boards/README.md).
 
 If you want that our automated system start making images for this particular board, you need to alter parameters `CLI_BETA_TARGET` and `DESKTOP_BETA_TARGET`.
 Variants are dependent from `KERNEL_TARGET` definitions and supported userlands: `jammy`, `bullseye`.
@@ -116,7 +116,7 @@ or for image with latest upstream development/bleeding edge kernel.
 
 ## Using alternate armbian builder repos and branches
 
-By default, armbian-builder assumes working from `master` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
+By default, armbian-builder assumes working from `main` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
 
 ## Executing any bash statement
 
