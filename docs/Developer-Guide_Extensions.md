@@ -59,7 +59,7 @@ The system will "magically" compose a single `run_after_build()` function, based
 
 Hook functions will be sorted by their numerical value; hook functions that do not begin with a number will receive `500_` prefix automatically.
 
-So the examples `run_after_build__do_this` and `run_after_build__500_do_this` are equivalent, and will run
+So the examples `run_after_build__do_this` and `run_after_build_500_do_this` are equivalent, and will run
 
 - sooner than `run_after_build_900_do_smth_else`
 - later than `run_after_build_300_do_even_another_thing`
