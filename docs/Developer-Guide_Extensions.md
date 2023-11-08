@@ -61,8 +61,8 @@ Hook functions will be sorted by their numerical value; hook functions that do n
 
 So the examples `run_after_build__do_this` and `run_after_build__500_do_this` are equivalent, and will run
 
-- sooner than `run_after_build_900_do_smth_else`
-- later than `run_after_build_300_do_even_another_thing`
+- sooner than `run_after_build__900_do_smth_else`
+- later than `run_after_build__300_do_even_another_thing`
 
 
 
