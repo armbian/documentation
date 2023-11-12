@@ -12,7 +12,7 @@ Support statuses:
 
 Gold and Platinum support is reserved for business relationships with the Armbian project and is out of the scope of this document. Please [contact us](https://www.armbian.com/contact/) for more information.
 
-## Standard Supporte
+## Standard Support
 
 ### Benefits provided for a Standard Supported SBC
 
@@ -25,7 +25,7 @@ Gold and Platinum support is reserved for business relationships with the Armbia
 
 ### Criteria for Supported
 
-For an SBC to be considered supported:
+For a SBC to be considered supported:
 
 * must be beneficial to the Armbian project as a whole. In case support burden is carried by maintainer or Armbian, it has to be labelled as "Pro bono"
 * Armbian team must confirm and agree upon all supported boards statuses
@@ -38,16 +38,16 @@ For an SBC to be considered supported:
 Additional Caveats:
 
 * If the burden placed on the Armbian team is too high funding maybe needed to assure:
-    -  R&D bills paid. Failsafe in case Armbian members or a team was hired
+    -  R&D bills are paid. Failsafe in case Armbian members or a team was hired
     -  support bills covered by vendor or end users with crowdfunding campaign
-* supported is **not** applied to a "board family" or group of related SBCs. It is per SBC
+* supported is **not** applied to a "board family" or group of related SBCs. It is per board
 * a maintainer can support multiple devices but must satisfy all requirements above per SBC
 * any individual can be a maintainer for a standard support SBC
-* missed released will result in immediate forfeit of "Armbian Supported" status and demotion to CSC status unless Armbian team grants exemption
+* missed major release will result in immediate forfeit of "Armbian Supported" status and demotion to CSC status unless Armbian team grants exemption
 
 ## Community maintained
 
-Community maintained devices are not under active development and support status is uknown to Armbian team. It represent combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect development.
+Community maintained devices are not under active development and support status is unknown to Armbian team. It represents combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect development.
 
 Community maintained SBCs are exclusively supported by the community.
 
@@ -60,10 +60,10 @@ Community maintained SBCs are exclusively supported by the community.
 ### Requirements for Community Support
 
 * patch or component does not break Armbian Build Framework
-* patch or component does not break build of supported or other CSCs
+* patch or component does not break build of supported boards or other CSCs
 * pull requests needs community review. Armbian team will not review any code related to community supported SBC
 * generally considered to "work most of the time"
-* generally considered to recieve periodic maintenace from community and upstream
+* generally considered to recieve periodic maintenance from community and upstream
 
 ## Staging - Work in progress
 
