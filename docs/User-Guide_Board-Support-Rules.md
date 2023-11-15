@@ -36,7 +36,7 @@ For a SBC to be considered supported:
 * maintainer must have physical access to the SBC they are supporting
 * maintainer can operate under pseudonym but must [reveal his identity](https://www.armbian.com/update-data/) to Armbian management
 * maintainer should attend [developers meetings](https://forum.armbian.com/events/) held every Wednesday 7:00 PM CET
-* when whole support burden is carried by maintainer of Armbian, it will be labelled as "Pro bono"
+* when whole support burden is carried by maintainer and Armbian team, it will be labelled as "Pro bono"
 
 Additional Caveats:
 
@@ -44,11 +44,11 @@ Additional Caveats:
 * supported is **not** applied to a "board family" or group of related SBCs. It is per board
 * a maintainer can support multiple devices but must satisfy all requirements above per SBC
 * any individual can be a maintainer for a standard support SBC
-* missed major release will result in immediate forfeit of "Armbian Supported" status and demotion to CSC status unless Armbian team grants exemption
+* missed major release will result in immediate forfeit of "Armbian Standard support" status and demotion to "Community maintained" status unless Armbian team grants exemption
 
 ## Community maintained
 
-Community maintained devices are not under active development and support status is unknown to Armbian team. It represents combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect development.
+Community maintained devices are not under active supervision or development. Support status is unknown to Armbian team. It represents combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect maintenance.
 
 Community maintained SBCs are exclusively supported by the community.
 
