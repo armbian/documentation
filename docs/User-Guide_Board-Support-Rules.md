@@ -54,8 +54,8 @@ Community maintained SBCs are exclusively supported by the community.
 
 ### Caveats for Community maintained SBC
 
-* Armbian will publish and distribute "-unofficial" images through its [mirror network](https://github.com/armbian/mirror)
-* Armbian will publish and distribute "-unofficial" rolling [images](https://github.com/armbian/os/releases/latest)
+* Armbian will publish and distribute images through its [mirror network](https://github.com/armbian/mirror)
+* Armbian will publish and distribute rolling [images](https://github.com/armbian/os/releases/latest) 
 * periodic packages are built and published into Armbian's apt repository
 * images are untested and Armbian team won't respond on troubles or apply any fixes.
 
