@@ -2,95 +2,85 @@
 
 ## Overview
 
-As mentioned in [our announcement](https://www.armbian.com/newsflash/armbian-needs-your-help/), made adjustments to ease the burden on the team, make the meaning "supported" status of an SBC clear to the community and vendors.
+Support statuses:
 
-Support Status from Lowest to Highest are the following:
+- Standard support
+- Staging
+- Community maintained
 
-1. EOL
-2. CSC
-3. WIP
-4. Standard
-5. Gold
-6. Platinum
+## Gold and Platinum Support
 
-## EOL - End of Life
+Gold and Platinum support is reserved for business relationships with the Armbian project and is out of the scope of this document. Please [contact us](https://www.armbian.com/contact/) for more information.
 
-EOL devices are not under active development by any entity or community. Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect development.
+## Standard Support
 
-### No benefits provided
+### Benefits provided for a Standard Supported SBC
 
-## Community Support
+* Armbian will publish and distribute "stable" images through its [mirror network](https://github.com/armbian/mirror) (behind automated closest mirror selection)
+* Armbian will publish and distribute "rolling" [images](https://github.com/armbian/os/releases/latest) (on GitHub and individual download page)
+* best-effort support to SBC maintainer to assure compatiblity within the [Armbian Build Framework](https://github.com/armbian/build)
+* best-effort team's unique expertise to assist maintainer with general challenges
+* best-effort [automated testing](https://github.com/armbian/os#latest-smoke-tests-results) for basic hardware functionality
+* best-effort compensation will be provided to maintainer from the "Armbian Community Fund" [[1]](https://github.com/sponsors/armbian) [[2]](https://liberapay.com/armbian) [[3]](https://forum.armbian.com/crowdfunding/)
 
-Community Support SBCs are exclusively supported by the community.
+### Criteria for Supported
 
-**No Images** are provided for Community Supported SBCs 
+For a SBC to be considered supported:
 
-* no stable
-* no periodic / nightly
-* users must use Armbian Build Framework to produce an image
+* must be beneficial to the Armbian project
+* Armbian team must confirm and agree upon all supported boards statuses
+* a named individual as "*maintainer*" with GitHub ID must be preset in the BOARD_MAINTAINER within [Board Configuration File](https://github.com/armbian/build/tree/main/config/boards)
+* a named individual must commit to providing "*best effort*" support for their SBC on the Armbian forums
+* maintainer must participate in the [Release Process](https://docs.armbian.com/Process_Release-Model/#release-coordinating)
+* maintainer must sign-off that device has been tested, is stable, and ready for release during release process
+* maintainer must have physical access to the SBC they are supporting
+* maintainer can operate under pseudonym but must [reveal his identity](https://www.armbian.com/update-data/) to Armbian management
+* maintainer should attend [developers meetings](https://forum.armbian.com/events/) held every Wednesday 7:00 PM CET
+* when whole support burden is carried by maintainer of Armbian, it will be labelled as "Pro bono"
 
-### Benefits for Community Support
+Additional Caveats:
 
-* pull requests are accepted
-* Armbian team will interact on Github with contributors considered to be acting in good faith
-* periodic / Nightly Debian packages are built and published into Armbian's community apt repository
+* if the burden placed on the maintainer and Armbian team is too high, [crowdfunding campaign](https://forum.armbian.com/crowdfunding/) success will decide support
+* supported is **not** applied to a "board family" or group of related SBCs. It is per board
+* a maintainer can support multiple devices but must satisfy all requirements above per SBC
+* any individual can be a maintainer for a standard support SBC
+* missed major release will result in immediate forfeit of "Armbian Supported" status and demotion to CSC status unless Armbian team grants exemption
+
+## Community maintained
+
+Community maintained devices are not under active development and support status is unknown to Armbian team. It represents combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect development.
+
+Community maintained SBCs are exclusively supported by the community.
+
+### Caveats for Community maintained SBC
+
+* Armbian will publish and distribute "-unofficial" images through its [mirror network](https://github.com/armbian/mirror)
+* Armbian will publish and distribute "-unofficial" rolling [images](https://github.com/armbian/os/releases/latest)
+* periodic packages are built and published into Armbian's apt repository
+* images are untested and Armbian team won't respond on troubles or apply any fixes.
 
 ### Requirements for Community Support
 
 * patch or component does not break Armbian Build Framework
-* patch or component does not break build of supported or other CSCs
+* patch or component does not break build of supported boards or other CSCs
+* pull requests needs community review. Armbian team will not review any code related to community supported SBC
 * generally considered to "work most of the time"
-* generally considered to recieve periodic maintenace from community
+* generally considered to recieve periodic maintenance from community and upstream
 
+## Staging - Work in progress
 
-## WIP - Work in progress
-
-WIP status is for when a maintainer has commited to an SBC, but is not ready to ship stable images.
+WIP status is for when a maintainer has commited to a SBC, but is not ready to ship stable images.
 
 Benefits of Community Supported SBCs apply to WIP.
 
-### Additional Benefits provided for a WIP SBC
+### Additional Benefits provided for a Staging status
 
 * periodic / nightly CLI images are published by Armbian
-* Armbian will work with SBC maintainer to assure compatiblity within the [Armbian Build System](https://github.com/armbian/build)
+* best-effort support to SBC maintainer to assure compatiblity within the [Armbian Build Framework](https://github.com/armbian/build)
+* best-effort team's unique expertise to assist maintainer with general challenges
 * eligible for promotion to Standard Support
 
 ### Criteria for WIP status
 
 * must satisfy standard support criteria
 * must show active development
-
-## Armbian Standard Support
-
-### Benefits provided for a Supported SBC
-
-* Armbian will publish and distribute "stable" CLI images through its mirror network
-* Armbian will publish and distribute "periodic / nightly" CLI and desktop images
-* Armbian will work with SBC maintainer to assure compatiblity within the [Armbian Build System](https://github.com/armbian/build)
-* Armbian will provide the team's unique expertise to assist maintainer with general challenges
-* best-effort compensation will be provided to maintainer from the "Armbian Community Fund"
-
-### Criteria for Supported
-
-For an SBC to be considered supported:
-
-* a named individual as "*maintainer*" along with GitHub ID must be clearly identifed in the [Board Configuration File](https://github.com/armbian/build/tree/master/config)
-* a named individual must commit to providing "*best effort*" support for their SBC on the Armbian forums
-* maintainer must participate in the [Release Process](https://docs.armbian.com/Process_Release-Model/#release-coordinating)
-* maintainer must sign-off that device has been tested, is stable, and ready for release during release process
-* maintainer must have physical access to the SBC they are supporting
-
-Additional Caveats:
-
-* If the burden placed on the Armbian team is too high funding maybe needed to assure:
-    -  R&D bills paid. Failsafe in case Armbian members or a team was hired
-    -  support bills covered by vendor or end users with crowdfunding campaign
-* supported is **not** applied to a "board family" or group of related SBCs. It is per SBC
-* a maintainer can support multiple devices but must satisfy all requirements above per SBC
-* any individual can be a maintainer for a standard support SBC
-* missed released will result in immediate forfeit of "Armbian Supported" status and demotion to CSC status unless Armbian team grants exemption
-
-
-## Gold and Platinum Support
-
-Gold and Platinum Support are intended to be business relationships with the Armbian project or team and are out of scope of this document. Please [connect with Armbian team](https://www.armbian.com/contact/) for more information.
