@@ -140,7 +140,8 @@ Sometimes we need to flash boot loader from some other Linux. Attach an SD card 
 ~ $ cd tmp/recovery
 ~ $ wget https://imola.armbian.com/apt/pool/main/l/linux-u-boot-nanopineo2-current/linux-u-boot-current-nanopineo2_20.08.13_arm64.deb
 ~ $ dpkg-deb -x linux-u-boot-current-nanopineo2_20.08.13_arm64.deb pack
-~ $ bash pack/usr/lib/u-boot/platform_install.sh pack/usr/lib/linux-u-boot-nanopineo2-current /dev/XXX # replace XXX with the actual device /dev/sdb
+~ $ source pack/usr/lib/u-boot/platform_install.sh
+~ $ write_uboot_platform pack/usr/lib/linux-u-boot-nanopineo2-current /dev/XXX # replace XXX with the actual device /dev/sdb
 ```
 
 Move it to the board and power on.  Check serial output for errors if problems persist.
