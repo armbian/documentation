@@ -148,3 +148,4 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **CONSOLE_AUTOLOGIN** ( **yes** | no ): Automatically login as root for local consoles. Disable if your security threat model requires.
 - **EXT** (`fake-vcgencmd`): execute [extension](/Developer-Guide_Extensions/) during the build
 	- `fake-vcgencmd`: include [fake vcgencmd](https://github.com/clach04/fake_vcgencmd) to monitor and control boards from [Android](https://eidottermihi.github.io/rpicheck/)
+- **INCLUDE_HOME_DIR** ( yes | **no** ): Include directories created inside /home in final image.
