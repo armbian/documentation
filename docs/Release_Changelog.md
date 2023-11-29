@@ -2,6 +2,79 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.11.1 (2023-11-30)
+
+### Closed projects
+
+* [AR-1702](https://armbian.atlassian.net/browse/AR-1702) Switch default login manager
+* [AR-1886](https://armbian.atlassian.net/browse/AR-1886) Enable artifacts creation at pull request
+* [AR-1924](https://armbian.atlassian.net/browse/AR-1924) Add support for Hikey 960
+* [AR-1928](https://armbian.atlassian.net/browse/AR-1928) K3: Update edge kernel to v6.5
+* [AR-1929](https://armbian.atlassian.net/browse/AR-1929) New Armbian Wallpapers
+* [AR-1930](https://armbian.atlassian.net/browse/AR-1930) Add orangepi3b build config
+* [AR-1940](https://armbian.atlassian.net/browse/AR-1940) Add edge kernel support for NanoPi R6S/R6C
+* [AR-1941](https://armbian.atlassian.net/browse/AR-1941) Rework ac200 patches and config for current and edge kernel.
+* [AR-1943](https://armbian.atlassian.net/browse/AR-1943) Add initial support for TI SK-TDA4VM board
+* [AR-1951](https://armbian.atlassian.net/browse/AR-1951) add new device xiaomi-elish
+* [AR-1957](https://armbian.atlassian.net/browse/AR-1957) Improve labeling system - refactor labeling logic
+* [AR-1958](https://armbian.atlassian.net/browse/AR-1958) rk3588: configure UEFI\_EDK2\_BOARD\_ID for all UEFI-supported boards
+* [AR-1959](https://armbian.atlassian.net/browse/AR-1959) use GHPROXY\_ADDRESS to customize ghproxy url
+
+### Closed Tasks
+
+* [AR-1784](https://armbian.atlassian.net/browse/AR-1784) Remove FriendlyElec vendor "driver" patch in mainline
+* [AR-1907](https://armbian.atlassian.net/browse/AR-1907) Add latest patch for eeprom support in JetHub D1\+
+* [AR-1811](https://armbian.atlassian.net/browse/AR-1811) Drop host OS-es that can't compile Crust
+* [AR-1882](https://armbian.atlassian.net/browse/AR-1882) Clean remaining legacy Rockchip kernels
+* [AR-1897](https://armbian.atlassian.net/browse/AR-1897) KDE build seems to be missing features
+* [AR-1913](https://armbian.atlassian.net/browse/AR-1913) Remove midstream kernel
+* [AR-1919](https://armbian.atlassian.net/browse/AR-1919) Change support status to multiple selection
+* [AR-1942](https://armbian.atlassian.net/browse/AR-1942) Add board config for Tanix TX6 tvbox
+* [AR-1944](https://armbian.atlassian.net/browse/AR-1944) Add support for Inovato Quadra
+* [AR-1945](https://armbian.atlassian.net/browse/AR-1945) hinlink-h28k \[new board\]: support new SoC Rockchip rk3528
+* [AR-1946](https://armbian.atlassian.net/browse/AR-1946) rockchip64/edge 6.6.y: update overlay configfs patch from rpi
+* [AR-1947](https://armbian.atlassian.net/browse/AR-1947) meson-s4t7: Add option to force 16x9 display resolution
+* [AR-1948](https://armbian.atlassian.net/browse/AR-1948) meson-s4t7: add systemd service to enable fan in automatic mode
+* [AR-1949](https://armbian.atlassian.net/browse/AR-1949) mekotronics-r58x-pro.wip: add new board Mekotronics R58X-Pro
+* [AR-1950](https://armbian.atlassian.net/browse/AR-1950) mixtile-blade3: enable pci3x4 nvme boot \(requires u.2 -> m.2 adapter from blade3 case kit\)
+* [AR-1952](https://armbian.atlassian.net/browse/AR-1952) Update Rock CM5 I/O board config \(#5866\)
+* [AR-1953](https://armbian.atlassian.net/browse/AR-1953) Add settings & updater for KDE
+* [AR-1954](https://armbian.atlassian.net/browse/AR-1954) add board ArmSoM-w3; with uboot-patch and updated blobs
+* [AR-1956](https://armbian.atlassian.net/browse/AR-1956) Rockchip64: Clean up archive of all EOL kernels
+* [AR-1960](https://armbian.atlassian.net/browse/AR-1960) VIM1S/VIM4: Add bluetooth support
+* [AR-1969](https://armbian.atlassian.net/browse/AR-1969) BPI-CM4: Add support for the waveshare cm4-io-base-b
+* [AR-1970](https://armbian.atlassian.net/browse/AR-1970) BPI-CM4: Enable usb support on waveshare baseboards via overlay
+* [AR-1971](https://armbian.atlassian.net/browse/AR-1971) BPI-SM1: Removed UART\_B overlay.
+* [AR-1972](https://armbian.atlassian.net/browse/AR-1972) BPI-SM1: Add UART\_A "pin-ctrl: cts rts"
+* [AR-1973](https://armbian.atlassian.net/browse/AR-1973)  Aligning display manager with the desktops
+* [AR-1974](https://armbian.atlassian.net/browse/AR-1974) Add Ubuntu Mantic build target
+* [AR-1979](https://armbian.atlassian.net/browse/AR-1979) Update kernel configs for Waydroid and Redroid support
+* [AR-1980](https://armbian.atlassian.net/browse/AR-1980) xiaomi-elish: bump to kernel 6.7-rc2
+* [AR-1983](https://armbian.atlassian.net/browse/AR-1983) xiaomi-elish: add typec pd support
+
+### Solved Bugs
+
+* [AR-1641](https://armbian.atlassian.net/browse/AR-1641) simpledrm module prevents Mali G-31 hardware acceleration
+* [AR-1832](https://armbian.atlassian.net/browse/AR-1832) x13s errors with bash: line 1: add-apt-repository: command not found
+* [AR-1866](https://armbian.atlassian.net/browse/AR-1866) UWE5622 driver is broken on 6.5.y
+* [AR-1876](https://armbian.atlassian.net/browse/AR-1876) Shallow clones CI is getting disabled due to inactivity
+* [AR-1911](https://armbian.atlassian.net/browse/AR-1911) Raspberry Pi, upgrade fails
+* [AR-1923](https://armbian.atlassian.net/browse/AR-1923) Rockchip kernels compilation breaking
+* [AR-1932](https://armbian.atlassian.net/browse/AR-1932) Update firmware for Orangepi R1\+ LTS
+* [AR-1936](https://armbian.atlassian.net/browse/AR-1936) Khadas Vim1s: Fix display output
+* [AR-1938](https://armbian.atlassian.net/browse/AR-1938) xradio: fix compilation for 6.1\+ 
+* [AR-1961](https://armbian.atlassian.net/browse/AR-1961) rangepi3lts: load wifi module via systemd service otherwise it crash
+* [AR-1962](https://armbian.atlassian.net/browse/AR-1962) Restore LED triggers for each ATA port indicating disk activity in mvebu-edge
+* [AR-1963](https://armbian.atlassian.net/browse/AR-1963) Fix broken HDMI output on rk3328
+* [AR-1964](https://armbian.atlassian.net/browse/AR-1964) Orange Pi 3 LTS: Fix ethernet broken for some users on 6.x kernel
+* [AR-1965](https://armbian.atlassian.net/browse/AR-1965) Fix LicheePi 4A audio problem
+* [AR-1966](https://armbian.atlassian.net/browse/AR-1966) Khadas Vim1s: Fix monitor not detected after its turned off and on again
+* [AR-1967](https://armbian.atlassian.net/browse/AR-1967) xiaomi-elish: update config for 6.6, and fix one bluetooth pairing issue
+* [AR-1968](https://armbian.atlassian.net/browse/AR-1968) bootscript: meson-s4t7: fix booting on ubuntu
+* [AR-1976](https://armbian.atlassian.net/browse/AR-1976) VIM1S: emmc 23.8.4 install fails to boot after running upgrade using beta repository
+* [AR-1977](https://armbian.atlassian.net/browse/AR-1977) Default renderer for NetPlan is not set on Debian variants
+* [AR-1982](https://armbian.atlassian.net/browse/AR-1982) rockpi-s still using ifconfig to set wlan MAC address
+
 ## v23.08.5 (2023-10-11)
 
 * Recreated images for Khadas VIM4
