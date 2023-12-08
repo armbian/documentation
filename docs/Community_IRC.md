@@ -10,17 +10,26 @@ Besides that communication is also possible via _Matrix_ or _Discord_.
 ## 🔌 Connect
 
 ### IRC
+Libera:
 
 + Server: `irc.libera.chat`  
 + Ports: `6697` / non-encrypted: `6667`  
 + Channel: `#armbian`  
 
+OFTC:
+
++ Server: `irc.oftc.net`  
++ Ports: `6697` / non-encrypted: `6667`  
++ Channel: `#armbian`
+
 In order to enter main `#armbian` channels registration with Nickserv is mandatory. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
 
 ### Discord
 
-Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)
-Channels starting with `#armbian-` are relayed between Discord and IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
+Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)  
+
+Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
+The main `#armbian` channel is relayed between Discord, Libera IRC and OFTC IRC.
 
 ### Matrix
 
@@ -51,7 +60,7 @@ We may or may not add more channels in future depending on the needs.
 
 ## 👮 Services
 
-Besides the services offered by Libera (like Nickserv or Chanserv) Armbian has set up some own services.  
+Besides the services offered by IRC (like Nickserv or Chanserv) Armbian has set up some own services (on Libera only).  
 
 **`ArmbianGithub`**
 
