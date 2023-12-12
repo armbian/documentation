@@ -107,6 +107,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - gpg: sign image using gpg
     - 7z: compress image, hash and signature to 7z archive
     - gz: compress image only using gz format
+    - xz: compress image only using xz format
     - yes: compatibility shorcut for `sha,gpg,7z`
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
