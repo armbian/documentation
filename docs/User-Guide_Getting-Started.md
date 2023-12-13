@@ -199,20 +199,12 @@ __Attention:__ Userspaces distribution upgrades are neither tested nor supported
 
 [Use the Armbian configuration utility `armbian-config`](User-Guide_Armbian-Config.md)
 
-## How to install to eMMC, NAND, SATA, NVME & USB?
+## How to install to eMMC, SATA, NVME & USB?
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
-Required condition:
+Required condition for eMMC/SATA/USB/NVME:
 
-NAND:
-
- * kernel 3.4.x and NAND storage
- * pre-installed system on NAND (stock Android or other Linux)
-
-eMMC/SATA/USB/NVME:
-
- * any kernel
  * onboard eMMC storage
  * attached SATA, NVME or USB storage
 
@@ -236,7 +228,11 @@ and you can choose the following file system options:
  * ext2,3,4
  * btrfs
 
-On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `armbian-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?tab=comments#comment-13163) for details).
+On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `armbian-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?tab=comments#comment-13163) for details).  
+
+## How to install to NAND?
+
+While in theory writing to NAND should still be possible using `armbian-installer`, this requires running a very old 3.4.y kernel which Armbian as dropped support for several years ago. Therefore this feature is to be considered as deprecated and no support for either 3.4.y systems or NAND installations will be provided.
 
 ## How to connect to wireless?
 
