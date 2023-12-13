@@ -1,11 +1,11 @@
-# IRC Channel / Matrix / Discord
+# IRC Channel / Discord
 
 ## 👏 Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC*)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/).  
 
-Besides that communication is also possible via _Matrix_ or _Discord_.
+Besides that communication is also possible via _Discord_.
 
 ## 🔌 Connect
 
@@ -31,10 +31,6 @@ Simply click here: [https://discord.com/invite/armbian](https://discord.com/invi
 Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
 The main `#armbian` channel is relayed between Discord, Libera IRC and OFTC IRC.
 
-### Matrix
-
-Simply join this room with our Matrix client: `#armbian:libera.chat`  
-Channel names are the same as for IRC mentioned below.
 
 ## 🛑 Rules
 
