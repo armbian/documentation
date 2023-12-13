@@ -51,6 +51,7 @@ plugins:
 markdown_extensions:
   - smarty
   - footnotes
+  - mdx_truly_sane_lists
   - toc:
       permalink: True
   - pymdownx.highlight:
