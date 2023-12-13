@@ -28,13 +28,15 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - no: Use provided kernel configuration provided by Armbian
     - leave empty to display selection dialog each time
 - **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
-    - make: execute `make clean` for selected kernel and U-Boot sources
-    - images: delete `output/images` (complete OS images)
-    - debs: delete packages in `output/debs` for current branch and device family
-    - alldebs: delete all packages in `output/debs`
-    - cache: delete `cache/rootfs` (rootfs cache)
-    - oldcache: remove old `cache/rootfs` except for the newest eight files
+    - make-atf = make clean for ATF, if it is built.
+    - make-uboot = make clean for uboot, if it is built.
+    - make-kernel = make clean for kernel, if it is built. very slow.<br>
+      *important*: "make" by itself has disabled, since Armbian knows how to handle Make timestamping now.      
+    - debs, alldebs = delete all packages in "./output/debs"
+    - images = delete "./output/images"
+    - cache = delete "./output/cache"
     - sources: delete `cache/sources` (all downloaded sources)
+    - oldcache = remove old cached rootfs except for the newest 8 files
     - extras: delete additional packages for current release in `output/debs/extra`
 - **REPOSITORY_INSTALL** (comma-separated list): list of core packages which will be installed from repository
     - Available options: `u-boot`, `kernel`, `bsp`, `armbian-bsp-cli`,`armbian-bsp-desktop`,`armbian-desktop`,`armbian-config`, `armbian-firmware`
@@ -105,6 +107,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - gpg: sign image using gpg
     - 7z: compress image, hash and signature to 7z archive
     - gz: compress image only using gz format
+    - xz: compress image only using xz format
     - yes: compatibility shorcut for `sha,gpg,7z`
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
