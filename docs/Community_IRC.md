@@ -30,7 +30,7 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)  
 
 Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both receive your messages. Check `#welcome-and-rules` for more information.
-The main `#armbian` channel is relayed between Discord, Libera IRC and OFTC IRC.
+The main `#armbian` channel and `#armbian-announcements` are relayed between Discord, Libera IRC and OFTC IRC.
 
 ## 🛑 Rules
 
