@@ -2,6 +2,11 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v23.11.2 (2023-12-18)
+
+* added standard support images for Raspberry Pi 5, Odroid N2/N2+, Odroid M1 due to the boards support status change
+* recreated images for Raspberry Pi 4, Nanopi R4S, Orangepi Zero2 due to several bug fixes (check commit log / newsletter for details)
+
 ## v23.11.1 (2023-11-30)
 
 ### Closed projects
