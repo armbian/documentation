@@ -111,6 +111,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - gz: compress image only using gz format
     - xz: compress image only using xz format
     - yes: compatibility shorcut for `sha,gpg,7z`
+- **IMAGE_XZ_COMPRESSION_RATIO** ( **1** - 9 ) Images compression levels when using xz compressor. Beware of memory consumption when going higher
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
