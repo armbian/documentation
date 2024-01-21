@@ -38,7 +38,7 @@ Run the script
 Make sure that full path to the build script **does not contain spaces**.
 
 
-<iframe width="607" height="342" src="https://www.youtube.com/embed/0K0vtUg_cgo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="607" height="342" src="https://www.youtube.com/embed/kQcEFsXEJEE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Providing build configuration
 
