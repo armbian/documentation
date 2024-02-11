@@ -87,11 +87,11 @@ Dates for **2023**:
  *  January [7th](http://meeting.armbian.de/armbian.2023-01-07-15.04.html)
  *  April [1st](http://meeting.armbian.de/armbian.2023-04-01-14.57.html)
  *  August (canceled)
- *  October [7th]
+ *  October 7th - no summary :(
 
 Dates for **2024**:
 
- *  February [10th]
+ *  February [10th](http://meeting.armbian.de/armbian.2024-02-10-15.01.html)
  
 
 ### Agenda:
@@ -148,7 +148,7 @@ Dates for **2024**:
 #help - Add a "Call for Help" to the minutes. Use this command when you need to recruit someone to do a task.
 ```
 
-Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera](https://libera.chat/). Meeting starts **[at 2pm GMT](https://www.thetimezoneconverter.com/?t=14:00&tz=GMT)**.
+Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera](https://libera.chat/). Meeting start times are announced in [Forum Events](https://forum.armbian.com/events/).
 
 ## Release Coordinating
 
