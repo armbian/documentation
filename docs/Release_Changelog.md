@@ -2,6 +2,67 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.2.1 (2024-02-15)
+
+### Closed projects
+
+* [AR-1657](https://armbian.atlassian.net/browse/AR-1657) Address DNS resolve with Debian Bookworm
+* [AR-1797](https://armbian.atlassian.net/browse/AR-1797) Auto-testing: install all kernels that are defined
+* [AR-1888](https://armbian.atlassian.net/browse/AR-1888) fix sluggish hdmi console for vim1s and vim4
+* [AR-1988](https://armbian.atlassian.net/browse/AR-1988) Resolve Rockchip patch maintenance nightmare
+* [AR-2061](https://armbian.atlassian.net/browse/AR-2061) Add Orangepi Zero3
+* [AR-2062](https://armbian.atlassian.net/browse/AR-2062) Mixtile Blade 3 refactor / rockchip-rk3588 edge 6.7
+* [AR-2063](https://armbian.atlassian.net/browse/AR-2063) Add new board of ASUS Tinker-Edge-R
+* [AR-2064](https://armbian.atlassian.net/browse/AR-2064) Khadas VIM1S & VIM4 - 5.15 kernel bump
+* [AR-2065](https://armbian.atlassian.net/browse/AR-2065) Add Xiaomi Mi10\(umi\) support
+* [AR-2066](https://armbian.atlassian.net/browse/AR-2066) aml-s9xx-box: Update u-boot-s905x2-s922 to u-boot version 2024.01
+
+### Closed Tasks
+* [AR-1879](https://armbian.atlassian.net/browse/AR-1879) JetHome: update u-boot to 2023.10
+* [AR-1985](https://armbian.atlassian.net/browse/AR-1985) Generate new function to display download links
+* [AR-1990](https://armbian.atlassian.net/browse/AR-1990) Move forgotten overlays from Odroid M1
+* [AR-2033](https://armbian.atlassian.net/browse/AR-2033) revert JetHub H1/D1 wifi driver from rtw88 to vendor
+* [AR-1552](https://armbian.atlassian.net/browse/AR-1552) Rework support for jethub devices
+* [AR-1696](https://armbian.atlassian.net/browse/AR-1696) Khadas Edge \(RK3399\) has wrong name and picture
+* [AR-1737](https://armbian.atlassian.net/browse/AR-1737) Merge Odroid M1 into rockchip64 family
+* [AR-1870](https://armbian.atlassian.net/browse/AR-1870) Git workaround failure
+* [AR-1925](https://armbian.atlassian.net/browse/AR-1925) Move wifi-4003-uwe5622-adjust-for-rockchip to the wireless section
+* [AR-1984](https://armbian.atlassian.net/browse/AR-1984) Move live patch to extension
+* [AR-2000](https://armbian.atlassian.net/browse/AR-2000) Several small maintainace tasks
+* [AR-2004](https://armbian.atlassian.net/browse/AR-2004) Add Ubuntu Noble to the build framework
+* [AR-2005](https://armbian.atlassian.net/browse/AR-2005) Bump all current kernels to 6.6 LTS
+* [AR-2012](https://armbian.atlassian.net/browse/AR-2012) Please set dpkg vendor to Armbian in all images
+* [AR-2016](https://armbian.atlassian.net/browse/AR-2016) Patchset for Rockchip \(32b\) needs to be ported to 6.7
+* [AR-2017](https://armbian.atlassian.net/browse/AR-2017) Patchset for Rockchip 64b needs to be ported to 6.7
+* [AR-2021](https://armbian.atlassian.net/browse/AR-2021) Add Home assistant extensions
+* [AR-2032](https://armbian.atlassian.net/browse/AR-2032) LVM support, CRYPTROOT and current implementation.
+* [AR-2035](https://armbian.atlassian.net/browse/AR-2035) Cloud-Init Supprot and Armbian First
+* [AR-2050](https://armbian.atlassian.net/browse/AR-2050) Add support for Radxa Rock S 0
+
+### Solved Bugs
+
+* [AR-1704](https://armbian.atlassian.net/browse/AR-1704) Bookworm Gnome lacks wallpaper withing lightdm
+* [AR-1735](https://armbian.atlassian.net/browse/AR-1735) Command docker-shell seems to be broken
+* [AR-1813](https://armbian.atlassian.net/browse/AR-1813) Orangepi One \+ fails to bring up NIC
+* [AR-1861](https://armbian.atlassian.net/browse/AR-1861) Hashing on wireless patches seems to not work
+* [AR-1908](https://armbian.atlassian.net/browse/AR-1908) Khadas VIM3 problem with high res displays
+* [AR-1915](https://armbian.atlassian.net/browse/AR-1915) Extlinux / Khadas Edge 2 install to eMMC fails
+* [AR-1933](https://armbian.atlassian.net/browse/AR-1933) Fix GitHub labeling anomaly 
+* [AR-1981](https://armbian.atlassian.net/browse/AR-1981) Edge Kernel \(6.6.x\) breaks WiFi and Bluetooth support for RockPI-S
+* [AR-1987](https://armbian.atlassian.net/browse/AR-1987) Error when removing BSP package
+* [AR-2003](https://armbian.atlassian.net/browse/AR-2003) None of the builds of Raspberry Pi 5 goes into desktop
+* [AR-2007](https://armbian.atlassian.net/browse/AR-2007) Fix armbian.list.disabled exists
+* [AR-2009](https://armbian.atlassian.net/browse/AR-2009) Extensions from USERPATCHES\_PATH are not supported
+* [AR-2010](https://armbian.atlassian.net/browse/AR-2010) Remove broken symlink
+* [AR-2020](https://armbian.atlassian.net/browse/AR-2020) RK35xx is seeking for rk35xx config
+* [AR-2027](https://armbian.atlassian.net/browse/AR-2027) Compressed images failed to upload to GitHub releases
+* [AR-2034](https://armbian.atlassian.net/browse/AR-2034) RockPI-S does WiFi broken on kernels >6.5
+* [AR-2038](https://armbian.atlassian.net/browse/AR-2038) KHADAS\_OOWOW\_BOARD\_ID is not set, can't use image-output-oowow
+* [AR-2051](https://armbian.atlassian.net/browse/AR-2051) All installed systemd units are forcefully enabled on first boot
+* [AR-2052](https://armbian.atlassian.net/browse/AR-2052) Cinnamon desktop doesn't work on vim4
+* [AR-2053](https://armbian.atlassian.net/browse/AR-2053) Desktop environment takes a long time to load on vim4
+* [AR-2054](https://armbian.atlassian.net/browse/AR-2054) Image takes a lot of time to load on vim1s/vim4 bookworm image
+
 ## v23.11.3 (2023-12-20)
 
 * [Bugfix: some desktop images on Raspberry Pi 5 didn't load desktop](https://github.com/armbian/build/commit/a82589e683471911cad04f4d4615bb6a3656eb85).
