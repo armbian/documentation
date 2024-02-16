@@ -106,6 +106,8 @@ In case you chose an SD card that was already in use before please consider rese
 
 Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.
 
+For Amlogic devices (tested on T95Z plus) stock android will boot automatically instead. Use the pinhole to enter recovery, from there restart into bootloader to boot to Armbian.
+
 ## How to login?
 
 First boot will log you automatically on HDMI or serial console while for SSH login you need to login as **root** and use password **1234**. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
