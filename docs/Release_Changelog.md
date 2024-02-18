@@ -2,7 +2,7 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v24.2.1 (2024-02-15)
+## v24.2.1 (2024-02-18)
 
 ### Closed projects
 
