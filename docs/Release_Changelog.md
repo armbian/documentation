@@ -2,7 +2,7 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v24.2.2 (2023-2-20)
+## v24.2.3 (2023-2-26)
 
 * recreated images for [Bigtreetech CB1](https://www.armbian.com/bigtreetech-cb1/)
 
