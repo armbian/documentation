@@ -107,5 +107,5 @@ Check [here](https://github.com/morrownr/USB-WiFi).
 
 ## I cannot find `armbian-config` on my device.
 
-If you are using a `minimal` variant this tool is not pre-installed. However you can simply install it via `apt update && apt install armbian-config` which will also handle all necessary dependencies.  
+If you are using a `minimal` variant this tool is not pre-installed. However you can simply install it via `sudo apt update && sudo apt install armbian-config` which will also handle all necessary dependencies.  
 If you are not using an `minimal` image and the tool is still missing [make sure your image is genuine](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-check-download-authenticity).
