@@ -104,3 +104,8 @@ You may also add support by yourself if criteria is satisfied. See [Board Suppor
 ## What WiFi adapters will most likely work out of the box?
 
 Check [here](https://github.com/morrownr/USB-WiFi).
+
+## I cannot find `armbian-config` on my device.
+
+If you are using a `minimal` variant this tool is not pre-installed. However you can simply install it via apt which will also handle all necessary dependencies.
+If you are not using an `minimal` image and the tool is still missing [make sure your image is genuine](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-check-download-authenticity).
