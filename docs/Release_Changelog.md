@@ -1766,7 +1766,6 @@ Build script:
 * added option to create minimal images with around 500Mb in size BUILD_MINIMAL="yes"
 * added initial support of MCIMX7SABRE board (CSC)
 * updates for xt-q8l-v10 (CSC)
-* vagrant-disksize is beeing determined automatically
 * Docker is installed automatically if one want use it (Debian based build host only)
 * refactor build all images scripting that images can be build in full parallel mode
 * added one file for storing which combinations shell be made for each board
@@ -2523,7 +2522,6 @@ Build script:
 * added docker as host
 * Added Belink X2 (H3 based media player), and Roseapple (S500) as WIP target
 * introducted CLI_TARGET per board
-* prepared FEL boot
 * prepared Xenial target
 * fixed USB redirector building on all kernels
 * support for Xenial as a build host is 95% ready.
