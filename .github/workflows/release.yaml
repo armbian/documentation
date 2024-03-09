@@ -5,7 +5,7 @@ name: Create offline documentation to release
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [ 3.8 ]
 
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
           path: site/pdf/document.pdf
 
   deploy:
-    needs: [build]
+    needs: [ build ]
     runs-on: ubuntu-20.04
     env:
       TZ: GMT
