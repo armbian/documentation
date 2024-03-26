@@ -47,7 +47,7 @@ You may edit it to your needs or create different configuration files using it a
 Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
-    ./compile.sh BOARD=cubietruck BRANCH=current KERNEL_ONLY=no RELEASE=jammy
+    ./compile.sh BOARD=cubietruck BRANCH=current RELEASE=jammy
 
 Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.  
 Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/main/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
