@@ -86,7 +86,7 @@ nav:
       - "H6": "Hardware_Allwinner-H6.md"
       - "Freescale i.MX6": "Hardware_Freescale-imx6.md"
       - "Marvell Armada": "Hardware_Marvell.md"
-      - "Rockchip": "Hardware_Rockchip.md"
+#      - "Rockchip": "Hardware_Rockchip.md"
 
   - "Developer Guide":
       - "Welcome": "Developer-Guide_Welcome.md"
