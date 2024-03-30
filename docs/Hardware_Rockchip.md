@@ -1,4 +1,4 @@
-# Rockchip RK3399 boards
+# Rockchip RK3399 boards (outdated)
 
 ## Graphics hardware acceleration (3D and VideoEngine)
 Both only work with legacy (4.4.y) kernel using Buster userspace.  
