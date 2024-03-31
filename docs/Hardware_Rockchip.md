@@ -41,7 +41,7 @@ Note: if you are asking about browsers, we are not there yet. Hardware video dec
 # Video Decoders for RK35xx series - updated March 2024
 
 Support in the mainline kernel is not yet ready or have not been tested yet. 
-These products have both rkvdec and Hantro IP (RK356x has Hantro G1, RK3568 seems to have just Hantro for AV1 decoder) but there are no reports of their actual support or readiness.
+These products have both rkvdec and Hantro IP (RK356x and RK3588 have Hantro G1) but there are no reports of their actual support or readiness.
 
 # Video Encoders
 
