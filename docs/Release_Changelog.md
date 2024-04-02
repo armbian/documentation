@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.2.5 (2024-4-2)
+
+* recreated images for [Rpi5](https://www.armbian.com/rpi5b/) due to a [bug](https://github.com/armbian/build/pull/6461)
+
 ## v24.2.4 (2024-3-12)
 
 * added KDE Neon 6 desktop images for generic UEFI targets, Orangepi 5 / 5+ (with new vendor kernel 6.1.y) and Odroid M1
