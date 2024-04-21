@@ -109,3 +109,25 @@ Check [here](https://github.com/morrownr/USB-WiFi).
 
 If you are using a `minimal` variant this tool is not pre-installed. However you can simply install it via `sudo apt update && sudo apt install armbian-config` which will also handle all necessary dependencies.  
 If you are not using an `minimal` image and the tool is still missing [make sure your image is genuine](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-check-download-authenticity).
+
+## Why keeps one of the leds flashing twice over and over like a heartbeat? Is there something wrong?
+
+Absolutely not. Quite the contrary. This behaviour is called `heartbeat trigger` and is controlled by the kernel. When the load increases the flashing speed will increase as well. If the flashing stops the kernel either froze or were unloaded by either reboot or shutdown.  
+
+## Can this behaviour adjusted/disabled?
+
+Maybe. Some boards have certain functions hard-wired to the onboard leds. Others allow to control the led functions from userspace.  
+Try to find `trigger` files for the leds in `/sys`.  
+Example for an _Orange Pi One_:
+```
+root@orangepione:~# find /sys/devices -name trigger | grep led
+/sys/devices/platform/leds/leds/orangepi:red:status/trigger
+/sys/devices/platform/leds/leds/orangepi:green:pwr/trigger
+```
+Use `cat` on the `trigger` file to both check its current behaviour, which is highlighted with [brackets], and which functions are supported. Then use `echo` to adjust the behaviour.
+Example for disabling a led: 
+```
+root@orangepione:~# cat /sys/devices/platform/leds/leds/orangepi:red:status/trigger
+none rc-feedback kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock usbport disk-activity disk-read disk-write ide-disk mtd nand-disk [heartbeat] cpu cpu0 cpu1 cpu2 cpu3 activity default-on panic mmc0 rfkill-any rfkill-none 0.1:01:link 0.1:01:100Mbps 0.1:01:10Mbps
+root@porangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:status/trigger
+```
