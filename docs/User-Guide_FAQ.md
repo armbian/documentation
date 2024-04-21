@@ -129,5 +129,5 @@ Example for disabling a led:
 ```
 root@orangepione:~# cat /sys/devices/platform/leds/leds/orangepi:red:status/trigger
 none rc-feedback kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock usbport disk-activity disk-read disk-write ide-disk mtd nand-disk [heartbeat] cpu cpu0 cpu1 cpu2 cpu3 activity default-on panic mmc0 rfkill-any rfkill-none 0.1:01:link 0.1:01:100Mbps 0.1:01:10Mbps
-root@porangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:status/trigger
+root@orangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:status/trigger
 ```
