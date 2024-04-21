@@ -84,4 +84,5 @@ Due to lack of manpower we unfortunately have to be very picky about bug reports
 * [Community](https://forum.armbian.com/)
 * [Contact](https://www.armbian.com/#contact)
 
-Our IRC channel is [#armbian](https://web.libera.chat/#armbian) on [Libera.Chat](https://libera.chat/). More details [here](https://docs.armbian.com/Community_IRC/)
+Our IRC channel is [#armbian](https://web.libera.chat/#armbian) on [Libera.Chat](https://libera.chat/). More details [here](https://docs.armbian.com/Community_IRC/)  
+For those who prefer some more proprietary way to communicate join our [Discord](https://discord.gg/armbian).
