@@ -113,6 +113,7 @@ If you are not using an `minimal` image and the tool is still missing [make sure
 ## Why keeps one of the leds flashing twice over and over like a heartbeat? Is there something wrong?
 
 Absolutely not. Quite the contrary. This behaviour is called `heartbeat trigger` and is controlled by the kernel. When the load increases the flashing speed will increase as well. If the flashing stops the kernel either froze or were unloaded by either reboot or shutdown.  
+Unhappy? Keep reading below :-)
 
 ## Can this behaviour adjusted/disabled?
 
