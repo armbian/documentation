@@ -60,7 +60,7 @@ We need many different profiles of people to run this project and just about any
 
 The Armbian project has very limited human and financial resources so it can focus only on a few up-to-date operating system releases.
 
-## I have a TV Box/tablet from \<insert random vendor\>. Can I use Armbian on it?
+## I have a TV Box/tablet from <insert random vendor\>. Can I use Armbian on it?
 
 No.
 
