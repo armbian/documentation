@@ -71,7 +71,7 @@ General advice: **Do not buy (cheap) tv boxes!**
 
 There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
-However, in vast majority of cases, TV boxes are lacking any documentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid. It only eats our personal time and finances.
+However, in vast majority of cases, TV boxes are lacking any documentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
 
 ## There is a new board on the market. Will Armbian officially support it?
 
