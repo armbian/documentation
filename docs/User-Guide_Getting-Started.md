@@ -212,7 +212,7 @@ Start the install script:
 
 	armbian-install
 
-and follow the guide. Theose are all possible scenarios:
+and follow the guide. Those are all possible scenarios:
 
  * boot from SD, system on SATA / USB
  * boot from eMMC / NAND, system on eMMC/NAND
