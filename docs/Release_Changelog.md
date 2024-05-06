@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.2.6 (2024-6-5)
+
+* recreated images for [Bananapi CM40IO](https://www.armbian.com/bananapicm4io/), [Bananapi M7](https://www.armbian.com/bananapi-m7/), 
+
 ## v24.2.5 (2024-4-2)
 
 * recreated images for [Rpi5](https://www.armbian.com/rpi5b/) due to a [bug](https://github.com/armbian/build/pull/6461)
