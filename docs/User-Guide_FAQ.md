@@ -83,19 +83,15 @@ Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep
 
 However Armbian's way of building kernel images is slightly different than the standard distribution method.  The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
 
-## How do I upgrade from Armbian Buster to Bullseye?
-
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Focal to Jammy, Jammy to Noble, Bullseye to Bookworm, Bookworm to Trixie. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
-
-You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please don't blame/complain at Armbian if something goes wrong or have other issues with the upgraded system.
-
 ## Why I cannot choose a specific kernel version (5.11.5 for example)?
 
 Each kernel Armbian offers has a custom patchset on top which would be impossible to maintain compatibility to each and every kernel version out there.  Therefore the choice is usually limited to up to three branches: legacy, current and edge.  Depending on board/family the versions behind these branches may differ.  You can lookup them in the [source code](https://github.com/armbian/build/tree/master/config/sources/families).
 
 ## Can I upgrade my userspace, like Buster to Bullseye or Focal to Jammy?
 
-Userspace upgrades are neither tested nor supported. The reason behind is simply the lacking of (human) ressources to test different scenarios on different boards. A dist-upgrade may work but as stated if something goes wrong Armbian cannot provide assistance. You are on your own to fix issues.
+Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Focal to Jammy, Jammy to Noble, Bullseye to Bookworm, Bookworm to Trixie. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
+
+You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please don't blame/complain at Armbian if something goes wrong or have other issues with the upgraded system.
 
 ## Where do I ship a board so that Armbian will add support?
 
