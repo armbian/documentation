@@ -1,6 +1,6 @@
-WARNING: DO NOT USE! Obsolete documentation, new documentation in progress..
+   :warning: DO NOT USE! Obsolete documentation, new documentation in progress.. 
 
-# Build options
+# Build options  (DEPRECATED)
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](/Developer-Guide_Build-Preparation/#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
