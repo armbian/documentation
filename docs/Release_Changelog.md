@@ -2,7 +2,7 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v25.5.1 (2025-25-5)
+## v24.5.1 (2025-25-5)
 
 ### Closed projects
 
