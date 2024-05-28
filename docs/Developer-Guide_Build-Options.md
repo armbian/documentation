@@ -49,7 +49,7 @@ Usage:
 
 ### targets
 
-Generates output/git_sources.json file that will contain url, branch and commit hash combo.
+Generates output/info/git_sources.json file that will contain url, branch and commit hash combo.
 
 The easiest way to generate file for all devices is to run `./compile.sh targets`. Then at the time of release we will copy the output/info/git_sources.json file to config/sources/git_sources.json. Once the file is copied, the hash information from the file will be used to fetch resources for git repositories where branches are specified instead of tags or commits.
 
