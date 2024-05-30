@@ -6,7 +6,7 @@ Builds kernel and device tree (where applicable) and place it to the `output/deb
 
 Usage:
 ```bash
-./compile.sh dts-check BOARD=nanopi-r5c BRANCH=edge 
+./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge 
 ```
 
 ### dts-check
