@@ -1,11 +1,11 @@
-# IRC Channel / Discord
+# IRC Channel / Discord / Matrix
 
 ## 👏 Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC* for short)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/) or [Konversation](https://konversation.kde.org/).  
 
-Besides that communication is also possible via *Discord*.
+Besides that communication is also possible via *Discord* or *Matrix* (closed beta).
 
 ## 🔌 How to connect
 
@@ -15,13 +15,13 @@ Libera network:
 
 - Server: `irc.libera.chat`  
 - Ports: `6697` / non-encrypted: `6667`  
-- Channel: `#armbian`  
+- Channels: as listed below
 
 OFTC network:
 
 - Server: `irc.oftc.net`  
 - Ports: `6697` / non-encrypted: `6667`  
-- Channel: `#armbian`
+- Channels: `#armbian` and `#armbian-announcements` are available only
 
 In order to enter main `#armbian` channels registration with Nickserv is mandatory on Libera. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
 
@@ -30,13 +30,19 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)  
 
 Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both ends receive your messages. Check `#welcome-and-rules` for more information.
-The main `#armbian` channel and `#armbian-announcements` are relayed between Discord, Libera and OFTC.
+The main `#armbian` channel and `#armbian-announcements` are relayed between Discord, Libera, OFTC and Matrix.
+
+### Matrix (closed beta)
+
+- Server: `matrix.armbian.com`
+- Channels: `#armbian:matrix.armbian.com` and `#armbian-announcements:matrix.armbian.com` are available only
+- To receive an invitation for former please ping either Lanefu or Werner with your Matrix handle in any known ways to communitcate like the chat options above or forums. Once in feel free to invite others by yourself.
 
 ## 🛑 Rules
 
 Forums registration terms and rules apply for our chats: [https://forum.armbian.com/terms](https://forum.armbian.com/terms)
 
-## 💬 Channels
+## 💬 Channels (depending on platform only a limited selection might be available)
 
 - **`#armbian`** is the project's main channel. Issue tracking, peer-to-peer user support or [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
 - **`#armbian-announcements`** : important messages from the Armbian team. You definitely want to idle here. Moderated channel
@@ -48,7 +54,7 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 - **`#armbian-broadcom`** Broadcom-related SoC talk
 - **`#armbian-rockchip`** Rockchip-related SoC talk
 - **`#armbian-offtopic`** General chit chat, whatever that does not fit other channels
-- **`#armbian-commits`** Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Also newly added issues on [Jira](https://armbian.atlassian.net/projects/AR/issues/?filter=allissues) will be pasted. Moderated channel
+- **`#armbian-commits`** Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Moderated channel
 
 ## 👮 Services
 
