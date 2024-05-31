@@ -36,7 +36,7 @@ The main `#armbian` channel and `#armbian-announcements` are relayed between Dis
 
 - Server: `matrix.armbian.com`
 - Channels: `#armbian:matrix.armbian.com` and `#armbian-announcements:matrix.armbian.com` are available only
-- To receive an invitation for former please ping either Lanefu or Werner with your Matrix handle in any known ways to communitcate like the chat options above or forums. Once in feel free to invite others by yourself.
+- To receive an invitation for former please ping either Lanefu or Werner with your Matrix handle in any known ways to communicate like the chat options above or forums. Once in feel free to invite others by yourself.
 
 ## 🛑 Rules
 
