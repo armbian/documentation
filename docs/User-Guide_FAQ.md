@@ -58,16 +58,16 @@ We need many different profiles of people to run this project and just about any
 
 ## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
 
-The Armbian project has very limited human and financial resources so it can focus only on a few up-to-date operating system releases.
+The Armbian project has very limited human and financial resources so it can focus on a few up-to-date operating system releases only.
 
-## I have a TV Box/tablet from <insert random vendor\>. Can I use Armbian on it?
+## I have a TV Box or tablet from <insert random vendor\>. Can I use Armbian on it?
 
 No.
 
 However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/forum/24-tv-boxes/). Take note that there is no support from the Armbian development team whatsoever.  
 General advice: **Do not buy (cheap) tv boxes!**
 
-## Why does Armbian not support TV boxes in general? The market is huge!
+## Why does Armbian not support tables or TV boxes in general? The market is huge!
 
 There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
 
@@ -75,27 +75,28 @@ However, in vast majority of cases, TV boxes are lacking any documentation.  The
 
 ## There is a new board on the market. Will Armbian officially support it?
 
-Maybe. It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human resources.  A Maintainer within the Armbian development team to say yes. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+Maybe. It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human resources. To say a Maintainer within the Armbian development team to agree taking care. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
 
 ## How can I compile my own kernel?
 
-Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.
-
-However Armbian's way of building kernel images is slightly different than the standard distribution method.  The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
+Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.  
+However Armbian's way of building kernel images is slightly different than the standard distribution method. The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
 
 ## Why I cannot choose a specific kernel version (5.11.5 for example)?
 
 Each kernel Armbian offers has a custom patchset on top which would be impossible to maintain compatibility to each and every kernel version out there.  Therefore the choice is usually limited to up to three branches: legacy, current and edge.  Depending on board/family the versions behind these branches may differ.  You can lookup them in the [source code](https://github.com/armbian/build/tree/master/config/sources/families).
 
-## Can I upgrade my userspace, like Buster to Bullseye or Focal to Jammy?
+## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
 
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace like Focal to Jammy, Jammy to Noble, Bullseye to Bookworm, Bookworm to Trixie. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in random scenarios.
+Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with `apt update && apt upgrade`.  
 
-You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please don't blame/complain at Armbian if something goes wrong or have other issues with the upgraded system.
+Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace, like Focal to Jammy, Jammy to Noble, Bullseye to Bookworm, Bookworm to Trixie. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in various random scenarios.
+
+You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please do not blame/complain (at) Armbian if something goes wrong or have other issues with an upgraded system.
 
 ## Where do I ship a board so that Armbian will add support?
 
-Unless you have an existing arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.    
+Unless you have an existing arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.  
 You may also add support by yourself if criteria is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
 
 ## What WiFi adapters will most likely work out of the box?
