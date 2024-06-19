@@ -95,36 +95,12 @@ But you can also use CLI / GUI tools
 
 	nmtui-connect SSID
 
-![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-1.png)
+![](images/wifi-connect.png)
 
 Replace `SSID` with the name of your hot-spot
 
+        nmtui-edit eth0
 
+![](images/edit-connection.png)
 
-
-If you do not know, you can browse and then connect
-
-	nmtui-connect
-
-![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-2.png)
-
-## How to set fixed IP?
-
-By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
-
-	user@boardname:~$ nmcli con show
-	NAME	UUID	TYPE	DEVICE 
-	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
-
-The connection can now be edited with the following:
-
-	nmcli con mod "Wired connection 1"
-	  ipv4.addresses "HOST_IP_ADDRESS"
-	  ipv4.gateway "IP_GATEWAY"
-	  ipv4.dns "DNS_SERVER(S)"
-	  ipv4.dns-search "DOMAIN_NAME"
-	  ipv4.method "manual"
-
-The same changes can also be done with NetworkManagers text user interface:
-
-	sudo nmtui
+Replace `eth0` with the name of your network device.
