@@ -74,6 +74,7 @@ nav:
       - "Frequently asked questions": "User-Guide_FAQ.md"
       - "Advanced Features": "User-Guide_Advanced-Features.md"
       - "Fine Tuning": "User-Guide_Fine-Tuning.md"
+      - "Networking": "User-Guide_Networking.md"
       - "Armbian config": "User-Guide_Armbian-Config.md"
       - "Armbian DT overlays": "User-Guide_Armbian_overlays.md"
       - "Board Support Rules": "User-Guide_Board-Support-Rules.md"
