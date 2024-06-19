@@ -79,19 +79,28 @@ Once you are done with configuring your network its time to test syntax and appl
 
 Cerver CLI and desktop images are using Network Manager. You can use the same methods as for minimal images.
 
+###  Set fixed IP address
+
 `/etc/netplan/armbian-default.yaml`
 
         network:
           version: 2
           renderer: NetworkManager
+          ethernets:
+            eth0:
+              addresses:
+                - 10.0.40.199/24
 
 But you can also use CLI / GUI tools
-
-If you know what is your wireless SSID:
 
 	nmtui-connect SSID
 
 ![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-1.png)
+
+Replace `SSID` with the name of your hot-spot
+
+
+
 
 If you do not know, you can browse and then connect
 
