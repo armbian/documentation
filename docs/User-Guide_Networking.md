@@ -1,10 +1,14 @@
 # Networking
 
-Armbian uses **Netplan.io** to describe networking configurations. This is the same on minimal IOT, server CLI and desktop images. However, backends are different. Minimal images are using networkd, which has smaller footprint, while server CLI and desktop are using Network Manager. Which provides GUI tools for managing configurations.
+Armbian uses **Netplan.io** to describe networking configurations. This is the same on minimal IOT, server CLI and desktop images, Debian or Ubuntu based. However, backends are different. 
 
-# Default Armbian configuration 
+# Minimal images with networkd
 
-Aembian preinstalled default configuration will run DHCP on all ethernet devices in order to help you connecting to the device and configure it appropriate.
+Minimal images are using `systemd-networkd`, which has **smaller footprint**. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service can be especially useful to set up complex network configurations. It also works fine on simple connections.
+
+## Default Armbian configuration 
+
+Preinstalled configuration will run DHCP on all ethernet devices in order to help you connecting to the device and configure it appropriate.
 
 `/etc/netplan/armbian-default.yaml`
 
@@ -18,7 +22,9 @@ Aembian preinstalled default configuration will run DHCP on all ethernet devices
               dhcp4: true
               dhcp6: true
 
- # Fixed IP address
+## Configuration examples
+
+###  Set fixed IP address
 
 `/etc/netplan/armbian-default.yaml`
 
@@ -30,12 +36,15 @@ Aembian preinstalled default configuration will run DHCP on all ethernet devices
               addresses:
                 - 10.0.40.199/24
 
+### Connect to wireless hotspot
 
-# Connecting to wireless hotspot
+It is recommended to make a separate config file for wireless network.
 
-You can add to existing configuration or you can make a separate config file for wireless network. Replace `wlan0` with a device used on your system.
+Generate a file:
 
-Generate a file `/etc/netplan/armbian-default.yaml`
+        sudo nano /etc/netplan/armbian-default.yaml
+
+with content:
 
         version: 2
         renderer: networkd
@@ -48,13 +57,65 @@ Generate a file `/etc/netplan/armbian-default.yaml`
                 "SSID":
                   password: "password"
 
-# Applying configuration
+Replace `SSID` with the name of your hot-spot and `wlan0` with a device used on your system.
 
-### Fix permission to get rid of warnings
-sudo chmod 600 /etc/netplan/*.yaml 
+## Applying configuration
 
-### Syntax test of configuration
-sudo netplan try
+Once you are done with configuring your network its time to test syntax and apply it.
 
-### Apply configuration
-sudo netplan apply
+### 1.  Fix configurations permissions
+
+        sudo chmod 600 /etc/netplan/*.yaml 
+
+### 2. Test if syntax is correct
+
+        sudo netplan try
+
+### 3.  Apply configuration
+
+        sudo netplan apply
+
+# CLI and desktop images with NetworkManager
+
+Cerver CLI and desktop images are using Network Manager. You can use the same methods as for minimal images.
+
+`/etc/netplan/armbian-default.yaml`
+
+        network:
+          version: 2
+          renderer: NetworkManager
+
+But you can also use CLI / GUI tools
+
+If you know what is your wireless SSID:
+
+	nmtui-connect SSID
+
+![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-1.png)
+
+If you do not know, you can browse and then connect
+
+	nmtui-connect
+
+![](https://www.armbian.com/wp-content/uploads/2016/12/wifi-2.png)
+
+## How to set fixed IP?
+
+By default your main network adapter's IP is assigned by your router DHCP server and all network interfaces are managed by **NetworkManager**:
+
+	user@boardname:~$ nmcli con show
+	NAME	UUID	TYPE	DEVICE 
+	Wired connection 1	xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	802-3-ethernet	eth0 
+
+The connection can now be edited with the following:
+
+	nmcli con mod "Wired connection 1"
+	  ipv4.addresses "HOST_IP_ADDRESS"
+	  ipv4.gateway "IP_GATEWAY"
+	  ipv4.dns "DNS_SERVER(S)"
+	  ipv4.dns-search "DOMAIN_NAME"
+	  ipv4.method "manual"
+
+The same changes can also be done with NetworkManagers text user interface:
+
+	sudo nmtui
