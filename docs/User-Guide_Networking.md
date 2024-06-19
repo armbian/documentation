@@ -1,6 +1,6 @@
 # Networking
 
-Armbian uses **Netplan.io** to describe networking configurations. This is the same on minimal IOT, server CLI and desktop images. However, backends are different. Minimal images are using networkd while server CLI and desktop are using Network Manager.
+Armbian uses **Netplan.io** to describe networking configurations. This is the same on minimal IOT, server CLI and desktop images. However, backends are different. Minimal images are using networkd, which has smaller footprint, while server CLI and desktop are using Network Manager. Which provides GUI tools for managing configurations.
 
 Default Armbian configuration (/etc/netplan/armbian-default.yaml)
 
@@ -15,16 +15,16 @@ Default Armbian configuration (/etc/netplan/armbian-default.yaml)
 
 Default configuration will run DHCP on all ethernet devices. So you can connect to the device and configure it appropriate. Setting up fixed IP address:
 
-network:
-  version: 2
-  renderer: NetworkManager
-  ethernets:
-    eth0:
-      addresses:
-        - 10.0.40.199/24
-      nameservers:
-        addresses:
-          - 10.0.10.10
+        network:
+          version: 2
+          renderer: NetworkManager
+          ethernets:
+            eth0:
+              addresses:
+                - 10.0.40.199/24
+              nameservers:
+                addresses:
+                  - 10.0.10.10
 
 
 network:
