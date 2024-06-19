@@ -20,6 +20,8 @@ Aembian preinstalled default configuration will run DHCP on all ethernet devices
 
  # Fixed IP address
 
+`/etc/netplan/armbian-default.yaml`
+
         network:
           version: 2
           renderer: networkd
@@ -28,10 +30,6 @@ Aembian preinstalled default configuration will run DHCP on all ethernet devices
               addresses:
                 - 10.0.40.199/24
 
-
-network:
-  version: 2
-  renderer: NetworkManager
 
 # Connecting to wireless hotspot
 
