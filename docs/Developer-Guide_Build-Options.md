@@ -1,4 +1,13 @@
-# Build options 
+# Build commands
+
+### kernel
+
+Builds kernel and device tree (where applicable) and place it to the `output/debs`
+
+Usage:
+```bash
+./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge 
+```
 
 ### dts-check
 
