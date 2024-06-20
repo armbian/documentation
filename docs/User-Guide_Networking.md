@@ -139,3 +139,5 @@ Mount live image before first run and use this example:
     PRESET_NET_STATIC_MASK='255.255.255.0'
     PRESET_NET_STATIC_GATEWAY='192.168.0.1'
     PRESET_NET_STATIC_DNS='9.9.9.9 1.1.1.1'
+
+If you want to use first run automatic configuration at build time, [check this](https://github.com/armbian/build/pull/6194).
