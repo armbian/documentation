@@ -141,3 +141,7 @@ Mount live image before first run and use this example:
     PRESET_NET_STATIC_DNS='9.9.9.9 1.1.1.1'
 
 If you want to use first run automatic configuration at build time, [check this](https://github.com/armbian/build/pull/6194).
+
+1. Copy `cp extensions/preset-firstrun.sh userpatches/extensions/`
+2. Edit `userpatches/extensions/preset-firstrun.sh` according to your situation
+3. Build with additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
