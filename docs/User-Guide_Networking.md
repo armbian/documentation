@@ -145,3 +145,5 @@ If you want to use first run automatic configuration at build time, [check this]
 1. Copy `cp extensions/preset-firstrun.sh userpatches/extensions/`
 2. Edit `userpatches/extensions/preset-firstrun.sh` according to your situation
 3. Build with additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
+
+Note: this method also adds new user, sets passwords, ...
