@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.5.2 (2025-18-6)
+
+* Recreated [Khadas Edge 2 images](https://www.armbian.com/khadas-edge-2/) due to lack of 3D / video acceleration support in 6.1.y
+
 ## v24.5.1 (2025-25-5)
 
 ### Closed projects
