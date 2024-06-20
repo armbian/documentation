@@ -104,3 +104,38 @@ Replace `SSID` with the name of your hot-spot
 ![](images/edit-connection.png)
 
 Replace `eth0` with the name of your network device.
+
+# Automatic configuration at first run
+
+It is possible to store first run preset network settings to the file `/root/.not_logged_in_yet` which is read and executed at first login.
+
+Mount live image before first run and use this example:
+
+    # Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related settings below
+    
+    PRESET_NET_CHANGE_DEFAULTS="1"
+
+    # Enable WiFi or Ethernet.
+    # NB: If both are enabled, WiFi will take priority and Ethernet will be disabled.
+    
+    PRESET_NET_ETHERNET_ENABLED=1
+    PRESET_NET_WIFI_ENABLED=1
+
+    # Enter your WiFi creds
+    # SECURITY WARN: Your wifi keys will be stored in plaintext, no encryption.
+    
+    PRESET_NET_WIFI_SSID='MySSID'
+    PRESET_NET_WIFI_KEY='MyWiFiKEY'
+
+    # Country code to enable power ratings and channels for your country. 
+    
+    # eg: GB US DE | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    PRESET_NET_WIFI_COUNTRYCODE='GB'
+
+    # If you want to use a static ip, set it here
+    
+    PRESET_NET_USE_STATIC=1
+    PRESET_NET_STATIC_IP='192.168.0.100'
+    PRESET_NET_STATIC_MASK='255.255.255.0'
+    PRESET_NET_STATIC_GATEWAY='192.168.0.1'
+    PRESET_NET_STATIC_DNS='9.9.9.9 1.1.1.1'
