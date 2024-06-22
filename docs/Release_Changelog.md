@@ -5,6 +5,8 @@
 ## v24.5.2 (2025-18-6)
 
 * Recreated [Khadas Edge 2 images](https://www.armbian.com/khadas-edge-2/) due to lack of 3D / video acceleration support in 6.1.y
+* Recreated Orangepi 5 plus images due to missing support for 32GB variant
+* Added Orangepi 5 Pro images
 
 ## v24.5.1 (2025-25-5)
 
