@@ -72,7 +72,7 @@ Usage:
 ### NETWORKING_STACK  
 ( network-manager | systemd-networkd | none ) 
 
-Installs desired networking stack. Is parameter is not defined, it sets systemd-netoworkd for minimal images (MINIMAL=yes) and network-manager for the rest.
+Installs desired networking stack. Is parameter is not defined, it sets systemd-netoworkd for minimal images (MINIMAL=yes) and network-manager for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
 
 # Build options  (DEPRECATED)
 
