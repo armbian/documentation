@@ -80,7 +80,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 
 Installs desired networking stack. Is parameter is undefined, it sets `systemd-netoworkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
 
-# Build options  (DEPRECATED)
+# Build options below needs to be-retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation in progress.. 
 
