@@ -67,6 +67,13 @@ Usage:
 ./compile.sh targets
 ```
 
+# Build options
+
+### NETWORKING_STACK  
+( network-manager | systemd-networkd | none ) 
+
+Installs desired networking stack. Is parameter is not defined, it sets systemd-netoworkd for minimal images (MINIMAL=yes) and network-manager for the rest.
+
 # Build options  (DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation in progress.. 
