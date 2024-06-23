@@ -73,7 +73,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
 
 ## Main options
 
-- NETWORKING_STACK ( string )
+- **NETWORKING_STACK** ( string )
     - network-manager
     - systemd-networkd
     - none
