@@ -67,14 +67,22 @@ Usage:
 ./compile.sh targets
 ```
 
-# Build options  (DEPRECATED)
-
-:warning: DO NOT USE! Obsolete documentation, new documentation in progress.. 
+# Build options
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](/Developer-Guide_Build-Preparation/#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
 ## Main options
 
+- **NETWORKING_STACK** ( string )
+    - network-manager
+    - systemd-networkd
+    - none (to not-add any networking extensions)
+
+Installs desired networking stack. Is parameter is undefined, it sets `systemd-netoworkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
+
+# Build options below needs to be-retested and added above (COULD BE DEPRECATED)
+
+:warning: DO NOT USE! Obsolete documentation, new documentation in progress.. 
 
 - **BUILD_ONLY** (comma-separated list): defines what artifacts should be built. Default value is empty string - will build all artifacts. Changing this option can be useful to build partial artifacts only.
     - u-boot: build U-Boot
