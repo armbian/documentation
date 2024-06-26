@@ -44,21 +44,45 @@ See the [document template](.github/DOCUMENT_TEMPLATE.md) before you writing any
 
 ## Working on the content
 
+### Prerequisites
+
+Ensure you have Python and the necessary development packages installed:
+
+```bash
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-venv python3.11-dev
+```
+### Cloning the Repository
+
+Next, clone the Armbian documentation repository:
+
 ```bash
 git clone https://github.com/armbian/documentation
-pip install -r requirements.txt
+cd documentation
+```
+
+### Setting Up the Environment
+
+Set up a Python virtual environment to isolate the project dependencies:
+
+```bash
+python3 -m venv $HOME/.local/armbian-docs-env 
+source $HOME/.local/armbian-docs-env/bin/activate
+$HOME/.local/armbian-docs-env/bin/pip install -r requirements.txt
+```
+
+### Building and Serving the Documentation
+
+To build and serve the documentation locally, allowing you to make edits and observe the results in real time, use:
+
+```bash
 mkdocs build --clean && mkdocs serve
 ```
 
 You will be able to make edits to existing files and observe the results in real time.
 
-After changing text in an existing file, use this command to rebuild and view the documentation:
-
-`mkdocs build --clean && mkdocs serve`
-
-After adding a new file, either hand-edit `mkdocs.yml`, or re-run `tools/mkArmbianDocs.py` **unless making changes to the structure of the `docs/` folder**. (See below)
-
 ## Generate tools
+After adding a new file, either hand-edit `mkdocs.yml`, or re-run `tools/mkArmbianDocs.py` **unless making changes to the structure of the `docs/` folder**. (See below)
 
 ### mkArmbianDocs.py
 Generate `mkdocs.yml` based on the contents of `docs/` folder
