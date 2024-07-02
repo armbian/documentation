@@ -110,65 +110,59 @@ Insert SD card into a slot and power the board. (First) boot (with DHCP) takes u
 
 First boot will log you automatically on HDMI or serial console while for SSH login you need to login as **root** and use password **1234**. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
 
+In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.
 
-	odroidxu4 login: root (automatic login)
+    Welcome to Armbian! 
 
-	  ___      _           _     _  __  ___   _ _  _
-	 / _ \  __| |_ __ ___ (_) __| | \ \/ / | | | || |
-	| | | |/ _` | '__/ _ \| |/ _` |  \  /| | | | || |_
-	| |_| | (_| | | | (_) | | (_| |  /  \| |_| |__   _|
-	 \___/ \__,_|_|  \___/|_|\__,_| /_/\_\\___/   |_|
+    Documentation: https://docs.armbian.com/ | Community support: https://forum.armbian.com/
 
-	Welcome to Armbian 21.11 Jammy with Linux 5.4.160-odroidxu4
+    IP address:  Network connection timeout!
 
-	No end-user support: built from trunk
+    Create root password: ********
+    Repeat root password: ********
 
-	System load:   13%              Up time:       0 min
-	Memory usage:  7% of 1.94G      IP:            10.0.10.112
-	CPU temp:      48°C             Usage of /:    6% of 29G
+    Shell: BASH
 
-	[ 0 security updates available, 45 updates total: apt upgrade ]
-	Last check: 2021-11-21 10:32
+    Creating a new user account. Press <Ctrl-C> to abort
 
-	[ General system configuration (beta): armbian-config ]
+    Please provide a username (eg. your first name): jane
+    Create user (Jane) password: ********
+    Repeat user (Jane) password: ********
 
-	Last login: Sun Nov 21 10:32:42 UTC 2021 on tty1
+    Please provide your real name: Jane
 
-	Waiting for system to finish booting ...
+    Dear Jane, your account jane has been created and is sudo enabled.
+    Please use this account for your daily work from now on.
 
-	New to Armbian? Documentation: https://docs.armbian.com Support: https://forum.armbian.com
+    Internet connection was not detected.
 
-	New root password: ********
-	Repeat password: ********
+    Connect via wireless? [Y/n] y
 
-	Choose default system command shell:
+    Multiple wireless adaptors detected. Choose primary:
 
-	1) bash
-	2) zsh
+    1        wlx00e032cxxx94
+    2        wlx60fb00yyyc4a
 
-	Shell: ZSH
+    Enter a number of wireles adaptor: 1
 
-	Creating a new user account. Press <Ctrl-C> to abort
+    Detected wireless networks:
 
-	Please provide a username (eg. your forename): igorp
-	Create password: ********
-	Repeat password: ********
+    1        NETWORK
+    2        MY-WIFI
+    3        Caatsanddogs    
 
-	Please provide your real name: Igor
+    Enter a number of SSID: 3
 
-	Dear Igor, your account igorp has been created and is sudo enabled.
-	Please use this account for your daily work from now on.
+    Enter a password for MY-WIFI: password
 
-	Detected timezone: Europe/Ljubljana
+    Probing internet connection (9)
 
-	Set user language based on your location? [Y/n] 
+    Detected timezone: Europe/Ljubljana
 
-	Generating locales: sl_SI.UTF-8
+    Set user language based on your location? [Y/n] y
 
-	You selected ZSH as your default shell. 
-	If you want to use it right away, please logout and login! 
-
-	root@odroidxu4:~# 
+    Generating locales: sl_SI.UTF-8
+    root@bananapim2pro:~#
 
 ## How to update firmware and packages?
 
