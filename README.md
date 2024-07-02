@@ -66,9 +66,9 @@ cd documentation
 Set up a Python virtual environment to isolate the project dependencies:
 
 ```bash
-python3 -m venv $HOME/.local/armbian-docs-env 
-source $HOME/.local/armbian-docs-env/bin/activate
-$HOME/.local/armbian-docs-env/bin/pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### Building and Serving the Documentation
