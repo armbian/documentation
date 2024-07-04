@@ -87,6 +87,19 @@ Installs desired networking stack. Is parameter is undefined, it sets `systemd-n
 
 Defines build host when using Docker container (default). [Here](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build) you can see which other options are available.
 
+- **CI** ( string )
+  - true
+  - **false**
+
+If enabled (`true`), the Docker build container will receive Docker credentials from the host 
+(`${HOME}/.docker/config.json`) and the `OCI_TARGET_BASE` environment variable.
+
+- **OCI_TARGET_BASE** ( string )
+  - url/to/container_registry/path
+  - **${GHCR_SOURCE}/armbian/*** (GHCR_SOURCE is defined in `lib/functions/configuration/main-config.sh`)
+
+Select target for pull/push OCI cached images. If not set, default is used.
+
 
 # Build options below needs to be-retested and added above (COULD BE DEPRECATED)
 
