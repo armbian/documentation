@@ -35,7 +35,12 @@ Preinstalled configuration will run DHCP on all ethernet devices in order to hel
             eth0:
               addresses:
                 - 10.0.40.199/24
-
+              routes:
+              - to: default
+                via: 10.0.40.1
+              nameservers:
+               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
+               
 ### Connect to wireless hotspot
 
 It is recommended to make a separate config file for wireless network.
@@ -90,6 +95,11 @@ Cerver CLI and desktop images are using Network Manager. You can use the same me
             eth0:
               addresses:
                 - 10.0.40.199/24
+              routes:
+              - to: default
+                via: 10.0.40.1
+              nameservers:
+               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
 
 But you can also use CLI / GUI tools
 
