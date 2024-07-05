@@ -78,7 +78,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - systemd-networkd
     - none (to not-add any networking extensions)
 
-Installs desired networking stack. Is parameter is undefined, it sets `systemd-netoworkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
+Installs desired networking stack. If parameter is undefined, it sets `systemd-netoworkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
 
 - **DOCKER_ARMBIAN_BASE_IMAGE** ( string )
     - **ubuntu:jammy**
@@ -117,9 +117,9 @@ Select target for pull/push OCI cached images. If not set, default is used.
     - bootstrap: build bootstrap package
     - default: build full OS image for flashing
 - **KERNEL_CONFIGURE** ( string or boolean ):
-    - prebuilt: Use precompiled packages (only for maintained hardware)
-    - yes: Automatically call kernel's `make menuconfig` (add or remove modules or features)
-    - no: Use provided kernel configuration provided by Armbian
+    - prebuilt: use precompiled packages (only for maintained hardware)
+    - yes: automatically call kernel's `make menuconfig` (add or remove modules or features)
+    - no: use provided kernel configuration provided by Armbian
     - leave empty to display selection dialog each time
 - **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
     - make-atf = make clean for ATF, if it is built.
@@ -176,7 +176,7 @@ Select target for pull/push OCI cached images. If not set, default is used.
 - **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
 ## Hidden options for advanced users (default values are marked **bold**)
-- **EXPERT** ( yes | **no** ): Show development features and boards regardless of its status in interactive mode
+- **EXPERT** ( yes | **no** ): show development features and boards regardless of its status in interactive mode
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for location of `userpatches` folder
 - **USE_CCACHE** ( **yes** | no ): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** ( yes | **no** ) use `$DEST/ccache` as ccache home directory
@@ -200,7 +200,7 @@ Select target for pull/push OCI cached images. If not set, default is used.
     - gz: compress image only using gz format
     - xz: compress image only using xz format
     - yes: compatibility shorcut for `sha,gpg,7z`
-- **IMAGE_XZ_COMPRESSION_RATIO** ( **1** - 9 ) Images compression levels when using xz compressor. Beware of memory consumption when going higher
+- **IMAGE_XZ_COMPRESSION_RATIO** ( **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
@@ -238,9 +238,9 @@ When selecting zstd compression level (`zstd:[1-15]`) both the host and the targ
 - **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
-- **AUFS** ( **yes** | no ): Include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
-- **SKIP_BOOTSPLASH** ( yes | **no** ): Use kernel bootsplash. Disable in case of troubles
-- **CONSOLE_AUTOLOGIN** ( **yes** | no ): Automatically login as root for local consoles. Disable if your security threat model requires.
+- **AUFS** ( **yes** | no ): include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
+- **SKIP_BOOTSPLASH** ( yes | **no** ): use kernel bootsplash. Disable in case of troubles
+- **CONSOLE_AUTOLOGIN** ( **yes** | no ): automatically login as root for local consoles. Disable if your security threat model requires.
 - **EXT** (`fake-vcgencmd`): execute [extension](/Developer-Guide_Extensions/) during the build
 	- `fake-vcgencmd`: include [fake vcgencmd](https://github.com/clach04/fake_vcgencmd) to monitor and control boards from [Android](https://eidottermihi.github.io/rpicheck/)
-- **INCLUDE_HOME_DIR** ( yes | **no** ): Include directories created inside /home in final image.
+- **INCLUDE_HOME_DIR** ( yes | **no** ): include directories created inside /home in final image.
