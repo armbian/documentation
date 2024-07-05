@@ -34,7 +34,7 @@ Preinstalled configuration will run DHCP on all ethernet devices in order to hel
           ethernets:
             eth0:
               addresses:
-                - 10.0.40.199/24
+              - 10.0.40.199/24
               routes:
               - to: default
                 via: 10.0.40.1
@@ -94,7 +94,7 @@ Cerver CLI and desktop images are using Network Manager. You can use the same me
           ethernets:
             eth0:
               addresses:
-                - 10.0.40.199/24
+              - 10.0.40.199/24
               routes:
               - to: default
                 via: 10.0.40.1
