@@ -1,127 +1,177 @@
 # Networking
 
-Armbian uses **Netplan.io** to describe networking configurations. This is the same on minimal IOT, server CLI and desktop images, Debian or Ubuntu based. However, backends are different. 
+Armbian uses [**Netplan.io**](https://netplan.io/) to describe networking configurations. Netplan is a utility to easily configure Linux networking, using a declarative approach.
+If you want to configure your network manually, it is as simple as editing and creating Netplan yaml files (see the yaml configuration reference at the [Netplan docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/)).
 
-# Minimal images with networkd
+Netplan is used to configure networks on **all** Armbian images, no matter if minimal or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a minimal image or not. 
 
-Minimal images are using `systemd-networkd`, which has **smaller footprint**. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service can be especially useful to set up complex network configurations. It also works fine on simple connections.
+# Minimal images (networkd)
+
+Minimal images are using the `systemd-networkd` backend, which has a **smaller footprint** compared to `Network-Manager`. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service is great for simple connections, but can also be useful to set up complex network configurations.
 
 ## Default Armbian configuration 
 
-Preinstalled configuration will run DHCP on all ethernet devices in order to help you connecting to the device and configure it appropriate.
+By default, your device will run using DHCP on all ethernet interfaces to be able to automatically receive an IP address from your router.
 
-`/etc/netplan/armbian-default.yaml`
+[`/etc/netplan/10-dhcp-all-interfaces.yaml`](https://github.com/armbian/build/blob/main/extensions/network/config-networkd/netplan/10-dhcp-all-interfaces.yaml):
 
-        network:
-          version: 2
-          renderer: networkd
-          ethernets:
-            alleths:
-              match:
-                name: e*
-              dhcp4: true
-              dhcp6: true
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    all-eth-interfaces:
+      match:
+        name: "*"
+      dhcp4: yes
+      dhcp6: yes
+      ipv6-privacy: yes
+```
 
 ## Configuration examples
 
-###  Set fixed IP address
+###  Setting a fixed IP address
 
-`/etc/netplan/armbian-default.yaml`
+The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
-        network:
-          version: 2
-          renderer: networkd
-          ethernets:
-            eth0:
-              addresses:
-              - 10.0.40.199/24
-              routes:
-              - to: default
-                via: 10.0.40.1
-              nameservers:
-               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
-               
-### Connect to wireless hotspot
+> [!TIP]
+> Find out the name of your device's Ethernet interface with the command `ip addr`. It's usually something like `eth0`, `enp4s3` or `lan`.
+
+`/etc/netplan/20-static-ip.yaml`:
+
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0: # Change this to your ethernet interface
+      addresses:
+      - 192.168.1.199/24
+      routes:
+      - to: default
+        via: 192.168.1.1
+      nameservers:
+       addresses:
+         - 9.9.9.9
+         - 1.1.1.1
+```
+
+See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/using-static-ip-addresses/) for reference.
+
+### Connecting to a wireless network
 
 It is recommended to make a separate config file for wireless network.
 
-Generate a file:
+Create the following file:
 
-        sudo nano /etc/netplan/armbian-default.yaml
+`sudo nano /etc/netplan/30-wifis-dhcp.yaml`:
 
-with content:
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  wifis:
+    wlan0:
+      dhcp4: true
+      dhcp6: true
+      access-points:
+        "Your-SSID":
+          password: "your-password"
+```
 
-        version: 2
-        renderer: networkd
-        network:
-          wifis:
-            wlan0:
-              dhcp4: true
-              dhcp6: true
-              access-points:
-                "SSID":
-                  password: "password"
+Replace `SSID` with the name of the network you want to connect to and `wlan0` with the wifi interface used on your system.
 
-Replace `SSID` with the name of your hot-spot and `wlan0` with a device used on your system.
+> [!TIP]
+> Find out the name of your device's WiFi interface with the command `ip addr`.
 
-## Applying configuration
+See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/examples/#how-to-configure-your-computer-to-connect-to-your-home-wi-fi-network) for reference.
 
-Once you are done with configuring your network its time to test syntax and apply it.
+## Applying your configuration
 
-### 1.  Fix configurations permissions
+Once you are done configuring your network, it's time to test syntax and apply it.
 
-        sudo chmod 600 /etc/netplan/*.yaml 
+#### 1. Fix config file permissions
 
-### 2. Test if syntax is correct
+According to the [Netplan docs](https://netplan.readthedocs.io/en/stable/security/), the permissions must be restricted to the root user.
 
-        sudo netplan try
+```bash
+sudo chmod 600 /etc/netplan/*.yaml
+```
 
-### 3.  Apply configuration
+#### 2. Test if the syntax is correct and if your device can still connect
+```bash
+sudo netplan try
+```
 
-        sudo netplan apply
+#### 3. Apply the configuration
 
-# CLI and desktop images with NetworkManager
+```bash
+sudo netplan apply
+```
 
-Cerver CLI and desktop images are using Network Manager. You can use the same methods as for minimal images.
+# CLI and desktop images (Network-Manager)
 
-###  Set fixed IP address
+Server CLI and desktop images are using the `Network-Manager` backend. You can use similar methods for configuring your network as with the `networkd` backend used on minimal images.
 
-`/etc/netplan/armbian-default.yaml`
+### Setting a fixed IP address
 
-        network:
-          version: 2
-          renderer: NetworkManager
-          ethernets:
-            eth0:
-              addresses:
-              - 10.0.40.199/24
-              routes:
-              - to: default
-                via: 10.0.40.1
-              nameservers:
-               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
+The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
-But you can also use CLI / GUI tools
+> [!TIP]
+> Find out the name of your device's Ethernet interface with the command `ip addr`. It's usually something like `eth0`, `enp4s3` or `lan`.
 
-	nmtui-connect SSID
+`/etc/netplan/20-static-ip.yaml`:
 
-![](images/wifi-connect.png)
+```yaml
+network:
+  version: 2
+  renderer: NetworkManager # Different than 'networkd'
+  ethernets:
+    eth0: # Change this to your ethernet interface
+      addresses:
+      - 192.168.1.199/24
+      routes:
+      - to: default
+        via: 192.168.1.1
+      nameservers:
+       addresses:
+         - 9.9.9.9
+         - 1.1.1.1
+```
 
-Replace `SSID` with the name of your hot-spot
+See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/using-static-ip-addresses/) for reference.
 
-        nmtui-edit eth0
+Alternatively, you can also use Network-Manager directly via the command line or GUI tools on your desktop:
+
+```bash
+nmtui-edit eth0
+```
 
 ![](images/edit-connection.png)
 
-Replace `eth0` with the name of your network device.
+Replace `eth0` with the name of your Ethernet Interface.
 
-# Automatic configuration at first run
+### Connecting to a wireless network
 
-It is possible to store first run preset network settings to the file `/root/.not_logged_in_yet` which is read and executed at first login.
+For connecting to a wireless network, you can use the same method as mention above for use with [`networkd` on minimal images](#connect-to-wireless-network). Just make sure to replace `renderer: networkd` with `renderer: NetworkManager`.
 
-Mount live image before first run and use this example:
+Alternatively, you can also use Network-Manager directly via the command line or GUI tools on your desktop:
 
-    # Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related settings below
+```bash
+nmtui-connect SSID
+```
+
+![](images/wifi-connect.png)
+
+Replace `SSID` with the name of your wireless network.
+
+# Automatic configuration on first boot
+
+It is possible to network configurations which are automatically applied when you first boot your device after flashing a fresh image by writing to the file `/root/.not_logged_in_yet` which is read at your first login.
+
+Mount your live image _before your first boot_ and use this example for reference:
+
+    # Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related settings below.
     
     PRESET_NET_CHANGE_DEFAULTS="1"
 
@@ -131,18 +181,18 @@ Mount live image before first run and use this example:
     PRESET_NET_ETHERNET_ENABLED=1
     PRESET_NET_WIFI_ENABLED=1
 
-    # Enter your WiFi creds
-    # SECURITY WARN: Your wifi keys will be stored in plaintext, no encryption.
+    # Enter your WiFi credentials
+    # SECURITY WARNING: Your wifi keys will be stored in plaintext, no encryption.
     
     PRESET_NET_WIFI_SSID='MySSID'
     PRESET_NET_WIFI_KEY='MyWiFiKEY'
 
-    # Country code to enable power ratings and channels for your country. 
+    # Country code to properly adjust the WiFi for your country. 
     
-    # eg: GB US DE | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    # E.g. 'GB', 'US' or 'DE' (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
     PRESET_NET_WIFI_COUNTRYCODE='GB'
 
-    # If you want to use a static ip, set it here
+    # If you want to use a static IP, you may set it here
     
     PRESET_NET_USE_STATIC=1
     PRESET_NET_STATIC_IP='192.168.0.100'
@@ -150,10 +200,12 @@ Mount live image before first run and use this example:
     PRESET_NET_STATIC_GATEWAY='192.168.0.1'
     PRESET_NET_STATIC_DNS='9.9.9.9 1.1.1.1'
 
-If you want to use first run automatic configuration at build time, [check this](https://github.com/armbian/build/pull/6194).
+If you want to use first run automatic configuration at build time, [check this GitHub pull request](https://github.com/armbian/build/pull/6194).
 
-1. Copy `cp extensions/preset-firstrun.sh userpatches/extensions/`
-2. Edit `userpatches/extensions/preset-firstrun.sh` according to your situation
-3. Build with additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
+In short:
+1. Copy the template with `cp extensions/preset-firstrun.sh userpatches/extensions/`
+2. Edit the template `userpatches/extensions/preset-firstrun.sh` according to your situation
+3. Build your Armbian image using the additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
 
-Note: this method also adds new user, sets passwords, ...
+> [!NOTE]
+> This method also creates a new user, sets passwords and more!
