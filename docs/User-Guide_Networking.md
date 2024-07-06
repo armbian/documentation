@@ -12,15 +12,15 @@ Preinstalled configuration will run DHCP on all ethernet devices in order to hel
 
 `/etc/netplan/armbian-default.yaml`
 
-        network:
-          version: 2
-          renderer: networkd
-          ethernets:
-            alleths:
-              match:
-                name: e*
-              dhcp4: true
-              dhcp6: true
+    network:
+      version: 2
+      renderer: networkd
+      ethernets:
+        alleths:
+          match:
+            name: e*
+          dhcp4: true
+          dhcp6: true
 
 ## Configuration examples
 
@@ -28,18 +28,18 @@ Preinstalled configuration will run DHCP on all ethernet devices in order to hel
 
 `/etc/netplan/armbian-default.yaml`
 
-        network:
-          version: 2
-          renderer: networkd
-          ethernets:
-            eth0:
-              addresses:
-              - 10.0.40.199/24
-              routes:
-              - to: default
-                via: 10.0.40.1
-              nameservers:
-               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
+    network:
+      version: 2
+      renderer: networkd
+      ethernets:
+        eth0:
+          addresses:
+          - 10.0.40.199/24
+          routes:
+          - to: default
+            via: 10.0.40.1
+          nameservers:
+           addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
                
 ### Connect to wireless hotspot
 
@@ -47,20 +47,20 @@ It is recommended to make a separate config file for wireless network.
 
 Generate a file:
 
-        sudo nano /etc/netplan/armbian-default.yaml
+    sudo nano /etc/netplan/armbian-default.yaml
 
 with content:
 
-        version: 2
-        renderer: networkd
-        network:
-          wifis:
-            wlan0:
-              dhcp4: true
-              dhcp6: true
-              access-points:
-                "SSID":
-                  password: "password"
+    version: 2
+    renderer: networkd
+    network:
+      wifis:
+        wlan0:
+          dhcp4: true
+          dhcp6: true
+          access-points:
+            "SSID":
+              password: "password"
 
 Replace `SSID` with the name of your hot-spot and `wlan0` with a device used on your system.
 
@@ -70,15 +70,15 @@ Once you are done with configuring your network its time to test syntax and appl
 
 ### 1.  Fix configurations permissions
 
-        sudo chmod 600 /etc/netplan/*.yaml 
+    sudo chmod 600 /etc/netplan/*.yaml 
 
 ### 2. Test if syntax is correct
 
-        sudo netplan try
+    sudo netplan try
 
 ### 3.  Apply configuration
 
-        sudo netplan apply
+    sudo netplan apply
 
 # CLI and desktop images with NetworkManager
 
@@ -88,28 +88,28 @@ Cerver CLI and desktop images are using Network Manager. You can use the same me
 
 `/etc/netplan/armbian-default.yaml`
 
-        network:
-          version: 2
-          renderer: NetworkManager
-          ethernets:
-            eth0:
-              addresses:
-              - 10.0.40.199/24
-              routes:
-              - to: default
-                via: 10.0.40.1
-              nameservers:
-               addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
+    network:
+      version: 2
+      renderer: NetworkManager
+      ethernets:
+        eth0:
+          addresses:
+          - 10.0.40.199/24
+          routes:
+          - to: default
+            via: 10.0.40.1
+          nameservers:
+           addresses: [9.9.9.9,8.8.8.8,8.8.4.4]
 
 But you can also use CLI / GUI tools
 
-	nmtui-connect SSID
+    nmtui-connect SSID
 
 ![](images/wifi-connect.png)
 
 Replace `SSID` with the name of your hot-spot
 
-        nmtui-edit eth0
+    nmtui-edit eth0
 
 ![](images/edit-connection.png)
 
