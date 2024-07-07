@@ -130,3 +130,9 @@ root@orangepione:~# cat /sys/devices/platform/leds/leds/orangepi:red:status/trig
 none rc-feedback kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock usbport disk-activity disk-read disk-write ide-disk mtd nand-disk [heartbeat] cpu cpu0 cpu1 cpu2 cpu3 activity default-on panic mmc0 rfkill-any rfkill-none 0.1:01:link 0.1:01:100Mbps 0.1:01:10Mbps
 root@orangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:status/trigger
 ```
+
+## Why is there no image for [board] with [Bookworm/Jammy/Noble/Trixie] and [Minimal/CLI/Gnome/KDE/Xfce] with [vendor/legacy/current/edge] kernel?
+
+It would be VERY ressource intensive and just insane to pre-create and provide images for all possible combination of kernels, userspaces and desktops/CLI for all available boards and last but not least provide support for them. We simply cannot afford doing this since our ressources in both human and financial are limited. Therefore we provide a small selection for each board only.  
+However with the Armbian build framework it is very easy and convenient to create an image of your desire by yourself.  
+If there is enough public interest for a certain combination we may occasionally adjust our build targets.
