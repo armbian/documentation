@@ -3,7 +3,7 @@
 Armbian uses [**Netplan.io**](https://netplan.io/) to describe networking configurations. Netplan is a utility to easily configure Linux networking, using a declarative approach.
 If you want to configure your network manually, it is as simple as editing and creating Netplan yaml files (see the yaml configuration reference at the [Netplan docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/)).
 
-Netplan is used to configure networks on **all** Armbian images, no matter if minimal or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a minimal image or not. 
+Netplan is used to configure networks on **all** Armbian images since Release 24.05, no matter if minimal or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a minimal image or not. 
 
 # Minimal images (networkd)
 
@@ -35,7 +35,7 @@ network:
 The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
 > [!TIP]
-> Find out the name of your device's Ethernet interface with the command `ip addr`. It's usually something like `eth0`, `enp4s3` or `lan`.
+> Find out the name of your device's Ethernet interface with the command `ip addr`. It is usually something like `eth0`, `enp4s3` or `lan`.
 
 `/etc/netplan/20-static-ip.yaml`:
 
@@ -88,7 +88,7 @@ See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/examples/#h
 
 ## Applying your configuration
 
-Once you are done configuring your network, it's time to test syntax and apply it.
+Once you are done configuring your network, it is time to test syntax and apply it.
 
 #### 1. Fix config file permissions
 
@@ -118,7 +118,7 @@ Server CLI and desktop images are using the `Network-Manager` backend. You can u
 The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
 > [!TIP]
-> Find out the name of your device's Ethernet interface with the command `ip addr`. It's usually something like `eth0`, `enp4s3` or `lan`.
+> Find out the name of your device's Ethernet interface with the command `ip addr`. It is usually something like `eth0`, `enp4s3` or `lan`.
 
 `/etc/netplan/20-static-ip.yaml`:
 
