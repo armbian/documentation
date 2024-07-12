@@ -22,9 +22,12 @@ Install and recreate kernel headers scripts (optional)
 Go back to root directory and fetch sources (working example, use `ARCH=arm64` on 64bit system)
 
 	cd
+    export KSRC="/usr/src/linux-headers-$(uname -r)"
 	git clone https://github.com/pvaret/rtl8192cu-fixes.git
 	cd rtl8192cu-fixes
-	make ARCH=arm
+	make -C "$KSRC" M="$PWD" ARCH=arm
+
+Refer to [Linux Kernel Documentations: Building External Modules](https://www.kernel.org/doc/html/latest/kbuild/modules.html) for more information.
 
 Load driver for test
 
