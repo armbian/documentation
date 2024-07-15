@@ -2,6 +2,16 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.5.4 (2025-15-7)
+
+* Recreated Olimex Teres images since they were broken
+* Sent sunxi64-current kernel to the stable repository
+
+## v24.5.3 (2025-01-7)
+
+* Recreated Helios64 since board was moved under supported
+* Sent rockchip64-current kernel to the stable repository
+
 ## v24.5.2 (2025-18-6)
 
 * Recreated [Khadas Edge 2 images](https://www.armbian.com/khadas-edge-2/) due to lack of 3D / video acceleration support in 6.1.y
