@@ -1,21 +1,30 @@
-# Automatic or Manual Firmware Compilation
+# Build All Artifacts (cronjob)
 
-[![Build train](https://github.com/armbian/build/actions/workflows/build-train.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-train.yml)
+[![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
-Generates kernels at code push if the code, patches or config were changed in any way. It is also triggered via cron in the middle of Central European Time (CET) night.
+Generates all build artifacts defined in [https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs every 8 hours and can also be run manually.
 
-![Build](images/build-train.png)
+Use defaults.
 
-The build train is executed only if there are changed kernels. When this happens, it also generates armbian-firmware, desktop and u-boot packages. If the build succeeds it pushes packages to the package repository and increments trunk build version.
+![Build](images/complete-artifact-matrix-all.png)
 
-- generates all changed kernels,
-- generate all boot loaders for all supported hardware,
-- generate desktop pacakages,
-- generates armbian-firmware, armbian-zsh, armbian-config.
+### Options
 
-You can change source repository and you can change destination package repository to https://beta.armbian.com (default) or https://apt.armbian.com
+- Skip building images?
+  - no = build images
+  - **yes** = skip images
+- Check OCI for existing artifacts?
+  - no = always build everything
+  - **yes** = check OCI for prebuild targets
+- Extra params for all builds/jobs (prepare/artifact/image)
+  - (example: DEBUG=yes)
+- Framework build branch
+  - **main**
+  - v24.5 (previous stable release)
 
-Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
+Leave others as is.
+
+Manual Executing rights: [Armbian release manager](https://github.com/orgs/armbian/teams/release-manager)
 
 # Official Images Compilation
 
