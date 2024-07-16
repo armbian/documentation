@@ -1,5 +1,6 @@
 # Build process for developers
 
+![Build](images/complete-artifact-matrix-all.png)
 
 ## Build All Artifacts (cronjob)
 
