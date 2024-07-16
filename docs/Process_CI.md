@@ -1,4 +1,7 @@
-# Build All Artifacts (cronjob)
+# Build process for developers
+
+
+## Build All Artifacts (cronjob)
 
 [![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
