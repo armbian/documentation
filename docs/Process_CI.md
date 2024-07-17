@@ -59,7 +59,7 @@ This pulls packages from build framework OCI cache located at GitHub and from [v
 - `apt.armbian.com` = new packages are added
 - `beta.armbian.com` = whole repository is recreated from scratch.
 
-Action is executed when artifact generations completes or manually.
+Action is executed automatically when artifact generations completes. Or manually.
 
 When
 - [ ] Add https://netcup.armbian.com/partial/ to stable repo
