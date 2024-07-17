@@ -54,6 +54,11 @@ Generated images are uploaded to incoming folder: https://netcup.armbian.com/inc
 
 ## Repository update (admin)
 
+This pulls packages from build framework OCI cache located at GitHub and from [various 3rd party repositories](https://github.com/armbian/os/tree/main/external) such as Chrome, Chromium, Code, Discord, (latest) ZFS, Thunderbird, Zoom, ... and pushes them to:
+
+- `apt.armbian.com` = new packages are added
+- `beta.armbian.com` = whole repository is recreated from scratch.
+
 Action is executed when artifact generations completes or manually.
 
 When
