@@ -68,6 +68,13 @@ Automatically label new pull request based on the paths of files which are being
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml)
 
+Generates all supported build combinations (minimal, cli, desktops) for x86 arhitecture.
+
+Options:
+
+- Framework build branch
+  - **main**
+  - testing_branch (string)
 
 ## Automatic Kernel Build at Pull Requests
 
