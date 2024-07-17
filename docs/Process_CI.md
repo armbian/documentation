@@ -44,6 +44,15 @@ Images generation can be customized:
 
 Generated images are uploaded to incoming folder: https://netcup.armbian.com/incoming/ and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refresh download pages within 15-30 minutes.
 
+## Repository update (admin)
+
+Action is executed when artifact generations completes or manually.
+
+When
+- [ ] Add https://netcup.armbian.com/partial/ to stable repo
+
+is selected, it will include packages that were build during images recreation. It will add everything that is inside this folder https://netcup.armbian.com/partial/
+
 ## Smoke tests on hardware devices
 
 Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is constructed of three steps:
