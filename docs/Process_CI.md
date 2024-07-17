@@ -1,47 +1,50 @@
-# Build process for developers
+# Build actions for developers
 
-![Build](images/complete-artifact-matrix-all.png)
+![Build](images/armbian-os-actions.png)
+
+https://github.com/armbian/os/actions
+
+Manual Executing rights: 
+
+- Organisation administrators
+- [Armbian release manager](https://github.com/orgs/armbian/teams/release-manager)
 
 ## Build All Artifacts (cronjob)
 
 [![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
-Generates all build artifacts defined in [https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs every 8 hours and can also be run manually.
+Generates all build artifacts defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed.
 
-Use defaults.
+## Build Nightly Images (cronjob)
 
-![Build](images/complete-artifact-matrix-all.png)
+[![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
 
-### Options
+Generates all nighly images defined in [targets-release-nightly.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml). This build job runs every day at **9 AM UTC** and can also be run manually when needed.
 
-- Skip building images?
-  - no = build images
-  - **yes** = skip images
-- Check OCI for existing artifacts?
-  - no = always build everything
-  - **yes** = check OCI for prebuild targets
-- Extra params for all builds/jobs (prepare/artifact/image)
-  - (example: DEBUG=yes)
+## Build Standard Support Images (admin)
+
+[![Build Standard Support Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
+
+Generates stable images defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml). 
+
+This build run is executed manually:
+- making a full set of stable release images
+- recreating broken image at the download pages
+
+Images generation can be customized:
+
 - Framework build branch
-  - **main**
+  - main
   - v24.5 (previous stable release)
+- Version override (leave empty for automatic bump)
+  - main
+  - v24.5 (previous stable release)
+- Board (make images only for one board)
+- Maintainer (make images for selected maintainer)
 
-Leave others as is.
+Generated images are uploaded to incoming folder: https://netcup.armbian.com/incoming/ and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refresh download pages within 15-30 minutes.
 
-Manual Executing rights: [Armbian release manager](https://github.com/orgs/armbian/teams/release-manager)
-
-# Official Images Compilation
-
-[![Build Official Images](https://github.com/armbian/os/actions/workflows/build-images.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/build-images.yml)
-
-
-![Build](images/build-images-ci.png)
-
-Regenerate predefined stable images with incrementing patch version for selected board.
-
-Manual executing rights: [Armbian release manager](https://forum.armbian.com/staffapplications/application/11-release-manager/)
-
-# Smoke tests on hardware devices
+## Smoke tests on hardware devices
 
 Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is constructed of three steps:
 
@@ -53,7 +56,7 @@ Smoke testing is preliminary testing to reveal simple failures severe enough to,
 
 Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
 
-# Automatic Pull Requests Labeler
+## Automatic Pull Requests Labeler
 
 [![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
 
@@ -61,49 +64,16 @@ Automatically label new pull request based on the paths of files which are being
 
         .github/labeler.yml
 
-# Manual Pull Requests rebase
+## Full distro test builds
 
-[![Automatic Rebase](https://github.com/armbian/build/actions/workflows/rebase.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/rebase.yml)
+[![Build Nightly Images](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml)
 
-Pull most recent code from master branch and put your work on top of your pull request.
 
-How to use it? Simply comment 
-
-       /rebase
-
-to trigger the action.
-
-- [Advantages of Git Rebase](https://itnext.io/advantages-of-git-rebase-af3b5f5448c6),
-- [Automatic Rebase Action origin](https://github.com/marketplace/actions/automatic-rebase).
-
-# Automatic or Manual Desktops Test Builds
-
-[![Build All Desktops](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/build-all-desktops.yml)
-
-Generates all desktops for arm64 and x86 arhitecture to verify if they build correctly. Build is triggered every day, manually (by [any member of Armbian project](https://github.com/orgs/armbian/people)) or in pull requests if label "Desktop" is set. Aim of this test case is to find out if there are troubles in packages relations.
-
-- releases: bullseye, bookworm, jammy,
-- desktop environments: xfce, gnome, mate, cinnamon, budgie, kde-plasma,
-- builds are not using cached rootfs to force packages assembly,
-- included applications paths are "3dsupport browsers",
-- builds are done with [Docker image](https://github.com/orgs/armbian/packages?repo_name=build) on public runners.
-
-# Automatic Kernel Build at Pull Requests
+## Automatic Kernel Build at Pull Requests
 
 Generates kernels at Pull Requests if their code, patches or config was changed. Build starts when label of Pull Request is set to "Ready to review"
 
-# Integrity testings
-
-This action tests package integrity from all stable images at download section.
-
-Manual Executing rights: [Armbian project member](https://github.com/orgs/armbian/people)
-
-# Forked Helper
-
-- Run repository dispatch to default fork branch
-- Dispatch event on forked repostitory
-
-# Lint On Scripts
+## Lint On Scripts
 
 ![Lint](images/linterror.png)
 
@@ -111,13 +81,13 @@ Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell script
 
 Linting is run automatically on pull requests change.
 
-# Scorecards Security Scan
+## Scorecards Security Scan
 
 Scorecards is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
 
 https://github.com/ossf/scorecard#what-is-scorecards
 
-# Kernel hardening analysis
+## Kernel hardening analysis
 
 This analysis checks kernel config if changed.
 
