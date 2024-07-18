@@ -100,6 +100,14 @@ If enabled (`true`), the Docker build container will receive Docker credentials 
 
 Select target for pull/push OCI cached images. If not set, default is used.
 
+- **GHCR_MIRROR_ADDRESS** (string)
+
+Default mirror address for ghcr.io set by GHCR_MIRROR=dockerproxy is ghcr.dockerproxy.com. When this address is not availabe, we can set an alternative address with GHCR_MIRROR_ADDRESS.
+
+Example:
+```
+./compile.sh GHCR_MIRROR=dockerproxy GHCR_MIRROR_ADDRESS=ghcr.libcuda.so
+```  
 
 # Build options below needs to be-retested and added above (COULD BE DEPRECATED)
 
