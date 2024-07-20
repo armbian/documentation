@@ -78,7 +78,7 @@ These parameters are meant to be applied to the `./compile.sh` command. They are
     - systemd-networkd
     - none (to not-add any networking extensions)
 
-Installs desired networking stack. If parameter is undefined, it sets `systemd-netoworkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
+Installs desired networking stack. If parameter is undefined, it sets `systemd-networkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time syncrhonisation is also changed, chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases we control network settings with **Netplan**.
 
 - **DOCKER_ARMBIAN_BASE_IMAGE** ( string )
     - **ubuntu:jammy**
