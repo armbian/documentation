@@ -4,30 +4,23 @@
 
 https://github.com/armbian/os/actions
 
-Manual Executing rights: 
+Manual Executing rights are tied to Organisation group [release manager](https://github.com/orgs/armbian/teams/release-manager). 
 
-- Organisation administrators
-- [Armbian release manager](https://github.com/orgs/armbian/teams/release-manager)
-- [Watchdog action](https://github.com/armbian/os/actions/workflows/watchdog.yml) restart those build trains 6x to rule out random troubles.
+Do you [want to have this permission](https://calendly.com/armbian/office-hours)?
 
 ## Build All Artifacts (cronjob)
 
 [![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
-Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed.
+Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed. This build job needs to be successfully completed in order to proceed generating OS images.
 
 ## Build Rolling Release Images (cronjob)
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
 
-Generates all nighly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml). This build job runs every day at **9 AM UTC** and can also be run manually when needed.
-
-Inspect and restart build train in case of failures. Download pages 
+Generates all nighly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml). This build job runs every day at **9 am UTC** and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/os/actions/workflows/webindex-update.yml) if build succeeds.
 
 ![Build](images/rolling-releases.png)
-
-
-are generated [automatically](https://github.com/armbian/os/actions/workflows/webindex-update.yml) after build succeeds.
 
 ## Build Standard Support Images (admin)
 
@@ -66,6 +59,15 @@ When
 - [ ] Add https://netcup.armbian.com/partial/ to stable repo
 
 is selected, it will include packages that were build during images recreation. It will add everything that is inside this folder https://netcup.armbian.com/partial/
+
+## Watchdog (cronjob)
+
+Runs every 15 minutes and re-trigger [failed builds](https://github.com/armbian/os/blob/main/.github/workflows/watchdog.yml#L26) six (6) times before finally gives out. This addresses various instabilities when building many artifacts on different hardware: 
+
+- network timeouts
+- artifact download failure
+- loop devices allocation failure
+- runner running low on space
 
 ## Smoke tests on hardware devices
 
