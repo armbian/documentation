@@ -109,9 +109,9 @@ Options:
   - **main**
   - testing_branch (string)
 
-## Automatic Kernel Build at Pull Requests
+## Build All Artifacts at Pull Requests
 
-Generates kernels at Pull Requests if their code, patches or config was changed. Build starts when label of Pull Request is set to "Ready to review"
+Generates artifacts at Pull Requests code. Build starts when label of Pull Request is set to "Build". Requires administration privileges.
 
 ## Lint On Scripts
 
@@ -120,6 +120,12 @@ Generates kernels at Pull Requests if their code, patches or config was changed.
 Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell scripts and report problems within. Since our scripts are full of shellcheck problems we don't block merging on those errors. Not yet.
 
 Linting is run automatically on pull requests change.
+
+## Update Tools in Build Scripts
+
+[![Update Tools in Scripts](https://github.com/armbian/build/actions/workflows/update-tools.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/update-tools.yml)
+
+Some of our scripts download tools from a repo. These can't be bumped by dependabot, so this workflow is a self-created dependabot to bump versions of those tools to stay up-to-date. This workflow only creates a PR if the version was actually updated. To add a new tool, it just needs to be added to the matrix [in the script](https://github.com/armbian/build/blob/main/.github/workflows/update-tools.yml) by filling out all the variables.
 
 ## Scorecards Security Scan
 
