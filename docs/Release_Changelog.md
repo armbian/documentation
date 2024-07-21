@@ -2,7 +2,7 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v24.5.4 (2025-15-7)
+## v24.5.4 (2025-21-7)
 
 * Recreated Radxa 5 ITX images
 * Recreated Olimex Teres images since they were broken
