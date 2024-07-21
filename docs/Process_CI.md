@@ -6,13 +6,11 @@ Manual Executing rights are tied to [release manager](https://github.com/orgs/ar
 
 [![Build Standard Support Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
 
-### 1. Open https://github.com/armbian/os
-
-### 2. Run workflow
+### 1. Open https://github.com/armbian/os and run
 
 [![Build](images/run-workflow.png)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
 
-### 3. Select board
+### 2. Select board
 
 ![Workflow](images/complete-artifact-matrix-standard-support.png)
 
