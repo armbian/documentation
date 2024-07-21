@@ -65,7 +65,7 @@ This build workflow is executed manually when making:
 
 **Note:** you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
 
-### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/targets-release-apps.yaml) and click
+### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml and click
 
 ![Run Workflow](images/run-workflow.png)
 
