@@ -4,8 +4,10 @@
 
 ## v24.5.4 (2025-15-7)
 
+* Recreated Radxa 5 ITX images
 * Recreated Olimex Teres images since they were broken
 * Sent sunxi64-current kernel to the stable repository
+* Sent rk35xx-vendor kernel to the stable repository
 
 ## v24.5.3 (2025-01-7)
 
