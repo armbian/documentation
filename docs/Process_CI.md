@@ -4,7 +4,7 @@
 
 Manual Executing rights are tied to [release manager](https://github.com/orgs/armbian/teams/release-manager) role within Armbian organiation. Do you [want to help and take this role](https://calendly.com/armbian/office-hours)?
 
-## Build All Artifacts (cronjob / release manager)
+## Build All Artifacts (cronjob)
 
 [![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
@@ -12,7 +12,7 @@ Generates all build artifacts cache for targets defined in [targets-all-not-eos.
 
 This build job **needs to be successfully completed** in order to proceed generating any OS images!
 
-## Build Rolling Release Images (cronjob / release manager)
+## Build Rolling Release Images (cronjob)
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
 
