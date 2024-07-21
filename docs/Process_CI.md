@@ -54,7 +54,7 @@ Images generation can be customized:
 - Board (make images only for one board)
 - Maintainer (make images for selected maintainer)
 
-Generated images are uploaded to incoming folder: https://netcup.armbian.com/incoming/ and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refresh download pages within 15-30 minutes.
+Generated images are uploaded to incoming folder: https://netcup.armbian.com/incoming/ and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refreshes download pages within 15-30 minutes.
 
 ## Repository update (admin)
 
