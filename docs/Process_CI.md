@@ -1,12 +1,8 @@
-# Build actions for maintainers
+# Build actions for developers and maintainers
 
 ![Build](images/armbian-os-actions.png)
 
-https://github.com/armbian/os/actions
-
-Manual Executing rights are tied to Organisation group [release manager](https://github.com/orgs/armbian/teams/release-manager). 
-
-Do you [want to take this role](https://calendly.com/armbian/office-hours)?
+Manual Executing rights are tied to [release manager](https://github.com/orgs/armbian/teams/release-manager) role within Armbian organiation. Do you [want to help and take this role](https://calendly.com/armbian/office-hours)?
 
 ## Build All Artifacts (cronjob / release manager)
 
