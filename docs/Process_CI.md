@@ -6,7 +6,7 @@ https://github.com/armbian/os/actions
 
 Manual Executing rights are tied to Organisation group [release manager](https://github.com/orgs/armbian/teams/release-manager). 
 
-Do you [want to have this permission](https://calendly.com/armbian/office-hours)?
+Do you [want to take this role](https://calendly.com/armbian/office-hours)?
 
 ## Build All Artifacts (cronjob)
 
