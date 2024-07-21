@@ -34,7 +34,7 @@ We are generating several images for each download / hardware target. They are a
 - Server and IOT releases
 - Dedicated applications
 
-In case we want to recommend and promote certain images, we usually expose two, this is than via RegEx [mapping](https://github.com/armbian/os/blob/main/exposed.map) file.
+In case we want to recommend and promote certain images, we usually expose two, this is done via RegEx [mapping](https://github.com/armbian/os/blob/main/exposed.map) file.
 
 ![Standard support images](images/standard-support-images.png)
 
