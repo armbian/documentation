@@ -101,7 +101,7 @@ Automatically label new pull request based on the paths of files which are being
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml)
 
-Generates all supported build combinations (minimal, cli, desktops) for x86 arhitecture.
+Generates all supported build combinations (minimal, cli, desktops) for x86 arhitecture to check package level changes inconsistency and dependencies.
 
 Options:
 
@@ -113,13 +113,13 @@ Options:
 
 Generates artifacts at Pull Requests code. Build starts when label of Pull Request is set to "Build". Requires administration privileges.
 
-## Lint On Scripts
+## Lint On Shell Scripts
+
+[![Lint On Shell Scripts](https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml)
 
 ![Lint](images/linterror.png)
 
-Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell scripts and report problems within. Since our scripts are full of shellcheck problems we don't block merging on those errors. Not yet.
-
-Linting is run automatically on pull requests change.
+Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell scripts and report problems within. Linting runs automatically on pull requests.
 
 ## Update Tools in Build Scripts
 
