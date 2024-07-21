@@ -129,14 +129,12 @@ Some of our scripts download tools from a repo. These can't be bumped by dependa
 
 ## Scorecards Security Scan
 
-Scorecards is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
+[![Scorecards Security Scan](https://github.com/armbian/build/actions/workflows/scorecard.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/scorecard.yml)
 
-https://github.com/ossf/scorecard#what-is-scorecards
+[Scorecards](https://github.com/ossf/scorecard#what-is-scorecards) is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
 
-## Kernel hardening analysis
+## Kernel Hardening Analysis
 
-This analysis checks kernel config if changed.
+[![Kernel Hardening Analysis](https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml)
 
-There are plenty of security hardening options for the Linux kernel. A lot of them are not enabled by the major distros. We have to enable these options ourselves to make our systems more secure.
-
-https://github.com/a13xp0p0v/kconfig-hardened-check/blob/master/README.md
+This [analysis](https://github.com/a13xp0p0v/kconfig-hardened-check/blob/master/README.md) checks kernel configs and run if changed. There are plenty of security hardening options for the Linux kernel. A lot of them are not enabled by the major distros. We have to enable these options ourselves to make our systems more secure.
