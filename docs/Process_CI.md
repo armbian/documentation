@@ -60,7 +60,7 @@ Images generation can be customized:
 - Board (make images only for one board)
 - Maintainer (make images for selected maintainer)
 
-Generated images are uploaded to incoming folder: https://rsync.armbian.com/incoming/GITHUB_USERNAME and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refreshes download pages within 15-30 minutes.
+Generated images are uploaded to incoming folder: https://rsync.armbian.com/incoming/ under your GitHub username and once they are confirmed working, please notify @igor to move them to official download pages. Once images are moved to main download section, automation refreshes download pages within 15-30 minutes.
 
 ## Build Dedicated Application Images (release manager)
 
