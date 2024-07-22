@@ -12,7 +12,9 @@ This build workflow is executed manually when making:
 - a set of images for specific maintainer
 - a full set of stable release images (default)
 
-**Note**: you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml) build lists!
+**Notes**:
+- you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml) build lists!
+- images generation workflows are compiled and are pretty much the same, just with different defaults
 
 ### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml) and click
 
@@ -63,7 +65,9 @@ This build workflow is executed manually when making:
 - a set of application images for specific maintainer
 - a full set of application images (default)
 
-**Note:** you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
+**Notes**:
+- you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
+- images generation workflows are compiled and are pretty much the same, just with different defaults
 
 ### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml) and click
 
