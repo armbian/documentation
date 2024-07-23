@@ -1,5 +1,8 @@
 # Build actions for developers and maintainers
 
+**Note**: Add ideas for process improvements as comments to the ticket:
+https://armbian.atlassian.net/browse/AR-2429
+
 Manual executing permissions are tied to [release manager](https://github.com/orgs/armbian/teams/release-manager) role within Armbian organization. Do you [want to help and take this role](https://calendly.com/armbian/office-hours)?
 
 ## Prepare Standard Support images for release (release manager)
