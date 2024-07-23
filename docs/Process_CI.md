@@ -1,10 +1,8 @@
 # Build actions for developers and maintainers
 
-**Note**: Add ideas for process improvements as comments to the ticket:
-https://armbian.atlassian.net/browse/AR-2429
+**Note**: Add ideas for process improvements as comments to the [Jira ticket](https://armbian.atlassian.net/browse/AR-2429).
 
 Manual executing permissions are tied to [release manager](https://github.com/orgs/armbian/teams/release-manager) role within Armbian organization. Do you [want to help and take this role](https://calendly.com/armbian/office-hours)?
-
 ## Prepare Standard Support images for release (release manager)
 
 [![Build Standard Support Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
@@ -16,6 +14,7 @@ This build workflow is executed manually when making:
 - a full set of stable release images (default)
 
 **Notes**:
+
 - this process prepares images for release without pushing them to the download pages
 - you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
@@ -34,7 +33,7 @@ This build workflow is executed manually when making:
 
 **(Workflow takes around 15 minutes to complete)**
 
-Generated images are uploaded to incoming folder: https://rsync.armbian.com/incoming/ under **your GitHub username** and once they are confirmed working, please notify @igorpecovnik to move them to official download pages. Once images are moved to [main download section](https://www.armbian.com/download/), automation refreshes download pages index within 15-30 minutes.
+Generated images are uploaded to incoming folder [https://rsync.armbian.com/incoming/](https://rsync.armbian.com/incoming/) under **your GitHub username** and once they are confirmed working, please notify [@igorpecovnik](https://github.com/igorpecovnik) to move them to official download pages. Once images are moved to [main download section](https://www.armbian.com/download/), automation refreshes download pages index within 15-30 minutes.
 
 ### Aditional options
 
@@ -70,6 +69,7 @@ This build workflow is executed manually when making:
 - a full set of application images (default)
 
 **Notes**:
+
 - **application images are released 10-15 minutes after build finishes succesfully**
 - you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
@@ -88,7 +88,7 @@ This build workflow is executed manually when making:
 
 **(Workflow takes around 15 minutes to complete)**
 
-Generated images are hosted at GitHub and released at once. Automation refreshes download pages within 15-30 minutes after/if workflow finished succesfully.
+Generated images are hosted at GitHub [https://github.com/armbian/distribution/releases](https://github.com/armbian/distribution/releases) and released at once. Automation refreshes download pages within 15-30 minutes after/if workflow finished succesfully.
 
 ![Dedicated Application Images](images/dedicated-applications.png)
 
