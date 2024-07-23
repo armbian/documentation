@@ -31,7 +31,7 @@ This build workflow is executed manually when making:
 
 ![Build](images/run-worflow-button.png)
 
-**(Workflow takes around 15 minutes to complete)**
+**(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)**
 
 Generated images are uploaded to incoming folder [https://rsync.armbian.com/incoming/](https://rsync.armbian.com/incoming/) under **your GitHub username** and once they are confirmed working, please notify [@igorpecovnik](https://github.com/igorpecovnik) to move them to official download pages. Once images are moved to [main download section](https://www.armbian.com/download/), automation refreshes download pages index within 15-30 minutes.
 
@@ -86,7 +86,7 @@ This build workflow is executed manually when making:
 
 ![Build](images/run-worflow-button.png)
 
-**(Workflow takes around 15 minutes to complete)**
+**(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)**
 
 Generated images are hosted at GitHub [https://github.com/armbian/distribution/releases](https://github.com/armbian/distribution/releases) and released at once. Automation refreshes download pages within 15-30 minutes after/if workflow finished succesfully.
 
