@@ -13,6 +13,7 @@ This build workflow is executed manually when making:
 - a full set of stable release images (default)
 
 **Notes**:
+- this process prepares images for release without pushing them to the download pages
 - you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
@@ -66,6 +67,7 @@ This build workflow is executed manually when making:
 - a full set of application images (default)
 
 **Notes**:
+- **application images are released 10-15 minutes after build finishes succesfully**
 - you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
