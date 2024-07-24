@@ -102,7 +102,7 @@ Select target for pull/push OCI cached images. If not set, default is used.
 
 - **GHCR_MIRROR_ADDRESS** (string)
 
-Default mirror address for ghcr.io set by GHCR_MIRROR=dockerproxy is ghcr.dockerproxy.com. When this address is not availabe, we can set an alternative address with GHCR_MIRROR_ADDRESS.
+Default mirror address for ghcr.io, set by `GHCR_MIRROR=dockerproxy`, is ghcr.dockerproxy.com. When this address is not available, an alternative address can be set with `GHCR_MIRROR_ADDRESS`.
 
 Example:
 ```
