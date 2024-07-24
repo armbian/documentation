@@ -2,6 +2,10 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
+## v24.5.5 (2025-25-7)
+
+* Recreated Bananapi M7, Khadas Edge 2, Orangepi 5, Orangepi 5 Plus
+
 ## v24.5.4 (2025-21-7)
 
 * Recreated Radxa ROCK5 ITX images
