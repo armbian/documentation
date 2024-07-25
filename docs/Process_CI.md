@@ -27,6 +27,8 @@ This build workflow is executed manually when making:
 
 ![Workflow](images/complete-artifact-matrix-standard-support.png)
 
+**Version override** Use this feature if you want to keep them under the same version, but not lower then [last released](https://docs.armbian.com/Release_Changelog/#changelog).
+
 ### 3. Run workflow
 
 ![Build](images/run-worflow-button.png)
@@ -81,6 +83,8 @@ This build workflow is executed manually when making:
 ### 2. Select board
 
 ![Workflow](images/complete-artifact-matrix-standard-support.png)
+
+**Version override**: Use this feature if you want to keep them under the same version, but not lower then [last released](https://docs.armbian.com/Release_Changelog/#changelog).
 
 ### 3. Run workflow
 
