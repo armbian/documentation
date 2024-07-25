@@ -5,6 +5,7 @@
 ## v24.5.5 (2025-25-7)
 
 * Recreated Bananapi M7, Khadas Edge 2, Orangepi 5, Orangepi 5 Plus
+* Sent rk35xx-vendor (6.1.75) and rk35xx-edge (6.10.y) kernel to the stable repository
 
 ## v24.5.4 (2025-21-7)
 
