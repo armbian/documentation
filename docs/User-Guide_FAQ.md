@@ -58,7 +58,8 @@ We need many different profiles of people to run this project and just about any
 
 ## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
 
-The Armbian project has very limited human and financial resources so it can focus on a few up-to-date operating system releases only.
+The Armbian project has very limited human and financial resources so it can focus on a few up-to-date operating system releases only.  
+Currently supported userspaces from [Debian](https://www.debian.org/releases/stable/) and [Ubuntu](https://wiki.ubuntu.com/Releases) (latest only).
 
 ## I have a TV Box or tablet from <insert random vendor\>. Can I use Armbian on it?
 
