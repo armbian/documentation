@@ -51,11 +51,10 @@ Tags are used in ad-hoc manner.
 | 23.08 | Colobus | August | [done](https://armbian.atlassian.net/projects/AR/versions/10015/tab/release-report-all-issues)
 | 23.11 | Topi | November | [done](https://armbian.atlassian.net/projects/AR/versions/10016/tab/release-report-all-issues)
 | 24.02 | Kereru | February | [done](https://armbian.atlassian.net/projects/AR/versions/10017/tab/release-report-all-issues)
-| 24.05 | Havier | May | planned
+| 24.05 | Havier | May |  [done](https://armbian.atlassian.net/projects/AR/versions/10018/tab/release-report-all-issues)
+| 24.08 | Yelt | August | planned
 
 
- 
- 
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
 ## Release Planning
