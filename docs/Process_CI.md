@@ -36,7 +36,7 @@ From those templates we are [autogenerating](https://github.com/armbian/os/blob/
 
 ### Blacklisting
 
-Autogeneration is excluded for boards that are on black lists:
+Autogeneration is excluded for boards that are on blacklists:
 
 ```
 userpatches/targets-automation.blacklist
