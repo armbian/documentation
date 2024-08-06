@@ -22,7 +22,7 @@ network:
   ethernets:
     all-eth-interfaces:
       match:
-        name: "*"
+        name: "e*"
       dhcp4: yes
       dhcp6: yes
       ipv6-privacy: yes
