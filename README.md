@@ -68,7 +68,7 @@ Set up a Python virtual environment to isolate the project dependencies:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install --use-pep517 -r requirements.txt
 ```
 
 ### Building and Serving the Documentation
