@@ -79,7 +79,7 @@ def generateSite(parsedFileList):
 site_name: Armbian Documentation
 site_author: "Armbian team"
 
-copyright: Copyright &copy; 2015 - 2022 Armbian team
+copyright: Copyright &copy; 2015 - 2024 Armbian team
 repo_url: https://github.com/armbian/documentation
 repo_name: armbian/documentation
 
@@ -119,15 +119,17 @@ extra:
       link: https://twitter.com/armbian
 
 plugins:
+   - search
    - with-pdf:
        author: Armbian documentation team
-       copyright: © 2021 by Armbian
+       copyright: © 2024 by Armbian
        cover_title: Armbian documentation
        cover_subtitle: Linux for ARM development boards
 
 markdown_extensions:
   - smarty
   - footnotes
+  - mdx_truly_sane_lists
   - toc:
       permalink: True
   - pymdownx.highlight:
@@ -136,8 +138,8 @@ markdown_extensions:
       use_pygments: true
   - pymdownx.superfences
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Home: index.md
