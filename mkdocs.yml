@@ -70,65 +70,65 @@ nav:
         - 'Maintainers_Procedures_and_Guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
     
   - 'Community' :
-        - 'IRC' : 'Community_IRC.md'
         - 'Governance' : 'Community_Governance.md'
+        - 'IRC' : 'Community_IRC.md'
         - 'Torrent' : 'Community_Torrent.md'
     
   - 'Developer Guide' :
-        - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
-        - 'Build Process' : 'Developer-Guide_Build-Process.md'
-        - 'Build Options' : 'Developer-Guide_Build-Options.md'
-        - 'Adding Board Family' : 'Developer-Guide_Adding-Board-Family.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
-        - 'Extensions' : 'Developer-Guide_Extensions.md'
         - 'Welcome' : 'Developer-Guide_Welcome.md'
+        - 'Build Process' : 'Developer-Guide_Build-Process.md'
+        - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
+        - 'Build Options' : 'Developer-Guide_Build-Options.md'
+        - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
+        - 'Adding Board Family' : 'Developer-Guide_Adding-Board-Family.md'
+        - 'Extensions' : 'Developer-Guide_Extensions.md'
         - 'Testing Procedures' : 'Developer-Guide_Testing-Procedures.md'
         - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
-        - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
     
   - 'Development Code' :
         - 'Review_Procedures_and_Guidelines' : 'Development-Code_Review_Procedures_and_Guidelines.md'
     
   - 'Hardware' :
-        - 'Rockchip' : 'Hardware_Rockchip.md'
-        - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
-        - 'Freescale imx6' : 'Hardware_Freescale-imx6.md'
-        - 'Allwinner' : 'Hardware_Allwinner.md'
-        - 'Allwinner A20' : 'Hardware_Allwinner-A20.md'
-        - 'Allwinner H6' : 'Hardware_Allwinner-H6.md'
         - 'Marvell' : 'Hardware_Marvell.md'
+        - 'Allwinner A20' : 'Hardware_Allwinner-A20.md'
+        - 'Rockchip' : 'Hardware_Rockchip.md'
         - 'Allwinner H5 A64' : 'Hardware_Allwinner-H5-A64.md'
+        - 'Allwinner' : 'Hardware_Allwinner.md'
+        - 'Allwinner H3' : 'Hardware_Allwinner-H3.md'
+        - 'Allwinner H6' : 'Hardware_Allwinner-H6.md'
+        - 'Freescale imx6' : 'Hardware_Freescale-imx6.md'
     
   - 'Process' :
-        - 'Merge Policy' : 'Process_Merge-Policy.md'
-        - 'Managing_Workflow' : 'Process_Managing_Workflow.md'
-        - 'Contribute' : 'Process_Contribute.md'
-        - 'Release Model' : 'Process_Release-Model.md'
         - 'Documentation' : 'Process_Documentation.md'
+        - 'Contribute' : 'Process_Contribute.md'
         - 'CI' : 'Process_CI.md'
+        - 'Managing_Workflow' : 'Process_Managing_Workflow.md'
         - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
+        - 'Merge Policy' : 'Process_Merge-Policy.md'
+        - 'Release Model' : 'Process_Release-Model.md'
     
   - 'Quick' :
         - 'facts' : 'Quick_facts.md'
     
   - 'Release' :
-        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
         - 'Changelog' : 'Release_Changelog.md'
+        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
     
   - 'User Guide' :
-        - 'Armbian_overlays' : 'User-Guide_Armbian_overlays.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
-        - 'Getting Started Download Page' : 'User-Guide_Getting-Started-Download-Page.md'
-        - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
-        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
         - 'Recovery' : 'User-Guide_Recovery.md'
-        - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
-        - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
-        - 'Migration_from_Bananian' : 'User-Guide_Migration_from_Bananian.md'
         - 'Allwinner_overlays' : 'User-Guide_Allwinner_overlays.md'
+        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
+        - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
+        - 'Getting Started Download Page' : 'User-Guide_Getting-Started-Download-Page.md'
+        - 'Migration_from_Bananian' : 'User-Guide_Migration_from_Bananian.md'
+        - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
+        - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
+        - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
         - 'Networking' : 'User-Guide_Networking.md'
+        - 'Armbian_overlays' : 'User-Guide_Armbian_overlays.md'
     
 
