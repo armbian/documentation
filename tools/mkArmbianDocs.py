@@ -122,7 +122,7 @@ plugins:
    - search
    - with-pdf:
        author: Armbian documentation team
-       copyright: © 2021 by Armbian
+       copyright: © 2024 by Armbian
        cover_title: Armbian documentation
        cover_subtitle: Linux for ARM development boards
 
