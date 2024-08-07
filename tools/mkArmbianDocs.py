@@ -79,7 +79,7 @@ def generateSite(parsedFileList):
 site_name: Armbian Documentation
 site_author: "Armbian team"
 
-copyright: Copyright &copy; 2015 - 2022 Armbian team
+copyright: Copyright &copy; 2015 - 2024 Armbian team
 repo_url: https://github.com/armbian/documentation
 repo_name: armbian/documentation
 
@@ -119,6 +119,7 @@ extra:
       link: https://twitter.com/armbian
 
 plugins:
+   - search
    - with-pdf:
        author: Armbian documentation team
        copyright: © 2021 by Armbian
