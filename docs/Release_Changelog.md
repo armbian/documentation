@@ -2,31 +2,31 @@
 
 * Note: If a new sub-version is released this does not necessarily mean all boards receive a new version number since most of the time these fixes are targeting a specific board or board family only.
 
-## v24.5.5 (2025-25-7)
+## v24.5.5 (2024-25-7)
 
 * Recreated Bananapi M7, Khadas Edge 2, Orangepi 5, Orangepi 5 Plus
 * Sent rk35xx-vendor (6.1.75) and rk35xx-edge (6.10.y) kernel to the stable repository
 
-## v24.5.4 (2025-21-7)
+## v24.5.4 (2024-21-7)
 
 * Recreated Radxa ROCK5 ITX images
 * Recreated Olimex Teres images since they were broken
 * Sent sunxi64-current kernel to the stable repository
 * Sent rk35xx-vendor kernel to the stable repository
 
-## v24.5.3 (2025-01-7)
+## v24.5.3 (2024-01-7)
 
 * Recreated Helios64 since board was moved under supported
 * Sent rockchip64-current kernel to the stable repository
 
-## v24.5.2 (2025-18-6)
+## v24.5.2 (2024-18-6)
 
 * Recreated [Khadas Edge 2 images](https://www.armbian.com/khadas-edge-2/) due to lack of 3D / video acceleration support in 6.1.y
 * Recreated Orangepi 5 plus images due to missing support for 32GB variant
 * Recreated Odroid M1 images with new minimal images and KDE Neon desktop
 * Added Orangepi 5 Pro images
 
-## v24.5.1 (2025-25-5)
+## v24.5.1 (2024-25-5)
 
 ### Closed projects
 
