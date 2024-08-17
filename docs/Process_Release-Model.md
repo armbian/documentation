@@ -57,6 +57,7 @@ Tags are used in ad-hoc manner.
 
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
 
+<!---
 ## Release Planning
 
 A release planning starts with an public IRC meeting where developers and interested users come together in **first Saturday, one month before the release month**. 
@@ -148,6 +149,7 @@ Dates for **2024**:
 ```
 
 Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera](https://libera.chat/). Meeting start times are announced in [Forum Events](https://forum.armbian.com/events/).
+-->
 
 ## Release Coordinating
 
