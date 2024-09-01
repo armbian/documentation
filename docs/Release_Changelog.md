@@ -6,314 +6,314 @@
 
 ## v24.8.1 (2024-08-31)
 
-* Add audio support to hdmi output (meson) by @kernelzru in https://github.com/armbian/build/pull/6730
-* Temporally disable broken build configuration by @igorpecovnik in https://github.com/armbian/build/pull/6733
-* Odroid XU4: Remove deprecated patches by @igorpecovnik in https://github.com/armbian/build/pull/6732
-* RK3588 edge kernel: Add support for Linux 6.10 + introduce stable `current` branch (6.8) by @ColorfulRhino in https://github.com/armbian/build/pull/6699
-* rk3588: Add board NanoPi R6C by @ColorfulRhino in https://github.com/armbian/build/pull/6738
-* re-add some Khadas Edge 2 patches to edge kernel by @efectn in https://github.com/armbian/build/pull/6737
-* Update JetHome JetHub D2 support by @adeepn in https://github.com/armbian/build/pull/6736
-* rockchip-rk3588 6.8.y: nanopct6: Add NanoPC T6 SPI Flash (v6.8.y version) by @rpardini in https://github.com/armbian/build/pull/6735
-* rockchip64/rk3318-box: move stack further from base addr to allow bigger uboot image by @alex3d in https://github.com/armbian/build/pull/6731
-* RK3588 edge: Add H.264 decoder support by @ColorfulRhino in https://github.com/armbian/build/pull/6734
-* GH Actions: Fix auto-labeler for "Desktop" category and add categories "Patches" and "Documentation" by @ColorfulRhino in https://github.com/armbian/build/pull/6743
-* extlinux: add DEFAULT_OVERLAYS support by @efectn in https://github.com/armbian/build/pull/6744
-* Disable autosuspend on Gnome based desktops by @igorpecovnik in https://github.com/armbian/build/pull/6742
-* actions: Fix typo in actions/labeler labeler.yml by @ColorfulRhino in https://github.com/armbian/build/pull/6745
-* cli: Fix DEFAULT_OVERLAYS array by @ColorfulRhino in https://github.com/armbian/build/pull/6746
-* khadas-edge2: rename audios by @efectn in https://github.com/armbian/build/pull/6750
-* Fix boot from btrfs fs in uboot 2024.01/2024.04 by @alex3d in https://github.com/armbian/build/pull/6748
-* rockchip-rk3588-edge: fix vepu of rk3588 by @amazingfate in https://github.com/armbian/build/pull/6752
-* board: orangepi-5-plus: Add mainline U-Boot for edge kernel by @ColorfulRhino in https://github.com/armbian/build/pull/6719
-* khadas-edge2: add vendor uboot to images by @igorpecovnik in https://github.com/armbian/build/pull/6754
-* board: nanopi-r6s: Add system-power-controller to pmic by @ColorfulRhino in https://github.com/armbian/build/pull/6755
-* kernel: mainline: Bump 6.10-rc3 to 6.10-rc4 by @ColorfulRhino in https://github.com/armbian/build/pull/6753
-* Sm8250 6.9 by @amazingfate in https://github.com/armbian/build/pull/6727
-* Add support for rk3399 based SBC Leez P710 by @andyshrk in https://github.com/armbian/build/pull/6749
-* Debian buster: disable non-existing backports repository by @igorpecovnik in https://github.com/armbian/build/pull/6758
-* packages: Enable bash-completion on all images by @ColorfulRhino in https://github.com/armbian/build/pull/6759
-* station-m2: Use Raxda u-boot 2024.01 by @chainsx in https://github.com/armbian/build/pull/6760
-* actions: Fix auto-labeler by checking subdirectories by @ColorfulRhino in https://github.com/armbian/build/pull/6764
-* aic8800: update firmware package URL by @RadxaYuntian in https://github.com/armbian/build/pull/6768
-* Move Network Manager bits into extensions by @igorpecovnik in https://github.com/armbian/build/pull/6756
-* fix armbian-leds-state-save.sh: by @alexl83 in https://github.com/armbian/build/pull/6765
-* add community support for lckfb taishanpi by @chainsx in https://github.com/armbian/build/pull/6767
-* Deboostrap: switch to last known working tag by @igorpecovnik in https://github.com/armbian/build/pull/6775
-* i3-wm: remove conflicting userspace packages by @igorpecovnik in https://github.com/armbian/build/pull/6776
-* partitioning: fix race condition on loop device allocation by @alex3d in https://github.com/armbian/build/pull/6729
-* rockchip-rk3588: edge: add rkvdec2 support by @amazingfate in https://github.com/armbian/build/pull/6777
-* Rootfs cache is repeating generation over and over again by @igorpecovnik in https://github.com/armbian/build/pull/6778
-* add device-tree-compiler to bsp-cli debian dependencies by @alexl83 in https://github.com/armbian/build/pull/6779
-* Run shellfmt to complete code by @igorpecovnik in https://github.com/armbian/build/pull/6782
-* Networking: set proper hook location for extensions by @igorpecovnik in https://github.com/armbian/build/pull/6780
-* ext: fs-cryptroot-support: don't abuse `add_host_dependencies` by @rpardini in https://github.com/armbian/build/pull/6785
-* rockchip-rk3588 6.8/610: add `i2c8-m2` overlay by @rpardini in https://github.com/armbian/build/pull/6784
-* rk3588: Enable `current` kernel branch for some boards by @ColorfulRhino in https://github.com/armbian/build/pull/6740
-* Add orangepi5-plus UART overlays by @alexl83 in https://github.com/armbian/build/pull/6787
-* networking: main-config: introduce `NETWORKING_STACK` to control network exts; allow "none"; fix typo by @rpardini in https://github.com/armbian/build/pull/6786
-* Helios64: move to supported section by @igorpecovnik in https://github.com/armbian/build/pull/6789
-* phytium-embedded: add bpf_syscall support by @chainsx in https://github.com/armbian/build/pull/6788
-* Use random-mac only with systemd-networkd (minimal images) by @igorpecovnik in https://github.com/armbian/build/pull/6783
-* Rockcchip RK3588: Rename overlay suffix to match reality by @igorpecovnik in https://github.com/armbian/build/pull/6791
-* distro: trixie: Add riscv64 to supported architectures by @ColorfulRhino in https://github.com/armbian/build/pull/6793
-* Revert "distro: trixie: Add riscv64 to supported architectures" by @ColorfulRhino in https://github.com/armbian/build/pull/6794
-* kernel: mainline: Bump 6.10-rc4 to 6.10-rc5 by @ColorfulRhino in https://github.com/armbian/build/pull/6792
-* cli: Add command "dts-check" to validate dts files and improve board & patch development overall (resubmission) by @ColorfulRhino in https://github.com/armbian/build/pull/6739
-* tools: Update shellfmt from version 3.6.0 to 3.8.0 by @ColorfulRhino in https://github.com/armbian/build/pull/6795
-* actions: Use "all-globs" instead of "any-glob" for negated checks by @ColorfulRhino in https://github.com/armbian/build/pull/6796
-* Fix aml-s9xx-box bsp-cli package upgrade by @SteeManMI in https://github.com/armbian/build/pull/6797
-* DTS-check: Python librarires have troubles to build, disabling for now by @igorpecovnik in https://github.com/armbian/build/pull/6798
-* Fix `dts-check` command and use Pip for some Python packages instead of APT by @ColorfulRhino in https://github.com/armbian/build/pull/6799
-* bootscript: Remove deprecated bootarg "swapaccount=1" by @ColorfulRhino in https://github.com/armbian/build/pull/6705
-* Odroid M1: add a network rule to rename default name by @igorpecovnik in https://github.com/armbian/build/pull/6757
-* Add new "BSP" and "GitHub" label for the auto-labeler by @ColorfulRhino in https://github.com/armbian/build/pull/6805
-* rk3588: bump default blobs (DDR:1.16, BL31:1.45); remove board-specific blobs from boards that used those versions by @rpardini in https://github.com/armbian/build/pull/6810
-* fix: partitioning: disable `orphan_file` (`FEATURE_C12`) for ext4 filesystems on 1.47+ e2fsprogs host by @rpardini in https://github.com/armbian/build/pull/6809
-* aml-s9xx-box: Remove u-boot and update generated extlinux.conf by @SteeManMI in https://github.com/armbian/build/pull/6803
-* GitHub: Improve issue templates and add new `Task` template for project management by @ColorfulRhino in https://github.com/armbian/build/pull/6813
-* station-m2: update u-boot patches by @chainsx in https://github.com/armbian/build/pull/6812
-* kde-neon: use Neon's "user" repo for Jammy & return it to `csc` status by @rpardini in https://github.com/armbian/build/pull/6808
-* actions: labeler: Fix label colors by removing `#` prefix by @ColorfulRhino in https://github.com/armbian/build/pull/6807
-* Move board-specific config (Odroid C1) away from family config by @ColorfulRhino in https://github.com/armbian/build/pull/6801
-* Remove haveged to save space and resources by @alexl83 in https://github.com/armbian/build/pull/6781
-* Lets not spam users with error message on fresh checkout by @viraniac in https://github.com/armbian/build/pull/6814
-* BPI-CM4: bluetooth: `fw version 0xb5d66dcb` by @pyavitz in https://github.com/armbian/build/pull/6816
-* Update odroidxu4-current to 6.6.36 by @belegdol in https://github.com/armbian/build/pull/6815
-* Odroid XU4: remove deprecated patch by @igorpecovnik in https://github.com/armbian/build/pull/6825
-* Add Matrix to README by @EvilOlaf in https://github.com/armbian/build/pull/6826
-* extensions/radxa-aic8800: fix aic8800_dkms_file_name for sdio by @andyshrk in https://github.com/armbian/build/pull/6827
-* Bump default boot blobs for RK3528, RK3566 and RK3568 and use them for NanoPi R5C by @ColorfulRhino in https://github.com/armbian/build/pull/6822
-* armbianmonitor `-u`: rationalize paste server retrying, use ANSI dmesg by @rpardini in https://github.com/armbian/build/pull/6836
-* cli: uboot: Include PYTHONPATH in env for compiling U-Boot by @ColorfulRhino in https://github.com/armbian/build/pull/6819
-* Integrate `media` boards into the `rockchip64` family by @ColorfulRhino in https://github.com/armbian/build/pull/6834
-* [Cleanup] Remove old torrents by @ColorfulRhino in https://github.com/armbian/build/pull/6829
-* [Cleanup] Remove leftovers of former `BOARDFAMILY` `rk322x` (now integrated into the `rockchip` family) by @ColorfulRhino in https://github.com/armbian/build/pull/6832
-* odroidm1/orangepi3b: use default (newer) blobs; rewrite patches; bump -rc u-boot to final by @rpardini in https://github.com/armbian/build/pull/6837
-* [Cleanup] Clean leftovers in `packages/extras-buildpkgs` by @ColorfulRhino in https://github.com/armbian/build/pull/6830
-* [Cleanup] Remove some leftover kernel patch folders by @ColorfulRhino in https://github.com/armbian/build/pull/6831
-* radxa-zero3: add `edge` branch (6.9.y) by picking DT from linux-rockchip#for-next & using Kwiboo's 24.07 u-boot by @rpardini in https://github.com/armbian/build/pull/6842
-* u-boot: add HOME env for make invocations to avoid binman/Python problems with older u-boot versions by @rpardini in https://github.com/armbian/build/pull/6845
-* rockchip: fix rk322x-box uboot boot order by @paolosabatino in https://github.com/armbian/build/pull/6844
-* Addressing two problems related to `wireless at firstlogin script` by @igorpecovnik in https://github.com/armbian/build/pull/6823
-* Remove OrangepiZero2 heavily outdated legacy kernel by @igorpecovnik in https://github.com/armbian/build/pull/6854
-* [v3] Add new RISCV family "SpacemiT" and board BananaPi F3 by @ColorfulRhino in https://github.com/armbian/build/pull/6850
-* Fix btrfs and xfs resize by @Ratio2 in https://github.com/armbian/build/pull/6846
-* aml-s9xx-box: bsp-cli hashing fixes by @rpardini in https://github.com/armbian/build/pull/6839
-* Bump sunxi-current and sunxi64 to latest tag by @EvilOlaf in https://github.com/armbian/build/pull/6861
-* improve fs-cryptroot-support.sh by @alexl83 in https://github.com/armbian/build/pull/6858
-* build(deps): bump setuptools from 70.1.1 to 70.2.0 by @dependabot in https://github.com/armbian/build/pull/6856
-* nanopi-r5s: bump blobs & u-boot enhancements for UMS/otg/bootorder by @rpardini in https://github.com/armbian/build/pull/6833
-* Update support for recore boards by @eliasbakken in https://github.com/armbian/build/pull/6859
-* Fixing syntax at Recore and add missing board level variables by @igorpecovnik in https://github.com/armbian/build/pull/6863
-* rootfs: add comment to force rootfs rebuild by @rpardini in https://github.com/armbian/build/pull/6864
-* Test automation - adjust kernel test targets. by @igorpecovnik in https://github.com/armbian/build/pull/6865
-* Fix Khadas Edge 2 uboot build by @efectn in https://github.com/armbian/build/pull/6868
-* Add recore dts patch to series.conf so it gets applied by @eliasbakken in https://github.com/armbian/build/pull/6866
-* bsp-cli/bsp-desktop: hashing fixes by @rpardini in https://github.com/armbian/build/pull/6838
-* Fix several issues related to building U-Boot by @ColorfulRhino in https://github.com/armbian/build/pull/6867
-* Bump rk322x-box and rk3318-box to u-boot v2024.07-rc5 by @paolosabatino in https://github.com/armbian/build/pull/6855
-* fix: firefly-itx-3588j fails to boot, and audio output by @SeeleVolleri in https://github.com/armbian/build/pull/6849
-* u-boot: use `pipetty` in place of `unbuffer` by @rpardini in https://github.com/armbian/build/pull/6873
-* Purge `s5p6818` board family by @ColorfulRhino in https://github.com/armbian/build/pull/6869
-* git: git_ensure_safe_directory(): use env vars instead of changing config by @rpardini in https://github.com/armbian/build/pull/6870
-* Spacemit: use same kernel config as on known to work image by @igorpecovnik in https://github.com/armbian/build/pull/6875
-* Update JetHub boards support by @adeepn in https://github.com/armbian/build/pull/6876
-* Next set of U-Boot compilation fixes by @ColorfulRhino in https://github.com/armbian/build/pull/6877
-* fix uboot compilation issues on Orange Pi 5/5 Plus by @efectn in https://github.com/armbian/build/pull/6878
-* Reverting attempted git-safe folder problem by @igorpecovnik in https://github.com/armbian/build/pull/6882
-* Test automation - optimise testing on targets by @igorpecovnik in https://github.com/armbian/build/pull/6883
-* mixtile-blade3: use default blobs & bump vendor u-boot to `next-dev-v2024.03` by @rpardini in https://github.com/armbian/build/pull/6872
-* mekotronics: rk3588: u-boot: borrow patch to fix build on newer gcc by @rpardini in https://github.com/armbian/build/pull/6871
-* Move OPi5/5B/5 Plus uboots to Radxa git tree by @efectn in https://github.com/armbian/build/pull/6884
-* rk35xx: Remove `legacy` kernel target from board configs by @ColorfulRhino in https://github.com/armbian/build/pull/6881
-* rockpi-s: Remove `legacy` kernel 4.4 support by @ColorfulRhino in https://github.com/armbian/build/pull/6879
-* Armbian-install: add option to wipe target destination by @igorpecovnik in https://github.com/armbian/build/pull/6828
-* Allow to pass docker login when in CI, but not in GitHub actions by @adeepn in https://github.com/armbian/build/pull/6702
-* Adjust Rockpi S patch to align with upstream changes by @igorpecovnik in https://github.com/armbian/build/pull/6886
-* RTW88: 6.6: upstream wireless: `fixups` by @pyavitz in https://github.com/armbian/build/pull/6888
-* Allwinner: set legacy 6.1.y to last known build tag by @igorpecovnik in https://github.com/armbian/build/pull/6889
-* add new board radxa-e52c by @amazingfate in https://github.com/armbian/build/pull/6891
-* Bananapi M5: Bump u-boot to v2024.07 final by @igorpecovnik in https://github.com/armbian/build/pull/6900
-* u-boot: embed armbian artifact version in CONFIG_LOCALVERSION by @rpardini in https://github.com/armbian/build/pull/6898
-* odroidm1: bump to u-boot v2024.07; replace defconfig patches with hook by @rpardini in https://github.com/armbian/build/pull/6897
-* bump rk3288 tinkerboard to uboot v2024.07 by @paolosabatino in https://github.com/armbian/build/pull/6895
-* Move the `NETWORKING_STACK` in main config and add armhf support to Trixie by @ColorfulRhino in https://github.com/armbian/build/pull/6911
-* multiple boards: bump u-boot from v2024.07-rcX to v2024.07 final by @rpardini in https://github.com/armbian/build/pull/6899
-* Beautify `shellfmt` and add board configs to formatting list by @ColorfulRhino in https://github.com/armbian/build/pull/6910
-* thinkpad-x13s: bump to jhovold's `wip/sc8280xp-6.10-rc6`; add fprintd back to Trixie; fixes by @rpardini in https://github.com/armbian/build/pull/6913
-* mixtile-blade3: u-boot: join rockchip-rk3588's default `u-boot-radxa-rk35xx` scheme by @rpardini in https://github.com/armbian/build/pull/6915
-* nanopi-r6s: Use mainline U-Boot by @ColorfulRhino in https://github.com/armbian/build/pull/6908
-* mekotronics: u-boot: join rockchip-rk3588's default `u-boot-radxa-rk35xx` scheme by @rpardini in https://github.com/armbian/build/pull/6916
-* Trixie: remove / replace missing packages by @igorpecovnik in https://github.com/armbian/build/pull/6917
-* build(deps): bump actions/upload-artifact from 4.3.3 to 4.3.4 by @dependabot in https://github.com/armbian/build/pull/6918
-* partitioning: Reduce `commit` mount option for btrfs and ext4 to 120 by @ColorfulRhino in https://github.com/armbian/build/pull/6919
-* sunxi-6.1: switch to tag:v6.1.97, re-extracting the corrected ones by @The-going in https://github.com/armbian/build/pull/6893
-* To modify the PWM-fan temperature control policy of fine3399 to adjust the fan speed to a lower level by @Lemon1151 in https://github.com/armbian/build/pull/6843
-* mt7623: Bump `legacy` 4.19 to `current` 6.6 kernel by @ColorfulRhino in https://github.com/armbian/build/pull/6902
-* nanopi-r5s: u-boot: pci enum in preboot; disable armbian-led-state by @rpardini in https://github.com/armbian/build/pull/6896
-* wifi: rtl8852bs: fix build for rockchip by @amazingfate in https://github.com/armbian/build/pull/6926
-* Fix armbian-firstrun service not disabled on start. by @adeepn in https://github.com/armbian/build/pull/6930
-* Add MKNOD capability to dockershell container by @JohnTheCoolingFan in https://github.com/armbian/build/pull/6927
-* Improve Actions UI, introduce Actions run names for all workflows by @ColorfulRhino in https://github.com/armbian/build/pull/6925
-* Inovato Quadra: enable correct PIN to get wifi working by @igorpecovnik in https://github.com/armbian/build/pull/6892
-* Spacemit-k1 / Banananpi F3: adjust u-boot patch by @igorpecovnik in https://github.com/armbian/build/pull/6931
-* thinkpad-x13s: bump to jhovold's `wip/sc8280xp-6.10-rc7` by @rpardini in https://github.com/armbian/build/pull/6934
-* mainline-kernel: bump to `6.10-rc7` by @rpardini in https://github.com/armbian/build/pull/6935
-* wifi: rtl8852bs: add driver for family instead of board by @amazingfate in https://github.com/armbian/build/pull/6932
-* Desktops: replace missing packages with correct ones by @igorpecovnik in https://github.com/armbian/build/pull/6939
-* firstlogin: quote values if space is legal by @jkt628 in https://github.com/armbian/build/pull/6942
-* rockchip-rk35xx-vendor enable rtw89_8852be as module by @alexl83 in https://github.com/armbian/build/pull/6947
-* sunxi-6.1: Reverse commit 75317a0, fix real reason inability to load kernel by @The-going in https://github.com/armbian/build/pull/6945
-* BananaPi CM4/M2S: `Bump u-boot to v2024.07` by @pyavitz in https://github.com/armbian/build/pull/6943
-* u-boot: 2024.07: fix boot from btrfs by @alex3d in https://github.com/armbian/build/pull/6946
-* Move teres-i in supported by @Kreyren in https://github.com/armbian/build/pull/6948
-* Add Libre Computer Alta and Solitude by @Tonymac32 in https://github.com/armbian/build/pull/6952
-* SpacemiT: BananaPi F3: U-Boot: use TAG and add SCRIPT support. by @pyavitz in https://github.com/armbian/build/pull/6953
-* SpacemiT: BananaPi F3: `update to BL v1.0.8` by @pyavitz in https://github.com/armbian/build/pull/6954
-* cli: uboot: Move `uboot_cflags` variable to before its first use by @ColorfulRhino in https://github.com/armbian/build/pull/6960
-* actions: forked-helper: Don't escape multiline strings by @ColorfulRhino in https://github.com/armbian/build/pull/6961
-* Trixie: remove non-existing packages from Budgie desktop by @igorpecovnik in https://github.com/armbian/build/pull/6959
-* SpacemiT: Legacy: Wireless RTL8852BS: `Fixups` by @pyavitz in https://github.com/armbian/build/pull/6957
-* VIM1S/4: follow Khadas's branch for u-boot by @viraniac in https://github.com/armbian/build/pull/6955
-* add customized GHCR_MIRROR_ADDRESS support by @amazingfate in https://github.com/armbian/build/pull/6951
-* actions: Create workflow to update shell tools via auto-PR by @ColorfulRhino in https://github.com/armbian/build/pull/6922
-* extensions: Establish some consistency with extension logging by @ColorfulRhino in https://github.com/armbian/build/pull/6920
-* rk35xx-vendor: bump to latest sdk release rkr3 by @amazingfate in https://github.com/armbian/build/pull/6853
-* JetHome: Update bsp: fix jethub-init to support /etc/defaults by @adeepn in https://github.com/armbian/build/pull/6970
-* add rk3576 support to rk35xx and armsom sige5 by @amazingfate in https://github.com/armbian/build/pull/6554
-* Enable sound and battery for Retro Lite CM5 by @ginkage in https://github.com/armbian/build/pull/6971
-* Bump koalaman/shellcheck from 0.9.0 to 0.10.0 in `lib/functions/general/shellcheck.sh` by @github-actions in https://github.com/armbian/build/pull/6963
-* build(deps): bump setuptools from 70.2.0 to 70.3.0 by @dependabot in https://github.com/armbian/build/pull/6950
-* Bump oras-project/oras from 0.16.0 to 1.2.0 in `lib/functions/general/oci-oras.sh` by @github-actions in https://github.com/armbian/build/pull/6964
-* Bump sharkdp/bat from 0.23.0 to 0.24.0 in `lib/functions/general/bat-cat.sh` by @github-actions in https://github.com/armbian/build/pull/6965
-* Add board config for Retro Lite CM5 by @ginkage in https://github.com/armbian/build/pull/6972
-* oci-oras: fix for ORAS > 1.x, as it now requires `HOME` to be set (fixes `download-artifact`) by @rpardini in https://github.com/armbian/build/pull/6976
-* mesa-vpu: use kisak mesa ppa instead of oibaf by @amazingfate in https://github.com/armbian/build/pull/6979
-* utils-dpkgdeb: force rebuild of all artifacts, due to https://github.com/armbian/build/pull/6964 (ORAS change) by @rpardini in https://github.com/armbian/build/pull/6977
-* Temporally move TI build targets to EOS as Git is out of reach by @igorpecovnik in https://github.com/armbian/build/pull/6981
-* [urgent] Hotfix for rk3399 boot by @paolosabatino in https://github.com/armbian/build/pull/6982
-* Bump rockchip64 edge kernel to 6.10 by @paolosabatino in https://github.com/armbian/build/pull/6980
-* rockchip: bump edge kernel to 6.10 by @paolosabatino in https://github.com/armbian/build/pull/6975
-* Fix rtl8189fs WiFi driver by @schwar3kat in https://github.com/armbian/build/pull/6984
-* Update odroidxu4-current to 6.6.41 by @belegdol in https://github.com/armbian/build/pull/6985
-* build(deps): bump setuptools from 70.3.0 to 71.1.0 by @dependabot in https://github.com/armbian/build/pull/6983
-* Add HDMI-rx to linux 6-10 for rk3588 by @benhoff in https://github.com/armbian/build/pull/6986
-* SpacemiT: `write_uboot_platform`: eMMC Support by @pyavitz in https://github.com/armbian/build/pull/6958
-* fix rk3568-roc-pc by @chainsx in https://github.com/armbian/build/pull/6992
-* Fixed Tinker-edge-r HDMI 4K bug by @ARC-MX in https://github.com/armbian/build/pull/6991
-* Fix for no network inside Docker container by @igorpecovnik in https://github.com/armbian/build/pull/6990
-* add new board armsom-aim7-io by @amazingfate in https://github.com/armbian/build/pull/6987
-* Repo management: rework to increase reliability and speed by @igorpecovnik in https://github.com/armbian/build/pull/6924
-* add new board RK3328 Heltec HT-M2808 by @sicXnull in https://github.com/armbian/build/pull/6989
-* mesa-vpu: install backported mesa from obs for bookworm panthor driver by @amazingfate in https://github.com/armbian/build/pull/6994
-* Awarding regular contributors - adding a special PR tag by @igorpecovnik in https://github.com/armbian/build/pull/6997
-* UEFI x86 and arm64: Bump EDGE kernels to 6.10.y by @igorpecovnik in https://github.com/armbian/build/pull/6996
-* Debian: drop support for Budgie on Trixe / Bookworm.  by @igorpecovnik in https://github.com/armbian/build/pull/7001
-* rockchip64-edge: add rkvdec2 for rk356x by @amazingfate in https://github.com/armbian/build/pull/6804
-* Switch Retro Lite CM5 back to legacy U-Boot by @ginkage in https://github.com/armbian/build/pull/7004
-* mesa-vpu: install chromium package instead of chromium-browser by @efectn in https://github.com/armbian/build/pull/7005
-* Extend mesa-vpu extension to load unpatched Chromium by default by @igorpecovnik in https://github.com/armbian/build/pull/6657
-* sun55iw3-syterkit: update kernel config by @chainsx in https://github.com/armbian/build/pull/7003
-* Meson64 edge to 6.10 by @SteeManMI in https://github.com/armbian/build/pull/7000
-* kernel: meson-s4t7: update config to match latest fenix changes by @viraniac in https://github.com/armbian/build/pull/7013
-* Update odroidxu4-current to 6.6.43 by @belegdol in https://github.com/armbian/build/pull/7014
-* thinkpad-x13s: bump to jhovold's 6.10 (from -rc7) by @rpardini in https://github.com/armbian/build/pull/7016
-* Update sunxi-6.6, switch to v6.6.43 by @The-going in https://github.com/armbian/build/pull/6887
-* build(deps): bump setuptools from 71.1.0 to 72.1.0 by @dependabot in https://github.com/armbian/build/pull/7009
-* build(deps): bump ossf/scorecard-action from 2.3.3 to 2.4.0 by @dependabot in https://github.com/armbian/build/pull/7008
-* Adjust patches that are broken or they found a way upstream by @igorpecovnik in https://github.com/armbian/build/pull/7022
-* Update board config h96-max to mainline u-boot by @hqnicolas in https://github.com/armbian/build/pull/7021
-* Repo management: base-files are placed under wrong repo key by @igorpecovnik in https://github.com/armbian/build/pull/7019
-* config: rk35xx: vendor: enable CONFIG_NVMEM_ROCKCHIP_OTP by @amazingfate in https://github.com/armbian/build/pull/7024
-* Cosmetic fix: do not show repository keys that doesn't exits by @igorpecovnik in https://github.com/armbian/build/pull/7023
-* Set fixed MAC address for Nanaopi R6S series by @igorpecovnik in https://github.com/armbian/build/pull/7028
-* bsp: armbian-install: fix the search for eMMC and SD card devices by @The-going in https://github.com/armbian/build/pull/7017
-* Move meson edge 6.10 by @SteeManMI in https://github.com/armbian/build/pull/7010
-* Armsom5 - switch to vendor branch and add BOARD_MAINTAINER field to suppress warnings by @igorpecovnik in https://github.com/armbian/build/pull/7026
-* Re-enabling KDE Neon Jammy builds by @igorpecovnik in https://github.com/armbian/build/pull/7031
-* Meson 6.10: adjust patches to align with upstream changes by @igorpecovnik in https://github.com/armbian/build/pull/7034
-* Bump Marvell mvebu EDGE family to 6.10.y by @igorpecovnik in https://github.com/armbian/build/pull/7029
-* Add latest Linux Mint versions, Virginia and Wilma, to supported hosts. by @schwar3kat in https://github.com/armbian/build/pull/7033
-* MBa8MPxL fixes and updates by @tq-schmiedel in https://github.com/armbian/build/pull/7036
-* build(deps): bump actions/upload-artifact from 4.3.4 to 4.3.5 by @dependabot in https://github.com/armbian/build/pull/7040
-* Odroid XU4: bump EDGE kernel to 6.10.y by @igorpecovnik in https://github.com/armbian/build/pull/7039
-* Udoo & Cubox: imx6: bump EDGE kernel to 6.10.y by @igorpecovnik in https://github.com/armbian/build/pull/7038
-* RaspberryPi: bump EDGE kernel to 6.10.y by @igorpecovnik in https://github.com/armbian/build/pull/7037
-* Improve partitioning, set correct partition type UUID for root filesystem by @ColorfulRhino in https://github.com/armbian/build/pull/6923
-* MBa8MPxL: rework uboot patches by @tq-schmiedel in https://github.com/armbian/build/pull/7044
-* Clarify label for entering giveaway - code completion, all authors counts by @igorpecovnik in https://github.com/armbian/build/pull/7035
-* Odroid XU4: Remove deprecated patches on CURRENT branch by @igorpecovnik in https://github.com/armbian/build/pull/7050
-* uboot: rk3576: add patches to enable tf card boot by @amazingfate in https://github.com/armbian/build/pull/7049
-* nanopi-r5c: enable KASLR (current|edge) by @alexl83 in https://github.com/armbian/build/pull/7047
-* orangepi5-plus: patch u-boot 2024.07 to support KASLR by @alexl83 in https://github.com/armbian/build/pull/7046
-* orangepi5: fix SPI flash boot by @efectn in https://github.com/armbian/build/pull/7053
-* sunxi-6.9: Add megous patches and switch EDGE to tag:v6.9.12 by @The-going in https://github.com/armbian/build/pull/6941
-* add general 2024.07 patches to orangepi5-plus u-boot by @alexl83 in https://github.com/armbian/build/pull/7057
-* nanopi-r5c: add general u-boot 2024.07 patches by @alexl83 in https://github.com/armbian/build/pull/7056
-* Send summaries of PR and merges to main chat by @EvilOlaf in https://github.com/armbian/build/pull/7060
-* BigTreeTech CB1 upstreaming by @JohnTheCoolingFan in https://github.com/armbian/build/pull/6656
-* disable saving state for invalid leds brought up in latest kernels by @alexl83 in https://github.com/armbian/build/pull/7062
-* Fix armbian-firmware-full package build. by @h-s-c in https://github.com/armbian/build/pull/7045
-* BigTreeTech CB1: current: Enable IR Receiver by @JohnTheCoolingFan in https://github.com/armbian/build/pull/7066
-* Allwinner legacy and current - bump to latest version by @igorpecovnik in https://github.com/armbian/build/pull/7027
-* Fixed tinker-edgr-r board GPU bug, drivers:regulator:fan53555:add new device chip id by @ARC-MX in https://github.com/armbian/build/pull/6998
-* Link to the actual pr rather than commit with no reference by @EvilOlaf in https://github.com/armbian/build/pull/7067
-* Discord: fix pr being announce multiple times by @EvilOlaf in https://github.com/armbian/build/pull/7070
-* RaspberryPi: Rewrite kernel configs for legacy and current by @igorpecovnik in https://github.com/armbian/build/pull/7068
-* UEFI kernels: rewrite kernel config for legacy - current - edge by @igorpecovnik in https://github.com/armbian/build/pull/7069
-* Add aic8800 driver for Rock 3C variant by @Zokhoi in https://github.com/armbian/build/pull/6672
-* Prevent running announce script in forks by @igorpecovnik in https://github.com/armbian/build/pull/7073
-* fix firefly itx3588j u-boot patches not applied by @SeeleVolleri in https://github.com/armbian/build/pull/7063
-* aic8800 DKMS driver: fix logic when extension is used by @igorpecovnik in https://github.com/armbian/build/pull/7074
-* build(deps): bump actions/upload-artifact from 4.3.5 to 4.3.6 by @dependabot in https://github.com/armbian/build/pull/7072
-* build(deps): bump pyyaml from 6.0.1 to 6.0.2 by @dependabot in https://github.com/armbian/build/pull/7071
-* attempt to fix pr announce for all contributors by @EvilOlaf in https://github.com/armbian/build/pull/7081
-* Add board Alfred Smart Gateway GZ80X by @pyavitz in https://github.com/armbian/build/pull/7058
-* JetHome: Put module blacklist in the board configs of the respective boards by @adeepn in https://github.com/armbian/build/pull/7076
-* Gateway GZ80X: `use actual u-boot.bin` by @pyavitz in https://github.com/armbian/build/pull/7085
-* JetHome: fix uboot patchset for JetHub D2 by @adeepn in https://github.com/armbian/build/pull/7084
-* meson64: refresh `drv-spi-spidev-remove-warnings.patch` by @alexl83 in https://github.com/armbian/build/pull/7089
-* JetHome: Update JetHub D2 dts by @adeepn in https://github.com/armbian/build/pull/7092
-* rockchip64: refresh `drv-spi-spidev-remove-warnings.patch` by @alexl83 in https://github.com/armbian/build/pull/7088
-* Support kernel compilation with Clang/LLVM by @Randl in https://github.com/armbian/build/pull/7086
-* rockchip64: Enable `CONFIG_SECURITY_DMESG_RESTRICT` kernel option by @alexl83 in https://github.com/armbian/build/pull/7080
-* JetHome: update list of preinstalled packages for JetHub devices by @adeepn in https://github.com/armbian/build/pull/7093
-* RFC: provide KASLR support to u-boot v2024.07 general availability by @alexl83 in https://github.com/armbian/build/pull/7078
-* Change KBUILD to `build@armbian` for kernel builds by @ColorfulRhino in https://github.com/armbian/build/pull/6909
-* rootfs: add comment to force rootfs rebuild by @igorpecovnik in https://github.com/armbian/build/pull/7097
-* Mesa extension: adjust KDE related troubles with packages downgrade by @igorpecovnik in https://github.com/armbian/build/pull/7098
-* sunxi 6.10: Add megous patches by @The-going in https://github.com/armbian/build/pull/7095
-* rockchip-rk3588: Bump `edge` kernel from 6.10 to 6.11-rc and `current` from 6.8 to 6.10 by @efectn in https://github.com/armbian/build/pull/7015
-* fix ps4 controllers and clones on rk3588 vendor and legacy kernel by @monkaBlyat in https://github.com/armbian/build/pull/7096
-* actions: forked-helper: Run only if secret is set and simplify workflow by @ColorfulRhino in https://github.com/armbian/build/pull/7094
-* Fix loop device search in docker when there are no loop devices before container launch by @JohnTheCoolingFan in https://github.com/armbian/build/pull/7090
-* build-framework: Switch to next VERSION and update main README by @igorpecovnik in https://github.com/armbian/build/pull/7083
-* rockchip-rk3588: Enable `CONFIG_SECURITY_DMESG_RESTRICT` kernel option by @alexl83 in https://github.com/armbian/build/pull/7079
-* KDE Neon: hack must be implemented only on Ubuntu Noble / Oracular by @igorpecovnik in https://github.com/armbian/build/pull/7104
-* Revert "Temporally move TI build targets to EOS as Git is out of reach" by @igorpecovnik in https://github.com/armbian/build/pull/7105
-* Release: board status check and adjustment by @igorpecovnik in https://github.com/armbian/build/pull/7103
-* Add Board X96Q TV Box LPDDR3 H313 by @sicXnull in https://github.com/armbian/build/pull/7101
-* Discord announcement: push only when label "Needs review" is set by @igorpecovnik in https://github.com/armbian/build/pull/7075
-* WIP: add initial support for Youyeetoo R1 V3 by @SuperKali in https://github.com/armbian/build/pull/7108
-* Build automation: update kernel test targets for many boards by @igorpecovnik in https://github.com/armbian/build/pull/7116
-* Build automation: Adjust test targets for remaining boards by @igorpecovnik in https://github.com/armbian/build/pull/7117
-* cli: packages: use iputils-ping instead of inetutils-ping by @amazingfate in https://github.com/armbian/build/pull/7118
-* rockchip-rk3588: current: add `rfkill-bt` device node to Radxa Rock-5B by @alexl83 in https://github.com/armbian/build/pull/7114
-* BananaPi M2S: `remove fan control` by @pyavitz in https://github.com/armbian/build/pull/7119
-* Gateway AM-GZ80x: `Re-brand as Amper & update u-boot to v2024.04` by @pyavitz in https://github.com/armbian/build/pull/7113
-* Update odroidxu4-current to 6.6.47 by @belegdol in https://github.com/armbian/build/pull/7111
-* rk3588: Bump kernel from 6.11-rc3 to 6.11-rc4 by @ColorfulRhino in https://github.com/armbian/build/pull/7109
-* Add OpenSBI compilation to D1 by @Randl in https://github.com/armbian/build/pull/7077
-* Debian Trixie Cinnamon: remove deprecated package by @igorpecovnik in https://github.com/armbian/build/pull/7120
-* Framework: disable armbian repository while generating rootfs cache by @igorpecovnik in https://github.com/armbian/build/pull/7123
-* build(deps): bump setuptools from 72.1.0 to 72.2.0 by @dependabot in https://github.com/armbian/build/pull/7107
-* Framework: expand package installing function with custom parameter by @igorpecovnik in https://github.com/armbian/build/pull/7124
-* Expand MESA extension fix to Jammy userspace by @igorpecovnik in https://github.com/armbian/build/pull/7125
-* Framework: bump tmpfs size as we are going over by @igorpecovnik in https://github.com/armbian/build/pull/7126
-* Mesa fixes applies only to armhf and arm64. Adjusting by @igorpecovnik in https://github.com/armbian/build/pull/7128
-* Repository management: add config driven BSP package modification by @igorpecovnik in https://github.com/armbian/build/pull/7129
-* Board config ayn-odin2 temporally disable broken build by @igorpecovnik in https://github.com/armbian/build/pull/7134
-* Improved freezing mechanism and README by @igorpecovnik in https://github.com/armbian/build/pull/7133
+* [Add audio support to hdmi output (meson) by @kernelzru](https://github.com/armbian/build/pull/6730)
+* [Temporally disable broken build configuration by @igorpecovnik](https://github.com/armbian/build/pull/6733)
+* [Odroid XU4: Remove deprecated patches by @igorpecovnik](https://github.com/armbian/build/pull/6732)
+* [RK3588 edge kernel: Add support for Linux 6.10 + introduce stable `current` branch (6.8) by @ColorfulRhino](https://github.com/armbian/build/pull/6699)
+* [rk3588: Add board NanoPi R6C by @ColorfulRhino](https://github.com/armbian/build/pull/6738)
+* [re-add some Khadas Edge 2 patches to edge kernel by @efectn](https://github.com/armbian/build/pull/6737)
+* [Update JetHome JetHub D2 support by @adeepn](https://github.com/armbian/build/pull/6736)
+* [rockchip-rk3588 6.8.y: nanopct6: Add NanoPC T6 SPI Flash (v6.8.y version) by @rpardini](https://github.com/armbian/build/pull/6735)
+* [rockchip64/rk3318-box: move stack further from base addr to allow bigger uboot image by @alex3d](https://github.com/armbian/build/pull/6731)
+* [RK3588 edge: Add H.264 decoder support by @ColorfulRhino](https://github.com/armbian/build/pull/6734)
+* [GH Actions: Fix auto-labeler for "Desktop" category and add categories "Patches" and "Documentation" by @ColorfulRhino](https://github.com/armbian/build/pull/67)
+* [extlinux: add DEFAULT_OVERLAYS support by @efectn](https://github.com/armbian/build/pull/6744)
+* [Disable autosuspend on Gnome based desktops by @igorpecovnik](https://github.com/armbian/build/pull/6742)
+* [actions: Fix typo in actions/labeler labeler.yml by @ColorfulRhino](https://github.com/armbian/build/pull/6745)
+* [cli: Fix DEFAULT_OVERLAYS array by @ColorfulRhino](https://github.com/armbian/build/pull/6746)
+* [khadas-edge2: rename audios by @efectn](https://github.com/armbian/build/pull/6750)
+* [Fix boot from btrfs fs in uboot 2024.01/2024.04 by @alex3d](https://github.com/armbian/build/pull/6748)
+* [rockchip-rk3588-edge: fix vepu of rk3588 by @amazingfate](https://github.com/armbian/build/pull/6752)
+* [board: orangepi-5-plus: Add mainline U-Boot for edge kernel by @ColorfulRhino](https://github.com/armbian/build/pull/6719)
+* [khadas-edge2: add vendor uboot to images by @igorpecovnik](https://github.com/armbian/build/pull/6754)
+* [board: nanopi-r6s: Add system-power-controller to pmic by @ColorfulRhino](https://github.com/armbian/build/pull/6755)
+* [kernel: mainline: Bump 6.10-rc3 to 6.10-rc4 by @ColorfulRhino](https://github.com/armbian/build/pull/6753)
+* [Sm8250 6.9 by @amazingfate](https://github.com/armbian/build/pull/6727)
+* [Add support for rk3399 based SBC Leez P710 by @andyshrk](https://github.com/armbian/build/pull/6749)
+* [Debian buster: disable non-existing backports repository by @igorpecovnik](https://github.com/armbian/build/pull/6758)
+* [packages: Enable bash-completion on all images by @ColorfulRhino](https://github.com/armbian/build/pull/6759)
+* [station-m2: Use Raxda u-boot 2024.01 by @chainsx](https://github.com/armbian/build/pull/6760)
+* [actions: Fix auto-labeler by checking subdirectories by @ColorfulRhino](https://github.com/armbian/build/pull/6764)
+* [aic8800: update firmware package URL by @RadxaYuntian](https://github.com/armbian/build/pull/6768)
+* [Move Network Manager bits into extensions by @igorpecovnik](https://github.com/armbian/build/pull/6756)
+* [fix armbian-leds-state-save.sh: by @alexl83](https://github.com/armbian/build/pull/6765)
+* [add community support for lckfb taishanpi by @chainsx](https://github.com/armbian/build/pull/6767)
+* [Deboostrap: switch to last known working tag by @igorpecovnik](https://github.com/armbian/build/pull/6775)
+* [i3-wm: remove conflicting userspace packages by @igorpecovnik](https://github.com/armbian/build/pull/6776)
+* [partitioning: fix race condition on loop device allocation by @alex3d](https://github.com/armbian/build/pull/6729)
+* [rockchip-rk3588: edge: add rkvdec2 support by @amazingfate](https://github.com/armbian/build/pull/6777)
+* [Rootfs cache is repeating generation over and over again by @igorpecovnik](https://github.com/armbian/build/pull/6778)
+* [add device-tree-compiler to bsp-cli debian dependencies by @alexl83](https://github.com/armbian/build/pull/6779)
+* [Run shellfmt to complete code by @igorpecovnik](https://github.com/armbian/build/pull/6782)
+* [Networking: set proper hook location for extensions by @igorpecovnik](https://github.com/armbian/build/pull/6780)
+* [ext: fs-cryptroot-support: don't abuse `add_host_dependencies` by @rpardini](https://github.com/armbian/build/pull/6785)
+* [rockchip-rk3588 6.8/610: add `i2c8-m2` overlay by @rpardini](https://github.com/armbian/build/pull/6784)
+* [rk3588: Enable `current` kernel branch for some boards by @ColorfulRhino](https://github.com/armbian/build/pull/6740)
+* [Add orangepi5-plus UART overlays by @alexl83](https://github.com/armbian/build/pull/6787)
+* [networking: main-config: introduce `NETWORKING_STACK` to control network exts; allow "none"; fix typo by @rpardini](https://github.com/armbian/build/pull/6786)
+* [Helios64: move to supported section by @igorpecovnik](https://github.com/armbian/build/pull/6789)
+* [phytium-embedded: add bpf_syscall support by @chainsx](https://github.com/armbian/build/pull/6788)
+* [Use random-mac only with systemd-networkd (minimal images) by @igorpecovnik](https://github.com/armbian/build/pull/6783)
+* [Rockcchip RK3588: Rename overlay suffix to match reality by @igorpecovnik](https://github.com/armbian/build/pull/6791)
+* [distro: trixie: Add riscv64 to supported architectures by @ColorfulRhino](https://github.com/armbian/build/pull/6793)
+* [Revert "distro: trixie: Add riscv64 to supported architectures" by @ColorfulRhino](https://github.com/armbian/build/pull/6794)
+* [kernel: mainline: Bump 6.10-rc4 to 6.10-rc5 by @ColorfulRhino](https://github.com/armbian/build/pull/6792)
+* [cli: Add command "dts-check" to validate dts files and improve board & patch development overall (resubmission) by @ColorfulRhino](https://github.com/armbian/bu)
+* [tools: Update shellfmt from version 3.6.0 to 3.8.0 by @ColorfulRhino](https://github.com/armbian/build/pull/6795)
+* [actions: Use "all-globs" instead of "any-glob" for negated checks by @ColorfulRhino](https://github.com/armbian/build/pull/6796)
+* [Fix aml-s9xx-box bsp-cli package upgrade by @SteeManMI](https://github.com/armbian/build/pull/6797)
+* [DTS-check: Python librarires have troubles to build, disabling for now by @igorpecovnik](https://github.com/armbian/build/pull/6798)
+* [Fix `dts-check` command and use Pip for some Python packages instead of APT by @ColorfulRhino](https://github.com/armbian/build/pull/6799)
+* [bootscript: Remove deprecated bootarg "swapaccount=1" by @ColorfulRhino](https://github.com/armbian/build/pull/6705)
+* [Odroid M1: add a network rule to rename default name by @igorpecovnik](https://github.com/armbian/build/pull/6757)
+* [Add new "BSP" and "GitHub" label for the auto-labeler by @ColorfulRhino](https://github.com/armbian/build/pull/6805)
+* [rk3588: bump default blobs (DDR:1.16, BL31:1.45); remove board-specific blobs from boards that used those versions by @rpardini](https://github.com/armbian/build/pull/6810)
+* [fix: partitioning: disable `orphan_file` (`FEATURE_C12`) for ext4 filesystems on 1.47+ e2fsprogs host by @rpardini](https://github.com/armbian/build/pull/6809)
+* [aml-s9xx-box: Remove u-boot and update generated extlinux.conf by @SteeManMI](https://github.com/armbian/build/pull/6803)
+* [GitHub: Improve issue templates and add new `Task` template for project management by @ColorfulRhino](https://github.com/armbian/build/pull/6813)
+* [station-m2: update u-boot patches by @chainsx](https://github.com/armbian/build/pull/6812)
+* [kde-neon: use Neon's "user" repo for Jammy & return it to `csc` status by @rpardini](https://github.com/armbian/build/pull/6808)
+* [actions: labeler: Fix label colors by removing `#` prefix by @ColorfulRhino](https://github.com/armbian/build/pull/6807)
+* [Move board-specific config (Odroid C1) away from family config by @ColorfulRhino](https://github.com/armbian/build/pull/6801)
+* [Remove haveged to save space and resources by @alexl83](https://github.com/armbian/build/pull/6781)
+* [Lets not spam users with error message on fresh checkout by @viraniac](https://github.com/armbian/build/pull/6814)
+* [BPI-CM4: bluetooth: `fw version 0xb5d66dcb` by @pyavitz](https://github.com/armbian/build/pull/6816)
+* [Update odroidxu4-current to 6.6.36 by @belegdol](https://github.com/armbian/build/pull/6815)
+* [Odroid XU4: remove deprecated patch by @igorpecovnik](https://github.com/armbian/build/pull/6825)
+* [Add Matrix to README by @EvilOlaf](https://github.com/armbian/build/pull/6826)
+* [extensions/radxa-aic8800: fix aic8800_dkms_file_name for sdio by @andyshrk](https://github.com/armbian/build/pull/6827)
+* [Bump default boot blobs for RK3528, RK3566 and RK3568 and use them for NanoPi R5C by @ColorfulRhino](https://github.com/armbian/build/pull/6822)
+* [armbianmonitor `-u`: rationalize paste server retrying, use ANSI dmesg by @rpardini](https://github.com/armbian/build/pull/6836)
+* [cli: uboot: Include PYTHONPATH in env for compiling U-Boot by @ColorfulRhino](https://github.com/armbian/build/pull/6819)
+* [Integrate `media` boards into the `rockchip64` family by @ColorfulRhino](https://github.com/armbian/build/pull/6834)
+* [Cleanup: Remove old torrents by @ColorfulRhino](https://github.com/armbian/build/pull/6829)
+* [Cleanup: Remove leftovers of former `BOARDFAMILY` `rk322x` (now integrated into the `rockchip` family) by @ColorfulRhino](https://github.com/armbian/build/pull/6832)
+* [odroidm1/orangepi3b: use default (newer) blobs; rewrite patches; bump -rc u-boot to final by @rpardini](https://github.com/armbian/build/pull/6837)
+* [Cleanup: Clean leftovers in `packages/extras-buildpkgs` by @ColorfulRhino](https://github.com/armbian/build/pull/6830)
+* [Cleanup: Remove some leftover kernel patch folders by @ColorfulRhino](https://github.com/armbian/build/pull/6831)
+* [radxa-zero3: add `edge` branch (6.9.y) by picking DT from linux-rockchip#for-next & using Kwiboo's 24.07 u-boot by @rpardini](https://github.com/armbian/build/pull/6842)
+* [u-boot: add HOME env for make invocations to avoid binman/Python problems with older u-boot versions by @rpardini](https://github.com/armbian/build/pull/6845)
+* [rockchip: fix rk322x-box uboot boot order by @paolosabatino](https://github.com/armbian/build/pull/6844)
+* [Addressing two problems related to `wireless at firstlogin script` by @igorpecovnik](https://github.com/armbian/build/pull/6823)
+* [Remove OrangepiZero2 heavily outdated legacy kernel by @igorpecovnik](https://github.com/armbian/build/pull/6854)
+* [v3: Add new RISCV family "SpacemiT" and board BananaPi F3 by @ColorfulRhino](https://github.com/armbian/build/pull/6850)
+* [Fix btrfs and xfs resize by @Ratio2](https://github.com/armbian/build/pull/6846)
+* [aml-s9xx-box: bsp-cli hashing fixes by @rpardini](https://github.com/armbian/build/pull/6839)
+* [Bump sunxi-current and sunxi64 to latest tag by @EvilOlaf](https://github.com/armbian/build/pull/6861)
+* [improve fs-cryptroot-support.sh by @alexl83](https://github.com/armbian/build/pull/6858)
+* [build(deps): bump setuptools from 70.1.1 to 70.2.0 by @dependabot](https://github.com/armbian/build/pull/6856)
+* [nanopi-r5s: bump blobs & u-boot enhancements for UMS/otg/bootorder by @rpardini](https://github.com/armbian/build/pull/6833)
+* [Update support for recore boards by @eliasbakken](https://github.com/armbian/build/pull/6859)
+* [Fixing syntax at Recore and add missing board level variables by @igorpecovnik](https://github.com/armbian/build/pull/6863)
+* [rootfs: add comment to force rootfs rebuild by @rpardini](https://github.com/armbian/build/pull/6864)
+* [Test automation - adjust kernel test targets. by @igorpecovnik](https://github.com/armbian/build/pull/6865)
+* [Fix Khadas Edge 2 uboot build by @efectn](https://github.com/armbian/build/pull/6868)
+* [Add recore dts patch to series.conf so it gets applied by @eliasbakken](https://github.com/armbian/build/pull/6866)
+* [bsp-cli/bsp-desktop: hashing fixes by @rpardini](https://github.com/armbian/build/pull/6838)
+* [Fix several issues related to building U-Boot by @ColorfulRhino](https://github.com/armbian/build/pull/6867)
+* [Bump rk322x-box and rk3318-box to u-boot v2024.07-rc5 by @paolosabatino](https://github.com/armbian/build/pull/6855)
+* [fix: firefly-itx-3588j fails to boot, and audio output by @SeeleVolleri](https://github.com/armbian/build/pull/6849)
+* [u-boot: use `pipetty` in place of `unbuffer` by @rpardini](https://github.com/armbian/build/pull/6873)
+* [Purge `s5p6818` board family by @ColorfulRhino](https://github.com/armbian/build/pull/6869)
+* [git: git_ensure_safe_directory(): use env vars instead of changing config by @rpardini](https://github.com/armbian/build/pull/6870)
+* [Spacemit: use same kernel config as on known to work image by @igorpecovnik](https://github.com/armbian/build/pull/6875)
+* [Update JetHub boards support by @adeepn](https://github.com/armbian/build/pull/6876)
+* [Next set of U-Boot compilation fixes by @ColorfulRhino](https://github.com/armbian/build/pull/6877)
+* [fix uboot compilation issues on Orange Pi 5/5 Plus by @efectn](https://github.com/armbian/build/pull/6878)
+* [Reverting attempted git-safe folder problem by @igorpecovnik](https://github.com/armbian/build/pull/6882)
+* [Test automation - optimise testing on targets by @igorpecovnik](https://github.com/armbian/build/pull/6883)
+* [mixtile-blade3: use default blobs & bump vendor u-boot to `next-dev-v2024.03` by @rpardini](https://github.com/armbian/build/pull/6872)
+* [mekotronics: rk3588: u-boot: borrow patch to fix build on newer gcc by @rpardini](https://github.com/armbian/build/pull/6871)
+* [Move OPi5/5B/5 Plus uboots to Radxa git tree by @efectn](https://github.com/armbian/build/pull/6884)
+* [rk35xx: Remove `legacy` kernel target from board configs by @ColorfulRhino](https://github.com/armbian/build/pull/6881)
+* [rockpi-s: Remove `legacy` kernel 4.4 support by @ColorfulRhino](https://github.com/armbian/build/pull/6879)
+* [Armbian-install: add option to wipe target destination by @igorpecovnik](https://github.com/armbian/build/pull/6828)
+* [Allow to pass docker login when in CI, but not in GitHub actions by @adeepn](https://github.com/armbian/build/pull/6702)
+* [Adjust Rockpi S patch to align with upstream changes by @igorpecovnik](https://github.com/armbian/build/pull/6886)
+* [RTW88: 6.6: upstream wireless: `fixups` by @pyavitz](https://github.com/armbian/build/pull/6888)
+* [Allwinner: set legacy 6.1.y to last known build tag by @igorpecovnik](https://github.com/armbian/build/pull/6889)
+* [add new board radxa-e52c by @amazingfate](https://github.com/armbian/build/pull/6891)
+* [Bananapi M5: Bump u-boot to v2024.07 final by @igorpecovnik](https://github.com/armbian/build/pull/6900)
+* [u-boot: embed armbian artifact version in CONFIG_LOCALVERSION by @rpardini](https://github.com/armbian/build/pull/6898)
+* [odroidm1: bump to u-boot v2024.07; replace defconfig patches with hook by @rpardini](https://github.com/armbian/build/pull/6897)
+* [bump rk3288 tinkerboard to uboot v2024.07 by @paolosabatino](https://github.com/armbian/build/pull/6895)
+* [Move the `NETWORKING_STACK` in main config and add armhf support to Trixie by @ColorfulRhino](https://github.com/armbian/build/pull/6911)
+* [multiple boards: bump u-boot from v2024.07-rcX to v2024.07 final by @rpardini](https://github.com/armbian/build/pull/6899)
+* [Beautify `shellfmt` and add board configs to formatting list by @ColorfulRhino](https://github.com/armbian/build/pull/6910)
+* [thinkpad-x13s: bump to jhovold's `wip/sc8280xp-6.10-rc6`; add fprintd back to Trixie; fixes by @rpardini](https://github.com/armbian/build/pull/6913)
+* [mixtile-blade3: u-boot: join rockchip-rk3588's default `u-boot-radxa-rk35xx` scheme by @rpardini](https://github.com/armbian/build/pull/6915)
+* [nanopi-r6s: Use mainline U-Boot by @ColorfulRhino](https://github.com/armbian/build/pull/6908)
+* [mekotronics: u-boot: join rockchip-rk3588's default `u-boot-radxa-rk35xx` scheme by @rpardini](https://github.com/armbian/build/pull/6916)
+* [Trixie: remove / replace missing packages by @igorpecovnik](https://github.com/armbian/build/pull/6917)
+* [build(deps): bump actions/upload-artifact from 4.3.3 to 4.3.4 by @dependabot](https://github.com/armbian/build/pull/6918)
+* [partitioning: Reduce `commit` mount option for btrfs and ext4 to 120 by @ColorfulRhino](https://github.com/armbian/build/pull/6919)
+* [sunxi-6.1: switch to tag:v6.1.97, re-extracting the corrected ones by @The-going](https://github.com/armbian/build/pull/6893)
+* [To modify the PWM-fan temperature control policy of fine3399 to adjust the fan speed to a lower level by @Lemon1151](https://github.com/armbian/build/pull/6843)
+* [mt7623: Bump `legacy` 4.19 to `current` 6.6 kernel by @ColorfulRhino](https://github.com/armbian/build/pull/6902)
+* [nanopi-r5s: u-boot: pci enum in preboot; disable armbian-led-state by @rpardini](https://github.com/armbian/build/pull/6896)
+* [wifi: rtl8852bs: fix build for rockchip by @amazingfate](https://github.com/armbian/build/pull/6926)
+* [Fix armbian-firstrun service not disabled on start. by @adeepn](https://github.com/armbian/build/pull/6930)
+* [Add MKNOD capability to dockershell container by @JohnTheCoolingFan](https://github.com/armbian/build/pull/6927)
+* [Improve Actions UI, introduce Actions run names for all workflows by @ColorfulRhino](https://github.com/armbian/build/pull/6925)
+* [Inovato Quadra: enable correct PIN to get wifi working by @igorpecovnik](https://github.com/armbian/build/pull/6892)
+* [Spacemit-k1 / Banananpi F3: adjust u-boot patch by @igorpecovnik](https://github.com/armbian/build/pull/6931)
+* [thinkpad-x13s: bump to jhovold's `wip/sc8280xp-6.10-rc7` by @rpardini](https://github.com/armbian/build/pull/6934)
+* [mainline-kernel: bump to `6.10-rc7` by @rpardini](https://github.com/armbian/build/pull/6935)
+* [wifi: rtl8852bs: add driver for family instead of board by @amazingfate](https://github.com/armbian/build/pull/6932)
+* [Desktops: replace missing packages with correct ones by @igorpecovnik](https://github.com/armbian/build/pull/6939)
+* [firstlogin: quote values if space is legal by @jkt628](https://github.com/armbian/build/pull/6942)
+* [rockchip-rk35xx-vendor enable rtw89_8852be as module by @alexl83](https://github.com/armbian/build/pull/6947)
+* [sunxi-6.1: Reverse commit 75317a0, fix real reason inability to load kernel by @The-going](https://github.com/armbian/build/pull/6945)
+* [BananaPi CM4/M2S: `Bump u-boot to v2024.07` by @pyavitz](https://github.com/armbian/build/pull/6943)
+* [u-boot: 2024.07: fix boot from btrfs by @alex3d](https://github.com/armbian/build/pull/6946)
+* [Move teres-i in supported by @Kreyren](https://github.com/armbian/build/pull/6948)
+* [Add Libre Computer Alta and Solitude by @Tonymac32](https://github.com/armbian/build/pull/6952)
+* [SpacemiT: BananaPi F3: U-Boot: use TAG and add SCRIPT support. by @pyavitz](https://github.com/armbian/build/pull/6953)
+* [SpacemiT: BananaPi F3: `update to BL v1.0.8` by @pyavitz](https://github.com/armbian/build/pull/6954)
+* [cli: uboot: Move `uboot_cflags` variable to before its first use by @ColorfulRhino](https://github.com/armbian/build/pull/6960)
+* [actions: forked-helper: Don't escape multiline strings by @ColorfulRhino](https://github.com/armbian/build/pull/6961)
+* [Trixie: remove non-existing packages from Budgie desktop by @igorpecovnik](https://github.com/armbian/build/pull/6959)
+* [SpacemiT: Legacy: Wireless RTL8852BS: `Fixups` by @pyavitz](https://github.com/armbian/build/pull/6957)
+* [VIM1S/4: follow Khadas's branch for u-boot by @viraniac](https://github.com/armbian/build/pull/6955)
+* [add customized GHCR_MIRROR_ADDRESS support by @amazingfate](https://github.com/armbian/build/pull/6951)
+* [actions: Create workflow to update shell tools via auto-PR by @ColorfulRhino](https://github.com/armbian/build/pull/6922)
+* [extensions: Establish some consistency with extension logging by @ColorfulRhino](https://github.com/armbian/build/pull/6920)
+* [rk35xx-vendor: bump to latest sdk release rkr3 by @amazingfate](https://github.com/armbian/build/pull/6853)
+* [JetHome: Update bsp: fix jethub-init to support /etc/defaults by @adeepn](https://github.com/armbian/build/pull/6970)
+* [add rk3576 support to rk35xx and armsom sige5 by @amazingfate](https://github.com/armbian/build/pull/6554)
+* [Enable sound and battery for Retro Lite CM5 by @ginkage](https://github.com/armbian/build/pull/6971)
+* [Bump koalaman/shellcheck from 0.9.0 to 0.10.0 in `lib/functions/general/shellcheck.sh` by @github-actions](https://github.com/armbian/build/pull/6963)
+* [build(deps): bump setuptools from 70.2.0 to 70.3.0 by @dependabot](https://github.com/armbian/build/pull/6950)
+* [Bump oras-project/oras from 0.16.0 to 1.2.0 in `lib/functions/general/oci-oras.sh` by @github-actions](https://github.com/armbian/build/pull/6964)
+* [Bump sharkdp/bat from 0.23.0 to 0.24.0 in `lib/functions/general/bat-cat.sh` by @github-actions](https://github.com/armbian/build/pull/6965)
+* [Add board config for Retro Lite CM5 by @ginkage](https://github.com/armbian/build/pull/6972)
+* [oci-oras: fix for ORAS > 1.x, as it now requires `HOME` to be set (fixes `download-artifact`) by @rpardini](https://github.com/armbian/build/pull/6976)
+* [mesa-vpu: use kisak mesa ppa instead of oibaf by @amazingfate](https://github.com/armbian/build/pull/6979)
+* [utils-dpkgdeb: force rebuild of all artifacts, due to https://github.com/armbian/build/pull/6964 (ORAS change) by @rpardini](https://github.com/armbian/build/pull/6977)
+* [Temporally move TI build targets to EOS as Git is out of reach by @igorpecovnik](https://github.com/armbian/build/pull/6981)
+* [urgent: Hotfix for rk3399 boot by @paolosabatino](https://github.com/armbian/build/pull/6982)
+* [Bump rockchip64 edge kernel to 6.10 by @paolosabatino](https://github.com/armbian/build/pull/6980)
+* [rockchip: bump edge kernel to 6.10 by @paolosabatino](https://github.com/armbian/build/pull/6975)
+* [Fix rtl8189fs WiFi driver by @schwar3kat](https://github.com/armbian/build/pull/6984)
+* [Update odroidxu4-current to 6.6.41 by @belegdol](https://github.com/armbian/build/pull/6985)
+* [build(deps): bump setuptools from 70.3.0 to 71.1.0 by @dependabot](https://github.com/armbian/build/pull/6983)
+* [Add HDMI-rx to linux 6-10 for rk3588 by @benhoff](https://github.com/armbian/build/pull/6986)
+* [SpacemiT: `write_uboot_platform`: eMMC Support by @pyavitz](https://github.com/armbian/build/pull/6958)
+* [fix rk3568-roc-pc by @chainsx](https://github.com/armbian/build/pull/6992)
+* [Fixed Tinker-edge-r HDMI 4K bug by @ARC-MX](https://github.com/armbian/build/pull/6991)
+* [Fix for no network inside Docker container by @igorpecovnik](https://github.com/armbian/build/pull/6990)
+* [add new board armsom-aim7-io by @amazingfate](https://github.com/armbian/build/pull/6987)
+* [Repo management: rework to increase reliability and speed by @igorpecovnik](https://github.com/armbian/build/pull/6924)
+* [add new board RK3328 Heltec HT-M2808 by @sicXnull](https://github.com/armbian/build/pull/6989)
+* [mesa-vpu: install backported mesa from obs for bookworm panthor driver by @amazingfate](https://github.com/armbian/build/pull/6994)
+* [Awarding regular contributors - adding a special PR tag by @igorpecovnik](https://github.com/armbian/build/pull/6997)
+* [UEFI x86 and arm64: Bump EDGE kernels to 6.10.y by @igorpecovnik](https://github.com/armbian/build/pull/6996)
+* [Debian: drop support for Budgie on Trixe / Bookworm.  by @igorpecovnik](https://github.com/armbian/build/pull/7001)
+* [rockchip64-edge: add rkvdec2 for rk356x by @amazingfate](https://github.com/armbian/build/pull/6804)
+* [Switch Retro Lite CM5 back to legacy U-Boot by @ginkage](https://github.com/armbian/build/pull/7004)
+* [mesa-vpu: install chromium package instead of chromium-browser by @efectn](https://github.com/armbian/build/pull/7005)
+* [Extend mesa-vpu extension to load unpatched Chromium by default by @igorpecovnik](https://github.com/armbian/build/pull/6657)
+* [sun55iw3-syterkit: update kernel config by @chainsx](https://github.com/armbian/build/pull/7003)
+* [Meson64 edge to 6.10 by @SteeManMI](https://github.com/armbian/build/pull/7000)
+* [kernel: meson-s4t7: update config to match latest fenix changes by @viraniac](https://github.com/armbian/build/pull/7013)
+* [Update odroidxu4-current to 6.6.43 by @belegdol](https://github.com/armbian/build/pull/7014)
+* [thinkpad-x13s: bump to jhovold's 6.10 (from -rc7) by @rpardini](https://github.com/armbian/build/pull/7016)
+* [Update sunxi-6.6, switch to v6.6.43 by @The-going](https://github.com/armbian/build/pull/6887)
+* [build(deps): bump setuptools from 71.1.0 to 72.1.0 by @dependabot](https://github.com/armbian/build/pull/7009)
+* [build(deps): bump ossf/scorecard-action from 2.3.3 to 2.4.0 by @dependabot](https://github.com/armbian/build/pull/7008)
+* [Adjust patches that are broken or they found a way upstream by @igorpecovnik](https://github.com/armbian/build/pull/7022)
+* [Update board config h96-max to mainline u-boot by @hqnicolas](https://github.com/armbian/build/pull/7021)
+* [Repo management: base-files are placed under wrong repo key by @igorpecovnik](https://github.com/armbian/build/pull/7019)
+* [config: rk35xx: vendor: enable CONFIG_NVMEM_ROCKCHIP_OTP by @amazingfate](https://github.com/armbian/build/pull/7024)
+* [Cosmetic fix: do not show repository keys that doesn't exits by @igorpecovnik](https://github.com/armbian/build/pull/7023)
+* [Set fixed MAC address for Nanaopi R6S series by @igorpecovnik](https://github.com/armbian/build/pull/7028)
+* [bsp: armbian-install: fix the search for eMMC and SD card devices by @The-going](https://github.com/armbian/build/pull/7017)
+* [Move meson edge 6.10 by @SteeManMI](https://github.com/armbian/build/pull/7010)
+* [Armsom5 - switch to vendor branch and add BOARD_MAINTAINER field to suppress warnings by @igorpecovnik](https://github.com/armbian/build/pull/7026)
+* [Re-enabling KDE Neon Jammy builds by @igorpecovnik](https://github.com/armbian/build/pull/7031)
+* [Meson 6.10: adjust patches to align with upstream changes by @igorpecovnik](https://github.com/armbian/build/pull/7034)
+* [Bump Marvell mvebu EDGE family to 6.10.y by @igorpecovnik](https://github.com/armbian/build/pull/7029)
+* [Add latest Linux Mint versions, Virginia and Wilma, to supported hosts. by @schwar3kat](https://github.com/armbian/build/pull/7033)
+* [MBa8MPxL fixes and updates by @tq-schmiedel](https://github.com/armbian/build/pull/7036)
+* [build(deps): bump actions/upload-artifact from 4.3.4 to 4.3.5 by @dependabot](https://github.com/armbian/build/pull/7040)
+* [Odroid XU4: bump EDGE kernel to 6.10.y by @igorpecovnik](https://github.com/armbian/build/pull/7039)
+* [Udoo & Cubox: imx6: bump EDGE kernel to 6.10.y by @igorpecovnik](https://github.com/armbian/build/pull/7038)
+* [RaspberryPi: bump EDGE kernel to 6.10.y by @igorpecovnik](https://github.com/armbian/build/pull/7037)
+* [Improve partitioning, set correct partition type UUID for root filesystem by @ColorfulRhino](https://github.com/armbian/build/pull/6923)
+* [MBa8MPxL: rework uboot patches by @tq-schmiedel](https://github.com/armbian/build/pull/7044)
+* [Clarify label for entering giveaway - code completion, all authors counts by @igorpecovnik](https://github.com/armbian/build/pull/7035)
+* [Odroid XU4: Remove deprecated patches on CURRENT branch by @igorpecovnik](https://github.com/armbian/build/pull/7050)
+* [uboot: rk3576: add patches to enable tf card boot by @amazingfate](https://github.com/armbian/build/pull/7049)
+* [nanopi-r5c: enable KASLR (current|edge) by @alexl83](https://github.com/armbian/build/pull/7047)
+* [orangepi5-plus: patch u-boot 2024.07 to support KASLR by @alexl83](https://github.com/armbian/build/pull/7046)
+* [orangepi5: fix SPI flash boot by @efectn](https://github.com/armbian/build/pull/7053)
+* [sunxi-6.9: Add megous patches and switch EDGE to tag:v6.9.12 by @The-going](https://github.com/armbian/build/pull/6941)
+* [add general 2024.07 patches to orangepi5-plus u-boot by @alexl83](https://github.com/armbian/build/pull/7057)
+* [nanopi-r5c: add general u-boot 2024.07 patches by @alexl83](https://github.com/armbian/build/pull/7056)
+* [Send summaries of PR and merges to main chat by @EvilOlaf](https://github.com/armbian/build/pull/7060)
+* [BigTreeTech CB1 upstreaming by @JohnTheCoolingFan](https://github.com/armbian/build/pull/6656)
+* [disable saving state for invalid leds brought up in latest kernels by @alexl83](https://github.com/armbian/build/pull/7062)
+* [Fix armbian-firmware-full package build. by @h-s-c](https://github.com/armbian/build/pull/7045)
+* [BigTreeTech CB1: current: Enable IR Receiver by @JohnTheCoolingFan](https://github.com/armbian/build/pull/7066)
+* [Allwinner legacy and current - bump to latest version by @igorpecovnik](https://github.com/armbian/build/pull/7027)
+* [Fixed tinker-edgr-r board GPU bug, drivers:regulator:fan53555:add new device chip id by @ARC-MX](https://github.com/armbian/build/pull/6998)
+* [Link to the actual pr rather than commit with no reference by @EvilOlaf](https://github.com/armbian/build/pull/7067)
+* [Discord: fix pr being announce multiple times by @EvilOlaf](https://github.com/armbian/build/pull/7070)
+* [RaspberryPi: Rewrite kernel configs for legacy and current by @igorpecovnik](https://github.com/armbian/build/pull/7068)
+* [UEFI kernels: rewrite kernel config for legacy - current - edge by @igorpecovnik](https://github.com/armbian/build/pull/7069)
+* [Add aic8800 driver for Rock 3C variant by @Zokhoi](https://github.com/armbian/build/pull/6672)
+* [Prevent running announce script in forks by @igorpecovnik](https://github.com/armbian/build/pull/7073)
+* [fix firefly itx3588j u-boot patches not applied by @SeeleVolleri](https://github.com/armbian/build/pull/7063)
+* [aic8800 DKMS driver: fix logic when extension is used by @igorpecovnik](https://github.com/armbian/build/pull/7074)
+* [build(deps): bump actions/upload-artifact from 4.3.5 to 4.3.6 by @dependabot](https://github.com/armbian/build/pull/7072)
+* [build(deps): bump pyyaml from 6.0.1 to 6.0.2 by @dependabot](https://github.com/armbian/build/pull/7071)
+* [attempt to fix pr announce for all contributors by @EvilOlaf](https://github.com/armbian/build/pull/7081)
+* [Add board Alfred Smart Gateway GZ80X by @pyavitz](https://github.com/armbian/build/pull/7058)
+* [JetHome: Put module blacklist in the board configs of the respective boards by @adeepn](https://github.com/armbian/build/pull/7076)
+* [Gateway GZ80X: `use actual u-boot.bin` by @pyavitz](https://github.com/armbian/build/pull/7085)
+* [JetHome: fix uboot patchset for JetHub D2 by @adeepn](https://github.com/armbian/build/pull/7084)
+* [meson64: refresh `drv-spi-spidev-remove-warnings.patch` by @alexl83](https://github.com/armbian/build/pull/7089)
+* [JetHome: Update JetHub D2 dts by @adeepn](https://github.com/armbian/build/pull/7092)
+* [rockchip64: refresh `drv-spi-spidev-remove-warnings.patch` by @alexl83](https://github.com/armbian/build/pull/7088)
+* [Support kernel compilation with Clang/LLVM by @Randl](https://github.com/armbian/build/pull/7086)
+* [rockchip64: Enable `CONFIG_SECURITY_DMESG_RESTRICT` kernel option by @alexl83](https://github.com/armbian/build/pull/7080)
+* [JetHome: update list of preinstalled packages for JetHub devices by @adeepn](https://github.com/armbian/build/pull/7093)
+* [RFC: provide KASLR support to u-boot v2024.07 general availability by @alexl83](https://github.com/armbian/build/pull/7078)
+* [Change KBUILD to `build@armbian` for kernel builds by @ColorfulRhino](https://github.com/armbian/build/pull/6909)
+* [rootfs: add comment to force rootfs rebuild by @igorpecovnik](https://github.com/armbian/build/pull/7097)
+* [Mesa extension: adjust KDE related troubles with packages downgrade by @igorpecovnik](https://github.com/armbian/build/pull/7098)
+* [sunxi 6.10: Add megous patches by @The-going](https://github.com/armbian/build/pull/7095)
+* [rockchip-rk3588: Bump `edge` kernel from 6.10 to 6.11-rc and `current` from 6.8 to 6.10 by @efectn](https://github.com/armbian/build/pull/7015)
+* [fix ps4 controllers and clones on rk3588 vendor and legacy kernel by @monkaBlyat](https://github.com/armbian/build/pull/7096)
+* [actions: forked-helper: Run only if secret is set and simplify workflow by @ColorfulRhino](https://github.com/armbian/build/pull/7094)
+* [Fix loop device search in docker when there are no loop devices before container launch by @JohnTheCoolingFan](https://github.com/armbian/build/pull/7090)
+* [build-framework: Switch to next VERSION and update main README by @igorpecovnik](https://github.com/armbian/build/pull/7083)
+* [rockchip-rk3588: Enable `CONFIG_SECURITY_DMESG_RESTRICT` kernel option by @alexl83](https://github.com/armbian/build/pull/7079)
+* [KDE Neon: hack must be implemented only on Ubuntu Noble / Oracular by @igorpecovnik](https://github.com/armbian/build/pull/7104)
+* [Revert "Temporally move TI build targets to EOS as Git is out of reach" by @igorpecovnik](https://github.com/armbian/build/pull/7105)
+* [Release: board status check and adjustment by @igorpecovnik](https://github.com/armbian/build/pull/7103)
+* [Add Board X96Q TV Box LPDDR3 H313 by @sicXnull](https://github.com/armbian/build/pull/7101)
+* [Discord announcement: push only when label "Needs review" is set by @igorpecovnik](https://github.com/armbian/build/pull/7075)
+* [WIP: add initial support for Youyeetoo R1 V3 by @SuperKali](https://github.com/armbian/build/pull/7108)
+* [Build automation: update kernel test targets for many boards by @igorpecovnik](https://github.com/armbian/build/pull/7116)
+* [Build automation: Adjust test targets for remaining boards by @igorpecovnik](https://github.com/armbian/build/pull/7117)
+* [cli: packages: use iputils-ping instead of inetutils-ping by @amazingfate](https://github.com/armbian/build/pull/7118)
+* [rockchip-rk3588: current: add `rfkill-bt` device node to Radxa Rock-5B by @alexl83](https://github.com/armbian/build/pull/7114)
+* [BananaPi M2S: `remove fan control` by @pyavitz](https://github.com/armbian/build/pull/7119)
+* [Gateway AM-GZ80x: `Re-brand as Amper & update u-boot to v2024.04` by @pyavitz](https://github.com/armbian/build/pull/7113)
+* [Update odroidxu4-current to 6.6.47 by @belegdol](https://github.com/armbian/build/pull/7111)
+* [rk3588: Bump kernel from 6.11-rc3 to 6.11-rc4 by @ColorfulRhino](https://github.com/armbian/build/pull/7109)
+* [Add OpenSBI compilation to D1 by @Randl](https://github.com/armbian/build/pull/7077)
+* [Debian Trixie Cinnamon: remove deprecated package by @igorpecovnik](https://github.com/armbian/build/pull/7120)
+* [Framework: disable armbian repository while generating rootfs cache by @igorpecovnik](https://github.com/armbian/build/pull/7123)
+* [build(deps): bump setuptools from 72.1.0 to 72.2.0 by @dependabot](https://github.com/armbian/build/pull/7107)
+* [Framework: expand package installing function with custom parameter by @igorpecovnik](https://github.com/armbian/build/pull/7124)
+* [Expand MESA extension fix to Jammy userspace by @igorpecovnik](https://github.com/armbian/build/pull/7125)
+* [Framework: bump tmpfs size as we are going over by @igorpecovnik](https://github.com/armbian/build/pull/7126)
+* [Mesa fixes applies only to armhf and arm64. Adjusting by @igorpecovnik](https://github.com/armbian/build/pull/7128)
+* [Repository management: add config driven BSP package modification by @igorpecovnik](https://github.com/armbian/build/pull/7129)
+* [Board config ayn-odin2 temporally disable broken build by @igorpecovnik](https://github.com/armbian/build/pull/7134)
+* [Improved freezing mechanism and README by @igorpecovnik](https://github.com/armbian/build/pull/7133)
 
 ## v24.5.5 (2024-25-7)
 
