@@ -4,6 +4,10 @@
 
 ## What's Changed
 
+## v24.8.3 (2024-13-9)
+
+* Recreated Radxa Rock 5 ITX, Rockpi E, Odroid M1
+
 ## v24.8.1 (2024-08-31)
 
 * [Add audio support to hdmi output (meson) by @kernelzru](https://github.com/armbian/build/pull/6730)
