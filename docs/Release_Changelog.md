@@ -6,7 +6,7 @@
 
 ## v24.8.3 (2024-13-9)
 
-* Recreated Radxa Rock 5 ITX, Rockpi E, Odroid M1
+* Recreated images for Radxa Rock 5 ITX, Rockpi E, Odroid M1
 
 ## v24.8.1 (2024-08-31)
 
