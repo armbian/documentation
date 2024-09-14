@@ -83,7 +83,12 @@ This build workflow is executed manually when making:
 
 ![Workflow](images/complete-artifact-matrix-standard-support.png)
 
-**Version override**: Use this feature if you want to keep them under the same version, but not lower then [last released](https://docs.armbian.com/Release_Changelog/#changelog).
+**Bump version**: Select if you want to trigger system wide version bump.
+**Version override**: Set version under which you want to release images.
+
+Images versions are stored in JSON files:
+- https://github.com/armbian/os/blob/main/stable.json
+- https://github.com/armbian/os/blob/main/nightly.json
 
 ### 3. Run workflow
 
@@ -110,7 +115,8 @@ Images generation can be customized:
 - Framework build branch
   - main (make images from trunk)
   - vXX.X (previous stable release)
-- Version override (leave empty for automatic bump)
+- Bump Version (system wide version bump)
+- Version override (in case you don't want to use latest)
 - Board (make images for one board only)
 - Maintainer (make images for selected maintainer)
 
@@ -159,7 +165,8 @@ Images generation can be customized:
 - framework build branch
   - main (make images from trunk)
   - vXX.X (previous stable release)
-- version override (use latest release number or leave empty for automatic bump)
+- Bump Version (system wide version bump)
+- Version override (in case you don't want to use latest)
 - board (make images only for one board)
 - maintainer (make images for selected maintainer)
 
