@@ -118,6 +118,17 @@ Example:
 ./compile.sh KERNEL_COMPILER=clang
 ```  
 
+- **OPENSSHD_REGENERATE_HOST_KEYS** (boolean)
+    - false (skip armbian-firstrun's OpenSSH host keys deletion and regeneration (eg: to let cloud-init set the SSH host keys)
+    - **true** (execute armbian-firstrun's OpenSSH host keys deletion + regeneration)
+
+Manage OpenSSH host key regeneration at armbian-firstrun service. 
+
+Example:
+```
+./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
+```  
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation in progress. 
