@@ -52,6 +52,13 @@ Ensure you have Python and the necessary development packages installed:
 sudo apt-get update
 sudo apt-get install python3 python3-pip python3-venv python3.11-dev
 ```
+
+If using Debian, you may need to install the following packages for `mkdocs-material`:
+
+```bash
+sudo apt-get install libcairo2 pango1.0-tools
+```
+
 ### Cloning the Repository
 
 Next, clone the Armbian documentation repository:
