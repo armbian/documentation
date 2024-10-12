@@ -69,7 +69,7 @@ Usage:
 
 # Build options
 
-These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](/Developer-Guide_Build-Preparation/#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
+These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](Developer-Guide_Build-Preparation.md#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
 ## Main options
 
@@ -269,6 +269,6 @@ When selecting the zstd compression level (`zstd:[1-15]`), both the host and the
 - **AUFS** ( **yes** | no ): include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
 - **SKIP_BOOTSPLASH** ( yes | **no** ): use kernel bootsplash. Disable in case of troubles
 - **CONSOLE_AUTOLOGIN** ( **yes** | no ): automatically login as root for local consoles. Disable if your security threat model requires.
-- **EXT** (`fake-vcgencmd`): execute [extension](/Developer-Guide_Extensions/) during the build
+- **EXT** (`fake-vcgencmd`): execute [extension](Developer-Guide_Extensions.md) during the build
 	- `fake-vcgencmd`: include [fake vcgencmd](https://github.com/clach04/fake_vcgencmd) to monitor and control boards from [Android](https://eidottermihi.github.io/rpicheck/)
 - **INCLUDE_HOME_DIR** ( yes | **no** ): include directories created inside /home in final image.

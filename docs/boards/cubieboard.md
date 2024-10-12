@@ -1,2 +1,0 @@
-- installation to NAND with root on SATA/USB is not supported. Legacy kernel only, where NAND support exist.
-- total memory is 1000Mb (disabled all memory reservations for GPU on CLI images)

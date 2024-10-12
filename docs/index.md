@@ -67,7 +67,7 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
 
 Armbian will publish and distribute “stable” CLI images for maintained boards through its mirror network. *Supported/maintained* is not a guarantee. *Supported/maintained* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
 
-For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules/)
+For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 ### Maintained boards
 
@@ -80,7 +80,7 @@ Due to lack of manpower we unfortunately have to be very picky about bug reports
 
 # Get Involved! #
 
-* [Contribute](Process_Contribute/)
+* [Contribute](Process_Contribute.md)
 * [Community](https://forum.armbian.com/)
 * [Contact](https://www.armbian.com/#contact)
 

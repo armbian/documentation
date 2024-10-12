@@ -79,21 +79,25 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - 'Home':
-        - 'Overview': 'index.md'
 
-  - 'Board' :
-        - 'Maintainers_Procedures_and_Guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
-    
-  - 'Community' :
-        - 'Governance' : 'Community_Governance.md'
-        - 'IRC' : 'Community_IRC.md'
-        - 'Torrent' : 'Community_Torrent.md'
-    
-  - 'Developer Guide' :
+  - 'ARMBIAN OS':
+        - 'Overview': 'index.md'
+        - 'Quick facts' : 'Quick_facts.md'
+        - 'Getting Started' : 'User-Guide_Getting-Started.md'
+        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
+        - 'Networking' : 'User-Guide_Networking.md'
+        - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
+        - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
+        - 'Recovery' : 'User-Guide_Recovery.md'
+        - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
+        - 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
+        - 'FAQ' : 'User-Guide_FAQ.md'
+
+  - 'ARMBIAN BUILD FRAMEWORK' :
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
         - 'Welcome' : 'Developer-Guide_Welcome.md'
+        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
         - 'Build Process' : 'Developer-Guide_Build-Process.md'
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
@@ -102,37 +106,22 @@ nav:
         - 'Extensions' : 'Developer-Guide_Extensions.md'
         - 'Testing Procedures' : 'Developer-Guide_Testing-Procedures.md'
         - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
-    
-  - 'Development Code' :
-        - 'Review_Procedures_and_Guidelines' : 'Development-Code_Review_Procedures_and_Guidelines.md'
-    
-  - 'Process' :
-        - 'Documentation' : 'Process_Documentation.md'
+
+  - 'DEVELOPMENT' :
         - 'Contribute' : 'Process_Contribute.md'
-        - 'CI' : 'Process_CI.md'
         - 'Managing_Workflow' : 'Process_Managing_Workflow.md'
         - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
         - 'Merge Policy' : 'Process_Merge-Policy.md'
-        - 'Release Model' : 'Process_Release-Model.md'
-    
-  - 'Quick' :
-        - 'facts' : 'Quick_facts.md'
-    
-  - 'Release' :
-        - 'Changelog' : 'Release_Changelog.md'
-        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
-    
-  - 'User Guide' :
-        - 'FAQ' : 'User-Guide_FAQ.md'
-        - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Recovery' : 'User-Guide_Recovery.md'
-        - 'Allwinner_overlays' : 'User-Guide_Allwinner_overlays.md'
-        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
-        - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
-        - 'Getting Started Download Page' : 'User-Guide_Getting-Started-Download-Page.md'
-        - 'Migration_from_Bananian' : 'User-Guide_Migration_from_Bananian.md'
-        - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
-        - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
-        - 'Networking' : 'User-Guide_Networking.md'
-        - 'Armbian_overlays' : 'User-Guide_Armbian_overlays.md'
+        - 'Maintainers_Procedures_and_Guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
+        - 'CI' : 'Process_CI.md'
+        - 'Review_Procedures_and_Guidelines' : 'Development-Code_Review_Procedures_and_Guidelines.md'
+
+  - 'OS RELEASES' :
+
+        - 'Release Model' : 'Process_Release-Model.md'
+        - 'Changelog' : 'Release_Changelog.md'
+
+  - 'COMMUNITY' :
+        - 'IRC' : 'Community_IRC.md'
+        - 'Torrent' : 'Community_Torrent.md'

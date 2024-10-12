@@ -153,7 +153,7 @@ Replace `eth0` with the name of your Ethernet Interface.
 
 ### Connecting to a wireless network
 
-For connecting to a wireless network, you can use the same method as mention above for use with [`networkd` on minimal images](#connect-to-wireless-network). Just make sure to replace `renderer: networkd` with `renderer: NetworkManager`.
+For connecting to a wireless network, you can use the same method as mention above for use with [`networkd` on minimal images](#connecting-to-a-wireless-network). Just make sure to replace `renderer: networkd` with `renderer: NetworkManager`.
 
 Alternatively, you can also use Network-Manager directly via the command line or GUI tools on your desktop:
 
