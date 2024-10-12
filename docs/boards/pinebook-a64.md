@@ -1,3 +1,0 @@
-- having anything plugged into headphone jack might prevent booting (serial console pinmuxed)
-- touchpad occasionally causes mouse pointer jumps
-- HDMI output not yet implemented

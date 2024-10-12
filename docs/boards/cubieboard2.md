@@ -1,4 +1,0 @@
-- [PWM ready](https://github.com/dwilkins/pwm-sunxi) on pin PB2 (legacy)
-- total memory is 1000Mb (disabled all memory reservations for GPU on CLI images)
-- support for dual micro SD card version (since v4.5)
-- make sure you power the board via power connector otherwise your USB port won’t be powered

@@ -1,4 +1,14 @@
-# Release model
+# Rolling releases
+
+Armbian makes daily rolliong releases which includes generating daily updates of stable kernels and daily releases of unstable kernels and userspace packages.
+
+<https://github.com/armbian/build/releases>
+
+Images are available at respective board download pages:
+
+<https://www.armbian.com/download>
+
+# Point releases
 
 ## Release Dates
 

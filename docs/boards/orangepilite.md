@@ -1,1 +1,0 @@
-- serial console gadget on the OTG port is available after the system boots up. Please make sure that board is properly powered (i.e. with microUSB Y cable or via GPIO pins) because a standard PC USB port will not provide enough current to the board

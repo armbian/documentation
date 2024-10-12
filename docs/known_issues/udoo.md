@@ -1,1 +1,0 @@
-- Gigabit ethernet transfer rate is around 50% of its theoretical max rate (internal chip bus limitation)
