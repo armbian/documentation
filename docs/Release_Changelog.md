@@ -4,7 +4,11 @@
 
 ## What's Changed
 
-## v24.8.3 (2024-13-9)
+## v24.8.4 (2024-10-12)
+
+* Recreated images for Radxa Rock 5C, Nanopi M6
+
+## v24.8.3 (2024-09-13)
 
 * Recreated images for Radxa Rock 5 ITX, Rockpi E, Odroid M1, Nanopi R6S
 
