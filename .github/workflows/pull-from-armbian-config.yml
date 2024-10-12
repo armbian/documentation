@@ -1,0 +1,53 @@
+name: "Pull from Armbian config"
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+
+  Build:
+    name: "Pull"
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+
+      - name: Checkout main documentation
+        uses: actions/checkout@v4
+        with:
+          repository: 'armbian/documentation'
+          path: 'documentation'
+
+      - name: Checkout Armbian config repository
+        uses: actions/checkout@v4
+        with:
+          repository: 'armbian/configng'
+          path: 'config'
+
+      - name: Make docs
+        run: |
+
+          cd config
+          bin/armbian-configng --doc
+          cp DOCUMENTATION.md ../documentation/docs/User-Guide_Armbian-Config.md
+
+      - name: Create Pull Request to documentation
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: documentation
+          commit-message: '`Automatic` documentation update'
+          signoff: false
+          branch: auto-update-docs
+          delete-branch: true
+          title: '`Automatic` documentation update'
+          body: |
+            Generate documentation.
+  
+          labels: |
+            Needs review
+          #assignees: igorpecovnik
+          #reviewers: Must be org collaborator
+          draft: false
