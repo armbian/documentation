@@ -7,7 +7,7 @@ description: Social media channels maintained by Armbian project team
 
 ## Armbian on Twitter and Mastodon
 
-Armbian short announcements are done via Twitter: <https://twitter.com/armbian> and <https://fosstodon.org/@armbian>
+Armbian short announcements are done via 𝕏 (formerly known as Twitter): <https://twitter.com/armbian> and <https://fosstodon.org/@armbian>
 
 # IRC Channel / Discord / Matrix
 
