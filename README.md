@@ -83,7 +83,8 @@ pip install --use-pep517 -r requirements.txt
 To build and serve the documentation locally, allowing you to make edits and observe the results in real time, use:
 
 ```bash
-mkdocs build --clean && mkdocs serve
+mkdocs build --clean
+mkdocs serve -a 0.0.0.0:8000
 ```
 
 You will be able to make edits to existing files and observe the results in real time.
