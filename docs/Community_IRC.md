@@ -5,7 +5,7 @@ description: Social media channels maintained by Armbian project team
 
 # Social media
 
-## Armbian on Twitter and Mastodon
+## Armbian on X and Mastodon
 
 Armbian short announcements are done via 𝕏 (formerly known as Twitter): <https://twitter.com/armbian> and <https://fosstodon.org/@armbian>
 

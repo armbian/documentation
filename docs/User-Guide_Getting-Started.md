@@ -2,101 +2,129 @@
 
 <iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Mentioned links:
+!!! tips "New users"
 
-- [https://gitlab.com/bztsrc/usbimager/](https://gitlab.com/bztsrc/usbimager/)  
-- [https://forum.armbian.com/topic/4767-powering-through-micro-usb/](https://forum.armbian.com/topic/4767-powering-through-micro-usb/)  
-- [https://docs.armbian.com/](https://docs.armbian.com/)  
-- [https://forum.armbian.com/profile/9032-werner/](https://forum.armbian.com/profile/9032-werner/)  
-- [https://forum.armbian.com/topic/12803-armbian-irc-chat/](https://forum.armbian.com/topic/12803-armbian-irc-chat/)  
+    Please, make sure you have:
 
-## Prerequisites for new users
+    - a proper power supply according to the board manufacturer requirements
+    - a reliable SD card (see below "How to prepare a SD card?")
 
-Please, make sure you have:
-
-- a proper power supply according to the board manufacturer requirements (basic usage example: 5V/2A with DC Jack barrel or **thick** USB cable)
-- a reliable SD card (see below "How to prepare a SD card?")
-
-## What to download?
+### What to download?
 
 The download for each image consists of three separate files:
 
-- **.xz**-compressed image file
-- **.sha file** for download verification
-- **.asc file** for image authentication  
+- **.xz** compressed image file
+- **.sha file** for download verification (optional)
+- **.asc file** for image authentication (optional)
+
+!!! question "How to check download authenticity?"
+
+    All our images are digitally signed and therefore it is possible to check their authenticity.  You need to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `sudo apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
+
+    ```sh
+    # download public key from the database
+  	gpg --keyserver hkp://keyserver.ubuntu.com --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+	
+	  # perform verification 
+	  gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
+
+  	# proper response
+  	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
+  	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+
+	  # wrong reponse. Not genuine Armbian image!
+	  gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
+	  gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+    ```
+    It is safe to ignore the message `WARNING: This key is not certified with a trusted signature!`.
+
+!!! question "How to check download integrity?"
+
+    Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. 
+
+    On Windows, you can download and use the [QuickHash GUI](https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui.
+
+    while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
+
+    ```sh
+	  shasum -a 256 -c Armbian_*.img.sha
+	  #good response
+	  Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
+    ```
 
 For each board we usually provide various image types:
 
-- **CLI** - server variant without desktop environment
-- **minimal** - very lightweight server variant with just the bare minimum, not even includes `armbian-config`. Everything can be installed via `apt`.
-- **Desktop** full featured desktop image with either Ubuntu Jammy userspace **or** Debian Bookworm userspace
+- **Minimal** - lightweight CLI with bare minimum of packages
+- **Server** - server variant with preinstalled standard utilities
+- **Desktop** full featured desktop image
 
-Other (unsupported) builds may also be available (like Debian Bullseye/Sid or Ubuntu Lunar/Mantic).
-Some boards have different options due to their hardware specialities - router or IoT boards.
+For some boards we provide only minimal images due to their hardware limitations.
 
-### Legacy, current or edge?
+### Debian or Ubuntu?
 
-- **legacy** is either a vendor provided kernel or an old LTS mainline kernel. Use if either _current_ is not available or something does not work well.
-- **current** is usually following current mainline LTS kernel and considered fully supported and can bring up features video acceleration for example
-- **edge** is as the name implies cutting-edge and usually following the latest mainline kernel or 3rd party development branch. Untested, unstable, can break at any time, for experienced users only.
+If you have no special preferences that require specific versions, we recommend Ubuntu based Armbian.
 
-The level of kernel support however always depends on the board family. 
-If in your specific case something does not work well, you are always free to try an image with an other kernel included.
+### Vendor, current?
 
-### What are testing images *(WIP)*?
+In some cases we provide images with different firmware. They differ in level of hardware support. Focus into:
 
-- made from stable branches
-- not very well tested
-- for end users
+- **vendor** contains vendor provided kernel which usually has best hardware support while version can be outdated, containin less general fixes
+- **current** is following latest [mainline LTS kernel](https://www.kernel.org/category/releases.html) and is in most cases best choice
 
-**Do not use** testing or edge images in a productive environment. We do appreciate your constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
+And use those if they are the only one / for testings:
 
-### How to check download authenticity?
+- **edge** is as the name implies cutting-edge fresh / development / latest stable. It is only automatically tested and can break at any time. Recommended for experienced users.
+- **legacy** is old stable current kernel. Use if either _current_ is not available or something does not work well with it.
 
-All our images are digitally signed and therefore it is possible to check their authenticity.  You need to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. `apt-get install gnupg ` on Debian/Ubuntu or `brew install gnupg ` on macOS. on windows install the current simple gnupg [Gnupg](https://gnupg.org/download/):
-	
-	# download public key from the database
-	gpg --keyserver hkp://keyserver.ubuntu.com --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
-	
-	# perform verification 
-	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
+The level of kernel support however always depends on the board family. If in your specific case something does not work well, you are always free to try an image with an other kernel included or change kernel within [armbian-config](/User-Guide_Armbian-Config).
 
-	# proper response
-	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
-	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+### Rolling releases?
 
-	# wrong reponse. Not genuine Armbian image!
-	gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
-	gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+Rolling releases are suitable for Linux enthusiasts who want cutting edge packages and have the skills to fix damage that a bad update might cause. If you want stability in a production environment or low headaches as a novice user, skip rolling releases. They are only at, build and ship, Debian testing / Arch / Manjaro / Suse Tumbleweed / Kali / Gentoo support quality level!
 
-It is safe to ignore the message `WARNING: This key is not certified with a trusted signature!`.
+``` mermaid
+graph LR
+  A[Hardware] --> B{Armbian kernel};
+  B -->|legacy| C["rolling release"];
+  B -->|vendor| C["rolling release"];
+  B -->|current| C["rolling release"];
+  B -->|edge| C["rolling release"];
+  B -->|legacy| X["point release"];
+  B -->|vendor| X["point release"];
+  B -->|current| X["point release"];
+  B -->|edge| X["point release"];
+  
+  
+  C ---->|minimal| E[Debian or Ubuntu];
+  C ---->|server| F[Debian or Ubuntu];
+  C ---->|desktop| G[Debian or Ubuntu];
 
-### How to check download integrity?
+  X ---->|minimal| E[Debian or Ubuntu];
+  X ---->|server| F[Debian or Ubuntu];
+  X ---->|desktop| G[Debian or Ubuntu];
+```
 
-Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image's SHA-256 hash with the one contained in the `sha256sum.sha` file. 
+!!! danger
 
-On Windows, you can download and use the [QuickHash GUI](https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui.
+    **Do not use** rollling or edge images in a productive environment. Their purpose is testing and providing constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
-while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
-
-	shasum -a 256 -c Armbian_*.img.sha
-	#good response
-	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
-
-## How to prepare a SD card?
+## Preparing SD card?
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run in problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
 Write the **.xz compressed image** with a tool [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://www.balena.io/etcher/) on all platforms since, unlike other tools, either can validate written data **saving you from corrupted SD card contents**.
 
-Also important: Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+
+!!! tip "Also important"
+
+    Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
 
 |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
 |---|---|---|---|---|
 |Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
 |Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
 
-At the time of this writing A1 and A2 cards are only widely available from SanDisk. Armbian recommends A1 rated SD-Cards **only** now ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
+We recommend at least A1 rated SD-Cards ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
 
 ![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
 
@@ -164,66 +192,74 @@ In case you have no wired network connection and there is a wireless adaptor det
     Generating locales: sl_SI.UTF-8
     root@bananapim2pro:~#
 
-## How to update firmware and packages?
+## How to install?
+
+![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
+
+!!! success "Required condition for eMMC/SATA/USB/NVME:"
+
+    * onboard eMMC storage
+    * attached SATA, NVME or USB storage
+
+Start the install script and follow the lead:
+
+	armbian-install
+
+!!! tip "Armbian installer provides those scenarios:"
+
+    * boot from SD, system on SATA / USB
+    * boot from eMMC / NAND, system on eMMC/NAND
+    * boot from eMMC / NAND, system on SATA / USB / NVME
+    * Boot from SPI - system on SATA, USB or NVMe
+    * Install/Update the bootloader on SD/eMMC
+    * Install/Update the bootloader on special eMMC partition
+    * Install/Update the bootloader on SPI Flash
+    * Install system to UEFI disk
+
+!!! tip "You can choose the following file system options:"
+
+    * ext2,3,4
+    * btrfs
+
+## How to update?
+
+### Armbian OS?
 
 	apt update
 	apt upgrade
 
-**Update process can take hours in case of using cheap SD card and/or under heavy load.**
+**Update process can take some time in case of using old & cheap SD card and/or under heavy load.**
 
 If the kernel was upgraded during this process you will be prompted to reboot at next login.
 
-## How to update u-boot?
+### Boot loader?
 
-First you need to update packages described in a previous "How to update" step. Then run armbian-config utility, go to system settings and proceed to:
+First you need to update all packages described in a previous step. Then run:
 
-**"Install" "Install to/update boot loader"** -> **Install/Update the bootloader on SD/eMMC**
+```bash
+sudo armbian-install
+```
 
-## How to upgrade distribution (like Focal to Jammy or Bullseye to Bookworm)?
+Select:
 
-Fire up `armbian-config` to freeze your firmware packages (if not frozen already, select `System` and `Freeze`).  
-Then follow generic upgrade instructions specific to your userspace:  
+Install/Update the bootloader on SD/eMMC
 
-- Like for Debian: [https://www.debian.org/releases/bookworm/arm64/release-notes/ch-upgrading.en.html](https://www.debian.org/releases/bookworm/arm64/release-notes/ch-upgrading.en.html)  
-- Or Ubuntu: launch `do-release-upgrade`
+## How to stay safe?
 
-__Attention:__ Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  
+Armbian provides firmware package freeze to give you an option to upgrade all packages but firmware. This prevents unplesant surprises on functionality regressions that comes with kernel upgrades. To enable / disable this feature, look for `Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades` within [armbian-config](/User-Guide_Armbian-Config).
 
-## How to adjust hardware features?
+## How to upgrade a distribution?
 
-[Use the Armbian configuration utility `armbian-config`](User-Guide_Armbian-Config.md)
+When a new userspace is out, we recommend to start with a fresh image. However, it is possible to upgrade, but the process is largerly in the domain of underlaying Debian or Ubuntu user space. However we provide experimental `Distribution upgrades` within [armbian-config](/User-Guide_Armbian-Config)
 
-## How to install to eMMC, SATA, NVME & USB?
 
-![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
+!!! danger
+    Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  
 
-Required condition for eMMC/SATA/USB/NVME:
+## How to tune hardware?
 
- * onboard eMMC storage
- * attached SATA, NVME or USB storage
+Hardware configuration is available within [armbian-config](User-Guide_Armbian-Config.md) utility.
 
-Start the install script:
+## How to report bugs?
 
-	armbian-install
-
-and follow the guide. Those are all possible scenarios:
-
- * boot from SD, system on SATA / USB
- * boot from eMMC / NAND, system on eMMC/NAND
- * boot from eMMC / NAND, system on SATA / USB / NVME
- * Boot from SPI - system on SATA, USB or NVMe
- * Install/Update the bootloader on SD/eMMC
- * Install/Update the bootloader on special eMMC partition
- * Install/Update the bootloader on SPI Flash
- * Install system to UEFI disk
-
-and you can choose the following file system options:
-
- * ext2,3,4
- * btrfs
-
-On Allwinner devices after switching to boot from NAND or eMMC clearing the boot loader signature on the SD card is recommended: `dd if=/dev/zero of=/dev/mmcblkN bs=1024 seek=8 count=1` (replace `/dev/mmcblkN` with the correct device node -- in case you run this directly after `armbian-install` without a reboot in between then it's `/dev/mmcblk0`). When booting from eMMC to get SD cards auto-detected on Allwinner legacy images please consider changing `mmc0`'s `sdc_detmode` from 3 to 1 in the board's fex file (see [here](https://forum.armbian.com/topic/1702-orange-pi-plus-2e-where-is-16ghz-and-sd/?tab=comments#comment-13163) for details).  
-
-## How to install to NAND?
-
-While in theory writing to NAND should still be possible using `armbian-installer`, this requires running a very old 3.4.y kernel which Armbian as dropped support for several years ago. Therefore this feature is to be considered as deprecated and no support for either 3.4.y systems or NAND installations will be provided.
+Follow bug reporting form available [here](https://armbian.com/bugs/) and learn how to collect necessary information and where provide to put your report depending on type of issue. Reports lacking fundamental diagnostics are ignored.

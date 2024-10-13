@@ -1,17 +1,19 @@
-# Networking
+## Networking
 
 Armbian uses [**Netplan.io**](https://netplan.io/) to describe networking configurations. Netplan is a utility to easily configure Linux networking, using a declarative approach.
 If you want to configure your network manually, it is as simple as editing and creating Netplan yaml files (see the yaml configuration reference at the [Netplan docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/)).
 
 Netplan is used to configure networks on **all** Armbian images since Release 24.05, no matter if minimal or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a minimal image or not. 
 
-# Minimal images (networkd)
+## Minimal images
+
+!!! tip "Netplan renderer: networkd"
 
 Minimal images are using the `systemd-networkd` backend, which has a **smaller footprint** compared to `Network-Manager`. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service is great for simple connections, but can also be useful to set up complex network configurations.
 
-## Default Armbian configuration 
+### Armbian defaults
 
-By default, your device will run using DHCP on all ethernet interfaces to be able to automatically receive an IP address from your router.
+All ethernet interfaces will automatically receive an IP address from your router.
 
 [`/etc/netplan/10-dhcp-all-interfaces.yaml`](https://github.com/armbian/build/blob/main/extensions/network/config-networkd/netplan/10-dhcp-all-interfaces.yaml):
 
@@ -28,14 +30,21 @@ network:
       ipv6-privacy: yes
 ```
 
-## Configuration examples
+### Configuration examples
 
-###  Setting a fixed IP address
+####  Setting a fixed IP address
 
 The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
-> [!TIP]
-> Find out the name of your device's Ethernet interface with the command `ip addr`. It is usually something like `eth0`, `enp4s3` or `lan`.
+
+!!! question "How to find your device's Ethernet interface?"
+
+    Use command:
+
+    ```sh
+    ip addr
+    ```
+    It is usually something like `eth0`, `enp4s3` or `lan`.
 
 `/etc/netplan/20-static-ip.yaml`:
 
@@ -58,9 +67,10 @@ network:
 
 See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/using-static-ip-addresses/) for reference.
 
-### Connecting to a wireless network
+#### Connecting to WiFI network
 
-It is recommended to make a separate config file for wireless network.
+
+!!! tip "It is recommended to make a separate config file for wireless network."
 
 Create the following file:
 
@@ -81,16 +91,23 @@ network:
 
 Replace `SSID` with the name of the network you want to connect to and `wlan0` with the wifi interface used on your system.
 
-> [!TIP]
-> Find out the name of your device's WiFi interface with the command `ip addr`.
+!!! question "How to find your device's WiFi interface?"
+
+    Use command:
+
+    ```sh
+    ip addr
+    ```
+    It is usually something like `wlan0`, `wlo1` or `wlx12334c47dec3`.
+
 
 See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/examples/#how-to-configure-your-computer-to-connect-to-your-home-wi-fi-network) for reference.
 
-## Applying your configuration
+### Applying your configuration
 
 Once you are done configuring your network, it is time to test syntax and apply it.
 
-#### 1. Fix config file permissions
+#### Fix file permissions
 
 According to the [Netplan docs](https://netplan.readthedocs.io/en/stable/security/), the permissions must be restricted to the root user.
 
@@ -98,18 +115,23 @@ According to the [Netplan docs](https://netplan.readthedocs.io/en/stable/securit
 sudo chmod 600 /etc/netplan/*.yaml
 ```
 
-#### 2. Test if the syntax is correct and if your device can still connect
+#### Test syntax
+
+This will verify the syntax and test if your device can connect
+
 ```bash
 sudo netplan try
 ```
 
-#### 3. Apply the configuration
+#### Apply the configuration
 
 ```bash
 sudo netplan apply
 ```
 
-# CLI and desktop images (Network-Manager)
+# CLI and desktop images
+
+!!! tip "Netplan renderer: Network Manager"
 
 Server CLI and desktop images are using the `Network-Manager` backend. You can use similar methods for configuring your network as with the `networkd` backend used on minimal images.
 
@@ -117,8 +139,14 @@ Server CLI and desktop images are using the `Network-Manager` backend. You can u
 
 The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
 
-> [!TIP]
-> Find out the name of your device's Ethernet interface with the command `ip addr`. It is usually something like `eth0`, `enp4s3` or `lan`.
+!!! question "How to find your device's Ethernet interface?"
+
+    Use command:
+
+    ```sh
+    ip addr
+    ```
+    It is usually something like `eth0`, `enp4s3` or `lan`.
 
 `/etc/netplan/20-static-ip.yaml`:
 
@@ -146,14 +174,14 @@ Alternatively, you can also use Network-Manager directly via the command line or
 ```bash
 nmtui-edit eth0
 ```
-
-![](images/edit-connection.png)
+??? note "Display screenshot"
+    ![](images/edit-connection.png)
 
 Replace `eth0` with the name of your Ethernet Interface.
 
-### Connecting to a wireless network
+### Connecting to WiFI network
 
-For connecting to a wireless network, you can use the same method as mention above for use with [`networkd` on minimal images](#connecting-to-a-wireless-network). Just make sure to replace `renderer: networkd` with `renderer: NetworkManager`.
+For connecting to a wireless network, you can use the same method as mention above for use with `networkd` [on minimal images](#minimal-images). Just make sure to replace `renderer: networkd` with `renderer: NetworkManager`.
 
 Alternatively, you can also use Network-Manager directly via the command line or GUI tools on your desktop:
 
@@ -161,11 +189,12 @@ Alternatively, you can also use Network-Manager directly via the command line or
 nmtui-connect SSID
 ```
 
-![](images/wifi-connect.png)
+??? note "Display screenshot"
+    ![](images/wifi-connect.png)
 
 Replace `SSID` with the name of your wireless network.
 
-# Automatic configuration on first boot
+# Automatic configuration
 
 It is possible to network configurations which are automatically applied when you first boot your device after flashing a fresh image by writing to the file `/root/.not_logged_in_yet` which is read at your first login.
 
@@ -203,9 +232,11 @@ Mount your live image _before your first boot_ and use this example for referenc
 If you want to use first run automatic configuration at build time, [check this GitHub pull request](https://github.com/armbian/build/pull/6194).
 
 In short:
+
 1. Copy the template with `cp extensions/preset-firstrun.sh userpatches/extensions/`
 2. Edit the template `userpatches/extensions/preset-firstrun.sh` according to your situation
 3. Build your Armbian image using the additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
 
-> [!NOTE]
-> This method also creates a new user, sets passwords and more!
+???+ tip
+
+    This method also creates a new user, sets passwords and more!
