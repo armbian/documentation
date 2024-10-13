@@ -1,16 +1,16 @@
 ## Rolling releases
 
-Armbian provides automated daily rolling releases of [small selection of images](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml) for all supported targets. Images are available at respective board download pages: <https://www.armbian.com/download> Armbian also populates packages repository so updates are available as an upgrade to your existing OS.
+Armbian provides automated daily rolling releases of [small selection of images](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml) for all supported targets. Images are available at respective board download pages: <https://www.armbian.com/download>. Armbian also populates its own packages repository so updates are available as an upgrade for existing installations.
 
 ## Point releases
 
-Armbian runs "train" based point releases. Whatever is ready to board the train, does so. Whatever isn't ready, has to wait for the next train. This enables us to have a predictable release cycles making it easy to plan. It also puts the responsibility on developers to make sure they have features ready on time. 
+Armbian runs "train" based point releases. Whatever is ready to board the train, does so. Whatever is not has to wait for the next train. This enables us to have a predictable release cycles making it easy to plan. It also puts the responsibility on developers to make sure they have features ready on time. 
 
 Armbian releases quarterly at the end of **February, May, August, November**. Offset is because we all know that nothing happens for half of December. At the beginning of a release cycle, we have a planning meeting and **two weeks before the end of the release we freeze integration of new features**.
 
 ## Release Cycle
 
-Releases last 3 months. Each release starts with a planning meeting. After planning, developers and development teams build their deliverable using whatever methods (scrum, kanban, waterfall, ... ) they want but shall commit their code frequently, leading **up to the last 2 weeks**. The project does not accept "dumps" of code at the end. **Commit early and often** on master. Two weeks before the release date, we halt feature integration and only allow bug fixes. At some point during those two weeks, we start the release candidate process. This process starts by pulling a branch off master that will become the release branch. That frees up master for development on the next release. On the release candidate branch we work on bug fixes, and choose "release candidate", RC, tags. The software at that tag is a candidate for release, and it is submitted to automated and manual tests on real hardware. If automated tests are passing, we can officially tag it as the release. If it doesn't, we enter another bug fix cycle and create a new release candidate. We iterate until we have a candidate that can be the formal release. Usually, this takes 2-3 cycles and 1-3 weeks of time.
+Releases last three months. Each release starts with a meeting for planning. After planning, developers and development teams build their deliverable using whatever methods (scrum, kanban, waterfall, ... ) they want but shall commit their code frequently, leading **up to the last 2 weeks**. The project does not accept "dumps" of code at the end. **Commit early and often** on master. Two weeks before the release date, we halt feature integration and only allow bug fixes. At some point during those two weeks, we start the release candidate process. This process starts by pulling a branch off master that will become the release branch. That frees up master for development on the next release. On the release candidate branch we work on bug fixes, and choose "release candidate", RC, tags. The software at that tag is a candidate for release, and it is submitted to automated and manual tests on real hardware. If automated tests are passing, we can officially tag it as the release. If it does not, we enter another bug fix cycle and create a new release candidate. We iterate until we have a candidate that can be the formal release. Usually, this takes 2-3 cycles and 1-3 weeks of time.
 
 Development epics, stories and bugs for each release are tracked through [Jira](https://armbian.atlassian.net/).
 
@@ -18,7 +18,7 @@ Development epics, stories and bugs for each release are tracked through [Jira](
 
 Branches in Armbian follow this convention: 
 
- - **Main branch (main):** Main development will happen on the main branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
+ - **Main branch (main):** Main development will happen on the `main` branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
  - **Release branch (v24.08 for example):** This is a branch per release with frozen external sources.
  
 Each Armbian release will have the following version format:
@@ -160,13 +160,13 @@ Meeting location is IRC channel [#armbian](https://web.libera.chat/) on [Libera]
 ## Release Coordinating
 
 ### Summary
-A release starts as a RC Branch cut from master at freeze time.  Once a RC Branch is cut, master can be unfrozen and development can continue.  RC Branch is a rolling release that accepts bug fixes.  The bug fixes should be cherry-picked back to master branch.  Once the RC Is stable, A Final release as a branch named after its version.  A release is *never* merged to master.  Once a release is complete, it only should be updated for severe bugs and severe security vulnerabilities.  A release is only maintained until the next release.
+A release starts as a RC branch cut from `main` at freeze time. Once a RC branch is cut, `main` can be unfrozen and development can continue. RC branch is a rolling release that accepts bug fixes. The bug fixes should be cherry-picked back to `main` branch. Once the RC is stable, a final release as a branch named after its version. A release is *never* merged to `main`. Once a release is complete, it only should be updated for severe bugs and security vulnerabilities. A release is only maintained until the next release.
 
 
 ### 1. Forum Communication
 
 - Create a new thread in the [Armbian Project Administration forum](https://forum.armbian.com/forum/39-armbian-project-administration/)
-  - Ex topic name: `Ambian 20.02 (Chiru) Release Thread`
+  - Ex topic name: `Armbian 24.02 (Kereru) Release Thread`
 - Tag the post with relase, release version, and codename
 - Use the following template to begin the body of the release thread:
 
@@ -180,34 +180,34 @@ Testing Tracking Sheet: https://example.com/link  (google sheets)
 
 The goal of this thread is to discuss testing, bugfixes, and the overall quality of the release.  Once the release is complete, this thread should be locked and unpinned. 
 ```
-- Before Code Freeze --  Make note in the thread the incomplete jira issues tagged for the release [example](https://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?tab=comments#comment-93245)
-- After test images are procuded, engage in community for assistants wih testing.. forums, twitter, etc.  [share this tool](https://github.com/armbian/autotests)
+- Before Code Freeze -- Make note in the thread the incomplete Jira issues tagged for the release [example](https://forum.armbian.com/topic/12763-armbian-2002-chiru-release-thread/?tab=comments#comment-93245)
+- After test images are procuded, engage in community for assistants wih testing.. forums, Twitter, etc.  [share this tool](https://github.com/armbian/autotests)
 
 ### 2. Release Candidate Branch Management
 
 - For code freeze -- create a RC branch as `version-rc` ex: `v20.02.0-rc`
-- If Possible, create Jira tickets for major changes in github that were not tracked in Jira
-- Begin Testing Process.  See [Release Testing](#release-testing)
-- Do not modify branch directy.  Only accept PRs
-- Only accept PRs for Bugfixes. No features
-- Update master branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc Master bacomes v20.05.0-trunk
-- CI Testing should pass on PR
+- If possible, create Jira tickets for major changes in github that were not tracked in Jira
+- Begin testing process. See [Release Testing](#release-testing)
+- Do not modify branch directy. Only accept PRs
+- Only accept PRs for bug fixes. No features
+- Update `main` branch version to the NEXT release version with `-trunk`  ex. If RC is v20.02.0-rc `main` becomes v20.05.0-trunk
+- CI testing should pass on PR
 - Test images should automatically be built via Igor's script
 - Repeat build, test, and bugfix process until release is stable
-- Cherry-pick bugfixes back into master
-- Create Final Release branch from RC
+- Cherry-pick bug fixes back into master
+- Create Final release branch from RC
 
 ### 3. Release
 
-- In Github create a Release from final release branch
+- In Github create a release from final release branch
 Enable [source freezing](https://github.com/armbian/build/pull/6318) for this branch
 ```
 ./compile.sh targets
 cp output/info/git_sources.json config/sources/
 ```
 following by commiting this code to build framework.
-- Copy Release notes generated by Jira Release into Github form
-- Add other appropriate information into release github release notes
+- Copy release notes generated by Jira release into Github form
+- Add other appropriate information into release Github release notes
 - Point Armbian build system to new release
-- Update armbian documentation to reflect current release
+- Update Armbian documentation to reflect current release
 - Celebrate
