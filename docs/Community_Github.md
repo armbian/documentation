@@ -19,7 +19,7 @@ Utility for configuring:
 ## Armbian OS
 <https://github.com/armbian/os>
 
-Armbian OS assemly line:
+Armbian OS assembly line:
 
 - [daily rolling releases](https://github.com/armbian/os/releases) for supported build targets
 - [point releases](https://www.armbian.com/download/?device_support=Standard%20support) for supported build targets
@@ -34,9 +34,9 @@ Armbian OS community assembly line:
 ## Armbian Distribution
 <https://github.com/armbian/distribution>
 
-Armbian OS with preinstalled:
+Armbian OS with pre-installed applications:
 
 - [HomeAssistant](https://www.home-assistant.io/),
 - [OpenHab](https://www.openhab.org/),
-- [KaliLinux](https://www.kali.org/), 
+- [Kali Linux](https://www.kali.org/), 
 - [OpenMediaVault](https://www.openmediavault.org/)
