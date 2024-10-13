@@ -1,18 +1,10 @@
-# Rolling releases
+## Rolling releases
 
-Armbian makes daily rolliong releases which includes generating daily updates of stable kernels and daily releases of unstable kernels and userspace packages.
+Armbian provides automated daily rolling releases of [small selection of images](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml) for all supported targets. Images are available at respective board download pages: <https://www.armbian.com/download> Armbian also populates packages repository so updates are available as an upgrade to your existing OS.
 
-<https://github.com/armbian/build/releases>
+## Point releases
 
-Images are available at respective board download pages:
-
-<https://www.armbian.com/download>
-
-# Point releases
-
-## Release Dates
-
-Armbian runs "train" based releases. Whatever is ready to board the train, does so. Whatever isn't ready, has to wait for the next train. This enables us to have a predictable release cycles making it easy to plan. It also puts the responsibility on developers to make sure they have features ready on time. 
+Armbian runs "train" based point releases. Whatever is ready to board the train, does so. Whatever isn't ready, has to wait for the next train. This enables us to have a predictable release cycles making it easy to plan. It also puts the responsibility on developers to make sure they have features ready on time. 
 
 Armbian releases quarterly at the end of **February, May, August, November**. Offset is because we all know that nothing happens for half of December. At the beginning of a release cycle, we have a planning meeting and **two weeks before the end of the release we freeze integration of new features**.
 
@@ -26,17 +18,14 @@ Development epics, stories and bugs for each release are tracked through [Jira](
 
 Branches in Armbian follow this convention: 
 
- - **Master branch (master):** Main development will happen on the master branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
- - **Maintenance branch (support):** This is the long-term maintenance branch per release.
- - **Bleeding edge branch (edge)**: This is a branch created for lengthy and/or involved feature development that could destabilize master.
-
+ - **Main branch (main):** Main development will happen on the main branch. This is the latest and greatest branch, but is always "stable" and "deployable". All tests always pass on this branch.
+ - **Release branch (v24.08 for example):** This is a branch per release with frozen external sources.
+ 
 Each Armbian release will have the following version format:
 
 **Format:** `<major>.<minor>.<revision>`
 
-`<major>` and `<minor>` version will be incremented at the end of the release cycles while `<revision>` is incremented for a fix (or set of fixes)
-
-Tags are used in ad-hoc manner.
+`<major>` and `<minor>` version are incremented at the end of the release cycles while `<revision>` is incremented for a fix.
 
 ## Release Naming
 
@@ -62,7 +51,14 @@ Tags are used in ad-hoc manner.
 | 23.11 | Topi | November | [done](https://armbian.atlassian.net/projects/AR/versions/10016/tab/release-report-all-issues)
 | 24.02 | Kereru | February | [done](https://armbian.atlassian.net/projects/AR/versions/10017/tab/release-report-all-issues)
 | 24.05 | Havier | May |  [done](https://armbian.atlassian.net/projects/AR/versions/10018/tab/release-report-all-issues)
-| 24.08 | Yelt | August | planned
+| 24.08 | Yelt | August | [done](https://armbian.atlassian.net/projects/AR/versions/10019/tab/release-report-all-issues)
+| 24.11 | Stirk | August | planned
+| 25.02 | Iiwi | August | planned
+| 25.05 | Caiman | August | planned
+| 25.08 | Dunnart | August | planned
+| 25.11 | Brach | August | planned
+| 26.02 | Goa | August | planned
+
 
 
  by [https://www.codenamegenerator.com](https://www.codenamegenerator.com) from unusual animals
@@ -215,26 +211,3 @@ following by commiting this code to build framework.
 - Point Armbian build system to new release
 - Update armbian documentation to reflect current release
 - Celebrate
-
-## Release Testing
-
-See [Opportunties for improvement](#opportunities-for-improvement)
-
-## Reflection on Prior Releases
-
-### Opportunities for Improvement
-
-#### wireless driver testing
-
-* wireless is a particularly sensitive issue.  We need to test, fix, or at least be able to inform others of what is broken
-
-#### Bug Tracking
-
-#### Testing
-
-#### Image Downloads
-
-### Positive Observations
-
-* Good response from community for testing assistance
-* Release was on time

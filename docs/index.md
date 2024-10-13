@@ -4,85 +4,101 @@ Linux for ARM development boards
 
 # Welcome to the Armbian Documentation!
 
-If you are **new to Armbian**, the [_Getting Started_](User-Guide_Getting-Started.md) section 
-provides a tutorial for everything you need to get Armbian running
-and answers many **F**requently **A**sked **Q**uestions.
-It then continues on to more advanced topics.
+## What is Armbian?
+
+Armbian is highly optimised base operating system specialised for single board computers.
+
+It embodies extremely lightweight hardware features focused Debian-based distribution, extensive build framework and is suitable for industrial or home use.
+
+``` mermaid
+graph LR
+  A[Hardware] --> B{50 x Armbian kernel};
+  B --> X["point release"];
+  X ---->|minimal| E[Debian or Ubuntu];
+  X ---->|server| F[Debian or Ubuntu];
+  X -->|desktop| H[Debian or Ubuntu];
+  H -->Q[XFCE];
+  H -->W[Gnome];
+  H -->R[KDE];
+  H -->T[Cinnamon];
+  
+```
+
+## Key Advantages
+
+- extreamly lean and standardised Debian-based user space
+- extensive build framework with endless capabilities
+- fast hybrid assembly of whole operating system
+- independednt long term support
+- advanced hardware and OS config (armbian-config)
+- in house kernel development, improvement and maintaining
+- daily automated stress and upgrade testing of key hardware targets
+- exlusive support on exotic hardware
+- installation is optional and simplifieds
+- provides point releases and daily rolling distribution
+- world wide download infrastructure with perfect coverage in China mainland
+- 1000+ build runners to assist CI automation
+- CI supports customized build list per each build target
+
+???+ "Other features and performance tweaks"
+
+    - Images are reduced to actual data size and automatically expand across boot media at first boot    
+    - BASH or ZSH shell, preinstalled standard system utilities
+    - login is possible via serial, HDMI/VGA or SSH
+    - highly compressed distributed images
+    - Upgrades are done via standard `apt upgrade` method
+    - Login script shows: board name with large text, distribution base, kernel version, system load, uptime, memory usage, IP(v6) address, CPU and drive temperature, ZFS, rootfs usage, battery conditions and number of updates to install
+    - `/var/log` is mounted as compressed device (zram, lzo), log2ram service saves logs to disk daily and on shutdown
+    - Half of memory is allocated/extended for/with compressed swap
+    - `/tmp` is mounted as `tmpfs` (optionally compressed)
+    - Browser profile memory caching is enabled on desktop images
+    - Optimized IO scheduler (check `/etc/init.d/armhwinfo`)
+    - Journal data writeback enabled. (`/etc/fstab`)
+    - ethernet interrupts are using dedicated core    
+
+## What is supported?
+
+Armbian distribute stable images for maintained boards through its [mirror network](https://github.com/armbian/mirror). *Supported / maintained* is not a guarantee. It has a named maintainer and implies a particular SBC is at a **high level of software maturity**. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
+
+## Support statuses?
+
+[Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
+
+At least one person providing maintainance and support.
+
+[Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
+
+Support is not secured but still good anything from this list.
+
+[Community maintained](https://www.armbian.com/download/?device_support=Community%20maintained){ .md-button }
+
+Most of those will also work, but no warranty as we don't monitor their status.
+
+For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
+
+## Getting started?
+
+If you are **new to Armbian**, the [_Getting Started_](User-Guide_Getting-Started.md) section provides a tutorial for everything you need to know to get Armbian running. It then continues on to more advanced topics.
 
 If you **need help** and have read through _Getting Started_ check out [_Troubleshooting_](User-Guide_Advanced-Features.md#how-to-troubleshoot).
 
 If you still cannot find what you need here visit the [_Armbian forum_](https://forum.armbian.com/) where your input can help to improve this documentation.
 
-## What is Armbian?
+## Software titles
 
-*Armbian is a base operating system platform for single board computers (SBCs) that other projects can trust to build upon.*
+You can quickly and easily install popular software! They are ready to run and optimised for Armbian. Here are few highlights:
 
+- Desktops - Install Desktop Environments
+- Netconfig - Network tools
+- DevTools - Development
+- Benchy - System benchmaking and diagnostics
+- Containers - Containerlization and Virtual Machines
+- Media - Media Servers and Editors
+- Management - Remote Management tools
 
-- Lightweight Debian or Ubuntu based Linux distribution specialized for ARM development boards
-- Each system is compiled, assembled and optimized by [_Armbian Build Tools_](https://github.com/armbian/build) 
-- It has powerful build and software development tools to make [_custom builds_](Developer-Guide_Build-Preparation.md)
-- A vibrant community
-
-
-### What is the difference between Armbian and Debian/Ubuntu?
-
-- Debian or Ubuntu officially do not support most of those boards/boxes. Armbian does.
-- Armbian userspace has many small but vital performance or security adjustments
-- Armbian fancy some kernel development and a lot of its maintaining. Debian relies on upstream sources for ARM hardware which can be **years** behind and/or lack of many functions
-- Armbian userspace is lean, clean but 100% Debian/Ubuntu compatible
-- Many stock Debian bugs are fixed on the way, "better than original :)"
-- The Armbian build system is a central part of this whole ecosystem. You can DIY. Debian is much harder.
-- Dedicated support forums per boards/boxes
-- Plug'n'Play vs. complicated install scenarios on stock Debian
-- unified development scenarios and user experience vs. mess of different setup instructions scattered all around 
-
-### Common features
-
-- Armbian Linux is available as Debian and Ubuntu based images, compiled from scratch
-- Images are reduced to actual data size and automatically expand across the SDcard at first boot
-- Root password is `1234`. You are forced to change this password and (optional) create a normal user at first login
-- Ethernet adapter with DHCP and SSH server ready on default port (22)
-- Wireless adapter with DHCP ready (if present) but disabled. You can use `armbian-config` to connect to your router or create an access point
-- NAND, SATA, eMMC and USB install script is included (`armbian-install`)
-- Upgrades are done via standard `apt upgrade` method
-- Login script shows: board name with large text, distribution base, kernel version, system load, uptime, memory usage, IP address, CPU  and drive temperature, ambient temperature from Temper if exits, SD card usage, battery conditions and number of updates to install
-
-### Performance tweaks
-
-- `/var/log` is mounted as compressed device (zram, lzo), log2ram service saves logs to disk daily and on shutdown
-- Half of memory is allocated/extended for/with compressed swap
-- `/tmp` is mounted as `tmpfs` (optionally compressed)
-- Browser profile memory caching
-- Optimized IO scheduler (check `/etc/init.d/armhwinfo`)
-- Journal data writeback enabled. (`/etc/fstab`)
-- `commit=600` to flush data to the disk every 10 minutes (`/etc/fstab`)
-- Optimized CPU frequency scaling with `interactive` governor (`/etc/init.d/cpufrequtils`)
-    - 480-1010Mhz @Allwinner A10/A20
-    - 480-1368Mhz @Allwinner H2+/H3
-    - 392-996Mhz @Freescale imx
-    - 600-2000Mhz @Exynos & S905
-- eth0 interrupts are using dedicated core (Allwinner based boards)
-
-## What is _supported/maintained_?
-
-Armbian will publish and distribute “stable” CLI images for maintained boards through its mirror network. *Supported/maintained* is not a guarantee. *Supported/maintained* has a named maintainer and implies a particular SBC is at a high level of software maturity. Due to the complexity and lack-of-openness in the ecosystem it is unlikely that all accelerated and specialized functionalities (like 3D, VE, I²C...) will be available.
-
-For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
-
-### Maintained boards
-
-Check [download page](https://www.armbian.com/download/) for recently maintained list.
+???+ success "Unit testing"
 
 
-## How to report bugs
+    All software targets and functions are automatically tested to catch as many problems as possible.
 
-Due to lack of manpower we unfortunately have to be very picky about bug reports. Make sure to follow the bug reporting form available [here](https://armbian.com/bugs/) to learn how to collect necessary information and where to put your report depending on type of issue. Reports lacking fundamental diagnostics may be ignored.
-
-# Get Involved! #
-
-* [Contribute](Process_Contribute.md)
-* [Community](https://forum.armbian.com/)
-* [Contact](https://www.armbian.com/#contact)
-
-Our IRC channel is [#armbian](https://web.libera.chat/#armbian) on [Libera.Chat](https://libera.chat/). More details [here](https://docs.armbian.com/Community_IRC/)  
-For those who prefer some more proprietary way to communicate join our [Discord](https://discord.gg/armbian).
+    <a href=https://github.com/armbian/configng/actions/workflows/unit-tests.yml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/configng/unit-tests.yml?logo=githubactions&label=Unit%20tests&style=for-the-badge&branch=main"></a>

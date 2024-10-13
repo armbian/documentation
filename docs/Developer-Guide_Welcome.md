@@ -1,27 +1,11 @@
-# Welcome to `armbian/build`, the Armbian build system
+# Welcome to the Armbian build framework documentation!
 
-Welcome to the Armbian build system (`armbian/build`).
-The build system has significantly changed since release 23.02, when the `armbian-next` effort was merged into
-our `main` branch.
-Please expect some rough edges and report them to us.
-
-## Errors, errors everywhere
-
-Previously, when faced with an error, the build system would simply ignore them, hardly log them anywhere, and continue.
-This led to builds completing successfully, but with (sometimes very sneakily) broken packages and images.
-Get used to seeing errors stopping builds now. Inspect the whole log, specially the errors, the last few lines, and the
-stack trace.
-We try, as much as possible given Bash limitations, to show the source of the error, with a "stack trace" of sorts.
-The topmost elements of the stack trace are usually the most relevant. Each line is prefixed with the file and line
-number where the error occurred.
-Open the file and go to the line number to see the source of the error. Most times, this simple inspection is enough to
-understand the error.
+Overview:
 
 ### (ANSI) Logging
 
-Logging is a bit more structured now. Logs are output to `output/logs`, in a few different formats.
-We output ANSI color both to the screen and to the logs.
-_Please_ add `SHARE_LOG=yes` to share your logs with us when reporting issues, that allows us to check the logs on a web
+Logs are output to `output/logs`, in a few different formats. We output ANSI color both to the screen and to the logs.
+_Please_ add `SHARE_LOG=yes` to share your logs with our pastebin service when reporting issues, that allows us to check the logs on a web
 browser and keep to correct formatting.
 
 ## Command line syntax has changed
@@ -112,16 +96,10 @@ This is (by far) not a complete list:
 - although "aggregation" has been rewritten in Python, it still mostly works using the legacy principle, by scanning
   directories and files in a very complex and error-prone way. This is a source of many bugs and confusion. We plan to
   replace this with pure extensions eventually.
-- "minimal" images are far from really minimal. It is common to see "extensions" that actually remove stuff put there
-  by the core. Those should be refactored.
-- board-side scripts (armbian-config, firstrun, hwoptimization, etc) haven't really changed with armbian-next, and are
-  in dire need of a rewrite. They're also a source of many bugs and confusion. They also need to be extensible.
-- we've mostly working Kernel headers (linux-headers pkg) for 5.10+ including some vendor kernels; no kernel-headers for
-  4.x kernels. sorry. We've no plans to support this.
+- we've mostly working Kernel headers (linux-headers pkg) for 5.10+ including some vendor kernels
 
 ## Multiple u-boot's for same board
 
-Hmm. This is an interesting problem. We can build u-boot twice, using `UBOOT_TARGET_MAP`.
-Some example I did in https://github.com/armbian/build/blob/main/config/boards/odroidhc4.conf#L15-L20 may help.
+We can build u-boot twice, using `UBOOT_TARGET_MAP`. Some example I did in https://github.com/armbian/build/blob/main/config/boards/odroidhc4.conf#L15-L20 may help.
 
 
