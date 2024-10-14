@@ -7,7 +7,7 @@ copyright: Copyright &copy; 2013 - 2024 Armbian.com
 repo_url: https://github.com/armbian/documentation
 repo_name: armbian/documentation
 
-theme: 
+theme:
     name: material
     custom_dir: overrides
     logo: images/logo.svg
@@ -18,7 +18,7 @@ theme:
           primary: red
           accent: red
           toggle:
-            icon: material/toggle-switch-off-outline 
+            icon: material/toggle-switch-off-outline
             name: Switch to dark mode
         - scheme: slate
           primary: red
@@ -28,6 +28,9 @@ theme:
             name: Switch to light mode
     favicon: images/logo.png
     features:
+        - content.action.edit
+        - content.action.view
+        - content.code.copy
         - navigation.tabs
         - navigation.top
         - toc.integrate
@@ -81,6 +84,17 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys # Keyboard key symbols
+  - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
+      repo_url_shortener: true
+      repo_url_shorthand: true
+  - pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
+  - pymdownx.tabbed: # Tabbed content blocks
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      combine_header_slug: true
 
 nav:
 
@@ -97,7 +111,6 @@ nav:
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Release Model' : 'Process_Release-Model.md'
         - 'Changelog' : 'Release_Changelog.md'
-
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Welcome.md'
         - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
