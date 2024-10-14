@@ -6,7 +6,7 @@ Linux for ARM development boards
 
 ## What is Armbian?
 
-Armbian is highly optimised base operating system specialised for single board computers.
+Armbian is highly optimized base operating system specialized for single board computers.
 
 It embodies extremely lightweight hardware features focused Debian-based distribution, extensive build framework and is suitable for industrial or home use.
 
@@ -26,19 +26,19 @@ graph LR
 
 ## Key Advantages
 
-- extreamly lean and standardised Debian-based user space
+- extremly lean and standardised Debian-based user space
 - extensive build framework with endless capabilities
 - fast hybrid assembly of whole operating system
-- independednt long term support
+- independent long term support
 - advanced hardware and OS config (armbian-config)
-- in house kernel development, improvement and maintaining
-- daily automated stress and upgrade testing of key hardware targets
-- exlusive support on exotic hardware
-- installation is optional and simplifieds
+- in-house kernel development, improvement and maintenance
+- daily automated stress and upgrade testing on key hardware targets
+- exlusive support of exotic hardware
+- installation is optional and simplified
 - provides point releases and daily rolling distribution
 - world wide download infrastructure with perfect coverage in China mainland
 - 1000+ build runners to assist CI automation
-- CI supports customized build list per each build target
+- CI supports customised build list per each build target
 
 ???+ "Other features and performance tweaks"
 
@@ -58,9 +58,10 @@ graph LR
 
 ## What is supported?
 
-Armbian distribute stable images for maintained boards through its [mirror network](https://github.com/armbian/mirror). *Supported / maintained* is not a guarantee. It has a named maintainer and implies a particular SBC is at a **high level of software maturity**. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
+Armbian distributes stable images for maintained hardware through its own [mirror network](https://github.com/armbian/mirror).  
+*Supported / maintained* is not a guarantee. It implies a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
 
-## Support statuses?
+## Support status
 
 [Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
 
@@ -72,11 +73,11 @@ Support is not secured but still good anything from this list.
 
 [Community maintained](https://www.armbian.com/download/?device_support=Community%20maintained){ .md-button }
 
-Most of those will also work, but no warranty as we don't monitor their status.
+Most of those will also work, but no warranty as Armbian does not monitor their status.
 
 For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
-## Getting started?
+## Getting started
 
 If you are **new to Armbian**, the [_Getting Started_](User-Guide_Getting-Started.md) section provides a tutorial for everything you need to know to get Armbian running. It then continues on to more advanced topics.
 
@@ -86,15 +87,15 @@ If you still cannot find what you need here visit the [_Armbian forum_](https://
 
 ## Software titles
 
-You can quickly and easily install popular software! They are ready to run and optimised for Armbian. Here are few highlights:
+You can quickly and easily install popular software! They are ready to run and optimized for Armbian. Here are few highlights:
 
-- Desktops - Install Desktop Environments
-- Netconfig - Network tools
-- DevTools - Development
-- Benchy - System benchmaking and diagnostics
-- Containers - Containerlization and Virtual Machines
-- Media - Media Servers and Editors
-- Management - Remote Management tools
+- Desktops - install desktop environments
+- Netconfig - network tools
+- DevTools - development
+- Benchy - system benchmaking and diagnostics
+- Containers - containerization and virtual machines
+- Media - media servers and editors
+- Management - remote management tools
 
 ???+ success "Unit testing"
 
