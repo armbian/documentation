@@ -23,18 +23,17 @@ The download for each image consists of three separate files:
 
     ```sh
     # download public key from the database
-  	gpg --keyserver hkp://keyserver.ubuntu.com --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
-	
-	  # perform verification 
-	  gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
+    gpg --keyserver hkp://keyserver.ubuntu.com --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+    # perform verification 
+	gpg --verify Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
 
-  	# proper response
-  	gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
-  	gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+    # proper response
+    gpg: Signature made sob 09 jan 2016 15:01:03 CET using RSA key ID 9F0E78D5
+    gpg: Good signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
 
-	  # wrong reponse. Not genuine Armbian image!
-	  gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
-	  gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
+	# wrong reponse. Not genuine Armbian image!
+	gpg: Signature made Sun 03 Jan 2016 11:46:25 AM CET using RSA key ID 9F0E78D5
+	gpg: BAD signature from "Igor Pecovnik (Ljubljana, Slovenia) <igor.++++++++++++@gmail.com>"
     ```
     It is safe to ignore the message `WARNING: This key is not certified with a trusted signature!`.
 
@@ -47,9 +46,10 @@ The download for each image consists of three separate files:
     while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this
 
     ```sh
-	  shasum -a 256 -c Armbian_*.img.sha
-	  #good response
-	  Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
+	shasum -a 256 -c Armbian_*.img.sha
+  
+	#good response
+	Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img: OK
     ```
 
 For each board we usually provide various image types:
