@@ -3,17 +3,17 @@
 Armbian uses [**Netplan.io**](https://netplan.io/) to describe networking configurations. Netplan is a utility to easily configure Linux networking, using a declarative approach.
 If you want to configure your network manually, it is as simple as editing and creating Netplan yaml files (see the yaml configuration reference at the [Netplan docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/)).
 
-Netplan is used to configure networks on **all** Armbian images since Release 24.05, no matter if minimal or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a minimal image or not. 
+_Netplan_ is used to configure networks on **all** Armbian images since Release 24.05, no matter if minimal, CLI or desktop, Debian or Ubuntu. However, the networking backends are different based on if you choose a _minimal_ image or not. 
 
 ## Minimal images
 
 !!! tip "Netplan renderer: networkd"
 
-Minimal images are using the `systemd-networkd` backend, which has a **smaller footprint** compared to `Network-Manager`. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service is great for simple connections, but can also be useful to set up complex network configurations.
+_Minimal_ images are using the `systemd-networkd` backend, which has a **smaller footprint** compared to `Network-Manager` which is used in all non-minimal images. `systemd-networkd` is a system daemon that manages network configurations. It detects and configures network devices as they appear; it can also create virtual network devices. This service is great for simple connections, but can also be useful to set up complex network configurations.
 
 ### Armbian defaults
 
-All ethernet interfaces will automatically receive an IP address from your router.
+All ethernet interfaces are configured for DHCP and will automatically receive an IP address from your router.
 
 [`/etc/netplan/10-dhcp-all-interfaces.yaml`](https://github.com/armbian/build/blob/main/extensions/network/config-networkd/netplan/10-dhcp-all-interfaces.yaml):
 
@@ -34,7 +34,7 @@ network:
 
 ####  Setting a fixed IP address
 
-The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust the example to your likings.
+The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust as necessary.
 
 
 !!! question "How to find your device's Ethernet interface?"
@@ -109,7 +109,7 @@ Once you are done configuring your network, it is time to test syntax and apply 
 
 #### Fix file permissions
 
-According to the [Netplan docs](https://netplan.readthedocs.io/en/stable/security/), the permissions must be restricted to the root user.
+According to the [Netplan docs](https://netplan.readthedocs.io/en/stable/security/), the permissions must be restricted to the `root` user.
 
 ```bash
 sudo chmod 600 /etc/netplan/*.yaml
