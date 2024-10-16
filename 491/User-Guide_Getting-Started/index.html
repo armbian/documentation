@@ -1479,20 +1479,18 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># download public key from the database</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># download public key from the database</span>
 gpg<span class="w"> </span>--keyserver<span class="w"> </span>hkp://keyserver.ubuntu.com<span class="w"> </span>--recv-key<span class="w"> </span>DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
-
-<span class="w">  </span><span class="c1"># perform verification </span>
-<span class="w">  </span>gpg<span class="w"> </span>--verify<span class="w"> </span>Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
+<span class="c1"># perform verification </span>
+gpg<span class="w"> </span>--verify<span class="w"> </span>Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
 
 <span class="c1"># proper response</span>
 gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>sob<span class="w"> </span><span class="m">09</span><span class="w"> </span>jan<span class="w"> </span><span class="m">2016</span><span class="w"> </span><span class="m">15</span>:01:03<span class="w"> </span>CET<span class="w"> </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>ID<span class="w"> </span>9F0E78D5
 gpg:<span class="w"> </span>Good<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span>
 
-<span class="w">  </span><span class="c1"># wrong reponse. Not genuine Armbian image!</span>
-<span class="w">  </span>gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Sun<span class="w"> </span><span class="m">03</span><span class="w"> </span>Jan<span class="w"> </span><span class="m">2016</span><span class="w"> </span><span class="m">11</span>:46:25<span class="w"> </span>AM<span class="w"> </span>CET<span class="w"> </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>ID<span class="w"> </span>9F0E78D5
-<span class="w">  </span>gpg:<span class="w"> </span>BAD<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span>
+<span class="c1"># wrong reponse. Not genuine Armbian image!</span>
+gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Sun<span class="w"> </span><span class="m">03</span><span class="w"> </span>Jan<span class="w"> </span><span class="m">2016</span><span class="w"> </span><span class="m">11</span>:46:25<span class="w"> </span>AM<span class="w"> </span>CET<span class="w"> </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>ID<span class="w"> </span>9F0E78D5
+gpg:<span class="w"> </span>BAD<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span>
 </code></pre></div></td></tr></table></div>
 It is safe to ignore the message <code>WARNING: This key is not certified with a trusted signature!</code>.</p>
 </div>
@@ -1503,9 +1501,11 @@ It is safe to ignore the message <code>WARNING: This key is not certified with a
 <p>while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>Armbian_*.img.sha
-<span class="w">  </span><span class="c1">#good response</span>
-<span class="w">  </span>Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img:<span class="w"> </span>OK
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>Armbian_*.img.sha
+
+<span class="c1">#good response</span>
+Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img:<span class="w"> </span>OK
 </code></pre></div></td></tr></table></div>
 </div>
 <p>For each board we usually provide various image types:</p>
