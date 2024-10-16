@@ -1,93 +1,75 @@
-# Building Armbian
+# Armbian Build Framework Quick Start Guide
 
-## What do I need?
+## Requirements
 
-- x86/x64/aarch64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
-- **The officially supported** compilation environment is [Ubuntu Jammy 22.04.x amd64](https://www.releases.ubuntu.com/jammy/) **only!**
-- `binfmt_misc` kernel module (some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.)
-- installed basic system, OpenSSH and Samba (optional)
-- no spaces in full path to the build script location allowed
-- superuser rights (configured `sudo` or root shell).
+- x86_64 / aarch64 machine
+- at least 2GB of memory and ~35GB of disk space for VM, container or bare metal installation
+- Armbian / Ubuntu Jammy 22.04.x for native building or any Docker capable Linux for containerised
+- Windows 10/11 with WSL2 subsystem running Armbian / Ubuntu Jammy 22.04.x
+- Superuser rights (configured sudo or root access).
+- Make sure your system is up-to-date! Outdated Docker binaries, for example, can cause trouble
+- Install git (apt-get -y -qq install git)
 
-Not officially supported build environments from community contributions:
+!!! danger
+    Make sure that full path to the build script **does not contain spaces**.
 
-- [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
-- [Multipass](https://gist.github.com/atomic77/7633fcdbf99dca80f31fd6d64bfd0565)
-
-Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Docker, Virtualbox, native).
-
-## How to start?
-
-### Native and VirtualBox environments:
-
-Login as root and run:
+Clone repository:
 
 ```bash
-apt-get -y -qq install git  
 git clone --depth=1 --branch=main https://github.com/armbian/build  
 cd build  
 ```
+## Interactive
 
-Run the script
+Run framework:
 
-	./compile.sh
+```bash
+./compile.sh
+```
 
-Make sure that full path to the build script **does not contain spaces**.
+``` mermaid
+graph LR
+  A[./compile.sh] --> B{Change<br>kernel<br>config};
+  B ---> |yes| C["HW"];
+  B ---> |no| C["HW"];
+  C ---> |branch| D["legacy<br>vendor<br>current<br>edge"];
+  D --> |base| E["Debian<br>Ubuntu"];
+  E ---> |type| F["CLI"];
+  F ---> |type| G["Server"];
+  F ---> |type| H["Minimal"];
+  E ---> I["Desktop"];
+  I ---> K["XFCE"];
+  I ---> L["Gnome"];
+  I ---> M["Cinammon"];
+  I ---> N["KDE Neon"];
+```
+Video instructions: <https://www.youtube.com/watch?v=kQcEFsXEJEE>
+
+## CLI
 
 
-<iframe width="607" height="342" src="https://www.youtube.com/embed/kQcEFsXEJEE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Comprehensive list of build Options](Developer-Guide_Build-Options.md)
 
-## Providing build configuration
-
-After the first run of `compile.sh` a new configuration file `config-example.conf` and symlink `config-default.conf` will be created.
-You may edit it to your needs or create different configuration files using it as a template.
-
-Alternatively you can supply options as command line parameters to compile.sh.
 Example:
 
-    ./compile.sh BOARD=cubietruck BRANCH=current RELEASE=jammy
-
-Note: Option `BUILD_ALL` cannot be set to "yes" via command line parameter.  
-Note: Names for `BOARD` can be found [here](https://github.com/armbian/build/tree/main/config/boards) by looking at file names. Example: OrangePi 4 = **orangepi4.conf** = `BOARD=orangepi4`
-
-### Base and descendant configuration
-
-You can create one base configuration (`config-base.conf`) and use this in descendant config (`config-edge.conf`). Three parameters (*BRANCH*, *RELEASE*, *COMPRESS_OUTPUTIMAGE*) will be overwritten.
-
-```
-. ./config-base.conf  
-  
-BRANCH="edge"  
-RELEASE="bullseye"  
-COMPRESS_OUTPUTIMAGE="sha,gz"  
+```bash
+./compile.sh build \
+BOARD=uefi-x86 \
+BRANCH=current \
+BUILD_DESKTOP=yes \
+BUILD_MINIMAL=no \
+DESKTOP_APPGROUPS_SELECTED='browsers chat desktop_tools' \
+DESKTOP_ENVIRONMENT=gnome \
+DESKTOP_ENVIRONMENT_CONFIG_NAME=config_base \
+KERNEL_CONFIGURE=no \
+RELEASE=noble
 ```
 
-## Using GitHub actions
+!!! question "Interpretation?"
 
-If you do not own the proper equipment to build images on your own, you can try to use our [official GitHub action](https://github.com/marketplace/actions/rebuild-armbian).
+    This command will generate **Ubuntu 24.04 Noble** based **Gnome desktop** environment image for Intel based hardware (**uefi-x86**). Besides bare desktop, it will contain packages from **browsers** and **desktop_tool** sections and it will use unchanged kernel from **current kernel** branch.
 
-## Using alternate armbian builder repos and branches
 
-By default, armbian-builder assumes working from `main` of `https://github.com/armbian/build.git`.  If you are working from your own repo / branch, `touch .ignore_changes` will cause armbian-builder to not attempt a repo checkout.
+## GitHub actions
 
-## Executing any bash statement
-
-Currently, invoking compile.sh will run a monotonous task of building all the components into a final image.
-
-In some situation, especially when developing with Kernel or U-Boot, it is handy to run a portion of that great task like:
-
-```
-        # using default profile  
-        ./compile.sh 'fetch_from_repo "$BOOTSOURCE" "$BOOTDIR" "$BOOTBRANCH" "yes"'  
-        ./compile.sh 'compile_uboot'  
-```
-
-You can also dump the variable:
-
-```
-        # using profile of `userpatches/config-my.conf`  
-        ./compile.sh my 'echo $SRC/cache/sources/$BOOTSOURCEDIR'  
-```
-
-NOTE: please use single quotes to keep the `$VAR` from early expansion in the command line shell.
+If you do not own the proper equipment to build images on your own, you can use our [GitHub action](https://github.com/marketplace/actions/rebuild-armbian).

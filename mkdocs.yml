@@ -113,7 +113,7 @@ nav:
         - 'Changelog' : 'Release_Changelog.md'
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Welcome.md'
-        - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
+        - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
         - 'Board Maintainers' : 'Release_Board-Maintainers.md'
