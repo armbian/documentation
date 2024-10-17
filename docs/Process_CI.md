@@ -1,19 +1,14 @@
-# Build actions for developers and maintainers
+# Automation for developers and maintainers
 
-**Note**: Add ideas for process improvements as comments to the [Jira ticket](https://armbian.atlassian.net/browse/AR-2429).
+Core automation for generating images for release are held at <https://github.com/armbian/os>
 
-Manual executing permissions are tied to [release manager](https://github.com/orgs/armbian/teams/release-manager) role within Armbian organization. Do you [want to help and take this role](https://calendly.com/armbian/office-hours)?
 
-## Prepare build lists (anyone)
+## Prepare build lists
 
-[https://github.com/armbian/os](https://github.com/armbian/os)
 
 ### Recommended images
 
-Recommended images on download pages
-![Standard support images](images/standard-support-images.png)
-
-are defined via regular expression mapping file `exposed.map` :
+Recommended images on download pages are defined via regular expression mapping file `exposed.map`:
 
 Example:
 
@@ -21,11 +16,14 @@ Example:
 bananapim7/archive/Armbian_[0-9].*Bananapim7_noble_vendor_[0-9]*.[0-9]*.[0-9]*_gnome-kisak_desktop.img.xz
 bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]*_minimal.img.xz
 ```
+
+![Standard support images](images/standard-support-images.png)
+
 ### Build templates
 
 They have definitions on what kind of images we want to build - for section or for one specific board:
 
-```
+``` yaml
 userpatches/targets-release-apps.template
 userpatches/targets-release-community-maintained.template
 userpatches/targets-release-nightly.template
@@ -38,7 +36,7 @@ From those templates we are [autogenerating](https://github.com/armbian/os/blob/
 
 Autogeneration is excluded for boards that are on blacklists:
 
-```
+``` yaml
 userpatches/targets-automation.blacklist
 userpatches/targets-automation-nightly.blacklist
 ```
@@ -59,7 +57,10 @@ Example:
 khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
 ```
 
-## Prepare Standard Support images for release (release manager)
+## Prepare Standard Support images for release
+
+???+ Info
+    Manual executing permissions are tied to [release manager role](/Process_Contribute/#release-manager).
 
 [![Build Standard Support Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
 
