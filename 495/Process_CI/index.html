@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-actions-for-developers-and-maintainers" class="md-skip">
+        <a href="#automation-for-developers-and-maintainers" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,13 +1092,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prepare-build-lists-anyone" class="md-nav__link">
+  <a href="#prepare-build-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare build lists (anyone)
+      Prepare build lists
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prepare build lists (anyone)">
+    <nav class="md-nav" aria-label="Prepare build lists">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1143,13 +1143,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prepare-standard-support-images-for-release-release-manager" class="md-nav__link">
+  <a href="#prepare-standard-support-images-for-release" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare Standard Support images for release (release manager)
+      Prepare Standard Support images for release
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prepare Standard Support images for release (release manager)">
+    <nav class="md-nav" aria-label="Prepare Standard Support images for release">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1495,36 +1495,33 @@
   
 
 
-<h1 id="build-actions-for-developers-and-maintainers">Build actions for developers and maintainers<a class="headerlink" href="#build-actions-for-developers-and-maintainers" title="Permanent link">&para;</a></h1>
-<p><strong>Note</strong>: Add ideas for process improvements as comments to the <a href="https://armbian.atlassian.net/browse/AR-2429">Jira ticket</a>.</p>
-<p>Manual executing permissions are tied to <a href="https://github.com/orgs/armbian/teams/release-manager">release manager</a> role within Armbian organization. Do you <a href="https://calendly.com/armbian/office-hours">want to help and take this role</a>?</p>
-<h2 id="prepare-build-lists-anyone">Prepare build lists (anyone)<a class="headerlink" href="#prepare-build-lists-anyone" title="Permanent link">&para;</a></h2>
-<p><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/os" title="GitHub Repository: armbian/os">armbian/os</a></p>
+<h1 id="automation-for-developers-and-maintainers">Automation for developers and maintainers<a class="headerlink" href="#automation-for-developers-and-maintainers" title="Permanent link">&para;</a></h1>
+<p>Core automation for generating images for release are held at <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/os" title="GitHub Repository: armbian/os">armbian/os</a></p>
+<h2 id="prepare-build-lists">Prepare build lists<a class="headerlink" href="#prepare-build-lists" title="Permanent link">&para;</a></h2>
 <h3 id="recommended-images">Recommended images<a class="headerlink" href="#recommended-images" title="Permanent link">&para;</a></h3>
-<p>Recommended images on download pages
-<img alt="Standard support images" src="../images/standard-support-images.png" /></p>
-<p>are defined via regular expression mapping file <code>exposed.map</code> :</p>
+<p>Recommended images on download pages are defined via regular expression mapping file <code>exposed.map</code>:</p>
 <p>Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>bananapim7/archive/Armbian_[0-9].*Bananapim7_noble_vendor_[0-9]*.[0-9]*.[0-9]*_gnome-kisak_desktop.img.xz
 bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]*_minimal.img.xz
 </code></pre></div></td></tr></table></div>
+<p><img alt="Standard support images" src="../images/standard-support-images.png" /></p>
 <h3 id="build-templates">Build templates<a class="headerlink" href="#build-templates" title="Permanent link">&para;</a></h3>
 <p>They have definitions on what kind of images we want to build - for section or for one specific board:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>userpatches/targets-release-apps.template
-userpatches/targets-release-community-maintained.template
-userpatches/targets-release-nightly.template
-userpatches/targets-release-standard-support.template
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-apps.template</span>
+<span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-community-maintained.template</span>
+<span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-nightly.template</span>
+<span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-standard-support.template</span>
 </code></pre></div></td></tr></table></div>
 <p>From those templates we are <a href="https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438">autogenerating</a> YAML files, which are passed to build matrix as input. Make sure to review generated YAML files if they have wanted build targets with correct exensions enabled.</p>
 <h3 id="blacklisting">Blacklisting<a class="headerlink" href="#blacklisting" title="Permanent link">&para;</a></h3>
 <p>Autogeneration is excluded for boards that are on blacklists:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>userpatches/targets-automation.blacklist
-userpatches/targets-automation-nightly.blacklist
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-automation.blacklist</span>
+<span class="l l-Scalar l-Scalar-Plain">userpatches/targets-automation-nightly.blacklist</span>
 </code></pre></div></td></tr></table></div>
 <p>We do this if we are not happy with the automation outcomes and want to define build targets in the template.</p>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h3>
@@ -1534,7 +1531,11 @@ userpatches/targets-automation-nightly.blacklist
 <p>Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS=&quot;image-output-oowow,v4l2loopback-dkms,mesa-vpu&quot;
 </code></pre></div></td></tr></table></div>
-<h2 id="prepare-standard-support-images-for-release-release-manager">Prepare Standard Support images for release (release manager)<a class="headerlink" href="#prepare-standard-support-images-for-release-release-manager" title="Permanent link">&para;</a></h2>
+<h2 id="prepare-standard-support-images-for-release">Prepare Standard Support images for release<a class="headerlink" href="#prepare-standard-support-images-for-release" title="Permanent link">&para;</a></h2>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Manual executing permissions are tied to <a href="/Process_Contribute/#release-manager">release manager role</a>.</p>
+</details>
 <p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml"><img alt="Build Standard Support Images" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg" /></a></p>
 <p>This build workflow is executed manually when making:</p>
 <ul>
