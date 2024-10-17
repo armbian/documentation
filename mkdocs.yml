@@ -116,11 +116,9 @@ nav:
         - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
-        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
         - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
-        - 'Adding Board Family' : 'Developer-Guide_Adding-Board-Family.md'
         - 'Extensions' : 'Developer-Guide_Extensions.md'
 
   - 'ARMBIAN COMMUNITY' :
@@ -130,11 +128,6 @@ nav:
 
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
-        - 'Managing_Workflow' : 'Process_Managing_Workflow.md'
-        - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
-        - 'Merge Policy' : 'Process_Merge-Policy.md'
+        - 'Automation' : 'Process_CI.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
-        - 'Maintainers_Procedures_and_Guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
-        - 'CI' : 'Process_CI.md'
-        - 'Review_Procedures_and_Guidelines' : 'Development-Code_Review_Procedures_and_Guidelines.md'
 
