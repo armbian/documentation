@@ -15,14 +15,12 @@
         <link rel="canonical" href="https://docs.armbian.com/User-Guide_Board-Support-Rules/">
       
       
-        <link rel="prev" href="../Process_Merge-Policy/">
+        <link rel="prev" href="../Process_CI/">
       
-      
-        <link rel="next" href="../Development-Code_Review_Procedures_and_Guidelines/">
       
       
       <link rel="icon" href="../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#support-definitions-criteria-and-relationships" class="md-skip">
+        <a href="#board-support-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -1064,27 +1062,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Process_Merge-Policy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Merge Policy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1143,11 +1120,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gold-and-platinum-support" class="md-nav__link">
+  <a href="#platinum-support" class="md-nav__link">
     <span class="md-ellipsis">
-      Gold and Platinum Support
+      Platinum Support
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Platinum Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact us
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1162,18 +1154,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#benefits-provided-for-a-standard-supported-sbc" class="md-nav__link">
+  <a href="#benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Benefits provided for a Standard Supported SBC
+      Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#criteria-for-supported" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Criteria for Supported
+      Requirements
     </span>
   </a>
   
@@ -1195,18 +1187,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caveats-for-community-maintained-sbc" class="md-nav__link">
+  <a href="#benefits_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Caveats for Community maintained SBC
+      Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#requirements-for-community-support" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements for Community Support
+      Requirements
     </span>
   </a>
   
@@ -1218,28 +1210,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#staging-work-in-progress" class="md-nav__link">
+  <a href="#staging" class="md-nav__link">
     <span class="md-ellipsis">
-      Staging - Work in progress
+      Staging
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Staging - Work in progress">
+    <nav class="md-nav" aria-label="Staging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#additional-benefits-provided-for-a-staging-status" class="md-nav__link">
+  <a href="#benefits_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Benefits provided for a Staging status
+      Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#criteria-for-wip-status" class="md-nav__link">
+  <a href="#requirements_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Criteria for WIP status
+      Requirements
     </span>
   </a>
   
@@ -1254,27 +1246,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Development-Code_Review_Procedures_and_Guidelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Review_Procedures_and_Guidelines
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1318,27 +1289,30 @@
   
 
 
-<h1 id="support-definitions-criteria-and-relationships">Support Definitions, Criteria and Relationships<a class="headerlink" href="#support-definitions-criteria-and-relationships" title="Permanent link">&para;</a></h1>
+<h1 id="board-support-rules">Board support Rules<a class="headerlink" href="#board-support-rules" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Support statuses:</p>
+<p>Support definitions, criteria and relationships for:</p>
 <ul>
-<li>Standard support</li>
-<li>Staging</li>
-<li>Community maintained</li>
+<li><a href="#platinum-support">Platinum Support</a></li>
+<li><a href="#standard-support">Standard support</a></li>
+<li><a href="#community-maintained">Community maintained</a></li>
+<li><a href="#">Staging</a></li>
 </ul>
-<h2 id="gold-and-platinum-support">Gold and Platinum Support<a class="headerlink" href="#gold-and-platinum-support" title="Permanent link">&para;</a></h2>
-<p>Gold and Platinum support is reserved for business relationships with the Armbian project and is out of the scope of this document. Please <a href="https://www.armbian.com/contact/">contact us</a> for more information.</p>
+<h2 id="platinum-support">Platinum Support<a class="headerlink" href="#platinum-support" title="Permanent link">&para;</a></h2>
+<p>Platinum support is reserved for business relationships with the Armbian project and is out of the scope of this document. </p>
+<h3 id="contact-us">Contact us<a class="headerlink" href="#contact-us" title="Permanent link">&para;</a></h3>
+<p>Please <a href="https://www.armbian.com/contact/">contact Armbian</a> management for more information.</p>
 <h2 id="standard-support">Standard Support<a class="headerlink" href="#standard-support" title="Permanent link">&para;</a></h2>
-<h3 id="benefits-provided-for-a-standard-supported-sbc">Benefits provided for a Standard Supported SBC<a class="headerlink" href="#benefits-provided-for-a-standard-supported-sbc" title="Permanent link">&para;</a></h3>
+<h3 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Armbian will publish and distribute &ldquo;stable&rdquo; images through its <a href="https://github.com/armbian/mirror">mirror network</a> (behind automated closest mirror selection)</li>
 <li>Armbian will publish and distribute &ldquo;rolling&rdquo; <a href="https://github.com/armbian/os/releases/latest">images</a> (on GitHub and individual download page)</li>
-<li>best-effort support to SBC maintainer to assure compatiblity within the <a href="https://github.com/armbian/build">Armbian Build Framework</a></li>
+<li>best-effort support to SBC maintainer to assure compatibility within the <a href="https://github.com/armbian/build">Armbian Build Framework</a></li>
 <li>best-effort team&rsquo;s unique expertise to assist maintainer with general challenges</li>
 <li>best-effort <a href="https://github.com/armbian/os#latest-smoke-tests-results">automated testing</a> for basic hardware functionality</li>
 <li>best-effort compensation will be provided to maintainer from the &ldquo;Armbian Community Fund&rdquo; <a href="https://github.com/sponsors/armbian">[1]</a> <a href="https://liberapay.com/armbian">[2]</a> <a href="https://forum.armbian.com/crowdfunding/">[3]</a></li>
 </ul>
-<h3 id="criteria-for-supported">Criteria for Supported<a class="headerlink" href="#criteria-for-supported" title="Permanent link">&para;</a></h3>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <p>For a SBC to be considered supported:</p>
 <ul>
 <li>must be beneficial to the Armbian project</li>
@@ -1352,7 +1326,8 @@
 <li>maintainer should attend <a href="https://forum.armbian.com/events/">developers meetings</a> held every Wednesday 7:00 PM CET</li>
 <li>when whole support burden is carried by maintainer and Armbian team, it will be labelled as &ldquo;Pro bono&rdquo;</li>
 </ul>
-<p>Additional Caveats:</p>
+<details class="info" open="open">
+<summary>Additional Caveats</summary>
 <ul>
 <li>if the burden placed on the maintainer and Armbian team is too high, <a href="https://forum.armbian.com/crowdfunding/">crowdfunding campaign</a> success will decide support</li>
 <li>supported is <strong>not</strong> applied to a &ldquo;board family&rdquo; or group of related SBCs. It is per board</li>
@@ -1360,38 +1335,40 @@
 <li>any individual can be a maintainer for a standard support SBC</li>
 <li>missed major release will result in immediate forfeit of &ldquo;Armbian Standard support&rdquo; status and demotion to &ldquo;Community maintained&rdquo; status unless Armbian team grants exemption</li>
 </ul>
+</details>
 <h2 id="community-maintained">Community maintained<a class="headerlink" href="#community-maintained" title="Permanent link">&para;</a></h2>
 <p>Community maintained devices are not under active supervision or development. Support status is unknown to Armbian team. It represents combined former CSC (community supported configuration) and EOS (end of support). Can be removed from Armbian code base at any time. Left as a courtesy in case a community member wants to attempt to resurrect maintenance.</p>
 <p>Community maintained SBCs are exclusively supported by the community.</p>
-<h3 id="caveats-for-community-maintained-sbc">Caveats for Community maintained SBC<a class="headerlink" href="#caveats-for-community-maintained-sbc" title="Permanent link">&para;</a></h3>
+<h3 id="benefits_1">Benefits<a class="headerlink" href="#benefits_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Armbian will publish and distribute images through its <a href="https://github.com/armbian/mirror">mirror network</a></li>
-<li>Armbian will publish and distribute rolling <a href="https://github.com/armbian/os/releases/latest">images</a> </li>
+<li>Armbian will publish and distribute daily rolling <a href="https://github.com/armbian/os/releases/latest">images</a> </li>
 <li>periodic packages are built and published into Armbian&rsquo;s apt repository</li>
 <li>images are untested and Armbian team won&rsquo;t respond on troubles or apply any fixes.</li>
 </ul>
-<h3 id="requirements-for-community-support">Requirements for Community Support<a class="headerlink" href="#requirements-for-community-support" title="Permanent link">&para;</a></h3>
+<h3 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>patch or component does not break Armbian Build Framework</li>
 <li>patch or component does not break build of supported boards or other CSCs</li>
 <li>pull requests needs community review. Armbian team will not review any code related to community supported SBC</li>
 <li>generally considered to &ldquo;work most of the time&rdquo;</li>
-<li>generally considered to recieve periodic maintenance from community and upstream</li>
+<li>generally considered to receive periodic maintenance from community and upstream</li>
 </ul>
-<h2 id="staging-work-in-progress">Staging - Work in progress<a class="headerlink" href="#staging-work-in-progress" title="Permanent link">&para;</a></h2>
-<p>WIP status is for when a maintainer has commited to a SBC, but is not ready to ship stable images.</p>
-<p>Benefits of Community Supported SBCs apply to WIP.</p>
-<h3 id="additional-benefits-provided-for-a-staging-status">Additional Benefits provided for a Staging status<a class="headerlink" href="#additional-benefits-provided-for-a-staging-status" title="Permanent link">&para;</a></h3>
+<h2 id="staging">Staging<a class="headerlink" href="#staging" title="Permanent link">&para;</a></h2>
+<p>Work in progress (WIP) status is for when a maintainer has committed to a SBC, but is not ready to ship stable images.</p>
+<h3 id="benefits_2">Benefits<a class="headerlink" href="#benefits_2" title="Permanent link">&para;</a></h3>
+<p>All benefits of Community Supported SBCs apply to Staging as well.</p>
 <ul>
 <li>periodic / nightly CLI images are published by Armbian</li>
-<li>best-effort support to SBC maintainer to assure compatiblity within the <a href="https://github.com/armbian/build">Armbian Build Framework</a></li>
+<li>best-effort support to SBC maintainer to assure compatibility within the <a href="https://github.com/armbian/build">Armbian Build Framework</a></li>
 <li>best-effort team&rsquo;s unique expertise to assist maintainer with general challenges</li>
 <li>eligible for promotion to Standard Support</li>
 </ul>
-<h3 id="criteria-for-wip-status">Criteria for WIP status<a class="headerlink" href="#criteria-for-wip-status" title="Permanent link">&para;</a></h3>
+<h3 id="requirements_2">Requirements<a class="headerlink" href="#requirements_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>must satisfy standard support criteria</li>
 <li>must show active development</li>
+<li>must compile successfully most of the time</li>
 </ul>
 
 
