@@ -107,6 +107,7 @@ nav:
         - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
         - 'Recovery' : 'User-Guide_Recovery.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
+        - 'Firstboot config': 'User-Guide_Autoconfig.md'
         - 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Release Model' : 'Process_Release-Model.md'
