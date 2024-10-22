@@ -2,17 +2,15 @@
 
 ## Reading presets from local config
 
-It is possible to configure your image automatically when you first boot your device. After flashing a fresh image writing config to the file:
+It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless. 
+
+After flashing an image to boot media, mount it and add a file containing your config to /root/.not_logged_in_yet
 
 ???+ info
 
     This file will be read at your first login and configure system automatically.
 
-```bash
-/root/.not_logged_in_yet
-```
-
-Mount your live image _before your first boot_ and use this example for reference:
+Config example for reference:
 
 ```bash
 # Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related 
@@ -79,7 +77,7 @@ PRESET_DEFAULT_REALNAME="Armbian user"
 
 ```
 
-## Reading presets from remote config
+## Reading presets from a remote config
 
 You can use the same config file for more images. In this case you create file that is accessible via HTTP with the same content and place only URL to this config
 
