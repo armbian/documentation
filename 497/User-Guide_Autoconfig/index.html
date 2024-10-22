@@ -630,9 +630,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-presets-from-remote-config" class="md-nav__link">
+  <a href="#reading-presets-from-a-remote-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Reading presets from remote config
+      Reading presets from a remote config
     </span>
   </a>
   
@@ -1200,14 +1200,13 @@
 
 <h1 id="automatic-first-boot-configuration">Automatic first boot configuration<a class="headerlink" href="#automatic-first-boot-configuration" title="Permanent link">&para;</a></h1>
 <h2 id="reading-presets-from-local-config">Reading presets from local config<a class="headerlink" href="#reading-presets-from-local-config" title="Permanent link">&para;</a></h2>
-<p>It is possible to configure your image automatically when you first boot your device. After flashing a fresh image writing config to the file:</p>
+<p>It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless. </p>
+<p>After flashing an image to boot media, mount it and add a file containing your config to /root/.not_logged_in_yet</p>
 <details class="info" open="open">
 <summary>Info</summary>
 <p>This file will be read at your first login and configure system automatically.</p>
 </details>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/root/.not_logged_in_yet
-</code></pre></div></td></tr></table></div>
-<p>Mount your live image <em>before your first boot</em> and use this example for reference:</p>
+<p>Config example for reference:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1330,7 +1329,7 @@
 <span class="c1"># Preset user default realname</span>
 <span class="nv">PRESET_DEFAULT_REALNAME</span><span class="o">=</span><span class="s2">&quot;Armbian user&quot;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="reading-presets-from-remote-config">Reading presets from remote config<a class="headerlink" href="#reading-presets-from-remote-config" title="Permanent link">&para;</a></h2>
+<h2 id="reading-presets-from-a-remote-config">Reading presets from a remote config<a class="headerlink" href="#reading-presets-from-a-remote-config" title="Permanent link">&para;</a></h2>
 <p>You can use the same config file for more images. In this case you create file that is accessible via HTTP with the same content and place only URL to this config</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/root/.not_logged_in_yet
 </code></pre></div></td></tr></table></div>
