@@ -23,12 +23,12 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 - To ask for a value interactively, leave it unset or comment out the directive.  
 - For fully-unattended setup, specify all values  
 
-| Configuration directive | `[default] \| option` | Description: |
+| Configuration directive | `[default] | option` | Description: |
 | :---------------------- | :--------------: | -----------: |
 | `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) ||
 | `PRESET_NET_CHANGE_DEFAULTS` | `[0] 1` | Change default network settings, if unset, **no network changes will be applied** |
-| `PRESET_NET_ETHERNET_ENABLED` | `0 \| 1` | Enable Ethernet, ignored if WiFi enabled |
-| `PRESET_NET_WIFI_ENABLED` | `0 \| 1` | Enable WiFi, **takes priority over Ethernet** |
+| `PRESET_NET_ETHERNET_ENABLED` | `0 | 1` | Enable Ethernet, ignored if WiFi enabled |
+| `PRESET_NET_WIFI_ENABLED` | `0 | 1` | Enable WiFi, **takes priority over Ethernet** |
 | `PRESET_NET_WIFI_SSID` | `MySSID` | WiFi SSID |
 | `PRESET_NET_WIFI_KEY` | `MyWPA-PSK` | WiFi Pre-Shared Key (Password), **stored in plaintext** |
 | `PRESET_NET_WIFI_COUNTRYCODE` | `CC` | Country code, **required** for WiFi; e.g. `GB`, `US`, `DE`; see [Wikipedia/ISO_3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) |
@@ -38,11 +38,11 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 | `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway
 | `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure, CloudFlare is `1.1.1.1 1.0.0.1`, Google is `8.8.8.8 8.8.4.4` |
 | `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported |
-| `PRESET_CONNECT_WIRELESS` | `Y \| n` | Set to `Y` for interactive mode, `n` for automatic |
-| `SET_LANG_BASED_ON_LOCATION` | `Y \| n` | "Set user language based on your location?" |
+| `PRESET_CONNECT_WIRELESS` | `Y | n` | Set to `Y` for interactive mode, `n` for automatic |
+| `SET_LANG_BASED_ON_LOCATION` | `Y | n` | "Set user language based on your location?" |
 | `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8` |
 | `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`, |
-| `PRESET_ROOT_PASSWORD` | `[1234] \| password` | Preset `root` password, **stored in plaintext**, *SSH keys are safer!* |
+| `PRESET_ROOT_PASSWORD` | `[1234] | password` | Preset `root` password, **stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_ROOT_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for `root` user |
 | `PRESET_USER_NAME` | `username` | Username to create |
 | `PRESET_USER_PASSWORD` | `password` | Preset created user password, **stored in plaintext**, *SSH keys are safer!* |
