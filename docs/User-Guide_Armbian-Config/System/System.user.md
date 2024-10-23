@@ -3,7 +3,6 @@
 
 ***
 
-<a id="s01" style="display:none;"></a>
 ## Enable Armbian kernel/firmware upgrades
 This will enable Armbian kernel upgrades.
 
@@ -20,7 +19,6 @@ This will enable Armbian kernel upgrades.
 
 ***
 
-<a id="s02" style="display:none;"></a>
 ## Disable Armbian kernel upgrades
 Disable Armbian kernel/firmware upgrades
 
@@ -37,7 +35,6 @@ Disable Armbian kernel/firmware upgrades
 
 ***
 
-<a id="s03" style="display:none;"></a>
 ## Edit the boot environment
 This will open /boot/armbianEnv.txt file to edit
 CTRL+S to save
@@ -57,7 +54,6 @@ would you like to continue?
 
 ***
 
-<a id="s04" style="display:none;"></a>
 ## Install Linux headers
 **Command:** 
 ~~~
@@ -72,7 +68,6 @@ would you like to continue?
 
 ***
 
-<a id="s05" style="display:none;"></a>
 ## Remove Linux headers
 **Command:** 
 ~~~
@@ -87,7 +82,6 @@ would you like to continue?
 
 ***
 
-<a id="s06" style="display:none;"></a>
 ## Install to internal storage
 **Command:** 
 ~~~
@@ -102,13 +96,11 @@ would you like to continue?
 
 ***
 
-<a id="ssh" style="display:none;"></a>
 ## Manage SSH login options
 
 
 ***
 
-<a id="s07" style="display:none;"></a>
 ### Disable root login
 **Command:** 
 ~~~
@@ -123,7 +115,6 @@ would you like to continue?
 
 ***
 
-<a id="s08" style="display:none;"></a>
 ### Enable root login
 **Command:** 
 ~~~
@@ -138,7 +129,6 @@ would you like to continue?
 
 ***
 
-<a id="s09" style="display:none;"></a>
 ### Disable password login
 **Command:** 
 ~~~
@@ -153,7 +143,6 @@ would you like to continue?
 
 ***
 
-<a id="s10" style="display:none;"></a>
 ### Enable password login
 **Command:** 
 ~~~
@@ -168,7 +157,6 @@ would you like to continue?
 
 ***
 
-<a id="s11" style="display:none;"></a>
 ### Disable Public key authentication login
 **Command:** 
 ~~~
@@ -183,7 +171,6 @@ would you like to continue?
 
 ***
 
-<a id="s12" style="display:none;"></a>
 ### Enable Public key authentication login
 **Command:** 
 ~~~
@@ -198,7 +185,6 @@ would you like to continue?
 
 ***
 
-<a id="s13" style="display:none;"></a>
 ### Disable OTP authentication
 **Command:** 
 ~~~
@@ -213,7 +199,6 @@ would you like to continue?
 
 ***
 
-<a id="s14" style="display:none;"></a>
 ### Enable OTP authentication
 **Command:** 
 ~~~
@@ -228,7 +213,6 @@ would you like to continue?
 
 ***
 
-<a id="s15" style="display:none;"></a>
 ### Generate new OTP authentication QR code
 **Command:** 
 ~~~
@@ -243,7 +227,6 @@ would you like to continue?
 
 ***
 
-<a id="s16" style="display:none;"></a>
 ### Show OTP authentication QR code
 **Command:** 
 ~~~
@@ -258,8 +241,7 @@ would you like to continue?
 
 ***
 
-<a id="s30" style="display:none;"></a>
-## Disable last login banner
+### Disable last login banner
 **Command:** 
 ~~~
 --cmd S30
@@ -273,8 +255,7 @@ would you like to continue?
 
 ***
 
-<a id="s31" style="display:none;"></a>
-## Enable last login banner
+### Enable last login banner
 **Command:** 
 ~~~
 --cmd S31
@@ -288,7 +269,6 @@ would you like to continue?
 
 ***
 
-<a id="s17" style="display:none;"></a>
 ## Change shell system wide to BASH
 **Command:** 
 ~~~
@@ -303,7 +283,6 @@ would you like to continue?
 
 ***
 
-<a id="s18" style="display:none;"></a>
 ## Change shell system wide to ZSH
 **Command:** 
 ~~~
@@ -318,7 +297,6 @@ would you like to continue?
 
 ***
 
-<a id="s19" style="display:none;"></a>
 ## Switch to rolling release
 This will switch to rolling releases
 
@@ -337,7 +315,6 @@ would you like to continue?
 
 ***
 
-<a id="s20" style="display:none;"></a>
 ## Switch to stable release
 This will switch to stable releases
 
@@ -356,7 +333,6 @@ would you like to continue?
 
 ***
 
-<a id="s21" style="display:none;"></a>
 ## Enable read only filesystem
 This will enable Armbian read-only filesystem. Reboot is mandatory?
 
@@ -374,7 +350,6 @@ This will enable Armbian read-only filesystem. Reboot is mandatory?
 
 ***
 
-<a id="s22" style="display:none;"></a>
 ## Disable read only filesystem
 This will disable Armbian read-only filesystem. Reboot is mandatory?
 
@@ -392,7 +367,6 @@ This will disable Armbian read-only filesystem. Reboot is mandatory?
 
 ***
 
-<a id="s23" style="display:none;"></a>
 ## Adjust welcome screen (motd)
 **Command:** 
 ~~~
@@ -407,7 +381,6 @@ This will disable Armbian read-only filesystem. Reboot is mandatory?
 
 ***
 
-<a id="s24" style="display:none;"></a>
 ## Install alternative kernels
 Switching between kernels might change functionality of your device. 
 
@@ -426,14 +399,12 @@ It might fail to boot!
 
 ***
 
-<a id="s25" style="display:none;"></a>
 ## Distribution upgrades
 
 
 ***
 
-<a id="s26" style="display:none;"></a>
-## Upgrade to latest stable / LTS
+### Upgrade to latest stable / LTS
 Release upgrade is irriversible operation which upgrades all packages. 
 
 Resoulted upgrade might break your build beyond repair!
@@ -451,8 +422,7 @@ Resoulted upgrade might break your build beyond repair!
 
 ***
 
-<a id="s27" style="display:none;"></a>
-## Upgrade to rolling unstable
+### Upgrade to rolling unstable
 Release upgrade is irriversible operation which upgrades all packages. 
 
 Resoulted upgrade might break your build beyond repair!
@@ -470,7 +440,6 @@ Resoulted upgrade might break your build beyond repair!
 
 ***
 
-<a id="s28" style="display:none;"></a>
 ## Manage device tree overlays
 **Command:** 
 ~~~

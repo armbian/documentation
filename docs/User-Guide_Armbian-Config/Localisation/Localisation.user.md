@@ -3,7 +3,6 @@
 
 ***
 
-<a id="l00" style="display:none;"></a>
 ## Change Global timezone (WIP)
 **Command:** 
 ~~~
@@ -18,7 +17,6 @@
 
 ***
 
-<a id="l01" style="display:none;"></a>
 ## Change Locales reconfigure the language and character set
 **Command:** 
 ~~~
@@ -33,7 +31,6 @@
 
 ***
 
-<a id="l02" style="display:none;"></a>
 ## Change Keyboard layout
 **Command:** 
 ~~~
@@ -48,7 +45,6 @@
 
 ***
 
-<a id="l03" style="display:none;"></a>
 ## Change APT mirrors
 This will change the APT mirrors
 
@@ -65,7 +61,6 @@ This will change the APT mirrors
 
 ***
 
-<a id="l04" style="display:none;"></a>
 ## Change System Hostname
 **Command:** 
 ~~~
