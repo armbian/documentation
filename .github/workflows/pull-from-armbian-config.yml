@@ -30,8 +30,14 @@ jobs:
         run: |
 
           cd config
-          bin/armbian-configng --doc
-          cp DOCUMENTATION.md ../documentation/docs/User-Guide_Armbian-Config.md
+          tools/config-markdown.py -u
+          rsync --delete -avr docs/. ../documentation/docs/User-Guide_Armbian-Config/
+          # make links
+          cd ../documentation
+          ln -fs System/System.user.md docs/User-Guide_Armbian-Config/System.md
+          ln -fs Network/Network.user.md docs/User-Guide_Armbian-Config/Network.md
+          ln -fs Localisation/Localisation.user.md docs/User-Guide_Armbian-Config/Localisation.md
+          ln -fs Software/Software.user.md docs/User-Guide_Armbian-Config/Software.md
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v7
@@ -45,7 +51,7 @@ jobs:
           title: '`Automatic` documentation update'
           body: |
             Generate documentation.
-  
+
           labels: |
             Needs review
           #assignees: igorpecovnik
