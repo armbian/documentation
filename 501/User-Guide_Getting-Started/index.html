@@ -480,9 +480,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="What to download?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#debian-or-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       Debian or Ubuntu?
@@ -490,8 +491,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#vendor-current" class="md-nav__link">
     <span class="md-ellipsis">
       Vendor, current?
@@ -499,13 +500,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#rolling-releases" class="md-nav__link">
     <span class="md-ellipsis">
       Rolling releases?
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1332,7 +1338,7 @@
 <li>a reliable SD card (see below &ldquo;How to prepare a SD card?&rdquo;)</li>
 </ul>
 </div>
-<h3 id="what-to-download">What to download?<a class="headerlink" href="#what-to-download" title="Permanent link">&para;</a></h3>
+<h2 id="what-to-download">What to download?<a class="headerlink" href="#what-to-download" title="Permanent link">&para;</a></h2>
 <p>The download for each image consists of three separate files:</p>
 <ul>
 <li><strong>.xz</strong> compressed image file</li>
@@ -1469,6 +1475,10 @@ Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img:<span class="w"> </span
 <p>Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.</p>
 <h2 id="how-to-login">How to login?<a class="headerlink" href="#how-to-login" title="Permanent link">&para;</a></h2>
 <p>First boot will log you automatically on HDMI or serial console while for SSH login you need to login as <strong>root</strong> and use password <strong>1234</strong>. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use <a href="https://angryip.org/">this tool</a>, to find your board IP address.</p>
+<details class="tips" open="open">
+<summary>Automated config</summary>
+<p>These settings can be pre-loaded, see <a href="/User-Guide_Autoconfig">Autoconfig</a></p>
+</details>
 <p>In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
