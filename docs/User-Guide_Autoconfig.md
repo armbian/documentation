@@ -24,7 +24,7 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 - For fully-unattended setup, specify all values  
 
 | Configuration directive | `[default]` \| `option` | Description: |
-| :---------------------- | :--------------: | -----------: |
+| :---------------------- | :-------------- | :----------- |
 | `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) |
 | `PRESET_NET_CHANGE_DEFAULTS` | `[0]` \| `1` | Change default network settings<br>if unset, **no network changes will be applied** |
 | `PRESET_NET_ETHERNET_ENABLED` | `0` \| `1` | Enable Ethernet, ignored if WiFi enabled |
