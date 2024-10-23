@@ -4,90 +4,87 @@
 
 It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless. 
 
-After flashing an image to boot media, mount it and add a file containing your config to /root/.not_logged_in_yet
+After flashing an image to boot media, mount it and add a file containing your config to `/root/.not_logged_in_yet`
 
-???+ info
+???+ tip
+    You may also mount the image and edit it prior to flashing, if this is preferable.
 
-    This file will be read at your first login and configure system automatically.
+## Loading a remote config
 
-Config example for reference:
+It is also possible to load this config file from a remote server, as above, however the **only** directive you should include is `PRESET_CONFIGURATION`  
+`PRESET_CONFIGURATION="http://path/to/config/file"`
 
-```bash
-# Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related 
-# settings below
+## Configuration directives
+
+
+- The directives in this file are specified using `key="value"` format.  
+- To ask for a value interactively, leave it unset or comment out the directive.  
+- For fully-unattended setup, specify all values  
+
+| Configuration directive | `[default] \| option` | Description: |
+| :---------------------- | :--------------: | -----------: |
+| `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) ||
+| `PRESET_NET_CHANGE_DEFAULTS` | `[0] 1` | Change default network settings, if unset, **no network changes will be applied** |
+| `PRESET_NET_ETHERNET_ENABLED` | `0 \| 1` | Enable Ethernet, ignored if WiFi enabled |
+| `PRESET_NET_WIFI_ENABLED` | `0 \| 1` | Enable WiFi, **takes priority over Ethernet** |
+| `PRESET_NET_WIFI_SSID` | `MySSID` | WiFi SSID |
+| `PRESET_NET_WIFI_KEY` | `MyWPA-PSK` | WiFi Pre-Shared Key (Password), **stored in plaintext** |
+| `PRESET_NET_WIFI_COUNTRYCODE` | `CC` | Country code, **required** for WiFi; e.g. `GB`, `US`, `DE`; see [Wikipedia/ISO_3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) |
+| `PRESET_NET_USE_STATIC` | `[0] 1` | Use the static IP provided, DHCP is the default; leaving **any** value unset will result in a broken config |
+| `PRESET_NET_STATIC_IP` | `xxx.xxx.xxx.xxx` | Static IPv4 address, dotted decimal notation |
+| `PRESET_NET_STATIC_MASK` | `xxx.xxx.xxx.xxx` | Subnet mask, typically `255.255.255.0` |
+| `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway
+| `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure, CloudFlare is `1.1.1.1 1.0.0.1`, Google is `8.8.8.8 8.8.4.4` |
+| `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported |
+| `PRESET_CONNECT_WIRELESS` | `Y \| n` | Set to `Y` for interactive mode, `n` for automatic |
+| `SET_LANG_BASED_ON_LOCATION` | `Y \| n` | "Set user language based on your location?" |
+| `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8` |
+| `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`, |
+| `PRESET_ROOT_PASSWORD` | `[1234] \| password` | Preset `root` password, **stored in plaintext**, *SSH keys are safer!* |
+| `PRESET_ROOT_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for `root` user |
+| `PRESET_USER_NAME` | `username` | Username to create |
+| `PRESET_USER_PASSWORD` | `password` | Preset created user password, **stored in plaintext**, *SSH keys are safer!* |
+| `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user |
+| `PRESET_DEFAULT_REALNAME` | `Real Name` | RealName to use for created user |
+## Sample config file
+
+The following is an example configuration, it may be used as a template
+```/root/.not_logged_in_yet
+# Network Settings
 PRESET_NET_CHANGE_DEFAULTS="1"
-
-# Enable WiFi or Ethernet. # If both are enabled, WiFi will take priority 
-# and Ethernet will be disabled.
-PRESET_NET_ETHERNET_ENABLED="1"
+## Ethernet
+PRESET_NET_ETHERNET_ENABLED="1"     #   Ignored due to WiFi
+## WiFi
 PRESET_NET_WIFI_ENABLED="1"
-
-# Enter your WiFi credentials
-# SECURITY WARN: Your wifi keys will be stored in plaintext, no encryption.
 PRESET_NET_WIFI_SSID="MySSID"
 PRESET_NET_WIFI_KEY="MyWiFiKEY"
-
-# Country code to enable power ratings and channels for your country. 
-# eg: GB US DE | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 PRESET_NET_WIFI_COUNTRYCODE="GB"
-
-#If you want to use a static ip, set it here
+PRESET_CONNECT_WIRELESS="n"
+## Static IP
 PRESET_NET_USE_STATIC="1"
 PRESET_NET_STATIC_IP="192.168.0.100"
 PRESET_NET_STATIC_MASK="255.255.255.0"
 PRESET_NET_STATIC_GATEWAY="192.168.0.1"
 PRESET_NET_STATIC_DNS="8.8.8.8 8.8.4.4"
 
-# Preset user default shell, you can choose bash or zsh
-PRESET_USER_SHELL="bash"
-
-# Set PRESET_CONNECT_WIRELESS=y if you want to connect wifi manually 
-# at first login
-PRESET_CONNECT_WIRELESS="n"
-
-# Set SET_LANG_BASED_ON_LOCATION=n if you want to choose 
-# "Set user language based on your location?" with "n" at first login
+# System
 SET_LANG_BASED_ON_LOCATION="y"
-
-# Preset default locale
 PRESET_LOCALE="en_US.UTF-8"
-
-# Preset timezone
 PRESET_TIMEZONE="Etc/UTC"
 
-# Preset root password
+# Root
 PRESET_ROOT_PASSWORD="RootPassword"
-
-# Preset URL for root SSH key
-# Use GitHub stored keys: https://github.com/<username>.keys
 PRESET_ROOT_KEY=""
 
-# Preset username
+# User
 PRESET_USER_NAME="armbian"
-
-# Preset user password
 PRESET_USER_PASSWORD="UserPassword"
-
-# Preset URL for user SSH key
-# Use GitHub stored keys: https://github.com/<username>.keys
 PRESET_USER_KEY=""
-
-# Preset user default realname
 PRESET_DEFAULT_REALNAME="Armbian user"
+PRESET_USER_SHELL="bash"
 
 ```
 
-## Reading presets from a remote config
-
-You can use the same config file for more images. In this case you create file that is accessible via HTTP with the same content and place only URL to this config
-
-```bash
-/root/.not_logged_in_yet
-```
-
-```
-PRESET_CONFIGURATION="http://URL_OF_THIS_CONFIG"
-```
 
 ???+ tip
 
