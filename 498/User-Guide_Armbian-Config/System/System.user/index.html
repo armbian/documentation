@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://docs.armbian.com/User-Guide_Armbian-Config/System/System.user/">
       
       
-        <link rel="prev" href="../../">
-      
-      
-        <link rel="next" href="../../Network/Network.user/">
       
       
       <link rel="icon" href="../../../images/logo.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>System - Armbian Documentation</title>
+        <title>System wide and admin settings - Armbian Documentation</title>
       
     
     
@@ -135,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              System
+              System wide and admin settings
             
           </span>
         </div>
@@ -258,12 +254,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -676,28 +670,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -708,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN CONFIG
@@ -740,30 +729,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    System
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,311 +741,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#enable-armbian-kernelfirmware-upgrades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable Armbian kernel/firmware upgrades
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-armbian-kernel-upgrades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable Armbian kernel upgrades
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-the-boot-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit the boot environment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-linux-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Linux headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-linux-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Linux headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-to-internal-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install to internal storage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-ssh-login-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manage SSH login options
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manage SSH login options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disable-root-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable root login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-root-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable root login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-password-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable password login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-password-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable password login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-public-key-authentication-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable Public key authentication login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-public-key-authentication-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable Public key authentication login
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-otp-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable OTP authentication
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-otp-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable OTP authentication
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-new-otp-authentication-qr-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate new OTP authentication QR code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-otp-authentication-qr-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show OTP authentication QR code
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-last-login-banner" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable last login banner
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-last-login-banner" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable last login banner
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#change-shell-system-wide-to-bash" class="md-nav__link">
-    <span class="md-ellipsis">
-      Change shell system wide to BASH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#change-shell-system-wide-to-zsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Change shell system wide to ZSH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-rolling-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Switch to rolling release
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-stable-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Switch to stable release
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-read-only-filesystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable read only filesystem
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-read-only-filesystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable read only filesystem
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adjust-welcome-screen-motd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjust welcome screen (motd)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-alternative-kernels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install alternative kernels
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distribution-upgrades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Distribution upgrades
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrade-to-latest-stable-lts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upgrade to latest stable / LTS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrade-to-rolling-unstable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upgrade to rolling unstable
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-device-tree-overlays" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manage device tree overlays
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1089,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/Network.user/" class="md-nav__link">
+      <a href="../../Network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Localisation/Localisation.user/" class="md-nav__link">
+      <a href="../../Localisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software/Software.user/" class="md-nav__link">
+      <a href="../../Software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">

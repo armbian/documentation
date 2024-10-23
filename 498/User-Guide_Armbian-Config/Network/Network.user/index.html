@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://docs.armbian.com/User-Guide_Armbian-Config/Network/Network.user/">
       
       
-        <link rel="prev" href="../../System/System.user/">
-      
-      
-        <link rel="next" href="../../Localisation/Localisation.user/">
       
       
       <link rel="icon" href="../../../images/logo.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Network - Armbian Documentation</title>
+        <title>Fixed and wireless network settings - Armbian Documentation</title>
       
     
     
@@ -135,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Network
+              Fixed and wireless network settings
             
           </span>
         </div>
@@ -258,12 +254,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -676,28 +670,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -708,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN CONFIG
@@ -743,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../System/System.user/" class="md-nav__link">
+      <a href="../../System/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,30 +750,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Network
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,107 +762,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configure-network-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure network interfaces
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-change-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add / change interface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revert-to-armbian-defaults" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revert to Armbian defaults
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-active-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show active status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-bluetooth-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Bluetooth support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-bluetooth-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Bluetooth support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bluetooth-discover" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bluetooth Discover
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#toggle-system-ipv6ipv4-internet-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      Toggle system IPv6/IPv4 internet protocol
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -906,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Localisation/Localisation.user/" class="md-nav__link">
+      <a href="../../Localisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software/Software.user/" class="md-nav__link">
+      <a href="../../Software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">

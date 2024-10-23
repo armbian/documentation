@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://docs.armbian.com/User-Guide_Armbian-Config/Software/Software.user/">
       
       
-        <link rel="prev" href="../../Localisation/Localisation.user/">
-      
-      
-        <link rel="next" href="../../../Developer-Guide_Welcome/">
       
       
       <link rel="icon" href="../../../images/logo.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Software - Armbian Documentation</title>
+        <title>Run/Install 3rd party applications - Armbian Documentation</title>
       
     
     
@@ -135,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software
+              Run/Install 3rd party applications
             
           </span>
         </div>
@@ -258,12 +254,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -676,28 +670,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -708,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN CONFIG
@@ -743,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../System/System.user/" class="md-nav__link">
+      <a href="../../System/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/Network.user/" class="md-nav__link">
+      <a href="../../Network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -785,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Localisation/Localisation.user/" class="md-nav__link">
+      <a href="../../Localisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,30 +792,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Software
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,521 +804,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#desktop-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desktop Environments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xfce-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFCE desktop
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xfce-desktop-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFCE desktop Install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uninstall
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-autologin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-autologin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gnome-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gnome desktop
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gnome-desktop-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gnome desktop Install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uninstall
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-autologin_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-autologin_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i3-wm-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      i3-wm desktop
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i3-desktop-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      i3 desktop Install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i3-desktop-uninstall" class="md-nav__link">
-    <span class="md-ellipsis">
-      i3 desktop uninstall
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-autologin_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-autologin_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cinnamon-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cinnamon desktop
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cinnamon-desktop-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cinnamon desktop Install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cinnamon-desktop-uninstall" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cinnamon desktop uninstall
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-autologin_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-autologin_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kde-neon-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kde-neon desktop
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kde-neon-desktop-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kde-neon desktop Install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uninstall
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-autologin_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disable-autologin_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disable autologin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improve-application-search-speed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improve application search speed
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-realtime-console-network-usage-monitor-nload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install realtime console network usage monitor (nload)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-realtime-console-network-usage-monitor-nload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove realtime console network usage monitor (nload)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-bandwidth-measuring-tool-iperf3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install bandwidth measuring tool (iperf3)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-bandwidth-measuring-tool-iperf3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove bandwidth measuring tool (iperf3)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-ip-lan-monitor-iptraf-ng" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install IP LAN monitor (iptraf-ng)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-ip-lan-monitor-iptraf-ng" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove IP LAN monitor (iptraf-ng)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-hostname-broadcast-via-mdns-avahi-daemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install hostname broadcast via mDNS (avahi-daemon)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-hostname-broadcast-via-mdns-avahi-daemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove hostname broadcast via mDNS (avahi-daemon)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Development
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-tools-for-cloning-and-managing-repositories-git" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install tools for cloning and managing repositories (git)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-tools-for-cloning-and-managing-repositories-git" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove tools for cloning and managing repositories (git)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-benchmaking-and-diagnostics" class="md-nav__link">
-    <span class="md-ellipsis">
-      System benchmaking and diagnostics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#containerlization-and-virtual-machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Containerlization and Virtual Machines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-docker-minimal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Docker Minimal
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-docker-engine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Docker Engine
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#purge-all-docker-images-containers-and-volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purge all Docker images, containers, and volumes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#media-servers-and-editors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Media Servers and Editors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-plex-media-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Plex Media server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-plex-media-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Plex Media server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-emby-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Emby server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-emby-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Emby server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-management-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remote Management tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-cockpit-web-based-management-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Cockpit web-based management tool
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#purge-cockpit-web-based-management-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purge Cockpit web-based management tool
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-cockpit-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Start Cockpit Service
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stop-cockpit-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stop Cockpit Service
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
