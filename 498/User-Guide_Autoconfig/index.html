@@ -52,6 +52,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/armbian-extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -627,9 +629,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-presets-from-a-remote-config" class="md-nav__link">
+  <a href="#loading-a-remote-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Reading presets from a remote config
+      Loading a remote config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-directives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration directives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample config file
     </span>
   </a>
   
@@ -1347,14 +1367,151 @@
 
 <h1 id="automatic-first-boot-configuration">Automatic first boot configuration<a class="headerlink" href="#automatic-first-boot-configuration" title="Permanent link">&para;</a></h1>
 <h2 id="reading-presets-from-local-config">Reading presets from local config<a class="headerlink" href="#reading-presets-from-local-config" title="Permanent link">&para;</a></h2>
-<p>It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless. </p>
-<p>After flashing an image to boot media, mount it and add a file containing your config to /root/.not_logged_in_yet</p>
-<details class="info" open="open">
-<summary>Info</summary>
-<p>This file will be read at your first login and configure system automatically.</p>
+<p>It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless.</p>
+<p>After flashing an image to boot media, mount it and add a file containing your config to <code>/root/.not_logged_in_yet</code></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>You may also mount the image and edit it prior to flashing, if this is preferable.</p>
 </details>
-<p>Config example for reference:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<h2 id="loading-a-remote-config">Loading a remote config<a class="headerlink" href="#loading-a-remote-config" title="Permanent link">&para;</a></h2>
+<p>It is also possible to load this config file from a remote server, as above, however the <strong>only</strong> directive you should include is:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">/root/.not_logged_in_yet</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">PRESET_CONFIGURATION</span><span class="o">=</span><span class="s2">&quot;http://path/to/config/file&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="configuration-directives">Configuration directives<a class="headerlink" href="#configuration-directives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The directives in this file are specified using <code>key="value"</code> format.  </li>
+<li>To ask for a value interactively, leave it unset or comment out the directive.  </li>
+<li>For fully-unattended setup, specify all values  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Configuration directive</th>
+<th style="text-align: left;"><code>[default]</code> | <code>option</code></th>
+<th style="text-align: left;">Description:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PRESET_CONFIGURATION</code></td>
+<td style="text-align: left;"><code>http://path/to/config/file</code></td>
+<td style="text-align: left;">See <a href="#loading-a-remote-config">Loading a remote config</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_CHANGE_DEFAULTS</code></td>
+<td style="text-align: left;"><code>[0]</code> | <code>1</code></td>
+<td style="text-align: left;">Change default network settings<br>if unset, <strong>no network changes will be applied</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_ETHERNET_ENABLED</code></td>
+<td style="text-align: left;"><code>0</code> | <code>1</code></td>
+<td style="text-align: left;">Enable Ethernet, ignored if WiFi enabled</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_WIFI_ENABLED</code></td>
+<td style="text-align: left;"><code>0</code> | <code>1</code></td>
+<td style="text-align: left;">Enable WiFi, <strong>takes priority over Ethernet</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_WIFI_SSID</code></td>
+<td style="text-align: left;"><code>MySSID</code></td>
+<td style="text-align: left;">WiFi SSID</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_WIFI_KEY</code></td>
+<td style="text-align: left;"><code>MyWPA-PSK</code></td>
+<td style="text-align: left;">WiFi Pre-Shared Key (Password), <strong>stored in plaintext</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_WIFI_COUNTRYCODE</code></td>
+<td style="text-align: left;"><code>CC</code></td>
+<td style="text-align: left;">Country code, <strong>required</strong> for WiFi<br>e.g. <code>GB</code>, <code>US</code>, <code>DE</code>; see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">Wikipedia/ISO_3166</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_CONNECT_WIRELESS</code></td>
+<td style="text-align: left;"><code>Y</code> | <code>n</code></td>
+<td style="text-align: left;">Set to <code>Y</code> for interactive mode, <code>n</code> uses values from file</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_USE_STATIC</code></td>
+<td style="text-align: left;"><code>[0]</code> | <code>1</code></td>
+<td style="text-align: left;">Use the static IP provided, DHCP is the default<br>Leaving <strong>any</strong> value unset will result in a broken config</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_STATIC_IP</code></td>
+<td style="text-align: left;"><code>xxx.xxx.xxx.xxx</code></td>
+<td style="text-align: left;">Static IPv4 address, dotted decimal notation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_STATIC_MASK</code></td>
+<td style="text-align: left;"><code>xxx.xxx.xxx.xxx</code></td>
+<td style="text-align: left;">Subnet mask, typically <code>255.255.255.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_STATIC_GATEWAY</code></td>
+<td style="text-align: left;"><code>xxx.xxx.xxx.xxx</code></td>
+<td style="text-align: left;">Default gateway address</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_NET_STATIC_DNS</code></td>
+<td style="text-align: left;"><code>x.x.x.x x.x.x.x</code></td>
+<td style="text-align: left;">DNS Servers to use, separated by a space. If unsure:<br>CloudFlare is <code>1.1.1.1 1.0.0.1</code><br>Google is <code>8.8.8.8 8.8.4.4</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SET_LANG_BASED_ON_LOCATION</code></td>
+<td style="text-align: left;"><code>Y</code> | <code>n</code></td>
+<td style="text-align: left;">&ldquo;Set user language based on your location?&rdquo;</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_LOCALE</code></td>
+<td style="text-align: left;"><code>locale</code></td>
+<td style="text-align: left;">Locale e.g. <code>en_GB.UTF-8</code>, <code>de_DE.UTF-8</code>, <code>zh_TW.UTF-8</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_TIMEZONE</code></td>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;">Timezone e.g. <code>Etc/UTC</code>,</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_ROOT_PASSWORD</code></td>
+<td style="text-align: left;"><code>[1234]</code> | <code>password</code></td>
+<td style="text-align: left;">Preset <code>root</code> password<br><strong>Stored in plaintext</strong>, <em>SSH keys are safer!</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_ROOT_KEY</code></td>
+<td style="text-align: left;"><code>https://path/to/key.file</code></td>
+<td style="text-align: left;">Fetches public key from specified URL for <code>root</code> user</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_USER_NAME</code></td>
+<td style="text-align: left;"><code>username</code></td>
+<td style="text-align: left;">Username to create</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_USER_PASSWORD</code></td>
+<td style="text-align: left;"><code>password</code></td>
+<td style="text-align: left;">Preset created user password<br><strong>Stored in plaintext</strong>, <em>SSH keys are safer!</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_USER_KEY</code></td>
+<td style="text-align: left;"><code>https://path/to/key.file</code></td>
+<td style="text-align: left;">Fetches public key from specified URL for created user</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_DEFAULT_REALNAME</code></td>
+<td style="text-align: left;"><code>Real Name</code></td>
+<td style="text-align: left;">RealName to use for created user</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRESET_USER_SHELL</code></td>
+<td style="text-align: left;"><code>shell</code></td>
+<td style="text-align: left;">Currently only <code>bash</code> (default) or <code>zsh</code> (<code>armbian-zsh</code>) supported</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-config-file">Sample config file<a class="headerlink" href="#sample-config-file" title="Permanent link">&para;</a></h2>
+<p>The following is an example configuration, it may be used as a template  </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">/root/.not_logged_in_yet</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1386,101 +1543,39 @@
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set PRESET_NET_CHANGE_DEFAULTS to 1 to apply any network related </span>
-<span class="c1"># settings below</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#/root/.not_logged_in_yet</span>
+<span class="c1"># Network Settings</span>
 <span class="nv">PRESET_NET_CHANGE_DEFAULTS</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
-
-<span class="c1"># Enable WiFi or Ethernet. # If both are enabled, WiFi will take priority </span>
-<span class="c1"># and Ethernet will be disabled.</span>
-<span class="nv">PRESET_NET_ETHERNET_ENABLED</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+<span class="c1">## Ethernet</span>
+<span class="nv">PRESET_NET_ETHERNET_ENABLED</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w">     </span><span class="c1">#   Ignored due to WiFi</span>
+<span class="c1">## WiFi</span>
 <span class="nv">PRESET_NET_WIFI_ENABLED</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
-
-<span class="c1"># Enter your WiFi credentials</span>
-<span class="c1"># SECURITY WARN: Your wifi keys will be stored in plaintext, no encryption.</span>
 <span class="nv">PRESET_NET_WIFI_SSID</span><span class="o">=</span><span class="s2">&quot;MySSID&quot;</span>
 <span class="nv">PRESET_NET_WIFI_KEY</span><span class="o">=</span><span class="s2">&quot;MyWiFiKEY&quot;</span>
-
-<span class="c1"># Country code to enable power ratings and channels for your country. </span>
-<span class="c1"># eg: GB US DE | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</span>
 <span class="nv">PRESET_NET_WIFI_COUNTRYCODE</span><span class="o">=</span><span class="s2">&quot;GB&quot;</span>
-
-<span class="c1">#If you want to use a static ip, set it here</span>
+<span class="nv">PRESET_CONNECT_WIRELESS</span><span class="o">=</span><span class="s2">&quot;n&quot;</span>
+<span class="c1">## Static IP</span>
 <span class="nv">PRESET_NET_USE_STATIC</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
 <span class="nv">PRESET_NET_STATIC_IP</span><span class="o">=</span><span class="s2">&quot;192.168.0.100&quot;</span>
 <span class="nv">PRESET_NET_STATIC_MASK</span><span class="o">=</span><span class="s2">&quot;255.255.255.0&quot;</span>
 <span class="nv">PRESET_NET_STATIC_GATEWAY</span><span class="o">=</span><span class="s2">&quot;192.168.0.1&quot;</span>
 <span class="nv">PRESET_NET_STATIC_DNS</span><span class="o">=</span><span class="s2">&quot;8.8.8.8 8.8.4.4&quot;</span>
 
-<span class="c1"># Preset user default shell, you can choose bash or zsh</span>
-<span class="nv">PRESET_USER_SHELL</span><span class="o">=</span><span class="s2">&quot;bash&quot;</span>
-
-<span class="c1"># Set PRESET_CONNECT_WIRELESS=y if you want to connect wifi manually </span>
-<span class="c1"># at first login</span>
-<span class="nv">PRESET_CONNECT_WIRELESS</span><span class="o">=</span><span class="s2">&quot;n&quot;</span>
-
-<span class="c1"># Set SET_LANG_BASED_ON_LOCATION=n if you want to choose </span>
-<span class="c1"># &quot;Set user language based on your location?&quot; with &quot;n&quot; at first login</span>
+<span class="c1"># System</span>
 <span class="nv">SET_LANG_BASED_ON_LOCATION</span><span class="o">=</span><span class="s2">&quot;y&quot;</span>
-
-<span class="c1"># Preset default locale</span>
 <span class="nv">PRESET_LOCALE</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
-
-<span class="c1"># Preset timezone</span>
 <span class="nv">PRESET_TIMEZONE</span><span class="o">=</span><span class="s2">&quot;Etc/UTC&quot;</span>
 
-<span class="c1"># Preset root password</span>
+<span class="c1"># Root</span>
 <span class="nv">PRESET_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;RootPassword&quot;</span>
-
-<span class="c1"># Preset URL for root SSH key</span>
-<span class="c1"># Use GitHub stored keys: https://github.com/&lt;username&gt;.keys</span>
 <span class="nv">PRESET_ROOT_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 
-<span class="c1"># Preset username</span>
+<span class="c1"># User</span>
 <span class="nv">PRESET_USER_NAME</span><span class="o">=</span><span class="s2">&quot;armbian&quot;</span>
-
-<span class="c1"># Preset user password</span>
 <span class="nv">PRESET_USER_PASSWORD</span><span class="o">=</span><span class="s2">&quot;UserPassword&quot;</span>
-
-<span class="c1"># Preset URL for user SSH key</span>
-<span class="c1"># Use GitHub stored keys: https://github.com/&lt;username&gt;.keys</span>
 <span class="nv">PRESET_USER_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-
-<span class="c1"># Preset user default realname</span>
 <span class="nv">PRESET_DEFAULT_REALNAME</span><span class="o">=</span><span class="s2">&quot;Armbian user&quot;</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="reading-presets-from-a-remote-config">Reading presets from a remote config<a class="headerlink" href="#reading-presets-from-a-remote-config" title="Permanent link">&para;</a></h2>
-<p>You can use the same config file for more images. In this case you create file that is accessible via HTTP with the same content and place only URL to this config</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/root/.not_logged_in_yet
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PRESET_CONFIGURATION=&quot;http://URL_OF_THIS_CONFIG&quot;
+<span class="nv">PRESET_USER_SHELL</span><span class="o">=</span><span class="s2">&quot;bash&quot;</span>
 </code></pre></div></td></tr></table></div>
 <details class="tip" open="open">
 <summary>Tip</summary>
