@@ -35,6 +35,9 @@ theme:
         - navigation.top
         - toc.integrate
 
+extra_css:
+  - css/armbian-extra.css
+
 extra:
   analytics:
     provider: google
