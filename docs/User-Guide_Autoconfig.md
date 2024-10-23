@@ -11,8 +11,10 @@ After flashing an image to boot media, mount it and add a file containing your c
 
 ## Loading a remote config
 
-It is also possible to load this config file from a remote server, as above, however the **only** directive you should include is `PRESET_CONFIGURATION`  
-`PRESET_CONFIGURATION="http://path/to/config/file"`
+It is also possible to load this config file from a remote server, as above, however the **only** directive you should include is:
+```bash
+PRESET_CONFIGURATION="http://path/to/config/file"
+```
 
 ## Configuration directives
 
@@ -46,10 +48,13 @@ It is also possible to load this config file from a remote server, as above, how
 | `PRESET_USER_PASSWORD` | `password` | Preset created user password, **stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user |
 | `PRESET_DEFAULT_REALNAME` | `Real Name` | RealName to use for created user |
+
+
 ## Sample config file
 
-The following is an example configuration, it may be used as a template
-```/root/.not_logged_in_yet
+The following is an example configuration, it may be used as a template  
+```bash
+#/root/.not_logged_in_yet
 # Network Settings
 PRESET_NET_CHANGE_DEFAULTS="1"
 ## Ethernet
