@@ -2,7 +2,7 @@
 
 ## Reading presets from local config
 
-It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless.
+It is possible to configure your device automatically at first boot. Settings like: root password, IP address, connecting to wireless. 
 
 After flashing an image to boot media, mount it and add a file containing your config to `/root/.not_logged_in_yet`
 
@@ -12,48 +12,48 @@ After flashing an image to boot media, mount it and add a file containing your c
 ## Loading a remote config
 
 It is also possible to load this config file from a remote server, as above, however the **only** directive you should include is:
-
-```bash title="/root/.not_logged_in_yet"
+```bash
 PRESET_CONFIGURATION="http://path/to/config/file"
 ```
 
 ## Configuration directives
 
+
 - The directives in this file are specified using `key="value"` format.  
 - To ask for a value interactively, leave it unset or comment out the directive.  
 - For fully-unattended setup, specify all values  
 
-| Configuration directive | `[default]` \| `option` | Description: |
+| Configuration directive | `[default] | option` | Description: |
 | :---------------------- | :--------------: | -----------: |
-| `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) |
-| `PRESET_NET_CHANGE_DEFAULTS` | `[0]` \| `1` | Change default network settings<br>if unset, **no network changes will be applied** |
-| `PRESET_NET_ETHERNET_ENABLED` | `0` \| `1` | Enable Ethernet, ignored if WiFi enabled |
-| `PRESET_NET_WIFI_ENABLED` | `0` \| `1` | Enable WiFi, **takes priority over Ethernet** |
+| `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) ||
+| `PRESET_NET_CHANGE_DEFAULTS` | `[0] 1` | Change default network settings, if unset, **no network changes will be applied** |
+| `PRESET_NET_ETHERNET_ENABLED` | `0 | 1` | Enable Ethernet, ignored if WiFi enabled |
+| `PRESET_NET_WIFI_ENABLED` | `0 | 1` | Enable WiFi, **takes priority over Ethernet** |
 | `PRESET_NET_WIFI_SSID` | `MySSID` | WiFi SSID |
 | `PRESET_NET_WIFI_KEY` | `MyWPA-PSK` | WiFi Pre-Shared Key (Password), **stored in plaintext** |
-| `PRESET_NET_WIFI_COUNTRYCODE` | `CC` | Country code, **required** for WiFi<br>e.g. `GB`, `US`, `DE`; see [Wikipedia/ISO_3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) |
-| `PRESET_CONNECT_WIRELESS` | `Y` \| `n` | Set to `Y` for interactive mode, `n` uses values from file |
-| `PRESET_NET_USE_STATIC` | `[0]` \| `1` | Use the static IP provided, DHCP is the default<br>Leaving **any** value unset will result in a broken config |
+| `PRESET_NET_WIFI_COUNTRYCODE` | `CC` | Country code, **required** for WiFi; e.g. `GB`, `US`, `DE`; see [Wikipedia/ISO_3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) |
+| `PRESET_NET_USE_STATIC` | `[0] 1` | Use the static IP provided, DHCP is the default; leaving **any** value unset will result in a broken config |
 | `PRESET_NET_STATIC_IP` | `xxx.xxx.xxx.xxx` | Static IPv4 address, dotted decimal notation |
 | `PRESET_NET_STATIC_MASK` | `xxx.xxx.xxx.xxx` | Subnet mask, typically `255.255.255.0` |
-| `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway address |
-| `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure:<br>CloudFlare is `1.1.1.1 1.0.0.1`<br>Google is `8.8.8.8 8.8.4.4` |
-| `SET_LANG_BASED_ON_LOCATION` | `Y` \| `n` | "Set user language based on your location?" |
+| `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway
+| `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure, CloudFlare is `1.1.1.1 1.0.0.1`, Google is `8.8.8.8 8.8.4.4` |
+| `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported |
+| `PRESET_CONNECT_WIRELESS` | `Y | n` | Set to `Y` for interactive mode, `n` for automatic |
+| `SET_LANG_BASED_ON_LOCATION` | `Y | n` | "Set user language based on your location?" |
 | `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8` |
 | `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`, |
-| `PRESET_ROOT_PASSWORD` | `[1234]` \| `password` | Preset `root` password<br>**Stored in plaintext**, *SSH keys are safer!* |
+| `PRESET_ROOT_PASSWORD` | `[1234] | password` | Preset `root` password, **stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_ROOT_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for `root` user |
 | `PRESET_USER_NAME` | `username` | Username to create |
-| `PRESET_USER_PASSWORD` | `password` | Preset created user password<br>**Stored in plaintext**, *SSH keys are safer!* |
+| `PRESET_USER_PASSWORD` | `password` | Preset created user password, **stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user |
 | `PRESET_DEFAULT_REALNAME` | `Real Name` | RealName to use for created user |
-| `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported |
+
 
 ## Sample config file
 
 The following is an example configuration, it may be used as a template  
-
-```bash title="/root/.not_logged_in_yet"
+```bash
 #/root/.not_logged_in_yet
 # Network Settings
 PRESET_NET_CHANGE_DEFAULTS="1"
@@ -87,7 +87,9 @@ PRESET_USER_PASSWORD="UserPassword"
 PRESET_USER_KEY=""
 PRESET_DEFAULT_REALNAME="Armbian user"
 PRESET_USER_SHELL="bash"
+
 ```
+
 
 ???+ tip
 
