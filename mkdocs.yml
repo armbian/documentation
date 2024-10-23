@@ -104,7 +104,6 @@ nav:
   - 'ARMBIAN OS':
         - 'Overview': 'index.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
         - 'Networking' : 'User-Guide_Networking.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
         - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
@@ -115,6 +114,12 @@ nav:
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Release Model' : 'Process_Release-Model.md'
         - 'Changelog' : 'Release_Changelog.md'
+  - 'ARMBIAN CONFIG':
+        - 'Overview': 'User-Guide_Armbian-Config.md'
+        - 'System': 'User-Guide_Armbian-Config/System.md'
+        - 'Network': 'User-Guide_Armbian-Config/Network.md'
+        - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
+        - 'Software': 'User-Guide_Armbian-Config/Software.md'
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Welcome.md'
         - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
