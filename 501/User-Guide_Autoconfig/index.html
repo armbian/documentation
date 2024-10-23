@@ -647,6 +647,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sample-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample config file
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1216,8 +1225,9 @@
 <p>You may also mount the image and edit it prior to flashing, if this is preferable.</p>
 </details>
 <h2 id="loading-a-remote-config">Loading a remote config<a class="headerlink" href="#loading-a-remote-config" title="Permanent link">&para;</a></h2>
-<p>It is also possible to load this config file from a remote server, as above, however the <strong>only</strong> directive you should include is <code>PRESET_CONFIGURATION</code><br />
-<code>PRESET_CONFIGURATION="http://path/to/config/file"</code></p>
+<p>It is also possible to load this config file from a remote server, as above, however the <strong>only</strong> directive you should include is:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">PRESET_CONFIGURATION</span><span class="o">=</span><span class="s2">&quot;http://path/to/config/file&quot;</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="configuration-directives">Configuration directives<a class="headerlink" href="#configuration-directives" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The directives in this file are specified using <code>key="value"</code> format.  </li>
@@ -1348,45 +1358,76 @@
 <td style="text-align: center;"><code>Real Name</code></td>
 <td style="text-align: right;">RealName to use for created user</td>
 </tr>
-<tr>
-<td style="text-align: left;">## Sample config file</td>
-<td style="text-align: center;"></td>
-<td style="text-align: right;"></td>
-</tr>
 </tbody>
 </table>
-<p>The following is an example configuration, it may be used as a template
-```/root/.not_logged_in_yet</p>
-<h1 id="network-settings">Network Settings<a class="headerlink" href="#network-settings" title="Permanent link">&para;</a></h1>
-<p>PRESET_NET_CHANGE_DEFAULTS=&rdquo;1&rdquo;</p>
-<h2 id="ethernet">Ethernet<a class="headerlink" href="#ethernet" title="Permanent link">&para;</a></h2>
-<p>PRESET_NET_ETHERNET_ENABLED=&rdquo;1&rdquo;     #   Ignored due to WiFi</p>
-<h2 id="wifi">WiFi<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h2>
-<p>PRESET_NET_WIFI_ENABLED=&rdquo;1&rdquo;
-PRESET_NET_WIFI_SSID=&rdquo;MySSID&rdquo;
-PRESET_NET_WIFI_KEY=&rdquo;MyWiFiKEY&rdquo;
-PRESET_NET_WIFI_COUNTRYCODE=&rdquo;GB&rdquo;
-PRESET_CONNECT_WIRELESS=&rdquo;n&rdquo;</p>
-<h2 id="static-ip">Static IP<a class="headerlink" href="#static-ip" title="Permanent link">&para;</a></h2>
-<p>PRESET_NET_USE_STATIC=&rdquo;1&rdquo;
-PRESET_NET_STATIC_IP=&rdquo;192.168.0.100&rdquo;
-PRESET_NET_STATIC_MASK=&rdquo;255.255.255.0&rdquo;
-PRESET_NET_STATIC_GATEWAY=&rdquo;192.168.0.1&rdquo;
-PRESET_NET_STATIC_DNS=&rdquo;8.8.8.8 8.8.4.4&rdquo;</p>
-<h1 id="system">System<a class="headerlink" href="#system" title="Permanent link">&para;</a></h1>
-<p>SET_LANG_BASED_ON_LOCATION=&rdquo;y&rdquo;
-PRESET_LOCALE=&rdquo;en_US.UTF-8&rdquo;
-PRESET_TIMEZONE=&rdquo;Etc/UTC&rdquo;</p>
-<h1 id="root">Root<a class="headerlink" href="#root" title="Permanent link">&para;</a></h1>
-<p>PRESET_ROOT_PASSWORD=&rdquo;RootPassword&rdquo;
-PRESET_ROOT_KEY=&rdquo;&ldquo;</p>
-<h1 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h1>
-<p>PRESET_USER_NAME=&rdquo;armbian&rdquo;
-PRESET_USER_PASSWORD=&rdquo;UserPassword&rdquo;
-PRESET_USER_KEY=&rdquo;&rdquo;
-PRESET_DEFAULT_REALNAME=&rdquo;Armbian user&rdquo;
-PRESET_USER_SHELL=&rdquo;bash&rdquo;</p>
-<p>```</p>
+<h2 id="sample-config-file">Sample config file<a class="headerlink" href="#sample-config-file" title="Permanent link">&para;</a></h2>
+<p>The following is an example configuration, it may be used as a template<br />
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#/root/.not_logged_in_yet</span>
+<span class="c1"># Network Settings</span>
+<span class="nv">PRESET_NET_CHANGE_DEFAULTS</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+<span class="c1">## Ethernet</span>
+<span class="nv">PRESET_NET_ETHERNET_ENABLED</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w">     </span><span class="c1">#   Ignored due to WiFi</span>
+<span class="c1">## WiFi</span>
+<span class="nv">PRESET_NET_WIFI_ENABLED</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+<span class="nv">PRESET_NET_WIFI_SSID</span><span class="o">=</span><span class="s2">&quot;MySSID&quot;</span>
+<span class="nv">PRESET_NET_WIFI_KEY</span><span class="o">=</span><span class="s2">&quot;MyWiFiKEY&quot;</span>
+<span class="nv">PRESET_NET_WIFI_COUNTRYCODE</span><span class="o">=</span><span class="s2">&quot;GB&quot;</span>
+<span class="nv">PRESET_CONNECT_WIRELESS</span><span class="o">=</span><span class="s2">&quot;n&quot;</span>
+<span class="c1">## Static IP</span>
+<span class="nv">PRESET_NET_USE_STATIC</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+<span class="nv">PRESET_NET_STATIC_IP</span><span class="o">=</span><span class="s2">&quot;192.168.0.100&quot;</span>
+<span class="nv">PRESET_NET_STATIC_MASK</span><span class="o">=</span><span class="s2">&quot;255.255.255.0&quot;</span>
+<span class="nv">PRESET_NET_STATIC_GATEWAY</span><span class="o">=</span><span class="s2">&quot;192.168.0.1&quot;</span>
+<span class="nv">PRESET_NET_STATIC_DNS</span><span class="o">=</span><span class="s2">&quot;8.8.8.8 8.8.4.4&quot;</span>
+
+<span class="c1"># System</span>
+<span class="nv">SET_LANG_BASED_ON_LOCATION</span><span class="o">=</span><span class="s2">&quot;y&quot;</span>
+<span class="nv">PRESET_LOCALE</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+<span class="nv">PRESET_TIMEZONE</span><span class="o">=</span><span class="s2">&quot;Etc/UTC&quot;</span>
+
+<span class="c1"># Root</span>
+<span class="nv">PRESET_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;RootPassword&quot;</span>
+<span class="nv">PRESET_ROOT_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># User</span>
+<span class="nv">PRESET_USER_NAME</span><span class="o">=</span><span class="s2">&quot;armbian&quot;</span>
+<span class="nv">PRESET_USER_PASSWORD</span><span class="o">=</span><span class="s2">&quot;UserPassword&quot;</span>
+<span class="nv">PRESET_USER_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="nv">PRESET_DEFAULT_REALNAME</span><span class="o">=</span><span class="s2">&quot;Armbian user&quot;</span>
+<span class="nv">PRESET_USER_SHELL</span><span class="o">=</span><span class="s2">&quot;bash&quot;</span>
+</code></pre></div></td></tr></table></div></p>
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p>If you want to use first run automatic configuration at build time, <a href="https://github.com/armbian/build/pull/6194">check this GitHub pull request</a>.</p>
