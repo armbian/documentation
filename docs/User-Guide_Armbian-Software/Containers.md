@@ -4,6 +4,11 @@
 ***
 
 ## Install Docker Minimal
+
+<!--- section image START from tools/include/images/SW25.webp --->
+[![Install Docker Minimal](/images/SW25.webp)](#)
+<!--- section image STOP from tools/include/images/SW25.webp --->
+
 This operation will install Docker Minimal.
 
 **Command:** 

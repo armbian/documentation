@@ -199,7 +199,7 @@ armbian-config --cmd DE24
 ### Cinnamon desktop Install
 
 <!--- section image START from tools/include/images/DE31.png --->
-[![Cinnamon desktop Install](images/DE31.png)](#)
+[![Cinnamon desktop Install](/images/DE31.png)](#)
 <!--- section image STOP from tools/include/images/DE31.png --->
 
 **Command:** 
