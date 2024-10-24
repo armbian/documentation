@@ -8,7 +8,7 @@ This operation will install Docker Minimal.
 
 **Command:** 
 ~~~
---cmd SW25
+armbian-config --cmd SW25
 ~~~
 
 **Author:** 
@@ -24,7 +24,7 @@ This operation will install Docker Engine.
 
 **Command:** 
 ~~~
---cmd SW26
+armbian-config --cmd SW26
 ~~~
 
 **Author:** 
@@ -40,7 +40,7 @@ This operation will purge Docker.
 
 **Command:** 
 ~~~
---cmd SW27
+armbian-config --cmd SW27
 ~~~
 
 **Author:** 
@@ -56,7 +56,7 @@ This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
 ~~~
---cmd SW28
+armbian-config --cmd SW28
 ~~~
 
 **Author:** 

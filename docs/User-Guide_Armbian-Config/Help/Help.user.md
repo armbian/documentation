@@ -6,7 +6,7 @@
 ## Contribute
 **Command:** 
 ~~~
---cmd H02
+armbian-config --cmd H02
 ~~~
 
 **Author:** 
@@ -20,7 +20,7 @@
 ## List of Config function(WIP)
 **Command:** 
 ~~~
---cmd H03
+armbian-config --cmd H03
 ~~~
 
 **Author:** 

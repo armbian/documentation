@@ -9,7 +9,7 @@ cockpit cockpit-ws cockpit-system cockpit-storaged
 
 **Command:** 
 ~~~
---cmd M00
+armbian-config --cmd M00
 ~~~
 
 **Author:** 
@@ -25,7 +25,7 @@ This operation will purge Cockpit.
 
 **Command:** 
 ~~~
---cmd M01
+armbian-config --cmd M01
 ~~~
 
 **Author:** 
@@ -39,7 +39,7 @@ This operation will purge Cockpit.
 ## Start Cockpit Service
 **Command:** 
 ~~~
---cmd M02
+armbian-config --cmd M02
 ~~~
 
 **Author:** 
@@ -53,7 +53,7 @@ This operation will purge Cockpit.
 ## Stop Cockpit Service
 **Command:** 
 ~~~
---cmd M03
+armbian-config --cmd M03
 ~~~
 
 **Author:** 

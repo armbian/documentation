@@ -6,7 +6,7 @@
 ## Install tools for cloning and managing repositories (git)
 **Command:** 
 ~~~
---cmd SW17
+armbian-config --cmd SW17
 ~~~
 
 **Author:** 
@@ -20,7 +20,7 @@
 ## Remove tools for cloning and managing repositories (git)
 **Command:** 
 ~~~
---cmd SW18
+armbian-config --cmd SW18
 ~~~
 
 **Author:** 

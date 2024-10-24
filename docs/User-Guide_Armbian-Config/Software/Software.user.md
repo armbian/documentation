@@ -19,7 +19,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 
 **Command:** 
 ~~~
---cmd DE01
+armbian-config --cmd DE01
 ~~~
 
 **Author:** @igorpecovnik
@@ -33,7 +33,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Uninstall
 **Command:** 
 ~~~
---cmd DE02
+armbian-config --cmd DE02
 ~~~
 
 **Author:** @igorpecovnik
@@ -47,7 +47,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Enable autologin
 **Command:** 
 ~~~
---cmd DE03
+armbian-config --cmd DE03
 ~~~
 
 **Author:** @igorpecovnik
@@ -61,7 +61,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Disable autologin
 **Command:** 
 ~~~
---cmd DE04
+armbian-config --cmd DE04
 ~~~
 
 **Author:** @igorpecovnik
@@ -80,7 +80,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Gnome desktop Install
 **Command:** 
 ~~~
---cmd DE11
+armbian-config --cmd DE11
 ~~~
 
 **Author:** @igorpecovnik
@@ -94,7 +94,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Uninstall
 **Command:** 
 ~~~
---cmd DE12
+armbian-config --cmd DE12
 ~~~
 
 **Author:** @igorpecovnik
@@ -108,7 +108,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Enable autologin
 **Command:** 
 ~~~
---cmd DE13
+armbian-config --cmd DE13
 ~~~
 
 **Author:** @igorpecovnik
@@ -122,7 +122,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Disable autologin
 **Command:** 
 ~~~
---cmd DE14
+armbian-config --cmd DE14
 ~~~
 
 **Author:** @igorpecovnik
@@ -143,7 +143,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### i3 desktop Install
 **Command:** 
 ~~~
---cmd DE21
+armbian-config --cmd DE21
 ~~~
 
 **Author:** @igorpecovnik
@@ -157,7 +157,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### i3 desktop uninstall
 **Command:** 
 ~~~
---cmd DE22
+armbian-config --cmd DE22
 ~~~
 
 **Author:** @igorpecovnik
@@ -171,7 +171,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Enable autologin
 **Command:** 
 ~~~
---cmd DE23
+armbian-config --cmd DE23
 ~~~
 
 **Author:** @igorpecovnik
@@ -185,7 +185,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Disable autologin
 **Command:** 
 ~~~
---cmd DE24
+armbian-config --cmd DE24
 ~~~
 
 **Author:** @igorpecovnik
@@ -202,14 +202,24 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ***
 
 #### Cinnamon desktop Install
+
+<!--- section image START from tools/include/images/DE31.png --->
+[![Cinnamon desktop Install](images/DE31.png)](#)
+<!--- section image STOP from tools/include/images/DE31.png --->
+
 **Command:** 
 ~~~
---cmd DE31
+armbian-config --cmd DE31
 ~~~
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/DE31-footer.md --->
+Cinnamon is a Linux desktop that provides advanced innovative features and a traditional user experience.The desktop layout is similar to Gnome 2 with underlying technology forked from Gnome Shell. Cinnamon makes users feel at home with an easy-to-use and comfortable desktop experience.
+<!--- footer STOP from tools/include/markdown/DE31-header.md --->
 
 
 
@@ -218,7 +228,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Cinnamon desktop uninstall
 **Command:** 
 ~~~
---cmd DE32
+armbian-config --cmd DE32
 ~~~
 
 **Author:** @igorpecovnik
@@ -232,7 +242,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Enable autologin
 **Command:** 
 ~~~
---cmd DE33
+armbian-config --cmd DE33
 ~~~
 
 **Author:** @igorpecovnik
@@ -246,7 +256,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Disable autologin
 **Command:** 
 ~~~
---cmd DE34
+armbian-config --cmd DE34
 ~~~
 
 **Author:** @igorpecovnik
@@ -267,7 +277,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Kde-neon desktop Install
 **Command:** 
 ~~~
---cmd DE41
+armbian-config --cmd DE41
 ~~~
 
 **Author:** @igorpecovnik
@@ -281,7 +291,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Uninstall
 **Command:** 
 ~~~
---cmd DE42
+armbian-config --cmd DE42
 ~~~
 
 **Author:** @igorpecovnik
@@ -295,7 +305,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Enable autologin
 **Command:** 
 ~~~
---cmd DE43
+armbian-config --cmd DE43
 ~~~
 
 **Author:** @igorpecovnik
@@ -309,7 +319,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 #### Disable autologin
 **Command:** 
 ~~~
---cmd DE44
+armbian-config --cmd DE44
 ~~~
 
 **Author:** @igorpecovnik
@@ -323,7 +333,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Improve application search speed
 **Command:** 
 ~~~
---cmd DE99
+armbian-config --cmd DE99
 ~~~
 
 **Author:** @igorpecovnik
@@ -342,7 +352,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Install realtime console network usage monitor (nload)
 **Command:** 
 ~~~
---cmd SW08
+armbian-config --cmd SW08
 ~~~
 
 **Author:** 
@@ -356,7 +366,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Remove realtime console network usage monitor (nload)
 **Command:** 
 ~~~
---cmd SW09
+armbian-config --cmd SW09
 ~~~
 
 **Author:** 
@@ -370,7 +380,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Install bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
---cmd SW10
+armbian-config --cmd SW10
 ~~~
 
 **Author:** 
@@ -384,7 +394,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Remove bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
---cmd SW11
+armbian-config --cmd SW11
 ~~~
 
 **Author:** 
@@ -398,7 +408,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Install IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
---cmd SW12
+armbian-config --cmd SW12
 ~~~
 
 **Author:** 
@@ -412,7 +422,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Remove IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
---cmd SW13
+armbian-config --cmd SW13
 ~~~
 
 **Author:** 
@@ -426,7 +436,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Install hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
---cmd SW14
+armbian-config --cmd SW14
 ~~~
 
 **Author:** 
@@ -440,7 +450,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Remove hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
---cmd SW15
+armbian-config --cmd SW15
 ~~~
 
 **Author:** 
@@ -459,7 +469,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Install tools for cloning and managing repositories (git)
 **Command:** 
 ~~~
---cmd SW17
+armbian-config --cmd SW17
 ~~~
 
 **Author:** 
@@ -473,7 +483,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Remove tools for cloning and managing repositories (git)
 **Command:** 
 ~~~
---cmd SW18
+armbian-config --cmd SW18
 ~~~
 
 **Author:** 
@@ -487,7 +497,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ## System benchmaking and diagnostics
 **Command:** 
 ~~~
---cmd Benchy
+armbian-config --cmd Benchy
 ~~~
 
 **Author:** 
@@ -508,7 +518,7 @@ This operation will install Docker Minimal.
 
 **Command:** 
 ~~~
---cmd SW25
+armbian-config --cmd SW25
 ~~~
 
 **Author:** 
@@ -524,7 +534,7 @@ This operation will install Docker Engine.
 
 **Command:** 
 ~~~
---cmd SW26
+armbian-config --cmd SW26
 ~~~
 
 **Author:** 
@@ -540,7 +550,7 @@ This operation will purge Docker.
 
 **Command:** 
 ~~~
---cmd SW27
+armbian-config --cmd SW27
 ~~~
 
 **Author:** 
@@ -556,7 +566,7 @@ This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
 ~~~
---cmd SW28
+armbian-config --cmd SW28
 ~~~
 
 **Author:** 
@@ -577,7 +587,7 @@ This operation will install Plex Media server.
 
 **Command:** 
 ~~~
---cmd SW21
+armbian-config --cmd SW21
 ~~~
 
 **Author:** 
@@ -593,7 +603,7 @@ This operation will purge Plex Media server.
 
 **Command:** 
 ~~~
---cmd SW22
+armbian-config --cmd SW22
 ~~~
 
 **Author:** 
@@ -609,7 +619,7 @@ This operation will install Emby server.
 
 **Command:** 
 ~~~
---cmd SW23
+armbian-config --cmd SW23
 ~~~
 
 **Author:** 
@@ -625,7 +635,7 @@ This operation will purge Emby server.
 
 **Command:** 
 ~~~
---cmd SW24
+armbian-config --cmd SW24
 ~~~
 
 **Author:** 
@@ -647,7 +657,7 @@ cockpit cockpit-ws cockpit-system cockpit-storaged
 
 **Command:** 
 ~~~
---cmd M00
+armbian-config --cmd M00
 ~~~
 
 **Author:** 
@@ -663,7 +673,7 @@ This operation will purge Cockpit.
 
 **Command:** 
 ~~~
---cmd M01
+armbian-config --cmd M01
 ~~~
 
 **Author:** 
@@ -677,7 +687,7 @@ This operation will purge Cockpit.
 ### Start Cockpit Service
 **Command:** 
 ~~~
---cmd M02
+armbian-config --cmd M02
 ~~~
 
 **Author:** 
@@ -691,7 +701,7 @@ This operation will purge Cockpit.
 ### Stop Cockpit Service
 **Command:** 
 ~~~
---cmd M03
+armbian-config --cmd M03
 ~~~
 
 **Author:** 

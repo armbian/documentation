@@ -6,7 +6,7 @@
 ## Disable root login
 **Command:** 
 ~~~
---cmd S07
+armbian-config --cmd S07
 ~~~
 
 **Author:** 
@@ -20,7 +20,7 @@
 ## Enable root login
 **Command:** 
 ~~~
---cmd S08
+armbian-config --cmd S08
 ~~~
 
 **Author:** 
@@ -34,7 +34,7 @@
 ## Disable password login
 **Command:** 
 ~~~
---cmd S09
+armbian-config --cmd S09
 ~~~
 
 **Author:** 
@@ -48,7 +48,7 @@
 ## Enable password login
 **Command:** 
 ~~~
---cmd S10
+armbian-config --cmd S10
 ~~~
 
 **Author:** 
@@ -62,7 +62,7 @@
 ## Disable Public key authentication login
 **Command:** 
 ~~~
---cmd S11
+armbian-config --cmd S11
 ~~~
 
 **Author:** 
@@ -76,7 +76,7 @@
 ## Enable Public key authentication login
 **Command:** 
 ~~~
---cmd S12
+armbian-config --cmd S12
 ~~~
 
 **Author:** 
@@ -90,7 +90,7 @@
 ## Disable OTP authentication
 **Command:** 
 ~~~
---cmd S13
+armbian-config --cmd S13
 ~~~
 
 **Author:** 
@@ -104,7 +104,7 @@
 ## Enable OTP authentication
 **Command:** 
 ~~~
---cmd S14
+armbian-config --cmd S14
 ~~~
 
 **Author:** 
@@ -118,7 +118,7 @@
 ## Generate new OTP authentication QR code
 **Command:** 
 ~~~
---cmd S15
+armbian-config --cmd S15
 ~~~
 
 **Author:** 
@@ -132,7 +132,7 @@
 ## Show OTP authentication QR code
 **Command:** 
 ~~~
---cmd S16
+armbian-config --cmd S16
 ~~~
 
 **Author:** Igor Pecovnik
@@ -146,7 +146,7 @@
 ## Disable last login banner
 **Command:** 
 ~~~
---cmd S30
+armbian-config --cmd S30
 ~~~
 
 **Author:** 
@@ -160,7 +160,7 @@
 ## Enable last login banner
 **Command:** 
 ~~~
---cmd S31
+armbian-config --cmd S31
 ~~~
 
 **Author:** 

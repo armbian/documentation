@@ -8,7 +8,7 @@ This will enable Armbian kernel upgrades.
 
 **Command:** 
 ~~~
---cmd S01
+armbian-config --cmd S01
 ~~~
 
 **Author:** 
@@ -24,7 +24,7 @@ Disable Armbian kernel/firmware upgrades
 
 **Command:** 
 ~~~
---cmd S02
+armbian-config --cmd S02
 ~~~
 
 **Author:** 
@@ -43,7 +43,7 @@ would you like to continue?
 
 **Command:** 
 ~~~
---cmd S03
+armbian-config --cmd S03
 ~~~
 
 **Author:** 
@@ -57,7 +57,7 @@ would you like to continue?
 ## Install Linux headers
 **Command:** 
 ~~~
---cmd S04
+armbian-config --cmd S04
 ~~~
 
 **Author:** @Tearran
@@ -71,7 +71,7 @@ would you like to continue?
 ## Remove Linux headers
 **Command:** 
 ~~~
---cmd S05
+armbian-config --cmd S05
 ~~~
 
 **Author:** @Tearran
@@ -85,7 +85,7 @@ would you like to continue?
 ## Install to internal storage
 **Command:** 
 ~~~
---cmd S06
+armbian-config --cmd S06
 ~~~
 
 **Author:** https://github.com/igorpecovnik
@@ -104,7 +104,7 @@ would you like to continue?
 ### Disable root login
 **Command:** 
 ~~~
---cmd S07
+armbian-config --cmd S07
 ~~~
 
 **Author:** 
@@ -118,7 +118,7 @@ would you like to continue?
 ### Enable root login
 **Command:** 
 ~~~
---cmd S08
+armbian-config --cmd S08
 ~~~
 
 **Author:** 
@@ -132,7 +132,7 @@ would you like to continue?
 ### Disable password login
 **Command:** 
 ~~~
---cmd S09
+armbian-config --cmd S09
 ~~~
 
 **Author:** 
@@ -146,7 +146,7 @@ would you like to continue?
 ### Enable password login
 **Command:** 
 ~~~
---cmd S10
+armbian-config --cmd S10
 ~~~
 
 **Author:** 
@@ -160,7 +160,7 @@ would you like to continue?
 ### Disable Public key authentication login
 **Command:** 
 ~~~
---cmd S11
+armbian-config --cmd S11
 ~~~
 
 **Author:** 
@@ -174,7 +174,7 @@ would you like to continue?
 ### Enable Public key authentication login
 **Command:** 
 ~~~
---cmd S12
+armbian-config --cmd S12
 ~~~
 
 **Author:** 
@@ -188,7 +188,7 @@ would you like to continue?
 ### Disable OTP authentication
 **Command:** 
 ~~~
---cmd S13
+armbian-config --cmd S13
 ~~~
 
 **Author:** 
@@ -202,7 +202,7 @@ would you like to continue?
 ### Enable OTP authentication
 **Command:** 
 ~~~
---cmd S14
+armbian-config --cmd S14
 ~~~
 
 **Author:** 
@@ -216,7 +216,7 @@ would you like to continue?
 ### Generate new OTP authentication QR code
 **Command:** 
 ~~~
---cmd S15
+armbian-config --cmd S15
 ~~~
 
 **Author:** 
@@ -230,7 +230,7 @@ would you like to continue?
 ### Show OTP authentication QR code
 **Command:** 
 ~~~
---cmd S16
+armbian-config --cmd S16
 ~~~
 
 **Author:** Igor Pecovnik
@@ -244,7 +244,7 @@ would you like to continue?
 ### Disable last login banner
 **Command:** 
 ~~~
---cmd S30
+armbian-config --cmd S30
 ~~~
 
 **Author:** 
@@ -258,7 +258,7 @@ would you like to continue?
 ### Enable last login banner
 **Command:** 
 ~~~
---cmd S31
+armbian-config --cmd S31
 ~~~
 
 **Author:** 
@@ -272,7 +272,7 @@ would you like to continue?
 ## Change shell system wide to BASH
 **Command:** 
 ~~~
---cmd S17
+armbian-config --cmd S17
 ~~~
 
 **Author:** https://github.com/igorpecovnik
@@ -286,7 +286,7 @@ would you like to continue?
 ## Change shell system wide to ZSH
 **Command:** 
 ~~~
---cmd S18
+armbian-config --cmd S18
 ~~~
 
 **Author:** https://github.com/igorpecovnik
@@ -304,7 +304,7 @@ would you like to continue?
 
 **Command:** 
 ~~~
---cmd S19
+armbian-config --cmd S19
 ~~~
 
 **Author:** Igor Pecovnik
@@ -322,7 +322,7 @@ would you like to continue?
 
 **Command:** 
 ~~~
---cmd S20
+armbian-config --cmd S20
 ~~~
 
 **Author:** Igor Pecovnik
@@ -339,7 +339,7 @@ This will enable Armbian read-only filesystem. Reboot is mandatory?
 
 **Command:** 
 ~~~
---cmd S21
+armbian-config --cmd S21
 ~~~
 
 **Author:** Igor Pecovnik
@@ -356,7 +356,7 @@ This will disable Armbian read-only filesystem. Reboot is mandatory?
 
 **Command:** 
 ~~~
---cmd S22
+armbian-config --cmd S22
 ~~~
 
 **Author:** Igor Pecovnik
@@ -370,7 +370,7 @@ This will disable Armbian read-only filesystem. Reboot is mandatory?
 ## Adjust welcome screen (motd)
 **Command:** 
 ~~~
---cmd S23
+armbian-config --cmd S23
 ~~~
 
 **Author:** 
@@ -388,7 +388,7 @@ It might fail to boot!
 
 **Command:** 
 ~~~
---cmd S24
+armbian-config --cmd S24
 ~~~
 
 **Author:** Igor Pecovnik
@@ -411,7 +411,7 @@ Resoulted upgrade might break your build beyond repair!
 
 **Command:** 
 ~~~
---cmd S26
+armbian-config --cmd S26
 ~~~
 
 **Author:** Igor Pecovnik
@@ -429,7 +429,7 @@ Resoulted upgrade might break your build beyond repair!
 
 **Command:** 
 ~~~
---cmd S27
+armbian-config --cmd S27
 ~~~
 
 **Author:** Igor Pecovnik
@@ -443,7 +443,7 @@ Resoulted upgrade might break your build beyond repair!
 ## Manage device tree overlays
 **Command:** 
 ~~~
---cmd S28
+armbian-config --cmd S28
 ~~~
 
 **Author:** Gunjan Gupta
