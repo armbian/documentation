@@ -119,7 +119,15 @@ nav:
         - 'System': 'User-Guide_Armbian-Config/System.md'
         - 'Network': 'User-Guide_Armbian-Config/Network.md'
         - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
-        - 'Software': 'User-Guide_Armbian-Config/Software.md'
+  - 'ARMBIAN SOFTWARE':
+        - 'Overview': 'User-Guide_Armbian-Software.md'
+        - 'Containers': 'User-Guide_Armbian-Software/Containers.user.md'
+        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.user.md'
+        - 'DevTools': 'User-Guide_Armbian-Software/DevTools.user.md'
+        - 'Management': 'User-Guide_Armbian-Software/Management.user.md'
+        - 'Media': 'User-Guide_Armbian-Software/Media.user.md'
+        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.user.md'
+        
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Welcome.md'
         - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
