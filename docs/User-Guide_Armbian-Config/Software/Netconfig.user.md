@@ -6,7 +6,7 @@
 ## Install realtime console network usage monitor (nload)
 **Command:** 
 ~~~
---cmd SW08
+armbian-config --cmd SW08
 ~~~
 
 **Author:** 
@@ -20,7 +20,7 @@
 ## Remove realtime console network usage monitor (nload)
 **Command:** 
 ~~~
---cmd SW09
+armbian-config --cmd SW09
 ~~~
 
 **Author:** 
@@ -34,7 +34,7 @@
 ## Install bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
---cmd SW10
+armbian-config --cmd SW10
 ~~~
 
 **Author:** 
@@ -48,7 +48,7 @@
 ## Remove bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
---cmd SW11
+armbian-config --cmd SW11
 ~~~
 
 **Author:** 
@@ -62,7 +62,7 @@
 ## Install IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
---cmd SW12
+armbian-config --cmd SW12
 ~~~
 
 **Author:** 
@@ -76,7 +76,7 @@
 ## Remove IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
---cmd SW13
+armbian-config --cmd SW13
 ~~~
 
 **Author:** 
@@ -90,7 +90,7 @@
 ## Install hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
---cmd SW14
+armbian-config --cmd SW14
 ~~~
 
 **Author:** 
@@ -104,7 +104,7 @@
 ## Remove hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
---cmd SW15
+armbian-config --cmd SW15
 ~~~
 
 **Author:** 

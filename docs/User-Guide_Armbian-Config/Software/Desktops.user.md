@@ -14,7 +14,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 
 **Command:** 
 ~~~
---cmd DE01
+armbian-config --cmd DE01
 ~~~
 
 **Author:** @igorpecovnik
@@ -28,7 +28,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Uninstall
 **Command:** 
 ~~~
---cmd DE02
+armbian-config --cmd DE02
 ~~~
 
 **Author:** @igorpecovnik
@@ -42,7 +42,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Enable autologin
 **Command:** 
 ~~~
---cmd DE03
+armbian-config --cmd DE03
 ~~~
 
 **Author:** @igorpecovnik
@@ -56,7 +56,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Disable autologin
 **Command:** 
 ~~~
---cmd DE04
+armbian-config --cmd DE04
 ~~~
 
 **Author:** @igorpecovnik
@@ -75,7 +75,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Gnome desktop Install
 **Command:** 
 ~~~
---cmd DE11
+armbian-config --cmd DE11
 ~~~
 
 **Author:** @igorpecovnik
@@ -89,7 +89,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Uninstall
 **Command:** 
 ~~~
---cmd DE12
+armbian-config --cmd DE12
 ~~~
 
 **Author:** @igorpecovnik
@@ -103,7 +103,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Enable autologin
 **Command:** 
 ~~~
---cmd DE13
+armbian-config --cmd DE13
 ~~~
 
 **Author:** @igorpecovnik
@@ -117,7 +117,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Disable autologin
 **Command:** 
 ~~~
---cmd DE14
+armbian-config --cmd DE14
 ~~~
 
 **Author:** @igorpecovnik
@@ -138,7 +138,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### i3 desktop Install
 **Command:** 
 ~~~
---cmd DE21
+armbian-config --cmd DE21
 ~~~
 
 **Author:** @igorpecovnik
@@ -152,7 +152,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### i3 desktop uninstall
 **Command:** 
 ~~~
---cmd DE22
+armbian-config --cmd DE22
 ~~~
 
 **Author:** @igorpecovnik
@@ -166,7 +166,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Enable autologin
 **Command:** 
 ~~~
---cmd DE23
+armbian-config --cmd DE23
 ~~~
 
 **Author:** @igorpecovnik
@@ -180,7 +180,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Disable autologin
 **Command:** 
 ~~~
---cmd DE24
+armbian-config --cmd DE24
 ~~~
 
 **Author:** @igorpecovnik
@@ -197,14 +197,24 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ***
 
 ### Cinnamon desktop Install
+
+<!--- section image START from tools/include/images/DE31.png --->
+[![Cinnamon desktop Install](images/DE31.png)](#)
+<!--- section image STOP from tools/include/images/DE31.png --->
+
 **Command:** 
 ~~~
---cmd DE31
+armbian-config --cmd DE31
 ~~~
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/DE31-footer.md --->
+Cinnamon is a Linux desktop that provides advanced innovative features and a traditional user experience.The desktop layout is similar to Gnome 2 with underlying technology forked from Gnome Shell. Cinnamon makes users feel at home with an easy-to-use and comfortable desktop experience.
+<!--- footer STOP from tools/include/markdown/DE31-header.md --->
 
 
 
@@ -213,7 +223,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Cinnamon desktop uninstall
 **Command:** 
 ~~~
---cmd DE32
+armbian-config --cmd DE32
 ~~~
 
 **Author:** @igorpecovnik
@@ -227,7 +237,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Enable autologin
 **Command:** 
 ~~~
---cmd DE33
+armbian-config --cmd DE33
 ~~~
 
 **Author:** @igorpecovnik
@@ -241,7 +251,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Disable autologin
 **Command:** 
 ~~~
---cmd DE34
+armbian-config --cmd DE34
 ~~~
 
 **Author:** @igorpecovnik
@@ -262,7 +272,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Kde-neon desktop Install
 **Command:** 
 ~~~
---cmd DE41
+armbian-config --cmd DE41
 ~~~
 
 **Author:** @igorpecovnik
@@ -276,7 +286,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Uninstall
 **Command:** 
 ~~~
---cmd DE42
+armbian-config --cmd DE42
 ~~~
 
 **Author:** @igorpecovnik
@@ -290,7 +300,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Enable autologin
 **Command:** 
 ~~~
---cmd DE43
+armbian-config --cmd DE43
 ~~~
 
 **Author:** @igorpecovnik
@@ -304,7 +314,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ### Disable autologin
 **Command:** 
 ~~~
---cmd DE44
+armbian-config --cmd DE44
 ~~~
 
 **Author:** @igorpecovnik
@@ -318,7 +328,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 ## Improve application search speed
 **Command:** 
 ~~~
---cmd DE99
+armbian-config --cmd DE99
 ~~~
 
 **Author:** @igorpecovnik

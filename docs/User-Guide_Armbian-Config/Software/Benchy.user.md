@@ -1,7 +1,7 @@
 # System benchmaking and diagnostics
 **Command:** 
 ~~~
---cmd Benchy
+armbian-config --cmd Benchy
 ~~~
 
 **Author:** 
