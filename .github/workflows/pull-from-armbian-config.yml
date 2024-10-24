@@ -31,7 +31,10 @@ jobs:
 
           cd config
           tools/config-markdown.py -u
+          # rsync docs that has been made          
           rsync --delete -avr docs/. ../documentation/docs/User-Guide_Armbian-Config/
+          # rsync images
+          rsync -avr tools/include/images/. ../documentation/docs/images/
           # make links
           cd ../documentation
           ln -fs System/System.user.md docs/User-Guide_Armbian-Config/System.md
