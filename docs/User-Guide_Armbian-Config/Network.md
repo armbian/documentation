@@ -11,12 +11,12 @@
 ### Add / change interface
 **Command:** 
 ~~~
-armbian-config --cmd N02
+armbian-config --cmd NE002
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -25,12 +25,12 @@ armbian-config --cmd N02
 ### Revert to Armbian defaults
 **Command:** 
 ~~~
-armbian-config --cmd N03
+armbian-config --cmd NE003
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -39,12 +39,12 @@ armbian-config --cmd N03
 ### Show configuration
 **Command:** 
 ~~~
-armbian-config --cmd N04
+armbian-config --cmd NE004
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -53,73 +53,12 @@ armbian-config --cmd N04
 ### Show active status
 **Command:** 
 ~~~
-armbian-config --cmd N06
+armbian-config --cmd NE005
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
-
-## Install Bluetooth support
-**Command:** 
-~~~
-armbian-config --cmd N15
-~~~
-
-**Author:** 
-
-**Status:** Preview
-
-
-
-***
-
-## Remove Bluetooth support
-**Command:** 
-~~~
-armbian-config --cmd N16
-~~~
-
-**Author:** 
-
-**Status:** Preview
-
-
-
-***
-
-## Bluetooth Discover
-This will enable bluetooth and discover devices
-
-
-**Command:** 
-~~~
-armbian-config --cmd N17
-~~~
-
-**Author:** 
-
-**Status:** Preview
-
-
-
-***
-
-## Toggle system IPv6/IPv4 internet protocol
-This will toggle your internet protocol
-
-**Command:** 
-~~~
-armbian-config --cmd N18
-~~~
-
-**Author:** 
-
-**Status:** Preview
+**Status:** Stable
 
 
 

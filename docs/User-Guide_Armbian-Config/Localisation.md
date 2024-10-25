@@ -3,15 +3,15 @@
 
 ***
 
-## Change Global timezone (WIP)
+## Change Global timezone
 **Command:** 
 ~~~
-armbian-config --cmd L00
+armbian-config --cmd LO001
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -20,12 +20,12 @@ armbian-config --cmd L00
 ## Change Locales reconfigure the language and character set
 **Command:** 
 ~~~
-armbian-config --cmd L01
+armbian-config --cmd LO002
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -34,28 +34,12 @@ armbian-config --cmd L01
 ## Change Keyboard layout
 **Command:** 
 ~~~
-armbian-config --cmd L02
+armbian-config --cmd LO003
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
-
-
-
-***
-
-## Change APT mirrors
-This will change the APT mirrors
-
-**Command:** 
-~~~
-armbian-config --cmd L03
-~~~
-
-**Author:** 
-
-**Status:** Disabled
+**Status:** Stable
 
 
 
@@ -64,12 +48,12 @@ armbian-config --cmd L03
 ## Change System Hostname
 **Command:** 
 ~~~
-armbian-config --cmd L04
+armbian-config --cmd LO005
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 

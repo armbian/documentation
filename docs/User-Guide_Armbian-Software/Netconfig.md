@@ -6,12 +6,12 @@
 ## Install realtime console network usage monitor (nload)
 **Command:** 
 ~~~
-armbian-config --cmd SW08
+armbian-config --cmd NET001
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -20,12 +20,12 @@ armbian-config --cmd SW08
 ## Remove realtime console network usage monitor (nload)
 **Command:** 
 ~~~
-armbian-config --cmd SW09
+armbian-config --cmd NET002
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -34,12 +34,12 @@ armbian-config --cmd SW09
 ## Install bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
-armbian-config --cmd SW10
+armbian-config --cmd NET003
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -48,12 +48,12 @@ armbian-config --cmd SW10
 ## Remove bandwidth measuring tool (iperf3)
 **Command:** 
 ~~~
-armbian-config --cmd SW11
+armbian-config --cmd NET004
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -62,12 +62,12 @@ armbian-config --cmd SW11
 ## Install IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
-armbian-config --cmd SW12
+armbian-config --cmd NET005
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -76,12 +76,12 @@ armbian-config --cmd SW12
 ## Remove IP LAN monitor (iptraf-ng)
 **Command:** 
 ~~~
-armbian-config --cmd SW13
+armbian-config --cmd NET006
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -90,12 +90,12 @@ armbian-config --cmd SW13
 ## Install hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
-armbian-config --cmd SW14
+armbian-config --cmd NET007
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -104,12 +104,12 @@ armbian-config --cmd SW14
 ## Remove hostname broadcast via mDNS (avahi-daemon)
 **Command:** 
 ~~~
-armbian-config --cmd SW15
+armbian-config --cmd NET008
 ~~~
 
-**Author:** 
+**Author:** @armbian
 
-**Status:** Preview
+**Status:** Stable
 
 
 

@@ -14,7 +14,7 @@ Xfce is a lightweight desktop environment for UNIX-like operating systems. It ai
 
 **Command:** 
 ~~~
-armbian-config --cmd DE01
+armbian-config --cmd XFCE01
 ~~~
 
 **Author:** @igorpecovnik
@@ -28,7 +28,7 @@ armbian-config --cmd DE01
 ### Uninstall
 **Command:** 
 ~~~
-armbian-config --cmd DE02
+armbian-config --cmd XFCE02
 ~~~
 
 **Author:** @igorpecovnik
@@ -42,7 +42,7 @@ armbian-config --cmd DE02
 ### Enable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE03
+armbian-config --cmd XFCE03
 ~~~
 
 **Author:** @igorpecovnik
@@ -56,7 +56,7 @@ armbian-config --cmd DE03
 ### Disable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE04
+armbian-config --cmd XFCE04
 ~~~
 
 **Author:** @igorpecovnik
@@ -75,7 +75,7 @@ armbian-config --cmd DE04
 ### Gnome desktop Install
 **Command:** 
 ~~~
-armbian-config --cmd DE11
+armbian-config --cmd GNOME01
 ~~~
 
 **Author:** @igorpecovnik
@@ -89,7 +89,7 @@ armbian-config --cmd DE11
 ### Uninstall
 **Command:** 
 ~~~
-armbian-config --cmd DE12
+armbian-config --cmd GNOME02
 ~~~
 
 **Author:** @igorpecovnik
@@ -103,7 +103,7 @@ armbian-config --cmd DE12
 ### Enable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE13
+armbian-config --cmd GNOME03
 ~~~
 
 **Author:** @igorpecovnik
@@ -117,70 +117,7 @@ armbian-config --cmd DE13
 ### Disable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE14
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## i3-wm desktop
-**Status:** Disabled
-
-
-
-***
-
-### i3 desktop Install
-**Command:** 
-~~~
-armbian-config --cmd DE21
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### i3 desktop uninstall
-**Command:** 
-~~~
-armbian-config --cmd DE22
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Enable autologin
-**Command:** 
-~~~
-armbian-config --cmd DE23
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Disable autologin
-**Command:** 
-~~~
-armbian-config --cmd DE24
+armbian-config --cmd GNOME04
 ~~~
 
 **Author:** @igorpecovnik
@@ -197,24 +134,14 @@ armbian-config --cmd DE24
 ***
 
 ### Cinnamon desktop Install
-
-<!--- section image START from tools/include/images/DE31.png --->
-[![Cinnamon desktop Install](/images/DE31.png)](#)
-<!--- section image STOP from tools/include/images/DE31.png --->
-
 **Command:** 
 ~~~
-armbian-config --cmd DE31
+armbian-config --cmd CINNAMON01
 ~~~
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/DE31-footer.md --->
-Cinnamon is a Linux desktop that provides advanced innovative features and a traditional user experience.The desktop layout is similar to Gnome 2 with underlying technology forked from Gnome Shell. Cinnamon makes users feel at home with an easy-to-use and comfortable desktop experience.
-<!--- footer STOP from tools/include/markdown/DE31-header.md --->
 
 
 
@@ -223,7 +150,7 @@ Cinnamon is a Linux desktop that provides advanced innovative features and a tra
 ### Cinnamon desktop uninstall
 **Command:** 
 ~~~
-armbian-config --cmd DE32
+armbian-config --cmd CINNAMON02
 ~~~
 
 **Author:** @igorpecovnik
@@ -237,7 +164,7 @@ armbian-config --cmd DE32
 ### Enable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE33
+armbian-config --cmd CINNAMON03
 ~~~
 
 **Author:** @igorpecovnik
@@ -251,70 +178,7 @@ armbian-config --cmd DE33
 ### Disable autologin
 **Command:** 
 ~~~
-armbian-config --cmd DE34
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Kde-neon desktop
-**Status:** Disabled
-
-
-
-***
-
-### Kde-neon desktop Install
-**Command:** 
-~~~
-armbian-config --cmd DE41
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Uninstall
-**Command:** 
-~~~
-armbian-config --cmd DE42
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Enable autologin
-**Command:** 
-~~~
-armbian-config --cmd DE43
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Disable autologin
-**Command:** 
-~~~
-armbian-config --cmd DE44
+armbian-config --cmd CINNAMON04
 ~~~
 
 **Author:** @igorpecovnik
@@ -328,7 +192,7 @@ armbian-config --cmd DE44
 ## Improve application search speed
 **Command:** 
 ~~~
-armbian-config --cmd DE99
+armbian-config --cmd Xapian
 ~~~
 
 **Author:** @igorpecovnik

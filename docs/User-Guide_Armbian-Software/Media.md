@@ -8,12 +8,12 @@ This operation will install Plex Media server.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW21
+armbian-config --cmd MED001
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -24,12 +24,12 @@ This operation will purge Plex Media server.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW22
+armbian-config --cmd MED002
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -40,12 +40,12 @@ This operation will install Emby server.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW23
+armbian-config --cmd MED003
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -56,12 +56,12 @@ This operation will purge Emby server.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW24
+armbian-config --cmd MED004
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
