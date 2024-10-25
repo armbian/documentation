@@ -4,21 +4,16 @@
 ***
 
 ## Install Docker Minimal
-
-<!--- section image START from tools/include/images/SW25.webp --->
-[![Install Docker Minimal](/images/SW25.webp)](#)
-<!--- section image STOP from tools/include/images/SW25.webp --->
-
 This operation will install Docker Minimal.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW25
+armbian-config --cmd CON001
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -29,12 +24,12 @@ This operation will install Docker Engine.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW26
+armbian-config --cmd CON002
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -45,12 +40,12 @@ This operation will purge Docker.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW27
+armbian-config --cmd CON003
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -61,12 +56,12 @@ This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
 ~~~
-armbian-config --cmd SW28
+armbian-config --cmd CON004
 ~~~
 
-**Author:** 
+**Author:** @schwar3kat
 
-**Status:** Preview
+**Status:** Stable
 
 
 

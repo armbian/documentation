@@ -3,17 +3,17 @@
 
 ***
 
-## Enable Armbian kernel/firmware upgrades
-This will enable Armbian kernel upgrades.
+## Enable Armbian firmware upgrades
+This will enable Armbian kernel upgrades that are currently put on hold.
 
 **Command:** 
 ~~~
-armbian-config --cmd S01
+armbian-config --cmd SY001
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -24,12 +24,12 @@ Disable Armbian kernel/firmware upgrades
 
 **Command:** 
 ~~~
-armbian-config --cmd S02
+armbian-config --cmd SY002
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -43,12 +43,12 @@ would you like to continue?
 
 **Command:** 
 ~~~
-armbian-config --cmd S03
+armbian-config --cmd SY003
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -57,7 +57,7 @@ armbian-config --cmd S03
 ## Install Linux headers
 **Command:** 
 ~~~
-armbian-config --cmd S04
+armbian-config --cmd SY004
 ~~~
 
 **Author:** @Tearran
@@ -71,7 +71,7 @@ armbian-config --cmd S04
 ## Remove Linux headers
 **Command:** 
 ~~~
-armbian-config --cmd S05
+armbian-config --cmd SY005
 ~~~
 
 **Author:** @Tearran
@@ -85,10 +85,10 @@ armbian-config --cmd S05
 ## Install to internal storage
 **Command:** 
 ~~~
-armbian-config --cmd S06
+armbian-config --cmd SY006
 ~~~
 
-**Author:** https://github.com/igorpecovnik
+**Author:** @igorpecovnik
 
 **Status:** Preview
 
@@ -104,12 +104,12 @@ armbian-config --cmd S06
 ### Disable root login
 **Command:** 
 ~~~
-armbian-config --cmd S07
+armbian-config --cmd SY101
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -118,12 +118,12 @@ armbian-config --cmd S07
 ### Enable root login
 **Command:** 
 ~~~
-armbian-config --cmd S08
+armbian-config --cmd SY102
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -132,12 +132,12 @@ armbian-config --cmd S08
 ### Disable password login
 **Command:** 
 ~~~
-armbian-config --cmd S09
+armbian-config --cmd SY103
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -146,12 +146,12 @@ armbian-config --cmd S09
 ### Enable password login
 **Command:** 
 ~~~
-armbian-config --cmd S10
+armbian-config --cmd SY104
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -160,12 +160,12 @@ armbian-config --cmd S10
 ### Disable Public key authentication login
 **Command:** 
 ~~~
-armbian-config --cmd S11
+armbian-config --cmd SY105
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -174,12 +174,12 @@ armbian-config --cmd S11
 ### Enable Public key authentication login
 **Command:** 
 ~~~
-armbian-config --cmd S12
+armbian-config --cmd SY106
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -188,12 +188,12 @@ armbian-config --cmd S12
 ### Disable OTP authentication
 **Command:** 
 ~~~
-armbian-config --cmd S13
+armbian-config --cmd SY107
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -202,12 +202,12 @@ armbian-config --cmd S13
 ### Enable OTP authentication
 **Command:** 
 ~~~
-armbian-config --cmd S14
+armbian-config --cmd SY108
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -216,12 +216,12 @@ armbian-config --cmd S14
 ### Generate new OTP authentication QR code
 **Command:** 
 ~~~
-armbian-config --cmd S15
+armbian-config --cmd SY109
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -230,12 +230,12 @@ armbian-config --cmd S15
 ### Show OTP authentication QR code
 **Command:** 
 ~~~
-armbian-config --cmd S16
+armbian-config --cmd SY110
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -244,12 +244,12 @@ armbian-config --cmd S16
 ### Disable last login banner
 **Command:** 
 ~~~
-armbian-config --cmd S30
+armbian-config --cmd SY111
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -258,76 +258,76 @@ armbian-config --cmd S30
 ### Enable last login banner
 **Command:** 
 ~~~
-armbian-config --cmd S31
+armbian-config --cmd SY112
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
 ***
 
 ## Change shell system wide to BASH
+This will switch system wide shell to BASH
+
 **Command:** 
 ~~~
-armbian-config --cmd S17
+armbian-config --cmd SY008
 ~~~
 
-**Author:** https://github.com/igorpecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
 ***
 
 ## Change shell system wide to ZSH
+This will switch system wide shell to ZSH
+
 **Command:** 
 ~~~
-armbian-config --cmd S18
+armbian-config --cmd SY009
 ~~~
 
-**Author:** https://github.com/igorpecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
 ***
 
 ## Switch to rolling release
-This will switch to rolling releases
-
-would you like to continue?
+This will switch OS to rolling releases.
 
 **Command:** 
 ~~~
-armbian-config --cmd S19
+armbian-config --cmd SY010
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
 ***
 
 ## Switch to stable release
-This will switch to stable releases
-
-would you like to continue?
+This will switch OS to stable releases
 
 **Command:** 
 ~~~
-armbian-config --cmd S20
+armbian-config --cmd SY011
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -339,12 +339,12 @@ This will enable Armbian read-only filesystem. Reboot is mandatory?
 
 **Command:** 
 ~~~
-armbian-config --cmd S21
+armbian-config --cmd SY012
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -356,12 +356,12 @@ This will disable Armbian read-only filesystem. Reboot is mandatory?
 
 **Command:** 
 ~~~
-armbian-config --cmd S22
+armbian-config --cmd SY013
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -370,12 +370,12 @@ armbian-config --cmd S22
 ## Adjust welcome screen (motd)
 **Command:** 
 ~~~
-armbian-config --cmd S23
+armbian-config --cmd SY014
 ~~~
 
-**Author:** 
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -388,12 +388,12 @@ It might fail to boot!
 
 **Command:** 
 ~~~
-armbian-config --cmd S24
+armbian-config --cmd SY015
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -411,12 +411,12 @@ Resoulted upgrade might break your build beyond repair!
 
 **Command:** 
 ~~~
-armbian-config --cmd S26
+armbian-config --cmd SY101
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
-**Status:** Active
+**Status:** Stable
 
 
 
@@ -429,10 +429,10 @@ Resoulted upgrade might break your build beyond repair!
 
 **Command:** 
 ~~~
-armbian-config --cmd S27
+armbian-config --cmd SY102
 ~~~
 
-**Author:** Igor Pecovnik
+**Author:** @igorpecovnik
 
 **Status:** Active
 
@@ -443,12 +443,12 @@ armbian-config --cmd S27
 ## Manage device tree overlays
 **Command:** 
 ~~~
-armbian-config --cmd S28
+armbian-config --cmd SY017
 ~~~
 
-**Author:** Gunjan Gupta
+**Author:** @viraniac @igorpecovnik
 
-**Status:** Active
+**Status:** Stable
 
 
 
