@@ -45,6 +45,7 @@ jobs:
           mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
           rsync -avr docs/Software/Containers.user.md ../documentation/docs/User-Guide_Armbian-Software/Containers.md
           rsync -avr docs/Software/Desktops.user.md ../documentation/docs/User-Guide_Armbian-Software/Desktops.md
+          rsync -avr docs/Software/DevTools.user.md ../documentation/docs/User-Guide_Armbian-Software/DevTools.md
           rsync -avr docs/Software/Management.user.md ../documentation/docs/User-Guide_Armbian-Software/Management.md
           rsync -avr docs/Software/Media.user.md ../documentation/docs/User-Guide_Armbian-Software/Media.md
           rsync -avr docs/Software/Netconfig.user.md ../documentation/docs/User-Guide_Armbian-Software/Netconfig.md
