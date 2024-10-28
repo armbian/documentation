@@ -30,6 +30,7 @@ jobs:
         run: |
 
           cd config
+          tools/config-assemble.sh -p
           tools/config-markdown.py -u
 
           # rsync images first
