@@ -31,7 +31,7 @@ This one we will place under `Software -> Containers`.
 
 ``` yaml title="File location: tools/json/config.software.json"
 {
-    "id": "SP27",
+    "id": "CON004",
     "description": "Install Portainer",
     "prompt": "This operation will install Portainer.\nWould you like to continue?",
     "command": ["module_portainer install"],
@@ -40,7 +40,7 @@ This one we will place under `Software -> Containers`.
     "condition": "! module_portainer status"
 },
 {
-    "id": "SP28",
+    "id": "CON005",
     "description": "Remove Portainer",
     "prompt": "This operation will delete Portainer container.\nWould you like to continue?",
     "command": ["module_portainer uninstall"],
@@ -67,7 +67,18 @@ This one we will place under `Software -> Containers`.
 
 #### Module code
 
-``` bash title="File location: lib/armbian-configng/config.ng.software.sh"
+Place module functions, each into its file, following by file naming convention, into one of the folders:
+
+``` bash title="Folder location: tools/modules"
+docs
+functions
+network
+runtime
+software
+system
+```
+
+``` bash title="File location: tools/modules/software/install_portainer.sh"
 module_options+=(
 	["update_skel,author"]="@armbian"
 	["update_skel,ref_link"]=""
@@ -113,9 +124,9 @@ module_portainer() {
 
 #### Manual testing
 
-Whenever you are making changes to the JSON structure, make sure to join JSON segments into main JSON file. This you do with a command:
+Whenever you are making changes to the JSON or modules structure, make sure to join JSON segments into main JSON file and fun. This you do with a command:
 ``` python
-tools/config-jobs -j lib/armbian-configng/config.ng.jobs.json
+tools/config-assemble.sh -p
 ```
 Python is required to run this tool.
 
@@ -128,9 +139,9 @@ sudo sudo bin/armbian-config --cmd
 This part is optional but highly recommended for at least install functionality. Our CI infrastructure will test this feature at pull request, on general code changes (push to main branch) and daily. It will test feature on latest Debian and Ubuntu images.
 Unit tests have simple design:
 
-Name of the config file is function id (unique identifier) `SP27.conf`
+Name of the config file is function id (unique identifier) `CON004.conf`
 
-``` bash title="File location: tests/SP27.conf"
+``` bash title="File location: tests/CON004.conf"
 ENABLED=true
 RELEASE="bookworm:jammy:noble"
 CONDITION="test=\$(docker container ls -a |  grep portainer )"
@@ -148,23 +159,25 @@ Make sure to add a test condition that makes sense. It has to return 0 when test
 
 When your solution works locally and you prepare unit tests its time to submit a pull request. Fix your code and unit tests until all pull request checks becomes green.
 
+[https://github.com/armbian/configng/pull/210](https://github.com/armbian/configng/pull/210)
+
 ### Documentation
 
 Documentation is generated automatically after your pull request is merged. But as automated documentation might not be satisfactory, you can add cover image, header and footer. You can use markdown elements with enhancements from https://squidfunk.github.io/mkdocs-material/
 
 #### Cover image
 
-Once code works perfectly, look for cover image. It can be .png or .webp. Place image to the `tools/include/images/SP27.webp`
+Once code works perfectly, look for cover image. It can be .png or .webp. Place image to the `tools/include/images/CON004.webp`
 
 #### Header
 
-``` text title="Header: tools/include/markdown/SP27-header.md"
+``` text title="Header: tools/include/markdown/CON004-header.md"
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 ```
 
 #### Footer
 
-``` text title="Footer: tools/include/markdown/SP27-footer.md"
+``` text title="Footer: tools/include/markdown/CON004-footer.md"
 
 === "Access to the web interface"
 
