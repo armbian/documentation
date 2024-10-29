@@ -63,12 +63,6 @@ armbian-config --cmd CON003
 ***
 
 ## Purge all Docker images, containers, and volumes
-
-<!--- header START from tools/include/markdown/CON004-header.md --->
-Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
-
-<!--- header STOP from tools/include/markdown/CON004-header.md --->
-
 This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
@@ -81,29 +75,24 @@ armbian-config --cmd CON004
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/CON004-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **9002**:
-
-    - URL = `http://<your.IP>:9002`
-
-<!--- footer STOP from tools/include/markdown/CON004-footer.md --->
-
-
 
 ***
 
 ## Install Portainer
 
-<!--- header START from tools/include/markdown/CON004-header.md --->
+<!--- section image START from tools/include/images/CON005.webp --->
+[![Install Portainer](/images/CON005.webp)](#)
+<!--- section image STOP from tools/include/images/CON005.webp --->
+
+
+<!--- header START from tools/include/markdown/CON005-header.md --->
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
-<!--- header STOP from tools/include/markdown/CON004-header.md --->
+<!--- header STOP from tools/include/markdown/CON005-header.md --->
 
 **Command:** 
 ~~~
-armbian-config --cmd CON004
+armbian-config --cmd CON005
 ~~~
 
 **Author:** @armbian
@@ -111,14 +100,14 @@ armbian-config --cmd CON004
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/CON004-footer.md --->
+<!--- footer START from tools/include/markdown/CON005-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **9002**:
 
     - URL = `http://<your.IP>:9002`
 
-<!--- footer STOP from tools/include/markdown/CON004-footer.md --->
+<!--- footer STOP from tools/include/markdown/CON005-footer.md --->
 
 
 
@@ -127,7 +116,7 @@ armbian-config --cmd CON004
 ## Remove Portainer
 **Command:** 
 ~~~
-armbian-config --cmd CON005
+armbian-config --cmd CON006
 ~~~
 
 **Author:** @armbian
