@@ -189,7 +189,11 @@ Example:
 - **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
     - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
     - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
+    - **Hint:** Private key can be placed in `$USERPATCHES_PATH/dropbear_authorized_keys` or they will be generated in `output/images/*.key` file
     - `CRYPTROOT_SSH_UNLOCK_PORT=2222` Default: `2022`
+    - `CRYPTROOT_MAPPER=armbian-root` Default: `armbian-root`
+    - **Note:** Cryptsetup root mapper name
+    - **Hint:** Can be helpfull for parallel image building
     - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` Default: `--pbkdf pbkdf2` (May not contain `=`; separate with spaces)
     - **Note:** This function might not work well with all distributions. Debian Buster and Stretch were tested. For building under Docker, you have to use privileged mode, which can be enabled in `userpatches/config-docker`.
     - **Warning:** This feature was added as a community contribution and is mostly functional. Under some circumstances, though, the prompt will not be shown. Therefore, it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)
