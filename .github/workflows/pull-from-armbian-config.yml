@@ -44,12 +44,15 @@ jobs:
 
           # the rest goes under armbian-software
           mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
-          rsync -avr docs/Software/Containers.user.md ../documentation/docs/User-Guide_Armbian-Software/Containers.md
-          rsync -avr docs/Software/Desktops.user.md ../documentation/docs/User-Guide_Armbian-Software/Desktops.md
-          rsync -avr docs/Software/DevTools.user.md ../documentation/docs/User-Guide_Armbian-Software/DevTools.md
-          rsync -avr docs/Software/Management.user.md ../documentation/docs/User-Guide_Armbian-Software/Management.md
-          rsync -avr docs/Software/Media.user.md ../documentation/docs/User-Guide_Armbian-Software/Media.md
-          rsync -avr docs/Software/Netconfig.user.md ../documentation/docs/User-Guide_Armbian-Software/Netconfig.md
+          rsync -avr docs/Software/* ../documentation/docs/
+          
+          #rsync -avr docs/Software/Containers.user.md ../documentation/docs/User-Guide_Armbian-Software/Containers.md
+          #rsync -avr docs/Software/Desktops.user.md ../documentation/docs/User-Guide_Armbian-Software/Desktops.md
+          #rsync -avr docs/Software/DevTools.user.md ../documentation/docs/User-Guide_Armbian-Software/DevTools.md
+          #rsync -avr docs/Software/HomeAutomation.user.md ../documentation/docs/User-Guide_Armbian-Software/HomeAutomation.user.md
+          #rsync -avr docs/Software/Management.user.md ../documentation/docs/User-Guide_Armbian-Software/Management.md
+          #rsync -avr docs/Software/Media.user.md ../documentation/docs/User-Guide_Armbian-Software/Media.md
+          #rsync -avr docs/Software/Netconfig.user.md ../documentation/docs/User-Guide_Armbian-Software/Netconfig.md
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v7
