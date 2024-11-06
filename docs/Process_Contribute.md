@@ -12,9 +12,9 @@ If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributin
 
 ## Source code
 
-Armbian build framework: <https://github.com/armbian>
-Armbian configuration utility: <https://github.com/confing>
-Armbian documentation: <https://github.com/documentation>
+- Armbian build framework: <https://github.com/armbian/build>
+- Armbian configuration utility: <https://github.com/armbian/confing>
+- Armbian documentation: <https://github.com/armbian/documentation>
 
 
 ## Adding a new board?
