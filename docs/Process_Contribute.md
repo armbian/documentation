@@ -13,7 +13,7 @@ If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributin
 ## Source code
 
 - Armbian build framework: <https://github.com/armbian/build>
-- Armbian configuration utility: <https://github.com/armbian/confing>
+- Armbian configuration utility: <https://github.com/armbian/configng>
 - Armbian documentation: <https://github.com/armbian/documentation>
 
 
