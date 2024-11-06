@@ -1,84 +1,25 @@
-# Build commands
-
-### kernel
-
-Builds kernel and device tree (where applicable) and places it to the `output/debs`
-
-Usage:
-```bash
-./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge 
-```
-
-### dts-check
-
-Validate dts files and improve board & patch development overall.
-
-This option validates the dts/dtb file for the selected board against the device tree bindings and outputs the validation logs to the user. It can be used when adding a new board, developing or improving a dts file.
-
-Usage:
-```bash
-./compile.sh dts-check BOARD=nanopi-r5c BRANCH=edge 
-```
-### inventory-boards
-
-Outputs a one-board-per-line CSV inventory of boards.
-
-Sets `TARGETS_FILE` to something that doesn't exist, so the `default-targets.yaml` is used (so same list for everyone, save for userpatched-boards)
-
-Usage:
-```bash
-./compile.sh inventory-boards
-```
-Outputs /info/boards-inventory.csv
-
-### kernel-dtb
-
-Builds only DTB and outputs full preprocessed dts source
-
-Outputs preprocessed DTS source for the board in question to `output/`
-also outputs the same preprocessed DTS source, ran through `dtc` with input and output DTS formats for "normalized" comparisons
-
-Usage:
-```bash
-./compile.sh kernel-dtb BOARD=xxxxx BRANCH=edge
-```
-
-### rewrite-uboot-patches
-
-Prepares git, applies patches to git, and rewrites them back from git
-same as kernel, it does git archeology for mbox-less patches, etc.
-
-- uboot-patches-to-git alias is also added, but my guess is that the rewrite is more useful.
-- refactor a common config function for both kernel and uboot.
-
-Usage:
-```bash
-./compile.sh rewrite-uboot-patches BOARD=xxxx BRANCH=edge 
-```
-
-### targets
-
-Generates output/info/git_sources.json file containing URL, branch, and commit hash combo.
-
-The easiest way to generate file for all devices is to run `./compile.sh targets`. Then, at the time of release, we will copy the output/info/git_sources.json file to config/sources/git_sources.json. Once the file is copied, the hash information from the file will be used to fetch resources for git repositories where branches are specified instead of tags or commits.
-
-Usage:
-```bash
-./compile.sh targets
-```
-
-# Build options
+# Build Switches
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](Developer-Guide_Build-Preparation.md#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
-## Main options
+### Networking
 
-- **NETWORKING_STACK** ( string )
-    - network-manager
-    - systemd-networkd
-    - none (to not-add any networking extensions)
+**NETWORKING_STACK** ( string )
+
+- network-manager
+- systemd-networkd
+- none (to not-add any networking extensions)
 
 Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
+
+!!! example "Build switch example"
+
+    ~~~
+    ./compile.sh NETWORKING_STACK="network-manager"
+    ~~~
+
+<hr>
+### Host environment
 
 - **DOCKER_ARMBIAN_BASE_IMAGE** ( string )
     - **ubuntu:jammy**
@@ -128,6 +69,32 @@ Example:
 ```
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
 ```  
+
+### Filesystem
+
+**CRYPTROOT_ENABLE** ( string )
+
+- yes
+- no
+
+LUKS (Linux Unified Key Setup) is a specification for block device encryption. It establishes an on-disk format for the data, as well as a passphrase/key management policy. LUKS uses the kernel device mapper subsystem via the dm-crypt module.
+
+``` title="When enabled, you need to provide additional information:"
+CRYPTROOT_PASSPHRASE="MYSECRECTPASS"             # Mandatory
+CRYPTROOT_SSH_UNLOCK="yes"                       # Default: yes
+CRYPTROOT_SSH_UNLOCK_PORT="2222"                 # Default: 2022
+CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root 
+CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
+```
+
+!!! tip "Tips and warnings"
+
+    - Private key can be placed in `$USERPATCHES_PATH/dropbear_authorized_keys` or they will be generated in `output/images/*.key` file
+    - If you want to do the encryption part from scratch, check out [this](https://forum.armbian.com/topic/15618-full-root-filesystem%C2%A0encryption%C2%A0on-an-armbian-system-new-replaces-2017-tutorial-on-this-topic/) forum post.
+    - This function might not work well with all distributions.
+    - CRYPTROOT_MAPPER name might affect parallel image building
+    - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
+
 
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
@@ -186,18 +153,7 @@ Example:
 - **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
 - **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 - **EXT=rkdevflash** to flash Rockchip images to eMMC either during image build or separately with flash CLI command ([only works bare Linux, not Docker](https://github.com/armbian/build/pull/5058))
-- **CRYPTROOT_ENABLE** ( yes | no ): enable LUKS encrypted rootfs
-    - `CRYPTROOT_PASSPHRASE="MYSECRECTPASS"` mandatory
-    - `CRYPTROOT_SSH_UNLOCK=yes` Default: `yes`
-    - **Hint:** Private key can be placed in `$USERPATCHES_PATH/dropbear_authorized_keys` or they will be generated in `output/images/*.key` file
-    - `CRYPTROOT_SSH_UNLOCK_PORT=2222` Default: `2022`
-    - `CRYPTROOT_MAPPER=armbian-root` Default: `armbian-root`
-    - **Note:** Cryptsetup root mapper name
-    - **Hint:** Can be helpful for parallel image building
-    - `CRYPTROOT_PARAMETERS="custom cryptsetup options"` Default: `--pbkdf pbkdf2` (May not contain `=`; separate with spaces)
-    - **Note:** This function might not work well with all distributions. Debian Buster and Stretch were tested. For building under Docker, you have to use privileged mode, which can be enabled in `userpatches/config-docker`.
-    - **Warning:** This feature was added as a community contribution and is mostly functional. Under some circumstances, though, the prompt will not be shown. Therefore, it should be considered experimental. Check [here](https://github.com/armbian/build/commit/681e58b6689acda6a957e325f12e7b748faa8330) and [here](https://github.com/armbian/build/issues/1183)
-    - **Hint:** If you want to do the encryption part from scratch, check out [this](https://forum.armbian.com/topic/15618-full-root-filesystem%C2%A0encryption%C2%A0on-an-armbian-system-new-replaces-2017-tutorial-on-this-topic/) forum post.  
+
   
   
 ## Hidden options to minimize user input for build automation

@@ -132,14 +132,15 @@ nav:
         - 'Management': 'User-Guide_Armbian-Software/Management.md'
         - 'Media': 'User-Guide_Armbian-Software/Media.md'
         - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
-        
+
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Welcome.md'
         - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
+        - 'Build Commands' : 'Developer-Guide_Build-Commands.md'
+        - 'Build Switches' : 'Developer-Guide_Build-Switches.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
-        - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
         - 'Extensions' : 'Developer-Guide_Extensions.md'
 
