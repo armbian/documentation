@@ -2,13 +2,63 @@
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional.  They can also be added to your [build configuration file](Developer-Guide_Build-Preparation.md#providing-build-configuration) to save time. Default values are marked **bold** if applicable. 
 
+### User space
+
+**BOARD** ( `string` )
+
+Set the name of the board manually to skip the dialog prompt. Name of the board is [a filename without extension](https://github.com/armbian/build/tree/main/config/boards).
+
+**BRANCH** ( `string` )
+
+- `vendor`
+- `legacy`
+- `current` (recommended)
+- `edge`
+
+Set kernel and U-Boot branch manually to skip dialog prompt
+
+!!! tip "Note"
+ 
+    Some branches may not be available for all devices.
+
+**RELEASE** ( `string` )
+
+- `bookworm`
+- `trixie`
+- `sid`
+- `jammy`
+- `noble`
+
+Set packages release base manually to skip dialog prompt. Check here for [currently available releases](https://github.com/armbian/build/tree/main/config/distributions).
+
+!!! tip "Note"
+ 
+    Only stable and/or LTS upstream Debian or Ubuntu releases are officially supported. Others might work or not.
+
+**BUILD_MINIMAL** ( `string` )
+    
+- `yes`: build a bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"`
+- `no`: (default)
+
+**BSPFREEZE** ( `string` ) 
+
+- `yes`: freeze (from upgrade) armbian firmware packages when building images (U-Boot, kernel, DTB, BSP)
+- `no`: (default)
+
+**INSTALL_HEADERS** ( `string` )
+
+- `yes`: pre-install kernel headers
+- `no`: (default)
+
+<hr>
+
 ### Networking
 
-**NETWORKING_STACK** ( string )
+**NETWORKING_STACK** ( `string` )
 
-- network-manager
-- systemd-networkd
-- none (to not-add any networking extensions)
+- `network-manager`
+- `systemd-networkd`
+- `none` (to not-add any networking extensions)
 
 Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
 
@@ -19,12 +69,48 @@ Installs desired networking stack. If the parameter is undefined, it sets `syste
     ~~~
 
 <hr>
+
 ### Host environment
 
-- **DOCKER_ARMBIAN_BASE_IMAGE** ( string )
-    - **ubuntu:jammy**
-    - ubuntu:noble
-    - debian:bookworm
+**EXPERT** 
+
+- `yes`
+
+Show development features and boards regardless of their support status in interactive mode.
+
+**CLEAN_LEVEL** (comma-separated list)
+
+Defines what should be cleaned. Changing this option can be useful when rebuilding images or building more than one image
+
+- `make-atf` = make clean for ATF, if it is built.
+- `make-uboot` = make clean for uboot, if it is built.
+- `make-kernel` = make clean for the kernel if it is built. very slow.<br>
+- `debs`, `alldebs` = delete all packages in "./output/debs"
+- `images` = delete "./output/images"
+- `cache` = delete "./output/cache"
+- `sources` = delete `cache/sources` (all downloaded sources)
+- `oldcache` = remove old cached rootfs except for the newest 8 files
+- `extras` = delete additional packages for the current release in `output/debs/extra`
+
+**CARD_DEVICE** ( string )
+
+- `/dev/sdX` 
+
+Set to the device of your flash media / SD card. The image will be burned and verified.
+
+
+**PREFER_DOCKER** ( string )
+
+- `yes` (default)
+- `no`
+
+Docker assisted compilation is on by default. Set to `no` if you prefer running compilation natively.
+
+**DOCKER_ARMBIAN_BASE_IMAGE** ( string )
+
+- `ubuntu:jammy` (default)
+- `ubuntu:noble`
+- `debian:bookworm`
 
 Defines the build host when using a Docker container (default). [Here](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build), you can see which other options are available.
 
@@ -70,7 +156,34 @@ Example:
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
 ```  
 
+<hr>
+
 ### Filesystem
+
+**ROOTFS_TYPE** ( string )
+
+- `ext4` (default)
+- `f2fs`
+- `btrfs` 
+- `nilfs2`
+- `xfs`
+- `nfs` 
+
+Create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
+
+**BTRFS_COMPRESSION** ( string )
+
+- `lzo`
+- `none`
+- `zlib` (default)
+- `zstd`
+
+When choosing `ROOTFS_TYPE=btrfs`, select `btrfs` filesystem compression method and compression level. By default, the compression is `zlib`.
+
+!!! tip "Note"
+ 
+    The script does not check the legality of the input variable (compression ratio). Input like `zlib:1234` is legal to the script but illegal to the kernel. Beware that setting this option does affect image creation only (shrinking disk size) and will not adjust `/etc/fstab`, so it is up to the user to later edit `/etc/fstab` if compression in daily operation is also wanted (beware of severe performance penalties with random IO patterns and heavy compression algorithms!).
+
 
 **CRYPTROOT_ENABLE** ( string )
 
@@ -96,75 +209,64 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
 
 
+<hr>
+
+### Advanced
+
+**INCLUDE_HOME_DIR** ( string )
+
+- `yes`
+- `no`  (default)
+
+Include directories created inside /home in final image.
+
+**ENABLE_EXTENSIONS** (c omma-separated list )
+
+[Extensions](/Developer-Guide_Extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
+
+!!! example "Build switch example"
+
+    ~~~
+    ./compile.sh \
+    build \
+    BOARD=uefi-x86 \
+    BRANCH=current \
+    BUILD_DESKTOP=no \
+    BUILD_MINIMAL=no \
+    KERNEL_CONFIGURE=no \
+    RELEASE=noble \
+    ENABLE_EXTENSIONS=mesa-vpu,nvidia \
+    ~~~
+
+**CONSOLE_AUTOLOGIN**
+
+- `yes` (default)
+- `no`
+
+Automatically login as root for local consoles at first run. Disable if your security threat model requires.
+
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
-:warning: DO NOT USE! Obsolete documentation, new documentation in progress. 
+:warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
 
-- **BUILD_ONLY** (comma-separated list): defines what artifacts should be built. The default value is an empty string - it will build all artifacts. Changing this option can be useful to build partial artifacts only.
-    - u-boot: build U-Boot
-    - kernel: build kernel
-    - armbian-config: build Armbian config
-    - armbian-zsh: build Armbian zsh
-    - plymouth-theme-armbian: build Armbian Plymouth theme
-    - armbian-firmware: build Armbian firmware
-    - armbian-bsp: build Armbian board support package
-    - chroot: build additional packages
-    - bootstrap: build bootstrap package
-    - default: build full OS image for flashing
-- **KERNEL_CONFIGURE** ( string or boolean ):
-    - prebuilt: use precompiled packages (only for maintained hardware)
-    - yes: automatically call kernel's `make menuconfig` (add or remove modules or features)
-    - no: use provided kernel configuration provided by Armbian
-    - leave empty to display the selection dialog each time
-- **CLEAN_LEVEL** (comma-separated list): defines what should be cleaned. Default value is `"make,debs"` - clean sources and remove all packages. Changing this option can be useful when rebuilding images or building more than one image
-    - make-atf = make clean for ATF, if it is built.
-    - make-uboot = make clean for uboot, if it is built.
-    - make-kernel = make clean for the kernel if it is built. very slow.<br>
-      *important*: "make" by itself has been disabled since Armbian now knows how to handle Make timestamping.      
-    - debs, alldebs = delete all packages in "./output/debs"
-    - images = delete "./output/images"
-    - cache = delete "./output/cache"
-    - sources: delete `cache/sources` (all downloaded sources)
-    - oldcache = remove old cached rootfs except for the newest 8 files
-    - extras: delete additional packages for the current release in `output/debs/extra`
-- **REPOSITORY_INSTALL** (comma-separated list): list of core packages that will be installed from the repository
-    - Available options: `u-boot`, `kernel`, `bsp`, `armbian-bsp-cli`,`armbian-bsp-desktop`,`armbian-desktop`,`armbian-config`, `armbian-firmware`
-    - Set to "" to use packages one from local output or build if not available
 - **KERNEL\_KEEP\_CONFIG** ( yes | no ):
     - yes: use kernel config file from previous compilation for the same branch, device family, and version
     - no: use default or user-provided config file  
-- **BUILD_MINIMAL** ( yes | no ):
-    - yes: build a bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"` and `BUILD_EXTERNAL="yes"`
-    - no: default CLI package selection
 - **BUILD_DESKTOP** ( yes | no ):
     - yes: build an image with a minimal desktop environment
     - no: build image with console interface only  
-- **EXTERNAL** ( yes | no ):
-    - yes: compile and install extra applications and firmware  
-- **BSPFREEZE** ( yes | no ): 
-    - yes: freeze (from update) armbian packages when building images (U-Boot, kernel, DTB)  
-- **INSTALL_HEADERS** ( **no** | yes ):
-    - yes: install kernel headers  
-- **EXTERNAL_NEW** ( no | prebuilt | compile ):
-    - prebuilt: install extra applications from the repository
-    - compile: compile extra applications in chroot  
 - **CREATE_PATCHES** ( yes | **no** ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use the new `kernel-patch` / `uboot-patch` / `atf-patch` CLI commands instead.
     - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes, patch files will be created and placed in the `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say), these files must be copied to the appropriate directories. Also, see [user-provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches).
-- **BUILD_ALL** ( yes | no | demo ): cycle through all available board and kernel configurations and make images for all combinations  
-- **CARD_DEVICE** ( /dev/sdX ): set to the device of your SD card. The image will be burned and verified using Etcher for CLI.
 - **EXT=rkdevflash** to flash Rockchip images to eMMC either during image build or separately with flash CLI command ([only works bare Linux, not Docker](https://github.com/armbian/build/pull/5058))
 
   
-  
 ## Hidden options to minimize user input for build automation
-- **BOARD** ( `string` ): set the name of the board manually to skip the dialog prompt
-- **BRANCH** ( `legacy` | `current` | `edge` ): set kernel and U-Boot branch manually to skip dialog prompt; some options may not be available for all devices
-- **RELEASE** ( `bullseye` | `bookworm` | `jammy` ): set OS release manually to skip dialog prompt; use this option with `KERNEL_ONLY=yes` to create board support package
 - **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
 - **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
   
 ## Hidden options for advanced users (default values are marked **bold**)
-- **EXPERT** ( yes | **no** ): show development features and boards regardless of their status in interactive mode
+
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for the location of the `userpatches` folder
 - **USE_CCACHE** ( **yes** | no ): use a C compiler cache to speed up the build process
 - **PRIVATE_CCACHE** ( yes | **no** ): use `$DEST/ccache` as ccache home directory
@@ -192,11 +294,6 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image 
-- **ROOTFS_TYPE** ( **ext4** | f2fs | btrfs | nilfs2 | xfs | nfs ): create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
-- **BTRFS_COMPRESSION** ( lzo | none | **zlib** | zstd ): when choosing `ROOTFS_TYPE=btrfs`, select `btrfs` filesystem compression method and compression level. By default, the compression is `zlib`.  
-When selecting `zstd` or setting zlib compression level(`zlib:[1-9]`) user must ensure kernel version is **>=4.14.x**.  
-When selecting the zstd compression level (`zstd:[1-15]`), both the host and the target kernel version must be **>=5.1.x** since the kernel started supporting the zstd compression ratio only from 5.1 on.  
-*Note:* The script does not check the legality of the input variable (compression ratio). Input like `zlib:1234` is legal to the script but illegal to the kernel. Beware that setting this option does affect image creation only (shrinking disk size) and will not adjust `/etc/fstab`, so it is up to the user to later edit `/etc/fstab` if compression in daily operation is also wanted (beware of severe performance penalties with random IO patterns and heavy compression algorithms!).
 - **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ): 
     - yes: force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** ( `IPv4 address` ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: `1.0.0.1`
@@ -222,13 +319,6 @@ When selecting the zstd compression level (`zstd:[1-15]`), both the host and the
 - **REGIONAL_MIRROR** ( `china` ): select mirrors based on regional setting, will not overwrite explicitly specified mirror option
 	- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
 	- leave empty to use default settings
-- **USE_TORRENT** ( yes | **no** ): use torrent to download toolchains and rootfs
 - **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **WIREGUARD** ( **yes** | no ): include Wireguard for kernels before it got upstreamed to mainline. Will lose functionality soon.
-- **AUFS** ( **yes** | no ): include support for [AUFS](https://en.wikipedia.org/wiki/Aufs)
-- **SKIP_BOOTSPLASH** ( yes | **no** ): use kernel bootsplash. Disable in case of troubles
-- **CONSOLE_AUTOLOGIN** ( **yes** | no ): automatically login as root for local consoles. Disable if your security threat model requires.
-- **EXT** (`fake-vcgencmd`): execute [extension](Developer-Guide_Extensions.md) during the build
-	- `fake-vcgencmd`: include [fake vcgencmd](https://github.com/clach04/fake_vcgencmd) to monitor and control boards from [Android](https://eidottermihi.github.io/rpicheck/)
-- **INCLUDE_HOME_DIR** ( yes | **no** ): include directories created inside /home in final image.
