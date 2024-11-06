@@ -128,6 +128,7 @@ nav:
         - 'Overview': 'User-Guide_Armbian-Software.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
         - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
+        - 'Home Automation': 'User-Guide_Armbian-Software/HomeAutomation.md'
         - 'DevTools': 'User-Guide_Armbian-Software/DevTools.md'
         - 'Management': 'User-Guide_Armbian-Software/Management.md'
         - 'Media': 'User-Guide_Armbian-Software/Media.md'

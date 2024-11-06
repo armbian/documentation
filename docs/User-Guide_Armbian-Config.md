@@ -13,3 +13,7 @@ To start the Armbian configuration utility, use the following command:
 ~~~
 sudo armbian-config
 ~~~
+
+## Adding new feature
+
+Please check example of [adding a new software title](/User-Guide_Armbian-Software/#adding-example). Principle is the same.
