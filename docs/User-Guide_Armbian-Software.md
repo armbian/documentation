@@ -161,8 +161,8 @@ When your solution works locally and you prepare unit tests its time to submit a
 
 Examples:
 
-<https://github.com/armbian/configng/pull/210>
-<https://github.com/armbian/configng/pull/230>
+- <https://github.com/armbian/configng/pull/210>
+- <https://github.com/armbian/configng/pull/230>
 
 ### Documentation
 
