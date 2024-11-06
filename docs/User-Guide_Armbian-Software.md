@@ -159,7 +159,10 @@ Make sure to add a test condition that makes sense. It has to return 0 when test
 
 When your solution works locally and you prepare unit tests its time to submit a pull request. Fix your code and unit tests until all pull request checks becomes green.
 
-[https://github.com/armbian/configng/pull/210](https://github.com/armbian/configng/pull/210)
+Examples:
+
+<https://github.com/armbian/configng/pull/210>
+<https://github.com/armbian/configng/pull/230>
 
 ### Documentation
 
