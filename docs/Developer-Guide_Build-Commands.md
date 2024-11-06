@@ -6,7 +6,16 @@ Builds kernel and device tree (where applicable) and places it to the `output/de
 
 Usage:
 ```bash
-./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge 
+./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
+```
+
+### kernel-config
+
+Automatically call kernel's `make menuconfig` (add or remove modules or features)
+
+Usage:
+```bash
+./compile.sh kernel-config BOARD=nanopi-r5c BRANCH=edge
 ```
 
 ### dts-check
