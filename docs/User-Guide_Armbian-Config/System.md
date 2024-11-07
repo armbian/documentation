@@ -399,47 +399,6 @@ armbian-config --cmd SY015
 
 ***
 
-## Distribution upgrades
-
-
-***
-
-### Upgrade to latest stable / LTS
-Release upgrade is irriversible operation which upgrades all packages. 
-
-Resoulted upgrade might break your build beyond repair!
-
-**Command:** 
-~~~
-armbian-config --cmd SY101
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Upgrade to rolling unstable
-Release upgrade is irriversible operation which upgrades all packages. 
-
-Resoulted upgrade might break your build beyond repair!
-
-**Command:** 
-~~~
-armbian-config --cmd SY102
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Active
-
-
-
-***
-
 ## Manage device tree overlays
 **Command:** 
 ~~~
