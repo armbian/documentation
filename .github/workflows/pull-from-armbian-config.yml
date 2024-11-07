@@ -50,6 +50,7 @@ jobs:
           rsync -avr docs/Software/Desktops.user.md ../documentation/docs/User-Guide_Armbian-Software/Desktops.md
           rsync -avr docs/Software/DevTools.user.md ../documentation/docs/User-Guide_Armbian-Software/DevTools.md
           rsync -avr docs/Software/HomeAutomation.user.md ../documentation/docs/User-Guide_Armbian-Software/HomeAutomation.md
+          rsync -avr docs/Software/DNS.user.md ../documentation/docs/User-Guide_Armbian-Software/DNS.md
           rsync -avr docs/Software/Monitoring.user.md ../documentation/docs/User-Guide_Armbian-Software/Monitoring.md
           rsync -avr docs/Software/Management.user.md ../documentation/docs/User-Guide_Armbian-Software/Management.md
           rsync -avr docs/Software/Media.user.md ../documentation/docs/User-Guide_Armbian-Software/Media.md
