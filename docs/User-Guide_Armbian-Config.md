@@ -11,7 +11,7 @@ Utility for configuring your board, adjusting services, and installing applicati
 
 To start the Armbian configuration utility, use the following command:
 ~~~
-sudo armbian-config
+armbian-config
 ~~~
 
 ## Adding new feature
