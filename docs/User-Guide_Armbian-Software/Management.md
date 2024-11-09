@@ -84,3 +84,34 @@ armbian-config --cmd MAN004
 
 ***
 
+## Webmin web-based management tool
+
+<!--- section image START from tools/include/images/MAN005.png --->
+[![Webmin web-based management tool](/images/MAN005.png)](#)
+<!--- section image STOP from tools/include/images/MAN005.png --->
+
+**Command:** 
+~~~
+armbian-config --cmd MAN005
+~~~
+
+**Author:** @Tearran
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/MAN005-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **10000**:
+
+    - URL: `https://<your.IP>:10000`
+    - Username/Password: your system login credentials
+
+
+<!--- footer STOP from tools/include/markdown/MAN005-footer.md --->
+
+
+
+***
+
