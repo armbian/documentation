@@ -70,7 +70,7 @@ software
 system
 ```
 
-``` bash title="File location: tools/modules/software/install_portainer.sh"
+``` bash title="File location: tools/template/module_software_template.sh"
 
 declare -A module_options
 module_options+=(
@@ -162,6 +162,7 @@ Examples:
 
 - <https://github.com/armbian/configng/pull/210>
 - <https://github.com/armbian/configng/pull/230>
+- <https://github.com/armbian/configng/pull/240>
 
 ### Documentation
 
