@@ -16,7 +16,7 @@ sudo armbian-config
 
 #### Manual install
 
-First try to install application manually. If it works on Debian or Ubuntu, proceed. In this example we will be using `Portainer`, which simplifies your Docker container management via web interface.
+First try to install application manually. If it works on Debian or Ubuntu, proceed. In this example we will be using `test`.
 
 #### Clone repository
 
@@ -27,26 +27,18 @@ git clone https://github.com/armbian/configng
 #### Design menu
 
 Predict which commands you expect to have in the menu. For installing an application, we usually need two, `install` and `uninstall`. Armbian-config stores menu in JSON files, so you need to select appropriate file.
-This one we will place under `Software -> Containers`.
+This one we will place under `Software -> Management`.
 
 ``` yaml title="File location: tools/json/config.software.json"
 {
-    "id": "CON004",
-    "description": "Install Portainer",
-    "prompt": "This operation will install Portainer.\nWould you like to continue?",
-    "command": ["module_portainer install"],
+    "id": "MAN005",
+    "description": "Webmin web-based management tool",
+    "command": [
+        "see_menu module_webmin"
+    ],
     "status": "Stable",
-    "author": "@armbian",
-    "condition": "! module_portainer status"
-},
-{
-    "id": "CON005",
-    "description": "Remove Portainer",
-    "prompt": "This operation will delete Portainer container.\nWould you like to continue?",
-    "command": ["module_portainer uninstall"],
-    "status": "Stable",
-    "author": "@armbian",
-    "condition": "module_portainer status"
+    "author": "@Tearran",
+    "condition": ""
 }
 ```
 
@@ -79,43 +71,50 @@ system
 ```
 
 ``` bash title="File location: tools/modules/software/install_portainer.sh"
-module_options+=(
-	["update_skel,author"]="@armbian"
-	["update_skel,ref_link"]=""
-	["update_skel,feature"]="module_portainer"
-	["update_skel,desc"]="Install/uninstall/check status of portainer container"
-	["update_skel,example"]="module_portainer install|uninstall|status"
-	["update_skel,status"]="Active"
-)
-#
-# Install portainer container
-#
-module_portainer() {
 
-	if check_if_installed docker-ce; then
-		local container=$(docker container ls -a | mawk '/portainer\/portainer(-ce)?( |$)/{print $1}')
-		local image=$(docker image ls -a | mawk '/portainer\/portainer(-ce)?( |$)/{print $3}')
-	fi
+declare -A module_options
+module_options+=(
+	["module_template,author"]="@armbian"
+	["module_template,feature"]="module_template"
+	["module_template,example"]="install remove help"
+	["module_template,desc"]="Example module unattended interface."
+	["module_template,status"]="review"
+)
+
+function module_template() {
+	local title="test"
+	local condition=$(which "$title" 2>/dev/null)
+
+	# Convert the example string to an array
+	local commands
+	IFS=' ' read -r -a commands <<< "${module_options["module_template,example"]}"
 
 	case "$1" in
-		install)
-			check_if_installed docker-ce || install_docker
-			docker volume ls -q | grep -xq 'portainer_data' || docker volume create portainer_data
-			docker run -d -p '9002:9000' --name=portainer --restart=always \
-			-v '/run/docker.sock:/var/run/docker.sock' \
-			-v '/etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro' \
-			-v 'portainer_data:/data' 'portainer/portainer-ce'
+		"${commands[0]}")
+		echo "Installing $title..."
+		# Installation logic here
 		;;
-		uninstall)
-			[[ "${container}" ]] && docker container rm -f "$container"
-			[[ "${image}" ]] && docker image rm "$image"
+		"${commands[1]}")
+		echo "Removing $title..."
+		# Removal logic here
 		;;
-		status)
-			[[ "${container}" ]] || [[ "${image}" ]] && return 0
+		"${commands[2]}")
+			echo -e "\nUsage: ${module_options["module_template,feature"]} <command>"
+			echo -e "Commands:  ${module_options["module_template,example"]}"
+			echo "Available commands:"
+			echo -e "\tinstall\t- Install $title."
+			echo -e "\tremove\t- Remove $title."
+			echo
+		;;
+		*)
+		${module_options["module_template,feature"]} ${commands[2]}
 		;;
 	esac
+	}
 
-}
+# uncomment to test the module
+#module_template "$1"
+
 ```
 
 !!! note
