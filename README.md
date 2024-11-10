@@ -23,7 +23,7 @@ Documentation edition goes in five simple steps.
 
 ### Offline
 
-Please reffer to [those instructions](/DOCUMENTATION.md)
+Please refer to [those instructions](/DOCUMENTATION.md)
 
 ### Tips 
 
