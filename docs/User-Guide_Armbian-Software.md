@@ -7,7 +7,7 @@
 
 To start the Armbian software section, use the following command:
 ~~~
-sudo armbian-config
+armbian-config
 ~~~
 
 ## Adding example
