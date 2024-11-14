@@ -2,23 +2,25 @@
 
 ## Requirements
 
-- x86_64 / aarch64 machine
-- at least 2GB of memory and ~35GB of disk space for VM, container or bare metal installation
-- Armbian / Ubuntu Jammy 22.04.x for native building or any Docker capable Linux for containerised
-- Windows 10/11 with WSL2 subsystem running Armbian / Ubuntu Jammy 22.04.x
+- x86_64 / aarch64 / riscv64 machine
+- at least 4GB of memory and ~50GB of disk space for VM, container or bare metal installation
+- **Armbian / Ubuntu Jammy 22.04.x** for native building or any Docker capable Linux for containerised
+- **Windows 10/11 with WSL2 subsystem** running Armbian / Ubuntu Jammy 22.04.x
 - Superuser rights (configured sudo or root access).
 - Make sure your system is up-to-date! Outdated Docker binaries, for example, can cause trouble
-- Install git (apt-get -y -qq install git)
 
-!!! danger
-    Make sure that full path to the build script **does not contain spaces**.
 
-Clone repository:
+## Clone repository
 
 ```bash
-git clone --depth=1 --branch=main https://github.com/armbian/build  
+git clone https://github.com/armbian/build
 cd build  
 ```
+!!! note
+    - Make sure that full path to the build script **does not contain spaces**
+    - For stable branch use `--branch=v24.11`
+
+
 ## Interactive
 
 Run framework:
@@ -27,23 +29,9 @@ Run framework:
 ./compile.sh
 ```
 
-``` mermaid
-graph LR
-  A[./compile.sh] --> B{Change<br>kernel<br>config};
-  B ---> |yes| C["HW"];
-  B ---> |no| C["HW"];
-  C ---> |branch| D["legacy<br>vendor<br>current<br>edge"];
-  D --> |base| E["Debian<br>Ubuntu"];
-  E ---> |type| F["CLI"];
-  F ---> |type| G["Server"];
-  F ---> |type| H["Minimal"];
-  E ---> I["Desktop"];
-  I ---> K["XFCE"];
-  I ---> L["Gnome"];
-  I ---> M["Cinammon"];
-  I ---> N["KDE Neon"];
-```
-Video instructions: <https://www.youtube.com/watch?v=kQcEFsXEJEE>
+??? info "Video"
+    <iframe width="939" height="529" src="https://www.youtube.com/embed/kQcEFsXEJEE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## CLI
 
