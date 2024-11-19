@@ -23,6 +23,10 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 - To ask for a value interactively, leave it unset or comment out the directive.  
 - For fully-unattended setup, specify all values  
 
+!!! caution
+    autoconfig will **blindly** apply network settings if provided, this can lead to broken networking.
+    If you are unsure, `PRESET_NET_CHANGE_DEFAULTS="0"` will use DHCP.
+
 | Configuration directive | `[default]` \| `option` | Description: |
 | :---------------------- | :-------------- | :----------- |
 | `PRESET_CONFIGURATION` |  `http://path/to/config/file` |  See [Loading a remote config](#loading-a-remote-config) |
