@@ -21,7 +21,13 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 
 - The directives in this file are specified using `key="value"` format.  
 - To ask for a value interactively, leave it unset or comment out the directive.  
-- For fully-unattended setup, specify all values  
+- For fully-unattended setup, specify all values.  
+
+!!! caution
+    No validation of this network config is performed, wrong settings will lead to broken network.  
+    Armbian supports [netplan.io](https://netplan.io), this is the preferred config method.  
+    See [netplan guides](https://netplan.readthedocs.io/en/stable/examples/) for various example configurations.  
+    Netplan config is stored in `/etc/netplan/`.  
 
 | Configuration directive | `[default]` \| `option` | Description: |
 | :---------------------- | :-------------- | :----------- |
