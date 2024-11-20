@@ -51,7 +51,7 @@ extra:
       link: https://twitter.com/armbian
 
 plugins:
-   - search
+  - search
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
