@@ -3,3 +3,4 @@ site/
 venv/
 .venv/
 *.pdf
+.DS_Store
