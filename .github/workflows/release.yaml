@@ -30,11 +30,12 @@ jobs:
         run: |
           mkdocs build --clean
 
-      - name: Upload pdf
-        uses: actions/upload-artifact@v4
-        with:
-          name: artifact
-          path: site/pdf/document.pdf
+      # - name: Upload pdf
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: artifact
+      #     path: site/pdf/document.pdf
+# PDF is not built, no need to upload
 
   deploy:
     needs: [ build ]
@@ -43,9 +44,9 @@ jobs:
       TZ: GMT
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: artifact
+      # - uses: actions/download-artifact@v4
+      #   with:
+      #     name: artifact
       # - name: Add
       #   run: |
       #     ls -l
