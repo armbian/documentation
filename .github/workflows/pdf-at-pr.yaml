@@ -5,6 +5,8 @@ on:
   pull_request:
     types: [opened, reopened, synchronize, labeled]
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   build:
