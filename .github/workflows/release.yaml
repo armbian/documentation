@@ -37,13 +37,13 @@ jobs:
       #     path: site/pdf/document.pdf
 # PDF is not built, no need to upload
 
-  deploy:
-    needs: [ build ]
-    runs-on: ubuntu-20.04
-    env:
-      TZ: GMT
-    steps:
-      - uses: actions/checkout@v4
+  #deploy:
+    #needs: [ build ]
+    #runs-on: ubuntu-20.04
+    #env:
+    #  TZ: GMT
+    #steps:
+     # - uses: actions/checkout@v4
       # - uses: actions/download-artifact@v4
       #   with:
       #     name: artifact
@@ -62,23 +62,23 @@ jobs:
       #   with:
       #     repo-token: ${{ secrets.GITHUB_TOKEN }}
       #     branch: ${{ github.ref }}
-      - name: Declare vars
-        id: vars
-        shell: bash
-        run: |
-          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-          echo "timenow=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-      - name: Rename release artifact
-        shell: bash
-        run: |
-          mv -v document.pdf armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.vars.outputs.sha_short }}
-          name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
-          draft: false
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
-          artifactContentType: application/pdf
+      #- name: Declare vars
+      #  id: vars
+      #  shell: bash
+      #  run: |
+      #    echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      #    echo "timenow=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      #- name: Rename release artifact
+      #  shell: bash
+      #  run: |
+      #    mv -v document.pdf armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
+      #- name: Create Release
+      #  uses: ncipollo/release-action@v1
+      #  with:
+      #    tag: ${{ steps.vars.outputs.sha_short }}
+      #    name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
+      #    draft: false
+      #    prerelease: false
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+      #    artifacts: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
+      #    artifactContentType: application/pdf
