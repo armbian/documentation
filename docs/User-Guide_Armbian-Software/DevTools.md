@@ -20,7 +20,7 @@ armbian-config --cmd DEV001
 ## Remove tools for cloning and managing repositories (git)
 **Command:** 
 ~~~
-armbian-config --cmd DEV001
+armbian-config --cmd DEV002
 ~~~
 
 **Author:** @armbian
