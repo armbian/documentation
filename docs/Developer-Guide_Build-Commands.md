@@ -65,6 +65,16 @@ Usage:
 ./compile.sh rewrite-uboot-patches BOARD=xxxx BRANCH=edge 
 ```
 
+### rewrite-kernel-patches
+
+Prepares git, applies patches to git, and rewrites them back from git
+same as kernel, it does git archeology for mbox-less patches, etc.
+
+Usage:
+```bash
+./compile.sh rewrite-kernel-patches BOARD=xxxx BRANCH=edge 
+```
+
 ### targets
 
 Generates output/info/git_sources.json file containing URL, branch, and commit hash combo.
