@@ -1,11 +1,21 @@
 # Armbian Software
 
-!!! warning teweew
 
-    Following instructions are valid for next generation of Armbian config utility which is due for integration in **Armbian v24.11**. Until then please follow this installation instructions to test it out:
-    <https://github.com/armbian/configng?tab=readme-ov-file#add--install-from-development-repository>
+``` mermaid
+flowchart LR
+  A[Software] ----> B["Containerlization"];
+  A[Software] ----> C["Desktops"];
+  A[Software] -----> D["DNS blockers"];
+  A[Software] -----> E["Home Automation"];
+  A[Software] ------> F["Monitoring"];
+  A[Software] ------> G["Development"];
+  A[Software] ------> J["Network tools"];
+  A[Software] ----------> H["Remote Management tools"];
+  A[Software] ----------> I["Media Servers"];
+```
 
-To start the Armbian software section, use the following command:
+
+To start the Armbian software section, use the following command and choose `software` section:
 ~~~
 armbian-config
 ~~~

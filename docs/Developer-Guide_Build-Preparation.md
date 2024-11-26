@@ -18,7 +18,36 @@ cd build
 ```
 !!! note
     - Make sure that full path to the build script **does not contain spaces**
-    - For stable branch use `--branch=v24.11`
+    - For stable branch use last point release `--branch=v24.11`
+
+
+    ``` mermaid
+    gitGraph
+       commit
+       commit
+       checkout main
+       commit id: "v24.08" tag: "v24.08"
+       branch v24.08
+       commit
+       commit
+       commit
+       commit
+       checkout main
+       commit id: "v24.11" tag: "v24.11"
+       branch v24.11
+       commit
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+       commit
+       commit
+       commit
+       commit
+       commit id: "main" type: REVERSE tag: "Trunk"
+    ```
 
 
 ## Interactive
