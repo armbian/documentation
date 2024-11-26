@@ -1,9 +1,13 @@
-!!! warning teweew
-
-    Following instructions are valid for next generation of Armbian config utility which is due for integration in **Armbian v24.11**. Until then please follow this installation instructions to test it out:
-    <https://github.com/armbian/configng?tab=readme-ov-file#add--install-from-development-repository>
-
 # Armbian Config
+
+``` mermaid
+flowchart LR
+  A[armbian-config] -----> B["System"];
+  A[armbian-config] -----> C["Network"];
+  A[armbian-config] -----> D["Localistation"];
+  A[armbian-config] -----> E["Software"];
+  A[armbian-config] -----> F["Help"];
+```
 
 <img src="https://raw.githubusercontent.com/armbian/configng/main/share/icons/hicolor/scalable/configng-tux.svg">
 
