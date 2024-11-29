@@ -98,7 +98,7 @@ Replace `SSID` with the name of the network you want to connect to and `wlan0` w
     ```sh
     iw dev | awk '$1=="Interface"{print $2}'
     ```
-    It is usually something like `wlan0`, `wlo1` or `wlx12334c47dec3`. If you get not response, it means your WiFi device / dongle is not supported by the kernel.
+    It is usually something like `wlan0`, `wlo1` or `wlx12334c47dec3`. If you get blank response, it means your WiFi device / dongle is not supported by the kernel.
 
 
 See also the [Netplan docs](https://netplan.readthedocs.io/en/latest/examples/#how-to-configure-your-computer-to-connect-to-your-home-wi-fi-network) for reference.
