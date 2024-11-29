@@ -60,9 +60,9 @@ armbian-config --cmd SY003
 armbian-config --cmd SY004
 ~~~
 
-**Author:** @Tearran
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
@@ -74,9 +74,9 @@ armbian-config --cmd SY004
 armbian-config --cmd SY005
 ~~~
 
-**Author:** @Tearran
+**Author:** @igorpecovnik
 
-**Status:** Preview
+**Status:** Stable
 
 
 
