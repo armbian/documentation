@@ -1865,7 +1865,7 @@ It is usually something like <code>eth0</code>, <code>enp4s3</code> or <code>lan
 <p>Use command:</p>
 <p><div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>iw<span class="w"> </span>dev<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$1==&quot;Interface&quot;{print $2}&#39;</span>
 </span></code></pre></div></td></tr></table></div>
-It is usually something like <code>wlan0</code>, <code>wlo1</code> or <code>wlx12334c47dec3</code>. If you get not response, it means your WiFi device / dongle is not supported by the kernel.</p>
+It is usually something like <code>wlan0</code>, <code>wlo1</code> or <code>wlx12334c47dec3</code>. If you get blank response, it means your WiFi device / dongle is not supported by the kernel.</p>
 </div>
 <p>See also the <a href="https://netplan.readthedocs.io/en/latest/examples/#how-to-configure-your-computer-to-connect-to-your-home-wi-fi-network">Netplan docs</a> for reference.</p>
 <h3 id="applying-your-configuration">Applying your configuration<a class="headerlink" href="#applying-your-configuration" title="Permanent link">&para;</a></h3>
