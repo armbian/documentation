@@ -9,6 +9,24 @@
 ***
 
 ### Add / change interface
+
+<!--- header START from tools/include/markdown/NE002-header.md --->
+``` mermaid
+graph LR
+  A[Network] --> B[Add / Change interface];
+  A[Network] --> O[Revert to defaults];
+  A[Network] --> P[Show configuration];
+  B ---->E[Wired];
+  B ---->F[Wireless];
+  E -->R[DHCP];
+  E -->T[Static];
+  E -->S[Spoof MAC];
+  F -->X[Station];
+  F -->W[Access point]; 
+```
+
+<!--- header STOP from tools/include/markdown/NE002-header.md --->
+
 **Command:** 
 ~~~
 armbian-config --cmd NE002
