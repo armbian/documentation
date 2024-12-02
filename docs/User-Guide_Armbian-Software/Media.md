@@ -67,3 +67,76 @@ armbian-config --cmd MED004
 
 ***
 
+## Stirling-PDF Install
+
+<!--- section image START from tools/include/images/MED010.png --->
+[![Stirling-PDF Install](/images/MED010.png)](#)
+<!--- section image STOP from tools/include/images/MED010.png --->
+
+
+<!--- header START from tools/include/markdown/MED010-header.md --->
+Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more. This locally hosted web application has evolved to encompass a comprehensive set of features, addressing all your PDF requirements.
+
+<!--- header STOP from tools/include/markdown/MED010-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd MED010
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/MED010-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8077**:
+
+    - URL: `https://<your.IP>:8077`
+
+=== "Directories"
+
+    - Install directory: `/armbian/stirling`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f stirling-pdf
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED010-footer.md --->
+
+
+
+***
+
+## Stirling-PDF Remove
+**Command:** 
+~~~
+armbian-config --cmd MED011
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Stirling-PDF Purge data folder
+**Command:** 
+~~~
+armbian-config --cmd MED012
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
