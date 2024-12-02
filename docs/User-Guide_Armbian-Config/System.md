@@ -413,3 +413,36 @@ armbian-config --cmd SY017
 
 ***
 
+## ZFS filesystem - enable support
+
+<!--- section image START from tools/include/images/SY018.png --->
+[![ZFS filesystem - enable support](/images/SY018.png)](#)
+<!--- section image STOP from tools/include/images/SY018.png --->
+
+**Command:** 
+~~~
+armbian-config --cmd SY018
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## ZFS filesystem - remove support
+**Command:** 
+~~~
+armbian-config --cmd SY019
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+

@@ -687,3 +687,56 @@ armbian-config --cmd DOW026
 
 ***
 
+## Jellyseerr install
+
+<!--- section image START from tools/include/images/DOW040.png --->
+[![Jellyseerr install](/images/DOW040.png)](#)
+<!--- section image STOP from tools/include/images/DOW040.png --->
+
+
+<!--- header START from tools/include/markdown/DOW040-header.md --->
+Jellyseerr is a free and open source software application for managing requests for your media library. It is a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
+
+<!--- header STOP from tools/include/markdown/DOW040-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd DOW040
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Jellyseerr remove 
+**Command:** 
+~~~
+armbian-config --cmd DOW041
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Jellyseerr purge data folder
+**Command:** 
+~~~
+armbian-config --cmd DOW042
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+

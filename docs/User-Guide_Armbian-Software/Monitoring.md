@@ -3,9 +3,7 @@
 
 ***
 
-## Install Uptime Kuma
-Uptime Kuma is an easy-to-use self-hosted monitoring tool.
-
+## Uptime Kuma install 
 **Command:** 
 ~~~
 armbian-config --cmd MON001
@@ -44,10 +42,77 @@ armbian-config --cmd MON001
 
 ***
 
-## Uninstall Uptime Kuma
+## Uptime Kuma remove
 **Command:** 
 ~~~
 armbian-config --cmd MON002
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Uptime Kuma purge data folder
+**Command:** 
+~~~
+armbian-config --cmd MON003
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Netdata Install
+
+<!--- section image START from tools/include/images/MON005.png --->
+[![Netdata Install](/images/MON005.png)](#)
+<!--- section image STOP from tools/include/images/MON005.png --->
+
+
+<!--- header START from tools/include/markdown/MON005-header.md --->
+Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
+
+<!--- header STOP from tools/include/markdown/MON005-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd MON005
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Netdata remove
+**Command:** 
+~~~
+armbian-config --cmd MON006
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Netdata purge data folder
+**Command:** 
+~~~
+armbian-config --cmd MON007
 ~~~
 
 **Author:** @igorpecovnik
