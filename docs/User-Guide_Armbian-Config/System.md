@@ -446,3 +446,17 @@ armbian-config --cmd SY019
 
 ***
 
+## Select Odroid board configuration
+**Command:** 
+~~~
+armbian-config --cmd SY020
+~~~
+
+**Author:** 
+
+**Status:** Preview
+
+
+
+***
+
