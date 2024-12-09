@@ -52,12 +52,12 @@ Each Armbian release will have the following version format:
 | 24.02 | Kereru | February | [done](https://armbian.atlassian.net/projects/AR/versions/10017/tab/release-report-all-issues)
 | 24.05 | Havier | May |  [done](https://armbian.atlassian.net/projects/AR/versions/10018/tab/release-report-all-issues)
 | 24.08 | Yelt | August | [done](https://armbian.atlassian.net/projects/AR/versions/10019/tab/release-report-all-issues)
-| 24.11 | Stirk | August | planned
-| 25.02 | Iiwi | August | planned
-| 25.05 | Caiman | August | planned
+| 24.11 | Stirk | November | planned
+| 25.02 | Iiwi | February | planned
+| 25.05 | Caiman | May | planned
 | 25.08 | Dunnart | August | planned
-| 25.11 | Brach | August | planned
-| 26.02 | Goa | August | planned
+| 25.11 | Brach | November | planned
+| 26.02 | Goa | February | planned
 
 
 
