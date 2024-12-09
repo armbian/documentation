@@ -3,12 +3,19 @@
 
 ***
 
-## Enable Armbian firmware upgrades
-This will enable Armbian kernel upgrades that are currently put on hold.
+## Alternative kernels, headers, rolling updates, overlays
+
+
+***
+
+### Install alternative kernels
+Switching between kernels might change functionality of your device. 
+
+It might fail to boot!
 
 **Command:** 
 ~~~
-armbian-config --cmd SY001
+armbian-config --cmd SY201
 ~~~
 
 **Author:** @igorpecovnik
@@ -19,12 +26,10 @@ armbian-config --cmd SY001
 
 ***
 
-## Disable Armbian kernel upgrades
-Disable Armbian kernel/firmware upgrades
-
+### Install Linux headers
 **Command:** 
 ~~~
-armbian-config --cmd SY002
+armbian-config --cmd SY204
 ~~~
 
 **Author:** @igorpecovnik
@@ -35,7 +40,49 @@ armbian-config --cmd SY002
 
 ***
 
-## Edit the boot environment
+### Remove Linux headers
+**Command:** 
+~~~
+armbian-config --cmd SY205
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Manage device tree overlays
+**Command:** 
+~~~
+armbian-config --cmd SY210
+~~~
+
+**Author:** @viraniac @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Select Odroid board configuration
+**Command:** 
+~~~
+armbian-config --cmd SY300
+~~~
+
+**Author:** 
+
+**Status:** Preview
+
+
+
+***
+
+### Edit the boot environment
 This will open /boot/armbianEnv.txt file to edit
 CTRL+S to save
 CTLR+X to exit
@@ -43,7 +90,7 @@ would you like to continue?
 
 **Command:** 
 ~~~
-armbian-config --cmd SY003
+armbian-config --cmd SY010
 ~~~
 
 **Author:** @igorpecovnik
@@ -54,38 +101,15 @@ armbian-config --cmd SY003
 
 ***
 
-## Install Linux headers
-**Command:** 
-~~~
-armbian-config --cmd SY004
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+## Install to internal media, ZFS, NFS, read-only rootfs
 
 
 ***
 
-## Remove Linux headers
+### Install to internal storage
 **Command:** 
 ~~~
-armbian-config --cmd SY005
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Install to internal storage
-**Command:** 
-~~~
-armbian-config --cmd SY006
+armbian-config --cmd SY001
 ~~~
 
 **Author:** @igorpecovnik
@@ -96,7 +120,111 @@ armbian-config --cmd SY006
 
 ***
 
-## Manage SSH login options
+### ZFS filesystem - enable support
+**Command:** 
+~~~
+armbian-config --cmd SY220
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### ZFS filesystem - remove support
+**Command:** 
+~~~
+armbian-config --cmd SY221
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Enable read only filesystem
+This will enable Armbian read-only filesystem. Reboot is mandatory?
+
+
+**Command:** 
+~~~
+armbian-config --cmd SY007
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Disable read only filesystem
+This will disable Armbian read-only filesystem. Reboot is mandatory?
+
+
+**Command:** 
+~~~
+armbian-config --cmd SY008
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Install network filesystem (NFS) daemon
+**Command:** 
+~~~
+armbian-config --cmd NFS01
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Configure network filesystem (NFS) daemon
+**Command:** 
+~~~
+armbian-config --cmd NFS02
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Remove network filesystem (NFS) daemon
+**Command:** 
+~~~
+armbian-config --cmd NFS03
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Manage SSH daemon options, enable 2FA
 
 
 ***
@@ -269,12 +397,17 @@ armbian-config --cmd SY112
 
 ***
 
-## Change shell system wide to BASH
+## Change shell, adjust MOTD
+
+
+***
+
+### Change shell system wide to BASH
 This will switch system wide shell to BASH
 
 **Command:** 
 ~~~
-armbian-config --cmd SY008
+armbian-config --cmd SY005
 ~~~
 
 **Author:** @igorpecovnik
@@ -285,9 +418,23 @@ armbian-config --cmd SY008
 
 ***
 
-## Change shell system wide to ZSH
+### Change shell system wide to ZSH
 This will switch system wide shell to ZSH
 
+**Command:** 
+~~~
+armbian-config --cmd SY006
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Adjust welcome screen (motd)
 **Command:** 
 ~~~
 armbian-config --cmd SY009
@@ -301,12 +448,51 @@ armbian-config --cmd SY009
 
 ***
 
-## Switch to rolling release
+## OS updates and distribution upgrades
+**Status:** Active
+
+
+
+***
+
+### Enable Armbian firmware upgrades
+This will enable Armbian kernel upgrades that are currently put on hold.
+
+**Command:** 
+~~~
+armbian-config --cmd SY202
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Disable Armbian kernel upgrades
+Disable Armbian kernel/firmware upgrades
+
+**Command:** 
+~~~
+armbian-config --cmd SY203
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Switch system to rolling packages repository
 This will switch OS to rolling releases.
 
 **Command:** 
 ~~~
-armbian-config --cmd SY010
+armbian-config --cmd SY206
 ~~~
 
 **Author:** @igorpecovnik
@@ -317,144 +503,17 @@ armbian-config --cmd SY010
 
 ***
 
-## Switch to stable release
+### Switch system to stable packages repository
 This will switch OS to stable releases
 
 **Command:** 
 ~~~
-armbian-config --cmd SY011
+armbian-config --cmd SY207
 ~~~
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
-
-
-
-***
-
-## Enable read only filesystem
-This will enable Armbian read-only filesystem. Reboot is mandatory?
-
-
-**Command:** 
-~~~
-armbian-config --cmd SY012
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Disable read only filesystem
-This will disable Armbian read-only filesystem. Reboot is mandatory?
-
-
-**Command:** 
-~~~
-armbian-config --cmd SY013
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Adjust welcome screen (motd)
-**Command:** 
-~~~
-armbian-config --cmd SY014
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Install alternative kernels
-Switching between kernels might change functionality of your device. 
-
-It might fail to boot!
-
-**Command:** 
-~~~
-armbian-config --cmd SY015
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## Manage device tree overlays
-**Command:** 
-~~~
-armbian-config --cmd SY017
-~~~
-
-**Author:** @viraniac @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-## ZFS filesystem - enable support
-
-<!--- section image START from tools/include/images/SY018.png --->
-[![ZFS filesystem - enable support](/images/SY018.png)](#)
-<!--- section image STOP from tools/include/images/SY018.png --->
-
-**Command:** 
-~~~
-armbian-config --cmd SY018
-~~~
-
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
-## ZFS filesystem - remove support
-**Command:** 
-~~~
-armbian-config --cmd SY019
-~~~
-
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
-## Select Odroid board configuration
-**Command:** 
-~~~
-armbian-config --cmd SY020
-~~~
-
-**Author:** 
-
-**Status:** Preview
 
 
 
