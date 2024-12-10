@@ -9,7 +9,7 @@
     - a proper power supply according to the board manufacturer requirements
     - a reliable SD card (see below "How to prepare a SD card?")
 
-## What to download?
+## What to download
 
 The download for each image consists of three separate files:
 
@@ -108,7 +108,7 @@ graph LR
 
     **Do not use** rollling or edge images in a productive environment. Their purpose is testing and providing constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
-## Preparing SD card?
+## Preparing SD card
 
 **Important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot -- 'Class 10' highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run in problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue checking with F3/H2testw directly after purchase is **highly recommended**.
 
@@ -129,11 +129,11 @@ We recommend at least A1 rated SD-Cards ([A2 rated cards need yet lacking driver
 
 In case you chose an SD card that was already in use before please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
 
-## How to boot?
+## How to boot
 
 Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.
 
-## How to login?
+## How to login
 
 First boot will log you automatically on HDMI or serial console while for SSH login you need to login as **root** and use password **1234**. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
 
@@ -194,7 +194,7 @@ In case you have no wired network connection and there is a wireless adaptor det
     Generating locales: sl_SI.UTF-8
     root@bananapim2pro:~#
 
-## How to install?
+## How to install
 
 ![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
 
@@ -223,9 +223,9 @@ Start the install script and follow the lead:
     * ext2,3,4
     * btrfs
 
-## How to update?
+## How to update
 
-### Armbian OS?
+### Armbian OS
 
     apt update
     apt upgrade
@@ -234,7 +234,7 @@ Start the install script and follow the lead:
 
 If the kernel was upgraded during this process you will be prompted to reboot at next login.
 
-### Boot loader?
+### Boot loader
 
 First you need to update all packages described in a previous step. Then run:
 
@@ -246,21 +246,21 @@ Select:
 
 Install/Update the bootloader on SD/eMMC
 
-## How to stay safe?
+## How to stay safe
 
 Armbian provides firmware package freeze to give you an option to upgrade all packages but firmware. This prevents unplesant surprises on functionality regressions that comes with kernel upgrades. To enable / disable this feature, look for `Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades` within [armbian-config](/User-Guide_Armbian-Config).
 
-## How to upgrade a distribution?
+## How to upgrade a distribution
 
 When a new userspace is out, we recommend to start with a fresh image. However, it is possible to upgrade, but the process is largerly in the domain of underlaying Debian or Ubuntu user space. However we provide experimental `Distribution upgrades` within [armbian-config](/User-Guide_Armbian-Config)
 
 !!! danger
     Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  
 
-## How to tune hardware?
+## How to tune hardware
 
 Hardware configuration is available within [armbian-config](User-Guide_Armbian-Config.md) utility.
 
-## How to report bugs?
+## How to report bugs
 
 Follow bug reporting form available [here](https://armbian.com/bugs/) and learn how to collect necessary information and where provide to put your report depending on type of issue. Reports lacking fundamental diagnostics are ignored.
