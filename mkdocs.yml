@@ -156,6 +156,7 @@ nav:
 
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
+        - 'Mirrors' : 'Mirrors.md'
         - 'Automation' : 'Process_CI.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
 
