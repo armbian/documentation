@@ -1,0 +1,83 @@
+name: "Pull mirrors from database"
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+
+  Build:
+    name: "Pull"
+    runs-on: ubuntu-24.04
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+
+      - name: Checkout main documentation
+        uses: actions/checkout@v4
+        with:
+          repository: 'armbian/documentation'
+          path: 'documentation'
+
+      - name: Make docs
+        run: |
+
+          #sudo apt-get -y install jq curl dnsutils
+
+          DOCUMENT="Mirrors.md"
+
+          echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" > ${DOCUMENT}
+          echo "|:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|" >> ${DOCUMENT}
+
+          # pull mirrors
+          JQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" -H "Accept: application/json; indent=4" "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror")
+          for i in $(echo $JQ | jq '.results[] | .id'); do
+              NAME=$(echo $JQ | jq ".results[] | select(.id == $i) | .name" | sed "s/\"//g")
+              SITE_ID=$(echo $JQ | jq ".results[] | select(.id == $i) | .site.id")
+              SITE_STATUS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .status.value")
+              SITE_TAGS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .tags[].slug" | xargs )
+              SITEQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" -H "Accept: application/json; indent=4" "${{ secrets.NETBOX_API }}/dcim/sites/?limit=500&name__empty=false&id=$SITE_ID")
+              SITE_NAME=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .name")
+              SITE_REGION=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .region.display")
+              SITE_TZ=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .time_zone")
+              SITE_LATITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .latitude")
+              SITE_LONGITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .longitude")
+              SITE_SPEED=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .custom_fields.download_speed")
+              IP=$(dig +short ${NAME} | tail -1)
+              SITE_FLAG=$(curl --max-time 5 -s http://ipwhois.app/json/${IP} | jq -r '.country_code')
+
+              [[ $SITE_STATUS == "decommissioning" ]] && continue
+
+              # if site is broken show different label
+              if [[ $SITE_STATUS != "active" ]]; then LABEL=":x:"; else LABEL=":white_check_mark:"; fi
+
+              if [[ "${SITE_TAGS}" == *"debs "* ]]; then FIELD1="$LABEL"; else FIELD1=""; fi
+              if [[ "${SITE_TAGS}" == *"images"* ]]; then FIELD2="$LABEL"; else FIELD2=""; fi
+              if [[ "${SITE_TAGS}" == *"archive"* ]]; then FIELD3="$LABEL"; else FIELD3=""; fi
+              if [[ "${SITE_TAGS}" == *"rsync"* ]]; then FIELD4="$LABEL"; else FIELD4=""; fi
+
+              echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | [![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE) | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> ${DOCUMENT}
+              sleep 1
+          done
+
+          cp $DOCUMENT documentation/docs/
+
+      - name: Create Pull Request to documentation
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: documentation
+          commit-message: '`Automatic` documentation update'
+          signoff: false
+          branch: auto-update-docs
+          delete-branch: true
+          title: '`Automatic` documentation update'
+          body: |
+            Generate documentation.
+
+          labels: |
+            Needs review
+          #assignees: igorpecovnik
+          #reviewers: Must be org collaborator
+          draft: false
