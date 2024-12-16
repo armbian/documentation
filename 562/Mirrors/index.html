@@ -12,13 +12,13 @@
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/Process_CI/">
+        <link rel="canonical" href="https://docs.armbian.com/Mirrors/">
       
       
-        <link rel="prev" href="../Mirrors/">
+        <link rel="prev" href="../Process_Contribute/">
       
       
-        <link rel="next" href="../User-Guide_Board-Support-Rules/">
+        <link rel="next" href="../Process_CI/">
       
       
       <link rel="icon" href="../images/logo.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Automation - Armbian Documentation</title>
+        <title>Mirrors - Armbian Documentation</title>
       
     
     
@@ -89,11 +89,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#automation-for-developers-and-maintainers" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -138,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automation
+              Mirrors
             
           </span>
         </div>
@@ -1529,27 +1524,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Mirrors/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mirrors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1559,21 +1533,30 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
   
   <span class="md-ellipsis">
-    Automation
+    Mirrors
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_CI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1582,320 +1565,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-build-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prepare build lists
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prepare build lists">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recommended-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recommended images
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build templates
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blacklisting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blacklisting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-standard-support-images-for-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prepare Standard Support images for release
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prepare Standard Support images for release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-open-workflow-and-click" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Open workflow and click
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-select-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Select board
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-run-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Run workflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aditional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aditional options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-application-images-for-release-release-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prepare application images for release (release manager)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prepare application images for release (release manager)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-open-workflow-and-click_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Open workflow and click
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-select-board_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Select board
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-run-workflow_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Run workflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aditional-options_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aditional options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repository-update-cronjobrelease-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repository update (cronjob/release manager)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Repository update (cronjob/release manager)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-open-workflow-and-click_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Open workflow and click
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-include-artifacts-from-generated-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Include artifacts from generated image(s)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-run-workflow_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Run workflow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-all-artifacts-cronjob" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build all artifacts (cronjob)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-rolling-release-images-cronjob" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build Rolling Release Images (cronjob)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#watchdog-cronjob" class="md-nav__link">
-    <span class="md-ellipsis">
-      Watchdog (cronjob)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smoke-tests-on-hardware-devices-release-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Smoke tests on hardware devices (release manager)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-pull-requests-labeler-pr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatic Pull Requests Labeler (PR)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#full-distro-test-builds-cronjobrelease-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Full distro test builds (cronjob/release manager)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-all-artifacts-adminpr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build all artifacts (admin/PR)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lint-on-shell-scripts-pr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lint on shell scripts (PR)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-tools-in-build-scripts-cronjobadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update tools in build scripts (cronjob/admin)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scorecards-security-scan-pr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scorecards security scan (PR)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kernel-hardening-analysis-pr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kernel hardening analysis (PR)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1944,7 +1613,7 @@
                   
 
   
-    <a href="https://github.com/armbian/documentation/edit/master/docs/Process_CI.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/edit/master/docs/Mirrors.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1953,210 +1622,501 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/master/docs/Process_CI.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/master/docs/Mirrors.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="automation-for-developers-and-maintainers">Automation for developers and maintainers<a class="headerlink" href="#automation-for-developers-and-maintainers" title="Permanent link">&para;</a></h1>
-<p>Core automation for generating images for release are held at <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/os" title="GitHub Repository: armbian/os">armbian/os</a></p>
-<h2 id="prepare-build-lists">Prepare build lists<a class="headerlink" href="#prepare-build-lists" title="Permanent link">&para;</a></h2>
-<h3 id="recommended-images">Recommended images<a class="headerlink" href="#recommended-images" title="Permanent link">&para;</a></h3>
-<p>Recommended images on download pages are defined via regular expression mapping file <code>exposed.map</code>:</p>
-<p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>bananapim7/archive/Armbian_[0-9].*Bananapim7_noble_vendor_[0-9]*.[0-9]*.[0-9]*_gnome-kisak_desktop.img.xz
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]*_minimal.img.xz
-</span></code></pre></div></td></tr></table></div>
-<p><img alt="Standard support images" src="../images/standard-support-images.png" /></p>
-<h3 id="build-templates">Build templates<a class="headerlink" href="#build-templates" title="Permanent link">&para;</a></h3>
-<p>They have definitions on what kind of images we want to build - for section or for one specific board:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-apps.template</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-community-maintained.template</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-nightly.template</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-release-standard-support.template</span>
-</span></code></pre></div></td></tr></table></div>
-<p>From those templates we are <a href="https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438">autogenerating</a> YAML files, which are passed to build matrix as input. Make sure to review generated YAML files if they have wanted build targets with correct exensions enabled.</p>
-<h3 id="blacklisting">Blacklisting<a class="headerlink" href="#blacklisting" title="Permanent link">&para;</a></h3>
-<p>Autogeneration is excluded for boards that are on blacklists:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-automation.blacklist</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="l l-Scalar l-Scalar-Plain">userpatches/targets-automation-nightly.blacklist</span>
-</span></code></pre></div></td></tr></table></div>
-<p>We do this if we are not happy with the automation outcomes and want to define build targets in the template.</p>
-<h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h3>
-<p>Each board variant can have additional extensions and they are defined in this file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>userpatches/targets-extensions.map
-</span></code></pre></div></td></tr></table></div>
-<p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS=&quot;image-output-oowow,v4l2loopback-dkms,mesa-vpu&quot;
-</span></code></pre></div></td></tr></table></div>
-<h2 id="prepare-standard-support-images-for-release">Prepare Standard Support images for release<a class="headerlink" href="#prepare-standard-support-images-for-release" title="Permanent link">&para;</a></h2>
-<details class="info" open="open">
-<summary>Info</summary>
-<p>Manual executing permissions are tied to <a href="/Process_Contribute/#release-manager">release manager role</a>.</p>
-</details>
-<p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml"><img alt="Build Standard Support Images" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg" /></a></p>
-<p>This build workflow is executed manually when making:</p>
-<ul>
-<li>a set of images for specific device</li>
-<li>a set of images for specific maintainer</li>
-<li>a full set of stable release images (default)</li>
-</ul>
-<p><strong>Notes</strong>:</p>
-<ul>
-<li>this process prepares images for release without pushing them to the download pages</li>
-<li>you can only generate images that are defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml">targets-release-standard-support.yaml</a> build lists!</li>
-<li>images generation workflows are compiled and are pretty much the same, just with different defaults</li>
-</ul>
-<h3 id="1-open-workflow-and-click">1. Open <a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml">workflow</a> and click<a class="headerlink" href="#1-open-workflow-and-click" title="Permanent link">&para;</a></h3>
-<p><img alt="Run Workflow" src="../images/run-workflow.png" /></p>
-<h3 id="2-select-board">2. Select board<a class="headerlink" href="#2-select-board" title="Permanent link">&para;</a></h3>
-<p><img alt="Workflow" src="../images/complete-artifact-matrix-standard-support.png" /></p>
-<p><strong>Bump version</strong>: Select if you want to trigger system wide version bump.
-<strong>Version override</strong>: Set version under which you want to release images.</p>
-<p>Images versions are stored in JSON files:
-- <a href="https://github.com/armbian/os/blob/main/stable.json">https://github.com/armbian/os/blob/main/stable.json</a>
-- <a href="https://github.com/armbian/os/blob/main/nightly.json">https://github.com/armbian/os/blob/main/nightly.json</a></p>
-<h3 id="3-run-workflow">3. Run workflow<a class="headerlink" href="#3-run-workflow" title="Permanent link">&para;</a></h3>
-<p><img alt="Build" src="../images/run-worflow-button.png" /></p>
-<p><strong>(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)</strong></p>
-<p>Generated images are uploaded to incoming folder <a href="https://rsync.armbian.com/incoming/">https://rsync.armbian.com/incoming/</a> under <strong>your GitHub username</strong> and once they are confirmed working, please notify <a href="https://github.com/igorpecovnik">@igorpecovnik</a> to move them to official download pages. Once images are moved to <a href="https://www.armbian.com/download/">main download section</a>, automation refreshes download pages index within 15-30 minutes.</p>
-<h3 id="aditional-options">Aditional options<a class="headerlink" href="#aditional-options" title="Permanent link">&para;</a></h3>
-<p>Generates stable images defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml">targets-release-standard-support.yaml</a>. </p>
-<p>We are generating several images for each download / hardware target. They are automatically sorted by sections:</p>
-<ul>
-<li>Desktop releases</li>
-<li>Server and IOT releases</li>
-<li>Dedicated applications</li>
-</ul>
-<p>Images generation can be customized:</p>
-<ul>
-<li>Framework build branch<ul>
-<li>main (make images from trunk)</li>
-<li>vXX.X (previous stable release)</li>
-</ul>
-</li>
-<li>Bump Version (system wide version bump)</li>
-<li>Version override (in case you don&rsquo;t want to use latest)</li>
-<li>Board (make images for one board only)</li>
-<li>Maintainer (make images for selected maintainer)</li>
-</ul>
-<h2 id="prepare-application-images-for-release-release-manager">Prepare application images for release (release manager)<a class="headerlink" href="#prepare-application-images-for-release-release-manager" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml"><img alt="Build Dedicated Application Images" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml/badge.svg" /></a></p>
-<p>This build workflow is executed manually when making:</p>
-<ul>
-<li>a set of application images for specific device</li>
-<li>a set of application images for specific maintainer</li>
-<li>a full set of application images (default)</li>
-</ul>
-<p><strong>Notes</strong>:</p>
-<ul>
-<li><strong>application images are released 10-15 minutes after build finishes succesfully</strong></li>
-<li>you can only generate images for applications that are defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml">targets-release-apps.yaml</a> build lists!</li>
-<li>images generation workflows are compiled and are pretty much the same, just with different defaults</li>
-</ul>
-<h3 id="1-open-workflow-and-click_1">1. Open <a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml">workflow</a> and click<a class="headerlink" href="#1-open-workflow-and-click_1" title="Permanent link">&para;</a></h3>
-<p><img alt="Run Workflow" src="../images/run-workflow.png" /></p>
-<h3 id="2-select-board_1">2. Select board<a class="headerlink" href="#2-select-board_1" title="Permanent link">&para;</a></h3>
-<p><img alt="Workflow" src="../images/complete-artifact-matrix-standard-support.png" /></p>
-<p><strong>Version override</strong>: Use this feature if you want to keep them under the same version, but not lower then <a href="https://docs.armbian.com/Release_Changelog/#changelog">last released</a>.</p>
-<h3 id="3-run-workflow_1">3. Run workflow<a class="headerlink" href="#3-run-workflow_1" title="Permanent link">&para;</a></h3>
-<p><img alt="Build" src="../images/run-worflow-button.png" /></p>
-<p><strong>(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)</strong></p>
-<p>Generated images are hosted at GitHub <a href="https://github.com/armbian/distribution/releases">https://github.com/armbian/distribution/releases</a> and released at once. Automation refreshes download pages within 15-30 minutes after/if workflow finished succesfully.</p>
-<p><img alt="Dedicated Application Images" src="../images/dedicated-applications.png" /></p>
-<h3 id="aditional-options_1">Aditional options<a class="headerlink" href="#aditional-options_1" title="Permanent link">&para;</a></h3>
-<p>Generates dedicated application images defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml">targets-release-apps.yaml</a>. This file is <a href="https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438">autogenerated</a> from <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.template">targets-release-apps.template</a>. (You always edit template)</p>
-<p>Images generation can be customized:</p>
-<ul>
-<li>framework build branch<ul>
-<li>main (make images from trunk)</li>
-<li>vXX.X (previous stable release)</li>
-</ul>
-</li>
-<li>Bump Version (system wide version bump)</li>
-<li>Version override (in case you don&rsquo;t want to use latest)</li>
-<li>board (make images only for one board)</li>
-<li>maintainer (make images for selected maintainer)</li>
-</ul>
-<h2 id="repository-update-cronjobrelease-manager">Repository update (cronjob/release manager)<a class="headerlink" href="#repository-update-cronjobrelease-manager" title="Permanent link">&para;</a></h2>
-<p>This pulls packages from build framework OCI cache located at GitHub and from <a href="https://github.com/armbian/os/wiki/Import-3rd-party-packages">various 3rd party repositories</a> such as Chrome, Chromium, Code, Discord, (latest) ZFS, Thunderbird, Zoom, &hellip; and pushes them to:</p>
-<ul>
-<li><code>apt.armbian.com</code> (only new packages are added)</li>
-<li><code>beta.armbian.com</code> (whole repository is recreated from scratch)</li>
-</ul>
-<h3 id="1-open-workflow-and-click_2">1. Open <a href="https://github.com/armbian/os/actions/workflows/repository-update.yml">workflow</a> and click<a class="headerlink" href="#1-open-workflow-and-click_2" title="Permanent link">&para;</a></h3>
-<p><img alt="Run Workflow" src="../images/run-workflow.png" /></p>
-<p>Action is executed automatically when artifact generations completes. Or manually.</p>
-<h3 id="2-include-artifacts-from-generated-images">2. Include <a href="https://netcup.armbian.com/partial/">artifacts from generated image(s)</a><a class="headerlink" href="#2-include-artifacts-from-generated-images" title="Permanent link">&para;</a></h3>
-<p>When
-- [ ] Add <a href="https://netcup.armbian.com/partial/">https://netcup.armbian.com/partial/</a> to stable repo</p>
-<p>is selected.</p>
-<h3 id="3-run-workflow_2">3. Run workflow<a class="headerlink" href="#3-run-workflow_2" title="Permanent link">&para;</a></h3>
-<p><img alt="Build" src="../images/run-worflow-button.png" /></p>
-<p><strong>(Workflow takes around 60 minutes to complete)</strong></p>
-<h2 id="build-all-artifacts-cronjob">Build all artifacts (cronjob)<a class="headerlink" href="#build-all-artifacts-cronjob" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml"><img alt="Build All Artifacts" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg" /></a></p>
-<p>Generates all build artifacts cache for targets defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml">targets-all-not-eos.yaml</a>. This build job runs <strong>every 8 hours</strong> and can also be run manually when needed. </p>
-<p>This build job <strong>needs to be successfully completed</strong> in order to proceed generating any OS images!</p>
-<h2 id="build-rolling-release-images-cronjob">Build Rolling Release Images (cronjob)<a class="headerlink" href="#build-rolling-release-images-cronjob" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml"><img alt="Build Nightly Images" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg" /></a></p>
-<p>Generates all nighly (Rolling Release) images defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml">targets-release-nightly.yaml</a>.  This file is <a href="https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438">autogenerated</a> from <a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.template">targets-release-nightly.template</a>. </p>
-<p>This build job runs every day at 9 a.m. UTC and can also be run manually when needed. Download pages are refreshed <a href="https://github.com/armbian/os/actions/workflows/webindex-update.yml">automatically</a> after successful build.</p>
-<p><img alt="Build" src="../images/rolling-releases.png" /></p>
-<h2 id="watchdog-cronjob">Watchdog (cronjob)<a class="headerlink" href="#watchdog-cronjob" title="Permanent link">&para;</a></h2>
-<p>Runs every 15 minutes and re-trigger <a href="https://github.com/armbian/os/blob/main/.github/workflows/watchdog.yml#L26">failed builds</a> six (6) times before finally gives out. This addresses various instabilities when building many artifacts on different hardware: </p>
-<ul>
-<li>network timeouts</li>
-<li>artifact download failure</li>
-<li>loop devices allocation failure</li>
-<li>runner running low on space</li>
-</ul>
-<h2 id="smoke-tests-on-hardware-devices-release-manager">Smoke tests on hardware devices (release manager)<a class="headerlink" href="#smoke-tests-on-hardware-devices-release-manager" title="Permanent link">&para;</a></h2>
-<p>Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is constructed of three steps:</p>
-<p><img alt="Smoke" src="../images/smoke-tests.png" /></p>
-<ul>
-<li>powering test equipment, consistent from several network switches, power supplies and dozens of hardware platforms</li>
-<li>running upgrade, reboot, repository switch, reboot, &hellip; tests in parallel</li>
-<li>uploading a test report as build artifact following by powering the devices off.</li>
-</ul>
-<h2 id="automatic-pull-requests-labeler-pr">Automatic Pull Requests Labeler (PR)<a class="headerlink" href="#automatic-pull-requests-labeler-pr" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/build/actions/workflows/labeler.yml"><img alt="Automatic Labeler" src="https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg" /></a></p>
-<p>Automatically label new pull request based on the paths of files which are being changed. Configuration file can be found in:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    .github/labeler.yml
-</code></pre></div></td></tr></table></div>
-<h2 id="full-distro-test-builds-cronjobrelease-manager">Full distro test builds (cronjob/release manager)<a class="headerlink" href="#full-distro-test-builds-cronjobrelease-manager" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml"><img alt="Build Nightly Images" src="https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml/badge.svg" /></a></p>
-<p>Generates all supported build combinations (minimal, cli, desktops) for x86 architecture to check package level changes inconsistency and dependencies.</p>
-<p>Options:</p>
-<ul>
-<li>Framework build branch<ul>
-<li><strong>main</strong></li>
-<li>testing_branch (string)</li>
-</ul>
-</li>
-</ul>
-<h2 id="build-all-artifacts-adminpr">Build all artifacts (admin/PR)<a class="headerlink" href="#build-all-artifacts-adminpr" title="Permanent link">&para;</a></h2>
-<p>Generates artifacts at Pull Requests code. Build starts when label of Pull Request is set to &ldquo;Build&rdquo;. Requires administration privileges.</p>
-<h2 id="lint-on-shell-scripts-pr">Lint on shell scripts (PR)<a class="headerlink" href="#lint-on-shell-scripts-pr" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml"><img alt="Lint On Shell Scripts" src="https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml/badge.svg" /></a></p>
-<p><img alt="Lint" src="../images/linterror.png" /></p>
-<p>Run <a href="https://github.com/koalaman/shellcheck">ShellCheck</a> on changed shell scripts and report problems within. Linting runs automatically on pull requests.</p>
-<h2 id="update-tools-in-build-scripts-cronjobadmin">Update tools in build scripts (cronjob/admin)<a class="headerlink" href="#update-tools-in-build-scripts-cronjobadmin" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/build/actions/workflows/update-tools.yml"><img alt="Update Tools in Scripts" src="https://github.com/armbian/build/actions/workflows/update-tools.yml/badge.svg" /></a></p>
-<p>Some of our scripts download tools from a repo. These cannot be bumped by Dependabot, so this workflow is a self-created Dependabot to bump versions of those tools to stay up-to-date. This workflow only creates a PR if the version was actually updated. To add a new tool, it just needs to be added to the matrix <a href="https://github.com/armbian/build/blob/main/.github/workflows/update-tools.yml">in the script</a> by filling out all the variables.</p>
-<h2 id="scorecards-security-scan-pr">Scorecards security scan (PR)<a class="headerlink" href="#scorecards-security-scan-pr" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/build/actions/workflows/scorecard.yml"><img alt="Scorecards Security Scan" src="https://github.com/armbian/build/actions/workflows/scorecard.yml/badge.svg" /></a></p>
-<p><a href="https://github.com/ossf/scorecard#what-is-scorecards">Scorecards</a> is an automated tool that assesses a number of important heuristics (&ldquo;checks&rdquo;) associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.</p>
-<h2 id="kernel-hardening-analysis-pr">Kernel hardening analysis (PR)<a class="headerlink" href="#kernel-hardening-analysis-pr" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml"><img alt="Kernel Hardening Analysis" src="https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml/badge.svg" /></a></p>
-<p>This <a href="https://github.com/a13xp0p0v/kconfig-hardened-check/blob/master/README.md">analysis</a> checks kernel configs and run if changed. There are plenty of security hardening options for the Linux kernel. A lot of them are not enabled by the major distros. We have to enable these options ourselves to make our systems more secure.</p>
+  <h1>Mirrors</h1>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Site</th>
+<th style="text-align: left;">Time Zone</th>
+<th>Flag</th>
+<th style="text-align: right;">Speed</th>
+<th style="text-align: center;">Packages</th>
+<th style="text-align: center;">Images</th>
+<th style="text-align: center;">Archive</th>
+<th style="text-align: center;">Rsync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.atomonetworks.com">Atomo Networks</a></td>
+<td style="text-align: left;">Europe/Rome</td>
+<td><a href="https://www.openstreetmap.org/search?lat=38.157745&amp;lon=13.195175"><img alt="Italy" src="https://flagsapi.com/IT/shiny/32.png" /></a></td>
+<td style="text-align: right;">2500&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.chi.auroradev.org">Auroradev Chicago</a></td>
+<td style="text-align: left;">America/Chicago</td>
+<td><a href="https://www.openstreetmap.org/search?lat=41.881832&amp;lon=-87.623177"><img alt="East coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.lv.auroradev.org">Auroradev Las Vegas</a></td>
+<td style="text-align: left;">America/Los_Angeles</td>
+<td><a href="https://www.openstreetmap.org/search?lat=36.18811&amp;lon=-115.176468"><img alt="West coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.nardol.ovh">Nardol</a></td>
+<td style="text-align: left;">Europe/Paris</td>
+<td><a href="https://www.openstreetmap.org/search?lat=48.8582&amp;lon=2.3387"><img alt="France" src="https://flagsapi.com/FR/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.systemonachip.net">Systemonachip</a></td>
+<td style="text-align: left;">Europe/Vienna</td>
+<td><a href="https://www.openstreetmap.org/search?lat=48.3003&amp;lon=16.3441"><img alt="Austria" src="https://flagsapi.com/AT/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://armbian.tnahosting.net">TNA Hosting</a></td>
+<td style="text-align: left;">America/New_York</td>
+<td><a href="https://www.openstreetmap.org/search?lat=42.112&amp;lon=-88.0353"><img alt="North America" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://au.mirrors.naho.moe">Naho.moe Australia</a></td>
+<td style="text-align: left;">Australia/Sydney</td>
+<td><a href="https://www.openstreetmap.org/search?lat=-33.8678&amp;lon=151.207"><img alt="Australia" src="https://flagsapi.com/AU/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://au.sbcmirror.org">SBC mirror Australia</a></td>
+<td style="text-align: left;">Australia/Sydney</td>
+<td><a href="https://www.openstreetmap.org/search?lat=-33.8715&amp;lon=151.2006"><img alt="Australia" src="https://flagsapi.com/AU/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://de.mirrors.naho.moe">Naho.moe Germany</a></td>
+<td style="text-align: left;">Europe/Berlin</td>
+<td><a href="https://www.openstreetmap.org/search?lat=49.4453&amp;lon=11.0222"><img alt="Germany" src="https://flagsapi.com/DE/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://es.sbcmirror.org">SBC mirror Spain</a></td>
+<td style="text-align: left;">Europe/Madrid</td>
+<td><a href="https://www.openstreetmap.org/search?lat=40.4163&amp;lon=-3.6934"><img alt="Spain" src="https://flagsapi.com/ES/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://fastmirror.pp.ua">Fastmirror.pp.ua</a></td>
+<td style="text-align: left;">Europe/Kiev</td>
+<td><a href="https://www.openstreetmap.org/search?lat=50.458&amp;lon=30.5303"><img alt="Ukraine" src="https://flagsapi.com/UA/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://fi.mirror.armbian.de">Hetzner Germany</a></td>
+<td style="text-align: left;">Europe/Berlin</td>
+<td><a href="https://www.openstreetmap.org/search?lat=51.2993&amp;lon=9.491"><img alt="Germany" src="https://flagsapi.com/FI/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://imola.armbian.com">Imola</a></td>
+<td style="text-align: left;">Europe/Ljubljana</td>
+<td><a href="https://www.openstreetmap.org/search?lat=46.081638&amp;lon=14.526054"><img alt="Slovenia" src="https://flagsapi.com/SI/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://in.mirrors.naho.moe">Naho.noe India</a></td>
+<td style="text-align: left;">Asia/Kolkata</td>
+<td><a href="https://www.openstreetmap.org/search?lat=19.0728&amp;lon=72.8826"><img alt="India" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://jp.mirrors.naho.moe">Naho.moe Japan</a></td>
+<td style="text-align: left;">Asia/Tokyo</td>
+<td><a href="https://www.openstreetmap.org/search?lat=35.6895&amp;lon=139.6923"><img alt="Japan" src="https://flagsapi.com/JP/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://kr.mirrors.naho.moe">Naho.moe Korea</a></td>
+<td style="text-align: left;">Asia/Seoul</td>
+<td><a href="https://www.openstreetmap.org/search?lat=37.499177&amp;lon=126.922828"><img alt="Korea" src="https://flagsapi.com/KR/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://k-space.ee.armbian.com">Kspace Estonia</a></td>
+<td style="text-align: left;">Europe/Tallinn</td>
+<td><a href="https://www.openstreetmap.org/search?lat=59.397987&amp;lon=24.661898"><img alt="Estonia" src="https://flagsapi.com/EE/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.albony.in">Albony</a></td>
+<td style="text-align: left;">Asia/Kolkata</td>
+<td><a href="https://www.openstreetmap.org/search?lat=null&amp;lon=null"><img alt="Dynamic" src="https://flagsapi.com/IN/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.dogmantech.com">SteeMan</a></td>
+<td style="text-align: left;">America/Chicago</td>
+<td><a href="https://www.openstreetmap.org/search?lat=42.9633&amp;lon=-85.6679"><img alt="Virginia" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror-eu-de1.armbian.airframes.io">Airframes Europe</a></td>
+<td style="text-align: left;">Europe/Berlin</td>
+<td><a href="https://www.openstreetmap.org/search?lat=49.405&amp;lon=11.1617"><img alt="Germany" src="https://flagsapi.com/DE/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.iscas.ac.cn">Intelligent Software Research Center</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=39.9075&amp;lon=116.3971"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.ossplanet.net">OSS Planet</a></td>
+<td style="text-align: left;">Asia/Taipei</td>
+<td><a href="https://www.openstreetmap.org/search?lat=24.0&amp;lon=121.0"><img alt="Taiwan" src="https://flagsapi.com/TW/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.aliyun.com">Alibaba Mirrors</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/RU/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.bfsu.edu.cn">Beijing Foreign Studies University</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=39.911&amp;lon=116.395"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.dotsrc.org">dotsrc.org</a></td>
+<td style="text-align: left;">Europe/Copenhagen</td>
+<td><a href="https://www.openstreetmap.org/search?lat=55.6802&amp;lon=12.5892"><img alt="Denmark" src="https://flagsapi.com/DK/shiny/32.png" /></a></td>
+<td style="text-align: right;">20000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.jevincanders.net">Jevin Canders LLC</a></td>
+<td style="text-align: left;">America/New_York</td>
+<td><a href="https://www.openstreetmap.org/search?lat=42.8868&amp;lon=-78.8787"><img alt="East coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.sjtu.edu.cn">Shanghai Jiao Tong University</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.nju.edu.cn">Nanjing University</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.shanghaitech.edu.cn">Shanghai Tech University</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.sustech.edu.cn">SUSTech</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=22.2767&amp;lon=113.5788"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.tuna.tsinghua.edu.cn">Tsinghua University</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.ustc.edu.cn">University of Science and Technology of China</a></td>
+<td style="text-align: left;">Asia/Shanghai</td>
+<td><a href="https://www.openstreetmap.org/search?lat=34.7732&amp;lon=113.722"><img alt="China" src="https://flagsapi.com/CN/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirrors.xtom.de">xTom</a></td>
+<td style="text-align: left;">Europe/Berlin</td>
+<td><a href="https://www.openstreetmap.org/search?lat=51.2215&amp;lon=6.7762"><img alt="Germany" src="https://flagsapi.com/DE/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror-us-phx1.armbian.airframes.io">Airframes Phoenix</a></td>
+<td style="text-align: left;">America/Phoenix</td>
+<td><a href="https://www.openstreetmap.org/search?lat=33.4413&amp;lon=-112.0421"><img alt="West coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror-us-sea1.armbian.airframes.io">Airframes Seattle</a></td>
+<td style="text-align: left;">America/Los_Angeles</td>
+<td><a href="https://www.openstreetmap.org/search?lat=47.6034&amp;lon=-122.3414"><img alt="West coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror-us-sea2.armbian.airframes.io">Airframes Seattle</a></td>
+<td style="text-align: left;">America/Los_Angeles</td>
+<td><a href="https://www.openstreetmap.org/search?lat=47.6034&amp;lon=-122.3414"><img alt="West coast" src="https://flagsapi.com/SI/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror-us-stl1.armbian.airframes.io">Airframes St Louis</a></td>
+<td style="text-align: left;">America/Chicago</td>
+<td><a href="https://www.openstreetmap.org/search?lat=38.6287&amp;lon=-90.1988"><img alt="East coast" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.vinehost.net/armbian">VineHost.NET</a></td>
+<td style="text-align: left;">Europe/London</td>
+<td><a href="https://www.openstreetmap.org/search?lat=54.1448&amp;lon=-0.1555"><img alt="United Kingdom" src="https://flagsapi.com/SI/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://mirror.yandex.ru/mirrors/armbian">Yandex</a></td>
+<td style="text-align: left;">Europe/Moscow</td>
+<td><a href="https://www.openstreetmap.org/search?lat=55.7483&amp;lon=37.6171"><img alt="Russia" src="https://flagsapi.com/SI/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://netcup.armbian.com">Netcup Germany</a></td>
+<td style="text-align: left;">Europe/Berlin</td>
+<td><a href="https://www.openstreetmap.org/search?lat=49.4478&amp;lon=11.0683"><img alt="Germany" src="https://flagsapi.com/DE/shiny/32.png" /></a></td>
+<td style="text-align: right;">2500&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://repo.jing.rocks">jing.rocks</a></td>
+<td style="text-align: left;">Asia/Tokyo</td>
+<td><a href="https://www.openstreetmap.org/search?lat=35.652832&amp;lon=139.839478"><img alt="Japan" src="https://flagsapi.com/JP/shiny/32.png" /></a></td>
+<td style="text-align: right;">10000&nbsp;Mbps</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://sg.mirrors.naho.moe">Naho.moe Singapore</a></td>
+<td style="text-align: left;">Asia/Singapore</td>
+<td><a href="https://www.openstreetmap.org/search?lat=1.29&amp;lon=103.8551"><img alt="Singapore" src="https://flagsapi.com/SG/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://sg.sbcmirror.org">SBC mirror Singapore</a></td>
+<td style="text-align: left;">Asia/Singapore</td>
+<td><a href="https://www.openstreetmap.org/search?lat=1.3673&amp;lon=103.8014"><img alt="Singapore" src="https://flagsapi.com/SG/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://stpete-mirror.armbian.com">JetHome</a></td>
+<td style="text-align: left;">Europe/Moscow</td>
+<td><a href="https://www.openstreetmap.org/search?lat=59.9417&amp;lon=30.3096"><img alt="Russia" src="https://flagsapi.com/RU/shiny/32.png" /></a></td>
+<td style="text-align: right;">2000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://uk.mirrors.naho.moe">Naho.moe UK</a></td>
+<td style="text-align: left;">Europe/London</td>
+<td><a href="https://www.openstreetmap.org/search?lat=51.5085&amp;lon=-0.1257"><img alt="United Kingdom" src="https://flagsapi.com/GB/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://wa.mirrors.naho.moe">Naho.noe USA west</a></td>
+<td style="text-align: left;">America/New_York</td>
+<td><a href="https://www.openstreetmap.org/search?lat=47.6062&amp;lon=-122.3321"><img alt="North America" src="https://flagsapi.com/US/shiny/32.png" /></a></td>
+<td style="text-align: right;">1000&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://xogium.performanceservers.nl">Xogium</a></td>
+<td style="text-align: left;">Europe/Paris</td>
+<td><a href="https://www.openstreetmap.org/search?lat=48.5144&amp;lon=-2.768"><img alt="France" src="https://flagsapi.com/NL/shiny/32.png" /></a></td>
+<td style="text-align: right;">500&nbsp;Mbps</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 
 
 
