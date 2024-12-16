@@ -52,7 +52,7 @@ jobs:
               # if site is broken show different label
               if [[ $SITE_STATUS != "active" ]]; then LABEL=":x:"; else LABEL=":white_check_mark:"; fi
 
-              if [[ "${SITE_TAGS}" == *"debs "* ]]; then FIELD1="$LABEL"; else FIELD1=""; fi
+              if [[ "${SITE_TAGS}" == *"debs"* ]]; then FIELD1="$LABEL"; else FIELD1=""; fi
               if [[ "${SITE_TAGS}" == *"images"* ]]; then FIELD2="$LABEL"; else FIELD2=""; fi
               if [[ "${SITE_TAGS}" == *"archive"* ]]; then FIELD3="$LABEL"; else FIELD3=""; fi
               if [[ "${SITE_TAGS}" == *"rsync"* ]]; then FIELD4="$LABEL"; else FIELD4=""; fi
