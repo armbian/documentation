@@ -1,3 +1,18 @@
+Space needs:
+
+| Mirror | Command | Size |
+|--------|---------|-----:|
+| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 540G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 162G |
+| Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.8T |
+| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
+
+1. Chose target and setup HTTP/HTTPS hostname
+2. Setup cron to sync every 2-4 hours
+3. [Inform us](https://www.armbian.com/contact/)
+
+## Current Mirrors
+
 | Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |
 |:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|
 | [Atomo Networks](https://armbian.atomonetworks.com) | Europe/Rome | [![Italy](https://flagsapi.com/IT/shiny/32.png)](https://www.openstreetmap.org/search?lat=38.157745&lon=13.195175) | 2500&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
