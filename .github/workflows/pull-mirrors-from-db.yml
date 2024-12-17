@@ -23,9 +23,25 @@ jobs:
       - name: Make docs
         run: |
 
-          #sudo apt-get -y install jq curl dnsutils
-
           DOCUMENT="Mirrors.md"
+          echo "## Mirroring Armbian?" > ${DOCUMENT}
+          echo "" >> ${DOCUMENT}
+          echo "Space needs:" > ${DOCUMENT}
+          echo "" >> ${DOCUMENT}
+          echo "| Mirror | Command | Size |" >> ${DOCUMENT}
+          echo "|--------|---------|-----:|" >> ${DOCUMENT}
+          for storage in dl apt archive oldarchive; do
+              size=$(curl -s https://rsync.armbian.com/$storage/size.txt)
+              echo "| Images | \`rsync -av rsync://rsync.armbian.com/$storage\` | $size |" >> ${DOCUMENT}
+          done
+          echo "
+          1. Chose target and setup HTTP/HTTPS hostname
+          2. Setup cron to sync every 2-4 hours
+          3. [Inform us](https://www.armbian.com/contact/)
+          " >> ${DOCUMENT}
+
+          echo "## Current Mirrors" > ${DOCUMENT}
+          echo "" >> ${DOCUMENT}
 
           echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" > ${DOCUMENT}
           echo "|:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|" >> ${DOCUMENT}
