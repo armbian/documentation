@@ -53,7 +53,7 @@ jobs:
           echo "## Current Mirrors" >> ${DOCUMENT}
           echo "" >> ${DOCUMENT}
 
-          echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" > ${DOCUMENT}
+          echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" >> ${DOCUMENT}
           echo "|:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|" >> ${DOCUMENT}
 
           # pull mirrors
