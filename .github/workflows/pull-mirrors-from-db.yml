@@ -64,7 +64,7 @@ jobs:
               SITE_STATUS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .status.value")
               SITE_TAGS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .tags[].slug" | xargs )
               SITEQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" -H "Accept: application/json; indent=4" "${{ secrets.NETBOX_API }}/dcim/sites/?limit=500&name__empty=false&id=$SITE_ID")
-              SITE_NAME=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .name")
+              SITE_NAME=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .name" | sed 's/ /\&nbsp;/g')
               SITE_REGION=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .region.display")
               SITE_TZ=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .time_zone")
               SITE_LATITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .latitude")
