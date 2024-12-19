@@ -3,7 +3,7 @@ Space needs:
 | Mirror | Command | Size |
 |--------|---------|-----:|
 | Current images | `rsync -av rsync://rsync.armbian.com/dl` | 540G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 162G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 166G |
 | Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.8T |
 | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
@@ -15,7 +15,7 @@ Space needs:
 
 | Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |
 |:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|
-| [Atomo&nbsp;Networks](https://armbian.atomonetworks.com) | Europe/Rome | [![Italy](https://flagsapi.com/IT/shiny/32.png)](https://www.openstreetmap.org/search?lat=38.157745&lon=13.195175) | 2500&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
+| [Atomo&nbsp;Networks](https://armbian.atomonetworks.com) | Europe/Rome | [![Italy](https://flagsapi.com/IT/shiny/32.png)](https://www.openstreetmap.org/search?lat=38.157745&lon=13.195175) | 2500&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Auroradev&nbsp;Chicago](https://armbian.chi.auroradev.org) | America/Chicago | [![East coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=41.881832&lon=-87.623177) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Auroradev&nbsp;Las&nbsp;Vegas](https://armbian.lv.auroradev.org) | America/Los_Angeles | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=36.18811&lon=-115.176468) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Nardol](https://armbian.nardol.ovh) | Europe/Paris | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.8582&lon=2.3387) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
@@ -35,6 +35,7 @@ Space needs:
 | [Albony](https://mirror.albony.in) | Asia/Kolkata | [![Dynamic](https://flagsapi.com/IN/shiny/32.png)](https://www.openstreetmap.org/search?lat=null&lon=null) | 1000&nbsp;Mbps | :white_check_mark: |  |  |  |
 | [SteeMan](https://mirror.dogmantech.com) | America/Chicago | [![Virginia](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=42.9633&lon=-85.6679) | 1000&nbsp;Mbps | :x: |  |  |  |
 | [Airframes&nbsp;Europe](https://mirror-eu-de1.armbian.airframes.io) | Europe/Berlin | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=49.405&lon=11.1617) | 1000&nbsp;Mbps | :x: | :x: |  |  |
+| [Hostiko](https://mirror.hostiko.network) | Europe/Kiev | [![Ukraine](https://flagsapi.com/UA/shiny/32.png)](https://www.openstreetmap.org/search?lat=50.4547&lon=30.5238) | 20000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [ISCAS](https://mirror.iscas.ac.cn) | Asia/Shanghai | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=39.9075&lon=116.3971) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [OSS&nbsp;Planet](https://mirror.ossplanet.net) | Asia/Taipei | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=24.0&lon=121.0) | 1000&nbsp;Mbps | :white_check_mark: |  |  |  |
 | [Alibaba&nbsp;Mirrors](https://mirrors.aliyun.com) | Asia/Shanghai | [![China](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
@@ -48,6 +49,7 @@ Space needs:
 | [Tsinghua&nbsp;University](https://mirrors.tuna.tsinghua.edu.cn) | Asia/Shanghai | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [USTC](https://mirrors.ustc.edu.cn) | Asia/Shanghai | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [xTom](https://mirrors.xtom.de) | Europe/Berlin | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=51.2215&lon=6.7762) | 10000&nbsp;Mbps | :white_check_mark: |  |  |  |
+| [Taiwan&nbsp;Digital&nbsp;Streaming&nbsp;Co.](https://mirror.twds.com.tw) | Asia/Taipei | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=25.0382&lon=121.5636) | 50000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Airframes&nbsp;Phoenix](https://mirror-us-phx1.armbian.airframes.io) | America/Phoenix | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=33.4413&lon=-112.0421) | 1000&nbsp;Mbps | :x: | :x: |  |  |
 | [Airframes&nbsp;Seattle](https://mirror-us-sea1.armbian.airframes.io) | America/Los_Angeles | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=47.6034&lon=-122.3414) | 1000&nbsp;Mbps | :x: | :x: |  |  |
 | [Airframes&nbsp;Seattle](https://mirror-us-sea2.armbian.airframes.io) | America/Los_Angeles | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=47.6034&lon=-122.3414) | 1000&nbsp;Mbps | :x: | :x: |  |  |
