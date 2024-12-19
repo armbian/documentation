@@ -3,7 +3,13 @@ Space needs:
 | Mirror | Command | Size |
 |--------|---------|-----:|
 | Current images | `rsync -av rsync://rsync.armbian.com/dl` | 540G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 166G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | <html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html> |
 | Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.8T |
 | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
@@ -49,7 +55,7 @@ Space needs:
 | [Tsinghua&nbsp;University](https://mirrors.tuna.tsinghua.edu.cn) | Asia/Shanghai | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [USTC](https://mirrors.ustc.edu.cn) | Asia/Shanghai | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [xTom](https://mirrors.xtom.de) | Europe/Berlin | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=51.2215&lon=6.7762) | 10000&nbsp;Mbps | :white_check_mark: |  |  |  |
-| [Taiwan&nbsp;Digital&nbsp;Streaming&nbsp;Co.](https://mirror.twds.com.tw) | Asia/Taipei | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=25.0382&lon=121.5636) | 50000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
+| [Digital&nbsp;Streaming&nbsp;Co.](https://mirror.twds.com.tw) | Asia/Taipei | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=25.0382&lon=121.5636) | 50000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Airframes&nbsp;Phoenix](https://mirror-us-phx1.armbian.airframes.io) | America/Phoenix | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=33.4413&lon=-112.0421) | 1000&nbsp;Mbps | :x: | :x: |  |  |
 | [Airframes&nbsp;Seattle](https://mirror-us-sea1.armbian.airframes.io) | America/Los_Angeles | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=47.6034&lon=-122.3414) | 1000&nbsp;Mbps | :x: | :x: |  |  |
 | [Airframes&nbsp;Seattle](https://mirror-us-sea2.armbian.airframes.io) | America/Los_Angeles | [![West coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=47.6034&lon=-122.3414) | 1000&nbsp;Mbps | :x: | :x: |  |  |
