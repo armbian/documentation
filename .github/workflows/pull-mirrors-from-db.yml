@@ -31,7 +31,7 @@ jobs:
           echo "| Mirror | Command | Size |" >> ${DOCUMENT}
           echo "|--------|---------|-----:|" >> ${DOCUMENT}
           for storage in dl apt archive oldarchive; do
-              size=$(curl -s https://rsync.armbian.com/$storage/size.txt)
+              size=$(curl --insecure -s https://rsync.armbian.com/$storage/size.txt)
               case "$storage" in
                   "dl")
                          TEXT="Current images";;
