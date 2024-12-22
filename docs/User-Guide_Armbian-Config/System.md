@@ -182,7 +182,7 @@ armbian-config --cmd SY008
 
 ***
 
-### Install network filesystem (NFS) daemon
+### Enable Network filesystem (NFS) support
 **Command:** 
 ~~~
 armbian-config --cmd NFS01
@@ -196,7 +196,7 @@ armbian-config --cmd NFS01
 
 ***
 
-### Configure network filesystem (NFS) daemon
+### Disable Network filesystem (NFS) support
 **Command:** 
 ~~~
 armbian-config --cmd NFS02
@@ -210,10 +210,76 @@ armbian-config --cmd NFS02
 
 ***
 
-### Remove network filesystem (NFS) daemon
+### Manage NFS Server
+
+
+***
+
+#### Enable network filesystem (NFS) daemon
 **Command:** 
 ~~~
-armbian-config --cmd NFS03
+armbian-config --cmd NFS06
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+#### Configure network filesystem (NFS) daemon
+**Command:** 
+~~~
+armbian-config --cmd NFS07
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+#### Remove network filesystem (NFS) daemon
+**Command:** 
+~~~
+armbian-config --cmd NFS08
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+#### Show network filesystem (NFS) daemon clients
+**Command:** 
+~~~
+armbian-config --cmd NFS09
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Manage NFS Client
+
+
+***
+
+#### Find NFS servers in subnet and mount shares
+**Command:** 
+~~~
+armbian-config --cmd NFS21
 ~~~
 
 **Author:** @igorpecovnik
