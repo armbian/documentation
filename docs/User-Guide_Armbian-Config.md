@@ -18,6 +18,6 @@ To start the Armbian configuration utility, use the following command:
 armbian-config
 ~~~
 
-## Adding new feature
+## Adding a new feature
 
-Please check example of [adding a new software title](/User-Guide_Armbian-Software/#adding-example). Principle is the same.
+Please check [instructions](/Contribute/Armbian-config/).

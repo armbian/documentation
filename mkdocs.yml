@@ -126,7 +126,7 @@ nav:
         - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
   - 'ARMBIAN SOFTWARE':
         - 'Overview': 'User-Guide_Armbian-Software.md'
-        - 'Web hosting': 'WebHosting.md'
+        - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
         - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
         - 'Database': 'User-Guide_Armbian-Software/Database.md'        
@@ -157,6 +157,7 @@ nav:
 
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
+        - 'Armbian config': 'Contribute/Armbian-config.md'
         - 'Mirrors' : 'Mirrors.md'
         - 'Automation' : 'Process_CI.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
