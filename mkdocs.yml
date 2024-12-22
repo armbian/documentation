@@ -126,6 +126,7 @@ nav:
         - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
   - 'ARMBIAN SOFTWARE':
         - 'Overview': 'User-Guide_Armbian-Software.md'
+        - 'Web hosting': 'WebHosting.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
         - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
         - 'Database': 'User-Guide_Armbian-Software/Database.md'        
