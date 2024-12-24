@@ -1,4 +1,4 @@
-# Web hosting
+# Web server, LEMP, reverse proxy, Let's Encrypt SSL
 **Status:** Stable
 
 
@@ -62,7 +62,7 @@ armbian-config --cmd SWAG02
 
 ***
 
-## SWAG reverse proxy remove
+## SWAG remove
 **Command:** 
 ~~~
 armbian-config --cmd SWAG03
@@ -76,7 +76,7 @@ armbian-config --cmd SWAG03
 
 ***
 
-## SWAG reverse proxy purge data folder
+## SWAG purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd SWAG04

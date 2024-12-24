@@ -1,12 +1,12 @@
-# Containerlization and Virtual Machines
+# Docker containerization and KVM virtual machines
 
 
 ***
 
-## Install Docker Minimal
+## Docker Minimal Install
 
 <!--- section image START from tools/include/images/CON001.webp --->
-[![Install Docker Minimal](/images/CON001.webp)](#)
+[![Docker Minimal Install](/images/CON001.webp)](#)
 <!--- section image STOP from tools/include/images/CON001.webp --->
 
 This operation will install Docker Minimal.
@@ -30,7 +30,7 @@ What is Docker? Docker helps developers build, share, run, and verify applicatio
 
 ***
 
-## Install Docker Engine
+## Docker Engine Install
 This operation will install Docker Engine.
 
 **Command:** 
@@ -46,7 +46,7 @@ armbian-config --cmd CON002
 
 ***
 
-## Remove Docker
+## Docker Remove
 This operation will purge Docker.
 
 **Command:** 
@@ -62,7 +62,7 @@ armbian-config --cmd CON003
 
 ***
 
-## Purge all Docker images, containers, and volumes
+## Docker Purge all images, containers, and volumes
 This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
@@ -78,10 +78,10 @@ armbian-config --cmd CON004
 
 ***
 
-## Install Portainer
+## Portainer container management platform
 
 <!--- section image START from tools/include/images/CON005.webp --->
-[![Install Portainer](/images/CON005.webp)](#)
+[![Portainer container management platform](/images/CON005.webp)](#)
 <!--- section image STOP from tools/include/images/CON005.webp --->
 
 
@@ -113,7 +113,7 @@ armbian-config --cmd CON005
 
 ***
 
-## Remove Portainer
+## Portainer remove
 **Command:** 
 ~~~
 armbian-config --cmd CON006
@@ -127,10 +127,10 @@ armbian-config --cmd CON006
 
 ***
 
-## Watchtower install
+## Portainer purge with with data folder
 
 <!--- section image START from tools/include/images/CON007.png --->
-[![Watchtower install](/images/CON007.png)](#)
+[![Portainer purge with with data folder](/images/CON007.png)](#)
 <!--- section image STOP from tools/include/images/CON007.png --->
 
 
@@ -153,20 +153,6 @@ armbian-config --cmd CON007
 Every day watchtower will pull the latest images and compare it to the one that was used to run the certain container. If it sees that the image has changed it will stop/remove containers and then restart it using the new image and the same docker run options that were used to start the container initially.
 
 <!--- footer STOP from tools/include/markdown/CON007-footer.md --->
-
-
-
-***
-
-## Watchtower remove
-**Command:** 
-~~~
-armbian-config --cmd CON008
-~~~
-
-**Author:** @armbian
-
-**Status:** Stable
 
 
 

@@ -1,12 +1,12 @@
-# DNS blockers
+# Network-wide ad blockers servers
 
 
 ***
 
-## Install Pi-hole DNS ad blocker
+## Pi-hole DNS ad blocker install
 
 <!--- section image START from tools/include/images/DNS001.png --->
-[![Install Pi-hole DNS ad blocker](/images/DNS001.png)](#)
+[![Pi-hole DNS ad blocker install](/images/DNS001.png)](#)
 <!--- section image STOP from tools/include/images/DNS001.png --->
 
 
@@ -44,7 +44,21 @@ armbian-config --cmd DNS001
 
 ***
 
-## Set Pi-hole web admin password
+## Pi-hole remove
+**Command:** 
+~~~
+armbian-config --cmd DNS003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Pi-hole change web admin password
 **Command:** 
 ~~~
 armbian-config --cmd DNS002
@@ -58,10 +72,10 @@ armbian-config --cmd DNS002
 
 ***
 
-## Remove Pi-hole DNS ad blocker
+## Pi-hole purge
 **Command:** 
 ~~~
-armbian-config --cmd DNS003
+armbian-config --cmd DNS004
 ~~~
 
 **Author:** @armbian

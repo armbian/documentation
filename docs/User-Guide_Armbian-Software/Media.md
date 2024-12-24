@@ -1,41 +1,20 @@
-# Media Servers and Editors
+# Media servers, organizers and editors
 
 
 ***
 
-## Install Plex Media server
-This operation will install Plex Media server.
+## Emby organizes video, music, live TV, and photos
 
-**Command:** 
-~~~
-armbian-config --cmd MED001
-~~~
-
-**Author:** @schwar3kat
-
-**Status:** Stable
+<!--- section image START from tools/include/images/MED003.png --->
+[![Emby organizes video, music, live TV, and photos](/images/MED003.png)](#)
+<!--- section image STOP from tools/include/images/MED003.png --->
 
 
+<!--- header START from tools/include/markdown/MED003-header.md --->
+Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.
 
-***
+<!--- header STOP from tools/include/markdown/MED003-header.md --->
 
-## Remove Plex Media server
-This operation will purge Plex Media server.
-
-**Command:** 
-~~~
-armbian-config --cmd MED002
-~~~
-
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
-## Install Emby server
 This operation will install Emby server.
 
 **Command:** 
@@ -48,11 +27,33 @@ armbian-config --cmd MED003
 **Status:** Stable
 
 
+<!--- footer START from tools/include/markdown/MED003-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
+
+    - URL: `https://<your.IP>:8096`
+
+=== "Directories"
+
+    - Install directory: `/armbian/emby`
+    - Site configuration directory: `/armbian/emby/config`
+    - Data directory: `/armbian/emby/tvshows` `/armbian/emby/movies`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f emby
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED003-footer.md --->
+
+
 
 ***
 
-## Remove Emby server
-This operation will purge Emby server.
+## Emby server remove
+This operation will remove Emby server
 
 **Command:** 
 ~~~
@@ -67,10 +68,24 @@ armbian-config --cmd MED004
 
 ***
 
-## Stirling-PDF Install
+## Emby server purge with data folder
+**Command:** 
+~~~
+armbian-config --cmd MED005
+~~~
+
+**Author:** @schwar3kat
+
+**Status:** Stable
+
+
+
+***
+
+## Stirling PDF tools for viewing and editing PDF files
 
 <!--- section image START from tools/include/images/MED010.png --->
-[![Stirling-PDF Install](/images/MED010.png)](#)
+[![Stirling PDF tools for viewing and editing PDF files](/images/MED010.png)](#)
 <!--- section image STOP from tools/include/images/MED010.png --->
 
 
@@ -78,6 +93,8 @@ armbian-config --cmd MED004
 Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more. This locally hosted web application has evolved to encompass a comprehensive set of features, addressing all your PDF requirements.
 
 <!--- header STOP from tools/include/markdown/MED010-header.md --->
+
+This operation will install Stirling-PDF tools.
 
 **Command:** 
 ~~~
@@ -112,7 +129,9 @@ armbian-config --cmd MED010
 
 ***
 
-## Stirling-PDF Remove
+## Stirling PDF remove
+This operation will remove Stirling-PDF tools.
+
 **Command:** 
 ~~~
 armbian-config --cmd MED011
@@ -126,7 +145,9 @@ armbian-config --cmd MED011
 
 ***
 
-## Stirling-PDF Purge data folder
+## Stirling PDF purge with data folder
+This operation will purge Stirling-PDF tools with data folder.
+
 **Command:** 
 ~~~
 armbian-config --cmd MED012
@@ -140,10 +161,10 @@ armbian-config --cmd MED012
 
 ***
 
-## Syncthing Install
+## Syncthing continuous file synchronization
 
 <!--- section image START from tools/include/images/MED015.png --->
-[![Syncthing Install](/images/MED015.png)](#)
+[![Syncthing continuous file synchronization](/images/MED015.png)](#)
 <!--- section image STOP from tools/include/images/MED015.png --->
 
 
@@ -188,7 +209,7 @@ armbian-config --cmd MED015
 
 ***
 
-## Syncthing Remove
+## Syncthing remove
 **Command:** 
 ~~~
 armbian-config --cmd MED016
@@ -202,7 +223,7 @@ armbian-config --cmd MED016
 
 ***
 
-## Syncthing Purge data folder
+## Syncthing purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd MED017
@@ -216,10 +237,10 @@ armbian-config --cmd MED017
 
 ***
 
-## Nextcloud Install
+## Nextcloud content collaboration platform
 
 <!--- section image START from tools/include/images/MED020.png --->
-[![Nextcloud Install](/images/MED020.png)](#)
+[![Nextcloud content collaboration platform](/images/MED020.png)](#)
 <!--- section image STOP from tools/include/images/MED020.png --->
 
 
@@ -266,7 +287,7 @@ armbian-config --cmd MED020
 
 ***
 
-## Nextcloud Remove
+## Nextcloud remove
 **Command:** 
 ~~~
 armbian-config --cmd MED021
@@ -280,7 +301,7 @@ armbian-config --cmd MED021
 
 ***
 
-## Nextcloud Purge data folder
+## Nextcloud purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd MED022
@@ -294,7 +315,7 @@ armbian-config --cmd MED022
 
 ***
 
-## Owncloud Install
+## Owncloud share files and folders, easy and secure
 **Command:** 
 ~~~
 armbian-config --cmd MED025
@@ -308,7 +329,7 @@ armbian-config --cmd MED025
 
 ***
 
-## Owncloud Remove
+## Owncloud remove
 **Command:** 
 ~~~
 armbian-config --cmd MED026
@@ -322,7 +343,7 @@ armbian-config --cmd MED026
 
 ***
 
-## Owncloud Purge data folder
+## Owncloud purge with data folder
 
 <!--- header START from tools/include/markdown/MED027-header.md --->
 ownCloud is a free and open-source software project for content collaboration and sharing and syncing of files in distributed and federated enterprise scenarios.

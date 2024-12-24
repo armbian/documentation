@@ -585,3 +585,31 @@ armbian-config --cmd SY207
 
 ***
 
+### Enable automating Docker container base images updating
+**Command:** 
+~~~
+armbian-config --cmd WTC001
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Disable automating Docker container base images updating
+**Command:** 
+~~~
+armbian-config --cmd WTC002
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
