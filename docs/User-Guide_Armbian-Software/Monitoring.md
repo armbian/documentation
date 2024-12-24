@@ -1,9 +1,11 @@
-# Monitoring
+# Real-time monitoring, collecting metrics, up-time status
 
 
 ***
 
-## Uptime Kuma install 
+## Uptime Kuma self-hosted monitoring tool
+This operation will install Uptime Kuma
+
 **Command:** 
 ~~~
 armbian-config --cmd MON001
@@ -43,6 +45,8 @@ armbian-config --cmd MON001
 ***
 
 ## Uptime Kuma remove
+This operation will remove Uptime Kuma
+
 **Command:** 
 ~~~
 armbian-config --cmd MON002
@@ -56,7 +60,9 @@ armbian-config --cmd MON002
 
 ***
 
-## Uptime Kuma purge data folder
+## Uptime Kuma purge with data folder
+This operation will remove Uptime Kuma with data folder
+
 **Command:** 
 ~~~
 armbian-config --cmd MON003
@@ -70,10 +76,10 @@ armbian-config --cmd MON003
 
 ***
 
-## Netdata Install
+## Netdata - monitoring real-time metrics
 
 <!--- section image START from tools/include/images/MON005.png --->
-[![Netdata Install](/images/MON005.png)](#)
+[![Netdata - monitoring real-time metrics](/images/MON005.png)](#)
 <!--- section image STOP from tools/include/images/MON005.png --->
 
 
@@ -81,6 +87,8 @@ armbian-config --cmd MON003
 Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
 
 <!--- header STOP from tools/include/markdown/MON005-header.md --->
+
+This operation will install Netdata
 
 **Command:** 
 ~~~
@@ -96,6 +104,8 @@ armbian-config --cmd MON005
 ***
 
 ## Netdata remove
+This operation will remove Netdata
+
 **Command:** 
 ~~~
 armbian-config --cmd MON006
@@ -109,7 +119,9 @@ armbian-config --cmd MON006
 
 ***
 
-## Netdata purge data folder
+## Netdata purge with data folder
+This operation will purge Netdata with data folder
+
 **Command:** 
 ~~~
 armbian-config --cmd MON007

@@ -1,9 +1,9 @@
-# Network tools
+# Console network tools for measuring load and bandwidth
 
 
 ***
 
-## Install realtime console network usage monitor (nload)
+## nload -realtime console network usage monitor
 **Command:** 
 ~~~
 armbian-config --cmd NET001
@@ -17,7 +17,7 @@ armbian-config --cmd NET001
 
 ***
 
-## Remove realtime console network usage monitor (nload)
+## nload - remove
 **Command:** 
 ~~~
 armbian-config --cmd NET002
@@ -31,7 +31,7 @@ armbian-config --cmd NET002
 
 ***
 
-## Install bandwidth measuring tool (iperf3)
+## iperf3 bandwidth measuring tool
 **Command:** 
 ~~~
 armbian-config --cmd NET003
@@ -45,7 +45,7 @@ armbian-config --cmd NET003
 
 ***
 
-## Remove bandwidth measuring tool (iperf3)
+## iperf3 remove
 **Command:** 
 ~~~
 armbian-config --cmd NET004
@@ -59,7 +59,7 @@ armbian-config --cmd NET004
 
 ***
 
-## Install IP LAN monitor (iptraf-ng)
+## iptraf-ng IP LAN monitor
 **Command:** 
 ~~~
 armbian-config --cmd NET005
@@ -73,7 +73,7 @@ armbian-config --cmd NET005
 
 ***
 
-## Remove IP LAN monitor (iptraf-ng)
+## iptraf-ng remove
 **Command:** 
 ~~~
 armbian-config --cmd NET006
@@ -87,7 +87,7 @@ armbian-config --cmd NET006
 
 ***
 
-## Install hostname broadcast via mDNS (avahi-daemon)
+## avahi-daemon hostname broadcast via mDNS
 **Command:** 
 ~~~
 armbian-config --cmd NET007
@@ -101,7 +101,7 @@ armbian-config --cmd NET007
 
 ***
 
-## Remove hostname broadcast via mDNS (avahi-daemon)
+## avahi-daemon remove
 **Command:** 
 ~~~
 armbian-config --cmd NET008

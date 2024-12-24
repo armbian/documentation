@@ -1,12 +1,12 @@
-# Download tools
+# P2P download managers for movies, TV shows, music and subtitles
 
 
 ***
 
-## Install qBittorrent
+## qBittorrent BitTorrent server 
 
 <!--- section image START from tools/include/images/DOW001.png --->
-[![Install qBittorrent](/images/DOW001.png)](#)
+[![qBittorrent BitTorrent server ](/images/DOW001.png)](#)
 <!--- section image STOP from tools/include/images/DOW001.png --->
 
 
@@ -14,6 +14,8 @@
 The Qbittorrent⁠ project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
 <!--- header STOP from tools/include/markdown/DOW001-header.md --->
+
+This operation will install qBittorrent BitTorrent server
 
 **Command:** 
 ~~~
@@ -51,7 +53,9 @@ armbian-config --cmd DOW001
 
 ***
 
-## Remove qBittorrent
+## qBittorrent remove
+This operation will remove qBittorrent BitTorrent server
+
 **Command:** 
 ~~~
 armbian-config --cmd DOW002
@@ -65,17 +69,8 @@ armbian-config --cmd DOW002
 
 ***
 
-## Install Deluge
-
-<!--- section image START from tools/include/images/DOW003.png --->
-[![Install Deluge](/images/DOW003.png)](#)
-<!--- section image STOP from tools/include/images/DOW003.png --->
-
-
-<!--- header START from tools/include/markdown/DOW003-header.md --->
-Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
-
-<!--- header STOP from tools/include/markdown/DOW003-header.md --->
+## qBittorrent purge with data folder
+This operation will remove qBittorrent BitTorrent data folder
 
 **Command:** 
 ~~~
@@ -87,7 +82,34 @@ armbian-config --cmd DOW003
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW003-footer.md --->
+
+***
+
+## Deluge BitTorrent server
+
+<!--- section image START from tools/include/images/DEL001.png --->
+[![Deluge BitTorrent server](/images/DEL001.png)](#)
+<!--- section image STOP from tools/include/images/DEL001.png --->
+
+
+<!--- header START from tools/include/markdown/DEL001-header.md --->
+Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
+
+<!--- header STOP from tools/include/markdown/DEL001-header.md --->
+
+This operation will install BitTorrent server
+
+**Command:** 
+~~~
+armbian-config --cmd DEL001
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/DEL001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8112**:
@@ -107,16 +129,18 @@ armbian-config --cmd DOW003
     docker logs -f deluge
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW003-footer.md --->
+<!--- footer STOP from tools/include/markdown/DEL001-footer.md --->
 
 
 
 ***
 
-## Remove Deluge
+## Deluge remove
+This operation will remove Deluge BitTorrent server
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW004
+armbian-config --cmd DEL002
 ~~~
 
 **Author:** @armbian
@@ -127,21 +151,39 @@ armbian-config --cmd DOW004
 
 ***
 
-## Install Transmission
+## Deluge purge with data folder
+This operation will remove Deluge BitTorrent server data folder
 
-<!--- section image START from tools/include/images/DOW005.png --->
-[![Install Transmission](/images/DOW005.png)](#)
-<!--- section image STOP from tools/include/images/DOW005.png --->
+**Command:** 
+~~~
+armbian-config --cmd DEL003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW005-header.md --->
+
+***
+
+## Transmission BitTorrent server
+
+<!--- section image START from tools/include/images/TRA001.png --->
+[![Transmission BitTorrent server](/images/TRA001.png)](#)
+<!--- section image STOP from tools/include/images/TRA001.png --->
+
+
+<!--- header START from tools/include/markdown/TRA001-header.md --->
 Transmission⁠ is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
 
-<!--- header STOP from tools/include/markdown/DOW005-header.md --->
+<!--- header STOP from tools/include/markdown/TRA001-header.md --->
+
+This operation will install Transmission BitTorrent server
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW005
+armbian-config --cmd TRA001
 ~~~
 
 **Author:** @armbian
@@ -149,7 +191,7 @@ armbian-config --cmd DOW005
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW005-footer.md --->
+<!--- footer START from tools/include/markdown/TRA001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **9091**:
@@ -170,16 +212,18 @@ armbian-config --cmd DOW005
     docker logs -f transmission
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW005-footer.md --->
+<!--- footer STOP from tools/include/markdown/TRA001-footer.md --->
 
 
 
 ***
 
-## Remove Transmission
+## Transmission remove
+This operation will remove Transmission BitTorrent server
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW006
+armbian-config --cmd TRA002
 ~~~
 
 **Author:** @armbian
@@ -190,21 +234,39 @@ armbian-config --cmd DOW006
 
 ***
 
-## Install SABnzbd
+## Transmission purge with data folder
+This operation will remove Transmission BitTorrent server data folder
 
-<!--- section image START from tools/include/images/DOW011.png --->
-[![Install SABnzbd](/images/DOW011.png)](#)
-<!--- section image STOP from tools/include/images/DOW011.png --->
+**Command:** 
+~~~
+armbian-config --cmd TRA003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW011-header.md --->
+
+***
+
+## SABnzbd newsgroup downloader
+
+<!--- section image START from tools/include/images/SABN01.png --->
+[![SABnzbd newsgroup downloader](/images/SABN01.png)](#)
+<!--- section image STOP from tools/include/images/SABN01.png --->
+
+
+<!--- header START from tools/include/markdown/SABN01-header.md --->
 Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
 
-<!--- header STOP from tools/include/markdown/DOW011-header.md --->
+<!--- header STOP from tools/include/markdown/SABN01-header.md --->
+
+This operation will install SABnzbd newsgroup downloader
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW011
+armbian-config --cmd SABN01
 ~~~
 
 **Author:** @armbian
@@ -212,7 +274,7 @@ armbian-config --cmd DOW011
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW011-footer.md --->
+<!--- footer START from tools/include/markdown/SABN01-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8080**:
@@ -233,16 +295,18 @@ armbian-config --cmd DOW011
     docker logs -f sabnzbd
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW011-footer.md --->
+<!--- footer STOP from tools/include/markdown/SABN01-footer.md --->
 
 
 
 ***
 
-## Remove SABnzbd
+## SABnzbd remove
+This operation will remove SABnzbd newsgroup downloader
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW012
+armbian-config --cmd SABN02
 ~~~
 
 **Author:** @armbian
@@ -253,21 +317,34 @@ armbian-config --cmd DOW012
 
 ***
 
-## Install Medusa
+## SABnzbd purge with data folder
+This operation will purge SABnzbd newsgroup data folder
 
-<!--- section image START from tools/include/images/DOW013.png --->
-[![Install Medusa](/images/DOW013.png)](#)
-<!--- section image STOP from tools/include/images/DOW013.png --->
+**Command:** 
+~~~
+armbian-config --cmd SABN03
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW013-header.md --->
+
+***
+
+## Medusa automatic downloader for TV shows
+
+<!--- header START from tools/include/markdown/MDS001-header.md --->
 Medusa is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
 
-<!--- header STOP from tools/include/markdown/DOW013-header.md --->
+<!--- header STOP from tools/include/markdown/MDS001-header.md --->
+
+This operation will install Medusa TV shows downloader
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW013
+armbian-config --cmd MDS001
 ~~~
 
 **Author:** @armbian
@@ -275,7 +352,7 @@ armbian-config --cmd DOW013
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW013-footer.md --->
+<!--- footer START from tools/include/markdown/MDS001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8081**:
@@ -295,16 +372,18 @@ armbian-config --cmd DOW013
     docker logs -f medusa
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW013-footer.md --->
+<!--- footer STOP from tools/include/markdown/MDS001-footer.md --->
 
 
 
 ***
 
-## Remove Medusa
+## Medusa TV shows downloader remove
+This operation will remove Medusa TV shows downloader
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW014
+armbian-config --cmd MDS002
 ~~~
 
 **Author:** @armbian
@@ -315,21 +394,39 @@ armbian-config --cmd DOW014
 
 ***
 
-## Install Sonarr
+## Medusa TV shows downloader purge
+This operation will purge Medusa TV shows data folder
 
-<!--- section image START from tools/include/images/DOW015.png --->
-[![Install Sonarr](/images/DOW015.png)](#)
-<!--- section image STOP from tools/include/images/DOW015.png --->
+**Command:** 
+~~~
+armbian-config --cmd MDS003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW015-header.md --->
+
+***
+
+## Sonarr automatic downloader for TV shows
+
+<!--- section image START from tools/include/images/SON001.png --->
+[![Sonarr automatic downloader for TV shows](/images/SON001.png)](#)
+<!--- section image STOP from tools/include/images/SON001.png --->
+
+
+<!--- header START from tools/include/markdown/SON001-header.md --->
 Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
-<!--- header STOP from tools/include/markdown/DOW015-header.md --->
+<!--- header STOP from tools/include/markdown/SON001-header.md --->
+
+This operation will install Sonarr PVR for Usenet and BitTorrent
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW015
+armbian-config --cmd SON001
 ~~~
 
 **Author:** @armbian
@@ -337,7 +434,7 @@ armbian-config --cmd DOW015
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW015-footer.md --->
+<!--- footer START from tools/include/markdown/SON001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8989**:
@@ -357,16 +454,18 @@ armbian-config --cmd DOW015
     docker logs -f sonarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW015-footer.md --->
+<!--- footer STOP from tools/include/markdown/SON001-footer.md --->
 
 
 
 ***
 
-## Remove Sonarr
+## Sonarr remove
+This operation will remove Sonarr PVR for Usenet and BitTorrent
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW016
+armbian-config --cmd SON002
 ~~~
 
 **Author:** @armbian
@@ -377,21 +476,39 @@ armbian-config --cmd DOW016
 
 ***
 
-## Install Radarr
+## Sonarr purge with data folder
+This operation will purge Sonarr PVR for Usenet and BitTorrent purge data folder
 
-<!--- section image START from tools/include/images/DOW017.png --->
-[![Install Radarr](/images/DOW017.png)](#)
-<!--- section image STOP from tools/include/images/DOW017.png --->
+**Command:** 
+~~~
+armbian-config --cmd SON003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW017-header.md --->
+
+***
+
+## Radarr automatic downloader for movies
+
+<!--- section image START from tools/include/images/RAD001.png --->
+[![Radarr automatic downloader for movies](/images/RAD001.png)](#)
+<!--- section image STOP from tools/include/images/RAD001.png --->
+
+
+<!--- header START from tools/include/markdown/RAD001-header.md --->
 Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
-<!--- header STOP from tools/include/markdown/DOW017-header.md --->
+<!--- header STOP from tools/include/markdown/RAD001-header.md --->
+
+This operation will install Radarr movie collection manager
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW017
+armbian-config --cmd RAD001
 ~~~
 
 **Author:** @armbian
@@ -399,7 +516,7 @@ armbian-config --cmd DOW017
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW017-footer.md --->
+<!--- footer START from tools/include/markdown/RAD001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **7878**:
@@ -420,16 +537,18 @@ armbian-config --cmd DOW017
     docker logs -f radarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW017-footer.md --->
+<!--- footer STOP from tools/include/markdown/RAD001-footer.md --->
 
 
 
 ***
 
-## Remove Radarr
+## Radarr remove
+This operation will remove Radarr movie collection manager
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW018
+armbian-config --cmd RAD002
 ~~~
 
 **Author:** @armbian
@@ -440,21 +559,39 @@ armbian-config --cmd DOW018
 
 ***
 
-## Install Bazarr
+## Radarr purge with data folder
+This operation will purge Radarr movie collection manager data folder
 
-<!--- section image START from tools/include/images/DOW019.png --->
-[![Install Bazarr](/images/DOW019.png)](#)
-<!--- section image STOP from tools/include/images/DOW019.png --->
+**Command:** 
+~~~
+armbian-config --cmd RAD003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW019-header.md --->
+
+***
+
+## Bazarr automatic subtitles downloader for Sonarr and Radarr
+
+<!--- section image START from tools/include/images/BAZ001.png --->
+[![Bazarr automatic subtitles downloader for Sonarr and Radarr](/images/BAZ001.png)](#)
+<!--- section image STOP from tools/include/images/BAZ001.png --->
+
+
+<!--- header START from tools/include/markdown/BAZ001-header.md --->
 Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.
 
-<!--- header STOP from tools/include/markdown/DOW019-header.md --->
+<!--- header STOP from tools/include/markdown/BAZ001-header.md --->
+
+This operation will install Bazarr subtitles manager for Sonarr and Radarr
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW019
+armbian-config --cmd BAZ001
 ~~~
 
 **Author:** @armbian
@@ -462,7 +599,7 @@ armbian-config --cmd DOW019
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW019-footer.md --->
+<!--- footer START from tools/include/markdown/BAZ001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **6767**:
@@ -482,16 +619,18 @@ armbian-config --cmd DOW019
     docker logs -f bazarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW019-footer.md --->
+<!--- footer STOP from tools/include/markdown/BAZ001-footer.md --->
 
 
 
 ***
 
-## Remove Bazarr
+## Bazarr remove
+This operation will remove Bazarr subtitles manager for Sonarr and Radarr
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW020
+armbian-config --cmd BAZ002
 ~~~
 
 **Author:** @armbian
@@ -502,21 +641,39 @@ armbian-config --cmd DOW020
 
 ***
 
-## Install Lidarr
+## Bazarr purge with data folder
+This operation will purge Bazarr subtitles manager with data folder
 
-<!--- section image START from tools/include/images/DOW021.png --->
-[![Install Lidarr](/images/DOW021.png)](#)
-<!--- section image STOP from tools/include/images/DOW021.png --->
+**Command:** 
+~~~
+armbian-config --cmd BAZ003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW021-header.md --->
+
+***
+
+## Lidarr automatic music downloader
+
+<!--- section image START from tools/include/images/LID001.png --->
+[![Lidarr automatic music downloader](/images/LID001.png)](#)
+<!--- section image STOP from tools/include/images/LID001.png --->
+
+
+<!--- header START from tools/include/markdown/LID001-header.md --->
 Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
-<!--- header STOP from tools/include/markdown/DOW021-header.md --->
+<!--- header STOP from tools/include/markdown/LID001-header.md --->
+
+This operation will install Lidarr music collection manager for Usenet and BitTorrent users
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW021
+armbian-config --cmd LID001
 ~~~
 
 **Author:** @armbian
@@ -524,7 +681,7 @@ armbian-config --cmd DOW021
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW021-footer.md --->
+<!--- footer START from tools/include/markdown/LID001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8686**:
@@ -544,16 +701,18 @@ armbian-config --cmd DOW021
     docker logs -f lidarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW021-footer.md --->
+<!--- footer STOP from tools/include/markdown/LID001-footer.md --->
 
 
 
 ***
 
-## Remove Lidarr
+## Lidarr remove
+This operation will remove Lidarr
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW022
+armbian-config --cmd LID002
 ~~~
 
 **Author:** @armbian
@@ -564,21 +723,39 @@ armbian-config --cmd DOW022
 
 ***
 
-## Install Readarr
+## Lidarr purge with data folder
+This operation will purge Lidarr with data folder
 
-<!--- section image START from tools/include/images/DOW023.png --->
-[![Install Readarr](/images/DOW023.png)](#)
-<!--- section image STOP from tools/include/images/DOW023.png --->
+**Command:** 
+~~~
+armbian-config --cmd LID003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW023-header.md --->
+
+***
+
+## Readarr automatic downloader for Ebooks
+
+<!--- section image START from tools/include/images/RDR001.png --->
+[![Readarr automatic downloader for Ebooks](/images/RDR001.png)](#)
+<!--- section image STOP from tools/include/images/RDR001.png --->
+
+
+<!--- header START from tools/include/markdown/RDR001-header.md --->
 Readarr - Book Manager and Automation (Sonarr for Ebooks)
 
-<!--- header STOP from tools/include/markdown/DOW023-header.md --->
+<!--- header STOP from tools/include/markdown/RDR001-header.md --->
+
+This operation will install Readarr
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW023
+armbian-config --cmd RDR001
 ~~~
 
 **Author:** @armbian
@@ -586,7 +763,7 @@ armbian-config --cmd DOW023
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DOW023-footer.md --->
+<!--- footer START from tools/include/markdown/RDR001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8787**:
@@ -606,16 +783,18 @@ armbian-config --cmd DOW023
     docker logs -f readarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW023-footer.md --->
+<!--- footer STOP from tools/include/markdown/RDR001-footer.md --->
 
 
 
 ***
 
-## Remove Readarr
+## Readarr remove
+This operation will remove Readarr
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW024
+armbian-config --cmd RDR002
 ~~~
 
 **Author:** @armbian
@@ -626,10 +805,26 @@ armbian-config --cmd DOW024
 
 ***
 
-## Install Prowlarr
+## Readarr purge with data folder
+This operation will purge Readarr with data folder
+
+**Command:** 
+~~~
+armbian-config --cmd RDR003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Prowlarr index manager and proxy for PVR
 
 <!--- section image START from tools/include/images/DOW025.png --->
-[![Install Prowlarr](/images/DOW025.png)](#)
+[![Prowlarr index manager and proxy for PVR](/images/DOW025.png)](#)
 <!--- section image STOP from tools/include/images/DOW025.png --->
 
 
@@ -637,6 +832,8 @@ armbian-config --cmd DOW024
 Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
 <!--- header STOP from tools/include/markdown/DOW025-header.md --->
+
+This operation will install Prowlarr
 
 **Command:** 
 ~~~
@@ -673,7 +870,9 @@ armbian-config --cmd DOW025
 
 ***
 
-## Remove Prowlarr
+## Prowlarr remove
+This operation will remove Prowlarr
+
 **Command:** 
 ~~~
 armbian-config --cmd DOW026
@@ -687,21 +886,39 @@ armbian-config --cmd DOW026
 
 ***
 
-## Jellyseerr install
+## Prowlarr purge with data folder
+This operation will purge Prowlarr with data folder
 
-<!--- section image START from tools/include/images/DOW040.png --->
-[![Jellyseerr install](/images/DOW040.png)](#)
-<!--- section image STOP from tools/include/images/DOW040.png --->
+**Command:** 
+~~~
+armbian-config --cmd DOW027
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
 
 
-<!--- header START from tools/include/markdown/DOW040-header.md --->
+
+***
+
+## Jellyseerr Jellyfin/Emby/Plex integration install
+
+<!--- section image START from tools/include/images/JEL001.png --->
+[![Jellyseerr Jellyfin/Emby/Plex integration install](/images/JEL001.png)](#)
+<!--- section image STOP from tools/include/images/JEL001.png --->
+
+
+<!--- header START from tools/include/markdown/JEL001-header.md --->
 Jellyseerr is a free and open source software application for managing requests for your media library. It is a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
 
-<!--- header STOP from tools/include/markdown/DOW040-header.md --->
+<!--- header STOP from tools/include/markdown/JEL001-header.md --->
+
+This operation will install Jellyseerr
 
 **Command:** 
 ~~~
-armbian-config --cmd DOW040
+armbian-config --cmd JEL001
 ~~~
 
 **Author:** @armbian
@@ -712,10 +929,12 @@ armbian-config --cmd DOW040
 
 ***
 
-## Jellyseerr remove 
+## Jellyseerr remove
+This operation will remove Jellyseerr
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW041
+armbian-config --cmd JEL002
 ~~~
 
 **Author:** @armbian
@@ -726,10 +945,12 @@ armbian-config --cmd DOW041
 
 ***
 
-## Jellyseerr purge data folder
+## Jellyseerr purge with data folder
+This operation will purge Jellyseerr with data folder
+
 **Command:** 
 ~~~
-armbian-config --cmd DOW042
+armbian-config --cmd JEL003
 ~~~
 
 **Author:** @armbian
