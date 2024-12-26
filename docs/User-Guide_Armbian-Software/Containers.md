@@ -3,10 +3,10 @@
 
 ***
 
-## Docker Minimal Install
+## Docker minimal
 
 <!--- section image START from tools/include/images/CON001.webp --->
-[![Docker Minimal Install](/images/CON001.webp)](#)
+[![Docker minimal](/images/CON001.webp)](#)
 <!--- section image STOP from tools/include/images/CON001.webp --->
 
 This operation will install Docker Minimal.
@@ -30,7 +30,7 @@ What is Docker? Docker helps developers build, share, run, and verify applicatio
 
 ***
 
-## Docker Engine Install
+## Docker engine
 This operation will install Docker Engine.
 
 **Command:** 
@@ -46,7 +46,7 @@ armbian-config --cmd CON002
 
 ***
 
-## Docker Remove
+## Docker remove
 This operation will purge Docker.
 
 **Command:** 
@@ -62,7 +62,7 @@ armbian-config --cmd CON003
 
 ***
 
-## Docker Purge all images, containers, and volumes
+## Docker purge with all images, containers, and volumes
 This operation will delete all Docker images, containers, and volumes.
 
 **Command:** 
@@ -128,17 +128,6 @@ armbian-config --cmd CON006
 ***
 
 ## Portainer purge with with data folder
-
-<!--- section image START from tools/include/images/CON007.png --->
-[![Portainer purge with with data folder](/images/CON007.png)](#)
-<!--- section image STOP from tools/include/images/CON007.png --->
-
-
-<!--- header START from tools/include/markdown/CON007-header.md --->
-Watchtower is an application that will monitor your running Docker containers and watch for changes to the images that those containers were originally started from. If watchtower detects that an image has changed, it will automatically restart the container using the new image.
-
-<!--- header STOP from tools/include/markdown/CON007-header.md --->
-
 **Command:** 
 ~~~
 armbian-config --cmd CON007
@@ -147,12 +136,6 @@ armbian-config --cmd CON007
 **Author:** @armbian
 
 **Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/CON007-footer.md --->
-Every day watchtower will pull the latest images and compare it to the one that was used to run the certain container. If it sees that the image has changed it will stop/remove containers and then restart it using the new image and the same docker run options that were used to start the container initially.
-
-<!--- footer STOP from tools/include/markdown/CON007-footer.md --->
 
 
 

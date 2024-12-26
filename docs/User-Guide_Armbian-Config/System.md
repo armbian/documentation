@@ -586,6 +586,17 @@ armbian-config --cmd SY207
 ***
 
 ### Enable automating Docker container base images updating
+
+<!--- section image START from tools/include/images/WTC001.png --->
+[![Enable automating Docker container base images updating](/images/WTC001.png)](#)
+<!--- section image STOP from tools/include/images/WTC001.png --->
+
+
+<!--- header START from tools/include/markdown/WTC001-header.md --->
+Watchtower is an application that will monitor your running Docker containers and watch for changes to the images that those containers were originally started from. If watchtower detects that an image has changed, it will automatically restart the container using the new image.
+
+<!--- header STOP from tools/include/markdown/WTC001-header.md --->
+
 **Command:** 
 ~~~
 armbian-config --cmd WTC001
@@ -594,6 +605,12 @@ armbian-config --cmd WTC001
 **Author:** @armbian
 
 **Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/WTC001-footer.md --->
+Every day watchtower will pull the latest images and compare it to the one that was used to run the certain container. If it sees that the image has changed it will stop/remove containers and then restart it using the new image and the same docker run options that were used to start the container initially.
+
+<!--- footer STOP from tools/include/markdown/WTC001-footer.md --->
 
 
 

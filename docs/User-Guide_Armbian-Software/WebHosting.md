@@ -5,10 +5,10 @@
 
 ***
 
-## SWAG reverse proxy install
+## SWAG reverse proxy
 
 <!--- section image START from tools/include/images/SWAG01.png --->
-[![SWAG reverse proxy install](/images/SWAG01.png)](#)
+[![SWAG reverse proxy](/images/SWAG01.png)](#)
 <!--- section image STOP from tools/include/images/SWAG01.png --->
 
 

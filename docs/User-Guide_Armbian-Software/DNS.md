@@ -3,10 +3,10 @@
 
 ***
 
-## Pi-hole DNS ad blocker install
+## Pi-hole DNS ad blocker
 
 <!--- section image START from tools/include/images/DNS001.png --->
-[![Pi-hole DNS ad blocker install](/images/DNS001.png)](#)
+[![Pi-hole DNS ad blocker](/images/DNS001.png)](#)
 <!--- section image STOP from tools/include/images/DNS001.png --->
 
 
@@ -72,7 +72,7 @@ armbian-config --cmd DNS002
 
 ***
 
-## Pi-hole purge
+## Pi-hole purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd DNS004
