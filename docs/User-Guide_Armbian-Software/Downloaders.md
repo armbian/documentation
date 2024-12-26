@@ -1,4 +1,4 @@
-# P2P download managers for movies, TV shows, music and subtitles
+# Download apps for movies, TV shows, music and subtitles
 
 
 ***

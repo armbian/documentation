@@ -3,10 +3,10 @@
 
 ***
 
-## Mariadb install
+## Mariadb SQL database server
 
 <!--- section image START from tools/include/images/DAT001.png --->
-[![Mariadb install](/images/DAT001.png)](#)
+[![Mariadb SQL database server](/images/DAT001.png)](#)
 <!--- section image STOP from tools/include/images/DAT001.png --->
 
 
@@ -67,7 +67,7 @@ armbian-config --cmd DAT002
 
 ***
 
-## Mariadb purge
+## Mariadb purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd DAT003
@@ -81,10 +81,10 @@ armbian-config --cmd DAT003
 
 ***
 
-## phpMyAdmin install
+## phpMyAdmin web interface manager
 
 <!--- section image START from tools/include/images/DAT005.png --->
-[![phpMyAdmin install](/images/DAT005.png)](#)
+[![phpMyAdmin web interface manager](/images/DAT005.png)](#)
 <!--- section image STOP from tools/include/images/DAT005.png --->
 
 
@@ -144,7 +144,7 @@ armbian-config --cmd DAT006
 
 ***
 
-## phpMyAdmin purge
+## phpMyAdmin purge with data folder
 **Command:** 
 ~~~
 armbian-config --cmd DAT007

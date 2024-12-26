@@ -1,4 +1,4 @@
-# Home Automation for monitoring and/or control home appliances
+# Home Automation for control home appliances
 
 
 ***
