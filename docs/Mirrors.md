@@ -3,7 +3,7 @@ Space needs:
 | Mirror | Command | Size |
 |--------|---------|-----:|
 | Current images | `rsync -av rsync://rsync.armbian.com/dl` | 540G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 175G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 78G |
 | Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.8T |
 | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
