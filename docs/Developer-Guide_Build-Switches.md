@@ -220,7 +220,7 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
 
 Include directories created inside /home in final image.
 
-**ENABLE_EXTENSIONS** (c omma-separated list )
+**ENABLE_EXTENSIONS** ( comma-separated list )
 
 [Extensions](/Developer-Guide_Extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
 
