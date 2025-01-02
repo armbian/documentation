@@ -72,7 +72,7 @@ graph LR
 
 ## What is supported?
 
-Armbian distributes stable images for maintained hardware through its own [mirror network](https://github.com/armbian/mirror). *Supported / maintained* is not a guarantee. It implies a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
+Armbian distributes stable images for maintained hardware through its own [mirror network](/Mirrors/). *Supported / maintained* is not a guarantee. It implies a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
 
 ## Support status
 
