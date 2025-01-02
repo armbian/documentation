@@ -3,10 +3,10 @@
 
 ***
 
-## qBittorrent BitTorrent server 
+## qBittorrent BitTorrent client 
 
 <!--- section image START from tools/include/images/DOW001.png --->
-[![qBittorrent BitTorrent server ](/images/DOW001.png)](#)
+[![qBittorrent BitTorrent client ](/images/DOW001.png)](#)
 <!--- section image STOP from tools/include/images/DOW001.png --->
 
 
@@ -15,7 +15,7 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 <!--- header STOP from tools/include/markdown/DOW001-header.md --->
 
-This operation will install qBittorrent BitTorrent server
+This operation will install qBittorrent BitTorrent client
 
 **Command:** 
 ~~~
@@ -54,7 +54,7 @@ armbian-config --cmd DOW001
 ***
 
 ## qBittorrent remove
-This operation will remove qBittorrent BitTorrent server
+This operation will remove qBittorrent BitTorrent client
 
 **Command:** 
 ~~~
@@ -85,10 +85,10 @@ armbian-config --cmd DOW003
 
 ***
 
-## Deluge BitTorrent server
+## Deluge BitTorrent client
 
 <!--- section image START from tools/include/images/DEL001.png --->
-[![Deluge BitTorrent server](/images/DEL001.png)](#)
+[![Deluge BitTorrent client](/images/DEL001.png)](#)
 <!--- section image STOP from tools/include/images/DEL001.png --->
 
 
@@ -97,7 +97,7 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
-This operation will install BitTorrent server
+This operation will install BitTorrent client
 
 **Command:** 
 ~~~
@@ -136,7 +136,7 @@ armbian-config --cmd DEL001
 ***
 
 ## Deluge remove
-This operation will remove Deluge BitTorrent server
+This operation will remove Deluge BitTorrent client
 
 **Command:** 
 ~~~
@@ -152,7 +152,7 @@ armbian-config --cmd DEL002
 ***
 
 ## Deluge purge with data folder
-This operation will remove Deluge BitTorrent server data folder
+This operation will remove Deluge BitTorrent client data folder
 
 **Command:** 
 ~~~
@@ -167,10 +167,10 @@ armbian-config --cmd DEL003
 
 ***
 
-## Transmission BitTorrent server
+## Transmission BitTorrent client
 
 <!--- section image START from tools/include/images/TRA001.png --->
-[![Transmission BitTorrent server](/images/TRA001.png)](#)
+[![Transmission BitTorrent client](/images/TRA001.png)](#)
 <!--- section image STOP from tools/include/images/TRA001.png --->
 
 
@@ -179,7 +179,7 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
-This operation will install Transmission BitTorrent server
+This operation will install Transmission BitTorrent client
 
 **Command:** 
 ~~~
@@ -219,7 +219,7 @@ armbian-config --cmd TRA001
 ***
 
 ## Transmission remove
-This operation will remove Transmission BitTorrent server
+This operation will remove Transmission BitTorrent client
 
 **Command:** 
 ~~~
@@ -235,7 +235,7 @@ armbian-config --cmd TRA002
 ***
 
 ## Transmission purge with data folder
-This operation will remove Transmission BitTorrent server data folder
+This operation will remove Transmission BitTorrent client data folder
 
 **Command:** 
 ~~~

@@ -135,3 +135,77 @@ armbian-config --cmd MON007
 
 ***
 
+## Grafana data analytics
+
+<!--- section image START from tools/include/images/GRA001.png --->
+[![Grafana data analytics](/images/GRA001.png)](#)
+<!--- section image STOP from tools/include/images/GRA001.png --->
+
+
+<!--- header START from tools/include/markdown/GRA001-header.md --->
+Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
+<!--- header STOP from tools/include/markdown/GRA001-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd GRA001
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/GRA001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
+
+    - URL: `https://<your.IP>:3000`
+
+=== "Directories"
+
+    - Install directory: `/armbian/grafana`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f grafana
+    ```
+
+<!--- footer STOP from tools/include/markdown/GRA001-footer.md --->
+
+
+
+***
+
+## Grafana remove
+**Command:** 
+~~~
+armbian-config --cmd GRA002
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Grafana purge with data folder
+This operation will purge Grafana with data folder
+
+**Command:** 
+~~~
+armbian-config --cmd GRA003
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
