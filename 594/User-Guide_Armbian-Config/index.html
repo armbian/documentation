@@ -807,9 +807,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-on-3rd-party-os" class="md-nav__link">
+  <a href="#installation-on-3rd-party-linux-os" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation on 3rd party OS
+      Installation on 3rd party Linux OS
     </span>
   </a>
   
@@ -1772,8 +1772,24 @@
 <p>Please check <a href="/Contribute/Armbian-config/">instructions</a>.</p>
 <h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
 <p><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/configng" title="GitHub Repository: armbian/configng">armbian/configng</a></p>
-<h2 id="installation-on-3rd-party-os">Installation on 3rd party OS<a class="headerlink" href="#installation-on-3rd-party-os" title="Permanent link">&para;</a></h2>
-<p><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/configng?tab=readme-ov-file#compatible-distributions" title="GitHub Repository: armbian/configng?tab=readme-ov-file#compatible-distributions">armbian/configng?tab=readme-ov-file#compatible-distributions</a></p>
+<h2 id="installation-on-3rd-party-linux-os">Installation on 3rd party Linux OS<a class="headerlink" href="#installation-on-3rd-party-linux-os" title="Permanent link">&para;</a></h2>
+<p>This tool is tailored to works best with Armbian Linux but it has also been automatically tested on:</p>
+<ul>
+<li>Debian Bookworm</li>
+<li>Ubuntu Jammy</li>
+<li>Ubuntu Noble</li>
+</ul>
+<p>In theory it should work on any systemd APT based Linux distributions such as: Linux Mint, Elementary OS, Kali Linux, MX Linux, Parrot OS, Proxmox, Raspberry Pi OS, &hellip;</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>echo &quot;deb [signed-by=/usr/share/keyrings/armbian.gpg] \
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>https://github.armbian.com/configng stable main&quot; | \
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>sudo tee /etc/apt/sources.list.d/armbian-development.list &gt; /dev/null
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>sudo apt update
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>sudo apt -y install armbian-config
+</span></code></pre></div></td></tr></table></div>
 
 
 
