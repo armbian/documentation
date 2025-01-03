@@ -1,0 +1,2161 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for Armbian OS and Armbian build framework">
+      
+      
+        <meta name="author" content="Armbian team">
+      
+      
+        <link rel="canonical" href="https://docs.armbian.com/Developer-Guide_Build-Switches/">
+      
+      
+        <link rel="prev" href="../Developer-Guide_Build-Commands/">
+      
+      
+        <link rel="next" href="../Developer-Guide_User-Configurations/">
+      
+      
+      <link rel="icon" href="../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Build Switches - Armbian Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/armbian-extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-284946-9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-284946-9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-284946-9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-switches" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://github.com/sponsors/armbian">
+    <span class="twemoji twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5"/></svg>
+    </span> &nbsp; Become a sponsor to Armbian!
+  </a>
+  <a rel="me" href="https://fosstodon.org/@armbian"></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Armbian Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build Switches
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/armbian/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    armbian/documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  ARMBIAN OS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../User-Guide_Armbian-Config/" class="md-tabs__link">
+          
+  
+  ARMBIAN CONFIG
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../User-Guide_Armbian-Software/" class="md-tabs__link">
+          
+  
+  ARMBIAN SOFTWARE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Developer-Guide_Overview/" class="md-tabs__link">
+          
+  
+  ARMBIAN BUILD FRAMEWORK
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Community_Forums/" class="md-tabs__link">
+          
+  
+  ARMBIAN COMMUNITY
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Process_Contribute/" class="md-tabs__link">
+          
+  
+  CONTRIBUTE
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    Armbian Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/armbian/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    armbian/documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ARMBIAN OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Getting-Started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Fine-Tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Basic-Troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Recovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Advanced-Features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Autoconfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firstboot config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian_overlays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Device tree overlays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_Release-Model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release_Changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ARMBIAN CONFIG
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN CONFIG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/Network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/Localisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ARMBIAN SOFTWARE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN SOFTWARE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/WebHosting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web hosting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Desktops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Downloaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Downloaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DNS blockers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/HomeAutomation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/DevTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DevTools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Netconfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Netconfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ARMBIAN BUILD FRAMEWORK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN BUILD FRAMEWORK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Build-Preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Build-Commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Build Switches
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Build Switches
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      User space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filesystem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_User-Configurations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Extensions-Hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions Hooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Building-with-Multipass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building with Multipass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Building-with-Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building with Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ARMBIAN COMMUNITY
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN COMMUNITY
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_Forums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_IRC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CONTRIBUTE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            CONTRIBUTE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_Contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contribute/Armbian-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Armbian config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mirrors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirrors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_CI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Board-Support-Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Board Support Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/armbian/documentation/edit/master/docs/Developer-Guide_Build-Switches.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/armbian/documentation/raw/master/docs/Developer-Guide_Build-Switches.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="build-switches">Build Switches<a class="headerlink" href="#build-switches" title="Permanent link">&para;</a></h1>
+<p>These parameters are meant to be applied to the <code>./compile.sh</code> command. They are <strong>all</strong> optional.  They can also be added to your <a href="../Developer-Guide_Build-Preparation/#providing-build-configuration">build configuration file</a> to save time. Default values are marked <strong>bold</strong> if applicable. </p>
+<h3 id="user-space">User space<a class="headerlink" href="#user-space" title="Permanent link">&para;</a></h3>
+<p><strong>BOARD</strong> ( <code>string</code> )</p>
+<p>Set the name of the board manually to skip the dialog prompt. Name of the board is <a href="https://github.com/armbian/build/tree/main/config/boards">a filename without extension</a>.</p>
+<p><strong>BRANCH</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>vendor</code></li>
+<li><code>legacy</code></li>
+<li><code>current</code> (recommended)</li>
+<li><code>edge</code></li>
+</ul>
+<p>Set kernel and U-Boot branch manually to skip dialog prompt</p>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>Some branches may not be available for all devices.</p>
+</div>
+<p><strong>RELEASE</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>bookworm</code></li>
+<li><code>trixie</code></li>
+<li><code>sid</code></li>
+<li><code>jammy</code></li>
+<li><code>noble</code></li>
+</ul>
+<p>Set packages release base manually to skip dialog prompt. Check here for <a href="https://github.com/armbian/build/tree/main/config/distributions">currently available releases</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>Only stable and/or LTS upstream Debian or Ubuntu releases are officially supported. Others might work or not.</p>
+</div>
+<p><strong>BUILD_MINIMAL</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>yes</code>: build a bare CLI image suitable for application deployment. This option is <strong>not compatible</strong> with <code>BUILD_DESKTOP="yes"</code></li>
+<li><code>no</code>: (default)</li>
+</ul>
+<p><strong>BSPFREEZE</strong> ( <code>string</code> ) </p>
+<ul>
+<li><code>yes</code>: freeze (from upgrade) armbian firmware packages when building images (U-Boot, kernel, DTB, BSP)</li>
+<li><code>no</code>: (default)</li>
+</ul>
+<p><strong>INSTALL_HEADERS</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>yes</code>: pre-install kernel headers</li>
+<li><code>no</code>: (default)</li>
+</ul>
+<hr>
+
+<h3 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h3>
+<p><strong>NETWORKING_STACK</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>network-manager</code></li>
+<li><code>systemd-networkd</code></li>
+<li><code>none</code> (to not-add any networking extensions)</li>
+</ul>
+<p>Installs desired networking stack. If the parameter is undefined, it sets <code>systemd-networkd</code> for minimal images (MINIMAL=yes) and <code>network-manager</code> for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using <strong>Netplan</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Build switch example</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh NETWORKING_STACK=&quot;network-manager&quot;
+</span></code></pre></div></td></tr></table></div>
+</div>
+<hr>
+
+<h3 id="host-environment">Host environment<a class="headerlink" href="#host-environment" title="Permanent link">&para;</a></h3>
+<p><strong>EXPERT</strong> </p>
+<ul>
+<li><code>yes</code></li>
+</ul>
+<p>Show development features and boards regardless of their support status in interactive mode.</p>
+<p><strong>CLEAN_LEVEL</strong> (comma-separated list)</p>
+<p>Defines what should be cleaned. Changing this option can be useful when rebuilding images or building more than one image</p>
+<ul>
+<li><code>make-atf</code> = make clean for ATF, if it is built.</li>
+<li><code>make-uboot</code> = make clean for uboot, if it is built.</li>
+<li><code>make-kernel</code> = make clean for the kernel if it is built. very slow.<br></li>
+<li><code>debs</code>, <code>alldebs</code> = delete all packages in &ldquo;./output/debs&rdquo;</li>
+<li><code>images</code> = delete &ldquo;./output/images&rdquo;</li>
+<li><code>cache</code> = delete &ldquo;./output/cache&rdquo;</li>
+<li><code>sources</code> = delete <code>cache/sources</code> (all downloaded sources)</li>
+<li><code>oldcache</code> = remove old cached rootfs except for the newest 8 files</li>
+<li><code>extras</code> = delete additional packages for the current release in <code>output/debs/extra</code></li>
+</ul>
+<p><strong>CARD_DEVICE</strong> ( string )</p>
+<ul>
+<li><code>/dev/sdX</code> </li>
+</ul>
+<p>Set to the device of your flash media / SD card. The image will be burned and verified.</p>
+<p><strong>PREFER_DOCKER</strong> ( string )</p>
+<ul>
+<li><code>yes</code> (default)</li>
+<li><code>no</code></li>
+</ul>
+<p>Docker assisted compilation is on by default. Set to <code>no</code> if you prefer running compilation natively.</p>
+<p><strong>DOCKER_ARMBIAN_BASE_IMAGE</strong> ( string )</p>
+<ul>
+<li><code>ubuntu:jammy</code> (default)</li>
+<li><code>ubuntu:noble</code></li>
+<li><code>debian:bookworm</code></li>
+</ul>
+<p>Defines the build host when using a Docker container (default). <a href="https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build">Here</a>, you can see which other options are available.</p>
+<ul>
+<li><strong>CI</strong> ( string )<ul>
+<li>true</li>
+<li><strong>false</strong></li>
+</ul>
+</li>
+</ul>
+<p>If enabled (<code>true</code>), the Docker build container will receive Docker credentials from the host 
+(<code>${HOME}/.docker/config.json</code>) and the <code>OCI_TARGET_BASE</code> environment variable.</p>
+<ul>
+<li><strong>OCI_TARGET_BASE</strong> ( string )<ul>
+<li>url/to/container_registry/path</li>
+<li><strong>${GHCR_SOURCE}/armbian/*</strong> (GHCR_SOURCE is defined in <code>lib/functions/configuration/main-config.sh</code>)</li>
+</ul>
+</li>
+</ul>
+<p>Select the target for pull/push OCI cached images. If not set, default is used.</p>
+<ul>
+<li><strong>GHCR_MIRROR_ADDRESS</strong> (string)</li>
+</ul>
+<p>The default mirror address for ghcr.io, set by <code>GHCR_MIRROR=dockerproxy</code>, is ghcr.dockerproxy.com. When this address is unavailable, an alternative address can be set with <code>GHCR_MIRROR_ADDRESS</code>.</p>
+<p>Example:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh GHCR_MIRROR=dockerproxy GHCR_MIRROR_ADDRESS=ghcr.libcuda.so
+</span></code></pre></div></td></tr></table></div></p>
+<ul>
+<li><strong>KERNEL_COMPILER</strong> (string)</li>
+</ul>
+<p>The compiler used to compile the kernel. Usually, this option is set by the board config, but it can be set to <code>clang</code> to use LLVM to compile the kernel.</p>
+<p>Example:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh KERNEL_COMPILER=clang
+</span></code></pre></div></td></tr></table></div></p>
+<ul>
+<li><strong>OPENSSHD_REGENERATE_HOST_KEYS</strong> (boolean)
+    - false (skip armbian-firstrun&rsquo;s OpenSSH host keys deletion and regeneration (eg: to let cloud-init set the SSH host keys)
+    - <strong>true</strong> (execute armbian-firstrun&rsquo;s OpenSSH host keys deletion + regeneration)</li>
+</ul>
+<p>Manage OpenSSH host key regeneration at armbian-firstrun service. </p>
+<p>Example:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
+</span></code></pre></div></td></tr></table></div></p>
+<hr>
+
+<h3 id="filesystem">Filesystem<a class="headerlink" href="#filesystem" title="Permanent link">&para;</a></h3>
+<p><strong>ROOTFS_TYPE</strong> ( string )</p>
+<ul>
+<li><code>ext4</code> (default)</li>
+<li><code>f2fs</code></li>
+<li><code>btrfs</code> </li>
+<li><code>nilfs2</code></li>
+<li><code>xfs</code></li>
+<li><code>nfs</code> </li>
+</ul>
+<p>Create image with different root filesystems instead of default <code>ext4</code>. Requires setting <code>FIXED_IMAGE_SIZE</code> to something smaller than the size of your SD card for <code>F2FS</code></p>
+<p><strong>BTRFS_COMPRESSION</strong> ( string )</p>
+<ul>
+<li><code>lzo</code></li>
+<li><code>none</code></li>
+<li><code>zlib</code> (default)</li>
+<li><code>zstd</code></li>
+</ul>
+<p>When choosing <code>ROOTFS_TYPE=btrfs</code>, select <code>btrfs</code> filesystem compression method and compression level. By default, the compression is <code>zlib</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>The script does not check the legality of the input variable (compression ratio). Input like <code>zlib:1234</code> is legal to the script but illegal to the kernel. Beware that setting this option does affect image creation only (shrinking disk size) and will not adjust <code>/etc/fstab</code>, so it is up to the user to later edit <code>/etc/fstab</code> if compression in daily operation is also wanted (beware of severe performance penalties with random IO patterns and heavy compression algorithms!).</p>
+</div>
+<p><strong>CRYPTROOT_ENABLE</strong> ( string )</p>
+<ul>
+<li>yes</li>
+<li>no</li>
+</ul>
+<p>LUKS (Linux Unified Key Setup) is a specification for block device encryption. It establishes an on-disk format for the data, as well as a passphrase/key management policy. LUKS uses the kernel device mapper subsystem via the dm-crypt module.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">When enabled, you need to provide additional information:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>CRYPTROOT_PASSPHRASE=&quot;MYSECRECTPASS&quot;             # Mandatory
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>CRYPTROOT_SSH_UNLOCK=&quot;yes&quot;                       # Default: yes
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>CRYPTROOT_SSH_UNLOCK_PORT=&quot;2222&quot;                 # Default: 2022
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root 
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>CRYPTROOT_PARAMETERS=&quot;custom cryptsetup options&quot; # Default: --pbkdf pbkdf2
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Tips and warnings</p>
+<ul>
+<li>Private key can be placed in <code>$USERPATCHES_PATH/dropbear_authorized_keys</code> or they will be generated in <code>output/images/*.key</code> file</li>
+<li>If you want to do the encryption part from scratch, check out <a href="https://forum.armbian.com/topic/15618-full-root-filesystem%C2%A0encryption%C2%A0on-an-armbian-system-new-replaces-2017-tutorial-on-this-topic/">this</a> forum post.</li>
+<li>This function might not work well with all distributions.</li>
+<li>CRYPTROOT_MAPPER name might affect parallel image building</li>
+<li>CRYPTROOT_PARAMETERS may not contain <code>=</code>; separate switches with spaces</li>
+</ul>
+</div>
+<hr>
+
+<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<p><strong>INCLUDE_HOME_DIR</strong> ( string )</p>
+<ul>
+<li><code>yes</code></li>
+<li><code>no</code>  (default)</li>
+</ul>
+<p>Include directories created inside /home in final image.</p>
+<p><strong>ENABLE_EXTENSIONS</strong> ( comma-separated list )</p>
+<p><a href="/Developer-Guide_Extensions/">Extensions</a> allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder <code>extensions</code> are called</p>
+<div class="admonition example">
+<p class="admonition-title">Build switch example</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh \
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>build \
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>BOARD=uefi-x86 \
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>BRANCH=current \
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>BUILD_DESKTOP=no \
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>BUILD_MINIMAL=no \
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>KERNEL_CONFIGURE=no \
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>RELEASE=noble \
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>ENABLE_EXTENSIONS=mesa-vpu,nvidia \
+</span></code></pre></div></td></tr></table></div>
+</div>
+<p><strong>CONSOLE_AUTOLOGIN</strong></p>
+<ul>
+<li><code>yes</code> (default)</li>
+<li><code>no</code></li>
+</ul>
+<p>Automatically login as root for local consoles at first run. Disable if your security threat model requires.</p>
+<h1 id="build-options-below-need-to-be-retested-and-added-above-could-be-deprecated">Build options below need to be retested and added above (COULD BE DEPRECATED)<a class="headerlink" href="#build-options-below-need-to-be-retested-and-added-above-could-be-deprecated" title="Permanent link">&para;</a></h1>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> DO NOT USE! Obsolete documentation, new documentation above is in progress.</p>
+<ul>
+<li><strong>KERNEL_KEEP_CONFIG</strong> ( yes | no ):
+    - yes: use kernel config file from previous compilation for the same branch, device family, and version
+    - no: use default or user-provided config file  </li>
+<li><strong>BUILD_DESKTOP</strong> ( yes | no ):
+    - yes: build an image with a minimal desktop environment
+    - no: build image with console interface only  </li>
+<li><strong>CREATE_PATCHES</strong> ( yes | <strong>no</strong> ) <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Warning:</strong> This option is deprecated and may be removed in future releases - use the new <code>kernel-patch</code> / <code>uboot-patch</code> / <code>atf-patch</code> CLI commands instead.
+    - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes, patch files will be created and placed in the <code>output</code> directory. If you want these patches included in a normal run (without CREATE_PATCHES to say), these files must be copied to the appropriate directories. Also, see <a href="https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches">user-provided patches</a>.</li>
+<li><strong>EXT=rkdevflash</strong> to flash Rockchip images to eMMC either during image build or separately with flash CLI command (<a href="https://github.com/armbian/build/pull/5058">only works bare Linux, not Docker</a>)</li>
+</ul>
+<h2 id="hidden-options-to-minimize-user-input-for-build-automation">Hidden options to minimize user input for build automation<a class="headerlink" href="#hidden-options-to-minimize-user-input-for-build-automation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ARMBIAN_CACHE_ROOTFS_PATH</strong> ( <code>string</code> ): bind mount cache/rootfs to defined folder</li>
+<li><strong>ARMBIAN_CACHE_TOOLCHAIN_PATH</strong> ( <code>string</code> ): bind mount cache/toolchain path to defined folder</li>
+</ul>
+<h2 id="hidden-options-for-advanced-users-default-values-are-marked-bold">Hidden options for advanced users (default values are marked <strong>bold</strong>)<a class="headerlink" href="#hidden-options-for-advanced-users-default-values-are-marked-bold" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>USERPATCHES_PATH</strong> ( <strong>userpatches/</strong> ): set alternate path for the location of the <code>userpatches</code> folder</li>
+<li><strong>USE_CCACHE</strong> ( <strong>yes</strong> | no ): use a C compiler cache to speed up the build process</li>
+<li><strong>PRIVATE_CCACHE</strong> ( yes | <strong>no</strong> ): use <code>$DEST/ccache</code> as ccache home directory</li>
+<li><strong>SKIP_EXTERNAL_TOOLCHAINS</strong> ( yes | <strong>no</strong> ): don&rsquo;t download and use Linaro toolchains, by default placed in cache/toolchain (and configurable with <strong>ARMBIAN_CACHE_TOOLCHAIN_PATH</strong>)</li>
+<li><strong>PROGRESS_DISPLAY</strong> ( none | <strong>plain</strong> | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap</li>
+<li><strong>PROGRESS_LOG_TO_FILE</strong> ( yes | <strong>no</strong> ): duplicate output, affected by the previous option, to log files <code>output/debug/*.log</code></li>
+<li><strong>NO_APT_CACHER</strong> ( <strong>yes</strong> | no ): disable usage of APT cache. Default <code>yes</code> in containers, but can be overridden</li>
+<li><strong>DISABLE_IPV6</strong> ( <strong>true</strong> | false ): The distant future, the year Two-Thousand.  Set false to allow Aria2c to use a modern ip protocol.</li>
+<li><strong>NO_HOST_RELEASE_CHECK</strong> ( yes | <strong>no</strong> ): overrides the check for a supported host system</li>
+<li><strong>USE_MAINLINE_GOOGLE_MIRROR</strong> ( yes | <strong>no</strong> ): use the <code>googlesource.com</code> mirror for downloading mainline kernel sources, which may be faster than <code>git.kernel.org</code> depending on your location</li>
+<li><strong>USE_GITHUB_UBOOT_MIRROR</strong> ( yes | <strong>no</strong> ): use an unofficial GitHub mirror for downloading mainline U-Boot sources, may be faster than <code>git.denx.de</code> depending on your location</li>
+<li><strong>SYNC_CLOCK</strong> ( <strong>yes</strong> | no ): sync system clock on builder before start image creation process</li>
+<li><strong>OFFLINE_WORK</strong> ( yes | <strong>no</strong> ): skip downloading and updating sources and time and host check. Set to &ldquo;yes,&rdquo; and you can collect packages without accessing the internet</li>
+<li><strong>FORCE_USE_RAMDISK</strong> ( yes | no ): overrides autodetect for using tmpfs in new debootstrap and image creation process</li>
+<li><strong>FIXED_IMAGE_SIZE</strong> ( <code>integer</code> ): create an image file of this size (in megabytes) instead of minimal</li>
+<li><strong>BOOTSIZE</strong> ( <code>integer</code> <strong>96</strong> ): set size (in megabytes) for separate /boot filesystem. Used if <strong>ROOTFS_TYPE</strong> set to non-ext4</li>
+<li><strong>COMPRESS_OUTPUTIMAGE</strong> (comma-separated list): create a compressed archive with an image file and GPG signature for redistribution
+    - sha: generate SHA256 hash for image
+    - gpg: sign image using gpg
+    - 7z: compress image, hash, and signature to 7z archive
+    - gz: compress image only using gz format
+    - xz: compress image only using xz format
+    - yes: compatibility shortcut for <code>sha,gpg,7z</code></li>
+<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
+<li><strong>SEVENZIP</strong> ( yes | <strong>no</strong> ): create .7z archive with extreme compression ratio instead of .zip</li>
+<li><strong>BUILD_KSRC</strong> ( <strong>yes</strong> | no ): create kernel source packages while building&hellip;</li>
+<li><strong>INSTALL_KSRC</strong> ( yes | <strong>no</strong> ): &hellip; and pre-install these kernel sources on the image </li>
+<li><strong>FORCE_BOOTSCRIPT_UPDATE</strong> ( yes | no ): 
+    - yes: force bootscript to get updated during bsp package upgrade</li>
+<li><strong>NAMESERVER</strong> ( <code>IPv4 address</code> ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: <code>1.0.0.1</code></li>
+<li><strong>DOWNLOAD_MIRROR</strong> ( <code>china</code> | <code>bfsu</code> ): select download mirror for <code>toolchain</code> and <code>debian/ubuntu packages</code>
+    - <code>china</code>: use <code>mirrors.tuna.tsinghua.edu.cn</code>; it will be very fast thanks to Tsinghua University
+    - <code>bfsu</code>: use <code>mirrors.bfsu.edu.cn</code>, the mirror of Beijing Foreign Studies University<br />
+    - leave empty to use official source</li>
+<li><strong>ARMBIAN_MIRROR</strong> (auto): override automated mirror selection, example &lsquo;ARMBIAN_MIRROR=&rdquo;<a href="https://yourlocalmirror.com">https://yourlocalmirror.com</a>&rdquo;&lsquo;</li>
+<li><strong>MAINLINE_MIRROR</strong> ( <code>google</code> | <code>tuna</code> | <code>bfsu</code> ): select mainline mirror of <code>linux-stable.git</code>
+    - <code>google</code>: use the mirror provided by Google, the same as <code>USE_MAINLINE_GOOGLE_MIRROR=yes</code>
+    - <code>tuna</code>: use the mirror provided by Tsinghua University
+    - <code>bfsu</code>: use the mirror provided by Beijing Foreign Studies University, which is similar to <code>tuna</code>
+    - leave empty to use the official <code>git.kernel.org</code>, which may be very slow for mainland China users</li>
+<li><strong>UBOOT_MIRROR</strong> （ <code>github</code> | <code>gitee</code> : select mainline mirror of <code>u-boot.git</code>
+    - <code>github</code>: use the mirror provided by github, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code>
+    - <code>gitee</code>: use the mirror provided by Gitee, a Chinese git services
+    - leave empty to use the official <code>source.denx.de</code>, which may be very slow for mainland China users</li>
+<li><strong>GITHUB_MIRROR</strong> ( <code>fastgit</code> | <code>gitclone</code> | <code>cnpmjs</code> ): select download mirror for GitHub hosted repository
+    - <code>fastgit</code>: use the mirror provided by fastgit.org
+    - <code>gitclone</code>: use the mirror provided by gitclone.com
+    - <code>cnpmjs</code>: use the mirror provided by cnpmjs.org
+    - leave empty to connect directly to GitHub, which may be very slow for mainland China users</li>
+<li><strong>REGIONAL_MIRROR</strong> ( <code>china</code> ): select mirrors based on regional setting, will not overwrite explicitly specified mirror option
+    - <code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>fastgit</code>, DOWNLOAD_MIRROR=<code>china</code>
+    - leave empty to use default settings</li>
+<li><strong>ROOT_FS_CREATE_ONLY</strong> ( yes | <strong>no</strong> ): set to yes to force local cache creation</li>
+<li><strong>EXTRAWIFI</strong> ( <strong>yes</strong> | no ): include several drivers for <a href="https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507">WiFi adapters</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2013 - 2024 Armbian.com
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/armbian" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.armbian.com/" target="_blank" rel="noopener" title="www.armbian.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/armbian" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
