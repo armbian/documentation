@@ -136,6 +136,7 @@ nav:
         - 'Monitoring': 'User-Guide_Armbian-Software/Monitoring.md'
         - 'DevTools': 'User-Guide_Armbian-Software/DevTools.md'
         - 'Management': 'User-Guide_Armbian-Software/Management.md'
+        - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
         - 'Media': 'User-Guide_Armbian-Software/Media.md'
         - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
 
