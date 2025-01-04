@@ -463,6 +463,84 @@ armbian-config --cmd SY112
 
 ***
 
+### Sandboxed & containerised SSH server
+
+<!--- section image START from tools/include/images/SSH200.png --->
+[![Sandboxed & containerised SSH server](/images/SSH200.png)](#)
+<!--- section image STOP from tools/include/images/SSH200.png --->
+
+
+<!--- header START from tools/include/markdown/SSH200-header.md --->
+Sandboxed & containerised SSH server allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.
+<!--- header STOP from tools/include/markdown/SSH200-header.md --->
+
+This operation will install SSH server.
+
+**Command:** 
+~~~
+armbian-config --cmd SSH200
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/SSH200-footer.md --->
+=== "Access to SSH server"
+
+    - `ssh username@<your.IP> -p 2222`
+
+=== "Directories"
+
+    - Install directory: `/armbian/openssh-server`
+    - Configuration directory: `/armbian/openssh-server/config`
+    - Shared storage directory: `USER_DEFINED`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f openssh-server
+    ```
+
+<!--- footer STOP from tools/include/markdown/SSH200-footer.md --->
+
+
+
+***
+
+### Remove sandboxed SSH server
+This operation will remove SSH server.
+
+**Command:** 
+~~~
+armbian-config --cmd SSH201
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+### Purge sandboxed SSH server with data folder
+This operation will purge SSH server with data folder.
+
+**Command:** 
+~~~
+armbian-config --cmd SSH202
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
 ## Change shell, adjust MOTD
 
 
