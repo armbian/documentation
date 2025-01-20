@@ -149,9 +149,6 @@ armbian-config --cmd SY221
 ***
 
 ### Enable read only filesystem
-This will enable Armbian read-only filesystem. Reboot is mandatory?
-
-
 **Command:** 
 ~~~
 armbian-config --cmd SY007
@@ -166,9 +163,6 @@ armbian-config --cmd SY007
 ***
 
 ### Disable read only filesystem
-This will disable Armbian read-only filesystem. Reboot is mandatory?
-
-
 **Command:** 
 ~~~
 armbian-config --cmd SY008
