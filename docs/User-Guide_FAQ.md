@@ -137,3 +137,13 @@ root@orangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:sta
 It would be VERY ressource intensive and just insane to pre-create and provide images for all possible combination of kernels, userspaces and desktops/CLI for all available boards and last but not least provide support for them. We simply cannot afford doing this since our ressources in both human and financial are limited. Therefore we provide a small selection for each board only.  
 However with the Armbian build framework it is very easy and convenient to create an image of your desire by yourself.  
 If there is enough public interest for a certain combination we may occasionally adjust our build targets.
+
+## When using the framework it does not build anything but downloads artifacts. How can I force rebuilding from sources?
+
+tl;dr: `ARTIFACT_IGNORE_CACHE=yes`
+
+Forcing a rebuild is usually not necessary, because:
+> Armbian build [...] operates on smaller units called “artifacts”: the kernel, u-boot, firmware, rootfs, and then finally the full image. Each of those has its version calculated beforehand based on its would-be 
+contents, and looked up in both a local and remote cache (OCI registry),  allowing users to re-use artifacts across builds and to use the best hardware available for each. [...]
+
+However sometimes local changes are not detected properly. Therefore this flag can be useful.
