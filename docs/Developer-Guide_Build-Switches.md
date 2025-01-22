@@ -246,6 +246,14 @@ Include directories created inside /home in final image.
 Automatically login as root for local consoles at first run. Disable if your security threat model requires.
 
 
+**ARTIFACT_IGNORE_CACHE** ( string )
+
+- `yes`
+- `no`  (default)
+
+Enforce building from source instead of using pre-built artifacts.
+
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
