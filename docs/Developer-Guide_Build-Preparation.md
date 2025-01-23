@@ -65,7 +65,7 @@ Run framework:
 ## CLI
 
 
-[Comprehensive list of build Options](Developer-Guide_Build-Switches.md)
+Comprehensive list of build [Commands](../Developer-Guide_Build-Commands) and [Switches](Developer-Guide_Build-Switches.md)
 
 Example:
 
