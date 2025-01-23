@@ -264,6 +264,12 @@ Use `$DEST/ccache` as ccache home directory. Setting yes to this will enable CCA
 
 Enforce building from source instead of using pre-built artifacts.
 
+**SKIP_ARMBIAN_REPO** ( string )
+
+- `yes`
+- `no`  (default)
+
+Enforce building without Armbian repository. Suitable for developing new releases or making custom images that doesn't need Armbian repository.
 
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
