@@ -2025,6 +2025,14 @@
 <li><code>no</code></li>
 </ul>
 <p>Automatically login as root for local consoles at first run. Disable if your security threat model requires.</p>
+<p><strong>USE_CCACHE</strong> 
+- <code>yes</code> 
+- <code>no</code> (default) </p>
+<p>Use a C compiler cache.  Generally not needed due to git-worktree .  Can slow performance on clean builds.</p>
+<p><strong>PRIVATE_CCACHE</strong> 
+- <code>yes</code> 
+- <code>no</code> (default) </p>
+<p>Use <code>$DEST/ccache</code> as ccache home directory. Setting yes to this will enable CCACHE as well.</p>
 <h1 id="build-options-below-need-to-be-retested-and-added-above-could-be-deprecated">Build options below need to be retested and added above (COULD BE DEPRECATED)<a class="headerlink" href="#build-options-below-need-to-be-retested-and-added-above-could-be-deprecated" title="Permanent link">&para;</a></h1>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> DO NOT USE! Obsolete documentation, new documentation above is in progress.</p>
 <ul>
@@ -2052,8 +2060,6 @@
 <h2 id="hidden-options-for-advanced-users-default-values-are-marked-bold">Hidden options for advanced users (default values are marked <strong>bold</strong>)<a class="headerlink" href="#hidden-options-for-advanced-users-default-values-are-marked-bold" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>USERPATCHES_PATH</strong> ( <strong>userpatches/</strong> ): set alternate path for the location of the <code>userpatches</code> folder</li>
-<li><strong>USE_CCACHE</strong> ( yes | <strong>no</strong> ): use a C compiler cache</li>
-<li><strong>PRIVATE_CCACHE</strong> ( yes | <strong>no</strong> ): use <code>$DEST/ccache</code> as ccache home directory, setting yes to this will enable CCACHE as well</li>
 <li><strong>SKIP_EXTERNAL_TOOLCHAINS</strong> ( yes | <strong>no</strong> ): don&rsquo;t download and use Linaro toolchains, by default placed in cache/toolchain (and configurable with <strong>ARMBIAN_CACHE_TOOLCHAIN_PATH</strong>)</li>
 <li><strong>PROGRESS_DISPLAY</strong> ( none | <strong>plain</strong> | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap</li>
 <li><strong>PROGRESS_LOG_TO_FILE</strong> ( yes | <strong>no</strong> ): duplicate output, affected by the previous option, to log files <code>output/debug/*.log</code></li>
