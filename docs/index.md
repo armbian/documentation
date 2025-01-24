@@ -90,14 +90,6 @@ Most of those will also work, but no warranty as Armbian does not monitor their 
 
 For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
-## Getting started
-
-If you are **new to Armbian**, the [_Getting Started_](User-Guide_Getting-Started.md) section provides a tutorial for everything you need to know to get Armbian running. It then continues on to more advanced topics.
-
-If you **need help** and have read through _Getting Started_ check out [_Troubleshooting_](User-Guide_Advanced-Features.md#how-to-troubleshoot).
-
-If you still cannot find what you need here visit the [_Armbian forum_](https://forum.armbian.com/) where your input can help to improve this documentation.
-
 ## Software titles
 
 You can quickly and easily install popular software! They are ready to run and optimized for Armbian. Here are few highlights:
