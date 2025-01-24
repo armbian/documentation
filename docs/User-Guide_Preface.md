@@ -22,4 +22,4 @@ If you still cannot find what you need here, visit the [_Armbian forum_](https:/
 
 ## How to report a problem in this documentation?
 
-iIf you come across an issue in these pages, you can either report it [here](https://github.com/armbian/documentation/issues), or follow [these instructions](https://github.com/armbian/documentation/blob/main/README.md) to suggest a fix yourself.
+If you come across an issue in these pages, you can either report it [here](https://github.com/armbian/documentation/issues), or follow [these instructions](https://github.com/armbian/documentation/blob/main/README.md) to suggest a fix yourself.
