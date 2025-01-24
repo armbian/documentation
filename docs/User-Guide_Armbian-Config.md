@@ -37,9 +37,11 @@ This tool is tailored to works best with Armbian Linux but it has also been auto
 In theory it should work on any systemd APT based Linux distributions such as: Linux Mint, Elementary OS, Kali Linux, MX Linux, Parrot OS, Proxmox, Raspberry Pi OS, ...
 
 ~~~
+wget -qO - https://apt.armbian.com/armbian.key | gpg --dearmor | \
+sudo tee /usr/share/keyrings/armbian.gpg > /dev/null
 echo "deb [signed-by=/usr/share/keyrings/armbian.gpg] \
 https://github.armbian.com/configng stable main" | \
-sudo tee /etc/apt/sources.list.d/armbian-development.list > /dev/null
+sudo tee /etc/apt/sources.list.d/armbian-config.list > /dev/null
 sudo apt update
 sudo apt -y install armbian-config
 ~~~
