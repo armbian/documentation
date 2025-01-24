@@ -1,4 +1,4 @@
-# Preface
+# Welcome to the Armbian Documentation
 
 Welcome to the official documentation of Armbian Linux, a highly optimized base operating system specialized for single board computers (*SBCs*) and its extensive build framework.
 
@@ -10,7 +10,7 @@ If you are **new to Armbian**, the [_Introduction_](index.md) and the [_Getting 
 
 It then continues on to [_Configuration_](User-Guide_Configuration.md) tasks and tools to customize your installation, e.g. change the network address, start or stop services like SSH, or install one of the many prepared software stacks. This section and the links contained in it are useful to **all user levels**.
 
-**Advanced users** will find more complex topics in the [_Advanced_](User-Guide_Advanced-Features.md) section.
+**Advanced users** will find more complex topics in the [_Advanced_](User-Guide_Advanced-Features.md) section, including how to customize your initial installation.
 
 If you have read through the documentation and still **need help**, check out our [_Troubleshooting_](User-Guide_Troubleshooting.md) advice.
 

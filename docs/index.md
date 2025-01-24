@@ -2,11 +2,11 @@
 
 Linux for ARM development boards
 
-# Welcome to the Armbian Documentation!
-
 ## What is Armbian?
 
-Armbian is **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with **well-known** and supported Debian-based user-space experience, **extensive build framework** and is suitable for **industrial or home use**.
+Armbian's goal is to provide a **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with a **well-known** and supported Debian-based user-space experience, an **extensive build framework**, and it is suitable for **industrial or home use**.
+
+Armbian is **not** a Linux distribution itself. Instead, we use Debian GNU/Linux and Ubuntu Linux as base for the images, that our users can download and deploy. We build our own set of optimized kernels for each board, and then provide an extensive and customizable framework to build, adjust, and configure these images. This framework is the heart of the project.
 
 ``` mermaid
 graph LR
@@ -22,20 +22,39 @@ graph LR
   
 ```
 
-## Key Advantages
+As a user, you can simply download one of our images, deploy and run it on your SBC. As an advanced user, a manufacturer or provider, you can create fully configured custom images for your board or product.
 
-- lean and standard **Debian** or **Ubuntu** based user space with well known APT package manager
-- independent kernel development and maintenance with **long term support**
-- extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of whole operating system and **endless capabilities**
-- advanced **hardware and OS config** and **software installation** with build-in [armbian-config](/User-Guide_Armbian-Config/)
-- daily **automated stress and upgrade testing** on key hardware targets
-- exclusive support of **exotic hardware** nobody else supports
-- **stabilized point** and **rolling** distribution of upgrades and OS images
-- world wide download infrastructure with **perfect coverage also in China mainland**
-- **extensive build infrastructure** to assist CI automation
-- strong ties to embedded Linux.
+In any case, you will get these key advantages:
 
-## Comparison
+- you get a lean and standard **Debian** or **Ubuntu** based user space with the well known APT package manager
+- we provide an independent kernel development and maintenance with **long term support**
+- we provide an extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of the whole operating system and **endless capabilities**
+- we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](/User-Guide_Armbian-Config/) tool
+- we provide exclusive support for **exotic hardware** that nobody else supports
+- we provide **stabilized point** and **rolling** distribution of upgrades and OS images
+- we provide a global download infrastructure with **perfect coverage, also in China mainland**
+- we provide an **extensive build infrastructure** to assist in CI automation
+- we do daily **automated stress and upgrade testing** on key hardware targets
+- we have strong ties to embedded Linux
+
+???+ "Other features and performance tweaks worth mentioning"
+
+    - Images are highly compressed and automatically expand across the boot media at first boot
+    - Preinstalled standard system utilities like BASH or ZSH shell
+    - Login is possible via serial, HDMI/VGA or SSH
+    - Custom login MOTD showing a collection of important information
+    - `/var/log` is mounted as compressed device (zram, lzo) and the log2ram service saves the logs to disk daily and on shutdown
+    - Half of the memory is allocated/extended for/with compressed zswap
+    - `/tmp` is mounted as `tmpfs` (and can be optionally compressed)
+    - Browser profile memory caching is enabled on desktop images
+    - Optimized IO scheduler (check `/etc/init.d/armhwinfo`)
+    - Journal data writeback is enabled (`/etc/fstab`)
+    - Ethernet interrupts are using a dedicated core
+
+
+### Comparison
+
+TODO: where to???
 
 | Distributions | Armbian  | Downstream | Upstream |
 | -------- | -------- | -------- |-------- |
@@ -56,39 +75,27 @@ graph LR
 | Pre-installed packages | optimized for fast install | makes install of anything slower | optimized for fast install |
 | Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
 
-???+ "Other features and performance tweaks worth mentioning"
+## Which hardware is supported?
 
-    - Images are highly compressed and automatically expand across boot media at first boot
-    - BASH or ZSH shell, preinstalled standard system utilities
-    - login is possible via serial, HDMI/VGA or SSH
-    - Login MOTD shows collection of important information
-    - `/var/log` is mounted as compressed device (zram, lzo), log2ram service saves logs to disk daily and on shutdown
-    - Half of memory is allocated/extended for/with compressed zswap
-    - `/tmp` is mounted as `tmpfs` (optionally compressed)
-    - Browser profile memory caching is enabled on desktop images
-    - Optimized IO scheduler (check `/etc/init.d/armhwinfo`)
-    - Journal data writeback enabled. (`/etc/fstab`)
-    - ethernet interrupts are using dedicated core
+Armbian supports many different single board computers (SBCs). But noch each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
+
+[Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
+
+At least one person is providing constant maintainance and support.
+
+[Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
+
+Support is not secured, but it is still overall good.
+
+[Community maintained](https://www.armbian.com/download/?device_support=Community%20maintained){ .md-button }
+
+Most of the images for boards in this category will also work, but no warranty can be given as Armbian does not monitor their status.
+
+For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 ## What is supported?
 
 Armbian distributes stable images for maintained hardware through its own [mirror network](/Mirrors/). *Supported / maintained* is not a guarantee. It implies a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
-
-## Support status
-
-[Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
-
-At least one person providing maintainance and support.
-
-[Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
-
-Support is not secured but still good anything from this list.
-
-[Community maintained](https://www.armbian.com/download/?device_support=Community%20maintained){ .md-button }
-
-Most of those will also work, but no warranty as Armbian does not monitor their status.
-
-For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 ## Software titles
 
