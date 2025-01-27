@@ -3,7 +3,86 @@
 
 ***
 
-## Configure network interfaces
+## Basic Network Setup
+
+<!--- header START from tools/include/markdown/BNS001-header.md --->
+``` mermaid
+graph LR
+  A{Select interface} --> B[Configure];
+  A{Select interface} --> C[Drop];
+  C ---->A;
+  B -->F[DHCP];
+  B ---->G[Static];
+  G ------>| MAC, IP, route, GW, DNS|H[Configured];
+  F -->| MAC | H[Configured];
+```
+
+<!--- header STOP from tools/include/markdown/BNS001-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd BNS001
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/BNS001-footer.md --->
+Network configuration is simple and easy to follow:
+
+1. Choose the interface. If it's a wireless interface, you'll be prompted to select an access point (AP) and enter its password. Leave empty for open network.
+
+2. Choose between DHCP (Dynamic Host Configuration Protocol) or static IP configuration. 
+
+- If you select DHCP, the setup is complete. Optionally, you can change the MAC address.
+
+3. If you choose a static configuration, you'll need to provide:
+
+- An optional MAC address change
+- A fixed IP address (e.g., x.x.x.x/y)
+- A route (default: 0.0.0.0/0)
+- A gateway (usually x.x.x.1/24)
+- DNS (default: 9.9.9.9)
+
+<!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
+
+
+
+***
+
+## Remove Fallback DHCP Configuration
+Drop preinstalled automatic DHCP on all wired interfaces after your configuration is setup.
+
+**Command:** 
+~~~
+armbian-config --cmd BNS002
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## View Network Settings
+**Command:** 
+~~~
+armbian-config --cmd VNS001
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Advanced bridged network configuration
 
 
 ***
