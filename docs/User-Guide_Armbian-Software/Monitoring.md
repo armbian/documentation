@@ -4,6 +4,11 @@
 ***
 
 ## Uptime Kuma self-hosted monitoring tool
+
+<!--- section image START from tools/include/images/MON001.webp --->
+[![Uptime Kuma self-hosted monitoring tool](/images/MON001.webp)](#)
+<!--- section image STOP from tools/include/images/MON001.webp --->
+
 This operation will install Uptime Kuma
 
 **Command:** 
