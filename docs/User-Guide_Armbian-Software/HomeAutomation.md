@@ -4,6 +4,11 @@
 ***
 
 ## openHAB empowering the smart home
+
+<!--- section image START from tools/include/images/HAB001.png --->
+[![openHAB empowering the smart home](/images/HAB001.png)](#)
+<!--- section image STOP from tools/include/images/HAB001.png --->
+
 This operation will install openHAB.
 
 **Command:** 
