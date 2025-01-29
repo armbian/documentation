@@ -141,6 +141,11 @@ armbian-config --cmd HAS003
 
 ## Domoticz open source home automation
 
+<!--- section image START from tools/include/images/DOM001.png --->
+[![Domoticz open source home automation](/images/DOM001.png)](#)
+<!--- section image STOP from tools/include/images/DOM001.png --->
+
+
 <!--- header START from tools/include/markdown/DOM001-header.md --->
 Domoticz is an open-source home automation platform that allows you to control and monitor smart devices in your home. It supports a wide range of devices, including lights, sensors, thermostats, and cameras. Through its web interface or mobile app, you can set up automation rules and schedules, providing greater convenience and energy efficiency. It’s customizable, flexible, and can be run on a variety of hardware platforms supported by Armbian.
 
@@ -178,11 +183,6 @@ armbian-config --cmd DOM001
 ***
 
 ## Domoticz remove
-
-<!--- section image START from tools/include/images/DOM002.png --->
-[![Domoticz remove](/images/DOM002.png)](#)
-<!--- section image STOP from tools/include/images/DOM002.png --->
-
 This operation will remove Domoticz.
 
 **Command:** 
