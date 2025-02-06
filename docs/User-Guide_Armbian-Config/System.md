@@ -284,6 +284,20 @@ armbian-config --cmd NFS21
 
 ***
 
+#### Show and manage NFS mounts
+**Command:** 
+~~~
+armbian-config --cmd NFS22
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
 ## Manage SSH daemon options, enable 2FA
 
 
