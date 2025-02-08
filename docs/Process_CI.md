@@ -70,6 +70,10 @@ Example:
 khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
 ```
 
+### Testing
+
+Unfortunatelly this part does not have testing at PR stage.
+
 ## Prepare Standard Support images for release
 
 ???+ Info
