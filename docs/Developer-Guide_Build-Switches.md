@@ -257,6 +257,12 @@ Use a C compiler cache.  Generally not needed due to git-worktree .  Can slow pe
 
 Use `$DEST/ccache` as ccache home directory. Setting yes to this will enable CCACHE as well.
 
+**KERNEL_BTF**
+- `yes` 
+- `no`
+
+Default is to auto-detect based on build host available RAM. If not enough RAM available, use =no to accept building without BTF debug information, or use =yes to force building with BTF even if low RAM. Family code can set this to opt-out of BTF. For more information on BTF see <https://docs.kernel.org/bpf/btf.html>
+
 **ARTIFACT_IGNORE_CACHE** ( string )
 
 - `yes`
