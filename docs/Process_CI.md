@@ -43,7 +43,7 @@ Section | Condition |
 | standard-support-headless | HAS_VIDEO_OUTPUT = no | 
 | standard-support-riscv64 | ARCH = riscv64 | 
 
-Example: if you want automated images without a desktop, add HAS_VIDEO_OUTPUT to no in board config file. Automation will build Ubuntu servern and Debian minimal.
+Example: if you want automated images without a desktop, add `HAS_VIDEO_OUTPUT=no` in board config file. Automation will only build two CLI images, Ubuntu server and Debian minimal. Which is suitable for hardware that will most likely be used headless.
 
 ### Blacklisting
 
