@@ -219,3 +219,84 @@ armbian-config --cmd DOM003
 
 ***
 
+## EVCC - solar charging automation
+
+<!--- section image START from tools/include/images/EVCC01.png --->
+[![EVCC - solar charging automation](/images/EVCC01.png)](#)
+<!--- section image STOP from tools/include/images/EVCC01.png --->
+
+
+<!--- header START from tools/include/markdown/EVCC01-header.md --->
+evcc is an energy management system with a focus on electromobility. The software controls your EV charger or smart plug. It communicates with your vehicle, inverter or home storage to make intelligent charging decisions. The software is open source and community-driven.
+
+<!--- header STOP from tools/include/markdown/EVCC01-header.md --->
+
+This operation will install solar charging automation.
+
+**Command:** 
+~~~
+armbian-config --cmd EVCC01
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+<!--- footer START from tools/include/markdown/EVCC01-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7070**:
+
+    - URL: `https://<your.IP>:7070`
+    - Admin password is generated at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/armbian/evcc`
+    - Site configuration directory: `/armbian/evcc/evcc.yaml`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f evcc
+    ```
+
+<!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
+
+
+
+***
+
+## EVCC - solar charging automation remove
+This operation will remove solar charging automation.
+
+**Command:** 
+~~~
+armbian-config --cmd EVCC02
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+
+***
+
+## EVCC purge with data folder
+This operation will purge solar charging automation with data folder.
+
+**Command:** 
+~~~
+armbian-config --cmd EVCC03
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+
+***
+

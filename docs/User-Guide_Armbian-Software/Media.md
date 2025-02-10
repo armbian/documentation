@@ -386,3 +386,80 @@ armbian-config --cmd MED027
 
 ***
 
+## Jellyfin Media System
+
+<!--- section image START from tools/include/images/MED030.png --->
+[![Jellyfin Media System](/images/MED030.png)](#)
+<!--- section image STOP from tools/include/images/MED030.png --->
+
+
+<!--- header START from tools/include/markdown/MED030-header.md --->
+Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.
+
+<!--- header STOP from tools/include/markdown/MED030-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd MED030
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+<!--- footer START from tools/include/markdown/MED030-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
+
+    - URL: `http://<your.IP>:8096`
+    - Username and password are set at first login
+
+=== "Directories"
+
+    - Install directory: `/armbian/jellyfin`
+    - Site configuration directory: `/armbian/jellyfin/config`
+    - TV shows directory: `/armbian/jellyfin/tvseries`
+    - Movies directory: `/armbian/jellyfin/movies`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f jellyfin
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED030-footer.md --->
+
+
+
+***
+
+## Jellyfin remove
+**Command:** 
+~~~
+armbian-config --cmd MED031
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+
+***
+
+## Jellyfin purge with data folder
+**Command:** 
+~~~
+armbian-config --cmd MED032
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+
+***
+
