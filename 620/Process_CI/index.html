@@ -2168,7 +2168,7 @@
 </tr>
 </tbody>
 </table>
-<p>Example: if you want automated images without a desktop, add HAS_VIDEO_OUTPUT to no in board config file. Automation will build Ubuntu servern and Debian minimal.</p>
+<p>Example: if you want automated images without a desktop, add <code>HAS_VIDEO_OUTPUT=no</code> in board config file. Automation will only build two CLI images, Ubuntu server and Debian minimal. Which is suitable for hardware that will most likely be used headless.</p>
 <h3 id="blacklisting">Blacklisting<a class="headerlink" href="#blacklisting" title="Permanent link">&para;</a></h3>
 <p>Autogeneration is excluded for boards that are on blacklists:</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
