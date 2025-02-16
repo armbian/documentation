@@ -2,9 +2,9 @@ Space needs:
 
 | Mirror | Command | Size |
 |--------|---------|-----:|
-| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
-| Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
+| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 598G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 55G |
+| Old images | `rsync -av rsync://rsync.armbian.com/archive` | 2.0T |
 | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
 1. Chose target and setup HTTP/HTTPS hostname
