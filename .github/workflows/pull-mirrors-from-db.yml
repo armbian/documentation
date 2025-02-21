@@ -20,50 +20,60 @@ jobs:
           repository: 'armbian/documentation'
           path: 'documentation'
 
-      - name: Make docs
+      - name: Update rsync section
         run: |
-
-          DOCUMENT="Mirrors.md"
-          echo "## Mirroring Armbian?" > ${DOCUMENT}
-          echo "" >> ${DOCUMENT}
-          echo "Space needs:" > ${DOCUMENT}
-          echo "" >> ${DOCUMENT}
-          echo "| Mirror | Command | Size |" >> ${DOCUMENT}
-          echo "|--------|---------|-----:|" >> ${DOCUMENT}
+          FILE="documentation/docs/Mirrors.md"
+          # Save static content up to the rsync section marker
+          sed '/^### 2\. Set up synchronization via rsync/,$d' $FILE > tmp.md
+          # Append updated rsync section header and table
+          echo "" >> tmp.md
+          echo "### 2. Set up synchronization via rsync" >> tmp.md
+          echo "" >> tmp.md
+          echo "   - Sync files from one of the official repositories using the following commands:" >> tmp.md
+          echo "" >> tmp.md
+          echo "   | Content         | Command                                     | Required Space |" >> tmp.md
+          echo "   |-----------------|---------------------------------------------|---------------:|" >> tmp.md
           for storage in dl apt archive oldarchive; do
               size=$(curl -s https://k-space.ee.armbian.com/$storage/size.txt)
               case "$storage" in
                   "dl")
-                         TEXT="Current images";;
+                      TEXT="Current images" ;;
                   "apt")
-                         TEXT="Packages";;
+                      TEXT="Packages" ;;
                   "archive")
-                         TEXT="Old images";;
-                   *)
-                         TEXT="Very old images";
+                      TEXT="Archived images" ;;
+                  *)
+                      TEXT="Very old images" ;;
               esac
-              echo "| $TEXT | \`rsync -av rsync://rsync.armbian.com/$storage\` | $size |" >> ${DOCUMENT}
+              echo "   | $TEXT | \`rsync -av rsync://rsync.armbian.com/$storage\` | $size |" >> tmp.md
           done
-          echo "
-          1. Chose target and setup HTTP/HTTPS hostname
-          2. Setup cron to sync every 2-4 hours
-          3. [Inform us](https://www.armbian.com/contact/)
-          " >> ${DOCUMENT}
-
-          echo "## Current Mirrors" >> ${DOCUMENT}
-          echo "" >> ${DOCUMENT}
-
-          echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" >> ${DOCUMENT}
-          echo "|:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|" >> ${DOCUMENT}
-
-          # pull mirrors
-          JQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" -H "Accept: application/json; indent=4" "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror")
+          # Append the remainder of the file starting from the "## Current Mirrors" marker
+          sed -n '/^## Current Mirrors/,$p' $FILE >> tmp.md
+          mv tmp.md $FILE
+  
+      - name: Update Current Mirrors section
+        run: |
+          FILE="documentation/docs/Mirrors.md"
+          # Save static content up to the "## Current Mirrors" marker
+          sed '/^## Current Mirrors/,$d' $FILE > tmp.md
+          # Append new "## Current Mirrors" section header and table header
+          echo "" >> tmp.md
+          echo "## Current Mirrors" >> tmp.md
+          echo "" >> tmp.md
+          echo "| Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |" >> tmp.md
+          echo "|:-----|:----------|------|-------:|:--------:|:------:|:-------:|:-----:|" >> tmp.md
+          # Dynamically generate the table rows from the API data
+          JQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" \
+                    -H "Accept: application/json; indent=4" \
+                    "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror")
           for i in $(echo $JQ | jq '.results[] | .id'); do
               NAME=$(echo $JQ | jq ".results[] | select(.id == $i) | .name" | sed "s/\"//g")
               SITE_ID=$(echo $JQ | jq ".results[] | select(.id == $i) | .site.id")
               SITE_STATUS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .status.value")
               SITE_TAGS=$(echo $JQ | jq -r ".results[] | select(.id == $i) | .tags[].slug" | xargs )
-              SITEQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" -H "Accept: application/json; indent=4" "${{ secrets.NETBOX_API }}/dcim/sites/?limit=500&name__empty=false&id=$SITE_ID")
+              SITEQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" \
+                            -H "Accept: application/json; indent=4" \
+                            "${{ secrets.NETBOX_API }}/dcim/sites/?limit=500&name__empty=false&id=$SITE_ID")
               SITE_NAME=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .name" | sed 's/ /\&nbsp;/g')
               SITE_REGION=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .region.display")
               SITE_TZ=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .time_zone")
@@ -72,22 +82,20 @@ jobs:
               SITE_SPEED=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .custom_fields.download_speed")
               IP=$(dig +short ${NAME} | tail -1)
               SITE_FLAG=$(curl --max-time 5 -s http://ipwhois.app/json/${IP} | jq -r '.country_code')
-
               [[ $SITE_STATUS == "decommissioning" ]] && continue
-
-              # if site is broken show different label
-              if [[ $SITE_STATUS != "active" ]]; then LABEL=":x:"; else LABEL=":white_check_mark:"; fi
-
+              if [[ $SITE_STATUS != "active" ]]; then 
+                  LABEL=":x:" 
+              else 
+                  LABEL=":white_check_mark:" 
+              fi
               if [[ "${SITE_TAGS}" == *"debs"* ]]; then FIELD1="$LABEL"; else FIELD1=""; fi
               if [[ "${SITE_TAGS}" == *"images"* ]]; then FIELD2="$LABEL"; else FIELD2=""; fi
               if [[ "${SITE_TAGS}" == *"archive"* ]]; then FIELD3="$LABEL"; else FIELD3=""; fi
               if [[ "${SITE_TAGS}" == *"rsync"* ]]; then FIELD4="$LABEL"; else FIELD4=""; fi
-
-              echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | [![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE) | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> ${DOCUMENT}
+              echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | [![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE) | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> tmp.md
               sleep 1
           done
-
-          cp $DOCUMENT documentation/docs/
+          mv tmp.md $FILE
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v7
