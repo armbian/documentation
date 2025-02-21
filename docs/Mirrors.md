@@ -1,15 +1,55 @@
-Space needs:
+# How the Armbian Mirror System Works  
 
-| Mirror | Command | Size |
-|--------|---------|-----:|
-| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
-| Old images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
-| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
+## Introduction  
+The Armbian mirror system is designed to efficiently distribute files, ensuring users get the best available server based on geographic proximity and server availability. This document outlines the mirroring system's operational flow, technical specifications for mirrors, and how to contribute a new server.
 
-1. Chose target and setup HTTP/HTTPS hostname
-2. Setup cron to sync every 2-4 hours
-3. [Inform us](https://www.armbian.com/contact/)
+![armbian-mirror](https://github.com/user-attachments/assets/a0b73498-8b76-41b7-8a68-2a20e3a912c7)
+
+## Operational Flow  
+
+1. **User Request**  
+   - A user initiates a file download (system image, package, etc.) from Armbian using a standard URL (e.g., `https://dl.armbian.com`).  
+
+2. **Redirector Server Processing**  
+   - The redirector server processes the request and determines the best available mirror based on:  
+     - User's geographic location  
+     - Mirror server status and load  
+     - Availability of the requested files  
+
+3. **Mirror Assignment**  
+   - The redirector server provides a direct URL to the most suitable mirror.  
+   - The user is automatically redirected to the designated server.  
+
+4. **Download from Assigned Mirror**  
+   - The user downloads the file directly from the assigned mirror, optimizing speed and reducing load on the main infrastructure.  
+
+## Benefits of the Mirroring System  
+- **Load balancing**: Requests are distributed across multiple servers to prevent congestion.  
+- **Faster downloads**: Users are served by the closest available mirror.  
+- **Redundancy and reliability**: If a mirror is unavailable, the redirector automatically assigns an alternative.  
+
+## How to Contribute a Mirror  
+If you would like to contribute to the Armbian project by providing a mirror, follow these steps:  
+
+### 1. Choose the target and set up an HTTP/HTTPS hostname  
+   - The mirror must be accessible via HTTP, and HTTPS is preferred.  
+
+### 2. Set up synchronization via `rsync`  
+   - Sync files from one of the official repositories using the following commands:  
+
+   | Content | Command | Required Space |  
+   |---------|---------|---------------:|  
+   | Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |  
+   | Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |  
+   | Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |  
+   | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |  
+
+   - Set up a cron job to sync every **2-4 hours**.  
+
+### 3. Inform us about your mirror  
+   - Once your server is configured, contact us via the [contact form](https://www.armbian.com/contact/) to integrate it into the official redirector system.  
+
+Contributing a mirror helps improve Armbian’s file distribution, ensuring faster and more reliable downloads for the global community.  
 
 
 ## Current Mirrors
