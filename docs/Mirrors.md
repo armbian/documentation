@@ -3,7 +3,7 @@
 ## Introduction  
 The Armbian mirror system is designed to efficiently distribute files, ensuring users get the best available server based on geographic proximity and server availability. This document outlines the mirroring system's operational flow, technical specifications for mirrors, and how to contribute a new server.
 
-![armbian-mirror](https://github.com/user-attachments/assets/a0b73498-8b76-41b7-8a68-2a20e3a912c7)
+![armbian-mirror](https://github.com/user-attachments/assets/e7163e14-e9fc-42c2-ba2b-93a257f5a919)
 
 ## Operational Flow  
 
