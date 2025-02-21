@@ -11,6 +11,7 @@ Space needs:
 2. Setup cron to sync every 2-4 hours
 3. [Inform us](https://www.armbian.com/contact/)
 
+
 ## Current Mirrors
 
 | Site | Time Zone | Flag | Speed  | Packages | Images | Archive | Rsync |
@@ -57,6 +58,7 @@ Space needs:
 | [Airframes&nbsp;St&nbsp;Louis](https://mirror-us-stl1.armbian.airframes.io) | America/Chicago | [![East coast](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=38.6287&lon=-90.1988) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [VineHost.NET](https://mirror.vinehost.net/armbian) | Europe/London | [![United Kingdom](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=54.1448&lon=-0.1555) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Yandex](https://mirror.yandex.ru/mirrors/armbian) | Europe/Moscow | [![Russia](https://flagsapi.com/US/shiny/32.png)](https://www.openstreetmap.org/search?lat=55.7483&lon=37.6171) | 10000&nbsp;Mbps |  | :white_check_mark: | :white_check_mark: |  |
+| [Netcup&nbsp;Germany](https://netcup-01.armbian.com) | Europe/Berlin | [![Germany](https://flagsapi.com/AT/shiny/32.png)](https://www.openstreetmap.org/search?lat=49.4478&lon=11.0683) | 2500&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Netcup&nbsp;Germany](https://netcup.armbian.com) | Europe/Berlin | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=49.4478&lon=11.0683) | 2500&nbsp;Mbps | :white_check_mark: |  |  |  |
 | [Jing&nbsp;Rocks](https://repo.jing.rocks) | Asia/Tokyo | [![Japan](https://flagsapi.com/JP/shiny/32.png)](https://www.openstreetmap.org/search?lat=35.652832&lon=139.839478) | 10000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [Naho.moe&nbsp;Singapore](https://sg.mirrors.naho.moe) | Asia/Singapore | [![Singapore](https://flagsapi.com/SG/shiny/32.png)](https://www.openstreetmap.org/search?lat=1.29&lon=103.8551) | 1000&nbsp;Mbps | :x: | :x: |  |  |
