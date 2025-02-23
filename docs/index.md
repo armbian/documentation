@@ -6,7 +6,7 @@ Linux for ARM development boards
 
 ## What is Armbian?
 
-Armbian is **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with **well-known** and supported Debian-based user-space experience, **extensive build framework** and is suitable for **industrial or home use**.
+Armbian is a **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with **well-known** and supported Debian-based user-space experience, **extensive build framework** and is suitable for **industrial or home use**.
 
 ``` mermaid
 graph LR
@@ -27,7 +27,7 @@ graph LR
 - lean and standard **Debian** or **Ubuntu** based user space with well known APT package manager
 - independent kernel development and maintenance with **long term support**
 - extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of whole operating system and **endless capabilities**
-- advanced **hardware and OS config** and **software installation** with build-in [armbian-config](/User-Guide_Armbian-Config/)
+- advanced **hardware and OS config** and **software installation** with built-in [armbian-config](/User-Guide_Armbian-Config/)
 - daily **automated stress and upgrade testing** on key hardware targets
 - exclusive support of **exotic hardware** nobody else supports
 - **stabilized point** and **rolling** distribution of upgrades and OS images
@@ -88,7 +88,7 @@ Support is not secured but still good anything from this list.
 
 Most of those will also work, but no warranty as Armbian does not monitor their status.
 
-For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
+For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 ## Getting started
 
