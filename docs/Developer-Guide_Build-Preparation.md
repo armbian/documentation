@@ -87,6 +87,21 @@ RELEASE=noble
     This command will generate **Ubuntu 24.04 Noble** based **Gnome desktop** environment image for Intel based hardware (**uefi-x86**). Besides bare desktop, it will contain packages from **browsers** and **desktop_tool** sections and it will use unchanged kernel from **current kernel** branch.
 
 
+## Logging
+
+
+Logs are written to **output/logs**. Old logs (all but the current build)
+are compressed and moved to **output/logs/archive**.
+
+Log formats are:
+
+- ANSI - text with ANSI escapes for color coding - \*.log.ans
+- ASCII (if ansi2txt is available) - text without color coding escapes - \*.log
+- Markdown summary - \*.md
+- Raw (if RAW_LOG=yes) - tar file containg all the raw logs - \*.raw.tar
+
+For much more verbose logs set switch 'DEBUG=yes'.
+
 ## GitHub actions
 
 If you do not own the proper equipment to build images on your own, you can use our [GitHub action](https://github.com/marketplace/actions/rebuild-armbian).
