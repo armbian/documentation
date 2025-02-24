@@ -31,3 +31,31 @@ armbian-config --cmd DEV002
 
 ***
 
+## Armbian router for repository mirror automation
+**Command:** 
+~~~
+armbian-config --cmd DEV003
+~~~
+
+**Author:** @efectn
+
+**Status:** Stable
+
+
+
+***
+
+## Remove Armbian router
+**Command:** 
+~~~
+armbian-config --cmd DEV004
+~~~
+
+**Author:** @efectn
+
+**Status:** Stable
+
+
+
+***
+
