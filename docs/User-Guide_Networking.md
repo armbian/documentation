@@ -34,6 +34,8 @@ network:
 
 ####  Setting a fixed IP address
 
+When creating an additional .yaml file be sure to remove the default file (/etc/netplan/10-dhcp-all-interfaces.yaml) as the default will overide.
+
 The following example configures a static IP `192.168.1.199` for the `eth0` interface. Please adjust as necessary.
 
 
@@ -122,6 +124,7 @@ This will verify the syntax and test if your device can connect
 ```bash
 sudo netplan try
 ```
+If there are no warmings or errors and you hit ENTER as suggested the changes will be made and the next, nextplan apply, step can be skipped.
 
 #### Apply the configuration
 
