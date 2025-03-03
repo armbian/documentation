@@ -59,3 +59,31 @@ armbian-config --cmd DEV004
 
 ***
 
+## Armbian rsyncd server
+**Command:** 
+~~~
+armbian-config --cmd DEV010
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+## Remove Armbian rsyncd server
+**Command:** 
+~~~
+armbian-config --cmd DEV011
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
