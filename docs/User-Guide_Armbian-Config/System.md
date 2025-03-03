@@ -716,3 +716,45 @@ armbian-config --cmd WTC002
 
 ***
 
+### Enable automatic package updates.
+**Command:** 
+~~~
+armbian-config --cmd UNAT01
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Configure automatic package updates
+**Command:** 
+~~~
+armbian-config --cmd UNAT02
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Disable automatic package updates
+**Command:** 
+~~~
+armbian-config --cmd UNAT03
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
