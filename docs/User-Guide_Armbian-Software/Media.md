@@ -463,3 +463,45 @@ armbian-config --cmd MED032
 
 ***
 
+## Hastebin Paste Server
+**Command:** 
+~~~
+armbian-config --cmd MED033
+~~~
+
+**Author:** @efectn
+
+**Status:** Stable
+
+
+
+***
+
+## Hastebin remove
+**Command:** 
+~~~
+armbian-config --cmd MED034
+~~~
+
+**Author:** @efectn
+
+**Status:** Stable
+
+
+
+***
+
+## Hastebin purge with data folder
+**Command:** 
+~~~
+armbian-config --cmd MED035
+~~~
+
+**Author:** @efectn
+
+**Status:** Stable
+
+
+
+***
+
