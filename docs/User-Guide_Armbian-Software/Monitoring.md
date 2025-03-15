@@ -214,3 +214,78 @@ armbian-config --cmd GRA003
 
 ***
 
+## Prometheus docker image
+
+<!--- section image START from tools/include/images/PRO001.png --->
+[![Prometheus docker image](/images/PRO001.png)](#)
+<!--- section image STOP from tools/include/images/PRO001.png --->
+
+
+<!--- header START from tools/include/markdown/PRO001-header.md --->
+Prometheus is an open-source monitoring and alerting toolkit designed for reliability and scalability. It collects and stores time-series data, provides powerful query capabilities, and enables real-time alerts based on defined conditions. Commonly used in cloud and containerized environments, Prometheus integrates seamlessly with Kubernetes and other modern infrastructure.
+
+<!--- header STOP from tools/include/markdown/PRO001-header.md --->
+
+**Command:** 
+~~~
+armbian-config --cmd PRO001
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+<!--- footer START from tools/include/markdown/PRO001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **9090**:
+
+    - URL: `https://<your.IP>:9090`
+
+=== "Directories"
+
+    - Config directory: `/armbian/prometheus`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f prometheus
+    ```
+
+<!--- footer STOP from tools/include/markdown/PRO001-footer.md --->
+
+
+
+***
+
+## Prometheus remove
+**Command:** 
+~~~
+armbian-config --cmd PRO002
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+## Prometheus purge with data folder
+This operation will purge Prometheus with data folder
+
+**Command:** 
+~~~
+armbian-config --cmd PRO003
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
