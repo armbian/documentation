@@ -1,4 +1,4 @@
-# Armbian Quick Start Guide
+# Armbian Getting Started Guide
 
 <iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
