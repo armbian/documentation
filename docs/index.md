@@ -27,7 +27,7 @@ As a user, you can simply download one of our images, deploy and run it on your 
 In any case, you will get these key advantages:
 
 - you get a lean and standard **Debian** or **Ubuntu** based user space with the well known APT package manager
-- we provide an independent kernel development and maintenance with **long term support**
+- we provide independent kernel development and maintenance with **long term support**
 - we provide an extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of the whole operating system and **endless capabilities**
 - we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](/User-Guide_Armbian-Config/) tool
 - we provide exclusive support for **exotic hardware** that nobody else supports
