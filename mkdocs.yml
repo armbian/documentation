@@ -33,6 +33,7 @@ theme:
         - content.code.copy
         - navigation.tabs
         - navigation.top
+        - navigation.expand
         - toc.integrate
 
 extra_css:
@@ -118,8 +119,10 @@ nav:
         - 'Firstboot config': 'User-Guide_Autoconfig.md'
         - 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
-        - 'Release Model' : 'Process_Release-Model.md'
-        - 'Changelog' : 'Release_Changelog.md'
+        - 'Appendix' :
+            - 'Changelog' : 'Release_Changelog.md'
+            - 'Release Model' : 'Process_Release-Model.md'
+            - 'Unit Test Status' : '/'
   - 'ARMBIAN CONFIG':
         - 'Overview': 'User-Guide_Armbian-Config.md'
         - 'System': 'User-Guide_Armbian-Config/System.md'
