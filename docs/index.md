@@ -77,7 +77,7 @@ TODO: where to???
 
 ## Which hardware is supported?
 
-Armbian supports many different single board computers (SBCs). But noch each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
+Armbian distributes stable images for many different single board computers (SBCs). But not each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
 
 [Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
 
@@ -91,11 +91,12 @@ Support is not secured, but it is still overall good.
 
 Most of the images for boards in this category will also work, but no warranty can be given as Armbian does not monitor their status.
 
-For more information is see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
+*Supported / maintained* is not a guarantee, though. It merely implies that a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem, it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
 
-## What is supported?
+For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
-Armbian distributes stable images for maintained hardware through its own [mirror network](/Mirrors/). *Supported / maintained* is not a guarantee. It implies a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
+
+
 
 ## Software titles
 
