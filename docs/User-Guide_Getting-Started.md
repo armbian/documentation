@@ -16,14 +16,14 @@ You will also need an existing operating system and a SD card writer tool. We re
     Some word of advice, though. The video has been created a few years ago. You might therefore find differences between this video and our current site. So, in doubt, also follow the sections below while watching the video.
 
 
-## Download the Image
+## Download the image
 
 All our images can be found at <https://www.armbian.com/download/>. You will find, that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
 
-### Minimal, Server, and Desktop?
+### Minimal, Server, or Desktop?
 
 For each board we usually provide various image types:
 
@@ -87,7 +87,7 @@ graph LR
     **Do not use** rolling release or edge images in a productive environment. Their purpose is testing and providing constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 
-### Download and Verfication
+### Download and verfication
 
 After you have determined the image you want, the download for each image consists of three separate files:
 
