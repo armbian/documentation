@@ -1,13 +1,20 @@
 # Armbian Getting Started Guide
 
-<iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Before you start, please make sure you have:
+
+- a proper power supply according to the board manufacturer requirements <!-- TODO: link to power issues -->
+- a reliable SD card
+
+You will also need an existing operating system and a SD card writer tool. We recommend using [balenaEtcher](https://www.balena.io/etcher/) or [USBImager](https://gitlab.com/bztsrc/usbimager) because these tools can validate written data **saving you from corrupted SD card contents**.
 
 !!! tips "New users"
 
-    Please, make sure you have:
+    Some users might find it easier to follow this video tutorial.
 
-    - a proper power supply according to the board manufacturer requirements
-    - a reliable SD card (see below "How to prepare a SD card?")
+    <iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    Some word of advice, though. The video has been created a few years ago. You might therefore find differences between this video and our current site. So, in doubt, also follow the sections below while watching the video.
+
 
 ## What to download
 
