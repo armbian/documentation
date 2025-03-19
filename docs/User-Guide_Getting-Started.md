@@ -246,7 +246,16 @@ After logging in, you will be prompted to change the default password. You will 
 <!-- TODO: it must be made clear that this just preps the SD card -->
 
 
-## Installation
+## First steps
+
+<!-- TODO:
+      * first customize: armbian-config, install software
+      * ...
+      * then deploy to one or all systems to get the same installation with armbian-install (reboot and check if everything works)
+      * how to test if everything is working well?
+ -->
+
+### Installation
 
 At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and attached SATA, NVME or USB storage.
 
@@ -277,6 +286,11 @@ After you have decided for an option, you can choose between the following file 
 For novice users, a sensible default is `ext4`.
 
 Congratulation. You have successfully installed Armbian onto your board!
+
+
+### Tune the hardware
+
+Hardware configuration is available within [armbian-config](User-Guide_Armbian-Config.md) utility.
 
 
 ## Update the system
