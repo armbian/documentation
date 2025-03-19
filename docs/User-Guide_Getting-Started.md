@@ -176,18 +176,17 @@ We recommend at least A1 rated SD-Cards ([A2 rated cards need yet lacking driver
 
 In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
 
-## How to boot
 
-Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.
+## First boot
 
-## How to login
+Insert the SD card into a slot and power on the board. With the cheapest board, the first boot (with DHCP) can take up to two minutes with a class 10 SD card.
 
-First boot will log you automatically on HDMI or serial console while for SSH login you need to login as **root** and use password **1234**. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use [this tool](https://angryip.org/), to find your board IP address.
 
-???+ tips "Automated config"
-    These settings can be pre-loaded, see [Autoconfig](/User-Guide_Autoconfig)
+## First login
 
-In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.
+The first boot will log you in automatically on HDMI or the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, please use [this tool](https://angryip.org/).
+
+After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.
 
     Welcome to Armbian! 
 
@@ -241,18 +240,15 @@ In case you have no wired network connection and there is a wireless adaptor det
     Generating locales: sl_SI.UTF-8
     root@bananapim2pro:~#
 
-## How to install
+???+ tips "Automated config"
+    These settings can be pre-loaded, see [Autoconfig](/User-Guide_Autoconfig)
 
-![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
+<!-- TODO: it must be made clear that this just preps the SD card -->
 
-!!! success "Required condition for eMMC/SATA/USB/NVME:"
 
-    * onboard eMMC storage
-    * attached SATA, NVME or USB storage
+## Installation
 
-Start the install script and follow the lead:
-
-    armbian-install
+At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and attached SATA, NVME or USB storage.
 
 !!! tip "Armbian installer provides those scenarios:"
 
@@ -265,25 +261,44 @@ Start the install script and follow the lead:
     * Install/Update the bootloader on SPI Flash
     * Install system to UEFI disk
 
-!!! tip "You can choose the following file system options:"
+<!-- TODO: give the user a sensible default -->
 
-    * ext2,3,4
-    * btrfs
+Start the install script and follow the lead:
 
-## How to update
+    armbian-install
 
-### Armbian OS
+![Installer](https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png)
+
+After you have decided for an option, you can choose between the following file systems: <!-- TODO: only for system? -->
+
+* ext2,3,4
+* btrfs
+
+For novice users, a sensible default is `ext4`.
+
+Congratulation. You have successfully installed Armbian onto your board!
+
+
+## Update the system
+
+The operating system consists of two parts that must be updated separately.
+
+
+### Update the Armbian OS
+
+For the base operating system, use the APT package manager to keep the packages up to date.
 
     apt update
     apt upgrade
 
-**Update process can take some time in case of using old & cheap SD card and/or under heavy load.**
+**The Update process can take quite some time in case you are using an old or a cheap SD card and/or experience heavy load.**
 
-If the kernel was upgraded during this process you will be prompted to reboot at next login.
+If the kernel was upgraded during this process you will be prompted to reboot at the next login.
 
-### Boot loader
 
-First you need to update all packages described in a previous step. Then run:
+### Update the boot loader
+
+First, you need to update all packages as described in the previous section. Then run:
 
 ```bash
 sudo armbian-install
@@ -291,7 +306,8 @@ sudo armbian-install
 
 Select:
 
-Install/Update the bootloader on SD/eMMC
+    Install/Update the bootloader on SD/eMMC
+
 
 ## How to stay safe
 
