@@ -20,7 +20,7 @@ It then continues on to [_Configuration_](User-Guide_Configuration.md) tasks and
 
 If you have read through the documentation and still **need help**, check out our [_Troubleshooting_](User-Guide_Troubleshooting.md) advice.
 
-TODO: Changelog, Relases, Model, FAQ appendixes
+<!-- TODO: Changelog, Relases, Model, FAQ appendixes -->
 
 
 ### Where to find additional help?
@@ -87,7 +87,7 @@ In any case, you will get these key advantages:
 
 ### Comparison
 
-TODO: where to???
+<!-- TODO: where to??? -->
 
 | Distributions | Armbian  | Downstream | Upstream |
 | -------- | -------- | -------- |-------- |
@@ -107,6 +107,12 @@ TODO: where to???
 | Process usage | optimal | only hidden | too broad |
 | Pre-installed packages | optimized for fast install | makes install of anything slower | optimized for fast install |
 | Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
+
+
+## Where are the project sources?
+
+<!-- TODO: tbw -->
+
 
 ## Which hardware is supported?
 
@@ -129,6 +135,16 @@ Most of the images for boards in this category will also work, but no warranty c
 For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 
+## Where can I find the image for my board?
+
+<!-- TODO -->
+
+[mirror network](/Mirrors/)
+
+
+## What are differences between releases?
+
+<!-- TODO -->
 
 
 ## Software titles
