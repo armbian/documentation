@@ -53,6 +53,8 @@ graph LR
   
 ```
 
+### What are the key features?
+
 As a user, you can simply download one of our images, deploy and run it on your SBC. As an advanced user, a manufacturer or provider, you can create fully configured custom images for your board or product.
 
 In any case, you will get these key advantages:
