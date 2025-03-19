@@ -108,7 +108,6 @@ markdown_extensions:
 nav:
 
   - 'ARMBIAN OS':
-        - 'Welcome': 'User-Guide_Preface.md'
         - 'Introduction': 'index.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
         - 'Networking' : 'User-Guide_Networking.md'
