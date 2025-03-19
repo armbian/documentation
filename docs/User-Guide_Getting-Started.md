@@ -307,7 +307,20 @@ For the base operating system, use the APT package manager to keep the packages 
 
 **The Update process can take quite some time in case you are using an old or a cheap SD card and/or experience heavy load.**
 
-If the kernel was upgraded during this process you will be prompted to reboot at the next login.
+Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages but the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
+
+    Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
+
+within [armbian-config](/User-Guide_Armbian-Config).
+
+If the kernel was upgraded during this process, you will be prompted to reboot at the next login.
+
+<!-- TODO: maybe move this to advanced? Definitely not for novice users -->
+
+When a new userspace is out, we recommend to start with a fresh image. While it is possible to upgrade, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
+
+!!! danger
+    Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.
 
 
 ### Update the boot loader
@@ -318,26 +331,19 @@ First, you need to update all packages as described in the previous section. The
 sudo armbian-install
 ```
 
-Select:
+and select:
 
     Install/Update the bootloader on SD/eMMC
 
 
-## How to stay safe
+## Troubleshooting
 
-Armbian provides firmware package freeze to give you an option to upgrade all packages but firmware. This prevents unplesant surprises on functionality regressions that comes with kernel upgrades. To enable / disable this feature, look for `Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades` within [armbian-config](/User-Guide_Armbian-Config).
+<!-- 
+      * armbianmonitor
+      * community / search forum || how to get help
+      * FAQ (maybe feature is not developed)
+-->
 
-## How to upgrade a distribution
-
-When a new userspace is out, we recommend to start with a fresh image. However, it is possible to upgrade, but the process is largerly in the domain of underlaying Debian or Ubuntu user space. However we provide experimental `Distribution upgrades` within [armbian-config](/User-Guide_Armbian-Config)
-
-!!! danger
-    Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  
-
-## How to tune hardware
-
-Hardware configuration is available within [armbian-config](User-Guide_Armbian-Config.md) utility.
-
-## How to report bugs
+### How to report bugs
 
 Follow bug reporting form available [here](https://armbian.com/bugs/) and learn how to collect necessary information and where provide to put your report depending on type of issue. Reports lacking fundamental diagnostics are ignored.
