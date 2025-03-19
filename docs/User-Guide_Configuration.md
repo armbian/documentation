@@ -1,5 +1,8 @@
 # How to customize keyboard, time zone?
 
+<!-- TODO: Probably move stuff like sound or screen resolution to Advanced tasks?? Or at least some?? -->
+
+
 - **Attention: The preferred method to change most of this stuff is by using the interactive _armbian-config_ tool which is shipped with all Armbian images.**
 
 ## Keyboard:

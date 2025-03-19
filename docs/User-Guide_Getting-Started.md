@@ -248,14 +248,19 @@ After logging in, you will be prompted to change the default password. You will 
 
 ## First steps
 
+You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD-card again if necesasary. or you want to adjust your hardware configuration, or install software.
+
+While the underlying operating system offers tools and processes to make these customizations, the **preferred method** to change most of these settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images.
+
 <!-- TODO:
-      * first customize: armbian-config, install software
+      * first customize: armbian-config, install software -> show some examples
       * ...
       * then deploy to one or all systems to get the same installation with armbian-install (reboot and check if everything works)
       * how to test if everything is working well?
  -->
 
-### Installation
+
+## Installation
 
 At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and attached SATA, NVME or USB storage.
 
@@ -286,11 +291,6 @@ After you have decided for an option, you can choose between the following file 
 For novice users, a sensible default is `ext4`.
 
 Congratulation. You have successfully installed Armbian onto your board!
-
-
-### Tune the hardware
-
-Hardware configuration is available within [armbian-config](User-Guide_Armbian-Config.md) utility.
 
 
 ## Update the system
