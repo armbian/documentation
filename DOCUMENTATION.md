@@ -50,7 +50,7 @@ Ensure you have Python and the necessary development packages installed:
 
 ```bash
 sudo apt-get update
-sudo apt-get install python3 python3-pip python3-venv python3.11-dev
+sudo apt-get install python3 python3-pip python3-venv python3.12-dev
 ```
 
 If using Debian, you may need to install the following packages for `mkdocs-material`:

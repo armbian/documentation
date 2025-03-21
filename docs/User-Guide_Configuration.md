@@ -200,7 +200,7 @@ Assure `jq` is installed
 Get a list of available mirrors from our `https://apt.armbian.com/mirrors` endpoint.
 
 ```bash
-curl -s http://apt.armbian.com/mirrors|jq
+curl -s http://apt.armbian.com/mirrors | jq
 ```
 
 You will see a result set similar to this, listing mirrors by region:
@@ -233,4 +233,4 @@ You will see a result set similar to this, listing mirrors by region:
 }
 ```
 
-Edit `/etc/apt/sources.list.d/armbian.list` and replace the url `http://apt.armbian.com` with your preferred mirror.
+Edit `/etc/apt/sources.list.d/armbian.sources` and replace the URL `https://apt.armbian.com` with your preferred mirror.

@@ -149,9 +149,6 @@ armbian-config --cmd SY221
 ***
 
 ### Enable read only filesystem
-This will enable Armbian read-only filesystem. Reboot is mandatory?
-
-
 **Command:** 
 ~~~
 armbian-config --cmd SY007
@@ -166,9 +163,6 @@ armbian-config --cmd SY007
 ***
 
 ### Disable read only filesystem
-This will disable Armbian read-only filesystem. Reboot is mandatory?
-
-
 **Command:** 
 ~~~
 armbian-config --cmd SY008
@@ -280,6 +274,20 @@ armbian-config --cmd NFS09
 **Command:** 
 ~~~
 armbian-config --cmd NFS21
+~~~
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+
+***
+
+#### Show and manage NFS mounts
+**Command:** 
+~~~
+armbian-config --cmd NFS22
 ~~~
 
 **Author:** @igorpecovnik
@@ -698,6 +706,48 @@ Every day watchtower will pull the latest images and compare it to the one that 
 **Command:** 
 ~~~
 armbian-config --cmd WTC002
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Enable automatic package updates.
+**Command:** 
+~~~
+armbian-config --cmd UNAT01
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Configure automatic package updates
+**Command:** 
+~~~
+armbian-config --cmd UNAT02
+~~~
+
+**Author:** @armbian
+
+**Status:** Stable
+
+
+
+***
+
+### Disable automatic package updates
+**Command:** 
+~~~
+armbian-config --cmd UNAT03
 ~~~
 
 **Author:** @armbian

@@ -157,7 +157,7 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 Before you start, there is an **important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability issues, in over 95 percent of the time it is either caused by an insufficient power supply or it is related to the SD card (due to a bad card, bad card reader, something went wrong when burning the image, card too slow to boot ... 'Class 10' is **highly** recommended!). Armbian can simply not run on unreliable hardware. So checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run into problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue, checking with F3/H2testw directly after purchase is also **highly recommended**.
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) or [balenaEtcher](https://www.balena.io/etcher/) on all platforms. Uunlike other tools, either of them can validate written data **saving you from corrupted SD card contents**.
+Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your microSD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**. Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended at this time.
 
 !!! tip "Also important"
 

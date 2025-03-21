@@ -8,7 +8,7 @@ Core automation for generating images for release are held at <https://github.co
 
 ### Recommended images
 
-Recommended images on download pages are defined via regular expression mapping file `exposed.map`:
+Recommended images on download pages are defined via regular expression mapping file <https://github.com/armbian/os/blob/main/exposed.map> (for changes sent PR to this file)
 
 Example:
 
@@ -31,6 +31,19 @@ userpatches/targets-release-standard-support.template
 ```
 
 From those templates we are [autogenerating](https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438) YAML files, which are passed to build matrix as input. Make sure to review generated YAML files if they have wanted build targets with correct exensions enabled.
+
+### Grouping logic
+
+Boards are automatically divided into sections and each section is appendend to certain build scenario (minimal Debian image, Ubuntu testing with KDE, ...), which is defined in template.
+
+Section | Condition |
+|:--|:--|
+| standard-support-slow-hdmi | HAS_VIDEO_OUTPUT = yes AND ARCH = armhf | 
+| standard-support-fast-hdmi | HAS_VIDEO_OUTPUT = yes AND ARCH = arm64|amd64 |
+| standard-support-headless | HAS_VIDEO_OUTPUT = no | 
+| standard-support-riscv64 | ARCH = riscv64 | 
+
+Example: if you want automated images without a desktop, add `HAS_VIDEO_OUTPUT=no` in board config file. Automation will only build two CLI images, Ubuntu server and Debian minimal. Which is suitable for hardware that will most likely be used headless.
 
 ### Blacklisting
 
@@ -56,6 +69,10 @@ Example:
 ```
 khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
 ```
+
+### Testing
+
+Unfortunatelly this part does not have testing at PR stage.
 
 ## Prepare Standard Support images for release
 

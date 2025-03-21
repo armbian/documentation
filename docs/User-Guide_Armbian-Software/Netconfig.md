@@ -4,6 +4,11 @@
 ***
 
 ## nload -realtime console network usage monitor
+
+<!--- section image START from tools/include/images/NET001.png --->
+[![nload -realtime console network usage monitor](/images/NET001.png)](#)
+<!--- section image STOP from tools/include/images/NET001.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd NET001
@@ -32,6 +37,11 @@ armbian-config --cmd NET002
 ***
 
 ## iperf3 bandwidth measuring tool
+
+<!--- section image START from tools/include/images/NET003.png --->
+[![iperf3 bandwidth measuring tool](/images/NET003.png)](#)
+<!--- section image STOP from tools/include/images/NET003.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd NET003

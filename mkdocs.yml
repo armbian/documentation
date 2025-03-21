@@ -132,6 +132,7 @@ nav:
         - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
         - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
+        - 'Music': 'User-Guide_Armbian-Software/Music.md'
         - 'Database': 'User-Guide_Armbian-Software/Database.md'        
         - 'Downloaders': 'User-Guide_Armbian-Software/Downloaders.md'
         - 'DNS blockers': 'User-Guide_Armbian-Software/DNS.md'
