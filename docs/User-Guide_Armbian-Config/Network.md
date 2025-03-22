@@ -5,6 +5,11 @@
 
 ## Basic Network Setup
 
+<!--- section image START from tools/include/images/BNS001.png --->
+[![Basic Network Setup](/images/BNS001.png)](#)
+<!--- section image STOP from tools/include/images/BNS001.png --->
+
+
 <!--- header START from tools/include/markdown/BNS001-header.md --->
 ``` mermaid
 graph LR
@@ -69,6 +74,11 @@ armbian-config --cmd BNS002
 ***
 
 ## View Network Settings
+
+<!--- section image START from tools/include/images/VNS001.png --->
+[![View Network Settings](/images/VNS001.png)](#)
+<!--- section image STOP from tools/include/images/VNS001.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd VNS001
