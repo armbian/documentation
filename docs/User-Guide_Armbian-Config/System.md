@@ -9,6 +9,11 @@
 ***
 
 ### Install alternative kernels
+
+<!--- section image START from tools/include/images/SY201.png --->
+[![Install alternative kernels](/images/SY201.png)](#)
+<!--- section image STOP from tools/include/images/SY201.png --->
+
 Switching between kernels might change functionality of your device. 
 
 It might fail to boot!
@@ -27,6 +32,11 @@ armbian-config --cmd SY201
 ***
 
 ### Install Linux headers
+
+<!--- section image START from tools/include/images/SY204.png --->
+[![Install Linux headers](/images/SY204.png)](#)
+<!--- section image STOP from tools/include/images/SY204.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd SY204
@@ -107,6 +117,11 @@ armbian-config --cmd SY010
 ***
 
 ### Install to internal storage
+
+<!--- section image START from tools/include/images/SY001.png --->
+[![Install to internal storage](/images/SY001.png)](#)
+<!--- section image STOP from tools/include/images/SY001.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd SY001
@@ -304,6 +319,11 @@ armbian-config --cmd NFS22
 ***
 
 ### Disable root login
+
+<!--- section image START from tools/include/images/SY101.png --->
+[![Disable root login](/images/SY101.png)](#)
+<!--- section image STOP from tools/include/images/SY101.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd SY101
@@ -555,6 +575,11 @@ armbian-config --cmd SSH202
 ***
 
 ### Change shell system wide to BASH
+
+<!--- section image START from tools/include/images/SY005.png --->
+[![Change shell system wide to BASH](/images/SY005.png)](#)
+<!--- section image STOP from tools/include/images/SY005.png --->
+
 This will switch system wide shell to BASH
 
 **Command:** 
@@ -608,6 +633,11 @@ armbian-config --cmd SY009
 ***
 
 ### Enable Armbian firmware upgrades
+
+<!--- section image START from tools/include/images/SY202.png --->
+[![Enable Armbian firmware upgrades](/images/SY202.png)](#)
+<!--- section image STOP from tools/include/images/SY202.png --->
+
 This will enable Armbian kernel upgrades that are currently put on hold.
 
 **Command:** 
@@ -731,6 +761,11 @@ armbian-config --cmd UNAT01
 ***
 
 ### Configure automatic package updates
+
+<!--- section image START from tools/include/images/UNAT02.png --->
+[![Configure automatic package updates](/images/UNAT02.png)](#)
+<!--- section image STOP from tools/include/images/UNAT02.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd UNAT02

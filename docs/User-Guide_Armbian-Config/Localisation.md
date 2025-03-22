@@ -4,6 +4,11 @@
 ***
 
 ## Change Global timezone
+
+<!--- section image START from tools/include/images/LO001.png --->
+[![Change Global timezone](/images/LO001.png)](#)
+<!--- section image STOP from tools/include/images/LO001.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd LO001
