@@ -14,6 +14,33 @@
 [![Install alternative kernels](/images/SY201.png)](#)
 <!--- section image STOP from tools/include/images/SY201.png --->
 
+
+<!--- header START from tools/include/markdown/SY201-header.md --->
+## Kernel Switching Warning
+
+Switching between different kernel versions can significantly impact the functionality of your device. A newer or older kernel may introduce changes to hardware compatibility, drivers, and system stability. Some features may stop working, while others may improve or be reintroduced.  
+
+### ⚠️ Important Warning: Kernel changes carry inherent risks!  
+- A mismatched or incompatible kernel may result in **boot failures**, rendering the system unresponsive.  
+- Certain peripherals or hardware components (e.g., Wi-Fi, GPU acceleration, or power management) may no longer function correctly.  
+- Custom configurations or third-party modules might need to be recompiled or adjusted to work with the new kernel.  
+
+### ✅ Precautions Before Switching Kernels  
+Before switching kernels, it is **strongly recommended** to:  
+1. **Back up your system** to prevent data loss.  
+2. **Verify compatibility** of your hardware and essential drivers with the target kernel version.  
+3. **Keep a rescue method available**, such as a bootable SD card / USB drive or serial console access, to recover the system if necessary.  
+
+### 🛠️ Recovery Steps if Boot Fails  
+If your device fails to boot after a kernel change, you may need to:  
+- **Revert to a previous working kernel** using recovery options.  
+- **Use a serial console or debug mode** to diagnose the issue.  
+- **Reinstall the system** if no recovery options are available.  
+
+**⚡ Exercise caution when switching kernels, especially on production systems or devices with limited recovery options.**
+
+<!--- header STOP from tools/include/markdown/SY201-header.md --->
+
 Switching between kernels might change functionality of your device. 
 
 It might fail to boot!
@@ -36,6 +63,12 @@ armbian-config --cmd SY201
 <!--- section image START from tools/include/images/SY204.png --->
 [![Install Linux headers](/images/SY204.png)](#)
 <!--- section image STOP from tools/include/images/SY204.png --->
+
+
+<!--- header START from tools/include/markdown/SY204-header.md --->
+Linux headers are essential for compiling kernel modules and ensuring compatibility with software that interacts with the kernel.
+
+<!--- header STOP from tools/include/markdown/SY204-header.md --->
 
 **Command:** 
 ~~~
@@ -65,6 +98,11 @@ armbian-config --cmd SY205
 ***
 
 ### Manage device tree overlays
+
+<!--- section image START from tools/include/images/SY210.png --->
+[![Manage device tree overlays](/images/SY210.png)](#)
+<!--- section image STOP from tools/include/images/SY210.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd SY210
@@ -93,6 +131,11 @@ armbian-config --cmd SY300
 ***
 
 ### Edit the boot environment
+
+<!--- section image START from tools/include/images/SY010.png --->
+[![Edit the boot environment](/images/SY010.png)](#)
+<!--- section image STOP from tools/include/images/SY010.png --->
+
 This will open /boot/armbianEnv.txt file to edit
 CTRL+S to save
 CTLR+X to exit
@@ -136,6 +179,33 @@ armbian-config --cmd SY001
 ***
 
 ### ZFS filesystem - enable support
+
+<!--- header START from tools/include/markdown/SY220-header.md --->
+# 📌 ZFS (Zettabyte File System)  
+
+## 🔍 Overview  
+
+**ZFS (Zettabyte File System)** is a high-performance, scalable, and robust file system designed to provide advanced data protection, integrity, and storage management. Developed by Sun Microsystems, ZFS is widely used in enterprise environments, NAS systems, and personal storage solutions due to its unique features.  
+
+## 🛠️ Key Features  
+
+### ✅ Data Integrity  
+- **Copy-on-Write (CoW):** Prevents data corruption by never overwriting live data.  
+- **Checksumming:** Detects and corrects silent data corruption (bit rot).  
+
+### 📦 Storage Management  
+- **Pooled Storage:** Eliminates the need for traditional partitions; all storage is managed dynamically.  
+- **Snapshots & Clones:** Creates instant backups without using extra storage.  
+
+### 🚀 Performance & Scalability  
+- **Efficient Compression & Deduplication:** Reduces storage usage without performance loss.  
+- **Dynamic Striping & Caching:** Distributes data across multiple disks for optimized read/write speeds.  
+
+### 🔐 Advanced Security  
+- **Native Encryption:** Supports dataset-level encryption for secure data storage.  
+- **RAID-Z:** A superior RAID alternative that prevents write-hole issues.  
+<!--- header STOP from tools/include/markdown/SY220-header.md --->
+
 **Command:** 
 ~~~
 armbian-config --cmd SY220
@@ -596,6 +666,19 @@ armbian-config --cmd SY005
 ***
 
 ### Change shell system wide to ZSH
+
+<!--- header START from tools/include/markdown/SY006-header.md --->
+**ZSH (Z Shell)** is an extended and highly customizable Unix shell that offers powerful features beyond traditional shells like **Bash**. It is widely used for its user-friendly enhancements, scripting capabilities, and plugin support.  
+
+## 🚀 Key Features  
+
+- **Auto-suggestions & Syntax Highlighting** ✨  
+- **Powerful Tab Completion & Globbing** 🔍  
+- **Customizable Prompt (e.g., with Oh My Zsh)** 🎨  
+- **Shared Command History Across Sessions** 📜  
+- **Built-in Spelling Correction** 🛠️  
+<!--- header STOP from tools/include/markdown/SY006-header.md --->
+
 This will switch system wide shell to ZSH
 
 **Command:** 
