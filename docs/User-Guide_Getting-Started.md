@@ -68,7 +68,7 @@ If you have no special preferences that require specific versions, we recommend 
 
 In some cases we provide images with different firmware. They differ in level of hardware support. Focus into:
 
-- **vendor** contains vendor provided kernel which usually has best hardware support while version can be outdated, containin less general fixes
+- **vendor** contains vendor provided kernel which usually has best hardware support while version can be outdated, containing less general fixes
 - **current** is following latest [mainline LTS kernel](https://www.kernel.org/category/releases.html) and is in most cases best choice
 
 And use those if they are the only one / for testings:
