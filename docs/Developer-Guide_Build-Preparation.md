@@ -64,6 +64,23 @@ Run framework:
 
 ## CLI
 
+```bash
+./compile.sh [command] [switch...] [config...]
+```
+
+Only one command can be specified.
+
+Switches are parameter settings that are used by the build framework itself
+(e.g. `DEBUG=yes`) or the specific command.
+
+Config files are bash shell scripts that are sourced in the order
+specified. They are primarily used to set switches but might also set hook
+functions. They must be located in the `userpatches` directory and must
+be named `config-${arg}.conf` or `config-${arg}.conf.sh` (where `${arg}` is
+the argument from the command line): one or the other, but not both.
+
+Switches set on the commandline override settings from the config files,
+regardless of the order they appear on the comandline.
 
 Comprehensive list of build [Commands](Developer-Guide_Build-Commands.md) and [Switches](Developer-Guide_Build-Switches.md)
 
@@ -80,6 +97,14 @@ DESKTOP_ENVIRONMENT=gnome \
 DESKTOP_ENVIRONMENT_CONFIG_NAME=config_base \
 KERNEL_CONFIGURE=no \
 RELEASE=noble
+```
+
+Or, using config file `userpatches/config-myboard.conf`
+that sets all these switches:
+
+```bash
+./compile.sh build \
+myboard
 ```
 
 !!! question "Interpretation?"
