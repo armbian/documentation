@@ -109,12 +109,7 @@ In any case, you will get these key advantages:
 | Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
 
 
-## Project sources
-
-<!-- TODO: tbw -->
-
-
-## Hardware support
+## Which hardware is supported?
 
 Armbian distributes stable images for many different single board computers (SBCs). But not each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
 
@@ -133,6 +128,18 @@ Most of the images for boards in this category will also work, but no warranty c
 *Supported / maintained* is not a guarantee, though. It merely implies that a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem, it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
 
 For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
+
+
+## Where to find images and sources?
+
+Our main website is <https://www.armbian.com/>. It is the default site for our users, and it contains the download section with all images, information about the support status for each board, links to our forum and this documentation.
+
+The project sources are hosted on [GitHub](https://github.com/armbian) and are organized in separate Git repositories. These are the resources for developers and participants, e.g. users helping with testing.
+
+
+## How can you contribute?
+
+<!-- tbw -->
 
 
 ## Software titles
