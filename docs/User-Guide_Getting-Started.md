@@ -18,35 +18,35 @@ You will also need an existing operating system and a SD card writer tool. We re
 
 ## Download the image
 
-All our images can be found at <https://www.armbian.com/download/>. You will find, that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
+All our system images can be found at <https://www.armbian.com/download/>. You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
 
-### Minimal, Server, or Desktop?
-
-For each board we usually provide various image types:
-
-- **Minimal** - lightweight CLI with bare minimum of packages
-- **Server** - server variant with preinstalled standard utilities
-- **Desktop** full featured desktop image
-
-For some boards we provide only minimal images due to their hardware limitations.
-
-
-### Debian or Ubuntu?
+### Debian or Ubuntu
 
 If you have no special preferences or requirements, we recommend Ubuntu based Armbian.
 
 
-### Vendor, Current, Edge, or Legacy?
+### Minimal, Server, or Desktop
 
-In some cases we provide images with different firmware. They differ in the level of hardware support. Focus into:
+For each board we usually provide these image types:
+
+- **Minimal** - lightweight CLI with only a bare minimum of packages and no graphical user environment
+- **Server** - server variant with preinstalled standard utilities and no graphical user environment
+- **Desktop** - full featured desktop image
+
+For some boards we provide only minimal images due to their hardware limitations.
+
+
+### Vendor, Current, Edge, or Legacy
+
+In some cases we provide images with different firmware. They differ in the level of hardware support and can be classified as follows:
 
 - **vendor** contains a vendor-provided kernel which usually has the best hardware support while package version can be outdated, containing less general fixes <!-- TODO: phrasing -->
-- **current** is following the latest [mainline LTS kernel](https://www.kernel.org/category/releases.html) and is in most cases the best choice.
+- **current** is following the latest [Linux mainline LTS kernel](https://www.kernel.org/category/releases.html) and is in most cases the _best choice_.
 
-Further, if the following images are the only ones provided, or if you want to participate in testing:
+Use the following images only if these are the only ones provided, or if you want to participate in testing:
 
 - **edge** is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.
 - **legacy** is the old stable current kernel. Use it if _current_ is not available or if something does not work well with it.
@@ -97,7 +97,7 @@ After you have determined the image you want, the download for each image consis
 
 After you have downloaded these files, we recommend checking the integrity and the authenticity of the compressed image file.
 
-!!! question "How to check download integrity?"
+!!! question "How to check the download integrity?"
 
     Since it might happen that your download got somehow corrupted, we publish a checksum/hash for each of our images. You can compare the image's SHA-256 hash with the one contained in the `.sha` file.
 
@@ -113,9 +113,9 @@ After you have downloaded these files, we recommend checking the integrity and t
     Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz: OK
     ```
 
-!!! question "How to check download authenticity?"
+!!! question "How to check the download authenticity?"
 
-    All our images are digitally signed. It is therefore possible to check their authenticity. Linux and macOS user might need to install the required tools first: for Debian/Ubuntu, this can be done via `sudo apt-get install gnupg `, and for macOS use `brew install gnupg ` on macOS. Windows users can install the [GnuPG from here](https://gnupg.org/download/). To check the authenticity, you will need the public key that was used to sign the images. This key can be retrieved from a keyserver or from the Debian/Ubuntu package repository (this step only needs to be done once):
+    All our images are digitally signed. It is therefore possible to check their authenticity. Linux and macOS user might need to install the required tools first: for Debian/Ubuntu, this can be done via `sudo apt-get install gnupg `, and for macOS use `brew install gnupg `. Windows users can install [GnuPG from here](https://gnupg.org/download/). To check the authenticity, you will need the public key that was used to sign the images. This key can be retrieved from a keyserver or from the Debian/Ubuntu package repository (this step only needs to be done once):
 
     ```sh
     # download the public key either from a keyserver
@@ -184,9 +184,9 @@ Insert the SD card into a slot and power on the board. With the cheapest board, 
 
 ## First login
 
-The first boot will log you in automatically on HDMI or the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, please use [this tool](https://angryip.org/).
+The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, you can use [this tool](https://angryip.org/).
 
-After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.
+After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
     Welcome to Armbian! 
 
@@ -248,7 +248,7 @@ After logging in, you will be prompted to change the default password. You will 
 
 ## First steps
 
-You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD-card again if necesasary. or you want to adjust your hardware configuration, or install software.
+You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD-card again if necesasary. Or you want to adjust your hardware configuration, or install software.
 
 While the underlying operating system offers tools and processes to make these customizations, the **preferred method** to change most of these settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images.
 
@@ -262,9 +262,9 @@ While the underlying operating system offers tools and processes to make these c
 
 ## Installation
 
-At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and attached SATA, NVME or USB storage.
+At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME or USB storage.
 
-!!! tip "Armbian installer provides those scenarios:"
+!!! tip "Armbian Installer support those storage scenarios:"
 
     * boot from SD, system on SATA / USB
     * boot from eMMC / NAND, system on eMMC/NAND
@@ -307,7 +307,9 @@ For the base operating system, use the APT package manager to keep the packages 
 
 **The Update process can take quite some time in case you are using an old or a cheap SD card and/or experience heavy load.**
 
-Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages but the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
+Users with a desktop will find graphical tools that allow one to update the system packages without using the command line.
+
+Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages **but** the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
 
     Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 
@@ -317,10 +319,10 @@ If the kernel was upgraded during this process, you will be prompted to reboot a
 
 <!-- TODO: maybe move this to advanced? Definitely not for novice users -->
 
-When a new userspace is out, we recommend to start with a fresh image. While it is possible to upgrade, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
+When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
 
 !!! danger
-    Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.
+    Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.
 
 
 ### Update the boot loader
@@ -346,4 +348,4 @@ and select:
 
 ### How to report bugs
 
-Follow bug reporting form available [here](https://armbian.com/bugs/) and learn how to collect necessary information and where provide to put your report depending on type of issue. Reports lacking fundamental diagnostics are ignored.
+Follow our [bug reporting form](https://armbian.com/bugs/) and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics will be ignored.
