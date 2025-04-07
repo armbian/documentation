@@ -18,19 +18,19 @@ You will also need an existing operating system and a SD card writer tool. We re
 
 ## Download the image
 
-All our system images can be found at <https://www.armbian.com/download/>. You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
+If your hardware is [supported](index.md#hardware-support), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](/Mirrors/). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
 
 ### Debian or Ubuntu
 
-If you have no special preferences or requirements, we recommend Ubuntu based Armbian.
+If you have no special preferences or requirements, we recommend using an Ubuntu based Armbian image.
 
 
 ### Minimal, Server, or Desktop
 
-For each board we usually provide these image types:
+For each board, we usually provide these types of images:
 
 - **Minimal** - lightweight CLI with only a bare minimum of packages and no graphical user environment
 - **Server** - server variant with preinstalled standard utilities and no graphical user environment
