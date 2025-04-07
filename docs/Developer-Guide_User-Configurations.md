@@ -2,7 +2,7 @@
 
 ## User provided patches
 
-You can add your own patches outside the build script. Place your patches inside the appropriate directory, for kernel or u-boot. There are no limitations except that all patches must have the file name extension `.patch`. User patches directory structure mirrors directory structure of `patch`. Look for the hint at the beginning of patching process to select the proper directory for patches. Example:
+You can add your own patches outside the build script. Place your patches inside the appropriate directory, for kernel or u-boot. There are no limitations except that all patches must have the file name extension `.patch`. `userpatches` directory structure mirrors directory structure of `patch`. Look for the hint at the beginning of patching process to select the proper directory for patches. Example:
 
     [ o.k. ] Started patching process for [ kernel sunxi-edge 4.4.0-rc6 ]
     [ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-edge ]
