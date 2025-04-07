@@ -53,7 +53,7 @@ graph LR
   
 ```
 
-### What are the key features?
+### Key features
 
 As a user, you can simply download one of our images, deploy and run it on your SBC. As an advanced user, a manufacturer or provider, you can create fully configured custom images for your board or product.
 
@@ -109,12 +109,12 @@ In any case, you will get these key advantages:
 | Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
 
 
-## Where are the project sources?
+## Project sources
 
 <!-- TODO: tbw -->
 
 
-## Which hardware is supported?
+## Hardware support
 
 Armbian distributes stable images for many different single board computers (SBCs). But not each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
 

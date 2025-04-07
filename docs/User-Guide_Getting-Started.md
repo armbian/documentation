@@ -54,7 +54,7 @@ Use the following images only if these are the only ones provided, or if you wan
 The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](/User-Guide_Armbian-Config).
 
 
-### Rolling releases?
+### Rolling releases
 
 <!-- TODO: this might be too much here; explanation could go into development docs, or appendix maybe?? -->
 
