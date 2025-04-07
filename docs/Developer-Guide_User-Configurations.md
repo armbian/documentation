@@ -35,7 +35,7 @@ Example:
 	
 ## User provided image customization script
 
-You can run additional commands to customize the created image. Edit the file:
+You can run additional commands to customize the created image. Edit this file:
 
     userpatches/customize-image.sh
 
