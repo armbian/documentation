@@ -115,7 +115,7 @@ nav:
             - 'Advanced Features': 'User-Guide_Advanced-Features.md'
             - 'Networking' : 'User-Guide_Networking.md'
             - 'Firstboot config': 'User-Guide_Autoconfig.md'
-            - 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
+            #- 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
         - 'Troubleshooting and Recovery' : 'User-Guide_Troubleshooting.md'
         #- 'Recovery' : 'User-Guide_Recovery.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
