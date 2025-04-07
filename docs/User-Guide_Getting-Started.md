@@ -5,7 +5,7 @@ Before you start, please make sure you have:
 - a proper power supply according to the board manufacturer requirements <!-- TODO: link to power issues -->
 - a reliable SD card <!-- TODO: link to hints for SD-card -->
 
-You will also need an existing operating system and a SD card writer tool. We recommend using [balenaEtcher](https://www.balena.io/etcher/) or [USBImager](https://gitlab.com/bztsrc/usbimager) because these tools can validate written data **saving you from corrupted SD card contents**.
+You will also need an existing operating system and a SD card writer tool. We recommend using [USBImager](https://gitlab.com/bztsrc/usbimager) because it can validate written data **saving you from corrupted SD card contents**.
 
 !!! tips "New users"
 
