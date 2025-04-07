@@ -135,18 +135,6 @@ Most of the images for boards in this category will also work, but no warranty c
 For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
 
 
-## Where can I find the image for my board?
-
-<!-- TODO -->
-
-[mirror network](/Mirrors/)
-
-
-## What are differences between releases?
-
-<!-- TODO -->
-
-
 ## Software titles
 
 You can quickly and easily install popular software! They are ready to run and optimized for Armbian. Here are few highlights:
