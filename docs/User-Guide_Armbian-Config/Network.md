@@ -5,6 +5,11 @@
 
 ## Basic Network Setup
 
+<!--- section image START from tools/include/images/BNS001.png --->
+[![Basic Network Setup](/images/BNS001.png)](#)
+<!--- section image STOP from tools/include/images/BNS001.png --->
+
+
 <!--- header START from tools/include/markdown/BNS001-header.md --->
 ``` mermaid
 graph LR
@@ -30,22 +35,31 @@ armbian-config --cmd BNS001
 
 
 <!--- footer START from tools/include/markdown/BNS001-footer.md --->
-Network configuration is simple and easy to follow:
+1. **Select Interface:**
+   - Launch the `armbian-config` utility:
+     ```bash
+     sudo armbian-config
+     ```
+   - Navigate to `Network` and choose the desired network interface (e.g., `eth0` for wired or `wlan0` for wireless).
 
-1. Choose the interface. If it's a wireless interface, you'll be prompted to select an access point (AP) and enter its password. Leave empty for open network.
+2. **Wireless Interface Configuration:**
+   - If configuring a wireless interface:
+     - A list of available Access Points (APs) will be displayed.
+     - Select your preferred AP and enter the password when prompted. Leave the password field empty for open networks.
 
-2. Choose between DHCP (Dynamic Host Configuration Protocol) or static IP configuration. 
+3. **IP Address Configuration:**
+   - Choose between:
+     - **DHCP (Dynamic Host Configuration Protocol):** Automatically assigns an IP address.
+     - **Static IP:** Manually enter details:
+       - **MAC Address (optional):** Specify if you want spoofing MAC address.
+       - **IP Address:** Use CIDR notation (e.g., `192.168.1.10/24`).
+       - **Route:** Default is `0.0.0.0/0`.
+       - **Gateway:** Typically the router's IP, e.g., `192.168.1.1`.
+       - **DNS:** Default is `9.9.9.9`, but can be changed.
 
-- If you select DHCP, the setup is complete. Optionally, you can change the MAC address.
-
-3. If you choose a static configuration, you'll need to provide:
-
-- An optional MAC address change
-- A fixed IP address (e.g., x.x.x.x/y)
-- A route (default: 0.0.0.0/0)
-- A gateway (usually x.x.x.1/24)
-- DNS (default: 9.9.9.9)
-
+4. **Finalize Configuration:**
+   - Review and confirm your settings.
+   - The system applies the configurations, and your network should be set up.
 <!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
 
 
@@ -69,6 +83,11 @@ armbian-config --cmd BNS002
 ***
 
 ## View Network Settings
+
+<!--- section image START from tools/include/images/VNS001.png --->
+[![View Network Settings](/images/VNS001.png)](#)
+<!--- section image STOP from tools/include/images/VNS001.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd VNS001
@@ -244,6 +263,11 @@ More informations:
 ***
 
 ## WireGuard remove
+
+<!--- section image START from tools/include/images/WG002.png --->
+[![WireGuard remove](/images/WG002.png)](#)
+<!--- section image STOP from tools/include/images/WG002.png --->
+
 This operation will remove WireGuard
 
 **Command:** 
@@ -260,6 +284,11 @@ armbian-config --cmd WG002
 ***
 
 ## WireGuard clients QR codes
+
+<!--- section image START from tools/include/images/WG003.png --->
+[![WireGuard clients QR codes](/images/WG003.png)](#)
+<!--- section image STOP from tools/include/images/WG003.png --->
+
 **Command:** 
 ~~~
 armbian-config --cmd WG003
@@ -274,6 +303,11 @@ armbian-config --cmd WG003
 ***
 
 ## WireGuard purge with data folder
+
+<!--- section image START from tools/include/images/WG004.png --->
+[![WireGuard purge with data folder](/images/WG004.png)](#)
+<!--- section image STOP from tools/include/images/WG004.png --->
+
 This operation will purge WireGuard with data folder
 
 **Command:** 

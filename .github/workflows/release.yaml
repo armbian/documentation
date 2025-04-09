@@ -1,84 +1,47 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Create offline documentation to release
+name: Update documentation website
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  build:
+  build-docs:
+    name: "Generate HTML"
+    if: ${{ github.repository_owner == 'Armbian' }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ 3.8 ]
-
     steps:
+
       - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: "Set up Python"
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install setuptools wheel
-          pip install -r requirements.txt
-      - name: Run mkdocs --clean
-        run: |
-          mkdocs build --clean
+          python-version: 3.8
 
-      # - name: Upload pdf
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: artifact
-      #     path: site/pdf/document.pdf
-# PDF is not built, no need to upload
+      - name: "Install dependencies"
+        run: |
 
-  #deploy:
-    #needs: [ build ]
-    #runs-on: ubuntu-20.04
-    #env:
-    #  TZ: GMT
-    #steps:
-     # - uses: actions/checkout@v4
-      # - uses: actions/download-artifact@v4
-      #   with:
-      #     name: artifact
-      # - name: Add
-      #   run: |
-      #     ls -l
-      #     git pull
-      #     git add document.pdf
-      # - name: Commit files
-      #   run: |
-      #     git config --local user.email "info@armbian.com"
-      #     git config --local user.name "Armbianworker"
-      #     git commit --allow-empty -m "Update github actions" -a
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ github.ref }}
-      #- name: Declare vars
-      #  id: vars
-      #  shell: bash
-      #  run: |
-      #    echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-      #    echo "timenow=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-      #- name: Rename release artifact
-      #  shell: bash
-      #  run: |
-      #    mv -v document.pdf armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
-      #- name: Create Release
-      #  uses: ncipollo/release-action@v1
-      #  with:
-      #    tag: ${{ steps.vars.outputs.sha_short }}
-      #    name: ${{ steps.vars.outputs.timenow }}-${{ steps.vars.outputs.sha_short }}
-      #    draft: false
-      #    prerelease: false
-      #    token: ${{ secrets.GITHUB_TOKEN }}
-      #    artifacts: armbian-document-${{ steps.vars.outputs.sha_short }}.pdf
-      #    artifactContentType: application/pdf
+          pip install --upgrade pip
+          pip install setuptools wheel -r requirements.txt
+
+      - name: "Build documentation"
+        run: mkdocs build --clean
+
+      - name: "Install SSH key"
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.KEY_UPLOAD }}
+          known_hosts: ${{ secrets.HOST_APPLICATIONS_KNOWN_HOSTS }}
+          if_key_exists: replace
+
+      - name: "Deploy to servers"
+        timeout-minutes: 3
+        run: |
+          rsync -e "ssh -p ${{ secrets.HOST_APPLICATIONS_PORT }}" \
+          -a site/ \
+          ${{ secrets.HOST_APPLICATIONS_USER }}@${{ secrets.HOST_APPLICATIONS }}:storage/docs.armbian.com
+
