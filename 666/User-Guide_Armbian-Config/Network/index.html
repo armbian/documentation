@@ -1972,6 +1972,10 @@
 <h1 id="fixed-and-wireless-network-settings">Fixed and wireless network settings<a class="headerlink" href="#fixed-and-wireless-network-settings" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="basic-network-setup">Basic Network Setup<a class="headerlink" href="#basic-network-setup" title="Permanent link">&para;</a></h2>
+<!--- section image START from tools/include/images/BNS001.png --->
+<p><a href="#"><img alt="Basic Network Setup" src="/images/BNS001.png" /></a></p>
+<!--- section image STOP from tools/include/images/BNS001.png --->
+
 <!--- header START from tools/include/markdown/BNS001-header.md --->
 <pre class="mermaid"><code>graph LR
   A{Select interface} --&gt; B[Configure];
@@ -1989,42 +1993,69 @@
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
 <!--- footer START from tools/include/markdown/BNS001-footer.md --->
-<p>Network configuration is simple and easy to follow:</p>
 <ol>
 <li>
-<p>Choose the interface. If it&rsquo;s a wireless interface, you&rsquo;ll be prompted to select an access point (AP) and enter its password. Leave empty for open network.</p>
+<p><strong>Select Interface:</strong></p>
+<ul>
+<li>Launch the <code>armbian-config</code> utility:
+   <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>armbian-config
+</span></code></pre></div></td></tr></table></div></li>
+<li>Navigate to <code>Network</code> and choose the desired network interface (e.g., <code>eth0</code> for wired or <code>wlan0</code> for wireless).</li>
+</ul>
 </li>
 <li>
-<p>Choose between DHCP (Dynamic Host Configuration Protocol) or static IP configuration. </p>
+<p><strong>Wireless Interface Configuration:</strong></p>
+<ul>
+<li>If configuring a wireless interface:<ul>
+<li>A list of available Access Points (APs) will be displayed.</li>
+<li>Select your preferred AP and enter the password when prompted. Leave the password field empty for open networks.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>IP Address Configuration:</strong></p>
+<ul>
+<li>Choose between:<ul>
+<li><strong>DHCP (Dynamic Host Configuration Protocol):</strong> Automatically assigns an IP address.</li>
+<li><strong>Static IP:</strong> Manually enter details:<ul>
+<li><strong>MAC Address (optional):</strong> Specify if you want spoofing MAC address.</li>
+<li><strong>IP Address:</strong> Use CIDR notation (e.g., <code>192.168.1.10/24</code>).</li>
+<li><strong>Route:</strong> Default is <code>0.0.0.0/0</code>.</li>
+<li><strong>Gateway:</strong> Typically the router&rsquo;s IP, e.g., <code>192.168.1.1</code>.</li>
+<li><strong>DNS:</strong> Default is <code>9.9.9.9</code>, but can be changed.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Finalize Configuration:</strong></p>
+<ul>
+<li>Review and confirm your settings.</li>
+<li>The system applies the configurations, and your network should be set up.</li>
+</ul>
 </li>
 </ol>
-<ul>
-<li>If you select DHCP, the setup is complete. Optionally, you can change the MAC address.</li>
-</ul>
-<ol>
-<li>If you choose a static configuration, you&rsquo;ll need to provide:</li>
-</ol>
-<ul>
-<li>An optional MAC address change</li>
-<li>A fixed IP address (e.g., x.x.x.x/y)</li>
-<li>A route (default: 0.0.0.0/0)</li>
-<li>A gateway (usually x.x.x.1/24)</li>
-<li>DNS (default: 9.9.9.9)</li>
-</ul>
 <!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
 
 <hr />
 <h2 id="remove-fallback-dhcp-configuration">Remove Fallback DHCP Configuration<a class="headerlink" href="#remove-fallback-dhcp-configuration" title="Permanent link">&para;</a></h2>
 <p>Drop preinstalled automatic DHCP on all wired interfaces after your configuration is setup.</p>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config --cmd BNS002
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config --cmd BNS002
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
 <hr />
 <h2 id="view-network-settings">View Network Settings<a class="headerlink" href="#view-network-settings" title="Permanent link">&para;</a></h2>
+<!--- section image START from tools/include/images/VNS001.png --->
+<p><a href="#"><img alt="View Network Settings" src="/images/VNS001.png" /></a></p>
+<!--- section image STOP from tools/include/images/VNS001.png --->
+
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config --cmd VNS001
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config --cmd VNS001
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
@@ -2047,7 +2078,7 @@
 <!--- header STOP from tools/include/markdown/NE002-header.md --->
 
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config --cmd NE002
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config --cmd NE002
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
@@ -2057,14 +2088,14 @@
 <div class="tabbed-block">
 <p>In order to configure your network devices, they need to be supported the kernel.</p>
 <p>To verify, use command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>ip<span class="w"> </span>addr
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>ip<span class="w"> </span>addr
 </span></code></pre></div></td></tr></table></div>
 <p>It is usually something like eth0, enp4s3 or lan.</p>
 </div>
 <div class="tabbed-block">
 <p>In order to configure your wireless network devices, they need to be supported the kernel.</p>
 <p>To verify, use command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>iw<span class="w"> </span>dev<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$1==&quot;Interface&quot;{print $2}&#39;</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>iw<span class="w"> </span>dev<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$1==&quot;Interface&quot;{print $2}&#39;</span>
 </span></code></pre></div></td></tr></table></div>
 <p>It is usually something like <code>wlan0</code>, <code>wlo1</code> or <code>wlx12334c47dec3</code>. If you get blank response, it means your WiFi device / dongle is not supported by the kernel.</p>
 </div>
@@ -2075,21 +2106,21 @@
 <hr />
 <h3 id="revert-to-armbian-defaults">Revert to Armbian defaults<a class="headerlink" href="#revert-to-armbian-defaults" title="Permanent link">&para;</a></h3>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config --cmd NE003
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config --cmd NE003
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
 <hr />
 <h3 id="show-configuration">Show configuration<a class="headerlink" href="#show-configuration" title="Permanent link">&para;</a></h3>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config --cmd NE004
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config --cmd NE004
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
 <hr />
 <h3 id="show-active-status">Show active status<a class="headerlink" href="#show-active-status" title="Permanent link">&para;</a></h3>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config --cmd NE005
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config --cmd NE005
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
@@ -2104,7 +2135,7 @@
 <!--- header STOP from tools/include/markdown/WG001-header.md --->
 
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config --cmd WG001
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config --cmd WG001
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <p><strong>Status:</strong> Enabled</p>
@@ -2121,7 +2152,7 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>wireguard
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>wireguard
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -2139,24 +2170,36 @@
 
 <hr />
 <h2 id="wireguard-remove">WireGuard remove<a class="headerlink" href="#wireguard-remove" title="Permanent link">&para;</a></h2>
+<!--- section image START from tools/include/images/WG002.png --->
+<p><a href="#"><img alt="WireGuard remove" src="/images/WG002.png" /></a></p>
+<!--- section image STOP from tools/include/images/WG002.png --->
+
 <p>This operation will remove WireGuard</p>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config --cmd WG002
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config --cmd WG002
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <p><strong>Status:</strong> Enabled</p>
 <hr />
 <h2 id="wireguard-clients-qr-codes">WireGuard clients QR codes<a class="headerlink" href="#wireguard-clients-qr-codes" title="Permanent link">&para;</a></h2>
+<!--- section image START from tools/include/images/WG003.png --->
+<p><a href="#"><img alt="WireGuard clients QR codes" src="/images/WG003.png" /></a></p>
+<!--- section image STOP from tools/include/images/WG003.png --->
+
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config --cmd WG003
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>armbian-config --cmd WG003
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <p><strong>Status:</strong> Enabled</p>
 <hr />
 <h2 id="wireguard-purge-with-data-folder">WireGuard purge with data folder<a class="headerlink" href="#wireguard-purge-with-data-folder" title="Permanent link">&para;</a></h2>
+<!--- section image START from tools/include/images/WG004.png --->
+<p><a href="#"><img alt="WireGuard purge with data folder" src="/images/WG004.png" /></a></p>
+<!--- section image STOP from tools/include/images/WG004.png --->
+
 <p>This operation will purge WireGuard with data folder</p>
 <p><strong>Command:</strong> 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>armbian-config --cmd WG004
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>armbian-config --cmd WG004
 </span></code></pre></div></td></tr></table></div></p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <p><strong>Status:</strong> Enabled</p>
