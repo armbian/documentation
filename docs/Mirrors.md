@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # How the Armbian Mirror System Works  
 
 ## Introduction  
