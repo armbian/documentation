@@ -4,8 +4,10 @@
   </a><br>
   <strong>Armbian Documentation</strong><br>
 <br>
-<a href=https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/documentation/pdf-at-pr.yaml?logo=githubactions&label=HTML%20page&style=for-the-badge&branch=main"></a>
+<a href=https://github.com/armbian/documentation/actions/workflows/release.yaml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/documentation/release.yaml?logo=githubactions&label=HTML%20page&style=for-the-badge&branch=main"></a>
 </p>
+
+**The Armbian Linux Documentation** offers a comprehensive collection of guides, manuals, and resources designed to assist users in every stage of working with Armbian - from installation and initial setup to advanced configuration and optimization. Whether you're a beginner setting up your first single-board computer or an experienced developer fine-tuning system performance, the documentation provides clear, step-by-step instructions and best practices to help you get the most out of your Armbian-powered device.
 
 # Editing
 
