@@ -1,10 +1,14 @@
 # This workflow will install Python dependencies and generate PDF file at PR
-name: Create offline documentation on PR
+name: Create docs preview on PR
 
 on:
   pull_request:
     types: [opened, reopened, synchronize, labeled]
   workflow_dispatch:
+
+permissions:
+  contents: write # Grants write access to repository contents
+  pull-requests: write
 
 jobs:
   build:
@@ -50,7 +54,7 @@ jobs:
           rsync -av ../documentation/site/. ${{ github.event.number }}
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add . 
+          git add .
           git commit -m "Updating repo" || true
           git push origin www || true
 
@@ -59,7 +63,9 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           body-template: |
 
-            [![Create offline documentation on PR](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml)
-            Documentation website preview will be available in few minutes:
+            [![Create docs preview on PR](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml)
+
+            Documentation website preview will be available in a few minutes:
+
             <a href=https://armbian.github.io/documentation/${{ github.event.number }}><kbd> <br> Open WWW preview <br> </kbd></a>
           body-update-action: 'suffix'
