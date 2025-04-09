@@ -1,11 +1,7 @@
-name: Clean Workflow Logs
-
+name: "Clean Workflow Logs"
 on:
   schedule:
     - cron: "0 0 * * 1"  # Runs "At 00:00 on Monday." (see https://crontab.guru)
-
-  workflow_dispatch:
-    inputs:
   workflow_dispatch:
     inputs:
       runs_older_than:
