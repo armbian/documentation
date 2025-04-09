@@ -1547,6 +1547,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#uboot-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      uboot-patch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rewrite-uboot-patches" class="md-nav__link">
     <span class="md-ellipsis">
       rewrite-uboot-patches
@@ -2074,9 +2083,43 @@ also outputs the same preprocessed DTS source, ran through <code>dtc</code> with
 <p>Usage:
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span>kernel-dtb<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
 </span></code></pre></div></td></tr></table></div></p>
+<h3 id="uboot-patch">uboot-patch<a class="headerlink" href="#uboot-patch" title="Permanent link">&para;</a></h3>
+<p>Create patch files for u-boot.</p>
+<p>The output patch files are written to
+<strong>output/patch/u-boot-${LINUXFAMILY}-${<a href="https://docs.armbian.com/Developer-Guide_Build-Switches/#user-space">BRANCH</a>}.patch</strong>.
+To use them in subsequent builds they
+must be copied to the appropriate directories in the patch/u-boot directory.
+See: <a href="https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches">user-provided patches</a></p>
+<p>Any uncommited changes in the work tree and index are commited
+to establish a clean work tree.
+It would be best if there are no uncommitted changes when running
+<code>uboot-patch</code>.</p>
+<p>If there is an existing patch file at the output path specified above, it
+may be applied before continuning work.</p>
+<p>When the prompt <code>Press &lt;ENTER\&gt; after you are done editing in ${pwd}</code> appears,
+in a separate window, navigate to the specified directory
+and make any required changes.
+When changes are complete,
+return to the window running the <code>uboot-patch</code> command
+and press <code>&lt;ENTER&gt;</code>. </p>
+<p>A patch to recreate the changes introduced to the u-boot tree is presented
+and the prompt &ldquo;Are you happy with this patch?&rdquo;.
+You can response
+<code>yes</code> to accept the patch as-is and generate the output patch file,
+<code>stop</code> to abort the command without producing the outpu patch file,
+or anything else to loop back, to make futher changes.</p>
+<p>Instead of creating them while running <code>uboot-patch</code>,
+new device tree files should be created in the relevant <code>dt</code> directory under
+<code>patch/u-boot</code>
+and new _defconfig files should be created in the relevant <code>configs</code> directory
+under <code>patch/u-boot</code>.
+While the <code>uboot-patch</code> command will add these new files to the patch
+if they are created while running <code>uboot-patch</code>,
+this is not the preferred way of adding these files.</p>
 <h3 id="rewrite-uboot-patches">rewrite-uboot-patches<a class="headerlink" href="#rewrite-uboot-patches" title="Permanent link">&para;</a></h3>
 <p>Prepares git, applies patches to git, and rewrites them back from git
 same as kernel, it does git archeology for mbox-less patches, etc.</p>
+<p>Note: MAINTAINER and MAINTAINEREMAIL should be set.</p>
 <ul>
 <li>uboot-patches-to-git alias is also added, but my guess is that the rewrite is more useful.</li>
 <li>refactor a common config function for both kernel and uboot.</li>
