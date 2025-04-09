@@ -6,11 +6,16 @@ on:
 
   workflow_dispatch:
     inputs:
+  workflow_dispatch:
+    inputs:
       runs_older_than:
         description: "The amount of days old to delete"
         default: "21"
         required: false
-
+      runs_to_keep:
+        description: "The number of workflow runs to keep"
+        default: "0"
+        required: false
 env:
   SCHEDULED_RUNS_OLDER_THAN: "21"
   SCHEDULED_RUNS_TO_KEEP: "0"
