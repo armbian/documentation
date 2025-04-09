@@ -18,7 +18,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../User-Guide_Networking/">
+        <link rel="next" href="../User-Guide_Configuration/">
       
       
       <link rel="icon" href="../images/logo.png">
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#armbian-quick-start-guide" class="md-skip">
+        <a href="#armbian-getting-started-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -469,7 +469,7 @@
   
   
   <span class="md-ellipsis">
-    Overview
+    Introduction
     
   </span>
   
@@ -537,28 +537,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-to-download" class="md-nav__link">
+  <a href="#download-the-image" class="md-nav__link">
     <span class="md-ellipsis">
-      What to download
+      Download the image
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What to download">
+    <nav class="md-nav" aria-label="Download the image">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#debian-or-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      Debian or Ubuntu?
+      Debian or Ubuntu
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#vendor-current" class="md-nav__link">
+  <a href="#minimal-server-or-desktop" class="md-nav__link">
     <span class="md-ellipsis">
-      Vendor, current?
+      Minimal, Server, or Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vendor-current-edge-or-legacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vendor, Current, Edge, or Legacy
     </span>
   </a>
   
@@ -567,7 +576,16 @@
           <li class="md-nav__item">
   <a href="#rolling-releases" class="md-nav__link">
     <span class="md-ellipsis">
-      Rolling releases?
+      Rolling releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-and-verfication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and verfication
     </span>
   </a>
   
@@ -579,64 +597,73 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preparing-sd-card" class="md-nav__link">
+  <a href="#deploy-the-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Preparing SD card
+      Deploy the image
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-boot" class="md-nav__link">
+  <a href="#first-boot" class="md-nav__link">
     <span class="md-ellipsis">
-      How to boot
+      First boot
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-login" class="md-nav__link">
+  <a href="#first-login" class="md-nav__link">
     <span class="md-ellipsis">
-      How to login
+      First login
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-install" class="md-nav__link">
+  <a href="#first-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      How to install
+      First steps
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-update" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      How to update
+      Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to update">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update the system
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update the system">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#armbian-os" class="md-nav__link">
+  <a href="#update-the-armbian-os" class="md-nav__link">
     <span class="md-ellipsis">
-      Armbian OS
+      Update the Armbian OS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#boot-loader" class="md-nav__link">
+  <a href="#update-the-boot-loader" class="md-nav__link">
     <span class="md-ellipsis">
-      Boot loader
+      Update the boot loader
     </span>
   </a>
   
@@ -648,33 +675,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-stay-safe" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
-      How to stay safe
+      Troubleshooting
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-upgrade-a-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to upgrade a distribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-tune-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to tune hardware
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-to-report-bugs" class="md-nav__link">
     <span class="md-ellipsis">
       How to report bugs
@@ -682,11 +692,105 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Advanced-Features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -722,98 +826,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Fine-Tuning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Fine Tuning
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../User-Guide_Basic-Troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Basic Troubleshooting
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../User-Guide_Recovery/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Recovery
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../User-Guide_Advanced-Features/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Advanced Features
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../User-Guide_Autoconfig/" class="md-nav__link">
         
   
@@ -830,6 +842,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -837,12 +857,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian_overlays/" class="md-nav__link">
+      <a href="../User-Guide_Troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Device tree overlays
+    Troubleshooting and Recovery
     
   </span>
   
@@ -866,6 +886,72 @@
   
   <span class="md-ellipsis">
     FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release_Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
     
   </span>
   
@@ -906,17 +992,25 @@
   
   
     <li class="md-nav__item">
-      <a href="../Release_Changelog/" class="md-nav__link">
+      <a href="/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Changelog
+    Unit Test Status
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -947,7 +1041,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1087,7 +1183,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1480,7 +1578,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1735,7 +1835,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1852,7 +1954,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -2029,90 +2133,49 @@
   
 
 
-<h1 id="armbian-quick-start-guide">Armbian Quick Start Guide<a class="headerlink" href="#armbian-quick-start-guide" title="Permanent link">&para;</a></h1>
-<iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<h1 id="armbian-getting-started-guide">Armbian Getting Started Guide<a class="headerlink" href="#armbian-getting-started-guide" title="Permanent link">&para;</a></h1>
+<p>Before you start, please make sure you have:</p>
+<ul>
+<li>a proper power supply according to the board manufacturer requirements <!-- TODO: link to power issues --></li>
+<li>a reliable SD card <!-- TODO: link to hints for SD-card --></li>
+</ul>
+<p>You will also need an existing operating system and a SD card writer tool. We recommend using <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> because it can validate written data <strong>saving you from corrupted SD card contents</strong>.</p>
 <div class="admonition tips">
 <p class="admonition-title">New users</p>
-<p>Please, make sure you have:</p>
-<ul>
-<li>a proper power supply according to the board manufacturer requirements</li>
-<li>a reliable SD card (see below &ldquo;How to prepare a SD card?&rdquo;)</li>
-</ul>
+<p>Some users might find it easier to follow this video tutorial.</p>
+<p><iframe width="607" height="342" src="https://www.youtube.com/embed/hFrdyLc4g50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Some word of advice, though. The video has been created a few years ago. You might therefore find differences between this video and our current site. So, in doubt, also follow the sections below while watching the video.</p>
 </div>
-<h2 id="what-to-download">What to download<a class="headerlink" href="#what-to-download" title="Permanent link">&para;</a></h2>
-<p>The download for each image consists of three separate files:</p>
+<h2 id="download-the-image">Download the image<a class="headerlink" href="#download-the-image" title="Permanent link">&para;</a></h2>
+<p>If your hardware is <a href="../#hardware-support">supported</a>, you must download an image for your board. All of our system images can be found at <a href="https://www.armbian.com/download/">https://www.armbian.com/download/</a> or at one of our <a href="/Mirrors/">many mirrors</a>. You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.</p>
+<!-- TODO: add some information about using the user interface on the site -->
+
+<h3 id="debian-or-ubuntu">Debian or Ubuntu<a class="headerlink" href="#debian-or-ubuntu" title="Permanent link">&para;</a></h3>
+<p>If you have no special preferences or requirements, we recommend using an Ubuntu based Armbian image.</p>
+<h3 id="minimal-server-or-desktop">Minimal, Server, or Desktop<a class="headerlink" href="#minimal-server-or-desktop" title="Permanent link">&para;</a></h3>
+<p>For each board, we usually provide these types of images:</p>
 <ul>
-<li><strong>.xz</strong> compressed image file</li>
-<li><strong>.sha file</strong> for download verification (optional)</li>
-<li><strong>.asc file</strong> for image authentication (optional)</li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">How to check download authenticity?</p>
-<p>All our images are digitally signed and therefore it is possible to check their authenticity.  You need to  issue these commands (Linux/macOS, you might need to install dependencies first, eg. <code>sudo apt-get install gnupg</code> on Debian/Ubuntu or <code>brew install gnupg</code> on macOS. on windows install the current simple gnupg <a href="https://gnupg.org/download/">Gnupg</a>:</p>
-<p><div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># download public key from the database</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>gpg<span class="w"> </span>--keyserver<span class="w"> </span>hkp://keyserver.ubuntu.com<span class="w"> </span>--recv-key<span class="w"> </span>DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># perform verification </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>gpg<span class="w"> </span>--verify<span class="w"> </span>Armbian_5.18_Armada_Debian_jessie_3.10.94.img.xz.asc
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># proper response</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>sob<span class="w"> </span><span class="m">09</span><span class="w"> </span>jan<span class="w"> </span><span class="m">2016</span><span class="w"> </span><span class="m">15</span>:01:03<span class="w"> </span>CET<span class="w"> </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>ID<span class="w"> </span>9F0E78D5
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>gpg:<span class="w"> </span>Good<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># wrong reponse. Not genuine Armbian image!</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Sun<span class="w"> </span><span class="m">03</span><span class="w"> </span>Jan<span class="w"> </span><span class="m">2016</span><span class="w"> </span><span class="m">11</span>:46:25<span class="w"> </span>AM<span class="w"> </span>CET<span class="w"> </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>ID<span class="w"> </span>9F0E78D5
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>gpg:<span class="w"> </span>BAD<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span>
-</span></code></pre></div></td></tr></table></div>
-It is safe to ignore the message <code>WARNING: This key is not certified with a trusted signature!</code>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">How to check download integrity?</p>
-<p>Since it might happen that your download got somehow corrupted we integrate a checksum/hash for the image.  You can compare the image&rsquo;s SHA-256 hash with the one contained in the <code>sha256sum.sha</code> file. </p>
-<p>On Windows, you can download and use the <a href="https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/">QuickHash GUI</a> and follow the instructions in the gui.</p>
-<p>while on Linux/macOS, in the directory in which you have downloaded the files ,you would do this</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>Armbian_*.img.sha
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">#good response</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>Armbian_5.35_Clearfogpro_Debian_stretch_next_4.13.16.img:<span class="w"> </span>OK
-</span></code></pre></div></td></tr></table></div>
-</div>
-<p>For each board we usually provide various image types:</p>
-<ul>
-<li><strong>Minimal</strong> - lightweight CLI with bare minimum of packages</li>
-<li><strong>Server</strong> - server variant with preinstalled standard utilities</li>
-<li><strong>Desktop</strong> full featured desktop image</li>
+<li><strong>Minimal</strong> - lightweight CLI with only a bare minimum of packages and no graphical user environment</li>
+<li><strong>Server</strong> - server variant with preinstalled standard utilities and no graphical user environment</li>
+<li><strong>Desktop</strong> - full featured desktop image</li>
 </ul>
 <p>For some boards we provide only minimal images due to their hardware limitations.</p>
-<h3 id="debian-or-ubuntu">Debian or Ubuntu?<a class="headerlink" href="#debian-or-ubuntu" title="Permanent link">&para;</a></h3>
-<p>If you have no special preferences that require specific versions, we recommend Ubuntu based Armbian.</p>
-<h3 id="vendor-current">Vendor, current?<a class="headerlink" href="#vendor-current" title="Permanent link">&para;</a></h3>
-<p>In some cases we provide images with different firmware. They differ in level of hardware support. Focus into:</p>
+<h3 id="vendor-current-edge-or-legacy">Vendor, Current, Edge, or Legacy<a class="headerlink" href="#vendor-current-edge-or-legacy" title="Permanent link">&para;</a></h3>
+<p>In some cases we provide images with different firmware. They differ in the level of hardware support and can be classified as follows:</p>
 <ul>
-<li><strong>vendor</strong> contains vendor provided kernel which usually has best hardware support while version can be outdated, containin less general fixes</li>
-<li><strong>current</strong> is following latest <a href="https://www.kernel.org/category/releases.html">mainline LTS kernel</a> and is in most cases best choice</li>
+<li><strong>vendor</strong> contains a vendor-provided kernel which usually has the best hardware support while package version can be outdated, containing less general fixes <!-- TODO: phrasing --></li>
+<li><strong>current</strong> is following the latest <a href="https://www.kernel.org/category/releases.html">Linux mainline LTS kernel</a> and is in most cases the <em>best choice</em>.</li>
 </ul>
-<p>And use those if they are the only one / for testings:</p>
+<p>Use the following images only if these are the only ones provided, or if you want to participate in testing:</p>
 <ul>
-<li><strong>edge</strong> is as the name implies cutting-edge fresh / development / latest stable. It is only automatically tested and can break at any time. Recommended for experienced users.</li>
-<li><strong>legacy</strong> is old stable current kernel. Use if either <em>current</em> is not available or something does not work well with it.</li>
+<li><strong>edge</strong> is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.</li>
+<li><strong>legacy</strong> is the old stable current kernel. Use it if <em>current</em> is not available or if something does not work well with it.</li>
 </ul>
-<p>The level of kernel support however always depends on the board family. If in your specific case something does not work well, you are always free to try an image with an other kernel included or change kernel within <a href="/User-Guide_Armbian-Config">armbian-config</a>.</p>
-<h3 id="rolling-releases">Rolling releases?<a class="headerlink" href="#rolling-releases" title="Permanent link">&para;</a></h3>
-<p>Rolling releases are suitable for Linux enthusiasts who want cutting edge packages and have the skills to fix damage that a bad update might cause. If you want stability in a production environment or low headaches as a novice user, skip rolling releases. They are only at, build and ship, Debian testing / Arch / Manjaro / Suse Tumbleweed / Kali / Gentoo support quality level!</p>
+<p>The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with <a href="/User-Guide_Armbian-Config">armbian-config</a>.</p>
+<h3 id="rolling-releases">Rolling releases<a class="headerlink" href="#rolling-releases" title="Permanent link">&para;</a></h3>
+<!-- TODO: this might be too much here; explanation could go into development docs, or appendix maybe?? -->
+
+<p>Rolling releases are suitable for Linux enthusiasts who want cutting edge packages and have the skills to fix the damage that a bad update might cause. If you want stability in a production environment or low headaches as a novice user, skip rolling releases. They are not at a suitable support quality level!</p>
 <pre class="mermaid"><code>graph LR
   A[Hardware] --&gt; B{Armbian kernel};
   B --&gt;|legacy| C["rolling release"];
@@ -2134,11 +2197,68 @@ It is safe to ignore the message <code>WARNING: This key is not certified with a
   X ----&gt;|desktop| G[Debian or Ubuntu];</code></pre>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p><strong>Do not use</strong> rollling or edge images in a productive environment. Their purpose is testing and providing constructive <a href="https://forum.armbian.com/forum/4-development/">feedback to developers</a>.</p>
+<p><strong>Do not use</strong> rolling release or edge images in a productive environment. Their purpose is testing and providing constructive <a href="https://forum.armbian.com/forum/4-development/">feedback to developers</a>.</p>
 </div>
-<h2 id="preparing-sd-card">Preparing SD card<a class="headerlink" href="#preparing-sd-card" title="Permanent link">&para;</a></h2>
-<p><strong>Important note:</strong> Make sure you use a <strong>good, reliable and fast</strong> SD card. If you encounter boot or stability troubles in over 95 percent of the time it is either insufficient power supply or related to SD card (bad card, bad card reader, something went wrong when burning the image, card too slow to boot &ndash; &lsquo;Class 10&rsquo; highly recommended!). Armbian can simply not run on unreliable hardware so checking your SD card with either <a href="https://fight-flash-fraud.readthedocs.io/en/stable/">F3</a> or <a href="https://www.heise.de/download/product/h2testw-50539">H2testw</a> is mandatory if you run in problems. Since <a href="https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/">counterfeit SD cards</a> are still an issue checking with F3/H2testw directly after purchase is <strong>highly recommended</strong>.</p>
-<p>Write the <strong>.xz compressed image</strong> to your microSD card. Using <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> on all platforms is recommended since, unlike other tools, it can validate written data <strong>saving you from corrupted SD card contents</strong>. Due to known issues using BalenaEtcher is not recommended at this time.</p>
+<h3 id="download-and-verfication">Download and verfication<a class="headerlink" href="#download-and-verfication" title="Permanent link">&para;</a></h3>
+<p>After you have determined the image you want, the download for each image consists of three separate files:</p>
+<ul>
+<li>the <strong>.xz</strong> compressed image file</li>
+<li>the <strong>.sha file</strong> for download verification (optional)</li>
+<li>the <strong>.asc file</strong> for image authentication (optional)</li>
+</ul>
+<p>After you have downloaded these files, we recommend checking the integrity and the authenticity of the compressed image file.</p>
+<div class="admonition question">
+<p class="admonition-title">How to check the download integrity?</p>
+<p>Since it might happen that your download got somehow corrupted, we publish a checksum/hash for each of our images. You can compare the image&rsquo;s SHA-256 hash with the one contained in the <code>.sha</code> file.</p>
+<p>On Windows, you can download and use the <a href="https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/">QuickHash GUI</a> and follow the instructions in the gui. Linux and macOS users can simply do this in the directory with the compressed image and the checksum file:</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sha256sum<span class="w"> </span>-c<span class="w"> </span>Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz.sha
+</span></code></pre></div></td></tr></table></div>
+<p>The integrity is verified if the output looks something like this:</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz:<span class="w"> </span>OK
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How to check the download authenticity?</p>
+<p>All our images are digitally signed. It is therefore possible to check their authenticity. Linux and macOS user might need to install the required tools first: for Debian/Ubuntu, this can be done via <code>sudo apt-get install gnupg</code>, and for macOS use <code>brew install gnupg</code>. Windows users can install <a href="https://gnupg.org/download/">GnuPG from here</a>. To check the authenticity, you will need the public key that was used to sign the images. This key can be retrieved from a keyserver or from the Debian/Ubuntu package repository (this step only needs to be done once):</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># download the public key either from a keyserver</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>gpg<span class="w"> </span>--keyserver<span class="w"> </span>hkp://keyserver.ubuntu.com<span class="w"> </span>--recv-key<span class="w"> </span>DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># or from the repository server</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>wget<span class="w"> </span>-O-<span class="w"> </span>https://apt.armbian.com/armbian.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--import<span class="w"> </span>-
+</span></code></pre></div></td></tr></table></div>
+<p>To perform the verfification, run the command shown below.</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>gpg<span class="w"> </span>--verify<span class="w"> </span>Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz.asc
+</span></code></pre></div></td></tr></table></div>
+<p>While the output can very depending on the GnuPG version, it should result in a response similar to the one below. It is safe to ignore the message <code>WARNING: This key is not certified with a trusted signature!</code>.</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Thu<span class="w"> </span>Feb<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">11</span>:53:18<span class="w"> </span><span class="m">2025</span><span class="w"> </span>CET
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>gpg:<span class="w">                </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>gpg:<span class="w"> </span>Good<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik &lt;igor@++++++++++++.com&gt;&quot;</span><span class="w"> </span><span class="o">[</span>unknown<span class="o">]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>gpg:<span class="w">                 </span>aka<span class="w"> </span><span class="s2">&quot;Igor Pecovnik (Ljubljana, Slovenia) &lt;igor.++++++++++++@gmail.com&gt;&quot;</span><span class="w"> </span><span class="o">[</span>unknown<span class="o">]</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>gpg:<span class="w"> </span>WARNING:<span class="w"> </span>This<span class="w"> </span>key<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>certified<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>trusted<span class="w"> </span>signature!
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>gpg:<span class="w">          </span>There<span class="w"> </span>is<span class="w"> </span>no<span class="w"> </span>indication<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>signature<span class="w"> </span>belongs<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>owner.
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>Primary<span class="w"> </span>key<span class="w"> </span>fingerprint:<span class="w"> </span>DF00<span class="w"> </span>FAF1<span class="w"> </span>C577<span class="w"> </span>104B<span class="w"> </span>50BF<span class="w">  </span>1D00<span class="w"> </span>93D6<span class="w"> </span>889F<span class="w"> </span>9F0E<span class="w"> </span>78D5
+</span></code></pre></div></td></tr></table></div>
+<p>If something is wrong, the output will look something like this:</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Thu<span class="w"> </span>Feb<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">11</span>:53:18<span class="w"> </span><span class="m">2025</span><span class="w"> </span>CET
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>gpg:<span class="w">                </span>using<span class="w"> </span>RSA<span class="w"> </span>key<span class="w"> </span>DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>gpg:<span class="w"> </span>BAD<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Igor Pecovnik &lt;igor@++++++++++++&gt;&quot;</span><span class="w"> </span><span class="o">[</span>unknown<span class="o">]</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<h2 id="deploy-the-image">Deploy the image<a class="headerlink" href="#deploy-the-image" title="Permanent link">&para;</a></h2>
+<!-- TODO: might be too much for novice users; needs to be shortened; maybe use admonitions -->
+
+<p>Before you start, there is an <strong>important note:</strong> Make sure you use a <strong>good, reliable and fast</strong> SD card. If you encounter boot or stability issues, in over 95 percent of the time it is either caused by an insufficient power supply or it is related to the SD card (due to a bad card, bad card reader, something went wrong when burning the image, card too slow to boot &hellip; &lsquo;Class 10&rsquo; is <strong>highly</strong> recommended!). Armbian can simply not run on unreliable hardware. So checking your SD card with either <a href="https://fight-flash-fraud.readthedocs.io/en/stable/">F3</a> or <a href="https://www.heise.de/download/product/h2testw-50539">H2testw</a> is mandatory if you run into problems. Since <a href="https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/">counterfeit SD cards</a> are still an issue, checking with F3/H2testw directly after purchase is also <strong>highly recommended</strong>.</p>
+<p>Write the <strong>.xz compressed image</strong> with a tool like <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> onto your microSD card. Unlike other tools, it can validate written data <strong>saving you from corrupted SD card contents</strong>. Due to known issues, <a href="https://www.balena.io/etcher/">balenaEtcher</a> can no longer be recommended at this time.</p>
 <div class="admonition tip">
 <p class="admonition-title">Also important</p>
 <p>Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the <em>speed class</em> is about. The SD Association defined <a href="https://www.sdcard.org/developers/overview/application/index.html"><em>Application Performance Class</em></a> as a standard for random IO performance.</p>
@@ -2170,18 +2290,16 @@ It is safe to ignore the message <code>WARNING: This key is not certified with a
 </tr>
 </tbody>
 </table>
+<!-- TODO: Is that still correct?? -->
+
 <p>We recommend at least A1 rated SD-Cards (<a href="https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md">A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance</a>). For example:</p>
 <p><img alt="a1-16gb-card" src="https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png" /> <img alt="a1-32gb-card" src="https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png" /> <img alt="a2-64gb-card" src="https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png" /></p>
-<p>In case you chose an SD card that was already in use before please consider resetting it back to &lsquo;factory default&rsquo; performance with <a href="https://www.sdcard.org/downloads/formatter/">SD Formatter</a> before burning Armbian to it (<a href="https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&amp;do=findComment&amp;comment=27413">explanation in the forum</a>). Detailed information regarding <a href="https://forum.armbian.com/topic/954-sd-card-performance/page/3/&amp;tab=comments#comment-49811">&lsquo;factory default&rsquo; SD card performance</a>.</p>
-<h2 id="how-to-boot">How to boot<a class="headerlink" href="#how-to-boot" title="Permanent link">&para;</a></h2>
-<p>Insert SD card into a slot and power the board. (First) boot (with DHCP) takes up to two minutes with a class 10 SD card and cheapest board.</p>
-<h2 id="how-to-login">How to login<a class="headerlink" href="#how-to-login" title="Permanent link">&para;</a></h2>
-<p>First boot will log you automatically on HDMI or serial console while for SSH login you need to login as <strong>root</strong> and use password <strong>1234</strong>. You will be prompted to change this password. You will then be asked to create a normal user account that is sudo enabled (beware of default QWERTY keyboard settings at this stage). Please use <a href="https://angryip.org/">this tool</a>, to find your board IP address.</p>
-<details class="tips" open="open">
-<summary>Automated config</summary>
-<p>These settings can be pre-loaded, see <a href="/User-Guide_Autoconfig">Autoconfig</a></p>
-</details>
-<p>In case you have no wired network connection and there is a wireless adaptor detected, it will prompt you to connect.</p>
+<p>In case you chose an SD card that was already in use before, please consider resetting it back to &lsquo;factory default&rsquo; performance with <a href="https://www.sdcard.org/downloads/formatter/">SD Formatter</a> before burning Armbian to it (<a href="https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&amp;do=findComment&amp;comment=27413">explanation in the forum</a>). Detailed information regarding <a href="https://forum.armbian.com/topic/954-sd-card-performance/page/3/&amp;tab=comments#comment-49811">&lsquo;factory default&rsquo; SD card performance</a>.</p>
+<h2 id="first-boot">First boot<a class="headerlink" href="#first-boot" title="Permanent link">&para;</a></h2>
+<p>Insert the SD card into a slot and power on the board. With the cheapest board, the first boot (with DHCP) can take up to two minutes with a class 10 SD card.</p>
+<h2 id="first-login">First login<a class="headerlink" href="#first-login" title="Permanent link">&para;</a></h2>
+<p>The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as <strong>root</strong> and use the password <strong>1234</strong>. If you need to find your board&rsquo;s IP address, you can use <a href="https://angryip.org/">this tool</a>.</p>
+<p>After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2284,20 +2402,26 @@ Set user language based on your location? [Y/n] y
 Generating locales: sl_SI.UTF-8
 root@bananapim2pro:~#
 </code></pre></div></td></tr></table></div>
-<h2 id="how-to-install">How to install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h2>
-<p><img alt="Installer" src="https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png" /></p>
-<div class="admonition success">
-<p class="admonition-title">Required condition for eMMC/SATA/USB/NVME:</p>
-<ul>
-<li>onboard eMMC storage</li>
-<li>attached SATA, NVME or USB storage</li>
-</ul>
-</div>
-<p>Start the install script and follow the lead:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>armbian-install
-</code></pre></div></td></tr></table></div>
+<details class="tips" open="open">
+<summary>Automated config</summary>
+<p>These settings can be pre-loaded, see <a href="/User-Guide_Autoconfig">Autoconfig</a></p>
+</details>
+<!-- TODO: it must be made clear that this just preps the SD card -->
+
+<h2 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Permanent link">&para;</a></h2>
+<p>You can customize your Armbian Linux before or after installing it onto your device&rsquo;s hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD-card again if necesasary. Or you want to adjust your hardware configuration, or install software.</p>
+<p>While the underlying operating system offers tools and processes to make these customizations, the <strong>preferred method</strong> to change most of these settings is using the interactive <a href="../User-Guide_Armbian-Config/"><em>armbian-config</em></a> tool which is shipped with all Armbian images.</p>
+<!-- TODO:
+      * first customize: armbian-config, install software -> show some examples
+      * ...
+      * then deploy to one or all systems to get the same installation with armbian-install (reboot and check if everything works)
+      * how to test if everything is working well?
+ -->
+
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME or USB storage.</p>
 <div class="admonition tip">
-<p class="admonition-title">Armbian installer provides those scenarios:</p>
+<p class="admonition-title">Armbian Installer support those storage scenarios:</p>
 <ul>
 <li>boot from SD, system on SATA / USB</li>
 <li>boot from eMMC / NAND, system on eMMC/NAND</li>
@@ -2309,39 +2433,57 @@ root@bananapim2pro:~#
 <li>Install system to UEFI disk</li>
 </ul>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">You can choose the following file system options:</p>
+<!-- TODO: give the user a sensible default -->
+
+<p>Start the install script and follow the lead:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>armbian-install
+</code></pre></div></td></tr></table></div>
+<p><img alt="Installer" src="https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png" /></p>
+<p>After you have decided for an option, you can choose between the following file systems: <!-- TODO: only for system? --></p>
 <ul>
 <li>ext2,3,4</li>
 <li>btrfs</li>
 </ul>
-</div>
-<h2 id="how-to-update">How to update<a class="headerlink" href="#how-to-update" title="Permanent link">&para;</a></h2>
-<h3 id="armbian-os">Armbian OS<a class="headerlink" href="#armbian-os" title="Permanent link">&para;</a></h3>
+<p>For novice users, a sensible default is <code>ext4</code>.</p>
+<p>Congratulation. You have successfully installed Armbian onto your board!</p>
+<h2 id="update-the-system">Update the system<a class="headerlink" href="#update-the-system" title="Permanent link">&para;</a></h2>
+<p>The operating system consists of two parts that must be updated separately.</p>
+<h3 id="update-the-armbian-os">Update the Armbian OS<a class="headerlink" href="#update-the-armbian-os" title="Permanent link">&para;</a></h3>
+<p>For the base operating system, use the APT package manager to keep the packages up to date.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>apt update
 apt upgrade
 </code></pre></div></td></tr></table></div>
-<p><strong>Update process can take some time in case of using old &amp; cheap SD card and/or under heavy load.</strong></p>
-<p>If the kernel was upgraded during this process you will be prompted to reboot at next login.</p>
-<h3 id="boot-loader">Boot loader<a class="headerlink" href="#boot-loader" title="Permanent link">&para;</a></h3>
-<p>First you need to update all packages described in a previous step. Then run:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>armbian-install
-</span></code></pre></div></td></tr></table></div>
-<p>Select:</p>
-<p>Install/Update the bootloader on SD/eMMC</p>
-<h2 id="how-to-stay-safe">How to stay safe<a class="headerlink" href="#how-to-stay-safe" title="Permanent link">&para;</a></h2>
-<p>Armbian provides firmware package freeze to give you an option to upgrade all packages but firmware. This prevents unplesant surprises on functionality regressions that comes with kernel upgrades. To enable / disable this feature, look for <code>Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades</code> within <a href="/User-Guide_Armbian-Config">armbian-config</a>.</p>
-<h2 id="how-to-upgrade-a-distribution">How to upgrade a distribution<a class="headerlink" href="#how-to-upgrade-a-distribution" title="Permanent link">&para;</a></h2>
-<p>When a new userspace is out, we recommend to start with a fresh image. However, it is possible to upgrade, but the process is largerly in the domain of underlaying Debian or Ubuntu user space. However we provide experimental <code>Distribution upgrades</code> within <a href="/User-Guide_Armbian-Config">armbian-config</a></p>
+<p><strong>The Update process can take quite some time in case you are using an old or a cheap SD card and/or experience heavy load.</strong></p>
+<p>Users with a desktop will find graphical tools that allow one to update the system packages without using the command line.</p>
+<p>Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages <strong>but</strong> the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
+</code></pre></div></td></tr></table></div>
+<p>within <a href="/User-Guide_Armbian-Config">armbian-config</a>.</p>
+<p>If the kernel was upgraded during this process, you will be prompted to reboot at the next login.</p>
+<!-- TODO: maybe move this to advanced? Definitely not for novice users -->
+
+<p>When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a <em>&ldquo;dist-upgrade&rdquo;</em>, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide an experimental <code>Distribution upgrades</code> feature for <a href="/User-Guide_Armbian-Config">armbian-config</a>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide support if something goes wrong.  </p>
+<p>Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.</p>
 </div>
-<h2 id="how-to-tune-hardware">How to tune hardware<a class="headerlink" href="#how-to-tune-hardware" title="Permanent link">&para;</a></h2>
-<p>Hardware configuration is available within <a href="../User-Guide_Armbian-Config/">armbian-config</a> utility.</p>
-<h2 id="how-to-report-bugs">How to report bugs<a class="headerlink" href="#how-to-report-bugs" title="Permanent link">&para;</a></h2>
-<p>Follow bug reporting form available <a href="https://armbian.com/bugs/">here</a> and learn how to collect necessary information and where provide to put your report depending on type of issue. Reports lacking fundamental diagnostics are ignored.</p>
+<h3 id="update-the-boot-loader">Update the boot loader<a class="headerlink" href="#update-the-boot-loader" title="Permanent link">&para;</a></h3>
+<p>First, you need to update all packages as described in the previous section. Then run:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>armbian-install
+</span></code></pre></div></td></tr></table></div>
+<p>and select:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Install/Update the bootloader on SD/eMMC
+</code></pre></div></td></tr></table></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<!-- 
+      * armbianmonitor
+      * community / search forum || how to get help
+      * FAQ (maybe feature is not developed)
+-->
+
+<h3 id="how-to-report-bugs">How to report bugs<a class="headerlink" href="#how-to-report-bugs" title="Permanent link">&para;</a></h3>
+<p>Follow our <a href="https://armbian.com/bugs/">bug reporting form</a> and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics will be ignored.</p>
 
 
 
@@ -2439,7 +2581,7 @@ apt upgrade
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

@@ -12,13 +12,13 @@
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/Developer-Guide_Overview/">
+        <link rel="canonical" href="https://docs.armbian.com/User-Guide_Configuration/">
       
       
-        <link rel="prev" href="../User-Guide_Armbian-Software/Netconfig/">
+        <link rel="prev" href="../User-Guide_Getting-Started/">
       
       
-        <link rel="next" href="../Developer-Guide_Build-Preparation/">
+        <link rel="next" href="../User-Guide_Advanced-Features/">
       
       
       <link rel="icon" href="../images/logo.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Overview - Armbian Documentation</title>
+        <title>Configuration - Armbian Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-it-does" class="md-skip">
+        <a href="#how-to-customize-keyboard-time-zone" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Configuration
             
           </span>
         </div>
@@ -247,10 +247,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href=".." class="md-tabs__link">
           
   
@@ -307,13 +309,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../Developer-Guide_Overview/" class="md-tabs__link">
           
   
   
@@ -415,26 +415,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -447,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN OS
@@ -504,10 +507,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../User-Guide_Configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -518,6 +543,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      System language:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-font-codepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console font, codepage:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time zone:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound output:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen-resolution-on-other-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen resolution on other boards:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen-resolution-within-xorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen resolution within Xorg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-alter-cpu-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to alter CPU frequency?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-for-experts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap for experts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-downgrade-a-package-via-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to downgrade a package via apt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-toggle-boot-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to toggle boot output?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-toggle-verbose-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to toggle verbose boot?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-provide-boot-logs-for-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to provide boot logs for inspection?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-network-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change network configuration?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-an-apt-mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing an apt mirror
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1357,29 +1537,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1392,7 +1569,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN BUILD FRAMEWORK
@@ -1403,30 +1580,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Overview/" class="md-nav__link">
         
   
   
@@ -1437,42 +1594,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      What it does?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1969,7 +2090,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/master/docs/Developer-Guide_Overview.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/edit/master/docs/User-Guide_Configuration.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1978,108 +2099,253 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/master/docs/Developer-Guide_Overview.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/master/docs/User-Guide_Configuration.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>Overview</h1>
+<h1 id="how-to-customize-keyboard-time-zone">How to customize keyboard, time zone?<a class="headerlink" href="#how-to-customize-keyboard-time-zone" title="Permanent link">&para;</a></h1>
+<!-- TODO: Probably move stuff like sound or screen resolution to Advanced tasks?? Or at least some?? -->
 
-<h2 id="what-it-does">What it does?<a class="headerlink" href="#what-it-does" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Builds custom <strong>kernel</strong>, <strong>image</strong> or a Debian based Linux <strong>distribution</strong> optimized for low-resource hardware,</li>
-<li>Include filesystem generation, low-level control software, kernel image and <strong>bootloader</strong> compilation,</li>
-<li>Provides a <strong>consistent user experience</strong> by keeping system standards across different platforms.</li>
+<li><strong>Attention: The preferred method to change most of this stuff is by using the interactive <em>armbian-config</em> tool which is shipped with all Armbian images.</strong></li>
 </ul>
-<pre class="mermaid"><code>graph LR
-  A[./compile.sh] --&gt; B{Change&lt;br&gt;kernel&lt;br&gt;config};
-  B ---&gt; |yes| C["HW"];
-  B ---&gt; |no| C["HW"];
-  C ---&gt; |branch| D["legacy&lt;br&gt;vendor&lt;br&gt;current&lt;br&gt;edge"];
-  D --&gt; |base| E["Debian&lt;br&gt;Ubuntu"];
-  E ---&gt; |type| F["CLI"];
-  F ---&gt; |type| G["Server"];
-  F ---&gt; |type| H["Minimal"];
-  E ---&gt; I["Desktop"];
-  I ---&gt; K["XFCE"];
-  I ---&gt; L["Gnome"];
-  I ---&gt; M["Cinammon"];
-  I ---&gt; N["KDE Neon"];</code></pre>
-<h2 id="key-advantages">Key Advantages<a class="headerlink" href="#key-advantages" title="Permanent link">&para;</a></h2>
+<h2 id="keyboard">Keyboard:<a class="headerlink" href="#keyboard" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dpkg-reconfigure keyboard-configuration
+</code></pre></div></td></tr></table></div>
+<p>In some cases, e.g. when your keyboard standard is not available in previous command, you may also need to set your keymap config:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># Check your actual keymap config
+localectl status | grep -i keymap
+
+# Set the desired keymap config. Example below to &#39;br-abnt2&#39;
+localectl set-keymap br-abnt2
+</code></pre></div></td></tr></table></div>
+<h2 id="system-language">System language:<a class="headerlink" href="#system-language" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># Debian --&gt; https://wiki.debian.org/ChangeLanguage
+dpkg-reconfigure locales
+# Ubuntu --&gt; https://help.ubuntu.com/community/Locale
+update-locale LANG=[options] &amp;&amp; dpkg-reconfigure locales
+</code></pre></div></td></tr></table></div>
+<h2 id="console-font-codepage">Console font, codepage:<a class="headerlink" href="#console-font-codepage" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dpkg-reconfigure console-setup
+</code></pre></div></td></tr></table></div>
+<h2 id="time-zone">Time zone:<a class="headerlink" href="#time-zone" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dpkg-reconfigure tzdata
+</code></pre></div></td></tr></table></div>
+<h2 id="sound-output">Sound output:<a class="headerlink" href="#sound-output" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># Check the available sound output options:
+pacmd list-sinks | less
+# The default will be marked with &quot;*&quot;
+# Press &quot;q&quot; to close
+
+
+# Define the new default sound output
+pacmd set-default-sink &lt;NAME-OF-DESIRED-OPTION&gt;
+</code></pre></div></td></tr></table></div>
+<p>The name of HDMI sound output may change accordingly to the device. If you don&rsquo;t wanna deal with different names you can:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pacmd set-default-sink $(pactl list short sinks | grep -i &#39;hdmi&#39; | awk &#39;{print $2}&#39;)
+</code></pre></div></td></tr></table></div>
+<p>The command to define the default sound output is not persistent, to make it persistent add it to the file <code>~/.bashrc</code></p>
+<h2 id="screen-resolution-on-other-boards">Screen resolution on other boards:<a class="headerlink" href="#screen-resolution-on-other-boards" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>nano /boot/boot.cmd
+
+# example:
+# change example from
+# disp.screen0_output_mode=1920x1080p60
+# to
+# disp.screen0_output_mode=1280x720p60
+
+mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+</code></pre></div></td></tr></table></div>
+<h2 id="screen-resolution-within-xorg">Screen resolution within Xorg<a class="headerlink" href="#screen-resolution-within-xorg" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Simplicity with interactive graphical interface.</li>
-<li>Generates widely recognized and well maintained userspace</li>
-<li>Fast learning curve for complex operations</li>
+<li>Thanks to user <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/maxlinux2000" title="GitHub User: maxlinux2000">@maxlinux2000</a> in <a href="https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/">this</a> forum post.</li>
 </ul>
-<p>Check other similarities, advantages and disadvantages compared with leading industry standard build software.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Function</th>
-<th style="text-align: left;">Armbian</th>
-<th style="text-align: left;">Yocto</th>
-<th style="text-align: left;">Buildroot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Target</td>
-<td style="text-align: left;">general purpose</td>
-<td style="text-align: left;">embedded</td>
-<td style="text-align: left;">embedded / IOT</td>
-</tr>
-<tr>
-<td style="text-align: left;">U-boot and kernel</td>
-<td style="text-align: left;">compiled from sources</td>
-<td style="text-align: left;">compiled from sources</td>
-<td style="text-align: left;">compiled from sources</td>
-</tr>
-<tr>
-<td style="text-align: left;">Board support maintenance &nbsp;</td>
-<td style="text-align: left;">complete</td>
-<td style="text-align: left;">outside</td>
-<td style="text-align: left;">outside</td>
-</tr>
-<tr>
-<td style="text-align: left;">Root file system</td>
-<td style="text-align: left;">Debian or Ubuntu based</td>
-<td style="text-align: left;">custom</td>
-<td style="text-align: left;">custom</td>
-</tr>
-<tr>
-<td style="text-align: left;">Package manager</td>
-<td style="text-align: left;">APT</td>
-<td style="text-align: left;">any</td>
-<td style="text-align: left;">none</td>
-</tr>
-<tr>
-<td style="text-align: left;">Configurability</td>
-<td style="text-align: left;">limited</td>
-<td style="text-align: left;">large</td>
-<td style="text-align: left;">large</td>
-</tr>
-<tr>
-<td style="text-align: left;">Initramfs support</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-</tr>
-<tr>
-<td style="text-align: left;">Getting started</td>
-<td style="text-align: left;">quick</td>
-<td style="text-align: left;">very slow</td>
-<td style="text-align: left;">slow</td>
-</tr>
-<tr>
-<td style="text-align: left;">Cross compilation</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-</tr>
-</tbody>
-</table>
+<p>Find matching HDMI output:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xrandr --listmonitors
+</code></pre></div></td></tr></table></div>
+<p>Calculate VESA CVT mode lines (example for 1440x900)</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cvt 1440 900
+</code></pre></div></td></tr></table></div>
+<p>Sample output:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
+Modeline &quot;1440x900_60.00&quot;  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync )
+</code></pre></div></td></tr></table></div>
+<p>Create new mode (example):</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xrandr --newmode &quot;1440x900_60.00&quot; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
+</code></pre></div></td></tr></table></div>
+<p>Add resolution (example):</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xrandr --addmode HDMI-1 1440x900_60.00
+</code></pre></div></td></tr></table></div>
+<p>Set current resolution (example):</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xrandr --output HDMI-1 --mode 1440x900_60.00
+</code></pre></div></td></tr></table></div>
+<p>If it works as expected add it to Xorg by editing <code>/etc/X11/xorg.conf.d/40-monitor.conf</code> and add (example):</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Section &quot;Monitor&quot;
+Identifier &quot;HDMI-1&quot;
+Modeline &quot;1440x900_60.00&quot; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
+Option &quot;PreferredMode&quot; &quot;1440x900&quot;
+EndSection
+</code></pre></div></td></tr></table></div>
+<p>Restart Xorg or reboot</p>
+<h2 id="how-to-alter-cpu-frequency">How to alter CPU frequency?<a class="headerlink" href="#how-to-alter-cpu-frequency" title="Permanent link">&para;</a></h2>
+<p>Some boards allow to adjust CPU speed</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano /etc/default/cpufrequtils
+</code></pre></div></td></tr></table></div>
+<p>Alter <strong>min_speed</strong> or <strong>max_speed</strong> variable.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>systemctl restart cpufrequtils
+</code></pre></div></td></tr></table></div>
+<h2 id="swap-for-experts">Swap for experts<a class="headerlink" href="#swap-for-experts" title="Permanent link">&para;</a></h2>
+<p>By default Armbian implements ZRAM (writing nothing to &lsquo;disk&rsquo; but compressing memory pages in RAM) but in case you often run into out of memory errors and your device has some capable storage (e.g. a securely attached NVMe or SATA SSD) you might want to use ZSWAP instead.</p>
+<p>Check whether your kernel has zswap enabled (<code>dmesg | grep zswap</code> should output something) and if so create a swapfile or swap partition the traditional way, edit/uncomment <code>/etc/default/armbian-zram-config</code> so that it reads <code>SWAP=false</code>, reboot and you&rsquo;re done.</p>
+<p>Zswap performs a lot better than the combination of ZRAM and &lsquo;swap on disk&rsquo; in parallel.</p>
+<h2 id="how-to-downgrade-a-package-via-apt">How to downgrade a package via apt?<a class="headerlink" href="#how-to-downgrade-a-package-via-apt" title="Permanent link">&para;</a></h2>
+<p>This is useful when you need to fall back to previous kernel version.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt install linux-image-sun8i=5.13
+</code></pre></div></td></tr></table></div>
+<p>This example is for H3 legacy kernel. Check <a href="https://www.armbian.com/kernel/">this page</a> for others.</p>
+<h2 id="how-to-toggle-boot-output">How to toggle boot output?<a class="headerlink" href="#how-to-toggle-boot-output" title="Permanent link">&para;</a></h2>
+<p>Edit and change <a href="http://redsymbol.net/linux-kernel-boot-parameters/">boot parameters</a> in <code>/boot/boot.cmd</code> (not recommended) or variables in <code>/boot/armbianEnv.txt</code>:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>- console=both
++ console=serial
+</code></pre></div></td></tr></table></div>
+<p>To disable console entirely (not recommended) set console to <code>none</code>.  </p>
+<p>Recompile boot.cmd to boot.scr if it was changed:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+</code></pre></div></td></tr></table></div>
+<p>Reboot.</p>
+<p>Serial console on imx6 boards are ttymxc0 (Hummingboard, Cubox-i) or ttymxc1 (Udoo).</p>
+<h2 id="how-to-toggle-verbose-boot">How to toggle verbose boot?<a class="headerlink" href="#how-to-toggle-verbose-boot" title="Permanent link">&para;</a></h2>
+<p>Using Armbian 5.05 to 5.20 you would need to touch/rm <code>/boot/.force-verbose</code> to increase boot verbosity. With more recent Armbian builds you would have to alter the <code>verbosity=</code> line in <code>/boot/armbianEnv.txt</code> (defaults to 1 which means less verbose, maximum value is 7).</p>
+<h2 id="how-to-provide-boot-logs-for-inspection">How to provide boot logs for inspection?<a class="headerlink" href="#how-to-provide-boot-logs-for-inspection" title="Permanent link">&para;</a></h2>
+<p>When your SBC behaves strange first step is to check power supply and integrity of boot media (<code>armbianmonitor -c "$HOME"</code>). Then look into your kernel logs. We made a tool that grabs info and pastes it to an online pasteboard service. Please increase boot verbosity as shown above (<code>verbosity=7</code>), reboot and then run</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbianmonitor -u
+</code></pre></div></td></tr></table></div>
+<p>Copy and past URL of your log to the forum, mail, &hellip;</p>
+<h2 id="how-to-change-network-configuration">How to change network configuration?<a class="headerlink" href="#how-to-change-network-configuration" title="Permanent link">&para;</a></h2>
+<p>To get Wi-Fi working simply use <code>nmtui</code>, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found <a href="https://forum.odroid.com/viewtopic.php?f=52&amp;t=25472&amp;">here</a>). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>/etc/network/interfaces.bonding
+/etc/network/interfaces.default
+/etc/network/interfaces.hostapd
+/etc/network/interfaces.network-manager
+/etc/network/interfaces.r1
+/etc/network/interfaces.r1switch
+</code></pre></div></td></tr></table></div>
+<p>By default <strong>/etc/network/interfaces</strong> is a copy of <strong>/etc/network/interfaces.default</strong></p>
+<ol>
+<li>BONDING: your network adapters are bonded in fail safe / &ldquo;notebook&rdquo; way.</li>
+<li>DEFAULT: your network adapters are connected classical way.</li>
+<li>HOSTAPD: your network adapters are bridged together and bridge is connected to the network. This allows you to have your AP connected directly to your router.</li>
+<li>All interfaces are handled by network-manager (<code>nmtui</code>/<code>nmcli</code> or using the GUI)</li>
+<li>Router configuration for Lamobo R1 / Banana R1.</li>
+<li>Switch configuration for Lamobo R1 / Banana R1.</li>
+</ol>
+<p>You can switch configuration with copying.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>cd /etc/network
+cp interfaces.x interfaces
+</code></pre></div></td></tr></table></div>
+<p>(x = default,hostapd,bonding,r1)</p>
+<p>Then check / alter your interfaces:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano /etc/network/interfaces
+</code></pre></div></td></tr></table></div>
+<h2 id="choosing-an-apt-mirror">Choosing an apt mirror<a class="headerlink" href="#choosing-an-apt-mirror" title="Permanent link">&para;</a></h2>
+<p>Armbian has its own apt repository and mirrors for armbian-specific packages.  The default of <code>http://apt.armbian.com</code> is a round-robin to all mirrors.   If you are having trouble updating or slow speeds you may want to choose a specific mirror.</p>
+<p>Do the following:</p>
+<p>Assure <code>jq</code> is installed</p>
+<p><code>apt install -y jq</code></p>
+<p>Get a list of available mirrors from our <code>https://apt.armbian.com/mirrors</code> endpoint.</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>http://apt.armbian.com/mirrors<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</span></code></pre></div></td></tr></table></div>
+<p>You will see a result set similar to this, listing mirrors by region:
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;AS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/armbian/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="s2">&quot;https://minio.k-space.ee/armbian/apt/&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;NA&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="s2">&quot;https://armbian.tnahosting.net/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="s2">&quot;https://us.mirrors.fossho.st/armbian/apt/&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="nt">&quot;EU&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="s2">&quot;https://minio.k-space.ee/armbian/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="s2">&quot;https://armbian.systemonachip.net/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="s2">&quot;https://mirrors.netix.net/armbian/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="s2">&quot;https://mirrors.dotsrc.org/armbian-apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="s2">&quot;https://armbian.hosthatch.com/apt/&quot;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="s2">&quot;https://armbian.tnahosting.net/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="s2">&quot;https://us.mirrors.fossho.st/armbian/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="s2">&quot;https://minio.k-space.ee/armbian/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="s2">&quot;https://armbian.systemonachip.net/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="s2">&quot;https://mirrors.netix.net/armbian/apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="s2">&quot;https://mirrors.dotsrc.org/armbian-apt/&quot;</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="s2">&quot;https://armbian.hosthatch.com/apt/&quot;</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>Edit <code>/etc/apt/sources.list.d/armbian.sources</code> and replace the URL <code>https://apt.armbian.com</code> with your preferred mirror.</p>
 
 
 

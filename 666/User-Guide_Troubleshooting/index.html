@@ -12,13 +12,13 @@
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/Developer-Guide_Overview/">
+        <link rel="canonical" href="https://docs.armbian.com/User-Guide_Troubleshooting/">
       
       
-        <link rel="prev" href="../User-Guide_Armbian-Software/Netconfig/">
+        <link rel="prev" href="../User-Guide_Autoconfig/">
       
       
-        <link rel="next" href="../Developer-Guide_Build-Preparation/">
+        <link rel="next" href="../User-Guide_FAQ/">
       
       
       <link rel="icon" href="../images/logo.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Overview - Armbian Documentation</title>
+        <title>Troubleshooting and Recovery - Armbian Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-it-does" class="md-skip">
+        <a href="#hardware-troubleshooting-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Troubleshooting and Recovery
             
           </span>
         </div>
@@ -247,10 +247,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href=".." class="md-tabs__link">
           
   
@@ -307,13 +309,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../Developer-Guide_Overview/" class="md-tabs__link">
           
   
   
@@ -415,26 +415,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -447,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN OS
@@ -647,10 +650,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../User-Guide_Troubleshooting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting and Recovery
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -661,6 +686,218 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#powering-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powering notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power supply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD card
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SD card">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sd-card-brand" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD card brand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sd-card-size-and-speed-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD card size and speed class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sd-card-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD card testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-images-to-the-sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing images to the SD card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-address-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAC Address Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-screen-on-4k-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Screen on 4k Resolution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-boot-shell-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      U-Boot Shell Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacing-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replacing /boot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing-boot-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing boot loader
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1357,29 +1594,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1392,7 +1626,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ARMBIAN BUILD FRAMEWORK
@@ -1403,30 +1637,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Overview/" class="md-nav__link">
         
   
   
@@ -1437,42 +1651,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      What it does?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1969,7 +2147,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/master/docs/Developer-Guide_Overview.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/edit/master/docs/User-Guide_Troubleshooting.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1978,108 +2156,266 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/master/docs/Developer-Guide_Overview.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/master/docs/User-Guide_Troubleshooting.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>Overview</h1>
+<h1 id="hardware-troubleshooting-guide">Hardware troubleshooting guide<a class="headerlink" href="#hardware-troubleshooting-guide" title="Permanent link">&para;</a></h1>
+<p>First aid video guide:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UpVMO7gbnYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h2 id="what-it-does">What it does?<a class="headerlink" href="#what-it-does" title="Permanent link">&para;</a></h2>
+<p>If you are experiencing at least one of these problems:</p>
 <ul>
-<li>Builds custom <strong>kernel</strong>, <strong>image</strong> or a Debian based Linux <strong>distribution</strong> optimized for low-resource hardware,</li>
-<li>Include filesystem generation, low-level control software, kernel image and <strong>bootloader</strong> compilation,</li>
-<li>Provides a <strong>consistent user experience</strong> by keeping system standards across different platforms.</li>
+<li>board does not boot</li>
+<li>board freezes, crashes or reboots randomly or when connecting USB devices</li>
+<li>plugged in USB devices are not detected (not listed in <code>lsusb</code> output)</li>
+<li>error changing the root password at first boot (Authentication token manipulation error)</li>
+<li>error installing or updating packages due to read-only file system</li>
 </ul>
-<pre class="mermaid"><code>graph LR
-  A[./compile.sh] --&gt; B{Change&lt;br&gt;kernel&lt;br&gt;config};
-  B ---&gt; |yes| C["HW"];
-  B ---&gt; |no| C["HW"];
-  C ---&gt; |branch| D["legacy&lt;br&gt;vendor&lt;br&gt;current&lt;br&gt;edge"];
-  D --&gt; |base| E["Debian&lt;br&gt;Ubuntu"];
-  E ---&gt; |type| F["CLI"];
-  F ---&gt; |type| G["Server"];
-  F ---&gt; |type| H["Minimal"];
-  E ---&gt; I["Desktop"];
-  I ---&gt; K["XFCE"];
-  I ---&gt; L["Gnome"];
-  I ---&gt; M["Cinammon"];
-  I ---&gt; N["KDE Neon"];</code></pre>
-<h2 id="key-advantages">Key Advantages<a class="headerlink" href="#key-advantages" title="Permanent link">&para;</a></h2>
+<p>and you are using a stable Armbian image, then most likely you have one of two common problems - <strong>powering issue</strong> or <strong>SD card issue</strong>.</p>
+<p>Note that</p>
 <ul>
-<li>Simplicity with interactive graphical interface.</li>
-<li>Generates widely recognized and well maintained userspace</li>
-<li>Fast learning curve for complex operations</li>
+<li><em>&ldquo;I know that my power supply is good&rdquo;, &ldquo;it worked yesterday&rdquo;, &ldquo;it works with a different device&rdquo;,</em> etc. are <strong>not objective reasons</strong> to skip powering related diagnostics</li>
+<li><em>&ldquo;I know that my SD card is good&rdquo;, &ldquo;it worked yesterday&rdquo;, &ldquo;it works with a different device&rdquo;,</em> etc. are <strong>not objective reasons</strong> to skip storage related diagnostics</li>
+<li>undervoltage can cause symptoms related to SD card problems such as filesystem corruptions and data loss, so powering has to be checked first</li>
 </ul>
-<p>Check other similarities, advantages and disadvantages compared with leading industry standard build software.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Function</th>
-<th style="text-align: left;">Armbian</th>
-<th style="text-align: left;">Yocto</th>
-<th style="text-align: left;">Buildroot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Target</td>
-<td style="text-align: left;">general purpose</td>
-<td style="text-align: left;">embedded</td>
-<td style="text-align: left;">embedded / IOT</td>
-</tr>
-<tr>
-<td style="text-align: left;">U-boot and kernel</td>
-<td style="text-align: left;">compiled from sources</td>
-<td style="text-align: left;">compiled from sources</td>
-<td style="text-align: left;">compiled from sources</td>
-</tr>
-<tr>
-<td style="text-align: left;">Board support maintenance &nbsp;</td>
-<td style="text-align: left;">complete</td>
-<td style="text-align: left;">outside</td>
-<td style="text-align: left;">outside</td>
-</tr>
-<tr>
-<td style="text-align: left;">Root file system</td>
-<td style="text-align: left;">Debian or Ubuntu based</td>
-<td style="text-align: left;">custom</td>
-<td style="text-align: left;">custom</td>
-</tr>
-<tr>
-<td style="text-align: left;">Package manager</td>
-<td style="text-align: left;">APT</td>
-<td style="text-align: left;">any</td>
-<td style="text-align: left;">none</td>
-</tr>
-<tr>
-<td style="text-align: left;">Configurability</td>
-<td style="text-align: left;">limited</td>
-<td style="text-align: left;">large</td>
-<td style="text-align: left;">large</td>
-</tr>
-<tr>
-<td style="text-align: left;">Initramfs support</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-</tr>
-<tr>
-<td style="text-align: left;">Getting started</td>
-<td style="text-align: left;">quick</td>
-<td style="text-align: left;">very slow</td>
-<td style="text-align: left;">slow</td>
-</tr>
-<tr>
-<td style="text-align: left;">Cross compilation</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">yes</td>
-</tr>
-</tbody>
-</table>
+<h2 id="powering-notes">Powering notes<a class="headerlink" href="#powering-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Most boards, even ones fitted with PMIC (power management integrated circuit) do not have any measures to react to undervoltage that could prevent instability</li>
+<li>It does not matter what voltage your power supply outputs, it matters what voltage will reach the onboard voltage regulators</li>
+<li>Peak power consumption of popular boards can vary from 0.9A at 5V (H3 based Orange Pi PC) to 1.7A at 5V (RK3288 based Tinkerboard), both without any attached peripherials like USB devices</li>
+<li>Due to the Ohm&rsquo;s law voltage drop due to cable and connector resistance will be proportional to the electric current, so most of the time problems will be experienced at current spikes caused by CPU load or peripherials like spinning up HDDs</li>
+</ul>
+<h3 id="power-supply">Power supply<a class="headerlink" href="#power-supply" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cheap phone chargers may not provide the current listed on their label, especially for long time periods</li>
+<li>Some cheap phone chargers don&rsquo;t have proper feedback based stabilization, so output voltage may change depending on load</li>
+<li>Power supplies will degrade over time (especially when working 24/7)</li>
+<li>Some problems like degraded output filtering capacitors cannot be diagnosed even with a multimeter because of the non-linear voltage form</li>
+</ul>
+<h3 id="cable">Cable<a class="headerlink" href="#cable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The longer and thinner the cable - the higher its resistance - the greater the voltage drop will be under load</li>
+<li>Even thick looking cable can have thin wires inside, so do not trust the outside cable diameter</li>
+</ul>
+<h3 id="connector">Connector<a class="headerlink" href="#connector" title="Permanent link">&para;</a></h3>
+<ul>
+<li>MicroUSB connector is rated for the maximum current of 1.8A, but even this number cannot be guaranteed. Trying to pass larger current (even momentarily) may result in a voltage dropping below USB specifications</li>
+<li>Most of the boards can also be powered through GPIO pins. This can be used to bypass the microUSB connector and thus to improve stability</li>
+</ul>
+<h2 id="sd-card">SD card<a class="headerlink" href="#sd-card" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A SD card is a complex storage device with an embedded controller that processes read, erase and write operations, wear leveling, error and corruption detection, but it does not provide any diagnostic protocols like S.M.A.R.T.</li>
+<li>SD cards will degrade over time and may fail in the end in different ways - become completely or partially read-only or cause a silent data corruption</li>
+</ul>
+<h3 id="sd-card-brand">SD card brand<a class="headerlink" href="#sd-card-brand" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Based on current prices and performance tests done by Armbian users Samsung Evo, Samsung Evo Plus and Sandisk Ultra cards are recommended</li>
+<li>Other good alternatives may be added to this page in the future</li>
+</ul>
+<h3 id="sd-card-size-and-speed-class">SD card size and speed class<a class="headerlink" href="#sd-card-size-and-speed-class" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SD card speed class and size does not influence the reliability directly, but larger size means larger amount of lifetime data written, even if you are using 10-20% of the cards space</li>
+</ul>
+<h3 id="sd-card-testing">SD card testing<a class="headerlink" href="#sd-card-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>There are many fake SD card around. eBay and Amazon Marketplace are notorious for selling fakes, but sometimes even reputable retailers get fooled.</li>
+<li>Most commonly low capacity cards will be reprogrammed to appear as bigger, but any files written beyond the true capacity will be lost or corrupted.</li>
+<li>We recommend to always <a href="https://fight-flash-fraud.readthedocs.io/en/latest/usage.html">test the capacity of each new SD cards using f3</a>.</li>
+</ul>
+<h3 id="writing-images-to-the-sd-card">Writing images to the SD card<a class="headerlink" href="#writing-images-to-the-sd-card" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If you wrote an image to the card it does not mean that it was written successfully without any errors</li>
+<li>so always verify images after write using some tools like <em>balenaEtcher</em> which is currently the only popular and cross-platform tool that does mandatory verify on write (more lightweight alternatives may be added to this page in the future)</li>
+<li>&ldquo;Check for bad blocks&rdquo; function available in some tools is mostly useless when dealing with SD cards</li>
+<li>Note that <em>balenaEtcher</em> verifies only 1-2GB that are occupied by the initial unresized image, it does not verify the whole SD card</li>
+</ul>
+<h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
+<h3 id="mac-address-conflicts">MAC Address Conflicts<a class="headerlink" href="#mac-address-conflicts" title="Permanent link">&para;</a></h3>
+<p>If you experience strange network problems, especially if you are running several of these SOC-boards with the same operating system, then the problems may be sourced by not having a real hardware MAC address. The operating systems try to generate a hardware MAC address from the CPUid, but what if that SOC has no CPUid either?</p>
+<p>Then you have to do it manually. Depending on system and network installation, there are several possibilities:</p>
+<ul>
+<li>the preferred way: change <code>/boot/armbianEnv.txt</code> and add a line:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>  ethaddr=XX:XX:XX:XX:XX:XX
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<p>but that file is interpreted by u-boot, which happens early in boot process, but not every u-boot is able to read that file.</p>
+<ul>
+<li>next possibility to set mac-address is changing network configuration. On systems with <strong>ifupdown</strong> you can do that by changing <code>/etc/network/interfaces</code>. Add these lines:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>  auto eth0
+  iface eth0 inet dhcp
+      hwaddress ether XX:XX:XX:XX:XX:XX
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<ul>
+<li>if the above does not work, then your network is probably controlled by <strong>Network-manager</strong> . In directory <code>/etc/Networkmanager/system-connections</code> is a file <code>Wired connection 1.nmconnection</code>. Change entry <em>cloned-mac-address</em> of group <strong>[ethernet]</strong> :<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>  [connection]
+  id=Wired connection 1
+  type=ethernet
+
+  [ethernet]
+  cloned-mac-address=XX:XX:XX:XX:XX:XX
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">&para;</a></h2>
+<h3 id="no-screen-on-4k-resolution">No Screen on 4k Resolution<a class="headerlink" href="#no-screen-on-4k-resolution" title="Permanent link">&para;</a></h3>
+<p>Some combination of boards/kernel versions does not support 4k resolution. This may cause black screen on connecting the board to 4k resolution devices. A workaround to solve this without changing the kernel is forcing the video mode to 1080p. Add this directive to the <code>/boot/armbianEnv.txt</code> and reboot your system:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>extraargs=video=HDMI-A-1:1920x1080@60
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Despite of this config, some apps may try to use 4k resolution, example: <em>Retroarch</em>. In this case you have to change app configuration to use the 1080p resolution.</li>
+</ul>
+<ul>
+<li>To edit files without video you could connect to the board using ssh. Other option is mount the sd card in another device.</li>
+</ul>
+<h2 id="board-configuration">Board configuration<a class="headerlink" href="#board-configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Some boards require the setup of the correct device tree file or they will not boot. Check the board specific documentation for details.</li>
+</ul>
+<h2 id="recovery">Recovery<a class="headerlink" href="#recovery" title="Permanent link">&para;</a></h2>
+<p>In 95 percent of all cases it is either a faulty/fraud/counterfeit <a href="#sd-card">SD card</a> or an <a href="#power-supply">insufficient power supply</a> that is causing all sorts of <em>does not work</em> issues! So, please, make sure you checked the sections above before proceeding.</p>
+<p>The following options are presented in (more or less) increasing levels of despair.  But keep heart!  :)  And proceed in order.</p>
+<h3 id="u-boot-shell-access">U-Boot Shell Access<a class="headerlink" href="#u-boot-shell-access" title="Permanent link">&para;</a></h3>
+<p>If you broke the system you can try to get in this way.  You have to get to u-boot command prompt, using either a serial adapter or monitor and usb keyboard.</p>
+<ul>
+<li>Note: USB support in u-boot is currently not enabled on all H3 boards.</li>
+</ul>
+<p>After switching power on or rebooting, when u-boot loads up, press some key on the keyboard (or send some key presses via terminal) to abort default boot sequence and get to the command prompt:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="go">U-Boot SPL 2015.07-dirty (Oct 01 2015 - 15:05:21)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="go">...</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="go">Hit any key to stop autoboot:  0</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="go">sunxi#</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Enter the following commands, replacing root device path if necessary.</p>
+<ul>
+<li>Note: these are for booting with mainline kernel; check <code>boot.cmd</code> for your device for commands related to legacy kernel.</li>
+</ul>
+<p>For serial:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="go">sunxi# setenv bootargs init=/bin/bash root=/dev/mmcblk0p1 rootwait console=ttyS0,115200</span>
+</span></code></pre></div></td></tr></table></div>
+<p>For monitor:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="go">sunxi# setenv bootargs init=/bin/bash root=/dev/mmcblk0p1 rootwait console=tty1</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Then:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="go">sunxi# ext4load mmc 0 0x49000000 /boot/dtb/${fdtfile}</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="go">sunxi# ext4load mmc 0 0x46000000 /boot/zImage</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="go">sunxi# env set fdt_high ffffffff</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="go">sunxi# bootz 0x46000000 - 0x49000000</span>
+</span></code></pre></div></td></tr></table></div>
+<p>System should eventually boot to bash shell:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="gp">root@host:/#</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Now you can try to fix your broken system.</p>
+<h3 id="replacing-boot">Replacing /boot<a class="headerlink" href="#replacing-boot" title="Permanent link">&para;</a></h3>
+<p>When something goes terribly wrong and you are not able to boot the system (and cannot gain access via u-boot as outlined above), this is the way to proceed.  You will need some Debian based Linux machine where you can mount the failed SD card.  With this procedure you will reinstall the kernel and hardware settings.  In most cases this should be enough to unbrick the board.</p>
+<p>It is recommended to issue a filesystem check before mounting.  Replace <code>X</code> and <code>Y</code> below with your device and partition(s), respectively (if not a flash based device, it may even be <code>/dev/sdXY</code>, etc).</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="go">/ # fsck /dev/mmcblkXpY -f</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Mount the SD card.</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="go">/ # cd /mnt</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="go">/mnt # mkdir sdcard</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="go">/mnt # mount /dev/mmcblkXpY /mnt/sdcard</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Make another temporary directory somewhere else (in our example <code>~/tmp/recovery</code>) and download the Linux root, kernel, firmware and dtb packages for your board and currently used OS.</p>
+<ul>
+<li>Note: This example is only for <strong>Nanopi Neo 2</strong> with <strong>Ubuntu Focal</strong>, <strong>current</strong> kernel (mainline) and <strong>Armbian 20.08.13</strong> firmware.  Alter package names according to your device name, SOC-family, kernel and firmware version!</li>
+</ul>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="go">/mnt $ cd</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="go">~ $ mkdir -p tmp/recovery</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="go">~ $ cd tmp/recovery</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="gp gp-VirtualEnv">(Root file system)</span><span class="go">:</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="go">~/tmp/recovery $ wget https://apt.armbian.com/pool/main/l/linux-focal-root-current-nanopineo2/linux-focal-root-current-nanopineo2_20.08.13_arm64.deb</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="gp gp-VirtualEnv">(Kernel)</span><span class="go">:</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="go">~/tmp/recovery $ wget https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-image-current-sunxi64_20.08.13_arm64.deb</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="gp gp-VirtualEnv">(Firmware)</span><span class="go">:</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="go">~/tmp/recovery $ wget https://apt.armbian.com/pool/main/a/armbian-firmware/armbian-firmware_20.08.13_all.deb</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="gp gp-VirtualEnv">(Device Tree Binary (DTB)</span><span class="go">):</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="go">~/tmp/recovery $ wget https://apt.armbian.com/pool/main/l/linux-5.8.16-sunxi64/linux-dtb-current-sunxi64_20.08.13_arm64.deb</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Extract all the Debian packages (<code>.deb</code> files) to the mounted sd card.</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="go">~/tmp/recovery # for f in *.deb; do dpkg -x $f /mnt/sdcard; done</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Navigate to <code>/mnt/sdcard/boot</code> and create symlinks:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="go">~/tmp/recovery # cd /mnt/sdcard/boot</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="go">/mnt/sdcard/boot # ln -s vmlinuz-5.8.16-sunxi64 zImage</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="go">/mnt/sdcard/boot # ln -s uInitrd-5.8.16-sunxi64 uInitrd</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="go">/mnt/sdcard/boot # ln -s dtb-5.8.16 dtb</span>
+</span></code></pre></div></td></tr></table></div>
+<p>If you upgrade from some very old build, you might need to update your boot script.</p>
+<ul>
+<li>Note: The following example is for Allwinner boards.</li>
+</ul>
+<ul>
+<li>Note: You will need a <code>u-boot-tools</code> package on your host system.</li>
+</ul>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="go">/mnt/sdcard/boot # wget https://raw.githubusercontent.com/armbian/build/master/config/bootscripts/boot-sunxi.cmd</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="go">/mnt/sdcard/boot # mv boot-sunxi.cmd boot.cmd</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="go">/mnt/sdcard/boot # mkimage -C none -A arm -T script -d boot.cmd boot.scr</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Unmount SD card.</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="go">/mnt/sdcard/boot # cd /</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="go">/ # umount /mnt/sdcard</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Move it to the board and power on.  Check serial output for errors if problems persist.</p>
+<h3 id="flashing-boot-loader">Flashing boot loader<a class="headerlink" href="#flashing-boot-loader" title="Permanent link">&para;</a></h3>
+<p>Sometimes we need to flash boot loader from some other Linux. Attach an SD card reader with your SD card and proceed this way:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="go">/mnt $ cd</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="go">~ $ mkdir -p tmp/recovery</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="go">~ $ cd tmp/recovery</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="go">~ $ wget https://imola.armbian.com/apt/pool/main/l/linux-u-boot-nanopineo2-current/linux-u-boot-current-nanopineo2_20.08.13_arm64.deb</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="go">~ $ dpkg-deb -x linux-u-boot-current-nanopineo2_20.08.13_arm64.deb pack</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="go">~ $ source pack/usr/lib/u-boot/platform_install.sh</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="go">~ $ write_uboot_platform pack/usr/lib/linux-u-boot-nanopineo2-current /dev/XXX # replace XXX with the actual device /dev/sdb</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Move it to the board and power on.  Check serial output for errors if problems persist.</p>
 
 
 
