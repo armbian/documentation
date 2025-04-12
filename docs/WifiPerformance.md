@@ -55,12 +55,14 @@ All wireless adapters were tested under consistent conditions - each positioned 
 
 ## Contribute
 
-We're working hard to push the boundaries of wireless performance testing, but we need your support to make it happen! Your contribution will help us acquire the essential equipment to improve our testing capabilities, ensuring more accurate and comprehensive results.
+- Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize [our test infrastructure](https://github.com/armbian/armbian.github.io/actions/workflows/usb-wireless-autotest.yml). By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.
 
-Every donation counts - buy us a wireless adaptor that is not yet here.
-https://www.amazon.de/hz/wishlist/ls/1GA17IGQ2MF0V?ref_=wl_share
+- Donate hardware: Your contribution of new hardware, whether it’s a wireless adapter or any other equipment, helps us expand our testing capabilities. We’re specifically looking for [new wireless adapters](https://www.amazon.de/hz/wishlist/ls/1GA17IGQ2MF0V?ref_=wl_share) that haven’t yet been added to our system. Your donation can directly impact the scope and depth of our tests.
+
+- Join our team: Become part of our passionate and dedicated team. We’re looking for [individuals who share our vision and are eager to contribute to the development of innovative testing solutions](https://forum.armbian.com/staffapplications/). Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!
 
 ## Other resources
 
-
 - [USB WiFi Adapter Information for Linux](https://github.com/morrownr/USB-WiFi)
+- [Official Linux Wireless documentation](https://wireless.docs.kernel.org/en/latest/index.html)
+- [Armbian forum - Advanced users - Development](https://forum.armbian.com/forum/4-advanced-users-development/)
