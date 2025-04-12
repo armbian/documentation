@@ -134,7 +134,7 @@ nav:
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
         - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
         - 'Music': 'User-Guide_Armbian-Software/Music.md'
-        - 'Database': 'User-Guide_Armbian-Software/Database.md'        
+        - 'Database': 'User-Guide_Armbian-Software/Database.md'
         - 'Downloaders': 'User-Guide_Armbian-Software/Downloaders.md'
         - 'DNS blockers': 'User-Guide_Armbian-Software/DNS.md'
         - 'Home Automation': 'User-Guide_Armbian-Software/HomeAutomation.md'
@@ -164,6 +164,7 @@ nav:
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
         - 'Armbian config': 'Contribute/Armbian-config.md'
+        - 'Wifi performance tests': 'WifiPerformance.md'
         - 'Mirrors' : 'Mirrors.md'
         - 'Automation' : 'Process_CI.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
