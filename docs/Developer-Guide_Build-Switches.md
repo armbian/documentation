@@ -277,6 +277,12 @@ Enforce building from source instead of using pre-built artifacts.
 
 Enforce building without Armbian repository. Suitable for developing new releases or making custom images that doesn't need Armbian repository.
 
+**SECTOR_SIZE** ( value )
+- `512` (default, for SD/EMMC/...)
+- `4096` (for UFS, requires util-linux >2.41. Tested on Debian Trixie host)
+
+Enforce sfdisk to align partition sector sizes.
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
