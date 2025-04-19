@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Board support Rules
 
 ## Overview
