@@ -1,4 +1,4 @@
-# This configures label matching for PR's.
+# This configures label matching for PRs.
 #
 # The keys are labels, and the values are lists of minimatch patterns
 # to which those labels apply.
