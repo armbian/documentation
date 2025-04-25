@@ -15,9 +15,8 @@ A configuration file named `userpatches/config-<something>.conf.sh` (`.conf` als
 
 ## Legacy user provided configuration (deprecated, support for this will be removed at some point)
 
-If the file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. It can also add additional packages to be installed, by adding to `PACKAGE_LIST_ADDITIONAL`. For a comprehensive list of available variables, look through  `lib/functions/configuration/main-config.sh`. Some examples of what you can change:
+If the file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. For a comprehensive list of available variables, look through  `lib/functions/configuration/main-config.sh`. Some examples of what you can change:
 
-    PACKAGE_LIST_ADDITIONAL="$PACKAGE_LIST_ADDITIONAL python-serial python" # additional packages
     [[ $LINUXFAMILY == sunxi64 && $BRANCH == edge ]] && BOOTBRANCH='tag:v2017.09' # conditionally change u-boot git branch/tag
     KERNELBRANCH="tag:v5.4.28" #always change to this kernel tag
 
