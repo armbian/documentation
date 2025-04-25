@@ -249,7 +249,7 @@ Smoke testing is preliminary testing to reveal simple failures severe enough to,
 
 - powering test equipment, consistent from several network switches, power supplies and dozens of hardware platforms
 - running upgrade, reboot, repository switch, reboot, ... tests in parallel
-- uploading a test report as build artifact following by powering the devices off.
+- uploading a test report as build artifact followed by powering the devices off.
 
 ## Automatic Pull Requests Labeler (PR)
 

@@ -7,7 +7,7 @@ You can add your own patches outside the build script. Place your patches inside
     [ o.k. ] Started patching process for [ kernel sunxi-edge 4.4.0-rc6 ]
     [ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-edge ]
 
-Patches with the same file name and path in the `userpatches` directory tree override those one in the `patch` directory. To _replace_ a patch provided by Armbian maintainers, copy it from `patch` to the corresponding directory in `userpatches` and edit it to your needs. To _disable_ a patch, create an empty file in the corresponding directory in `userpatches`.
+Patches with the same file name and path in the `userpatches` directory tree override those in the `patch` directory. To _replace_ a patch provided by Armbian maintainers, copy it from `patch` to the corresponding directory in `userpatches` and edit it to your needs. To _disable_ a patch, create an empty file in the corresponding directory in `userpatches`.
 
 ## User provided configuration
 
