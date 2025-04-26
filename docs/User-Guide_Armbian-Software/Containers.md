@@ -4,7 +4,11 @@ comments: true
 
 # Docker containerization and KVM virtual machines
 
+## Docker minimal
+
 **Author:** @schwar3kat
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/CON001.webp --->

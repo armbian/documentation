@@ -4,7 +4,11 @@ comments: true
 
 # Network-wide ad blockers servers
 
+## Pi-hole DNS ad blocker
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DNS001.png --->
@@ -48,7 +52,11 @@ armbian-config --cmd DNS002
 armbian-config --cmd DNS004
 ~~~
 
+## Unbound caching DNS resolver
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/UNB001.png --->
@@ -75,7 +83,11 @@ armbian-config --cmd UNB002
 armbian-config --cmd UNB003
 ~~~
 
+## AdGuardHome DNS sinkhole
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/ADG001.png --->

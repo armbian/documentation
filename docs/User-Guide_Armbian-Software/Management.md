@@ -4,7 +4,11 @@ comments: true
 
 # Remote File & Management tools
 
+## Cockpit web-based management tool
+
 **Author:** @Tearran
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MAN001.png --->
