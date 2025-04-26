@@ -16,6 +16,21 @@ comments: true
 <!--- section image STOP from tools/include/images/NET001.png --->
 
 
+<!--- header START from tools/include/markdown/NET001-header.md --->
+``` mermaid
+graph LR
+  A{Select interface} --> B[Configure];
+  A{Select interface} --> C[Drop];
+  C ---->A;
+  B -->F[DHCP];
+  B ---->G[Static];
+  G ------>| MAC, IP, route, GW, DNS|H[Configured];
+  F -->| MAC | H[Configured];
+```
+
+<!--- header STOP from tools/include/markdown/NET001-header.md --->
+
+
 ~~~ bash title="Basic Network Setup:"
 armbian-config --cmd NET001
 ~~~
@@ -53,6 +68,24 @@ armbian-config --cmd VNS001
 **Author:** @igorpecovnik
 
 **Status:** Stable
+
+
+<!--- header START from tools/include/markdown/NEA001-header.md --->
+``` mermaid
+graph LR
+  A[Network] --> B[Add / Change interface];
+  A[Network] --> O[Revert to defaults];
+  A[Network] --> P[Show configuration];
+  B ---->E[Wired];
+  B ---->F[Wireless];
+  E -->R[DHCP];
+  E -->T[Static];
+  E -->S[Spoof MAC];
+  F -->X[Station];
+  F -->W[Access point]; 
+```
+
+<!--- header STOP from tools/include/markdown/NEA001-header.md --->
 
 
 ~~~ bash title="Add / change interface:"
