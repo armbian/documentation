@@ -4,10 +4,6 @@ comments: true
 
 # Tools for printing and 3D printing
 
-## OctoPrint web-based 3D printers management tool
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -25,14 +21,10 @@ OctoPrint is an open source 3D printer controller application, which provides a 
 armbian-config --cmd OCT001
 ~~~
 
-## OctoPrint remove
-
 
 ~~~ bash title="OctoPrint remove:"
 armbian-config --cmd OCT002
 ~~~
-
-## OctoPrint purge with data folder
 
 
 ~~~ bash title="OctoPrint purge with data folder:"
