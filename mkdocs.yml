@@ -80,6 +80,9 @@ markdown_extensions:
       - name: mermaid
         class: mermaid
         format: !!python/name:pymdownx.superfences.fence_code_format
+      - name: custombash
+        class: custom-bash-block
+        format: !!python/name:pymdownx.superfences.fence_code_format
   - markdown.extensions.admonition # Highlighted warning/info blocks
   - markdown.extensions.attr_list # Set custom HTML attributes {: }
   - markdown.extensions.footnotes # Footnotes [^1]
