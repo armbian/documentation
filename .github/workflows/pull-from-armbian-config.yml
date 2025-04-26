@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'armbian/configng'
+          ref: 'improve_docs_gen'
           path: 'config'
 
       - name: Make docs
