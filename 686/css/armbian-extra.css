@@ -5,3 +5,8 @@
 .md-typeset table:not([class]) {
     display: table;
 }
+
+/* Style for only specially tagged bash blocks */
+pre.custom-bash-block, code.custom-bash-block {
+  font-size: 24pt;
+}
