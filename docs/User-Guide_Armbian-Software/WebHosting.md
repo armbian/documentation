@@ -4,7 +4,13 @@ comments: true
 
 # Web server, LEMP, reverse proxy, Let's Encrypt SSL
 
+**Status:** Stable
+
+## SWAG reverse proxy
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SWAG01.png --->

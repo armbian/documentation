@@ -4,7 +4,11 @@ comments: true
 
 # Media servers, organizers and editors
 
+## Emby organizes video, music, live TV, and photos
+
 **Author:** @schwar3kat
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MED003.png --->

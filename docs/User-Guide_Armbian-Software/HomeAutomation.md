@@ -4,7 +4,11 @@ comments: true
 
 # Home Automation for control home appliances
 
+## openHAB empowering the smart home
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/HAB001.png --->
@@ -26,7 +30,11 @@ armbian-config --cmd HAB002
 armbian-config --cmd HAB003
 ~~~
 
+## Home Assistant open source home automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/HAS001.png --->
@@ -69,7 +77,11 @@ armbian-config --cmd HAS002
 armbian-config --cmd HAS003
 ~~~
 
+## Domoticz open source home automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/DOM001.png --->
@@ -113,7 +125,11 @@ armbian-config --cmd DOM002
 armbian-config --cmd DOM003
 ~~~
 
+## EVCC - solar charging automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->

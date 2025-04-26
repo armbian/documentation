@@ -4,7 +4,11 @@ comments: true
 
 # Applications and tools for development
 
+## Install tools for cloning and managing repositories (git)
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 ~~~ bash title="Install tools for cloning and managing repositories (git):"

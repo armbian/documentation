@@ -4,7 +4,11 @@ comments: true
 
 # Real-time monitoring, collecting metrics, up-time status
 
+## Uptime Kuma self-hosted monitoring tool
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MON001.webp --->
@@ -41,7 +45,11 @@ armbian-config --cmd MON006
 armbian-config --cmd MON007
 ~~~
 
+## Grafana data analytics
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/GRA001.png --->
@@ -68,7 +76,11 @@ armbian-config --cmd GRA002
 armbian-config --cmd GRA003
 ~~~
 
+## Prometheus docker image
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/PRO001.png --->

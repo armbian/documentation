@@ -4,7 +4,11 @@ comments: true
 
 # Localisation
 
+## Change Global timezone
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/LO001.png --->
