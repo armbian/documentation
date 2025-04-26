@@ -1945,7 +1945,11 @@
 
 
 <h1 id="runinstall-3rd-party-applications">Run/Install 3rd party applications<a class="headerlink" href="#runinstall-3rd-party-applications" title="Permanent link">&para;</a></h1>
+<h2 id="web-server-lemp-reverse-proxy-lets-encrypt-ssl">Web server, LEMP, reverse proxy, Let&rsquo;s Encrypt SSL<a class="headerlink" href="#web-server-lemp-reverse-proxy-lets-encrypt-ssl" title="Permanent link">&para;</a></h2>
+<p><strong>Status:</strong> Stable</p>
+<h2 id="swag-reverse-proxy">SWAG reverse proxy<a class="headerlink" href="#swag-reverse-proxy" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/SWAG01.png --->
 <p><a href="#"><img alt="SWAG reverse proxy" src="/images/SWAG01.png" /></a></p>
 <!--- section image STOP from tools/include/images/SWAG01.png --->
@@ -1953,7 +1957,7 @@
 <!--- header START from tools/include/markdown/SWAG01-header.md --->
 <p>SWAG - Secure Web Application Gateway sets up an Nginx webserver and reverse proxy with php support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let&rsquo;s Encrypt). It also contains fail2ban for intrusion prevention.</p>
 <p>After entering required information, your server will have auto updating SSL secured website! To this website you can attach several services, for example: <a href="https://my.server.com/netdata">https://my.server.com/netdata</a> will run <a href="https://www.netdata.cloud/">Netdata</a> instance.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="runinstall-3rd-party-applications-requirements" name="__tabbed_1" type="radio" /><input id="runinstall-3rd-party-applications-directories" name="__tabbed_1" type="radio" /><input id="runinstall-3rd-party-applications-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-requirements">Requirements</label><label for="runinstall-3rd-party-applications-directories">Directories</label><label for="runinstall-3rd-party-applications-advanced-setup">Advanced setup</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="swag-reverse-proxy-requirements" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-directories" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="swag-reverse-proxy-requirements">Requirements</label><label for="swag-reverse-proxy-directories">Directories</label><label for="swag-reverse-proxy-advanced-setup">Advanced setup</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1986,7 +1990,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG04
 </span></code></pre></div></td></tr></table></div>
+<h2 id="home-automation-for-control-home-appliances">Home Automation for control home appliances<a class="headerlink" href="#home-automation-for-control-home-appliances" title="Permanent link">&para;</a></h2>
+<h2 id="openhab-empowering-the-smart-home">openHAB empowering the smart home<a class="headerlink" href="#openhab-empowering-the-smart-home" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/HAB001.png --->
 <p><a href="#"><img alt="openHAB empowering the smart home" src="/images/HAB001.png" /></a></p>
 <!--- section image STOP from tools/include/images/HAB001.png --->
@@ -1997,7 +2004,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">openHAB purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAB003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="home-assistant-open-source-home-automation">Home Assistant open source home automation<a class="headerlink" href="#home-assistant-open-source-home-automation" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Preview</p>
 <!--- section image START from tools/include/images/HAS001.png --->
 <p><a href="#"><img alt="Home Assistant open source home automation" src="/images/HAS001.png" /></a></p>
 <!--- section image STOP from tools/include/images/HAS001.png --->
@@ -2005,7 +2014,7 @@
 <!--- header START from tools/include/markdown/HAS001-header.md --->
 <p>Home Assistant is an open source smart home platform that allows you to connect your smart home devices like your TV, fan, cameras, thermostats, lights, and sensors. As a user, you can build intricate automation using Home Assistant&rsquo;s user-friendly, unified web-based user interface.</p>
 <p>Perfect to run on any single board computer with 4 cores and at least 512Mb of memory. Armbian installation is optimised to run from SD/eMMC media, but it is recommended to use SSD.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="runinstall-3rd-party-applications-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="runinstall-3rd-party-applications-directories_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-access-to-the-web-interface">Access to the web interface</label><label for="runinstall-3rd-party-applications-directories_1">Directories</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="home-assistant-open-source-home-automation-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="home-assistant-open-source-home-automation-directories" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="home-assistant-open-source-home-automation-access-to-the-web-interface">Access to the web interface</label><label for="home-assistant-open-source-home-automation-directories">Directories</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface is accessible via port <strong>8123</strong>:</p>
@@ -2030,14 +2039,16 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Home Assistant purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAS003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="domoticz-open-source-home-automation">Domoticz open source home automation<a class="headerlink" href="#domoticz-open-source-home-automation" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Preview</p>
 <!--- section image START from tools/include/images/DOM001.png --->
 <p><a href="#"><img alt="Domoticz open source home automation" src="/images/DOM001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DOM001.png --->
 
 <!--- header START from tools/include/markdown/DOM001-header.md --->
 <p>Domoticz is an open-source home automation platform that allows you to control and monitor smart devices in your home. It supports a wide range of devices, including lights, sensors, thermostats, and cameras. Through its web interface or mobile app, you can set up automation rules and schedules, providing greater convenience and energy efficiency. It’s customizable, flexible, and can be run on a variety of hardware platforms supported by Armbian.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="runinstall-3rd-party-applications-access-to-the-web-interface_1" name="__tabbed_3" type="radio" /><input id="runinstall-3rd-party-applications-directories_2" name="__tabbed_3" type="radio" /><input id="runinstall-3rd-party-applications-advanced-setup_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-access-to-the-web-interface_1">Access to the web interface</label><label for="runinstall-3rd-party-applications-directories_2">Directories</label><label for="runinstall-3rd-party-applications-advanced-setup_1">Advanced setup</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="domoticz-open-source-home-automation-access-to-the-web-interface" name="__tabbed_3" type="radio" /><input id="domoticz-open-source-home-automation-directories" name="__tabbed_3" type="radio" /><input id="domoticz-open-source-home-automation-advanced-setup" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="domoticz-open-source-home-automation-access-to-the-web-interface">Access to the web interface</label><label for="domoticz-open-source-home-automation-directories">Directories</label><label for="domoticz-open-source-home-automation-advanced-setup">Advanced setup</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface is accessible via port <strong>8080</strong>:</p>
@@ -2067,7 +2078,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Domoticz purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOM003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="evcc-solar-charging-automation">EVCC - solar charging automation<a class="headerlink" href="#evcc-solar-charging-automation" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Preview</p>
 <!--- section image START from tools/include/images/EVCC01.png --->
 <p><a href="#"><img alt="EVCC - solar charging automation" src="/images/EVCC01.png" /></a></p>
 <!--- section image STOP from tools/include/images/EVCC01.png --->
@@ -2082,7 +2095,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EVCC purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>EVCC03
 </span></code></pre></div></td></tr></table></div>
+<h2 id="network-wide-ad-blockers-servers">Network-wide ad blockers servers<a class="headerlink" href="#network-wide-ad-blockers-servers" title="Permanent link">&para;</a></h2>
+<h2 id="pi-hole-dns-ad-blocker">Pi-hole DNS ad blocker<a class="headerlink" href="#pi-hole-dns-ad-blocker" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/DNS001.png --->
 <p><a href="#"><img alt="Pi-hole DNS ad blocker" src="/images/DNS001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DNS001.png --->
@@ -2115,7 +2131,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DNS004
 </span></code></pre></div></td></tr></table></div>
+<h2 id="unbound-caching-dns-resolver">Unbound caching DNS resolver<a class="headerlink" href="#unbound-caching-dns-resolver" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/UNB001.png --->
 <p><a href="#"><img alt="Unbound caching DNS resolver" src="/images/UNB001.png" /></a></p>
 <!--- section image STOP from tools/include/images/UNB001.png --->
@@ -2130,7 +2148,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="adguardhome-dns-sinkhole">AdGuardHome DNS sinkhole<a class="headerlink" href="#adguardhome-dns-sinkhole" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/ADG001.png --->
 <p><a href="#"><img alt="AdGuardHome DNS sinkhole" src="/images/ADG001.png" /></a></p>
 <!--- section image STOP from tools/include/images/ADG001.png --->
@@ -2145,7 +2165,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="music-servers-and-streamers">Music servers and streamers<a class="headerlink" href="#music-servers-and-streamers" title="Permanent link">&para;</a></h2>
+<h2 id="navidrome-music-server-and-streamer-compatible-with-subsonicairsonic">Navidrome music server and streamer compatible with Subsonic/Airsonic<a class="headerlink" href="#navidrome-music-server-and-streamer-compatible-with-subsonicairsonic" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/NAV001.png --->
 <p><a href="#"><img alt="Navidrome music server and streamer compatible with Subsonic/Airsonic" src="/images/NAV001.png" /></a></p>
 <!--- section image STOP from tools/include/images/NAV001.png --->
@@ -2156,7 +2179,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Navidrome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NAV003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="download-apps-for-movies-tv-shows-music-and-subtitles">Download apps for movies, TV shows, music and subtitles<a class="headerlink" href="#download-apps-for-movies-tv-shows-music-and-subtitles" title="Permanent link">&para;</a></h2>
+<h2 id="qbittorrent-bittorrent-client">qBittorrent BitTorrent client<a class="headerlink" href="#qbittorrent-bittorrent-client" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/DOW001.png --->
 <p><a href="#"><img alt="qBittorrent BitTorrent client " src="/images/DOW001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DOW001.png --->
@@ -2171,7 +2197,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qBittorrent purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="deluge-bittorrent-client">Deluge BitTorrent client<a class="headerlink" href="#deluge-bittorrent-client" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/DEL001.png --->
 <p><a href="#"><img alt="Deluge BitTorrent client" src="/images/DEL001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DEL001.png --->
@@ -2186,7 +2214,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Deluge purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEL003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="transmission-bittorrent-client">Transmission BitTorrent client<a class="headerlink" href="#transmission-bittorrent-client" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/TRA001.png --->
 <p><a href="#"><img alt="Transmission BitTorrent client" src="/images/TRA001.png" /></a></p>
 <!--- section image STOP from tools/include/images/TRA001.png --->
@@ -2201,7 +2231,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Transmission purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>TRA003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="sabnzbd-newsgroup-downloader">SABnzbd newsgroup downloader<a class="headerlink" href="#sabnzbd-newsgroup-downloader" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/SABN01.png --->
 <p><a href="#"><img alt="SABnzbd newsgroup downloader" src="/images/SABN01.png" /></a></p>
 <!--- section image STOP from tools/include/images/SABN01.png --->
@@ -2216,7 +2248,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SABnzbd purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SABN03
 </span></code></pre></div></td></tr></table></div>
+<h2 id="medusa-automatic-downloader-for-tv-shows">Medusa automatic downloader for TV shows<a class="headerlink" href="#medusa-automatic-downloader-for-tv-shows" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- header START from tools/include/markdown/MDS001-header.md --->
 <p>Medusa is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</p>
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
@@ -2227,7 +2261,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Medusa TV shows downloader purge:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MDS003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="sonarr-automatic-downloader-for-tv-shows">Sonarr automatic downloader for TV shows<a class="headerlink" href="#sonarr-automatic-downloader-for-tv-shows" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/SON001.png --->
 <p><a href="#"><img alt="Sonarr automatic downloader for TV shows" src="/images/SON001.png" /></a></p>
 <!--- section image STOP from tools/include/images/SON001.png --->
@@ -2242,7 +2278,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sonarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SON003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="radarr-automatic-downloader-for-movies">Radarr automatic downloader for movies<a class="headerlink" href="#radarr-automatic-downloader-for-movies" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/RAD001.png --->
 <p><a href="#"><img alt="Radarr automatic downloader for movies" src="/images/RAD001.png" /></a></p>
 <!--- section image STOP from tools/include/images/RAD001.png --->
@@ -2257,7 +2295,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Radarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RAD003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="bazarr-automatic-subtitles-downloader-for-sonarr-and-radarr">Bazarr automatic subtitles downloader for Sonarr and Radarr<a class="headerlink" href="#bazarr-automatic-subtitles-downloader-for-sonarr-and-radarr" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/BAZ001.png --->
 <p><a href="#"><img alt="Bazarr automatic subtitles downloader for Sonarr and Radarr" src="/images/BAZ001.png" /></a></p>
 <!--- section image STOP from tools/include/images/BAZ001.png --->
@@ -2272,7 +2312,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bazarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>BAZ003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="lidarr-automatic-music-downloader">Lidarr automatic music downloader<a class="headerlink" href="#lidarr-automatic-music-downloader" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/LID001.png --->
 <p><a href="#"><img alt="Lidarr automatic music downloader" src="/images/LID001.png" /></a></p>
 <!--- section image STOP from tools/include/images/LID001.png --->
@@ -2287,7 +2329,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lidarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>LID003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="readarr-automatic-downloader-for-ebooks">Readarr automatic downloader for Ebooks<a class="headerlink" href="#readarr-automatic-downloader-for-ebooks" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/RDR001.png --->
 <p><a href="#"><img alt="Readarr automatic downloader for Ebooks" src="/images/RDR001.png" /></a></p>
 <!--- section image STOP from tools/include/images/RDR001.png --->
@@ -2308,7 +2352,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prowlarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW027
 </span></code></pre></div></td></tr></table></div>
+<h2 id="jellyseerr-jellyfinembyplex-integration-install">Jellyseerr Jellyfin/Emby/Plex integration install<a class="headerlink" href="#jellyseerr-jellyfinembyplex-integration-install" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/JEL001.png --->
 <p><a href="#"><img alt="Jellyseerr Jellyfin/Emby/Plex integration install" src="/images/JEL001.png" /></a></p>
 <!--- section image STOP from tools/include/images/JEL001.png --->
@@ -2323,7 +2369,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyseerr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>JEL003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="sql-database-servers-and-web-interface-managers">SQL database servers and web interface managers<a class="headerlink" href="#sql-database-servers-and-web-interface-managers" title="Permanent link">&para;</a></h2>
+<h2 id="mariadb-sql-database-server">Mariadb SQL database server<a class="headerlink" href="#mariadb-sql-database-server" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/DAT001.png --->
 <p><a href="#"><img alt="Mariadb SQL database server" src="/images/DAT001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DAT001.png --->
@@ -2344,7 +2393,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">phpMyAdmin purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT007
 </span></code></pre></div></td></tr></table></div>
+<h2 id="applications-and-tools-for-development">Applications and tools for development<a class="headerlink" href="#applications-and-tools-for-development" title="Permanent link">&para;</a></h2>
+<h2 id="install-tools-for-cloning-and-managing-repositories-git">Install tools for cloning and managing repositories (git)<a class="headerlink" href="#install-tools-for-cloning-and-managing-repositories-git" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV001
@@ -2361,7 +2413,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Armbian rsyncd server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV011
 </span></code></pre></div></td></tr></table></div>
+<h2 id="docker-containerization-and-kvm-virtual-machines">Docker containerization and KVM virtual machines<a class="headerlink" href="#docker-containerization-and-kvm-virtual-machines" title="Permanent link">&para;</a></h2>
+<h2 id="docker-minimal">Docker minimal<a class="headerlink" href="#docker-minimal" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/schwar3kat" title="GitHub User: schwar3kat">@schwar3kat</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/CON001.webp --->
 <p><a href="#"><img alt="Docker minimal" src="/images/CON001.webp" /></a></p>
 <!--- section image STOP from tools/include/images/CON001.webp --->
@@ -2380,7 +2435,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Portainer purge with with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON007
 </span></code></pre></div></td></tr></table></div>
+<h2 id="media-servers-organizers-and-editors">Media servers, organizers and editors<a class="headerlink" href="#media-servers-organizers-and-editors" title="Permanent link">&para;</a></h2>
+<h2 id="emby-organizes-video-music-live-tv-and-photos">Emby organizes video, music, live TV, and photos<a class="headerlink" href="#emby-organizes-video-music-live-tv-and-photos" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/schwar3kat" title="GitHub User: schwar3kat">@schwar3kat</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/MED003.png --->
 <p><a href="#"><img alt="Emby organizes video, music, live TV, and photos" src="/images/MED003.png" /></a></p>
 <!--- section image STOP from tools/include/images/MED003.png --->
@@ -2431,7 +2489,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hastebin purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-106-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-106-1"><a id="__codelineno-106-1" name="__codelineno-106-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED035
 </span></code></pre></div></td></tr></table></div>
+<h2 id="real-time-monitoring-collecting-metrics-up-time-status">Real-time monitoring, collecting metrics, up-time status<a class="headerlink" href="#real-time-monitoring-collecting-metrics-up-time-status" title="Permanent link">&para;</a></h2>
+<h2 id="uptime-kuma-self-hosted-monitoring-tool">Uptime Kuma self-hosted monitoring tool<a class="headerlink" href="#uptime-kuma-self-hosted-monitoring-tool" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/MON001.webp --->
 <p><a href="#"><img alt="Uptime Kuma self-hosted monitoring tool" src="/images/MON001.webp" /></a></p>
 <!--- section image STOP from tools/include/images/MON001.webp --->
@@ -2448,7 +2509,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Netdata purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-112-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-112-1"><a id="__codelineno-112-1" name="__codelineno-112-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON007
 </span></code></pre></div></td></tr></table></div>
+<h2 id="grafana-data-analytics">Grafana data analytics<a class="headerlink" href="#grafana-data-analytics" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/GRA001.png --->
 <p><a href="#"><img alt="Grafana data analytics" src="/images/GRA001.png" /></a></p>
 <!--- section image STOP from tools/include/images/GRA001.png --->
@@ -2463,7 +2526,9 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Grafana purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-115-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-115-1"><a id="__codelineno-115-1" name="__codelineno-115-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GRA003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="prometheus-docker-image">Prometheus docker image<a class="headerlink" href="#prometheus-docker-image" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/PRO001.png --->
 <p><a href="#"><img alt="Prometheus docker image" src="/images/PRO001.png" /></a></p>
 <!--- section image STOP from tools/include/images/PRO001.png --->
@@ -2478,7 +2543,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prometheus purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-118-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-118-1"><a id="__codelineno-118-1" name="__codelineno-118-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PRO003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="remote-file-management-tools">Remote File &amp; Management tools<a class="headerlink" href="#remote-file-management-tools" title="Permanent link">&para;</a></h2>
+<h2 id="cockpit-web-based-management-tool">Cockpit web-based management tool<a class="headerlink" href="#cockpit-web-based-management-tool" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Tearran" title="GitHub User: Tearran">@Tearran</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/MAN001.png --->
 <p><a href="#"><img alt="Cockpit web-based management tool" src="/images/MAN001.png" /></a></p>
 <!--- section image STOP from tools/include/images/MAN001.png --->
@@ -2489,7 +2557,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Webmin web-based management tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-121-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-121-1"><a id="__codelineno-121-1" name="__codelineno-121-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MAN005
 </span></code></pre></div></td></tr></table></div>
+<h2 id="tools-for-printing-and-3d-printing">Tools for printing and 3D printing<a class="headerlink" href="#tools-for-printing-and-3d-printing" title="Permanent link">&para;</a></h2>
+<h2 id="octoprint-web-based-3d-printers-management-tool">OctoPrint web-based 3D printers management tool<a class="headerlink" href="#octoprint-web-based-3d-printers-management-tool" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/OCT001.png --->
 <p><a href="#"><img alt="OctoPrint web-based 3D printers management tool" src="/images/OCT001.png" /></a></p>
 <!--- section image STOP from tools/include/images/OCT001.png --->
@@ -2504,7 +2575,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">OctoPrint purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-124-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-124-1"><a id="__codelineno-124-1" name="__codelineno-124-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>OCT003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="console-network-tools-for-measuring-load-and-bandwidth">Console network tools for measuring load and bandwidth<a class="headerlink" href="#console-network-tools-for-measuring-load-and-bandwidth" title="Permanent link">&para;</a></h2>
+<h2 id="nload-realtime-console-network-usage-monitor">nload -realtime console network usage monitor<a class="headerlink" href="#nload-realtime-console-network-usage-monitor" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
+<p><strong>Status:</strong> Stable</p>
 <!--- section image START from tools/include/images/NET001.png --->
 <p><a href="#"><img alt="nload -realtime console network usage monitor" src="/images/NET001.png" /></a></p>
 <!--- section image STOP from tools/include/images/NET001.png --->
@@ -2533,7 +2607,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-136-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-136-1"><a id="__codelineno-136-1" name="__codelineno-136-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET008
 </span></code></pre></div></td></tr></table></div>
+<h2 id="vpn-tools">VPN tools<a class="headerlink" href="#vpn-tools" title="Permanent link">&para;</a></h2>
+<h2 id="zerotier-connect-devices-over-your-own-private-network-in-the-world">ZeroTier connect devices over your own private network in the world.<a class="headerlink" href="#zerotier-connect-devices-over-your-own-private-network-in-the-world" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jnovos" title="GitHub User: jnovos">@jnovos</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZeroTier connect devices over your own private network in the world.:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-137-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-137-1"><a id="__codelineno-137-1" name="__codelineno-137-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>VPN001
 </span></code></pre></div></td></tr></table></div>
 

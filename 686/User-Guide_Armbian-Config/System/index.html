@@ -901,6 +901,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -912,6 +925,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-kernels-headers-rolling-updates-overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative kernels, headers, rolling updates, overlays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-alternative-kernels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install alternative kernels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-to-internal-media-zfs-nfs-read-only-rootfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install to internal media, ZFS, NFS, read-only rootfs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-to-internal-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install to internal storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-network-filesystem-nfs-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Network filesystem (NFS) support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-network-filesystem-nfs-daemon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable network filesystem (NFS) daemon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-nfs-servers-in-subnet-and-mount-shares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find NFS servers in subnet and mount shares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-ssh-daemon-options-enable-2fa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage SSH daemon options, enable 2FA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-root-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable root login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-shell-adjust-motd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change shell, adjust MOTD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-shell-system-wide-to-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change shell system wide to BASH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-updates-and-distribution-upgrades" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS updates and distribution upgrades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-armbian-firmware-upgrades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Armbian firmware upgrades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1964,7 +2113,10 @@
 
 
 <h1 id="system-wide-and-admin-settings">System wide and admin settings<a class="headerlink" href="#system-wide-and-admin-settings" title="Permanent link">&para;</a></h1>
+<h2 id="alternative-kernels-headers-rolling-updates-overlays">Alternative kernels, headers, rolling updates, overlays<a class="headerlink" href="#alternative-kernels-headers-rolling-updates-overlays" title="Permanent link">&para;</a></h2>
+<h2 id="install-alternative-kernels">Install alternative kernels<a class="headerlink" href="#install-alternative-kernels" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install alternative kernels:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install Linux headers:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER002
@@ -1977,7 +2129,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Edit the boot environment:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER006
 </span></code></pre></div></td></tr></table></div>
+<h2 id="install-to-internal-media-zfs-nfs-read-only-rootfs">Install to internal media, ZFS, NFS, read-only rootfs<a class="headerlink" href="#install-to-internal-media-zfs-nfs-read-only-rootfs" title="Permanent link">&para;</a></h2>
+<h2 id="install-to-internal-storage">Install to internal storage<a class="headerlink" href="#install-to-internal-storage" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Preview</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install to internal storage:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>STOR001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZFS filesystem - enable support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>STOR002
@@ -1988,12 +2143,16 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable read only filesystem:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>STOR005
 </span></code></pre></div></td></tr></table></div>
+<h2 id="enable-network-filesystem-nfs-support">Enable Network filesystem (NFS) support<a class="headerlink" href="#enable-network-filesystem-nfs-support" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable Network filesystem (NFS) support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS01
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Network filesystem (NFS) support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS02
 </span></code></pre></div></td></tr></table></div>
+<h2 id="enable-network-filesystem-nfs-daemon">Enable network filesystem (NFS) daemon<a class="headerlink" href="#enable-network-filesystem-nfs-daemon" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS04
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configure network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS05
@@ -2002,12 +2161,17 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show network filesystem (NFS) daemon clients:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS07
 </span></code></pre></div></td></tr></table></div>
+<h2 id="find-nfs-servers-in-subnet-and-mount-shares">Find NFS servers in subnet and mount shares<a class="headerlink" href="#find-nfs-servers-in-subnet-and-mount-shares" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Find NFS servers in subnet and mount shares:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS09
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show and manage NFS mounts:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETFS10
 </span></code></pre></div></td></tr></table></div>
+<h2 id="manage-ssh-daemon-options-enable-2fa">Manage SSH daemon options, enable 2FA<a class="headerlink" href="#manage-ssh-daemon-options-enable-2fa" title="Permanent link">&para;</a></h2>
+<h2 id="disable-root-login">Disable root login<a class="headerlink" href="#disable-root-login" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC001
@@ -2072,14 +2236,21 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge sandboxed SSH server with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC015
 </span></code></pre></div></td></tr></table></div>
+<h2 id="change-shell-adjust-motd">Change shell, adjust MOTD<a class="headerlink" href="#change-shell-adjust-motd" title="Permanent link">&para;</a></h2>
+<h2 id="change-shell-system-wide-to-bash">Change shell system wide to BASH<a class="headerlink" href="#change-shell-system-wide-to-bash" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to BASH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>USR001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to ZSH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>USR002
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Adjust welcome screen (motd):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>USR003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="os-updates-and-distribution-upgrades">OS updates and distribution upgrades<a class="headerlink" href="#os-updates-and-distribution-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Status:</strong> Active</p>
+<h2 id="enable-armbian-firmware-upgrades">Enable Armbian firmware upgrades<a class="headerlink" href="#enable-armbian-firmware-upgrades" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
+<p><strong>Status:</strong> Stable</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable Armbian firmware upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Armbian kernel upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD002
