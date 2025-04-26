@@ -4,12 +4,6 @@ comments: true
 
 # Run/Install 3rd party applications
 
-## Web server, LEMP, reverse proxy, Let's Encrypt SSL
-
-### SWAG reverse proxy
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -46,32 +40,20 @@ After entering required information, your server will have auto updating SSL sec
 armbian-config --cmd SWAG01
 ~~~
 
-### SWAG reverse proxy .htpasswd set
-
 
 ~~~ bash title="SWAG reverse proxy .htpasswd set:"
 armbian-config --cmd SWAG02
 ~~~
-
-### SWAG remove
 
 
 ~~~ bash title="SWAG remove:"
 armbian-config --cmd SWAG03
 ~~~
 
-### SWAG purge with data folder
-
 
 ~~~ bash title="SWAG purge with data folder:"
 armbian-config --cmd SWAG04
 ~~~
-
-## Home Automation for control home appliances
-
-### openHAB empowering the smart home
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -85,21 +67,17 @@ armbian-config --cmd SWAG04
 armbian-config --cmd HAB001
 ~~~
 
-### openHAB remove
-
 
 ~~~ bash title="openHAB remove:"
 armbian-config --cmd HAB002
 ~~~
-
-### openHAB purge with data folder
 
 
 ~~~ bash title="openHAB purge with data folder:"
 armbian-config --cmd HAB003
 ~~~
 
-### Home Assistant open source home automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/HAS001.png --->
@@ -132,21 +110,17 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 armbian-config --cmd HAS001
 ~~~
 
-### Home Assistant remove
-
 
 ~~~ bash title="Home Assistant remove:"
 armbian-config --cmd HAS002
 ~~~
-
-### Home Assistant purge with data folder
 
 
 ~~~ bash title="Home Assistant purge with data folder:"
 armbian-config --cmd HAS003
 ~~~
 
-### Domoticz open source home automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/DOM001.png --->
@@ -180,21 +154,17 @@ Domoticz is an open-source home automation platform that allows you to control a
 armbian-config --cmd DOM001
 ~~~
 
-### Domoticz remove
-
 
 ~~~ bash title="Domoticz remove:"
 armbian-config --cmd DOM002
 ~~~
-
-### Domoticz purge with data folder
 
 
 ~~~ bash title="Domoticz purge with data folder:"
 armbian-config --cmd DOM003
 ~~~
 
-### EVCC - solar charging automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->
@@ -212,25 +182,15 @@ evcc is an energy management system with a focus on electromobility. The softwar
 armbian-config --cmd EVCC01
 ~~~
 
-### EVCC - solar charging automation remove
-
 
 ~~~ bash title="EVCC - solar charging automation remove:"
 armbian-config --cmd EVCC02
 ~~~
 
-### EVCC purge with data folder
-
 
 ~~~ bash title="EVCC purge with data folder:"
 armbian-config --cmd EVCC03
 ~~~
-
-## Network-wide ad blockers servers
-
-### Pi-hole DNS ad blocker
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -261,28 +221,22 @@ Pi-hole is typically installed on a Armbian minimal, but it can also run on othe
 armbian-config --cmd DNS001
 ~~~
 
-### Pi-hole remove
-
 
 ~~~ bash title="Pi-hole remove:"
 armbian-config --cmd DNS003
 ~~~
-
-### Pi-hole change web admin password
 
 
 ~~~ bash title="Pi-hole change web admin password:"
 armbian-config --cmd DNS002
 ~~~
 
-### Pi-hole purge with data folder
-
 
 ~~~ bash title="Pi-hole purge with data folder:"
 armbian-config --cmd DNS004
 ~~~
 
-### Unbound caching DNS resolver
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/UNB001.png --->
@@ -299,21 +253,17 @@ Unbound is a high-performance, open-source DNS resolver. It primarily serves to 
 armbian-config --cmd UNB001
 ~~~
 
-### Unbound remove
-
 
 ~~~ bash title="Unbound remove:"
 armbian-config --cmd UNB002
 ~~~
-
-### Unbound purge with data folder
 
 
 ~~~ bash title="Unbound purge with data folder:"
 armbian-config --cmd UNB003
 ~~~
 
-### AdGuardHome DNS sinkhole
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/ADG001.png --->
@@ -331,25 +281,15 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 armbian-config --cmd ADG001
 ~~~
 
-### AdGuardHome remove
-
 
 ~~~ bash title="AdGuardHome remove:"
 armbian-config --cmd ADG002
 ~~~
 
-### AdGuardHome purge with data folder
-
 
 ~~~ bash title="AdGuardHome purge with data folder:"
 armbian-config --cmd ADG003
 ~~~
-
-## Music servers and streamers
-
-### Navidrome music server and streamer compatible with Subsonic/Airsonic
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -363,25 +303,15 @@ armbian-config --cmd ADG003
 armbian-config --cmd NAV001
 ~~~
 
-### Navidrome remove
-
 
 ~~~ bash title="Navidrome remove:"
 armbian-config --cmd NAV002
 ~~~
 
-### Navidrome purge with data folder
-
 
 ~~~ bash title="Navidrome purge with data folder:"
 armbian-config --cmd NAV003
 ~~~
-
-## Download apps for movies, TV shows, music and subtitles
-
-### qBittorrent BitTorrent client 
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -401,21 +331,17 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 armbian-config --cmd DOW001
 ~~~
 
-### qBittorrent remove
-
 
 ~~~ bash title="qBittorrent remove:"
 armbian-config --cmd DOW002
 ~~~
-
-### qBittorrent purge with data folder
 
 
 ~~~ bash title="qBittorrent purge with data folder:"
 armbian-config --cmd DOW003
 ~~~
 
-### Deluge BitTorrent client
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
@@ -433,21 +359,17 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 armbian-config --cmd DEL001
 ~~~
 
-### Deluge remove
-
 
 ~~~ bash title="Deluge remove:"
 armbian-config --cmd DEL002
 ~~~
-
-### Deluge purge with data folder
 
 
 ~~~ bash title="Deluge purge with data folder:"
 armbian-config --cmd DEL003
 ~~~
 
-### Transmission BitTorrent client
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/TRA001.png --->
@@ -465,21 +387,17 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 armbian-config --cmd TRA001
 ~~~
 
-### Transmission remove
-
 
 ~~~ bash title="Transmission remove:"
 armbian-config --cmd TRA002
 ~~~
-
-### Transmission purge with data folder
 
 
 ~~~ bash title="Transmission purge with data folder:"
 armbian-config --cmd TRA003
 ~~~
 
-### SABnzbd newsgroup downloader
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
@@ -497,21 +415,17 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 armbian-config --cmd SABN01
 ~~~
 
-### SABnzbd remove
-
 
 ~~~ bash title="SABnzbd remove:"
 armbian-config --cmd SABN02
 ~~~
-
-### SABnzbd purge with data folder
 
 
 ~~~ bash title="SABnzbd purge with data folder:"
 armbian-config --cmd SABN03
 ~~~
 
-### Medusa automatic downloader for TV shows
+**Author:** @armbian
 
 
 <!--- header START from tools/include/markdown/MDS001-header.md --->
@@ -524,21 +438,17 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 armbian-config --cmd MDS001
 ~~~
 
-### Medusa TV shows downloader remove
-
 
 ~~~ bash title="Medusa TV shows downloader remove:"
 armbian-config --cmd MDS002
 ~~~
-
-### Medusa TV shows downloader purge
 
 
 ~~~ bash title="Medusa TV shows downloader purge:"
 armbian-config --cmd MDS003
 ~~~
 
-### Sonarr automatic downloader for TV shows
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/SON001.png --->
@@ -556,21 +466,17 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 armbian-config --cmd SON001
 ~~~
 
-### Sonarr remove
-
 
 ~~~ bash title="Sonarr remove:"
 armbian-config --cmd SON002
 ~~~
-
-### Sonarr purge with data folder
 
 
 ~~~ bash title="Sonarr purge with data folder:"
 armbian-config --cmd SON003
 ~~~
 
-### Radarr automatic downloader for movies
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/RAD001.png --->
@@ -588,21 +494,17 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 armbian-config --cmd RAD001
 ~~~
 
-### Radarr remove
-
 
 ~~~ bash title="Radarr remove:"
 armbian-config --cmd RAD002
 ~~~
-
-### Radarr purge with data folder
 
 
 ~~~ bash title="Radarr purge with data folder:"
 armbian-config --cmd RAD003
 ~~~
 
-### Bazarr automatic subtitles downloader for Sonarr and Radarr
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/BAZ001.png --->
@@ -620,21 +522,17 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 armbian-config --cmd BAZ001
 ~~~
 
-### Bazarr remove
-
 
 ~~~ bash title="Bazarr remove:"
 armbian-config --cmd BAZ002
 ~~~
-
-### Bazarr purge with data folder
 
 
 ~~~ bash title="Bazarr purge with data folder:"
 armbian-config --cmd BAZ003
 ~~~
 
-### Lidarr automatic music downloader
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/LID001.png --->
@@ -652,21 +550,17 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 armbian-config --cmd LID001
 ~~~
 
-### Lidarr remove
-
 
 ~~~ bash title="Lidarr remove:"
 armbian-config --cmd LID002
 ~~~
-
-### Lidarr purge with data folder
 
 
 ~~~ bash title="Lidarr purge with data folder:"
 armbian-config --cmd LID003
 ~~~
 
-### Readarr automatic downloader for Ebooks
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/RDR001.png --->
@@ -684,53 +578,32 @@ Readarr - Book Manager and Automation (Sonarr for Ebooks)
 armbian-config --cmd RDR001
 ~~~
 
-### Readarr remove
-
 
 ~~~ bash title="Readarr remove:"
 armbian-config --cmd RDR002
 ~~~
-
-### Readarr purge with data folder
 
 
 ~~~ bash title="Readarr purge with data folder:"
 armbian-config --cmd RDR003
 ~~~
 
-### Prowlarr index manager and proxy for PVR
-
-
-<!--- section image START from tools/include/images/DOW025.png --->
-[![Prowlarr index manager and proxy for PVR](/images/DOW025.png)](#)
-<!--- section image STOP from tools/include/images/DOW025.png --->
-
-
-<!--- header START from tools/include/markdown/DOW025-header.md --->
-Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
-
-<!--- header STOP from tools/include/markdown/DOW025-header.md --->
-
 
 ~~~ bash title="Prowlarr index manager and proxy for PVR:"
 armbian-config --cmd DOW025
 ~~~
-
-### Prowlarr remove
 
 
 ~~~ bash title="Prowlarr remove:"
 armbian-config --cmd DOW026
 ~~~
 
-### Prowlarr purge with data folder
-
 
 ~~~ bash title="Prowlarr purge with data folder:"
 armbian-config --cmd DOW027
 ~~~
 
-### Jellyseerr Jellyfin/Emby/Plex integration install
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/JEL001.png --->
@@ -748,25 +621,15 @@ Jellyseerr is a free and open source software application for managing requests 
 armbian-config --cmd JEL001
 ~~~
 
-### Jellyseerr remove
-
 
 ~~~ bash title="Jellyseerr remove:"
 armbian-config --cmd JEL002
 ~~~
 
-### Jellyseerr purge with data folder
-
 
 ~~~ bash title="Jellyseerr purge with data folder:"
 armbian-config --cmd JEL003
 ~~~
-
-## SQL database servers and web interface managers
-
-### Mariadb SQL database server
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -786,57 +649,30 @@ Mariadb is one of the most popular database servers. Made by the original develo
 armbian-config --cmd DAT001
 ~~~
 
-### Mariadb remove
-
 
 ~~~ bash title="Mariadb remove:"
 armbian-config --cmd DAT002
 ~~~
-
-### Mariadb purge with data folder
 
 
 ~~~ bash title="Mariadb purge with data folder:"
 armbian-config --cmd DAT003
 ~~~
 
-### phpMyAdmin web interface manager
-
-
-<!--- section image START from tools/include/images/DAT005.png --->
-[![phpMyAdmin web interface manager](/images/DAT005.png)](#)
-<!--- section image STOP from tools/include/images/DAT005.png --->
-
-
-<!--- header START from tools/include/markdown/DAT005-header.md --->
-Phpmyadmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.
-
-<!--- header STOP from tools/include/markdown/DAT005-header.md --->
-
 
 ~~~ bash title="phpMyAdmin web interface manager:"
 armbian-config --cmd DAT005
 ~~~
-
-### phpMyAdmin remove
 
 
 ~~~ bash title="phpMyAdmin remove:"
 armbian-config --cmd DAT006
 ~~~
 
-### phpMyAdmin purge with data folder
-
 
 ~~~ bash title="phpMyAdmin purge with data folder:"
 armbian-config --cmd DAT007
 ~~~
-
-## Applications and tools for development
-
-### Install tools for cloning and managing repositories (git)
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -850,8 +686,6 @@ armbian-config --cmd DEV001
 armbian-config --cmd DEV001
 ~~~
 
-### Remove tools for cloning and managing repositories (git)
-
 
 ~~~ bash title="Remove tools for cloning and managing repositories (git):"
 armbian-config --cmd DEV002
@@ -861,40 +695,26 @@ armbian-config --cmd DEV002
 ~~~ bash title="Remove tools for cloning and managing repositories (git):"
 armbian-config --cmd DEV002
 ~~~
-
-### Armbian router for repository mirror automation
 
 
 ~~~ bash title="Armbian router for repository mirror automation:"
 armbian-config --cmd DEV003
 ~~~
 
-### Remove Armbian router
-
 
 ~~~ bash title="Remove Armbian router:"
 armbian-config --cmd DEV004
 ~~~
-
-### Armbian rsyncd server
 
 
 ~~~ bash title="Armbian rsyncd server:"
 armbian-config --cmd DEV010
 ~~~
 
-### Remove Armbian rsyncd server
-
 
 ~~~ bash title="Remove Armbian rsyncd server:"
 armbian-config --cmd DEV011
 ~~~
-
-## Docker containerization and KVM virtual machines
-
-### Docker minimal
-
-**Status:** Stable
 
 **Author:** @schwar3kat
 
@@ -908,64 +728,35 @@ armbian-config --cmd DEV011
 armbian-config --cmd CON001
 ~~~
 
-### Docker engine
-
 
 ~~~ bash title="Docker engine:"
 armbian-config --cmd CON002
 ~~~
-
-### Docker remove
 
 
 ~~~ bash title="Docker remove:"
 armbian-config --cmd CON003
 ~~~
 
-### Docker purge with all images, containers, and volumes
-
 
 ~~~ bash title="Docker purge with all images, containers, and volumes:"
 armbian-config --cmd CON004
 ~~~
-
-### Portainer container management platform
-
-
-<!--- section image START from tools/include/images/CON005.webp --->
-[![Portainer container management platform](/images/CON005.webp)](#)
-<!--- section image STOP from tools/include/images/CON005.webp --->
-
-
-<!--- header START from tools/include/markdown/CON005-header.md --->
-Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
-
-<!--- header STOP from tools/include/markdown/CON005-header.md --->
 
 
 ~~~ bash title="Portainer container management platform:"
 armbian-config --cmd CON005
 ~~~
 
-### Portainer remove
-
 
 ~~~ bash title="Portainer remove:"
 armbian-config --cmd CON006
 ~~~
 
-### Portainer purge with with data folder
-
 
 ~~~ bash title="Portainer purge with with data folder:"
 armbian-config --cmd CON007
 ~~~
-
-## Media servers, organizers and editors
-
-### Emby organizes video, music, live TV, and photos
-
-**Status:** Stable
 
 **Author:** @schwar3kat
 
@@ -985,203 +776,105 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 armbian-config --cmd MED003
 ~~~
 
-### Emby server remove
-
 
 ~~~ bash title="Emby server remove:"
 armbian-config --cmd MED004
 ~~~
-
-### Emby server purge with data folder
 
 
 ~~~ bash title="Emby server purge with data folder:"
 armbian-config --cmd MED005
 ~~~
 
-### Stirling PDF tools for viewing and editing PDF files
-
-
-<!--- section image START from tools/include/images/MED010.png --->
-[![Stirling PDF tools for viewing and editing PDF files](/images/MED010.png)](#)
-<!--- section image STOP from tools/include/images/MED010.png --->
-
-
-<!--- header START from tools/include/markdown/MED010-header.md --->
-Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more. This locally hosted web application has evolved to encompass a comprehensive set of features, addressing all your PDF requirements.
-
-<!--- header STOP from tools/include/markdown/MED010-header.md --->
-
 
 ~~~ bash title="Stirling PDF tools for viewing and editing PDF files:"
 armbian-config --cmd MED010
 ~~~
-
-### Stirling PDF remove
 
 
 ~~~ bash title="Stirling PDF remove:"
 armbian-config --cmd MED011
 ~~~
 
-### Stirling PDF purge with data folder
-
 
 ~~~ bash title="Stirling PDF purge with data folder:"
 armbian-config --cmd MED012
 ~~~
-
-### Syncthing continuous file synchronization
-
-
-<!--- section image START from tools/include/images/MED015.png --->
-[![Syncthing continuous file synchronization](/images/MED015.png)](#)
-<!--- section image STOP from tools/include/images/MED015.png --->
-
-
-<!--- header START from tools/include/markdown/MED015-header.md --->
-Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
-
-<!--- header STOP from tools/include/markdown/MED015-header.md --->
 
 
 ~~~ bash title="Syncthing continuous file synchronization:"
 armbian-config --cmd MED015
 ~~~
 
-### Syncthing remove
-
 
 ~~~ bash title="Syncthing remove:"
 armbian-config --cmd MED016
 ~~~
-
-### Syncthing purge with data folder
 
 
 ~~~ bash title="Syncthing purge with data folder:"
 armbian-config --cmd MED017
 ~~~
 
-### Nextcloud content collaboration platform
-
-
-<!--- section image START from tools/include/images/MED020.png --->
-[![Nextcloud content collaboration platform](/images/MED020.png)](#)
-<!--- section image STOP from tools/include/images/MED020.png --->
-
-
-<!--- header START from tools/include/markdown/MED020-header.md --->
-Nextcloud gives you access to all your files wherever you are.
-<br>
-Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.
-
-<!--- header STOP from tools/include/markdown/MED020-header.md --->
-
 
 ~~~ bash title="Nextcloud content collaboration platform:"
 armbian-config --cmd MED020
 ~~~
-
-### Nextcloud remove
 
 
 ~~~ bash title="Nextcloud remove:"
 armbian-config --cmd MED021
 ~~~
 
-### Nextcloud purge with data folder
-
 
 ~~~ bash title="Nextcloud purge with data folder:"
 armbian-config --cmd MED022
 ~~~
-
-### Owncloud share files and folders, easy and secure
 
 
 ~~~ bash title="Owncloud share files and folders, easy and secure:"
 armbian-config --cmd MED025
 ~~~
 
-### Owncloud remove
-
 
 ~~~ bash title="Owncloud remove:"
 armbian-config --cmd MED026
 ~~~
-
-### Owncloud purge with data folder
-
-
-<!--- header START from tools/include/markdown/MED027-header.md --->
-ownCloud is a free and open-source software project for content collaboration and sharing and syncing of files in distributed and federated enterprise scenarios.
-
-<!--- header STOP from tools/include/markdown/MED027-header.md --->
 
 
 ~~~ bash title="Owncloud purge with data folder:"
 armbian-config --cmd MED027
 ~~~
 
-### Jellyfin Media System
-
-
-<!--- section image START from tools/include/images/MED030.png --->
-[![Jellyfin Media System](/images/MED030.png)](#)
-<!--- section image STOP from tools/include/images/MED030.png --->
-
-
-<!--- header START from tools/include/markdown/MED030-header.md --->
-Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.
-
-<!--- header STOP from tools/include/markdown/MED030-header.md --->
-
 
 ~~~ bash title="Jellyfin Media System:"
 armbian-config --cmd MED030
 ~~~
-
-### Jellyfin remove
 
 
 ~~~ bash title="Jellyfin remove:"
 armbian-config --cmd MED031
 ~~~
 
-### Jellyfin purge with data folder
-
 
 ~~~ bash title="Jellyfin purge with data folder:"
 armbian-config --cmd MED032
 ~~~
-
-### Hastebin Paste Server
 
 
 ~~~ bash title="Hastebin Paste Server:"
 armbian-config --cmd MED033
 ~~~
 
-### Hastebin remove
-
 
 ~~~ bash title="Hastebin remove:"
 armbian-config --cmd MED034
 ~~~
 
-### Hastebin purge with data folder
-
 
 ~~~ bash title="Hastebin purge with data folder:"
 armbian-config --cmd MED035
 ~~~
-
-## Real-time monitoring, collecting metrics, up-time status
-
-### Uptime Kuma self-hosted monitoring tool
-
-**Status:** Stable
 
 **Author:** @igorpecovnik
 
@@ -1195,53 +888,32 @@ armbian-config --cmd MED035
 armbian-config --cmd MON001
 ~~~
 
-### Uptime Kuma remove
-
 
 ~~~ bash title="Uptime Kuma remove:"
 armbian-config --cmd MON002
 ~~~
-
-### Uptime Kuma purge with data folder
 
 
 ~~~ bash title="Uptime Kuma purge with data folder:"
 armbian-config --cmd MON003
 ~~~
 
-### Netdata - monitoring real-time metrics
-
-
-<!--- section image START from tools/include/images/MON005.png --->
-[![Netdata - monitoring real-time metrics](/images/MON005.png)](#)
-<!--- section image STOP from tools/include/images/MON005.png --->
-
-
-<!--- header START from tools/include/markdown/MON005-header.md --->
-Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
-
-<!--- header STOP from tools/include/markdown/MON005-header.md --->
-
 
 ~~~ bash title="Netdata - monitoring real-time metrics:"
 armbian-config --cmd MON005
 ~~~
-
-### Netdata remove
 
 
 ~~~ bash title="Netdata remove:"
 armbian-config --cmd MON006
 ~~~
 
-### Netdata purge with data folder
-
 
 ~~~ bash title="Netdata purge with data folder:"
 armbian-config --cmd MON007
 ~~~
 
-### Grafana data analytics
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/GRA001.png --->
@@ -1258,21 +930,17 @@ Grafana is a multi-platform open source analytics and interactive visualization 
 armbian-config --cmd GRA001
 ~~~
 
-### Grafana remove
-
 
 ~~~ bash title="Grafana remove:"
 armbian-config --cmd GRA002
 ~~~
-
-### Grafana purge with data folder
 
 
 ~~~ bash title="Grafana purge with data folder:"
 armbian-config --cmd GRA003
 ~~~
 
-### Prometheus docker image
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
@@ -1290,25 +958,15 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 armbian-config --cmd PRO001
 ~~~
 
-### Prometheus remove
-
 
 ~~~ bash title="Prometheus remove:"
 armbian-config --cmd PRO002
 ~~~
 
-### Prometheus purge with data folder
-
 
 ~~~ bash title="Prometheus purge with data folder:"
 armbian-config --cmd PRO003
 ~~~
-
-## Remote File & Management tools
-
-### Cockpit web-based management tool
-
-**Status:** Stable
 
 **Author:** @Tearran
 
@@ -1322,30 +980,15 @@ armbian-config --cmd PRO003
 armbian-config --cmd MAN001
 ~~~
 
-### SAMBA Remote File share
-
 
 ~~~ bash title="SAMBA Remote File share:"
 armbian-config --cmd MAN002
 ~~~
 
-### Webmin web-based management tool
-
-
-<!--- section image START from tools/include/images/MAN005.png --->
-[![Webmin web-based management tool](/images/MAN005.png)](#)
-<!--- section image STOP from tools/include/images/MAN005.png --->
-
 
 ~~~ bash title="Webmin web-based management tool:"
 armbian-config --cmd MAN005
 ~~~
-
-## Tools for printing and 3D printing
-
-### OctoPrint web-based 3D printers management tool
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -1364,25 +1007,15 @@ OctoPrint is an open source 3D printer controller application, which provides a 
 armbian-config --cmd OCT001
 ~~~
 
-### OctoPrint remove
-
 
 ~~~ bash title="OctoPrint remove:"
 armbian-config --cmd OCT002
 ~~~
 
-### OctoPrint purge with data folder
-
 
 ~~~ bash title="OctoPrint purge with data folder:"
 armbian-config --cmd OCT003
 ~~~
-
-## Console network tools for measuring load and bandwidth
-
-### nload -realtime console network usage monitor
-
-**Status:** Stable
 
 **Author:** @armbian
 
@@ -1396,48 +1029,31 @@ armbian-config --cmd OCT003
 armbian-config --cmd NET001
 ~~~
 
-### nload - remove
-
 
 ~~~ bash title="nload - remove:"
 armbian-config --cmd NET002
 ~~~
-
-### iperf3 bandwidth measuring tool
-
-
-<!--- section image START from tools/include/images/NET003.png --->
-[![iperf3 bandwidth measuring tool](/images/NET003.png)](#)
-<!--- section image STOP from tools/include/images/NET003.png --->
 
 
 ~~~ bash title="iperf3 bandwidth measuring tool:"
 armbian-config --cmd NET003
 ~~~
 
-### iperf3 remove
-
 
 ~~~ bash title="iperf3 remove:"
 armbian-config --cmd NET004
 ~~~
-
-### iptraf-ng IP LAN monitor
 
 
 ~~~ bash title="iptraf-ng IP LAN monitor:"
 armbian-config --cmd NET005
 ~~~
 
-### iptraf-ng remove
-
 
 ~~~ bash title="iptraf-ng remove:"
 armbian-config --cmd NET006
 ~~~
 
-### avahi-daemon hostname broadcast via mDNS
-
 
 ~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
 armbian-config --cmd NET007
@@ -1457,8 +1073,6 @@ armbian-config --cmd NET007
 ~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
 armbian-config --cmd NET007
 ~~~
-
-### avahi-daemon remove
 
 
 ~~~ bash title="avahi-daemon remove:"
@@ -1469,12 +1083,6 @@ armbian-config --cmd NET008
 ~~~ bash title="avahi-daemon remove:"
 armbian-config --cmd NET008
 ~~~
-
-## VPN tools
-
-### ZeroTier connect devices over your own private network in the world.
-
-**Status:** Stable
 
 **Author:** @jnovos
 

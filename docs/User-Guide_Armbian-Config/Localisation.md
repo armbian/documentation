@@ -4,10 +4,6 @@ comments: true
 
 # Localisation
 
-## Change Global timezone
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -20,8 +16,6 @@ comments: true
 armbian-config --cmd LO001
 ~~~
 
-## Change Locales reconfigure the language and character set
-
 
 ~~~ bash title="Change Locales reconfigure the language and character set:"
 armbian-config --cmd LO002
@@ -36,8 +30,6 @@ armbian-config --cmd LO002
 ~~~ bash title="Change Locales reconfigure the language and character set:"
 armbian-config --cmd LO002
 ~~~
-
-## Change Keyboard layout
 
 
 ~~~ bash title="Change Keyboard layout:"
@@ -48,8 +40,6 @@ armbian-config --cmd LO003
 ~~~ bash title="Change Keyboard layout:"
 armbian-config --cmd LO003
 ~~~
-
-## Change System Hostname
 
 
 ~~~ bash title="Change System Hostname:"

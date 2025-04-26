@@ -4,10 +4,6 @@ comments: true
 
 # Fixed and wireless network settings
 
-## Basic Network Setup
-
-**Status:** Stable
-
 **Author:** @igorpecovnik
 
 
@@ -20,8 +16,6 @@ comments: true
 armbian-config --cmd NET001
 ~~~
 
-## Remove Fallback DHCP Configuration
-
 
 ~~~ bash title="Remove Fallback DHCP Configuration:"
 armbian-config --cmd NET002
@@ -32,7 +26,7 @@ armbian-config --cmd NET002
 armbian-config --cmd NET002
 ~~~
 
-## View Network Settings
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/VNS001.png --->
@@ -44,12 +38,6 @@ armbian-config --cmd NET002
 armbian-config --cmd VNS001
 ~~~
 
-## Advanced bridged network configuration
-
-### Add / change interface
-
-**Status:** Stable
-
 **Author:** @igorpecovnik
 
 
@@ -57,28 +45,22 @@ armbian-config --cmd VNS001
 armbian-config --cmd NEA001
 ~~~
 
-### Revert to Armbian defaults
-
 
 ~~~ bash title="Revert to Armbian defaults:"
 armbian-config --cmd NEA002
 ~~~
-
-### Show configuration
 
 
 ~~~ bash title="Show configuration:"
 armbian-config --cmd NEA003
 ~~~
 
-### Show active status
-
 
 ~~~ bash title="Show active status:"
 armbian-config --cmd NEA004
 ~~~
 
-## WireGuard VPN client / server
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/WG001.png --->
@@ -95,36 +77,15 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 armbian-config --cmd WG001
 ~~~
 
-## WireGuard remove
-
-
-<!--- section image START from tools/include/images/WG002.png --->
-[![WireGuard remove](/images/WG002.png)](#)
-<!--- section image STOP from tools/include/images/WG002.png --->
-
 
 ~~~ bash title="WireGuard remove:"
 armbian-config --cmd WG002
 ~~~
 
-## WireGuard clients QR codes
-
-
-<!--- section image START from tools/include/images/WG003.png --->
-[![WireGuard clients QR codes](/images/WG003.png)](#)
-<!--- section image STOP from tools/include/images/WG003.png --->
-
 
 ~~~ bash title="WireGuard clients QR codes:"
 armbian-config --cmd WG003
 ~~~
-
-## WireGuard purge with data folder
-
-
-<!--- section image START from tools/include/images/WG004.png --->
-[![WireGuard purge with data folder](/images/WG004.png)](#)
-<!--- section image STOP from tools/include/images/WG004.png --->
 
 
 ~~~ bash title="WireGuard purge with data folder:"

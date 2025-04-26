@@ -4,10 +4,6 @@ comments: true
 
 # Network-wide ad blockers servers
 
-## Pi-hole DNS ad blocker
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -37,28 +33,22 @@ Pi-hole is typically installed on a Armbian minimal, but it can also run on othe
 armbian-config --cmd DNS001
 ~~~
 
-## Pi-hole remove
-
 
 ~~~ bash title="Pi-hole remove:"
 armbian-config --cmd DNS003
 ~~~
-
-## Pi-hole change web admin password
 
 
 ~~~ bash title="Pi-hole change web admin password:"
 armbian-config --cmd DNS002
 ~~~
 
-## Pi-hole purge with data folder
-
 
 ~~~ bash title="Pi-hole purge with data folder:"
 armbian-config --cmd DNS004
 ~~~
 
-## Unbound caching DNS resolver
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/UNB001.png --->
@@ -75,21 +65,17 @@ Unbound is a high-performance, open-source DNS resolver. It primarily serves to 
 armbian-config --cmd UNB001
 ~~~
 
-## Unbound remove
-
 
 ~~~ bash title="Unbound remove:"
 armbian-config --cmd UNB002
 ~~~
-
-## Unbound purge with data folder
 
 
 ~~~ bash title="Unbound purge with data folder:"
 armbian-config --cmd UNB003
 ~~~
 
-## AdGuardHome DNS sinkhole
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/ADG001.png --->
@@ -107,14 +93,10 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 armbian-config --cmd ADG001
 ~~~
 
-## AdGuardHome remove
-
 
 ~~~ bash title="AdGuardHome remove:"
 armbian-config --cmd ADG002
 ~~~
-
-## AdGuardHome purge with data folder
 
 
 ~~~ bash title="AdGuardHome purge with data folder:"

@@ -4,10 +4,6 @@ comments: true
 
 # Web server, LEMP, reverse proxy, Let's Encrypt SSL
 
-## SWAG reverse proxy
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -44,21 +40,15 @@ After entering required information, your server will have auto updating SSL sec
 armbian-config --cmd SWAG01
 ~~~
 
-## SWAG reverse proxy .htpasswd set
-
 
 ~~~ bash title="SWAG reverse proxy .htpasswd set:"
 armbian-config --cmd SWAG02
 ~~~
 
-## SWAG remove
-
 
 ~~~ bash title="SWAG remove:"
 armbian-config --cmd SWAG03
 ~~~
-
-## SWAG purge with data folder
 
 
 ~~~ bash title="SWAG purge with data folder:"
