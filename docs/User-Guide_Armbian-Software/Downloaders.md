@@ -4,10 +4,6 @@ comments: true
 
 # Download apps for movies, TV shows, music and subtitles
 
-## qBittorrent BitTorrent client 
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -26,21 +22,17 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 armbian-config --cmd DOW001
 ~~~
 
-## qBittorrent remove
-
 
 ~~~ bash title="qBittorrent remove:"
 armbian-config --cmd DOW002
 ~~~
-
-## qBittorrent purge with data folder
 
 
 ~~~ bash title="qBittorrent purge with data folder:"
 armbian-config --cmd DOW003
 ~~~
 
-## Deluge BitTorrent client
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
@@ -58,21 +50,17 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 armbian-config --cmd DEL001
 ~~~
 
-## Deluge remove
-
 
 ~~~ bash title="Deluge remove:"
 armbian-config --cmd DEL002
 ~~~
-
-## Deluge purge with data folder
 
 
 ~~~ bash title="Deluge purge with data folder:"
 armbian-config --cmd DEL003
 ~~~
 
-## Transmission BitTorrent client
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/TRA001.png --->
@@ -90,21 +78,17 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 armbian-config --cmd TRA001
 ~~~
 
-## Transmission remove
-
 
 ~~~ bash title="Transmission remove:"
 armbian-config --cmd TRA002
 ~~~
-
-## Transmission purge with data folder
 
 
 ~~~ bash title="Transmission purge with data folder:"
 armbian-config --cmd TRA003
 ~~~
 
-## SABnzbd newsgroup downloader
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
@@ -122,21 +106,17 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 armbian-config --cmd SABN01
 ~~~
 
-## SABnzbd remove
-
 
 ~~~ bash title="SABnzbd remove:"
 armbian-config --cmd SABN02
 ~~~
-
-## SABnzbd purge with data folder
 
 
 ~~~ bash title="SABnzbd purge with data folder:"
 armbian-config --cmd SABN03
 ~~~
 
-## Medusa automatic downloader for TV shows
+**Author:** @armbian
 
 
 <!--- header START from tools/include/markdown/MDS001-header.md --->
@@ -149,21 +129,17 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 armbian-config --cmd MDS001
 ~~~
 
-## Medusa TV shows downloader remove
-
 
 ~~~ bash title="Medusa TV shows downloader remove:"
 armbian-config --cmd MDS002
 ~~~
-
-## Medusa TV shows downloader purge
 
 
 ~~~ bash title="Medusa TV shows downloader purge:"
 armbian-config --cmd MDS003
 ~~~
 
-## Sonarr automatic downloader for TV shows
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/SON001.png --->
@@ -181,21 +157,17 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 armbian-config --cmd SON001
 ~~~
 
-## Sonarr remove
-
 
 ~~~ bash title="Sonarr remove:"
 armbian-config --cmd SON002
 ~~~
-
-## Sonarr purge with data folder
 
 
 ~~~ bash title="Sonarr purge with data folder:"
 armbian-config --cmd SON003
 ~~~
 
-## Radarr automatic downloader for movies
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/RAD001.png --->
@@ -213,21 +185,17 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 armbian-config --cmd RAD001
 ~~~
 
-## Radarr remove
-
 
 ~~~ bash title="Radarr remove:"
 armbian-config --cmd RAD002
 ~~~
-
-## Radarr purge with data folder
 
 
 ~~~ bash title="Radarr purge with data folder:"
 armbian-config --cmd RAD003
 ~~~
 
-## Bazarr automatic subtitles downloader for Sonarr and Radarr
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/BAZ001.png --->
@@ -245,21 +213,17 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 armbian-config --cmd BAZ001
 ~~~
 
-## Bazarr remove
-
 
 ~~~ bash title="Bazarr remove:"
 armbian-config --cmd BAZ002
 ~~~
-
-## Bazarr purge with data folder
 
 
 ~~~ bash title="Bazarr purge with data folder:"
 armbian-config --cmd BAZ003
 ~~~
 
-## Lidarr automatic music downloader
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/LID001.png --->
@@ -277,21 +241,17 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 armbian-config --cmd LID001
 ~~~
 
-## Lidarr remove
-
 
 ~~~ bash title="Lidarr remove:"
 armbian-config --cmd LID002
 ~~~
-
-## Lidarr purge with data folder
 
 
 ~~~ bash title="Lidarr purge with data folder:"
 armbian-config --cmd LID003
 ~~~
 
-## Readarr automatic downloader for Ebooks
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/RDR001.png --->
@@ -309,53 +269,32 @@ Readarr - Book Manager and Automation (Sonarr for Ebooks)
 armbian-config --cmd RDR001
 ~~~
 
-## Readarr remove
-
 
 ~~~ bash title="Readarr remove:"
 armbian-config --cmd RDR002
 ~~~
-
-## Readarr purge with data folder
 
 
 ~~~ bash title="Readarr purge with data folder:"
 armbian-config --cmd RDR003
 ~~~
 
-## Prowlarr index manager and proxy for PVR
-
-
-<!--- section image START from tools/include/images/DOW025.png --->
-[![Prowlarr index manager and proxy for PVR](/images/DOW025.png)](#)
-<!--- section image STOP from tools/include/images/DOW025.png --->
-
-
-<!--- header START from tools/include/markdown/DOW025-header.md --->
-Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
-
-<!--- header STOP from tools/include/markdown/DOW025-header.md --->
-
 
 ~~~ bash title="Prowlarr index manager and proxy for PVR:"
 armbian-config --cmd DOW025
 ~~~
-
-## Prowlarr remove
 
 
 ~~~ bash title="Prowlarr remove:"
 armbian-config --cmd DOW026
 ~~~
 
-## Prowlarr purge with data folder
-
 
 ~~~ bash title="Prowlarr purge with data folder:"
 armbian-config --cmd DOW027
 ~~~
 
-## Jellyseerr Jellyfin/Emby/Plex integration install
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/JEL001.png --->
@@ -373,14 +312,10 @@ Jellyseerr is a free and open source software application for managing requests 
 armbian-config --cmd JEL001
 ~~~
 
-## Jellyseerr remove
-
 
 ~~~ bash title="Jellyseerr remove:"
 armbian-config --cmd JEL002
 ~~~
-
-## Jellyseerr purge with data folder
 
 
 ~~~ bash title="Jellyseerr purge with data folder:"

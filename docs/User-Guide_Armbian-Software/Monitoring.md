@@ -4,10 +4,6 @@ comments: true
 
 # Real-time monitoring, collecting metrics, up-time status
 
-## Uptime Kuma self-hosted monitoring tool
-
-**Status:** Stable
-
 **Author:** @igorpecovnik
 
 
@@ -20,53 +16,32 @@ comments: true
 armbian-config --cmd MON001
 ~~~
 
-## Uptime Kuma remove
-
 
 ~~~ bash title="Uptime Kuma remove:"
 armbian-config --cmd MON002
 ~~~
-
-## Uptime Kuma purge with data folder
 
 
 ~~~ bash title="Uptime Kuma purge with data folder:"
 armbian-config --cmd MON003
 ~~~
 
-## Netdata - monitoring real-time metrics
-
-
-<!--- section image START from tools/include/images/MON005.png --->
-[![Netdata - monitoring real-time metrics](/images/MON005.png)](#)
-<!--- section image STOP from tools/include/images/MON005.png --->
-
-
-<!--- header START from tools/include/markdown/MON005-header.md --->
-Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
-
-<!--- header STOP from tools/include/markdown/MON005-header.md --->
-
 
 ~~~ bash title="Netdata - monitoring real-time metrics:"
 armbian-config --cmd MON005
 ~~~
-
-## Netdata remove
 
 
 ~~~ bash title="Netdata remove:"
 armbian-config --cmd MON006
 ~~~
 
-## Netdata purge with data folder
-
 
 ~~~ bash title="Netdata purge with data folder:"
 armbian-config --cmd MON007
 ~~~
 
-## Grafana data analytics
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/GRA001.png --->
@@ -83,21 +58,17 @@ Grafana is a multi-platform open source analytics and interactive visualization 
 armbian-config --cmd GRA001
 ~~~
 
-## Grafana remove
-
 
 ~~~ bash title="Grafana remove:"
 armbian-config --cmd GRA002
 ~~~
-
-## Grafana purge with data folder
 
 
 ~~~ bash title="Grafana purge with data folder:"
 armbian-config --cmd GRA003
 ~~~
 
-## Prometheus docker image
+**Author:** @armbian
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
@@ -115,14 +86,10 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 armbian-config --cmd PRO001
 ~~~
 
-## Prometheus remove
-
 
 ~~~ bash title="Prometheus remove:"
 armbian-config --cmd PRO002
 ~~~
-
-## Prometheus purge with data folder
 
 
 ~~~ bash title="Prometheus purge with data folder:"

@@ -4,10 +4,6 @@ comments: true
 
 # Home Automation for control home appliances
 
-## openHAB empowering the smart home
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -20,21 +16,17 @@ comments: true
 armbian-config --cmd HAB001
 ~~~
 
-## openHAB remove
-
 
 ~~~ bash title="openHAB remove:"
 armbian-config --cmd HAB002
 ~~~
-
-## openHAB purge with data folder
 
 
 ~~~ bash title="openHAB purge with data folder:"
 armbian-config --cmd HAB003
 ~~~
 
-## Home Assistant open source home automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/HAS001.png --->
@@ -67,21 +59,17 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 armbian-config --cmd HAS001
 ~~~
 
-## Home Assistant remove
-
 
 ~~~ bash title="Home Assistant remove:"
 armbian-config --cmd HAS002
 ~~~
-
-## Home Assistant purge with data folder
 
 
 ~~~ bash title="Home Assistant purge with data folder:"
 armbian-config --cmd HAS003
 ~~~
 
-## Domoticz open source home automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/DOM001.png --->
@@ -115,21 +103,17 @@ Domoticz is an open-source home automation platform that allows you to control a
 armbian-config --cmd DOM001
 ~~~
 
-## Domoticz remove
-
 
 ~~~ bash title="Domoticz remove:"
 armbian-config --cmd DOM002
 ~~~
-
-## Domoticz purge with data folder
 
 
 ~~~ bash title="Domoticz purge with data folder:"
 armbian-config --cmd DOM003
 ~~~
 
-## EVCC - solar charging automation
+**Author:** @igorpecovnik
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->
@@ -147,14 +131,10 @@ evcc is an energy management system with a focus on electromobility. The softwar
 armbian-config --cmd EVCC01
 ~~~
 
-## EVCC - solar charging automation remove
-
 
 ~~~ bash title="EVCC - solar charging automation remove:"
 armbian-config --cmd EVCC02
 ~~~
-
-## EVCC purge with data folder
 
 
 ~~~ bash title="EVCC purge with data folder:"

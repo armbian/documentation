@@ -4,10 +4,6 @@ comments: true
 
 # Music servers and streamers
 
-## Navidrome music server and streamer compatible with Subsonic/Airsonic
-
-**Status:** Stable
-
 **Author:** @armbian
 
 
@@ -20,14 +16,10 @@ comments: true
 armbian-config --cmd NAV001
 ~~~
 
-## Navidrome remove
-
 
 ~~~ bash title="Navidrome remove:"
 armbian-config --cmd NAV002
 ~~~
-
-## Navidrome purge with data folder
 
 
 ~~~ bash title="Navidrome purge with data folder:"
