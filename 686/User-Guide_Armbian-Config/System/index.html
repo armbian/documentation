@@ -960,6 +960,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#kernel-switching-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel Switching Warning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kernel Switching Warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-warning-kernel-changes-carry-inherent-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Important Warning: Kernel changes carry inherent risks!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precautions-before-switching-kernels" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Precautions Before Switching Kernels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-steps-if-boot-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Recovery Steps if Boot Fails
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-to-internal-media-zfs-nfs-read-only-rootfs" class="md-nav__link">
     <span class="md-ellipsis">
       Install to internal media, ZFS, NFS, read-only rootfs
@@ -2117,6 +2159,32 @@
 <h2 id="install-alternative-kernels">Install alternative kernels<a class="headerlink" href="#install-alternative-kernels" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
+<!--- section image START from tools/include/images/KER001.png --->
+<p><a href="#"><img alt="Install alternative kernels" src="/images/KER001.png" /></a></p>
+<!--- section image STOP from tools/include/images/KER001.png --->
+
+<!--- header START from tools/include/markdown/KER001-header.md --->
+<h2 id="kernel-switching-warning">Kernel Switching Warning<a class="headerlink" href="#kernel-switching-warning" title="Permanent link">&para;</a></h2>
+<p>Switching between different kernel versions can significantly impact the functionality of your device. A newer or older kernel may introduce changes to hardware compatibility, drivers, and system stability. Some features may stop working, while others may improve or be reintroduced.  </p>
+<h3 id="important-warning-kernel-changes-carry-inherent-risks">⚠️ Important Warning: Kernel changes carry inherent risks!<a class="headerlink" href="#important-warning-kernel-changes-carry-inherent-risks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A mismatched or incompatible kernel may result in <strong>boot failures</strong>, rendering the system unresponsive.  </li>
+<li>Certain peripherals or hardware components (e.g., Wi-Fi, GPU acceleration, or power management) may no longer function correctly.  </li>
+<li>Custom configurations or third-party modules might need to be recompiled or adjusted to work with the new kernel.  </li>
+</ul>
+<h3 id="precautions-before-switching-kernels">✅ Precautions Before Switching Kernels<a class="headerlink" href="#precautions-before-switching-kernels" title="Permanent link">&para;</a></h3>
+<p>Before switching kernels, it is <strong>strongly recommended</strong> to:<br />
+1. <strong>Back up your system</strong> to prevent data loss.<br />
+2. <strong>Verify compatibility</strong> of your hardware and essential drivers with the target kernel version.<br />
+3. <strong>Keep a rescue method available</strong>, such as a bootable SD card / USB drive or serial console access, to recover the system if necessary.  </p>
+<h3 id="recovery-steps-if-boot-fails">🛠️ Recovery Steps if Boot Fails<a class="headerlink" href="#recovery-steps-if-boot-fails" title="Permanent link">&para;</a></h3>
+<p>If your device fails to boot after a kernel change, you may need to:<br />
+- <strong>Revert to a previous working kernel</strong> using recovery options.<br />
+- <strong>Use a serial console or debug mode</strong> to diagnose the issue.<br />
+- <strong>Reinstall the system</strong> if no recovery options are available.  </p>
+<p><strong>⚡ Exercise caution when switching kernels, especially on production systems or devices with limited recovery options.</strong></p>
+<!--- header STOP from tools/include/markdown/KER001-header.md --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install alternative kernels:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install Linux headers:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER002
@@ -2133,6 +2201,10 @@
 <h2 id="install-to-internal-storage">Install to internal storage<a class="headerlink" href="#install-to-internal-storage" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Preview</p>
+<!--- section image START from tools/include/images/STOR001.png --->
+<p><a href="#"><img alt="Install to internal storage" src="/images/STOR001.png" /></a></p>
+<!--- section image STOP from tools/include/images/STOR001.png --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install to internal storage:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>STOR001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZFS filesystem - enable support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>STOR002
@@ -2172,6 +2244,10 @@
 <h2 id="disable-root-login">Disable root login<a class="headerlink" href="#disable-root-login" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
+<!--- section image START from tools/include/images/ACC001.png --->
+<p><a href="#"><img alt="Disable root login" src="/images/ACC001.png" /></a></p>
+<!--- section image STOP from tools/include/images/ACC001.png --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC001
@@ -2240,6 +2316,10 @@
 <h2 id="change-shell-system-wide-to-bash">Change shell system wide to BASH<a class="headerlink" href="#change-shell-system-wide-to-bash" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
+<!--- section image START from tools/include/images/USR001.png --->
+<p><a href="#"><img alt="Change shell system wide to BASH" src="/images/USR001.png" /></a></p>
+<!--- section image STOP from tools/include/images/USR001.png --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to BASH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>USR001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to ZSH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>USR002
@@ -2251,6 +2331,10 @@
 <h2 id="enable-armbian-firmware-upgrades">Enable Armbian firmware upgrades<a class="headerlink" href="#enable-armbian-firmware-upgrades" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
+<!--- section image START from tools/include/images/UPD001.png --->
+<p><a href="#"><img alt="Enable Armbian firmware upgrades" src="/images/UPD001.png" /></a></p>
+<!--- section image STOP from tools/include/images/UPD001.png --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable Armbian firmware upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Armbian kernel upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD002

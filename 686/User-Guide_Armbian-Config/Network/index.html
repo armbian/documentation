@@ -2048,6 +2048,17 @@
 <p><a href="#"><img alt="Basic Network Setup" src="/images/NET001.png" /></a></p>
 <!--- section image STOP from tools/include/images/NET001.png --->
 
+<!--- header START from tools/include/markdown/NET001-header.md --->
+<pre class="mermaid"><code>graph LR
+  A{Select interface} --&gt; B[Configure];
+  A{Select interface} --&gt; C[Drop];
+  C ----&gt;A;
+  B --&gt;F[DHCP];
+  B ----&gt;G[Static];
+  G ------&gt;| MAC, IP, route, GW, DNS|H[Configured];
+  F --&gt;| MAC | H[Configured];</code></pre>
+<!--- header STOP from tools/include/markdown/NET001-header.md --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Basic Network Setup:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Fallback DHCP Configuration:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET002
@@ -2067,6 +2078,20 @@
 <h2 id="add-change-interface">Add / change interface<a class="headerlink" href="#add-change-interface" title="Permanent link">&para;</a></h2>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <p><strong>Status:</strong> Stable</p>
+<!--- header START from tools/include/markdown/NEA001-header.md --->
+<pre class="mermaid"><code>graph LR
+  A[Network] --&gt; B[Add / Change interface];
+  A[Network] --&gt; O[Revert to defaults];
+  A[Network] --&gt; P[Show configuration];
+  B ----&gt;E[Wired];
+  B ----&gt;F[Wireless];
+  E --&gt;R[DHCP];
+  E --&gt;T[Static];
+  E --&gt;S[Spoof MAC];
+  F --&gt;X[Station];
+  F --&gt;W[Access point]; </code></pre>
+<!--- header STOP from tools/include/markdown/NEA001-header.md --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Add / change interface:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Revert to Armbian defaults:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA002

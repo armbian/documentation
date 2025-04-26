@@ -2012,6 +2012,17 @@
 <p><a href="#"><img alt="nload -realtime console network usage monitor" src="/images/NET001.png" /></a></p>
 <!--- section image STOP from tools/include/images/NET001.png --->
 
+<!--- header START from tools/include/markdown/NET001-header.md --->
+<pre class="mermaid"><code>graph LR
+  A{Select interface} --&gt; B[Configure];
+  A{Select interface} --&gt; C[Drop];
+  C ----&gt;A;
+  B --&gt;F[DHCP];
+  B ----&gt;G[Static];
+  G ------&gt;| MAC, IP, route, GW, DNS|H[Configured];
+  F --&gt;| MAC | H[Configured];</code></pre>
+<!--- header STOP from tools/include/markdown/NET001-header.md --->
+
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">nload -realtime console network usage monitor:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">nload - remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET002
