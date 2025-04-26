@@ -1,9 +1,15 @@
+---
+comments: true
+---
+
 # Media servers, organizers and editors
 
-
-***
-
 ## Emby organizes video, music, live TV, and photos
+
+**Status:** Stable
+
+**Author:** @schwar3kat
+
 
 <!--- section image START from tools/include/images/MED003.png --->
 [![Emby organizes video, music, live TV, and photos](/images/MED003.png)](#)
@@ -15,74 +21,27 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 <!--- header STOP from tools/include/markdown/MED003-header.md --->
 
-This operation will install Emby server.
 
-**Command:** 
-~~~
+~~~ bash title="Emby organizes video, music, live TV, and photos:"
 armbian-config --cmd MED003
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/MED003-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8096**:
-
-    - URL: `https://<your.IP>:8096`
-
-=== "Directories"
-
-    - Install directory: `/armbian/emby`
-    - Site configuration directory: `/armbian/emby/config`
-    - Data directory: `/armbian/emby/tvshows` `/armbian/emby/movies`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f emby
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED003-footer.md --->
-
-
-
-***
-
 ## Emby server remove
-This operation will remove Emby server
 
-**Command:** 
-~~~
+
+~~~ bash title="Emby server remove:"
 armbian-config --cmd MED004
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
 ## Emby server purge with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Emby server purge with data folder:"
 armbian-config --cmd MED005
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
 ## Stirling PDF tools for viewing and editing PDF files
+
 
 <!--- section image START from tools/include/images/MED010.png --->
 [![Stirling PDF tools for viewing and editing PDF files](/images/MED010.png)](#)
@@ -94,74 +53,27 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 <!--- header STOP from tools/include/markdown/MED010-header.md --->
 
-This operation will install Stirling-PDF tools.
 
-**Command:** 
-~~~
+~~~ bash title="Stirling PDF tools for viewing and editing PDF files:"
 armbian-config --cmd MED010
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/MED010-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8077**:
-
-    - URL: `https://<your.IP>:8077`
-
-=== "Directories"
-
-    - Install directory: `/armbian/stirling`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f stirling-pdf
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED010-footer.md --->
-
-
-
-***
-
 ## Stirling PDF remove
-This operation will remove Stirling-PDF tools.
 
-**Command:** 
-~~~
+
+~~~ bash title="Stirling PDF remove:"
 armbian-config --cmd MED011
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Stirling PDF purge with data folder
-This operation will purge Stirling-PDF tools with data folder.
 
-**Command:** 
-~~~
+
+~~~ bash title="Stirling PDF purge with data folder:"
 armbian-config --cmd MED012
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Syncthing continuous file synchronization
+
 
 <!--- section image START from tools/include/images/MED015.png --->
 [![Syncthing continuous file synchronization](/images/MED015.png)](#)
@@ -173,71 +85,27 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 <!--- header STOP from tools/include/markdown/MED015-header.md --->
 
-**Command:** 
-~~~
+
+~~~ bash title="Syncthing continuous file synchronization:"
 armbian-config --cmd MED015
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/MED015-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8884**:
-
-    - URL: `https://<your.IP>:8884`
-    - Username/Password: There is none, but it is highly suggested setting a password for this container. To do this go to Actions -> Settings -> set user/password for the webUI.
-
-=== "Directories"
-
-    - Install directory: `/armbian/syncthing`
-    - Site configuration directory: `/armbian/syncthing/config`
-    - Data directory: `/armbian/syncthing/data1` `/armbian/syncthing/data2`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f syncthing
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED015-footer.md --->
-
-
-
-***
-
 ## Syncthing remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Syncthing remove:"
 armbian-config --cmd MED016
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Syncthing purge with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Syncthing purge with data folder:"
 armbian-config --cmd MED017
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Nextcloud content collaboration platform
+
 
 <!--- section image START from tools/include/images/MED020.png --->
 [![Nextcloud content collaboration platform](/images/MED020.png)](#)
@@ -251,142 +119,54 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <!--- header STOP from tools/include/markdown/MED020-header.md --->
 
-**Command:** 
-~~~
+
+~~~ bash title="Nextcloud content collaboration platform:"
 armbian-config --cmd MED020
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/MED020-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **443**:
-
-    - URL: `https://<your.IP>:443`
-    - Username/Password: admin / generate at first web interface login
-
-=== "Directories"
-
-    - Install directory: `/armbian/nextcloud`
-    - Site configuration directory: `/armbian/nextcloud/config`
-    - Data directory: `/armbian/nextcloud/data`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f nextcloud
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED020-footer.md --->
-
-
-
-***
-
 ## Nextcloud remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Nextcloud remove:"
 armbian-config --cmd MED021
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Nextcloud purge with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Nextcloud purge with data folder:"
 armbian-config --cmd MED022
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Owncloud share files and folders, easy and secure
-**Command:** 
-~~~
+
+
+~~~ bash title="Owncloud share files and folders, easy and secure:"
 armbian-config --cmd MED025
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Owncloud remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Owncloud remove:"
 armbian-config --cmd MED026
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
 ## Owncloud purge with data folder
+
 
 <!--- header START from tools/include/markdown/MED027-header.md --->
 ownCloud is a free and open-source software project for content collaboration and sharing and syncing of files in distributed and federated enterprise scenarios.
 
 <!--- header STOP from tools/include/markdown/MED027-header.md --->
 
-**Command:** 
-~~~
+
+~~~ bash title="Owncloud purge with data folder:"
 armbian-config --cmd MED027
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/MED027-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **7787**:
-
-    - URL: `http://<your.IP>:7787`
-    - Username/Password: admin / admin
-
-=== "Directories"
-
-    - Install directory: `/armbian/owncloud`
-    - Site configuration directory: `/armbian/owncloud/config`
-    - Data directory: `/armbian/owncloud/data`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f owncloud
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED027-footer.md --->
-
-
-
-***
-
 ## Jellyfin Media System
+
 
 <!--- section image START from tools/include/images/MED030.png --->
 [![Jellyfin Media System](/images/MED030.png)](#)
@@ -398,110 +178,42 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 <!--- header STOP from tools/include/markdown/MED030-header.md --->
 
-**Command:** 
-~~~
+
+~~~ bash title="Jellyfin Media System:"
 armbian-config --cmd MED030
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
-
-<!--- footer START from tools/include/markdown/MED030-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8096**:
-
-    - URL: `http://<your.IP>:8096`
-    - Username and password are set at first login
-
-=== "Directories"
-
-    - Install directory: `/armbian/jellyfin`
-    - Site configuration directory: `/armbian/jellyfin/config`
-    - TV shows directory: `/armbian/jellyfin/tvseries`
-    - Movies directory: `/armbian/jellyfin/movies`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f jellyfin
-    ```
-
-<!--- footer STOP from tools/include/markdown/MED030-footer.md --->
-
-
-
-***
-
 ## Jellyfin remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Jellyfin remove:"
 armbian-config --cmd MED031
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
-
-
-***
-
 ## Jellyfin purge with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Jellyfin purge with data folder:"
 armbian-config --cmd MED032
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
-
-
-***
-
 ## Hastebin Paste Server
-**Command:** 
-~~~
+
+
+~~~ bash title="Hastebin Paste Server:"
 armbian-config --cmd MED033
 ~~~
 
-**Author:** @efectn
-
-**Status:** Stable
-
-
-
-***
-
 ## Hastebin remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Hastebin remove:"
 armbian-config --cmd MED034
 ~~~
 
-**Author:** @efectn
-
-**Status:** Stable
-
-
-
-***
-
 ## Hastebin purge with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Hastebin purge with data folder:"
 armbian-config --cmd MED035
 ~~~
-
-**Author:** @efectn
-
-**Status:** Stable
-
-
-
-***
-

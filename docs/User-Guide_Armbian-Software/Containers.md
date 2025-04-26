@@ -1,84 +1,48 @@
+---
+comments: true
+---
+
 # Docker containerization and KVM virtual machines
 
-
-***
-
 ## Docker minimal
+
+**Status:** Stable
+
+**Author:** @schwar3kat
+
 
 <!--- section image START from tools/include/images/CON001.webp --->
 [![Docker minimal](/images/CON001.webp)](#)
 <!--- section image STOP from tools/include/images/CON001.webp --->
 
-This operation will install Docker Minimal.
 
-**Command:** 
-~~~
+~~~ bash title="Docker minimal:"
 armbian-config --cmd CON001
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/CON001-footer.md --->
-What is Docker? Docker helps developers build, share, run, and verify applications anywhere - without tedious environment configuration or management.
-
-<!--- footer STOP from tools/include/markdown/CON001-footer.md --->
-
-
-
-***
-
 ## Docker engine
-This operation will install Docker Engine.
 
-**Command:** 
-~~~
+
+~~~ bash title="Docker engine:"
 armbian-config --cmd CON002
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
 ## Docker remove
-This operation will purge Docker.
 
-**Command:** 
-~~~
+
+~~~ bash title="Docker remove:"
 armbian-config --cmd CON003
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
 ## Docker purge with all images, containers, and volumes
-This operation will delete all Docker images, containers, and volumes.
 
-**Command:** 
-~~~
+
+~~~ bash title="Docker purge with all images, containers, and volumes:"
 armbian-config --cmd CON004
 ~~~
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
-
-
-***
-
 ## Portainer container management platform
+
 
 <!--- section image START from tools/include/images/CON005.webp --->
 [![Portainer container management platform](/images/CON005.webp)](#)
@@ -90,54 +54,21 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 <!--- header STOP from tools/include/markdown/CON005-header.md --->
 
-**Command:** 
-~~~
+
+~~~ bash title="Portainer container management platform:"
 armbian-config --cmd CON005
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/CON005-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **9002**:
-
-    - URL = `http://<your.IP>:9002`
-
-<!--- footer STOP from tools/include/markdown/CON005-footer.md --->
-
-
-
-***
-
 ## Portainer remove
-**Command:** 
-~~~
+
+
+~~~ bash title="Portainer remove:"
 armbian-config --cmd CON006
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## Portainer purge with with data folder
-**Command:** 
-~~~
+
+
+~~~ bash title="Portainer purge with with data folder:"
 armbian-config --cmd CON007
 ~~~
-
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
