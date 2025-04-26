@@ -4,7 +4,11 @@ comments: true
 
 # Fixed and wireless network settings
 
+## Basic Network Setup
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/NET001.png --->
@@ -26,7 +30,11 @@ armbian-config --cmd NET002
 armbian-config --cmd NET002
 ~~~
 
+## View Network Settings
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/VNS001.png --->
@@ -38,7 +46,13 @@ armbian-config --cmd NET002
 armbian-config --cmd VNS001
 ~~~
 
+## Advanced bridged network configuration
+
+## Add / change interface
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Add / change interface:"
@@ -60,7 +74,11 @@ armbian-config --cmd NEA003
 armbian-config --cmd NEA004
 ~~~
 
+## WireGuard VPN client / server
+
 **Author:** @armbian
+
+**Status:** Enabled
 
 
 <!--- section image START from tools/include/images/WG001.png --->

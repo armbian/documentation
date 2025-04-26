@@ -4,7 +4,15 @@ comments: true
 
 # Run/Install 3rd party applications
 
+## Web server, LEMP, reverse proxy, Let's Encrypt SSL
+
+**Status:** Stable
+
+## SWAG reverse proxy
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SWAG01.png --->
@@ -55,7 +63,13 @@ armbian-config --cmd SWAG03
 armbian-config --cmd SWAG04
 ~~~
 
+## Home Automation for control home appliances
+
+## openHAB empowering the smart home
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/HAB001.png --->
@@ -77,7 +91,11 @@ armbian-config --cmd HAB002
 armbian-config --cmd HAB003
 ~~~
 
+## Home Assistant open source home automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/HAS001.png --->
@@ -120,7 +138,11 @@ armbian-config --cmd HAS002
 armbian-config --cmd HAS003
 ~~~
 
+## Domoticz open source home automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/DOM001.png --->
@@ -164,7 +186,11 @@ armbian-config --cmd DOM002
 armbian-config --cmd DOM003
 ~~~
 
+## EVCC - solar charging automation
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->
@@ -192,7 +218,13 @@ armbian-config --cmd EVCC02
 armbian-config --cmd EVCC03
 ~~~
 
+## Network-wide ad blockers servers
+
+## Pi-hole DNS ad blocker
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DNS001.png --->
@@ -236,7 +268,11 @@ armbian-config --cmd DNS002
 armbian-config --cmd DNS004
 ~~~
 
+## Unbound caching DNS resolver
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/UNB001.png --->
@@ -263,7 +299,11 @@ armbian-config --cmd UNB002
 armbian-config --cmd UNB003
 ~~~
 
+## AdGuardHome DNS sinkhole
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/ADG001.png --->
@@ -291,7 +331,13 @@ armbian-config --cmd ADG002
 armbian-config --cmd ADG003
 ~~~
 
+## Music servers and streamers
+
+## Navidrome music server and streamer compatible with Subsonic/Airsonic
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/NAV001.png --->
@@ -313,7 +359,13 @@ armbian-config --cmd NAV002
 armbian-config --cmd NAV003
 ~~~
 
+## Download apps for movies, TV shows, music and subtitles
+
+## qBittorrent BitTorrent client 
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DOW001.png --->
@@ -341,7 +393,11 @@ armbian-config --cmd DOW002
 armbian-config --cmd DOW003
 ~~~
 
+## Deluge BitTorrent client
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
@@ -369,7 +425,11 @@ armbian-config --cmd DEL002
 armbian-config --cmd DEL003
 ~~~
 
+## Transmission BitTorrent client
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/TRA001.png --->
@@ -397,7 +457,11 @@ armbian-config --cmd TRA002
 armbian-config --cmd TRA003
 ~~~
 
+## SABnzbd newsgroup downloader
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
@@ -425,7 +489,11 @@ armbian-config --cmd SABN02
 armbian-config --cmd SABN03
 ~~~
 
+## Medusa automatic downloader for TV shows
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- header START from tools/include/markdown/MDS001-header.md --->
@@ -448,7 +516,11 @@ armbian-config --cmd MDS002
 armbian-config --cmd MDS003
 ~~~
 
+## Sonarr automatic downloader for TV shows
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SON001.png --->
@@ -476,7 +548,11 @@ armbian-config --cmd SON002
 armbian-config --cmd SON003
 ~~~
 
+## Radarr automatic downloader for movies
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/RAD001.png --->
@@ -504,7 +580,11 @@ armbian-config --cmd RAD002
 armbian-config --cmd RAD003
 ~~~
 
+## Bazarr automatic subtitles downloader for Sonarr and Radarr
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/BAZ001.png --->
@@ -532,7 +612,11 @@ armbian-config --cmd BAZ002
 armbian-config --cmd BAZ003
 ~~~
 
+## Lidarr automatic music downloader
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/LID001.png --->
@@ -560,7 +644,11 @@ armbian-config --cmd LID002
 armbian-config --cmd LID003
 ~~~
 
+## Readarr automatic downloader for Ebooks
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/RDR001.png --->
@@ -603,7 +691,11 @@ armbian-config --cmd DOW026
 armbian-config --cmd DOW027
 ~~~
 
+## Jellyseerr Jellyfin/Emby/Plex integration install
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/JEL001.png --->
@@ -631,7 +723,13 @@ armbian-config --cmd JEL002
 armbian-config --cmd JEL003
 ~~~
 
+## SQL database servers and web interface managers
+
+## Mariadb SQL database server
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DAT001.png --->
@@ -674,7 +772,13 @@ armbian-config --cmd DAT006
 armbian-config --cmd DAT007
 ~~~
 
+## Applications and tools for development
+
+## Install tools for cloning and managing repositories (git)
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 ~~~ bash title="Install tools for cloning and managing repositories (git):"
@@ -716,7 +820,13 @@ armbian-config --cmd DEV010
 armbian-config --cmd DEV011
 ~~~
 
+## Docker containerization and KVM virtual machines
+
+## Docker minimal
+
 **Author:** @schwar3kat
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/CON001.webp --->
@@ -758,7 +868,13 @@ armbian-config --cmd CON006
 armbian-config --cmd CON007
 ~~~
 
+## Media servers, organizers and editors
+
+## Emby organizes video, music, live TV, and photos
+
 **Author:** @schwar3kat
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MED003.png --->
@@ -876,7 +992,13 @@ armbian-config --cmd MED034
 armbian-config --cmd MED035
 ~~~
 
+## Real-time monitoring, collecting metrics, up-time status
+
+## Uptime Kuma self-hosted monitoring tool
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MON001.webp --->
@@ -913,7 +1035,11 @@ armbian-config --cmd MON006
 armbian-config --cmd MON007
 ~~~
 
+## Grafana data analytics
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/GRA001.png --->
@@ -940,7 +1066,11 @@ armbian-config --cmd GRA002
 armbian-config --cmd GRA003
 ~~~
 
+## Prometheus docker image
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
@@ -968,7 +1098,13 @@ armbian-config --cmd PRO002
 armbian-config --cmd PRO003
 ~~~
 
+## Remote File & Management tools
+
+## Cockpit web-based management tool
+
 **Author:** @Tearran
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/MAN001.png --->
@@ -990,7 +1126,13 @@ armbian-config --cmd MAN002
 armbian-config --cmd MAN005
 ~~~
 
+## Tools for printing and 3D printing
+
+## OctoPrint web-based 3D printers management tool
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/OCT001.png --->
@@ -1017,7 +1159,13 @@ armbian-config --cmd OCT002
 armbian-config --cmd OCT003
 ~~~
 
+## Console network tools for measuring load and bandwidth
+
+## nload -realtime console network usage monitor
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/NET001.png --->
@@ -1084,7 +1232,13 @@ armbian-config --cmd NET008
 armbian-config --cmd NET008
 ~~~
 
+## VPN tools
+
+## ZeroTier connect devices over your own private network in the world.
+
 **Author:** @jnovos
+
+**Status:** Stable
 
 
 ~~~ bash title="ZeroTier connect devices over your own private network in the world.:"

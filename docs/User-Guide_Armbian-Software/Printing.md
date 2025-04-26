@@ -4,7 +4,11 @@ comments: true
 
 # Tools for printing and 3D printing
 
+## OctoPrint web-based 3D printers management tool
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/OCT001.png --->

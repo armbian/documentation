@@ -4,7 +4,11 @@ comments: true
 
 # SQL database servers and web interface managers
 
+## Mariadb SQL database server
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DAT001.png --->

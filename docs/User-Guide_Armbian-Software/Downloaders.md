@@ -4,7 +4,11 @@ comments: true
 
 # Download apps for movies, TV shows, music and subtitles
 
+## qBittorrent BitTorrent client 
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DOW001.png --->
@@ -32,7 +36,11 @@ armbian-config --cmd DOW002
 armbian-config --cmd DOW003
 ~~~
 
+## Deluge BitTorrent client
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
@@ -60,7 +68,11 @@ armbian-config --cmd DEL002
 armbian-config --cmd DEL003
 ~~~
 
+## Transmission BitTorrent client
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/TRA001.png --->
@@ -88,7 +100,11 @@ armbian-config --cmd TRA002
 armbian-config --cmd TRA003
 ~~~
 
+## SABnzbd newsgroup downloader
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
@@ -116,7 +132,11 @@ armbian-config --cmd SABN02
 armbian-config --cmd SABN03
 ~~~
 
+## Medusa automatic downloader for TV shows
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- header START from tools/include/markdown/MDS001-header.md --->
@@ -139,7 +159,11 @@ armbian-config --cmd MDS002
 armbian-config --cmd MDS003
 ~~~
 
+## Sonarr automatic downloader for TV shows
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/SON001.png --->
@@ -167,7 +191,11 @@ armbian-config --cmd SON002
 armbian-config --cmd SON003
 ~~~
 
+## Radarr automatic downloader for movies
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/RAD001.png --->
@@ -195,7 +223,11 @@ armbian-config --cmd RAD002
 armbian-config --cmd RAD003
 ~~~
 
+## Bazarr automatic subtitles downloader for Sonarr and Radarr
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/BAZ001.png --->
@@ -223,7 +255,11 @@ armbian-config --cmd BAZ002
 armbian-config --cmd BAZ003
 ~~~
 
+## Lidarr automatic music downloader
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/LID001.png --->
@@ -251,7 +287,11 @@ armbian-config --cmd LID002
 armbian-config --cmd LID003
 ~~~
 
+## Readarr automatic downloader for Ebooks
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/RDR001.png --->
@@ -294,7 +334,11 @@ armbian-config --cmd DOW026
 armbian-config --cmd DOW027
 ~~~
 
+## Jellyseerr Jellyfin/Emby/Plex integration install
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/JEL001.png --->

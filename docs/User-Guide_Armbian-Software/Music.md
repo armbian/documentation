@@ -4,7 +4,11 @@ comments: true
 
 # Music servers and streamers
 
+## Navidrome music server and streamer compatible with Subsonic/Airsonic
+
 **Author:** @armbian
+
+**Status:** Stable
 
 
 <!--- section image START from tools/include/images/NAV001.png --->

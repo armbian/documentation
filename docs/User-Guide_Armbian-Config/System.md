@@ -4,7 +4,13 @@ comments: true
 
 # System wide and admin settings
 
+## Alternative kernels, headers, rolling updates, overlays
+
+## Install alternative kernels
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Install alternative kernels:"
@@ -36,7 +42,13 @@ armbian-config --cmd KER005
 armbian-config --cmd KER006
 ~~~
 
+## Install to internal media, ZFS, NFS, read-only rootfs
+
+## Install to internal storage
+
 **Author:** @igorpecovnik
+
+**Status:** Preview
 
 
 ~~~ bash title="Install to internal storage:"
@@ -63,7 +75,11 @@ armbian-config --cmd STOR004
 armbian-config --cmd STOR005
 ~~~
 
+## Enable Network filesystem (NFS) support
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Enable Network filesystem (NFS) support:"
@@ -75,7 +91,11 @@ armbian-config --cmd NETFS01
 armbian-config --cmd NETFS02
 ~~~
 
+## Enable network filesystem (NFS) daemon
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Enable network filesystem (NFS) daemon:"
@@ -97,7 +117,11 @@ armbian-config --cmd NETFS06
 armbian-config --cmd NETFS07
 ~~~
 
+## Find NFS servers in subnet and mount shares
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Find NFS servers in subnet and mount shares:"
@@ -109,7 +133,13 @@ armbian-config --cmd NETFS09
 armbian-config --cmd NETFS10
 ~~~
 
+## Manage SSH daemon options, enable 2FA
+
+## Disable root login
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Disable root login:"
@@ -271,7 +301,13 @@ armbian-config --cmd ACC014
 armbian-config --cmd ACC015
 ~~~
 
+## Change shell, adjust MOTD
+
+## Change shell system wide to BASH
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Change shell system wide to BASH:"
@@ -288,7 +324,15 @@ armbian-config --cmd USR002
 armbian-config --cmd USR003
 ~~~
 
+## OS updates and distribution upgrades
+
+**Status:** Active
+
+## Enable Armbian firmware upgrades
+
 **Author:** @igorpecovnik
+
+**Status:** Stable
 
 
 ~~~ bash title="Enable Armbian firmware upgrades:"
