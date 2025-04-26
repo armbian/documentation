@@ -16,6 +16,21 @@ comments: true
 <!--- section image STOP from tools/include/images/NET001.png --->
 
 
+<!--- header START from tools/include/markdown/NET001-header.md --->
+``` mermaid
+graph LR
+  A{Select interface} --> B[Configure];
+  A{Select interface} --> C[Drop];
+  C ---->A;
+  B -->F[DHCP];
+  B ---->G[Static];
+  G ------>| MAC, IP, route, GW, DNS|H[Configured];
+  F -->| MAC | H[Configured];
+```
+
+<!--- header STOP from tools/include/markdown/NET001-header.md --->
+
+
 ~~~ bash title="nload -realtime console network usage monitor:"
 armbian-config --cmd NET001
 ~~~
