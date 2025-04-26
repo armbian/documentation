@@ -45,32 +45,32 @@ If your device fails to boot after a kernel change, you may need to:
 <!--- header STOP from tools/include/markdown/KER001-header.md --->
 
 
-~~~ bash title="Install alternative kernels:"
+~~~ custombash title="Install alternative kernels:"
 armbian-config --cmd KER001
 ~~~
 
 
-~~~ bash title="Install Linux headers:"
+~~~ custombash title="Install Linux headers:"
 armbian-config --cmd KER002
 ~~~
 
 
-~~~ bash title="Remove Linux headers:"
+~~~ custombash title="Remove Linux headers:"
 armbian-config --cmd KER003
 ~~~
 
 
-~~~ bash title="Manage device tree overlays:"
+~~~ custombash title="Manage device tree overlays:"
 armbian-config --cmd KER004
 ~~~
 
 
-~~~ bash title="Select Odroid board configuration:"
+~~~ custombash title="Select Odroid board configuration:"
 armbian-config --cmd KER005
 ~~~
 
 
-~~~ bash title="Edit the boot environment:"
+~~~ custombash title="Edit the boot environment:"
 armbian-config --cmd KER006
 ~~~
 
@@ -88,27 +88,27 @@ armbian-config --cmd KER006
 <!--- section image STOP from tools/include/images/STOR001.png --->
 
 
-~~~ bash title="Install to internal storage:"
+~~~ custombash title="Install to internal storage:"
 armbian-config --cmd STOR001
 ~~~
 
 
-~~~ bash title="ZFS filesystem - enable support:"
+~~~ custombash title="ZFS filesystem - enable support:"
 armbian-config --cmd STOR002
 ~~~
 
 
-~~~ bash title="ZFS filesystem - remove support:"
+~~~ custombash title="ZFS filesystem - remove support:"
 armbian-config --cmd STOR003
 ~~~
 
 
-~~~ bash title="Enable read only filesystem:"
+~~~ custombash title="Enable read only filesystem:"
 armbian-config --cmd STOR004
 ~~~
 
 
-~~~ bash title="Disable read only filesystem:"
+~~~ custombash title="Disable read only filesystem:"
 armbian-config --cmd STOR005
 ~~~
 
@@ -119,12 +119,12 @@ armbian-config --cmd STOR005
 **Status:** Stable
 
 
-~~~ bash title="Enable Network filesystem (NFS) support:"
+~~~ custombash title="Enable Network filesystem (NFS) support:"
 armbian-config --cmd NETFS01
 ~~~
 
 
-~~~ bash title="Disable Network filesystem (NFS) support:"
+~~~ custombash title="Disable Network filesystem (NFS) support:"
 armbian-config --cmd NETFS02
 ~~~
 
@@ -135,22 +135,22 @@ armbian-config --cmd NETFS02
 **Status:** Stable
 
 
-~~~ bash title="Enable network filesystem (NFS) daemon:"
+~~~ custombash title="Enable network filesystem (NFS) daemon:"
 armbian-config --cmd NETFS04
 ~~~
 
 
-~~~ bash title="Configure network filesystem (NFS) daemon:"
+~~~ custombash title="Configure network filesystem (NFS) daemon:"
 armbian-config --cmd NETFS05
 ~~~
 
 
-~~~ bash title="Remove network filesystem (NFS) daemon:"
+~~~ custombash title="Remove network filesystem (NFS) daemon:"
 armbian-config --cmd NETFS06
 ~~~
 
 
-~~~ bash title="Show network filesystem (NFS) daemon clients:"
+~~~ custombash title="Show network filesystem (NFS) daemon clients:"
 armbian-config --cmd NETFS07
 ~~~
 
@@ -161,12 +161,12 @@ armbian-config --cmd NETFS07
 **Status:** Stable
 
 
-~~~ bash title="Find NFS servers in subnet and mount shares:"
+~~~ custombash title="Find NFS servers in subnet and mount shares:"
 armbian-config --cmd NETFS09
 ~~~
 
 
-~~~ bash title="Show and manage NFS mounts:"
+~~~ custombash title="Show and manage NFS mounts:"
 armbian-config --cmd NETFS10
 ~~~
 
@@ -184,162 +184,182 @@ armbian-config --cmd NETFS10
 <!--- section image STOP from tools/include/images/ACC001.png --->
 
 
-~~~ bash title="Disable root login:"
+~~~ custombash title="Disable root login:"
 armbian-config --cmd ACC001
 ~~~
 
 
-~~~ bash title="Disable root login:"
+~~~ custombash title="Disable root login:"
 armbian-config --cmd ACC001
 ~~~
 
 
-~~~ bash title="Enable root login:"
+~~~ custombash title="Enable root login:"
 armbian-config --cmd ACC002
 ~~~
 
 
-~~~ bash title="Enable root login:"
+~~~ custombash title="Enable root login:"
 armbian-config --cmd ACC002
 ~~~
 
 
-~~~ bash title="Disable password login:"
+~~~ custombash title="Disable password login:"
 armbian-config --cmd ACC003
 ~~~
 
 
-~~~ bash title="Disable password login:"
+~~~ custombash title="Disable password login:"
 armbian-config --cmd ACC003
 ~~~
 
 
-~~~ bash title="Enable password login:"
+~~~ custombash title="Enable password login:"
 armbian-config --cmd ACC004
 ~~~
 
 
-~~~ bash title="Enable password login:"
+~~~ custombash title="Enable password login:"
 armbian-config --cmd ACC004
 ~~~
 
 
-~~~ bash title="Disable Public key authentication login:"
+~~~ custombash title="Disable Public key authentication login:"
 armbian-config --cmd ACC005
 ~~~
 
 
-~~~ bash title="Disable Public key authentication login:"
+~~~ custombash title="Disable Public key authentication login:"
 armbian-config --cmd ACC005
 ~~~
 
 
-~~~ bash title="Enable Public key authentication login:"
+~~~ custombash title="Enable Public key authentication login:"
 armbian-config --cmd ACC006
 ~~~
 
 
-~~~ bash title="Enable Public key authentication login:"
+~~~ custombash title="Enable Public key authentication login:"
 armbian-config --cmd ACC006
 ~~~
 
 
-~~~ bash title="Disable OTP authentication:"
+~~~ custombash title="Disable OTP authentication:"
 armbian-config --cmd ACC007
 ~~~
 
 
-~~~ bash title="Disable OTP authentication:"
+~~~ custombash title="Disable OTP authentication:"
 armbian-config --cmd ACC007
 ~~~
 
 
-~~~ bash title="Disable OTP authentication:"
+~~~ custombash title="Disable OTP authentication:"
 armbian-config --cmd ACC007
 ~~~
 
 
-~~~ bash title="Disable OTP authentication:"
+~~~ custombash title="Disable OTP authentication:"
 armbian-config --cmd ACC007
 ~~~
 
 
-~~~ bash title="Disable OTP authentication:"
+~~~ custombash title="Disable OTP authentication:"
 armbian-config --cmd ACC007
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Enable OTP authentication:"
+~~~ custombash title="Enable OTP authentication:"
 armbian-config --cmd ACC008
 ~~~
 
 
-~~~ bash title="Generate new OTP authentication QR code:"
+~~~ custombash title="Generate new OTP authentication QR code:"
 armbian-config --cmd ACC009
 ~~~
 
 
-~~~ bash title="Show OTP authentication QR code:"
+~~~ custombash title="Show OTP authentication QR code:"
 armbian-config --cmd ACC010
 ~~~
 
 
-~~~ bash title="Disable last login banner:"
+~~~ custombash title="Disable last login banner:"
 armbian-config --cmd ACC011
 ~~~
 
 
-~~~ bash title="Disable last login banner:"
+~~~ custombash title="Disable last login banner:"
 armbian-config --cmd ACC011
 ~~~
 
 
-~~~ bash title="Enable last login banner:"
+~~~ custombash title="Enable last login banner:"
 armbian-config --cmd ACC012
 ~~~
 
 
-~~~ bash title="Enable last login banner:"
+~~~ custombash title="Enable last login banner:"
 armbian-config --cmd ACC012
 ~~~
 
 
-~~~ bash title="Sandboxed & containerised SSH server:"
+~~~ custombash title="Sandboxed & containerised SSH server:"
 armbian-config --cmd ACC013
 ~~~
 
 
-~~~ bash title="Remove sandboxed SSH server:"
+<!--- footer START from tools/include/markdown/ACC013-footer.md --->
+=== "Access to SSH server"
+
+    - `ssh username@<your.IP> -p 2222`
+
+=== "Directories"
+
+    - Install directory: `/armbian/openssh-server`
+    - Configuration directory: `/armbian/openssh-server/config`
+    - Shared storage directory: `USER_DEFINED`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f openssh-server
+    ```
+
+<!--- footer STOP from tools/include/markdown/ACC013-footer.md --->
+
+
+~~~ custombash title="Remove sandboxed SSH server:"
 armbian-config --cmd ACC014
 ~~~
 
 
-~~~ bash title="Purge sandboxed SSH server with data folder:"
+~~~ custombash title="Purge sandboxed SSH server with data folder:"
 armbian-config --cmd ACC015
 ~~~
 
@@ -357,17 +377,17 @@ armbian-config --cmd ACC015
 <!--- section image STOP from tools/include/images/USR001.png --->
 
 
-~~~ bash title="Change shell system wide to BASH:"
+~~~ custombash title="Change shell system wide to BASH:"
 armbian-config --cmd USR001
 ~~~
 
 
-~~~ bash title="Change shell system wide to ZSH:"
+~~~ custombash title="Change shell system wide to ZSH:"
 armbian-config --cmd USR002
 ~~~
 
 
-~~~ bash title="Adjust welcome screen (motd):"
+~~~ custombash title="Adjust welcome screen (motd):"
 armbian-config --cmd USR003
 ~~~
 
@@ -387,46 +407,52 @@ armbian-config --cmd USR003
 <!--- section image STOP from tools/include/images/UPD001.png --->
 
 
-~~~ bash title="Enable Armbian firmware upgrades:"
+~~~ custombash title="Enable Armbian firmware upgrades:"
 armbian-config --cmd UPD001
 ~~~
 
 
-~~~ bash title="Disable Armbian kernel upgrades:"
+~~~ custombash title="Disable Armbian kernel upgrades:"
 armbian-config --cmd UPD002
 ~~~
 
 
-~~~ bash title="Switch system to rolling packages repository:"
+~~~ custombash title="Switch system to rolling packages repository:"
 armbian-config --cmd UPD003
 ~~~
 
 
-~~~ bash title="Switch system to stable packages repository:"
+~~~ custombash title="Switch system to stable packages repository:"
 armbian-config --cmd UPD004
 ~~~
 
 
-~~~ bash title="Enable automating Docker container base images updating:"
+~~~ custombash title="Enable automating Docker container base images updating:"
 armbian-config --cmd UPD007
 ~~~
 
 
-~~~ bash title="Disable automating Docker container base images updating:"
+<!--- footer START from tools/include/markdown/UPD007-footer.md --->
+Every day watchtower will pull the latest images and compare it to the one that was used to run the certain container. If it sees that the image has changed it will stop/remove containers and then restart it using the new image and the same docker run options that were used to start the container initially.
+
+<!--- footer STOP from tools/include/markdown/UPD007-footer.md --->
+
+
+~~~ custombash title="Disable automating Docker container base images updating:"
 armbian-config --cmd UPD008
 ~~~
 
 
-~~~ bash title="Enable automatic package updates.:"
+~~~ custombash title="Enable automatic package updates.:"
 armbian-config --cmd UPD009
 ~~~
 
 
-~~~ bash title="Configure automatic package updates:"
+~~~ custombash title="Configure automatic package updates:"
 armbian-config --cmd UPD010
 ~~~
 
 
-~~~ bash title="Disable automatic package updates:"
+~~~ custombash title="Disable automatic package updates:"
 armbian-config --cmd UPD011
 ~~~

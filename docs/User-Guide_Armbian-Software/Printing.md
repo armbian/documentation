@@ -21,16 +21,36 @@ OctoPrint is an open source 3D printer controller application, which provides a 
 <!--- header STOP from tools/include/markdown/OCT001-header.md --->
 
 
-~~~ bash title="OctoPrint web-based 3D printers management tool:"
+~~~ custombash title="OctoPrint web-based 3D printers management tool:"
 armbian-config --cmd OCT001
 ~~~
 
 
-~~~ bash title="OctoPrint remove:"
+<!--- footer START from tools/include/markdown/OCT001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7981**:
+
+    - URL: `https://<your.IP>:7981`
+
+=== "Directories"
+
+    - Install directory: `/armbian/octoprint`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f octoprint
+    ```
+
+<!--- footer STOP from tools/include/markdown/OCT001-footer.md --->
+
+
+~~~ custombash title="OctoPrint remove:"
 armbian-config --cmd OCT002
 ~~~
 
 
-~~~ bash title="OctoPrint purge with data folder:"
+~~~ custombash title="OctoPrint purge with data folder:"
 armbian-config --cmd OCT003
 ~~~

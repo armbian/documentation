@@ -11,6 +11,6 @@ comments: true
 **Status:** Stable
 
 
-~~~ bash title="ZeroTier connect devices over your own private network in the world.:"
+~~~ custombash title="ZeroTier connect devices over your own private network in the world.:"
 armbian-config --cmd VPN001
 ~~~

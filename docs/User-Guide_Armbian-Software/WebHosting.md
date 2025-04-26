@@ -42,21 +42,21 @@ After entering required information, your server will have auto updating SSL sec
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
 
-~~~ bash title="SWAG reverse proxy:"
+~~~ custombash title="SWAG reverse proxy:"
 armbian-config --cmd SWAG01
 ~~~
 
 
-~~~ bash title="SWAG reverse proxy .htpasswd set:"
+~~~ custombash title="SWAG reverse proxy .htpasswd set:"
 armbian-config --cmd SWAG02
 ~~~
 
 
-~~~ bash title="SWAG remove:"
+~~~ custombash title="SWAG remove:"
 armbian-config --cmd SWAG03
 ~~~
 
 
-~~~ bash title="SWAG purge with data folder:"
+~~~ custombash title="SWAG purge with data folder:"
 armbian-config --cmd SWAG04
 ~~~

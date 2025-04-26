@@ -16,17 +16,17 @@ comments: true
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
 
-~~~ bash title="openHAB empowering the smart home:"
+~~~ custombash title="openHAB empowering the smart home:"
 armbian-config --cmd HAB001
 ~~~
 
 
-~~~ bash title="openHAB remove:"
+~~~ custombash title="openHAB remove:"
 armbian-config --cmd HAB002
 ~~~
 
 
-~~~ bash title="openHAB purge with data folder:"
+~~~ custombash title="openHAB purge with data folder:"
 armbian-config --cmd HAB003
 ~~~
 
@@ -63,17 +63,31 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
 
-~~~ bash title="Home Assistant open source home automation:"
+~~~ custombash title="Home Assistant open source home automation:"
 armbian-config --cmd HAS001
 ~~~
 
 
-~~~ bash title="Home Assistant remove:"
+<!--- footer START from tools/include/markdown/HAS001-footer.md --->
+|Functionality|HAOS|Armbian with HA|
+|:--|:--:|:--:|
+|Automations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Dashboards|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Integrations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Add-ons|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|One-click updates|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Backups|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|General purpose server|:x:|:white_check_mark:|
+|Running on exotic hardware|:x:|:white_check_mark:|
+<!--- footer STOP from tools/include/markdown/HAS001-footer.md --->
+
+
+~~~ custombash title="Home Assistant remove:"
 armbian-config --cmd HAS002
 ~~~
 
 
-~~~ bash title="Home Assistant purge with data folder:"
+~~~ custombash title="Home Assistant purge with data folder:"
 armbian-config --cmd HAS003
 ~~~
 
@@ -111,17 +125,17 @@ Domoticz is an open-source home automation platform that allows you to control a
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
 
-~~~ bash title="Domoticz open source home automation:"
+~~~ custombash title="Domoticz open source home automation:"
 armbian-config --cmd DOM001
 ~~~
 
 
-~~~ bash title="Domoticz remove:"
+~~~ custombash title="Domoticz remove:"
 armbian-config --cmd DOM002
 ~~~
 
 
-~~~ bash title="Domoticz purge with data folder:"
+~~~ custombash title="Domoticz purge with data folder:"
 armbian-config --cmd DOM003
 ~~~
 
@@ -143,16 +157,38 @@ evcc is an energy management system with a focus on electromobility. The softwar
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
 
-~~~ bash title="EVCC - solar charging automation:"
+~~~ custombash title="EVCC - solar charging automation:"
 armbian-config --cmd EVCC01
 ~~~
 
 
-~~~ bash title="EVCC - solar charging automation remove:"
+<!--- footer START from tools/include/markdown/EVCC01-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7070**:
+
+    - URL: `https://<your.IP>:7070`
+    - Admin password is generated at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/armbian/evcc`
+    - Site configuration directory: `/armbian/evcc/evcc.yaml`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f evcc
+    ```
+
+<!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
+
+
+~~~ custombash title="EVCC - solar charging automation remove:"
 armbian-config --cmd EVCC02
 ~~~
 
 
-~~~ bash title="EVCC purge with data folder:"
+~~~ custombash title="EVCC purge with data folder:"
 armbian-config --cmd EVCC03
 ~~~

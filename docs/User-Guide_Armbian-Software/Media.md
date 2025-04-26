@@ -22,106 +22,241 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 <!--- header STOP from tools/include/markdown/MED003-header.md --->
 
 
-~~~ bash title="Emby organizes video, music, live TV, and photos:"
+~~~ custombash title="Emby organizes video, music, live TV, and photos:"
 armbian-config --cmd MED003
 ~~~
 
 
-~~~ bash title="Emby server remove:"
+<!--- footer START from tools/include/markdown/MED003-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
+
+    - URL: `https://<your.IP>:8096`
+
+=== "Directories"
+
+    - Install directory: `/armbian/emby`
+    - Site configuration directory: `/armbian/emby/config`
+    - Data directory: `/armbian/emby/tvshows` `/armbian/emby/movies`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f emby
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED003-footer.md --->
+
+
+~~~ custombash title="Emby server remove:"
 armbian-config --cmd MED004
 ~~~
 
 
-~~~ bash title="Emby server purge with data folder:"
+~~~ custombash title="Emby server purge with data folder:"
 armbian-config --cmd MED005
 ~~~
 
 
-~~~ bash title="Stirling PDF tools for viewing and editing PDF files:"
+~~~ custombash title="Stirling PDF tools for viewing and editing PDF files:"
 armbian-config --cmd MED010
 ~~~
 
 
-~~~ bash title="Stirling PDF remove:"
+<!--- footer START from tools/include/markdown/MED010-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8077**:
+
+    - URL: `https://<your.IP>:8077`
+
+=== "Directories"
+
+    - Install directory: `/armbian/stirling`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f stirling-pdf
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED010-footer.md --->
+
+
+~~~ custombash title="Stirling PDF remove:"
 armbian-config --cmd MED011
 ~~~
 
 
-~~~ bash title="Stirling PDF purge with data folder:"
+~~~ custombash title="Stirling PDF purge with data folder:"
 armbian-config --cmd MED012
 ~~~
 
 
-~~~ bash title="Syncthing continuous file synchronization:"
+~~~ custombash title="Syncthing continuous file synchronization:"
 armbian-config --cmd MED015
 ~~~
 
 
-~~~ bash title="Syncthing remove:"
+<!--- footer START from tools/include/markdown/MED015-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8884**:
+
+    - URL: `https://<your.IP>:8884`
+    - Username/Password: There is none, but it is highly suggested setting a password for this container. To do this go to Actions -> Settings -> set user/password for the webUI.
+
+=== "Directories"
+
+    - Install directory: `/armbian/syncthing`
+    - Site configuration directory: `/armbian/syncthing/config`
+    - Data directory: `/armbian/syncthing/data1` `/armbian/syncthing/data2`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f syncthing
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED015-footer.md --->
+
+
+~~~ custombash title="Syncthing remove:"
 armbian-config --cmd MED016
 ~~~
 
 
-~~~ bash title="Syncthing purge with data folder:"
+~~~ custombash title="Syncthing purge with data folder:"
 armbian-config --cmd MED017
 ~~~
 
 
-~~~ bash title="Nextcloud content collaboration platform:"
+~~~ custombash title="Nextcloud content collaboration platform:"
 armbian-config --cmd MED020
 ~~~
 
 
-~~~ bash title="Nextcloud remove:"
+<!--- footer START from tools/include/markdown/MED020-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **443**:
+
+    - URL: `https://<your.IP>:443`
+    - Username/Password: admin / generate at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/armbian/nextcloud`
+    - Site configuration directory: `/armbian/nextcloud/config`
+    - Data directory: `/armbian/nextcloud/data`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f nextcloud
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED020-footer.md --->
+
+
+~~~ custombash title="Nextcloud remove:"
 armbian-config --cmd MED021
 ~~~
 
 
-~~~ bash title="Nextcloud purge with data folder:"
+~~~ custombash title="Nextcloud purge with data folder:"
 armbian-config --cmd MED022
 ~~~
 
 
-~~~ bash title="Owncloud share files and folders, easy and secure:"
+~~~ custombash title="Owncloud share files and folders, easy and secure:"
 armbian-config --cmd MED025
 ~~~
 
 
-~~~ bash title="Owncloud remove:"
+~~~ custombash title="Owncloud remove:"
 armbian-config --cmd MED026
 ~~~
 
 
-~~~ bash title="Owncloud purge with data folder:"
+~~~ custombash title="Owncloud purge with data folder:"
 armbian-config --cmd MED027
 ~~~
 
 
-~~~ bash title="Jellyfin Media System:"
+<!--- footer START from tools/include/markdown/MED027-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7787**:
+
+    - URL: `http://<your.IP>:7787`
+    - Username/Password: admin / admin
+
+=== "Directories"
+
+    - Install directory: `/armbian/owncloud`
+    - Site configuration directory: `/armbian/owncloud/config`
+    - Data directory: `/armbian/owncloud/data`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f owncloud
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED027-footer.md --->
+
+
+~~~ custombash title="Jellyfin Media System:"
 armbian-config --cmd MED030
 ~~~
 
 
-~~~ bash title="Jellyfin remove:"
+<!--- footer START from tools/include/markdown/MED030-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
+
+    - URL: `http://<your.IP>:8096`
+    - Username and password are set at first login
+
+=== "Directories"
+
+    - Install directory: `/armbian/jellyfin`
+    - Site configuration directory: `/armbian/jellyfin/config`
+    - TV shows directory: `/armbian/jellyfin/tvseries`
+    - Movies directory: `/armbian/jellyfin/movies`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f jellyfin
+    ```
+
+<!--- footer STOP from tools/include/markdown/MED030-footer.md --->
+
+
+~~~ custombash title="Jellyfin remove:"
 armbian-config --cmd MED031
 ~~~
 
 
-~~~ bash title="Jellyfin purge with data folder:"
+~~~ custombash title="Jellyfin purge with data folder:"
 armbian-config --cmd MED032
 ~~~
 
 
-~~~ bash title="Hastebin Paste Server:"
+~~~ custombash title="Hastebin Paste Server:"
 armbian-config --cmd MED033
 ~~~
 
 
-~~~ bash title="Hastebin remove:"
+~~~ custombash title="Hastebin remove:"
 armbian-config --cmd MED034
 ~~~
 
 
-~~~ bash title="Hastebin purge with data folder:"
+~~~ custombash title="Hastebin purge with data folder:"
 armbian-config --cmd MED035
 ~~~

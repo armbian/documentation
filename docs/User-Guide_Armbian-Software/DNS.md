@@ -33,22 +33,37 @@ Pi-hole is typically installed on a Armbian minimal, but it can also run on othe
 <!--- header STOP from tools/include/markdown/DNS001-header.md --->
 
 
-~~~ bash title="Pi-hole DNS ad blocker:"
+~~~ custombash title="Pi-hole DNS ad blocker:"
 armbian-config --cmd DNS001
 ~~~
 
 
-~~~ bash title="Pi-hole remove:"
+<!--- footer START from tools/include/markdown/DNS001-footer.md --->
+=== "Access the web interface"
+
+    The web interface of Pi-hole can be accessed via:
+
+    - URL = `http://<your.IP>/admin`
+    - Password is set and adjust from `armbian-config`
+
+=== "Documentation"
+
+<https://docs.pi-hole.net/>
+
+<!--- footer STOP from tools/include/markdown/DNS001-footer.md --->
+
+
+~~~ custombash title="Pi-hole remove:"
 armbian-config --cmd DNS003
 ~~~
 
 
-~~~ bash title="Pi-hole change web admin password:"
+~~~ custombash title="Pi-hole change web admin password:"
 armbian-config --cmd DNS002
 ~~~
 
 
-~~~ bash title="Pi-hole purge with data folder:"
+~~~ custombash title="Pi-hole purge with data folder:"
 armbian-config --cmd DNS004
 ~~~
 
@@ -69,17 +84,36 @@ Unbound is a high-performance, open-source DNS resolver. It primarily serves to 
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
 
-~~~ bash title="Unbound caching DNS resolver:"
+~~~ custombash title="Unbound caching DNS resolver:"
 armbian-config --cmd UNB001
 ~~~
 
 
-~~~ bash title="Unbound remove:"
+<!--- footer START from tools/include/markdown/UNB001-footer.md --->
+=== "Default DNS port"
+
+    - Default DNS port: 53
+
+=== "Directories"
+
+    - Install directory: `/armbian/unbound/`
+    - Configuration directory: `/armbian/unbound/`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f unbound
+    ```
+
+<!--- footer STOP from tools/include/markdown/UNB001-footer.md --->
+
+
+~~~ custombash title="Unbound remove:"
 armbian-config --cmd UNB002
 ~~~
 
 
-~~~ bash title="Unbound purge with data folder:"
+~~~ custombash title="Unbound purge with data folder:"
 armbian-config --cmd UNB003
 ~~~
 
@@ -101,16 +135,53 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
 
-~~~ bash title="AdGuardHome DNS sinkhole:"
+~~~ custombash title="AdGuardHome DNS sinkhole:"
 armbian-config --cmd ADG001
 ~~~
 
 
-~~~ bash title="AdGuardHome remove:"
+<!--- footer START from tools/include/markdown/ADG001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
+
+    - URL: `https://<your.IP>:3000`
+    - Username/Password: admin / generate at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/armbian/adguardhome/`
+    - Configuration directory: `/armbian/adguardhome/confdir`
+    - Work directory: `/armbian/adguardhome/workdir`
+
+=== "Usage"
+
+    - server where you are installing is automatically switched to this DNS
+    - on your desktop PC set IP address of this server as DNS
+    - network wide: set IP address of this server on routers DNS
+
+=== "Black and white lists"
+
+    There are many sites in the web giving blocklists and whitelists for AdGuard Home. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:
+
+    - [The Big Blocklist Collection by WaLLy3K](https://firebog.net/)
+    - [Phishing Army blocklist](https://phishing.army/)
+    - [Whitelist collection by anudeepND](https://github.com/anudeepND/whitelist)
+
+=== "View logs"
+
+    ```sh
+    docker logs -f adguardhome
+    ```
+
+<!--- footer STOP from tools/include/markdown/ADG001-footer.md --->
+
+
+~~~ custombash title="AdGuardHome remove:"
 armbian-config --cmd ADG002
 ~~~
 
 
-~~~ bash title="AdGuardHome purge with data folder:"
+~~~ custombash title="AdGuardHome purge with data folder:"
 armbian-config --cmd ADG003
 ~~~
