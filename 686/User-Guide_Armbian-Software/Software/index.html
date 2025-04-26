@@ -1945,9 +1945,6 @@
 
 
 <h1 id="runinstall-3rd-party-applications">Run/Install 3rd party applications<a class="headerlink" href="#runinstall-3rd-party-applications" title="Permanent link">&para;</a></h1>
-<h2 id="web-server-lemp-reverse-proxy-lets-encrypt-ssl">Web server, LEMP, reverse proxy, Let&rsquo;s Encrypt SSL<a class="headerlink" href="#web-server-lemp-reverse-proxy-lets-encrypt-ssl" title="Permanent link">&para;</a></h2>
-<h3 id="swag-reverse-proxy">SWAG reverse proxy<a class="headerlink" href="#swag-reverse-proxy" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/SWAG01.png --->
 <p><a href="#"><img alt="SWAG reverse proxy" src="/images/SWAG01.png" /></a></p>
@@ -1956,7 +1953,7 @@
 <!--- header START from tools/include/markdown/SWAG01-header.md --->
 <p>SWAG - Secure Web Application Gateway sets up an Nginx webserver and reverse proxy with php support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let&rsquo;s Encrypt). It also contains fail2ban for intrusion prevention.</p>
 <p>After entering required information, your server will have auto updating SSL secured website! To this website you can attach several services, for example: <a href="https://my.server.com/netdata">https://my.server.com/netdata</a> will run <a href="https://www.netdata.cloud/">Netdata</a> instance.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="swag-reverse-proxy-requirements" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-directories" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="swag-reverse-proxy-requirements">Requirements</label><label for="swag-reverse-proxy-directories">Directories</label><label for="swag-reverse-proxy-advanced-setup">Advanced setup</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="runinstall-3rd-party-applications-requirements" name="__tabbed_1" type="radio" /><input id="runinstall-3rd-party-applications-directories" name="__tabbed_1" type="radio" /><input id="runinstall-3rd-party-applications-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-requirements">Requirements</label><label for="runinstall-3rd-party-applications-directories">Directories</label><label for="runinstall-3rd-party-applications-advanced-setup">Advanced setup</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1983,18 +1980,12 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG reverse proxy:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG01
 </span></code></pre></div></td></tr></table></div>
-<h3 id="swag-reverse-proxy-htpasswd-set">SWAG reverse proxy .htpasswd set<a class="headerlink" href="#swag-reverse-proxy-htpasswd-set" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG reverse proxy .htpasswd set:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG02
 </span></code></pre></div></td></tr></table></div>
-<h3 id="swag-remove">SWAG remove<a class="headerlink" href="#swag-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG03
 </span></code></pre></div></td></tr></table></div>
-<h3 id="swag-purge-with-data-folder">SWAG purge with data folder<a class="headerlink" href="#swag-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG04
 </span></code></pre></div></td></tr></table></div>
-<h2 id="home-automation-for-control-home-appliances">Home Automation for control home appliances<a class="headerlink" href="#home-automation-for-control-home-appliances" title="Permanent link">&para;</a></h2>
-<h3 id="openhab-empowering-the-smart-home">openHAB empowering the smart home<a class="headerlink" href="#openhab-empowering-the-smart-home" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/HAB001.png --->
 <p><a href="#"><img alt="openHAB empowering the smart home" src="/images/HAB001.png" /></a></p>
@@ -2002,13 +1993,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">openHAB empowering the smart home:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAB001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="openhab-remove">openHAB remove<a class="headerlink" href="#openhab-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">openHAB remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAB002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="openhab-purge-with-data-folder">openHAB purge with data folder<a class="headerlink" href="#openhab-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">openHAB purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAB003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="home-assistant-open-source-home-automation">Home Assistant open source home automation<a class="headerlink" href="#home-assistant-open-source-home-automation" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/HAS001.png --->
 <p><a href="#"><img alt="Home Assistant open source home automation" src="/images/HAS001.png" /></a></p>
 <!--- section image STOP from tools/include/images/HAS001.png --->
@@ -2016,7 +2005,7 @@
 <!--- header START from tools/include/markdown/HAS001-header.md --->
 <p>Home Assistant is an open source smart home platform that allows you to connect your smart home devices like your TV, fan, cameras, thermostats, lights, and sensors. As a user, you can build intricate automation using Home Assistant&rsquo;s user-friendly, unified web-based user interface.</p>
 <p>Perfect to run on any single board computer with 4 cores and at least 512Mb of memory. Armbian installation is optimised to run from SD/eMMC media, but it is recommended to use SSD.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="home-assistant-open-source-home-automation-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="home-assistant-open-source-home-automation-directories" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="home-assistant-open-source-home-automation-access-to-the-web-interface">Access to the web interface</label><label for="home-assistant-open-source-home-automation-directories">Directories</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="runinstall-3rd-party-applications-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="runinstall-3rd-party-applications-directories_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-access-to-the-web-interface">Access to the web interface</label><label for="runinstall-3rd-party-applications-directories_1">Directories</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface is accessible via port <strong>8123</strong>:</p>
@@ -2037,20 +2026,18 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Home Assistant open source home automation:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAS001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="home-assistant-remove">Home Assistant remove<a class="headerlink" href="#home-assistant-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Home Assistant remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAS002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="home-assistant-purge-with-data-folder">Home Assistant purge with data folder<a class="headerlink" href="#home-assistant-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Home Assistant purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HAS003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="domoticz-open-source-home-automation">Domoticz open source home automation<a class="headerlink" href="#domoticz-open-source-home-automation" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/DOM001.png --->
 <p><a href="#"><img alt="Domoticz open source home automation" src="/images/DOM001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DOM001.png --->
 
 <!--- header START from tools/include/markdown/DOM001-header.md --->
 <p>Domoticz is an open-source home automation platform that allows you to control and monitor smart devices in your home. It supports a wide range of devices, including lights, sensors, thermostats, and cameras. Through its web interface or mobile app, you can set up automation rules and schedules, providing greater convenience and energy efficiency. It’s customizable, flexible, and can be run on a variety of hardware platforms supported by Armbian.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="domoticz-open-source-home-automation-access-to-the-web-interface" name="__tabbed_3" type="radio" /><input id="domoticz-open-source-home-automation-directories" name="__tabbed_3" type="radio" /><input id="domoticz-open-source-home-automation-advanced-setup" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="domoticz-open-source-home-automation-access-to-the-web-interface">Access to the web interface</label><label for="domoticz-open-source-home-automation-directories">Directories</label><label for="domoticz-open-source-home-automation-advanced-setup">Advanced setup</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="runinstall-3rd-party-applications-access-to-the-web-interface_1" name="__tabbed_3" type="radio" /><input id="runinstall-3rd-party-applications-directories_2" name="__tabbed_3" type="radio" /><input id="runinstall-3rd-party-applications-advanced-setup_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="runinstall-3rd-party-applications-access-to-the-web-interface_1">Access to the web interface</label><label for="runinstall-3rd-party-applications-directories_2">Directories</label><label for="runinstall-3rd-party-applications-advanced-setup_1">Advanced setup</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface is accessible via port <strong>8080</strong>:</p>
@@ -2076,13 +2063,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Domoticz open source home automation:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOM001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="domoticz-remove">Domoticz remove<a class="headerlink" href="#domoticz-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Domoticz remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOM002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="domoticz-purge-with-data-folder">Domoticz purge with data folder<a class="headerlink" href="#domoticz-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Domoticz purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOM003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="evcc-solar-charging-automation">EVCC - solar charging automation<a class="headerlink" href="#evcc-solar-charging-automation" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/EVCC01.png --->
 <p><a href="#"><img alt="EVCC - solar charging automation" src="/images/EVCC01.png" /></a></p>
 <!--- section image STOP from tools/include/images/EVCC01.png --->
@@ -2093,15 +2078,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EVCC - solar charging automation:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>EVCC01
 </span></code></pre></div></td></tr></table></div>
-<h3 id="evcc-solar-charging-automation-remove">EVCC - solar charging automation remove<a class="headerlink" href="#evcc-solar-charging-automation-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EVCC - solar charging automation remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>EVCC02
 </span></code></pre></div></td></tr></table></div>
-<h3 id="evcc-purge-with-data-folder">EVCC purge with data folder<a class="headerlink" href="#evcc-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EVCC purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>EVCC03
 </span></code></pre></div></td></tr></table></div>
-<h2 id="network-wide-ad-blockers-servers">Network-wide ad blockers servers<a class="headerlink" href="#network-wide-ad-blockers-servers" title="Permanent link">&para;</a></h2>
-<h3 id="pi-hole-dns-ad-blocker">Pi-hole DNS ad blocker<a class="headerlink" href="#pi-hole-dns-ad-blocker" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/DNS001.png --->
 <p><a href="#"><img alt="Pi-hole DNS ad blocker" src="/images/DNS001.png" /></a></p>
@@ -2129,16 +2109,13 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole DNS ad blocker:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DNS001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="pi-hole-remove">Pi-hole remove<a class="headerlink" href="#pi-hole-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DNS003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="pi-hole-change-web-admin-password">Pi-hole change web admin password<a class="headerlink" href="#pi-hole-change-web-admin-password" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole change web admin password:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DNS002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="pi-hole-purge-with-data-folder">Pi-hole purge with data folder<a class="headerlink" href="#pi-hole-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DNS004
 </span></code></pre></div></td></tr></table></div>
-<h3 id="unbound-caching-dns-resolver">Unbound caching DNS resolver<a class="headerlink" href="#unbound-caching-dns-resolver" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/UNB001.png --->
 <p><a href="#"><img alt="Unbound caching DNS resolver" src="/images/UNB001.png" /></a></p>
 <!--- section image STOP from tools/include/images/UNB001.png --->
@@ -2149,13 +2126,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound caching DNS resolver:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="unbound-remove">Unbound remove<a class="headerlink" href="#unbound-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="unbound-purge-with-data-folder">Unbound purge with data folder<a class="headerlink" href="#unbound-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="adguardhome-dns-sinkhole">AdGuardHome DNS sinkhole<a class="headerlink" href="#adguardhome-dns-sinkhole" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/ADG001.png --->
 <p><a href="#"><img alt="AdGuardHome DNS sinkhole" src="/images/ADG001.png" /></a></p>
 <!--- section image STOP from tools/include/images/ADG001.png --->
@@ -2166,15 +2141,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome DNS sinkhole:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="adguardhome-remove">AdGuardHome remove<a class="headerlink" href="#adguardhome-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="adguardhome-purge-with-data-folder">AdGuardHome purge with data folder<a class="headerlink" href="#adguardhome-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="music-servers-and-streamers">Music servers and streamers<a class="headerlink" href="#music-servers-and-streamers" title="Permanent link">&para;</a></h2>
-<h3 id="navidrome-music-server-and-streamer-compatible-with-subsonicairsonic">Navidrome music server and streamer compatible with Subsonic/Airsonic<a class="headerlink" href="#navidrome-music-server-and-streamer-compatible-with-subsonicairsonic" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/NAV001.png --->
 <p><a href="#"><img alt="Navidrome music server and streamer compatible with Subsonic/Airsonic" src="/images/NAV001.png" /></a></p>
@@ -2182,15 +2152,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Navidrome music server and streamer compatible with Subsonic/Airsonic:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NAV001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="navidrome-remove">Navidrome remove<a class="headerlink" href="#navidrome-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Navidrome remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NAV002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="navidrome-purge-with-data-folder">Navidrome purge with data folder<a class="headerlink" href="#navidrome-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Navidrome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NAV003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="download-apps-for-movies-tv-shows-music-and-subtitles">Download apps for movies, TV shows, music and subtitles<a class="headerlink" href="#download-apps-for-movies-tv-shows-music-and-subtitles" title="Permanent link">&para;</a></h2>
-<h3 id="qbittorrent-bittorrent-client">qBittorrent BitTorrent client<a class="headerlink" href="#qbittorrent-bittorrent-client" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/DOW001.png --->
 <p><a href="#"><img alt="qBittorrent BitTorrent client " src="/images/DOW001.png" /></a></p>
@@ -2202,13 +2167,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qBittorrent BitTorrent client :</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="qbittorrent-remove">qBittorrent remove<a class="headerlink" href="#qbittorrent-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qBittorrent remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="qbittorrent-purge-with-data-folder">qBittorrent purge with data folder<a class="headerlink" href="#qbittorrent-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qBittorrent purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="deluge-bittorrent-client">Deluge BitTorrent client<a class="headerlink" href="#deluge-bittorrent-client" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/DEL001.png --->
 <p><a href="#"><img alt="Deluge BitTorrent client" src="/images/DEL001.png" /></a></p>
 <!--- section image STOP from tools/include/images/DEL001.png --->
@@ -2219,13 +2182,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Deluge BitTorrent client:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEL001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="deluge-remove">Deluge remove<a class="headerlink" href="#deluge-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Deluge remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEL002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="deluge-purge-with-data-folder">Deluge purge with data folder<a class="headerlink" href="#deluge-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Deluge purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEL003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="transmission-bittorrent-client">Transmission BitTorrent client<a class="headerlink" href="#transmission-bittorrent-client" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/TRA001.png --->
 <p><a href="#"><img alt="Transmission BitTorrent client" src="/images/TRA001.png" /></a></p>
 <!--- section image STOP from tools/include/images/TRA001.png --->
@@ -2236,13 +2197,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Transmission BitTorrent client:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>TRA001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="transmission-remove">Transmission remove<a class="headerlink" href="#transmission-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Transmission remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>TRA002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="transmission-purge-with-data-folder">Transmission purge with data folder<a class="headerlink" href="#transmission-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Transmission purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>TRA003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sabnzbd-newsgroup-downloader">SABnzbd newsgroup downloader<a class="headerlink" href="#sabnzbd-newsgroup-downloader" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/SABN01.png --->
 <p><a href="#"><img alt="SABnzbd newsgroup downloader" src="/images/SABN01.png" /></a></p>
 <!--- section image STOP from tools/include/images/SABN01.png --->
@@ -2253,26 +2212,22 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SABnzbd newsgroup downloader:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SABN01
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sabnzbd-remove">SABnzbd remove<a class="headerlink" href="#sabnzbd-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SABnzbd remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SABN02
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sabnzbd-purge-with-data-folder">SABnzbd purge with data folder<a class="headerlink" href="#sabnzbd-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SABnzbd purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SABN03
 </span></code></pre></div></td></tr></table></div>
-<h3 id="medusa-automatic-downloader-for-tv-shows">Medusa automatic downloader for TV shows<a class="headerlink" href="#medusa-automatic-downloader-for-tv-shows" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- header START from tools/include/markdown/MDS001-header.md --->
 <p>Medusa is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</p>
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Medusa automatic downloader for TV shows:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MDS001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="medusa-tv-shows-downloader-remove">Medusa TV shows downloader remove<a class="headerlink" href="#medusa-tv-shows-downloader-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Medusa TV shows downloader remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MDS002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="medusa-tv-shows-downloader-purge">Medusa TV shows downloader purge<a class="headerlink" href="#medusa-tv-shows-downloader-purge" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Medusa TV shows downloader purge:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MDS003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sonarr-automatic-downloader-for-tv-shows">Sonarr automatic downloader for TV shows<a class="headerlink" href="#sonarr-automatic-downloader-for-tv-shows" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/SON001.png --->
 <p><a href="#"><img alt="Sonarr automatic downloader for TV shows" src="/images/SON001.png" /></a></p>
 <!--- section image STOP from tools/include/images/SON001.png --->
@@ -2283,13 +2238,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sonarr automatic downloader for TV shows:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SON001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sonarr-remove">Sonarr remove<a class="headerlink" href="#sonarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sonarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SON002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="sonarr-purge-with-data-folder">Sonarr purge with data folder<a class="headerlink" href="#sonarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sonarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SON003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="radarr-automatic-downloader-for-movies">Radarr automatic downloader for movies<a class="headerlink" href="#radarr-automatic-downloader-for-movies" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/RAD001.png --->
 <p><a href="#"><img alt="Radarr automatic downloader for movies" src="/images/RAD001.png" /></a></p>
 <!--- section image STOP from tools/include/images/RAD001.png --->
@@ -2300,13 +2253,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Radarr automatic downloader for movies:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RAD001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="radarr-remove">Radarr remove<a class="headerlink" href="#radarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Radarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RAD002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="radarr-purge-with-data-folder">Radarr purge with data folder<a class="headerlink" href="#radarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Radarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RAD003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="bazarr-automatic-subtitles-downloader-for-sonarr-and-radarr">Bazarr automatic subtitles downloader for Sonarr and Radarr<a class="headerlink" href="#bazarr-automatic-subtitles-downloader-for-sonarr-and-radarr" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/BAZ001.png --->
 <p><a href="#"><img alt="Bazarr automatic subtitles downloader for Sonarr and Radarr" src="/images/BAZ001.png" /></a></p>
 <!--- section image STOP from tools/include/images/BAZ001.png --->
@@ -2317,13 +2268,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bazarr automatic subtitles downloader for Sonarr and Radarr:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>BAZ001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="bazarr-remove">Bazarr remove<a class="headerlink" href="#bazarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bazarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>BAZ002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="bazarr-purge-with-data-folder">Bazarr purge with data folder<a class="headerlink" href="#bazarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bazarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>BAZ003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="lidarr-automatic-music-downloader">Lidarr automatic music downloader<a class="headerlink" href="#lidarr-automatic-music-downloader" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/LID001.png --->
 <p><a href="#"><img alt="Lidarr automatic music downloader" src="/images/LID001.png" /></a></p>
 <!--- section image STOP from tools/include/images/LID001.png --->
@@ -2334,13 +2283,11 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lidarr automatic music downloader:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>LID001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="lidarr-remove">Lidarr remove<a class="headerlink" href="#lidarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lidarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>LID002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="lidarr-purge-with-data-folder">Lidarr purge with data folder<a class="headerlink" href="#lidarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lidarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>LID003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="readarr-automatic-downloader-for-ebooks">Readarr automatic downloader for Ebooks<a class="headerlink" href="#readarr-automatic-downloader-for-ebooks" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/RDR001.png --->
 <p><a href="#"><img alt="Readarr automatic downloader for Ebooks" src="/images/RDR001.png" /></a></p>
 <!--- section image STOP from tools/include/images/RDR001.png --->
@@ -2351,30 +2298,17 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Readarr automatic downloader for Ebooks:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RDR001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="readarr-remove">Readarr remove<a class="headerlink" href="#readarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Readarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RDR002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="readarr-purge-with-data-folder">Readarr purge with data folder<a class="headerlink" href="#readarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Readarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>RDR003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prowlarr-index-manager-and-proxy-for-pvr">Prowlarr index manager and proxy for PVR<a class="headerlink" href="#prowlarr-index-manager-and-proxy-for-pvr" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/DOW025.png --->
-<p><a href="#"><img alt="Prowlarr index manager and proxy for PVR" src="/images/DOW025.png" /></a></p>
-<!--- section image STOP from tools/include/images/DOW025.png --->
-
-<!--- header START from tools/include/markdown/DOW025-header.md --->
-<p>Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).</p>
-<!--- header STOP from tools/include/markdown/DOW025-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prowlarr index manager and proxy for PVR:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW025
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prowlarr-remove">Prowlarr remove<a class="headerlink" href="#prowlarr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prowlarr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW026
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prowlarr-purge-with-data-folder">Prowlarr purge with data folder<a class="headerlink" href="#prowlarr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prowlarr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DOW027
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyseerr-jellyfinembyplex-integration-install">Jellyseerr Jellyfin/Emby/Plex integration install<a class="headerlink" href="#jellyseerr-jellyfinembyplex-integration-install" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/JEL001.png --->
 <p><a href="#"><img alt="Jellyseerr Jellyfin/Emby/Plex integration install" src="/images/JEL001.png" /></a></p>
 <!--- section image STOP from tools/include/images/JEL001.png --->
@@ -2385,15 +2319,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyseerr Jellyfin/Emby/Plex integration install:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>JEL001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyseerr-remove">Jellyseerr remove<a class="headerlink" href="#jellyseerr-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyseerr remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>JEL002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyseerr-purge-with-data-folder">Jellyseerr purge with data folder<a class="headerlink" href="#jellyseerr-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyseerr purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>JEL003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="sql-database-servers-and-web-interface-managers">SQL database servers and web interface managers<a class="headerlink" href="#sql-database-servers-and-web-interface-managers" title="Permanent link">&para;</a></h2>
-<h3 id="mariadb-sql-database-server">Mariadb SQL database server<a class="headerlink" href="#mariadb-sql-database-server" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/DAT001.png --->
 <p><a href="#"><img alt="Mariadb SQL database server" src="/images/DAT001.png" /></a></p>
@@ -2405,57 +2334,33 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Mariadb SQL database server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="mariadb-remove">Mariadb remove<a class="headerlink" href="#mariadb-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Mariadb remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="mariadb-purge-with-data-folder">Mariadb purge with data folder<a class="headerlink" href="#mariadb-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Mariadb purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="phpmyadmin-web-interface-manager">phpMyAdmin web interface manager<a class="headerlink" href="#phpmyadmin-web-interface-manager" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/DAT005.png --->
-<p><a href="#"><img alt="phpMyAdmin web interface manager" src="/images/DAT005.png" /></a></p>
-<!--- section image STOP from tools/include/images/DAT005.png --->
-
-<!--- header START from tools/include/markdown/DAT005-header.md --->
-<p>Phpmyadmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.</p>
-<!--- header STOP from tools/include/markdown/DAT005-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">phpMyAdmin web interface manager:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT005
 </span></code></pre></div></td></tr></table></div>
-<h3 id="phpmyadmin-remove">phpMyAdmin remove<a class="headerlink" href="#phpmyadmin-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">phpMyAdmin remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT006
 </span></code></pre></div></td></tr></table></div>
-<h3 id="phpmyadmin-purge-with-data-folder">phpMyAdmin purge with data folder<a class="headerlink" href="#phpmyadmin-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">phpMyAdmin purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DAT007
 </span></code></pre></div></td></tr></table></div>
-<h2 id="applications-and-tools-for-development">Applications and tools for development<a class="headerlink" href="#applications-and-tools-for-development" title="Permanent link">&para;</a></h2>
-<h3 id="install-tools-for-cloning-and-managing-repositories-git">Install tools for cloning and managing repositories (git)<a class="headerlink" href="#install-tools-for-cloning-and-managing-repositories-git" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV001
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="remove-tools-for-cloning-and-managing-repositories-git">Remove tools for cloning and managing repositories (git)<a class="headerlink" href="#remove-tools-for-cloning-and-managing-repositories-git" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV002
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove tools for cloning and managing repositories (git):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="armbian-router-for-repository-mirror-automation">Armbian router for repository mirror automation<a class="headerlink" href="#armbian-router-for-repository-mirror-automation" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Armbian router for repository mirror automation:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="remove-armbian-router">Remove Armbian router<a class="headerlink" href="#remove-armbian-router" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Armbian router:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV004
 </span></code></pre></div></td></tr></table></div>
-<h3 id="armbian-rsyncd-server">Armbian rsyncd server<a class="headerlink" href="#armbian-rsyncd-server" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Armbian rsyncd server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV010
 </span></code></pre></div></td></tr></table></div>
-<h3 id="remove-armbian-rsyncd-server">Remove Armbian rsyncd server<a class="headerlink" href="#remove-armbian-rsyncd-server" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Armbian rsyncd server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>DEV011
 </span></code></pre></div></td></tr></table></div>
-<h2 id="docker-containerization-and-kvm-virtual-machines">Docker containerization and KVM virtual machines<a class="headerlink" href="#docker-containerization-and-kvm-virtual-machines" title="Permanent link">&para;</a></h2>
-<h3 id="docker-minimal">Docker minimal<a class="headerlink" href="#docker-minimal" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/schwar3kat" title="GitHub User: schwar3kat">@schwar3kat</a></p>
 <!--- section image START from tools/include/images/CON001.webp --->
 <p><a href="#"><img alt="Docker minimal" src="/images/CON001.webp" /></a></p>
@@ -2463,35 +2368,18 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="docker-engine">Docker engine<a class="headerlink" href="#docker-engine" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker engine:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="docker-remove">Docker remove<a class="headerlink" href="#docker-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-81-1"><a id="__codelineno-81-1" name="__codelineno-81-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="docker-purge-with-all-images-containers-and-volumes">Docker purge with all images, containers, and volumes<a class="headerlink" href="#docker-purge-with-all-images-containers-and-volumes" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker purge with all images, containers, and volumes:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-82-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-82-1"><a id="__codelineno-82-1" name="__codelineno-82-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON004
 </span></code></pre></div></td></tr></table></div>
-<h3 id="portainer-container-management-platform">Portainer container management platform<a class="headerlink" href="#portainer-container-management-platform" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/CON005.webp --->
-<p><a href="#"><img alt="Portainer container management platform" src="/images/CON005.webp" /></a></p>
-<!--- section image STOP from tools/include/images/CON005.webp --->
-
-<!--- header START from tools/include/markdown/CON005-header.md --->
-<p>Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.</p>
-<!--- header STOP from tools/include/markdown/CON005-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Portainer container management platform:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-83-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON005
 </span></code></pre></div></td></tr></table></div>
-<h3 id="portainer-remove">Portainer remove<a class="headerlink" href="#portainer-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Portainer remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-84-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON006
 </span></code></pre></div></td></tr></table></div>
-<h3 id="portainer-purge-with-with-data-folder">Portainer purge with with data folder<a class="headerlink" href="#portainer-purge-with-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Portainer purge with with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CON007
 </span></code></pre></div></td></tr></table></div>
-<h2 id="media-servers-organizers-and-editors">Media servers, organizers and editors<a class="headerlink" href="#media-servers-organizers-and-editors" title="Permanent link">&para;</a></h2>
-<h3 id="emby-organizes-video-music-live-tv-and-photos">Emby organizes video, music, live TV, and photos<a class="headerlink" href="#emby-organizes-video-music-live-tv-and-photos" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/schwar3kat" title="GitHub User: schwar3kat">@schwar3kat</a></p>
 <!--- section image START from tools/include/images/MED003.png --->
 <p><a href="#"><img alt="Emby organizes video, music, live TV, and photos" src="/images/MED003.png" /></a></p>
@@ -2503,107 +2391,46 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Emby organizes video, music, live TV, and photos:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-86-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="emby-server-remove">Emby server remove<a class="headerlink" href="#emby-server-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Emby server remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-87-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED004
 </span></code></pre></div></td></tr></table></div>
-<h3 id="emby-server-purge-with-data-folder">Emby server purge with data folder<a class="headerlink" href="#emby-server-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Emby server purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-88-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-88-1"><a id="__codelineno-88-1" name="__codelineno-88-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED005
 </span></code></pre></div></td></tr></table></div>
-<h3 id="stirling-pdf-tools-for-viewing-and-editing-pdf-files">Stirling PDF tools for viewing and editing PDF files<a class="headerlink" href="#stirling-pdf-tools-for-viewing-and-editing-pdf-files" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MED010.png --->
-<p><a href="#"><img alt="Stirling PDF tools for viewing and editing PDF files" src="/images/MED010.png" /></a></p>
-<!--- section image STOP from tools/include/images/MED010.png --->
-
-<!--- header START from tools/include/markdown/MED010-header.md --->
-<p>Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more. This locally hosted web application has evolved to encompass a comprehensive set of features, addressing all your PDF requirements.</p>
-<!--- header STOP from tools/include/markdown/MED010-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Stirling PDF tools for viewing and editing PDF files:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-89-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-89-1"><a id="__codelineno-89-1" name="__codelineno-89-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED010
 </span></code></pre></div></td></tr></table></div>
-<h3 id="stirling-pdf-remove">Stirling PDF remove<a class="headerlink" href="#stirling-pdf-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Stirling PDF remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-90-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-90-1"><a id="__codelineno-90-1" name="__codelineno-90-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED011
 </span></code></pre></div></td></tr></table></div>
-<h3 id="stirling-pdf-purge-with-data-folder">Stirling PDF purge with data folder<a class="headerlink" href="#stirling-pdf-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Stirling PDF purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-91-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-91-1"><a id="__codelineno-91-1" name="__codelineno-91-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED012
 </span></code></pre></div></td></tr></table></div>
-<h3 id="syncthing-continuous-file-synchronization">Syncthing continuous file synchronization<a class="headerlink" href="#syncthing-continuous-file-synchronization" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MED015.png --->
-<p><a href="#"><img alt="Syncthing continuous file synchronization" src="/images/MED015.png" /></a></p>
-<!--- section image STOP from tools/include/images/MED015.png --->
-
-<!--- header START from tools/include/markdown/MED015-header.md --->
-<p>Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it&rsquo;s transmitted over the Internet.</p>
-<!--- header STOP from tools/include/markdown/MED015-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Syncthing continuous file synchronization:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-92-1"><a id="__codelineno-92-1" name="__codelineno-92-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED015
 </span></code></pre></div></td></tr></table></div>
-<h3 id="syncthing-remove">Syncthing remove<a class="headerlink" href="#syncthing-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Syncthing remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-93-1"><a id="__codelineno-93-1" name="__codelineno-93-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED016
 </span></code></pre></div></td></tr></table></div>
-<h3 id="syncthing-purge-with-data-folder">Syncthing purge with data folder<a class="headerlink" href="#syncthing-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Syncthing purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-94-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-94-1"><a id="__codelineno-94-1" name="__codelineno-94-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED017
 </span></code></pre></div></td></tr></table></div>
-<h3 id="nextcloud-content-collaboration-platform">Nextcloud content collaboration platform<a class="headerlink" href="#nextcloud-content-collaboration-platform" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MED020.png --->
-<p><a href="#"><img alt="Nextcloud content collaboration platform" src="/images/MED020.png" /></a></p>
-<!--- section image STOP from tools/include/images/MED020.png --->
-
-<!--- header START from tools/include/markdown/MED020-header.md --->
-<p>Nextcloud gives you access to all your files wherever you are.
-<br>
-Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.</p>
-<!--- header STOP from tools/include/markdown/MED020-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Nextcloud content collaboration platform:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-95-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-95-1"><a id="__codelineno-95-1" name="__codelineno-95-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED020
 </span></code></pre></div></td></tr></table></div>
-<h3 id="nextcloud-remove">Nextcloud remove<a class="headerlink" href="#nextcloud-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Nextcloud remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-96-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-96-1"><a id="__codelineno-96-1" name="__codelineno-96-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED021
 </span></code></pre></div></td></tr></table></div>
-<h3 id="nextcloud-purge-with-data-folder">Nextcloud purge with data folder<a class="headerlink" href="#nextcloud-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Nextcloud purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-97-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-97-1"><a id="__codelineno-97-1" name="__codelineno-97-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED022
 </span></code></pre></div></td></tr></table></div>
-<h3 id="owncloud-share-files-and-folders-easy-and-secure">Owncloud share files and folders, easy and secure<a class="headerlink" href="#owncloud-share-files-and-folders-easy-and-secure" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Owncloud share files and folders, easy and secure:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-98-1"><a id="__codelineno-98-1" name="__codelineno-98-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED025
 </span></code></pre></div></td></tr></table></div>
-<h3 id="owncloud-remove">Owncloud remove<a class="headerlink" href="#owncloud-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Owncloud remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-99-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-99-1"><a id="__codelineno-99-1" name="__codelineno-99-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED026
 </span></code></pre></div></td></tr></table></div>
-<h3 id="owncloud-purge-with-data-folder">Owncloud purge with data folder<a class="headerlink" href="#owncloud-purge-with-data-folder" title="Permanent link">&para;</a></h3>
-<!--- header START from tools/include/markdown/MED027-header.md --->
-<p>ownCloud is a free and open-source software project for content collaboration and sharing and syncing of files in distributed and federated enterprise scenarios.</p>
-<!--- header STOP from tools/include/markdown/MED027-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Owncloud purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-100-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-100-1"><a id="__codelineno-100-1" name="__codelineno-100-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED027
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyfin-media-system">Jellyfin Media System<a class="headerlink" href="#jellyfin-media-system" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MED030.png --->
-<p><a href="#"><img alt="Jellyfin Media System" src="/images/MED030.png" /></a></p>
-<!--- section image STOP from tools/include/images/MED030.png --->
-
-<!--- header START from tools/include/markdown/MED030-header.md --->
-<p>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby&rsquo;s 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.</p>
-<!--- header STOP from tools/include/markdown/MED030-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyfin Media System:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-101-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-101-1"><a id="__codelineno-101-1" name="__codelineno-101-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED030
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyfin-remove">Jellyfin remove<a class="headerlink" href="#jellyfin-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyfin remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-102-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-102-1"><a id="__codelineno-102-1" name="__codelineno-102-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED031
 </span></code></pre></div></td></tr></table></div>
-<h3 id="jellyfin-purge-with-data-folder">Jellyfin purge with data folder<a class="headerlink" href="#jellyfin-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Jellyfin purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-103-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-103-1"><a id="__codelineno-103-1" name="__codelineno-103-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED032
 </span></code></pre></div></td></tr></table></div>
-<h3 id="hastebin-paste-server">Hastebin Paste Server<a class="headerlink" href="#hastebin-paste-server" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hastebin Paste Server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-104-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-104-1"><a id="__codelineno-104-1" name="__codelineno-104-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED033
 </span></code></pre></div></td></tr></table></div>
-<h3 id="hastebin-remove">Hastebin remove<a class="headerlink" href="#hastebin-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hastebin remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-105-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-105-1"><a id="__codelineno-105-1" name="__codelineno-105-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED034
 </span></code></pre></div></td></tr></table></div>
-<h3 id="hastebin-purge-with-data-folder">Hastebin purge with data folder<a class="headerlink" href="#hastebin-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hastebin purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-106-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-106-1"><a id="__codelineno-106-1" name="__codelineno-106-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MED035
 </span></code></pre></div></td></tr></table></div>
-<h2 id="real-time-monitoring-collecting-metrics-up-time-status">Real-time monitoring, collecting metrics, up-time status<a class="headerlink" href="#real-time-monitoring-collecting-metrics-up-time-status" title="Permanent link">&para;</a></h2>
-<h3 id="uptime-kuma-self-hosted-monitoring-tool">Uptime Kuma self-hosted monitoring tool<a class="headerlink" href="#uptime-kuma-self-hosted-monitoring-tool" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/MON001.webp --->
 <p><a href="#"><img alt="Uptime Kuma self-hosted monitoring tool" src="/images/MON001.webp" /></a></p>
@@ -2611,30 +2438,17 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uptime Kuma self-hosted monitoring tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-107-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-107-1"><a id="__codelineno-107-1" name="__codelineno-107-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="uptime-kuma-remove">Uptime Kuma remove<a class="headerlink" href="#uptime-kuma-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uptime Kuma remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-108-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-108-1"><a id="__codelineno-108-1" name="__codelineno-108-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="uptime-kuma-purge-with-data-folder">Uptime Kuma purge with data folder<a class="headerlink" href="#uptime-kuma-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uptime Kuma purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-109-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-109-1"><a id="__codelineno-109-1" name="__codelineno-109-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="netdata-monitoring-real-time-metrics">Netdata - monitoring real-time metrics<a class="headerlink" href="#netdata-monitoring-real-time-metrics" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MON005.png --->
-<p><a href="#"><img alt="Netdata - monitoring real-time metrics" src="/images/MON005.png" /></a></p>
-<!--- section image STOP from tools/include/images/MON005.png --->
-
-<!--- header START from tools/include/markdown/MON005-header.md --->
-<p>Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.</p>
-<!--- header STOP from tools/include/markdown/MON005-header.md --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Netdata - monitoring real-time metrics:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-110-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-110-1"><a id="__codelineno-110-1" name="__codelineno-110-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON005
 </span></code></pre></div></td></tr></table></div>
-<h3 id="netdata-remove">Netdata remove<a class="headerlink" href="#netdata-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Netdata remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-111-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-111-1"><a id="__codelineno-111-1" name="__codelineno-111-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON006
 </span></code></pre></div></td></tr></table></div>
-<h3 id="netdata-purge-with-data-folder">Netdata purge with data folder<a class="headerlink" href="#netdata-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Netdata purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-112-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-112-1"><a id="__codelineno-112-1" name="__codelineno-112-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MON007
 </span></code></pre></div></td></tr></table></div>
-<h3 id="grafana-data-analytics">Grafana data analytics<a class="headerlink" href="#grafana-data-analytics" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/GRA001.png --->
 <p><a href="#"><img alt="Grafana data analytics" src="/images/GRA001.png" /></a></p>
 <!--- section image STOP from tools/include/images/GRA001.png --->
@@ -2645,13 +2459,11 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Grafana data analytics:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-113-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-113-1"><a id="__codelineno-113-1" name="__codelineno-113-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GRA001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="grafana-remove">Grafana remove<a class="headerlink" href="#grafana-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Grafana remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-114-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-114-1"><a id="__codelineno-114-1" name="__codelineno-114-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GRA002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="grafana-purge-with-data-folder">Grafana purge with data folder<a class="headerlink" href="#grafana-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Grafana purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-115-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-115-1"><a id="__codelineno-115-1" name="__codelineno-115-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GRA003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prometheus-docker-image">Prometheus docker image<a class="headerlink" href="#prometheus-docker-image" title="Permanent link">&para;</a></h3>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/PRO001.png --->
 <p><a href="#"><img alt="Prometheus docker image" src="/images/PRO001.png" /></a></p>
 <!--- section image STOP from tools/include/images/PRO001.png --->
@@ -2662,15 +2474,10 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prometheus docker image:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-116-1"><a id="__codelineno-116-1" name="__codelineno-116-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PRO001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prometheus-remove">Prometheus remove<a class="headerlink" href="#prometheus-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prometheus remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-117-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-117-1"><a id="__codelineno-117-1" name="__codelineno-117-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PRO002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="prometheus-purge-with-data-folder">Prometheus purge with data folder<a class="headerlink" href="#prometheus-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Prometheus purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-118-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-118-1"><a id="__codelineno-118-1" name="__codelineno-118-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PRO003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="remote-file-management-tools">Remote File &amp; Management tools<a class="headerlink" href="#remote-file-management-tools" title="Permanent link">&para;</a></h2>
-<h3 id="cockpit-web-based-management-tool">Cockpit web-based management tool<a class="headerlink" href="#cockpit-web-based-management-tool" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Tearran" title="GitHub User: Tearran">@Tearran</a></p>
 <!--- section image START from tools/include/images/MAN001.png --->
 <p><a href="#"><img alt="Cockpit web-based management tool" src="/images/MAN001.png" /></a></p>
@@ -2678,19 +2485,10 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Cockpit web-based management tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-119-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-119-1"><a id="__codelineno-119-1" name="__codelineno-119-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MAN001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="samba-remote-file-share">SAMBA Remote File share<a class="headerlink" href="#samba-remote-file-share" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SAMBA Remote File share:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-120-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-120-1"><a id="__codelineno-120-1" name="__codelineno-120-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MAN002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="webmin-web-based-management-tool">Webmin web-based management tool<a class="headerlink" href="#webmin-web-based-management-tool" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/MAN005.png --->
-<p><a href="#"><img alt="Webmin web-based management tool" src="/images/MAN005.png" /></a></p>
-<!--- section image STOP from tools/include/images/MAN005.png --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Webmin web-based management tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-121-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-121-1"><a id="__codelineno-121-1" name="__codelineno-121-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MAN005
 </span></code></pre></div></td></tr></table></div>
-<h2 id="tools-for-printing-and-3d-printing">Tools for printing and 3D printing<a class="headerlink" href="#tools-for-printing-and-3d-printing" title="Permanent link">&para;</a></h2>
-<h3 id="octoprint-web-based-3d-printers-management-tool">OctoPrint web-based 3D printers management tool<a class="headerlink" href="#octoprint-web-based-3d-printers-management-tool" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/OCT001.png --->
 <p><a href="#"><img alt="OctoPrint web-based 3D printers management tool" src="/images/OCT001.png" /></a></p>
@@ -2702,15 +2500,10 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">OctoPrint web-based 3D printers management tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-122-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-122-1"><a id="__codelineno-122-1" name="__codelineno-122-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>OCT001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="octoprint-remove">OctoPrint remove<a class="headerlink" href="#octoprint-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">OctoPrint remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-123-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-123-1"><a id="__codelineno-123-1" name="__codelineno-123-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>OCT002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="octoprint-purge-with-data-folder">OctoPrint purge with data folder<a class="headerlink" href="#octoprint-purge-with-data-folder" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">OctoPrint purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-124-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-124-1"><a id="__codelineno-124-1" name="__codelineno-124-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>OCT003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="console-network-tools-for-measuring-load-and-bandwidth">Console network tools for measuring load and bandwidth<a class="headerlink" href="#console-network-tools-for-measuring-load-and-bandwidth" title="Permanent link">&para;</a></h2>
-<h3 id="nload-realtime-console-network-usage-monitor">nload -realtime console network usage monitor<a class="headerlink" href="#nload-realtime-console-network-usage-monitor" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/NET001.png --->
 <p><a href="#"><img alt="nload -realtime console network usage monitor" src="/images/NET001.png" /></a></p>
@@ -2718,26 +2511,16 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">nload -realtime console network usage monitor:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-125-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-125-1"><a id="__codelineno-125-1" name="__codelineno-125-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="nload-remove">nload - remove<a class="headerlink" href="#nload-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">nload - remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-126-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-126-1"><a id="__codelineno-126-1" name="__codelineno-126-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="iperf3-bandwidth-measuring-tool">iperf3 bandwidth measuring tool<a class="headerlink" href="#iperf3-bandwidth-measuring-tool" title="Permanent link">&para;</a></h3>
-<!--- section image START from tools/include/images/NET003.png --->
-<p><a href="#"><img alt="iperf3 bandwidth measuring tool" src="/images/NET003.png" /></a></p>
-<!--- section image STOP from tools/include/images/NET003.png --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">iperf3 bandwidth measuring tool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-127-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-127-1"><a id="__codelineno-127-1" name="__codelineno-127-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="iperf3-remove">iperf3 remove<a class="headerlink" href="#iperf3-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">iperf3 remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-128-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-128-1"><a id="__codelineno-128-1" name="__codelineno-128-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET004
 </span></code></pre></div></td></tr></table></div>
-<h3 id="iptraf-ng-ip-lan-monitor">iptraf-ng IP LAN monitor<a class="headerlink" href="#iptraf-ng-ip-lan-monitor" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">iptraf-ng IP LAN monitor:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-129-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-129-1"><a id="__codelineno-129-1" name="__codelineno-129-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET005
 </span></code></pre></div></td></tr></table></div>
-<h3 id="iptraf-ng-remove">iptraf-ng remove<a class="headerlink" href="#iptraf-ng-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">iptraf-ng remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-130-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-130-1"><a id="__codelineno-130-1" name="__codelineno-130-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET006
 </span></code></pre></div></td></tr></table></div>
-<h3 id="avahi-daemon-hostname-broadcast-via-mdns">avahi-daemon hostname broadcast via mDNS<a class="headerlink" href="#avahi-daemon-hostname-broadcast-via-mdns" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon hostname broadcast via mDNS:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-131-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-131-1"><a id="__codelineno-131-1" name="__codelineno-131-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET007
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon hostname broadcast via mDNS:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-132-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-132-1"><a id="__codelineno-132-1" name="__codelineno-132-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET007
@@ -2746,14 +2529,10 @@ Where are your photos and documents? With Nextcloud you pick a server of your ch
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon hostname broadcast via mDNS:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-134-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-134-1"><a id="__codelineno-134-1" name="__codelineno-134-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET007
 </span></code></pre></div></td></tr></table></div>
-<h3 id="avahi-daemon-remove">avahi-daemon remove<a class="headerlink" href="#avahi-daemon-remove" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-135-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-135-1"><a id="__codelineno-135-1" name="__codelineno-135-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET008
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">avahi-daemon remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-136-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-136-1"><a id="__codelineno-136-1" name="__codelineno-136-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET008
 </span></code></pre></div></td></tr></table></div>
-<h2 id="vpn-tools">VPN tools<a class="headerlink" href="#vpn-tools" title="Permanent link">&para;</a></h2>
-<h3 id="zerotier-connect-devices-over-your-own-private-network-in-the-world">ZeroTier connect devices over your own private network in the world.<a class="headerlink" href="#zerotier-connect-devices-over-your-own-private-network-in-the-world" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jnovos" title="GitHub User: jnovos">@jnovos</a></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZeroTier connect devices over your own private network in the world.:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-137-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-137-1"><a id="__codelineno-137-1" name="__codelineno-137-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>VPN001
 </span></code></pre></div></td></tr></table></div>

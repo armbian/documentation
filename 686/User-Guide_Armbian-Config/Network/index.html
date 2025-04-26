@@ -924,19 +924,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Network
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -948,139 +935,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-network-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Network Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-fallback-dhcp-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Fallback DHCP Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-network-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      View Network Settings
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-bridged-network-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced bridged network configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced bridged network configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-change-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add / change interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revert-to-armbian-defaults" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revert to Armbian defaults
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-active-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show active status
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wireguard-vpn-client-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      WireGuard VPN client / server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wireguard-remove" class="md-nav__link">
-    <span class="md-ellipsis">
-      WireGuard remove
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wireguard-clients-qr-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      WireGuard clients QR codes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wireguard-purge-with-data-folder" class="md-nav__link">
-    <span class="md-ellipsis">
-      WireGuard purge with data folder
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2110,8 +1964,6 @@
 
 
 <h1 id="fixed-and-wireless-network-settings">Fixed and wireless network settings<a class="headerlink" href="#fixed-and-wireless-network-settings" title="Permanent link">&para;</a></h1>
-<h2 id="basic-network-setup">Basic Network Setup<a class="headerlink" href="#basic-network-setup" title="Permanent link">&para;</a></h2>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/NET001.png --->
 <p><a href="#"><img alt="Basic Network Setup" src="/images/NET001.png" /></a></p>
@@ -2119,34 +1971,27 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Basic Network Setup:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET001
 </span></code></pre></div></td></tr></table></div>
-<h2 id="remove-fallback-dhcp-configuration">Remove Fallback DHCP Configuration<a class="headerlink" href="#remove-fallback-dhcp-configuration" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Fallback DHCP Configuration:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET002
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Fallback DHCP Configuration:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NET002
 </span></code></pre></div></td></tr></table></div>
-<h2 id="view-network-settings">View Network Settings<a class="headerlink" href="#view-network-settings" title="Permanent link">&para;</a></h2>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <!--- section image START from tools/include/images/VNS001.png --->
 <p><a href="#"><img alt="View Network Settings" src="/images/VNS001.png" /></a></p>
 <!--- section image STOP from tools/include/images/VNS001.png --->
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">View Network Settings:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>VNS001
 </span></code></pre></div></td></tr></table></div>
-<h2 id="advanced-bridged-network-configuration">Advanced bridged network configuration<a class="headerlink" href="#advanced-bridged-network-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="add-change-interface">Add / change interface<a class="headerlink" href="#add-change-interface" title="Permanent link">&para;</a></h3>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Add / change interface:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA001
 </span></code></pre></div></td></tr></table></div>
-<h3 id="revert-to-armbian-defaults">Revert to Armbian defaults<a class="headerlink" href="#revert-to-armbian-defaults" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Revert to Armbian defaults:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA002
 </span></code></pre></div></td></tr></table></div>
-<h3 id="show-configuration">Show configuration<a class="headerlink" href="#show-configuration" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show configuration:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA003
 </span></code></pre></div></td></tr></table></div>
-<h3 id="show-active-status">Show active status<a class="headerlink" href="#show-active-status" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show active status:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NEA004
 </span></code></pre></div></td></tr></table></div>
-<h2 id="wireguard-vpn-client-server">WireGuard VPN client / server<a class="headerlink" href="#wireguard-vpn-client-server" title="Permanent link">&para;</a></h2>
+<p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/WG001.png --->
 <p><a href="#"><img alt="WireGuard VPN client / server" src="/images/WG001.png" /></a></p>
 <!--- section image STOP from tools/include/images/WG001.png --->
@@ -2157,25 +2002,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">WireGuard VPN client / server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WG001
 </span></code></pre></div></td></tr></table></div>
-<h2 id="wireguard-remove">WireGuard remove<a class="headerlink" href="#wireguard-remove" title="Permanent link">&para;</a></h2>
-<!--- section image START from tools/include/images/WG002.png --->
-<p><a href="#"><img alt="WireGuard remove" src="/images/WG002.png" /></a></p>
-<!--- section image STOP from tools/include/images/WG002.png --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">WireGuard remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WG002
 </span></code></pre></div></td></tr></table></div>
-<h2 id="wireguard-clients-qr-codes">WireGuard clients QR codes<a class="headerlink" href="#wireguard-clients-qr-codes" title="Permanent link">&para;</a></h2>
-<!--- section image START from tools/include/images/WG003.png --->
-<p><a href="#"><img alt="WireGuard clients QR codes" src="/images/WG003.png" /></a></p>
-<!--- section image STOP from tools/include/images/WG003.png --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">WireGuard clients QR codes:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WG003
 </span></code></pre></div></td></tr></table></div>
-<h2 id="wireguard-purge-with-data-folder">WireGuard purge with data folder<a class="headerlink" href="#wireguard-purge-with-data-folder" title="Permanent link">&para;</a></h2>
-<!--- section image START from tools/include/images/WG004.png --->
-<p><a href="#"><img alt="WireGuard purge with data folder" src="/images/WG004.png" /></a></p>
-<!--- section image STOP from tools/include/images/WG004.png --->
-
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">WireGuard purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WG004
 </span></code></pre></div></td></tr></table></div>
 

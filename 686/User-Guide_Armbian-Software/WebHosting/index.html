@@ -1043,19 +1043,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Web hosting
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1067,61 +1054,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#swag-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      SWAG reverse proxy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swag-reverse-proxy-htpasswd-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      SWAG reverse proxy .htpasswd set
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swag-remove" class="md-nav__link">
-    <span class="md-ellipsis">
-      SWAG remove
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swag-purge-with-data-folder" class="md-nav__link">
-    <span class="md-ellipsis">
-      SWAG purge with data folder
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2032,8 +1964,6 @@
 
 
 <h1 id="web-server-lemp-reverse-proxy-lets-encrypt-ssl">Web server, LEMP, reverse proxy, Let&rsquo;s Encrypt SSL<a class="headerlink" href="#web-server-lemp-reverse-proxy-lets-encrypt-ssl" title="Permanent link">&para;</a></h1>
-<h2 id="swag-reverse-proxy">SWAG reverse proxy<a class="headerlink" href="#swag-reverse-proxy" title="Permanent link">&para;</a></h2>
-<p><strong>Status:</strong> Stable</p>
 <p><strong>Author:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a></p>
 <!--- section image START from tools/include/images/SWAG01.png --->
 <p><a href="#"><img alt="SWAG reverse proxy" src="/images/SWAG01.png" /></a></p>
@@ -2042,7 +1972,7 @@
 <!--- header START from tools/include/markdown/SWAG01-header.md --->
 <p>SWAG - Secure Web Application Gateway sets up an Nginx webserver and reverse proxy with php support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let&rsquo;s Encrypt). It also contains fail2ban for intrusion prevention.</p>
 <p>After entering required information, your server will have auto updating SSL secured website! To this website you can attach several services, for example: <a href="https://my.server.com/netdata">https://my.server.com/netdata</a> will run <a href="https://www.netdata.cloud/">Netdata</a> instance.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="swag-reverse-proxy-requirements" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-directories" name="__tabbed_1" type="radio" /><input id="swag-reverse-proxy-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="swag-reverse-proxy-requirements">Requirements</label><label for="swag-reverse-proxy-directories">Directories</label><label for="swag-reverse-proxy-advanced-setup">Advanced setup</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="web-server-lemp-reverse-proxy-lets-encrypt-ssl-requirements" name="__tabbed_1" type="radio" /><input id="web-server-lemp-reverse-proxy-lets-encrypt-ssl-directories" name="__tabbed_1" type="radio" /><input id="web-server-lemp-reverse-proxy-lets-encrypt-ssl-advanced-setup" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="web-server-lemp-reverse-proxy-lets-encrypt-ssl-requirements">Requirements</label><label for="web-server-lemp-reverse-proxy-lets-encrypt-ssl-directories">Directories</label><label for="web-server-lemp-reverse-proxy-lets-encrypt-ssl-advanced-setup">Advanced setup</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -2069,13 +1999,10 @@
 
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG reverse proxy:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG01
 </span></code></pre></div></td></tr></table></div>
-<h2 id="swag-reverse-proxy-htpasswd-set">SWAG reverse proxy .htpasswd set<a class="headerlink" href="#swag-reverse-proxy-htpasswd-set" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG reverse proxy .htpasswd set:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG02
 </span></code></pre></div></td></tr></table></div>
-<h2 id="swag-remove">SWAG remove<a class="headerlink" href="#swag-remove" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG03
 </span></code></pre></div></td></tr></table></div>
-<h2 id="swag-purge-with-data-folder">SWAG purge with data folder<a class="headerlink" href="#swag-purge-with-data-folder" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SWAG purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SWAG04
 </span></code></pre></div></td></tr></table></div>
 
