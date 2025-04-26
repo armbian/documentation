@@ -1,127 +1,95 @@
+---
+comments: true
+---
+
 # Console network tools for measuring load and bandwidth
 
-
-***
-
 ## nload -realtime console network usage monitor
+
+**Status:** Stable
+
+**Author:** @armbian
+
 
 <!--- section image START from tools/include/images/NET001.png --->
 [![nload -realtime console network usage monitor](/images/NET001.png)](#)
 <!--- section image STOP from tools/include/images/NET001.png --->
 
-**Command:** 
-~~~
+
+~~~ bash title="nload -realtime console network usage monitor:"
 armbian-config --cmd NET001
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## nload - remove
-**Command:** 
-~~~
+
+
+~~~ bash title="nload - remove:"
 armbian-config --cmd NET002
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## iperf3 bandwidth measuring tool
+
 
 <!--- section image START from tools/include/images/NET003.png --->
 [![iperf3 bandwidth measuring tool](/images/NET003.png)](#)
 <!--- section image STOP from tools/include/images/NET003.png --->
 
-**Command:** 
-~~~
+
+~~~ bash title="iperf3 bandwidth measuring tool:"
 armbian-config --cmd NET003
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## iperf3 remove
-**Command:** 
-~~~
+
+
+~~~ bash title="iperf3 remove:"
 armbian-config --cmd NET004
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## iptraf-ng IP LAN monitor
-**Command:** 
-~~~
+
+
+~~~ bash title="iptraf-ng IP LAN monitor:"
 armbian-config --cmd NET005
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## iptraf-ng remove
-**Command:** 
-~~~
+
+
+~~~ bash title="iptraf-ng remove:"
 armbian-config --cmd NET006
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
-
-
-
-***
-
 ## avahi-daemon hostname broadcast via mDNS
-**Command:** 
-~~~
+
+
+~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
 armbian-config --cmd NET007
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
+~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
+armbian-config --cmd NET007
+~~~
 
 
+~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
+armbian-config --cmd NET007
+~~~
 
-***
+
+~~~ bash title="avahi-daemon hostname broadcast via mDNS:"
+armbian-config --cmd NET007
+~~~
 
 ## avahi-daemon remove
-**Command:** 
-~~~
+
+
+~~~ bash title="avahi-daemon remove:"
 armbian-config --cmd NET008
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
+~~~ bash title="avahi-daemon remove:"
+armbian-config --cmd NET008
+~~~
