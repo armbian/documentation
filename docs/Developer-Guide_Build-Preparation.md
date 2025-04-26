@@ -3,7 +3,7 @@
 ## Requirements
 
 - x86_64 / aarch64 / riscv64 machine
-- at least 8GB (if less [BTF](https://docs.kernel.org/bpf/btf.html) must be disabled) of memory and ~50GB of disk space for VM, container or bare metal installation
+- at least 8GB (less for non-[BTF](https://docs.kernel.org/bpf/btf.html) builds) of memory and ~50GB of disk space for VM, container, or bare metal installation
 - **Armbian / Ubuntu Jammy 22.04.x** for native building or any Docker capable Linux for containerised
 - **Windows 10/11 with WSL2 subsystem** running Armbian / Ubuntu Jammy 22.04.x
 - Superuser rights (configured sudo or root access).
