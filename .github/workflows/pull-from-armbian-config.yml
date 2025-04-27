@@ -38,28 +38,13 @@ jobs:
 
           # this section goes under armbian-config
           mkdir -p ../documentation/docs/User-Guide_Armbian-Config/
-          rsync -avr docs/Localisation/Localisation.user.md ../documentation/docs/User-Guide_Armbian-Config/Localisation.md
-          rsync -avr docs/Network/Network.user.md ../documentation/docs/User-Guide_Armbian-Config/Network.md
-          rsync -avr docs/System/System.user.md ../documentation/docs/User-Guide_Armbian-Config/System.md
+          rsync -avr docs/Localisation/Localisation.md ../documentation/docs/User-Guide_Armbian-Config/
+          rsync -avr docs/Network/Network.md ../documentation/docs/User-Guide_Armbian-Config/
+          rsync -avr docs/System/System.md ../documentation/docs/User-Guide_Armbian-Config/
 
           # the rest goes under armbian-software
           mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
-          #rsync -avr --exclude="Software.user.md" --exclude="Benchy.user.md" docs/Software/* ../documentation/docs/User-Guide_Armbian-Software/
-
-          rsync -avr docs/Software/Containers.user.md ../documentation/docs/User-Guide_Armbian-Software/Containers.md
-          rsync -avr docs/Software/WebHosting.user.md ../documentation/docs/User-Guide_Armbian-Software/WebHosting.md
-          rsync -avr docs/Software/Desktops.user.md ../documentation/docs/User-Guide_Armbian-Software/Desktops.md
-          rsync -avr docs/Software/Database.user.md ../documentation/docs/User-Guide_Armbian-Software/Database.md
-          rsync -avr docs/Software/Music.user.md ../documentation/docs/User-Guide_Armbian-Software/Music.md
-          rsync -avr docs/Software/Downloaders.user.md ../documentation/docs/User-Guide_Armbian-Software/Downloaders.md
-          rsync -avr docs/Software/DevTools.user.md ../documentation/docs/User-Guide_Armbian-Software/DevTools.md
-          rsync -avr docs/Software/HomeAutomation.user.md ../documentation/docs/User-Guide_Armbian-Software/HomeAutomation.md
-          rsync -avr docs/Software/DNS.user.md ../documentation/docs/User-Guide_Armbian-Software/DNS.md
-          rsync -avr docs/Software/Monitoring.user.md ../documentation/docs/User-Guide_Armbian-Software/Monitoring.md
-          rsync -avr docs/Software/Printing.user.md ../documentation/docs/User-Guide_Armbian-Software/Printing.md
-          rsync -avr docs/Software/Management.user.md ../documentation/docs/User-Guide_Armbian-Software/Management.md
-          rsync -avr docs/Software/Media.user.md ../documentation/docs/User-Guide_Armbian-Software/Media.md
-          rsync -avr docs/Software/Netconfig.user.md ../documentation/docs/User-Guide_Armbian-Software/Netconfig.md
+          rsync -avr --exclude="Software.user.md" docs/Software/* ../documentation/docs/User-Guide_Armbian-Software/
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v7
