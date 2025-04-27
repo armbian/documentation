@@ -1,590 +1,463 @@
+---
+comments: true
+---
+
 # System wide and admin settings
 
-
-***
-
-## Alternative kernels, headers, rolling updates, overlays
+## Hardware
 
 
-***
+Alternative kernels, headers, overlays, bootenv
 
-### Install alternative kernels
-
-<!--- section image START from tools/include/images/SY201.png --->
-[![Install alternative kernels](/images/SY201.png)](#)
-<!--- section image STOP from tools/include/images/SY201.png --->
+#### Alternative kernels
 
 
-<!--- header START from tools/include/markdown/SY201-header.md --->
-## Kernel Switching Warning
+Use alternative kernels
 
-Switching between different kernel versions can significantly impact the functionality of your device. A newer or older kernel may introduce changes to hardware compatibility, drivers, and system stability. Some features may stop working, while others may improve or be reintroduced.  
 
-### ⚠️ Important Warning: Kernel changes carry inherent risks!  
-- A mismatched or incompatible kernel may result in **boot failures**, rendering the system unresponsive.  
-- Certain peripherals or hardware components (e.g., Wi-Fi, GPU acceleration, or power management) may no longer function correctly.  
-- Custom configurations or third-party modules might need to be recompiled or adjusted to work with the new kernel.  
+<!--- section image START from tools/include/images/KER001.png --->
+[![Alternative kernels](/images/KER001.png)](#)
+<!--- section image STOP from tools/include/images/KER001.png --->
 
-### ✅ Precautions Before Switching Kernels  
-Before switching kernels, it is **strongly recommended** to:  
-1. **Back up your system** to prevent data loss.  
-2. **Verify compatibility** of your hardware and essential drivers with the target kernel version.  
-3. **Keep a rescue method available**, such as a bootable SD card / USB drive or serial console access, to recover the system if necessary.  
 
-### 🛠️ Recovery Steps if Boot Fails  
-If your device fails to boot after a kernel change, you may need to:  
-- **Revert to a previous working kernel** using recovery options.  
-- **Use a serial console or debug mode** to diagnose the issue.  
-- **Reinstall the system** if no recovery options are available.  
+<!--- header START from tools/include/markdown/KER001-header.md --->
+Switching between different kernel versions can significantly impact the functionality of your device. A newer or older kernel may introduce changes to hardware compatibility, drivers, and system stability. Some features may stop working, while others may improve or be reintroduced.
 
-**⚡ Exercise caution when switching kernels, especially on production systems or devices with limited recovery options.**
+!!! danger "Kernel changes carry inherent risks!"
 
-<!--- header STOP from tools/include/markdown/SY201-header.md --->
+    - A mismatched or incompatible kernel may result in **boot failures**, rendering the system unresponsive.
+    - Certain peripherals or hardware components (e.g., Wi-Fi, GPU acceleration, or power management) may no longer function correctly.
+    - Custom configurations or third-party modules might need to be recompiled or adjusted to work with the new kernel.
 
-Switching between kernels might change functionality of your device. 
+    Precautions Before Switching Kernels
+    Before switching kernels, it is **strongly recommended** to:
 
-It might fail to boot!
+    1. **Back up your system** to prevent data loss.
+    2. **Verify compatibility** of your hardware and essential drivers with the target kernel version.
+    3. **Keep a rescue method available**, such as a bootable SD card / USB drive or serial console access, to recover the system if necessary.
 
-**Command:** 
-~~~
-armbian-config --cmd SY201
-~~~
+    Recovery Steps if Boot Fails
+    If your device fails to boot after a kernel change, you may need to:
+
+    - **Revert to a previous working kernel** using recovery options.
+    - **Use a serial console or debug mode** to diagnose the issue.
+    - **Reinstall the system** if no recovery options are available.
+
+    **Exercise caution when switching kernels, especially on production systems or devices with limited recovery options.**
+
+<!--- header STOP from tools/include/markdown/KER001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Install Linux headers
-
-<!--- section image START from tools/include/images/SY204.png --->
-[![Install Linux headers](/images/SY204.png)](#)
-<!--- section image STOP from tools/include/images/SY204.png --->
-
-
-<!--- header START from tools/include/markdown/SY204-header.md --->
-Linux headers are essential for compiling kernel modules and ensuring compatibility with software that interacts with the kernel.
-
-<!--- header STOP from tools/include/markdown/SY204-header.md --->
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd KER001
 ~~~
-armbian-config --cmd SY204
-~~~
+
+
+#### Kernel Headers
+
+
+Install Linux headers
+
+
+<!--- section image START from tools/include/images/HEAD01.png --->
+[![Kernel Headers](/images/HEAD01.png)](#)
+<!--- section image STOP from tools/include/images/HEAD01.png --->
+
+
+<!--- header START from tools/include/markdown/HEAD01-header.md --->
+Kernel headers are files required to build modules (drivers) or software that interfaces directly with the Linux kernel. Installing headers ensures compatibility when compiling custom drivers, DKMS modules (like ZFS, WireGuard), or updating third-party software that requires access to kernel internals. The installed headers match your running kernel version and are critical for system extensions and hardware support.
+
+<!--- header STOP from tools/include/markdown/HEAD01-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Remove Linux headers
-**Command:** 
-~~~
-armbian-config --cmd SY205
+~~~ custombash
+armbian-config --cmd HEAD01
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Manage device tree overlays
-
-<!--- section image START from tools/include/images/SY210.png --->
-[![Manage device tree overlays](/images/SY210.png)](#)
-<!--- section image STOP from tools/include/images/SY210.png --->
-
-**Command:** 
+~~~ bash title="Remove Linux headers:"
+armbian-config --cmd HEAD02
 ~~~
-armbian-config --cmd SY210
-~~~
+
+
+
+#### Device Tree Overlays
+
+
+Manage device tree overlays
+
+
+<!--- section image START from tools/include/images/DTO001.png --->
+[![Device Tree Overlays](/images/DTO001.png)](#)
+<!--- section image STOP from tools/include/images/DTO001.png --->
+
+
+<!--- header START from tools/include/markdown/DTO001-header.md --->
+Device Tree Overlays allow you to dynamically modify the Linux device tree at runtime, without rebuilding the kernel. They are used to enable or configure specific hardware features (like GPIO pins, I²C, SPI, sensors, displays) on single-board computers. Overlays are small snippets that can add, change, or remove parts of the hardware description, making it flexible to adapt the system for different peripherals without recompiling the full device tree.
+
+<!--- header STOP from tools/include/markdown/DTO001-header.md --->
 
 **Author:** @viraniac @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Select Odroid board configuration
-**Command:** 
-~~~
-armbian-config --cmd SY300
+~~~ custombash
+armbian-config --cmd DTO001
 ~~~
 
-**Author:** 
+
+#### Odroid Boards Config
+
+
+Select Odroid board configuration
 
 **Status:** Preview
 
 
-
-***
-
-### Edit the boot environment
-
-<!--- section image START from tools/include/images/SY010.png --->
-[![Edit the boot environment](/images/SY010.png)](#)
-<!--- section image STOP from tools/include/images/SY010.png --->
-
-This will open /boot/armbianEnv.txt file to edit
-CTRL+S to save
-CTLR+X to exit
-would you like to continue?
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd ODR001
 ~~~
-armbian-config --cmd SY010
-~~~
+
+
+#### Boot Environment
+
+
+Edit the boot environment
+
+
+<!--- section image START from tools/include/images/BOOT01.png --->
+[![Boot Environment](/images/BOOT01.png)](#)
+<!--- section image STOP from tools/include/images/BOOT01.png --->
+
+
+<!--- header START from tools/include/markdown/BOOT01-header.md --->
+Edit the boot environment allows you to modify critical boot settings stored in `/boot/armbianEnv.txt`. You can adjust options such as root filesystem location, kernel parameters, overlays, boot targets, or enable advanced features like early serial console. This is essential for fine-tuning hardware support, troubleshooting, or optimizing system startup behavior.
+
+<!--- header STOP from tools/include/markdown/BOOT01-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## Install to internal media, ZFS, NFS, read-only rootfs
-
-
-***
-
-### Install to internal storage
-
-<!--- section image START from tools/include/images/SY001.png --->
-[![Install to internal storage](/images/SY001.png)](#)
-<!--- section image STOP from tools/include/images/SY001.png --->
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd BOOT01
 ~~~
-armbian-config --cmd SY001
-~~~
+
+
+## Storage
+
+
+Install to internal media, ZFS, NFS, read-only rootfs
+
+#### Install
+
+
+<!--- header START from tools/include/markdown/STO001-header.md --->
+This section provides an option to transfer the live running Armbian system from an SD card to internal storage devices such as eMMC, SATA, NVMe, or USB drives. It prepares the target storage, copies the active system, adjusts bootloader settings, and ensures the system can boot independently without requiring reinstallation.
+
+<!--- header STOP from tools/include/markdown/STO001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Preview
 
 
-
-***
-
-### ZFS filesystem - enable support
-
-<!--- header START from tools/include/markdown/SY220-header.md --->
-# 📌 ZFS (Zettabyte File System)  
-
-## 🔍 Overview  
-
-**ZFS (Zettabyte File System)** is a high-performance, scalable, and robust file system designed to provide advanced data protection, integrity, and storage management. Developed by Sun Microsystems, ZFS is widely used in enterprise environments, NAS systems, and personal storage solutions due to its unique features.  
-
-## 🛠️ Key Features  
-
-### ✅ Data Integrity  
-- **Copy-on-Write (CoW):** Prevents data corruption by never overwriting live data.  
-- **Checksumming:** Detects and corrects silent data corruption (bit rot).  
-
-### 📦 Storage Management  
-- **Pooled Storage:** Eliminates the need for traditional partitions; all storage is managed dynamically.  
-- **Snapshots & Clones:** Creates instant backups without using extra storage.  
-
-### 🚀 Performance & Scalability  
-- **Efficient Compression & Deduplication:** Reduces storage usage without performance loss.  
-- **Dynamic Striping & Caching:** Distributes data across multiple disks for optimized read/write speeds.  
-
-### 🔐 Advanced Security  
-- **Native Encryption:** Supports dataset-level encryption for secure data storage.  
-- **RAID-Z:** A superior RAID alternative that prevents write-hole issues.  
-<!--- header STOP from tools/include/markdown/SY220-header.md --->
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd STO001
 ~~~
-armbian-config --cmd SY220
+
+
+#### Read Only FS
+
+
+Enable read only filesystem
+
+
+<!--- header START from tools/include/markdown/ROO001-header.md --->
+Read-only filesystem is enabled using overlayroot, a utility that places a temporary writable layer over the system root filesystem. Changes made during runtime are redirected into RAM or an alternative writable storage, while the underlying system remains untouched. This ensures that after a reboot, the system returns to a clean original state. It's ideal for kiosks, appliances, SD card-based systems, and scenarios where long-term filesystem durability and recovery are critical.
+
+<!--- header STOP from tools/include/markdown/ROO001-header.md --->
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd ROO001
 ~~~
+
+
+~~~ bash title="Disable read only filesystem:"
+armbian-config --cmd ROO002
+~~~
+
+
+
+#### NFS
+
+
+Enable Network filesystem (NFS) support
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd NETF01
+~~~
+
+
+~~~ bash title="Disable Network filesystem (NFS) support:"
+armbian-config --cmd NETF02
+~~~
+
+
+
+###### NFS server
+
+
+Enable network filesystem (NFS) daemon
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd NETF04
+~~~
+
+
+~~~ bash title="Configure network filesystem (NFS) daemon:"
+armbian-config --cmd NETF05
+~~~
+
+
+~~~ bash title="Remove network filesystem (NFS) daemon:"
+armbian-config --cmd NETF06
+~~~
+
+
+~~~ bash title="Show network filesystem (NFS) daemon clients:"
+armbian-config --cmd NETF07
+~~~
+
+
+
+
+
+###### Find NFS servers
+
+
+Find NFS servers in subnet and mount shares
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd NETF09
+~~~
+
+
+~~~ bash title="Show and manage NFS mounts:"
+armbian-config --cmd NETF10
+~~~
+
+
+
+#### ZFS
+
+
+ZFS filesystem - enable support
+
+
+<!--- section image START from tools/include/images/ZFS001.png --->
+[![ZFS](/images/ZFS001.png)](#)
+<!--- section image STOP from tools/include/images/ZFS001.png --->
+
+
+<!--- header START from tools/include/markdown/ZFS001-header.md --->
+ZFS is an advanced, high-performance file system and volume manager designed for data integrity, scalability, and ease of use. It offers features like copy-on-write snapshots, native compression, data deduplication, automatic repair, and efficient storage pooling. Originally developed by Sun Microsystems, ZFS is ideal for handling large amounts of data reliably with minimal maintenance.
+
+When enabling ZFS support, Armbian checks if the running kernel can support ZFS, installs matching kernel headers if necessary, and builds the ZFS DKMS (Dynamic Kernel Module Support) module automatically.
+
+<!--- header STOP from tools/include/markdown/ZFS001-header.md --->
 
 **Author:** @armbian
 
 **Status:** Stable
 
 
-
-***
-
-### ZFS filesystem - remove support
-**Command:** 
-~~~
-armbian-config --cmd SY221
+~~~ custombash
+armbian-config --cmd ZFS001
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
+<!--- footer START from tools/include/markdown/ZFS001-footer.md --->
+##### Key Features
+
+###### Data Integrity
+- **Copy-on-Write (CoW):** Prevents data corruption by never overwriting live data.
+- **Checksumming:** Detects and corrects silent data corruption (bit rot).
+
+###### Storage Management
+- **Pooled Storage:** Eliminates the need for traditional partitions; all storage is managed dynamically.
+- **Snapshots & Clones:** Creates instant backups without using extra storage.
+
+###### Performance & Scalability
+- **Efficient Compression & Deduplication:** Reduces storage usage without performance loss.
+- **Dynamic Striping & Caching:** Distributes data across multiple disks for optimized read/write speeds.
+
+###### Advanced Security
+- **Native Encryption:** Supports dataset-level encryption for secure data storage.
+- **RAID-Z:** A superior RAID alternative that prevents write-hole issues.
+
+<!--- footer STOP from tools/include/markdown/ZFS001-footer.md --->
 
 
-
-***
-
-### Enable read only filesystem
-**Command:** 
+~~~ bash title="ZFS filesystem - remove support:"
+armbian-config --cmd ZFS002
 ~~~
-armbian-config --cmd SY007
-~~~
+
+
+
+## SSH daemon
+
+
+Manage SSH daemon options, enable 2FA
+
+#### Native
+
+
+Disable root login
+
+
+<!--- section image START from tools/include/images/ACC001.png --->
+[![Native](/images/ACC001.png)](#)
+<!--- section image STOP from tools/include/images/ACC001.png --->
+
+
+<!--- header START from tools/include/markdown/ACC001-header.md --->
+Manage native SSH daemon allows you to configure SSH server settings such as login security, authentication methods, and connection restrictions. It also enables setting up Two-Factor Authentication (2FA) to further secure SSH access using time-based codes (TOTP), adding an extra layer of protection beyond passwords.
+
+<!--- header STOP from tools/include/markdown/ACC001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Disable read only filesystem
-**Command:** 
-~~~
-armbian-config --cmd SY008
+~~~ custombash
+armbian-config --cmd ACC001
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Enable Network filesystem (NFS) support
-**Command:** 
-~~~
-armbian-config --cmd NFS01
+~~~ bash title="Enable root login:"
+armbian-config --cmd ACC002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Disable Network filesystem (NFS) support
-**Command:** 
-~~~
-armbian-config --cmd NFS02
+~~~ bash title="Disable password login:"
+armbian-config --cmd ACC003
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Manage NFS Server
-
-
-***
-
-#### Enable network filesystem (NFS) daemon
-**Command:** 
-~~~
-armbian-config --cmd NFS06
+~~~ bash title="Enable password login:"
+armbian-config --cmd ACC004
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-#### Configure network filesystem (NFS) daemon
-**Command:** 
-~~~
-armbian-config --cmd NFS07
+~~~ bash title="Disable Public key authentication login:"
+armbian-config --cmd ACC005
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-#### Remove network filesystem (NFS) daemon
-**Command:** 
-~~~
-armbian-config --cmd NFS08
+~~~ bash title="Enable Public key authentication login:"
+armbian-config --cmd ACC006
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-#### Show network filesystem (NFS) daemon clients
-**Command:** 
-~~~
-armbian-config --cmd NFS09
+~~~ bash title="Disable OTP authentication:"
+armbian-config --cmd ACC007
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Manage NFS Client
-
-
-***
-
-#### Find NFS servers in subnet and mount shares
-**Command:** 
-~~~
-armbian-config --cmd NFS21
+~~~ bash title="Enable OTP authentication:"
+armbian-config --cmd ACC008
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-#### Show and manage NFS mounts
-**Command:** 
-~~~
-armbian-config --cmd NFS22
+~~~ bash title="Generate new OTP authentication QR code:"
+armbian-config --cmd ACC009
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-## Manage SSH daemon options, enable 2FA
-
-
-***
-
-### Disable root login
-
-<!--- section image START from tools/include/images/SY101.png --->
-[![Disable root login](/images/SY101.png)](#)
-<!--- section image STOP from tools/include/images/SY101.png --->
-
-**Command:** 
-~~~
-armbian-config --cmd SY101
+~~~ bash title="Show OTP authentication QR code:"
+armbian-config --cmd ACC010
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Enable root login
-**Command:** 
-~~~
-armbian-config --cmd SY102
+~~~ bash title="Disable last login banner:"
+armbian-config --cmd ACC011
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Disable password login
-**Command:** 
-~~~
-armbian-config --cmd SY103
+~~~ bash title="Enable last login banner:"
+armbian-config --cmd ACC012
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
-
-### Enable password login
-**Command:** 
-~~~
-armbian-config --cmd SY104
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
-
-### Disable Public key authentication login
-**Command:** 
-~~~
-armbian-config --cmd SY105
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
-
-### Enable Public key authentication login
-**Command:** 
-~~~
-armbian-config --cmd SY106
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
-
-### Disable OTP authentication
-**Command:** 
-~~~
-armbian-config --cmd SY107
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
+#### Containerised
 
 
-
-***
-
-### Enable OTP authentication
-**Command:** 
-~~~
-armbian-config --cmd SY108
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
+Sandboxed & containerised SSH server
 
 
-
-***
-
-### Generate new OTP authentication QR code
-**Command:** 
-~~~
-armbian-config --cmd SY109
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
+<!--- section image START from tools/include/images/SSH001.png --->
+[![Containerised](/images/SSH001.png)](#)
+<!--- section image STOP from tools/include/images/SSH001.png --->
 
 
-
-***
-
-### Show OTP authentication QR code
-**Command:** 
-~~~
-armbian-config --cmd SY110
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Disable last login banner
-**Command:** 
-~~~
-armbian-config --cmd SY111
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Enable last login banner
-**Command:** 
-~~~
-armbian-config --cmd SY112
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Sandboxed & containerised SSH server
-
-<!--- section image START from tools/include/images/SSH200.png --->
-[![Sandboxed & containerised SSH server](/images/SSH200.png)](#)
-<!--- section image STOP from tools/include/images/SSH200.png --->
-
-
-<!--- header START from tools/include/markdown/SSH200-header.md --->
+<!--- header START from tools/include/markdown/SSH001-header.md --->
 Sandboxed & containerised SSH server allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.
-<!--- header STOP from tools/include/markdown/SSH200-header.md --->
-
-This operation will install SSH server.
-
-**Command:** 
-~~~
-armbian-config --cmd SSH200
-~~~
+<!--- header STOP from tools/include/markdown/SSH001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/SSH200-footer.md --->
+~~~ custombash
+armbian-config --cmd SSH001
+~~~
+
+
+<!--- footer START from tools/include/markdown/SSH001-footer.md --->
 === "Access to SSH server"
 
     - `ssh username@<your.IP> -p 2222`
@@ -601,278 +474,220 @@ armbian-config --cmd SSH200
     docker logs -f openssh-server
     ```
 
-<!--- footer STOP from tools/include/markdown/SSH200-footer.md --->
+<!--- footer STOP from tools/include/markdown/SSH001-footer.md --->
 
 
-
-***
-
-### Remove sandboxed SSH server
-This operation will remove SSH server.
-
-**Command:** 
+~~~ bash title="Remove sandboxed SSH server:"
+armbian-config --cmd SSH002
 ~~~
-armbian-config --cmd SSH201
+
+
+~~~ bash title="Purge sandboxed SSH server with data folder:"
+armbian-config --cmd SSH003
 ~~~
+
+
+
+
+## Shell and MOTD
+
+
+Change shell, adjust MOTD
+
+#### Change shell
+
+
+Change shell system wide to ZSH
+
+
+<!--- section image START from tools/include/images/SHELL1.png --->
+[![Change shell](/images/SHELL1.png)](#)
+<!--- section image STOP from tools/include/images/SHELL1.png --->
+
+
+<!--- header START from tools/include/markdown/SHELL1-header.md --->
+ZSH is a powerful and customizable shell designed to be an enhanced replacement for BASH. When combined with Oh My Zsh, which is integrated in `armbian-zsh`, it offers an extensive plugin system, beautiful themes, and productivity features like autosuggestions, syntax highlighting, and easier navigation.
+
+<!--- header STOP from tools/include/markdown/SHELL1-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Purge sandboxed SSH server with data folder
-This operation will purge SSH server with data folder.
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd SHELL1
 ~~~
-armbian-config --cmd SSH202
+
+
+~~~ bash title="Change shell system wide to BASH:"
+armbian-config --cmd SHELL2
 ~~~
+
+
+
+#### Adjust MOTD
+
+
+Adjust welcome screen (motd)
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## Change shell, adjust MOTD
-
-
-***
-
-### Change shell system wide to BASH
-
-<!--- section image START from tools/include/images/SY005.png --->
-[![Change shell system wide to BASH](/images/SY005.png)](#)
-<!--- section image STOP from tools/include/images/SY005.png --->
-
-This will switch system wide shell to BASH
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd MOTD01
 ~~~
-armbian-config --cmd SY005
-~~~
+
+
+## Update
+
+
+OS updates and distribution upgrades
+
+#### Firmware
+
+
+Enable Armbian firmware upgrades
+
+
+<!--- section image START from tools/include/images/UPD001.png --->
+[![Firmware](/images/UPD001.png)](#)
+<!--- section image STOP from tools/include/images/UPD001.png --->
+
+
+<!--- header START from tools/include/markdown/UPD001-header.md --->
+**Enable Armbian firmware upgrades** manages whether the Armbian firmware (kernel + u-boot + firmware) packages are held or unheld in the package manager. By removing or setting the hold, it controls if firmware updates are applied automatically through regular `apt update` and `apt upgrade` processes. This allows users to either freeze the firmware version for stability or enable updates for improved hardware support.
+
+<!--- header STOP from tools/include/markdown/UPD001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Change shell system wide to ZSH
-
-<!--- header START from tools/include/markdown/SY006-header.md --->
-**ZSH (Z Shell)** is an extended and highly customizable Unix shell that offers powerful features beyond traditional shells like **Bash**. It is widely used for its user-friendly enhancements, scripting capabilities, and plugin support.  
-
-## 🚀 Key Features  
-
-- **Auto-suggestions & Syntax Highlighting** ✨  
-- **Powerful Tab Completion & Globbing** 🔍  
-- **Customizable Prompt (e.g., with Oh My Zsh)** 🎨  
-- **Shared Command History Across Sessions** 📜  
-- **Built-in Spelling Correction** 🛠️  
-<!--- header STOP from tools/include/markdown/SY006-header.md --->
-
-This will switch system wide shell to ZSH
-
-**Command:** 
+~~~ custombash
+armbian-config --cmd UPD001
 ~~~
-armbian-config --cmd SY006
+
+
+~~~ bash title="Disable Armbian kernel upgrades:"
+armbian-config --cmd UPD002
 ~~~
+
+
+
+#### Rolling
+
+
+Switch system to rolling packages repository
+
+
+<!--- header START from tools/include/markdown/ROLLIN-header.md --->
+The daily rolling repository offers frequently updated packages directly from development branches. It provides access to the latest features, bug fixes, and hardware support improvements but may introduce instability or regressions. This channel is intended for testing, development, and users who need the newest updates at the cost of reduced stability.
+
+<!--- header STOP from tools/include/markdown/ROLLIN-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-### Adjust welcome screen (motd)
-**Command:** 
+~~~ custombash
+armbian-config --cmd ROLLIN
 ~~~
-armbian-config --cmd SY009
-~~~
+
+
+#### Stable
+
+
+Switch system to stable packages repository
+
+
+<!--- header START from tools/include/markdown/STABLE-header.md --->
+The stable repository provides thoroughly tested packages intended for production use. Updates from this channel prioritize stability, long-term reliability, and minimal risk, ensuring systems remain secure and operational without unexpected changes. Only critical bug fixes and essential improvements are introduced after extensive testing.
+
+<!--- header STOP from tools/include/markdown/STABLE-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## OS updates and distribution upgrades
-**Status:** Active
-
-
-
-***
-
-### Enable Armbian firmware upgrades
-
-<!--- section image START from tools/include/images/SY202.png --->
-[![Enable Armbian firmware upgrades](/images/SY202.png)](#)
-<!--- section image STOP from tools/include/images/SY202.png --->
-
-This will enable Armbian kernel upgrades that are currently put on hold.
-
-**Command:** 
-~~~
-armbian-config --cmd SY202
+~~~ custombash
+armbian-config --cmd STABLE
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
+#### Docker images
 
 
-***
+Enable automating Docker container base images updating
 
-### Disable Armbian kernel upgrades
-Disable Armbian kernel/firmware upgrades
-
-**Command:** 
-~~~
-armbian-config --cmd SY203
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Switch system to rolling packages repository
-This will switch OS to rolling releases.
-
-**Command:** 
-~~~
-armbian-config --cmd SY206
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Switch system to stable packages repository
-This will switch OS to stable releases
-
-**Command:** 
-~~~
-armbian-config --cmd SY207
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
-
-
-***
-
-### Enable automating Docker container base images updating
 
 <!--- section image START from tools/include/images/WTC001.png --->
-[![Enable automating Docker container base images updating](/images/WTC001.png)](#)
+[![Docker images](/images/WTC001.png)](#)
 <!--- section image STOP from tools/include/images/WTC001.png --->
 
 
 <!--- header START from tools/include/markdown/WTC001-header.md --->
-Watchtower is an application that will monitor your running Docker containers and watch for changes to the images that those containers were originally started from. If watchtower detects that an image has changed, it will automatically restart the container using the new image.
+Watchtower is a lightweight tool that automatically monitors and updates running Docker containers whenever a new image version becomes available.
+It checks remote registries for updated images, pulls them, stops the old containers, and restarts them using the updated versions — all without manual intervention.
+Watchtower is fully configurable, allowing you to control update frequency, select specific containers, and manage notification settings.
 
 <!--- header STOP from tools/include/markdown/WTC001-header.md --->
 
-**Command:** 
-~~~
+**Author:** @armbian
+
+**Status:** Stable
+
+
+~~~ custombash
 armbian-config --cmd WTC001
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-<!--- footer START from tools/include/markdown/WTC001-footer.md --->
-Every day watchtower will pull the latest images and compare it to the one that was used to run the certain container. If it sees that the image has changed it will stop/remove containers and then restart it using the new image and the same docker run options that were used to start the container initially.
-
-<!--- footer STOP from tools/include/markdown/WTC001-footer.md --->
-
-
-
-***
-
-### Disable automating Docker container base images updating
-**Command:** 
-~~~
+~~~ bash title="Disable automating Docker container base images updating:"
 armbian-config --cmd WTC002
 ~~~
 
+
+
+#### Packages
+
+
+Enable automatic package updates.
+
+
+<!--- section image START from tools/include/images/UNAT01.png --->
+[![Packages](/images/UNAT01.png)](#)
+<!--- section image STOP from tools/include/images/UNAT01.png --->
+
+
+<!--- header START from tools/include/markdown/UNAT01-header.md --->
+Unattended upgrades automatically install security updates and important package updates on your system without requiring manual intervention. It helps keep your system secure, stable, and up-to-date by silently applying patches. The behavior is fully configurable — you can control which packages are upgraded, set reboot options, and customize notifications or logging.
+
+<!--- header STOP from tools/include/markdown/UNAT01-header.md --->
+
 **Author:** @armbian
 
 **Status:** Stable
 
 
-
-***
-
-### Enable automatic package updates.
-**Command:** 
-~~~
+~~~ custombash
 armbian-config --cmd UNAT01
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-### Configure automatic package updates
-
-<!--- section image START from tools/include/images/UNAT02.png --->
-[![Configure automatic package updates](/images/UNAT02.png)](#)
-<!--- section image STOP from tools/include/images/UNAT02.png --->
-
-**Command:** 
-~~~
+~~~ bash title="Configure automatic package updates:"
 armbian-config --cmd UNAT02
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-### Disable automatic package updates
-**Command:** 
-~~~
+~~~ bash title="Disable automatic package updates:"
 armbian-config --cmd UNAT03
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
 

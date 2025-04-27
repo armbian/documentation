@@ -1,12 +1,17 @@
+---
+comments: true
+---
+
 # SQL database servers and web interface managers
 
+## Mariadb
 
-***
 
-## Mariadb SQL database server
+Mariadb SQL database server
+
 
 <!--- section image START from tools/include/images/DAT001.png --->
-[![Mariadb SQL database server](/images/DAT001.png)](#)
+[![Mariadb](/images/DAT001.png)](#)
 <!--- section image STOP from tools/include/images/DAT001.png --->
 
 
@@ -15,14 +20,14 @@ Mariadb is one of the most popular database servers. Made by the original develo
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd DAT001
-~~~
-
 **Author:** @armbian
 
 **Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd DAT001
+~~~
 
 
 <!--- footer START from tools/include/markdown/DAT001-footer.md --->
@@ -50,111 +55,46 @@ armbian-config --cmd DAT001
 <!--- footer STOP from tools/include/markdown/DAT001-footer.md --->
 
 
-
-***
-
-## Mariadb remove
-**Command:** 
-~~~
+~~~ bash title="Mariadb remove:"
 armbian-config --cmd DAT002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Mariadb purge with data folder
-**Command:** 
-~~~
+~~~ bash title="Mariadb purge with data folder:"
 armbian-config --cmd DAT003
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
 
 
 
-***
-
-## phpMyAdmin web interface manager
-
-<!--- section image START from tools/include/images/DAT005.png --->
-[![phpMyAdmin web interface manager](/images/DAT005.png)](#)
-<!--- section image STOP from tools/include/images/DAT005.png --->
+## phpMyAdmin
 
 
-<!--- header START from tools/include/markdown/DAT005-header.md --->
-Phpmyadmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.
+phpMyAdmin web interface manager
 
-<!--- header STOP from tools/include/markdown/DAT005-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd DAT005
-~~~
+<!--- section image START from tools/include/images/MYA001.png --->
+[![phpMyAdmin](/images/MYA001.png)](#)
+<!--- section image STOP from tools/include/images/MYA001.png --->
 
 **Author:** @armbian
 
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DAT005-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8071**:
-
-    - URL: `https://<your.IP>:8071`
-    - Server: IP from server you are connecting to. If you have installed MariaDB via this tool, then this is `<your.IP>`
-    - Username: defined at SQL server install (MariaDb)
-    - Password: defined at SQL server install (MariaDb)
-
-=== "Directories"
-
-    - Install directory: `/armbian/phpmyadmin`
-    - Site configuration directory: `/armbian/phpmyadmin/config`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f phpmyadmin
-    ```
-
-<!--- footer STOP from tools/include/markdown/DAT005-footer.md --->
-
-
-
-***
-
-## phpMyAdmin remove
-**Command:** 
-~~~
-armbian-config --cmd DAT006
+~~~ custombash
+armbian-config --cmd MYA001
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## phpMyAdmin purge with data folder
-**Command:** 
-~~~
-armbian-config --cmd DAT007
+~~~ bash title="phpMyAdmin remove:"
+armbian-config --cmd MYA002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
+~~~ bash title="phpMyAdmin purge with data folder:"
+armbian-config --cmd MYA003
+~~~
 
 
-
-***
 

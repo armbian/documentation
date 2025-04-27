@@ -1,12 +1,17 @@
+---
+comments: true
+---
+
 # Fixed and wireless network settings
 
+## Basic setup
 
-***
 
-## Basic Network Setup
+Basic network setup
+
 
 <!--- section image START from tools/include/images/BNS001.png --->
-[![Basic Network Setup](/images/BNS001.png)](#)
+[![Basic setup](/images/BNS001.png)](#)
 <!--- section image STOP from tools/include/images/BNS001.png --->
 
 
@@ -24,91 +29,96 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/BNS001-header.md --->
 
-**Command:** 
-~~~
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
 armbian-config --cmd BNS001
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
 
 <!--- footer START from tools/include/markdown/BNS001-footer.md --->
-1. **Select Interface:**
-   - Launch the `armbian-config` utility:
-     ```bash
-     sudo armbian-config
-     ```
-   - Navigate to `Network` and choose the desired network interface (e.g., `eth0` for wired or `wlan0` for wireless).
+**Select Interface:**  
+Choose the desired network interface, such as:
 
-2. **Wireless Interface Configuration:**
-   - If configuring a wireless interface:
-     - A list of available Access Points (APs) will be displayed.
-     - Select your preferred AP and enter the password when prompted. Leave the password field empty for open networks.
+- `eth0` for wired Ethernet
+- `wlan0` for wireless connections
 
-3. **IP Address Configuration:**
-   - Choose between:
-     - **DHCP (Dynamic Host Configuration Protocol):** Automatically assigns an IP address.
-     - **Static IP:** Manually enter details:
-       - **MAC Address (optional):** Specify if you want spoofing MAC address.
-       - **IP Address:** Use CIDR notation (e.g., `192.168.1.10/24`).
-       - **Route:** Default is `0.0.0.0/0`.
-       - **Gateway:** Typically the router's IP, e.g., `192.168.1.1`.
-       - **DNS:** Default is `9.9.9.9`, but can be changed.
+If selecting a **wireless interface**:
 
-4. **Finalize Configuration:**
-   - Review and confirm your settings.
-   - The system applies the configurations, and your network should be set up.
+- A list of available Access Points (APs) will be displayed.
+- Select your preferred AP and enter the password when prompted.
+- Leave the password field empty for open networks.
+
+**IP Address Configuration:**  
+Choose between:
+
+- **DHCP (Dynamic Host Configuration Protocol):**  
+  Automatically assigns an IP address.
+
+- **Static IP:**  
+  Manually enter the following details:
+  - **MAC Address (optional):** Specify if you want to spoof the MAC address.
+  - **IP Address:** Use CIDR notation (e.g., `192.168.1.10/24`).
+  - **Route:** Default is `0.0.0.0/0`.
+  - **Gateway:** Typically the router’s IP (e.g., `192.168.1.1`).
+  - **DNS:** Default is `9.9.9.9`, but you can specify another.
+
+**Finalize Configuration:**  
+
+- Review and confirm your settings.
+- The system will apply the configurations.
+- Your network connection should then be fully established.
+
 <!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
 
 
-
-***
-
-## Remove Fallback DHCP Configuration
-Drop preinstalled automatic DHCP on all wired interfaces after your configuration is setup.
-
-**Command:** 
-~~~
+~~~ bash title="Remove Fallback DHCP Configuration:"
 armbian-config --cmd BNS002
 ~~~
 
+
+
+## View configuration
+
+
+View Network Configuration
+
+
+<!--- section image START from tools/include/images/VNS001.png --->
+[![View configuration](/images/VNS001.png)](#)
+<!--- section image STOP from tools/include/images/VNS001.png --->
+
+
+<!--- header START from tools/include/markdown/VNS001-header.md --->
+View Network Configuration allows you to display the system’s active network settings as a Netplan YAML configuration. This shows interfaces, IP addresses, gateways, DNS servers, and other networking details in a clean, human-readable format. Useful for verifying, troubleshooting, or manually editing network setup on systems that use Netplan for managing network interfaces.
+
+<!--- header STOP from tools/include/markdown/VNS001-header.md --->
+
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## View Network Settings
-
-<!--- section image START from tools/include/images/VNS001.png --->
-[![View Network Settings](/images/VNS001.png)](#)
-<!--- section image STOP from tools/include/images/VNS001.png --->
-
-**Command:** 
-~~~
+~~~ custombash
 armbian-config --cmd VNS001
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
+## Advanced
 
 
-***
+Advanced bridged network configuration
 
-## Advanced bridged network configuration
+#### Add or Change
 
 
-***
+Add / change interface
 
-### Add / change interface
 
-<!--- header START from tools/include/markdown/NE002-header.md --->
+<!--- header START from tools/include/markdown/NEA001-header.md --->
 ``` mermaid
 graph LR
   A[Network] --> B[Add / Change interface];
@@ -123,19 +133,19 @@ graph LR
   F -->W[Access point]; 
 ```
 
-<!--- header STOP from tools/include/markdown/NE002-header.md --->
-
-**Command:** 
-~~~
-armbian-config --cmd NE002
-~~~
+<!--- header STOP from tools/include/markdown/NEA001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/NE002-footer.md --->
+~~~ custombash
+armbian-config --cmd NEA001
+~~~
+
+
+<!--- footer START from tools/include/markdown/NEA001-footer.md --->
 === "Wired device check"
 
     In order to configure your network devices, they need to be supported the kernel.
@@ -160,58 +170,35 @@ armbian-config --cmd NE002
 
     It is usually something like `wlan0`, `wlo1` or `wlx12334c47dec3`. If you get blank response, it means your WiFi device / dongle is not supported by the kernel.
 
-<!--- footer STOP from tools/include/markdown/NE002-footer.md --->
+<!--- footer STOP from tools/include/markdown/NEA001-footer.md --->
 
 
-
-***
-
-### Revert to Armbian defaults
-**Command:** 
-~~~
-armbian-config --cmd NE003
+~~~ bash title="Revert to Armbian defaults:"
+armbian-config --cmd NEA002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Show configuration
-**Command:** 
-~~~
-armbian-config --cmd NE004
+~~~ bash title="Show configuration:"
+armbian-config --cmd NEA003
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-### Show active status
-**Command:** 
-~~~
-armbian-config --cmd NE005
+~~~ bash title="Show active status:"
+armbian-config --cmd NEA004
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
 
-## WireGuard VPN client / server
+## WireGuard
+
+
+WireGuard VPN client / server
+
 
 <!--- section image START from tools/include/images/WG001.png --->
-[![WireGuard VPN client / server](/images/WG001.png)](#)
+[![WireGuard](/images/WG001.png)](#)
 <!--- section image STOP from tools/include/images/WG001.png --->
 
 
@@ -219,14 +206,14 @@ armbian-config --cmd NE005
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. Regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 <!--- header STOP from tools/include/markdown/WG001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd WG001
-~~~
-
 **Author:** @armbian
 
 **Status:** Enabled
+
+
+~~~ custombash
+armbian-config --cmd WG001
+~~~
 
 
 <!--- footer START from tools/include/markdown/WG001-footer.md --->
@@ -259,67 +246,20 @@ More informations:
 <!--- footer STOP from tools/include/markdown/WG001-footer.md --->
 
 
-
-***
-
-## WireGuard remove
-
-<!--- section image START from tools/include/images/WG002.png --->
-[![WireGuard remove](/images/WG002.png)](#)
-<!--- section image STOP from tools/include/images/WG002.png --->
-
-This operation will remove WireGuard
-
-**Command:** 
-~~~
+~~~ bash title="WireGuard remove:"
 armbian-config --cmd WG002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Enabled
-
-
-
-***
-
-## WireGuard clients QR codes
-
-<!--- section image START from tools/include/images/WG003.png --->
-[![WireGuard clients QR codes](/images/WG003.png)](#)
-<!--- section image STOP from tools/include/images/WG003.png --->
-
-**Command:** 
-~~~
+~~~ bash title="WireGuard clients QR codes:"
 armbian-config --cmd WG003
 ~~~
 
-**Author:** @armbian
 
-**Status:** Enabled
-
-
-
-***
-
-## WireGuard purge with data folder
-
-<!--- section image START from tools/include/images/WG004.png --->
-[![WireGuard purge with data folder](/images/WG004.png)](#)
-<!--- section image STOP from tools/include/images/WG004.png --->
-
-This operation will purge WireGuard with data folder
-
-**Command:** 
-~~~
+~~~ bash title="WireGuard purge with data folder:"
 armbian-config --cmd WG004
 ~~~
 
-**Author:** @armbian
-
-**Status:** Enabled
 
 
-
-***
 
