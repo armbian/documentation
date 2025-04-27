@@ -1,89 +1,65 @@
+---
+comments: true
+---
+
 # Applications and tools for development
 
+## Git CLI
 
-***
 
-## Install tools for cloning and managing repositories (git)
-**Command:** 
-~~~
-armbian-config --cmd DEV001
-~~~
+Install tools for cloning and managing repositories (git)
 
 **Author:** @armbian
 
 **Status:** Stable
 
 
-
-***
-
-## Remove tools for cloning and managing repositories (git)
-**Command:** 
-~~~
-armbian-config --cmd DEV002
+~~~ custombash
+armbian-config --cmd GIT001
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Armbian router for repository mirror automation
-**Command:** 
+~~~ bash title="Remove tools for cloning and managing repositories (git):"
+armbian-config --cmd GIT002
 ~~~
-armbian-config --cmd DEV003
-~~~
+
+
+
+## Armbian CDN router
+
+
+Armbian router for repository mirror automation
 
 **Author:** @efectn
 
 **Status:** Stable
 
 
-
-***
-
-## Remove Armbian router
-**Command:** 
-~~~
-armbian-config --cmd DEV004
+~~~ custombash
+armbian-config --cmd ART001
 ~~~
 
-**Author:** @efectn
 
-**Status:** Stable
+~~~ bash title="Remove Armbian router:"
+armbian-config --cmd ART002
+~~~
 
 
-
-***
 
 ## Armbian rsyncd server
-**Command:** 
-~~~
-armbian-config --cmd DEV010
-~~~
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## Remove Armbian rsyncd server
-**Command:** 
-~~~
-armbian-config --cmd DEV011
+~~~ custombash
+armbian-config --cmd RSD001
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
+~~~ bash title="Remove Armbian rsyncd server:"
+armbian-config --cmd RSD002
+~~~
 
-
-
-***
 

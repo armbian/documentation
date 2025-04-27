@@ -1,27 +1,39 @@
+---
+comments: true
+---
+
 # Real-time monitoring, collecting metrics, up-time status
 
+## Uptime Kuma
 
-***
 
-## Uptime Kuma self-hosted monitoring tool
+Uptime Kuma self-hosted monitoring tool
 
-<!--- section image START from tools/include/images/MON001.webp --->
-[![Uptime Kuma self-hosted monitoring tool](/images/MON001.webp)](#)
-<!--- section image STOP from tools/include/images/MON001.webp --->
 
-This operation will install Uptime Kuma
+<!--- section image START from tools/include/images/UPK001.png --->
+[![Uptime Kuma](/images/UPK001.png)](#)
+<!--- section image STOP from tools/include/images/UPK001.png --->
 
-**Command:** 
-~~~
-armbian-config --cmd MON001
-~~~
+
+<!--- header START from tools/include/markdown/UPK001-header.md --->
+[Uptime Kuma](https://github.com/louislam/uptime-kuma) is a self-hosted monitoring tool similar to \"Uptime Robot\". 
+It provides a beautiful, easy-to-use web dashboard to monitor HTTP(s), TCP, Ping, and more types of services.
+
+You can receive instant notifications when a service goes down via Telegram, Discord, Slack, email, and many other integrations.
+
+<!--- header STOP from tools/include/markdown/UPK001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/MON001-footer.md --->
+~~~ custombash
+armbian-config --cmd UPK001
+~~~
+
+
+<!--- footer START from tools/include/markdown/UPK001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **3001**:
@@ -29,7 +41,7 @@ armbian-config --cmd MON001
     - URL: `https://<your.IP>:3001`
     - Username/Password: Are set at first web interface login
 
-???+ "Uptime Kuma features"
+=== "Features"
 
     - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / HTTP(s) Json Query / Ping / DNS Record / Push / Steam Game Server / Docker Containers
     - Fancy, Reactive, Fast UI/UX
@@ -43,107 +55,67 @@ armbian-config --cmd MON001
     - Proxy support
     - 2FA support
 
-<!--- footer STOP from tools/include/markdown/MON001-footer.md --->
+<!--- footer STOP from tools/include/markdown/UPK001-footer.md --->
 
 
-
-***
-
-## Uptime Kuma remove
-This operation will remove Uptime Kuma
-
-**Command:** 
-~~~
-armbian-config --cmd MON002
+~~~ bash title="Uptime Kuma remove:"
+armbian-config --cmd UPK002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-## Uptime Kuma purge with data folder
-This operation will remove Uptime Kuma with data folder
-
-**Command:** 
-~~~
-armbian-config --cmd MON003
+~~~ bash title="Uptime Kuma purge with data folder:"
+armbian-config --cmd UPK003
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
-
-## Netdata - monitoring real-time metrics
-
-<!--- section image START from tools/include/images/MON005.png --->
-[![Netdata - monitoring real-time metrics](/images/MON005.png)](#)
-<!--- section image STOP from tools/include/images/MON005.png --->
+## Netdata
 
 
-<!--- header START from tools/include/markdown/MON005-header.md --->
+Netdata - monitoring real-time metrics
+
+
+<!--- section image START from tools/include/images/NTD001.png --->
+[![Netdata](/images/NTD001.png)](#)
+<!--- section image STOP from tools/include/images/NTD001.png --->
+
+
+<!--- header START from tools/include/markdown/NTD001-header.md --->
 Netdata is a partially open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
 
-<!--- header STOP from tools/include/markdown/MON005-header.md --->
-
-This operation will install Netdata
-
-**Command:** 
-~~~
-armbian-config --cmd MON005
-~~~
+<!--- header STOP from tools/include/markdown/NTD001-header.md --->
 
 **Author:** @igorpecovnik
 
 **Status:** Stable
 
 
-
-***
-
-## Netdata remove
-This operation will remove Netdata
-
-**Command:** 
-~~~
-armbian-config --cmd MON006
+~~~ custombash
+armbian-config --cmd NTD001
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
-
-
-
-***
-
-## Netdata purge with data folder
-This operation will purge Netdata with data folder
-
-**Command:** 
-~~~
-armbian-config --cmd MON007
+~~~ bash title="Netdata remove:"
+armbian-config --cmd NTD002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Stable
+~~~ bash title="Netdata purge with data folder:"
+armbian-config --cmd NTD003
+~~~
 
 
 
-***
 
-## Grafana data analytics
+## Grafana
+
+
+Grafana data analytics
+
 
 <!--- section image START from tools/include/images/GRA001.png --->
-[![Grafana data analytics](/images/GRA001.png)](#)
+[![Grafana](/images/GRA001.png)](#)
 <!--- section image STOP from tools/include/images/GRA001.png --->
 
 
@@ -151,14 +123,14 @@ armbian-config --cmd MON007
 Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
 <!--- header STOP from tools/include/markdown/GRA001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd GRA001
-~~~
-
 **Author:** @armbian
 
 **Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd GRA001
+~~~
 
 
 <!--- footer START from tools/include/markdown/GRA001-footer.md --->
@@ -181,43 +153,26 @@ armbian-config --cmd GRA001
 <!--- footer STOP from tools/include/markdown/GRA001-footer.md --->
 
 
-
-***
-
-## Grafana remove
-**Command:** 
-~~~
+~~~ bash title="Grafana remove:"
 armbian-config --cmd GRA002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Grafana purge with data folder
-This operation will purge Grafana with data folder
-
-**Command:** 
-~~~
+~~~ bash title="Grafana purge with data folder:"
 armbian-config --cmd GRA003
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
 
 
 
-***
+## Prometheus
 
-## Prometheus docker image
+
+Prometheus docker image
+
 
 <!--- section image START from tools/include/images/PRO001.png --->
-[![Prometheus docker image](/images/PRO001.png)](#)
+[![Prometheus](/images/PRO001.png)](#)
 <!--- section image STOP from tools/include/images/PRO001.png --->
 
 
@@ -226,14 +181,14 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 <!--- header STOP from tools/include/markdown/PRO001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd PRO001
-~~~
-
 **Author:** @armbian
 
 **Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd PRO001
+~~~
 
 
 <!--- footer START from tools/include/markdown/PRO001-footer.md --->
@@ -256,36 +211,14 @@ armbian-config --cmd PRO001
 <!--- footer STOP from tools/include/markdown/PRO001-footer.md --->
 
 
-
-***
-
-## Prometheus remove
-**Command:** 
-~~~
+~~~ bash title="Prometheus remove:"
 armbian-config --cmd PRO002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Prometheus purge with data folder
-This operation will purge Prometheus with data folder
-
-**Command:** 
-~~~
+~~~ bash title="Prometheus purge with data folder:"
 armbian-config --cmd PRO003
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
 

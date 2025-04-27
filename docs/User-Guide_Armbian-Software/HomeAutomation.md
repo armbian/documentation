@@ -1,65 +1,49 @@
+---
+comments: true
+---
+
 # Home Automation for control home appliances
 
+## openHAB
 
-***
 
-## openHAB empowering the smart home
+openHAB empowering the smart home
+
 
 <!--- section image START from tools/include/images/HAB001.png --->
-[![openHAB empowering the smart home](/images/HAB001.png)](#)
+[![openHAB](/images/HAB001.png)](#)
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
-This operation will install openHAB.
+**Author:** @armbian
 
-**Command:** 
-~~~
+**Status:** Stable
+
+
+~~~ custombash
 armbian-config --cmd HAB001
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## openHAB remove
-This operation will purge openHAB.
-
-**Command:** 
-~~~
+~~~ bash title="openHAB remove:"
 armbian-config --cmd HAB002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## openHAB purge with data folder
-This operation will purge openHAB.
-
-**Command:** 
-~~~
+~~~ bash title="openHAB purge with data folder:"
 armbian-config --cmd HAB003
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
 
 
 
-***
+## Home Assistant
 
-## Home Assistant open source home automation
+
+Home Assistant open source home automation
+
 
 <!--- section image START from tools/include/images/HAS001.png --->
-[![Home Assistant open source home automation](/images/HAS001.png)](#)
+[![Home Assistant](/images/HAS001.png)](#)
 <!--- section image STOP from tools/include/images/HAS001.png --->
 
 
@@ -68,6 +52,19 @@ Home Assistant is an open source smart home platform that allows you to connect 
 
 Perfect to run on any single board computer with 4 cores and at least 512Mb of memory. Armbian installation is optimised to run from SD/eMMC media, but it is recommended to use SSD.
 
+<!--- header STOP from tools/include/markdown/HAS001-header.md --->
+
+**Author:** @igorpecovnik
+
+**Status:** Preview
+
+
+~~~ custombash
+armbian-config --cmd HAS001
+~~~
+
+
+<!--- footer START from tools/include/markdown/HAS001-footer.md --->
 === "Access to the web interface"
 
     The web interface is accessible via port **8123**:
@@ -81,73 +78,42 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 
     - Config directory: `/armbian/haos`
 
-<!--- header STOP from tools/include/markdown/HAS001-header.md --->
+=== "Armbian advantages"
 
-This operation will install Home Assistant.
+    |Functionality|HAOS|Armbian with HA|
+    |:--|:--:|:--:|
+    |Automations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |Dashboards|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |Integrations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |Add-ons|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |One-click updates|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |Backups|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+    |General purpose server|:x:|:white_check_mark:|
+    |Running on exotic hardware|:x:|:white_check_mark:|
 
-**Command:** 
-~~~
-armbian-config --cmd HAS001
-~~~
-
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
-
-<!--- footer START from tools/include/markdown/HAS001-footer.md --->
-|Functionality|HAOS|Armbian with HA|
-|:--|:--:|:--:|
-|Automations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|Dashboards|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|Integrations|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|Add-ons|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|One-click updates|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|Backups|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-|General purpose server|:x:|:white_check_mark:|
-|Running on exotic hardware|:x:|:white_check_mark:|
 <!--- footer STOP from tools/include/markdown/HAS001-footer.md --->
 
 
-
-***
-
-## Home Assistant remove
-This operation will remove Home Assistant.
-
-**Command:** 
-~~~
+~~~ bash title="Home Assistant remove:"
 armbian-config --cmd HAS002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
-
-## Home Assistant purge with data folder
-This operation will purge Home Assistant.
-
-**Command:** 
-~~~
+~~~ bash title="Home Assistant purge with data folder:"
 armbian-config --cmd HAS003
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
 
 
 
-***
+## Domoticz
 
-## Domoticz open source home automation
+
+Domoticz open source home automation
+
 
 <!--- section image START from tools/include/images/DOM001.png --->
-[![Domoticz open source home automation](/images/DOM001.png)](#)
+[![Domoticz](/images/DOM001.png)](#)
 <!--- section image STOP from tools/include/images/DOM001.png --->
 
 
@@ -172,57 +138,36 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
-This operation will install Domoticz.
+**Author:** @igorpecovnik
 
-**Command:** 
-~~~
+**Status:** Preview
+
+
+~~~ custombash
 armbian-config --cmd DOM001
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
-
-## Domoticz remove
-This operation will remove Domoticz.
-
-**Command:** 
-~~~
+~~~ bash title="Domoticz remove:"
 armbian-config --cmd DOM002
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
-
-## Domoticz purge with data folder
-This operation will purge Domoticz.
-
-**Command:** 
-~~~
+~~~ bash title="Domoticz purge with data folder:"
 armbian-config --cmd DOM003
 ~~~
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
 
 
 
-***
+## EVCC
 
-## EVCC - solar charging automation
+
+EVCC - solar charging automation
+
 
 <!--- section image START from tools/include/images/EVCC01.png --->
-[![EVCC - solar charging automation](/images/EVCC01.png)](#)
+[![EVCC](/images/EVCC01.png)](#)
 <!--- section image STOP from tools/include/images/EVCC01.png --->
 
 
@@ -231,16 +176,14 @@ evcc is an energy management system with a focus on electromobility. The softwar
 
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
-This operation will install solar charging automation.
-
-**Command:** 
-~~~
-armbian-config --cmd EVCC01
-~~~
-
 **Author:** @igorpecovnik
 
 **Status:** Preview
+
+
+~~~ custombash
+armbian-config --cmd EVCC01
+~~~
 
 
 <!--- footer START from tools/include/markdown/EVCC01-footer.md --->
@@ -265,38 +208,14 @@ armbian-config --cmd EVCC01
 <!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
 
 
-
-***
-
-## EVCC - solar charging automation remove
-This operation will remove solar charging automation.
-
-**Command:** 
-~~~
+~~~ bash title="EVCC - solar charging automation remove:"
 armbian-config --cmd EVCC02
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
-
-## EVCC purge with data folder
-This operation will purge solar charging automation with data folder.
-
-**Command:** 
-~~~
+~~~ bash title="EVCC purge with data folder:"
 armbian-config --cmd EVCC03
 ~~~
 
-**Author:** @igorpecovnik
 
-**Status:** Preview
-
-
-
-***
 

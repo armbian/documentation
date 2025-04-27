@@ -1,16 +1,21 @@
+---
+comments: true
+---
+
 # Network-wide ad blockers servers
 
-
-***
-
-## Pi-hole DNS ad blocker
-
-<!--- section image START from tools/include/images/DNS001.png --->
-[![Pi-hole DNS ad blocker](/images/DNS001.png)](#)
-<!--- section image STOP from tools/include/images/DNS001.png --->
+## Pi-hole
 
 
-<!--- header START from tools/include/markdown/DNS001-header.md --->
+Pi-hole DNS ad blocker
+
+
+<!--- section image START from tools/include/images/PIH001.png --->
+[![Pi-hole](/images/PIH001.png)](#)
+<!--- section image STOP from tools/include/images/PIH001.png --->
+
+
+<!--- header START from tools/include/markdown/PIH001-header.md --->
 Pi-hole is a network-wide ad blocker that acts as a DNS (Domain Name System) sinkhole. It works by blocking requests to known ad servers, trackers, and malicious websites across all devices connected to your home network. Here's how it works:
 
 - DNS-Based Filtering: Pi-hole intercepts DNS requests from devices on your network. When a device tries to connect to a website, Pi-hole checks if the website's domain is on a blocklist. If it is, Pi-hole prevents the connection from being made, effectively blocking ads, trackers, and potentially harmful sites.
@@ -24,19 +29,19 @@ Pi-hole is a network-wide ad blocker that acts as a DNS (Domain Name System) sin
 - Privacy and Speed: By blocking unwanted content at the DNS level, Pi-hole not only improves browsing speed (since ads are not loaded), but also enhances privacy by preventing tracking scripts from running in the background.
 
 Pi-hole is typically installed on a Armbian minimal, but it can also run on other systems. It's a great way to have ad-blocking and privacy protection across your entire network without needing to install anything on individual devices.
-<!--- header STOP from tools/include/markdown/DNS001-header.md --->
-
-**Command:** 
-~~~
-armbian-config --cmd DNS001
-~~~
+<!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
 **Author:** @armbian
 
 **Status:** Stable
 
 
-<!--- footer START from tools/include/markdown/DNS001-footer.md --->
+~~~ custombash
+armbian-config --cmd PIH001
+~~~
+
+
+<!--- footer START from tools/include/markdown/PIH001-footer.md --->
 === "Access the web interface"
 
     The web interface of Pi-hole can be accessed via:
@@ -48,58 +53,35 @@ armbian-config --cmd DNS001
 
 <https://docs.pi-hole.net/>
 
-<!--- footer STOP from tools/include/markdown/DNS001-footer.md --->
+<!--- footer STOP from tools/include/markdown/PIH001-footer.md --->
 
 
-
-***
-
-## Pi-hole remove
-**Command:** 
-~~~
-armbian-config --cmd DNS003
+~~~ bash title="Pi-hole remove:"
+armbian-config --cmd PIH003
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Pi-hole change web admin password
-**Command:** 
-~~~
-armbian-config --cmd DNS002
+~~~ bash title="Pi-hole change web admin password:"
+armbian-config --cmd PIH002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Pi-hole purge with data folder
-**Command:** 
-~~~
-armbian-config --cmd DNS004
+~~~ bash title="Pi-hole purge with data folder:"
+armbian-config --cmd PIH004
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
 
 
 
-***
 
-## Unbound caching DNS resolver
+## Unbound
+
+
+Unbound caching DNS resolver
+
 
 <!--- section image START from tools/include/images/UNB001.png --->
-[![Unbound caching DNS resolver](/images/UNB001.png)](#)
+[![Unbound](/images/UNB001.png)](#)
 <!--- section image STOP from tools/include/images/UNB001.png --->
 
 
@@ -107,14 +89,14 @@ armbian-config --cmd DNS004
 Unbound is a high-performance, open-source DNS resolver. It primarily serves to resolve domain names into IP addresses for devices on a network. Unlike regular DNS servers, Unbound performs DNS lookups directly and securely, providing features like DNSSEC validation (ensuring data integrity) and privacy protections. It's often used to improve speed, security, and privacy by resolving queries locally rather than relying on external DNS services.
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd UNB001
-~~~
-
 **Author:** @armbian
 
 **Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd UNB001
+~~~
 
 
 <!--- footer START from tools/include/markdown/UNB001-footer.md --->
@@ -136,41 +118,26 @@ armbian-config --cmd UNB001
 <!--- footer STOP from tools/include/markdown/UNB001-footer.md --->
 
 
-
-***
-
-## Unbound remove
-**Command:** 
-~~~
+~~~ bash title="Unbound remove:"
 armbian-config --cmd UNB002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## Unbound purge with data folder
-**Command:** 
-~~~
+~~~ bash title="Unbound purge with data folder:"
 armbian-config --cmd UNB003
 ~~~
 
-**Author:** @armbian
-
-**Status:** Stable
 
 
 
-***
+## AdGuardHome
 
-## AdGuardHome DNS sinkhole
+
+AdGuardHome DNS sinkhole
+
 
 <!--- section image START from tools/include/images/ADG001.png --->
-[![AdGuardHome DNS sinkhole](/images/ADG001.png)](#)
+[![AdGuardHome](/images/ADG001.png)](#)
 <!--- section image STOP from tools/include/images/ADG001.png --->
 
 
@@ -179,14 +146,14 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
-**Command:** 
-~~~
-armbian-config --cmd ADG001
-~~~
-
 **Author:** @armbian
 
 **Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd ADG001
+~~~
 
 
 <!--- footer START from tools/include/markdown/ADG001-footer.md --->
@@ -226,34 +193,14 @@ armbian-config --cmd ADG001
 <!--- footer STOP from tools/include/markdown/ADG001-footer.md --->
 
 
-
-***
-
-## AdGuardHome remove
-**Command:** 
-~~~
+~~~ bash title="AdGuardHome remove:"
 armbian-config --cmd ADG002
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
-
-## AdGuardHome purge with data folder
-**Command:** 
-~~~
+~~~ bash title="AdGuardHome purge with data folder:"
 armbian-config --cmd ADG003
 ~~~
 
-**Author:** @armbian
 
-**Status:** Stable
-
-
-
-***
 
