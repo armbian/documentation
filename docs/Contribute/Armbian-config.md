@@ -34,6 +34,7 @@ This one we will place under `Software -> Management`.
 | :---------------------- | :-------------- | :----------- |
 | `id` |  `unique identifier` | Select higher number. If you will select existing, application will fail to run |
 | `description` |  `menu descriptor` | This will be displayed in the menu |
+| `short` |  `docs menu descriptor` | This will over-ride description in the rendering of documentation |
 | `prompt` |  `confirmation text` | Some features needs confirmation before proceeding |
 | `command` |  `executes function` | What should be run after we select and agree (optional) |
 | `status` |  `Stable|Disabled` | Control if function is shown to users in the menu |
