@@ -118,3 +118,81 @@ armbian-config --cmd WBM001
 
 <!--- footer STOP from tools/include/markdown/WBM001-footer.md --->
 
+
+## Homepage
+
+
+Install Homepage startpage / application dashboard
+
+
+<!--- section image START from tools/include/images/HPG001.png --->
+[![Homepage](/images/HPG001.png)](#)
+<!--- section image STOP from tools/include/images/HPG001.png --->
+
+
+<!--- header START from tools/include/markdown/HPG001-header.md --->
+[gethomepage](https://gethomepage.dev/) is a fast, fully static, highly customizable application dashboard built for modern self-hosted environments. With a **fully proxied** architecture and **zero runtime**, it delivers exceptional speed, security, and simplicity for organizing and accessing your services.
+
+It supports **over 100 service integrations** and **multiple languages**, offering live status displays and dynamic resource monitoring out-of-the-box. Configuration is effortless via **YAML files** or automatic **Docker label discovery**, making setup and management seamless.
+
+*Key Features*
+
+- **Static Frontend**: Blazing-fast performance with no server-side runtime.
+- **Secure Proxying**: Safely access internal services without direct exposure.
+- **Service Integrations**: Native support for Docker, Kubernetes, Grafana, Proxmox, Home Assistant, and more.
+- **Easy Configuration**: Manage layout and services with YAML or Docker labels.
+- **Internationalization**: Translations available for multiple languages.
+- **Flexible Theming**: Personalize with themes, layouts, and styling.
+- **Simple Deployment**: Host via Docker, Kubernetes, or any static hosting platform.
+
+---
+
+Whether you're running a small homelab or a full server fleet, **gethomepage** offers a sleek, powerful, and secure way to stay organized.
+
+<!--- header STOP from tools/include/markdown/HPG001-header.md --->
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd HPG001
+~~~
+
+
+<!--- footer START from tools/include/markdown/HPG001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
+
+    - URL: `https://<your.IP>:3000`
+    - Username/Password: none
+
+    Configuration: Please reffer to official manual <https://gethomepage.dev/configs/>
+
+=== "Directories"
+
+    - Install directory: `/armbian/homepage`
+    - Site configuration directory: `/armbian/homepage/config`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f homepage
+    ```
+
+<!--- footer STOP from tools/include/markdown/HPG001-footer.md --->
+
+
+~~~ bash title="Remove Homepage:"
+armbian-config --cmd HPG002
+~~~
+
+
+~~~ bash title="Purge Homepage with data folder:"
+armbian-config --cmd HPG003
+~~~
+
+
+
