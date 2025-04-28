@@ -136,6 +136,7 @@ nav:
         - 'Overview': 'User-Guide_Armbian-Software.md'
         - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
+        - 'Backup': 'User-Guide_Armbian-Software/Backup.md'
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
         - 'Music': 'User-Guide_Armbian-Software/Music.md'
         - 'Finance': 'User-Guide_Armbian-Software/Finance.md'
