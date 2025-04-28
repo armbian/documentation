@@ -541,10 +541,9 @@ armbian-config --cmd MOTD01
 ~~~
 
 
-## Update
+## OS updates and distribution upgrades
 
-
-OS updates and distribution upgrades
+**Status:** Active
 
 #### Firmware
 
