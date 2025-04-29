@@ -10,6 +10,11 @@ comments: true
 PostgreSQL install
 
 
+<!--- section image START from tools/include/images/PGSQL1.png --->
+[![PostgreSQL](/images/PGSQL1.png)](#)
+<!--- section image STOP from tools/include/images/PGSQL1.png --->
+
+
 <!--- header START from tools/include/markdown/PGSQL1-header.md --->
 PostgreSQL is a powerful, open-source object-relational database system known for its robustness, feature richness, and reliability.
 
