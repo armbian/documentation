@@ -118,7 +118,7 @@ Advanced bridged network configuration
 Add / change interface
 
 
-<!--- header START from tools/include/markdown/NEA001-header.md --->
+<!--- header START from tools/include/markdown/NEA002-header.md --->
 ``` mermaid
 graph LR
   A[Network] --> B[Add / Change interface];
@@ -133,7 +133,7 @@ graph LR
   F -->W[Access point]; 
 ```
 
-<!--- header STOP from tools/include/markdown/NEA001-header.md --->
+<!--- header STOP from tools/include/markdown/NEA002-header.md --->
 
 **Author:** @igorpecovnik
 
@@ -141,11 +141,11 @@ graph LR
 
 
 ~~~ custombash
-armbian-config --cmd NEA001
+armbian-config --cmd NEA002
 ~~~
 
 
-<!--- footer START from tools/include/markdown/NEA001-footer.md --->
+<!--- footer START from tools/include/markdown/NEA002-footer.md --->
 === "Wired device check"
 
     In order to configure your network devices, they need to be supported the kernel.
@@ -170,21 +170,21 @@ armbian-config --cmd NEA001
 
     It is usually something like `wlan0`, `wlo1` or `wlx12334c47dec3`. If you get blank response, it means your WiFi device / dongle is not supported by the kernel.
 
-<!--- footer STOP from tools/include/markdown/NEA001-footer.md --->
+<!--- footer STOP from tools/include/markdown/NEA002-footer.md --->
 
 
 ~~~ bash title="Revert to Armbian defaults:"
-armbian-config --cmd NEA002
-~~~
-
-
-~~~ bash title="Show configuration:"
 armbian-config --cmd NEA003
 ~~~
 
 
-~~~ bash title="Show active status:"
+~~~ bash title="Show configuration:"
 armbian-config --cmd NEA004
+~~~
+
+
+~~~ bash title="Show active status:"
+armbian-config --cmd NEA005
 ~~~
 
 
@@ -197,14 +197,14 @@ armbian-config --cmd NEA004
 WireGuard VPN client / server
 
 
-<!--- section image START from tools/include/images/WG001.png --->
-[![WireGuard](/images/WG001.png)](#)
-<!--- section image STOP from tools/include/images/WG001.png --->
+<!--- section image START from tools/include/images/WRG001.png --->
+[![WireGuard](/images/WRG001.png)](#)
+<!--- section image STOP from tools/include/images/WRG001.png --->
 
 
-<!--- header START from tools/include/markdown/WG001-header.md --->
+<!--- header START from tools/include/markdown/WRG001-header.md --->
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. Regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
-<!--- header STOP from tools/include/markdown/WG001-header.md --->
+<!--- header STOP from tools/include/markdown/WRG001-header.md --->
 
 **Author:** @armbian
 
@@ -212,11 +212,11 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 
 
 ~~~ custombash
-armbian-config --cmd WG001
+armbian-config --cmd WRG001
 ~~~
 
 
-<!--- footer START from tools/include/markdown/WG001-footer.md --->
+<!--- footer START from tools/include/markdown/WRG001-footer.md --->
 === "Access to the server from internet"
 
     Remember to open/forward the port 51820 (UDP) through NAT on your router.
@@ -243,21 +243,21 @@ Enjoy private network! Its that easy.
 More informations:
 
 <https://docs.linuxserver.io/images/docker-wireguard/>
-<!--- footer STOP from tools/include/markdown/WG001-footer.md --->
+<!--- footer STOP from tools/include/markdown/WRG001-footer.md --->
 
 
 ~~~ bash title="WireGuard remove:"
-armbian-config --cmd WG002
+armbian-config --cmd WRG002
 ~~~
 
 
 ~~~ bash title="WireGuard clients QR codes:"
-armbian-config --cmd WG003
+armbian-config --cmd WRG003
 ~~~
 
 
 ~~~ bash title="WireGuard purge with data folder:"
-armbian-config --cmd WG004
+armbian-config --cmd WRG004
 ~~~
 
 
