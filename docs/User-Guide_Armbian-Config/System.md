@@ -120,6 +120,8 @@ armbian-config --cmd DTO001
 
 Select Odroid board configuration
 
+**Author:** @GeoffClements
+
 **Status:** Preview
 
 

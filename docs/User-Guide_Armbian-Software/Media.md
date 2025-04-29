@@ -132,6 +132,12 @@ Syncthing continuous file synchronization
 [![Syncthing](/images/STC001.png)](#)
 <!--- section image STOP from tools/include/images/STC001.png --->
 
+
+<!--- header START from tools/include/markdown/STC001-header.md --->
+Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
+
+<!--- header STOP from tools/include/markdown/STC001-header.md --->
+
 **Author:** @igorpecovnik
 
 **Status:** Stable
@@ -140,6 +146,29 @@ Syncthing continuous file synchronization
 ~~~ custombash
 armbian-config --cmd STC001
 ~~~
+
+
+<!--- footer START from tools/include/markdown/STC001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8884**:
+
+    - URL: `https://<your.IP>:8884`
+    - Username/Password: There is none, but it is highly suggested setting a password for this container. To do this go to Actions -> Settings -> set user/password for the webUI.
+
+=== "Directories"
+
+    - Install directory: `/armbian/syncthing`
+    - Site configuration directory: `/armbian/syncthing/config`
+    - Data directory: `/armbian/syncthing/data1` `/armbian/syncthing/data2`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f syncthing
+    ```
+
+<!--- footer STOP from tools/include/markdown/STC001-footer.md --->
 
 
 ~~~ bash title="Syncthing remove:"

@@ -14,6 +14,12 @@ Navidrome music server and streamer compatible with Subsonic/Airsonic
 [![Navidrome](/images/NAV001.png)](#)
 <!--- section image STOP from tools/include/images/NAV001.png --->
 
+
+<!--- header START from tools/include/markdown/NAV001-header.md --->
+Navidrome is a modern, lightweight, and self-hosted music server and streamer. It's designed to be compatible with the Subsonic and Airsonic APIs, making it a drop-in replacement for users of those systems. With Navidrome, you can stream your personal music collection from anywhere using any compatible Subsonic client (mobile or desktop). It supports multi-user access, real-time updates, album artwork, and is built with performance and simplicity in mind—perfect for organizing and accessing large music libraries.
+
+<!--- header STOP from tools/include/markdown/NAV001-header.md --->
+
 **Author:** @armbian
 
 **Status:** Stable

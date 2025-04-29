@@ -24,6 +24,32 @@ armbian-config --cmd HAB001
 ~~~
 
 
+<!--- footer START from tools/include/markdown/HAB001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8444**:
+
+    - URL: `https://<your.IP>:8444`
+    - Username/Password: Are set at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/usr/share/openhab`
+    - Site configuration directory: `/etc/openhab`
+    - Config file: `/etc/default/openhab`
+    - Data directory: `/var/lib/openhab`
+
+    See also [openHAB file locations](https://www.openhab.org/docs/installation/linux.html#file-locations).
+
+=== "View logs"
+
+    ```sh
+    journalctl -u openhab
+    ```
+
+<!--- footer STOP from tools/include/markdown/HAB001-footer.md --->
+
+
 ~~~ bash title="openHAB remove:"
 armbian-config --cmd HAB002
 ~~~
