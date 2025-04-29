@@ -196,3 +196,93 @@ armbian-config --cmd HPG003
 
 
 
+
+## NetBox
+
+
+NetBox infrastructure resource modeling install
+
+
+<!--- section image START from tools/include/images/NBOX01.png --->
+[![NetBox](/images/NBOX01.png)](#)
+<!--- section image STOP from tools/include/images/NBOX01.png --->
+
+
+<!--- header START from tools/include/markdown/NBOX01-header.md --->
+**NetBox** is an open-source infrastructure resource modeling (IRM) tool used for managing and documenting networks and data center assets.
+
+Requirements (installed automatically)
+
+- [Redis](/User-Guide_Armbian-Software/Database/#redis)
+- [Postgres SQL](/User-Guide_Armbian-Software/Database/#postgresql)
+
+Key Features
+
+- **IP Address Management (IPAM)**: Track IP networks, addresses, and VRFs.
+- **Data Center Infrastructure Management (DCIM)**: Model racks, devices, connections, and more.
+- **Secrets Management**: Securely store credentials and other sensitive data.
+- **Extensible API & Webhooks**: Integrate with external systems.
+- **Custom Fields & Scripts**: Tailor NetBox to fit your organization’s needs.
+
+Originally developed by DigitalOcean, NetBox is widely adopted by network engineers and sysadmins to maintain source-of-truth data for automation.
+
+[Official Website](https://netbox.dev/)
+
+<!--- header STOP from tools/include/markdown/NBOX01-header.md --->
+
+**Author:** @igorpecovnik
+
+**Status:** Stable
+
+
+~~~ custombash
+armbian-config --cmd NBOX01
+~~~
+
+
+<!--- footer START from tools/include/markdown/NBOX01-footer.md --->
+=== "Access to the service"
+
+    NetBox is accessible via HTTP on port **8000**:
+
+    - URL: `http://<your.IP>:8000`
+    - API root: `http://<your.IP>:8000/api/`
+
+=== "Default credentials"
+
+    - Username: `admin`
+    - Password: *(set during setup)*
+    - API token: *Generate in the UI or via Django shell*
+
+=== "Directories"
+
+    - Configuration: `/armbian/netbox/config/`
+    - Scripts: `/armbian/netbox/scripts/`
+    - Reports: `/armbian/netbox/reports/`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f netbox
+    ```
+
+=== "Manage the service"
+
+    ```sh
+    docker exec -it netbox bash
+    ```
+
+<!--- footer STOP from tools/include/markdown/NBOX01-footer.md --->
+
+
+~~~ bash title="NetBox remove:"
+armbian-config --cmd NBOX02
+~~~
+
+
+~~~ bash title="NetBox purge with data folder:"
+armbian-config --cmd NBOX03
+~~~
+
+
+
