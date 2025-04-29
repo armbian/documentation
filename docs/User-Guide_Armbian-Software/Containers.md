@@ -10,9 +10,9 @@ comments: true
 Docker minimal
 
 
-<!--- section image START from tools/include/images/CON001.webp --->
-[![Docker](/images/CON001.webp)](#)
-<!--- section image STOP from tools/include/images/CON001.webp --->
+<!--- section image START from tools/include/images/CON001.png --->
+[![Docker](/images/CON001.png)](#)
+<!--- section image STOP from tools/include/images/CON001.png --->
 
 **Author:** @schwar3kat
 
@@ -54,9 +54,9 @@ armbian-config --cmd CON004
 Portainer container management platform
 
 
-<!--- section image START from tools/include/images/POR001.webp --->
-[![Portainer](/images/POR001.webp)](#)
-<!--- section image STOP from tools/include/images/POR001.webp --->
+<!--- section image START from tools/include/images/POR001.png --->
+[![Portainer](/images/POR001.png)](#)
+<!--- section image STOP from tools/include/images/POR001.png --->
 
 
 <!--- header START from tools/include/markdown/POR001-header.md --->
