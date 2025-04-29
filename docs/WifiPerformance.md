@@ -5,6 +5,9 @@ comments: true
 
 All wireless adapters were tested under consistent conditions - each positioned in close proximity (1-2m) and connected to the same wireless access point (AP). The adapters utilized various interface types, including USB, SDIO, and PCI, to evaluate performance across different hardware configurations.
 
+<br>
+[![Support Autotests](/images/support-autotest.png)](#contribute)
+
 ## Test Equipment
 
 - **Access Point**: [Zyxel NWA130BE (Wi-Fi 7)](https://amzn.to/428dvnH)
