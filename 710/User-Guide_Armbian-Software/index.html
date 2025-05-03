@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#armbian-software-lightweight-secure-and-optimized-services" class="md-skip">
+        <a href="#armbian-software" class="md-skip">
           Skip to content
         </a>
       
@@ -1064,6 +1064,15 @@
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-installation-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Installation &amp; Maintenance
     </span>
   </a>
   
@@ -2054,27 +2063,71 @@
   
 
 
-<h1 id="armbian-software-lightweight-secure-and-optimized-services">Armbian Software: Lightweight, Secure, and Optimized Services<a class="headerlink" href="#armbian-software-lightweight-secure-and-optimized-services" title="Permanent link">&para;</a></h1>
+<h1 id="armbian-software">Armbian Software<a class="headerlink" href="#armbian-software" title="Permanent link">&para;</a></h1>
+<p><strong>Lightweight, Secure, and Optimized Services for Embedded Systems</strong></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Armbian Software, accessible via <code>armbian-config</code>, lets you quickly deploy a wide range of preconfigured applications and advanced services — from simple tools to full-scale dashboards and network managers.<br />
-Most are provided as Docker containers, optimized specifically for Armbian devices, with select native installs also available.</p>
-<h2 id="security-and-management">Security and Management<a class="headerlink" href="#security-and-management" title="Permanent link">&para;</a></h2>
-<p>All services run on a dedicated network bridge, isolating traffic for improved security.<br />
-Each app supports clean removal, manual or automatic updates, and Docker image upgrades, giving you full control.<br />
-Installations are also tested daily to ensure reliability.</p>
-<h2 id="hardware-support">Hardware Support<a class="headerlink" href="#hardware-support" title="Permanent link">&para;</a></h2>
+<p><strong>Armbian Software</strong>, accessible via the <code>armbian-config</code> utility, empowers you to quickly deploy a variety of <strong>preconfigured applications and advanced services</strong> — from diagnostic tools and media servers to dashboards and container orchestration platforms. Most services are offered as <strong>Docker containers</strong> optimized specifically for Armbian OS and supported hardware, while a subset is available as <strong>native installations</strong> for lightweight or performance-critical setups.</p>
+<h2 id="clean-installation-maintenance">Clean Installation &amp; Maintenance<a class="headerlink" href="#clean-installation-maintenance" title="Permanent link">&para;</a></h2>
+<p>Each installation is isolated and designed with <strong>clean setup and teardown</strong> in mind. Key features include:</p>
 <ul>
-<li>Full: x86, ARM64  </li>
-<li>Partial: ARMHF, RISCV64  </li>
+<li><strong>One-command installs</strong> with sensible defaults  </li>
+<li><strong>No leftover files or dangling containers</strong> after uninstallation  </li>
+<li><strong>Service isolation</strong> via Docker networks and volume mappings  </li>
+<li><strong>Support for both manual and automatic updates</strong>, including container image refresh  </li>
+<li>Daily-tested <a href="https://github.com/armbian/configng/actions/workflows/unit-tests.yml">CI pipelines</a> ensure that software definitions remain reliable and compatible with the latest system changes  </li>
 </ul>
-<p>Each setup includes board-specific performance and compatibility tweaks.</p>
+<p>All configurations are streamlined to work <strong>out of the box</strong>, reducing the need for manual intervention or deep technical know-how.</p>
+<h2 id="security-and-management">Security and Management<a class="headerlink" href="#security-and-management" title="Permanent link">&para;</a></h2>
+<p>Every service runs on a <strong>dedicated Docker network bridge</strong>, isolating app traffic for <strong>enhanced security</strong> and performance. Key management benefits include:</p>
+<ul>
+<li>Optional automatic restart and image updates  </li>
+<li>Native logging integration with <code>journalctl</code> or Docker logs  </li>
+<li>Clean rollbacks and easy troubleshooting  </li>
+<li>Support for encrypted volumes and HTTPS reverse proxies</li>
+</ul>
+<p>These features make the platform suitable for both <strong>prototyping</strong> and <strong>long-term deployments</strong>.</p>
+<h2 id="hardware-support">Hardware Support<a class="headerlink" href="#hardware-support" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Support Level</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x86_64</td>
+<td>✅ Full</td>
+<td>Ideal for servers, mini PCs</td>
+</tr>
+<tr>
+<td>ARM64</td>
+<td>✅ Full</td>
+<td>Full compatibility on SBCs</td>
+</tr>
+<tr>
+<td>ARMHF</td>
+<td>⚠️ Partial</td>
+<td>Limited by upstream container support</td>
+</tr>
+<tr>
+<td>RISCV64</td>
+<td>⚠️ Partial</td>
+<td>Experimental, growing ecosystem</td>
+</tr>
+</tbody>
+</table>
+<p>Installations may include board-specific tuning (e.g., CPU governors, memory tweaks) for optimal performance.</p>
 <h2 id="why-use-it">Why Use It<a class="headerlink" href="#why-use-it" title="Permanent link">&para;</a></h2>
 <ul>
-<li>One-click deployments  </li>
-<li>Curated, tested, and secure services  </li>
-<li>Optional automated updates  </li>
-<li>Optimized for Armbian-supported hardware  </li>
-<li>Fast, stable, and easy to maintain</li>
+<li>🚀 <strong>One-click deployments</strong> of popular, containerized apps  </li>
+<li>🔒 <strong>Curated, tested, and secure</strong> software maintained by the Armbian community  </li>
+<li>🔁 <strong>Clean installs and easy removal</strong> — no system clutter or dependency hell  </li>
+<li>📦 <strong>Optimized for Armbian-supported hardware</strong>, with fine-tuned configurations  </li>
+<li>⚙️ <strong>Minimal overhead</strong>, ideal for embedded, headless, or remote systems  </li>
+<li>🛠️ <strong>Easy maintenance</strong> with integrated update and monitoring tools  </li>
+<li>🌐 <strong>Internet-ready services</strong>, including reverse proxies and network bridges</li>
 </ul>
 
 
