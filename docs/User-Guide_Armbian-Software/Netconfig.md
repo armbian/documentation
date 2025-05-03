@@ -9,10 +9,10 @@ comments: true
 
 nload - realtime console network usage monitor
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
 ~~~ custombash
 armbian-config --cmd NLD001
@@ -30,10 +30,10 @@ armbian-config --cmd NLD002
 
 iperf3 bandwidth measuring tool
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
 ~~~ custombash
 armbian-config --cmd IPR001
@@ -51,10 +51,10 @@ armbian-config --cmd IPR002
 
 iptraf-ng IP LAN monitor
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
 ~~~ custombash
 armbian-config --cmd IPT001
@@ -72,10 +72,10 @@ armbian-config --cmd IPT002
 
 avahi-daemon hostname broadcast via mDNS
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
 ~~~ custombash
 armbian-config --cmd AVH001
