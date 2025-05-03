@@ -6,14 +6,14 @@
 
 **Armbian Software**, accessible via the `armbian-config` utility, empowers you to quickly deploy a variety of **preconfigured applications and advanced services** — from diagnostic tools and media servers to dashboards and container orchestration platforms. Most services are offered as **Docker containers** optimized specifically for Armbian OS and supported hardware, while a subset is available as **native installations** for lightweight or performance-critical setups.
 
-## Clean Installation & Maintenance
+## Installation & Maintenance
 
 Each installation is isolated and designed with **clean setup and teardown** in mind. Key features include:
 
 - **One-command installs** with sensible defaults  
 - **No leftover files or dangling containers** after uninstallation  
 - **Service isolation** via Docker networks and volume mappings  
-- **Support for both manual and automatic updates**, including container image refresh  
+- **Support for both manual and automatic updates**, [including container image refresh](/User-Guide_Armbian-Config/System/#docker-images)
 - Daily-tested [CI pipelines](https://github.com/armbian/configng/actions/workflows/unit-tests.yml) ensure that software definitions remain reliable and compatible with the latest system changes  
 
 All configurations are streamlined to work **out of the box**, reducing the need for manual intervention or deep technical know-how.
@@ -27,7 +27,7 @@ Every service runs on a **dedicated Docker network bridge**, isolating app traff
 - Clean rollbacks and easy troubleshooting  
 - Support for encrypted volumes and HTTPS reverse proxies
 
-These features make the platform suitable for both **prototyping** and **long-term deployments**.
+These features make the platform suitable for both **prototyping** and **long-term deployments**. However, a few specific services — typically those requiring low-level hardware access or advanced networking features — may still need to run directly on the host network rather than within an isolated Docker bridge.
 
 ## Hardware Support
 
@@ -38,7 +38,7 @@ These features make the platform suitable for both **prototyping** and **long-te
 | ARMHF        | ⚠️ Partial      | Limited by upstream container support |
 | RISCV64      | ⚠️ Partial      | Experimental, growing ecosystem |
 
-Installations may include board-specific tuning (e.g., CPU governors, memory tweaks) for optimal performance.
+Installations may include hardware specific tuning for optimal performance.
 
 ## Why Use It
 
