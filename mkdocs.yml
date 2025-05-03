@@ -145,6 +145,7 @@ nav:
         - 'DNS blockers': 'User-Guide_Armbian-Software/DNS.md'
         - 'Home Automation': 'User-Guide_Armbian-Software/HomeAutomation.md'
         - 'Monitoring': 'User-Guide_Armbian-Software/Monitoring.md'
+        - 'Armbian': 'User-Guide_Armbian-Software/Armbian.md'
         - 'DevTools': 'User-Guide_Armbian-Software/DevTools.md'
         - 'Management': 'User-Guide_Armbian-Software/Management.md'
         - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
