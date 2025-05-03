@@ -1719,6 +1719,11 @@ armbian-config --cmd GHR002
 
 #### Rsyncd server
 
+
+<!--- section image START from tools/include/images/RSD001.png --->
+[![Rsyncd server](/images/RSD001.png)](#)
+<!--- section image STOP from tools/include/images/RSD001.png --->
+
 **Author:** @igorpecovnik
 
 **Status:** Stable
@@ -3161,6 +3166,11 @@ armbian-config --cmd WRG004
 
 
 ZeroTier connect devices over your own private network in the world.
+
+
+<!--- section image START from tools/include/images/ZTR001.png --->
+[![ZeroTier](/images/ZTR001.png)](#)
+<!--- section image STOP from tools/include/images/ZTR001.png --->
 
 **Author:** @jnovos
 
