@@ -1,27 +1,51 @@
-# Armbian Software: Lightweight, Secure, and Optimized Services
+# Armbian Software
 
-## Overview  
+**Lightweight, Secure, and Optimized Services for Embedded Systems**
 
-Armbian Software, accessible via `armbian-config`, lets you quickly deploy a wide range of preconfigured applications and advanced services — from simple tools to full-scale dashboards and network managers.  
-Most are provided as Docker containers, optimized specifically for Armbian devices, with select native installs also available.
+## Overview
 
-## Security and Management  
+**Armbian Software**, accessible via the `armbian-config` utility, empowers you to quickly deploy a variety of **preconfigured applications and advanced services** — from diagnostic tools and media servers to dashboards and container orchestration platforms. Most services are offered as **Docker containers** optimized specifically for Armbian OS and supported hardware, while a subset is available as **native installations** for lightweight or performance-critical setups.
 
-All services run on a dedicated network bridge, isolating traffic for improved security.  
-Each app supports clean removal, manual or automatic updates, and Docker image upgrades, giving you full control.  
-Installations are also tested daily to ensure reliability.
+## Clean Installation & Maintenance
 
-## Hardware Support  
+Each installation is isolated and designed with **clean setup and teardown** in mind. Key features include:
 
-- Full: x86, ARM64  
-- Partial: ARMHF, RISCV64  
+- **One-command installs** with sensible defaults  
+- **No leftover files or dangling containers** after uninstallation  
+- **Service isolation** via Docker networks and volume mappings  
+- **Support for both manual and automatic updates**, including container image refresh  
+- Daily-tested [CI pipelines](https://github.com/armbian/configng/actions/workflows/unit-tests.yml) ensure that software definitions remain reliable and compatible with the latest system changes  
 
-Each setup includes board-specific performance and compatibility tweaks.
+All configurations are streamlined to work **out of the box**, reducing the need for manual intervention or deep technical know-how.
 
-## Why Use It  
+## Security and Management
 
-- One-click deployments  
-- Curated, tested, and secure services  
-- Optional automated updates  
-- Optimized for Armbian-supported hardware  
-- Fast, stable, and easy to maintain
+Every service runs on a **dedicated Docker network bridge**, isolating app traffic for **enhanced security** and performance. Key management benefits include:
+
+- Optional automatic restart and image updates  
+- Native logging integration with `journalctl` or Docker logs  
+- Clean rollbacks and easy troubleshooting  
+- Support for encrypted volumes and HTTPS reverse proxies
+
+These features make the platform suitable for both **prototyping** and **long-term deployments**.
+
+## Hardware Support
+
+| Architecture | Support Level | Notes |
+|--------------|----------------|-------|
+| x86_64       | ✅ Full         | Ideal for servers, mini PCs |
+| ARM64        | ✅ Full         | Full compatibility on SBCs |
+| ARMHF        | ⚠️ Partial      | Limited by upstream container support |
+| RISCV64      | ⚠️ Partial      | Experimental, growing ecosystem |
+
+Installations may include board-specific tuning (e.g., CPU governors, memory tweaks) for optimal performance.
+
+## Why Use It
+
+- 🚀 **One-click deployments** of popular, containerized apps  
+- 🔒 **Curated, tested, and secure** software maintained by the Armbian community  
+- 🔁 **Clean installs and easy removal** — no system clutter or dependency hell  
+- 📦 **Optimized for Armbian-supported hardware**, with fine-tuned configurations  
+- ⚙️ **Minimal overhead**, ideal for embedded, headless, or remote systems  
+- 🛠️ **Easy maintenance** with integrated update and monitoring tools  
+- 🌐 **Internet-ready services**, including reverse proxies and network bridges
