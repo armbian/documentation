@@ -107,6 +107,11 @@ armbian-config --cmd GHR002
 
 ## Rsyncd server
 
+
+<!--- section image START from tools/include/images/RSD001.png --->
+[![Rsyncd server](/images/RSD001.png)](#)
+<!--- section image STOP from tools/include/images/RSD001.png --->
+
 **Author:** @igorpecovnik
 
 **Status:** Stable
