@@ -3075,7 +3075,10 @@ armbian-config --cmd WRG004
 
 
 
-#### ZeroTier connect devices over your own private network in the world.
+#### ZeroTier
+
+
+ZeroTier connect devices over your own private network in the world.
 
 **Author:** @jnovos
 
