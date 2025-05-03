@@ -33,10 +33,10 @@ These features make the platform suitable for both **prototyping** and **long-te
 
 | Architecture | Support Level | Notes |
 |--------------|----------------|-------|
-| x86_64       | ✅ Full         | Ideal for servers, mini PCs |
-| ARM64        | ✅ Full         | Ideal for servers and SBCs |
-| ARMHF        | ⚠️ Partial      | Limited by upstream container support |
-| RISCV64      | ⚠️ Partial      | Experimental, growing ecosystem |
+| <span style="background-color:#d0ebff; color:#003865; padding:3px 6px; border-radius:4px; font-size:90%;">x86_64</span>       | ✅ Full         | Ideal for servers, mini PCs |
+| <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>        | ✅ Full         | Ideal for servers and SBCs |
+| <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>        | ⚠️ Partial      | Limited by upstream container support |
+| <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>      | ⚠️ Partial      | Experimental, growing ecosystem |
 
 Installations may include hardware specific tuning for optimal performance.
 
