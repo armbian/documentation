@@ -150,6 +150,7 @@ nav:
         - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
         - 'Media': 'User-Guide_Armbian-Software/Media.md'
         - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
+        - 'VPN': 'User-Guide_Armbian-Software/VPN.md'
 
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'Developer-Guide_Overview.md'
