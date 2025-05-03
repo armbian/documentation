@@ -573,7 +573,7 @@ armbian-config --cmd UPD001
 ~~~
 
 
-~~~ bash title="Disable Armbian kernel upgrades:"
+~~~ bash title="Disable Armbian firmware upgrades:"
 armbian-config --cmd UPD002
 ~~~
 
