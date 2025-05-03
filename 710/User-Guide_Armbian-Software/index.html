@@ -1070,9 +1070,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clean-installation-maintenance" class="md-nav__link">
+  <a href="#installation-maintenance" class="md-nav__link">
     <span class="md-ellipsis">
-      Clean Installation &amp; Maintenance
+      Installation &amp; Maintenance
     </span>
   </a>
   
@@ -2067,13 +2067,13 @@
 <p><strong>Lightweight, Secure, and Optimized Services for Embedded Systems</strong></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><strong>Armbian Software</strong>, accessible via the <code>armbian-config</code> utility, empowers you to quickly deploy a variety of <strong>preconfigured applications and advanced services</strong> — from diagnostic tools and media servers to dashboards and container orchestration platforms. Most services are offered as <strong>Docker containers</strong> optimized specifically for Armbian OS and supported hardware, while a subset is available as <strong>native installations</strong> for lightweight or performance-critical setups.</p>
-<h2 id="clean-installation-maintenance">Clean Installation &amp; Maintenance<a class="headerlink" href="#clean-installation-maintenance" title="Permanent link">&para;</a></h2>
+<h2 id="installation-maintenance">Installation &amp; Maintenance<a class="headerlink" href="#installation-maintenance" title="Permanent link">&para;</a></h2>
 <p>Each installation is isolated and designed with <strong>clean setup and teardown</strong> in mind. Key features include:</p>
 <ul>
 <li><strong>One-command installs</strong> with sensible defaults  </li>
 <li><strong>No leftover files or dangling containers</strong> after uninstallation  </li>
 <li><strong>Service isolation</strong> via Docker networks and volume mappings  </li>
-<li><strong>Support for both manual and automatic updates</strong>, including container image refresh  </li>
+<li><strong>Support for both manual and automatic updates</strong>, <a href="/User-Guide_Armbian-Config/System/#docker-images">including container image refresh</a></li>
 <li>Daily-tested <a href="https://github.com/armbian/configng/actions/workflows/unit-tests.yml">CI pipelines</a> ensure that software definitions remain reliable and compatible with the latest system changes  </li>
 </ul>
 <p>All configurations are streamlined to work <strong>out of the box</strong>, reducing the need for manual intervention or deep technical know-how.</p>
@@ -2085,7 +2085,7 @@
 <li>Clean rollbacks and easy troubleshooting  </li>
 <li>Support for encrypted volumes and HTTPS reverse proxies</li>
 </ul>
-<p>These features make the platform suitable for both <strong>prototyping</strong> and <strong>long-term deployments</strong>.</p>
+<p>These features make the platform suitable for both <strong>prototyping</strong> and <strong>long-term deployments</strong>. However, a few specific services — typically those requiring low-level hardware access or advanced networking features — may still need to run directly on the host network rather than within an isolated Docker bridge.</p>
 <h2 id="hardware-support">Hardware Support<a class="headerlink" href="#hardware-support" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2118,7 +2118,7 @@
 </tr>
 </tbody>
 </table>
-<p>Installations may include board-specific tuning (e.g., CPU governors, memory tweaks) for optimal performance.</p>
+<p>Installations may include hardware specific tuning for optimal performance.</p>
 <h2 id="why-use-it">Why Use It<a class="headerlink" href="#why-use-it" title="Permanent link">&para;</a></h2>
 <ul>
 <li>🚀 <strong>One-click deployments</strong> of popular, containerized apps  </li>
