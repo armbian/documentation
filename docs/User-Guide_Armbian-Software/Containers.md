@@ -14,10 +14,10 @@ Docker minimal
 [![Docker](/images/CON001.png)](#)
 <!--- section image STOP from tools/include/images/CON001.png --->
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64 armhf  
+__Documentation:__ [Link](https://wiki.bazarr.media/)  
 
 ~~~ custombash
 armbian-config --cmd CON001
@@ -64,10 +64,10 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 <!--- header STOP from tools/include/markdown/POR001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Maintainer:__ @schwar3kat  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64 armhf  
+__Documentation:__ [Link](https://docs.portainer.io/)  
 
 ~~~ custombash
 armbian-config --cmd POR001

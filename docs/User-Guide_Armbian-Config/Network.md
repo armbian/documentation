@@ -29,10 +29,7 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/BNS001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd BNS001
@@ -97,10 +94,7 @@ View Network Configuration allows you to display the system’s active network s
 
 <!--- header STOP from tools/include/markdown/VNS001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd VNS001
@@ -135,10 +129,7 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/NEA002-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd NEA002

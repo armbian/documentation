@@ -9,10 +9,7 @@ comments: true
 
 Install tools for cloning and managing repositories (git)
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd GIT001

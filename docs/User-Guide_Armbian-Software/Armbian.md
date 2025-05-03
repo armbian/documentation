@@ -20,10 +20,7 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 
 <!--- header STOP from tools/include/markdown/ART001-header.md --->
 
-**Author:** @efectn
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd ART001
@@ -52,10 +49,7 @@ This module automates the installation, removal, and status checking of GitHub s
 
 <!--- header STOP from tools/include/markdown/GHR001-header.md --->
 
-**Author:** @efectn
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd GHR001
@@ -112,10 +106,7 @@ armbian-config --cmd GHR002
 [![Rsyncd server](/images/RSD001.png)](#)
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd RSD001

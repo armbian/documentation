@@ -19,10 +19,10 @@ OctoPrint web-based 3D printers management tool
 OctoPrint is an open source 3D printer controller application, which provides a web interface for the connected printers. It displays printers status and key parameters and allows user to schedule prints and remotely control the printer.
 <!--- header STOP from tools/include/markdown/OCT001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64  
+__Documentation:__ [Link](https://transmissionbt.com/)  
 
 ~~~ custombash
 armbian-config --cmd OCT001

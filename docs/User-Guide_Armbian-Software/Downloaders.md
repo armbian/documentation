@@ -20,10 +20,7 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 <!--- header STOP from tools/include/markdown/DOW001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd DOW001
@@ -121,10 +118,7 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd DEL001
@@ -182,10 +176,7 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd TRA001
@@ -244,10 +235,7 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 
 <!--- header STOP from tools/include/markdown/SABN01-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd SABN01
@@ -301,10 +289,7 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd MDS001
@@ -362,10 +347,7 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 
 <!--- header STOP from tools/include/markdown/SON001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd SON001
@@ -423,10 +405,7 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
 <!--- header STOP from tools/include/markdown/RAD001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd RAD001
@@ -485,10 +464,7 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 
 <!--- header STOP from tools/include/markdown/BAZ001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd BAZ001
@@ -546,10 +522,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 <!--- header STOP from tools/include/markdown/LID001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd LID001
@@ -607,10 +580,7 @@ Readarr - Book Manager and Automation (Sonarr for Ebooks)
 
 <!--- header STOP from tools/include/markdown/RDR001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd RDR001
@@ -668,10 +638,7 @@ Jellyseerr is a free and open source software application for managing requests 
 
 <!--- header STOP from tools/include/markdown/JEL001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd JEL001

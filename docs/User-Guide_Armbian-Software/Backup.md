@@ -29,10 +29,10 @@ Thanks to Duplicati’s smart design — working through standard protocols and 
 
 <!--- header STOP from tools/include/markdown/DPL001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64  
+__Documentation:__ [Link](https://prev-docs.duplicati.com/en/latest/)  
 
 ~~~ custombash
 armbian-config --cmd DPL001

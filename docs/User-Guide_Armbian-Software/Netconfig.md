@@ -9,10 +9,7 @@ comments: true
 
 nload - realtime console network usage monitor
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd NLD001
@@ -30,10 +27,7 @@ armbian-config --cmd NLD002
 
 iperf3 bandwidth measuring tool
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd IPR001
@@ -51,10 +45,7 @@ armbian-config --cmd IPR002
 
 iptraf-ng IP LAN monitor
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd IPT001
@@ -72,10 +63,7 @@ armbian-config --cmd IPT002
 
 avahi-daemon hostname broadcast via mDNS
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd AVH001

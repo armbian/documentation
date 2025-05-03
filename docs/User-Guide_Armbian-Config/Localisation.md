@@ -11,10 +11,7 @@ comments: true
 [![Change Global timezone](/images/LOC001.png)](#)
 <!--- section image STOP from tools/include/images/LOC001.png --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd LOC001

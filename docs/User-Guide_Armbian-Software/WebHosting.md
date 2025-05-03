@@ -38,10 +38,10 @@ After entering required information, your server will have auto updating SSL sec
 
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64  
+__Documentation:__ [Link](https://github.com/linuxserver/docker-swag)  
 
 ~~~ custombash
 armbian-config --cmd SWAG01

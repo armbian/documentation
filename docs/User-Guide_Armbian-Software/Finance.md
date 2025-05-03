@@ -28,10 +28,9 @@ Do your finances with Actual Budget
 
 <!--- header STOP from tools/include/markdown/ABU001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Documentation:__ [Link](https://actualbudget.org/docs)  
 
 ~~~ custombash
 armbian-config --cmd ABU001

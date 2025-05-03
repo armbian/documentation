@@ -29,10 +29,7 @@ who mainly use other tools but want an overview on individual systems
 Thanks to Cockpit intentionally using system APIs and commands, a whole team of admins can manage a system in the way they prefer, including the command line and utilities right alongside Cockpit.
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
-**Author:** @Tearran
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd CPT001
@@ -71,10 +68,7 @@ Samba is an open-source software suite that enables seamless file and printer sh
 
 <!--- header STOP from tools/include/markdown/SMB001-header.md --->
 
-**Author:** @Tearran
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd SMB001
@@ -97,10 +91,7 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 
 <!--- header STOP from tools/include/markdown/WBM001-header.md --->
 
-**Author:** @Tearran
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd WBM001
@@ -151,10 +142,7 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 
 <!--- header STOP from tools/include/markdown/HPG001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd HPG001
@@ -230,10 +218,7 @@ Originally developed by DigitalOcean, NetBox is widely adopted by network engine
 
 <!--- header STOP from tools/include/markdown/NBOX01-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd NBOX01

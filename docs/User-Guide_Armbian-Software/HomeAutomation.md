@@ -14,10 +14,10 @@ openHAB empowering the smart home
 [![openHAB](/images/HAB001.png)](#)
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Stable  
+__Architecture:__ x86-64 arm64 armhf  
+__Documentation:__ [Link](https://www.openhab.org/docs/tutorial)  
 
 ~~~ custombash
 armbian-config --cmd HAB001
@@ -80,10 +80,7 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Status:__ Preview  
 
 ~~~ custombash
 armbian-config --cmd HAS001
@@ -164,10 +161,9 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Preview  
+__Documentation:__ [Link](https://wiki.domoticz.com)  
 
 ~~~ custombash
 armbian-config --cmd DOM001
@@ -202,10 +198,9 @@ evcc is an energy management system with a focus on electromobility. The softwar
 
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Maintainer:__ @igorpecovnik  
+__Status:__ Preview  
+__Documentation:__ [Link](https://docs.evcc.io/en)  
 
 ~~~ custombash
 armbian-config --cmd EVCC01
