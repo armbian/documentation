@@ -20,10 +20,10 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 <!--- header STOP from tools/include/markdown/EMB001-header.md --->
 
-**Author:** @schwar3kat
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @schwar3kat  
+__Documentation:__ [Link](https://emby.media)  
 
 ~~~ custombash
 armbian-config --cmd EMB001
@@ -80,10 +80,10 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 <!--- header STOP from tools/include/markdown/STR001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.stirlingpdf.com)  
 
 ~~~ custombash
 armbian-config --cmd STR001
@@ -138,10 +138,10 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 <!--- header STOP from tools/include/markdown/STC001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.syncthing.net/)  
 
 ~~~ custombash
 armbian-config --cmd STC001
@@ -199,10 +199,10 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 
 <!--- header STOP from tools/include/markdown/NCT001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://nextcloud.com/support/)  
 
 ~~~ custombash
 armbian-config --cmd NCT001
@@ -260,10 +260,10 @@ ownCloud is a free and open-source software project for content collaboration an
 
 <!--- header STOP from tools/include/markdown/OWC001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://doc.owncloud.com/)  
 
 ~~~ custombash
 armbian-config --cmd OWC001
@@ -321,10 +321,10 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 <!--- header STOP from tools/include/markdown/JMS001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://jellyfin.org/docs/general/quick-start/)  
 
 ~~~ custombash
 armbian-config --cmd JMS001
@@ -383,10 +383,10 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 
 <!--- header STOP from tools/include/markdown/HPS001-header.md --->
 
-**Author:** @efectn
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @efectn  
+__Documentation:__ [Link](https://github.com/rpardini/ansi-hastebin)  
 
 ~~~ custombash
 armbian-config --cmd HPS001
@@ -434,10 +434,10 @@ Thanks to Immich being built with modern technologies like NestJS, TypeScript, a
 
 <!--- header STOP from tools/include/markdown/IMM001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://immich.app/docs)  
 
 ~~~ custombash
 armbian-config --cmd IMM001

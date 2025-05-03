@@ -23,10 +23,10 @@ You can receive instant notifications when a service goes down via Telegram, Dis
 
 <!--- header STOP from tools/include/markdown/UPK001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://github.com/louislam/uptime-kuma/wiki)  
 
 ~~~ custombash
 armbian-config --cmd UPK001
@@ -86,10 +86,10 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 
 <!--- header STOP from tools/include/markdown/NTD001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://transmissionbt.com/)  
 
 ~~~ custombash
 armbian-config --cmd NTD001
@@ -123,10 +123,10 @@ Grafana data analytics
 Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
 <!--- header STOP from tools/include/markdown/GRA001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://grafana.com/docs/)  
 
 ~~~ custombash
 armbian-config --cmd GRA001
@@ -181,10 +181,10 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 <!--- header STOP from tools/include/markdown/PRO001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @efectn  
+__Documentation:__ [Link](https://prometheus.io/docs/)  
 
 ~~~ custombash
 armbian-config --cmd PRO001
@@ -257,10 +257,10 @@ For more information and installation guides, visit the official [NetAlertX docu
 
 <!--- header STOP from tools/include/markdown/NAX001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://netalertx.com)  
 
 ~~~ custombash
 armbian-config --cmd NAX001

@@ -20,10 +20,10 @@ Navidrome is a modern, lightweight, and self-hosted music server and streamer. I
 
 <!--- header STOP from tools/include/markdown/NAV001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://github.com/pynavidrome/navidrome/wiki)  
 
 ~~~ custombash
 armbian-config --cmd NAV001

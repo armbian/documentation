@@ -20,10 +20,10 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 
 <!--- header STOP from tools/include/markdown/ART001-header.md --->
 
-**Author:** @efectn
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd ART001
@@ -52,10 +52,10 @@ This module automates the installation, removal, and status checking of GitHub s
 
 <!--- header STOP from tools/include/markdown/GHR001-header.md --->
 
-**Author:** @efectn
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd GHR001
@@ -112,10 +112,10 @@ armbian-config --cmd GHR002
 [![Rsyncd server](/images/RSD001.png)](#)
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd RSD001

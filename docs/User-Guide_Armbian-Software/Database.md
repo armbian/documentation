@@ -31,10 +31,10 @@ Thanks to its proven architecture and open-source nature, PostgreSQL fits seamle
 
 <!--- header STOP from tools/include/markdown/PGSQL1-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://www.postgresql.org/docs/)  
 
 ~~~ custombash
 armbian-config --cmd PGSQL1
@@ -92,10 +92,10 @@ Mariadb is one of the most popular database servers. Made by the original develo
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://mariadb.org/documentation/)  
 
 ~~~ custombash
 armbian-config --cmd DAT001
@@ -165,10 +165,10 @@ Redis is widely used for real-time applications, caching layers, session stores,
 
 <!--- header STOP from tools/include/markdown/REDIS1-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://redis.io/docs/)  
 
 ~~~ custombash
 armbian-config --cmd REDIS1
@@ -217,10 +217,10 @@ phpMyAdmin web interface manager
 [![phpMyAdmin](/images/MYA001.png)](#)
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://www.phpmyadmin.net/docs/)  
 
 ~~~ custombash
 armbian-config --cmd MYA001

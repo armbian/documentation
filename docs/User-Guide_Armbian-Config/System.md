@@ -47,10 +47,10 @@ Switching between different kernel versions can significantly impact the functio
 
 <!--- header STOP from tools/include/markdown/KER001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd KER001
@@ -73,10 +73,10 @@ Kernel headers are files required to build modules (drivers) or software that in
 
 <!--- header STOP from tools/include/markdown/HEAD01-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd HEAD01
@@ -105,10 +105,10 @@ Device Tree Overlays allow you to dynamically modify the Linux device tree at ru
 
 <!--- header STOP from tools/include/markdown/DTO001-header.md --->
 
-**Author:** @viraniac @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd DTO001
@@ -120,10 +120,8 @@ armbian-config --cmd DTO001
 
 Select Odroid board configuration
 
-**Author:** @GeoffClements
-
-**Status:** Preview
-
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 
 ~~~ custombash
 armbian-config --cmd ODR001
@@ -146,10 +144,10 @@ Edit the boot environment allows you to modify critical boot settings stored in 
 
 <!--- header STOP from tools/include/markdown/BOOT01-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd BOOT01
@@ -161,6 +159,9 @@ armbian-config --cmd BOOT01
 
 Install to internal media, ZFS, NFS, read-only rootfs
 
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 #### Install
 
 
@@ -169,10 +170,10 @@ This section provides an option to transfer the live running Armbian system from
 
 <!--- header STOP from tools/include/markdown/STO001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Preview
-
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd STO001
@@ -190,10 +191,10 @@ Read-only filesystem is enabled using overlayroot, a utility that places a tempo
 
 <!--- header STOP from tools/include/markdown/ROO001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd ROO001
@@ -211,10 +212,10 @@ armbian-config --cmd ROO002
 
 Enable Network filesystem (NFS) support
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd NETF01
@@ -232,10 +233,10 @@ armbian-config --cmd NETF02
 
 Enable network filesystem (NFS) daemon
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd NETF04
@@ -265,10 +266,10 @@ armbian-config --cmd NETF07
 
 Find NFS servers in subnet and mount shares
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd NETF09
@@ -299,10 +300,10 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
 
 <!--- header STOP from tools/include/markdown/ZFS001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd ZFS001
@@ -358,10 +359,10 @@ Manage native SSH daemon allows you to configure SSH server settings such as log
 
 <!--- header STOP from tools/include/markdown/ACC001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd ACC001
@@ -449,10 +450,10 @@ Sandboxed & containerised SSH server
 Sandboxed & containerised SSH server allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.
 <!--- header STOP from tools/include/markdown/SSH001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.linuxserver.io/images/docker-openssh-server/#server-mode)  
 
 ~~~ custombash
 armbian-config --cmd SSH001
@@ -512,10 +513,10 @@ ZSH is a powerful and customizable shell designed to be an enhanced replacement 
 
 <!--- header STOP from tools/include/markdown/SHELL1-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd SHELL1
@@ -533,10 +534,10 @@ armbian-config --cmd SHELL2
 
 Adjust welcome screen (motd)
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd MOTD01
@@ -545,8 +546,7 @@ armbian-config --cmd MOTD01
 
 ## OS updates and distribution upgrades
 
-**Status:** Active
-
+__Status:__ Active  
 #### Firmware
 
 
@@ -563,10 +563,10 @@ Enable Armbian firmware upgrades
 
 <!--- header STOP from tools/include/markdown/UPD001-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd UPD001
@@ -590,10 +590,10 @@ The daily rolling repository offers frequently updated packages directly from de
 
 <!--- header STOP from tools/include/markdown/ROLLIN-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd ROLLIN
@@ -611,10 +611,10 @@ The stable repository provides thoroughly tested packages intended for productio
 
 <!--- header STOP from tools/include/markdown/STABLE-header.md --->
 
-**Author:** @igorpecovnik
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd STABLE
@@ -639,10 +639,10 @@ Watchtower is fully configurable, allowing you to control update frequency, sele
 
 <!--- header STOP from tools/include/markdown/WTC001-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://containrrr.dev/watchtower/)  
 
 ~~~ custombash
 armbian-config --cmd WTC001
@@ -671,10 +671,10 @@ Unattended upgrades automatically install security updates and important package
 
 <!--- header STOP from tools/include/markdown/UNAT01-header.md --->
 
-**Author:** @armbian
-
-**Status:** Stable
-
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://forum.armbian.com/)  
 
 ~~~ custombash
 armbian-config --cmd UNAT01
