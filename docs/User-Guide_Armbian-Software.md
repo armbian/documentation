@@ -1,6 +1,6 @@
 # Armbian Software
 
-**Lightweight, Secure, and Optimized Services for Embedded Systems**
+Lightweight, Secure, and Optimized Services for Embedded Systems
 
 ## Overview
 
