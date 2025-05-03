@@ -34,7 +34,7 @@ These features make the platform suitable for both **prototyping** and **long-te
 | Architecture | Support Level | Notes |
 |--------------|----------------|-------|
 | x86_64       | ✅ Full         | Ideal for servers, mini PCs |
-| ARM64        | ✅ Full         | Full compatibility on SBCs |
+| ARM64        | ✅ Full         | Ideal for servers and SBCs |
 | ARMHF        | ⚠️ Partial      | Limited by upstream container support |
 | RISCV64      | ⚠️ Partial      | Experimental, growing ecosystem |
 
