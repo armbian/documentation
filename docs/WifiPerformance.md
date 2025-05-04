@@ -22,7 +22,7 @@ All wireless adapters were tested under consistent conditions - each positioned 
 ## Software and Infrastructure
 
 - **Infrastructure Database**: [NetBox](https://netbox.dev) for resource modeling and inventory
-- **Automation**: GitHub Actions for workflow orchestration and test execution
+- **Automation**: [GitHub Actions for workflow orchestration and test execution](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/wireless-performance-autotest.yml)
 - **Networking**: [Tailscale](https://tailscale.com) for secure device connectivity across the test environment
 - **Test Platform**: KVM virtual machine running the latest x86 Armbian image for USB wireless testing
 
