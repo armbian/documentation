@@ -4,7 +4,7 @@
 flowchart LR
   A[armbian-config] -----> B["System"];
   A[armbian-config] -----> C["Network"];
-  A[armbian-config] -----> D["Localistation"];
+  A[armbian-config] -----> D["Localisation"];
   A[armbian-config] -----> E["Software"];
   A[armbian-config] -----> F["Help"];
 ```
