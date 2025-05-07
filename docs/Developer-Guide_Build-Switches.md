@@ -64,21 +64,21 @@ Installs desired networking stack. If the parameter is undefined, it sets `syste
 
 !!! example "Build switch example"
 
-    ~~~
-    ./compile.sh NETWORKING_STACK="network-manager"
-    ~~~
+```sh
+./compile.sh NETWORKING_STACK="network-manager"
+```
 
 <hr>
 
 ### Host environment
 
-**EXPERT**
+**EXPERT** ( `string` )
 
 - `yes`
 
 Show development features and boards regardless of their support status in interactive mode.
 
-**CLEAN_LEVEL** (comma-separated list)
+**CLEAN_LEVEL** ( `comma-separated list` )
 
 Defines what should be cleaned. Changing this option can be useful when rebuilding images or building more than one image
 
@@ -92,20 +92,19 @@ Defines what should be cleaned. Changing this option can be useful when rebuildi
 - `oldcache` = remove old cached rootfs except for the newest 8 files
 - `extras` = delete additional packages for the current release in `output/debs/extra`
 
-**CARD_DEVICE** ( string )
+**CARD_DEVICE** ( `string` )
 
 - `/dev/sdX`
 
 Set to the device of your flash media / SD card. The image will be burned and verified.
 
-**PREFER_DOCKER** ( string )
-
+**PREFER_DOCKER** ( `string` )
 - `yes` (default)
 - `no`
 
 Docker assisted compilation is on by default. Set to `no` if you prefer running compilation natively.
 
-**DOCKER_ARMBIAN_BASE_IMAGE** ( string )
+**DOCKER_ARMBIAN_BASE_IMAGE** ( `string` )
 
 - `ubuntu:jammy` (default)
 - `ubuntu:noble`
@@ -113,40 +112,41 @@ Docker assisted compilation is on by default. Set to `no` if you prefer running 
 
 Defines the build host when using a Docker container (default). [Here](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build), you can see which other options are available.
 
-- **CI** ( string )
+- **CI** ( `string` )
   - true
   - **false**
 
 If enabled (`true`), the Docker build container will receive Docker credentials from the host
 (`${HOME}/.docker/config.json`) and the `OCI_TARGET_BASE` environment variable.
 
-- **OCI_TARGET_BASE** ( string )
+- **OCI_TARGET_BASE** ( `string` )
   - url/to/container_registry/path
   - **${GHCR_SOURCE}/armbian/\*** (GHCR_SOURCE is defined in `lib/functions/configuration/main-config.sh`)
 
 Select the target for pull/push OCI cached images. If not set, default is used.
 
-- **GHCR_MIRROR_ADDRESS** (string)
+**GHCR_MIRROR_ADDRESS** ( `string` )
 
 The default mirror address for ghcr.io, set by `GHCR_MIRROR=dockerproxy`, is ghcr.dockerproxy.com. When this address is unavailable, an alternative address can be set with `GHCR_MIRROR_ADDRESS`.
 
 Example:
 
-```
+```sh
 ./compile.sh GHCR_MIRROR=dockerproxy GHCR_MIRROR_ADDRESS=ghcr.libcuda.so
 ```
 
-- **KERNEL_COMPILER** (string)
+**KERNEL_COMPILER** ( `string` )
 
 The compiler used to compile the kernel. Usually, this option is set by the board config, but it can be set to `clang` to use LLVM to compile the kernel.
 
 Example:
 
-```
+```sh
 ./compile.sh KERNEL_COMPILER=clang
 ```
 
-- **OPENSSHD_REGENERATE_HOST_KEYS** (boolean)
+**OPENSSHD_REGENERATE_HOST_KEYS** ( `boolean` )
+
   - false (skip armbian-firstrun's OpenSSH host keys deletion and regeneration (eg: to let cloud-init set the SSH host keys)
   - **true** (execute armbian-firstrun's OpenSSH host keys deletion + regeneration)
 
@@ -154,7 +154,7 @@ Manage OpenSSH host key regeneration at armbian-firstrun service.
 
 Example:
 
-```
+```sh
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
 ```
 
@@ -162,7 +162,7 @@ Example:
 
 ### Filesystem
 
-**ROOTFS_TYPE** ( string )
+**ROOTFS_TYPE** ( `string` )
 
 - `ext4` (default)
 - `f2fs`
@@ -173,7 +173,7 @@ Example:
 
 Create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
 
-**BTRFS_COMPRESSION** ( string )
+**BTRFS_COMPRESSION** ( `string` )
 
 - `lzo`
 - `none`
@@ -186,7 +186,7 @@ When choosing `ROOTFS_TYPE=btrfs`, select `btrfs` filesystem compression method 
 
     The script does not check the legality of the input variable (compression ratio). Input like `zlib:1234` is legal to the script but illegal to the kernel. Beware that setting this option does affect image creation only (shrinking disk size) and will not adjust `/etc/fstab`, so it is up to the user to later edit `/etc/fstab` if compression in daily operation is also wanted (beware of severe performance penalties with random IO patterns and heavy compression algorithms!).
 
-**BTRFS_ROOT_SUBVOLUME**
+**BTRFS_ROOT_SUBVOLUME** ( `string` )
 
 When using a BTRFS image as a file system, the volume `/` is placed on
 btrfs subvolume `@`. The same subvolume is set as default for mounting without
@@ -195,11 +195,11 @@ specifying the `subvol=@` option at the time the image is mounted.
 Using `BTRFS_ROOT_SUBVOLUME`, you can set a different name for the
 root filesystem subvolume:
 
-```
+```sh
 ./compile.sh ROOTFS_TYPE=btrfs BTRFS_ROOT_SUBVOLUME=@root
 ```
 
-**CRYPTROOT_ENABLE** ( string )
+**CRYPTROOT_ENABLE** ( `string` )
 
 - yes
 - no
@@ -226,71 +226,74 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
 
 ### Advanced
 
-**INCLUDE_HOME_DIR** ( string )
+**INCLUDE_HOME_DIR** ( `string` )
 
 - `yes`
 - `no` (default)
 
 Include directories created inside /home in final image.
 
-**ENABLE_EXTENSIONS** ( comma-separated list )
+**ENABLE_EXTENSIONS** ( `comma-separated list` )
 
 [Extensions](/Developer-Guide_Extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
 
 !!! example "Build switch example"
 
-    ~~~
-    ./compile.sh \
-    build \
-    BOARD=uefi-x86 \
-    BRANCH=current \
-    BUILD_DESKTOP=no \
-    BUILD_MINIMAL=no \
-    KERNEL_CONFIGURE=no \
-    RELEASE=noble \
-    ENABLE_EXTENSIONS=mesa-vpu,nvidia \
-    ~~~
+```sh
+./compile.sh \
+build \
+BOARD=uefi-x86 \
+BRANCH=current \
+BUILD_DESKTOP=no \
+BUILD_MINIMAL=no \
+KERNEL_CONFIGURE=no \
+RELEASE=noble \
+ENABLE_EXTENSIONS=mesa-vpu,nvidia \
+```
 
-**CONSOLE_AUTOLOGIN**
+**CONSOLE_AUTOLOGIN** ( `string` )
 
 - `yes` (default)
 - `no`
 
 Automatically login as root for local consoles at first run. Disable if your security threat model requires.
 
-**USE_CCACHE** 
-- `yes` 
-- `no` (default) 
+**USE_CCACHE** ( `string` )
+
+- `yes`
+- `no` (default)
 
 Use a C compiler cache.  Generally not needed due to git-worktree .  Can slow performance on clean builds.
 
-**PRIVATE_CCACHE** 
-- `yes` 
-- `no` (default) 
+**PRIVATE_CCACHE** ( `string` )
+
+- `yes`
+- `no` (default)
 
 Use `$DEST/ccache` as ccache home directory. Setting yes to this will enable CCACHE as well.
 
 **KERNEL_BTF**
-- `yes` 
+
+- `yes`
 - `no`
 
 Default is to auto-detect based on build host available RAM. If not enough RAM available, use =no to accept building without BTF debug information, or use =yes to force building with BTF even if low RAM. Family code can set this to opt-out of BTF. For more information on BTF see <https://docs.kernel.org/bpf/btf.html>
 
-**ARTIFACT_IGNORE_CACHE** ( string )
+**ARTIFACT_IGNORE_CACHE** ( `string` )
 
 - `yes`
 - `no`  (default)
 
 Enforce building from source instead of using pre-built artifacts.
 
-**SKIP_ARMBIAN_REPO** ( string )
+**SKIP_ARMBIAN_REPO** ( `string` )
 
 - `yes`
 - `no`  (default)
 
 Enforce building without Armbian repository. Suitable for developing new releases or making custom images that doesn't need Armbian repository.
 
-**SECTOR_SIZE** ( value )
+**SECTOR_SIZE** ( `value` )
 - `512` (default, for SD/EMMC/...)
 - `4096` (for UFS, requires util-linux >2.41. Tested on Debian Trixie host)
 
@@ -367,4 +370,3 @@ Enforce sfdisk to align partition sector sizes.
 - **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **DISABLE_KERNEL_PATCHES** ( yes | **no** ): Disable all Armbian-specific kernel patches and build a vanilla kernel instead. Also disables `EXTRAWIFI`
-
