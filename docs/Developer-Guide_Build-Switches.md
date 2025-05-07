@@ -186,6 +186,19 @@ When choosing `ROOTFS_TYPE=btrfs`, select `btrfs` filesystem compression method 
 
     The script does not check the legality of the input variable (compression ratio). Input like `zlib:1234` is legal to the script but illegal to the kernel. Beware that setting this option does affect image creation only (shrinking disk size) and will not adjust `/etc/fstab`, so it is up to the user to later edit `/etc/fstab` if compression in daily operation is also wanted (beware of severe performance penalties with random IO patterns and heavy compression algorithms!).
 
+**BTRFS_ROOT_SUBVOLUME**
+
+When using a BTRFS image as a file system, the volume `/` is placed on
+btrfs subvolume `@`. The same subvolume is set as default for mounting without
+specifying the `subvol=@` option at the time the image is mounted.
+
+Using `BTRFS_ROOT_SUBVOLUME`, you can set a different name for the
+root filesystem subvolume:
+
+```
+./compile.sh ROOTFS_TYPE=btrfs BTRFS_ROOT_SUBVOLUME=@root
+```
+
 **CRYPTROOT_ENABLE** ( string )
 
 - yes
