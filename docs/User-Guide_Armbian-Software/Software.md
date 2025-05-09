@@ -2462,17 +2462,17 @@ armbian-config --cmd IMM001
 
 === "Directories"
 
-    - Uploads: `/armbian/photos/upload/`
-    - Thumbnails: `/armbian/photos/thumbs/`
-    - Profile images: `/armbian/photos/profile/`
-    - Library: `/armbian/photos/library/`
-    - Encoded videos: `/armbian/photos/encoded-video/`
-    - Backups: `/armbian/photos/backups/`
+    - Uploads: `/armbian/immich/photos/upload/`
+    - Thumbnails: `/armbian/immich/photos/thumbs/`
+    - Profile images: `/armbian/immich/photos/profile/`
+    - Library: `/armbian/immich/photos/library/`
+    - Encoded videos: `/armbian/immich/photos/encoded-video/`
+    - Backups: `/armbian/immich/photos/backups/`
 
 === "View logs"
 
     ```sh
-    docker logs -f immich_server
+    docker logs -f immich
     ```
 
 === "Immich vs Google Photos vs Synology Photos"
