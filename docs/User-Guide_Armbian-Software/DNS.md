@@ -31,6 +31,7 @@ Pi-hole is a network-wide ad blocker that acts as a DNS (Domain Name System) sin
 Pi-hole is typically installed on a Armbian minimal, but it can also run on other systems. It's a great way to have ad-blocking and privacy protection across your entire network without needing to install anything on individual devices.
 <!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.pi-hole.net/)  
@@ -88,6 +89,7 @@ Unbound caching DNS resolver
 Unbound is a high-performance, open-source DNS resolver. It primarily serves to resolve domain names into IP addresses for devices on a network. Unlike regular DNS servers, Unbound performs DNS lookups directly and securely, providing features like DNSSEC validation (ensuring data integrity) and privacy protections. It's often used to improve speed, security, and privacy by resolving queries locally rather than relying on external DNS services.
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -145,6 +147,7 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/AdguardTeam/AdGuardHome/wiki)  

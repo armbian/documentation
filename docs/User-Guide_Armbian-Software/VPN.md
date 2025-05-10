@@ -19,6 +19,7 @@ WireGuard VPN client / server
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. Regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 <!--- header STOP from tools/include/markdown/WRG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-header.md)  
 __Status:__ Enabled  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -87,6 +88,7 @@ ZeroTier connect devices over your own private network in the world.
 [![ZeroTier](/images/ZTR001.png)](#)
 <!--- section image STOP from tools/include/images/ZTR001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-header.md)  
 __Status:__ Stable  
 
 ~~~ custombash

@@ -20,6 +20,7 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 <!--- header STOP from tools/include/markdown/DOW001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -121,6 +122,7 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -182,6 +184,7 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -244,6 +247,7 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 
 <!--- header STOP from tools/include/markdown/SABN01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -301,6 +305,7 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -362,6 +367,7 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 
 <!--- header STOP from tools/include/markdown/SON001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -423,6 +429,7 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
 <!--- header STOP from tools/include/markdown/RAD001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -485,6 +492,7 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 
 <!--- header STOP from tools/include/markdown/BAZ001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -546,6 +554,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 <!--- header STOP from tools/include/markdown/LID001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -607,6 +616,7 @@ Readarr - Book Manager and Automation (Sonarr for Ebooks)
 
 <!--- header STOP from tools/include/markdown/RDR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -668,6 +678,7 @@ Jellyseerr is a free and open source software application for managing requests 
 
 <!--- header STOP from tools/include/markdown/JEL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/JEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JEL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  

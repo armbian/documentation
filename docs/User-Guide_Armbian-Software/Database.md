@@ -31,6 +31,7 @@ Thanks to its proven architecture and open-source nature, PostgreSQL fits seamle
 
 <!--- header STOP from tools/include/markdown/PGSQL1-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -92,6 +93,7 @@ Mariadb is one of the most popular database servers. Made by the original develo
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -165,6 +167,7 @@ Redis is widely used for real-time applications, caching layers, session stores,
 
 <!--- header STOP from tools/include/markdown/REDIS1-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -217,6 +220,7 @@ phpMyAdmin web interface manager
 [![phpMyAdmin](/images/MYA001.png)](#)
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  

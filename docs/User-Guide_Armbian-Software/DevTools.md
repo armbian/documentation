@@ -9,6 +9,7 @@ comments: true
 
 Install tools for cloning and managing repositories (git)
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  

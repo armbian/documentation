@@ -29,6 +29,7 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/BNS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/BNS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BNS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -97,6 +98,7 @@ View Network Configuration allows you to display the system’s active network s
 
 <!--- header STOP from tools/include/markdown/VNS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/VNS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/VNS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -112,6 +114,7 @@ armbian-config --cmd VNS001
 
 Advanced bridged network configuration
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NEA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NEA001-header.md)  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
 __Documentation:__ [Link](https://forum.armbian.com/)  
@@ -138,6 +141,7 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/NEA002-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NEA002-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NEA002-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
