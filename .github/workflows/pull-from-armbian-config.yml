@@ -25,7 +25,7 @@ jobs:
         with:
           repository: 'armbian/configng'
           path: 'config'
-          ref: custom_edit
+          ref: custom_edit2
 
       - name: Make docs
         run: |
