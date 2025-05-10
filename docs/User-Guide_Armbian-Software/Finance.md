@@ -28,6 +28,7 @@ Do your finances with Actual Budget
 
 <!--- header STOP from tools/include/markdown/ABU001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://actualbudget.org/docs)  
