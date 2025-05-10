@@ -27,6 +27,7 @@ Whether used on a dedicated server, a Raspberry Pi, or virtualized hardware, OMV
 **Warning**: installation works only on Debian (bookworm) based Armbian image.
 <!--- header STOP from tools/include/markdown/OMV001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">amd64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -111,6 +112,7 @@ Official site: [https://filebrowser.org](https://filebrowser.org)
 
 <!--- header STOP from tools/include/markdown/FIL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -174,6 +176,7 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 <!--- header STOP from tools/include/markdown/EMB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @schwar3kat  
@@ -234,6 +237,7 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 <!--- header STOP from tools/include/markdown/STR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -292,6 +296,7 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 <!--- header STOP from tools/include/markdown/STC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -353,6 +358,7 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 
 <!--- header STOP from tools/include/markdown/NCT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -414,6 +420,7 @@ ownCloud is a free and open-source software project for content collaboration an
 
 <!--- header STOP from tools/include/markdown/OWC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -475,6 +482,7 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 <!--- header STOP from tools/include/markdown/JMS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -537,6 +545,7 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 
 <!--- header STOP from tools/include/markdown/HPS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HPS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @efectn  
@@ -588,6 +597,7 @@ Thanks to Immich being built with modern technologies like NestJS, TypeScript, a
 
 <!--- header STOP from tools/include/markdown/IMM001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -612,17 +622,17 @@ armbian-config --cmd IMM001
 
 === "Directories"
 
-    - Uploads: `/armbian/photos/upload/`
-    - Thumbnails: `/armbian/photos/thumbs/`
-    - Profile images: `/armbian/photos/profile/`
-    - Library: `/armbian/photos/library/`
-    - Encoded videos: `/armbian/photos/encoded-video/`
-    - Backups: `/armbian/photos/backups/`
+    - Uploads: `/armbian/immich/photos/upload/`
+    - Thumbnails: `/armbian/immich/photos/thumbs/`
+    - Profile images: `/armbian/immich/photos/profile/`
+    - Library: `/armbian/immich/photos/library/`
+    - Encoded videos: `/armbian/immich/photos/encoded-video/`
+    - Backups: `/armbian/immich/photos/backups/`
 
 === "View logs"
 
     ```sh
-    docker logs -f immich_server
+    docker logs -f immich
     ```
 
 === "Immich vs Google Photos vs Synology Photos"

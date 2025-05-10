@@ -29,6 +29,7 @@ who mainly use other tools but want an overview on individual systems
 Thanks to Cockpit intentionally using system APIs and commands, a whole team of admins can manage a system in the way they prefer, including the command line and utilities right alongside Cockpit.
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -71,6 +72,7 @@ Samba is an open-source software suite that enables seamless file and printer sh
 
 <!--- header STOP from tools/include/markdown/SMB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SMB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -97,6 +99,7 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 
 <!--- header STOP from tools/include/markdown/WBM001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -151,6 +154,7 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 
 <!--- header STOP from tools/include/markdown/HPG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://gethomepage.dev/configs/)  
@@ -229,6 +233,7 @@ Originally developed by DigitalOcean, NetBox is widely adopted by network engine
 
 <!--- header STOP from tools/include/markdown/NBOX01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  

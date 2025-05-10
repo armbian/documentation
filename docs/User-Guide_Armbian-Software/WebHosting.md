@@ -38,6 +38,7 @@ After entering required information, your server will have auto updating SSL sec
 
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SWAG01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SWAG01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  

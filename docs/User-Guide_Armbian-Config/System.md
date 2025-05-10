@@ -9,6 +9,7 @@ comments: true
 
 Alternative kernels, headers, overlays, bootenv
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Kernel-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Kernel-header.md)  
 #### Alternative kernels
 
 
@@ -47,6 +48,7 @@ Switching between different kernel versions can significantly impact the functio
 
 <!--- header STOP from tools/include/markdown/KER001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/KER001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/KER001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -73,6 +75,7 @@ Kernel headers are files required to build modules (drivers) or software that in
 
 <!--- header STOP from tools/include/markdown/HEAD01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HEAD01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HEAD01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -105,6 +108,7 @@ Device Tree Overlays allow you to dynamically modify the Linux device tree at ru
 
 <!--- header STOP from tools/include/markdown/DTO001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DTO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DTO001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -120,6 +124,7 @@ armbian-config --cmd DTO001
 
 Select Odroid board configuration
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ODR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ODR001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 
@@ -144,6 +149,7 @@ Edit the boot environment allows you to modify critical boot settings stored in 
 
 <!--- header STOP from tools/include/markdown/BOOT01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/BOOT01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BOOT01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -159,6 +165,7 @@ armbian-config --cmd BOOT01
 
 Install to internal media, ZFS, NFS, read-only rootfs
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Storage-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Storage-header.md)  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
 __Documentation:__ [Link](https://forum.armbian.com/)  
@@ -170,6 +177,7 @@ This section provides an option to transfer the live running Armbian system from
 
 <!--- header STOP from tools/include/markdown/STO001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STO001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -191,6 +199,7 @@ Read-only filesystem is enabled using overlayroot, a utility that places a tempo
 
 <!--- header STOP from tools/include/markdown/ROO001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ROO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ROO001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -212,6 +221,7 @@ armbian-config --cmd ROO002
 
 Enable Network filesystem (NFS) support
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -233,6 +243,7 @@ armbian-config --cmd NETF02
 
 Enable network filesystem (NFS) daemon
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF04-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF04-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -266,6 +277,7 @@ armbian-config --cmd NETF07
 
 Find NFS servers in subnet and mount shares
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF09-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NETF09-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -300,6 +312,7 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
 
 <!--- header STOP from tools/include/markdown/ZFS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ZFS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ZFS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -343,6 +356,7 @@ armbian-config --cmd ZFS002
 
 Manage SSH daemon options, enable 2FA
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Access-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Access-header.md)  
 #### Native
 
 
@@ -359,6 +373,7 @@ Manage native SSH daemon allows you to configure SSH server settings such as log
 
 <!--- header STOP from tools/include/markdown/ACC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ACC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ACC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -450,6 +465,7 @@ Sandboxed & containerised SSH server
 Sandboxed & containerised SSH server allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.
 <!--- header STOP from tools/include/markdown/SSH001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SSH001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SSH001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -497,6 +513,7 @@ armbian-config --cmd SSH003
 
 Change shell, adjust MOTD
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/User-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/User-header.md)  
 #### Change shell
 
 
@@ -513,6 +530,7 @@ ZSH is a powerful and customizable shell designed to be an enhanced replacement 
 
 <!--- header STOP from tools/include/markdown/SHELL1-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SHELL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SHELL1-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -534,6 +552,7 @@ armbian-config --cmd SHELL2
 
 Adjust welcome screen (motd)
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MOTD01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MOTD01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -546,6 +565,7 @@ armbian-config --cmd MOTD01
 
 ## OS updates and distribution upgrades
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Updates-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Updates-header.md)  
 __Status:__ Active  
 #### Firmware
 
@@ -563,6 +583,7 @@ Enable Armbian firmware upgrades
 
 <!--- header STOP from tools/include/markdown/UPD001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/UPD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UPD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -590,6 +611,7 @@ The daily rolling repository offers frequently updated packages directly from de
 
 <!--- header STOP from tools/include/markdown/ROLLIN-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ROLLIN-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ROLLIN-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -611,6 +633,7 @@ The stable repository provides thoroughly tested packages intended for productio
 
 <!--- header STOP from tools/include/markdown/STABLE-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STABLE-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STABLE-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -639,6 +662,7 @@ Watchtower is fully configurable, allowing you to control update frequency, sele
 
 <!--- header STOP from tools/include/markdown/WTC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/WTC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WTC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -671,6 +695,7 @@ Unattended upgrades automatically install security updates and important package
 
 <!--- header STOP from tools/include/markdown/UNAT01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/UNAT01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNAT01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  

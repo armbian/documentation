@@ -6,6 +6,7 @@ comments: true
 
 ## Web server, LEMP, reverse proxy, Let's Encrypt SSL
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/WebHosting-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/WebHosting-header.md)  
 #### SWAG
 
 
@@ -40,6 +41,7 @@ After entering required information, your server will have auto updating SSL sec
 
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SWAG01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SWAG01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -70,6 +72,7 @@ armbian-config --cmd SWAG04
 
 ## Home Automation for control home appliances
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HomeAutomation-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/HomeAutomation-header.md)  
 #### openHAB
 
 
@@ -80,6 +83,7 @@ openHAB empowering the smart home
 [![openHAB](/images/HAB001.png)](#)
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAB001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/HAB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -146,6 +150,7 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -230,6 +235,7 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DOM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOM001-header.md)  
 __Status:__ Preview  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://wiki.domoticz.com)  
@@ -267,6 +273,7 @@ evcc is an energy management system with a focus on electromobility. The softwar
 
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-header.md)  
 __Status:__ Preview  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.evcc.io/en)  
@@ -312,6 +319,7 @@ armbian-config --cmd EVCC03
 
 ## Network-wide ad blockers servers
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DNS-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/DNS-header.md)  
 #### Pi-hole
 
 
@@ -339,6 +347,7 @@ Pi-hole is a network-wide ad blocker that acts as a DNS (Domain Name System) sin
 Pi-hole is typically installed on a Armbian minimal, but it can also run on other systems. It's a great way to have ad-blocking and privacy protection across your entire network without needing to install anything on individual devices.
 <!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.pi-hole.net/)  
@@ -396,6 +405,7 @@ Unbound caching DNS resolver
 Unbound is a high-performance, open-source DNS resolver. It primarily serves to resolve domain names into IP addresses for devices on a network. Unlike regular DNS servers, Unbound performs DNS lookups directly and securely, providing features like DNSSEC validation (ensuring data integrity) and privacy protections. It's often used to improve speed, security, and privacy by resolving queries locally rather than relying on external DNS services.
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -453,6 +463,7 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/AdguardTeam/AdGuardHome/wiki)  
@@ -513,6 +524,7 @@ armbian-config --cmd ADG003
 
 ## Music servers and streamers
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Music-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Music-header.md)  
 #### Navidrome
 
 
@@ -529,6 +541,7 @@ Navidrome is a modern, lightweight, and self-hosted music server and streamer. I
 
 <!--- header STOP from tools/include/markdown/NAV001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NAV001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAV001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -553,6 +566,7 @@ armbian-config --cmd NAV003
 
 ## Manage your finances
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Finance-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Finance-header.md)  
 #### Actual Budget
 
 
@@ -577,6 +591,7 @@ Do your finances with Actual Budget
 
 <!--- header STOP from tools/include/markdown/ABU001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://actualbudget.org/docs)  
@@ -615,6 +630,7 @@ armbian-config --cmd ABU003
 
 ## Backup solutions for your data
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Backup-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Backup-header.md)  
 #### Duplicati
 
 
@@ -640,6 +656,7 @@ Thanks to Duplicati’s smart design — working through standard protocols and 
 
 <!--- header STOP from tools/include/markdown/DPL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -686,6 +703,7 @@ armbian-config --cmd DPL003
 
 ## Download apps for movies, TV shows, music and subtitles
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Downloaders-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Downloaders-header.md)  
 #### qBittorrent
 
 
@@ -702,6 +720,7 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 <!--- header STOP from tools/include/markdown/DOW001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -803,6 +822,7 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -864,6 +884,7 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -926,6 +947,7 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 
 <!--- header STOP from tools/include/markdown/SABN01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -983,6 +1005,7 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1044,6 +1067,7 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 
 <!--- header STOP from tools/include/markdown/SON001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1105,6 +1129,7 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
 <!--- header STOP from tools/include/markdown/RAD001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1167,6 +1192,7 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 
 <!--- header STOP from tools/include/markdown/BAZ001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1228,6 +1254,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 <!--- header STOP from tools/include/markdown/LID001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1289,6 +1316,7 @@ Readarr - Book Manager and Automation (Sonarr for Ebooks)
 
 <!--- header STOP from tools/include/markdown/RDR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1350,6 +1378,7 @@ Jellyseerr is a free and open source software application for managing requests 
 
 <!--- header STOP from tools/include/markdown/JEL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/JEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JEL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1374,6 +1403,7 @@ armbian-config --cmd JEL003
 
 ## SQL database servers and web interface managers
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-header.md)  
 #### PostgreSQL
 
 
@@ -1401,6 +1431,7 @@ Thanks to its proven architecture and open-source nature, PostgreSQL fits seamle
 
 <!--- header STOP from tools/include/markdown/PGSQL1-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1462,6 +1493,7 @@ Mariadb is one of the most popular database servers. Made by the original develo
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1535,6 +1567,7 @@ Redis is widely used for real-time applications, caching layers, session stores,
 
 <!--- header STOP from tools/include/markdown/REDIS1-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1587,6 +1620,7 @@ phpMyAdmin web interface manager
 [![phpMyAdmin](/images/MYA001.png)](#)
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1611,6 +1645,7 @@ armbian-config --cmd MYA003
 
 ## Armbian infrastructure services
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Armbian-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Armbian-header.md)  
 #### CDN router
 
 
@@ -1627,6 +1662,7 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 
 <!--- header STOP from tools/include/markdown/ART001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ART001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ART001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -1659,6 +1695,7 @@ This module automates the installation, removal, and status checking of GitHub s
 
 <!--- header STOP from tools/include/markdown/GHR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -1719,6 +1756,7 @@ armbian-config --cmd GHR002
 [![Rsyncd server](/images/RSD001.png)](#)
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -1737,11 +1775,13 @@ armbian-config --cmd RSD002
 
 ## Applications and tools for development
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DevTools-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/DevTools-header.md)  
 #### Git CLI
 
 
 Install tools for cloning and managing repositories (git)
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -1760,6 +1800,7 @@ armbian-config --cmd GIT002
 
 ## Docker containerization and KVM virtual machines
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Containers-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Containers-header.md)  
 #### Docker
 
 
@@ -1770,6 +1811,7 @@ Docker minimal
 [![Docker](/images/CON001.png)](#)
 <!--- section image STOP from tools/include/images/CON001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CON001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CON001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1820,6 +1862,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 <!--- header STOP from tools/include/markdown/POR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/POR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/POR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @schwar3kat  
@@ -1854,6 +1897,7 @@ armbian-config --cmd POR003
 
 ## Media servers, organizers and editors
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Media-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Media-header.md)  
 #### OMV
 
 
@@ -1877,6 +1921,7 @@ Whether used on a dedicated server, a Raspberry Pi, or virtualized hardware, OMV
 **Warning**: installation works only on Debian (bookworm) based Armbian image.
 <!--- header STOP from tools/include/markdown/OMV001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">amd64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1961,6 +2006,7 @@ Official site: [https://filebrowser.org](https://filebrowser.org)
 
 <!--- header STOP from tools/include/markdown/FIL001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2024,6 +2070,7 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 <!--- header STOP from tools/include/markdown/EMB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @schwar3kat  
@@ -2084,6 +2131,7 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 <!--- header STOP from tools/include/markdown/STR001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2142,6 +2190,7 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 <!--- header STOP from tools/include/markdown/STC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2203,6 +2252,7 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 
 <!--- header STOP from tools/include/markdown/NCT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2264,6 +2314,7 @@ ownCloud is a free and open-source software project for content collaboration an
 
 <!--- header STOP from tools/include/markdown/OWC001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2325,6 +2376,7 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 <!--- header STOP from tools/include/markdown/JMS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2387,6 +2439,7 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 
 <!--- header STOP from tools/include/markdown/HPS001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HPS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPS001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @efectn  
@@ -2438,6 +2491,7 @@ Thanks to Immich being built with modern technologies like NestJS, TypeScript, a
 
 <!--- header STOP from tools/include/markdown/IMM001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-header.md)  
 __Status:__ Preview  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2462,17 +2516,17 @@ armbian-config --cmd IMM001
 
 === "Directories"
 
-    - Uploads: `/armbian/photos/upload/`
-    - Thumbnails: `/armbian/photos/thumbs/`
-    - Profile images: `/armbian/photos/profile/`
-    - Library: `/armbian/photos/library/`
-    - Encoded videos: `/armbian/photos/encoded-video/`
-    - Backups: `/armbian/photos/backups/`
+    - Uploads: `/armbian/immich/photos/upload/`
+    - Thumbnails: `/armbian/immich/photos/thumbs/`
+    - Profile images: `/armbian/immich/photos/profile/`
+    - Library: `/armbian/immich/photos/library/`
+    - Encoded videos: `/armbian/immich/photos/encoded-video/`
+    - Backups: `/armbian/immich/photos/backups/`
 
 === "View logs"
 
     ```sh
-    docker logs -f immich_server
+    docker logs -f immich
     ```
 
 === "Immich vs Google Photos vs Synology Photos"
@@ -2511,6 +2565,7 @@ armbian-config --cmd IMM003
 
 ## Real-time monitoring, collecting metrics, up-time status
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Monitoring-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Monitoring-header.md)  
 #### Uptime Kuma
 
 
@@ -2530,6 +2585,7 @@ You can receive instant notifications when a service goes down via Telegram, Dis
 
 <!--- header STOP from tools/include/markdown/UPK001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/UPK001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UPK001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2593,6 +2649,7 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 
 <!--- header STOP from tools/include/markdown/NTD001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NTD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NTD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2630,6 +2687,7 @@ Grafana data analytics
 Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
 <!--- header STOP from tools/include/markdown/GRA001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GRA001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GRA001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2688,6 +2746,7 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 <!--- header STOP from tools/include/markdown/PRO001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRO001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @efectn  
@@ -2764,6 +2823,7 @@ For more information and installation guides, visit the official [NetAlertX docu
 
 <!--- header STOP from tools/include/markdown/NAX001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAX001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAX001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2808,6 +2868,7 @@ armbian-config --cmd NAX003
 
 ## Remote File & Management tools
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Management-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Management-header.md)  
 #### Cockpit
 
 
@@ -2833,6 +2894,7 @@ who mainly use other tools but want an overview on individual systems
 Thanks to Cockpit intentionally using system APIs and commands, a whole team of admins can manage a system in the way they prefer, including the command line and utilities right alongside Cockpit.
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -2875,6 +2937,7 @@ Samba is an open-source software suite that enables seamless file and printer sh
 
 <!--- header STOP from tools/include/markdown/SMB001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SMB001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -2901,6 +2964,7 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 
 <!--- header STOP from tools/include/markdown/WBM001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
@@ -2955,6 +3019,7 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 
 <!--- header STOP from tools/include/markdown/HPG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-header.md)  
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://gethomepage.dev/configs/)  
@@ -3033,6 +3098,7 @@ Originally developed by DigitalOcean, NetBox is widely adopted by network engine
 
 <!--- header STOP from tools/include/markdown/NBOX01-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3092,6 +3158,7 @@ armbian-config --cmd NBOX03
 
 ## Tools for printing and 3D printing
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Printing-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Printing-header.md)  
 #### OctoPrint
 
 
@@ -3107,6 +3174,7 @@ OctoPrint web-based 3D printers management tool
 OctoPrint is an open source 3D printer controller application, which provides a web interface for the connected printers. It displays printers status and key parameters and allows user to schedule prints and remotely control the printer.
 <!--- header STOP from tools/include/markdown/OCT001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OCT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OCT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3151,11 +3219,13 @@ armbian-config --cmd OCT003
 
 ## Console network tools for measuring load and bandwidth
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Netconfig-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Netconfig-header.md)  
 #### nload
 
 
 nload - realtime console network usage monitor
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3177,6 +3247,7 @@ armbian-config --cmd NLD002
 
 iperf3 bandwidth measuring tool
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3198,6 +3269,7 @@ armbian-config --cmd IPR002
 
 iptraf-ng IP LAN monitor
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3219,6 +3291,7 @@ armbian-config --cmd IPT002
 
 avahi-daemon hostname broadcast via mDNS
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3237,6 +3310,7 @@ armbian-config --cmd AVH002
 
 ## Virtual Private Network tools
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/VPN-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/VPN-header.md)  
 #### WireGuard
 
 
@@ -3252,6 +3326,7 @@ WireGuard VPN client / server
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. Regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 <!--- header STOP from tools/include/markdown/WRG001-header.md --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-header.md)  
 __Status:__ Enabled  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -3320,6 +3395,7 @@ ZeroTier connect devices over your own private network in the world.
 [![ZeroTier](/images/ZTR001.png)](#)
 <!--- section image STOP from tools/include/images/ZTR001.png --->
 
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-header.md)  
 __Status:__ Stable  
 
 ~~~ custombash
