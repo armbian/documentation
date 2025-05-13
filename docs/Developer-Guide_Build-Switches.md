@@ -297,7 +297,7 @@ Enforce building from source instead of using pre-built artifacts.
 - `yes`
 - `no`  (default)
 
-Enforce building without Armbian repository. Suitable for developing new releases or making custom images that doesn't need Armbian repository.
+Enforce building without Armbian repository. Suitable for developing new releases or making custom images that don't need Armbian repository.
 
 **SECTOR_SIZE** ( `value` )
 - `512` (default, for SD/EMMC/...)

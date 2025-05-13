@@ -11,7 +11,7 @@ Patches with the same file name and path in the `userpatches` directory tree ove
 
 ## User provided configuration
 
-A configuration file named `userpatches/config-<something>.conf.sh` (`.conf` also allowed) is a bash script that is sourced during the build if `./compile.sh something` is issued. All parameters which normally are passed via command line can be used (`PARAM1=value1` `PARAM2=value`) by using the same syntax, one separate line per `PARAM`. Command-line parameters still can override what is the config file. More advanced use cases can use conditionals, define functions to implement hooks, source other/common config files, etc. A few, quite complex, examples can be found [here](https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova).
+A configuration file named `userpatches/config-<something>.conf.sh` (`.conf` also allowed) is a bash script that is sourced during the build if `./compile.sh something` is issued. All parameters which normally are passed via command line can be used (`PARAM1=value1` `PARAM2=value`) by using the same syntax, one separate line per `PARAM`. Command-line parameters still can override what is in the config file. More advanced use cases can use conditionals, define functions to implement hooks, source other/common config files, etc. A few, quite complex, examples can be found [here](https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova).
 
 ## Legacy user provided configuration (deprecated, support for this will be removed at some point)
 
