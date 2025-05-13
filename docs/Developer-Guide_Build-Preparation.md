@@ -4,8 +4,8 @@
 
 - x86_64 / aarch64 / riscv64 machine
 - at least 8GB (less for non-[BTF](https://docs.kernel.org/bpf/btf.html) builds) of memory and ~50GB of disk space for VM, container, or bare-metal installation
-- **Armbian / Ubuntu Jammy 22.04.x** for native building or any Docker capable Linux for containerised
-- **Windows 10/11 with WSL2 subsystem** running Armbian / Ubuntu Jammy 22.04.x
+- **Armbian / Ubuntu Noble 24.04.x** for native building or any Docker capable Linux for containerised
+- **Windows 10/11 with WSL2 subsystem** running Armbian / Ubuntu Noble 24.04.x
 - Superuser rights (configured sudo or root access).
 - Make sure your system is up-to-date! Outdated Docker binaries, for example, can cause trouble
 
