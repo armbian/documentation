@@ -158,18 +158,6 @@ Example:
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
 ```
 
-**SHARE_LOG** ( `string` )
-
-  - `yes`
-
-Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process. 
-
-Example:
-
-```sh
-./compile.sh SHARE_LOG=yes
-```
-
 <hr>
 
 ### Filesystem
@@ -310,6 +298,19 @@ Enforce building without Armbian repository. Suitable for developing new release
 - `4096` (for UFS, requires util-linux >2.41. Tested on Debian Trixie host)
 
 Enforce sfdisk to align partition sector sizes.
+
+**SHARE_LOG** ( `string` )
+
+- `yes`
+- `no` (default)
+
+Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process. 
+
+Example:
+
+```sh
+./compile.sh SHARE_LOG=yes
+```
 
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
