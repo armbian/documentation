@@ -158,6 +158,18 @@ Example:
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
 ```
 
+**SHARE_LOG** ( `string` )
+
+  - `yes`
+
+Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process. 
+
+Example:
+
+```sh
+./compile.sh SHARE_LOG=yes
+```
+
 <hr>
 
 ### Filesystem
