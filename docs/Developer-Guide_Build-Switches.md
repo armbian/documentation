@@ -304,7 +304,7 @@ Enforce sfdisk to align partition sector sizes.
 - `yes`
 - `no` (default)
 
-Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process. 
+Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process.
 
 Example:
 
