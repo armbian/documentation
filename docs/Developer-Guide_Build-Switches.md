@@ -299,6 +299,19 @@ Enforce building without Armbian repository. Suitable for developing new release
 
 Enforce sfdisk to align partition sector sizes.
 
+**SHARE_LOG** ( `string` )
+
+- `yes`
+- `no` (default)
+
+Automatically upload full build logs for debugging to one of Armbian's paste servers at the end of the build process.
+
+Example:
+
+```sh
+./compile.sh SHARE_LOG=yes
+```
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
