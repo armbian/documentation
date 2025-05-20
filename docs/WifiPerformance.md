@@ -60,7 +60,7 @@ All wireless adapters were tested under consistent conditions - each positioned 
 
 ## Devices Under Tests
 This section presents the performance test results, including key metrics and technical details from the test execution.  
-**Test Date:** [2025-05-16 20:10 UTC](https://github.com/armbian/armbian.github.io/actions/runs/15075940859)
+**Test Date:** [2025-05-20 10:12 UTC](https://github.com/armbian/armbian.github.io/actions/runs/15133953816)
 ### AC
 
 #### BCM4345
@@ -70,61 +70,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">BCM4345</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">57.7</span> Mbits/sec | <span style="font-size: 1.5rem;">59.1</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">BCM4345</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">57.1</span> Mbits/sec | <span style="font-size: 1.5rem;">58.8</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.131 port 46021 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.131 port 34653 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  6.53 MBytes  54.8 Mbits/sec                  
-    [  5]   1.00-2.00   sec  6.57 MBytes  55.1 Mbits/sec                  
-    [  5]   2.00-3.00   sec  6.83 MBytes  57.3 Mbits/sec                  
-    [  5]   3.00-4.00   sec  6.62 MBytes  55.5 Mbits/sec                  
-    [  5]   4.00-5.00   sec  6.57 MBytes  55.1 Mbits/sec                  
-    [  5]   5.00-6.00   sec  6.62 MBytes  55.6 Mbits/sec                  
-    [  5]   6.00-7.00   sec  6.64 MBytes  55.7 Mbits/sec                  
-    [  5]   7.00-8.00   sec  6.60 MBytes  55.3 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.65 MBytes  55.8 Mbits/sec                  
-    [  5]   9.00-10.00  sec  6.65 MBytes  55.8 Mbits/sec                  
+    [  5]   0.00-1.00   sec  6.38 MBytes  53.5 Mbits/sec                  
+    [  5]   1.00-2.00   sec  6.46 MBytes  54.2 Mbits/sec                  
+    [  5]   2.00-3.00   sec  6.49 MBytes  54.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  6.55 MBytes  54.9 Mbits/sec                  
+    [  5]   4.00-5.00   sec  6.53 MBytes  54.8 Mbits/sec                  
+    [  5]   5.00-6.00   sec  6.43 MBytes  54.0 Mbits/sec                  
+    [  5]   6.00-7.00   sec  6.46 MBytes  54.2 Mbits/sec                  
+    [  5]   7.00-8.00   sec  6.48 MBytes  54.3 Mbits/sec                  
+    [  5]   8.00-9.00   sec  6.40 MBytes  53.7 Mbits/sec                  
+    [  5]   9.00-10.00  sec  6.38 MBytes  53.6 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec  68.9 MBytes  57.7 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  66.3 MBytes  55.6 Mbits/sec                  receiver
+    [  5]   0.00-10.02  sec  68.2 MBytes  57.1 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  64.6 MBytes  54.2 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.131 port 35167 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.131 port 41983 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  7.92 MBytes  66.4 Mbits/sec    0    421 KBytes       
-    [  5]   1.00-2.00   sec  8.83 MBytes  74.1 Mbits/sec    0    734 KBytes       
-    [  5]   2.00-3.00   sec  6.25 MBytes  52.4 Mbits/sec    0    895 KBytes       
-    [  5]   3.00-4.00   sec  6.25 MBytes  52.4 Mbits/sec    0    947 KBytes       
-    [  5]   4.00-5.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1022 KBytes       
-    [  5]   5.00-6.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.13 MBytes       
-    [  5]   6.00-7.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.34 MBytes       
-    [  5]   7.00-8.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.53 MBytes       
-    [  5]   8.00-9.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.53 MBytes       
-    [  5]   9.00-10.00  sec  6.25 MBytes  52.4 Mbits/sec    0   1.63 MBytes       
+    [  5]   0.00-1.00   sec  7.83 MBytes  65.7 Mbits/sec    0    421 KBytes       
+    [  5]   1.00-2.00   sec  8.55 MBytes  71.7 Mbits/sec    0    626 KBytes       
+    [  5]   2.00-3.00   sec  7.50 MBytes  62.9 Mbits/sec    0    897 KBytes       
+    [  5]   3.00-4.00   sec  6.25 MBytes  52.4 Mbits/sec    0    942 KBytes       
+    [  5]   4.00-5.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1015 KBytes       
+    [  5]   5.00-6.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.13 MBytes       
+    [  5]   6.00-7.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.30 MBytes       
+    [  5]   7.00-8.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.47 MBytes       
+    [  5]   8.00-9.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.55 MBytes       
+    [  5]   9.00-10.00  sec  6.25 MBytes  52.4 Mbits/sec    0   1.59 MBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  70.5 MBytes  59.1 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec  67.9 MBytes  56.8 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  70.1 MBytes  58.8 Mbits/sec    0             sender
+    [  5]   0.00-10.02  sec  68.0 MBytes  56.9 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462
-    RX: 157571 bytes (428 packets)
-    TX: 95453 bytes (542 packets)
-    signal: -25 dBm
+    RX: 39959 bytes (160 packets)
+    TX: 53708 bytes (215 packets)
+    signal: -27 dBm
     rx bitrate: 72.2 MBit/s
-    tx bitrate: 65.0 MBit/s
+    tx bitrate: 72.2 MBit/s
     
     ```
 
@@ -135,59 +135,59 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">QCA9880</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">116</span> Mbits/sec | <span style="font-size: 1.5rem;">105</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">QCA9880</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">117</span> Mbits/sec | <span style="font-size: 1.5rem;">85.3</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.126 port 34245 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.126 port 46183 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
     [  5]   0.00-1.00   sec  13.1 MBytes   110 Mbits/sec                  
-    [  5]   1.00-2.00   sec  13.4 MBytes   113 Mbits/sec                  
-    [  5]   2.00-3.00   sec  13.5 MBytes   113 Mbits/sec                  
-    [  5]   3.00-4.00   sec  13.4 MBytes   112 Mbits/sec                  
-    [  5]   4.00-5.00   sec  13.3 MBytes   112 Mbits/sec                  
-    [  5]   5.00-6.00   sec  13.7 MBytes   115 Mbits/sec                  
-    [  5]   6.00-7.00   sec  13.7 MBytes   115 Mbits/sec                  
-    [  5]   7.00-8.00   sec  13.6 MBytes   114 Mbits/sec                  
-    [  5]   8.00-9.00   sec  13.5 MBytes   113 Mbits/sec                  
-    [  5]   9.00-10.00  sec  13.6 MBytes   114 Mbits/sec                  
+    [  5]   1.00-2.00   sec  13.8 MBytes   116 Mbits/sec                  
+    [  5]   2.00-3.00   sec  14.0 MBytes   117 Mbits/sec                  
+    [  5]   3.00-4.00   sec  13.7 MBytes   115 Mbits/sec                  
+    [  5]   4.00-5.00   sec  13.6 MBytes   114 Mbits/sec                  
+    [  5]   5.00-6.00   sec  13.8 MBytes   115 Mbits/sec                  
+    [  5]   6.00-7.00   sec  13.9 MBytes   117 Mbits/sec                  
+    [  5]   7.00-8.00   sec  13.9 MBytes   116 Mbits/sec                  
+    [  5]   8.00-9.00   sec  13.8 MBytes   116 Mbits/sec                  
+    [  5]   9.00-10.00  sec  13.5 MBytes   113 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   138 MBytes   116 Mbits/sec   44             sender
-    [  5]   0.00-10.00  sec   135 MBytes   113 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   140 MBytes   117 Mbits/sec    9             sender
+    [  5]   0.00-10.00  sec   137 MBytes   115 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.126 port 55639 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.126 port 37643 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  12.9 MBytes   108 Mbits/sec    0    447 KBytes       
-    [  5]   1.00-2.00   sec  11.4 MBytes  95.4 Mbits/sec    0    494 KBytes       
-    [  5]   2.00-3.00   sec  12.1 MBytes   102 Mbits/sec    0    525 KBytes       
-    [  5]   3.00-4.00   sec  12.6 MBytes   105 Mbits/sec    0    577 KBytes       
-    [  5]   4.00-5.00   sec  12.7 MBytes   106 Mbits/sec    0    608 KBytes       
-    [  5]   5.00-6.00   sec  13.3 MBytes   112 Mbits/sec    0    672 KBytes       
-    [  5]   6.00-7.00   sec  12.3 MBytes   103 Mbits/sec    0    672 KBytes       
-    [  5]   7.00-8.00   sec  13.4 MBytes   112 Mbits/sec    0    672 KBytes       
-    [  5]   8.00-9.00   sec  12.5 MBytes   105 Mbits/sec    0    672 KBytes       
-    [  5]   9.00-10.00  sec  12.4 MBytes   104 Mbits/sec    0    707 KBytes       
+    [  5]   0.00-1.00   sec  11.2 MBytes  94.2 Mbits/sec    0    448 KBytes       
+    [  5]   1.00-2.00   sec  9.38 MBytes  78.7 Mbits/sec    0    530 KBytes       
+    [  5]   2.00-3.00   sec  10.9 MBytes  91.7 Mbits/sec    0    590 KBytes       
+    [  5]   3.00-4.00   sec  10.0 MBytes  83.9 Mbits/sec    0    590 KBytes       
+    [  5]   4.00-5.00   sec  10.1 MBytes  85.0 Mbits/sec    0    650 KBytes       
+    [  5]   5.00-6.00   sec  9.76 MBytes  81.8 Mbits/sec    0    650 KBytes       
+    [  5]   6.00-7.00   sec  9.82 MBytes  82.4 Mbits/sec    0    691 KBytes       
+    [  5]   7.00-8.00   sec  9.45 MBytes  79.2 Mbits/sec    0    691 KBytes       
+    [  5]   8.00-9.00   sec  11.6 MBytes  97.0 Mbits/sec    0    691 KBytes       
+    [  5]   9.00-10.00  sec  9.38 MBytes  78.7 Mbits/sec    0    691 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   125 MBytes   105 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec   124 MBytes   104 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   102 MBytes  85.3 Mbits/sec    0             sender
+    [  5]   0.00-10.04  sec   100 MBytes  83.9 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462
-    RX: 111902 bytes (468 packets)
-    TX: 53783 bytes (240 packets)
-    signal: -38 dBm
+    RX: 109370 bytes (476 packets)
+    TX: 56861 bytes (230 packets)
+    signal: -45 dBm
     rx bitrate: 144.4 MBit/s MCS 15 short GI
     
     ```
@@ -199,61 +199,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL88x2BU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">83.3</span> Mbits/sec | <span style="font-size: 1.5rem;">76.4</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL88x2BU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">94.7</span> Mbits/sec | <span style="font-size: 1.5rem;">52.2</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.107 port 39141 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.107 port 53693 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  8.25 MBytes  69.1 Mbits/sec                  
-    [  5]   1.00-2.00   sec  8.75 MBytes  73.4 Mbits/sec                  
-    [  5]   2.00-3.00   sec  9.12 MBytes  76.5 Mbits/sec                  
-    [  5]   3.00-4.00   sec  8.38 MBytes  70.3 Mbits/sec                  
-    [  5]   4.00-5.00   sec  9.25 MBytes  77.6 Mbits/sec                  
-    [  5]   5.00-6.00   sec  10.9 MBytes  91.2 Mbits/sec                  
-    [  5]   6.00-7.00   sec  11.0 MBytes  92.3 Mbits/sec                  
-    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
-    [  5]   8.00-9.00   sec  10.6 MBytes  89.1 Mbits/sec                  
-    [  5]   9.00-10.00  sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   0.00-1.00   sec  9.62 MBytes  80.7 Mbits/sec                  
+    [  5]   1.00-2.00   sec  9.62 MBytes  80.7 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.8 MBytes  98.6 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.5 MBytes  96.5 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.6 MBytes  97.5 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.8 MBytes  98.6 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.6 MBytes  97.5 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.5 MBytes  96.5 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.8 MBytes  98.6 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec  99.4 MBytes  83.3 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  98.6 MBytes  82.7 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   113 MBytes  94.7 Mbits/sec    2             sender
+    [  5]   0.00-10.00  sec   112 MBytes  93.9 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.107 port 45003 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.107 port 41189 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  10.8 MBytes  90.1 Mbits/sec    0    491 KBytes       
-    [  5]   1.00-2.00   sec  9.75 MBytes  81.8 Mbits/sec    0    703 KBytes       
-    [  5]   2.00-3.00   sec  8.50 MBytes  71.3 Mbits/sec    0    793 KBytes       
-    [  5]   3.00-4.00   sec  8.38 MBytes  70.3 Mbits/sec    0    830 KBytes       
-    [  5]   4.00-5.00   sec  8.88 MBytes  74.5 Mbits/sec    3    588 KBytes       
-    [  5]   5.00-6.00   sec  9.75 MBytes  81.8 Mbits/sec    0    617 KBytes       
-    [  5]   6.00-7.00   sec  8.50 MBytes  71.3 Mbits/sec    0    717 KBytes       
-    [  5]   7.00-8.00   sec  7.00 MBytes  58.7 Mbits/sec    0    717 KBytes       
-    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec    0    717 KBytes       
-    [  5]   9.00-10.00  sec  8.50 MBytes  71.3 Mbits/sec    0    717 KBytes       
+    [  5]   0.00-1.00   sec  7.25 MBytes  60.8 Mbits/sec    0    352 KBytes       
+    [  5]   1.00-2.00   sec  6.75 MBytes  56.6 Mbits/sec    0    550 KBytes       
+    [  5]   2.00-3.00   sec  6.00 MBytes  50.3 Mbits/sec    0    581 KBytes       
+    [  5]   3.00-4.00   sec  6.25 MBytes  52.4 Mbits/sec    0    662 KBytes       
+    [  5]   4.00-5.00   sec  5.25 MBytes  44.0 Mbits/sec    0    662 KBytes       
+    [  5]   5.00-6.00   sec  7.00 MBytes  58.7 Mbits/sec    0    697 KBytes       
+    [  5]   6.00-7.00   sec  5.50 MBytes  46.1 Mbits/sec    0    740 KBytes       
+    [  5]   7.00-8.00   sec  6.75 MBytes  56.6 Mbits/sec    0    740 KBytes       
+    [  5]   8.00-9.00   sec  5.62 MBytes  47.2 Mbits/sec    0    778 KBytes       
+    [  5]   9.00-10.00  sec  5.88 MBytes  49.3 Mbits/sec    0    778 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  91.1 MBytes  76.4 Mbits/sec    3             sender
-    [  5]   0.00-10.03  sec  88.5 MBytes  74.0 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  62.2 MBytes  52.2 Mbits/sec    0             sender
+    [  5]   0.00-10.04  sec  59.0 MBytes  49.3 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462.0
-    RX: 197448 bytes (500 packets)
-    TX: 105269 bytes (518 packets)
-    signal: -43 dBm
-    rx bitrate: 117.0 MBit/s MCS 14
-    tx bitrate: 104.0 MBit/s MCS 13
+    RX: 173484 bytes (409 packets)
+    TX: 90605 bytes (482 packets)
+    signal: -37 dBm
+    rx bitrate: 130.0 MBit/s MCS 15
+    tx bitrate: 117.0 MBit/s MCS 14
     ```
 
 #### Realtek 8811AU
@@ -263,57 +263,57 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8812AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">191</span> Mbits/sec | <span style="font-size: 1.5rem;">200</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8812AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">189</span> Mbits/sec | <span style="font-size: 1.5rem;">190</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.119 port 56171 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.119 port 32861 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  19.6 MBytes   164 Mbits/sec                  
-    [  5]   1.00-2.00   sec  22.9 MBytes   192 Mbits/sec                  
-    [  5]   2.00-3.00   sec  23.1 MBytes   194 Mbits/sec                  
-    [  5]   3.00-4.00   sec  23.0 MBytes   193 Mbits/sec                  
-    [  5]   4.00-5.00   sec  22.5 MBytes   189 Mbits/sec                  
-    [  5]   5.00-6.00   sec  22.9 MBytes   192 Mbits/sec                  
-    [  5]   6.00-7.00   sec  22.6 MBytes   190 Mbits/sec                  
-    [  5]   7.00-8.00   sec  22.2 MBytes   187 Mbits/sec                  
-    [  5]   8.00-9.00   sec  22.1 MBytes   186 Mbits/sec                  
-    [  5]   9.00-10.00  sec  22.6 MBytes   190 Mbits/sec                  
+    [  5]   0.00-1.00   sec  20.1 MBytes   169 Mbits/sec                  
+    [  5]   1.00-2.00   sec  23.2 MBytes   195 Mbits/sec                  
+    [  5]   2.00-3.00   sec  22.5 MBytes   189 Mbits/sec                  
+    [  5]   3.00-4.00   sec  22.2 MBytes   187 Mbits/sec                  
+    [  5]   4.00-5.00   sec  22.6 MBytes   190 Mbits/sec                  
+    [  5]   5.00-6.00   sec  22.5 MBytes   189 Mbits/sec                  
+    [  5]   6.00-7.00   sec  22.1 MBytes   186 Mbits/sec                  
+    [  5]   7.00-8.00   sec  22.0 MBytes   185 Mbits/sec                  
+    [  5]   8.00-9.00   sec  22.5 MBytes   189 Mbits/sec                  
+    [  5]   9.00-10.00  sec  22.4 MBytes   188 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   228 MBytes   191 Mbits/sec   22             sender
-    [  5]   0.00-10.00  sec   224 MBytes   188 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   225 MBytes   189 Mbits/sec  269             sender
+    [  5]   0.00-10.00  sec   222 MBytes   186 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.119 port 51407 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.119 port 59551 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  25.4 MBytes   213 Mbits/sec    0    636 KBytes       
-    [  5]   1.00-2.00   sec  24.4 MBytes   204 Mbits/sec    0    711 KBytes       
-    [  5]   2.00-3.00   sec  23.6 MBytes   198 Mbits/sec    0    761 KBytes       
-    [  5]   3.00-4.00   sec  22.5 MBytes   189 Mbits/sec    0    834 KBytes       
-    [  5]   4.00-5.00   sec  23.8 MBytes   199 Mbits/sec    0    858 KBytes       
-    [  5]   5.00-6.00   sec  23.8 MBytes   199 Mbits/sec    0    908 KBytes       
-    [  5]   6.00-7.00   sec  23.8 MBytes   199 Mbits/sec    0    908 KBytes       
-    [  5]   7.00-8.00   sec  23.6 MBytes   198 Mbits/sec    0    908 KBytes       
-    [  5]   8.00-9.00   sec  23.9 MBytes   200 Mbits/sec    0    908 KBytes       
-    [  5]   9.00-10.00  sec  23.8 MBytes   199 Mbits/sec    0    908 KBytes       
+    [  5]   0.00-1.00   sec  25.1 MBytes   211 Mbits/sec    0    585 KBytes       
+    [  5]   1.00-2.00   sec  23.8 MBytes   199 Mbits/sec    0    701 KBytes       
+    [  5]   2.00-3.00   sec  24.0 MBytes   201 Mbits/sec    0    740 KBytes       
+    [  5]   3.00-4.00   sec  22.6 MBytes   190 Mbits/sec    0    740 KBytes       
+    [  5]   4.00-5.00   sec  16.6 MBytes   139 Mbits/sec    0    781 KBytes       
+    [  5]   5.00-6.00   sec  21.2 MBytes   178 Mbits/sec    0    781 KBytes       
+    [  5]   6.00-7.00   sec  22.6 MBytes   190 Mbits/sec    0    781 KBytes       
+    [  5]   7.00-8.00   sec  23.4 MBytes   196 Mbits/sec    0    781 KBytes       
+    [  5]   8.00-9.00   sec  23.6 MBytes   198 Mbits/sec    0    875 KBytes       
+    [  5]   9.00-10.00  sec  24.1 MBytes   202 Mbits/sec    0    875 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   238 MBytes   200 Mbits/sec    0             sender
-    [  5]   0.00-10.01  sec   235 MBytes   197 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   227 MBytes   190 Mbits/sec    0             sender
+    [  5]   0.00-10.01  sec   224 MBytes   187 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500.0
-    signal: -29 dBm
+    signal: -37 dBm
     tx bitrate: 434.0 MBit/s
     ```
 
@@ -324,57 +324,57 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8812AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">66.1</span> Mbits/sec | <span style="font-size: 1.5rem;">87.0</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8812AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">61.2</span> Mbits/sec | <span style="font-size: 1.5rem;">73.4</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.118 port 44809 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.118 port 53725 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  7.38 MBytes  61.8 Mbits/sec                  
-    [  5]   1.00-2.00   sec  7.00 MBytes  58.7 Mbits/sec                  
-    [  5]   2.00-3.00   sec  7.88 MBytes  66.0 Mbits/sec                  
-    [  5]   3.00-4.00   sec  7.62 MBytes  64.0 Mbits/sec                  
-    [  5]   4.00-5.00   sec  7.38 MBytes  61.9 Mbits/sec                  
-    [  5]   5.00-6.00   sec  7.50 MBytes  62.9 Mbits/sec                  
-    [  5]   6.00-7.00   sec  7.75 MBytes  65.0 Mbits/sec                  
-    [  5]   7.00-8.00   sec  7.88 MBytes  66.1 Mbits/sec                  
-    [  5]   8.00-9.00   sec  7.62 MBytes  64.0 Mbits/sec                  
-    [  5]   9.00-10.00  sec  7.25 MBytes  60.8 Mbits/sec                  
+    [  5]   0.00-1.00   sec  4.75 MBytes  39.8 Mbits/sec                  
+    [  5]   1.00-2.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  9.38 MBytes  78.6 Mbits/sec                  
+    [  5]   3.00-4.00   sec  5.88 MBytes  49.3 Mbits/sec                  
+    [  5]   4.00-5.00   sec  6.50 MBytes  54.5 Mbits/sec                  
+    [  5]   5.00-6.00   sec  7.62 MBytes  64.0 Mbits/sec                  
+    [  5]   6.00-7.00   sec  5.75 MBytes  48.3 Mbits/sec                  
+    [  5]   7.00-8.00   sec  7.62 MBytes  63.9 Mbits/sec                  
+    [  5]   8.00-9.00   sec  10.1 MBytes  84.9 Mbits/sec                  
+    [  5]   9.00-10.00  sec  5.62 MBytes  47.2 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.04  sec  79.1 MBytes  66.1 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  75.2 MBytes  63.1 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  73.0 MBytes  61.2 Mbits/sec   48             sender
+    [  5]   0.00-10.00  sec  69.2 MBytes  58.1 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.118 port 60807 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.118 port 59161 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  13.4 MBytes   112 Mbits/sec    0    523 KBytes       
-    [  5]   1.00-2.00   sec  11.4 MBytes  95.4 Mbits/sec    0    656 KBytes       
-    [  5]   2.00-3.00   sec  11.5 MBytes  96.5 Mbits/sec    0    748 KBytes       
-    [  5]   3.00-4.00   sec  9.75 MBytes  81.8 Mbits/sec    0    788 KBytes       
-    [  5]   4.00-5.00   sec  8.50 MBytes  71.3 Mbits/sec    0    788 KBytes       
-    [  5]   5.00-6.00   sec  9.88 MBytes  82.8 Mbits/sec    0    788 KBytes       
-    [  5]   6.00-7.00   sec  9.88 MBytes  82.8 Mbits/sec    0    788 KBytes       
-    [  5]   7.00-8.00   sec  10.0 MBytes  83.9 Mbits/sec    0    788 KBytes       
-    [  5]   8.00-9.00   sec  9.75 MBytes  81.8 Mbits/sec    0    788 KBytes       
-    [  5]   9.00-10.00  sec  9.75 MBytes  81.7 Mbits/sec    0    788 KBytes       
+    [  5]   0.00-1.00   sec  8.12 MBytes  68.1 Mbits/sec    0    379 KBytes       
+    [  5]   1.00-2.00   sec  6.88 MBytes  57.7 Mbits/sec    0    566 KBytes       
+    [  5]   2.00-3.00   sec  7.12 MBytes  59.8 Mbits/sec    0    601 KBytes       
+    [  5]   3.00-4.00   sec  7.62 MBytes  64.0 Mbits/sec    0    667 KBytes       
+    [  5]   4.00-5.00   sec  8.25 MBytes  69.2 Mbits/sec    0    676 KBytes       
+    [  5]   5.00-6.00   sec  7.00 MBytes  58.7 Mbits/sec    0    757 KBytes       
+    [  5]   6.00-7.00   sec  12.9 MBytes   108 Mbits/sec    0    798 KBytes       
+    [  5]   7.00-8.00   sec  8.25 MBytes  69.2 Mbits/sec    0    798 KBytes       
+    [  5]   8.00-9.00   sec  10.0 MBytes  83.9 Mbits/sec    0    839 KBytes       
+    [  5]   9.00-10.00  sec  11.4 MBytes  95.4 Mbits/sec    0    942 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   104 MBytes  87.0 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec   100 MBytes  84.1 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  87.5 MBytes  73.4 Mbits/sec    0             sender
+    [  5]   0.00-10.02  sec  84.0 MBytes  70.3 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462.0
-    signal: -41 dBm
+    signal: -46 dBm
     tx bitrate: 174.0 MBit/s
     ```
 
@@ -385,57 +385,57 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8814AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">168</span> Mbits/sec | <span style="font-size: 1.5rem;">278</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8814AU</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">165</span> Mbits/sec | <span style="font-size: 1.5rem;">24.2</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.106 port 33833 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.106 port 39571 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  20.0 MBytes   168 Mbits/sec                  
-    [  5]   1.00-2.00   sec  20.1 MBytes   169 Mbits/sec                  
-    [  5]   2.00-3.00   sec  20.1 MBytes   169 Mbits/sec                  
-    [  5]   3.00-4.00   sec  20.2 MBytes   170 Mbits/sec                  
+    [  5]   0.00-1.00   sec  16.8 MBytes   140 Mbits/sec                  
+    [  5]   1.00-2.00   sec  19.0 MBytes   159 Mbits/sec                  
+    [  5]   2.00-3.00   sec  19.8 MBytes   166 Mbits/sec                  
+    [  5]   3.00-4.00   sec  19.9 MBytes   167 Mbits/sec                  
     [  5]   4.00-5.00   sec  19.8 MBytes   166 Mbits/sec                  
-    [  5]   5.00-6.00   sec  18.1 MBytes   152 Mbits/sec                  
-    [  5]   6.00-7.00   sec  19.1 MBytes   160 Mbits/sec                  
-    [  5]   7.00-8.00   sec  19.9 MBytes   167 Mbits/sec                  
-    [  5]   8.00-9.00   sec  19.6 MBytes   165 Mbits/sec                  
-    [  5]   9.00-10.00  sec  20.1 MBytes   169 Mbits/sec                  
+    [  5]   5.00-6.00   sec  20.0 MBytes   168 Mbits/sec                  
+    [  5]   6.00-7.00   sec  19.6 MBytes   165 Mbits/sec                  
+    [  5]   7.00-8.00   sec  19.6 MBytes   165 Mbits/sec                  
+    [  5]   8.00-9.00   sec  19.8 MBytes   166 Mbits/sec                  
+    [  5]   9.00-10.00  sec  19.4 MBytes   163 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   201 MBytes   168 Mbits/sec  144             sender
-    [  5]   0.00-10.00  sec   197 MBytes   165 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   196 MBytes   165 Mbits/sec  105             sender
+    [  5]   0.00-10.00  sec   194 MBytes   162 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.106 port 33815 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.106 port 41803 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  35.0 MBytes   293 Mbits/sec    0    624 KBytes       
-    [  5]   1.00-2.00   sec  33.8 MBytes   283 Mbits/sec    0    701 KBytes       
-    [  5]   2.00-3.00   sec  32.6 MBytes   274 Mbits/sec    0    735 KBytes       
-    [  5]   3.00-4.00   sec  32.0 MBytes   268 Mbits/sec    0    782 KBytes       
-    [  5]   4.00-5.00   sec  34.0 MBytes   285 Mbits/sec    0    782 KBytes       
-    [  5]   5.00-6.00   sec  32.5 MBytes   273 Mbits/sec    0    826 KBytes       
-    [  5]   6.00-7.00   sec  32.4 MBytes   271 Mbits/sec    0    826 KBytes       
-    [  5]   7.00-8.00   sec  33.6 MBytes   282 Mbits/sec    0    826 KBytes       
-    [  5]   8.00-9.00   sec  32.4 MBytes   272 Mbits/sec    0    826 KBytes       
-    [  5]   9.00-10.00  sec  32.8 MBytes   275 Mbits/sec    0    870 KBytes       
+    [  5]   0.00-1.00   sec  3.62 MBytes  30.4 Mbits/sec    0    175 KBytes       
+    [  5]   1.00-2.00   sec  2.88 MBytes  24.1 Mbits/sec    0    301 KBytes       
+    [  5]   2.00-3.00   sec  3.25 MBytes  27.3 Mbits/sec    0    321 KBytes       
+    [  5]   3.00-4.00   sec  2.75 MBytes  23.1 Mbits/sec    0    321 KBytes       
+    [  5]   4.00-5.00   sec  2.12 MBytes  17.8 Mbits/sec    0    321 KBytes       
+    [  5]   5.00-6.00   sec  2.62 MBytes  22.0 Mbits/sec    0    321 KBytes       
+    [  5]   6.00-7.00   sec  3.25 MBytes  27.2 Mbits/sec    0    321 KBytes       
+    [  5]   7.00-8.00   sec  2.62 MBytes  22.0 Mbits/sec    0    321 KBytes       
+    [  5]   8.00-9.00   sec  2.75 MBytes  23.1 Mbits/sec    0    321 KBytes       
+    [  5]   9.00-10.00  sec  3.00 MBytes  25.2 Mbits/sec    0    465 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   331 MBytes   278 Mbits/sec    0             sender
-    [  5]   0.00-10.01  sec   329 MBytes   275 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  28.9 MBytes  24.2 Mbits/sec    0             sender
+    [  5]   0.00-10.10  sec  27.1 MBytes  22.5 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500.0
-    signal: -33 dBm
+    signal: -35 dBm
     tx bitrate: 867.0 MBit/s
     ```
 
@@ -446,59 +446,59 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8822CE</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">325</span> Mbits/sec | <span style="font-size: 1.5rem;">571</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8822CE</span> | <span style="font-size: 1.5rem;">AC</span> | <span style="font-size: 1.5rem;">518</span> Mbits/sec | <span style="font-size: 1.5rem;">548</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.127 port 46473 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.127 port 59667 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  51.7 MBytes   433 Mbits/sec                  
-    [  5]   1.00-2.00   sec  35.5 MBytes   298 Mbits/sec                  
-    [  5]   2.00-3.00   sec  36.9 MBytes   310 Mbits/sec                  
-    [  5]   3.00-4.00   sec  37.2 MBytes   312 Mbits/sec                  
-    [  5]   4.00-5.00   sec  37.4 MBytes   314 Mbits/sec                  
-    [  5]   5.00-6.00   sec  36.0 MBytes   302 Mbits/sec                  
-    [  5]   6.00-7.00   sec  37.0 MBytes   310 Mbits/sec                  
-    [  5]   7.00-8.00   sec  38.2 MBytes   320 Mbits/sec                  
-    [  5]   8.00-9.00   sec  38.6 MBytes   324 Mbits/sec                  
-    [  5]   9.00-10.00  sec  35.8 MBytes   300 Mbits/sec                  
+    [  5]   0.00-1.00   sec  74.0 MBytes   621 Mbits/sec                  
+    [  5]   1.00-2.00   sec  64.0 MBytes   537 Mbits/sec                  
+    [  5]   2.00-3.00   sec  60.3 MBytes   506 Mbits/sec                  
+    [  5]   3.00-4.00   sec  57.8 MBytes   485 Mbits/sec                  
+    [  5]   4.00-5.00   sec  60.0 MBytes   504 Mbits/sec                  
+    [  5]   5.00-6.00   sec  62.4 MBytes   524 Mbits/sec                  
+    [  5]   6.00-7.00   sec  60.9 MBytes   511 Mbits/sec                  
+    [  5]   7.00-8.00   sec  57.6 MBytes   483 Mbits/sec                  
+    [  5]   8.00-9.00   sec  58.4 MBytes   490 Mbits/sec                  
+    [  5]   9.00-10.00  sec  58.8 MBytes   493 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   388 MBytes   325 Mbits/sec  772             sender
-    [  5]   0.00-10.00  sec   384 MBytes   322 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   618 MBytes   518 Mbits/sec  1229             sender
+    [  5]   0.00-10.00  sec   614 MBytes   515 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.127 port 33355 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.127 port 54643 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  77.1 MBytes   647 Mbits/sec   57   3.21 MBytes       
-    [  5]   1.00-2.00   sec  78.8 MBytes   661 Mbits/sec   69   1.65 MBytes       
-    [  5]   2.00-3.00   sec  75.0 MBytes   629 Mbits/sec   20    898 KBytes       
-    [  5]   3.00-4.00   sec  60.0 MBytes   503 Mbits/sec   32    588 KBytes       
-    [  5]   4.00-5.00   sec  63.8 MBytes   533 Mbits/sec    0    727 KBytes       
-    [  5]   5.00-6.00   sec  67.5 MBytes   568 Mbits/sec    0    853 KBytes       
-    [  5]   6.00-7.00   sec  65.0 MBytes   545 Mbits/sec   13    522 KBytes       
-    [  5]   7.00-8.00   sec  60.0 MBytes   503 Mbits/sec    0    667 KBytes       
-    [  5]   8.00-9.00   sec  66.2 MBytes   556 Mbits/sec    0    799 KBytes       
-    [  5]   9.00-10.00  sec  67.5 MBytes   566 Mbits/sec    0    912 KBytes       
+    [  5]   0.00-1.00   sec  77.6 MBytes   650 Mbits/sec    0   6.43 MBytes       
+    [  5]   1.00-2.00   sec  72.5 MBytes   609 Mbits/sec  838    875 KBytes       
+    [  5]   2.00-3.00   sec  57.5 MBytes   482 Mbits/sec   11    583 KBytes       
+    [  5]   3.00-4.00   sec  53.8 MBytes   451 Mbits/sec    2    445 KBytes       
+    [  5]   4.00-5.00   sec  58.8 MBytes   492 Mbits/sec    0    607 KBytes       
+    [  5]   5.00-6.00   sec  63.8 MBytes   535 Mbits/sec    0    742 KBytes       
+    [  5]   6.00-7.00   sec  65.0 MBytes   545 Mbits/sec    0    861 KBytes       
+    [  5]   7.00-8.00   sec  68.8 MBytes   575 Mbits/sec    0    969 KBytes       
+    [  5]   8.00-9.00   sec  72.5 MBytes   610 Mbits/sec    0   1.05 MBytes       
+    [  5]   9.00-10.00  sec  63.8 MBytes   535 Mbits/sec   18    643 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   681 MBytes   571 Mbits/sec  191             sender
-    [  5]   0.00-10.00  sec   679 MBytes   569 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   654 MBytes   548 Mbits/sec  869             sender
+    [  5]   0.00-10.01  sec   651 MBytes   546 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500
-    RX: 112422 bytes (387 packets)
-    TX: 54574 bytes (206 packets)
-    signal: -30 dBm
+    RX: 132732 bytes (484 packets)
+    TX: 62222 bytes (220 packets)
+    signal: -32 dBm
     rx bitrate: 780.0 MBit/s VHT-MCS 9 80MHz VHT-NSS 2
     tx bitrate: 866.7 MBit/s VHT-MCS 9 80MHz short GI VHT-NSS 2
     
@@ -512,61 +512,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">MT7921AU</span> | <span style="font-size: 1.5rem;">AX</span> | <span style="font-size: 1.5rem;">121</span> Mbits/sec | <span style="font-size: 1.5rem;">146</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">MT7921AU</span> | <span style="font-size: 1.5rem;">AX</span> | <span style="font-size: 1.5rem;">122</span> Mbits/sec | <span style="font-size: 1.5rem;">147</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.117 port 37607 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.117 port 43037 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  13.5 MBytes   113 Mbits/sec                  
-    [  5]   1.00-2.00   sec  14.2 MBytes   120 Mbits/sec                  
-    [  5]   2.00-3.00   sec  14.4 MBytes   121 Mbits/sec                  
-    [  5]   3.00-4.00   sec  14.1 MBytes   118 Mbits/sec                  
-    [  5]   4.00-5.00   sec  14.0 MBytes   117 Mbits/sec                  
+    [  5]   0.00-1.00   sec  13.8 MBytes   115 Mbits/sec                  
+    [  5]   1.00-2.00   sec  14.5 MBytes   122 Mbits/sec                  
+    [  5]   2.00-3.00   sec  14.5 MBytes   122 Mbits/sec                  
+    [  5]   3.00-4.00   sec  14.4 MBytes   121 Mbits/sec                  
+    [  5]   4.00-5.00   sec  14.2 MBytes   120 Mbits/sec                  
     [  5]   5.00-6.00   sec  14.1 MBytes   118 Mbits/sec                  
     [  5]   6.00-7.00   sec  14.2 MBytes   120 Mbits/sec                  
-    [  5]   7.00-8.00   sec  14.2 MBytes   120 Mbits/sec                  
+    [  5]   7.00-8.00   sec  14.1 MBytes   118 Mbits/sec                  
     [  5]   8.00-9.00   sec  14.4 MBytes   121 Mbits/sec                  
-    [  5]   9.00-10.00  sec  14.4 MBytes   121 Mbits/sec                  
+    [  5]   9.00-10.00  sec  14.5 MBytes   122 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   145 MBytes   121 Mbits/sec   63             sender
-    [  5]   0.00-10.00  sec   142 MBytes   119 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   146 MBytes   122 Mbits/sec  149             sender
+    [  5]   0.00-10.00  sec   143 MBytes   120 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.117 port 43393 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.117 port 33229 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  18.5 MBytes   155 Mbits/sec    0    559 KBytes       
-    [  5]   1.00-2.00   sec  17.1 MBytes   143 Mbits/sec    0    690 KBytes       
-    [  5]   2.00-3.00   sec  17.0 MBytes   143 Mbits/sec    0    843 KBytes       
-    [  5]   3.00-4.00   sec  18.0 MBytes   151 Mbits/sec    0    889 KBytes       
-    [  5]   4.00-5.00   sec  17.1 MBytes   144 Mbits/sec    0   1.09 MBytes       
-    [  5]   5.00-6.00   sec  17.9 MBytes   150 Mbits/sec    0   1.20 MBytes       
-    [  5]   6.00-7.00   sec  16.5 MBytes   138 Mbits/sec    0   1.28 MBytes       
-    [  5]   7.00-8.00   sec  18.1 MBytes   152 Mbits/sec    0   1.35 MBytes       
-    [  5]   8.00-9.00   sec  16.9 MBytes   142 Mbits/sec    0   1.35 MBytes       
-    [  5]   9.00-10.00  sec  17.2 MBytes   145 Mbits/sec    0   1.35 MBytes       
+    [  5]   0.00-1.00   sec  19.4 MBytes   162 Mbits/sec    0    498 KBytes       
+    [  5]   1.00-2.00   sec  17.8 MBytes   149 Mbits/sec    0    604 KBytes       
+    [  5]   2.00-3.00   sec  16.4 MBytes   137 Mbits/sec    0    740 KBytes       
+    [  5]   3.00-4.00   sec  18.2 MBytes   153 Mbits/sec    0    885 KBytes       
+    [  5]   4.00-5.00   sec  17.5 MBytes   147 Mbits/sec    0    942 KBytes       
+    [  5]   5.00-6.00   sec  16.8 MBytes   141 Mbits/sec    0    942 KBytes       
+    [  5]   6.00-7.00   sec  18.0 MBytes   151 Mbits/sec    0    998 KBytes       
+    [  5]   7.00-8.00   sec  17.1 MBytes   144 Mbits/sec    0    998 KBytes       
+    [  5]   8.00-9.00   sec  17.4 MBytes   146 Mbits/sec    0    998 KBytes       
+    [  5]   9.00-10.00  sec  17.1 MBytes   144 Mbits/sec    0   1.09 MBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   174 MBytes   146 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec   172 MBytes   144 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   176 MBytes   147 Mbits/sec    0             sender
+    [  5]   0.00-10.01  sec   173 MBytes   145 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
-    freq: 2462.0
-    RX: 49360 bytes (187 packets)
-    TX: 54023 bytes (231 packets)
-    signal: -36 dBm
-    rx bitrate: 286.7 MBit/s HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
-    tx bitrate: 286.7 MBit/s HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
+    freq: 5500.0
+    RX: 44963 bytes (146 packets)
+    TX: 42671 bytes (198 packets)
+    signal: -39 dBm
+    rx bitrate: 1080.6 MBit/s 80MHz HE-MCS 10 HE-NSS 2 HE-GI 0 HE-DCM 0
+    tx bitrate: 1200.9 MBit/s 80MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
     ```
 
 #### Intel AX200
@@ -576,61 +576,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">AX200</span> | <span style="font-size: 1.5rem;">AX</span> | <span style="font-size: 1.5rem;">796</span> Mbits/sec | <span style="font-size: 1.5rem;">631</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">AX200</span> | <span style="font-size: 1.5rem;">AX</span> | <span style="font-size: 1.5rem;">196</span> Mbits/sec | <span style="font-size: 1.5rem;">152</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.116 port 45011 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.116 port 55743 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  90.6 MBytes   760 Mbits/sec                  
-    [  5]   1.00-2.00   sec   108 MBytes   910 Mbits/sec                  
-    [  5]   2.00-3.00   sec   105 MBytes   880 Mbits/sec                  
-    [  5]   3.00-4.00   sec  96.5 MBytes   810 Mbits/sec                  
-    [  5]   4.00-5.00   sec  87.5 MBytes   734 Mbits/sec                  
-    [  5]   5.00-6.00   sec  92.8 MBytes   778 Mbits/sec                  
-    [  5]   6.00-7.00   sec  85.9 MBytes   721 Mbits/sec                  
-    [  5]   7.00-8.00   sec  90.2 MBytes   757 Mbits/sec                  
-    [  5]   8.00-9.00   sec  89.0 MBytes   747 Mbits/sec                  
-    [  5]   9.00-10.00  sec  99.5 MBytes   834 Mbits/sec                  
+    [  5]   0.00-1.00   sec  23.0 MBytes   193 Mbits/sec                  
+    [  5]   1.00-2.00   sec  23.4 MBytes   196 Mbits/sec                  
+    [  5]   2.00-3.00   sec  23.0 MBytes   193 Mbits/sec                  
+    [  5]   3.00-4.00   sec  23.5 MBytes   197 Mbits/sec                  
+    [  5]   4.00-5.00   sec  23.1 MBytes   194 Mbits/sec                  
+    [  5]   5.00-6.00   sec  23.4 MBytes   196 Mbits/sec                  
+    [  5]   6.00-7.00   sec  23.5 MBytes   197 Mbits/sec                  
+    [  5]   7.00-8.00   sec  23.9 MBytes   200 Mbits/sec                  
+    [  5]   8.00-9.00   sec  21.0 MBytes   176 Mbits/sec                  
+    [  5]   9.00-10.00  sec  23.0 MBytes   193 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   949 MBytes   796 Mbits/sec  289             sender
-    [  5]   0.00-10.00  sec   946 MBytes   793 Mbits/sec                  receiver
+    [  5]   0.00-10.02  sec   234 MBytes   196 Mbits/sec  104             sender
+    [  5]   0.00-10.00  sec   231 MBytes   194 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.116 port 42039 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.116 port 49255 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  84.0 MBytes   704 Mbits/sec  944    725 KBytes       
-    [  5]   1.00-2.00   sec  86.5 MBytes   726 Mbits/sec    0    881 KBytes       
-    [  5]   2.00-3.00   sec  71.4 MBytes   599 Mbits/sec    9    584 KBytes       
-    [  5]   3.00-4.00   sec  79.2 MBytes   665 Mbits/sec    0    757 KBytes       
-    [  5]   4.00-5.00   sec  72.8 MBytes   610 Mbits/sec  192    530 KBytes       
-    [  5]   5.00-6.00   sec  75.1 MBytes   630 Mbits/sec    0    706 KBytes       
-    [  5]   6.00-7.00   sec  83.1 MBytes   697 Mbits/sec    0    861 KBytes       
-    [  5]   7.00-8.00   sec  71.4 MBytes   599 Mbits/sec    1    583 KBytes       
-    [  5]   8.00-9.00   sec  66.4 MBytes   557 Mbits/sec   84    400 KBytes       
-    [  5]   9.00-10.00  sec  62.4 MBytes   522 Mbits/sec    6    584 KBytes       
+    [  5]   0.00-1.00   sec  21.0 MBytes   176 Mbits/sec    0   3.24 MBytes       
+    [  5]   1.00-2.00   sec  16.4 MBytes   137 Mbits/sec    0   3.62 MBytes       
+    [  5]   2.00-3.00   sec  18.9 MBytes   158 Mbits/sec    0   3.62 MBytes       
+    [  5]   3.00-4.00   sec  19.2 MBytes   161 Mbits/sec    0   3.62 MBytes       
+    [  5]   4.00-5.00   sec  15.2 MBytes   128 Mbits/sec    0   3.62 MBytes       
+    [  5]   5.00-6.00   sec  17.9 MBytes   150 Mbits/sec    0   3.62 MBytes       
+    [  5]   6.00-7.00   sec  18.2 MBytes   153 Mbits/sec    0   3.62 MBytes       
+    [  5]   7.00-8.00   sec  18.0 MBytes   151 Mbits/sec    0   3.62 MBytes       
+    [  5]   8.00-9.00   sec  18.6 MBytes   156 Mbits/sec    0   4.77 MBytes       
+    [  5]   9.00-10.00  sec  17.5 MBytes   147 Mbits/sec    0   4.77 MBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   752 MBytes   631 Mbits/sec  1236             sender
-    [  5]   0.00-10.01  sec   750 MBytes   628 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   181 MBytes   152 Mbits/sec    0             sender
+    [  5]   0.00-10.04  sec   179 MBytes   150 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
-    freq: 5500.0
-    RX: 39473 bytes (166 packets)
-    TX: 51518 bytes (183 packets)
-    signal: -30 dBm
-    rx bitrate: 2401.9 MBit/s 160MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
-    tx bitrate: 490.0 MBit/s 160MHz HE-MCS 3 HE-NSS 2 HE-GI 2 HE-DCM 0
+    freq: 2462.0
+    RX: 38256 bytes (168 packets)
+    TX: 55539 bytes (196 packets)
+    signal: -27 dBm
+    rx bitrate: 286.7 MBit/s HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
+    tx bitrate: 58.5 MBit/s HE-MCS 3 HE-NSS 2 HE-GI 2 HE-DCM 0
     ```
 ### N
 
@@ -641,125 +641,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RT3572</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">102</span> Mbits/sec | <span style="font-size: 1.5rem;">72.2</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RT3572</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">93.6</span> Mbits/sec | <span style="font-size: 1.5rem;">69.7</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.114 port 52293 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.114 port 52051 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  11.1 MBytes  93.3 Mbits/sec                  
-    [  5]   1.00-2.00   sec  11.4 MBytes  95.4 Mbits/sec                  
-    [  5]   2.00-3.00   sec  11.8 MBytes  98.6 Mbits/sec                  
-    [  5]   3.00-4.00   sec  11.8 MBytes  98.6 Mbits/sec                  
-    [  5]   4.00-5.00   sec  12.1 MBytes   102 Mbits/sec                  
-    [  5]   5.00-6.00   sec  11.5 MBytes  96.5 Mbits/sec                  
-    [  5]   6.00-7.00   sec  12.5 MBytes   105 Mbits/sec                  
-    [  5]   7.00-8.00   sec  12.6 MBytes   106 Mbits/sec                  
-    [  5]   8.00-9.00   sec  12.5 MBytes   105 Mbits/sec                  
-    [  5]   9.00-10.00  sec  12.2 MBytes   103 Mbits/sec                  
+    [  5]   0.00-1.00   sec  10.1 MBytes  84.8 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.0 MBytes  92.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  10.8 MBytes  90.2 Mbits/sec                  
+    [  5]   3.00-4.00   sec  10.9 MBytes  91.2 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  10.8 MBytes  90.2 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.0 MBytes  92.2 Mbits/sec                  
+    [  5]   8.00-9.00   sec  10.8 MBytes  90.2 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   122 MBytes   102 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec   120 MBytes   100 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   112 MBytes  93.6 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec   109 MBytes  91.3 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.114 port 44983 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.114 port 51519 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  8.00 MBytes  67.0 Mbits/sec    0    331 KBytes       
-    [  5]   1.00-2.00   sec  9.50 MBytes  79.7 Mbits/sec    0    460 KBytes       
-    [  5]   2.00-3.00   sec  8.25 MBytes  69.2 Mbits/sec    0    522 KBytes       
-    [  5]   3.00-4.00   sec  8.88 MBytes  74.4 Mbits/sec    0    608 KBytes       
-    [  5]   4.00-5.00   sec  8.88 MBytes  74.4 Mbits/sec    0    636 KBytes       
-    [  5]   5.00-6.00   sec  9.00 MBytes  75.5 Mbits/sec    0    672 KBytes       
-    [  5]   6.00-7.00   sec  8.38 MBytes  70.2 Mbits/sec    0    672 KBytes       
-    [  5]   7.00-8.00   sec  8.38 MBytes  70.2 Mbits/sec    0    672 KBytes       
-    [  5]   8.00-9.00   sec  8.25 MBytes  69.2 Mbits/sec    0    710 KBytes       
-    [  5]   9.00-10.00  sec  8.62 MBytes  72.3 Mbits/sec    0    710 KBytes       
+    [  5]   0.00-1.00   sec  9.00 MBytes  75.4 Mbits/sec    0    284 KBytes       
+    [  5]   1.00-2.00   sec  8.50 MBytes  71.3 Mbits/sec    0    331 KBytes       
+    [  5]   2.00-3.00   sec  7.75 MBytes  65.0 Mbits/sec    0    370 KBytes       
+    [  5]   3.00-4.00   sec  8.75 MBytes  73.4 Mbits/sec    0    370 KBytes       
+    [  5]   4.00-5.00   sec  8.12 MBytes  68.2 Mbits/sec    0    370 KBytes       
+    [  5]   5.00-6.00   sec  7.62 MBytes  64.0 Mbits/sec    0    436 KBytes       
+    [  5]   6.00-7.00   sec  8.12 MBytes  68.2 Mbits/sec    0    436 KBytes       
+    [  5]   7.00-8.00   sec  8.50 MBytes  71.3 Mbits/sec    0    467 KBytes       
+    [  5]   8.00-9.00   sec  8.12 MBytes  68.2 Mbits/sec    0    467 KBytes       
+    [  5]   9.00-10.00  sec  8.62 MBytes  72.3 Mbits/sec    0    467 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  86.1 MBytes  72.2 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  82.9 MBytes  69.5 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  83.1 MBytes  69.7 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  80.4 MBytes  67.4 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500.0
-    RX: 89010 bytes (363 packets)
-    TX: 64572 bytes (242 packets)
+    RX: 93484 bytes (354 packets)
+    TX: 111260 bytes (291 packets)
     signal: -17 dBm
-    rx bitrate: 300.0 MBit/s MCS 15 40MHz short GI
+    rx bitrate: 180.0 MBit/s MCS 12 40MHz short GI
     tx bitrate: 300.0 MBit/s MCS 15 40MHz short GI
-    ```
-
-#### Atheros AR9271
-
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AR9271.png>
-<span style="font-size: 0.5rem;">OS: Armbian v25.5.0-trunk.550, 6.12.28-current-x86</span>
-
-| Chipset | Class | Average forward speed | Average reverse speed |
-|:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">AR9271</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">57.6</span> Mbits/sec | <span style="font-size: 1.5rem;">52.1</span> Mbits/sec |
-
-=== "Forward mode (client to server)"
-    ```
-    Connecting to host 10.0.60.10, port 5201
-    Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.113 port 45659 connected to 10.0.60.10 port 5201
-    [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  6.25 MBytes  52.4 Mbits/sec                  
-    [  5]   1.00-2.00   sec  6.62 MBytes  55.6 Mbits/sec                  
-    [  5]   2.00-3.00   sec  6.38 MBytes  53.5 Mbits/sec                  
-    [  5]   3.00-4.00   sec  6.62 MBytes  55.6 Mbits/sec                  
-    [  5]   4.00-5.00   sec  6.50 MBytes  54.5 Mbits/sec                  
-    [  5]   5.00-6.00   sec  6.50 MBytes  54.5 Mbits/sec                  
-    [  5]   6.00-7.00   sec  6.75 MBytes  56.6 Mbits/sec                  
-    [  5]   7.00-8.00   sec  6.62 MBytes  55.6 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.62 MBytes  55.6 Mbits/sec                  
-    [  5]   9.00-10.00  sec  6.75 MBytes  56.6 Mbits/sec                  
-    - - - - - - - - - - - - - - - - - - - - - - - - -
-    [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.03  sec  68.9 MBytes  57.6 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  65.6 MBytes  55.0 Mbits/sec                  receiver
-    
-    iperf Done.
-    ```
-=== "Reverse mode (server to client)"
-    ```
-    Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.113 port 43023 connected to 10.0.60.10 port 5201
-    [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  7.12 MBytes  59.7 Mbits/sec    0    247 KBytes       
-    [  5]   1.00-2.00   sec  6.00 MBytes  50.3 Mbits/sec    0    262 KBytes       
-    [  5]   2.00-3.00   sec  6.12 MBytes  51.4 Mbits/sec    0    262 KBytes       
-    [  5]   3.00-4.00   sec  6.12 MBytes  51.4 Mbits/sec    0    262 KBytes       
-    [  5]   4.00-5.00   sec  5.62 MBytes  47.2 Mbits/sec    0    262 KBytes       
-    [  5]   5.00-6.00   sec  6.12 MBytes  51.4 Mbits/sec    0    262 KBytes       
-    [  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec    0    262 KBytes       
-    [  5]   7.00-8.00   sec  6.75 MBytes  56.6 Mbits/sec    0    407 KBytes       
-    [  5]   8.00-9.00   sec  6.50 MBytes  54.5 Mbits/sec    0    407 KBytes       
-    [  5]   9.00-10.00  sec  5.62 MBytes  47.2 Mbits/sec    0    407 KBytes       
-    - - - - - - - - - - - - - - - - - - - - - - - - -
-    [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  62.1 MBytes  52.1 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec  60.4 MBytes  50.5 Mbits/sec                  receiver
-    
-    iperf Done.
-    ```
-=== "Wireless link info"
-    ```
-    freq: 2462.0
-    RX: 101758 bytes (422 packets)
-    TX: 58331 bytes (222 packets)
-    signal: -35 dBm
-    rx bitrate: 72.2 MBit/s MCS 7 short GI
-    tx bitrate: 72.2 MBit/s MCS 7 short GI
     ```
 
 #### BCM 43455
@@ -769,61 +705,61 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">BCM43455</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">54.4</span> Mbits/sec | <span style="font-size: 1.5rem;">54.6</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">BCM43455</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">42.4</span> Mbits/sec | <span style="font-size: 1.5rem;">54.3</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.120 port 45763 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.120 port 34923 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  6.30 MBytes  52.9 Mbits/sec                  
-    [  5]   1.00-2.00   sec  5.37 MBytes  45.0 Mbits/sec                  
-    [  5]   2.00-3.00   sec  7.66 MBytes  64.3 Mbits/sec                  
-    [  5]   3.00-4.00   sec  5.26 MBytes  44.1 Mbits/sec                  
-    [  5]   4.00-5.00   sec  5.58 MBytes  46.8 Mbits/sec                  
-    [  5]   5.00-6.00   sec  7.48 MBytes  62.8 Mbits/sec                  
-    [  5]   6.00-7.00   sec  7.53 MBytes  63.2 Mbits/sec                  
-    [  5]   7.00-8.00   sec  5.73 MBytes  48.0 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.36 MBytes  53.3 Mbits/sec                  
-    [  5]   9.00-10.00  sec  5.89 MBytes  49.4 Mbits/sec                  
+    [  5]   0.00-1.00   sec  4.99 MBytes  41.9 Mbits/sec                  
+    [  5]   1.00-2.00   sec  5.46 MBytes  45.8 Mbits/sec                  
+    [  5]   2.00-3.00   sec  5.49 MBytes  46.0 Mbits/sec                  
+    [  5]   3.00-4.00   sec  5.13 MBytes  43.0 Mbits/sec                  
+    [  5]   4.00-5.00   sec  4.60 MBytes  38.5 Mbits/sec                  
+    [  5]   5.00-6.00   sec  4.65 MBytes  39.0 Mbits/sec                  
+    [  5]   6.00-7.00   sec  4.73 MBytes  39.7 Mbits/sec                  
+    [  5]   7.00-8.00   sec  4.74 MBytes  39.8 Mbits/sec                  
+    [  5]   8.00-9.00   sec  4.61 MBytes  38.7 Mbits/sec                  
+    [  5]   9.00-10.00  sec  5.15 MBytes  43.2 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.03  sec  65.0 MBytes  54.4 Mbits/sec    3             sender
-    [  5]   0.00-10.00  sec  63.2 MBytes  53.0 Mbits/sec                  receiver
+    [  5]   0.00-10.53  sec  53.2 MBytes  42.4 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  49.6 MBytes  41.6 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.120 port 34723 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.120 port 49449 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  6.57 MBytes  55.1 Mbits/sec    0    214 KBytes       
-    [  5]   1.00-2.00   sec  6.65 MBytes  55.8 Mbits/sec    0    280 KBytes       
-    [  5]   2.00-3.00   sec  7.15 MBytes  59.9 Mbits/sec    0    345 KBytes       
-    [  5]   3.00-4.00   sec  6.71 MBytes  56.3 Mbits/sec    0    365 KBytes       
-    [  5]   4.00-5.00   sec  5.97 MBytes  50.0 Mbits/sec    0    365 KBytes       
-    [  5]   5.00-6.00   sec  6.84 MBytes  57.4 Mbits/sec    0    365 KBytes       
-    [  5]   6.00-7.00   sec  6.09 MBytes  51.1 Mbits/sec    0    365 KBytes       
-    [  5]   7.00-8.00   sec  6.21 MBytes  52.1 Mbits/sec    0    365 KBytes       
-    [  5]   8.00-9.00   sec  6.84 MBytes  57.3 Mbits/sec    0    365 KBytes       
-    [  5]   9.00-10.00  sec  6.03 MBytes  50.6 Mbits/sec    0    365 KBytes       
+    [  5]   0.00-1.00   sec  7.54 MBytes  63.2 Mbits/sec    0    235 KBytes       
+    [  5]   1.00-2.00   sec  5.47 MBytes  45.9 Mbits/sec    0    245 KBytes       
+    [  5]   2.00-3.00   sec  5.72 MBytes  47.9 Mbits/sec    0    256 KBytes       
+    [  5]   3.00-4.00   sec  6.21 MBytes  52.1 Mbits/sec    0    269 KBytes       
+    [  5]   4.00-5.00   sec  6.28 MBytes  52.7 Mbits/sec    0    283 KBytes       
+    [  5]   5.00-6.00   sec  5.72 MBytes  47.9 Mbits/sec    0    296 KBytes       
+    [  5]   6.00-7.00   sec  8.51 MBytes  71.4 Mbits/sec    0    430 KBytes       
+    [  5]   7.00-8.00   sec  6.09 MBytes  51.1 Mbits/sec    0    430 KBytes       
+    [  5]   8.00-9.00   sec  6.21 MBytes  52.1 Mbits/sec    0    430 KBytes       
+    [  5]   9.00-10.00  sec  6.96 MBytes  58.4 Mbits/sec    0    430 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  65.0 MBytes  54.6 Mbits/sec    0             sender
-    [  5]   0.00-10.01  sec  63.6 MBytes  53.3 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  64.7 MBytes  54.3 Mbits/sec    0             sender
+    [  5]   0.00-10.02  sec  62.2 MBytes  52.1 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500
-    RX: 46196 bytes (124 packets)
-    TX: 50552 bytes (228 packets)
-    signal: -55 dBm
-    rx bitrate: 390.0 MBit/s
-    tx bitrate: 390.0 MBit/s
+    RX: 54204 bytes (167 packets)
+    TX: 54794 bytes (232 packets)
+    signal: -52 dBm
+    rx bitrate: 433.3 MBit/s
+    tx bitrate: 433.3 MBit/s
     
     ```
 
@@ -834,59 +770,59 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RT5370</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">52.3</span> Mbits/sec | <span style="font-size: 1.5rem;">47.4</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RT5370</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">49.9</span> Mbits/sec | <span style="font-size: 1.5rem;">51.4</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.112 port 40459 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.112 port 50329 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  5.62 MBytes  47.1 Mbits/sec                  
-    [  5]   1.00-2.00   sec  5.75 MBytes  48.2 Mbits/sec                  
-    [  5]   2.00-3.00   sec  5.88 MBytes  49.3 Mbits/sec                  
-    [  5]   3.00-4.00   sec  5.88 MBytes  49.3 Mbits/sec                  
-    [  5]   4.00-5.00   sec  5.88 MBytes  49.3 Mbits/sec                  
-    [  5]   5.00-6.00   sec  5.88 MBytes  49.3 Mbits/sec                  
-    [  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
-    [  5]   7.00-8.00   sec  6.12 MBytes  51.4 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.25 MBytes  52.5 Mbits/sec                  
-    [  5]   9.00-10.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+    [  5]   0.00-1.00   sec  5.38 MBytes  45.0 Mbits/sec                  
+    [  5]   1.00-2.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+    [  5]   2.00-3.00   sec  5.50 MBytes  46.1 Mbits/sec                  
+    [  5]   3.00-4.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+    [  5]   4.00-5.00   sec  5.50 MBytes  46.1 Mbits/sec                  
+    [  5]   5.00-6.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+    [  5]   6.00-7.00   sec  5.88 MBytes  49.3 Mbits/sec                  
+    [  5]   7.00-8.00   sec  5.75 MBytes  48.2 Mbits/sec                  
+    [  5]   8.00-9.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+    [  5]   9.00-10.00  sec  5.50 MBytes  46.1 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.02  sec  62.5 MBytes  52.3 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  59.4 MBytes  49.8 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  59.5 MBytes  49.9 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  56.0 MBytes  47.0 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.112 port 41917 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.112 port 45049 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  3.88 MBytes  32.5 Mbits/sec    0    212 KBytes       
-    [  5]   1.00-2.00   sec  5.12 MBytes  43.0 Mbits/sec    0    416 KBytes       
-    [  5]   2.00-3.00   sec  6.75 MBytes  56.6 Mbits/sec    0    659 KBytes       
-    [  5]   3.00-4.00   sec  5.50 MBytes  46.1 Mbits/sec    0    881 KBytes       
-    [  5]   4.00-5.00   sec  6.38 MBytes  53.5 Mbits/sec    0    901 KBytes       
-    [  5]   5.00-6.00   sec  4.38 MBytes  36.7 Mbits/sec    0    959 KBytes       
-    [  5]   6.00-7.00   sec  6.88 MBytes  57.7 Mbits/sec    0   1.10 MBytes       
-    [  5]   7.00-8.00   sec  5.50 MBytes  46.2 Mbits/sec    1    580 KBytes       
-    [  5]   8.00-9.00   sec  5.50 MBytes  46.1 Mbits/sec    0    926 KBytes       
-    [  5]   9.00-10.00  sec  5.62 MBytes  47.2 Mbits/sec    0   1012 KBytes       
+    [  5]   0.00-1.00   sec  7.00 MBytes  58.7 Mbits/sec    0    345 KBytes       
+    [  5]   1.00-2.00   sec  6.75 MBytes  56.6 Mbits/sec    0    624 KBytes       
+    [  5]   2.00-3.00   sec  7.00 MBytes  58.7 Mbits/sec    0    822 KBytes       
+    [  5]   3.00-4.00   sec  5.62 MBytes  47.2 Mbits/sec    0    957 KBytes       
+    [  5]   4.00-5.00   sec  5.50 MBytes  46.2 Mbits/sec    0   1.05 MBytes       
+    [  5]   5.00-6.00   sec  5.62 MBytes  47.2 Mbits/sec    0   1.12 MBytes       
+    [  5]   6.00-7.00   sec  5.50 MBytes  46.1 Mbits/sec    0   1.12 MBytes       
+    [  5]   7.00-8.00   sec  5.62 MBytes  47.2 Mbits/sec    0   1.25 MBytes       
+    [  5]   8.00-9.00   sec  5.62 MBytes  47.2 Mbits/sec    0   1.32 MBytes       
+    [  5]   9.00-10.00  sec  7.00 MBytes  58.7 Mbits/sec    0   1.32 MBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  56.5 MBytes  47.4 Mbits/sec    1             sender
-    [  5]   0.00-10.00  sec  54.0 MBytes  45.3 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  61.2 MBytes  51.4 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  58.1 MBytes  48.7 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462.0
-    RX: 101344 bytes (447 packets)
-    TX: 56715 bytes (219 packets)
-    signal: -31 dBm
+    RX: 86097 bytes (345 packets)
+    TX: 48386 bytes (206 packets)
+    signal: -29 dBm
     rx bitrate: 72.2 MBit/s MCS 7 short GI
     tx bitrate: 72.2 MBit/s MCS 7 short GI
     ```
@@ -898,60 +834,60 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RT5572</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">90.8</span> Mbits/sec | <span style="font-size: 1.5rem;">71.1</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RT5572</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">68.8</span> Mbits/sec | <span style="font-size: 1.5rem;">65.1</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.111 port 46151 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.111 port 35437 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  10.4 MBytes  86.9 Mbits/sec                  
-    [  5]   1.00-2.00   sec  10.5 MBytes  88.2 Mbits/sec                  
-    [  5]   2.00-3.00   sec  10.6 MBytes  88.9 Mbits/sec                  
-    [  5]   3.00-4.00   sec  10.4 MBytes  87.2 Mbits/sec                  
-    [  5]   4.00-5.00   sec  10.6 MBytes  89.1 Mbits/sec                  
-    [  5]   5.00-6.00   sec  10.4 MBytes  87.0 Mbits/sec                  
-    [  5]   6.00-7.00   sec  10.8 MBytes  90.2 Mbits/sec                  
-    [  5]   7.00-8.00   sec  10.4 MBytes  86.8 Mbits/sec                  
-    [  5]   8.00-9.00   sec  10.6 MBytes  89.3 Mbits/sec                  
-    [  5]   9.00-10.00  sec  10.8 MBytes  90.1 Mbits/sec                  
+    [  5]   0.00-1.00   sec  7.75 MBytes  65.0 Mbits/sec                  
+    [  5]   1.00-2.00   sec  8.75 MBytes  73.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  7.88 MBytes  66.1 Mbits/sec                  
+    [  5]   3.00-4.00   sec  7.88 MBytes  66.1 Mbits/sec                  
+    [  5]   4.00-5.00   sec  8.62 MBytes  72.4 Mbits/sec                  
+    [  5]   5.00-6.00   sec  8.25 MBytes  69.1 Mbits/sec                  
+    [  5]   6.00-7.00   sec  7.75 MBytes  65.0 Mbits/sec                  
+    [  5]   7.00-8.00   sec  7.25 MBytes  60.8 Mbits/sec                  
+    [  5]   8.00-9.00   sec  7.62 MBytes  64.0 Mbits/sec                  
+    [  5]   9.00-10.00  sec  7.62 MBytes  64.0 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   108 MBytes  90.8 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec   105 MBytes  88.4 Mbits/sec                  receiver
+    [  5]   0.00-10.02  sec  82.1 MBytes  68.8 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  79.4 MBytes  66.6 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.111 port 40299 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.111 port 43953 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  9.00 MBytes  75.4 Mbits/sec    0    239 KBytes       
-    [  5]   1.00-2.00   sec  8.75 MBytes  73.4 Mbits/sec    0    324 KBytes       
-    [  5]   2.00-3.00   sec  8.88 MBytes  74.5 Mbits/sec    0    380 KBytes       
-    [  5]   3.00-4.00   sec  8.38 MBytes  70.3 Mbits/sec    0    440 KBytes       
-    [  5]   4.00-5.00   sec  7.88 MBytes  66.1 Mbits/sec    0    461 KBytes       
-    [  5]   5.00-6.00   sec  9.12 MBytes  76.5 Mbits/sec    0    513 KBytes       
-    [  5]   6.00-7.00   sec  8.25 MBytes  69.2 Mbits/sec    0    513 KBytes       
-    [  5]   7.00-8.00   sec  8.38 MBytes  70.3 Mbits/sec    0    513 KBytes       
-    [  5]   8.00-9.00   sec  8.38 MBytes  70.3 Mbits/sec    0    513 KBytes       
-    [  5]   9.00-10.00  sec  7.75 MBytes  65.0 Mbits/sec    0    513 KBytes       
+    [  5]   0.00-1.00   sec  8.12 MBytes  68.1 Mbits/sec    0    276 KBytes       
+    [  5]   1.00-2.00   sec  7.62 MBytes  63.9 Mbits/sec    0    341 KBytes       
+    [  5]   2.00-3.00   sec  7.75 MBytes  65.0 Mbits/sec    0    362 KBytes       
+    [  5]   3.00-4.00   sec  7.38 MBytes  61.9 Mbits/sec    0    404 KBytes       
+    [  5]   4.00-5.00   sec  8.38 MBytes  70.2 Mbits/sec    0    404 KBytes       
+    [  5]   5.00-6.00   sec  7.50 MBytes  62.9 Mbits/sec    0    404 KBytes       
+    [  5]   6.00-7.00   sec  8.12 MBytes  68.2 Mbits/sec    0    404 KBytes       
+    [  5]   7.00-8.00   sec  7.50 MBytes  62.9 Mbits/sec    0    404 KBytes       
+    [  5]   8.00-9.00   sec  8.25 MBytes  69.2 Mbits/sec    0    433 KBytes       
+    [  5]   9.00-10.00  sec  7.00 MBytes  58.7 Mbits/sec    0    433 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  84.8 MBytes  71.1 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  82.2 MBytes  69.0 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  77.6 MBytes  65.1 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec  75.4 MBytes  63.2 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 5500.0
-    RX: 221110 bytes (681 packets)
-    TX: 115735 bytes (594 packets)
-    signal: -22 dBm
-    rx bitrate: 270.0 MBit/s MCS 14 40MHz short GI
+    RX: 191138 bytes (569 packets)
+    TX: 93186 bytes (526 packets)
+    signal: -28 dBm
+    rx bitrate: 240.0 MBit/s MCS 13 40MHz short GI
     tx bitrate: 300.0 MBit/s MCS 15 40MHz short GI
     ```
 
@@ -962,60 +898,60 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8192CU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">28.1</span> Mbits/sec | <span style="font-size: 1.5rem;">30.9</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8192CU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">42.9</span> Mbits/sec | <span style="font-size: 1.5rem;">49.3</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.110 port 49295 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.110 port 48427 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  3.62 MBytes  30.4 Mbits/sec                  
-    [  5]   1.00-2.00   sec  3.50 MBytes  29.4 Mbits/sec                  
-    [  5]   2.00-3.00   sec  4.00 MBytes  33.6 Mbits/sec                  
-    [  5]   3.00-4.00   sec  3.50 MBytes  29.4 Mbits/sec                  
-    [  5]   4.00-5.00   sec  3.00 MBytes  25.2 Mbits/sec                  
-    [  5]   5.00-6.00   sec  3.88 MBytes  32.5 Mbits/sec                  
-    [  5]   6.00-7.00   sec  3.50 MBytes  29.4 Mbits/sec                  
-    [  5]   7.00-8.00   sec  3.12 MBytes  26.2 Mbits/sec                  
-    [  5]   8.00-9.00   sec  1.62 MBytes  13.6 Mbits/sec                  
-    [  5]   9.00-10.00  sec  2.00 MBytes  16.8 Mbits/sec                  
+    [  5]   0.00-1.00   sec  4.88 MBytes  40.9 Mbits/sec                  
+    [  5]   1.00-2.00   sec  5.25 MBytes  44.0 Mbits/sec                  
+    [  5]   2.00-3.00   sec  4.00 MBytes  33.5 Mbits/sec                  
+    [  5]   3.00-4.00   sec  4.50 MBytes  37.8 Mbits/sec                  
+    [  5]   4.00-5.00   sec  4.12 MBytes  34.6 Mbits/sec                  
+    [  5]   5.00-6.00   sec  4.88 MBytes  40.9 Mbits/sec                  
+    [  5]   6.00-7.00   sec  5.00 MBytes  41.9 Mbits/sec                  
+    [  5]   7.00-8.00   sec  5.25 MBytes  44.0 Mbits/sec                  
+    [  5]   8.00-9.00   sec  5.00 MBytes  41.9 Mbits/sec                  
+    [  5]   9.00-10.00  sec  5.00 MBytes  41.9 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.49  sec  35.1 MBytes  28.1 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  31.8 MBytes  26.6 Mbits/sec                  receiver
+    [  5]   0.00-10.04  sec  51.4 MBytes  42.9 Mbits/sec   46             sender
+    [  5]   0.00-10.00  sec  47.9 MBytes  40.2 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.110 port 48303 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.110 port 34343 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  5.12 MBytes  42.9 Mbits/sec    0    272 KBytes       
-    [  5]   1.00-2.00   sec  4.12 MBytes  34.6 Mbits/sec    0    298 KBytes       
-    [  5]   2.00-3.00   sec  3.75 MBytes  31.5 Mbits/sec    0    314 KBytes       
-    [  5]   3.00-4.00   sec  4.62 MBytes  38.8 Mbits/sec    0    314 KBytes       
-    [  5]   4.00-5.00   sec  4.50 MBytes  37.7 Mbits/sec    0    332 KBytes       
-    [  5]   5.00-6.00   sec  3.62 MBytes  30.4 Mbits/sec    0    332 KBytes       
-    [  5]   6.00-7.00   sec  2.00 MBytes  16.8 Mbits/sec    0    332 KBytes       
-    [  5]   7.00-8.00   sec  2.75 MBytes  23.1 Mbits/sec    0    332 KBytes       
-    [  5]   8.00-9.00   sec  2.75 MBytes  23.1 Mbits/sec    0    332 KBytes       
-    [  5]   9.00-10.00  sec  3.62 MBytes  30.4 Mbits/sec    0    332 KBytes       
+    [  5]   0.00-1.00   sec  6.88 MBytes  57.6 Mbits/sec    0    327 KBytes       
+    [  5]   1.00-2.00   sec  5.50 MBytes  46.1 Mbits/sec    0    389 KBytes       
+    [  5]   2.00-3.00   sec  6.88 MBytes  57.7 Mbits/sec    0    468 KBytes       
+    [  5]   3.00-4.00   sec  5.75 MBytes  48.2 Mbits/sec    0    468 KBytes       
+    [  5]   4.00-5.00   sec  6.00 MBytes  50.3 Mbits/sec    0    489 KBytes       
+    [  5]   5.00-6.00   sec  5.12 MBytes  43.0 Mbits/sec    0    489 KBytes       
+    [  5]   6.00-7.00   sec  6.38 MBytes  53.5 Mbits/sec    0    516 KBytes       
+    [  5]   7.00-8.00   sec  5.50 MBytes  46.1 Mbits/sec    0    516 KBytes       
+    [  5]   8.00-9.00   sec  5.38 MBytes  45.1 Mbits/sec    0    516 KBytes       
+    [  5]   9.00-10.00  sec  5.38 MBytes  45.1 Mbits/sec    0    516 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  36.9 MBytes  30.9 Mbits/sec    0             sender
-    [  5]   0.00-10.03  sec  35.1 MBytes  29.4 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  58.8 MBytes  49.3 Mbits/sec    0             sender
+    [  5]   0.00-10.02  sec  56.8 MBytes  47.5 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462.0
-    RX: 199682 bytes (507 packets)
-    TX: 130752 bytes (730 packets)
-    signal: -34 dBm
-    rx bitrate: 58.5 MBit/s MCS 6
+    RX: 57467 bytes (166 packets)
+    TX: 49194 bytes (209 packets)
+    signal: -36 dBm
+    rx bitrate: 52.0 MBit/s MCS 5
     tx bitrate: 72.2 MBit/s MCS 7 short GI
     ```
 
@@ -1026,50 +962,50 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8723BS</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">47.0</span> Mbits/sec | <span style="font-size: 1.5rem;">30.9</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8723BS</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">50.0</span> Mbits/sec | <span style="font-size: 1.5rem;">48.0</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.134 port 46857 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.134 port 48345 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  5.81 MBytes  48.8 Mbits/sec                  
-    [  5]   1.00-2.00   sec  4.91 MBytes  41.2 Mbits/sec                  
-    [  5]   2.00-3.00   sec  3.47 MBytes  29.1 Mbits/sec                  
-    [  5]   3.00-4.00   sec  3.03 MBytes  25.4 Mbits/sec                  
-    [  5]   4.00-5.00   sec  6.16 MBytes  51.7 Mbits/sec                  
-    [  5]   5.00-6.00   sec  4.63 MBytes  38.8 Mbits/sec                  
-    [  5]   6.00-7.00   sec  6.25 MBytes  52.4 Mbits/sec                  
-    [  5]   7.00-8.00   sec  6.23 MBytes  52.3 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.10 MBytes  51.2 Mbits/sec                  
-    [  5]   9.00-10.00  sec  6.15 MBytes  51.6 Mbits/sec                  
+    [  5]   0.00-1.00   sec  5.98 MBytes  50.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  3.23 MBytes  27.1 Mbits/sec                  
+    [  5]   2.00-3.00   sec  5.23 MBytes  43.9 Mbits/sec                  
+    [  5]   3.00-4.00   sec  5.62 MBytes  47.1 Mbits/sec                  
+    [  5]   4.00-5.00   sec  6.30 MBytes  52.8 Mbits/sec                  
+    [  5]   5.00-6.00   sec  6.20 MBytes  52.0 Mbits/sec                  
+    [  5]   6.00-7.00   sec  6.21 MBytes  52.1 Mbits/sec                  
+    [  5]   7.00-8.00   sec  6.08 MBytes  51.0 Mbits/sec                  
+    [  5]   8.00-9.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  6.17 MBytes  51.7 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  56.0 MBytes  47.0 Mbits/sec   26             sender
-    [  5]   0.00-10.00  sec  52.7 MBytes  44.2 Mbits/sec                  receiver
+    [  5]   0.00-10.03  sec  59.8 MBytes  50.0 Mbits/sec   21             sender
+    [  5]   0.00-10.00  sec  57.1 MBytes  47.9 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.134 port 37261 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.134 port 50465 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  5.33 MBytes  44.7 Mbits/sec    0    276 KBytes       
-    [  5]   1.00-2.00   sec  5.28 MBytes  44.3 Mbits/sec    0    508 KBytes       
-    [  5]   2.00-3.00   sec  3.60 MBytes  30.2 Mbits/sec    0    673 KBytes       
-    [  5]   3.00-4.00   sec  4.10 MBytes  34.4 Mbits/sec    0    735 KBytes       
-    [  5]   4.00-5.00   sec  3.48 MBytes  29.2 Mbits/sec    0    851 KBytes       
-    [  5]   5.00-6.00   sec  3.29 MBytes  27.6 Mbits/sec    0    949 KBytes       
-    [  5]   6.00-7.00   sec  3.29 MBytes  27.6 Mbits/sec    0   1015 KBytes       
-    [  5]   7.00-8.00   sec  2.37 MBytes  19.9 Mbits/sec    0   1.10 MBytes       
-    [  5]   8.00-9.00   sec  2.38 MBytes  19.9 Mbits/sec    0   1.23 MBytes       
-    [  5]   9.00-10.00  sec  3.75 MBytes  31.5 Mbits/sec    0   1.36 MBytes       
+    [  5]   0.00-1.00   sec  6.36 MBytes  53.4 Mbits/sec    0    363 KBytes       
+    [  5]   1.00-2.00   sec  5.78 MBytes  48.5 Mbits/sec    0    462 KBytes       
+    [  5]   2.00-3.00   sec  5.47 MBytes  45.9 Mbits/sec    0    491 KBytes       
+    [  5]   3.00-4.00   sec  6.09 MBytes  51.1 Mbits/sec    0    516 KBytes       
+    [  5]   4.00-5.00   sec  5.34 MBytes  44.8 Mbits/sec    0    543 KBytes       
+    [  5]   5.00-6.00   sec  5.72 MBytes  48.0 Mbits/sec    0    543 KBytes       
+    [  5]   6.00-7.00   sec  5.72 MBytes  48.0 Mbits/sec    0    543 KBytes       
+    [  5]   7.00-8.00   sec  5.65 MBytes  47.4 Mbits/sec    0    543 KBytes       
+    [  5]   8.00-9.00   sec  5.28 MBytes  44.3 Mbits/sec    0    543 KBytes       
+    [  5]   9.00-10.00  sec  5.84 MBytes  49.0 Mbits/sec    0    543 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  36.9 MBytes  30.9 Mbits/sec    0             sender
-    [  5]   0.00-10.07  sec  34.5 MBytes  28.7 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  57.3 MBytes  48.0 Mbits/sec    0             sender
+    [  5]   0.00-10.05  sec  56.0 MBytes  46.7 Mbits/sec                  receiver
     
     iperf Done.
     ```
@@ -1085,59 +1021,59 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8723BU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">3.56</span> Mbits/sec | <span style="font-size: 1.5rem;">20.8</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8723BU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">2.82</span> Mbits/sec | <span style="font-size: 1.5rem;">19.9</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.109 port 52765 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.109 port 41217 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  1.12 MBytes  9.43 Mbits/sec                  
-    [  5]   1.00-2.00   sec   128 KBytes  1.05 Mbits/sec                  
+    [  5]   0.00-1.00   sec   640 KBytes  5.24 Mbits/sec                  
+    [  5]   1.00-2.00   sec   256 KBytes  2.10 Mbits/sec                  
     [  5]   2.00-3.00   sec   256 KBytes  2.10 Mbits/sec                  
-    [  5]   3.00-4.00   sec   384 KBytes  3.15 Mbits/sec                  
+    [  5]   3.00-4.00   sec   128 KBytes  1.05 Mbits/sec                  
     [  5]   4.00-5.00   sec   384 KBytes  3.15 Mbits/sec                  
-    [  5]   5.00-6.00   sec   128 KBytes  1.05 Mbits/sec                  
-    [  5]   6.00-7.00   sec   256 KBytes  2.10 Mbits/sec                  
-    [  5]   7.00-8.00   sec   128 KBytes  1.05 Mbits/sec                  
-    [  5]   8.00-9.00   sec   256 KBytes  2.10 Mbits/sec                  
-    [  5]   9.00-10.00  sec   128 KBytes  1.05 Mbits/sec                  
+    [  5]   5.00-6.00   sec   256 KBytes  2.10 Mbits/sec                  
+    [  5]   6.00-7.00   sec   128 KBytes  1.05 Mbits/sec                  
+    [  5]   7.00-8.00   sec   256 KBytes  2.10 Mbits/sec                  
+    [  5]   8.00-9.00   sec  0.00 Bytes  0.00 bits/sec                  
+    [  5]   9.00-10.00  sec   256 KBytes  2.10 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec  4.25 MBytes  3.56 Mbits/sec  101             sender
-    [  5]   0.00-10.00  sec  3.12 MBytes  2.62 Mbits/sec                  receiver
+    [  5]   0.00-10.05  sec  3.38 MBytes  2.82 Mbits/sec   94             sender
+    [  5]   0.00-10.00  sec  2.50 MBytes  2.10 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.109 port 44381 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.109 port 43105 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  3.12 MBytes  26.2 Mbits/sec    0    156 KBytes       
-    [  5]   1.00-2.00   sec  3.38 MBytes  28.3 Mbits/sec   12    168 KBytes       
-    [  5]   2.00-3.00   sec  1.75 MBytes  14.7 Mbits/sec    0    192 KBytes       
-    [  5]   3.00-4.00   sec  1.75 MBytes  14.7 Mbits/sec    0    206 KBytes       
-    [  5]   4.00-5.00   sec  1.75 MBytes  14.7 Mbits/sec    0    214 KBytes       
-    [  5]   5.00-6.00   sec  1.75 MBytes  14.7 Mbits/sec    0    214 KBytes       
-    [  5]   6.00-7.00   sec  1.75 MBytes  14.7 Mbits/sec    0    214 KBytes       
-    [  5]   7.00-8.00   sec  1.75 MBytes  14.7 Mbits/sec    0    215 KBytes       
-    [  5]   8.00-9.00   sec  3.12 MBytes  26.2 Mbits/sec    0    225 KBytes       
-    [  5]   9.00-10.00  sec  4.62 MBytes  38.8 Mbits/sec    0    242 KBytes       
+    [  5]   0.00-1.00   sec  2.12 MBytes  17.8 Mbits/sec    0    124 KBytes       
+    [  5]   1.00-2.00   sec  4.12 MBytes  34.6 Mbits/sec    0    272 KBytes       
+    [  5]   2.00-3.00   sec  2.88 MBytes  24.1 Mbits/sec    0    355 KBytes       
+    [  5]   3.00-4.00   sec  2.50 MBytes  21.0 Mbits/sec    0    444 KBytes       
+    [  5]   4.00-5.00   sec  1.88 MBytes  15.7 Mbits/sec    0    495 KBytes       
+    [  5]   5.00-6.00   sec  2.25 MBytes  18.9 Mbits/sec    0    585 KBytes       
+    [  5]   6.00-7.00   sec  2.50 MBytes  21.0 Mbits/sec    0    655 KBytes       
+    [  5]   7.00-8.00   sec  1.38 MBytes  11.5 Mbits/sec    0    723 KBytes       
+    [  5]   8.00-9.00   sec  2.75 MBytes  23.1 Mbits/sec    0    823 KBytes       
+    [  5]   9.00-10.00  sec  1.38 MBytes  11.5 Mbits/sec   30    776 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  24.8 MBytes  20.8 Mbits/sec   12             sender
-    [  5]   0.00-10.03  sec  23.8 MBytes  19.9 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  23.8 MBytes  19.9 Mbits/sec   30             sender
+    [  5]   0.00-10.01  sec  22.1 MBytes  18.5 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462.0
-    RX: 79580 bytes (327 packets)
-    TX: 59674 bytes (221 packets)
-    signal: 0 dBm
+    RX: 77599 bytes (277 packets)
+    TX: 50123 bytes (216 packets)
+    signal: -36 dBm
     rx bitrate: 65.0 MBit/s MCS 7
     tx bitrate: 72.2 MBit/s MCS 7 short GI
     ```
@@ -1149,49 +1085,49 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">RTL8821CU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">132</span> Mbits/sec | <span style="font-size: 1.5rem;">210</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">RTL8821CU</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">144</span> Mbits/sec | <span style="font-size: 1.5rem;">209</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.136 port 36283 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.136 port 55049 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  15.5 MBytes   130 Mbits/sec                  
-    [  5]   1.00-2.00   sec  15.8 MBytes   132 Mbits/sec                  
-    [  5]   2.00-3.00   sec  15.8 MBytes   132 Mbits/sec                  
-    [  5]   3.00-4.00   sec  15.8 MBytes   132 Mbits/sec                  
-    [  5]   4.00-5.00   sec  15.6 MBytes   131 Mbits/sec                  
-    [  5]   5.00-6.00   sec  15.5 MBytes   130 Mbits/sec                  
-    [  5]   6.00-7.00   sec  15.8 MBytes   132 Mbits/sec                  
-    [  5]   7.00-8.00   sec  15.8 MBytes   132 Mbits/sec                  
-    [  5]   8.00-9.00   sec  15.6 MBytes   131 Mbits/sec                  
-    [  5]   9.00-10.00  sec  15.8 MBytes   132 Mbits/sec                  
+    [  5]   0.00-1.00   sec  12.4 MBytes   104 Mbits/sec                  
+    [  5]   1.00-2.00   sec  13.8 MBytes   115 Mbits/sec                  
+    [  5]   2.00-3.00   sec  17.5 MBytes   147 Mbits/sec                  
+    [  5]   3.00-4.00   sec  17.1 MBytes   144 Mbits/sec                  
+    [  5]   4.00-5.00   sec  18.1 MBytes   152 Mbits/sec                  
+    [  5]   5.00-6.00   sec  18.2 MBytes   153 Mbits/sec                  
+    [  5]   6.00-7.00   sec  18.0 MBytes   151 Mbits/sec                  
+    [  5]   7.00-8.00   sec  17.9 MBytes   150 Mbits/sec                  
+    [  5]   8.00-9.00   sec  18.5 MBytes   155 Mbits/sec                  
+    [  5]   9.00-10.00  sec  18.5 MBytes   155 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.01  sec   157 MBytes   132 Mbits/sec   45             sender
-    [  5]   0.00-10.00  sec   157 MBytes   131 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   172 MBytes   144 Mbits/sec   22             sender
+    [  5]   0.00-10.00  sec   170 MBytes   143 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.136 port 48063 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.136 port 53579 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  27.2 MBytes   228 Mbits/sec    0    563 KBytes       
-    [  5]   1.00-2.00   sec  25.0 MBytes   210 Mbits/sec    0    621 KBytes       
-    [  5]   2.00-3.00   sec  25.1 MBytes   211 Mbits/sec    0    621 KBytes       
-    [  5]   3.00-4.00   sec  23.6 MBytes   198 Mbits/sec    0    652 KBytes       
-    [  5]   4.00-5.00   sec  25.0 MBytes   210 Mbits/sec    0    652 KBytes       
-    [  5]   5.00-6.00   sec  25.8 MBytes   216 Mbits/sec    0    684 KBytes       
-    [  5]   6.00-7.00   sec  24.8 MBytes   208 Mbits/sec    0    684 KBytes       
-    [  5]   7.00-8.00   sec  24.6 MBytes   207 Mbits/sec    0    684 KBytes       
-    [  5]   8.00-9.00   sec  24.6 MBytes   207 Mbits/sec    0    684 KBytes       
-    [  5]   9.00-10.00  sec  24.6 MBytes   207 Mbits/sec    0    721 KBytes       
+    [  5]   0.00-1.00   sec  27.6 MBytes   231 Mbits/sec    0    622 KBytes       
+    [  5]   1.00-2.00   sec  23.8 MBytes   199 Mbits/sec    0    622 KBytes       
+    [  5]   2.00-3.00   sec  24.8 MBytes   208 Mbits/sec    0    655 KBytes       
+    [  5]   3.00-4.00   sec  25.1 MBytes   211 Mbits/sec    0    655 KBytes       
+    [  5]   4.00-5.00   sec  25.4 MBytes   213 Mbits/sec    0    655 KBytes       
+    [  5]   5.00-6.00   sec  23.8 MBytes   199 Mbits/sec    0    655 KBytes       
+    [  5]   6.00-7.00   sec  26.1 MBytes   219 Mbits/sec    0    689 KBytes       
+    [  5]   7.00-8.00   sec  23.4 MBytes   196 Mbits/sec    0    689 KBytes       
+    [  5]   8.00-9.00   sec  24.6 MBytes   206 Mbits/sec    0    689 KBytes       
+    [  5]   9.00-10.00  sec  25.0 MBytes   210 Mbits/sec    0    724 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec   250 MBytes   210 Mbits/sec    0             sender
+    [  5]   0.00-10.00  sec   250 MBytes   209 Mbits/sec    0             sender
     [  5]   0.00-10.02  sec   247 MBytes   207 Mbits/sec                  receiver
     
     iperf Done.
@@ -1199,9 +1135,9 @@ This section presents the performance test results, including key metrics and te
 === "Wireless link info"
     ```
     freq: 5500.0
-    RX: 209539 bytes (396 packets)
-    TX: 100889 bytes (477 packets)
-    signal: -35 dBm
+    RX: 202170 bytes (378 packets)
+    TX: 128718 bytes (516 packets)
+    signal: -40 dBm
     rx bitrate: 390.0 MBit/s VHT-MCS 9 80MHz VHT-NSS 1
     tx bitrate: 433.3 MBit/s VHT-MCS 9 80MHz short GI VHT-NSS 1
     ```
@@ -1213,57 +1149,57 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">UWE5622</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">54.2</span> Mbits/sec | <span style="font-size: 1.5rem;">60.1</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">UWE5622</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">143</span> Mbits/sec | <span style="font-size: 1.5rem;">138</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.128 port 33577 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.128 port 37745 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  6.07 MBytes  50.9 Mbits/sec                  
-    [  5]   1.00-2.00   sec  6.12 MBytes  51.4 Mbits/sec                  
-    [  5]   2.00-3.00   sec  6.03 MBytes  50.6 Mbits/sec                  
-    [  5]   3.00-4.00   sec  6.17 MBytes  51.7 Mbits/sec                  
-    [  5]   4.00-5.00   sec  6.19 MBytes  51.9 Mbits/sec                  
-    [  5]   5.00-6.00   sec  6.01 MBytes  50.4 Mbits/sec                  
-    [  5]   6.00-7.00   sec  6.13 MBytes  51.4 Mbits/sec                  
-    [  5]   7.00-8.00   sec  6.16 MBytes  51.7 Mbits/sec                  
-    [  5]   8.00-9.00   sec  6.33 MBytes  53.1 Mbits/sec                  
-    [  5]   9.00-10.00  sec  6.18 MBytes  51.8 Mbits/sec                  
+    [  5]   0.00-1.00   sec  16.0 MBytes   134 Mbits/sec                  
+    [  5]   1.00-2.00   sec  16.6 MBytes   139 Mbits/sec                  
+    [  5]   2.00-3.00   sec  16.8 MBytes   141 Mbits/sec                  
+    [  5]   3.00-4.00   sec  16.7 MBytes   140 Mbits/sec                  
+    [  5]   4.00-5.00   sec  16.9 MBytes   142 Mbits/sec                  
+    [  5]   5.00-6.00   sec  17.0 MBytes   142 Mbits/sec                  
+    [  5]   6.00-7.00   sec  17.0 MBytes   143 Mbits/sec                  
+    [  5]   7.00-8.00   sec  17.0 MBytes   143 Mbits/sec                  
+    [  5]   8.00-9.00   sec  16.9 MBytes   142 Mbits/sec                  
+    [  5]   9.00-10.00  sec  17.0 MBytes   142 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  64.6 MBytes  54.2 Mbits/sec    0             sender
-    [  5]   0.00-10.00  sec  61.4 MBytes  51.5 Mbits/sec                  receiver
+    [  5]   0.00-10.01  sec   171 MBytes   143 Mbits/sec   30             sender
+    [  5]   0.00-10.00  sec   168 MBytes   141 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.128 port 35237 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.128 port 38025 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  8.56 MBytes  71.8 Mbits/sec    0    358 KBytes       
-    [  5]   1.00-2.00   sec  6.90 MBytes  57.9 Mbits/sec    0    560 KBytes       
-    [  5]   2.00-3.00   sec  8.67 MBytes  72.7 Mbits/sec    0    689 KBytes       
-    [  5]   3.00-4.00   sec  6.25 MBytes  52.4 Mbits/sec    0    800 KBytes       
-    [  5]   4.00-5.00   sec  6.25 MBytes  52.4 Mbits/sec    0    871 KBytes       
-    [  5]   5.00-6.00   sec  7.50 MBytes  62.9 Mbits/sec    0    916 KBytes       
-    [  5]   6.00-7.00   sec  7.50 MBytes  62.9 Mbits/sec    0    967 KBytes       
-    [  5]   7.00-8.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.05 MBytes       
-    [  5]   8.00-9.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.05 MBytes       
-    [  5]   9.00-10.00  sec  6.25 MBytes  52.4 Mbits/sec    0   1.05 MBytes       
+    [  5]   0.00-1.00   sec  17.5 MBytes   147 Mbits/sec    0    301 KBytes       
+    [  5]   1.00-2.00   sec  16.0 MBytes   134 Mbits/sec    0    301 KBytes       
+    [  5]   2.00-3.00   sec  16.2 MBytes   136 Mbits/sec    0    317 KBytes       
+    [  5]   3.00-4.00   sec  17.2 MBytes   144 Mbits/sec    0    335 KBytes       
+    [  5]   4.00-5.00   sec  16.2 MBytes   136 Mbits/sec    0    352 KBytes       
+    [  5]   5.00-6.00   sec  16.5 MBytes   139 Mbits/sec    0    352 KBytes       
+    [  5]   6.00-7.00   sec  16.5 MBytes   139 Mbits/sec    0    352 KBytes       
+    [  5]   7.00-8.00   sec  16.2 MBytes   136 Mbits/sec    0    352 KBytes       
+    [  5]   8.00-9.00   sec  16.4 MBytes   138 Mbits/sec    0    352 KBytes       
+    [  5]   9.00-10.00  sec  16.3 MBytes   137 Mbits/sec    0    352 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  71.6 MBytes  60.1 Mbits/sec    0             sender
-    [  5]   0.00-10.02  sec  69.0 MBytes  57.8 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec   165 MBytes   138 Mbits/sec    0             sender
+    [  5]   0.00-10.01  sec   164 MBytes   137 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
-    freq: 2462
-    RX: 48601 bytes (207 packets)
+    freq: 5500
+    RX: 817591805 bytes (683054 packets)
     ```
 
 #### Xradio XR819
@@ -1273,27 +1209,27 @@ This section presents the performance test results, including key metrics and te
 
 | Chipset | Class | Average forward speed | Average reverse speed |
 |:-----|------|-------:|-------:|
-|<span style="font-size: 1.5rem;">XR819</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">19.0</span> Mbits/sec | <span style="font-size: 1.5rem;">13.2</span> Mbits/sec |
+|<span style="font-size: 1.5rem;">XR819</span> | <span style="font-size: 1.5rem;">N</span> | <span style="font-size: 1.5rem;">18.2</span> Mbits/sec | <span style="font-size: 1.5rem;">12.4</span> Mbits/sec |
 
 === "Forward mode (client to server)"
     ```
     Connecting to host 10.0.60.10, port 5201
     Reverse mode, remote host 10.0.60.10 is sending
-    [  5] local 10.0.50.138 port 58077 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.154 port 54617 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate
-    [  5]   0.00-1.00   sec  1.81 MBytes  15.2 Mbits/sec                  
-    [  5]   1.00-2.00   sec  1.29 MBytes  10.8 Mbits/sec                  
-    [  5]   2.00-3.00   sec  1.59 MBytes  13.4 Mbits/sec                  
-    [  5]   3.00-4.00   sec  1.96 MBytes  16.4 Mbits/sec                  
-    [  5]   4.00-5.00   sec  2.23 MBytes  18.7 Mbits/sec                  
-    [  5]   5.00-6.00   sec  2.03 MBytes  17.0 Mbits/sec                  
-    [  5]   6.00-7.00   sec  2.39 MBytes  20.1 Mbits/sec                  
-    [  5]   7.00-8.00   sec  2.46 MBytes  20.7 Mbits/sec                  
-    [  5]   8.00-9.00   sec  2.44 MBytes  20.4 Mbits/sec                  
-    [  5]   9.00-10.00  sec  1.99 MBytes  16.7 Mbits/sec                  
+    [  5]   0.00-1.00   sec  1.70 MBytes  14.3 Mbits/sec                  
+    [  5]   1.00-2.00   sec  1.84 MBytes  15.5 Mbits/sec                  
+    [  5]   2.00-3.00   sec  1.88 MBytes  15.7 Mbits/sec                  
+    [  5]   3.00-4.00   sec  1.89 MBytes  15.8 Mbits/sec                  
+    [  5]   4.00-5.00   sec  1.72 MBytes  14.5 Mbits/sec                  
+    [  5]   5.00-6.00   sec  1.83 MBytes  15.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  2.44 MBytes  20.5 Mbits/sec                  
+    [  5]   7.00-8.00   sec  2.45 MBytes  20.5 Mbits/sec                  
+    [  5]   8.00-9.00   sec  1.96 MBytes  16.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  2.43 MBytes  20.4 Mbits/sec                  
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.11  sec  22.9 MBytes  19.0 Mbits/sec    0             sender
+    [  5]   0.00-10.15  sec  22.0 MBytes  18.2 Mbits/sec    0             sender
     [  5]   0.00-10.00  sec  20.2 MBytes  16.9 Mbits/sec                  receiver
     
     iperf Done.
@@ -1301,33 +1237,33 @@ This section presents the performance test results, including key metrics and te
 === "Reverse mode (server to client)"
     ```
     Connecting to host 10.0.60.10, port 5201
-    [  5] local 10.0.50.138 port 53655 connected to 10.0.60.10 port 5201
+    [  5] local 10.0.50.154 port 44849 connected to 10.0.60.10 port 5201
     [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-    [  5]   0.00-1.00   sec  1.94 MBytes  16.3 Mbits/sec    0    106 KBytes       
-    [  5]   1.00-2.00   sec  1.55 MBytes  13.0 Mbits/sec    0    129 KBytes       
-    [  5]   2.00-3.00   sec  1.49 MBytes  12.5 Mbits/sec    0    134 KBytes       
-    [  5]   3.00-4.00   sec  1.68 MBytes  14.1 Mbits/sec    0    140 KBytes       
-    [  5]   4.00-5.00   sec  1.49 MBytes  12.5 Mbits/sec    0    140 KBytes       
-    [  5]   5.00-6.00   sec  1.49 MBytes  12.5 Mbits/sec    0    146 KBytes       
-    [  5]   6.00-7.00   sec  1.68 MBytes  14.1 Mbits/sec    0    146 KBytes       
-    [  5]   7.00-8.00   sec  1.68 MBytes  14.1 Mbits/sec    0    194 KBytes       
-    [  5]   8.00-9.00   sec  1.49 MBytes  12.5 Mbits/sec    0    194 KBytes       
-    [  5]   9.00-10.00  sec  1.24 MBytes  10.4 Mbits/sec    4    140 KBytes       
+    [  5]   0.00-1.00   sec  1.83 MBytes  15.4 Mbits/sec    0    107 KBytes       
+    [  5]   1.00-2.00   sec  1.55 MBytes  13.0 Mbits/sec    0    119 KBytes       
+    [  5]   2.00-3.00   sec  1.55 MBytes  13.0 Mbits/sec    0    130 KBytes       
+    [  5]   3.00-4.00   sec  1.30 MBytes  10.9 Mbits/sec    3    107 KBytes       
+    [  5]   4.00-5.00   sec  1.49 MBytes  12.5 Mbits/sec    1   86.3 KBytes       
+    [  5]   5.00-6.00   sec  1.30 MBytes  10.9 Mbits/sec    1   73.5 KBytes       
+    [  5]   6.00-7.00   sec  1.30 MBytes  10.9 Mbits/sec    3   65.0 KBytes       
+    [  5]   7.00-8.00   sec  1.49 MBytes  12.5 Mbits/sec    0   80.6 KBytes       
+    [  5]   8.00-9.00   sec  1.49 MBytes  12.5 Mbits/sec    0   91.9 KBytes       
+    [  5]   9.00-10.00  sec  1.49 MBytes  12.5 Mbits/sec    4   70.7 KBytes       
     - - - - - - - - - - - - - - - - - - - - - - - - -
     [ ID] Interval           Transfer     Bitrate         Retr
-    [  5]   0.00-10.00  sec  15.7 MBytes  13.2 Mbits/sec    4             sender
-    [  5]   0.00-10.04  sec  15.2 MBytes  12.7 Mbits/sec                  receiver
+    [  5]   0.00-10.00  sec  14.8 MBytes  12.4 Mbits/sec   12             sender
+    [  5]   0.00-10.04  sec  14.4 MBytes  12.0 Mbits/sec                  receiver
     
     iperf Done.
     ```
 === "Wireless link info"
     ```
     freq: 2462
-    RX: 60041 bytes (191 packets)
-    TX: 66671 bytes (282 packets)
-    signal: -30 dBm
+    RX: 51168 bytes (168 packets)
+    TX: 63170 bytes (244 packets)
+    signal: -27 dBm
     rx bitrate: 6.0 MBit/s
-    tx bitrate: 52.0 MBit/s MCS 5
+    tx bitrate: 39.0 MBit/s MCS 4
     
     ```
 <!-- DUT-STOP -->
