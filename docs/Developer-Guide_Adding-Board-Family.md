@@ -4,3 +4,5 @@ There are no detailed instructions on how to add a new board or even a whole new
 
 - [https://github.com/armbian/build/pull/3176/files](https://github.com/armbian/build/pull/3176/files)
 - [https://github.com/armbian/build/pull/3138/files](https://github.com/armbian/build/pull/3138/files)
+- [https://github.com/armbian/build/pull/7902/files](https://github.com/armbian/build/pull/7902/files)
+- [https://github.com/armbian/build/pull/8208/files](https://github.com/armbian/build/pull/8208/files)
