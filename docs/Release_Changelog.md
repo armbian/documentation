@@ -4,6 +4,228 @@
 
 ## What's Changed
 
+## v25.5.1 (2025-5-26)
+
+* [Bugfix] Fixed Non supported OS warning message.  by @Tearran in https://github.com/armbian/configng/pull/498
+* [Bugfix] feature array names,  by @Tearran in https://github.com/armbian/configng/pull/305
+* [Bugfix] Unexpected command executed when config overlays #349 by @Tearran in https://github.com/armbian/configng/pull/355
+* Activate the specified network interface, before applying IP stack by @igorpecovnik in https://github.com/armbian/configng/pull/411
+* Add _out of date_ notice to example config by @EvilOlaf in https://github.com/armbian/build/pull/8106
+* Add a collection of applications for downloading by @igorpecovnik in https://github.com/armbian/configng/pull/270
+* Add arch to the module template by @igorpecovnik in https://github.com/armbian/configng/pull/471
+* Add armbian-router to software section by @efectn in https://github.com/armbian/configng/pull/429
+* Add bananapim7 description - interactive build fix by @Grippy98 in https://github.com/armbian/build/pull/8155
+* Add BeagleY & K3 Kernel Updates by @Grippy98 in https://github.com/armbian/build/pull/7950
+* Add buttons for editing or adding header and footer by @igorpecovnik in https://github.com/armbian/configng/pull/602
+* Add code style checking exception for Prometheus by @igorpecovnik in https://github.com/armbian/configng/pull/477
+* Add configurable EFI partition alignment to support UFS devices by @FantasyGmm in https://github.com/armbian/build/pull/8053
+* Add e2fspros as it fell out of default dependency by @igorpecovnik in https://github.com/armbian/build/pull/7894
+* Add GPG key download for 3rd party distro by @igorpecovnik in https://github.com/armbian/configng/pull/381
+* Add initial support for BeagleBoard PocketBeagle2 by @Grippy98 in https://github.com/armbian/build/pull/7897
+* Add initial support for BeagleBone AI-64 by @Grippy98 in https://github.com/armbian/build/pull/7918
+* Add initial support for BeaglePlay by @Grippy98 in https://github.com/armbian/build/pull/7917
+* Add initial support for TI SK-AM69 board by @glneo in https://github.com/armbian/build/pull/7885
+* Add lcd panel of hinlink-h88k support to rockchip64 current and edge by @amazingfate in https://github.com/armbian/build/pull/7901
+* Add Mediatek Genio Family + Radxa Nio-12L by @HeyMeco in https://github.com/armbian/build/pull/8006
+* Add missing cockpit module by @Tearran in https://github.com/armbian/configng/pull/342
+* Add missing deps for generating deb file by @igorpecovnik in https://github.com/armbian/configng/pull/314
+* Add Odroid board selection by @GeoffClements in https://github.com/armbian/configng/pull/298
+* Add option to disable kernel patching by @timsurber in https://github.com/armbian/build/pull/8149
+* Add Qcom Robotics RB5 Support by @FantasyGmm in https://github.com/armbian/build/pull/8017
+* Add Radxa Cubie A5E (sun55i-a527) by @juanesf in https://github.com/armbian/build/pull/7852
+* Add reset and power down support for both ODROID SM1 units by @pyavitz in https://github.com/armbian/build/pull/7900
+* Add sandboxed SSH server port [2222] to the menu by @igorpecovnik in https://github.com/armbian/configng/pull/514
+* Add Scheduled Workflow to Clean Old GitHub Action Logs by @igorpecovnik in https://github.com/armbian/configng/pull/569
+* Add screenshot for several section of auto-made documentation by @igorpecovnik in https://github.com/armbian/configng/pull/486
+* add SMART AM40 support by @retro98boy in https://github.com/armbian/build/pull/8002
+* Add software package: Home Assistant by @igorpecovnik in https://github.com/armbian/configng/pull/235
+* Add support for MOTD logo colors by @igorpecovnik in https://github.com/armbian/build/pull/8018
+* Add support for NanoPi R2S Plus by @ig3 in https://github.com/armbian/build/pull/7913
+* Add VENDOR color to BSP and artifacts hashing by @igorpecovnik in https://github.com/armbian/build/pull/8026
+* Add wrapper for package manipulation by @dimitry-ishenko in https://github.com/armbian/configng/pull/320
+* Add wrapper for service manipulation by @dimitry-ishenko in https://github.com/armbian/configng/pull/323
+* Add Zerotier into configng by @jnovos in https://github.com/armbian/configng/pull/470
+* Add ZeroTier short description to fit menu by @igorpecovnik in https://github.com/armbian/configng/pull/580
+* Adding a warning to welcome screen by @Tearran in https://github.com/armbian/configng/pull/276
+* Adding schematic for network settings by @igorpecovnik in https://github.com/armbian/configng/pull/280
+* AdGuardHome and unbound DNS by @igorpecovnik in https://github.com/armbian/configng/pull/415
+* Adjust condition to use proper if then fi style by @igorpecovnik in https://github.com/armbian/configng/pull/510
+* Adjust images and markdown files by @igorpecovnik in https://github.com/armbian/configng/pull/570
+* Adjust keywords for displaying links with ports in the menu by @igorpecovnik in https://github.com/armbian/configng/pull/547
+* Adjust software module options to match recent changes by @igorpecovnik in https://github.com/armbian/configng/pull/332
+* After changing apt lists methodology, we need to rebuild rootfs cache by @igorpecovnik in https://github.com/armbian/build/pull/7877
+* Allow NetworkManager and systemd-networkd by @ig3 in https://github.com/armbian/build/pull/7961
+* Allwinner: bump to latest tags - booted on H5 by @igorpecovnik in https://github.com/armbian/build/pull/8100
+* Application logos: fix some of images by @igorpecovnik in https://github.com/armbian/configng/pull/564
+* Apply several fixes to NFS service by @igorpecovnik in https://github.com/armbian/configng/pull/313
+* Armbian internal: deploy Armbian qemu KVM instances by @igorpecovnik in https://github.com/armbian/configng/pull/365
+* Armbian internal: GitHub runners deployment script by @igorpecovnik in https://github.com/armbian/configng/pull/364
+* Armbian kernel: add ZRAM and DOCKER configurations by @igorpecovnik in https://github.com/armbian/build/pull/8014
+* Armbian rsyncd: fix port used in the module by @igorpecovnik in https://github.com/armbian/configng/pull/463
+* Armbian runners deploy: fixing bugs by @igorpecovnik in https://github.com/armbian/configng/pull/369
+* Armbian system: manage rsyncd server for armbian download instances by @igorpecovnik in https://github.com/armbian/configng/pull/457
+* Automation: automatically close issues marked as "Can be closed?"  by @igorpecovnik in https://github.com/armbian/configng/pull/387
+* BananaPi BPI-M4-Zero: `Enable GPU and add Audio nodes` by @pyavitz in https://github.com/armbian/build/pull/8191
+* BananaPi BPI-M4-Zero: `sunxi: mmc: Improve reset procedure` by @pyavitz in https://github.com/armbian/build/pull/7943
+* BananaPi SM1: `Fixup patch name association` by @pyavitz in https://github.com/armbian/build/pull/8099
+* BigTreeTech CB2: use mainline device tree on edge (6.14) by @JohnTheCoolingFan in https://github.com/armbian/build/pull/7892
+* board: youyeetoo-r1 v3  by @amazingfate in https://github.com/armbian/configng/pull/299
+* manage_overlayfs: Keep the default value of overlayroot_cfgdisk by @slowpeek in https://github.com/armbian/configng/pull/372
+* Match JSON and modules in order to read data stored in modules by @igorpecovnik in https://github.com/armbian/configng/pull/584
+* MBa8MPxL:  add Pi Camera support, fix config | fix in armbian-firstlogin by @schmiedelm in https://github.com/armbian/build/pull/8010
+* mekotronics-rk3588: u-boot: back to radxa's v2024.03, as .10 breaks GMAC stable MAC patch by @rpardini in https://github.com/armbian/build/pull/7971
+* Mekotronics: move two boards from community supported to supported by @igorpecovnik in https://github.com/armbian/build/pull/8187
+* Meson64: adjust patch to match upstream changes by @igorpecovnik in https://github.com/armbian/build/pull/7989
+* mksklipad50: add DT overlays for edge kernel by @torte71 in https://github.com/armbian/build/pull/7983
+* mksklipad50: Switch to u-boot v2025.01 (resend) by @torte71 in https://github.com/armbian/build/pull/7936
+* Module Docker: Check if SUDO_USER variable is defined by @igorpecovnik in https://github.com/armbian/configng/pull/366
+* Module ZSH: update package before installing ZSH package by @igorpecovnik in https://github.com/armbian/configng/pull/456
+* Move Armbian related services in dedicated section by @igorpecovnik in https://github.com/armbian/configng/pull/581
+* Move Domoticz logo to the correct location by @igorpecovnik in https://github.com/armbian/configng/pull/399
+* Move wireguard to software section VPN by @igorpecovnik in https://github.com/armbian/configng/pull/578
+* Multiple sources fix: after changing to deb822 we forgot on leftovers by @igorpecovnik in https://github.com/armbian/build/pull/7909
+* mvebu: bootscript fixes & enhancements by @djurny in https://github.com/armbian/build/pull/8189
+* nanopi-r3s, radxa-zero3, rock-3a: board config cleanup & maint by @EvilOlaf in https://github.com/armbian/build/pull/8045
+* nanopi-r3s: bump uboot to v2025.04 by @EvilOlaf in https://github.com/armbian/build/pull/8070
+* Navidrom: fix problems that are popping up on unit tests by @igorpecovnik in https://github.com/armbian/configng/pull/426
+* Network config: Show the "disable hotspot" dialog only if there is an active hotspot on the selected interface. by @fvalasiad in https://github.com/armbian/configng/pull/596
+* NFS: several fixes to improve handling by @igorpecovnik in https://github.com/armbian/configng/pull/396
+* Odroid XU4: fix broken patch by @igorpecovnik in https://github.com/armbian/build/pull/8146
+* odroidm2: use standard `v2025.04` (drop `-rc4`) from u-boot patch folder name; bump `v2025.04-rc4` -> `v2025.04-rc5` by @rpardini in https://github.com/armbian/build/pull/8035
+* odroidxu4: fix uboot compilation for Noble hosts by @EvilOlaf in https://github.com/armbian/build/pull/8168
+* officially support Banana Pi M2+ by @leggewie in https://github.com/armbian/build/pull/8127
+* Opi5max - remove `current` builds by @EvilOlaf in https://github.com/armbian/build/pull/7993
+* Optimize JSON Validation Workflow by @igorpecovnik in https://github.com/armbian/configng/pull/568
+* Optimizing images - no other changes by @igorpecovnik in https://github.com/armbian/configng/pull/582
+* Oracular Ubuntu is no more, switching to Plucky by @igorpecovnik in https://github.com/armbian/configng/pull/392
+* orangepi-5-max: switch `edge` u-boot to mainline by @EvilOlaf in https://github.com/armbian/build/pull/8082
+* Orangepi5 maintenance by @EvilOlaf in https://github.com/armbian/build/pull/7893
+* orangepi5b: split opi5b board from opi5 board config by @efectn in https://github.com/armbian/build/pull/8126
+* orangepi5pro: Fix uboot compilation by @EvilOlaf in https://github.com/armbian/build/pull/8181
+* Orangepi5PRO: move to EOS as it has broken u-boot compilation on Noble by @igorpecovnik in https://github.com/armbian/build/pull/8172
+* Overlay management: disable showing this option where its not supported by @igorpecovnik in https://github.com/armbian/configng/pull/285
+* Overlayfs: refactor module structure by @igorpecovnik in https://github.com/armbian/configng/pull/378
+* partitioning: Add BTRFS_ROOT_SUBVOLUME switch by @kageurufu in https://github.com/armbian/build/pull/8144
+* Pi-hole and adguardhome: addressing small bugs, hardening by @igorpecovnik in https://github.com/armbian/configng/pull/417
+* qemu arm64: bump u-boot and fix wrong boot script parameter by @igorpecovnik in https://github.com/armbian/build/pull/7994
+* Radxa Nio 12l: dropping vendor kernel as its broken and generally in bad shape by @igorpecovnik in https://github.com/armbian/build/pull/8093
+* radxa-zero3: bump mainline uboot by @EvilOlaf in https://github.com/armbian/build/pull/8071
+* radxa-zero3: enable wifi extension by default by @EvilOlaf in https://github.com/armbian/build/pull/8049
+* RaspberryPi: add support for managing overlays by @igorpecovnik in https://github.com/armbian/configng/pull/451
+* RaspberryPi: add brcm firmware package to fix missing wireless support by @igorpecovnik in https://github.com/armbian/build/pull/8118
+* RaspberryPi: suppress warnings for missing firmware by @igorpecovnik in https://github.com/armbian/build/pull/8116
+* Raspbery Pi: legacy kernel is missing support for CONFIG_FW_LOADER_COMPRESS by @igorpecovnik in https://github.com/armbian/build/pull/7916
+* Refactor and cleanup of documentation making code by @igorpecovnik in https://github.com/armbian/configng/pull/544
+* Refactor conditions to use if then fi otherwise tests cases are failing by @igorpecovnik in https://github.com/armbian/configng/pull/506
+* Refactor patches for NanoPC T6 & LTS by @SuperKali in https://github.com/armbian/build/pull/7980
+* Refactoring Desktop installation by @igorpecovnik in https://github.com/armbian/configng/pull/436
+* Remove `lib.config` from README.me, create proper example by @EvilOlaf in https://github.com/armbian/build/pull/8090
+* Remove deprecated CM3588 devicetree by @timsurber in https://github.com/armbian/build/pull/8150
+* Remove escape character from runtime by @Tearran in https://github.com/armbian/configng/pull/341
+* Remove mainlined patch in 6.14.5 by @timsurber in https://github.com/armbian/build/pull/8148
+* Remove OMV after test install by @igorpecovnik in https://github.com/armbian/configng/pull/594
+* Remove wrong unit test definitions by @igorpecovnik in https://github.com/armbian/configng/pull/318
+* Remove Xiaomi umi Support by @FantasyGmm in https://github.com/armbian/build/pull/7932
+* Repository consistency: rename armbian-development to armbian-config.list by @igorpecovnik in https://github.com/armbian/configng/pull/383
+* RESEND - Add initial support for Orangepi 5 Ultra by @EvilOlaf in https://github.com/armbian/build/pull/7902
+* RFC: Networking - add simple way without using bridge by @igorpecovnik in https://github.com/armbian/configng/pull/394
+* RK3588 add HDMI sound, add support for OPi5 Max by @palachzzz in https://github.com/armbian/build/pull/7884
+* rock-3a: bump mainline uboot to v2025.04 by @EvilOlaf in https://github.com/armbian/build/pull/8072
+* Rock5 mainline hs400 mode fix by @amazingfate in https://github.com/armbian/build/pull/7921
+* Rockchip - Adjustin broken patch for EDGE kernel by @igorpecovnik in https://github.com/armbian/build/pull/8107
+* Rockchip RK3588: Adjust mainlined patch by @igorpecovnik in https://github.com/armbian/build/pull/8064
+* rockchip-rk3308-current: fix uart dma by @ssp97 in https://github.com/armbian/build/pull/8074
+* rockchip/64: bump rk322x-box and rk3318-box to u-boot v2025.01 by @paolosabatino in https://github.com/armbian/build/pull/7895
+* rockchip64-6.12: fix compatible for CPU regulator on BTT PI2/CB2 by @anarsoul in https://github.com/armbian/build/pull/7974
+* rockchip64-6.14: Add HDMI audio support and missing stuff on Youyeetoo R1 v3 by @SuperKali in https://github.com/armbian/build/pull/7934
+* rockchip64-6.14: Add missing opp nodes by @SuperKali in https://github.com/armbian/build/pull/8048
+* rockchip64-6.14: Add patch to fix USB 3.0 A on NanoPC T6 by @SuperKali in https://github.com/armbian/build/pull/7969
+* rockchip64-6.14: Enabled HDMI1 video and audio on NanoPC T6/LTS by @SuperKali in https://github.com/armbian/build/pull/7933
+* rockchip64-6.14: rewrite rock5b hdmi audio patch by @SuperKali in https://github.com/armbian/build/pull/7929
+* rockchip64-6.14: Set dma mask to 64 bit by @SuperKali in https://github.com/armbian/build/pull/7924
+* rockchip64-edge: bump to 6.14 by @amazingfate in https://github.com/armbian/build/pull/7835
+* rockchip64: add multiple SPI images support to armbian-install by @efectn in https://github.com/armbian/build/pull/8123
+* rockchip64: bump orangepi4 lts uboot to v2025.01 by @paolosabatino in https://github.com/armbian/build/pull/7964
+* rockchip64: bump rockpi-e to u-boot v2025.01 by @paolosabatino in https://github.com/armbian/build/pull/7965
+* rockchip64: Enable CAN FD driver MCP251XFD by @mickeprag in https://github.com/armbian/build/pull/8136
+* rockchip64: fix atf build by @EvilOlaf in https://github.com/armbian/build/pull/8097
+* rockchip64: fix OrangePi 4 LTS boot with BTF, bump uboot to 2024.10 by @paolosabatino in https://github.com/armbian/build/pull/7887
+* rockchip64: rk3318-box: fix wifi with alternate sdio bus by @paolosabatino in https://github.com/armbian/build/pull/7959
+* rockchip64: rk356x: add PLL rate for 33.3MHz by @anarsoul in https://github.com/armbian/build/pull/7970
+* rockchip64: uboot: fix stable mac address for rk3318-box by @paolosabatino in https://github.com/armbian/build/pull/7930
+* rockchip: bump tinkerboard and xt-q8l-v10 u-boot to v2025.01 by @paolosabatino in https://github.com/armbian/build/pull/7967
+* Rpi bugfix: Split Debian and Ubuntu packages  by @igorpecovnik in https://github.com/armbian/build/pull/8087
+* Runner install: add missing dependencies by @igorpecovnik in https://github.com/armbian/configng/pull/606
+* sakurapi-rk3308b: several updates for the board by @TheSnowfield in https://github.com/armbian/build/pull/8047
+* Sandboxed SSH server: add rsync to the Docker container by @igorpecovnik in https://github.com/armbian/configng/pull/357
+* Software title: Actual budget by @igorpecovnik in https://github.com/armbian/configng/pull/419
+* Software title: ANSI hastebin docker instance by @efectn in https://github.com/armbian/configng/pull/461
+* Software title: Immich as a self-hosted photo/video backup option by @igorpecovnik in https://github.com/armbian/configng/pull/575
+* Software title: NetBox full Docker module with automated configuration by @igorpecovnik in https://github.com/armbian/configng/pull/559
+* Software title: Redis Module Support by @igorpecovnik in https://github.com/armbian/configng/pull/561
+* Software title: Duplicati backup service by @igorpecovnik in https://github.com/armbian/configng/pull/555
+* Software title: File browser by @igorpecovnik in https://github.com/armbian/configng/pull/590
+* Software title: Grafana monitoring dashboards by @igorpecovnik in https://github.com/armbian/configng/pull/351
+* Software title: NetAlertX - scan, monitor and visualize your networks by @igorpecovnik in https://github.com/armbian/configng/pull/479
+* Software title: NetData by @igorpecovnik in https://github.com/armbian/configng/pull/289
+* Software title: OMV (openmediavault) by @igorpecovnik in https://github.com/armbian/configng/pull/588
+* Software title: Samba module by @Tearran in https://github.com/armbian/configng/pull/529
+* Software title: Add PostgreSQL Module Support by @igorpecovnik in https://github.com/armbian/configng/pull/560
+* Software title: Add prometheus by @efectn in https://github.com/armbian/configng/pull/469
+* Software title: Armbianrouter: add cdn.armbian.com container  by @efectn in https://github.com/armbian/configng/pull/460
+* Software title: Switch hastebin to golang version by @efectn in https://github.com/armbian/configng/pull/481
+* SpacemiT: Defconfig: `Add CONFIG_NFT_FLOW_OFFLOAD=m` by @pyavitz in https://github.com/armbian/build/pull/7951
+* SpacemiT: Defconfig: `Add CONFIG_TUN=m` by @pyavitz in https://github.com/armbian/build/pull/8162
+* SpacemiT: Defconfig: `Enable PPPoe Module` by @pyavitz in https://github.com/armbian/build/pull/8073
+* Standardize naming in Kernel/firmware upgrades by @squassina in https://github.com/armbian/configng/pull/574
+* Starfive: bump kernel to v6.6 for starfive2 by @libiunc in https://github.com/armbian/build/pull/8033
+* station-m3: delete the redundant function. by @chainsx in https://github.com/armbian/build/pull/8068
+* station-p2: bump u-boot to 2025.04 by @chainsx in https://github.com/armbian/build/pull/8081
+* station: Clean firmware by @chainsx in https://github.com/armbian/build/pull/8084
+* Stop altering global git config file and set safe per cloned repository by @igorpecovnik in https://github.com/armbian/build/pull/7910
+* sunxi 6.12: Switch to v6.12.16, Add HDMI support by @The-going in https://github.com/armbian/build/pull/7752
+* sunxi 6.13: Switching to v6.13.11; Add pwm, dma, fix hardware decoding video, audio by @The-going in https://github.com/armbian/build/pull/8086
+* sunxi-6.12: BUGFIX: Remove the incomplete patch. by @The-going in https://github.com/armbian/build/pull/7947
+* sunxi-6.12: sunxi:  by @The-going in https://github.com/armbian/build/pull/8004
+* sunxi-6.13: Add all patches by @The-going in https://github.com/armbian/build/pull/7705
+* sunxi-6.14: Add all patches by @The-going in https://github.com/armbian/build/pull/8147
+* sunxi64: bump ATF to latest LTS tag by @EvilOlaf in https://github.com/armbian/build/pull/8111
+* switch `current` u-boot to v2025.01 by @EvilOlaf in https://github.com/armbian/build/pull/8012
+* Switch adguard home to network host for accurate client ip address logging by @aancw in https://github.com/armbian/configng/pull/537
+* Switch CM3588 to mainline A-TF by @timsurber in https://github.com/armbian/build/pull/7898
+* Switch from rkr5 to rkr5.1 by @HeyMeco in https://github.com/armbian/build/pull/8089
+* Switch Netdata to host network for proper metrics and accessibility by @fbernier in https://github.com/armbian/configng/pull/516
+* System: add NFS daemon install and manipulation by @igorpecovnik in https://github.com/armbian/configng/pull/292
+* System: add ZFS compilation support by @igorpecovnik in https://github.com/armbian/configng/pull/282
+* Transmission: add docker subnet to the whitelist by @igorpecovnik in https://github.com/armbian/configng/pull/346
+* uboot: mainline board: youyeetoo r1 add uboot patches by @SuperKali in https://github.com/armbian/build/pull/8175
+* Unattended Upgrade Manager module - reconfiguring automatic updates by @igorpecovnik in https://github.com/armbian/configng/pull/459
+* Unit tests: drop several old test cases by @igorpecovnik in https://github.com/armbian/configng/pull/380
+* Unit tests: improve configuration and fix bugs by @igorpecovnik in https://github.com/armbian/configng/pull/442
+* Unit tests: upgrade unit tests components to mitigate deprecation by @igorpecovnik in https://github.com/armbian/configng/pull/347
+* Update all missing connections between JSON and modules by @igorpecovnik in https://github.com/armbian/configng/pull/585
+* Update boot-mvebu.cmd by @djurny in https://github.com/armbian/build/pull/8166
+* Update IMM001-footer.md for immich by @hartraft in https://github.com/armbian/configng/pull/600
+* Update issue template by @igorpecovnik in https://github.com/armbian/configng/pull/386
+* Update K3 Family to use Github Mirror over TI Cgit by @Grippy98 in https://github.com/armbian/build/pull/7952
+* Update kernel configs with enabled wifi drivers from rtw88/9 by @igorpecovnik in https://github.com/armbian/build/pull/8051
+* Update linux-sun55iw3-dev.config by @juanesf in https://github.com/armbian/build/pull/8058
+* Update Odin2 Config by @FantasyGmm in https://github.com/armbian/build/pull/7946
+* Update odroidxu4-current to 6.6.81 by @belegdol in https://github.com/armbian/build/pull/7931
+* Update odroidxu4-current to 6.6.88 by @belegdol in https://github.com/armbian/build/pull/8135
+* Update prepare-host.sh to use ntpsec-ntpdate by @squassina in https://github.com/armbian/build/pull/8177
+* Update README.md by @leggewie in https://github.com/armbian/configng/pull/464
+* Update the version of U-boot used with Radxa rock 4 se to v2025.04 by @trappiz in https://github.com/armbian/build/pull/8115
+* Updating maintainers: switch to new location of JSON file by @igorpecovnik in https://github.com/armbian/build/pull/8179
+* Upgrade Cherryba-m1 to latest u-boot, move patch to new folder by @igorpecovnik in https://github.com/armbian/build/pull/8131
+* Userspace status changes to EOS for bullseye, focal and jammy by @igorpecovnik in https://github.com/armbian/build/pull/8114
+* V2 - Update the version of U-boot used with Radxa rock 4 se to v2025.04 by @trappiz in https://github.com/armbian/build/pull/8129
+* We need to escape $ otherwise this will be executed on host by @igorpecovnik in https://github.com/armbian/build/pull/8060
+* Webserver & reverse proxy with php and SSL support by @igorpecovnik in https://github.com/armbian/configng/pull/329
+* Wireless discovery hardening by @igorpecovnik in https://github.com/armbian/configng/pull/302
+* Wireless networking: retry 3 times for getting stations by @igorpecovnik in https://github.com/armbian/configng/pull/286
+* ZFS: define architecture for ZFS module by @igorpecovnik in https://github.com/armbian/configng/pull/410
+
 ## v25.2.2 (2025-2-25)
 
 * Adjusting aml-s9xx as armbian-install was moved to another location by @igorpecovnik in https://github.com/armbian/build/pull/7499
