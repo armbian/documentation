@@ -104,3 +104,19 @@ PRESET_USER_SHELL="bash"
     1. Copy the template with `cp extensions/preset-firstrun.sh userpatches/extensions/`
     2. Edit the template `userpatches/extensions/preset-firstrun.sh` according to your situation
     3. Build your Armbian image using the additional parameter `ENABLE_EXTENSIONS=preset-firstrun`
+
+## Provisioning script
+
+`/root/provisioning` is executed once as root after the first successful login, either manual or automated. It’s used to perform final system setup tasks like installing packages, configuring the system, or enabling services.
+
+The example script updates package lists, installs htop, sets a custom hostname.
+
+
+```bash title="/root/provisioning"
+#!/bin/bash
+set -e
+echo "Provisioning started"
+apt update && apt install -y htop
+hostnamectl set-hostname my-device
+echo "Provisioning complete"
+```
