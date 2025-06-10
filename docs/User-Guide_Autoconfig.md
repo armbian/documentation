@@ -107,12 +107,12 @@ PRESET_USER_SHELL="bash"
 
 ## Provisioning script
 
-`/root/provisioning` is executed once as root after the first successful login, either manual or automated. It’s used to perform final system setup tasks like installing packages, configuring the system, or enabling services.
+`/root/provisioning.sh` is executed once as root after the first successful login, either manual or automated. It’s used to perform final system setup tasks like installing packages, configuring the system, or enabling services.
 
 The example script updates package lists, installs htop, sets a custom hostname.
 
 
-```bash title="/root/provisioning"
+```bash title="/root/provisioning.sh"
 #!/bin/bash
 set -e
 echo "Provisioning started"
