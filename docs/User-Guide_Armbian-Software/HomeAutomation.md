@@ -4,6 +4,120 @@ comments: true
 
 # Home Automation for control home appliances
 
+## Domoticz
+
+
+Domoticz open source home automation
+
+
+<!--- section image START from tools/include/images/DOM001.png --->
+[![Domoticz](/images/DOM001.png)](#)
+<!--- section image STOP from tools/include/images/DOM001.png --->
+
+
+<!--- header START from tools/include/markdown/DOM001-header.md --->
+Domoticz is an open-source home automation platform that allows you to control and monitor smart devices in your home. It supports a wide range of devices, including lights, sensors, thermostats, and cameras. Through its web interface or mobile app, you can set up automation rules and schedules, providing greater convenience and energy efficiency. It’s customizable, flexible, and can be run on a variety of hardware platforms supported by Armbian.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8080**:
+
+    - URL: `https://<your.IP>:8080`
+    - Username/Password: admin / domoticz
+
+=== "Directories"
+
+    - Config directory: `/armbian/domoticz`
+
+=== "Advanced setup"
+
+    - Primary USB device passing through (`/dev/ttyUSB0`) to Docker container is enabled by default
+    - For more complex setup, please follow this comprehensive guide: <https://wiki.domoticz.com/Main_Page>
+
+<!--- header STOP from tools/include/markdown/DOM001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DOM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOM001-header.md)  
+__Status:__ Preview  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://wiki.domoticz.com)  
+
+~~~ custombash
+armbian-config --cmd DOM001
+~~~
+
+
+~~~ bash title="Domoticz remove:"
+armbian-config --cmd DOM002
+~~~
+
+
+~~~ bash title="Domoticz purge with data folder:"
+armbian-config --cmd DOM003
+~~~
+
+
+
+
+## EVCC
+
+
+EVCC - solar charging automation
+
+
+<!--- section image START from tools/include/images/EVCC01.png --->
+[![EVCC](/images/EVCC01.png)](#)
+<!--- section image STOP from tools/include/images/EVCC01.png --->
+
+
+<!--- header START from tools/include/markdown/EVCC01-header.md --->
+evcc is an energy management system with a focus on electromobility. The software controls your EV charger or smart plug. It communicates with your vehicle, inverter or home storage to make intelligent charging decisions. The software is open source and community-driven.
+
+<!--- header STOP from tools/include/markdown/EVCC01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-header.md)  
+__Status:__ Preview  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.evcc.io/en)  
+
+~~~ custombash
+armbian-config --cmd EVCC01
+~~~
+
+
+<!--- footer START from tools/include/markdown/EVCC01-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7070**:
+
+    - URL: `https://<your.IP>:7070`
+    - Admin password is generated at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/armbian/evcc`
+    - Site configuration directory: `/armbian/evcc/evcc.yaml`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f evcc
+    ```
+
+<!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
+
+
+~~~ bash title="EVCC - solar charging automation remove:"
+armbian-config --cmd EVCC02
+~~~
+
+
+~~~ bash title="EVCC purge with data folder:"
+armbian-config --cmd EVCC03
+~~~
+
+
+
+
 ## openHAB
 
 
@@ -136,120 +250,6 @@ armbian-config --cmd HAS002
 
 ~~~ bash title="Home Assistant purge with data folder:"
 armbian-config --cmd HAS003
-~~~
-
-
-
-
-## Domoticz
-
-
-Domoticz open source home automation
-
-
-<!--- section image START from tools/include/images/DOM001.png --->
-[![Domoticz](/images/DOM001.png)](#)
-<!--- section image STOP from tools/include/images/DOM001.png --->
-
-
-<!--- header START from tools/include/markdown/DOM001-header.md --->
-Domoticz is an open-source home automation platform that allows you to control and monitor smart devices in your home. It supports a wide range of devices, including lights, sensors, thermostats, and cameras. Through its web interface or mobile app, you can set up automation rules and schedules, providing greater convenience and energy efficiency. It’s customizable, flexible, and can be run on a variety of hardware platforms supported by Armbian.
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8080**:
-
-    - URL: `https://<your.IP>:8080`
-    - Username/Password: admin / domoticz
-
-=== "Directories"
-
-    - Config directory: `/armbian/domoticz`
-
-=== "Advanced setup"
-
-    - Primary USB device passing through (`/dev/ttyUSB0`) to Docker container is enabled by default
-    - For more complex setup, please follow this comprehensive guide: <https://wiki.domoticz.com/Main_Page>
-
-<!--- header STOP from tools/include/markdown/DOM001-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DOM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOM001-header.md)  
-__Status:__ Preview  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.domoticz.com)  
-
-~~~ custombash
-armbian-config --cmd DOM001
-~~~
-
-
-~~~ bash title="Domoticz remove:"
-armbian-config --cmd DOM002
-~~~
-
-
-~~~ bash title="Domoticz purge with data folder:"
-armbian-config --cmd DOM003
-~~~
-
-
-
-
-## EVCC
-
-
-EVCC - solar charging automation
-
-
-<!--- section image START from tools/include/images/EVCC01.png --->
-[![EVCC](/images/EVCC01.png)](#)
-<!--- section image STOP from tools/include/images/EVCC01.png --->
-
-
-<!--- header START from tools/include/markdown/EVCC01-header.md --->
-evcc is an energy management system with a focus on electromobility. The software controls your EV charger or smart plug. It communicates with your vehicle, inverter or home storage to make intelligent charging decisions. The software is open source and community-driven.
-
-<!--- header STOP from tools/include/markdown/EVCC01-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-header.md)  
-__Status:__ Preview  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.evcc.io/en)  
-
-~~~ custombash
-armbian-config --cmd EVCC01
-~~~
-
-
-<!--- footer START from tools/include/markdown/EVCC01-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **7070**:
-
-    - URL: `https://<your.IP>:7070`
-    - Admin password is generated at first web interface login
-
-=== "Directories"
-
-    - Install directory: `/armbian/evcc`
-    - Site configuration directory: `/armbian/evcc/evcc.yaml`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f evcc
-    ```
-
-<!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
-
-
-~~~ bash title="EVCC - solar charging automation remove:"
-armbian-config --cmd EVCC02
-~~~
-
-
-~~~ bash title="EVCC purge with data folder:"
-armbian-config --cmd EVCC03
 ~~~
 
 
