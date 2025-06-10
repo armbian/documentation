@@ -563,7 +563,10 @@ armbian-config --cmd MOTD01
 ~~~
 
 
-## OS updates and distribution upgrades
+## OS Updates
+
+
+OS updates and distribution upgrades
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Updates-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Updates-header.md)  
 __Status:__ Active  

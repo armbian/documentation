@@ -4,6 +4,103 @@ comments: true
 
 # SQL database servers and web interface managers
 
+## Mariadb
+
+
+Mariadb SQL database server
+
+
+<!--- section image START from tools/include/images/DAT001.png --->
+[![Mariadb](/images/DAT001.png)](#)
+<!--- section image STOP from tools/include/images/DAT001.png --->
+
+
+<!--- header START from tools/include/markdown/DAT001-header.md --->
+Mariadb is one of the most popular database servers. Made by the original developers of MySQL.
+
+<!--- header STOP from tools/include/markdown/DAT001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://mariadb.org/documentation/)  
+
+~~~ custombash
+armbian-config --cmd DAT001
+~~~
+
+
+<!--- footer START from tools/include/markdown/DAT001-footer.md --->
+=== "Configuration"
+
+    Database access configuration is done at first install:
+    - create root password
+    - create database
+    - create normal user
+    - create password for normal user
+
+    - Database host: `<your.IP>`
+
+=== "Directories"
+
+    - Install directory: `/armbian/mariadb`
+    - Site configuration directory: `/armbian/mariadb/config`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f mariadb
+    ```
+
+<!--- footer STOP from tools/include/markdown/DAT001-footer.md --->
+
+
+~~~ bash title="Mariadb remove:"
+armbian-config --cmd DAT002
+~~~
+
+
+~~~ bash title="Mariadb purge with data folder:"
+armbian-config --cmd DAT003
+~~~
+
+
+
+
+## phpMyAdmin
+
+
+phpMyAdmin web interface manager
+
+
+<!--- section image START from tools/include/images/MYA001.png --->
+[![phpMyAdmin](/images/MYA001.png)](#)
+<!--- section image STOP from tools/include/images/MYA001.png --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://www.phpmyadmin.net/docs/)  
+
+~~~ custombash
+armbian-config --cmd MYA001
+~~~
+
+
+~~~ bash title="phpMyAdmin remove:"
+armbian-config --cmd MYA002
+~~~
+
+
+~~~ bash title="phpMyAdmin purge with data folder:"
+armbian-config --cmd MYA003
+~~~
+
+
+
+
 ## PostgreSQL
 
 
@@ -77,70 +174,6 @@ armbian-config --cmd PGSQL3
 
 
 
-## Mariadb
-
-
-Mariadb SQL database server
-
-
-<!--- section image START from tools/include/images/DAT001.png --->
-[![Mariadb](/images/DAT001.png)](#)
-<!--- section image STOP from tools/include/images/DAT001.png --->
-
-
-<!--- header START from tools/include/markdown/DAT001-header.md --->
-Mariadb is one of the most popular database servers. Made by the original developers of MySQL.
-
-<!--- header STOP from tools/include/markdown/DAT001-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://mariadb.org/documentation/)  
-
-~~~ custombash
-armbian-config --cmd DAT001
-~~~
-
-
-<!--- footer START from tools/include/markdown/DAT001-footer.md --->
-=== "Configuration"
-
-    Database access configuration is done at first install:
-    - create root password
-    - create database
-    - create normal user
-    - create password for normal user
-
-    - Database host: `<your.IP>`
-
-=== "Directories"
-
-    - Install directory: `/armbian/mariadb`
-    - Site configuration directory: `/armbian/mariadb/config`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f mariadb
-    ```
-
-<!--- footer STOP from tools/include/markdown/DAT001-footer.md --->
-
-
-~~~ bash title="Mariadb remove:"
-armbian-config --cmd DAT002
-~~~
-
-
-~~~ bash title="Mariadb purge with data folder:"
-armbian-config --cmd DAT003
-~~~
-
-
-
-
 ## Redis
 
 
@@ -205,39 +238,6 @@ armbian-config --cmd REDIS2
 
 ~~~ bash title="Redis purge with data folder:"
 armbian-config --cmd REDIS3
-~~~
-
-
-
-
-## phpMyAdmin
-
-
-phpMyAdmin web interface manager
-
-
-<!--- section image START from tools/include/images/MYA001.png --->
-[![phpMyAdmin](/images/MYA001.png)](#)
-<!--- section image STOP from tools/include/images/MYA001.png --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://www.phpmyadmin.net/docs/)  
-
-~~~ custombash
-armbian-config --cmd MYA001
-~~~
-
-
-~~~ bash title="phpMyAdmin remove:"
-armbian-config --cmd MYA002
-~~~
-
-
-~~~ bash title="phpMyAdmin purge with data folder:"
-armbian-config --cmd MYA003
 ~~~
 
 
