@@ -182,22 +182,28 @@ This example is for the H3 legacy kernel. Check [this page](https://www.armbian.
     Please note that this situation or task is very uncommon. Version dependencies between packages can create serious conflicts when attempting a downgrade. If you force anything here, you can easily destroy your system beyond the point of repair. 
 
 
-## How to toggle boot output?
+## Toggle boot output
 
-Edit and change [boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) in `/boot/boot.cmd` (not recommended) or variables in `/boot/armbianEnv.txt`:
+[Boot parameters](http://redsymbol.net/linux-kernel-boot-parameters/) are edited or changed directly in `/boot/boot.cmd` (**not recommended**) or via variables in `/boot/armbianEnv.txt`:
 
-    - console=both
-    + console=serial
+```diff
+- console=both
++ console=serial
+```
 
-To disable console entirely (not recommended) set console to `none`.  
+To disable the console entirely (also **not recommended** and only as an example) one would set `console=none`.
 
-Recompile boot.cmd to boot.scr if it was changed:
+To recompile `boot.cmd` to `boot.scr` if it was changed:
 
-	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+```sh
+mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+```
 
-Reboot.
+And reboot.
 
-Serial console on imx6 boards are ttymxc0 (Hummingboard, Cubox-i) or ttymxc1 (Udoo).
+The serial console on imx6 boards is `ttymxc0` (Hummingboard, Cubox-i) or `ttymxc1` (Udoo).
+
+
 
 ## How to toggle verbose boot?
 
