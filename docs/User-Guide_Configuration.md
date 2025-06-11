@@ -264,50 +264,52 @@ Then check / alter your interfaces:
 	nano /etc/network/interfaces
 -->
 
-## Choosing an apt mirror
 
-Armbian has its own apt repository and mirrors for armbian-specific packages.  The default of `http://apt.armbian.com` is a round-robin to all mirrors.   If you are having trouble updating or slow speeds you may want to choose a specific mirror.
+## APT mirror selection
 
-Do the following:
+Armbian has its own APT repository `http://apt.armbian.com` and mirrors for armbian-specific packages. The default domain is a round-robin to all mirrors. If you are having trouble updating or expereince slow speeds, you may want to choose a specific mirror.
 
-Assure `jq` is installed
+First, make sure that you have the `jq` package installed:
 
-`apt install -y jq`
+```sh
+apt install -y jq
+```
 
-Get a list of available mirrors from our `https://apt.armbian.com/mirrors` endpoint.
+To get a list of available mirrors from our `https://apt.armbian.com/mirrors` endpoint in JSON format, run:
 
 ```bash
 curl -s http://apt.armbian.com/mirrors | jq
 ```
 
-You will see a result set similar to this, listing mirrors by region:
+You will see a result set similar to this (shortened), listing mirrors by region:
+
 ```json
 {
   "AS": [
-    "https://mirrors.tuna.tsinghua.edu.cn/armbian/",
-    "https://minio.k-space.ee/armbian/apt/"
-  ],
-  "NA": [
-    "https://armbian.tnahosting.net/apt/",
-    "https://us.mirrors.fossho.st/armbian/apt/"
+    "http://mirror.twds.com.tw/armbian-apt/",
+    "http://mirror.albony.in/armbian/",
+    "http://jp.mirrors.naho.moe/armbian/",
+    ...
   ],
   "EU": [
-    "https://minio.k-space.ee/armbian/apt/",
-    "https://armbian.systemonachip.net/apt/",
-    "https://mirrors.netix.net/armbian/apt/",
-    "https://mirrors.dotsrc.org/armbian-apt/",
-    "https://armbian.hosthatch.com/apt/"
+    "http://netcup-02.armbian.com/apt/",
+    "http://fi.mirror.armbian.de/apt/",
+    "http://armbian.nardol.ovh/apt/",
+    ...
+  ],
+  "NA": [
+    "http://mirrors.jevincanders.net/armbian/apt/"
+  ],
+  "OC": [
+    "http://au.sbcmirror.org/armbian/apt/"
   ],
   "default": [
-    "https://armbian.tnahosting.net/apt/",
-    "https://us.mirrors.fossho.st/armbian/apt/",
-    "https://minio.k-space.ee/armbian/apt/",
-    "https://armbian.systemonachip.net/apt/",
-    "https://mirrors.netix.net/armbian/apt/",
-    "https://mirrors.dotsrc.org/armbian-apt/",
-    "https://armbian.hosthatch.com/apt/"
+    "http://mirrors.jevincanders.net/armbian/apt/",
+    "http://netcup-02.armbian.com/apt/",
+    "http://fi.mirror.armbian.de/apt/",
+    ...
   ]
 }
 ```
 
-Edit `/etc/apt/sources.list.d/armbian.sources` and replace the URL `https://apt.armbian.com` with your preferred mirror.
+Choose a mirror, edit `/etc/apt/sources.list.d/armbian.sources`, and replace the URL `http(s)://apt.armbian.com` with your preferred mirror.
