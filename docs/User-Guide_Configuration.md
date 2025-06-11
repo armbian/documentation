@@ -81,56 +81,66 @@ pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $
 
 The command to define the default sink is not persistent. To make it persistent, add it to the file `~/.bashrc`.
 
-## Screen resolution on other boards:
 
-	nano /boot/boot.cmd
+## Screen resolution on other boards
 
-	# example:
-	# change example from
-	# disp.screen0_output_mode=1920x1080p60
-	# to
-	# disp.screen0_output_mode=1280x720p60
+<!-- TODO: this requires HDMI, and what is "other boards"; the parameter is mentioned by sunxi/allwinner -->
 
-	mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+Open the `/boot/boot.cmd` file with an editor of your choice (e.g. `nano`) and add or change the `disp.screen0_output_mode` option to the kernel command line. For a fixed mode (e.g. 1280x720 at 60 Hz), set it to:
 
-## Screen resolution within Xorg
+```
+disp.screen0_output_mode=1280x720p60
+```
 
-- Thanks to user @maxlinux2000 in [this](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/) forum post.
+Then run
 
-Find matching HDMI output:
+```sh
+mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+```
 
-	xrandr --listmonitors
 
-Calculate VESA CVT mode lines (example for 1440x900)
+## Enable a custom screen resolution within X.Org
 
-	cvt 1440 900
+Sometimes, not all desired resolutions are supported out of the box. The following short howto shows how to enable a custom resolution and add it to your X.Org configuration. It is based on [this forum post](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/) by user @maxlinux2000 (Thanks!). The `xrandr` and `cvt` commands must be executed as the current user, **not** the root user!
 
-Sample output:
+First, find the matching HDMI output (the `x11-xserver-utils` package must be installed):
 
-	1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
-	Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync )
+```sh
+xrandr --listmonitors
+```
 
-Create new mode (example):
+Then, calculate the VESA CVT mode line. The following command does this for the a custom resolution of 1440x900.
 
-	xrandr --newmode "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
+```sh
+cvt 1440 900
+```
 
-Add resolution (example):
+The command will output a new modeline. For our example, it may look like this:
 
-	xrandr --addmode HDMI-1 1440x900_60.00
+```
+# 1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
+Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync )
+```
 
-Set current resolution (example):
+The new modeline can then be used directly to create and add the new mode, and enable it. The following commands will do that for the output device _HDMI-1_.
 
-	xrandr --output HDMI-1 --mode 1440x900_60.00
+```sh
+xrandr --newmode "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
+xrandr --addmode HDMI-1 1440x900_60.00
+xrandr --output HDMI-1 --mode 1440x900_60.00
+```
 
-If it works as expected add it to Xorg by editing `/etc/X11/xorg.conf.d/40-monitor.conf` and add (example):
+If it works well, the new mode can also be added to X.Org's configuration in `/etc/X11/xorg.conf.d/` to make it permanently available/active. Otherwise, these commands will have to be executed after every reboot. To load this resolution automatically after starting the device, add the following section to e.g. `/etc/X11/xorg.conf.d/40-monitor.conf` (create the file if it does not exist):
 
-	Section "Monitor"
+```
+Section "Monitor"
 	Identifier "HDMI-1"
 	Modeline "1440x900_60.00" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync
 	Option "PreferredMode" "1440x900"
-	EndSection
+EndSection
+```
 
-Restart Xorg or reboot
+After a restart, the graphical session should automtaically be shown in the chosen resolution.
 
 ## How to alter CPU frequency?
 
