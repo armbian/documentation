@@ -6,32 +6,56 @@ While the underlying operating system offers tools and processes to make customi
 
 Usually all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
-## Keyboard:
 
-	dpkg-reconfigure keyboard-configuration
+## Keyboard layout
 
-In some cases, e.g. when your keyboard standard is not available in previous command, you may also need to set your keymap config:
+This is typically handled by [_armbian-config_](TODO). For some corner cases, changing the keyboard layout can also be done with:
 
-	# Check your actual keymap config
-	localectl status | grep -i keymap
+```sh
+dpkg-reconfigure keyboard-configuration
+```
 
-	# Set the desired keymap config. Example below to 'br-abnt2'
-	localectl set-keymap br-abnt2
+If the chosen standard is not available with the previous command, you may also need to set the keymap config.
 
-## System language:
+```sh
+# Check the actual keymap config
+localectl status | grep -i keymap
 
-	# Debian --> https://wiki.debian.org/ChangeLanguage
-	dpkg-reconfigure locales
-	# Ubuntu --> https://help.ubuntu.com/community/Locale
-	update-locale LANG=[options] && dpkg-reconfigure locales
+# Set the desired keymap config. In the example below it is set to 'br-abnt2'
+localectl set-keymap br-abnt2
+```
 
-## Console font, codepage:
 
-	dpkg-reconfigure console-setup
+## System language
 
-## Time zone:
+This is typically handled by [_armbian-config_](TODO). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
 
-	dpkg-reconfigure tzdata
+```sh
+dpkg-reconfigure locales
+```
+
+And for [Ubuntu](https://help.ubuntu.com/community/Locale)
+
+```sh
+update-locale LANG=[options] && dpkg-reconfigure locales
+```
+
+
+## Console font and codepage
+
+```sh
+dpkg-reconfigure console-setup
+```
+
+
+## Time zone
+
+This is typically handled by [_armbian-config_](TODO). If necessary, one can also run:
+
+```sh
+dpkg-reconfigure tzdata
+```
+
 
 ## Sound output:
 
