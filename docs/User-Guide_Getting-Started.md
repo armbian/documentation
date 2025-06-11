@@ -3,9 +3,30 @@
 Before you start, please make sure you have:
 
 - a proper power supply according to the board manufacturer's requirements <!-- TODO: link to power issues -->
-- a reliable SD card <!-- TODO: link to hints for SD-card -->
+- a reliable SD card (at least 'Class 10' and 'A1'-rated is **highly** recommended)
 
 You will also need an existing operating system and a SD card writer tool. We recommend using [USBImager](https://gitlab.com/bztsrc/usbimager) because it can validate written data **saving you from corrupted SD card contents**.
+
+
+!!! warning
+
+    Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability issues, in over 95 percent of all cases these are either caused by an **insufficient** power supply, or they are related to the SD card. This can be due to a bad card, bad card reader, something went wrong when burning the image, the card turns out to be too slow to boot, etc. Armbian can simply not run on unreliable hardware.
+
+    Checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run into problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue, we also highly recommend checking your card with these tools directly after purchase.
+
+    Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+
+    |Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
+    |---|---|---|---|---|
+    |Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
+    |Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
+
+    We recommend SD-cards that are rated at least A1 ([A2 rated cards are yet lacking driver support, and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)) and fulfill at least speed class C10 or higher (U1/U3, etc.). For example:
+
+    ![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
+
+    In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
+
 
 !!! tips "New users"
 
@@ -153,28 +174,13 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-<!-- TODO: might be too much for novice users; needs to be shortened; maybe use admonitions -->
+Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your microSD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
-Before you start, there is an **important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability issues, in over 95 percent of the time it is either caused by an insufficient power supply or it is related to the SD card (due to a bad card, bad card reader, something went wrong when burning the image, card too slow to boot ... 'Class 10' is **highly** recommended!). Armbian can simply not run on unreliable hardware. So checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run into problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue, checking with F3/H2testw directly after purchase is also **highly recommended**.
+!!! warning "Other tools"
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your microSD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**. Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended at this time.
+    We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
-!!! tip "Also important"
-
-    Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
-
-|Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
-|---|---|---|---|---|
-|Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
-|Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
-
-<!-- TODO: Is that still correct?? -->
-
-We recommend at least A1 rated SD-Cards ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
-
-![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
-
-In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
+    Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
 
 
 ## First boot
