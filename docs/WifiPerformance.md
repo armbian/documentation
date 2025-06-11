@@ -690,6 +690,7 @@ This section presents the performance test results, including key metrics and te
     signal: -70 dBm
     rx bitrate: 480.3 MBit/s
     tx bitrate: 340.2 MBit/s
+    ```
 
 #### Comfast CF953AX
 
