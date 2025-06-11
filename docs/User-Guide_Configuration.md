@@ -166,13 +166,21 @@ should return some output. If that is te case, create a swapfile or a swap parti
 
 Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in parallel.
 
-## How to downgrade a package via apt?
 
-This is useful when you need to fall back to previous kernel version.
+## Downgrade a package with APT
 
-	apt install linux-image-sun8i=5.13
+Sometimes, it can be necessary to downgrade a package version, e.g. to fall back to a previous kernel version.
 
-This example is for H3 legacy kernel. Check [this page](https://www.armbian.com/kernel/) for others.
+```sh
+apt install linux-image-sun8i=5.13
+```
+
+This example is for the H3 legacy kernel. Check [this page](https://www.armbian.com/kernel/) for others.
+
+!!! danger
+
+    Please note that this situation or task is very uncommon. Version dependencies between packages can create serious conflicts when attempting a downgrade. If you force anything here, you can easily destroy your system beyond the point of repair. 
+
 
 ## How to toggle boot output?
 
