@@ -351,6 +351,8 @@ and select:
 
 ## Troubleshooting
 
+If you experience an issue during any of the steps mentioned in this section, please first check out our [_Troubleshooting and Recovery_](User-Guide_Troubleshooting.md) guide.
+
 <!-- 
       * armbianmonitor
       * community / search forum || how to get help
