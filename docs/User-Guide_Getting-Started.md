@@ -361,4 +361,4 @@ If you experience an issue during any of the steps mentioned in this section, pl
 
 ### How to report bugs
 
-Follow our [bug reporting form](https://armbian.com/bugs/) and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics will be ignored.
+If you are certain you have found a bug, fill out our [bug reporting form](https://armbian.com/bugs/) and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics might be ignored.
