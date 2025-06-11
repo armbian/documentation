@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://docs.armbian.com/User-Guide_Armbian-Software/DNS/">
       
       
-        <link rel="prev" href="../Downloaders/">
+        <link rel="prev" href="../DevTools/">
       
       
-        <link rel="next" href="../HomeAutomation/">
+        <link rel="next" href="../Downloaders/">
       
       
       <link rel="icon" href="../../images/logo.png">
@@ -101,6 +101,12 @@
           <div class="md-banner__inner md-grid md-typeset">
             
             
+  <a href="https://www.armbian.com">
+    <span class="twemoji twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </span> &nbsp; www.armbian.com
+  </a>
+  &nbsp;
   <a href="https://github.com/sponsors/armbian">
     <span class="twemoji twitter">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5"/></svg>
@@ -293,7 +299,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../Armbian/" class="md-tabs__link">
           
   
   
@@ -1011,58 +1017,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../Armbian/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WebHosting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Web hosting
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Containers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Containers
+    Armbian
     
   </span>
   
@@ -1103,35 +1063,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Music/" class="md-nav__link">
+      <a href="../Containers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Music
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Finance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Finance
+    Containers
     
   </span>
   
@@ -1172,12 +1109,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Downloaders/" class="md-nav__link">
+      <a href="../DevTools/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Downloaders
+    Development tools
     
   </span>
   
@@ -1245,6 +1182,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#adguardhome" class="md-nav__link">
+    <span class="md-ellipsis">
+      AdGuardHome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pi-hole" class="md-nav__link">
     <span class="md-ellipsis">
       Pi-hole
@@ -1257,15 +1203,6 @@
   <a href="#unbound" class="md-nav__link">
     <span class="md-ellipsis">
       Unbound
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adguardhome" class="md-nav__link">
-    <span class="md-ellipsis">
-      AdGuardHome
     </span>
   </a>
   
@@ -1287,81 +1224,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../Downloaders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloaders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../HomeAutomation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Home Automation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Monitoring/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Monitoring
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Armbian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Armbian
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../DevTools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    DevTools
+    Home automation
     
   </span>
   
@@ -1402,12 +1316,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Printing/" class="md-nav__link">
+      <a href="../Media/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Printing
+    Media
     
   </span>
   
@@ -1425,12 +1339,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../Media/" class="md-nav__link">
+      <a href="../Monitoring/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Media
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music
     
   </span>
   
@@ -1471,12 +1408,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Printing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../VPN/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebHosting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web hosting
     
   </span>
   
@@ -2092,6 +2098,65 @@
 
 
 <h1 id="network-wide-ad-blockers-servers">Network-wide ad blockers servers<a class="headerlink" href="#network-wide-ad-blockers-servers" title="Permanent link">&para;</a></h1>
+<h2 id="adguardhome">AdGuardHome<a class="headerlink" href="#adguardhome" title="Permanent link">&para;</a></h2>
+<p>AdGuardHome DNS sinkhole</p>
+<!--- section image START from tools/include/images/ADG001.png --->
+<p><a href="#"><img alt="AdGuardHome" src="/images/ADG001.png" /></a></p>
+<!--- section image STOP from tools/include/images/ADG001.png --->
+
+<!--- header START from tools/include/markdown/ADG001-header.md --->
+<p>AdGuard Home is a network-wide software that functions as a DNS server and ad blocker. It blocks ads, trackers, and malicious websites at the DNS level, meaning it filters content for all devices connected to the network. It also provides additional features like parental controls, logging, and privacy protections. Essentially, it acts as a gateway between your devices and the internet, blocking unwanted content before it even reaches your devices.</p>
+<!--- header STOP from tools/include/markdown/ADG001-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-header.md">header</a><br />
+<strong>Status:</strong> Stable<br />
+<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
+<strong>Documentation:</strong> <a href="https://github.com/AdguardTeam/AdGuardHome/wiki">Link</a>  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd ADG001</code></pre>
+<!--- footer START from tools/include/markdown/ADG001-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="adguardhome-access-to-the-web-interface" name="__tabbed_1" type="radio" /><input id="adguardhome-directories" name="__tabbed_1" type="radio" /><input id="adguardhome-usage" name="__tabbed_1" type="radio" /><input id="adguardhome-black-and-white-lists" name="__tabbed_1" type="radio" /><input id="adguardhome-view-logs" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="adguardhome-access-to-the-web-interface">Access to the web interface</label><label for="adguardhome-directories">Directories</label><label for="adguardhome-usage">Usage</label><label for="adguardhome-black-and-white-lists">Black and white lists</label><label for="adguardhome-view-logs">View logs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The web interface is accessible via port <strong>3000</strong>:</p>
+<ul>
+<li>URL: <code>https://&lt;your.IP&gt;:3000</code></li>
+<li>Username/Password: admin / generate at first web interface login</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Install directory: <code>/armbian/adguardhome/</code></li>
+<li>Configuration directory: <code>/armbian/adguardhome/confdir</code></li>
+<li>Work directory: <code>/armbian/adguardhome/workdir</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>server where you are installing is automatically switched to this DNS</li>
+<li>on your desktop PC set IP address of this server as DNS</li>
+<li>network wide: set IP address of this server on routers DNS</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>There are many sites in the web giving blocklists and whitelists for AdGuard Home. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:</p>
+<ul>
+<li><a href="https://firebog.net/">The Big Blocklist Collection by WaLLy3K</a></li>
+<li><a href="https://phishing.army/">Phishing Army blocklist</a></li>
+<li><a href="https://github.com/anudeepND/whitelist">Whitelist collection by anudeepND</a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>adguardhome
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/ADG001-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG002
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG003
+</span></code></pre></div></td></tr></table></div>
 <h2 id="pi-hole">Pi-hole<a class="headerlink" href="#pi-hole" title="Permanent link">&para;</a></h2>
 <p>Pi-hole DNS ad blocker</p>
 <!--- section image START from tools/include/images/PIH001.png --->
@@ -2124,7 +2189,7 @@
 <strong>Documentation:</strong> <a href="https://docs.pi-hole.net/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd PIH001</code></pre>
 <!--- footer START from tools/include/markdown/PIH001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="pi-hole-access-the-web-interface" name="__tabbed_1" type="radio" /><input id="pi-hole-documentation" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="pi-hole-access-the-web-interface">Access the web interface</label><label for="pi-hole-documentation">Documentation</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="pi-hole-access-the-web-interface" name="__tabbed_2" type="radio" /><input id="pi-hole-documentation" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="pi-hole-access-the-web-interface">Access the web interface</label><label for="pi-hole-documentation">Documentation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface of Pi-hole can be accessed via:</p>
@@ -2139,11 +2204,11 @@
 <p><a href="https://docs.pi-hole.net/">https://docs.pi-hole.net/</a></p>
 <!--- footer STOP from tools/include/markdown/PIH001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole change web admin password:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole change web admin password:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH003
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH004
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pi-hole purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PIH004
 </span></code></pre></div></td></tr></table></div>
 <h2 id="unbound">Unbound<a class="headerlink" href="#unbound" title="Permanent link">&para;</a></h2>
 <p>Unbound caching DNS resolver</p>
@@ -2162,7 +2227,7 @@
 <strong>Documentation:</strong> <a href="https://unbound.docs.nlnetlabs.nl/en/latest/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd UNB001</code></pre>
 <!--- footer START from tools/include/markdown/UNB001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="unbound-default-dns-port" name="__tabbed_2" type="radio" /><input id="unbound-directories" name="__tabbed_2" type="radio" /><input id="unbound-view-logs" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="unbound-default-dns-port">Default DNS port</label><label for="unbound-directories">Directories</label><label for="unbound-view-logs">View logs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="unbound-default-dns-port" name="__tabbed_3" type="radio" /><input id="unbound-directories" name="__tabbed_3" type="radio" /><input id="unbound-view-logs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="unbound-default-dns-port">Default DNS port</label><label for="unbound-directories">Directories</label><label for="unbound-view-logs">View logs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -2176,75 +2241,16 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>unbound
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>unbound
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <!--- footer STOP from tools/include/markdown/UNB001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB003
-</span></code></pre></div></td></tr></table></div>
-<h2 id="adguardhome">AdGuardHome<a class="headerlink" href="#adguardhome" title="Permanent link">&para;</a></h2>
-<p>AdGuardHome DNS sinkhole</p>
-<!--- section image START from tools/include/images/ADG001.png --->
-<p><a href="#"><img alt="AdGuardHome" src="/images/ADG001.png" /></a></p>
-<!--- section image STOP from tools/include/images/ADG001.png --->
-
-<!--- header START from tools/include/markdown/ADG001-header.md --->
-<p>AdGuard Home is a network-wide software that functions as a DNS server and ad blocker. It blocks ads, trackers, and malicious websites at the DNS level, meaning it filters content for all devices connected to the network. It also provides additional features like parental controls, logging, and privacy protections. Essentially, it acts as a gateway between your devices and the internet, blocking unwanted content before it even reaches your devices.</p>
-<!--- header STOP from tools/include/markdown/ADG001-header.md --->
-
-<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-header.md">header</a><br />
-<strong>Status:</strong> Stable<br />
-<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
-<strong>Documentation:</strong> <a href="https://github.com/AdguardTeam/AdGuardHome/wiki">Link</a>  </p>
-<pre class="custom-bash-block"><code>armbian-config --cmd ADG001</code></pre>
-<!--- footer START from tools/include/markdown/ADG001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="adguardhome-access-to-the-web-interface" name="__tabbed_3" type="radio" /><input id="adguardhome-directories" name="__tabbed_3" type="radio" /><input id="adguardhome-usage" name="__tabbed_3" type="radio" /><input id="adguardhome-black-and-white-lists" name="__tabbed_3" type="radio" /><input id="adguardhome-view-logs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="adguardhome-access-to-the-web-interface">Access to the web interface</label><label for="adguardhome-directories">Directories</label><label for="adguardhome-usage">Usage</label><label for="adguardhome-black-and-white-lists">Black and white lists</label><label for="adguardhome-view-logs">View logs</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>The web interface is accessible via port <strong>3000</strong>:</p>
-<ul>
-<li>URL: <code>https://&lt;your.IP&gt;:3000</code></li>
-<li>Username/Password: admin / generate at first web interface login</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>Install directory: <code>/armbian/adguardhome/</code></li>
-<li>Configuration directory: <code>/armbian/adguardhome/confdir</code></li>
-<li>Work directory: <code>/armbian/adguardhome/workdir</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>server where you are installing is automatically switched to this DNS</li>
-<li>on your desktop PC set IP address of this server as DNS</li>
-<li>network wide: set IP address of this server on routers DNS</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p>There are many sites in the web giving blocklists and whitelists for AdGuard Home. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:</p>
-<ul>
-<li><a href="https://firebog.net/">The Big Blocklist Collection by WaLLy3K</a></li>
-<li><a href="https://phishing.army/">Phishing Army blocklist</a></li>
-<li><a href="https://github.com/anudeepND/whitelist">Whitelist collection by anudeepND</a></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>adguardhome
-</span></code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-<!--- footer STOP from tools/include/markdown/ADG001-footer.md --->
-
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG002
-</span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AdGuardHome purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ADG003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Unbound purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNB003
 </span></code></pre></div></td></tr></table></div>
 
 
