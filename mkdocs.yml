@@ -114,8 +114,8 @@ nav:
   - 'ARMBIAN OS':
         - 'Introduction': 'index.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Configuration' : 'User-Guide_Configuration.md'
         - 'Advanced Usage' :
+            - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
             - 'Advanced Features': 'User-Guide_Advanced-Features.md'
             - 'Networking' : 'User-Guide_Networking.md'
             - 'Firstboot config': 'User-Guide_Autoconfig.md'

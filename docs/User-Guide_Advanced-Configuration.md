@@ -1,6 +1,4 @@
-# Customize the Armbian system
-
-<!-- TODO: Probably move stuff like sound or screen resolution to Advanced tasks?? Or at least some?? -->
+# Advanced features and tasks
 
 While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
