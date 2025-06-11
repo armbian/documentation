@@ -374,3 +374,33 @@ You will see a result set similar to this (shortened), listing mirrors by region
 ```
 
 Choose a mirror, edit `/etc/apt/sources.list.d/armbian.sources`, and replace the URL `http(s)://apt.armbian.com` with your preferred mirror.
+
+
+## Install Docker
+
+Install either the minimal package ...
+
+```bash
+armbian-config --CON001
+```
+
+... or the fully featured one.
+
+```bash
+armbian-config --CON002
+```
+
+To test if Docker works correctly:
+
+<!-- TODO: Will the above have added the current user to the docker group? -->
+
+```bash
+docker run hello-world
+```
+
+If you get that kind of output, then Docker install went fine:
+
+```bash
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+```
