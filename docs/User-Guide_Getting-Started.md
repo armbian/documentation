@@ -283,7 +283,7 @@ At this stage, nothing has been installed onto the boards internal drive yet. Us
 
 <!-- TODO: give the user a sensible default -->
 
-Start the install script and follow the lead:
+Start the install script, make your choice, and follow the instructions:
 
     armbian-install
 
