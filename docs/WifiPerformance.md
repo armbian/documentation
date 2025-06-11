@@ -628,6 +628,69 @@ This section presents the performance test results, including key metrics and te
     ```
 ### AX
 
+#### Ampak 6275P
+
+<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AP6275P.png>
+<span style="font-size: 0.5rem;">OS: Armbian v25.8.0-trunk.149, 6.12.33-current-rockchip64</span>
+
+| Chipset | Class | Average forward speed | Average reverse speed |
+|:-----|------|-------:|-------:|
+|<span style="font-size: 1.5rem;">AP6275P</span> | <span style="font-size: 1.5rem;">AX</span> | <span style="font-size: 1.5rem;">273</span> Mbits/sec | <span style="font-size: 1.5rem;">262</span> Mbits/sec |
+
+=== "Forward mode (client to server)"
+    ```
+    Connecting to host 10.0.60.10, port 5201
+    Reverse mode, remote host 10.0.60.10 is sending
+    [  5] local 10.0.50.137 port 56383 connected to 10.0.60.10 port 5201
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  32.7 MBytes   274 Mbits/sec                  
+    [  5]   1.00-2.00   sec  32.0 MBytes   268 Mbits/sec                  
+    [  5]   2.00-3.00   sec  31.8 MBytes   267 Mbits/sec                  
+    [  5]   3.00-4.00   sec  32.2 MBytes   270 Mbits/sec                  
+    [  5]   4.00-5.00   sec  30.6 MBytes   256 Mbits/sec                  
+    [  5]   5.00-6.00   sec  31.9 MBytes   267 Mbits/sec                  
+    [  5]   6.00-7.00   sec  34.3 MBytes   288 Mbits/sec                  
+    [  5]   7.00-8.00   sec  32.4 MBytes   272 Mbits/sec                  
+    [  5]   8.00-9.00   sec  31.6 MBytes   265 Mbits/sec                  
+    [  5]   9.00-10.00  sec  32.8 MBytes   275 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate         Retr
+    [  5]   0.00-10.02  sec   325 MBytes   273 Mbits/sec  102             sender
+    [  5]   0.00-10.00  sec   322 MBytes   270 Mbits/sec                  receiver
+    
+    iperf Done.
+    ```
+=== "Reverse mode (server to client)"
+    ```
+    Connecting to host 10.0.60.10, port 5201
+    [  5] local 10.0.50.137 port 39057 connected to 10.0.60.10 port 5201
+    [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+    [  5]   0.00-1.00   sec  39.6 MBytes   332 Mbits/sec    0   7.49 MBytes       
+    [  5]   1.00-2.00   sec  26.2 MBytes   220 Mbits/sec    0   7.49 MBytes       
+    [  5]   2.00-3.00   sec  26.2 MBytes   220 Mbits/sec    0   7.50 MBytes       
+    [  5]   3.00-4.00   sec  28.8 MBytes   241 Mbits/sec    0   7.50 MBytes       
+    [  5]   4.00-5.00   sec  30.0 MBytes   252 Mbits/sec    0   7.50 MBytes       
+    [  5]   5.00-6.00   sec  30.0 MBytes   252 Mbits/sec    0   7.50 MBytes       
+    [  5]   6.00-7.00   sec  35.0 MBytes   294 Mbits/sec    0   7.50 MBytes       
+    [  5]   7.00-8.00   sec  32.5 MBytes   273 Mbits/sec    0   7.50 MBytes       
+    [  5]   8.00-9.00   sec  32.5 MBytes   273 Mbits/sec    0   7.50 MBytes       
+    [  5]   9.00-10.00  sec  31.2 MBytes   262 Mbits/sec    0   7.50 MBytes       
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate         Retr
+    [  5]   0.00-10.00  sec   312 MBytes   262 Mbits/sec    0             sender
+    [  5]   0.00-10.03  sec   311 MBytes   260 Mbits/sec                  receiver
+    
+    iperf Done.
+    ```
+=== "Wireless link info"
+    ```
+    freq: 5500
+    RX: 65859 bytes (141 packets)
+    TX: 58074 bytes (207 packets)
+    signal: -70 dBm
+    rx bitrate: 480.3 MBit/s
+    tx bitrate: 340.2 MBit/s
+
 #### Comfast CF953AX
 
 <img src=https://stuff.armbian.com/netbox/media/devicetype-images/MT7921AU.png>
