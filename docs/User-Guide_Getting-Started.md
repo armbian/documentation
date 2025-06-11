@@ -254,9 +254,7 @@ After logging in, you will be prompted to change the default password. You will 
 
 ## First steps
 
-You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD card again if necessary. Or you want to adjust your hardware configuration, or install software.
-
-While the underlying operating system offers tools and processes to make these customizations, the **preferred method** to change most of these settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images.
+You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation as outlined in the next section [_Configuration_](User-Guide_Configuration.md), so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](User-Guide_Armbian-Config.md) or [install preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
 <!-- TODO:
       * first customize: armbian-config, install software -> show some examples
