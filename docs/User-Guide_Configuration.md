@@ -2,8 +2,9 @@
 
 <!-- TODO: Probably move stuff like sound or screen resolution to Advanced tasks?? Or at least some?? -->
 
+While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
-- **Attention: The preferred method to change most of this stuff is by using the interactive _armbian-config_ tool which is shipped with all Armbian images.**
+Usually all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
 ## Keyboard:
 
