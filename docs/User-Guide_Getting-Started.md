@@ -192,7 +192,7 @@ Insert the SD card into a slot and power on the board. With the cheapest board, 
 
 The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, you can use [this tool](https://angryip.org/).
 
-After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
+After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage, the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
     Welcome to Armbian! 
 
@@ -268,7 +268,7 @@ While the underlying operating system offers tools and processes to make these c
 
 ## Installation
 
-At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME or USB storage.
+At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME, or USB storage.
 
 !!! tip "Armbian Installer support those storage scenarios:"
 
