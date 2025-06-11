@@ -229,6 +229,8 @@ sudo armbianmonitor -u
 
 Then copy and past the URL of your log to the [forum, mail, etc](index.md#where-to-find-additional-help).
 
+<!--
+TODO: General: how current is that?
 
 ## How to change network configuration?
 
@@ -260,6 +262,7 @@ You can switch configuration with copying.
 Then check / alter your interfaces:
 
 	nano /etc/network/interfaces
+-->
 
 ## Choosing an apt mirror
 
