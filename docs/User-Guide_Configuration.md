@@ -204,18 +204,31 @@ And reboot.
 The serial console on imx6 boards is `ttymxc0` (Hummingboard, Cubox-i) or `ttymxc1` (Udoo).
 
 
+## Toggle boot verbosity
 
-## How to toggle verbose boot?
+<!-- TODO: Isn't this better suited for Troubleshooting; at least cross-link from there here -->
 
-Using Armbian 5.05 to 5.20 you would need to touch/rm `/boot/.force-verbose` to increase boot verbosity. With more recent Armbian builds you would have to alter the `verbosity=` line in `/boot/armbianEnv.txt` (defaults to 1 which means less verbose, maximum value is 7).
+Using Armbian from version 5.05 to 5.20, you have to touch/delete `/boot/.force-verbose` to increase the boot verbosity.
 
-## How to provide boot logs for inspection?
+With more recent Armbian builds, you have to alter the `verbosity=` line in `/boot/armbianEnv.txt` which defaults to `1` (which means less verbose) and has a maximum value of `7`.
 
-When your SBC behaves strange first step is to check power supply and integrity of boot media (`armbianmonitor -c "$HOME"`). Then look into your kernel logs. We made a tool that grabs info and pastes it to an online pasteboard service. Please increase boot verbosity as shown above (`verbosity=7`), reboot and then run
 
-	sudo armbianmonitor -u
+## Enable boot logs for inspection
 
-Copy and past URL of your log to the forum, mail, ...
+If your SBC behaves strange, the first step is to check the power supply and the integrity of the boot media as detailed in the [_Troubleshooting_](User-Guide_Troubleshooting.md) section. Also, run
+
+```sh
+armbianmonitor -c "$HOME"`
+```
+
+Then look into your kernel logs. Armbian also provides a tool that grabs some information and pastes it to an online pasteboard service. Please increase the boot verbosity to its maximum level (`verbosity=7`) as shown above, reboot and then run:
+
+```sh
+sudo armbianmonitor -u
+```
+
+Then copy and past the URL of your log to the [forum, mail, etc](index.md#where-to-find-additional-help).
+
 
 ## How to change network configuration?
 
