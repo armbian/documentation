@@ -57,23 +57,29 @@ dpkg-reconfigure tzdata
 ```
 
 
-## Sound output:
+## Sound output
 
-	# Check the available sound output options:
-	pacmd list-sinks | less
-	# The default will be marked with "*"
-	# Press "q" to close
+To check the available sound output options ("sinks") with pulseaudio:
 
+```sh
+pacmd list-sinks | less
+```
 
-	# Define the new default sound output
-	pacmd set-default-sink <NAME-OF-DESIRED-OPTION>
+The default sink will be marked with an asterisk "\*". Press <kbd>q</kbd> to exit.
 
+To define a new default sound output:
 
-The name of HDMI sound output may change accordingly to the device. If you don't wanna deal with different names you can:
+```sh
+pacmd set-default-sink <NAME-OF-DESIRED-OPTION>
+```
 
-	pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $2}')
+The name of HDMI sound output devices may change accordingly to the device. If you don't want to deal with different names, you can run:
 
-The command to define the default sound output is not persistent, to make it persistent add it to the file `~/.bashrc`
+```sh
+pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $2}')
+```
+
+The command to define the default sink is not persistent. To make it persistent, add it to the file `~/.bashrc`.
 
 ## Screen resolution on other boards:
 
