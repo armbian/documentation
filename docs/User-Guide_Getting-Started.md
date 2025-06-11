@@ -194,7 +194,7 @@ The first boot will log you in automatically if you have connected a display via
 
 After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage, the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
-    Welcome to Armbian! 
+    Welcome to Armbian!
 
     Documentation: https://docs.armbian.com/ | Community support: https://forum.armbian.com/
 
@@ -231,7 +231,7 @@ After logging in, you will be prompted to change the default password. You will 
 
     1        NETWORK
     2        MY-WIFI
-    3        Caatsanddogs    
+    3        Caatsanddogs
 
     Enter a number of SSID: 3
 
@@ -257,6 +257,30 @@ After logging in, you will be prompted to change the default password. You will 
 You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](User-Guide_Armbian-Config.md) or [install preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
 Please note that the typical tool for all tasks is [_armbian-config_](User-Guide_Armbian-Config.md). The section [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
+
+
+### Configuration
+
+Typical tasks include for example:
+
+-  Set the default language and keyboard layout
+-  Disable or enable root logins and/or SSH
+-  Handle and configure system and firmware upgrades
+-  Configure the network
+
+
+### Software titles
+
+You can quickly and easily install popular software too! It is ready to run and optimized for Armbian. Here are few highlights:
+
+-  Desktops - install desktop environments
+-  Netconfig - network tools
+-  DevTools - development
+-  Benchy - system benchmaking and diagnostics
+-  Containers - containerization and virtual machines
+-  Media - media servers and editors
+-  Management - remote management tools
+
 
 <!-- TODO:
       * first customize: armbian-config, install software -> show some examples
@@ -351,7 +375,7 @@ and select:
 
 If you experience an issue during any of the steps mentioned in this section, please first check out our [_Troubleshooting and Recovery_](User-Guide_Troubleshooting.md) guide.
 
-<!-- 
+<!--
       * armbianmonitor
       * community / search forum || how to get help
       * FAQ (maybe feature is not developed)
