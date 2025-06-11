@@ -139,7 +139,7 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 
 ## How can you contribute?
 
-<!-- tbw -->
+If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
 
 
 ## Software titles
