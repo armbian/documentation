@@ -7,7 +7,7 @@ Usually all of the following commands require elevated permissions, and must be 
 
 ## Keyboard layout
 
-This is typically handled by [_armbian-config_](TODO). For some corner cases, changing the keyboard layout can also be done with:
+This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-keyboard-layout). For some corner cases, changing the keyboard layout can also be done with:
 
 ```sh
 dpkg-reconfigure keyboard-configuration
@@ -26,7 +26,7 @@ localectl set-keymap br-abnt2
 
 ## System language
 
-This is typically handled by [_armbian-config_](TODO). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
+This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-locales-reconfigure-the-language-and-character-set). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
 
 ```sh
 dpkg-reconfigure locales
@@ -48,7 +48,7 @@ dpkg-reconfigure console-setup
 
 ## Time zone
 
-This is typically handled by [_armbian-config_](TODO). If necessary, one can also run:
+This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-global-timezone). If necessary, one can also run:
 
 ```sh
 dpkg-reconfigure tzdata
