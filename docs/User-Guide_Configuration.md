@@ -1,4 +1,4 @@
-# How to customize keyboard, time zone?
+# Customize the Armbian system
 
 <!-- TODO: Probably move stuff like sound or screen resolution to Advanced tasks?? Or at least some?? -->
 
