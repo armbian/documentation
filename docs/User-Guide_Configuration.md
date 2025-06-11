@@ -142,15 +142,15 @@ EndSection
 
 After a restart, the graphical session should automtaically be shown in the chosen resolution.
 
-## How to alter CPU frequency?
 
-Some boards allow to adjust CPU speed
+## Alter the CPU frequency
 
-	nano /etc/default/cpufrequtils
+Some boards allow to adjust the CPU speed by editing the file `/etc/default/cpufrequtils` and alter the  **min_speed** and/or **max_speed** variable. Changing these values require restarting `cpufrequtils.service` to activate the new settings:
 
-Alter **min_speed** or **max_speed** variable.
+```sh
+systemctl restart cpufrequtils.service
+```
 
-	systemctl restart cpufrequtils
 
 ## Swap for experts
 
