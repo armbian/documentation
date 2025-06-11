@@ -165,6 +165,13 @@ should return some output. If that is te case, create a swapfile or a swap parti
 Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in parallel.
 
 
+## Switch kernels
+
+```bash
+armbian-config --cmd KER001
+```
+
+
 ## Downgrade a package with APT
 
 Sometimes, it can be necessary to downgrade a package version, e.g. to fall back to a previous kernel version.

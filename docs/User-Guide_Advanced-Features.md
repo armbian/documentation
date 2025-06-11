@@ -1,10 +1,5 @@
 # Advanced Features
 
-## How to switch kernels?
-
-```bash
-armbian-config --cmd SY015
-```
 ## How to build a wireless driver?
 
 Install kernel headers:
