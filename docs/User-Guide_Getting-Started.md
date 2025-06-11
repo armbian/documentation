@@ -323,12 +323,10 @@ If the kernel was upgraded during this process, you will be prompted to reboot a
 
 <!-- TODO: maybe move this to advanced? Definitely not for novice users -->
 
+!!! danger "Upgrade the Armbian OS"
 
-### Upgrade the Armbian OS
+    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
 
-When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
-
-!!! danger
     Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.
 
 
