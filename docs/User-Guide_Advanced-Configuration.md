@@ -172,7 +172,63 @@ armbian-config --cmd KER001
 ```
 
 
-## Downgrade a package with APT
+## Build a wireless driver
+
+First, install the kernel headers. They are required.
+
+```sh
+armbian-config --cmd HEAD01
+```
+
+Then download the driver sources:
+
+```sh
+git clone https://github.com/morrownr/8821au-20210708.git
+cd 8821au-20210708
+```
+
+Then build and install. The following commands will usually be enough. But you should carefully read the driver's homepage for instructions.
+
+```sh
+make
+make install
+```
+
+??? "Build log"
+
+    ```
+    make ARCH=arm64 CROSS_COMPILE= -C /lib/modules/6.6.62-current-sunxi64/build M=/root/8821au-20210708  modules
+    make[1]: Entering directory '/usr/src/linux-headers-6.6.62-current-sunxi64'
+      CC [M]  /root/8821au-20210708/core/rtw_cmd.o
+      CC [M]  /root/8821au-20210708/core/rtw_security.o
+      CC [M]  /root/8821au-20210708/core/rtw_debug.o
+      CC [M]  /root/8821au-20210708/core/rtw_io.o
+      CC [M]  /root/8821au-20210708/core/rtw_ioctl_query.o
+      CC [M]  /root/8821au-20210708/core/rtw_ioctl_set.o
+      CC [M]  /root/8821au-20210708/core/rtw_ieee80211.o
+      CC [M]  /root/8821au-20210708/core/rtw_mlme.o
+      CC [M]  /root/8821au-20210708/core/rtw_mlme_ext.o
+      ...
+      [ goes on for a while ]
+      ...
+      LD [M]  /root/8821au-20210708/8821au.o
+      MODPOST /root/8821au-20210708/Module.symvers
+      CC [M]  /root/8821au-20210708/8821au.mod.o
+      LD [M]  /root/8821au-20210708/8821au.ko
+    make[1]: Leaving directory '/usr/src/linux-headers-6.6.62-current-sunxi64'
+    ```
+
+Then attempt to load the driver and check the `dmesg` output.
+
+```sh
+insmod 8821au.ko
+usbcore: registered new interface driver rtl8821au
+```
+
+Plug the USB wireless adaptor and proceed with the [network configuration](/User-Guide_Networking/).
+
+
+## Downgrade a kernel package with APT
 
 Sometimes, it can be necessary to downgrade a package version, e.g. to fall back to a previous kernel version.
 
