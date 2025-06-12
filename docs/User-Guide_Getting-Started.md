@@ -292,7 +292,7 @@ You can quickly and easily install popular software too! It is ready to run and 
 
 ## Installation
 
-At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME, or USB storage.
+At this stage, nothing has been installed onto the board's internal drive yet. Using the installer, one can now decide where to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME, or USB storage.
 
 !!! tip "Armbian Installer support those storage scenarios:"
 
