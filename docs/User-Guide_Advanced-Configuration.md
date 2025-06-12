@@ -225,7 +225,7 @@ insmod 8821au.ko
 usbcore: registered new interface driver rtl8821au
 ```
 
-Plug the USB wireless adaptor and proceed with the [network configuration](/User-Guide_Networking/).
+Plug the USB wireless adaptor and proceed with the [network configuration](User-Guide_Networking.md).
 
 
 ## Downgrade a kernel package with APT

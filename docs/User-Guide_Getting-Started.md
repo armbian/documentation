@@ -39,7 +39,7 @@ You will also need an existing operating system and a SD card writer tool. We re
 
 ## Download the image
 
-If your hardware is [supported](index.md#hardware-support), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](/Mirrors/). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
+If your hardware is [supported](index.md#which-hardware-is-supported), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](Mirrors.md). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
@@ -72,7 +72,7 @@ Use the following images only if these are the only ones provided, or if you wan
 - **edge** is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.
 - **legacy** is the old stable current kernel. Use it if _current_ is not available or if something does not work well with it.
 
-The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](/User-Guide_Armbian-Config).
+The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](User-Guide_Armbian-Config.md).
 
 
 ### Rolling releases
@@ -247,7 +247,7 @@ After logging in, you will be prompted to change the default password. You will 
     root@bananapim2pro:~#
 
 ???+ tips "Automated config"
-    These settings can be pre-loaded, see [Autoconfig](/User-Guide_Autoconfig)
+    These settings can be pre-loaded, see [Autoconfig](User-Guide_Autoconfig.md)
 
 <!-- TODO: it must be made clear that this just preps the SD card -->
 
@@ -343,7 +343,7 @@ Armbian provides a firmware package freeze feature to provide you with the possi
 
     Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 
-within [armbian-config](/User-Guide_Armbian-Config).
+within [armbian-config](User-Guide_Armbian-Config.md).
 
 If the kernel was upgraded during this process, you will be prompted to reboot at the next login.
 
@@ -351,7 +351,7 @@ If the kernel was upgraded during this process, you will be prompted to reboot a
 
 !!! danger "Upgrade the Armbian OS"
 
-    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
+    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](User-Guide_Armbian-Config.md).
 
     Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.
 
