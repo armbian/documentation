@@ -140,18 +140,6 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
 
 
-## Software titles
-
-You can quickly and easily install popular software! They are ready to run and optimized for Armbian. Here are few highlights:
-
-- Desktops - install desktop environments
-- Netconfig - network tools
-- DevTools - development
-- Benchy - system benchmaking and diagnostics
-- Containers - containerization and virtual machines
-- Media - media servers and editors
-- Management - remote management tools
-
 ???+ success "Unit testing"
 
 
