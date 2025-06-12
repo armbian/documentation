@@ -86,7 +86,7 @@ The command to define the default sink is not persistent. To make it persistent,
 
 Open the `/boot/boot.cmd` file with an editor of your choice (e.g. `nano`) and add or change the `disp.screen0_output_mode` option to the kernel command line. For a fixed mode (e.g. 1280x720 at 60 Hz), set it to:
 
-```
+```sh
 disp.screen0_output_mode=1280x720p60
 ```
 
@@ -196,7 +196,7 @@ make install
 
 ??? "Build log"
 
-    ```
+    ```text
     make ARCH=arm64 CROSS_COMPILE= -C /lib/modules/6.6.62-current-sunxi64/build M=/root/8821au-20210708  modules
     make[1]: Entering directory '/usr/src/linux-headers-6.6.62-current-sunxi64'
       CC [M]  /root/8821au-20210708/core/rtw_cmd.o

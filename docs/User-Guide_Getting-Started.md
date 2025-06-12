@@ -28,7 +28,7 @@ You will also need an existing operating system and a SD card writer tool. We re
     In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
 
 
-!!! tips "New users"
+!!! tip "New users"
 
     Some users might find it easier to follow this video tutorial.
 
@@ -246,7 +246,7 @@ After logging in, you will be prompted to change the default password. You will 
     Generating locales: sl_SI.UTF-8
     root@bananapim2pro:~#
 
-???+ tips "Automated config"
+???+ tip "Automated config"
     These settings can be pre-loaded, see [Autoconfig](User-Guide_Autoconfig.md)
 
 <!-- TODO: it must be made clear that this just preps the SD card -->
