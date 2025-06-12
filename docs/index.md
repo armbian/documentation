@@ -12,11 +12,9 @@ Welcome to the official documentation of Armbian Linux, a highly optimized base 
 
 The table of contents in the sidebar and the links at the top of the page should let you easily access the documentation for your topic of interest.
 
-If you are **new to Armbian**, the [_Introduction_](index.md) and the [_Getting Started_](User-Guide_Getting-Started.md) sections provide everything you need to know about the project, where to find the resources for your board, and a tutorial for everything you need to get Armbian running.
+If you are **new to Armbian**, the [_Introduction_](index.md) and the [_Getting Started_](User-Guide_Getting-Started.md) sections provide everything you need to know about the project, where to find the resources for your board, and a tutorial for everything you need to get Armbian running and configured.
 
-It then continues on to [_Configuration_](User-Guide_Configuration.md) tasks and tools to customize your installation, e.g. change the network address, start or stop services like SSH, or install one of the many prepared software stacks. This section and the links contained in it are useful to **all user levels**.
-
-**Advanced users** will find more complex topics in the [_Advanced_](User-Guide_Advanced-Features.md) section, including how to customize your initial installation.
+It then continues on to [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) tasks and tools for **advanced users**. The topics in this section cover a wide range of tasks: configuring the system or the network without using [`armbian-config`](User-Guide_Armbian-Config.md), configuring your device automatically at first boot, and creating a custom image using the [`Armbian Build Framework`](Developer-Guide_Overview.md).
 
 If you have read through the documentation and still **need help**, check out our [_Troubleshooting_](User-Guide_Troubleshooting.md) advice.
 
@@ -62,7 +60,7 @@ In any case, you will get these key advantages:
 - you get a lean and standard **Debian** or **Ubuntu** based user space with the well known APT package manager
 - we provide independent kernel development and maintenance with **long term support**
 - we provide an extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of the whole operating system and **endless capabilities**
-- we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](/User-Guide_Armbian-Config/) tool
+- we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](User-Guide_Armbian-Config.md) tool
 - we provide exclusive support for **exotic hardware** that nobody else supports
 - we provide **stabilized point** and **rolling** distribution of upgrades and OS images
 - we provide a global download infrastructure with **perfect coverage, also in China mainland**
@@ -115,7 +113,7 @@ Armbian distributes stable images for many different single board computers (SBC
 
 [Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
 
-At least one person is providing constant maintainance and support.
+At least one person is providing constant maintenance and support.
 
 [Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
 
@@ -139,20 +137,8 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 
 ## How can you contribute?
 
-<!-- tbw -->
+If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
 
-
-## Software titles
-
-You can quickly and easily install popular software! They are ready to run and optimized for Armbian. Here are few highlights:
-
-- Desktops - install desktop environments
-- Netconfig - network tools
-- DevTools - development
-- Benchy - system benchmaking and diagnostics
-- Containers - containerization and virtual machines
-- Media - media servers and editors
-- Management - remote management tools
 
 ???+ success "Unit testing"
 
