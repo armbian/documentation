@@ -138,7 +138,7 @@ Section "Monitor"
 EndSection
 ```
 
-After a restart, the graphical session should automtaically be shown in the chosen resolution.
+After a restart, the graphical session should automatically be shown in the chosen resolution.
 
 
 ## Alter the CPU frequency
@@ -154,13 +154,13 @@ systemctl restart cpufrequtils.service
 
 By default, Armbian implements ZRAM (writing nothing to 'disk', but compressing memory pages in RAM). In case you often run into out-of-memory (OOM) errors and your device has some capable storage (e.g. a securely attached NVMe or SATA SSD), you might want to use ZSWAP instead.
 
-Check whether your kernel has zswap enabled. If yes, te following command
+Check whether your kernel has zswap enabled. If yes, the following command
 
 ```sh
 dmesg | grep zswap
 ```
 
-should return some output. If that is te case, create a swapfile or a swap partition the traditional way: edit `/etc/default/armbian-zram-config` so that it reads `SWAP=false`. Reboot, and you're done.
+should return some output. If that is the case, create a swapfile or a swap partition the traditional way: edit `/etc/default/armbian-zram-config` so that it reads `SWAP=false`. Reboot, and you're done.
 
 Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in parallel.
 

@@ -113,7 +113,7 @@ Armbian distributes stable images for many different single board computers (SBC
 
 [Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
 
-At least one person is providing constant maintainance and support.
+At least one person is providing constant maintenance and support.
 
 [Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
 

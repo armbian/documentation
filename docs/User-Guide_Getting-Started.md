@@ -108,7 +108,7 @@ graph LR
     **Do not use** rolling release or edge images in a productive environment. Their purpose is testing and providing constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 
-### Download and verfication
+### Download and verification
 
 After you have determined the image you want, the download for each image consists of three separate files:
 
@@ -174,7 +174,7 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your microSD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
+Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your micro-SD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
 !!! warning "Other tools"
 
@@ -339,7 +339,7 @@ For the base operating system, use the APT package manager to keep the packages 
 
 Users with a desktop will find graphical tools that allow one to update the system packages without using the command line.
 
-Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages **but** the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
+Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages **but** the firmware. This prevents unpleasant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
 
     Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 
