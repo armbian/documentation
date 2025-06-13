@@ -362,7 +362,7 @@ Example:
   - `china`: use `mirrors.tuna.tsinghua.edu.cn`; it will be very fast thanks to Tsinghua University
   - `bfsu`: use `mirrors.bfsu.edu.cn`, the mirror of Beijing Foreign Studies University
   - leave empty to use official source
-- **ARMBIAN_MIRROR** (auto): override automated mirror selection, example 'ARMBIAN_MIRROR="<https://yourlocalmirror.com>"'
+- **LOCAL_MIRROR** (auto): override automated mirror selection, example 'LOCAL_MIRROR="<https://yourlocalmirror.com>"'
 - **MAINLINE_MIRROR** ( `google` | `tuna` | `bfsu` ): select mainline mirror of `linux-stable.git`
   - `google`: use the mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
   - `tuna`: use the mirror provided by Tsinghua University
