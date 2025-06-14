@@ -1,0 +1,2578 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for Armbian OS and Armbian build framework">
+      
+      
+        <meta name="author" content="Armbian team">
+      
+      
+        <link rel="canonical" href="https://docs.armbian.com/User-Guide_Advanced-Features/">
+      
+      
+        <link rel="prev" href="../User-Guide_Configuration/">
+      
+      
+        <link rel="next" href="../User-Guide_Networking/">
+      
+      
+      <link rel="icon" href="../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Advanced Features - Armbian Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/armbian-extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-284946-9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-284946-9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-284946-9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://www.armbian.com">
+    <span class="twemoji twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </span> &nbsp; www.armbian.com
+  </a>
+  &nbsp;
+  <a href="https://github.com/sponsors/armbian">
+    <span class="twemoji twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5"/></svg>
+    </span> &nbsp; Become a sponsor to Armbian!
+  </a>
+  <a rel="me" href="https://fosstodon.org/@armbian"></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Armbian Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/armbian/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    armbian/documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  ARMBIAN OS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../User-Guide_Armbian-Config/" class="md-tabs__link">
+          
+  
+  
+  ARMBIAN CONFIG
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../User-Guide_Armbian-Software/Armbian/" class="md-tabs__link">
+          
+  
+  
+  ARMBIAN SOFTWARE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Developer-Guide_Overview/" class="md-tabs__link">
+          
+  
+  
+  ARMBIAN BUILD FRAMEWORK
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Community_Forums/" class="md-tabs__link">
+          
+  
+  
+  ARMBIAN COMMUNITY
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Process_Contribute/" class="md-tabs__link">
+          
+  
+  
+  CONTRIBUTE
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    Armbian Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/armbian/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    armbian/documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARMBIAN OS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-switch-kernels" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to switch kernels?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-build-a-wireless-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to build a wireless driver?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to install Docker?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Autoconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firstboot config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting and Recovery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release_Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_Release-Model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Test Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARMBIAN CONFIG
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN CONFIG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Config/Localisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Localisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARMBIAN SOFTWARE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN SOFTWARE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Armbian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Armbian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/DevTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/DNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DNS blockers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Downloaders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloaders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/HomeAutomation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Netconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netconfig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Printing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Armbian-Software/WebHosting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web hosting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARMBIAN BUILD FRAMEWORK
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN BUILD FRAMEWORK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Build-Preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Build-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Build-Switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Switches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_User-Configurations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Extensions-Hooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions Hooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Building-with-Multipass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building with Multipass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Building-with-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building with Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Guide_Extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARMBIAN COMMUNITY
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            ARMBIAN COMMUNITY
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_Forums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forums
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_Github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community_IRC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CONTRIBUTE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            CONTRIBUTE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_Contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contribute/Armbian-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Armbian config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WifiPerformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wifi performance tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mirrors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mirrors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Process_CI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User-Guide_Board-Support-Rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Board Support Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/armbian/documentation/edit/main/docs/User-Guide_Advanced-Features.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/armbian/documentation/raw/main/docs/User-Guide_Advanced-Features.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h1>
+<h2 id="how-to-switch-kernels">How to switch kernels?<a class="headerlink" href="#how-to-switch-kernels" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SY015
+</span></code></pre></div></td></tr></table></div>
+<h2 id="how-to-build-a-wireless-driver">How to build a wireless driver?<a class="headerlink" href="#how-to-build-a-wireless-driver" title="Permanent link">&para;</a></h2>
+<p>Install kernel headers:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>armbian-config --cmd SY004
+</code></pre></div></td></tr></table></div>
+<p>Download driver sources:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    git clone https://github.com/morrownr/8821au-20210708.git
+    cd 8821au-20210708
+</code></pre></div></td></tr></table></div>
+<p>Build and install:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    make
+    make install
+</code></pre></div></td></tr></table></div>
+<details>
+<summary>Build log</summary>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-1-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-1-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-1-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-1-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-1-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-1-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-1-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-1-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-1-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-1-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-1-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-1-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-1-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-1-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-1-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-1-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-1-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-1-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-1-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-1-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-1-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-1-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-1-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-1-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-1-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-1-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-1-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-1-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-1-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-1-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-1-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-1-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-1-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-1-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-1-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-1-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-1-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-1-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-1-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-1-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-1-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-1-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-1-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-1-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-1-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-1-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-1-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-1-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-1-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-1-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-1-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-1-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-1-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-1-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-1-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-1-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-1-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-1-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-1-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-1-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-1-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-1-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-1-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-1-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-1-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-1-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-1-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-1-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-1-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-1-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-1-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-1-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-1-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-1-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-1-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-1-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-1-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-1-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-1-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-1-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-1-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-1-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-1-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-1-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-1-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-1-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-1-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-1-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-1-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-1-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-1-100">100</a></span>
+<span class="normal"><a href="#__codelineno-1-101">101</a></span>
+<span class="normal"><a href="#__codelineno-1-102">102</a></span>
+<span class="normal"><a href="#__codelineno-1-103">103</a></span>
+<span class="normal"><a href="#__codelineno-1-104">104</a></span>
+<span class="normal"><a href="#__codelineno-1-105">105</a></span>
+<span class="normal"><a href="#__codelineno-1-106">106</a></span>
+<span class="normal"><a href="#__codelineno-1-107">107</a></span>
+<span class="normal"><a href="#__codelineno-1-108">108</a></span>
+<span class="normal"><a href="#__codelineno-1-109">109</a></span>
+<span class="normal"><a href="#__codelineno-1-110">110</a></span>
+<span class="normal"><a href="#__codelineno-1-111">111</a></span>
+<span class="normal"><a href="#__codelineno-1-112">112</a></span>
+<span class="normal"><a href="#__codelineno-1-113">113</a></span>
+<span class="normal"><a href="#__codelineno-1-114">114</a></span>
+<span class="normal"><a href="#__codelineno-1-115">115</a></span>
+<span class="normal"><a href="#__codelineno-1-116">116</a></span>
+<span class="normal"><a href="#__codelineno-1-117">117</a></span>
+<span class="normal"><a href="#__codelineno-1-118">118</a></span>
+<span class="normal"><a href="#__codelineno-1-119">119</a></span>
+<span class="normal"><a href="#__codelineno-1-120">120</a></span>
+<span class="normal"><a href="#__codelineno-1-121">121</a></span>
+<span class="normal"><a href="#__codelineno-1-122">122</a></span>
+<span class="normal"><a href="#__codelineno-1-123">123</a></span>
+<span class="normal"><a href="#__codelineno-1-124">124</a></span>
+<span class="normal"><a href="#__codelineno-1-125">125</a></span>
+<span class="normal"><a href="#__codelineno-1-126">126</a></span>
+<span class="normal"><a href="#__codelineno-1-127">127</a></span>
+<span class="normal"><a href="#__codelineno-1-128">128</a></span>
+<span class="normal"><a href="#__codelineno-1-129">129</a></span>
+<span class="normal"><a href="#__codelineno-1-130">130</a></span>
+<span class="normal"><a href="#__codelineno-1-131">131</a></span>
+<span class="normal"><a href="#__codelineno-1-132">132</a></span>
+<span class="normal"><a href="#__codelineno-1-133">133</a></span>
+<span class="normal"><a href="#__codelineno-1-134">134</a></span>
+<span class="normal"><a href="#__codelineno-1-135">135</a></span>
+<span class="normal"><a href="#__codelineno-1-136">136</a></span>
+<span class="normal"><a href="#__codelineno-1-137">137</a></span>
+<span class="normal"><a href="#__codelineno-1-138">138</a></span>
+<span class="normal"><a href="#__codelineno-1-139">139</a></span>
+<span class="normal"><a href="#__codelineno-1-140">140</a></span>
+<span class="normal"><a href="#__codelineno-1-141">141</a></span>
+<span class="normal"><a href="#__codelineno-1-142">142</a></span>
+<span class="normal"><a href="#__codelineno-1-143">143</a></span>
+<span class="normal"><a href="#__codelineno-1-144">144</a></span>
+<span class="normal"><a href="#__codelineno-1-145">145</a></span>
+<span class="normal"><a href="#__codelineno-1-146">146</a></span>
+<span class="normal"><a href="#__codelineno-1-147">147</a></span>
+<span class="normal"><a href="#__codelineno-1-148">148</a></span>
+<span class="normal"><a href="#__codelineno-1-149">149</a></span>
+<span class="normal"><a href="#__codelineno-1-150">150</a></span>
+<span class="normal"><a href="#__codelineno-1-151">151</a></span>
+<span class="normal"><a href="#__codelineno-1-152">152</a></span>
+<span class="normal"><a href="#__codelineno-1-153">153</a></span>
+<span class="normal"><a href="#__codelineno-1-154">154</a></span>
+<span class="normal"><a href="#__codelineno-1-155">155</a></span>
+<span class="normal"><a href="#__codelineno-1-156">156</a></span>
+<span class="normal"><a href="#__codelineno-1-157">157</a></span>
+<span class="normal"><a href="#__codelineno-1-158">158</a></span>
+<span class="normal"><a href="#__codelineno-1-159">159</a></span>
+<span class="normal"><a href="#__codelineno-1-160">160</a></span>
+<span class="normal"><a href="#__codelineno-1-161">161</a></span>
+<span class="normal"><a href="#__codelineno-1-162">162</a></span>
+<span class="normal"><a href="#__codelineno-1-163">163</a></span>
+<span class="normal"><a href="#__codelineno-1-164">164</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>make ARCH=arm64 CROSS_COMPILE= -C /lib/modules/6.6.62-current-sunxi64/build M=/root/8821au-20210708  modules
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>make[1]: Entering directory &#39;/usr/src/linux-headers-6.6.62-current-sunxi64&#39;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>  CC [M]  /root/8821au-20210708/core/rtw_cmd.o
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>  CC [M]  /root/8821au-20210708/core/rtw_security.o
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>  CC [M]  /root/8821au-20210708/core/rtw_debug.o
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>  CC [M]  /root/8821au-20210708/core/rtw_io.o
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>  CC [M]  /root/8821au-20210708/core/rtw_ioctl_query.o
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>  CC [M]  /root/8821au-20210708/core/rtw_ioctl_set.o
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>  CC [M]  /root/8821au-20210708/core/rtw_ieee80211.o
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>  CC [M]  /root/8821au-20210708/core/rtw_mlme.o
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>  CC [M]  /root/8821au-20210708/core/rtw_mlme_ext.o
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>  CC [M]  /root/8821au-20210708/core/rtw_mi.o
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>  CC [M]  /root/8821au-20210708/core/rtw_wlan_util.o
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>  CC [M]  /root/8821au-20210708/core/rtw_vht.o
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>  CC [M]  /root/8821au-20210708/core/rtw_pwrctrl.o
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>  CC [M]  /root/8821au-20210708/core/rtw_rf.o
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>  CC [M]  /root/8821au-20210708/core/rtw_chplan.o
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>  CC [M]  /root/8821au-20210708/core/monitor/rtw_radiotap.o
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>  CC [M]  /root/8821au-20210708/core/rtw_recv.o
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a>  CC [M]  /root/8821au-20210708/core/rtw_sta_mgt.o
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>  CC [M]  /root/8821au-20210708/core/rtw_ap.o
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>  CC [M]  /root/8821au-20210708/core/wds/rtw_wds.o
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>  CC [M]  /root/8821au-20210708/core/mesh/rtw_mesh.o
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>  CC [M]  /root/8821au-20210708/core/mesh/rtw_mesh_pathtbl.o
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>  CC [M]  /root/8821au-20210708/core/mesh/rtw_mesh_hwmp.o
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>  CC [M]  /root/8821au-20210708/core/rtw_xmit.o
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a>  CC [M]  /root/8821au-20210708/core/rtw_p2p.o
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>  CC [M]  /root/8821au-20210708/core/rtw_rson.o
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>  CC [M]  /root/8821au-20210708/core/rtw_tdls.o
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>  CC [M]  /root/8821au-20210708/core/rtw_br_ext.o
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a>  CC [M]  /root/8821au-20210708/core/rtw_iol.o
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a>  CC [M]  /root/8821au-20210708/core/rtw_sreset.o
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a>  CC [M]  /root/8821au-20210708/core/rtw_btcoex_wifionly.o
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a>  CC [M]  /root/8821au-20210708/core/rtw_btcoex.o
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a>  CC [M]  /root/8821au-20210708/core/rtw_beamforming.o
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a>  CC [M]  /root/8821au-20210708/core/rtw_odm.o
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a>  CC [M]  /root/8821au-20210708/core/rtw_rm.o
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38"></a>  CC [M]  /root/8821au-20210708/core/rtw_rm_fsm.o
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a>  CC [M]  /root/8821au-20210708/core/rtw_ft.o
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40"></a>  CC [M]  /root/8821au-20210708/core/rtw_wnm.o
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41"></a>  CC [M]  /root/8821au-20210708/core/rtw_mbo.o
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a>  CC [M]  /root/8821au-20210708/core/rtw_rm_util.o
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43"></a>  CC [M]  /root/8821au-20210708/core/efuse/rtw_efuse.o
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44"></a>  CC [M]  /root/8821au-20210708/core/rtw_roch.o
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-internal.o
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-internal-enc.o
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-gcm.o
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-ccm.o
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-omac1.o
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50"></a>  CC [M]  /root/8821au-20210708/core/crypto/ccmp.o
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51"></a>  CC [M]  /root/8821au-20210708/core/crypto/gcmp.o
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-siv.o
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53"></a>  CC [M]  /root/8821au-20210708/core/crypto/aes-ctr.o
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54"></a>  CC [M]  /root/8821au-20210708/core/crypto/sha256-internal.o
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55"></a>  CC [M]  /root/8821au-20210708/core/crypto/sha256.o
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56"></a>  CC [M]  /root/8821au-20210708/core/crypto/sha256-prf.o
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57"></a>  CC [M]  /root/8821au-20210708/core/crypto/rtw_crypto_wrap.o
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58"></a>  CC [M]  /root/8821au-20210708/core/rtw_swcrypto.o
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59"></a>  CC [M]  /root/8821au-20210708/os_dep/osdep_service.o
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/os_intfs.o
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/usb_intf.o
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/usb_ops_linux.o
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/ioctl_linux.o
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/xmit_linux.o
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/mlme_linux.o
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/recv_linux.o
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/ioctl_cfg80211.o
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/rtw_cfgvendor.o
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/wifi_regd.o
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/rtw_android.o
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/rtw_proc.o
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/nlrtw.o
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73"></a>  CC [M]  /root/8821au-20210708/os_dep/linux/rtw_rhashtable.o
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74"></a>  CC [M]  /root/8821au-20210708/hal/hal_intf.o
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75"></a>  CC [M]  /root/8821au-20210708/hal/hal_com.o
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76"></a>  CC [M]  /root/8821au-20210708/hal/hal_com_phycfg.o
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77"></a>  CC [M]  /root/8821au-20210708/hal/hal_phy.o
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78"></a>  CC [M]  /root/8821au-20210708/hal/hal_dm.o
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79"></a>  CC [M]  /root/8821au-20210708/hal/hal_dm_acs.o
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80"></a>  CC [M]  /root/8821au-20210708/hal/hal_btcoex_wifionly.o
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81"></a>  CC [M]  /root/8821au-20210708/hal/hal_btcoex.o
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82"></a>  CC [M]  /root/8821au-20210708/hal/hal_mp.o
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83"></a>  CC [M]  /root/8821au-20210708/hal/hal_mcc.o
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84"></a>  CC [M]  /root/8821au-20210708/hal/hal_hci/hal_usb.o
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85"></a>  CC [M]  /root/8821au-20210708/hal/led/hal_led.o
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86"></a>  CC [M]  /root/8821au-20210708/hal/led/hal_usb_led.o
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87"></a>  CC [M]  /root/8821au-20210708/hal/HalPwrSeqCmd.o
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/Hal8812PwrSeq.o
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/Hal8821APwrSeq.o
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_xmit.o
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_sreset.o
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_hal_init.o
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_phycfg.o
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_rf6052.o
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_dm.o
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_rxdesc.o
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/rtl8812a_cmd.o
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/usb/usb_halinit.o
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/usb/rtl8812au_led.o
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/usb/rtl8812au_xmit.o
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/usb/rtl8812au_recv.o
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/usb/usb_ops_linux.o
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103"></a>  CC [M]  /root/8821au-20210708/hal/efuse/rtl8812a/HalEfuseMask8821A_USB.o
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104"></a>  CC [M]  /root/8821au-20210708/hal/rtl8812a/hal8821a_fw.o
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_debug.o
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_antdiv.o
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_soml.o
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_smt_ant.o
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_antdect.o
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_interface.o
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_phystatus.o
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_hwconfig.o
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm.o
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_dig.o
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_pathdiv.o
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_rainfo.o
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_dynamictxpower.o
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_adaptivity.o
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_cfotracking.o
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_noisemonitor.o
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_beamforming.o
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_direct_bf.o
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_dfs.o
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124"></a>  CC [M]  /root/8821au-20210708/hal/phydm/txbf/halcomtxbf.o
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125"></a>  CC [M]  /root/8821au-20210708/hal/phydm/txbf/haltxbfinterface.o
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126"></a>  CC [M]  /root/8821au-20210708/hal/phydm/txbf/phydm_hal_txbf_api.o
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_adc_sampling.o
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_ccx.o
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_psd.o
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_primary_cca.o
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_cck_pd.o
+</span><span id="__span-1-132"><a id="__codelineno-1-132" name="__codelineno-1-132"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_rssi_monitor.o
+</span><span id="__span-1-133"><a id="__codelineno-1-133" name="__codelineno-1-133"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_auto_dbg.o
+</span><span id="__span-1-134"><a id="__codelineno-1-134" name="__codelineno-1-134"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_math_lib.o
+</span><span id="__span-1-135"><a id="__codelineno-1-135" name="__codelineno-1-135"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_api.o
+</span><span id="__span-1-136"><a id="__codelineno-1-136" name="__codelineno-1-136"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_pow_train.o
+</span><span id="__span-1-137"><a id="__codelineno-1-137" name="__codelineno-1-137"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_lna_sat.o
+</span><span id="__span-1-138"><a id="__codelineno-1-138" name="__codelineno-1-138"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_pmac_tx_setting.o
+</span><span id="__span-1-139"><a id="__codelineno-1-139" name="__codelineno-1-139"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_mp.o
+</span><span id="__span-1-140"><a id="__codelineno-1-140" name="__codelineno-1-140"></a>  CC [M]  /root/8821au-20210708/hal/phydm/phydm_cck_rx_pathdiv.o
+</span><span id="__span-1-141"><a id="__codelineno-1-141" name="__codelineno-1-141"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf.o
+</span><span id="__span-1-142"><a id="__codelineno-1-142" name="__codelineno-1-142"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf_debug.o
+</span><span id="__span-1-143"><a id="__codelineno-1-143" name="__codelineno-1-143"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halphyrf_ce.o
+</span><span id="__span-1-144"><a id="__codelineno-1-144" name="__codelineno-1-144"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf_powertracking_ce.o
+</span><span id="__span-1-145"><a id="__codelineno-1-145" name="__codelineno-1-145"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf_powertracking.o
+</span><span id="__span-1-146"><a id="__codelineno-1-146" name="__codelineno-1-146"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf_kfree.o
+</span><span id="__span-1-147"><a id="__codelineno-1-147" name="__codelineno-1-147"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/halrf_psd.o
+</span><span id="__span-1-148"><a id="__codelineno-1-148" name="__codelineno-1-148"></a>  CC [M]  /root/8821au-20210708/hal/phydm/rtl8821a/halhwimg8821a_mac.o
+</span><span id="__span-1-149"><a id="__codelineno-1-149" name="__codelineno-1-149"></a>  CC [M]  /root/8821au-20210708/hal/phydm/rtl8821a/halhwimg8821a_bb.o
+</span><span id="__span-1-150"><a id="__codelineno-1-150" name="__codelineno-1-150"></a>  CC [M]  /root/8821au-20210708/hal/phydm/rtl8821a/halhwimg8821a_rf.o
+</span><span id="__span-1-151"><a id="__codelineno-1-151" name="__codelineno-1-151"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/rtl8812a/halrf_8812a_ce.o
+</span><span id="__span-1-152"><a id="__codelineno-1-152" name="__codelineno-1-152"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/rtl8821a/halrf_8821a_ce.o
+</span><span id="__span-1-153"><a id="__codelineno-1-153" name="__codelineno-1-153"></a>  CC [M]  /root/8821au-20210708/hal/phydm/rtl8821a/phydm_regconfig8821a.o
+</span><span id="__span-1-154"><a id="__codelineno-1-154" name="__codelineno-1-154"></a>  CC [M]  /root/8821au-20210708/hal/phydm/rtl8821a/phydm_rtl8821a.o
+</span><span id="__span-1-155"><a id="__codelineno-1-155" name="__codelineno-1-155"></a>  CC [M]  /root/8821au-20210708/hal/phydm/halrf/rtl8821a/halrf_iqk_8821a_ce.o
+</span><span id="__span-1-156"><a id="__codelineno-1-156" name="__codelineno-1-156"></a>  CC [M]  /root/8821au-20210708/hal/phydm/txbf/haltxbfjaguar.o
+</span><span id="__span-1-157"><a id="__codelineno-1-157" name="__codelineno-1-157"></a>  CC [M]  /root/8821au-20210708/hal/btc/halbtc8821a1ant.o
+</span><span id="__span-1-158"><a id="__codelineno-1-158" name="__codelineno-1-158"></a>  CC [M]  /root/8821au-20210708/hal/btc/halbtc8821a2ant.o
+</span><span id="__span-1-159"><a id="__codelineno-1-159" name="__codelineno-1-159"></a>  CC [M]  /root/8821au-20210708/platform/platform_ops.o
+</span><span id="__span-1-160"><a id="__codelineno-1-160" name="__codelineno-1-160"></a>  LD [M]  /root/8821au-20210708/8821au.o
+</span><span id="__span-1-161"><a id="__codelineno-1-161" name="__codelineno-1-161"></a>  MODPOST /root/8821au-20210708/Module.symvers
+</span><span id="__span-1-162"><a id="__codelineno-1-162" name="__codelineno-1-162"></a>  CC [M]  /root/8821au-20210708/8821au.mod.o
+</span><span id="__span-1-163"><a id="__codelineno-1-163" name="__codelineno-1-163"></a>  LD [M]  /root/8821au-20210708/8821au.ko
+</span><span id="__span-1-164"><a id="__codelineno-1-164" name="__codelineno-1-164"></a>make[1]: Leaving directory &#39;/usr/src/linux-headers-6.6.62-current-sunxi64&#39;
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p>Load driver for test</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>insmod 8821au.ko
+</code></pre></div></td></tr></table></div>
+<p>Check <code>dmesg</code> and the last entry will be:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>usbcore: registered new interface driver rtl8821au
+</code></pre></div></td></tr></table></div>
+<p>Plug the USB wireless adaptor and proceed with <a href="/User-Guide_Networking/">network configuration</a></p>
+<h2 id="how-to-install-docker">How to install Docker?<a class="headerlink" href="#how-to-install-docker" title="Permanent link">&para;</a></h2>
+<p>Minimal:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--CON01
+</span></code></pre></div></td></tr></table></div>
+<p>Full featured:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--CON02
+</span></code></pre></div></td></tr></table></div>
+<p>Test if Docker works correctly:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</span></code></pre></div></td></tr></table></div>
+<p>If you get that kind of output, then Docker install went fine:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>This<span class="w"> </span>message<span class="w"> </span>shows<span class="w"> </span>that<span class="w"> </span>your<span class="w"> </span>installation<span class="w"> </span>appears<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>working<span class="w"> </span>correctly.
+</span></code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2013 - 2024 Armbian.com
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/armbian" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.armbian.com/" target="_blank" rel="noopener" title="www.armbian.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/armbian" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
