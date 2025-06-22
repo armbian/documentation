@@ -84,21 +84,23 @@ pacmd set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{print $
 The command to define the default sink is not persistent. To make it persistent, add it to the file `~/.bashrc`.
 
 
-## Screen resolution on other boards
+## Fix HDMI screen resolution for SunXi/Allwinner SoC
 
-<!-- TODO: this requires HDMI, and what is "other boards"; the parameter is mentioned by sunxi/allwinner -->
+In rare cases, some SunXi/Allwinner boards failed to detect Full-HD support for HDMI and booted with 720p only. Ths problem is supposed to be fixed nowaydays, and the following steps are merely for documentary reasons and are only necessary if you still encounter this issue.
 
-Open the `/boot/boot.cmd` file with an editor of your choice (e.g. `nano`) and add or change the `disp.screen0_output_mode` option to the kernel command line. For a fixed mode (e.g. 1280x720 at 60 Hz), set it to:
+!!! tip "Legacy versions"
 
-```sh
-disp.screen0_output_mode=1280x720p60
-```
+    Open the `/boot/boot.cmd` file with an editor of your choice (e.g. `nano`) and add or change the [`disp.screen0_output_mode`](https://linux-sunxi.org/Display#HDMI) option to the kernel command line. For a fixed mode (e.g. 1280x720 at 60 Hz), set it to:
 
-Then run
+    ```sh
+    disp.screen0_output_mode=1280x720p60
+    ```
 
-```sh
-mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
-```
+    Then run
+
+    ```sh
+    mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+    ```
 
 
 ## Enable a custom screen resolution within X.Org
