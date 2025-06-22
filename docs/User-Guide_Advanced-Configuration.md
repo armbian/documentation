@@ -2,7 +2,7 @@
 
 While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
-Usually all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
+Usually, all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
 
 ## Keyboard layout
@@ -112,7 +112,7 @@ First, find the matching HDMI output (the `x11-xserver-utils` package must be in
 xrandr --listmonitors
 ```
 
-Then, calculate the VESA CVT mode line. The following command does this for the a custom resolution of 1440x900.
+Then, calculate the VESA CVT mode line. The following command does this for a custom resolution of 1440x900.
 
 ```sh
 cvt 1440 900
