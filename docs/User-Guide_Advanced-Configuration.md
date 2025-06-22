@@ -86,8 +86,7 @@ The command to define the default sink is not persistent. To make it persistent,
 
 ## Fix HDMI screen resolution for SunXi/Allwinner SoC
 
-In rare cases, some SunXi/Allwinner boards failed to detect Full-HD support for HDMI and booted with 720p only. Ths problem is supposed to be fixed nowaydays, and the following steps are merely for documentary reasons and are only necessary if you still encounter this issue.
-
+In rare cases, some SunXi/Allwinner boards failed to detect Full-HD support for HDMI and boot with only 720p. This issue should now be resolved, and the following steps are provided only for reference if it still occurs.
 !!! tip "Legacy versions"
 
     Open the `/boot/boot.cmd` file with an editor of your choice (e.g. `nano`) and add or change the [`disp.screen0_output_mode`](https://linux-sunxi.org/Display#HDMI) option to the kernel command line. For a fixed mode (e.g. 1280x720 at 60 Hz), set it to:
