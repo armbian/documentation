@@ -103,7 +103,7 @@ mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
 
 ## Enable a custom screen resolution within X.Org
 
-Sometimes, not all desired resolutions are supported out of the box. The following short howto shows how to enable a custom resolution and add it to your X.Org configuration. It is based on [this forum post](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/) by user @maxlinux2000 (Thanks!). The `xrandr` and `cvt` commands must be executed as the current user, **not** the root user!
+Sometimes, not all desired resolutions are supported out of the box. The following short howto shows how to enable a custom resolution and add it to your X.Org configuration. It is based on [this forum post](https://forum.armbian.com/topic/10403-add-undetected-hdmi-resolution-to-x11xorg/) by user @maxlinux2000 (Thanks!). The `xrandr` and `cvt` commands must be executed as the current user in a graphical session, **not** by the root user!
 
 First, find the matching HDMI output (the `x11-xserver-utils` package must be installed):
 
