@@ -175,12 +175,22 @@ should return some output. If that is the case, create a swapfile or a swap part
 Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in parallel.
 
 
-## Switch kernels
+## Switch or downgrade kernels
 
 This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/System.md#alternative-kernels).
 
 ```bash
 armbian-config --cmd KER001
+```
+
+In rare cases, it can be necessary to downgrade a kernel package, e.g. to fall back to a previous version.
+
+!!! danger
+
+    Version dependencies between packages can create serious conflicts when attempting a package downgrade. If you force anything here, you can easily destroy your system beyond the point of repair. Don't use that command lightly and better ask twice.
+
+```sh
+apt install linux-image-current-rockchip64=25.5
 ```
 
 
@@ -240,21 +250,6 @@ usbcore: registered new interface driver rtl8821au
 ```
 
 If everything was successful, plug the USB wireless adaptor in and proceed with the [network configuration](User-Guide_Networking.md).
-
-
-## Downgrade a kernel package with APT
-
-Sometimes, it can be necessary to downgrade a package version, e.g. to fall back to a previous kernel version.
-
-```sh
-apt install linux-image-sun8i=5.13
-```
-
-This example is for the H3 legacy kernel. Check [this page](https://www.armbian.com/kernel/) for others.
-
-!!! danger
-
-    Please note that this situation or task is very uncommon. Version dependencies between packages can create serious conflicts when attempting a downgrade. If you force anything here, you can easily destroy your system beyond the point of repair. 
 
 
 ## Toggle boot output
