@@ -290,41 +290,6 @@ sudo armbianmonitor -u
 
 Then copy and past the URL of your log to the [forum, mail, etc](index.md#where-to-find-additional-help).
 
-<!--
-TODO: General: how current is that?
-
-## How to change network configuration?
-
-To get Wi-Fi working simply use `nmtui`, a simple console based UI for network-manager (an example how to set up an AP with network-manager can be found [here](https://forum.odroid.com/viewtopic.php?f=52&t=25472&)). To deal with different Ethernet/Wi-Fi combinations there are six predefined configurations available, you can find them in those files:
-
-	/etc/network/interfaces.bonding
-	/etc/network/interfaces.default
-	/etc/network/interfaces.hostapd
-	/etc/network/interfaces.network-manager
-	/etc/network/interfaces.r1
-	/etc/network/interfaces.r1switch
-
-By default **/etc/network/interfaces** is a copy of **/etc/network/interfaces.default**
-
-1. BONDING: your network adapters are bonded in fail safe / "notebook" way.
-2. DEFAULT: your network adapters are connected classical way.
-3. HOSTAPD: your network adapters are bridged together and bridge is connected to the network. This allows you to have your AP connected directly to your router.
-4. All interfaces are handled by network-manager (`nmtui`/`nmcli` or using the GUI)
-4. Router configuration for Lamobo R1 / Banana R1.
-5. Switch configuration for Lamobo R1 / Banana R1.
-
-You can switch configuration with copying.
-
-	cd /etc/network
-	cp interfaces.x interfaces
-
-(x = default,hostapd,bonding,r1)
-
-Then check / alter your interfaces:
-
-	nano /etc/network/interfaces
--->
-
 
 ## APT mirror selection
 
