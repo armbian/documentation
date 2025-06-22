@@ -178,20 +178,22 @@ armbian-config --cmd KER001
 
 ## Build a wireless driver
 
-First, install the kernel headers. They are required.
+The kernels provided by the project should contain the drivers, modules, and firmware to support most commonly used network devices/dongles. If you encounter that you have to build your own module and load it, the following example shows the general procedure because most modules follow the same structure and setup. It is, however, rarely necessary to build and load so-called "out-of-tree" kernel modules as shown in this example. Even the module we use here as an example is already supported by the current kernels.
+
+First, building a module always requires having the kernel headers installed. The correct version can be installed with:
 
 ```sh
 armbian-config --cmd HEAD01
 ```
 
-Then download the driver sources:
+Then download the driver's sources. Most drivers can probably be found in a Git repository like in our example.
 
 ```sh
 git clone https://github.com/morrownr/8821au-20210708.git
 cd 8821au-20210708
 ```
 
-Then build and install. The following commands will usually be enough. But you should carefully read the driver's homepage for instructions.
+The build and install instructions can usually be found on the driver's homepage or in a file called `README.md` in the source. Read these instructions carefully. Usually, the following commands will suffice and result in an output as shown below.
 
 ```sh
 make
@@ -222,14 +224,14 @@ make install
     make[1]: Leaving directory '/usr/src/linux-headers-6.6.62-current-sunxi64'
     ```
 
-Then attempt to load the driver and check the `dmesg` output.
+If make succeeded, attempt to load the driver and check the `dmesg` output.
 
 ```sh
 insmod 8821au.ko
 usbcore: registered new interface driver rtl8821au
 ```
 
-Plug the USB wireless adaptor and proceed with the [network configuration](User-Guide_Networking.md).
+If everything was successful, plug the USB wireless adaptor in and proceed with the [network configuration](User-Guide_Networking.md).
 
 
 ## Downgrade a kernel package with APT
