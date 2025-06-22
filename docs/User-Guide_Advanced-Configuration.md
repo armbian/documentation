@@ -269,9 +269,11 @@ The serial console on imx6 boards is `ttymxc0` (Hummingboard, Cubox-i) or `ttymx
 
 <!-- TODO: Isn't this better suited for Troubleshooting; at least cross-link from there here -->
 
-Using Armbian from version 5.05 to 5.20, you have to touch/delete `/boot/.force-verbose` to increase the boot verbosity.
+To change the boot verbosity, alter the `verbosity=` line in `/boot/armbianEnv.txt`. The lower the value, the lower the verbosity. The default is `1` and the maximum is `7`.
 
-With more recent Armbian builds, you have to alter the `verbosity=` line in `/boot/armbianEnv.txt` which defaults to `1` (which means less verbose) and has a maximum value of `7`.
+!!! tip "Legacy versions"
+
+    Using Armbian from version 5.05 to 5.20, you have to touch or delete `/boot/.force-verbose` to increase the boot verbosity.
 
 
 ## Enable boot logs for inspection
