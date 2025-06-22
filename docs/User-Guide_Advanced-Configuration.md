@@ -55,7 +55,11 @@ dpkg-reconfigure tzdata
 ```
 
 
-## Sound output
+## Default sound output
+
+!!! note
+
+    In recent versions of Debian and Ubuntu, `pulseaudio` got replaced by `pipewire`. The following suggestions won't work in that case.
 
 To check the available sound output options ("sinks") with pulseaudio:
 
