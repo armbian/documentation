@@ -147,11 +147,15 @@ After a restart, the graphical session should automatically be shown in the chos
 
 ## Alter the CPU frequency
 
-Some boards allow to adjust the CPU speed by editing the file `/etc/default/cpufrequtils` and alter the  **min_speed** and/or **max_speed** variable. Changing these values require restarting `cpufrequtils.service` to activate the new settings:
+<!--TODO: new boards? -->
 
-```sh
-systemctl restart cpufrequtils.service
-```
+!!! tip "Legacy versions"
+
+    Some boards allow to adjust the CPU speed by editing the file `/etc/default/cpufrequtils` and alter the  **min_speed** and/or **max_speed** variable. Changing these values require restarting `cpufrequtils.service` to activate the new settings:
+
+    ```sh
+    systemctl restart cpufrequtils.service
+    ```
 
 
 ## Swap for experts
