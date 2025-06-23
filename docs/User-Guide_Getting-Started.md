@@ -139,8 +139,9 @@ After you have downloaded these files, we recommend checking the integrity and t
     All our images are digitally signed. It is therefore possible to check their authenticity. Linux and macOS user might need to install the required tools first: for Debian/Ubuntu, this can be done via `sudo apt-get install gnupg `, and for macOS use `brew install gnupg `. Windows users can install [GnuPG from here](https://gnupg.org/download/). To check the authenticity, you will need the public key that was used to sign the images. This key can be retrieved from a keyserver or from the Debian/Ubuntu package repository (this step only needs to be done once):
 
     ```sh
-    # download the public key either from a keyserver
+    # download public keys either from a keyserver
     gpg --keyserver hkp://keyserver.ubuntu.com --recv-key DF00FAF1C577104B50BF1D0093D6889F9F0E78D5
+    gpg --keyserver hkp://keyserver.ubuntu.com --recv-key 8CFA83D13EB2181EEF5843E41EB30FAF236099FE
     # or from the repository server
     wget -O- https://apt.armbian.com/armbian.key | gpg --import -
     ```
