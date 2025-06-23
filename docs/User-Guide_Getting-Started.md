@@ -2,12 +2,33 @@
 
 Before you start, please make sure you have:
 
-- a proper power supply according to the board manufacturer requirements <!-- TODO: link to power issues -->
-- a reliable SD card <!-- TODO: link to hints for SD-card -->
+- a proper power supply according to the board manufacturer's requirements <!-- TODO: link to power issues -->
+- a reliable SD card (at least 'Class 10' and 'A1'-rated is **highly** recommended)
 
 You will also need an existing operating system and a SD card writer tool. We recommend using [USBImager](https://gitlab.com/bztsrc/usbimager) because it can validate written data **saving you from corrupted SD card contents**.
 
-!!! tips "New users"
+
+!!! warning
+
+    Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability issues, in over 95 percent of all cases these are either caused by an **insufficient** power supply, or they are related to the SD card. This can be due to a bad card, bad card reader, something went wrong when burning the image, the card turns out to be too slow to boot, etc. Armbian can simply not run on unreliable hardware.
+
+    Checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run into problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue, we also highly recommend checking your card with these tools directly after purchase.
+
+    Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
+
+    |Application Performance Class|Pictograph|Minimum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
+    |---|---|---|---|---|
+    |Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
+    |Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
+
+    We recommend SD cards that are rated at least A1 ([A2 rated cards are yet lacking driver support, and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)) and fulfill at least speed class C10 or higher (U1/U3, etc.). For example:
+
+    ![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
+
+    In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
+
+
+!!! tip "New users"
 
     Some users might find it easier to follow this video tutorial.
 
@@ -18,7 +39,7 @@ You will also need an existing operating system and a SD card writer tool. We re
 
 ## Download the image
 
-If your hardware is [supported](index.md#hardware-support), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](/Mirrors/). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
+If your hardware is [supported](index.md#which-hardware-is-supported), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](Mirrors.md). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
@@ -51,7 +72,7 @@ Use the following images only if these are the only ones provided, or if you wan
 - **edge** is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.
 - **legacy** is the old stable current kernel. Use it if _current_ is not available or if something does not work well with it.
 
-The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](/User-Guide_Armbian-Config).
+The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](User-Guide_Armbian-Config.md).
 
 
 ### Rolling releases
@@ -87,7 +108,7 @@ graph LR
     **Do not use** rolling release or edge images in a productive environment. Their purpose is testing and providing constructive [feedback to developers](https://forum.armbian.com/forum/4-development/).
 
 
-### Download and verfication
+### Download and verification
 
 After you have determined the image you want, the download for each image consists of three separate files:
 
@@ -153,28 +174,13 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-<!-- TODO: might be too much for novice users; needs to be shortened; maybe use admonitions -->
+Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your micro-SD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
-Before you start, there is an **important note:** Make sure you use a **good, reliable and fast** SD card. If you encounter boot or stability issues, in over 95 percent of the time it is either caused by an insufficient power supply or it is related to the SD card (due to a bad card, bad card reader, something went wrong when burning the image, card too slow to boot ... 'Class 10' is **highly** recommended!). Armbian can simply not run on unreliable hardware. So checking your SD card with either [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) or [H2testw](https://www.heise.de/download/product/h2testw-50539) is mandatory if you run into problems. Since [counterfeit SD cards](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) are still an issue, checking with F3/H2testw directly after purchase is also **highly recommended**.
+!!! warning "Other tools"
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your microSD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**. Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended at this time.
+    We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
-!!! tip "Also important"
-
-    Most SD cards are only optimised for sequential reads/writes as it is common with digital cameras. This is what the *speed class* is about. The SD Association defined [*Application Performance Class*](https://www.sdcard.org/developers/overview/application/index.html) as a standard for random IO performance.
-
-|Application Performance Class|Pictograph|Miniumum Random Read|Minimum Random Write|Minimum Sustained (Seq. Write)|
-|---|---|---|---|---|
-|Class 1 (A1)|![a1-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a1-logo.png)|1500 4k IOPS|500 4k IOPS|10MBytes/sec|
-|Class 2 (A2)|![a2-logo](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/a2-logo.png)|4000 4k IOPS|2000 4k IOPS|10MBytes/sec|
-
-<!-- TODO: Is that still correct?? -->
-
-We recommend at least A1 rated SD-Cards ([A2 rated cards need yet lacking driver support and therefore show lower overall and especially random IO performance](https://github.com/ThomasKaiser/Knowledge/blob/master/articles/A1_and_A2_rated_SD_cards.md)). For example:
-
-![a1-16gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-ultra-a1.png) ![a1-32gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extremepro-a1.png) ![a2-64gb-card](https://raw.githubusercontent.com/armbian/documentation/master/docs/images/sandisk-extreme-a2.png)
-
-In case you chose an SD card that was already in use before, please consider resetting it back to 'factory default' performance with [SD Formatter](https://www.sdcard.org/downloads/formatter/) before burning Armbian to it ([explanation in the forum](https://forum.armbian.com/topic/3776-the-partition-is-not-resized-to-full-sd-card-size/&do=findComment&comment=27413)). Detailed information regarding ['factory default' SD card performance](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811).
+    Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
 
 
 ## First boot
@@ -186,9 +192,9 @@ Insert the SD card into a slot and power on the board. With the cheapest board, 
 
 The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, you can use [this tool](https://angryip.org/).
 
-After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
+After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage, the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
-    Welcome to Armbian! 
+    Welcome to Armbian!
 
     Documentation: https://docs.armbian.com/ | Community support: https://forum.armbian.com/
 
@@ -225,7 +231,7 @@ After logging in, you will be prompted to change the default password. You will 
 
     1        NETWORK
     2        MY-WIFI
-    3        Caatsanddogs    
+    3        Caatsanddogs
 
     Enter a number of SSID: 3
 
@@ -240,17 +246,41 @@ After logging in, you will be prompted to change the default password. You will 
     Generating locales: sl_SI.UTF-8
     root@bananapim2pro:~#
 
-???+ tips "Automated config"
-    These settings can be pre-loaded, see [Autoconfig](/User-Guide_Autoconfig)
+???+ tip "Automated config"
+    These settings can be pre-loaded, see [Autoconfig](User-Guide_Autoconfig.md)
 
 <!-- TODO: it must be made clear that this just preps the SD card -->
 
 
 ## First steps
 
-You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc. before the installation, so you can use the same SD-card again if necesasary. Or you want to adjust your hardware configuration, or install software.
+You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](User-Guide_Armbian-Config.md) or [install preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
-While the underlying operating system offers tools and processes to make these customizations, the **preferred method** to change most of these settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images.
+Please note that the typical tool for all tasks is [_armbian-config_](User-Guide_Armbian-Config.md). The section [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
+
+
+### Configuration
+
+Typical tasks include for example:
+
+-  Set the default language and keyboard layout
+-  Disable or enable root logins and/or SSH
+-  Handle and configure system and firmware upgrades
+-  Configure the network
+
+
+### Software titles
+
+You can quickly and easily install popular software too! It is ready to run and optimized for Armbian. Here are few highlights:
+
+-  Desktops - install desktop environments
+-  Netconfig - network tools
+-  DevTools - development
+-  Benchy - system benchmaking and diagnostics
+-  Containers - containerization and virtual machines
+-  Media - media servers and editors
+-  Management - remote management tools
+
 
 <!-- TODO:
       * first customize: armbian-config, install software -> show some examples
@@ -262,7 +292,7 @@ While the underlying operating system offers tools and processes to make these c
 
 ## Installation
 
-At this stage, nothing has been installed onto the boards internal drive yet. Using the installer, you can now decide, where you want to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME or USB storage.
+At this stage, nothing has been installed onto the board's internal drive yet. Using the installer, one can now decide where to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME, or USB storage.
 
 !!! tip "Armbian Installer support those storage scenarios:"
 
@@ -277,7 +307,7 @@ At this stage, nothing has been installed onto the boards internal drive yet. Us
 
 <!-- TODO: give the user a sensible default -->
 
-Start the install script and follow the lead:
+Start the install script, make your choice, and follow the instructions:
 
     armbian-install
 
@@ -309,25 +339,28 @@ For the base operating system, use the APT package manager to keep the packages 
 
 Users with a desktop will find graphical tools that allow one to update the system packages without using the command line.
 
-Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages **but** the firmware. This prevents unplesant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
+Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages **but** the firmware. This prevents unpleasant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for
 
     Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 
-within [armbian-config](/User-Guide_Armbian-Config).
+within [armbian-config](User-Guide_Armbian-Config.md).
 
 If the kernel was upgraded during this process, you will be prompted to reboot at the next login.
 
 <!-- TODO: maybe move this to advanced? Definitely not for novice users -->
 
-When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide an experimental `Distribution upgrades` feature for [armbian-config](/User-Guide_Armbian-Config).
+!!! danger "Upgrade the Armbian OS"
 
-!!! danger
+    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](User-Guide_Armbian-Config.md).
+
     Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.
 
 
 ### Update the boot loader
 
-First, you need to update all packages as described in the previous section. Then run:
+The second part that can be updated is the boot loader.
+
+First, update all packages as described in the previous section. Then run:
 
 ```bash
 sudo armbian-install
@@ -340,7 +373,9 @@ and select:
 
 ## Troubleshooting
 
-<!-- 
+If you experience an issue during any of the steps mentioned in this section, please first check out our [_Troubleshooting and Recovery_](User-Guide_Troubleshooting.md) guide.
+
+<!--
       * armbianmonitor
       * community / search forum || how to get help
       * FAQ (maybe feature is not developed)
@@ -348,4 +383,4 @@ and select:
 
 ### How to report bugs
 
-Follow our [bug reporting form](https://armbian.com/bugs/) and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics will be ignored.
+If you are certain you have found a bug, fill out our [bug reporting form](https://armbian.com/bugs/) and follow its instructions to collect the necessary information and how/where to provide them depending on the type of issue. Please understand that any reports lacking these fundamental diagnostics might be ignored.

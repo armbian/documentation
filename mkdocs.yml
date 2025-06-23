@@ -114,9 +114,8 @@ nav:
   - 'ARMBIAN OS':
         - 'Introduction': 'index.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Configuration' : 'User-Guide_Configuration.md'
         - 'Advanced Usage' :
-            - 'Advanced Features': 'User-Guide_Advanced-Features.md'
+            - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
             - 'Networking' : 'User-Guide_Networking.md'
             - 'Firstboot config': 'User-Guide_Autoconfig.md'
             #- 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
