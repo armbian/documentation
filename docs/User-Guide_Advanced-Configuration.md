@@ -289,7 +289,7 @@ To change the boot verbosity, alter the `verbosity=` line in `/boot/armbianEnv.t
 If your SBC behaves strange, the first step is to check the power supply and the integrity of the boot media as detailed in the [_Troubleshooting_](User-Guide_Troubleshooting.md) section. Also, run
 
 ```sh
-armbianmonitor -c "$HOME"`
+armbianmonitor -c "$HOME"
 ```
 
 Then look into your kernel logs. Armbian also provides a tool that grabs some information and pastes it to an online pasteboard service. Please increase the boot verbosity to its maximum level (`verbosity=7`) as shown above, reboot and then run:
