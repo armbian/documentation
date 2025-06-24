@@ -2279,9 +2279,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-register-device-in-netbox" class="md-nav__link">
+  <a href="#6-register-site-in-netbox" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Register Device in NetBox
+      6. Register Site in NetBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-register-device-in-netbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Register Device in NetBox
     </span>
   </a>
   
@@ -5149,11 +5158,9 @@
 </span></code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="4-get-tailscale-tailscale_auth_key">4. Get Tailscale TAILSCALE_AUTH_KEY<a class="headerlink" href="#4-get-tailscale-tailscale_auth_key" title="Permanent link">&para;</a></h3>
-<p>This will be provided by administrator</p>
+<p>Key must be provided by administrator <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a></p>
 <h3 id="5-prepare-machine">5. Prepare machine<a class="headerlink" href="#5-prepare-machine" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Private key:
-  <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1"> 1</a></span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-68-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-68-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-68-4"> 4</a></span>
@@ -5191,48 +5198,59 @@
 <span class="normal"><a href="#__codelineno-68-36">36</a></span>
 <span class="normal"><a href="#__codelineno-68-37">37</a></span>
 <span class="normal"><a href="#__codelineno-68-38">38</a></span>
-<span class="normal"><a href="#__codelineno-68-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="ch">#!/bin/bash</span>
+<span class="normal"><a href="#__codelineno-68-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="w">  </span><span class="c1">#!/bin/bash</span>
 </span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2"></a>
-</span><span id="__span-68-3"><a id="__codelineno-68-3" name="__codelineno-68-3"></a><span class="nb">set</span><span class="w"> </span>-e
+</span><span id="__span-68-3"><a id="__codelineno-68-3" name="__codelineno-68-3"></a><span class="w">  </span><span class="nb">set</span><span class="w"> </span>-e
 </span><span id="__span-68-4"><a id="__codelineno-68-4" name="__codelineno-68-4"></a>
-</span><span id="__span-68-5"><a id="__codelineno-68-5" name="__codelineno-68-5"></a><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ci&quot;</span>
-</span><span id="__span-68-6"><a id="__codelineno-68-6" name="__codelineno-68-6"></a><span class="nv">KEY_URL</span><span class="o">=</span><span class="s2">&quot;https://github.armbian.com/ci.asc&quot;</span>
-</span><span id="__span-68-7"><a id="__codelineno-68-7" name="__codelineno-68-7"></a><span class="nv">TAILSCALE_AUTH_KEY</span><span class="o">=</span><span class="s2">&quot;tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span>
+</span><span id="__span-68-5"><a id="__codelineno-68-5" name="__codelineno-68-5"></a><span class="w">  </span><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ci&quot;</span>
+</span><span id="__span-68-6"><a id="__codelineno-68-6" name="__codelineno-68-6"></a><span class="w">  </span><span class="nv">KEY_URL</span><span class="o">=</span><span class="s2">&quot;https://github.armbian.com/ci.asc&quot;</span>
+</span><span id="__span-68-7"><a id="__codelineno-68-7" name="__codelineno-68-7"></a><span class="w">  </span><span class="nv">TAILSCALE_AUTH_KEY</span><span class="o">=</span><span class="s2">&quot;tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span>
 </span><span id="__span-68-8"><a id="__codelineno-68-8" name="__codelineno-68-8"></a>
-</span><span id="__span-68-9"><a id="__codelineno-68-9" name="__codelineno-68-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Creating user &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; without password&quot;</span>
-</span><span id="__span-68-10"><a id="__codelineno-68-10" name="__codelineno-68-10"></a>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
-</span><span id="__span-68-11"><a id="__codelineno-68-11" name="__codelineno-68-11"></a>passwd<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
-</span><span id="__span-68-12"><a id="__codelineno-68-12" name="__codelineno-68-12"></a>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
+</span><span id="__span-68-9"><a id="__codelineno-68-9" name="__codelineno-68-9"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Creating user &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; without password&quot;</span>
+</span><span id="__span-68-10"><a id="__codelineno-68-10" name="__codelineno-68-10"></a><span class="w">  </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
+</span><span id="__span-68-11"><a id="__codelineno-68-11" name="__codelineno-68-11"></a><span class="w">  </span>passwd<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
+</span><span id="__span-68-12"><a id="__codelineno-68-12" name="__codelineno-68-12"></a><span class="w">  </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
 </span><span id="__span-68-13"><a id="__codelineno-68-13" name="__codelineno-68-13"></a>
-</span><span id="__span-68-14"><a id="__codelineno-68-14" name="__codelineno-68-14"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Setting up SSH key from </span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span>
-</span><span id="__span-68-15"><a id="__codelineno-68-15" name="__codelineno-68-15"></a><span class="nv">SSH_DIR</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USERNAME</span><span class="s2">/.ssh&quot;</span>
-</span><span id="__span-68-16"><a id="__codelineno-68-16" name="__codelineno-68-16"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
-</span><span id="__span-68-17"><a id="__codelineno-68-17" name="__codelineno-68-17"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
-</span><span id="__span-68-18"><a id="__codelineno-68-18" name="__codelineno-68-18"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
-</span><span id="__span-68-19"><a id="__codelineno-68-19" name="__codelineno-68-19"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
-</span><span id="__span-68-20"><a id="__codelineno-68-20" name="__codelineno-68-20"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">:</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-68-14"><a id="__codelineno-68-14" name="__codelineno-68-14"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Setting up SSH key from </span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span>
+</span><span id="__span-68-15"><a id="__codelineno-68-15" name="__codelineno-68-15"></a><span class="w">  </span><span class="nv">SSH_DIR</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USERNAME</span><span class="s2">/.ssh&quot;</span>
+</span><span id="__span-68-16"><a id="__codelineno-68-16" name="__codelineno-68-16"></a><span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-68-17"><a id="__codelineno-68-17" name="__codelineno-68-17"></a><span class="w">  </span>curl<span class="w"> </span>-fsSL<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
+</span><span id="__span-68-18"><a id="__codelineno-68-18" name="__codelineno-68-18"></a><span class="w">  </span>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-68-19"><a id="__codelineno-68-19" name="__codelineno-68-19"></a><span class="w">  </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
+</span><span id="__span-68-20"><a id="__codelineno-68-20" name="__codelineno-68-20"></a><span class="w">  </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">:</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
 </span><span id="__span-68-21"><a id="__codelineno-68-21" name="__codelineno-68-21"></a>
-</span><span id="__span-68-22"><a id="__codelineno-68-22" name="__codelineno-68-22"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Disabling password authentication in SSH config&quot;</span>
-</span><span id="__span-68-23"><a id="__codelineno-68-23" name="__codelineno-68-23"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-68-24"><a id="__codelineno-68-24" name="__codelineno-68-24"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-68-25"><a id="__codelineno-68-25" name="__codelineno-68-25"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-68-26"><a id="__codelineno-68-26" name="__codelineno-68-26"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</span><span id="__span-68-22"><a id="__codelineno-68-22" name="__codelineno-68-22"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Disabling password authentication in SSH config&quot;</span>
+</span><span id="__span-68-23"><a id="__codelineno-68-23" name="__codelineno-68-23"></a><span class="w">  </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
+</span><span id="__span-68-24"><a id="__codelineno-68-24" name="__codelineno-68-24"></a><span class="w">  </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
+</span><span id="__span-68-25"><a id="__codelineno-68-25" name="__codelineno-68-25"></a><span class="w">  </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
+</span><span id="__span-68-26"><a id="__codelineno-68-26" name="__codelineno-68-26"></a><span class="w">  </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
 </span><span id="__span-68-27"><a id="__codelineno-68-27" name="__codelineno-68-27"></a>
-</span><span id="__span-68-28"><a id="__codelineno-68-28" name="__codelineno-68-28"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing Tailscale&quot;</span>
-</span><span id="__span-68-29"><a id="__codelineno-68-29" name="__codelineno-68-29"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span><span id="__span-68-28"><a id="__codelineno-68-28" name="__codelineno-68-28"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing Tailscale&quot;</span>
+</span><span id="__span-68-29"><a id="__codelineno-68-29" name="__codelineno-68-29"></a><span class="w">  </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </span><span id="__span-68-30"><a id="__codelineno-68-30" name="__codelineno-68-30"></a>
-</span><span id="__span-68-31"><a id="__codelineno-68-31" name="__codelineno-68-31"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Bringing up Tailscale with provided auth key&quot;</span>
-</span><span id="__span-68-32"><a id="__codelineno-68-32" name="__codelineno-68-32"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--auth-key<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$TAILSCALE_AUTH_KEY</span><span class="s2">&quot;</span>
+</span><span id="__span-68-31"><a id="__codelineno-68-31" name="__codelineno-68-31"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Bringing up Tailscale with provided auth key&quot;</span>
+</span><span id="__span-68-32"><a id="__codelineno-68-32" name="__codelineno-68-32"></a><span class="w">  </span>tailscale<span class="w"> </span>up<span class="w"> </span>--auth-key<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$TAILSCALE_AUTH_KEY</span><span class="s2">&quot;</span>
 </span><span id="__span-68-33"><a id="__codelineno-68-33" name="__codelineno-68-33"></a>
-</span><span id="__span-68-34"><a id="__codelineno-68-34" name="__codelineno-68-34"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing iperf3 (non-interactive, no daemon)&quot;</span>
-</span><span id="__span-68-35"><a id="__codelineno-68-35" name="__codelineno-68-35"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
-</span><span id="__span-68-36"><a id="__codelineno-68-36" name="__codelineno-68-36"></a>apt-get<span class="w"> </span>update<span class="w"> </span>-qq
-</span><span id="__span-68-37"><a id="__codelineno-68-37" name="__codelineno-68-37"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-yqq<span class="w"> </span>iperf3
+</span><span id="__span-68-34"><a id="__codelineno-68-34" name="__codelineno-68-34"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing iperf3 (non-interactive, no daemon)&quot;</span>
+</span><span id="__span-68-35"><a id="__codelineno-68-35" name="__codelineno-68-35"></a><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+</span><span id="__span-68-36"><a id="__codelineno-68-36" name="__codelineno-68-36"></a><span class="w">  </span>apt-get<span class="w"> </span>update<span class="w"> </span>-qq
+</span><span id="__span-68-37"><a id="__codelineno-68-37" name="__codelineno-68-37"></a><span class="w">  </span>apt-get<span class="w"> </span>install<span class="w"> </span>-yqq<span class="w"> </span>iperf3
 </span><span id="__span-68-38"><a id="__codelineno-68-38" name="__codelineno-68-38"></a>
-</span><span id="__span-68-39"><a id="__codelineno-68-39" name="__codelineno-68-39"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
-</span></code></pre></div></td></tr></table></div></li>
+</span><span id="__span-68-39"><a id="__codelineno-68-39" name="__codelineno-68-39"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="6-register-site-in-netbox">6. Register Site in NetBox<a class="headerlink" href="#6-register-site-in-netbox" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sites in NetBox represent physical locations of wireless test equipment.</li>
+<li>Each site groups together multiple devices such as Access Points (APs), iperf3 servers, and wireless test clients.</li>
+<li>Register your testing location first if it doesn&rsquo;t exist yet: <a href="https://stuff.armbian.com/netbox/dcim/sites/">https://stuff.armbian.com/netbox/dcim/sites/</a>
+  Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data. Make sure to check if site is not already define to not clutter database!</li>
+<li>Relevant data:<ul>
+<li>Access point SSID: Your SSID</li>
+<li>Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client</li>
 </ul>
-<h3 id="6-register-device-in-netbox">6. Register Device in NetBox<a class="headerlink" href="#6-register-device-in-netbox" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<h3 id="7-register-device-in-netbox">7. Register Device in NetBox<a class="headerlink" href="#7-register-device-in-netbox" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Add new device type (skip this step if WiFi SoC already exists in database):<br />
 <a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">https://stuff.armbian.com/netbox/dcim/manufacturers/61/</a><ul>
@@ -5248,7 +5266,7 @@
 <li>Device type: AIC8800 (select the one you added previously)</li>
 <li>Serial number: 04:f0:21:2c:75:14 (MAC address)</li>
 <li>Location: where you are</li>
-<li>Site: name of your office</li>
+<li>Site: name of your office, defined in previous step</li>
 <li>
 <p>Custom Fields / class: AC (wifi classes: AX, AC, N)</p>
 <p>Select Create</p>
