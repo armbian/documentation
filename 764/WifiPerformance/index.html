@@ -2224,19 +2224,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-new-device" class="md-nav__link">
+  <a href="#adding-a-new-device" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding New Device
+      Adding a New Device
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding New Device">
+    <nav class="md-nav" aria-label="Adding a New Device">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-prepare-host-machine" class="md-nav__link">
+  <a href="#1-prepare-the-host-machine" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Prepare Host Machine
+      1. Prepare the Host Machine
     </span>
   </a>
   
@@ -2252,9 +2252,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-create-udev-rule" class="md-nav__link">
+  <a href="#3-create-a-udev-rule" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Create UDEV Rule
+      3. Create a UDEV Rule
     </span>
   </a>
   
@@ -2270,9 +2270,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-prepare-machine" class="md-nav__link">
+  <a href="#5-prepare-the-machine" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Prepare machine
+      5. Prepare the machine
     </span>
   </a>
   
@@ -2281,7 +2281,7 @@
           <li class="md-nav__item">
   <a href="#6-register-your-location" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Register your location
+      6. Register Your Location
     </span>
   </a>
   
@@ -2290,7 +2290,7 @@
           <li class="md-nav__item">
   <a href="#7-register-device-type" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Register Device type
+      7. Register Device Type
     </span>
   </a>
   
@@ -5144,9 +5144,9 @@
 <ul>
 <li>Join our team: Become part of our passionate and dedicated team. We’re looking for <a href="https://forum.armbian.com/staffapplications/">individuals who share our vision and are eager to contribute to the development of innovative testing solutions</a>. Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!</li>
 </ul>
-<h2 id="adding-new-device">Adding New Device<a class="headerlink" href="#adding-new-device" title="Permanent link">&para;</a></h2>
+<h2 id="adding-a-new-device">Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permanent link">&para;</a></h2>
 <p>This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.</p>
-<h3 id="1-prepare-host-machine">1. Prepare Host Machine<a class="headerlink" href="#1-prepare-host-machine" title="Permanent link">&para;</a></h3>
+<h3 id="1-prepare-the-host-machine">1. Prepare the Host Machine<a class="headerlink" href="#1-prepare-the-host-machine" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ensure the board and wireless device is supported by Armbian.</li>
 <li>Flash Armbian image and configure basic settings</li>
@@ -5159,7 +5159,7 @@
 <li>Use <code>ip link</code> or <code>iw dev</code> to list available interfaces.</li>
 <li>Identify MAC address and interface name (e.g., <code>wlan0</code>, <code>wlxMAC</code>, etc.).</li>
 </ul>
-<h3 id="3-create-udev-rule">3. Create UDEV Rule<a class="headerlink" href="#3-create-udev-rule" title="Permanent link">&para;</a></h3>
+<h3 id="3-create-a-udev-rule">3. Create a UDEV Rule<a class="headerlink" href="#3-create-a-udev-rule" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This step is only necessary if your network device does not have a predictable interface name.</p>
@@ -5172,7 +5172,7 @@
 </span></code></pre></div></td></tr></table></div>
 <h3 id="4-get-vpn-access">4. Get VPN access<a class="headerlink" href="#4-get-vpn-access" title="Permanent link">&para;</a></h3>
 <p>The <code>TAILSCALE_AUTH_KEY</code> and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
-<h3 id="5-prepare-machine">5. Prepare machine<a class="headerlink" href="#5-prepare-machine" title="Permanent link">&para;</a></h3>
+<h3 id="5-prepare-the-machine">5. Prepare the machine<a class="headerlink" href="#5-prepare-the-machine" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Creates a new user (<code>ci</code>) with sudo privileges</li>
 <li>Configures SSH for key-based authentication only</li>
@@ -5255,7 +5255,7 @@
 </span><span id="__span-68-37"><a id="__codelineno-68-37" name="__codelineno-68-37"></a>
 </span><span id="__span-68-38"><a id="__codelineno-68-38" name="__codelineno-68-38"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="6-register-your-location">6. Register your location<a class="headerlink" href="#6-register-your-location" title="Permanent link">&para;</a></h3>
+<h3 id="6-register-your-location">6. Register Your Location<a class="headerlink" href="#6-register-your-location" title="Permanent link">&para;</a></h3>
 <p>Access: <a href="https://stuff.armbian.com/netbox/dcim/sites/">https://stuff.armbian.com/netbox/dcim/sites/</a></p>
 <ul>
 <li>Sites in NetBox represent physical locations of wireless test equipment.</li>
@@ -5273,7 +5273,7 @@
 <li>Iperf3 server IP: your local <code>IP address</code> that runs iperf3 server and can be accessible from wireless client</li>
 </ul>
 </details>
-<h3 id="7-register-device-type">7. Register Device type<a class="headerlink" href="#7-register-device-type" title="Permanent link">&para;</a></h3>
+<h3 id="7-register-device-type">7. Register Device Type<a class="headerlink" href="#7-register-device-type" title="Permanent link">&para;</a></h3>
 <p>Add <a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">new device type</a> </p>
 <details class="success" open="open">
 <summary>Relevant data</summary>
