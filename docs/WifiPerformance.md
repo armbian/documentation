@@ -1485,7 +1485,7 @@ This guide provides step-by-step instructions to add a new device (SBC or USB ad
 
 ### 3. Create UDEV Rule
 
-This step is optional and required if your network device is not in predictable form.
+This step is only necessary if your network device does not have a predictable interface name.
 
 - Use a predictable name like `wl<MAC>` to avoid interface conflicts.
 - Add rule in `/etc/udev/rules.d/70-persistent-net.rules`:
@@ -1496,9 +1496,14 @@ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MA
 
 ### 4. Get VPN access
 
-Key TAILSCALE_AUTH_KEY and access to NetBox will be provided by Armbian administration <https://www.armbian.com/contact/>.
+The `TAILSCALE_AUTH_KEY` and access credentials for NetBox will be provided by the Armbian administration team. For assistance, please contact us via [https://www.armbian.com/contact/](https://www.armbian.com/contact/).
 
 ### 5. Prepare machine
+
+- Creates a new user (`ci`) with sudo privileges
+- Configures SSH for key-based authentication only
+- Installs and configures Tailscale for secure remote access
+- Installs `iperf3` for network performance testing
 
 ```bash
 #!/bin/bash
@@ -1551,44 +1556,51 @@ echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale
 
 ???+ success "Relevant data"
 
-    - Access point SSID: Your SSID
-    - Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client
+    - Access point SSID: `Your SSID`
+    - Iperf3 server IP: your local `IP address` that runs iperf3 server and can be accessible from wireless client
 
 ### 7. Register Devices
 
 - Add new device type (skip this step if WiFi SoC already exists in database):  
   [https://stuff.armbian.com/netbox/dcim/manufacturers/61/](https://stuff.armbian.com/netbox/dcim/manufacturers/61/)
-  - Model name (CAPS): AIC8800
-  - Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)
+
+???+ success "Relevant data"
+
+    - Model name (CAPS): AIC8800
+    - Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)
+
 - Add new device:
-  - Name: Compex WLE900VX (use commercial name)
-  - Device role: WiFi DUT
-  - Tags: USB Wireless
-  - Manufacturer: Generic
-  - Device type: AIC8800 (select the one you added previously)
-  - Serial number: 04:f0:21:2c:75:14 (MAC address)
-  - Location: where you are
-  - Site: name of your office, defined in previous step
-  - Custom Fields / class: AC (wifi classes: AX, AC, N)
 
-    Select Create
+???+ success "Relevant data"
+ 
+    - Name: Compex WLE900VX (use commercial name)
+    - Device role: WiFi DUT
+    - Tags: USB Wireless
+    - Manufacturer: Generic
+    - Device type: AIC8800 (select the one you added previously)
+    - Serial number: 04:f0:21:2c:75:14 (MAC address)
+    - Location: where you are
+    - Site: name of your office, defined in previous step
+    - Custom Fields / class: AC (wifi classes: AX, AC, N)
 
-* Add virtual interface (Add Components -> Interfaces)
-  - Name: tailscale0
-  - Type: virtual
+Select `Create`
 
-    Select Create
+- Add virtual interface (Add Components -> Interfaces)
 
-* Add IP address (select interface tailscale0)
-* Copy IP address from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM
+???+ success "Relevant data"
 
-  Select Create
+    - Name: `tailscale0`
+    - Type: `virtual`
+
+Select `Create`
+
+Then select interface `tailscale0` and add `IP address`. Copy `IP address` from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM
+
+Select `Create`
 
 ### 8. Run Initial Test
 
-- Execute workflow  
-  [https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) and see if it works.
-
+[Execute workflow](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) and see if it works.
 
 ## Other resources
 
