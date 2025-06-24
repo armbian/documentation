@@ -1464,6 +1464,148 @@ This section presents the performance test results, including key metrics and te
 
 - Join our team: Become part of our passionate and dedicated team. We’re looking for [individuals who share our vision and are eager to contribute to the development of innovative testing solutions](https://forum.armbian.com/staffapplications/). Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!
 
+
+## Adding a New Device
+
+This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.
+
+### 1. Prepare the Host Machine
+
+- Ensure the board and wireless device is supported by Armbian.
+- Flash Armbian image and configure basic settings
+- Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)
+
+```bash
+sudo hostnamectl set-hostname rtl3070
+```
+
+### 2. Identify Network Interfaces
+
+- Use `ip link` or `iw dev` to list available interfaces.
+- Identify MAC address and interface name (e.g., `wlan0`, `wlxMAC`, etc.).
+
+### 3. Create a UDEV Rule
+
+!!! warning
+
+    This step is only necessary if your network device does not have a predictable interface name.
+
+- Use a predictable name like `wl<MAC>` to avoid interface conflicts.
+- Add rule in `/etc/udev/rules.d/70-persistent-net.rules`:
+  
+```bash
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MAC>"
+```
+
+### 4. Get VPN access
+
+The `TAILSCALE_AUTH_KEY` and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via [https://www.armbian.com/contact/](https://www.armbian.com/contact/).
+
+### 5. Prepare the machine
+
+- Creates a new user (`ci`) with sudo privileges
+- Configures SSH for key-based authentication only
+- Installs and configures Tailscale for secure remote access
+- Installs `iperf3` for network performance testing
+
+```bash
+#!/bin/bash
+
+set -e
+
+USERNAME="ci"
+KEY_URL="https://github.armbian.com/ci.asc"
+TAILSCALE_AUTH_KEY="tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+echo "[+] Creating user '$USERNAME' without password"
+useradd -m -s /bin/bash "$USERNAME"
+passwd -d "$USERNAME"
+usermod -aG sudo "$USERNAME"
+
+echo "[+] Setting up SSH key from $KEY_URL"
+SSH_DIR="/home/$USERNAME/.ssh"
+mkdir -p "$SSH_DIR"
+curl -fsSL "$KEY_URL" -o "$SSH_DIR/authorized_keys"
+chmod 700 "$SSH_DIR"
+chmod 600 "$SSH_DIR/authorized_keys"
+chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
+
+echo "[+] Disabling password authentication in SSH config"
+sed -i 's/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+systemctl restart ssh
+
+echo "[+] Installing Tailscale"
+curl -fsSL https://tailscale.com/install.sh | sh
+
+echo "[+] Bringing up Tailscale with provided auth key"
+tailscale up --auth-key="$TAILSCALE_AUTH_KEY"
+
+echo "[+] Installing iperf3 (non-interactive, no daemon)"
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -yqq iperf3
+
+echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
+```
+
+### 6. Register Your Location
+
+Access: <https://stuff.armbian.com/netbox/dcim/sites/>
+
+- Sites in NetBox represent physical locations of wireless test equipment.
+- Each site have devices such as Access Points (APs), iperf3 servers, and wireless test clients.
+- Register your testing location first if it doesn't exist yet. Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data.
+
+!!! warning
+    Make sure to check if site is not already define to not clutter database!
+
+???+ success "Update Relevant Information"
+
+    - Access point SSID: `Your SSID`
+    - Iperf3 server IP: your local `IP address` that runs iperf3 server and can be accessible from wireless client
+
+### 7. Register Device Type
+
+Add [new device type](https://stuff.armbian.com/netbox/dcim/manufacturers/61/) 
+ 
+???+ success "Relevant data"
+
+    - Model name (CAPS): AIC8800
+    - Manufacturer: Generic
+    - Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)
+
+!!! warning
+
+    Skip this step if WiFi SoC already exists in database.
+
+### 8. Register Device
+
+???+ success "Relevant data"
+ 
+    - Name: Compex WLE900VX (use commercial name)
+    - Device role: WiFi DUT
+    - Tags: USB Wireless
+    - Manufacturer: Generic
+    - Device type: AIC8800 (select the one you added previously)
+    - Serial number: 04:f0:21:2c:75:14 (MAC address)
+    - Location: where you are
+    - Site: name of your office, defined in previous step
+    - Custom Fields / class: AC (wifi classes: AX, AC, N)
+
+- Add virtual interface (Add Components -> Interfaces)
+
+???+ success "Relevant data"
+
+    - Name: `tailscale0`
+    - Type: `virtual`
+
+Then select interface `tailscale0` and add `IP address`. Copy `IP address` from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM
+
+### 9. Run Initial Test
+
+Run the [Wireless Performance Autotest workflow](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) to verify whether the newly added device has been included in the test pool.
+
 ## Other resources
 
 - [USB WiFi Adapter Information for Linux](https://github.com/morrownr/USB-WiFi)
