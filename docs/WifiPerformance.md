@@ -1467,16 +1467,17 @@ This section presents the performance test results, including key metrics and te
 
 ## Adding New Device
 
-This guide provides step-by-step instructions to add a new device (SBC or USB adapter) to the wireless testing infrastructure.
+This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.
 
 ### 1. Prepare Host Machine
 
 - Ensure the board and wireless device is supported by Armbian.
 - Flash Armbian image and configure basic settings
 - Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)
-  ```bash
-  sudo hostnamectl set-hostname rtl3070
-  ```
+
+```bash
+sudo hostnamectl set-hostname rtl3070
+```
 
 ### 2. Identify Network Interfaces
 
@@ -1485,7 +1486,9 @@ This guide provides step-by-step instructions to add a new device (SBC or USB ad
 
 ### 3. Create UDEV Rule
 
-This step is only necessary if your network device does not have a predictable interface name.
+!!! warning
+
+    This step is only necessary if your network device does not have a predictable interface name.
 
 - Use a predictable name like `wl<MAC>` to avoid interface conflicts.
 - Add rule in `/etc/udev/rules.d/70-persistent-net.rules`:
@@ -1496,7 +1499,7 @@ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MA
 
 ### 4. Get VPN access
 
-The `TAILSCALE_AUTH_KEY` and access credentials for NetBox will be provided by the Armbian administration team. For assistance, please contact us via [https://www.armbian.com/contact/](https://www.armbian.com/contact/).
+The `TAILSCALE_AUTH_KEY` and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via [https://www.armbian.com/contact/](https://www.armbian.com/contact/).
 
 ### 5. Prepare machine
 
@@ -1530,7 +1533,6 @@ chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
 echo "[+] Disabling password authentication in SSH config"
 sed -i 's/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
 sed -i 's/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
-sed -i 's/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
 systemctl restart ssh
 
 echo "[+] Installing Tailscale"
@@ -1549,27 +1551,35 @@ echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale
 
 ### 6. Register your location
 
-- Sites in NetBox represent physical locations of wireless test equipment.
-- Each site groups together multiple devices such as Access Points (APs), iperf3 servers, and wireless test clients.
-- Register your testing location first if it doesn't exist yet: <https://stuff.armbian.com/netbox/dcim/sites/>
-  Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data. Make sure to check if site is not already define to not clutter database!
+Access: <https://stuff.armbian.com/netbox/dcim/sites/>
 
-???+ success "Relevant data"
+- Sites in NetBox represent physical locations of wireless test equipment.
+- Each site have devices such as Access Points (APs), iperf3 servers, and wireless test clients.
+- Register your testing location first if it doesn't exist yet. Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data.
+
+!!! warning
+    Make sure to check if site is not already define to not clutter database!
+
+???+ success "Update Relevant Information"
 
     - Access point SSID: `Your SSID`
     - Iperf3 server IP: your local `IP address` that runs iperf3 server and can be accessible from wireless client
 
-### 7. Register Devices
+### 7. Register Device type
 
-- Add new device type (skip this step if WiFi SoC already exists in database):  
-  [https://stuff.armbian.com/netbox/dcim/manufacturers/61/](https://stuff.armbian.com/netbox/dcim/manufacturers/61/)
-
+Add [new device type](https://stuff.armbian.com/netbox/dcim/manufacturers/61/) 
+ 
 ???+ success "Relevant data"
 
     - Model name (CAPS): AIC8800
+    - Manufacturer: Generic
     - Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)
 
-- Add new device:
+!!! warning
+
+    Skip this step if WiFi SoC already exists in database.
+
+### 8. Register Device
 
 ???+ success "Relevant data"
  
@@ -1583,8 +1593,6 @@ echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale
     - Site: name of your office, defined in previous step
     - Custom Fields / class: AC (wifi classes: AX, AC, N)
 
-Select `Create`
-
 - Add virtual interface (Add Components -> Interfaces)
 
 ???+ success "Relevant data"
@@ -1592,15 +1600,11 @@ Select `Create`
     - Name: `tailscale0`
     - Type: `virtual`
 
-Select `Create`
-
 Then select interface `tailscale0` and add `IP address`. Copy `IP address` from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM
 
-Select `Create`
+### 9. Run Initial Test
 
-### 8. Run Initial Test
-
-[Execute workflow](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) and see if it works.
+Run the [Wireless Performance Autotest workflow](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) to verify whether the newly added device has been included in the test pool.
 
 ## Other resources
 
