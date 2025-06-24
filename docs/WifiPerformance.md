@@ -1465,15 +1465,15 @@ This section presents the performance test results, including key metrics and te
 - Join our team: Become part of our passionate and dedicated team. We’re looking for [individuals who share our vision and are eager to contribute to the development of innovative testing solutions](https://forum.armbian.com/staffapplications/). Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!
 
 
-## Instructions: Adding a Device to Wireless Testing Framework
+## Adding New Device
 
 This guide provides step-by-step instructions to add a new device (SBC or USB adapter) to the wireless testing infrastructure.
 
-### 1. Prepare the Device
+### 1. Prepare Host Machine
 
 - Ensure the board and wireless device is supported by Armbian.
 - Flash Armbian image and configure basic settings
-- Set hostname that reflects wireless test device (eg. rtl3070)
+- Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)
   ```bash
   sudo hostnamectl set-hostname rtl3070
   ```
@@ -1483,73 +1483,78 @@ This guide provides step-by-step instructions to add a new device (SBC or USB ad
 - Use `ip link` or `iw dev` to list available interfaces.
 - Identify MAC address and interface name (e.g., `wlan0`, `wlxMAC`, etc.).
 
-### 3. Create or Update udev Rule (Optional)
+### 3. Create UDEV Rule
+
+This step is optional and required if your network device is not in predictable form.
 
 - Use a predictable name like `wl<MAC>` to avoid interface conflicts.
 - Add rule in `/etc/udev/rules.d/70-persistent-net.rules`:
-  ```
-  SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MAC>"
-  ```
+  
+```bash
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MAC>"
+```
 
-### 4. Get Tailscale TAILSCALE_AUTH_KEY
+### 4. Get VPN access
 
-Key must be provided by administrator <https://www.armbian.com/contact/>
+Key TAILSCALE_AUTH_KEY and access to NetBox will be provided by Armbian administration <https://www.armbian.com/contact/>.
 
 ### 5. Prepare machine
 
 ```bash
-  #!/bin/bash
+#!/bin/bash
 
-  set -e
+set -e
 
-  USERNAME="ci"
-  KEY_URL="https://github.armbian.com/ci.asc"
-  TAILSCALE_AUTH_KEY="tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+USERNAME="ci"
+KEY_URL="https://github.armbian.com/ci.asc"
+TAILSCALE_AUTH_KEY="tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-  echo "[+] Creating user '$USERNAME' without password"
-  useradd -m -s /bin/bash "$USERNAME"
-  passwd -d "$USERNAME"
-  usermod -aG sudo "$USERNAME"
+echo "[+] Creating user '$USERNAME' without password"
+useradd -m -s /bin/bash "$USERNAME"
+passwd -d "$USERNAME"
+usermod -aG sudo "$USERNAME"
 
-  echo "[+] Setting up SSH key from $KEY_URL"
-  SSH_DIR="/home/$USERNAME/.ssh"
-  mkdir -p "$SSH_DIR"
-  curl -fsSL "$KEY_URL" -o "$SSH_DIR/authorized_keys"
-  chmod 700 "$SSH_DIR"
-  chmod 600 "$SSH_DIR/authorized_keys"
-  chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
+echo "[+] Setting up SSH key from $KEY_URL"
+SSH_DIR="/home/$USERNAME/.ssh"
+mkdir -p "$SSH_DIR"
+curl -fsSL "$KEY_URL" -o "$SSH_DIR/authorized_keys"
+chmod 700 "$SSH_DIR"
+chmod 600 "$SSH_DIR/authorized_keys"
+chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
 
-  echo "[+] Disabling password authentication in SSH config"
-  sed -i 's/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-  sed -i 's/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
-  sed -i 's/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
-  systemctl restart ssh
+echo "[+] Disabling password authentication in SSH config"
+sed -i 's/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+sed -i 's/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+systemctl restart ssh
 
-  echo "[+] Installing Tailscale"
-  curl -fsSL https://tailscale.com/install.sh | sh
+echo "[+] Installing Tailscale"
+curl -fsSL https://tailscale.com/install.sh | sh
 
-  echo "[+] Bringing up Tailscale with provided auth key"
-  tailscale up --auth-key="$TAILSCALE_AUTH_KEY"
+echo "[+] Bringing up Tailscale with provided auth key"
+tailscale up --auth-key="$TAILSCALE_AUTH_KEY"
 
-  echo "[+] Installing iperf3 (non-interactive, no daemon)"
-  export DEBIAN_FRONTEND=noninteractive
-  apt-get update -qq
-  apt-get install -yqq iperf3
+echo "[+] Installing iperf3 (non-interactive, no daemon)"
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -yqq iperf3
 
-  echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
+echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
 ```
 
-### 6. Register Site in NetBox
+### 6. Register your location
 
 - Sites in NetBox represent physical locations of wireless test equipment.
 - Each site groups together multiple devices such as Access Points (APs), iperf3 servers, and wireless test clients.
 - Register your testing location first if it doesn't exist yet: <https://stuff.armbian.com/netbox/dcim/sites/>
   Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data. Make sure to check if site is not already define to not clutter database!
- - Relevant data:
-   - Access point SSID: Your SSID
-   - Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client
 
-### 7. Register Device in NetBox
+???+ success "Relevant data"
+
+    - Access point SSID: Your SSID
+    - Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client
+
+### 7. Register Devices
 
 - Add new device type (skip this step if WiFi SoC already exists in database):  
   [https://stuff.armbian.com/netbox/dcim/manufacturers/61/](https://stuff.armbian.com/netbox/dcim/manufacturers/61/)
