@@ -1464,6 +1464,118 @@ This section presents the performance test results, including key metrics and te
 
 - Join our team: Become part of our passionate and dedicated team. We’re looking for [individuals who share our vision and are eager to contribute to the development of innovative testing solutions](https://forum.armbian.com/staffapplications/). Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!
 
+
+## Instructions: Adding a Device to Wireless Testing Framework
+
+This guide provides step-by-step instructions to add a new device (SBC or USB adapter) to the wireless testing infrastructure.
+
+### 1. Prepare the Device
+
+- Ensure the board and wireless device is supported by Armbian.
+- Flash Armbian image and configure basic settings
+- Set hostname that reflects wireless test device (eg. rtl3070)
+  ```bash
+  sudo hostnamectl set-hostname rtl3070
+  ```
+
+### 2. Identify Network Interfaces
+
+- Use `ip link` or `iw dev` to list available interfaces.
+- Identify MAC address and interface name (e.g., `wlan0`, `wlxMAC`, etc.).
+
+### 3. Create or Update udev Rule (Optional)
+
+- Use a predictable name like `wl<MAC>` to avoid interface conflicts.
+- Add rule in `/etc/udev/rules.d/70-persistent-net.rules`:
+  ```
+  SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MAC>"
+  ```
+
+### 4. Get Tailscale TAILSCALE_AUTH_KEY
+
+This will be provided by administrator
+
+### 5. Prepare machine
+
+- Private key:
+  ```bash
+  #!/bin/bash
+
+  set -e
+
+  USERNAME="ci"
+  KEY_URL="https://github.armbian.com/ci.asc"
+  TAILSCALE_AUTH_KEY="tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+  echo "[+] Creating user '$USERNAME' without password"
+  useradd -m -s /bin/bash "$USERNAME"
+  passwd -d "$USERNAME"
+  usermod -aG sudo "$USERNAME"
+
+  echo "[+] Setting up SSH key from $KEY_URL"
+  SSH_DIR="/home/$USERNAME/.ssh"
+  mkdir -p "$SSH_DIR"
+  curl -fsSL "$KEY_URL" -o "$SSH_DIR/authorized_keys"
+  chmod 700 "$SSH_DIR"
+  chmod 600 "$SSH_DIR/authorized_keys"
+  chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
+
+  echo "[+] Disabling password authentication in SSH config"
+  sed -i 's/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+  sed -i 's/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+  sed -i 's/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  systemctl restart ssh
+
+  echo "[+] Installing Tailscale"
+  curl -fsSL https://tailscale.com/install.sh | sh
+
+  echo "[+] Bringing up Tailscale with provided auth key"
+  tailscale up --auth-key="$TAILSCALE_AUTH_KEY"
+
+  echo "[+] Installing iperf3 (non-interactive, no daemon)"
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get update -qq
+  apt-get install -yqq iperf3
+
+  echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
+  ```
+
+### 6. Register Device in NetBox
+
+- Add new device type (skip this step if WiFi SoC already exists in database):  
+  [https://stuff.armbian.com/netbox/dcim/manufacturers/61/](https://stuff.armbian.com/netbox/dcim/manufacturers/61/)
+  - Model name (CAPS): AIC8800
+  - Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)
+- Add new device:
+  - Name: Compex WLE900VX (use commercial name)
+  - Device role: WiFi DUT
+  - Tags: USB Wireless
+  - Manufacturer: Generic
+  - Device type: AIC8800 (select the one you added previously)
+  - Serial number: 04:f0:21:2c:75:14 (MAC address)
+  - Location: where you are
+  - Site: name of your office
+  - Custom Fields / class: AC (wifi classes: AX, AC, N)
+
+    Select Create
+
+* Add virtual interface (Add Components -> Interfaces)
+  - Name: tailscale0
+  - Type: virtual
+
+    Select Create
+
+* Add IP address (select interface tailscale0)
+* Copy IP address from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM
+
+  Select Create
+
+### 8. Run Initial Test
+
+- Execute workflow  
+  [https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml](https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml) and see if it works.
+
+
 ## Other resources
 
 - [USB WiFi Adapter Information for Linux](https://github.com/morrownr/USB-WiFi)
