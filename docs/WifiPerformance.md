@@ -1454,6 +1454,19 @@ This section presents the performance test results, including key metrics and te
     tx bitrate: 52.0 MBit/s MCS 5
     
     ```
+## Failed Devices
+
+| | Name | Model | Class |
+|:---:|:-----|:--------|:------|
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AIC8800.png height=64> | AIC8800 | AIC8800 | AX |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AR9271.png height=64> | Atheros AR9271 | AR9271 | N |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8852AU.png height=64> | BrosTrend 1800 | RTL8852AU | AXE3000 |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/MT7601U.png height=64> | Ralink MT7601U | MT7601U |  |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8192CU.png height=64> | Realtek 8188EU | RTL8192CU | N |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8852BE.png height=64> | Realtek 8852BE | RTL8852BE | AX |
+|<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL2870.png height=64> | Realtek RT2870 | RTL2870 | N |
+
+
 <!-- DUT-STOP -->
 
 ## Contribute
