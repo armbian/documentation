@@ -1465,11 +1465,11 @@ This section presents the performance test results, including key metrics and te
 - Join our team: Become part of our passionate and dedicated team. We’re looking for [individuals who share our vision and are eager to contribute to the development of innovative testing solutions](https://forum.armbian.com/staffapplications/). Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!
 
 
-## Adding New Device
+## Adding a New Device
 
 This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.
 
-### 1. Prepare Host Machine
+### 1. Prepare the Host Machine
 
 - Ensure the board and wireless device is supported by Armbian.
 - Flash Armbian image and configure basic settings
@@ -1484,7 +1484,7 @@ sudo hostnamectl set-hostname rtl3070
 - Use `ip link` or `iw dev` to list available interfaces.
 - Identify MAC address and interface name (e.g., `wlan0`, `wlxMAC`, etc.).
 
-### 3. Create UDEV Rule
+### 3. Create a UDEV Rule
 
 !!! warning
 
@@ -1501,7 +1501,7 @@ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="xx:xx:xx:xx:xx:xx", NAME="wl<MA
 
 The `TAILSCALE_AUTH_KEY` and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via [https://www.armbian.com/contact/](https://www.armbian.com/contact/).
 
-### 5. Prepare machine
+### 5. Prepare the machine
 
 - Creates a new user (`ci`) with sudo privileges
 - Configures SSH for key-based authentication only
@@ -1549,7 +1549,7 @@ apt-get install -yqq iperf3
 echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
 ```
 
-### 6. Register your location
+### 6. Register Your Location
 
 Access: <https://stuff.armbian.com/netbox/dcim/sites/>
 
@@ -1565,7 +1565,7 @@ Access: <https://stuff.armbian.com/netbox/dcim/sites/>
     - Access point SSID: `Your SSID`
     - Iperf3 server IP: your local `IP address` that runs iperf3 server and can be accessible from wireless client
 
-### 7. Register Device type
+### 7. Register Device Type
 
 Add [new device type](https://stuff.armbian.com/netbox/dcim/manufacturers/61/) 
  
