@@ -5151,7 +5151,7 @@
 <li>Identify MAC address and interface name (e.g., <code>wlan0</code>, <code>wlxMAC</code>, etc.).</li>
 </ul>
 <h3 id="3-create-udev-rule">3. Create UDEV Rule<a class="headerlink" href="#3-create-udev-rule" title="Permanent link">&para;</a></h3>
-<p>This step is optional and required if your network device is not in predictable form.</p>
+<p>This step is only necessary if your network device does not have a predictable interface name.</p>
 <ul>
 <li>Use a predictable name like <code>wl&lt;MAC&gt;</code> to avoid interface conflicts.</li>
 <li>Add rule in <code>/etc/udev/rules.d/70-persistent-net.rules</code>:</li>
@@ -5159,8 +5159,14 @@
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;net&quot;</span>,<span class="w"> </span><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&quot;add&quot;</span>,<span class="w"> </span>ATTR<span class="o">{</span>address<span class="o">}==</span><span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span>,<span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;wl&lt;MAC&gt;&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="4-get-vpn-access">4. Get VPN access<a class="headerlink" href="#4-get-vpn-access" title="Permanent link">&para;</a></h3>
-<p>Key TAILSCALE_AUTH_KEY and access to NetBox will be provided by Armbian administration <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
+<p>The <code>TAILSCALE_AUTH_KEY</code> and access credentials for NetBox will be provided by the Armbian administration team. For assistance, please contact us via <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
 <h3 id="5-prepare-machine">5. Prepare machine<a class="headerlink" href="#5-prepare-machine" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates a new user (<code>ci</code>) with sudo privileges</li>
+<li>Configures SSH for key-based authentication only</li>
+<li>Installs and configures Tailscale for secure remote access</li>
+<li>Installs <code>iperf3</code> for network performance testing</li>
+</ul>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-68-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-68-3"> 3</a></span>
@@ -5249,19 +5255,28 @@
 <details class="success" open="open">
 <summary>Relevant data</summary>
 <ul>
-<li>Access point SSID: Your SSID</li>
-<li>Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client</li>
+<li>Access point SSID: <code>Your SSID</code></li>
+<li>Iperf3 server IP: your local <code>IP address</code> that runs iperf3 server and can be accessible from wireless client</li>
 </ul>
 </details>
 <h3 id="7-register-devices">7. Register Devices<a class="headerlink" href="#7-register-devices" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Add new device type (skip this step if WiFi SoC already exists in database):<br />
-<a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">https://stuff.armbian.com/netbox/dcim/manufacturers/61/</a><ul>
+<a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">https://stuff.armbian.com/netbox/dcim/manufacturers/61/</a></li>
+</ul>
+<details class="success" open="open">
+<summary>Relevant data</summary>
+<ul>
 <li>Model name (CAPS): AIC8800</li>
 <li>Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)</li>
 </ul>
-</li>
-<li>Add new device:<ul>
+</details>
+<ul>
+<li>Add new device:</li>
+</ul>
+<details class="success" open="open">
+<summary>Relevant data</summary>
+<ul>
 <li>Name: Compex WLE900VX (use commercial name)</li>
 <li>Device role: WiFi DUT</li>
 <li>Tags: USB Wireless</li>
@@ -5270,35 +5285,25 @@
 <li>Serial number: 04:f0:21:2c:75:14 (MAC address)</li>
 <li>Location: where you are</li>
 <li>Site: name of your office, defined in previous step</li>
-<li>
-<p>Custom Fields / class: AC (wifi classes: AX, AC, N)</p>
-<p>Select Create</p>
-</li>
+<li>Custom Fields / class: AC (wifi classes: AX, AC, N)</li>
 </ul>
-</li>
-</ul>
+</details>
+<p>Select <code>Create</code></p>
 <ul>
-<li>Add virtual interface (Add Components -&gt; Interfaces)<ul>
-<li>Name: tailscale0</li>
-<li>
-<p>Type: virtual</p>
-<p>Select Create</p>
-</li>
+<li>Add virtual interface (Add Components -&gt; Interfaces)</li>
 </ul>
-</li>
-</ul>
+<details class="success" open="open">
+<summary>Relevant data</summary>
 <ul>
-<li>Add IP address (select interface tailscale0)</li>
-<li>
-<p>Copy IP address from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM</p>
-<p>Select Create</p>
-</li>
+<li>Name: <code>tailscale0</code></li>
+<li>Type: <code>virtual</code></li>
 </ul>
+</details>
+<p>Select <code>Create</code></p>
+<p>Then select interface <code>tailscale0</code> and add <code>IP address</code>. Copy <code>IP address</code> from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM</p>
+<p>Select <code>Create</code></p>
 <h3 id="8-run-initial-test">8. Run Initial Test<a class="headerlink" href="#8-run-initial-test" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Execute workflow<br />
-<a href="https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml">https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml</a> and see if it works.</li>
-</ul>
+<p><a href="https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml">Execute workflow</a> and see if it works.</p>
 <h2 id="other-resources">Other resources<a class="headerlink" href="#other-resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/morrownr/USB-WiFi">USB WiFi Adapter Information for Linux</a></li>
