@@ -1493,12 +1493,11 @@ This guide provides step-by-step instructions to add a new device (SBC or USB ad
 
 ### 4. Get Tailscale TAILSCALE_AUTH_KEY
 
-This will be provided by administrator
+Key must be provided by administrator <https://www.armbian.com/contact/>
 
 ### 5. Prepare machine
 
-- Private key:
-  ```bash
+```bash
   #!/bin/bash
 
   set -e
@@ -1538,9 +1537,19 @@ This will be provided by administrator
   apt-get install -yqq iperf3
 
   echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale connected."
-  ```
+```
 
-### 6. Register Device in NetBox
+### 6. Register Site in NetBox
+
+- Sites in NetBox represent physical locations of wireless test equipment.
+- Each site groups together multiple devices such as Access Points (APs), iperf3 servers, and wireless test clients.
+- Register your testing location first if it doesn't exist yet: <https://stuff.armbian.com/netbox/dcim/sites/>
+  Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data. Make sure to check if site is not already define to not clutter database!
+ - Relevant data:
+   - Access point SSID: Your SSID
+   - Iperf3 server IP: your local IP address that runs iperf3 server and can be accessible from wireless client
+
+### 7. Register Device in NetBox
 
 - Add new device type (skip this step if WiFi SoC already exists in database):  
   [https://stuff.armbian.com/netbox/dcim/manufacturers/61/](https://stuff.armbian.com/netbox/dcim/manufacturers/61/)
@@ -1554,7 +1563,7 @@ This will be provided by administrator
   - Device type: AIC8800 (select the one you added previously)
   - Serial number: 04:f0:21:2c:75:14 (MAC address)
   - Location: where you are
-  - Site: name of your office
+  - Site: name of your office, defined in previous step
   - Custom Fields / class: AC (wifi classes: AX, AC, N)
 
     Select Create
