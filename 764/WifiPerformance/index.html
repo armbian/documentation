@@ -2288,18 +2288,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-register-devices" class="md-nav__link">
+  <a href="#7-register-device-type" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Register Devices
+      7. Register Device type
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-run-initial-test" class="md-nav__link">
+  <a href="#8-register-device" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Run Initial Test
+      8. Register Device
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-run-initial-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Run Initial Test
     </span>
   </a>
   
@@ -5136,22 +5145,25 @@
 <li>Join our team: Become part of our passionate and dedicated team. We’re looking for <a href="https://forum.armbian.com/staffapplications/">individuals who share our vision and are eager to contribute to the development of innovative testing solutions</a>. Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!</li>
 </ul>
 <h2 id="adding-new-device">Adding New Device<a class="headerlink" href="#adding-new-device" title="Permanent link">&para;</a></h2>
-<p>This guide provides step-by-step instructions to add a new device (SBC or USB adapter) to the wireless testing infrastructure.</p>
+<p>This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.</p>
 <h3 id="1-prepare-host-machine">1. Prepare Host Machine<a class="headerlink" href="#1-prepare-host-machine" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ensure the board and wireless device is supported by Armbian.</li>
 <li>Flash Armbian image and configure basic settings</li>
-<li>Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)
-  <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>rtl3070
-</span></code></pre></div></td></tr></table></div></li>
+<li>Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)</li>
 </ul>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>rtl3070
+</span></code></pre></div></td></tr></table></div>
 <h3 id="2-identify-network-interfaces">2. Identify Network Interfaces<a class="headerlink" href="#2-identify-network-interfaces" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Use <code>ip link</code> or <code>iw dev</code> to list available interfaces.</li>
 <li>Identify MAC address and interface name (e.g., <code>wlan0</code>, <code>wlxMAC</code>, etc.).</li>
 </ul>
 <h3 id="3-create-udev-rule">3. Create UDEV Rule<a class="headerlink" href="#3-create-udev-rule" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>This step is only necessary if your network device does not have a predictable interface name.</p>
+</div>
 <ul>
 <li>Use a predictable name like <code>wl&lt;MAC&gt;</code> to avoid interface conflicts.</li>
 <li>Add rule in <code>/etc/udev/rules.d/70-persistent-net.rules</code>:</li>
@@ -5159,7 +5171,7 @@
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;net&quot;</span>,<span class="w"> </span><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&quot;add&quot;</span>,<span class="w"> </span>ATTR<span class="o">{</span>address<span class="o">}==</span><span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span>,<span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;wl&lt;MAC&gt;&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="4-get-vpn-access">4. Get VPN access<a class="headerlink" href="#4-get-vpn-access" title="Permanent link">&para;</a></h3>
-<p>The <code>TAILSCALE_AUTH_KEY</code> and access credentials for NetBox will be provided by the Armbian administration team. For assistance, please contact us via <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
+<p>The <code>TAILSCALE_AUTH_KEY</code> and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
 <h3 id="5-prepare-machine">5. Prepare machine<a class="headerlink" href="#5-prepare-machine" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Creates a new user (<code>ci</code>) with sudo privileges</li>
@@ -5204,8 +5216,7 @@
 <span class="normal"><a href="#__codelineno-68-35">35</a></span>
 <span class="normal"><a href="#__codelineno-68-36">36</a></span>
 <span class="normal"><a href="#__codelineno-68-37">37</a></span>
-<span class="normal"><a href="#__codelineno-68-38">38</a></span>
-<span class="normal"><a href="#__codelineno-68-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="ch">#!/bin/bash</span>
+<span class="normal"><a href="#__codelineno-68-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="ch">#!/bin/bash</span>
 </span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2"></a>
 </span><span id="__span-68-3"><a id="__codelineno-68-3" name="__codelineno-68-3"></a><span class="nb">set</span><span class="w"> </span>-e
 </span><span id="__span-68-4"><a id="__codelineno-68-4" name="__codelineno-68-4"></a>
@@ -5229,51 +5240,54 @@
 </span><span id="__span-68-22"><a id="__codelineno-68-22" name="__codelineno-68-22"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Disabling password authentication in SSH config&quot;</span>
 </span><span id="__span-68-23"><a id="__codelineno-68-23" name="__codelineno-68-23"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
 </span><span id="__span-68-24"><a id="__codelineno-68-24" name="__codelineno-68-24"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-68-25"><a id="__codelineno-68-25" name="__codelineno-68-25"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-68-26"><a id="__codelineno-68-26" name="__codelineno-68-26"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
-</span><span id="__span-68-27"><a id="__codelineno-68-27" name="__codelineno-68-27"></a>
-</span><span id="__span-68-28"><a id="__codelineno-68-28" name="__codelineno-68-28"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing Tailscale&quot;</span>
-</span><span id="__span-68-29"><a id="__codelineno-68-29" name="__codelineno-68-29"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</span><span id="__span-68-30"><a id="__codelineno-68-30" name="__codelineno-68-30"></a>
-</span><span id="__span-68-31"><a id="__codelineno-68-31" name="__codelineno-68-31"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Bringing up Tailscale with provided auth key&quot;</span>
-</span><span id="__span-68-32"><a id="__codelineno-68-32" name="__codelineno-68-32"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--auth-key<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$TAILSCALE_AUTH_KEY</span><span class="s2">&quot;</span>
-</span><span id="__span-68-33"><a id="__codelineno-68-33" name="__codelineno-68-33"></a>
-</span><span id="__span-68-34"><a id="__codelineno-68-34" name="__codelineno-68-34"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing iperf3 (non-interactive, no daemon)&quot;</span>
-</span><span id="__span-68-35"><a id="__codelineno-68-35" name="__codelineno-68-35"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
-</span><span id="__span-68-36"><a id="__codelineno-68-36" name="__codelineno-68-36"></a>apt-get<span class="w"> </span>update<span class="w"> </span>-qq
-</span><span id="__span-68-37"><a id="__codelineno-68-37" name="__codelineno-68-37"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-yqq<span class="w"> </span>iperf3
-</span><span id="__span-68-38"><a id="__codelineno-68-38" name="__codelineno-68-38"></a>
-</span><span id="__span-68-39"><a id="__codelineno-68-39" name="__codelineno-68-39"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
+</span><span id="__span-68-25"><a id="__codelineno-68-25" name="__codelineno-68-25"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</span><span id="__span-68-26"><a id="__codelineno-68-26" name="__codelineno-68-26"></a>
+</span><span id="__span-68-27"><a id="__codelineno-68-27" name="__codelineno-68-27"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing Tailscale&quot;</span>
+</span><span id="__span-68-28"><a id="__codelineno-68-28" name="__codelineno-68-28"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span><span id="__span-68-29"><a id="__codelineno-68-29" name="__codelineno-68-29"></a>
+</span><span id="__span-68-30"><a id="__codelineno-68-30" name="__codelineno-68-30"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Bringing up Tailscale with provided auth key&quot;</span>
+</span><span id="__span-68-31"><a id="__codelineno-68-31" name="__codelineno-68-31"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--auth-key<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$TAILSCALE_AUTH_KEY</span><span class="s2">&quot;</span>
+</span><span id="__span-68-32"><a id="__codelineno-68-32" name="__codelineno-68-32"></a>
+</span><span id="__span-68-33"><a id="__codelineno-68-33" name="__codelineno-68-33"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing iperf3 (non-interactive, no daemon)&quot;</span>
+</span><span id="__span-68-34"><a id="__codelineno-68-34" name="__codelineno-68-34"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+</span><span id="__span-68-35"><a id="__codelineno-68-35" name="__codelineno-68-35"></a>apt-get<span class="w"> </span>update<span class="w"> </span>-qq
+</span><span id="__span-68-36"><a id="__codelineno-68-36" name="__codelineno-68-36"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-yqq<span class="w"> </span>iperf3
+</span><span id="__span-68-37"><a id="__codelineno-68-37" name="__codelineno-68-37"></a>
+</span><span id="__span-68-38"><a id="__codelineno-68-38" name="__codelineno-68-38"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="6-register-your-location">6. Register your location<a class="headerlink" href="#6-register-your-location" title="Permanent link">&para;</a></h3>
+<p>Access: <a href="https://stuff.armbian.com/netbox/dcim/sites/">https://stuff.armbian.com/netbox/dcim/sites/</a></p>
 <ul>
 <li>Sites in NetBox represent physical locations of wireless test equipment.</li>
-<li>Each site groups together multiple devices such as Access Points (APs), iperf3 servers, and wireless test clients.</li>
-<li>Register your testing location first if it doesn&rsquo;t exist yet: <a href="https://stuff.armbian.com/netbox/dcim/sites/">https://stuff.armbian.com/netbox/dcim/sites/</a>
-  Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data. Make sure to check if site is not already define to not clutter database!</li>
+<li>Each site have devices such as Access Points (APs), iperf3 servers, and wireless test clients.</li>
+<li>Register your testing location first if it doesn&rsquo;t exist yet. Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to check if site is not already define to not clutter database!</p>
+</div>
 <details class="success" open="open">
-<summary>Relevant data</summary>
+<summary>Update Relevant Information</summary>
 <ul>
 <li>Access point SSID: <code>Your SSID</code></li>
 <li>Iperf3 server IP: your local <code>IP address</code> that runs iperf3 server and can be accessible from wireless client</li>
 </ul>
 </details>
-<h3 id="7-register-devices">7. Register Devices<a class="headerlink" href="#7-register-devices" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Add new device type (skip this step if WiFi SoC already exists in database):<br />
-<a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">https://stuff.armbian.com/netbox/dcim/manufacturers/61/</a></li>
-</ul>
+<h3 id="7-register-device-type">7. Register Device type<a class="headerlink" href="#7-register-device-type" title="Permanent link">&para;</a></h3>
+<p>Add <a href="https://stuff.armbian.com/netbox/dcim/manufacturers/61/">new device type</a> </p>
 <details class="success" open="open">
 <summary>Relevant data</summary>
 <ul>
 <li>Model name (CAPS): AIC8800</li>
+<li>Manufacturer: Generic</li>
 <li>Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)</li>
 </ul>
 </details>
-<ul>
-<li>Add new device:</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Skip this step if WiFi SoC already exists in database.</p>
+</div>
+<h3 id="8-register-device">8. Register Device<a class="headerlink" href="#8-register-device" title="Permanent link">&para;</a></h3>
 <details class="success" open="open">
 <summary>Relevant data</summary>
 <ul>
@@ -5288,7 +5302,6 @@
 <li>Custom Fields / class: AC (wifi classes: AX, AC, N)</li>
 </ul>
 </details>
-<p>Select <code>Create</code></p>
 <ul>
 <li>Add virtual interface (Add Components -&gt; Interfaces)</li>
 </ul>
@@ -5299,11 +5312,9 @@
 <li>Type: <code>virtual</code></li>
 </ul>
 </details>
-<p>Select <code>Create</code></p>
 <p>Then select interface <code>tailscale0</code> and add <code>IP address</code>. Copy <code>IP address</code> from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM</p>
-<p>Select <code>Create</code></p>
-<h3 id="8-run-initial-test">8. Run Initial Test<a class="headerlink" href="#8-run-initial-test" title="Permanent link">&para;</a></h3>
-<p><a href="https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml">Execute workflow</a> and see if it works.</p>
+<h3 id="9-run-initial-test">9. Run Initial Test<a class="headerlink" href="#9-run-initial-test" title="Permanent link">&para;</a></h3>
+<p>Run the <a href="https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml">Wireless Performance Autotest workflow</a> to verify whether the newly added device has been included in the test pool.</p>
 <h2 id="other-resources">Other resources<a class="headerlink" href="#other-resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/morrownr/USB-WiFi">USB WiFi Adapter Information for Linux</a></li>
