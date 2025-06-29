@@ -132,6 +132,7 @@ nav:
         - 'Network': 'User-Guide_Armbian-Config/Network.md'
         - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
   - 'ARMBIAN SOFTWARE':
+        - 'Overview': 'User-Guide_Armbian-Software.md'
         - 'Armbian': 'User-Guide_Armbian-Software/Armbian.md'
         - 'Backup': 'User-Guide_Armbian-Software/Backup.md'
         - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
@@ -145,8 +146,7 @@ nav:
         - 'Media': 'User-Guide_Armbian-Software/Media.md'
         - 'Monitoring': 'User-Guide_Armbian-Software/Monitoring.md'
         - 'Music': 'User-Guide_Armbian-Software/Music.md'
-        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
-        - 'Overview': 'User-Guide_Armbian-Software.md'
+        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'        
         - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
         - 'VPN': 'User-Guide_Armbian-Software/VPN.md'
         - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
