@@ -7,7 +7,7 @@ comments: true
 ## WireGuard
 
 
-WireGuard VPN client / server
+WireGuard VPN server
 
 
 <!--- section image START from tools/include/images/WRG001.png --->
@@ -31,6 +31,54 @@ armbian-config --cmd WRG001
 
 
 <!--- footer START from tools/include/markdown/WRG001-footer.md --->
+=== "Server"
+
+    1. Launch `armbian-config --cmd WRG001`.
+
+    2. When prompted, enter a comma-separated list of peer names (e.g., laptop,phone,router).
+
+    3. Peer configuration files will be created in
+
+        ```
+        /armbian/wireguard/config/wg_confs/peer_laptop.conf
+        ```
+    4. Scan the QR code (for mobile) or transfer .conf to your client system.
+
+    5. Connect the client using the configuration.
+
+=== "Client"
+
+    1. Launch `armbian-config --cmd WRG002`.
+
+    2. You will be asked to edit or paste a valid WireGuard configuration.
+
+    3. Provide the client configuration in this format:
+
+    ```sh
+    [Interface]
+    Address = 10.13.13.2/32
+    PrivateKey = <your-private-key>
+    DNS = 1.1.1.1
+
+    [Peer]
+    PublicKey = <server-public-key>
+    Endpoint = your.server.com:51820
+    AllowedIPs = 0.0.0.0/0
+    PersistentKeepalive = 25
+    ```
+
+    4. The configuration will be saved to:
+
+        ```
+        /armbian/wireguard/config/wg_confs/client.conf
+        ```
+
+    5. When prompted, enter the local LAN subnets you wish to route via VPN (e.g., `10.0.10.0/24,192.168.0.0/16`).
+
+    6. The VPN container will be started and routing rules will be generated accordingly.
+
+    7. Routing will be restored automatically on boot via systemd service.
+
 === "Access to the server from internet"
 
     Remember to open/forward the port 51820 (UDP) through NAT on your router.
@@ -45,34 +93,28 @@ armbian-config --cmd WRG001
     ```sh
     docker logs -f wireguard
     ```
-
-# Install server and enable private network on a client
-
-1. Install Wireguard server
-2. It will asks you for peer keywords. It will make a profile for each peer
-3. Download client to your PC, server or mobile phone. Scan OR code or copy credentials to the client.
-
-Enjoy private network! Its that easy.
-
-More informations:
-
-<https://docs.linuxserver.io/images/docker-wireguard/>
 <!--- footer STOP from tools/include/markdown/WRG001-footer.md --->
 
 
-~~~ bash title="WireGuard remove:"
+~~~ bash title="WireGuard VPN client:"
 armbian-config --cmd WRG002
 ~~~
 
 
-~~~ bash title="WireGuard clients QR codes:"
+~~~ bash title="WireGuard remove:"
 armbian-config --cmd WRG003
 ~~~
 
 
-~~~ bash title="WireGuard purge with data folder:"
+~~~ bash title="WireGuard VPN server QR codes for clients:"
 armbian-config --cmd WRG004
 ~~~
+
+
+~~~ bash title="WireGuard purge with data folder:"
+armbian-config --cmd WRG005
+~~~
+
 
 
 
