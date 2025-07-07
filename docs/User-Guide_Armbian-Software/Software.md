@@ -512,6 +512,70 @@ armbian-config --cmd UNB003
 ## SQL database servers and web interface managers
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-header.md)  
+#### MySQL
+
+
+MySQL SQL database server
+
+
+<!--- section image START from tools/include/images/MYSQL1.png --->
+[![MySQL](/images/MYSQL1.png)](#)
+<!--- section image STOP from tools/include/images/MYSQL1.png --->
+
+
+<!--- header START from tools/include/markdown/MYSQL1-header.md --->
+MySQL is one of the world’s most widely used open-source database servers. Trusted for decades in web, cloud, and enterprise applications.
+
+<!--- header STOP from tools/include/markdown/MYSQL1-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MYSQL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MYSQL1-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://hub.docker.com/_/mysql)  
+
+~~~ custombash
+armbian-config --cmd MYSQL1
+~~~
+
+
+<!--- footer START from tools/include/markdown/MYSQL1-footer.md --->
+=== "Configuration"
+
+    Database access configuration is done at first install:
+    - create root password
+    - create database
+    - create normal user
+    - create password for normal user
+
+    - Database host: `<your.IP>`
+
+=== "Directories"
+
+    - Install directory: `/armbian/mysql`
+    - Data volume mounted to: `/armbian/mysql/data`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f mysql
+    ```
+
+<!--- footer STOP from tools/include/markdown/MYSQL1-footer.md --->
+
+
+~~~ bash title="MySQL remove:"
+armbian-config --cmd MYSQL2
+~~~
+
+
+~~~ bash title="MySQL purge with data folder:"
+armbian-config --cmd MYSQL3
+~~~
+
+
+
+
 #### Mariadb
 
 
@@ -3445,6 +3509,69 @@ armbian-config --cmd SWAG03
 armbian-config --cmd SWAG04
 ~~~
 
+
+
+
+
+#### Ghost
+
+
+Ghost CMS install
+
+
+<!--- section image START from tools/include/images/GHOST1.png --->
+[![Ghost](/images/GHOST1.png)](#)
+<!--- section image STOP from tools/include/images/GHOST1.png --->
+
+
+<!--- header START from tools/include/markdown/GHOST1-header.md --->
+Ghost is a powerful open-source publishing platform designed for professional publishing, newsletters, and modern blogs. It’s built on Node.js and provides a clean, fast, and customizable CMS experience.
+
+<!--- header STOP from tools/include/markdown/GHOST1-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHOST1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHOST1-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://ghost.org/docs/)  
+
+~~~ custombash
+armbian-config --cmd GHOST1
+~~~
+
+
+<!--- footer START from tools/include/markdown/GHOST1-footer.md --->
+=== "Configuration"
+
+    Initial setup includes:
+    - automatic database schema setup on first run
+    - admin account created via web interface
+    - Default port: `9190`
+    - Admin URL: `http://<your.IP>:9190/ghost` (or behind reverse proxy like SWAG)
+    - Site: `http://<your.IP>:9190`
+
+=== "Directories"
+
+    - Install directory: `/armbian/ghost`
+    - Content volume mounted to: `/armbian/ghost/content`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f ghost
+    ```
+
+<!--- footer STOP from tools/include/markdown/GHOST1-footer.md --->
+
+
+~~~ bash title="Ghost CMS remove:"
+armbian-config --cmd GHOST2
+~~~
+
+
+~~~ bash title="Ghost CMS purge with data folder:"
+armbian-config --cmd GHOST3
+~~~
 
 
 
