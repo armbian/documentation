@@ -3555,7 +3555,6 @@ armbian-config --cmd GHOST1
 === "Directories"
 
     - Install directory: `/armbian/ghost`
-    - Content volume mounted to: `/armbian/ghost/content`
 
 === "View logs"
 
