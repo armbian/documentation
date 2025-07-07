@@ -543,6 +543,7 @@ armbian-config --cmd MYSQL1
 === "Configuration"
 
     Database access configuration is done at first install:
+
     - create root password
     - create database
     - create normal user
@@ -3544,6 +3545,7 @@ armbian-config --cmd GHOST1
 === "Configuration"
 
     Initial setup includes:
+
     - automatic database schema setup on first run
     - admin account created via web interface
     - Default port: `9190`
