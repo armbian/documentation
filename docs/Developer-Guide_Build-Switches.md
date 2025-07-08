@@ -258,6 +258,12 @@ ENABLE_EXTENSIONS=mesa-vpu,nvidia \
 
 Automatically login as root for local consoles at first run. Disable if your security threat model requires.
 
+**CPUTHREADS** ( `string` )
+
+Allows the user to override CTHREADS if CPUTHREADS is defined and a valid positive integer.
+
+If not defined, defaults to 150% the number of CPU Threads available to maximize compilation speed.
+
 **USE_CCACHE** ( `string` )
 
 - `yes`
