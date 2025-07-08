@@ -24,7 +24,7 @@ Please [contact Armbian](https://www.armbian.com/contact/) management for more i
 
 ### Benefits
 
-* Armbian will publish and distribute "stable" images through its [mirror network](https://github.com/armbian/mirror) (behind automated closest mirror selection)
+* Armbian will publish and distribute "stable" images through its [mirror network](https://docs.armbian.com/Mirrors/) (behind automated closest mirror selection)
 * Armbian will publish and distribute "rolling" [images](https://github.com/armbian/os/releases/latest) (on GitHub and individual download page)
 * best-effort support to SBC maintainer to assure compatibility within the [Armbian Build Framework](https://github.com/armbian/build)
 * best-effort team's unique expertise to assist maintainer with general challenges
