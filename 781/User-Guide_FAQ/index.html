@@ -718,63 +718,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-no-generic-image-on-sbc" class="md-nav__link">
+  <a href="#why-no-universal-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Why no generic image on SBC?
+      Why no universal image?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-armbian-asks-for-funding" class="md-nav__link">
+  <a href="#why-fund-armbian" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Armbian asks for funding?
+      Why fund Armbian?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-features-fail-in-new-kernels" class="md-nav__link">
+  <a href="#why-features-break-in-kernels" class="md-nav__link">
     <span class="md-ellipsis">
-      Why features fail in new kernels?
+      Why features break in kernels?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-do-wip-eos-and-csc-mean" class="md-nav__link">
+  <a href="#wip-eos-csc-what-are-they" class="md-nav__link">
     <span class="md-ellipsis">
-      What do WIP, EOS, and CSC mean?
+      WIP, EOS, CSC – what are they?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-can-i-help-without-tech-skills" class="md-nav__link">
+  <a href="#no-tech-skills-how-to-help" class="md-nav__link">
     <span class="md-ellipsis">
-      How can I help without tech skills?
+      No tech skills - how to help?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-no-support-for-old-distros" class="md-nav__link">
+  <a href="#why-drop-support-for-old-os" class="md-nav__link">
     <span class="md-ellipsis">
-      Why no support for old distros?
+      Why drop support for old OS?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-tv-boxes-arent-supported" class="md-nav__link">
+  <a href="#tv-boxes-why-no-support" class="md-nav__link">
     <span class="md-ellipsis">
-      Why TV boxes aren’t supported?
+      TV boxes – why no support?
     </span>
   </a>
   
@@ -2149,35 +2149,33 @@
 <h1 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h1>
 <h2 id="is-armbian-os">Is Armbian OS?<a class="headerlink" href="#is-armbian-os" title="Permanent link">&para;</a></h2>
 <p>Yes. But it is more than that. Armbian is a <a href="https://github.com/armbian/build">build</a> framework that allows users to create <a href="#what-is-armbian">ready-to-use images</a> with kernels in variable userspace configurations for various single board computers (SBCs).</p>
-<h2 id="why-no-generic-image-on-sbc">Why no generic image on SBC?<a class="headerlink" href="#why-no-generic-image-on-sbc" title="Permanent link">&para;</a></h2>
+<h2 id="why-no-universal-image">Why no universal image?<a class="headerlink" href="#why-no-universal-image" title="Permanent link">&para;</a></h2>
 <p>The x86 architecture consistently includes a traditional BIOS or UEFI, providing a standardized interface between the operating system and hardware. In contrast, most single-board computers (SBCs) lack such consistency. Although the ARM ecosystem is advancing through initiatives like ARM ServerReady and ARM SystemReady certifications, adoption remains limited. Many SBC vendors operate with tight budgets and minimal engineering resources, making full compliance with these standards difficult. Additionally, since much of the SBC market relies on open-source communities to fill software gaps, vendors often see little commercial incentive to invest in standardization beyond what is strictly necessary to boot the hardware.</p>
 <p>In the absence of standardized boot protocols, vendors often resort to forking low-level bootloaders like U-Boot, applying only minimal changes necessary to get their hardware running.</p>
-<h2 id="why-armbian-asks-for-funding">Why Armbian asks for funding?<a class="headerlink" href="#why-armbian-asks-for-funding" title="Permanent link">&para;</a></h2>
+<h2 id="why-fund-armbian">Why fund Armbian?<a class="headerlink" href="#why-fund-armbian" title="Permanent link">&para;</a></h2>
 <p>Because building and maintaining it requires time, expertise, infrastructure, and ongoing effort—just like commercial software, but without the backing of licenses or corporate funding. Armbian supports a wide range of ARM-based boards that often lack proper vendor support, which means our small team has to do the heavy lifting: writing board support, maintaining patches, testing, and handling updates across many platforms. This work demands thousands of euros worth of time and infrastructure every day.</p>
 <p>We also provide forums, documentation, and user support—all of which take real effort. While the software is free to use, supporting it is not. Each support request and feature demand pulls time away from development, and solving complex hardware-specific problems requires specialized knowledge that very few people have. Our team of 10–15 volunteers maintains this project in their spare time, and we operate in the open so that others can freely reuse our work. Unfortunately, the burden often stays with us, while others build on top of it without contributing back.</p>
 <p>On top of that, we face commercial competitors who repackage our work and offer similar services—without investing anything into the research, development, or long-term maintenance. This puts even more pressure on our limited resources. That’s why we ask for your help—not to pay for software, but to help sustain the people and systems that make it possible.</p>
-<h2 id="why-features-fail-in-new-kernels">Why features fail in new kernels?<a class="headerlink" href="#why-features-fail-in-new-kernels" title="Permanent link">&para;</a></h2>
+<h2 id="why-features-break-in-kernels">Why features break in kernels?<a class="headerlink" href="#why-features-break-in-kernels" title="Permanent link">&para;</a></h2>
 <p>Hardware vendors typically develop board support using fixed, often outdated, long-term support (LTS) kernel versions and customized U-Boot forks. These implementations are tailored just enough to make the hardware work, with minimal long-term maintainability in mind. Unfortunately, this code is rarely submitted upstream to the mainline Linux kernel, and vendors seldom update their public sources—if those are made available at all.</p>
 <p>Armbian, on the other hand, actively tracks mainline development to offer up-to-date kernels with modern features and security patches. However, this forward-looking approach can reveal gaps in hardware support. If a vendor-specific driver hasn’t been ported to newer kernel versions, some features may stop working or become unstable.</p>
 <p>Due to limited resources, Armbian can only conduct basic functional testing of images—ensuring essential features like boot, networking, and USB operate as expected. Deep testing of every hardware feature across every board simply isn&rsquo;t feasible without broader community or vendor support.</p>
-<h2 id="what-do-wip-eos-and-csc-mean">What do WIP, EOS, and CSC mean?<a class="headerlink" href="#what-do-wip-eos-and-csc-mean" title="Permanent link">&para;</a></h2>
-<p>These labels indicate the support status of a board within the Armbian ecosystem:</p>
+<h2 id="wip-eos-csc-what-are-they">WIP, EOS, CSC – what are they?<a class="headerlink" href="#wip-eos-csc-what-are-they" title="Permanent link">&para;</a></h2>
+<p>These labels indicate the <a href="https://docs.armbian.com/User-Guide_Board-Support-Status">support status</a> of a board within the Armbian ecosystem:</p>
 <ul>
 <li>WIP (Work In Progress): The board is in early development. Basic functionality may work, but it is not yet suitable for production use.</li>
 <li>CSC (Community Supported Configuration): Support for this board is provided by the community. The Armbian core team does not maintain or test it.</li>
 <li>EOS (End of Support): Development and maintenance for this board have ended. No further updates or support will be provided.</li>
 </ul>
-<p>For a detailed explanation of these support categories and what they imply, visit:
-<a href="https://docs.armbian.com/User-Guide_Board-Support-Status/">https://docs.armbian.com/User-Guide_Board-Support-Status/</a></p>
-<h2 id="how-can-i-help-without-tech-skills">How can I help without tech skills?<a class="headerlink" href="#how-can-i-help-without-tech-skills" title="Permanent link">&para;</a></h2>
+<h2 id="no-tech-skills-how-to-help">No tech skills - how to help?<a class="headerlink" href="#no-tech-skills-how-to-help" title="Permanent link">&para;</a></h2>
 <p>You don’t need to be a developer to contribute to Armbian. We welcome help from people with all kinds of skills. In fact, non-technical contributions are often just as valuable.</p>
 <p>Without community involvement, developers are left to do everything: maintaining the website, managing infrastructure, moderating forums, handling support requests, running operations, communicating with partners, and even fundraising—all on top of writing and maintaining code.</p>
 <p>By helping with tasks like documentation, community moderation, translations, outreach, fundraising, or even just spreading the word, you allow developers to focus on development—which benefits everyone.</p>
 <p>If you’re willing to contribute, no matter your background, we’ll find a place for you.</p>
-<h2 id="why-no-support-for-old-distros">Why no support for old distros?<a class="headerlink" href="#why-no-support-for-old-distros" title="Permanent link">&para;</a></h2>
-<p>Armbian operates with very limited human and financial resources compared to larger projects like Debian or Ubuntu, so we focus on maintaining only the most up-to-date and relevant operating system releases. Supporting outdated distributions such as Ubuntu Focal or Debian Buster—which often lack upstream maintenance—would divert resources away from improving and securing current versions.</p>
+<h2 id="why-drop-support-for-old-os">Why drop support for old OS?<a class="headerlink" href="#why-drop-support-for-old-os" title="Permanent link">&para;</a></h2>
+<p>Armbian operates with very limited human and financial resources compared to larger FOSS projects, so we focus on maintaining only the most up-to-date and relevant operating system releases. Supporting outdated distributions such as Ubuntu Focal or Debian Buster—which often lack upstream maintenance—would divert resources away from improving and securing current versions.</p>
 <p>We focus on the latest stable releases from both <a href="https://www.debian.org/releases/stable/">Debian</a> and <a href="https://wiki.ubuntu.com/Releases">Ubuntu</a> only.</p>
-<h2 id="why-tv-boxes-arent-supported">Why TV boxes aren’t supported?<a class="headerlink" href="#why-tv-boxes-arent-supported" title="Permanent link">&para;</a></h2>
+<h2 id="tv-boxes-why-no-support">TV boxes – why no support?<a class="headerlink" href="#tv-boxes-why-no-support" title="Permanent link">&para;</a></h2>
 <p>While there are a few hardware vendors that follow best practices—such as providing schematics, upstream support, and occasional engineering assistance—this is the exception, not the rule. When proper documentation and minimal collaboration are available, software development becomes much more feasible, which is critical for a volunteer-driven project like Armbian.</p>
 <p>Unfortunately, most TV boxes and tablets offer none of this. They often lack public documentation, change internal components without notice, and rely on closed-source boot mechanisms. As a result, nearly all Armbian builds that circulate for these devices are unofficial community efforts or experimental hacks.</p>
 <p>Despite the size of the market, the absence of upstream support and public interest in long-term maintenance makes official involvement unsustainable. Supporting these devices would consume a disproportionate amount of our limited time and resources—without any guarantee of stability or return. That’s why, as a general rule, Armbian does not support tablets or TV boxes.</p>
