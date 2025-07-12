@@ -93,7 +93,7 @@ Pi-hole DNS ad blocker with Unbound support
 <!--- header START from tools/include/markdown/PIH001-header.md --->
 **Pi-hole** is a network-wide ad blocker that acts as a DNS (Domain Name System) sinkhole. It blocks connections to known ad servers, trackers, and malicious domains across all devices in your network, without requiring any browser extensions or client-side software.
 
-## How Pi-hole Works
+## Pi-hole Explained
 
 - **DNS-Based Filtering**
 Pi-hole intercepts DNS queries made by devices on your network. When a domain is requested, Pi-hole checks it against a set of blocklists. If the domain is known to serve ads or track user activity, Pi-hole blocks the request, preventing unwanted content from loading.
@@ -105,7 +105,7 @@ You can choose from various community-maintained blocklists or add your own. The
 Once Pi-hole is configured as your network’s DNS server, all devices - smartphones, laptops, smart TVs, and IoT devices - are automatically protected. No additional configuration or software is required on the individual devices.
 
 - **Built-in Recursive DNS with Unbound**
-For added privacy and full DNS resolution control, **Unbound** is installed and enabled by default during Pi-hole installation. Unbound functions as a local recursive DNS resolver, fetching responses directly from authoritative DNS servers rather than relying on upstream providers. This minimizes third-party exposure and can improve query performance.
+For added privacy and full DNS resolution control, [Unbound](#unbound) is installed and enabled by default during Pi-hole installation. Unbound functions as a local recursive DNS resolver, fetching responses directly from authoritative DNS servers rather than relying on upstream providers. This minimizes third-party exposure and can improve query performance.
 
 - **Web Interface**
 Pi-hole includes a web-based dashboard that provides real-time visibility into DNS activity. The interface allows you to view statistics, manage blocklists, whitelist domains, and configure settings with ease.
@@ -135,13 +135,8 @@ armbian-config --cmd PIH001
 
     The web interface of Pi-hole can be accessed via:
 
-    - URL = `http://<your.IP>/admin`
+    - URL = `http://<your.IP>:8811/admin`
     - Password is set on install and can be adjusted from `armbian-config`
-
-=== "Documentation"
-
-<https://docs.pi-hole.net/>
-
 <!--- footer STOP from tools/include/markdown/PIH001-footer.md --->
 
 
