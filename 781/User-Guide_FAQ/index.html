@@ -718,9 +718,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-no-one-image-for-all" class="md-nav__link">
+  <a href="#why-no-universal-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Why no one image for all?
+      Why no universal image?
     </span>
   </a>
   
@@ -781,9 +781,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#will-armbian-support-my-board" class="md-nav__link">
+  <a href="#will-my-board-be-supported" class="md-nav__link">
     <span class="md-ellipsis">
-      Will Armbian support my board?
+      Will my board be supported?
     </span>
   </a>
   
@@ -2148,8 +2148,9 @@
 
 <h1 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-armbian">What is Armbian?<a class="headerlink" href="#what-is-armbian" title="Permanent link">&para;</a></h2>
-<p><strong>Yes, it&rsquo;s an OS—but also more.</strong> Armbian is a <a href="/Developer-Guide_Overview/"><strong>build framework</strong></a> that allows users to create <a href="/#what-is-armbian"><strong>ready-to-use images</strong></a> with kernels in variable userspace configurations for various single board computers (SBCs).</p>
-<h2 id="why-no-one-image-for-all">Why no one image for all?<a class="headerlink" href="#why-no-one-image-for-all" title="Permanent link">&para;</a></h2>
+<p>Armbian is a lightweight Linux distribution optimized for single board computers (SBCs). It provides a reliable, standardized Debian or Ubuntu-based environment tailored to work across many different ARM devices. </p>
+<p>In addition to prebuilt images, Armbian includes a powerful <a href="https://github.com/armbian/build">build framework</a> that lets you customize kernel versions, desktop environments, and other system components to fit your needs.</p>
+<h2 id="why-no-universal-image">Why no universal image?<a class="headerlink" href="#why-no-universal-image" title="Permanent link">&para;</a></h2>
 <p>The <strong>x86 architecture includes BIOS or UEFI</strong>, providing a standardized interface. In contrast, <strong>most SBCs lack such consistency</strong>. Although the ARM ecosystem is improving via <strong>ARM ServerReady</strong> and <strong>SystemReady certifications</strong>, adoption is limited. Vendors often have <strong>tight budgets and minimal engineering resources</strong>, and there&rsquo;s little incentive to go beyond basic boot functionality.</p>
 <p>Instead of following standards, vendors usually <strong>fork U-Boot and apply minimal changes</strong> needed to boot their boards.</p>
 <h2 id="why-does-armbian-need-help">Why does Armbian need help?<a class="headerlink" href="#why-does-armbian-need-help" title="Permanent link">&para;</a></h2>
@@ -2160,7 +2161,7 @@
 <p>Vendors typically rely on <strong>fixed, outdated LTS kernels</strong> and <strong>custom U-Boot forks</strong>, often without upstreaming changes or maintaining source availability.</p>
 <p>Armbian, in contrast, <strong>tracks mainline kernels</strong> to provide modern features and security. But if <strong>drivers aren&rsquo;t ported</strong>, features can break. Due to limited resources, Armbian performs <strong>basic functional testing only</strong>, not full coverage of every hardware feature.</p>
 <h2 id="what-do-wip-eos-csc-mean">What do WIP, EOS, CSC mean?<a class="headerlink" href="#what-do-wip-eos-csc-mean" title="Permanent link">&para;</a></h2>
-<p>These indicate <a href="https://docs.armbian.com/User-Guide_Board-Support-Status"><strong>support status</strong></a>:</p>
+<p>These indicate <a href="https://docs.armbian.com/User-Guide_Board-Support-Rules"><strong>support status</strong></a>:</p>
 <ul>
 <li><strong>WIP</strong>: <em>Work In Progress</em>. Early development; <strong>not ready for production</strong>.</li>
 <li><strong>CSC</strong>: <em>Community Supported Configuration</em>. Maintained by the <strong>community</strong>, not the core team.</li>
@@ -2168,6 +2169,7 @@
 </ul>
 <h2 id="can-i-help-without-tech-skills">Can I help without tech skills?<a class="headerlink" href="#can-i-help-without-tech-skills" title="Permanent link">&para;</a></h2>
 <p>Absolutely! <strong>Non-technical help is equally valuable</strong>. Without community help, developers must do everything: <strong>run infrastructure, moderate forums, answer support, manage partnerships, and fundraise</strong>—on top of development.</p>
+<p><a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a></p>
 <p>You can help with <strong>documentation, moderation, translations, outreach, fundraising, or promotion</strong>—freeing developers to focus on what they do best.</p>
 <h2 id="why-no-support-for-old-os">Why no support for old OS?<a class="headerlink" href="#why-no-support-for-old-os" title="Permanent link">&para;</a></h2>
 <p>Armbian has <strong>limited resources</strong>, unlike larger projects. Supporting outdated OS releases like <strong>Ubuntu Focal</strong> or <strong>Debian Buster</strong>, which may lack upstream maintenance, <strong>diverts resources from improving current versions</strong>.</p>
@@ -2175,7 +2177,7 @@
 <h2 id="why-no-support-for-tv-boxes">Why no support for TV boxes?<a class="headerlink" href="#why-no-support-for-tv-boxes" title="Permanent link">&para;</a></h2>
 <p>A few vendors provide <strong>schematics, upstream support, and occasional assistance</strong>, which helps. But <strong>most TV boxes lack documentation</strong>, <strong>change hardware without notice</strong>, and use <strong>closed-source bootloaders</strong>.</p>
 <p>Nearly all Armbian images for these devices are <strong>unofficial community hacks</strong>. Despite the large market, the <strong>cost of support is high</strong>, and public interest in sustaining it is low. Supporting these devices would be <strong>unsustainable</strong> for our small team.</p>
-<h2 id="will-armbian-support-my-board">Will Armbian support my board?<a class="headerlink" href="#will-armbian-support-my-board" title="Permanent link">&para;</a></h2>
+<h2 id="will-my-board-be-supported">Will my board be supported?<a class="headerlink" href="#will-my-board-be-supported" title="Permanent link">&para;</a></h2>
 <p><strong>Maybe.</strong> Official support depends on factors like <strong>documentation</strong>, <strong>SoC vendor transparency</strong>, <strong>sample availability</strong>, and—most critically—a <strong>willing maintainer</strong>.</p>
 <p>When <strong>vendors collaborate with Armbian</strong>, the chance of support <strong>significantly increases</strong>.</p>
 <h2 id="which-wifi-works-right-away">Which WiFi works right away?<a class="headerlink" href="#which-wifi-works-right-away" title="Permanent link">&para;</a></h2>
