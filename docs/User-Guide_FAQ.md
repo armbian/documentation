@@ -1,149 +1,79 @@
 # Frequently asked questions
 
-**This information is mainly for new/inexperienced users but could be useful for others too.**
+## What is Armbian?
 
-## Is Armbian an operating system?
+Armbian is a lightweight Linux distribution optimized for single board computers (SBCs). It provides a reliable, standardized Debian or Ubuntu-based environment tailored to work across many different ARM devices. 
 
-Not per se.  Armbian is a [build](https://github.com/armbian/build) framework that allows users to create ready-to-use images with working kernels in variable userspace configurations for various single board computers (SBCs).
+In addition to prebuilt images, Armbian includes a powerful [build framework](https://github.com/armbian/build) that lets you customize kernel versions, desktop environments, and other system components to fit your needs.
 
-We do provide various prebuilt images for some boards, but mostly for users convenience.
+## Why no universal image?
 
-## Why I cannot simply shove a random image into my board to work like on my PC?
+The **x86 architecture includes BIOS or UEFI**, providing a standardized interface. In contrast, **most SBCs lack such consistency**. Although the ARM ecosystem is improving via **ARM ServerReady** and **SystemReady certifications**, adoption is limited. Vendors often have **tight budgets and minimal engineering resources**, and there's little incentive to go beyond basic boot functionality.
 
-x86 architecture always has a traditional BIOS or UEFI.  This provides a standard framework for operating systems to interact with the hardware.  Most SBCs do not.  ARM is improving the situation with *ARM Server Ready* and *ARM System Ready certificates*, but most SBC vendors are not yet incentivized to meet these standards.
+Instead of following standards, vendors usually **fork U-Boot and apply minimal changes** needed to boot their boards.
 
-Without such standards, many vendors quickly fork low-level bootloaders such as u-boot and make the bare minimum modifications needed.
+## Why does Armbian need help?
 
-[Great reference here](https://bootlin.com/pub/conferences/2017/lca/petazzoni-arm-introduction/petazzoni-arm-introduction.pdf)
-	
-## Why is Armbian constantly asking for money?  Free software should be free.
+Building and maintaining support for diverse custom hardware requires substantial **time, infrastructure, and expertise**—similar to commercial software development, but without licensing revenue. Armbian supports **a wide range of ARM-based boards**, often with **minimal or no vendor assistance** and limited user contributions. As a result, our team takes on the full responsibility for **board bring-up, patching, testing, and ongoing maintenance**, largely funded out of pocket.
 
-Making free licence software also requires best people, expensive infrastructure, tooling.  It has as much or more costs as proprietary while generating no income from the licence.
+In addition to the software, we maintain **forums, documentation, and user support**, all of which demand consistent effort. A dedicated group of just **10–15 volunteers** sustains the project in their spare time. While some projects repackage and redistribute our work, **the core maintenance responsibility remains with us**.
 
-tl;dr: We are asking for help that developers and project maintainers do not lose their generosity and humanity which are the driving force that generates a value.  For all of us!  A great deal of our work represent a big pressure on our very limited private resources.  We ask you to share that burden with us.
+We also face **commercial entities** that leverage our work—sometimes contributing only superficial changes—adding further pressure to our limited resources. That’s why we kindly ask for **your support in helping us sustain and grow Armbian**.
 
-### Development time
+## Why things stop working?
 
-We are covering a large swath of diverse, custom designed ARM hardware in ways, extents, and under conditions nobody else does.  Keeping this service up, keeping these low end hardware functional is laborious.  When releases are approaching and a lot of testing and fixing is going on, this gets up, stress intensifies.  This means we have to invest let's say at least 3.000 - 4.000 EUR of our time on top of fixed costs into this service every day just to keep it up.  Without developing any serious features [users wish to have](https://forum.armbian.com/forum/38-feature-requests/).  Fulfilling many of these wishes would easily cost tens of thousands in development time, which we don't have and which we can't get back due to it being free software.  Nobody needs to buy licence for using it, and yet only a few people decide to [respect the time and attention](https://forum.armbian.com/subscriptions/) they are receiving from developers on forums. 
+Vendors often base their software on **fixed, vendor-specific LTS kernels** and **custom U-Boot forks**, which may lack long-term upstream maintenance or open-source availability.
 
-### Infrastructure and operations
+Armbian, by contrast, **tracks and contribute to mainline kernel development** to provide modern features and improved security. However, if **drivers are not upstreamed or ported**, certain hardware functions may not work or may break over time. With limited resources, Armbian focuses on **basic functionality and integration testing**, rather than full validation of all hardware capabilities. While issues are often identified, **many remain unresolved for extended periods — sometimes months or even years — due to a significant shortage of development resources**.
 
-We have to maintain our infrastructure where biggest costs are - once again - people's time, followed by electricity, then hardware itself.  Often we get free hardware and very rare break even with electricity costs and with people that would maintain this for us.  A new sponsored board usually brings us more costs then benefits -- since benefit is anyway public.
+## What do WIP, EOS, CSC mean?
 
-### Support time
+These indicate [**support status**](https://docs.armbian.com/User-Guide_Board-Support-Rules):
 
-The software is given, released free.  However support, development, and documentation costs time, effort, hardware and technical ability, which incurs costs.
+- **.conf**: *Official Configuration*. Boards with this status are supported by the Armbian team and benefit from **Standard** or **Platinum** support levels, depending on vendor involvement, stability, and available maintenance resources.
+- **WIP**: *Work In Progress*. Early development; **not ready for production**.
+- **CSC**: *Community Supported Configuration*. Maintained by the **community**, not the core team.
+- **EOS**: *End of Support*. **No further updates or maintenance.**
 
-Each question that is directed towards our team is generating opportunity costs and taking away from development time.  Some we are happy to cover, but not all.  Especially when it goes for repetitive questions and demands.
+## Can I help without tech skills?
 
-Questions associated with missing features represent another hit and miss for us.  Complicated and critical upstream functions are missing (like video acceleration within a web browser, supporting a board that had very poor initial support and no community backing, etc.).  This functionality is unique to hardware and implementing is extremely labor intensive and requires unique expertise.  Our team is 10-15 volunteers that maintain this project during their own time.  We cannot cover the job of Google Chromium team, Collabora, ARM, Rockchip and other vendors which have not provided sufficient support for their products.
+Absolutely! **Non-technical help is equally valuable**. Without community help, developers must do everything: **run infrastructure, moderate forums, answer support, manage partnerships, and fundraise**—on top of development.
 
-All our work is done in public and we provide all sources which we are changing in the process.  All our work is patent free and released under a free licence so anyone can re-use it further.  The scale of SBCs Armbian supports is hard to beat, and consequently our work is repackaged and reused by other projects and vendors.  Unfortunately the burden of support is often directed to us, while they focus on revenue.
+<https://www.armbian.com/contact/>
 
-## Why does hardware feature XY work in old kernel but not in more recent one?
+You can help with **documentation, moderation, translations, outreach, fundraising, or promotion**—freeing developers to focus on what they do best.
 
-Vendors develop hardware specific support on fixed (usually old LTS) kernel and U-Boot fork and only do minimal adjustments to make board features work.  Besides the fact that those adjustments are almost never pushed back to mainline they usually do not update their sources (if available at all) and pre-made kernels/boot loaders as well.
+## Why no support for old OS?
 
-Armbian moves things forward and follows mainline kernel as much as possible, to provide both its features as well as security updates.  The downside is that some features do not work since nobody ported specific drivers to recent mainline, and they can also break.  Armbian can only afford to do brief testing of images and check if basic functions (boot-up, network, USB, etc.) work due to lack of both human and financial resources.
+Armbian has **limited resources**, unlike larger projects. Supporting outdated OS releases like **Ubuntu Focal** or **Debian Buster**, which may lack upstream maintenance, **diverts resources from improving current versions**.
 
-## What does WIP/EOS/CSC mean?
+We focus only on the latest stable releases of [**Debian**](https://www.debian.org/releases/stable/) and [**Ubuntu**](https://wiki.ubuntu.com/Releases).
 
-- WIP: Work In Progress: Basic functions can be tested but not ready for production yet.
-- CSC: Community Supported Configuration: Community contributed support.  No official support from Armbian development team.
-- EOS: End of life: Support ended.
+## Why no support for TV boxes?
 
-## I have no technical knowledge.  How can I help?
+A few vendors provide **schematics, upstream support, and occasional assistance**, which helps. But **most TV boxes lack documentation**, **change hardware without notice**, and use **closed-source bootloaders**.
 
-We need many different profiles of people to run this project and just about any help is appreciated, not just help on development.  Since otherwise developers have to fix web pages, developers have to run projects, developers have to seek for money, developers have to maintain servers, developers have to maintain forum, developers have to moderate forums, developers have to maintain infrastructure, developers have to maintain relations with partners, developers have to waste time on repeated support question, developers have to deal with "customers", ...
+Nearly all Armbian images for these devices are **unofficial community hacks**. Despite the large market, the **cost of support is high**, and public interest in sustaining it is low. Supporting these devices would be **unsustainable** for our small team.
 
-## Why are old-stable distributions like Ubuntu Focal or Debian Buster not supported?
+## Will my board be supported?
 
-The Armbian project has very limited human and financial resources so it can focus on a few up-to-date operating system releases only.  
-Currently supported userspaces from [Debian](https://www.debian.org/releases/stable/) and [Ubuntu](https://wiki.ubuntu.com/Releases) (latest only).
+**Maybe.** Official support depends on factors like **documentation**, **SoC vendor transparency**, **sample availability**, and—most critically—a **willing maintainer**.
 
-## I have a TV Box or tablet from <insert random vendor\>. Can I use Armbian on it?
+When **vendors collaborate with Armbian**, the chance of support **significantly increases**.
 
-No.
+## Which WiFi works right away?
 
-However some community members are commited to tinkering with these devices.  They discuss their findings in a dedicated space in [our forums](https://forum.armbian.com/forum/24-tv-boxes/). Take note that there is no support from the Armbian development team whatsoever.  
-General advice: **Do not buy (cheap) tv boxes!**
+WiFi compatibility depends on **Linux kernel driver support**. Adapters using **Intel, Atheros, or Realtek chipsets** tend to work better **out of the box**.
 
-## Why does Armbian not support tables or TV boxes in general? The market is huge!
+For performance and compatibility details, see:  
+<https://docs.armbian.com/WifiPerformance/>
 
-There are some manufacturers who produce better quality than the others.  In general they provide more or less accurate schematics and they have some engineers that are available for general public and you can ask them things here and there.  Most of them try to keep up with the highest standards of hardware development. With proper documentation and minimal support, costs of software development are significantly lower. This is especially important, because we waste our precious private time to secure proper hardware functioning through the time.
+Note: **Results may vary by board**, due to **power limits, USB/PCI quirks**, and driver maturity.
 
-However, in vast majority of cases, TV boxes are lacking any documentation.  There are frequent changes of components without notice whatsoever, boot mechanisms are closed source and almost all Armbian builds that exist in the wild are unofficial community hacks.  Market is huge but since public does not have interest in covering of support - which in this case is even bigger - involvement in providing support is simply insane and stupid.  It only eats our personal time and finances.
+## Why is my image not listed?
 
-## There is a new board on the market. Will Armbian officially support it?
+Creating and maintaining images for **all combinations** of kernel, userspace, and desktop across all boards is **technically and financially unfeasible**. We provide **[a carefully chosen set of default images](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml)** per board.
 
-Maybe. It depends on things like available documentation from both the vendor as well as SoC manufacturer, production samples to play with, available BSP and last but certainly not least human resources. To say a Maintainer within the Armbian development team to agree taking care. Also if vendors decide to support Armbian there is certainly a higher chance to get it fully supported.
+However, using the [**Armbian build framework**](https://docs.armbian.com/Developer-Guide_Build-Preparation/), you can **easily create custom images**. It’s well-documented and accessible to moderately experienced users.
 
-## How can I compile my own kernel?
-
-Normally on Debian or Ubuntu you would do something like `sudo apt-get build-dep linux linux-image-$(uname -r)`.  
-However Armbian's way of building kernel images is slightly different than the standard distribution method. The best way is to follow the procedures in the [Developer Guide](https://docs.armbian.com/Developer-Guide_Build-Preparation/).
-
-## Why I cannot choose a specific kernel version (5.11.5 for example)?
-
-Each kernel Armbian offers has a custom patchset on top which would be impossible to maintain compatibility to each and every kernel version out there.  Therefore the choice is usually limited to up to three branches: legacy, current and edge.  Depending on board/family the versions behind these branches may differ.  You can lookup them in the [source code](https://github.com/armbian/build/tree/master/config/sources/families).
-
-## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
-
-Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with `apt update && apt upgrade`.  
-
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace, like Focal to Jammy, Jammy to Noble, Bullseye to Bookworm, Bookworm to Trixie. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in various random scenarios.
-
-You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please do not blame/complain (at) Armbian if something goes wrong or have other issues with an upgraded system.
-
-## Where do I ship a board so that Armbian will add support?
-
-Unless you have an existing arrangement with the Armbian, you will need to [contact Armbian](https://forum.armbian.com/contact/) for a paid engagement.  
-You may also add support by yourself if criteria is satisfied. See [Board Support Rules](https://docs.armbian.com/User-Guide_Board-Support-Rules/) for further information.
-
-## What WiFi adapters will most likely work out of the box?
-
-Check [here](https://github.com/morrownr/USB-WiFi).
-
-## I cannot find `armbian-config` on my device.
-
-If you are using a `minimal` variant this tool is not pre-installed. However you can simply install it via `sudo apt update && sudo apt install armbian-config` which will also handle all necessary dependencies.  
-If you are not using an `minimal` image and the tool is still missing [make sure your image is genuine](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-check-download-authenticity).
-
-## Why keeps one of the leds flashing twice over and over like a heartbeat? Is there something wrong?
-
-Absolutely not. Quite the contrary. This behaviour is called `heartbeat trigger` and is controlled by the kernel. When the load increases the flashing speed will increase as well. If the flashing stops the kernel either froze or were unloaded by either reboot or shutdown.  
-Unhappy? Keep reading below :-)
-
-## Can this behaviour adjusted/disabled?
-
-Maybe. Some boards have certain functions hard-wired to the onboard leds. Others allow to control the led functions from userspace.  
-Try to find `trigger` files for the leds in `/sys`.  
-Example for an _Orange Pi One_:
-```
-root@orangepione:~# find /sys/devices -name trigger | grep led
-/sys/devices/platform/leds/leds/orangepi:red:status/trigger
-/sys/devices/platform/leds/leds/orangepi:green:pwr/trigger
-```
-Use `cat` on the `trigger` file to both check its current behaviour, which is highlighted with [brackets], and which functions are supported. Then use `echo` to adjust the behaviour.
-Example for disabling a led: 
-```
-root@orangepione:~# cat /sys/devices/platform/leds/leds/orangepi:red:status/trigger
-none rc-feedback kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock usbport disk-activity disk-read disk-write ide-disk mtd nand-disk [heartbeat] cpu cpu0 cpu1 cpu2 cpu3 activity default-on panic mmc0 rfkill-any rfkill-none 0.1:01:link 0.1:01:100Mbps 0.1:01:10Mbps
-root@orangepione:~# echo none > /sys/devices/platform/leds/leds/orangepi:red:status/trigger
-```
-
-## Why is there no image for [board] with [Bookworm/Jammy/Noble/Trixie] and [Minimal/CLI/Gnome/KDE/Xfce] with [vendor/legacy/current/edge] kernel?
-
-It would be VERY ressource intensive and just insane to pre-create and provide images for all possible combination of kernels, userspaces and desktops/CLI for all available boards and last but not least provide support for them. We simply cannot afford doing this since our ressources in both human and financial are limited. Therefore we provide a small selection for each board only.  
-However with the Armbian build framework it is very easy and convenient to create an image of your desire by yourself.  
-If there is enough public interest for a certain combination we may occasionally adjust our build targets.
-
-## When using the framework it does not build anything but downloads artifacts. How can I force rebuilding from sources?
-
-tl;dr: `ARTIFACT_IGNORE_CACHE=yes`
-
-Forcing a rebuild is usually not necessary, because:
-> Armbian build [...] operates on smaller units called “artifacts”: the kernel, u-boot, firmware, rootfs, and then finally the full image. Each of those has its version calculated beforehand based on its would-be 
-contents, and looked up in both a local and remote cache (OCI registry),  allowing users to re-use artifacts across builds and to use the best hardware available for each. [...]
-
-However sometimes local changes are not detected properly. Therefore this flag can be useful.
+If enough users show interest in a specific configuration, we may **adjust build targets** accordingly.
