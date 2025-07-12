@@ -385,7 +385,7 @@ armbian-config --cmd ADG003
 #### Pi-hole
 
 
-Pi-hole DNS ad blocker
+Pi-hole DNS ad blocker with Unbound support
 
 
 <!--- section image START from tools/include/images/PIH001.png --->
@@ -394,19 +394,33 @@ Pi-hole DNS ad blocker
 
 
 <!--- header START from tools/include/markdown/PIH001-header.md --->
-Pi-hole is a network-wide ad blocker that acts as a DNS (Domain Name System) sinkhole. It works by blocking requests to known ad servers, trackers, and malicious websites across all devices connected to your home network. Here's how it works:
+**Pi-hole** is a network-wide ad blocker that acts as a DNS (Domain Name System) sinkhole. It blocks connections to known ad servers, trackers, and malicious domains across all devices in your network, without requiring any browser extensions or client-side software.
 
-- DNS-Based Filtering: Pi-hole intercepts DNS requests from devices on your network. When a device tries to connect to a website, Pi-hole checks if the website's domain is on a blocklist. If it is, Pi-hole prevents the connection from being made, effectively blocking ads, trackers, and potentially harmful sites.
+## How Pi-hole Works
 
-- Customizable Blocklists: Pi-hole allows you to choose from a variety of community-maintained blocklists or even add your own. These blocklists contain domains known to serve ads, trackers, and other unwanted content.
+- **DNS-Based Filtering**
+Pi-hole intercepts DNS queries made by devices on your network. When a domain is requested, Pi-hole checks it against a set of blocklists. If the domain is known to serve ads or track user activity, Pi-hole blocks the request, preventing unwanted content from loading.
 
-- Device and Network-Level Protection: Once set up, Pi-hole works across your entire network. This means all devices (smartphones, tablets, computers, smart TVs, etc.) that use your Pi-hole as their DNS server automatically benefit from ad-blocking without needing individual apps or browser extensions.
+- **Customizable Blocklists**
+You can choose from various community-maintained blocklists or add your own. These lists contain domains associated with ads, trackers, malware, or other undesirable content.
 
-- Web Interface: Pi-hole offers an intuitive web interface where you can monitor statistics, review blocked domains, and tweak settings like adding custom blocklists or whitelisting certain sites.
+- **Whole-Network Protection**
+Once Pi-hole is configured as your network’s DNS server, all devices - smartphones, laptops, smart TVs, and IoT devices - are automatically protected. No additional configuration or software is required on the individual devices.
 
-- Privacy and Speed: By blocking unwanted content at the DNS level, Pi-hole not only improves browsing speed (since ads are not loaded), but also enhances privacy by preventing tracking scripts from running in the background.
+- **Built-in Recursive DNS with Unbound**
+For added privacy and full DNS resolution control, **Unbound** is installed and enabled by default during Pi-hole installation. Unbound functions as a local recursive DNS resolver, fetching responses directly from authoritative DNS servers rather than relying on upstream providers. This minimizes third-party exposure and can improve query performance.
 
-Pi-hole is typically installed on a Armbian minimal, but it can also run on other systems. It's a great way to have ad-blocking and privacy protection across your entire network without needing to install anything on individual devices.
+- **Web Interface**
+Pi-hole includes a web-based dashboard that provides real-time visibility into DNS activity. The interface allows you to view statistics, manage blocklists, whitelist domains, and configure settings with ease.
+
+- **Privacy and Performance Benefits**
+By blocking unwanted domains at the DNS level, Pi-hole reduces page load times, lowers bandwidth usage, and enhances user privacy by preventing tracking scripts and ads from reaching client devices.
+
+- **Platform Compatibility**
+Pi-hole can be installed on a variety of platforms. It runs well on lightweight systems such as **Armbian Minimal**, but is also available as a Docker container and supports deployment on most Linux-based environments.
+
+Pi-hole offers an effective and centralized way to enhance privacy and reduce unwanted content across your entire network.
+
 <!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-header.md)  
@@ -425,7 +439,7 @@ armbian-config --cmd PIH001
     The web interface of Pi-hole can be accessed via:
 
     - URL = `http://<your.IP>/admin`
-    - Password is set and adjust from `armbian-config`
+    - Password is set on install and can be adjusted from `armbian-config`
 
 === "Documentation"
 
@@ -481,7 +495,7 @@ armbian-config --cmd UNB001
 <!--- footer START from tools/include/markdown/UNB001-footer.md --->
 === "Default DNS port"
 
-    - Default DNS port: 53
+    - Default DNS port: 8053
 
 === "Directories"
 
