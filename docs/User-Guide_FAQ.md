@@ -24,7 +24,11 @@ We also face **commercial entities** that leverage our work—sometimes contribu
 
 Vendors often base their software on **fixed, vendor-specific LTS kernels** and **custom U-Boot forks**, which may lack long-term upstream maintenance or open-source availability.
 
-Armbian, by contrast, **tracks and contribute to mainline kernel development** to provide modern features and improved security. However, if **drivers are not upstreamed or ported**, certain hardware functions may not work or may break over time. With limited resources, Armbian focuses on **basic functionality and integration testing**, rather than full validation of all hardware capabilities. While issues are often identified, **many remain unresolved for extended periods — sometimes months or even years — due to a significant shortage of development resources**.
+Armbian, by contrast, **tracks and contributes to mainline kernel development** to provide modern features and improved security. However, if **drivers are not upstreamed or properly ported**, certain hardware functions may not work or may break over time.
+
+Our development focus is on maintaining the **CURRENT kernel branch**, which is selected for having sufficient maturity and stability for general use. **EDGE kernels**, as the name implies, are based on the latest upstream kernel versions — often including release candidates — and are **not suitable for production deployment**. These kernels are assembled for early adopters and development purposes only. Their experimental nature means **higher risk of regressions and broken functionality**.
+
+Due to limited resources, Armbian prioritizes **basic functionality and integration testing**, not full validation of all features across all supported devices. While we do identify many issues, **some remain unresolved for extended periods — sometimes months or even years — due to a significant shortage of development capacity**.
 
 ## What do WIP, EOS, CSC mean?
 
