@@ -1874,7 +1874,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 #### Cockpit
 
 
-Cockpit web-based management tool
+Cockpit OS and VM management tool
 
 
 <!--- section image START from tools/include/images/CPT001.png --->
@@ -1883,24 +1883,30 @@ Cockpit web-based management tool
 
 
 <!--- header START from tools/include/markdown/CPT001-header.md --->
-Introducing Cockpit
-Cockpit is a web-based graphical interface for servers, intended for everyone, especially those who are:
+Cockpit is a web-based graphical interface for servers, intended for everyone.
 
-- new to Linux
-(including Windows admins)
-- familiar with Linux
-and want an easy, graphical way to administer servers
-- expert admins
-who mainly use other tools but want an overview on individual systems
+Here’s a subset of tasks you can perform on each host running Cockpit
 
-Thanks to Cockpit intentionally using system APIs and commands, a whole team of admins can manage a system in the way they prefer, including the command line and utilities right alongside Cockpit.
+- inspect and change network settings
+- configure a firewall
+- manage storage (including RAID and LUKS partitions)
+- create and manage virtual machines
+- download and run containers
+- browse and search system logs
+- inspect a system’s hardware
+- upgrade software
+- manage user accounts
+- inspect and interact with systemd-based services
+- use a terminal on a remote server in your local web browser
+- switch between multiple Cockpit servers
+
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-header.md)  
 __Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://cockpit-project.org/guide/latest/)  
 
 ~~~ custombash
 armbian-config --cmd CPT001
@@ -1910,9 +1916,9 @@ armbian-config --cmd CPT001
 <!--- footer START from tools/include/markdown/CPT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9090**:
+    The web interface is accessible via port **9890**:
 
-    - URL: `https://<your.IP>:9090`
+    - URL: `https://<your.IP>:9890`
     - Username/Password: your system login credentials
 
 === "Video instructions"
@@ -1921,6 +1927,18 @@ armbian-config --cmd CPT001
     <iframe width="1200" height="676" src="https://www.youtube.com/embed/L9fMWCRcqIE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--- footer STOP from tools/include/markdown/CPT001-footer.md --->
+
+
+~~~ bash title="Remove Cockpit:"
+armbian-config --cmd CPT002
+~~~
+
+
+~~~ bash title="Purge Cockpit with virtual machines:"
+armbian-config --cmd CPT003
+~~~
+
+
 
 
 #### Homepage
