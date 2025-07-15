@@ -34,9 +34,9 @@ armbian-config --cmd EMB001
 <!--- footer START from tools/include/markdown/EMB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8096**:
+    The web interface is accessible via port **8091**:
 
-    - URL: `https://<your.IP>:8096`
+    - URL: `https://<your.IP>:8091`
 
 === "Directories"
 
@@ -412,9 +412,9 @@ armbian-config --cmd NCT001
 <!--- footer START from tools/include/markdown/NCT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **443**:
+    The web interface is accessible via port **1443**:
 
-    - URL: `https://<your.IP>:443`
+    - URL: `https://<your.IP>:1443`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -679,9 +679,9 @@ armbian-config --cmd STR001
 <!--- footer START from tools/include/markdown/STR001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8077**:
+    The web interface is accessible via port **8075**:
 
-    - URL: `https://<your.IP>:8077`
+    - URL: `https://<your.IP>:8075`
 
 === "Directories"
 

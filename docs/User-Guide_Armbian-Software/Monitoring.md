@@ -33,9 +33,9 @@ armbian-config --cmd GRA001
 <!--- footer START from tools/include/markdown/GRA001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via port **3022**:
 
-    - URL: `https://<your.IP>:3000`
+    - URL: `https://<your.IP>:3022`
 
 === "Directories"
 
@@ -181,7 +181,7 @@ armbian-config --cmd NTD003
 ## Prometheus
 
 
-Prometheus docker image
+Prometheus monitoring and alerting toolkit
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
@@ -208,9 +208,9 @@ armbian-config --cmd PRO001
 <!--- footer START from tools/include/markdown/PRO001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9090**:
+    The web interface is accessible via port **9191**:
 
-    - URL: `https://<your.IP>:9090`
+    - URL: `http://<your.IP>:9191`
 
 === "Directories"
 

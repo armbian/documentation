@@ -73,6 +73,8 @@ Choose between:
 - The system will apply the configurations.
 - Your network connection should then be fully established.
 
+If you experience issues or prefer full control, follow the [manual networking setup guide](https://docs.armbian.com/User-Guide_Networking/).
+
 <!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
 
 

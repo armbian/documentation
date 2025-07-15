@@ -20,9 +20,9 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8080**:
+    The web interface is accessible via port **8780**:
 
-    - URL: `https://<your.IP>:8080`
+    - URL: `https://<your.IP>:8780`
     - Username/Password: admin / domoticz
 
 === "Directories"
@@ -142,9 +142,9 @@ armbian-config --cmd HAB001
 <!--- footer START from tools/include/markdown/HAB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8444**:
+    The web interface is accessible via port **8080**:
 
-    - URL: `https://<your.IP>:8444`
+    - URL: `https://<your.IP>:8080`
     - Username/Password: Are set at first web interface login
 
 === "Directories"
