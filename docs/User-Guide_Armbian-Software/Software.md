@@ -1392,9 +1392,9 @@ armbian-config --cmd SABN01
 <!--- footer START from tools/include/markdown/SABN01-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8080**:
+    The web interface is accessible via port **8380**:
 
-    - URL: `https://<your.IP>:8080`
+    - URL: `https://<your.IP>:8380`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1633,9 +1633,9 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8080**:
+    The web interface is accessible via port **8780**:
 
-    - URL: `https://<your.IP>:8080`
+    - URL: `https://<your.IP>:8780`
     - Username/Password: admin / domoticz
 
 === "Directories"
@@ -1755,9 +1755,9 @@ armbian-config --cmd HAB001
 <!--- footer START from tools/include/markdown/HAB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8444**:
+    The web interface is accessible via port **8080**:
 
-    - URL: `https://<your.IP>:8444`
+    - URL: `https://<your.IP>:8080`
     - Username/Password: Are set at first web interface login
 
 === "Directories"
@@ -1968,9 +1968,9 @@ armbian-config --cmd HPG001
 <!--- footer START from tools/include/markdown/HPG001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via port **3021**:
 
-    - URL: `https://<your.IP>:3000`
+    - URL: `https://<your.IP>:3021`
     - Username/Password: none
 
     Configuration: Please reffer to official manual <https://gethomepage.dev/configs/>
@@ -2191,9 +2191,9 @@ armbian-config --cmd EMB001
 <!--- footer START from tools/include/markdown/EMB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8096**:
+    The web interface is accessible via port **8091**:
 
-    - URL: `https://<your.IP>:8096`
+    - URL: `https://<your.IP>:8091`
 
 === "Directories"
 
@@ -2569,9 +2569,9 @@ armbian-config --cmd NCT001
 <!--- footer START from tools/include/markdown/NCT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **443**:
+    The web interface is accessible via port **1443**:
 
-    - URL: `https://<your.IP>:443`
+    - URL: `https://<your.IP>:1443`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -2836,9 +2836,9 @@ armbian-config --cmd STR001
 <!--- footer START from tools/include/markdown/STR001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8077**:
+    The web interface is accessible via port **8075**:
 
-    - URL: `https://<your.IP>:8077`
+    - URL: `https://<your.IP>:8075`
 
 === "Directories"
 
@@ -2897,9 +2897,9 @@ armbian-config --cmd GRA001
 <!--- footer START from tools/include/markdown/GRA001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via port **3022**:
 
-    - URL: `https://<your.IP>:3000`
+    - URL: `https://<your.IP>:3022`
 
 === "Directories"
 
@@ -3045,7 +3045,7 @@ armbian-config --cmd NTD003
 #### Prometheus
 
 
-Prometheus docker image
+Prometheus monitoring and alerting toolkit
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
@@ -3072,9 +3072,9 @@ armbian-config --cmd PRO001
 <!--- footer START from tools/include/markdown/PRO001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9090**:
+    The web interface is accessible via port **9191**:
 
-    - URL: `https://<your.IP>:9090`
+    - URL: `http://<your.IP>:9191`
 
 === "Directories"
 

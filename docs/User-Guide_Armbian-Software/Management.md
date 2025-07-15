@@ -101,9 +101,9 @@ armbian-config --cmd HPG001
 <!--- footer START from tools/include/markdown/HPG001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via port **3021**:
 
-    - URL: `https://<your.IP>:3000`
+    - URL: `https://<your.IP>:3021`
     - Username/Password: none
 
     Configuration: Please reffer to official manual <https://gethomepage.dev/configs/>
