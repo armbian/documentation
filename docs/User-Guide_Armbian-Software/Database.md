@@ -81,7 +81,10 @@ Mariadb SQL database server
 
 
 <!--- header START from tools/include/markdown/DAT001-header.md --->
-Mariadb is one of the most popular database servers. Made by the original developers of MySQL.
+**MariaDB** is a fast, open-source relational database server developed by the original creators of MySQL. It is designed to be fully compatible with MySQL while offering improved performance, enhanced security, and additional features.
+
+MariaDB supports a wide range of storage engines, advanced SQL capabilities, and both single-node and clustered deployments. It is widely used in web, cloud, and
+
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
@@ -105,7 +108,7 @@ armbian-config --cmd DAT001
     - create normal user
     - create password for normal user
 
-    - Database host: `<your.IP>`
+    - Database host: `<your.IP>:3307`
 
 === "Directories"
 

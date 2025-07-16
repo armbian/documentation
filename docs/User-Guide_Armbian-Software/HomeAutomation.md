@@ -142,24 +142,24 @@ armbian-config --cmd HAB001
 <!--- footer START from tools/include/markdown/HAB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8080**:
+    The web interface is accessible via port **2080**:
 
-    - URL: `https://<your.IP>:8080`
+    - URL: `https://<your.IP>:2080`
     - Username/Password: Are set at first web interface login
 
 === "Directories"
 
-    - Install directory: `/usr/share/openhab`
-    - Site configuration directory: `/etc/openhab`
-    - Config file: `/etc/default/openhab`
-    - Data directory: `/var/lib/openhab`
+    - Install directory: `/armbian/openhab`
+    - Site configuration directory: `/armbian/openhab/conf`
+    - Userdata directory: `/armbian/openhab/userdata`
+    - Addons directory: `/armbian/openhab/addons`
 
     See also [openHAB file locations](https://www.openhab.org/docs/installation/linux.html#file-locations).
 
 === "View logs"
 
     ```sh
-    journalctl -u openhab
+    docker logs -f openhab
     ```
 
 <!--- footer STOP from tools/include/markdown/HAB001-footer.md --->
