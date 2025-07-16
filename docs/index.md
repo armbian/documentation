@@ -1,7 +1,4 @@
-[![](images/logo_middle.png)](https://www.armbian.com)
-
-Linux for ARM development boards
-
+[![](images/logo-small.png)](https://www.armbian.com)
 
 ## Preface
 
