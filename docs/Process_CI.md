@@ -69,6 +69,9 @@ Example:
 ```
 khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
 ```
+### Kernel Descriptions for Download Pages?
+
+Each kernel branch can include an optional description, stored in [`kernel-description.json`](https://github.com/armbian/os/blob/logo/kernel-description.json).
 
 ### Testing
 
