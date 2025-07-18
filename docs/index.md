@@ -1,4 +1,6 @@
-[![](images/logo-small.png)](https://www.armbian.com)
+# Armbian OS
+
+![Armbian logo](images/logo-small.png){ width=25% }
 
 ## Preface
 
