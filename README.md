@@ -1,32 +1,57 @@
-<p align="center">
-  <a target="_blank" href="https://docs.armbian.com">
-    <img alt="logo" src="./docs/images/logo.png" width=128>
-  </a><br>
-  <strong>Armbian Documentation</strong><br>
-<br>
-<a href=https://github.com/armbian/documentation/actions/workflows/release.yaml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/documentation/release.yaml?logo=githubactions&label=HTML%20page&style=for-the-badge&branch=main"></a>
-</p>
+<h2 align="center">
+  <img src="https://raw.githubusercontent.com/armbian/.github/master/profile/logo.png" alt="Armbian logo" width="25%">
+  <br><br>
+</h2>
 
-**The Armbian Linux Documentation** offers a comprehensive collection of guides, manuals, and resources designed to assist users in every stage of working with Armbian - from installation and initial setup to advanced configuration and optimization. Whether you're a beginner setting up your first single-board computer or an experienced developer fine-tuning system performance, the documentation provides clear, step-by-step instructions and best practices to help you get the most out of your Armbian-powered device.
+### Purpose of This Repository
 
-# Editing
+Armbian Documentation serves as the central knowledge base for the entire Armbian ecosystem. It covers everything from the **Armbian OS** and **armbian-config** utility to **software modules** and the **Armbian build framework**. Whether you're installing Armbian for the first time, configuring advanced features, or building custom images from source, the documentation provides step-by-step guides, best practices, and technical references to support both beginners and experienced developers.
 
-### Online
+## Contribute
 
-Documentation edition goes in five simple steps.
+You can contribute to Armbian Documentation directly on [GitHub](docs/) by editing or submitting pull requests.  
+However, to **enjoy a fully rendered local preview** with proper styling and live reload, we recommend setting up the documentation site locally using `mkdocs`.
 
-|Step|Description|Visuals|
-|:-------:|---|---:|
-| 1. | Open <a href=https://docs.armbian.com/ target="_blank">website</a> and **find content you want to change**.| <details><summary>Expand</summary><a href=#><img alt="logo" src="./docs/images/edit-icon.png"></a></details> |
-| 2. | When you are done with editing, **Commit changes**. | <details><summary>Expand</summary><a href=#><img alt="logo" src="./docs/images/commit-changes.png"></a></details> |
-| 3. | Enter title and description of changes you are proposing. Proceed with **Propose changes** | <details><summary>Expand</summary><a href=#><img alt="logo" src="./docs/images/propose-changes.png"></a></details> |
-| 4. | Following by **Create a pull request**. |<details><summary>Expand</summary><a href=#><img alt="logo" src="./docs/images/create-pull-reqest.png"></a></details> |
-| 5. | Verify your changes on **HTML rendered preview** at your pull reqest. |<details><summary>Expand</summary><a href=#><img alt="logo" src="./docs/images/wait-for-preview.png"></a></details> |
+```bash
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-venv python3.12-dev
+```
 
-### Offline
+If using Debian, you may need to install the following packages for `mkdocs-material`:
 
-Please refer to [those instructions](/DOCUMENTATION.md)
+```bash
+sudo apt-get install libcairo2 pango1.0-tools
+```
 
-### Tips 
+### Cloning the Repository
 
-<https://squidfunk.github.io/mkdocs-material/reference/>
+Next, clone the Armbian documentation repository:
+
+```bash
+git clone https://github.com/armbian/documentation
+cd documentation
+```
+
+### Setting Up the Environment
+
+Set up a Python virtual environment to isolate the project dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --use-pep517 -r requirements.txt
+```
+
+### Running the Local Server
+
+To preview the documentation locally:
+
+```bash
+mkdocs build --clean
+mkdocs serve -a 0.0.0.0:8000
+```
+
+Then open your browser and go to http://localhost:8000 
+The site will automatically reload when you make changes to .md files.
+
+💡 Tip: Use the local preview to verify formatting and layout before committing your changes.

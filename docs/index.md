@@ -1,7 +1,6 @@
-[![](images/logo_middle.png)](https://www.armbian.com)
+# Armbian OS
 
-Linux for ARM development boards
-
+![Armbian logo](images/logo-small.png){ width=25% }
 
 ## Preface
 

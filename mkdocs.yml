@@ -62,6 +62,9 @@ plugins:
 
 markdown_extensions:
   - smarty
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - footnotes
   - mdx_truly_sane_lists
   - toc:
