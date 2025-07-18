@@ -71,7 +71,7 @@ khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-d
 ```
 ### Kernel Descriptions for Download Pages?
 
-Each kernel branch can include an optional description, stored in [`kernel-description.json`](https://github.com/armbian/os/blob/logo/kernel-description.json).
+Each kernel branch can include an optional description, stored in [`kernel-description.json`](https://github.com/armbian/os/blob/main/kernel-description.json).
 
 ### Testing
 
