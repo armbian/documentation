@@ -175,18 +175,82 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your micro-SD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
+There is multiple ways to deploy the image to your board. The easist and most common option is to write the Armbian Image to your SD-Card. Other options include using rkdeveloptool to flash the EMMC / UFS / SPI on Rockchip Boards directly over USB (via Maskrom Mode).
 
-!!! warning "Other tools"
+=== "SD-Card"
+
+    Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your micro-SD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
+
+    !!! warning "Other tools"
 
     We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
     Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
 
+=== "RKdeveloptool"
+
+    === Debian"
+
+        Install requirements
+        
+        ``` bash
+        sudo apt-get update
+        sudo apt-get install -y libudev-dev libusb-1.0-0-dev dh-autoreconf pkg-config libusb-1.0 build-essential git wget
+        ```
+
+        Download & Compile RKdeveloptool
+
+        ``` bash
+        git clone https://github.com/rockchip-linux/rkdeveloptool
+        cd rkdeveloptool
+        autoreconf -i
+        ./configure
+        make -j $(nproc)
+        ```
+
+        Optionally install rkdeveloptool systemwide:
+
+        ``` bash
+        sudo cp rkdeveloptool /usr/local/sbin/
+        ```
+
+    === "MacOS"
+
+        First make sure you have [brew](https://brew.sh) installed. Then you can run the following commands to install rkdeveloptool:
+
+        Install requirements
+        
+        ``` bash
+        brew install automake autoconf libusb pkg-config git wget
+        ```
+
+        Download & Compile RKdeveloptool
+
+        ``` bash
+        git clone https://github.com/rockchip-linux/rkdeveloptool
+        cd rkdeveloptool
+        autoreconf -i
+        ./configure
+        make -j $(nproc)
+        ```
+
+        Optionally install rkdeveloptool systemwide:
+
+        ``` bash
+        cp rkdeveloptool /opt/homebrew/bin/
+        ```
+
+    1. Connect & Boot your Board into Maskrom mode. Usually there is a button to hold for 5 seconds during boot else check your manufactures website.
+    2. Run `rkdeveloptool ld` to list all connected devices
+    3. Extract your image `tar -xf Armbian-YourBoard.img.xz`
+    4. Flash the RK3XXX_loader.bin (check your SoC) via `rkdeveloptool db RK3XXX_loader.bin` which stands for download boot
+    5. Erase the current storage medium (usually EMMC) via `rkdeveloptool ef` which stands for erase flash
+    6. Now you can flash the extracted image with `rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
+    7. Reboot your board with `rkdeveloptool rd` which stands for (power) reset device
 
 ## First boot
 
-Insert the SD card into a slot and power on the board. With the cheapest board, the first boot (with DHCP) can take up to two minutes with a class 10 SD card.
+If you used an SD card insert it into a slot and power on the board. With the cheapest board, the first boot (with DHCP) can take up to two minutes with a class 10 SD card.
 
 
 ## First login
