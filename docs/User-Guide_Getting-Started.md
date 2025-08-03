@@ -243,7 +243,7 @@ There is multiple ways to deploy the image to your board. The easist and most co
 
     1. Connect & Boot your Board into Maskrom mode. Usually there is a button to hold for 5 seconds during boot else check your manufactures website.
     2. Run `rkdeveloptool ld` to list all connected devices
-    3. Extract your image `tar -xf Armbian-YourBoard.img.xz`
+    3. Extract your image `unxz Armbian-YourBoard.img.xz`
     4. Flash the RK3XXX_loader.bin (check your SoC) via `rkdeveloptool db RK3XXX_loader.bin` which stands for download boot
     5. Erase the current storage medium (usually EMMC) via `rkdeveloptool ef` which stands for erase flash
     6. Now you can flash the extracted image with `rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
