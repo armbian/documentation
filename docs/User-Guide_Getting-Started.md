@@ -183,16 +183,17 @@ There is multiple ways to deploy the image to your board. The easist and most co
 
     !!! warning "Other tools"
 
-    We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
+        We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
-    Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
+        Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
+
 
 === "RKdeveloptool"
 
-    === Debian"
+    === "Debian"
 
         Install requirements
-        
+
         ``` bash
         sudo apt-get update
         sudo apt-get install -y libudev-dev libusb-1.0-0-dev dh-autoreconf pkg-config libusb-1.0 build-essential git wget
@@ -219,7 +220,7 @@ There is multiple ways to deploy the image to your board. The easist and most co
         First make sure you have [brew](https://brew.sh) installed. Then you can run the following commands to install rkdeveloptool:
 
         Install requirements
-        
+
         ``` bash
         brew install automake autoconf libusb pkg-config git wget
         ```
