@@ -175,7 +175,7 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-There is multiple ways to deploy the image to your board. The easist and most common option is to write the Armbian Image to your SD-Card. Other options include using rkdeveloptool to flash the EMMC / UFS / SPI on Rockchip Boards directly over USB (via Maskrom Mode).
+There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. Other options include using rkdeveloptool to flash the EMMC / UFS / SPI on Rockchip Boards directly over USB (via Maskrom Mode).
 
 === "SD-Card"
 
@@ -186,7 +186,6 @@ There is multiple ways to deploy the image to your board. The easist and most co
         We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
         Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
-
 
 === "RKdeveloptool"
 
