@@ -175,78 +175,86 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ## Deploy the image
 
-There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. Other options include using rkdeveloptool to flash the EMMC / UFS / SPI on Rockchip Boards directly over USB (via Maskrom Mode).
+There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. 
 
-=== "SD-Card"
+### SD Card
 
-    Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your micro-SD card. Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
+Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your **micro-SD card** or **USB drive** (if booting from it is supported). Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
-    !!! warning "Other tools"
+!!! warning "Other tools"
 
-        We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
+    We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
 
-        Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
+    Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
 
-=== "RKdeveloptool"
 
-    === "Debian"
+### Flash to Internal Memory
 
-        Install requirements
+Flash to Internal Memory allows you to write Armbian image directly to the device’s built‑in storage. This process completely replaces the existing system and erases all current data on the target drive. Use with caution, as once started, the operation cannot be undone.
 
-        ``` bash
-        sudo apt-get update
-        sudo apt-get install -y libudev-dev libusb-1.0-0-dev dh-autoreconf pkg-config libusb-1.0 build-essential git wget
-        ```
+#### Rockchip
 
-        Download & Compile RKdeveloptool
+When a Rockchip device is placed into **Maskrom mode**, you can use `rkdeveloptool` to flash an image directly to its internal storage (**eMMC**, **UFS**, or **SPI**) over USB.
 
-        ``` bash
-        git clone https://github.com/rockchip-linux/rkdeveloptool
-        cd rkdeveloptool
-        autoreconf -i
-        ./configure
-        make -j $(nproc)
-        ```
+=== "Debian"
 
-        Optionally install rkdeveloptool systemwide:
+    Install requirements for `rkdeveloptool`
 
-        ``` bash
-        sudo cp rkdeveloptool /usr/local/sbin/
-        ```
+    ``` bash
+    sudo apt-get update
+    sudo apt-get install -y build-essential git wget
+    sudo apt-get install -y libudev-dev libusb-1.0-0-dev dh-autoreconf pkg-config libusb-1.0
+    ```
 
-    === "MacOS"
+    Download & Compile `rkdeveloptool`
 
-        First make sure you have [brew](https://brew.sh) installed. Then you can run the following commands to install rkdeveloptool:
+    ``` bash
+    git clone https://github.com/rockchip-linux/rkdeveloptool
+    cd rkdeveloptool
+    autoreconf -i
+    ./configure
+    make -j $(nproc)
+    ```
 
-        Install requirements
+    Optionally install `rkdeveloptool` systemwide:
 
-        ``` bash
-        brew install automake autoconf libusb pkg-config git wget
-        ```
+    ``` bash
+    sudo cp rkdeveloptool /usr/local/sbin/
+    ```
 
-        Download & Compile RKdeveloptool
+=== "MacOS"
 
-        ``` bash
-        git clone https://github.com/rockchip-linux/rkdeveloptool
-        cd rkdeveloptool
-        autoreconf -i
-        ./configure
-        make -j $(nproc)
-        ```
+    First make sure you have [brew](https://brew.sh) installed. Then you can run the following commands to install rkdeveloptool:
 
-        Optionally install rkdeveloptool systemwide:
+    Install requirements
 
-        ``` bash
-        cp rkdeveloptool /opt/homebrew/bin/
-        ```
+    ``` bash
+    brew install automake autoconf libusb pkg-config git wget
+    ```
 
-    1. Connect & Boot your Board into Maskrom mode. Usually there is a button to hold for 5 seconds during boot else check your manufactures website.
-    2. Run `rkdeveloptool ld` to list all connected devices
-    3. Extract your image `unxz Armbian-YourBoard.img.xz`
-    4. Flash the RK3XXX_loader.bin (check your SoC) via `rkdeveloptool db RK3XXX_loader.bin` which stands for download boot
-    5. Erase the current storage medium (usually EMMC) via `rkdeveloptool ef` which stands for erase flash
-    6. Now you can flash the extracted image with `rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
-    7. Reboot your board with `rkdeveloptool rd` which stands for (power) reset device
+    Download & Compile `rkdeveloptool`
+
+    ``` bash
+    git clone https://github.com/rockchip-linux/rkdeveloptool
+    cd rkdeveloptool
+    autoreconf -i
+    ./configure
+    make -j $(nproc)
+    ```
+
+    Optionally install `rkdeveloptool` systemwide:
+
+    ``` bash
+    cp rkdeveloptool /opt/homebrew/bin/
+    ```
+
+1. Connect & Boot your Board into Maskrom mode. Usually there is a button to hold for 5 seconds during boot else check your manufactures website.
+2. Run `rkdeveloptool ld` to list all connected devices
+3. Extract your image `unxz Armbian-YourBoard.img.xz`
+4. Flash the RK3XXX_loader.bin (check your SoC) via `rkdeveloptool db RK3XXX_loader.bin` which stands for download boot
+5. Erase the current storage medium (usually EMMC) via `rkdeveloptool ef` which stands for erase flash
+6. Now you can flash the extracted image with `rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
+7. Reboot your board with `rkdeveloptool rd` which stands for (power) reset device
 
 ## First boot
 
