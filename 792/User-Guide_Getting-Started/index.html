@@ -609,6 +609,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Deploy the image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-to-internal-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash to Internal Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flash to Internal Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rockchip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rockchip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2393,27 +2432,29 @@
 </span></code></pre></div></td></tr></table></div>
 </div>
 <h2 id="deploy-the-image">Deploy the image<a class="headerlink" href="#deploy-the-image" title="Permanent link">&para;</a></h2>
-<p>There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. Other options include using rkdeveloptool to flash the EMMC / UFS / SPI on Rockchip Boards directly over USB (via Maskrom Mode).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="deploy-the-image-sd-card" name="__tabbed_1" type="radio" /><input id="deploy-the-image-rkdeveloptool" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="deploy-the-image-sd-card">SD-Card</label><label for="deploy-the-image-rkdeveloptool">RKdeveloptool</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Write the <strong>.xz compressed image</strong> with a tool like <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> onto your micro-SD card. Unlike other tools, it can validate written data <strong>saving you from corrupted SD card contents</strong>.</p>
+<p>There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. </p>
+<h3 id="sd-card">SD Card<a class="headerlink" href="#sd-card" title="Permanent link">&para;</a></h3>
+<p>Write the <strong>.xz compressed image</strong> with a tool like <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> onto your <strong>micro-SD card</strong> or <strong>USB drive</strong> (if booting from it is supported). Unlike other tools, it can validate written data <strong>saving you from corrupted SD card contents</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Other tools</p>
 <p>We are aware that there are many programs that can be used for this step. <strong>But</strong>, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don&rsquo;t use other tools, especially if you are a novice user.</p>
 <p>Due to known issues, <a href="https://www.balena.io/etcher/">balenaEtcher</a> can no longer be recommended as an alternative at this time.</p>
 </div>
-</div>
-<div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="deploy-the-image-debian" name="__tabbed_2" type="radio" /><input id="deploy-the-image-macos" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="deploy-the-image-debian">Debian</label><label for="deploy-the-image-macos">MacOS</label></div>
+<h3 id="flash-to-internal-memory">Flash to Internal Memory<a class="headerlink" href="#flash-to-internal-memory" title="Permanent link">&para;</a></h3>
+<p>Flash to Internal Memory allows you to write Armbian image directly to the device’s built‑in storage. This process completely replaces the existing system and erases all current data on the target drive. Use with caution, as once started, the operation cannot be undone.</p>
+<h4 id="rockchip">Rockchip<a class="headerlink" href="#rockchip" title="Permanent link">&para;</a></h4>
+<p>When a Rockchip device is placed into <strong>Maskrom mode</strong>, you can use <code>rkdeveloptool</code> to flash an image directly to its internal storage (<strong>eMMC</strong>, <strong>UFS</strong>, or <strong>SPI</strong>) over USB.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="rockchip-debian" name="__tabbed_1" type="radio" /><input id="rockchip-macos" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="rockchip-debian">Debian</label><label for="rockchip-macos">MacOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Install requirements</p>
+<p>Install requirements for <code>rkdeveloptool</code></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libudev-dev<span class="w"> </span>libusb-1.0-0-dev<span class="w"> </span>dh-autoreconf<span class="w"> </span>pkg-config<span class="w"> </span>libusb-1.0<span class="w"> </span>build-essential<span class="w"> </span>git<span class="w"> </span>wget
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>build-essential<span class="w"> </span>git<span class="w"> </span>wget
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libudev-dev<span class="w"> </span>libusb-1.0-0-dev<span class="w"> </span>dh-autoreconf<span class="w"> </span>pkg-config<span class="w"> </span>libusb-1.0
 </span></code></pre></div></td></tr></table></div>
-<p>Download &amp; Compile RKdeveloptool</p>
+<p>Download &amp; Compile <code>rkdeveloptool</code></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
@@ -2424,7 +2465,7 @@
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>./configure
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>make<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Optionally install rkdeveloptool systemwide:</p>
+<p>Optionally install <code>rkdeveloptool</code> systemwide:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>rkdeveloptool<span class="w"> </span>/usr/local/sbin/
 </span></code></pre></div></td></tr></table></div>
 </div>
@@ -2433,7 +2474,7 @@
 <p>Install requirements</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>brew<span class="w"> </span>install<span class="w"> </span>automake<span class="w"> </span>autoconf<span class="w"> </span>libusb<span class="w"> </span>pkg-config<span class="w"> </span>git<span class="w"> </span>wget
 </span></code></pre></div></td></tr></table></div>
-<p>Download &amp; Compile RKdeveloptool</p>
+<p>Download &amp; Compile <code>rkdeveloptool</code></p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
@@ -2444,7 +2485,7 @@
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>./configure
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>make<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Optionally install rkdeveloptool systemwide:</p>
+<p>Optionally install <code>rkdeveloptool</code> systemwide:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>cp<span class="w"> </span>rkdeveloptool<span class="w"> </span>/opt/homebrew/bin/
 </span></code></pre></div></td></tr></table></div>
 </div>
@@ -2459,9 +2500,6 @@
 <li>Now you can flash the extracted image with <code>rkdeveloptool wl 0 Armbian-YourBoard.img</code> (make sure the file ends with <strong>.img</strong>)</li>
 <li>Reboot your board with <code>rkdeveloptool rd</code> which stands for (power) reset device</li>
 </ol>
-</div>
-</div>
-</div>
 <h2 id="first-boot">First boot<a class="headerlink" href="#first-boot" title="Permanent link">&para;</a></h2>
 <p>If you used an SD card insert it into a slot and power on the board. With the cheapest board, the first boot (with DHCP) can take up to two minutes with a class 10 SD card.</p>
 <h2 id="first-login">First login<a class="headerlink" href="#first-login" title="Permanent link">&para;</a></h2>
