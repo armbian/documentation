@@ -177,7 +177,7 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. 
 
-### SD Card
+### Flash to SD Card
 
 Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your **micro-SD card** or **USB drive** (if booting from it is supported). Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
