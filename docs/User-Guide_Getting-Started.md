@@ -253,8 +253,8 @@ When a Rockchip device is placed into **Maskrom mode**, you can use `rkdevelopto
 3. Extract your image `unxz Armbian-YourBoard.img.xz`
 4. Flash the RK3XXX_loader.bin (check your SoC) via `rkdeveloptool db RK3XXX_loader.bin` which stands for download boot
 5. Erase the current storage medium (usually EMMC) via `rkdeveloptool ef` which stands for erase flash
-6. Now you can flash the extracted image with `rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
-7. Reboot your board with `rkdeveloptool rd` which stands for (power) reset device
+6. Now you can flash the extracted image with `sudo rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
+7. Reboot your board with `sudo rkdeveloptool rd` which stands for (power) reset device
 
 ## First boot
 
