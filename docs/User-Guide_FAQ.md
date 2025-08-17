@@ -84,8 +84,8 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 ## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
 
-Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with `apt update && apt upgrade`.  
-  
-Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace, like _Focal_ to _Jammy_, _Jammy_ to _Noble_, _Bullseye_ to _Bookworm_, _Bookworm_ to _Trixie_. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in various random scenarios.  
-  
-You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please do not blame/complain (at) Armbian if something goes wrong or have other issues with an upgraded system.
+Note: Upgrading Armbian core components (kernel, firmware, bootloader) and upgrading the chosen userspace are independent processes. The former is performed with `apt update && apt upgrade`.
+
+Armbian does not provide or encourage a standardized userspace upgrade path (e.g., *Focal*→*Jammy*, *Jammy*→*Noble*, *Bullseye*→*Bookworm*, *Bookworm*→*Trixie*). We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.
+
+You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/). Note: issues arising from such upgrades are out of scope for Armbian support.
