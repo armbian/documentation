@@ -82,7 +82,7 @@ However, using the [**Armbian build framework**](https://docs.armbian.com/Develo
 
 If enough users show interest in a specific configuration, we may **adjust build targets** accordingly.
 
-# Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
+## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
 
 Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with `apt update && apt upgrade`.  
   
