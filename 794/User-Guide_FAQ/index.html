@@ -2202,9 +2202,9 @@
 <p>However, using the <a href="https://docs.armbian.com/Developer-Guide_Build-Preparation/"><strong>Armbian build framework</strong></a>, you can <strong>easily create custom images</strong>. It’s well-documented and accessible to moderately experienced users.</p>
 <p>If enough users show interest in a specific configuration, we may <strong>adjust build targets</strong> accordingly.</p>
 <h2 id="can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble">Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?<a class="headerlink" href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" title="Permanent link">&para;</a></h2>
-<p>Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with <code>apt update &amp;&amp; apt upgrade</code>.  </p>
-<p>Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace, like <em>Focal</em> to <em>Jammy</em>, <em>Jammy</em> to <em>Noble</em>, <em>Bullseye</em> to <em>Bookworm</em>, <em>Bookworm</em> to <em>Trixie</em>. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in various random scenarios.  </p>
-<p>You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via <code>armbian-config</code> beforehand. Also please do not blame/complain (at) Armbian if something goes wrong or have other issues with an upgraded system.</p>
+<p>Note: Upgrading Armbian core components (kernel, firmware, bootloader) and upgrading the chosen userspace are independent processes. The former is performed with <code>apt update &amp;&amp; apt upgrade</code>.</p>
+<p>Armbian does not provide or encourage a standardized userspace upgrade path (e.g., <em>Focal</em>→<em>Jammy</em>, <em>Jammy</em>→<em>Noble</em>, <em>Bullseye</em>→<em>Bookworm</em>, <em>Bookworm</em>→<em>Trixie</em>). We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.</p>
+<p>You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via <a href="https://docs.armbian.com/User-Guide_Armbian-Config/">armbian-config</a>. Note: issues arising from such upgrades are out of scope for Armbian support.</p>
 
 
 
