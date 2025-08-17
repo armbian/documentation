@@ -81,3 +81,11 @@ Creating and maintaining images for **all combinations** of kernel, userspace, a
 However, using the [**Armbian build framework**](https://docs.armbian.com/Developer-Guide_Build-Preparation/), you can **easily create custom images**. It’s well-documented and accessible to moderately experienced users.
 
 If enough users show interest in a specific configuration, we may **adjust build targets** accordingly.
+
+# Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
+
+Note: Upgrading the Armbian core packages like kernel, firmware and boot loader and the chosen userspace are independent processes. Former is simply done with `apt update && apt upgrade`.  
+  
+Armbian does not offer a standardized way nor do we encourage users to upgrade their userspace, like _Focal_ to _Jammy_, _Jammy_ to _Noble_, _Bullseye_ to _Bookworm_, _Bookworm_ to _Trixie_. We would love to do that but the reason why we cannot is simply the lack of ressources in time and devices to test such upgrades in various random scenarios.  
+  
+You can try to upgrade your userspace by following official ways from Debian/Ubuntu but make sure to freeze your firmware packages via `armbian-config` beforehand. Also please do not blame/complain (at) Armbian if something goes wrong or have other issues with an upgraded system.
