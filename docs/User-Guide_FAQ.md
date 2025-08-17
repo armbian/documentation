@@ -86,6 +86,6 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 Note: Upgrading Armbian core components (kernel, firmware, bootloader) and upgrading the chosen userspace are independent processes. The former is performed with `apt update && apt upgrade`.
 
-Armbian does not provide or encourage a standardized userspace upgrade path (e.g., *Focal*→*Jammy*, *Jammy*→*Noble*, *Bullseye*→*Bookworm*, *Bookworm*→*Trixie*). We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.
+Armbian does not provide a standardized userspace upgrade path (e.g., *Focal*→*Jammy*, *Jammy*→*Noble*, *Bullseye*→*Bookworm*, *Bookworm*→*Trixie*) nor encourages to do so. We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.
 
 You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/). Note: issues arising from such upgrades are out of scope for Armbian support.
