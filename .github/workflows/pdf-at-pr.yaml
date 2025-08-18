@@ -15,13 +15,13 @@ jobs:
 
     steps:
       - name: Checkout PR branch (documentation)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: documentation
 
       - name: Checkout `www` branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: www
           path: www
