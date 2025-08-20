@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -802,6 +802,15 @@
   <a href="#why-is-my-image-not-listed" class="md-nav__link">
     <span class="md-ellipsis">
       Why is my image not listed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
     </span>
   </a>
   
@@ -2192,6 +2201,10 @@
 <p>Creating and maintaining images for <strong>all combinations</strong> of kernel, userspace, and desktop across all boards is <strong>technically and financially unfeasible</strong>. We provide <strong><a href="https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml">a carefully chosen set of default images</a></strong> per board.</p>
 <p>However, using the <a href="https://docs.armbian.com/Developer-Guide_Build-Preparation/"><strong>Armbian build framework</strong></a>, you can <strong>easily create custom images</strong>. It’s well-documented and accessible to moderately experienced users.</p>
 <p>If enough users show interest in a specific configuration, we may <strong>adjust build targets</strong> accordingly.</p>
+<h2 id="can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble">Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?<a class="headerlink" href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" title="Permanent link">&para;</a></h2>
+<p>Note: Upgrading Armbian core components (kernel, firmware, bootloader) and upgrading the chosen userspace are independent processes. The former is performed with <code>apt update &amp;&amp; apt upgrade</code>.</p>
+<p>Armbian does not provide a standardized userspace upgrade path (e.g., <em>Focal</em>→<em>Jammy</em>, <em>Jammy</em>→<em>Noble</em>, <em>Bullseye</em>→<em>Bookworm</em>, <em>Bookworm</em>→<em>Trixie</em>) nor encourages to do so. We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.</p>
+<p>You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via <a href="https://docs.armbian.com/User-Guide_Armbian-Config/">armbian-config</a>. Note: issues arising from such upgrades are out of scope for Armbian support.</p>
 
 
 
@@ -2292,10 +2305,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
