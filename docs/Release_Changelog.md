@@ -4,9 +4,109 @@
 
 ## What's Changed
 
+## v25.8.1 (2025-8-17)
+
+ 
+    • Fix - Package apt-xapian-index missing on Trixie by @Grippy98 in #8202 
+    • Fix and improve Armbian GH Action by @igorpecovnik in #8201 
+    • partitioning: fix compressed BTRFS creation by @alex3d in #8200 
+    • Allwinner: replace bc with awk in temperature check by @igorpecovnik in #8205 
+    • Work if no customize-image.sh present by @iav in #8222 
+    • grub: ensure tty0 console if others used by @rpardini in #8247 
+    • artifacts: force fsync() before caching by @rpardini in #8242 
+    • rootfs-to-image: drop --sparse (too slow) by @rpardini in #8249 
+    • docker: speed up extension checks by @rpardini in #8248 
+    • kernel-debs: retry make clean with logs by @rpardini in #8241 
+    • Signing key: keep symlink to old location by @igorpecovnik in #8282 
+    • motd: fix login screen alignment by @leggewie in #8322 
+    • README cleanup, update logo, declutter by @igorpecovnik in #8391 
+    • Plymouth: update boot logo by @igorpecovnik in #8381 
+    • fix firstlogin password creation on sid by @amazingfate in #8415 
+    • gcc-arm-linux-gnueabi: install conditionally by @leggewie in #8401 
+    • Don’t copy id_ecdsa if not needed by @gbrdead in #8446 
+    • minor spelling mistakes by @leggewie in #8450 
+    • APA extension: small fixes by @leggewie in #8509 
+    • Trixie: drop non-existing packages by @igorpecovnik in #8279 
+    • Bullseye: drop backports repo (gone) by @igorpecovnik in #8437 
+    • Debian: drop security repo from package lists by @igorpecovnik in #8444 
+    • Debian Trixie: declare supported by @igorpecovnik in #8470 
+    • Wireless drivers: bump commit hash, mark deprecated by @igorpecovnik in #8408 
+    • kernel-debs: use dynamic kernel image names by @amazingfate in #8451 
+    • Improve WiFi support for sun50iw1 family by @leggewie in #8467 
+    • drop apt-xapian-index and pavumeter from desktops by @leggewie in #8356 
+    • update plasma-workspace pkgs for RB5 by @leggewie in #8357 
+    • config/desktop: disable mate-sntray-plugin on Trixie by @leggewie in #8491 
+    • config/desktop: update gnome-bluetooth in Noble/Trixie by @leggewie in #8502 
+    • Preparation for HTTP proxy caching by @EvilOlaf in #8281 
+    • Add dual signing support by @igorpecovnik in #8320 
+    • Add new repository key by @igorpecovnik in #8323 
+    • mvebu: bump EDGE kernel to 6.12 by @igorpecovnik in #8193 
+    • sunxi 6.12: switch to v6.12.30 by @The-going in #8233 
+    • sunxi-6.15: bump EDGE to v6.15 by @The-going in #8270 
+    • Allwinner: bump current to 6.12.35 & edge to 6.15.4 by @igorpecovnik in #8337 
+    • rockchip64: bump edge to 6.16-rc3 by @EvilOlaf in #8328 
+    • mainline-kernel: bump 6.16 → released by @amazingfate in #8443 
+    • uefi-arm64: bump to 6.16 by @amazingfate in #8453 
+    • rockchip edge: bump to 6.16 by @paolosabatino in #8435 
+    • rpi4b: bump edge to 6.16 by @EvilOlaf in #8390 
+    • BPI-F3: update linux-6.6.95 → 99 by @pyavitz in #8411 
+    • SpacemiT: linux-6.6.93 → 95 by @pyavitz in #8333 
+    • odroidxu4: bump to 6.6.93 → 100 by @belegdol in #8277, #8442 
+    • Bump rockchip32 edge kernel to 6.15 by @paolosabatino in #8262 
+    • Bump imx6, mvebu, xu4 kernels, mark wdk2023 EoS by @igorpecovnik in #8410 
+    • khadas-edge2: fix u-boot by @efectn in #8220 
+    • Gateway GZ80x: switch back to u-boot v2024.10 by @pyavitz in #8216 
+    • nanopct6(-lts): bump u-boot to v2025.04 final by @rpardini in #8239 
+    • odroidhc4: u-boot v2025.04, unify configs by @rpardini in #8244 
+    • mixtible-blade3: revert to radxa u-boot v2024.03 by @rpardini in #8243 
+    • khadas-vim3: bump u-boot v2025.04 final by @rpardini in #8238 
+    • nanopct6(-lts): switch to mainline ATF + u-boot for current by @rpardini in #8219 
+    • tinkerboard-2: bump u-boot v2025.04 by @hyx0329 in #8268 
+    • quartz64a: bump u-boot to v2025.04 final by @rpardini in #8250 
+    • BananaPi BPI-M4-Zero: bump u-boot v2025.01 & v2025.07 by @pyavitz in #8339, #8434 
+    • orangepi5pro: bump u-boot v2025.07 (eMMC) by @c127dev in #8417 
+    • MBa8MPxL: bump u-boot to v2024.04 by @schmiedelm in #8291 
+    • station-m3: update u-boot patches by @chainsx in #8424 
+    • lckfb-taishanpi: update u-boot patches by @chainsx in #8428 
+    • rock-4se: binman boot with mainline ATF by @jclds139 in #8449 
+    • Update Realtek RTL8822CS external driver by @adeepn in #8195 
+    • Unlock radios on RPi with service by @igorpecovnik in #8210 
+    • helios4: fix WOL service by @djurny in #8235 
+    • Rock-5C: enable thermal sensors by @mdziekon in #8430 
+    • Fix DSI display on RPi5 by @CaWeissWz in #8294 
+    • Restore RockPI-S audio by @brentr in #8360 
+    • SMART AM40: add PHY LED config by @retro98boy in #8431 
+    • Gateway GZ80x: add rtl8723ds BT support by @pyavitz in #8351 
+    • Orangepi Zero: drop Crust support (fix reboot) by @igorpecovnik in #8503 
+    • linux-rk35xx-vendor: add LTE em05 driver by @rafayahmed317 in #8484, #8508 
+    • Xradio: adjust for kernel 6.16+ by @igorpecovnik in #8469 
+    • Innosilicon USB3 phy driver for rk3328 by @paolosabatino in #8510 
+    • Netplan: DHCP on lan*/wan* interfaces by @djurny in #8259 
+    • sunxi-6.14: bananapi_m4_berry → supported by @The-going in #8226 
+    • SpacemiT: enable audio, bump kernels by @pyavitz in #8221, #8333, #8481 
+    • CAINIAO CNIoT-CORE initial support by @retro98boy in #8208 
+    • NanoPi R3S LTS added by @pyavitz in #8300 
+    • BananaPi BPI-CM4 Waveshare IO-BASE-B fixes by @pyavitz in #8303 
+    • Add imb3588 board by @JackHuang021 in #8267 
+    • Add KickPi K2B board by @pyavitz in #8452 
+    • Add DshanPi A1 (RK3576) by @chainsx in #8380 
+    • Orange Pi 5 Pro initial support by @c127dev in #8348 
+    • Orange Pi 5 Ultra fixes & improvements by @khusika in #8373 
+    • Rock-5B-Plus: align Edge with upstream by @HeyMeco in #8338 
+    • BananaPi BPI-M4-Zero DTS + overlays fixes by @pyavitz in #8339, #8434, #8448, #8454, #8498 
+    • BananaPi CM4/M2S: revert SDIO WiFi change by @pyavitz in #8495 
+    • Nanopi R6/R5: netplan fix (wan→wan1) by @igorpecovnik in #8325 
+    • PocketBeagle2: image fixes + USB serial enable by @Ayush1325 in #8283, #8349, #8370 
+    • Pcduino2/3: add HDMI, fix drm regression by @Ryzer58 in #8341 
+    • MediaTek Filogic: BananaPi R4 community support by @chainsx in #8407 
+    • Radxa Cubie A5E: migrate to mainline 6.16 by @juanesf in #8447 
+    • coolpi-genbook: vendor branch by @andyshrk in #8275 
+    • Inovato quadra bootfix + u-boot bump by @igorpecovnik in #8334 
+
+
 ## v25.5.1 (2025-5-26)
 
-* [Bugfix] Fixed Non supported OS warning message.  by @Tearran in https://github.com/armbian/configng/pull/498
+* [Bugfix] Fixed Non supported OS warning message.  by @Tearran in https://github.com/armbian/configng/pull/498 
 * [Bugfix] feature array names,  by @Tearran in https://github.com/armbian/configng/pull/305
 * [Bugfix] Unexpected command executed when config overlays #349 by @Tearran in https://github.com/armbian/configng/pull/355
 * Activate the specified network interface, before applying IP stack by @igorpecovnik in https://github.com/armbian/configng/pull/411
