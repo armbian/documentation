@@ -11,7 +11,7 @@ repo_name: armbian/documentation
 theme:
     name: material
     custom_dir: overrides
-    logo: images/logo.svg
+    logo: images/armbian-logo.png
     icon:
       repo: fontawesome/brands/github-alt
     palette:
