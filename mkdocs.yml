@@ -92,8 +92,6 @@ markdown_extensions:
   - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
   - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
   - markdown.extensions.tables # Tables
-  - markdown.extensions.toc: # Add HTML id attribute to headers
-      permalink: true # Headers are links to themselves
   - pymdownx.betterem: # More intuitive emphasis handling
       smart_enable: all # Even smarter for both (asterisk and underscore) syntax => GitHub-like
   - pymdownx.details # Collapsible details blocks
