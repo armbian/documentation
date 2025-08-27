@@ -54,6 +54,9 @@ extra:
 
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        'User-Guide_Allwinner_overlays.md': 'User-Guide_Armbian_overlays.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
