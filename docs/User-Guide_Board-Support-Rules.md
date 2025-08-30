@@ -10,7 +10,7 @@ Support definitions, criteria and relationships for:
 - [Platinum Support](#platinum-support)
 - [Standard support](#standard-support)
 - [Community maintained](#community-maintained)
-- [Staging](#)
+- [Staging](#staging)
 
 ## Platinum Support
 
