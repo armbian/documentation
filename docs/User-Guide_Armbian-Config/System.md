@@ -647,6 +647,54 @@ armbian-config --cmd STABLE
 ~~~
 
 
+#### Stable Distro Upgrade
+
+
+Distribution upgrade to latest stable / LTS
+
+
+<!--- header START from tools/include/markdown/STD001-header.md --->
+Long-Term Support (LTS) upgrades provide a **well-tested and stable release** of the underlying Linux distribution (Debian or Ubuntu). These versions receive **security patches and critical bug fixes** for an extended period, making them the recommended choice for production systems and users who prioritize stability over new features.
+
+!!! Note
+
+    While LTS upgrades are considered safe, always back up your data before proceeding with a distribution upgrade.
+
+<!--- header STOP from tools/include/markdown/STD001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STD001-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd STD001
+~~~
+
+
+#### Unstable Distro Upgrade
+
+
+Distribution upgrade to rolling unstable
+
+
+<!--- header START from tools/include/markdown/UNS001-header.md --->
+Testing upgrades track the **latest distribution releases** that are not yet fully stabilized. They include **new features, packages, and improvements**, but may also introduce regressions or breaking changes. This option is best suited for **developers, testers, and enthusiasts** who want early access and are willing to troubleshoot issues. 
+
+!!! Warning
+
+    Testing upgrades may cause system instability. Avoid using this option on production devices. Always back up important data before upgrading.  
+
+
+
+<!--- header STOP from tools/include/markdown/UNS001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/UNS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNS001-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd UNS001
+~~~
+
+
 #### Docker images
 
 
