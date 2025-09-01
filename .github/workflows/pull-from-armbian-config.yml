@@ -25,7 +25,7 @@ jobs:
         with:
           repository: 'armbian/configng'
           path: 'config'
-          ref: renamne
+          ref: rename
 
       - name: Make docs
         run: |
