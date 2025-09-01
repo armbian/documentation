@@ -647,7 +647,7 @@ armbian-config --cmd STABLE
 ~~~
 
 
-#### Stable LTS Distribution Upgrade
+#### Stable Distro Upgrade
 
 
 Distribution upgrade to latest stable / LTS
@@ -670,7 +670,7 @@ armbian-config --cmd STD001
 ~~~
 
 
-#### Unstable Testing Distribution Upgrade
+#### Unstable Distro Upgrade
 
 
 Distribution upgrade to rolling unstable
