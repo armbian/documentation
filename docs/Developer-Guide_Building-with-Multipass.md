@@ -1,6 +1,6 @@
 # Building with Multipass
 
-In order to build an Armbian image from scratch, whether for development purposes or to [apply user customizations](https://docs.armbian.com/Developer-Guide_User-Configurations/) on top of a base image, a build environment is required. Per the Armbian documentation, Ubuntu 22.04 is [the officially supported](https://docs.armbian.com/Developer-Guide_Build-Preparation/) build platform. 
+In order to build an Armbian image from scratch, whether for development purposes or to [apply user customizations](https://docs.armbian.com/Developer-Guide_User-Configurations/) on top of a base image, a build environment is required. Per the Armbian documentation, Ubuntu 24.04 is [the officially supported](https://docs.armbian.com/Developer-Guide_Build-Preparation/) build platform.
 
 [Multipass](https://multipass.run/) that is designed for quick and painless provisioning of Ubuntu VMs.
 
