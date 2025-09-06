@@ -389,3 +389,4 @@ Example:
 - **ROOT_FS_CREATE_ONLY** ( yes | **no** ): set to yes to force local cache creation
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **DISABLE_KERNEL_PATCHES** ( yes | **no** ): Disable all Armbian-specific kernel patches and build a vanilla kernel instead. Also disables `EXTRAWIFI`
+- **DOCKER_NICE** ( `integer`, -20 to 19 ): automatically propagated from the initial `compile.sh`'s `nice` value.
