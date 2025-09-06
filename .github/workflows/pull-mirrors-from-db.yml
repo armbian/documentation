@@ -66,7 +66,7 @@ jobs:
           EOF
           JQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" \
                     -H "Accept: application/json; indent=4" \
-                    "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror")
+                    "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror&status=active")
           for i in $(echo $JQ | jq '.results[] | .id'); do
             NAME=$(echo $JQ | jq ".results[] | select(.id == $i) | .name" | sed "s/\"//g")
             SITE_ID=$(echo $JQ | jq ".results[] | select(.id == $i) | .site.id")
