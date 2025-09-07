@@ -654,20 +654,43 @@ Distribution upgrade to latest stable / LTS
 
 
 <!--- header START from tools/include/markdown/STD001-header.md --->
-Long-Term Support (LTS) upgrades provide a **well-tested and stable release** of the underlying Linux distribution (Debian or Ubuntu). These versions receive **security patches and critical bug fixes** for an extended period, making them the recommended choice for production systems and users who prioritize stability over new features.
+Stable / LTS upgrades move your system to a newer release of Debian or Ubuntu, bringing updated system packages along with long-term security fixes and bug patches. This makes them the safest choice for reliable, everyday use.
 
-!!! Note
+!!! Warning "Risks of Stable Upgrades"
 
-    While LTS upgrades are considered safe, always back up your data before proceeding with a distribution upgrade.
+    Distribution upgrades are experimental and **not supported by Armbian**. Use at your own risk.
+
+    Even LTS → LTS upgrades (e.g., **Debian Bookworm → Trixie**, **Ubuntu Jammy → Noble**) carry some risks:
+
+    - **Broken dependencies** – some packages may fail to upgrade or be removed.  
+    - **Configuration overrides** – local changes may be replaced by defaults.  
+    - **Downtime** – failed upgrades may require console access, manual recovery, or a full reinstall.  
+
+    Because Armbian integrates upstream Debian/Ubuntu with custom board support packages, upgrades may still trigger **unexpected breakage** on some devices.  
 
 <!--- header STOP from tools/include/markdown/STD001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STD001-header.md)  
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STD001-header.md)  
 __Status:__ Stable  
 
 ~~~ custombash
 armbian-config --cmd STD001
 ~~~
+
+
+<!--- footer START from tools/include/markdown/STD001-footer.md --->
+Best Practices
+
+1. **Back up your data** (system and configuration).  
+2. **Test on a spare device or SD card** before upgrading production systems.  
+3. **Read the official release notes** of your target distribution:  
+- [Armbian FAQ: Can I upgrade my userspace flavor?](/User-Guide_FAQ/#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble)  
+- [Debian upgrade notes](https://www.debian.org/releases/trixie/release-notes/upgrading.en.html)  
+- [Ubuntu release upgrade guide](https://documentation.ubuntu.com/server/how-to/software/upgrade-your-release/)  
+4. **Ensure you have console access** (serial, HDMI + keyboard, SSH).  
+5. **Consider fresh installs** if uptime and stability matter more than keeping the old environment.  
+
+<!--- footer STOP from tools/include/markdown/STD001-footer.md --->
 
 
 #### Unstable Distro Upgrade
@@ -677,13 +700,16 @@ Distribution upgrade to rolling unstable
 
 
 <!--- header START from tools/include/markdown/UNS001-header.md --->
-Testing upgrades track the **latest distribution releases** that are not yet fully stabilized. They include **new features, packages, and improvements**, but may also introduce regressions or breaking changes. This option is best suited for **developers, testers, and enthusiasts** who want early access and are willing to troubleshoot issues. 
+Non-LTS releases are intended for **developers, testers, and enthusiasts** who want the latest features — **not for production systems**.  
 
-!!! Warning
+!!! Warning "Risks of Unstable Upgrades"
 
-    Testing upgrades may cause system instability. Avoid using this option on production devices. Always back up important data before upgrading.  
+    Distribution upgrades are experimental and **not supported by Armbian**. Use at your own risk.
 
-
+    - **High chance of breakage** – dependencies, bootloader, or kernel may fail.  
+    - **Short lifecycle** – requires frequent re-upgrades (every ~6–9 months).  
+    - **Unfinished features** – packages may be experimental or not fully supported.  
+    - **Armbian compatibility** – integration with board support packages is less tested.  
 
 <!--- header STOP from tools/include/markdown/UNS001-header.md --->
 
