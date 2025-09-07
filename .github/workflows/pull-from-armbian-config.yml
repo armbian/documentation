@@ -25,6 +25,7 @@ jobs:
         with:
           repository: 'armbian/configng'
           path: 'config'
+          ref: igorpecovnik-patch-3
 
       - name: Make docs
         run: |
