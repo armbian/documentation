@@ -84,10 +84,10 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 ## Can I upgrade to a new Armbian release?
 
-Yes! A simple `apt update && apt upgrade` will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available.
+Yes! A simple `apt update && apt upgrade` will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available just like it will for underlying distribution packages.
 
 ## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
 
-Armbian does not provide a standardized userspace upgrade path (e.g. *Jammy*→*Noble*, *Bookworm*→*Trixie*, ...) nor encourages to do so. We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.
-
-You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/). Note: issues arising from such upgrades are out of scope for Armbian support.
+Performing this is out of scope for Armbian domain and we cannot provide any support if something goes wrong.  
+An experimental way of doing this is available through `armbian-config` but also here no supported can be provided.  
+In any case when trying this make sure you have a proper backup for your whole system.
