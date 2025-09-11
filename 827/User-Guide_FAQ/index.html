@@ -2211,10 +2211,11 @@
 <p>However, using the <a href="https://docs.armbian.com/Developer-Guide_Build-Preparation/"><strong>Armbian build framework</strong></a>, you can <strong>easily create custom images</strong>. It’s well-documented and accessible to moderately experienced users.</p>
 <p>If enough users show interest in a specific configuration, we may <strong>adjust build targets</strong> accordingly.</p>
 <h2 id="can-i-upgrade-to-a-new-armbian-release">Can I upgrade to a new Armbian release?<a class="headerlink" href="#can-i-upgrade-to-a-new-armbian-release" title="Permanent link">&para;</a></h2>
-<p>Yes! A simple <code>apt update &amp;&amp; apt upgrade</code> will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available.</p>
+<p>Yes! A simple <code>apt update &amp;&amp; apt upgrade</code> will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available just like it will for underlying distribution packages.</p>
 <h2 id="can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble">Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?<a class="headerlink" href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" title="Permanent link">&para;</a></h2>
-<p>Armbian does not provide a standardized userspace upgrade path (e.g. <em>Jammy</em>→<em>Noble</em>, <em>Bookworm</em>→<em>Trixie</em>, &hellip;) nor encourages to do so. We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.</p>
-<p>You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via <a href="https://docs.armbian.com/User-Guide_Armbian-Config/">armbian-config</a>. Note: issues arising from such upgrades are out of scope for Armbian support.</p>
+<p>Performing this is out of scope for Armbian domain and we cannot provide any support if something goes wrong.<br />
+An experimental way of doing this is available through <code>armbian-config</code> but also here no supported can be provided.<br />
+In any case when trying this make sure you have a proper backup for your whole system.</p>
 
 
 
