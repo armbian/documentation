@@ -69,13 +69,14 @@ Run framework:
 ```
 
 !!! tip "Troubleshooting: 'unknown terminal type' error"
-When running the script, especially from modern terminal emulators (like Ghostty, Kitty, WezTerm), you might encounter an error like 'xterm-ghostty': unknown terminal type
+    When running the script, especially from modern terminal emulators (like Ghostty, Kitty, WezTerm), you might encounter an error like
 
-**Quick Workaround:** You can force a more common terminal type before running the script:
-```bash
-export TERM=xterm-256color
-./compile.sh
-```
+    'xterm-ghostty': unknown terminal type
+
+    **Quick workaround:** you can force a more common terminal type before running the script:
+    ```bash
+    env TERM=xterm-256color ./compile.sh
+    ```
 
 Only one command can be specified.
 
