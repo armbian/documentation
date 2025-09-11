@@ -814,14 +814,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" class="md-nav__link">
+    <nav class="md-nav" aria-label="Can I upgrade to a new Armbian release?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-upgrade-my-userspace-flavor-like-bookworm-trixie-or-jammy-noble" class="md-nav__link">
     <span class="md-ellipsis">
-      Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
+      Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2212,10 +2218,15 @@
 <p>If enough users show interest in a specific configuration, we may <strong>adjust build targets</strong> accordingly.</p>
 <h2 id="can-i-upgrade-to-a-new-armbian-release">Can I upgrade to a new Armbian release?<a class="headerlink" href="#can-i-upgrade-to-a-new-armbian-release" title="Permanent link">&para;</a></h2>
 <p>Yes! A simple <code>apt update &amp;&amp; apt upgrade</code> will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available just like it will for underlying distribution packages.</p>
-<h2 id="can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble">Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?<a class="headerlink" href="#can-i-upgrade-my-userspace-flavor-like-bullseye-to-bookworm-or-jammy-to-noble" title="Permanent link">&para;</a></h2>
-<p>Performing this is out of scope for Armbian domain and we cannot provide any support if something goes wrong.<br />
-An experimental way of doing this is available through <code>armbian-config</code> but also here no supported can be provided.<br />
-In any case when trying this make sure you have a proper backup for your whole system.</p>
+<h3 id="can-i-upgrade-my-userspace-flavor-like-bookworm-trixie-or-jammy-noble">Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?<a class="headerlink" href="#can-i-upgrade-my-userspace-flavor-like-bookworm-trixie-or-jammy-noble" title="Permanent link">&para;</a></h3>
+<p>Distribution upgrades (e.g. Bookworm → Trixie, Jammy → Noble) are <strong>outside the scope of Armbian support</strong>. If you attempt such an upgrade, we cannot assist if problems occur.</p>
+<p>An <strong>experimental upgrade option</strong> is available in <a href="/User-Guide_Armbian-Config/System/#stable-distro-upgrade">armbian-config</a>, but it is provided <em>as-is</em> and without support.</p>
+<p>Keep in mind:</p>
+<ul>
+<li>A distribution upgrade usually updates <strong>all system packages</strong>, which in 99% of cases come from the <strong>upstream distribution (Debian/Ubuntu)</strong>.  </li>
+<li><strong>Armbian firmware, kernel, and U-Boot are not part of this process</strong>, which makes the upgrade generally safer from a hardware-support perspective.</li>
+</ul>
+<p>If you decide to proceed, always ensure you have a <strong>full backup of your system</strong> so you can recover in case the upgrade fails.</p>
 
 
 
