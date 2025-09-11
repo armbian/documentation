@@ -84,10 +84,17 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 ## Can I upgrade to a new Armbian release?
 
-Yes! A simple `apt update && apt upgrade` will upgrade all Armbian-related core packages (firmware, kernel, bsp) to the most recent version available just like it will for underlying distribution packages.
+Yes! The simple `armbian-upgrade` command, which is an alias for `apt update && apt upgrade`, will upgrade **all Armbian-related core packages** (firmware, kernel, BSP) to the most recent version available — just as it will upgrade the underlying distribution packages.
 
-## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
+## Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?
 
-Performing this is out of scope for Armbian domain and we cannot provide any support if something goes wrong.  
-An experimental way of doing this is available through `armbian-config` but also here no supported can be provided.  
-In any case when trying this make sure you have a proper backup for your whole system.
+Distribution upgrades (e.g. Bookworm → Trixie, Jammy → Noble) are **outside the scope of Armbian support**. If you attempt such an upgrade, we cannot assist if problems occur.
+
+An **experimental upgrade option** is available in [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/System/#stable-distro-upgrade), but it is provided *as-is* and without support.
+
+Keep in mind:
+
+- A distribution upgrade usually updates **all system packages**, which in 99% of cases come from the **upstream distribution (Debian/Ubuntu)**.  
+- **Armbian firmware, kernel, and U-Boot are not part of this process**, which makes the upgrade generally safer from a hardware-support perspective.
+
+If you decide to proceed, always ensure you have a **full backup of your system** so you can recover in case the upgrade fails.
