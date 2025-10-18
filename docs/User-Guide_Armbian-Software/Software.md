@@ -224,7 +224,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/m
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.bazarr.media/)  
+__Documentation:__ [Link](https://docs.docker.com)  
 
 ~~~ custombash
 armbian-config --cmd CON001
@@ -1815,7 +1815,8 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 
     You are welcome to report high-level application issues that are reproducible on the official Home Assistant Operating System (HAOS) within the [Home Assistant Community](https://community.home-assistant.io/). For any topics related to single-board computer hardware, you may use the [Armbian Community Forums](https://forum.armbian.com); however, please be aware that official support from the Armbian team is not guaranteed.
 
-    While the Home Assistant team is [planning to deprecate the Supervised installation method](https://community.home-assistant.io/t/feedback-requested-deprecating-core-supervised-i386-armhf-armv7/880968/312), the Armbian team will continue to provide and maintain the supervised installation method as long as automated installation tests remain successful and the maintenance effort remains reasonable.
+    While the Home Assistant team [deprecated the Supervised installation method](https://community.home-assistant.io/t/feedback-requested-deprecating-core-supervised-i386-armhf-armv7/880968/312), the Armbian team will continue to provide and maintain it, as long as automated installation tests succeed and the required maintenance remains manageable.
+
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-header.md)  
