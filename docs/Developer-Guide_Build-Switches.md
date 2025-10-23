@@ -369,6 +369,9 @@ Example:
   - `bfsu`: use `mirrors.bfsu.edu.cn`, the mirror of Beijing Foreign Studies University
   - leave empty to use official source
 - **LOCAL_MIRROR** (auto): override automated mirror selection, example 'LOCAL_MIRROR="<https://yourlocalmirror.com>"'
+- **MANAGE_ACNG** ( `yes` | **`no`** | http URL ): configures use of `apt-cacher-ng`, a cache for debian/ubuntu/etc apt repositories.
+  - `yes` sets up an automatically managed `apt-cacher-ng` instance on the build host. This mode is incompatible with container builds.
+  - but you can provide a URL for a self-managed `apt-cacher-ng` instance, e.g. `"http://apt-cacher.example.com:3142"`
 - **MAINLINE_MIRROR** ( `google` | `tuna` | `bfsu` ): select mainline mirror of `linux-stable.git`
   - `google`: use the mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
   - `tuna`: use the mirror provided by Tsinghua University
