@@ -222,7 +222,7 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - This function might not work well with all distributions.
     - CRYPTROOT_MAPPER name might affect parallel image building
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
-    - CRYPTROOT_AUTOUNLOCK stores entryption key in the /etc/rootfs.key
+    - CRYPTROOT_AUTOUNLOCK stores encryption key in the /etc/rootfs.key
 
 <hr>
 
