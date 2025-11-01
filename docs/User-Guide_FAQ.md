@@ -82,10 +82,19 @@ However, using the [**Armbian build framework**](https://docs.armbian.com/Develo
 
 If enough users show interest in a specific configuration, we may **adjust build targets** accordingly.
 
-## Can I upgrade my userspace flavor, like Bullseye to Bookworm or Jammy to Noble?
+## Can I upgrade to a new Armbian release?
 
-Note: Upgrading Armbian core components (kernel, firmware, bootloader) and upgrading the chosen userspace are independent processes. The former is performed with `apt update && apt upgrade`.
+Yes! The simple `armbian-upgrade` command, which is an alias for `apt update && apt upgrade`, will upgrade **all Armbian-related core packages** (firmware, kernel, BSP) to the most recent version available — just as it will upgrade the underlying distribution packages.
 
-Armbian does not provide a standardized userspace upgrade path (e.g., *Focal*→*Jammy*, *Jammy*→*Noble*, *Bullseye*→*Bookworm*, *Bookworm*→*Trixie*) nor encourages to do so. We would love to offer this, but we currently lack the resources (time and devices) to validate such upgrades across diverse scenarios.
+## Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?
 
-You may attempt a userspace upgrade using the official Debian/Ubuntu methods. Before doing so, freeze Armbian firmware/kernel/bootloader packages via [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/). Note: issues arising from such upgrades are out of scope for Armbian support.
+Distribution upgrades (e.g. Bookworm → Trixie, Jammy → Noble) are **outside the scope of Armbian support**. If you attempt such an upgrade, we cannot assist if problems occur.
+
+An **experimental upgrade option** is available in [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/System/#stable-distro-upgrade), but it is provided *as-is* and without support.
+
+Keep in mind:
+
+- A distribution upgrade usually updates **all system packages**, which in 99% of cases come from the **upstream distribution (Debian/Ubuntu)**.  
+- **Armbian firmware, kernel, and U-Boot are not part of this process**, which makes the upgrade generally safer from a hardware-support perspective.
+
+If you decide to proceed, always ensure you have a **full backup of your system** so you can recover in case the upgrade fails.
