@@ -208,6 +208,7 @@ LUKS (Linux Unified Key Setup) is a specification for block device encryption. I
 
 ```title="When enabled, you need to provide additional information:"
 CRYPTROOT_PASSPHRASE="MYSECRECTPASS"             # Mandatory
+CRYPTROOT_AUTOUNLOCK="yes"                       # Default: no. If set to yes you can omit CRYPTROOT_PASSPHRASE to do unattended unlocking
 CRYPTROOT_SSH_UNLOCK="yes"                       # Default: yes
 CRYPTROOT_SSH_UNLOCK_PORT="2222"                 # Default: 2022
 CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root
@@ -221,6 +222,7 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - This function might not work well with all distributions.
     - CRYPTROOT_MAPPER name might affect parallel image building
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
+    - CRYPTROOT_AUTOUNLOCK stores encryption key in the /etc/rootfs.key
 
 <hr>
 
