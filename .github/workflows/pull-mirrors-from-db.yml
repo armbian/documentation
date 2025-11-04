@@ -48,7 +48,7 @@ jobs:
                 TEXT="Very old images"
                 ;;
             esac
-            echo "   | $TEXT | \`rsync -av rsync://rsync.armbian.com/$storage\` | $size |" >> tmp.md
+            echo "   | $TEXT | \`rsync -av rsync://fi.mirror.armbian.de/$storage\` | $size |" >> tmp.md
           done
           sed -n '/^## Current Mirrors/,$p' "$FILE" >> tmp.md
           sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' tmp.md
