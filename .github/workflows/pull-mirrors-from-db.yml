@@ -33,7 +33,7 @@ jobs:
             |-----------------|---------------------------------------------|---------------:|
           EOF
           for storage in dl apt archive oldarchive; do
-            size=$(curl -s https://k-space.ee.armbian.com/$storage/size.txt)
+            size=$(curl -s https://fi.mirror.armbian.de/$storage/size.txt)
             case "$storage" in
               "dl")
                 TEXT="Current images"
