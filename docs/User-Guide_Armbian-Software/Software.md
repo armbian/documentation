@@ -2070,10 +2070,10 @@ armbian-config --cmd NBOX01
 <!--- footer START from tools/include/markdown/NBOX01-footer.md --->
 === "Access to the service"
 
-    NetBox is accessible via HTTP on port **8000**:
+    NetBox is accessible via HTTP on port **8222**:
 
-    - URL: `http://<your.IP>:8000`
-    - API root: `http://<your.IP>:8000/api/`
+    - URL: `http://<your.IP>:8222`
+    - API root: `http://<your.IP>:8222/api/`
 
 === "Default credentials"
 
