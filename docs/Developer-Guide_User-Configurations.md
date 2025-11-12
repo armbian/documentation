@@ -13,6 +13,12 @@ Patches with the same file name and path in the `userpatches` directory tree ove
 
 A configuration file named `userpatches/config-<something>.conf.sh` (`.conf` also allowed) is a bash script that is sourced during the build if `./compile.sh something` is issued. All parameters which normally are passed via command line can be used (`PARAM1=value1` `PARAM2=value`) by using the same syntax, one separate line per `PARAM`. Command-line parameters still can override what is in the config file. More advanced use cases can use conditionals, define functions to implement hooks, source other/common config files, etc. A few, quite complex, examples can be found [here](https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova).
 
+## User provided first config
+
+    userpatches/firstboot.conf
+
+When detected, the system displays an informational alert and applies the [first config configuration](https://docs.armbian.com/User-Guide_Autoconfig/).
+
 ## Legacy user provided configuration (deprecated, support for this will be removed at some point)
 
 If the file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. For a comprehensive list of available variables, look through  `lib/functions/configuration/main-config.sh`. Some examples of what you can change:
