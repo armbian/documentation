@@ -12,8 +12,9 @@ All wireless adapters were tested under consistent conditions - each positioned 
 
 - **Access Point**: [Zyxel NWA130BE (Wi-Fi 7)](https://amzn.to/428dvnH)
 - **Network Switches**: 
-  - Netgear XS712T  
-  - Netgear XS508M
+  - Netgear XS712T (10Gb)
+  - Netgear XS508M (10Gb)
+  - TP Link SG3218XP-M2 (2.5Gb PoE)
 - **Power Switches**: APC AP7920  
 - **Client Devices**:
   - Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards
