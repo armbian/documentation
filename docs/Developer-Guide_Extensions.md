@@ -97,3 +97,13 @@ They're the same, except:
 - Directory-based extensions will be passed a `${EXTENSION_DIR}` environment variable.
 - That is useful if there are other files/assets that belong together with that extension. An example would be a template file, some configuration file, or other static asset that is directly related to the extension.
 - Using directory-based extensions and `${EXTENSION_DIR}` allows for easy moving and PR'ing of user extensions.
+
+# Opt-out of individual hook functions
+
+Any function making use of the extension framework [generally of the form `hook_name__individual_function`] can be skipped in a board or family config, by way of
+
+```bash
+unset -f hook_name__individual_function
+```
+
+Doing so is at the board/family maintainer's own risk and doing so is officially unsupported. Consider splitting the function into pieces so that only the part the board/family cannot tolerate is skipped.
