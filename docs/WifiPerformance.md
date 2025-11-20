@@ -66,7 +66,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Broadcom 4345
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/BCM4345.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/BCM4345.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.2.2, 6.12.15-current-bcm2711</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -131,7 +131,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Compex WLE900VX
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/QCA9880.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/QCA9880.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.08.0-trunk, 6.12.28-edge-mvebu</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -195,7 +195,7 @@ This section presents the performance test results, including key metrics and te
 
 #### EDUP EP-AC1681
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL88x2BU.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL88x2BU.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -259,7 +259,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8821CU #1
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8821CU.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8821CU.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -323,7 +323,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8821CU #2
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8821CU.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8821CU.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.5.1, 6.12.28-current-meson64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -382,7 +382,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 88X2CS
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL88X2CS.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL88X2CS.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.8.1, 6.12.42-current-meson64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -447,7 +447,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Ampak 6275P
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AP6275P.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/AP6275P.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.8.0-trunk.149, 6.12.33-current-rockchip64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -512,7 +512,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Comfast CF953AX
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/MT7921AU.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/MT7921AU.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -576,7 +576,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Intel AX200
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AX200.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/AX200.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.2.2, 6.12.15-current-rockchip64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -640,7 +640,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8852AE
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8852AE.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8852AE.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.8.1, 6.12.42-current-rockchip64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -705,7 +705,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8852BS
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8852BS.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8852BS.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.8.1, 6.6.99-current-spacemit</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -767,7 +767,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Alfa RT3572
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RT3572.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RT3572.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -831,7 +831,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Atheros AR9271
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/AR9271.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/AR9271.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -895,7 +895,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Broadcom 43430
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/BCM43430.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/BCM43430.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.5.1, 6.12.23-current-sunxi</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -960,7 +960,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Broadcom 43455
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/BCM43455.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/BCM43455.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.2.3, 6.12.22-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1025,7 +1025,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Ralink RT5370
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RT5370.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RT5370.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1089,7 +1089,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Ralink RT5572
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RT5572.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RT5572.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1153,7 +1153,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8188CUS
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8192CU.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8192CU.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.11.0-trunk.49, 6.12.42-current-x86</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1217,7 +1217,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Realtek 8723BS
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/RTL8723BS.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/RTL8723BS.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.2.1, 6.12.13-current-rockchip</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1276,7 +1276,7 @@ This section presents the performance test results, including key metrics and te
 
 #### UWE 5622
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/UWE5622.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/UWE5622.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.8.0-trunk.154, 6.12.30-current-sunxi64</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1336,7 +1336,7 @@ This section presents the performance test results, including key metrics and te
 
 #### Xradio XR819
 
-<img src=https://stuff.armbian.com/netbox/media/devicetype-images/XR819.png>
+<img src=https://netbox.armbian.com/media/devicetype-images/XR819.png>
 <span style="font-size: 0.5rem;">OS: Armbian v25.5.1, 6.16.0-edge-sunxi</span>
 
 | Chipset | Class | Average forward speed | Average reverse speed |
@@ -1512,7 +1512,7 @@ echo "[✔] Setup complete. User '$USERNAME' added, SSH key installed, Tailscale
 
 ### 6. Register Your Location
 
-Access: <https://stuff.armbian.com/netbox/dcim/sites/>
+Access: <https://netbox.armbian.com/dcim/sites/>
 
 - Sites in NetBox represent physical locations of wireless test equipment.
 - Each site have devices such as Access Points (APs), iperf3 servers, and wireless test clients.
@@ -1528,7 +1528,7 @@ Access: <https://stuff.armbian.com/netbox/dcim/sites/>
 
 ### 7. Register Device Type
 
-Add [new device type](https://stuff.armbian.com/netbox/dcim/manufacturers/61/) 
+Add [new device type](https://netbox.armbian.com/dcim/manufacturers/61/) 
  
 ???+ success "Relevant data"
 
