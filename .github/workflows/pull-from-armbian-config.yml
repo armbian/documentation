@@ -15,13 +15,13 @@ jobs:
     steps:
 
       - name: Checkout main documentation
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: 'armbian/documentation'
           path: 'documentation'
 
       - name: Checkout Armbian config repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: 'armbian/configng'
           path: 'config'

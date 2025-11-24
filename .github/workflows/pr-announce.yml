@@ -10,7 +10,7 @@ jobs:
     if: ${{ github.repository_owner == 'Armbian' }}
     steps:
       - name: Get repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Discord webhook
