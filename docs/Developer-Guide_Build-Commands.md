@@ -62,13 +62,13 @@ To use them in subsequent builds they
 must be copied to the appropriate directories in the patch/u-boot directory.
 See: [user-provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches)
 
-Any uncommited changes in the work tree and index are commited
+Any uncommitted changes in the work tree and index are committed
 to establish a clean work tree.
 It would be best if there are no uncommitted changes when running
 `uboot-patch`.
 
 If there is an existing patch file at the output path specified above, it
-may be applied before continuning work.
+may be applied before continuing work.
 
 When the prompt `Press <ENTER\> after you are done editing in ${pwd}` appears,
 in a separate window, navigate to the specified directory
@@ -79,10 +79,10 @@ and press `<ENTER>`.
 
 A patch to recreate the changes introduced to the u-boot tree is presented
 and the prompt "Are you happy with this patch?".
-You can response
+You can respond
 `yes` to accept the patch as-is and generate the output patch file,
-`stop` to abort the command without producing the outpu patch file,
-or anything else to loop back, to make futher changes.
+`stop` to abort the command without producing the output patch file,
+or anything else to loop back, to make further changes.
 
 Instead of creating them while running `uboot-patch`,
 new device tree files should be created in the relevant `dt` directory under
