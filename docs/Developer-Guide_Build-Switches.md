@@ -96,7 +96,7 @@ Defines what should be cleaned. Changing this option can be useful when rebuildi
 
 - `/dev/sdX`
 
-Set to the device of your flash media / SD card. The image will be burned and verified.
+After successful compilation, do a verified burn of the image to the specified storage device (flash media / SD card).
 
 **PREFER_DOCKER** ( `string` )
 - `yes` (default)
