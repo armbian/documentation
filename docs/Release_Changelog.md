@@ -47,7 +47,7 @@
 * Add user-friendly tool for interacting with Qualcomm devices.  by @igorpecovnik in [armbian/os#389](https://github.com/armbian/os/pull/389)
 * Add warning for rockchip uboot on modern hosts.  by @HeyMeco in [armbian/build#8783](https://github.com/armbian/build/pull/8783)
 * Add wget to prepare-host.sh.  by @HeyMeco in [armbian/build#8779](https://github.com/armbian/build/pull/8779)
-* Add Wi-Fi injection patch for Linux 6.12 kernels..  by @igorpecovnik in [armbian/build#8727](https://github.com/armbian/build/pull/8727)
+* Add Wi-Fi injection patch for Linux 6.12 kernels.  by @igorpecovnik in [armbian/build#8727](https://github.com/armbian/build/pull/8727)
 * Add WWAN and IOSM support to xpressreal-t3 kernel configuration.  by @aalaei in [armbian/build#8714](https://github.com/armbian/build/pull/8714)
 * add zstd and lzo as zram compression to meson64 current and edge configs.  by @Migelo in [armbian/build#8767](https://github.com/armbian/build/pull/8767)
 * Added new kde-plasma-mobile environment for trixie.  by @Squishy123 in [armbian/build#8769](https://github.com/armbian/build/pull/8769)
