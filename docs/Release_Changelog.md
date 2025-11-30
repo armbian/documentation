@@ -27,7 +27,7 @@
 * Add optional certDataPath input to action.yml.  by @efectn in [armbian/actions#10](https://github.com/armbian/actions/pull/10)
 * Add PWM configuration to rk3506b-armsom-forge1.dts.  by @as-jackson in [armbian/linux-rockchip#420](https://github.com/armbian/linux-rockchip/pull/420)
 * Add Radxa Rock 4D and Rockchip UFS support.  by @HeyMeco in [armbian/build#8570](https://github.com/armbian/build/pull/8570)
-* add redirect for https://docs.armbian.com/User-Guide_Allwinner_overlays/.  by @leggewie in [armbian/documentation#803](https://github.com/armbian/documentation/pull/803)
+* add redirect for [User-Guide_Allwinner_overlays](https://docs.armbian.com/User-Guide_Allwinner_overlays/).  by @leggewie in [armbian/documentation#803](https://github.com/armbian/documentation/pull/803)
 * add rk3506 ddr and tee blobs.  by @amazingfate in [armbian/rkbin#39](https://github.com/armbian/rkbin/pull/39)
 * Add rk3506 support and introduce new board armsom forge1.  by @amazingfate in [armbian/build#8619](https://github.com/armbian/build/pull/8619)
 * Add rk3528_ddr_ddr3_lpdr3_780MHz_v1.11.bin.  by @coolsnowwolf in [armbian/rkbin#37](https://github.com/armbian/rkbin/pull/37)
