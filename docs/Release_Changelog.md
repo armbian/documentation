@@ -4,7 +4,7 @@
 
 ## What's Changed
 
-## v25.11.1 (2025-11-20)
+## v25.11.1 (2025-11-30)
 
 * Action: Upload arm64 artifacts too.  by @HeyMeco in [armbian/linux-rockchip#423](https://github.com/armbian/linux-rockchip/pull/423)
 * Actions: Disable merge-announce workflow on forks.  by @vidplace7 in [armbian/build#8907](https://github.com/armbian/build/pull/8907)
