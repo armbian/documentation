@@ -125,7 +125,7 @@ After you have downloaded these files, we recommend checking the integrity and t
     On Windows, you can download and use the [QuickHash GUI](https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui. Linux and macOS users can simply do this in the directory with the compressed image and the checksum file:
 
     ```sh
-    sha256sum -c Armbian_25.2.1_Bananahttps://docs.armbian.compicm4io_bookworm_current_6.12.13_minimal.img.xz.sha
+    sha256sum -c Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz.sha
     ```
 
     The integrity is verified if the output looks something like this:
