@@ -172,8 +172,15 @@ __Documentation:__ [Link](https://forum.armbian.com/)
 #### Install
 
 
+Copy the running Armbian system to another device
+
+
 <!--- header START from tools/include/markdown/STO001-header.md --->
-This section provides an option to transfer the live running Armbian system from an SD card to internal storage devices such as eMMC, SATA, NVMe, or USB drives. It prepares the target storage, copies the active system, adjusts bootloader settings, and ensures the system can boot independently without requiring reinstallation.
+- Clones your current live OS installation
+- Keeps your settings, configuration, installed packages, and user data
+- Essentially “transfer my existing system to internal/external storage”
+
+Use this option to **transfer your current live Armbian system** to another storage device (eMMC, SSD, USB, etc.).  This copies your existing installation exactly as it is — including settings, installed packages, and user data.
 
 <!--- header STOP from tools/include/markdown/STO001-header.md --->
 
@@ -186,6 +193,49 @@ __Documentation:__ [Link](https://forum.armbian.com/)
 ~~~ custombash
 armbian-config --cmd STO001
 ~~~
+
+
+#### Download and flash
+
+
+Download a fresh, official Armbian OS image and write it to a device
+
+
+<!--- section image START from tools/include/images/FLASH1.png --->
+[![Download and flash](/images/FLASH1.png)](#)
+<!--- section image STOP from tools/include/images/FLASH1.png --->
+
+
+<!--- header START from tools/include/markdown/FLASH1-header.md --->
+What can this tool do?
+
+- Install Armbian onto internal **eMMC, SSD, or other storage**
+- Create **bootable SD cards or USB drives** for any supported board
+- Recover a system by **re-flashing a clean image**
+- Switch between different **OS variants, kernel branches, or preinstalled applications**
+- Accelerate development with **fast, repeatable deployments** for testing and automation
+
+<!--- header STOP from tools/include/markdown/FLASH1-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/FLASH1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/FLASH1-header.md)  
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
+__Maintainer:__ @igorpecovnik  
+
+~~~ custombash
+armbian-config --cmd FLASH1
+~~~
+
+
+<!--- footer START from tools/include/markdown/FLASH1-footer.md --->
+
+<!--- footer STOP from tools/include/markdown/FLASH1-footer.md --->
+
+
+~~~ bash title="Remove cached images:"
+armbian-config --cmd FLASH2
+~~~
+
 
 
 #### Read Only FS
