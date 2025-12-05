@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: 'armbian/configng'
+          ref: write_images
           path: 'config'
 
       - name: Make docs
