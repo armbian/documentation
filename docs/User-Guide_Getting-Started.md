@@ -125,7 +125,7 @@ After you have downloaded these files, we recommend checking the integrity and t
     On Windows, you can download and use the [QuickHash GUI](https://www.quickhash-gui.org/download/quickhash-v3-1-0-windows/) and follow the instructions in the gui. Linux and macOS users can simply do this in the directory with the compressed image and the checksum file:
 
     ```sh
-    sha256sum -c Armbian_25.2.1_Bananapicm4io_bookworm_current_6.12.13_minimal.img.xz.sha
+    sha256sum -c Armbian_25.2.1_Bananahttps://docs.armbian.compicm4io_bookworm_current_6.12.13_minimal.img.xz.sha
     ```
 
     The integrity is verified if the output looks something like this:
@@ -178,6 +178,8 @@ After you have downloaded these files, we recommend checking the integrity and t
 There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. 
 
 ### Flash to SD Card
+
+[Armbian imager](/User-Guide_Armbian-Config/System/#download-and-flash) works on any device running **Armbian** or any compatible **Debian/Ubuntu** system and can download, flash and verify.
 
 Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your **micro-SD card** or **USB drive** (if booting from it is supported). Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
@@ -264,7 +266,7 @@ If you used an SD card insert it into a slot and power on the board. With the ch
 ## First login
 
 The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, you can use [this tool](https://angryip.org/).
-
+https://docs.armbian.com
 After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage, the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
     Welcome to Armbian!
@@ -398,11 +400,10 @@ Congratulation. You have successfully installed Armbian onto your board!
 ## Flashing Armbian images from a running system
 
 !!! note
-    Armbian also provides a tool to **download, verify, and flash OS images**
-    directly to SD cards, USB drives, eMMC, SSD, or NVMe storage — without using
-    another computer.
+    Armbian also provides a tool to **download, verify, and flash OS images** directly to SD cards, USB drives, eMMC, SSD, or NVMe storage — without using  another computer.
 
     This is useful when:
+    
     - preparing new boot media  
     - reinstalling or recovering a broken system  
     - switching to another Armbian variant or kernel branch  
