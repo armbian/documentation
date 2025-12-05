@@ -266,7 +266,7 @@ If you used an SD card insert it into a slot and power on the board. With the ch
 ## First login
 
 The first boot will log you in automatically if you have connected a display via HDMI or if you are connected to the serial console. For SSH, you need to login as **root** and use the password **1234**. If you need to find your board's IP address, you can use [this tool](https://angryip.org/).
-https://docs.armbian.com
+
 After logging in, you will be prompted to change the default password. You will then be asked to create a normal user account that will have sudo permissions. Beware, at this stage, the keyboard is using the QWERTY layout. In case you have no wired network connection and there is a wireless adaptor detected, the system will prompt you to connect.
 
     Welcome to Armbian!
