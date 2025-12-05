@@ -1158,18 +1158,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#download-and-flash-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Download and Flash Process
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Download and Flash Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#read-only-fs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1284,11 +1272,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2935,7 +2918,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <h4 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h4>
-<p>Move or copy the running Armbian system to another device</p>
+<p>Copy the running Armbian system to another device</p>
 <!--- header START from tools/include/markdown/STO001-header.md --->
 <ul>
 <li>Clones your current live OS installation</li>
@@ -2953,33 +2936,28 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <pre class="custom-bash-block"><code>armbian-config --cmd STO001</code></pre>
 <h4 id="download-and-flash">Download and flash<a class="headerlink" href="#download-and-flash" title="Permanent link">&para;</a></h4>
 <p>Download a fresh, official Armbian OS image and write it to a device</p>
+<!--- section image START from tools/include/images/FLASH1.png --->
+<p><a href="#"><img alt="Download and flash" src="/images/FLASH1.png" /></a></p>
+<!--- section image STOP from tools/include/images/FLASH1.png --->
+
 <!--- header START from tools/include/markdown/FLASH1-header.md --->
+<p>What can this tool do?</p>
 <ul>
-<li>Installing Armbian to internal eMMC/SSD  </li>
-<li>Preparing SD/USB boot media  </li>
-<li>Recovering or re-flashing devices  </li>
-<li>Switching OS variants or kernel branches  </li>
-<li>Rapid deployment and testing scenarios  </li>
+<li>Install Armbian onto internal <strong>eMMC, SSD, or other storage</strong></li>
+<li>Create <strong>bootable SD cards or USB drives</strong> for any supported board</li>
+<li>Recover a system by <strong>re-flashing a clean image</strong></li>
+<li>Switch between different <strong>OS variants, kernel branches, or preinstalled applications</strong></li>
+<li>Accelerate development with <strong>fast, repeatable deployments</strong> for testing and automation</li>
 </ul>
 <!--- header STOP from tools/include/markdown/FLASH1-header.md --->
 
 <p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/FLASH1-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/FLASH1-header.md">header</a><br />
 <strong>Status:</strong> Preview<br />
 <strong>Architecture:</strong> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span><br />
-<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
-<strong>Documentation:</strong> <a href="https://docs.armbian.com/User-Guide_Recovery/">Link</a>  </p>
+<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd FLASH1</code></pre>
 <!--- footer START from tools/include/markdown/FLASH1-footer.md --->
-<h3 id="download-and-flash-process">Download and Flash Process<a class="headerlink" href="#download-and-flash-process" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Downloading the selected image</li>
-<li>On-the-fly decompression</li>
-<li>Progress indication using <code>pv</code> + whiptail gauges when available</li>
-<li>Fallback text progress when minimal tools are installed</li>
-<li>Writing to the selected storage device</li>
-<li>Post-flash verification to confirm data integrity</li>
-<li>User choice to Reboot, Shut down, or Exit</li>
-</ol>
+
 <!--- footer STOP from tools/include/markdown/FLASH1-footer.md --->
 
 <h4 id="read-only-fs">Read Only FS<a class="headerlink" href="#read-only-fs" title="Permanent link">&para;</a></h4>
