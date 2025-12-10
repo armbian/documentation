@@ -98,7 +98,15 @@ They're the same, except:
 - That is useful if there are other files/assets that belong together with that extension. An example would be a template file, some configuration file, or other static asset that is directly related to the extension.
 - Using directory-based extensions and `${EXTENSION_DIR}` allows for easy moving and PR'ing of user extensions.
 
-# Opt-out of individual hook functions
+### FAQ
+
+#### Can you give me examples of some extensions shipped in Armbian?
+
+- [image-output-qcow2](https://github.com/armbian/build/blob/main/extensions/image-output-qcow2.sh): create images in qcow2-format, suitable to test-run in a VM.
+- [uboot-btrfs](https://github.com/armbian/build/blob/main/extensions/uboot-btrfs.sh): Add btrfs support for u-boot.  This makes it possible to boot straight from btrfs partitions.  A growi>
+- [watchdog](https://github.com/armbian/build/blob/main/extensions/watchdog.sh): Add watchdog support for an image
+
+#### How to opt out of a specific hook function?
 
 Any function making use of the extension framework [generally of the form `hook_name__individual_function`] can be skipped in a board or family config, by way of
 
