@@ -103,8 +103,8 @@ They're the same, except:
 #### Can you give me examples of some extensions shipped in Armbian?
 
 - [image-output-qcow2](https://github.com/armbian/build/blob/main/extensions/image-output-qcow2.sh): create images in qcow2-format, suitable to test-run in a VM.
-- [uboot-btrfs](https://github.com/armbian/build/blob/main/extensions/uboot-btrfs.sh): Add btrfs support for u-boot.  This makes it possible to boot straight from btrfs partitions.  A growi>
-- [watchdog](https://github.com/armbian/build/blob/main/extensions/watchdog.sh): Add watchdog support for an image
+- [uboot-btrfs](https://github.com/armbian/build/blob/main/extensions/uboot-btrfs.sh): Add btrfs support for u-boot
+- [watchdog](https://github.com/armbian/build/blob/main/extensions/watchdog.sh): Add watchdog alert support
 
 #### How to opt out of a specific hook function?
 
