@@ -5,7 +5,7 @@
 ## Hooks
 
 - Hooks are listed in the order they are called.
-- Individual/specific hook functions can be [skipped/ignored/opted-out](/Developer-Guide_Extensions#opt-out-of-individual-hook-functions).
+- Individual/specific hook functions can be [skipped/ignored/opted-out](/Developer-Guide_Extensions#how-to-opt-out-of-a-specific-hook-function).
 
 ### `post_family_config`
 
