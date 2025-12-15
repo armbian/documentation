@@ -2,7 +2,8 @@
 
 ## Hooks
 
-- Hooks listed below appear in the order in which they are called.
+- Hooks listed below appear in the order in which they are called, but the list is not complete.
+- Running 'grep -h call_extension_method -r lib/|awk -F' ' '{print $2}'|grep '^"' |cut -d '"' -f 2|sort -u' in the build/ directory should give you a complete list of the currently available hooks, sorted alphabetically.
 - Individual/specific hook functions can be [skipped/ignored/opted-out](/Developer-Guide_Extensions#how-to-opt-out-of-a-specific-hook-function).
 
 ### `post_family_config`
