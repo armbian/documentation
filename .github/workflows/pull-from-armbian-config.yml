@@ -47,7 +47,7 @@ jobs:
           rsync -avr --exclude="Software.user.md" docs/Software/* ../documentation/docs/User-Guide_Armbian-Software/
 
       - name: Create Pull Request to documentation
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: documentation
