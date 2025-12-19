@@ -2777,11 +2777,11 @@ root filesystem subvolume:</p>
 <li>sha: generate SHA256 hash for image</li>
 <li>gpg: sign image using gpg</li>
 <li>xz: compress image only using xz format<ul>
-<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
+<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( 0 - <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
 </ul>
 </li>
 <li>zstd: compress image only using zstd format<ul>
-<li><strong>ZSTD_COMPRESSION_LEVEL</strong> ( 1 - <strong>9</strong> ) images compression levels when using zstd compressor. Beware of memory consumption when going higher</li>
+<li><strong>ZSTD_COMPRESSION_LEVEL</strong> ( 1 - <strong>9</strong> - 19 ) images compression levels when using zstd compressor. Beware of memory consumption when going higher</li>
 </ul>
 </li>
 </ul>
