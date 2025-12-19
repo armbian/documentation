@@ -359,9 +359,9 @@ Example:
   - sha: generate SHA256 hash for image
   - gpg: sign image using gpg
   - xz: compress image only using xz format
+    - **IMAGE_XZ_COMPRESSION_RATIO** ( **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
   - zstd: compress image only using zstd format
-- **IMAGE_XZ_COMPRESSION_RATIO** ( **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
-- **ZSTD_COMPRESSION_LEVEL** ( 1 - **9** ) images compression levels when using zstd compressor. Beware of memory consumption when going higher
+    - **ZSTD_COMPRESSION_LEVEL** ( 1 - **9** ) images compression levels when using zstd compressor. Beware of memory consumption when going higher
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image
