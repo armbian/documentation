@@ -2776,12 +2776,16 @@ root filesystem subvolume:</p>
 <li><strong>COMPRESS_OUTPUTIMAGE</strong> (comma-separated list): create a compressed archive with an image file and GPG signature for redistribution<ul>
 <li>sha: generate SHA256 hash for image</li>
 <li>gpg: sign image using gpg</li>
-<li>xz: compress image only using xz format</li>
-<li>zstd: compress image only using zstd format</li>
+<li>xz: compress image only using xz format<ul>
+<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
 </ul>
 </li>
-<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
+<li>zstd: compress image only using zstd format<ul>
 <li><strong>ZSTD_COMPRESSION_LEVEL</strong> ( 1 - <strong>9</strong> ) images compression levels when using zstd compressor. Beware of memory consumption when going higher</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong>SEVENZIP</strong> ( yes | <strong>no</strong> ): create .7z archive with extreme compression ratio instead of .zip</li>
 <li><strong>BUILD_KSRC</strong> ( <strong>yes</strong> | no ): create kernel source packages while building&hellip;</li>
 <li><strong>INSTALL_KSRC</strong> ( yes | <strong>no</strong> ): &hellip; and pre-install these kernel sources on the image</li>
