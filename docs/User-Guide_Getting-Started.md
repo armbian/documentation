@@ -179,6 +179,8 @@ There are multiple ways to deploy the image to your board. The easiest and most 
 
 ### Flash to SD Card
 
+[Armbian imager](/User-Guide_Armbian-Config/System/#download-and-flash) works on any device running **Armbian** or any compatible **Debian/Ubuntu** system and can download, flash and verify.
+
 Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your **micro-SD card** or **USB drive** (if booting from it is supported). Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
 
 !!! warning "Other tools"
@@ -395,6 +397,18 @@ For novice users, a sensible default is `ext4`.
 
 Congratulation. You have successfully installed Armbian onto your board!
 
+## Flashing Armbian images from a running system
+
+!!! note
+    Armbian also provides a tool to **download, verify, and flash OS images** directly to SD cards, USB drives, eMMC, SSD, or NVMe storage — without using  another computer.
+
+    This is useful when:
+    
+    - preparing new boot media  
+    - reinstalling or recovering a broken system  
+    - switching to another Armbian variant or kernel branch  
+
+    [The tool](/User-Guide_Armbian-Config/System/#download-and-flash) works on any device running **Armbian** or any compatible **Debian/Ubuntu** system.
 
 ## Update the system
 
