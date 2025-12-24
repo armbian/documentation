@@ -2831,11 +2831,26 @@
 <h2 id="deploy-the-image">Deploy the image<a class="headerlink" href="#deploy-the-image" title="Permanent link">&para;</a></h2>
 <p>There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. </p>
 <h3 id="flash-to-sd-card">Flash to SD Card<a class="headerlink" href="#flash-to-sd-card" title="Permanent link">&para;</a></h3>
-<p>Write the <strong>.xz compressed image</strong> with a tool like <a href="https://gitlab.com/bztsrc/usbimager">USBImager</a> onto your <strong>micro-SD card</strong> or <strong>USB drive</strong> (if booting from it is supported). Unlike other tools, it can validate written data <strong>saving you from corrupted SD card contents</strong>.</p>
+<p>Use <strong><a href="https://github.com/armbian/imager/releases">Armbian Imager</a></strong> to flash the image.</p>
+<p>Armbian Imager can:</p>
+<ul>
+<li>download official Armbian images</li>
+<li>flash <strong>already downloaded <code>.img</code>, <code>.img.xz</code>, or custom images</strong></li>
+<li>automatically verify written data</li>
+<li>protect your system disks from accidental overwrite</li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Install and open <strong>Armbian Imager</strong></li>
+<li>Select your board or choose a local/custom image</li>
+<li>Select your SD card or USB drive</li>
+<li>Flash and wait for verification to finish</li>
+</ol>
 <div class="admonition warning">
 <p class="admonition-title">Other tools</p>
-<p>We are aware that there are many programs that can be used for this step. <strong>But</strong>, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don&rsquo;t use other tools, especially if you are a novice user.</p>
-<p>Due to known issues, <a href="https://www.balena.io/etcher/">balenaEtcher</a> can no longer be recommended as an alternative at this time.</p>
+<p>We are aware that many programs can be used for this step. However, tools without proper verification and safe target selection can hide problems such as bad cards, faulty readers, partial writes, or accidentally selecting the wrong drive. These issues have caused too many avoidable error reports.</p>
+<p>For this reason, <strong>Armbian Imager is the recommended tool</strong>.</p>
+<p>Due to reports of image corruption caused by decompression issues, <a href="https://www.balena.io/etcher/">balenaEtcher</a> is not recommended.</p>
 </div>
 <h3 id="flash-to-internal-memory">Flash to Internal Memory<a class="headerlink" href="#flash-to-internal-memory" title="Permanent link">&para;</a></h3>
 <p>Flash to Internal Memory allows you to write Armbian image directly to the device’s built‑in storage. This process completely replaces the existing system and erases all current data on the target drive. Use with caution, as once started, the operation cannot be undone.</p>
