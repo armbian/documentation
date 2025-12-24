@@ -5,8 +5,11 @@ Before you start, please make sure you have:
 - a proper power supply according to the board manufacturer's requirements <!-- TODO: link to power issues -->
 - a reliable SD card (at least 'Class 10' and 'A1'-rated is **highly** recommended)
 
-You will also need an existing operating system and a SD card writer tool. We recommend using [USBImager](https://gitlab.com/bztsrc/usbimager) because it can validate written data **saving you from corrupted SD card contents**.
+You will also need an existing operating system and an SD card writer tool. We recommend using **[Armbian Imager](https://github.com/armbian/imager/releases)** — the official Armbian flashing tool.
 
+![Armbian Imager workflow](images/armbian-imager-ani.gif)
+
+Armbian Imager is a **lightweight, native flashing tool** that supports both **selecting and downloading an Armbian image before flashing**, as well as **flashing an already downloaded image**.
 
 !!! warning
 
@@ -39,7 +42,7 @@ You will also need an existing operating system and a SD card writer tool. We re
 
 ## Download the image
 
-If your hardware is [supported](index.md#which-hardware-is-supported), you must download an image for your board. All of our system images can be found at <https://www.armbian.com/download/> or at one of our [many mirrors](Mirrors.md). You will find that there are different types of images, either using Debian GNU/Linux or Ubuntu as their base operating system.
+If your hardware is [supported](index.md#which-hardware-is-supported), the recommended way to get started is to use **[Armbian Imager](https://github.com/armbian/imager/releases)** to select your board, download the appropriate image, and flash it in one step; alternatively, images can also be downloaded manually from [https://www.armbian.com/download/](https://www.armbian.com/download/) and flashed using Armbian Imager.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
@@ -179,14 +182,29 @@ There are multiple ways to deploy the image to your board. The easiest and most 
 
 ### Flash to SD Card
 
-Write the **.xz compressed image** with a tool like [USBImager](https://gitlab.com/bztsrc/usbimager) onto your **micro-SD card** or **USB drive** (if booting from it is supported). Unlike other tools, it can validate written data **saving you from corrupted SD card contents**.
+Use **[Armbian Imager](https://github.com/armbian/imager/releases)** to flash the image.
+
+Armbian Imager can:
+
+- download official Armbian images
+- flash **already downloaded `.img`, `.img.xz`, or custom images**
+- automatically verify written data
+- protect your system disks from accidental overwrite
+
+Steps:
+
+1. Install and open **Armbian Imager**
+2. Select your board or choose a local/custom image
+3. Select your SD card or USB drive
+4. Flash and wait for verification to finish
 
 !!! warning "Other tools"
 
-    We are aware that there are many programs that can be used for this step. **But**, they usually cannot validate the written data to catch a bad card, a faulty card reader, problems writing the image. etc. Issues like these have caused too many error reports. Thus, please follow our advice and don't use other tools, especially if you are a novice user.
+    We are aware that many programs can be used for this step. However, tools without proper verification and safe target selection can hide problems such as bad cards, faulty readers, partial writes, or accidentally selecting the wrong drive. These issues have caused too many avoidable error reports.
 
-    Due to known issues, [balenaEtcher](https://www.balena.io/etcher/) can no longer be recommended as an alternative at this time.
+    For this reason, **Armbian Imager is the recommended tool**.
 
+    Due to reports of image corruption caused by decompression issues, [balenaEtcher](https://www.balena.io/etcher/) is not recommended.
 
 ### Flash to Internal Memory
 
