@@ -111,7 +111,8 @@ They're the same, except:
 Any function making use of the extension framework [generally of the form `hook_name__individual_function`] can be skipped in a board or family config, by way of
 
 ```bash
-unset -f hook_name__individual_function
+extension_hook_opt_out "hook_name__individual_function"
 ```
 
-Doing so is at the board/family maintainer's own risk and doing so is officially unsupported. Consider splitting the function into pieces so that only the part the board/family cannot tolerate is skipped.
+Doing so is at the board/family maintainer's own risk and is officially unsupported. Consider splitting the function into pieces so that only the part the board/family cannot tolerate is skipped.
+You can also opt out, then copy the otherwise-intolerable function into your own config and modify it as appropriate. Splitting the intolerable-function is still highly recommended.
