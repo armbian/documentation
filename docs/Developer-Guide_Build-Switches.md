@@ -112,6 +112,31 @@ Docker assisted compilation is on by default. Set to `no` if you prefer running 
 
 Defines the build host when using a Docker container (default). [Here](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build), you can see which other options are available.
 
+**ARMBIAN_DOCKER_AUTO_PULL** ( `string` )
+
+- `yes`: enable automatic Docker image pulling via system cronjob (every 12 hours)
+- `no`: disable and remove any existing auto-pull cronjob
+- undefined (default): no automatic pulling, manual pull when needed
+
+Enables automatic background updates of Docker build images via a system cronjob that runs every 12 hours. This prevents waiting for image pulls during builds and keeps images fresh. The feature also includes automatic cleanup of old images (keeps only the 2 most recent per tag).
+
+!!! example "Build switch example"
+
+```sh
+# Enable auto-pull cronjob
+./compile.sh docker ARMBIAN_DOCKER_AUTO_PULL=yes
+
+# Disable and remove auto-pull cronjob
+./compile.sh docker ARMBIAN_DOCKER_AUTO_PULL=no
+```
+
+!!! tip "Note"
+
+    This is an opt-in feature. When enabled, it creates:
+    - `/usr/local/bin/armbian-docker-pull` - wrapper script for cron execution
+    - `/etc/cron.d/armbian-docker-pull` - cronjob (runs at 00:00 and 12:00)
+    - `/var/lib/armbian/docker-pull.hash` - configuration hash for update detection
+
 - **CI** ( `string` )
   - true
   - **false**
