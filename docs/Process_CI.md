@@ -2,6 +2,9 @@
 
 Core automation for generating images for release are held at <https://github.com/armbian/os>
 
+???+ Note
+    For monitoring all action scripts status and execution details, visit [https://actions.armbian.com/](https://actions.armbian.com/)
+
 
 ## Prepare build lists
 
@@ -19,56 +22,87 @@ bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]
 
 ![Standard support images](images/standard-support-images.png)
 
-### Build templates
+### Target generation
 
-They have definitions on what kind of images we want to build - for section or for one specific board:
+Build target YAML files are automatically generated from `image-info.json` at <https://github.com/armbian/armbian.github.io>. The generation script classifies boards by hardware capabilities and creates appropriate build targets.
+
+Generated files:
+- `targets-release-apps.yaml` - One image per board with app-specific extensions
+- `targets-release-standard-support.yaml` - Full stable/release builds
+- `targets-release-nightly.yaml` - Nightly builds with hardware-based desktop selection
+- `targets-release-community-maintained.yaml` - Community/CSC/TVB board builds
+
+???+ Note
+    For changes to target generation logic, submit PR to [armbian.github.io](https://github.com/armbian/armbian.github.io)
+
+### Hardware-based board classification
+
+Boards are automatically classified by hardware speed and architecture to determine appropriate desktop environments:
+
+**Category** | **Condition** | **Desktop (nightly/community)**
+|:--|:--|:--|
+| **Fast HDMI** | ARM64/x86 with video, not in slow list | GNOME |
+| **Slow HDMI** | ARM 32-bit or specific slower SoCs | XFCE |
+| **Headless** | Boards without video output | CLI only |
+| **RISC-V** | ARCH = riscv64 | CLI only |
+| **LoongArch** | ARCH = loongarch64 | CLI only (sid only) |
+
+**Slow hardware list** (gets XFCE):
+- ARM 32-bit (arm/armhf) architecture
+- Allwinner H3/H5/H6 (sun50iw*, sun55iw*)
+- Amlogic S905X/S912/S905X2/S922X/A311D (meson-gxbb, meson-gxl, meson-g12a, meson-g12b, meson-sm1)
+- Nuvoton MA35D1
+- Rockchip RK3328/RK3399/RK3399PRO
+
+All other ARM64 and x86 boards with video are classified as **fast** (gets GNOME).
+
+### Automatic extensions
+
+Fast HDMI boards automatically receive these extensions:
+- `v4l2loopback-dkms` - Video4Linux loopback device support
+- `mesa-vpu` - VPU driver for video acceleration
+
+These can be supplemented with manual extensions via the extensions map.
+
+### Manual overrides
+
+**Blacklisting** - exclude boards from automatic generation:
 
 ``` yaml
-userpatches/targets-release-apps.template
-userpatches/targets-release-community-maintained.template
-userpatches/targets-release-nightly.template
-userpatches/targets-release-standard-support.template
+release-targets/targets-release-nightly.blacklist
+release-targets/targets-release-community-maintained.blacklist
 ```
 
-From those templates we are [autogenerating](https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438) YAML files, which are passed to build matrix as input. Make sure to review generated YAML files if they have wanted build targets with correct exensions enabled.
-
-### Grouping logic
-
-Boards are automatically divided into sections and each section is appendend to certain build scenario (minimal Debian image, Ubuntu testing with KDE, ...), which is defined in template.
-
-Section | Condition |
-|:--|:--|
-| standard-support-slow-hdmi | HAS_VIDEO_OUTPUT = yes AND ARCH = armhf | 
-| standard-support-fast-hdmi | HAS_VIDEO_OUTPUT = yes AND ARCH = arm64|amd64 |
-| standard-support-headless | HAS_VIDEO_OUTPUT = no | 
-| standard-support-riscv64 | ARCH = riscv64 | 
-
-Example: if you want automated images without a desktop, add `HAS_VIDEO_OUTPUT=no` in board config file. Automation will only build two CLI images, Ubuntu server and Debian minimal. Which is suitable for hardware that will most likely be used headless.
-
-### Blacklisting
-
-Autogeneration is excluded for boards that are on blacklists:
+**Manual targets** - add custom build targets:
 
 ``` yaml
-userpatches/targets-automation.blacklist
-userpatches/targets-automation-nightly.blacklist
+release-targets/targets-release-nightly.manual
+release-targets/targets-release-community-maintained.manual
 ```
 
-We do this if we are not happy with the automation outcomes and want to define build targets in the template.
-
-### Extensions
-
-Each board variant can have additional extensions and they are defined in this file:
+**Extensions** - add board-specific extensions:
 
 ```
-userpatches/targets-extensions.map
+release-targets/targets-extensions.map
+```
+
+Format:
+```
+BOARD_NAME:branch1:branch2:...:ENABLE_EXTENSIONS="ext1,ext2"
 ```
 
 Example:
+```
+khadas-edge2:legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
+```
 
+Wildcards apply to all branches:
 ```
-khadas-edge2,legacy:vendor:,ENABLE_EXTENSIONS="image-output-oowow,v4l2loopback-dkms,mesa-vpu"
+BOARD_NAME::ENABLE_EXTENSIONS="ext1,ext2"
 ```
+
+???+ Note
+    Manual extensions are **merged** with automatic extensions, not replaced.
 ### Kernel Descriptions for Download Pages?
 
 Each kernel branch can include an optional description, stored in [`kernel-description.json`](https://github.com/armbian/os/blob/main/kernel-description.json).
@@ -93,7 +127,7 @@ This build workflow is executed manually when making:
 **Notes**:
 
 - this process prepares images for release without pushing them to the download pages
-- you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml) build lists!
+- you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
 ### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml) and click
@@ -121,7 +155,7 @@ Generated images are uploaded to incoming folder [https://rsync.armbian.com/inco
 
 ### Aditional options
 
-Generates stable images defined in [targets-release-standard-support.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml). 
+Generates stable images defined in [targets-release-standard-support.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml). 
 
 
 
@@ -154,7 +188,7 @@ This build workflow is executed manually when making:
 **Notes**:
 
 - **application images are released 10-15 minutes after build finishes succesfully**
-- you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml) build lists!
+- you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-apps.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
 ### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml) and click
@@ -179,7 +213,7 @@ Generated images are hosted at GitHub [https://github.com/armbian/distribution/r
 
 ### Aditional options
 
-Generates dedicated application images defined in [targets-release-apps.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.yaml). This file is [autogenerated](https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438) from [targets-release-apps.template](https://github.com/armbian/os/blob/main/userpatches/targets-release-apps.template). (You always edit template)
+Generates dedicated application images defined in [targets-release-apps.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-apps.yaml). This file is automatically generated from `image-info.json` by the [generate-targets workflow](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml).
 
 Images generation can be customized:
 
@@ -229,7 +263,7 @@ This build job **needs to be successfully completed** in order to proceed genera
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
 
-Generates all nighly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.yaml).  This file is [autogenerated](https://github.com/armbian/os/blob/main/.github/workflows/recreate-matrix.yml#L147-L438) from [targets-release-nightly.template](https://github.com/armbian/os/blob/main/userpatches/targets-release-nightly.template). 
+Generates all nightly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml). This file is automatically generated from `image-info.json` by the [generate-targets workflow](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml). 
 
 This build job runs every day at 9 a.m. UTC and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/os/actions/workflows/webindex-update.yml) after successful build.
 
