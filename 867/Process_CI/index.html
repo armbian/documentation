@@ -2796,7 +2796,7 @@
 </details>
 <h2 id="prepare-build-lists">Prepare build lists<a class="headerlink" href="#prepare-build-lists" title="Permanent link">&para;</a></h2>
 <h3 id="recommended-images">Recommended images<a class="headerlink" href="#recommended-images" title="Permanent link">&para;</a></h3>
-<p>Recommended images on download pages are defined via regular expression mapping file <a href="https://github.com/armbian/os/blob/main/exposed.map">https://github.com/armbian/os/blob/main/exposed.map</a> (for changes sent PR to this file)</p>
+<p>Recommended images on download pages and in <a href="http://imager.armbian.com/">Armbian imager</a> are defined via regular expression mapping file <a href="https://github.com/armbian/os/blob/main/exposed.map">https://github.com/armbian/os/blob/main/exposed.map</a> (for changes sent PR to this file)</p>
 <p>Example:</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>bananapim7/archive/Armbian_[0-9].*Bananapim7_noble_vendor_[0-9]*.[0-9]*.[0-9]*_gnome-kisak_desktop.img.xz
@@ -2805,11 +2805,13 @@
 <p><img alt="Standard support images" src="../images/standard-support-images.png" /></p>
 <h3 id="target-generation">Target generation<a class="headerlink" href="#target-generation" title="Permanent link">&para;</a></h3>
 <p>Build target YAML files are automatically generated from <code>image-info.json</code> at <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/armbian/armbian.github.io" title="GitHub Repository: armbian/armbian.github.io">armbian/armbian.github.io</a>. The generation script classifies boards by hardware capabilities and creates appropriate build targets.</p>
-<p>Generated files:
-- <code>targets-release-apps.yaml</code> - One image per board with app-specific extensions
-- <code>targets-release-standard-support.yaml</code> - Full stable/release builds
-- <code>targets-release-nightly.yaml</code> - Nightly builds with hardware-based desktop selection
-- <code>targets-release-community-maintained.yaml</code> - Community/CSC/TVB board builds</p>
+<p>Generated files:</p>
+<ul>
+<li><code>targets-release-apps.yaml</code> - One image per board with app-specific extensions</li>
+<li><code>targets-release-standard-support.yaml</code> - Full stable/release builds</li>
+<li><code>targets-release-nightly.yaml</code> - Nightly builds with hardware-based desktop selection</li>
+<li><code>targets-release-community-maintained.yaml</code> - Community/CSC/TVB board builds</li>
+</ul>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>For changes to target generation logic, submit PR to <a href="https://github.com/armbian/armbian.github.io">armbian.github.io</a></p>
@@ -2898,7 +2900,7 @@
 <p><strong>(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)</strong></p>
 <p>Generated images are uploaded to incoming folder <a href="https://rsync.armbian.com/incoming/">https://rsync.armbian.com/incoming/</a> under <strong>your GitHub username</strong> and once they are confirmed working, please notify <a href="https://github.com/igorpecovnik">@igorpecovnik</a> to move them to official download pages. Once images are moved to <a href="https://www.armbian.com/download/">main download section</a>, automation refreshes download pages index within 15-30 minutes.</p>
 <h3 id="aditional-options">Aditional options<a class="headerlink" href="#aditional-options" title="Permanent link">&para;</a></h3>
-<p>Generates stable images defined in <a href="https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml">targets-release-standard-support.yaml</a>. </p>
+<p>Generates stable images defined in <a href="https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml">targets-release-standard-support.yaml</a>.</p>
 <p>We are generating several images for each download / hardware target. They are automatically sorted by sections:</p>
 <ul>
 <li>Desktop releases</li>
@@ -2973,15 +2975,15 @@
 <p><strong>(Workflow takes around 60 minutes to complete)</strong></p>
 <h2 id="build-all-artifacts-cronjob">Build all artifacts (cronjob)<a class="headerlink" href="#build-all-artifacts-cronjob" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml"><img alt="Build All Artifacts" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg" /></a></p>
-<p>Generates all build artifacts cache for targets defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml">targets-all-not-eos.yaml</a>. This build job runs <strong>every 8 hours</strong> and can also be run manually when needed. </p>
+<p>Generates all build artifacts cache for targets defined in <a href="https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml">targets-all-not-eos.yaml</a>. This build job runs <strong>every 8 hours</strong> and can also be run manually when needed.</p>
 <p>This build job <strong>needs to be successfully completed</strong> in order to proceed generating any OS images!</p>
 <h2 id="build-rolling-release-images-cronjob">Build Rolling Release Images (cronjob)<a class="headerlink" href="#build-rolling-release-images-cronjob" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml"><img alt="Build Nightly Images" src="https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg" /></a></p>
-<p>Generates all nightly (Rolling Release) images defined in <a href="https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml">targets-release-nightly.yaml</a>. This file is automatically generated from <code>image-info.json</code> by the <a href="https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml">generate-targets workflow</a>. </p>
+<p>Generates all nightly (Rolling Release) images defined in <a href="https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml">targets-release-nightly.yaml</a>. This file is automatically generated from <code>image-info.json</code> by the <a href="https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml">generate-targets workflow</a>.</p>
 <p>This build job runs every day at 9 a.m. UTC and can also be run manually when needed. Download pages are refreshed <a href="https://github.com/armbian/os/actions/workflows/webindex-update.yml">automatically</a> after successful build.</p>
 <p><img alt="Build" src="../images/rolling-releases.png" /></p>
 <h2 id="watchdog-cronjob">Watchdog (cronjob)<a class="headerlink" href="#watchdog-cronjob" title="Permanent link">&para;</a></h2>
-<p>Runs every 15 minutes and re-trigger <a href="https://github.com/armbian/os/blob/main/.github/workflows/watchdog.yml#L26">failed builds</a> six (6) times before finally gives out. This addresses various instabilities when building many artifacts on different hardware: </p>
+<p>Runs every 15 minutes and re-trigger <a href="https://github.com/armbian/os/blob/main/.github/workflows/watchdog.yml#L26">failed builds</a> six (6) times before finally gives out. This addresses various instabilities when building many artifacts on different hardware:</p>
 <ul>
 <li>network timeouts</li>
 <li>artifact download failure</li>
