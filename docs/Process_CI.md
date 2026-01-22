@@ -11,7 +11,7 @@ Core automation for generating images for release are held at <https://github.co
 
 ### Recommended images
 
-Recommended images on download pages are defined via regular expression mapping file <https://github.com/armbian/os/blob/main/exposed.map> (for changes sent PR to this file)
+Recommended images on download pages and in [Armbian imager](http://imager.armbian.com/) are defined via regular expression mapping file <https://github.com/armbian/os/blob/main/exposed.map> (for changes sent PR to this file)
 
 Example:
 
@@ -27,19 +27,20 @@ bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]
 Build target YAML files are automatically generated from `image-info.json` at <https://github.com/armbian/armbian.github.io>. The generation script classifies boards by hardware capabilities and creates appropriate build targets.
 
 Generated files:
+
 - `targets-release-apps.yaml` - One image per board with app-specific extensions
 - `targets-release-standard-support.yaml` - Full stable/release builds
 - `targets-release-nightly.yaml` - Nightly builds with hardware-based desktop selection
 - `targets-release-community-maintained.yaml` - Community/CSC/TVB board builds
 
 ???+ Note
-    For changes to target generation logic, submit PR to [armbian.github.io](https://github.com/armbian/armbian.github.io)
+    For changes to target generation logic, submit PR to the Python script at [armbian.github.io](https://github.com/armbian/armbian.github.io/blob/feature/sync-mirrors-action/scripts/generate_targets.py)
 
 ### Hardware-based board classification
 
 Boards are automatically classified by hardware speed and architecture to determine appropriate desktop environments:
 
-**Category** | **Condition** | **Desktop (nightly/community)**
+|**Category** | **Condition** | **Desktop (nightly/community)**|
 |:--|:--|:--|
 | **Fast HDMI** | ARM64/x86 with video, not in slow list | GNOME |
 | **Slow HDMI** | ARM 32-bit or specific slower SoCs | XFCE |
@@ -48,6 +49,7 @@ Boards are automatically classified by hardware speed and architecture to determ
 | **LoongArch** | ARCH = loongarch64 | CLI only (sid only) |
 
 **Slow hardware list** (gets XFCE):
+
 - ARM 32-bit (arm/armhf) architecture
 - Allwinner H3/H5/H6 (sun50iw*, sun55iw*)
 - Amlogic S905X/S912/S905X2/S922X/A311D (meson-gxbb, meson-gxl, meson-g12a, meson-g12b, meson-sm1)
@@ -59,6 +61,7 @@ All other ARM64 and x86 boards with video are classified as **fast** (gets GNOME
 ### Automatic extensions
 
 Fast HDMI boards automatically receive these extensions:
+
 - `v4l2loopback-dkms` - Video4Linux loopback device support
 - `mesa-vpu` - VPU driver for video acceleration
 
@@ -142,6 +145,7 @@ This build workflow is executed manually when making:
 **Version override**: Set version under which you want to release images.
 
 Images versions are stored in JSON files:
+
 - https://github.com/armbian/os/blob/main/stable.json
 - https://github.com/armbian/os/blob/main/nightly.json
 
@@ -155,9 +159,7 @@ Generated images are uploaded to incoming folder [https://rsync.armbian.com/inco
 
 ### Aditional options
 
-Generates stable images defined in [targets-release-standard-support.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml). 
-
-
+Generates stable images defined in [targets-release-standard-support.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml).
 
 We are generating several images for each download / hardware target. They are automatically sorted by sections:
 
@@ -242,7 +244,7 @@ Action is executed automatically when artifact generations completes. Or manuall
 
 When
 - [ ] Add https://netcup.armbian.com/partial/ to stable repo
-      
+
 is selected.
 
 ### 3. Run workflow
@@ -255,7 +257,7 @@ is selected.
 
 [![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
 
-Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed. 
+Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed.
 
 This build job **needs to be successfully completed** in order to proceed generating any OS images!
 
@@ -263,38 +265,11 @@ This build job **needs to be successfully completed** in order to proceed genera
 
 [![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
 
-Generates all nightly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml). This file is automatically generated from `image-info.json` by the [generate-targets workflow](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml). 
+Generates all nightly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml). This file is automatically generated from `image-info.json` by the [generate-targets workflow](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml).
 
 This build job runs every day at 9 a.m. UTC and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/os/actions/workflows/webindex-update.yml) after successful build.
 
 ![Build](images/rolling-releases.png)
-
-## Watchdog (cronjob)
-
-Runs every 15 minutes and re-trigger [failed builds](https://github.com/armbian/os/blob/main/.github/workflows/watchdog.yml#L26) six (6) times before finally gives out. This addresses various instabilities when building many artifacts on different hardware: 
-
-- network timeouts
-- artifact download failure
-- loop devices allocation failure
-- runner running low on space
-
-## Smoke tests on hardware devices (release manager)
-
-Smoke testing is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. Our test case is constructed of three steps:
-
-![Smoke](images/smoke-tests.png)
-
-- powering test equipment, consistent from several network switches, power supplies and dozens of hardware platforms
-- running upgrade, reboot, repository switch, reboot, ... tests in parallel
-- uploading a test report as build artifact followed by powering the devices off.
-
-## Automatic Pull Requests Labeler (PR)
-
-[![Automatic Labeler](https://github.com/armbian/build/actions/workflows/labeler.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/labeler.yml)
-
-Automatically label new pull request based on the paths of files which are being changed. Configuration file can be found in:
-
-        .github/labeler.yml
 
 ## Full distro test builds (cronjob/release manager)
 
@@ -312,28 +287,3 @@ Options:
 
 Generates artifacts at Pull Requests code. Build starts when label of Pull Request is set to "Build". Requires administration privileges.
 
-## Lint on shell scripts (PR)
-
-[![Lint On Shell Scripts](https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/pr-lint-scripts.yml)
-
-![Lint](images/linterror.png)
-
-Run [ShellCheck](https://github.com/koalaman/shellcheck) on changed shell scripts and report problems within. Linting runs automatically on pull requests.
-
-## Update tools in build scripts (cronjob/admin)
-
-[![Update Tools in Scripts](https://github.com/armbian/build/actions/workflows/update-tools.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/update-tools.yml)
-
-Some of our scripts download tools from a repo. These cannot be bumped by Dependabot, so this workflow is a self-created Dependabot to bump versions of those tools to stay up-to-date. This workflow only creates a PR if the version was actually updated. To add a new tool, it just needs to be added to the matrix [in the script](https://github.com/armbian/build/blob/main/.github/workflows/update-tools.yml) by filling out all the variables.
-
-## Scorecards security scan (PR)
-
-[![Scorecards Security Scan](https://github.com/armbian/build/actions/workflows/scorecard.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/scorecard.yml)
-
-[Scorecards](https://github.com/ossf/scorecard#what-is-scorecards) is an automated tool that assesses a number of important heuristics ("checks") associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project. You can also assess the risks that dependencies introduce, and make informed decisions about accepting these risks, evaluating alternative solutions, or working with the maintainers to make improvements.
-
-## Kernel hardening analysis (PR)
-
-[![Kernel Hardening Analysis](https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml/badge.svg)](https://github.com/armbian/build/actions/workflows/pr-kernel-security-analysis.yml)
-
-This [analysis](https://github.com/a13xp0p0v/kconfig-hardened-check/blob/master/README.md) checks kernel configs and run if changed. There are plenty of security hardening options for the Linux kernel. A lot of them are not enabled by the major distros. We have to enable these options ourselves to make our systems more secure.
