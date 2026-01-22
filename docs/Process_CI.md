@@ -28,10 +28,10 @@ Build target YAML files are automatically generated from `image-info.json` at <h
 
 Generated files:
 
-- `targets-release-apps.yaml` - One image per board with app-specific extensions
-- `targets-release-standard-support.yaml` - Full stable/release builds
-- `targets-release-nightly.yaml` - Nightly builds with hardware-based desktop selection
-- `targets-release-community-maintained.yaml` - Community/CSC/TVB board builds
+- [`targets-release-apps.yaml`](https://github.armbian.com/release-targets/targets-release-apps.yaml) - One image per board with app-specific extensions
+- [`targets-release-standard-support.yaml`](https://github.armbian.com/release-targets/targets-release-standard-support.yaml) - Full stable/release builds
+- [`targets-release-nightly.yaml`](https://github.armbian.com/release-targets/targets-release-nightly.yaml) - Nightly builds with hardware-based desktop selection
+- [`targets-release-community-maintained.yaml`](https://github.armbian.com/release-targets/targets-release-community-maintained.yaml) - Community/CSC/TVB board builds
 
 ???+ Note
     For changes to target generation logic, submit PR to the Python script at [armbian.github.io](https://github.com/armbian/armbian.github.io/blob/feature/sync-mirrors-action/scripts/generate_targets.py)
