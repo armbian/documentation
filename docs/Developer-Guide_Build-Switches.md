@@ -320,6 +320,13 @@ Example:
 ./compile.sh SHARE_LOG=yes
 ```
 
+**UBOOT_LOGLEVEL** ( `integer` )
+
+- `0` to `9`: set U-Boot log verbosity level
+- `6`: (default)
+
+Controls the U-Boot bootloader log level during image building. Lower values produce less verbose output. This affects `CONFIG_LOGLEVEL` and `CONFIG_LOG_MAX_LEVEL` in U-Boot configuration.
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
