@@ -7,16 +7,13 @@ comments: true
 ## Docker
 
 
-Docker minimal
-
-
 <!--- section image START from tools/include/images/CON001.png --->
 [![Docker](/images/CON001.png)](#)
 <!--- section image STOP from tools/include/images/CON001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CON001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CON001-header.md)  
 __Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.docker.com)  
 
@@ -31,11 +28,6 @@ What is Docker? Docker helps developers build, share, run, and verify applicatio
 <!--- footer STOP from tools/include/markdown/CON001-footer.md --->
 
 
-~~~ bash title="Docker engine:"
-armbian-config --cmd CON002
-~~~
-
-
 ~~~ bash title="Docker remove:"
 armbian-config --cmd CON003
 ~~~
@@ -44,7 +36,6 @@ armbian-config --cmd CON003
 ~~~ bash title="Docker purge with all images, containers, and volumes:"
 armbian-config --cmd CON004
 ~~~
-
 
 
 
