@@ -451,68 +451,6 @@ armbian-config --cmd RAD003
 
 
 
-## Readarr
-
-
-Readarr automatic downloader for Ebooks
-
-
-<!--- section image START from tools/include/images/RDR001.png --->
-[![Readarr](/images/RDR001.png)](#)
-<!--- section image STOP from tools/include/images/RDR001.png --->
-
-
-<!--- header START from tools/include/markdown/RDR001-header.md --->
-Readarr - Book Manager and Automation (Sonarr for Ebooks)
-
-<!--- header STOP from tools/include/markdown/RDR001-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RDR001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.servarr.com/readarr)  
-
-~~~ custombash
-armbian-config --cmd RDR001
-~~~
-
-
-<!--- footer START from tools/include/markdown/RDR001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8787**:
-
-    - URL: `https://<your.IP>:8787`
-    - Username/Password: admin / generate at first web interface login
-
-=== "Directories"
-
-    - Install directory: `/armbian/readarr`
-    - Site configuration directory: `/armbian/readarr/config`
-    - Download directory: `/armbian/readarr/books` `/armbian/readarr/client`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f readarr
-    ```
-
-<!--- footer STOP from tools/include/markdown/RDR001-footer.md --->
-
-
-~~~ bash title="Readarr remove:"
-armbian-config --cmd RDR002
-~~~
-
-
-~~~ bash title="Readarr purge with data folder:"
-armbian-config --cmd RDR003
-~~~
-
-
-
-
 ## SABnzbd
 
 
