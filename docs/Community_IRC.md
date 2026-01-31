@@ -29,12 +29,6 @@ Libera network:
 - Ports: `6697` / non-encrypted: `6667`  
 - Channels: as listed below
 
-OFTC network:
-
-- Server: `irc.oftc.net`  
-- Ports: `6697` / non-encrypted: `6667`  
-- Channels: `#armbian` and `#armbian-announcements` are available only
-
 In order to enter main `#armbian` channels registration with Nickserv is mandatory on Libera. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
 
 ### Discord
@@ -43,12 +37,6 @@ Simply click here: [https://discord.com/invite/armbian](https://discord.com/invi
 
 Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both ends receive your messages. Check `#welcome-and-rules` for more information.
 The main `#armbian` channel and `#armbian-announcements` are relayed between Discord, Libera, OFTC and Matrix.
-
-### Matrix (closed beta)
-
-- Server: `matrix.armbian.com`
-- Channels: `#armbian:matrix.armbian.com` and `#armbian-announcements:matrix.armbian.com` are available only
-- To receive an invitation for former please ping either Lanefu or Werner with your Matrix handle in any known ways to communicate like the chat options above or forums. Once in feel free to invite others by yourself.
 
 ## 🛑 Rules
 
