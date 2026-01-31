@@ -387,7 +387,7 @@ Pi-hole DNS ad blocker with Unbound support
 <!--- header START from tools/include/markdown/PIH001-header.md --->
 **Pi-hole** is a network-wide ad blocker that acts as a DNS (Domain Name System) sinkhole. It blocks connections to known ad servers, trackers, and malicious domains across all devices in your network, without requiring any browser extensions or client-side software.
 
-## Pi-hole Explained
+### Pi-hole Explained
 
 - **DNS-Based Filtering**
 Pi-hole intercepts DNS queries made by devices on your network. When a domain is requested, Pi-hole checks it against a set of blocklists. If the domain is known to serve ads or track user activity, Pi-hole blocks the request, preventing unwanted content from loading.
@@ -2976,7 +2976,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://transmissionbt.com/)  
+__Documentation:__ [Link](https://learn.netdata.cloud/)  
 
 ~~~ custombash
 armbian-config --cmd NTD001
