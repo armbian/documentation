@@ -65,7 +65,7 @@ Besides the services offered by IRC (like Nickserv or Chanserv) Armbian has set 
 
 **`DC-IRC`**
 
-- Has the purpose to relay messages between the IRC networks and Discord. Applies for all channels beginning with `#armbian-` as well as `#armbian`.
+- Has the purpose to relay messages between IRC and Discord. Applies for all channels beginning with `#armbian-` as well as `#armbian`.
 
 **`ArmbianHelper`**
 
