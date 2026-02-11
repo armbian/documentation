@@ -9,15 +9,14 @@ description: Social media channels maintained by Armbian project team
 
 Armbian short announcements are done via 𝕏 (formerly known as Twitter): <https://twitter.com/armbian> and <https://fosstodon.org/@armbian>
 
-# IRC Channel / Discord / Matrix
+# IRC Channel / Discord
 
 ## 👏 Overview
 
 As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC* for short)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known IRC clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/) or [Konversation](https://konversation.kde.org/).  
-Mature clients for Matrix: [Element](https://element.io/download) or [FluffyChat](https://fluffychat.im).  
 
-Besides that communication is also possible via *Discord* or *Matrix* (closed beta).
+Besides that communication is also possible via *Discord*.
 
 ## 🔌 How to connect
 
@@ -36,7 +35,7 @@ In order to enter main `#armbian` channels registration with Nickserv is mandato
 Simply click here: [https://discord.com/invite/armbian](https://discord.com/invite/armbian)  
 
 Channels starting with `#armbian-` are relayed between Discord and Libera IRC so it does not matter if you join IRC or Discord as both ends receive your messages. Check `#welcome-and-rules` for more information.
-The main `#armbian` channel and `#armbian-announcements` are relayed between Discord, Libera, OFTC and Matrix.
+The main `#armbian` channel and `#armbian-announcements` are relayed between Discord and Libera.
 
 ## 🛑 Rules
 
