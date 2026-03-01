@@ -6,7 +6,7 @@
 
 ## v26.2.1 (2026-02-28)
 
-*  sunxi: refactor full patchset. by @EvilOlaf in [armbian/build#9219](https://github.com/armbian/build/pull/9219)
+* sunxi: refactor full patchset. by `@EvilOlaf` in [armbian/build#9219](https://github.com/armbian/build/pull/9219)
 * "get completely rid of dead code toolchain stuff", pt2. by @rpardini in [armbian/build#9218](https://github.com/armbian/build/pull/9218)
 * "get completely rid of dead code toolchain stuff", pt3. by @rpardini in [armbian/build#9252](https://github.com/armbian/build/pull/9252)
 * "get completely rid of dead code toolchain stuff", pt4 - fixes. by @rpardini in [armbian/build#9256](https://github.com/armbian/build/pull/9256)
