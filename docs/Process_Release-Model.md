@@ -56,8 +56,8 @@ Each Armbian release will have the following version format:
 | 25.02 | Iiwi | February | planned
 | 25.05 | Caiman | May | planned
 | 25.08 | Dunnart | August | planned
-| 25.11 | Brach | November | planned
-| 26.02 | Goa | February | planned
+| 25.11 | Brach | November | [done](https://github.com/armbian/build/releases/tag/v25.11.1)
+| 26.02 | Goa | February | [done](https://github.com/armbian/build/releases/tag/v26.2.1)
 
 
 
