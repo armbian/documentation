@@ -222,6 +222,8 @@ Adds JetHub device flashing support to the build.
 
 Enables Rust language support in the Linux kernel (`CONFIG_RUST`). Installs a rustup-managed toolchain into `${SRC}/cache/tools/rustup/` and configures all required make parameters.
 
+See: [kernel-rust extension](Developer-Guide_Extension-kernel-rust.md)
+
 ---
 
 ## kernel-version-toolchain
