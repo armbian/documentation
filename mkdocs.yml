@@ -147,7 +147,7 @@ nav:
         - 'Media': 'User-Guide_Armbian-Software/Media.md'
         - 'Monitoring': 'User-Guide_Armbian-Software/Monitoring.md'
         - 'Music': 'User-Guide_Armbian-Software/Music.md'
-        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'        
+        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
         - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
         - 'VPN': 'User-Guide_Armbian-Software/VPN.md'
         - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
@@ -161,7 +161,10 @@ nav:
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
-        - 'Extensions' : 'Developer-Guide_Extensions.md'
+        - 'Extensions Framework' : 'Developer-Guide_Extensions.md'
+        - 'Extensions List' : 'Developer-Guide_Extensions-List.md'
+        - 'Extension: kernel-rust' : 'Developer-Guide_Extension-kernel-rust.md'
+        - 'Extension: ccache-remote' : 'Developer-Guide_Extension-ccache-remote.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'
