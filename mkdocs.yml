@@ -164,6 +164,7 @@ nav:
         - 'Extensions Framework' : 'Developer-Guide_Extensions.md'
         - 'Extensions List' : 'Developer-Guide_Extensions-List.md'
         - 'Extension: kernel-rust' : 'Developer-Guide_Extension-kernel-rust.md'
+        - 'Extension: ccache-remote' : 'Developer-Guide_Extension-ccache-remote.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'

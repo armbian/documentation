@@ -78,6 +78,8 @@ Adds a C++ compiler to host build dependencies. The C++ compiler is no longer in
 
 Enables ccache with a remote storage backend (Redis or HTTP/WebDAV) for sharing the compilation cache across multiple build hosts. Requires ccache 4.4+.
 
+See: [ccache-remote extension](Developer-Guide_Extension-ccache-remote.md)
+
 ---
 
 ## cleanup-space-final-image
