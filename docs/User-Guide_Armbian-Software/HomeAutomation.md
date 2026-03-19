@@ -40,7 +40,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 __Status:__ Preview  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://wiki.domoticz.com)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd DOM001
@@ -79,7 +79,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/m
 __Status:__ Preview  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.evcc.io/en)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd EVCC01
@@ -135,7 +135,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://www.openhab.org/docs/tutorial)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd HAB001
@@ -211,7 +211,7 @@ __Status:__ Preview
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/home-assistant/supervised-installer)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd HAS001

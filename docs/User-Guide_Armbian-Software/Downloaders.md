@@ -25,7 +25,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://wiki.bazarr.media/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd BAZ001
@@ -88,7 +88,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://deluge-torrent.org/userguide/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd DEL001
@@ -151,7 +151,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/qbittorrent/qBittorrent/wiki/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd DOW001
@@ -254,7 +254,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.jellyseerr.dev/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd JEL001
@@ -294,7 +294,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://wiki.servarr.com/lidarr)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd LID001
@@ -352,7 +352,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/pymedusa/Medusa/wiki)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd MDS001
@@ -415,7 +415,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://wiki.servarr.com/radarr)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd RAD001
@@ -479,7 +479,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://sabnzbd.org/wiki/faq)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd SABN01
@@ -543,7 +543,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://transmissionbt.com/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd SON001
@@ -606,7 +606,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://transmissionbt.com/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd TRA001

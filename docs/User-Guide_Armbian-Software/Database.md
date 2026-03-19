@@ -25,7 +25,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://hub.docker.com/_/mysql)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd MYSQL1
@@ -94,7 +94,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://mariadb.org/documentation/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd DAT001
@@ -153,7 +153,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://www.phpmyadmin.net/docs/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd MYA001
@@ -204,7 +204,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://www.postgresql.org/docs/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd PGSQL1
@@ -277,7 +277,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://redis.io/docs/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd REDIS1

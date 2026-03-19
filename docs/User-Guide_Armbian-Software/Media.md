@@ -25,7 +25,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @schwar3kat  
 __Documentation:__ [Link](https://emby.media)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd EMB001
@@ -98,7 +98,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://filebrowser.org/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd FIL001
@@ -163,7 +163,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @efectn  
 __Documentation:__ [Link](https://github.com/rpardini/ansi-hastebin)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd HPS001
@@ -216,7 +216,7 @@ __Status:__ Preview
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://immich.app/docs)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd IMM001
@@ -305,7 +305,7 @@ __Status:__ Preview
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://jellyfin.org/docs/general/quick-start/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd JMS001
@@ -369,7 +369,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/pynavidrome/navidrome/wiki)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd NAV001
@@ -409,7 +409,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://nextcloud.com/support/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd NCT001
@@ -553,7 +553,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://doc.owncloud.com/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd OWC001
@@ -616,7 +616,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.syncthing.net/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd STC001
@@ -679,7 +679,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://docs.stirlingpdf.com)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd STR001

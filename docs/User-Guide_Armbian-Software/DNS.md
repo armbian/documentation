@@ -24,7 +24,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/m
 __Status:__ Stable  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://github.com/AdguardTeam/AdGuardHome/wiki)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd ADG001
@@ -180,7 +180,7 @@ __Status:__ Stable
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://unbound.docs.nlnetlabs.nl/en/latest/)  
-__Installation:__ <span style="background-color:#039BE5; color:#ffffff; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
 armbian-config --cmd UNB001
