@@ -144,4 +144,4 @@ If you want to contribute to our project, please read the [collaboration notes](
 
     All software targets and functions are automatically tested to catch as many problems as possible.
 
-    <a href=https://github.com/armbian/configng/actions/workflows/unit-tests.yml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/configng/unit-tests.yml?logo=githubactions&label=Unit%20tests&style=for-the-badge&branch=main"></a>
+    <a href=https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/configng/maintenance-unit-tests.yml?logo=githubactions&label=Unit%20tests&style=for-the-badge&branch=main"></a>
