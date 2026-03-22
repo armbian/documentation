@@ -159,7 +159,7 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NTD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NTD001-header.md)  
 __Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
 __Maintainer:__ @igorpecovnik  
 __Documentation:__ [Link](https://learn.netdata.cloud/)  
 __Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
