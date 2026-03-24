@@ -360,6 +360,28 @@ ZFS is an advanced, high-performance file system and volume manager designed for
 
 When enabling ZFS support, Armbian checks if the running kernel can support ZFS, installs matching kernel headers if necessary, and builds the ZFS DKMS (Dynamic Kernel Module Support) module automatically.
 
+**Performance Tuning:**
+
+Once ZFS is installed, the **Tune ZFS** option becomes available, allowing you to fine-tune critical performance parameters:
+
+- **ARC Cache (Adaptive Replacement Cache)**: ZFS's intelligent caching system that stores frequently accessed data in RAM. The ARC can consume 50% or more of system memory by default, which may be excessive for memory-constrained devices.
+
+- **Dirty Data Limits**: Controls how much modified data can accumulate before being written to disk. Higher values improve performance but increase risk of data loss on power failure.
+
+- **TXG Timeout**: Transaction Group timeout determines how often ZFS writes changes to disk. Lower values increase data safety at the cost of performance.
+
+- **Compression**: Transparent compression that can actually improve performance by reducing I/O. LZ4 is recommended for most workloads.
+
+**Recommended Settings for ARM Devices:**
+
+- **ARC Max**: 1/2 to 2/3 of RAM (on 1-2GB systems, consider 256-512MB)
+- **ARC Min**: 1/8 of RAM
+- **Dirty Data Max**: 4% of RAM or ARC size (whichever is smaller)
+- **TXG Timeout**: 5 seconds (default)
+- **Compression**: lz4 (recommended)
+
+The tuning interface provides safe defaults based on your system's memory size and allows you to adjust parameters with immediate feedback. Changes are saved to `/etc/modprobe.d/zfs.conf` and persist across reboots.
+
 <!--- header STOP from tools/include/markdown/ZFS001-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ZFS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ZFS001-header.md)  
@@ -374,6 +396,100 @@ armbian-config --cmd ZFS001
 
 
 <!--- footer START from tools/include/markdown/ZFS001-footer.md --->
+## Performance Tuning
+
+The ZFS module includes a comprehensive tuning interface accessible via **System → Storage → Tune ZFS** (or `armbian-config` → **System** → **Storage** → **Tune ZFS**).
+
+=== "ARC Cache Tuning"
+
+The **ARC (Adaptive Replacement Cache)** is ZFS's intelligent caching system.
+
+**Recommended Settings:**
+- **ARC Min:** 1/8 of RAM (minimum cache size)
+- **ARC Max:** 1/2 of RAM (maximum cache size)
+
+For memory-constrained ARM devices (1-2 GB RAM):
+- Consider limiting ARC to 256-512 MB to leave memory for applications
+- ARC Max = 0 means "use all available RAM" (may not be ideal for small systems)
+
+**Impact:**
+- Higher ARC = better read performance for frequently accessed data
+- Too high ARC can cause system swapping and degraded performance
+
+=== "Dirty Data Tuning"
+
+**Dirty data** is modified data waiting to be written to disk.
+
+**Recommended Setting:**
+- **4% of RAM** (or 4% of ARC size, whichever is smaller)
+
+**Impact:**
+- Higher values = better write performance, more data loss risk on power failure
+- Lower values = safer data, more frequent disk writes
+
+=== "TXG Timeout Tuning"
+
+**TXG (Transaction Group)** controls how often ZFS writes changes to disk.
+
+**Recommended Setting:**
+- **5 seconds** (default)
+
+**Range:** 1-30 seconds
+
+**Impact:**
+- Lower (1-3s): Better data safety, more disk writes, lower performance
+- Higher (10-30s): Better performance, more data loss risk on power failure
+
+=== "Compression"
+
+ZFS compression is transparent and can actually **improve performance** by reducing I/O.
+
+**Options:**
+- **lz4**: Fast, good compression (recommended for most)
+- **zstd**: Better compression ratio, slightly slower CPU usage
+- **gzip**: Maximum compression, slowest
+- **off**: Disable compression
+
+**Note:** Compression setting only affects **new** datasets. Existing datasets keep their compression setting.
+
+=== "Applying Configuration"
+
+Configuration is saved to `/etc/modprobe.d/zfs.conf` and requires reloading the ZFS module:
+
+```bash
+# Option 1: Reboot (simplest)
+reboot
+
+# Option 2: Reload module (requires unmounting all ZFS filesystems)
+zfs umount -a
+rmmod zfs
+modprobe zfs
+```
+
+=== "Viewing Current Settings"
+
+Current settings can be viewed in the tuning interface or directly:
+
+```bash
+# View module parameters
+cat /sys/module/zfs/parameters/zfs_arc_max
+cat /sys/module/zfs/parameters/zfs_arc_min
+cat /sys/module/zfs/parameters/zfs_dirty_data_max
+cat /sys/module/zfs/parameters/zfs_txg_timeout
+
+# View configuration file
+cat /etc/modprobe.d/zfs.conf
+```
+
+=== "Reset to Defaults"
+
+The tuning interface includes a "Reset to Defaults" option that:
+- Removes custom configuration from `/etc/modprobe.d/zfs.conf`
+- Resets all parameters to ZFS defaults
+- Requires module reload to take effect
+
+---
+
 ##### Key Features
 
 ###### Data Integrity
@@ -392,12 +508,19 @@ armbian-config --cmd ZFS001
 - **Native Encryption:** Supports dataset-level encryption for secure data storage.
 - **RAID-Z:** A superior RAID alternative that prevents write-hole issues.
 
+
 <!--- footer STOP from tools/include/markdown/ZFS001-footer.md --->
 
 
 ~~~ bash title="ZFS filesystem - remove support:"
 armbian-config --cmd ZFS002
 ~~~
+
+
+~~~ bash title="Tune ZFS:"
+armbian-config --cmd ZFS003
+~~~
+
 
 
 
