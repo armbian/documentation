@@ -437,10 +437,39 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
 === "Reset to Defaults"
 
     The tuning interface includes a "Reset to Defaults" option that:
-    
+
     - Removes custom configuration from `/etc/modprobe.d/zfs.conf`
     - Resets all parameters to ZFS defaults
     - Requires module reload to take effect
+
+=== "Pool Import"
+
+    ZFS pools can be imported when they are not currently mounted. This is useful when:
+    - Moving pools between systems
+    - Booting from a different system with ZFS pools present
+    - Pools were exported and need to be re-imported
+
+    **Import Options:**
+
+    - **Scan:** Lists all available pools that can be imported
+    - **Import with original mount points:** Pool datasets mount at their configured locations
+    - **Import with alternate mount point:** Pool datasets mount under a custom root directory
+
+    **Force Import:**
+
+    The import function uses `-f` flag to force import, which handles:
+    - HostID mismatches between systems
+    - Pool state issues
+    - Active pools on other systems (use with caution)
+
+    **Alternate Mount Point:**
+
+    When importing with an alternate root (`altroot`):
+    - Datasets mount under the specified path (e.g., `/mnt/pool`)
+    - Original mount point configuration is preserved
+    - Useful for temporary access or recovery scenarios
+
+    **Note:** Default behavior is to use the pool's original mount points for maximum compatibility.
 
 <!--- header STOP from tools/include/markdown/ZFS001-header.md --->
 
@@ -486,6 +515,12 @@ armbian-config --cmd ZFS002
 ~~~ bash title="Tune ZFS:"
 armbian-config --cmd ZFS003
 ~~~
+
+
+~~~ bash title="Import ZFS Pool:"
+armbian-config --cmd ZFS004
+~~~
+
 
 
 
