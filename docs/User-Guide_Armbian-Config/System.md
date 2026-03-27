@@ -445,6 +445,7 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
 === "Pool Import"
 
     ZFS pools can be imported when they are not currently mounted. This is useful when:
+
     - Moving pools between systems
     - Booting from a different system with ZFS pools present
     - Pools were exported and need to be re-imported
@@ -458,6 +459,7 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
     **Force Import:**
 
     The import function uses `-f` flag to force import, which handles:
+
     - HostID mismatches between systems
     - Pool state issues
     - Active pools on other systems (use with caution)
@@ -465,6 +467,7 @@ When enabling ZFS support, Armbian checks if the running kernel can support ZFS,
     **Alternate Mount Point:**
 
     When importing with an alternate root (`altroot`):
+
     - Datasets mount under the specified path (e.g., `/mnt/pool`)
     - Original mount point configuration is preserved
     - Useful for temporary access or recovery scenarios
