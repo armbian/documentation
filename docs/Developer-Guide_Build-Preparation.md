@@ -14,7 +14,7 @@
 
 ```bash
 git clone https://github.com/armbian/build
-cd build  
+cd build
 ```
 !!! note
     - Make sure that full path to the build script **does not contain spaces**
@@ -140,3 +140,54 @@ For much more verbose logs set switch 'DEBUG=yes'.
 ## GitHub Actions
 
 If you do not have the proper equipment to build images on your own, you can use our [GitHub Action](https://github.com/marketplace/actions/rebuild-armbian).
+
+### Minimal workflow example
+
+Create `.github/workflows/build.yml` in your repository:
+
+```yaml
+name: Build Armbian Image
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # ubuntu-24.04-arm, ubuntu-24.04-riscv
+    steps:
+      - uses: armbian/build@main
+        with:
+          armbian_token: ${{ secrets.GITHUB_TOKEN }}
+          armbian_board: "uefi-x86" # orangepi5 bananapif3
+          armbian_release: "noble" # trixie
+          armbian_target: "build"
+          armbian_ui: "minimal" # server xfce
+          armbian_runner_clean: "yes" # recommended for Github runners
+```
+
+The action will build the image, create a GitHub Release in your repository and upload the artifacts.
+
+### Inputs reference
+
+| Input | Required | Default | Description |
+|---|---|---|---|
+| `armbian_token` | **yes** | — | GitHub access token (`GITHUB_TOKEN` or a PAT) |
+| `armbian_board` | no | `uefi-x86` | Hardware platform (e.g. `orangepi5`, `rock-5b`) |
+| `armbian_target` | no | `kernel` | Build target: `kernel` or `build` (full image) |
+| `armbian_branch` | no | `main` | Armbian framework branch |
+| `armbian_kernel_branch` | no | `current` | Kernel branch: `current`, `edge`, etc. |
+| `armbian_release` | no | `noble` | Userspace release (e.g. `noble`, `bookworm`, `trixie`) |
+| `armbian_ui` | no | `minimal` | `minimal`, `server`, or a desktop environment name (e.g. `xfce`, `gnome`) |
+| `armbian_version` | no | *auto* | Override version; patch level is auto-incremented from `stable.json` if not set |
+| `armbian_compress` | no | `sha,img,xz` | Output compression method |
+| `armbian_extensions` | no | — | Comma-separated list of build extensions to enable |
+| `armbian_pgp_key` | no | — | GPG private key for image signing (store as a secret) |
+| `armbian_pgp_password` | no | — | GPG passphrase (store as a secret) |
+| `armbian_release_title` | no | `Armbian image` | GitHub Release title |
+| `armbian_release_body` | no | *(link to build tools)* | GitHub Release body text |
+| `armbian_release_tag` | no | *auto* | GitHub Release tag; defaults to the computed version |
+| `armbian_artifacts` | no | `build/output/images/` | Path to artifacts for upload |
+| `armbian_runner_clean` | no | — | Set to any non-empty value to free disk space on GitHub-hosted runners |
+
+### Customisation
+
+If your repository contains a `userpatches/` directory, it will be merged into the build framework automatically. This allows you to add custom kernel configs, patches, or overlay files without forking the main build repository.
