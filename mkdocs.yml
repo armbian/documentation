@@ -14,16 +14,19 @@ theme:
     logo: images/armbian-logo.png
     icon:
       repo: fontawesome/brands/github-alt
+    font:
+        text: DM Sans
+        code: JetBrains Mono
     palette:
         - scheme: default
-          primary: red
-          accent: red
+          primary: custom
+          accent: custom
           toggle:
             icon: material/toggle-switch-off-outline
             name: Switch to dark mode
         - scheme: slate
-          primary: red
-          accent: red
+          primary: custom
+          accent: custom
           toggle:
             icon: material/toggle-switch
             name: Switch to light mode
