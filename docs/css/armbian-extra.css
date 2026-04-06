@@ -1,3 +1,20 @@
+/* Armbian brand colors matching armbian.com */
+:root {
+  --md-primary-fg-color: #F26522;
+  --md-primary-fg-color--light: #FF8B1A;
+  --md-primary-fg-color--dark: #DC5819;
+  --md-accent-fg-color: #F26522;
+  --md-accent-fg-color--transparent: #F2652218;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #F26522;
+  --md-primary-fg-color--light: #FF8B1A;
+  --md-primary-fg-color--dark: #DC5819;
+  --md-accent-fg-color: #F26522;
+  --md-accent-fg-color--transparent: #F2652218;
+}
+
 .md-typeset__table {
    min-width: 100%;
 }
