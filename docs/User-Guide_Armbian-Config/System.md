@@ -119,6 +119,66 @@ armbian-config --cmd DTO001
 ~~~
 
 
+#### Device Tree Editor
+
+
+Edit device tree
+
+
+<!--- section image START from tools/include/images/DTE001.png --->
+[![Device Tree Editor](/images/DTE001.png)](#)
+<!--- section image STOP from tools/include/images/DTE001.png --->
+
+
+<!--- header START from tools/include/markdown/DTE001-header.md --->
+The Device Tree Editor allows you to decompile, edit, and recompile device tree blobs (DTB) directly on your system. Device trees describe the hardware layout of your board to the Linux kernel. This tool provides a safe way to modify DTB files by decompiling them to human-readable DTS source, opening them in a text editor, validating the changes, and recompiling back to binary format.
+
+!!! danger "Incorrect device tree changes can prevent your system from booting!"
+
+    - Modifying the device tree can cause **hardware to stop functioning** or the system to **fail to boot entirely**.
+    - Always verify your changes carefully before applying them.
+    - A backup is created automatically before any modification, and can be restored from the module menu.
+    - **Keep a rescue method available**, such as a bootable SD card or serial console access, to recover the system if necessary.
+
+<!--- header STOP from tools/include/markdown/DTE001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DTE001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DTE001-header.md)  
+__Status:__ Preview  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.kernel.org/devicetree/usage-model.html)  
+
+~~~ custombash
+armbian-config --cmd DTE001
+~~~
+
+
+<!--- footer START from tools/include/markdown/DTE001-footer.md --->
+=== "Features"
+
+    - **Select and edit** any DTB file from the device tree directory
+    - **Edit active DTB** directly based on the `fdtfile` setting in `/boot/armbianEnv.txt`
+    - **Automatic backups** before every modification with timestamped filenames
+    - **Restore from backup** to revert to a previous device tree
+    - **Validation** of edited DTS source before applying changes
+    - **View device tree info** including model, compatible strings, and DTC version
+
+=== "Requirements"
+
+    - Package: `device-tree-compiler` (installed automatically if missing)
+    - Device tree directory: `/boot/dtb/`
+
+=== "Backup location"
+
+    Backups are stored in `/boot/dtb/backup/` with the naming format:
+
+    ```
+    <original-name>.dtb.<YYYYMMDD_HHMMSS>.bak
+    ```
+
+<!--- footer STOP from tools/include/markdown/DTE001-footer.md --->
+
+
 #### Odroid Boards Config
 
 
