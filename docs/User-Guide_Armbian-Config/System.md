@@ -234,8 +234,8 @@ Armbian desktop installation uses upstream meta-packages from Debian and Ubuntu 
 - Installs the desktop environment meta-package (e.g., `xfce4`, `gnome-session`) along with essential extras
 - Tracks all newly installed packages so uninstall cleanly removes everything added on top of CLI, including dependencies
 - Applies Armbian branding: wallpapers, icons, login screen theme, and default user settings
-- Configures the display manager (LightDM, GDM3, or SDDM) with auto-login
-- Installs Armbian Imager as an AppImage for writing OS images
+- Configures the display manager (LightDM, GDM3, or SDDM) with auto-login (this can be disabled in menu)
+- Installs [Armbian Imager](https://imager.armbian.com/) as an AppImage for writing OS images
 - Sets up Profile Sync Daemon (psd) to keep browser profiles in RAM, reducing flash media wear
 - Removes unnecessary bloat pulled in by meta-packages
 
