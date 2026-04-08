@@ -220,6 +220,137 @@ armbian-config --cmd BOOT01
 ~~~
 
 
+## Install, remove and configure desktop environments
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Desktops-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Desktops-header.md)  
+#### Gnome desktop
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GNOMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GNOMDE-header.md)  
+###### Gnome desktop Install
+
+
+<!--- section image START from tools/include/images/GNME01.png --->
+[![Gnome desktop Install](/images/GNME01.png)](#)
+<!--- section image STOP from tools/include/images/GNME01.png --->
+
+
+<!--- header START from tools/include/markdown/GNME01-header.md --->
+GNOME is a modern, user-friendly desktop environment for Linux, offering a clean interface, essential apps, and customization through extensions. It prioritizes simplicity, accessibility, and efficiency.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/GNME01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GNME01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GNME01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd GNME01
+~~~
+
+
+<!--- footer START from tools/include/markdown/GNME01-footer.md --->
+=== "Display Manager"
+
+    GNOME uses **GDM3** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/gnome.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/gdm3/custom.conf`
+
+<!--- footer STOP from tools/include/markdown/GNME01-footer.md --->
+
+
+~~~ bash title="Uninstall:"
+armbian-config --cmd GNME02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd GNME03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd GNME04
+~~~
+
+
+
+
+
+#### XFCE desktop
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/XFCEDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/XFCEDE-header.md)  
+###### XFCE desktop Install
+
+
+<!--- section image START from tools/include/images/XFCE01.png --->
+[![XFCE desktop Install](/images/XFCE01.png)](#)
+<!--- section image STOP from tools/include/images/XFCE01.png --->
+
+
+<!--- header START from tools/include/markdown/XFCE01-header.md --->
+Xfce is a lightweight, fast, and user-friendly desktop environment for Linux, offering a classic interface, essential apps, and customization. It prioritizes performance, simplicity, and efficiency, making it an excellent choice for devices with limited resources.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/XFCE01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/XFCE01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/XFCE01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd XFCE01
+~~~
+
+
+<!--- footer START from tools/include/markdown/XFCE01-footer.md --->
+=== "Display Manager"
+
+    Xfce uses **LightDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/xfce.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
+
+
+~~~ bash title="Uninstall:"
+armbian-config --cmd XFCE02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd XFCE03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd XFCE04
+~~~
+
+
+
+
+
 ## Storage
 
 
