@@ -258,6 +258,74 @@ Desktop environments that require NetworkManager (e.g., GNOME) install it alongs
 <!--- header STOP from tools/include/markdown/Desktops-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Desktops-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/Desktops-header.md)  
+#### Cinnamon
+
+
+Cinnamon - traditional layout with modern features
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/CINMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CINMDE-header.md)  
+###### Cinnamon desktop Install
+
+
+<!--- section image START from tools/include/images/CINM01.png --->
+[![Cinnamon desktop Install](/images/CINM01.png)](#)
+<!--- section image STOP from tools/include/images/CINM01.png --->
+
+
+<!--- header START from tools/include/markdown/CINM01-header.md --->
+Cinnamon is a Linux desktop environment that provides advanced innovative features and a traditional user experience. The desktop layout is similar to GNOME 2 with underlying technology forked from GNOME Shell. Cinnamon makes users feel at home with an easy-to-use and comfortable desktop experience.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/CINM01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CINM01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/CINM01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd CINM01
+~~~
+
+
+<!--- footer START from tools/include/markdown/CINM01-footer.md --->
+=== "Display Manager"
+
+    Cinnamon uses **LightDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/cinnamon.desktop`
+    - `/usr/share/xsessions/cinnamon2d.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/CINM01-footer.md --->
+
+
+~~~ bash title="Cinnamon desktop uninstall:"
+armbian-config --cmd CINM02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd CINM03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd CINM04
+~~~
+
+
+
+
+
 #### GNOME
 
 
