@@ -251,6 +251,7 @@ Desktop environments that require NetworkManager (e.g., GNOME) install it alongs
 | GNOME | Modern desktops, touchscreen devices | ~800 MB RAM |
 | Cinnamon | Users familiar with Windows layout | ~500 MB RAM |
 | MATE | Classic GNOME 2 fans, low-resource systems | ~350 MB RAM |
+| KDE Plasma | Power users, heavy customization | ~600 MB RAM |
 
 !!! note "Switching desktops"
 
@@ -526,6 +527,73 @@ armbian-config --cmd I3WM03
 
 ~~~ bash title="Disable autologin:"
 armbian-config --cmd I3WM04
+~~~
+
+
+
+
+
+#### KDE Plasma
+
+
+KDE Plasma - feature-rich customizable desktop
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/KDEPDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/KDEPDE-header.md)  
+###### KDE Plasma Install
+
+
+<!--- section image START from tools/include/images/KDEP01.png --->
+[![KDE Plasma Install](/images/KDEP01.png)](#)
+<!--- section image STOP from tools/include/images/KDEP01.png --->
+
+
+<!--- header START from tools/include/markdown/KDEP01-header.md --->
+KDE Plasma is a feature-rich desktop environment with extensive customization options. It provides a familiar taskbar and start menu layout with modern effects, widgets, and a powerful system settings application.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/KDEP01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEP01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEP01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd KDEP01
+~~~
+
+
+<!--- footer START from tools/include/markdown/KDEP01-footer.md --->
+=== "Display Manager"
+
+    KDE Plasma uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/plasma.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
+
+
+~~~ bash title="Uninstall:"
+armbian-config --cmd KDEP02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd KDEP03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd KDEP04
 ~~~
 
 
