@@ -252,6 +252,7 @@ Desktop environments that require NetworkManager (e.g., GNOME) install it alongs
 | Cinnamon | Users familiar with Windows layout | ~500 MB RAM |
 | MATE | Classic GNOME 2 fans, low-resource systems | ~350 MB RAM |
 | KDE Plasma | Power users, heavy customization | ~600 MB RAM |
+| i3-wm | Developers, keyboard-driven workflows | ~150 MB RAM |
 
 !!! note "Switching desktops"
 
@@ -594,6 +595,67 @@ armbian-config --cmd KDEP03
 
 ~~~ bash title="Disable autologin:"
 armbian-config --cmd KDEP04
+~~~
+
+
+
+
+
+###### KDE Neon Install
+
+
+<!--- header START from tools/include/markdown/KDEN01-header.md --->
+KDE Neon provides the latest KDE Plasma desktop built on top of Ubuntu. It uses the KDE Neon repository to deliver cutting-edge Plasma releases, offering the newest features and improvements ahead of distribution packages. Ubuntu Noble/Plucky only.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+!!! note "KDE Neon vs KDE Plasma"
+
+    **KDE Neon** uses the KDE Neon repository for the latest Plasma releases (Ubuntu only). **KDE Plasma** uses distribution packages and works on both Debian and Ubuntu.
+
+<!--- header STOP from tools/include/markdown/KDEN01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEN01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEN01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd KDEN01
+~~~
+
+
+<!--- footer START from tools/include/markdown/KDEN01-footer.md --->
+=== "Display Manager"
+
+    KDE Neon uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/wayland-sessions/plasma.desktop`
+    - `/usr/share/xsessions/plasmax11.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
+
+
+~~~ bash title="Uninstall:"
+armbian-config --cmd KDEN02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd KDEN03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd KDEN04
 ~~~
 
 
