@@ -461,6 +461,77 @@ armbian-config --cmd MATE04
 
 
 
+#### i3-wm
+
+
+i3 - lightweight tiling window manager
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/I3WMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/I3WMDE-header.md)  
+###### i3 desktop Install
+
+
+<!--- section image START from tools/include/images/I3WM01.png --->
+[![i3 desktop Install](/images/I3WM01.png)](#)
+<!--- section image STOP from tools/include/images/I3WM01.png --->
+
+
+<!--- header START from tools/include/markdown/I3WM01-header.md --->
+i3 is a tiling window manager designed for power users and developers. It is keyboard-driven, highly configurable, and extremely lightweight — making it ideal for single board computers and headless-to-desktop conversions.
+
+!!! info "Keyboard shortcuts"
+
+    i3 is controlled primarily via keyboard. The default modifier key is **$mod** (Super/Windows key). Press **$mod+Enter** to open a terminal, **$mod+d** to launch applications via rofi, and **$mod+Shift+e** to exit.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/I3WM01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/I3WM01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/I3WM01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd I3WM01
+~~~
+
+
+<!--- footer START from tools/include/markdown/I3WM01-footer.md --->
+=== "Display Manager"
+
+    i3 uses **LightDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/i3.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/I3WM01-footer.md --->
+
+
+~~~ bash title="i3 desktop uninstall:"
+armbian-config --cmd I3WM02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd I3WM03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd I3WM04
+~~~
+
+
+
+
+
 #### XFCE
 
 
