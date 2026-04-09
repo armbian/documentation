@@ -250,6 +250,7 @@ Desktop environments that require NetworkManager (e.g., GNOME) install it alongs
 | XFCE | Single board computers, low-end hardware | ~300 MB RAM |
 | GNOME | Modern desktops, touchscreen devices | ~800 MB RAM |
 | Cinnamon | Users familiar with Windows layout | ~500 MB RAM |
+| MATE | Classic GNOME 2 fans, low-resource systems | ~350 MB RAM |
 
 !!! note "Switching desktops"
 
@@ -387,6 +388,73 @@ armbian-config --cmd GNME03
 
 ~~~ bash title="Disable autologin:"
 armbian-config --cmd GNME04
+~~~
+
+
+
+
+
+#### MATE
+
+
+MATE - traditional GNOME 2 desktop
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MATEDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MATEDE-header.md)  
+###### MATE desktop Install
+
+
+<!--- section image START from tools/include/images/MATE01.png --->
+[![MATE desktop Install](/images/MATE01.png)](#)
+<!--- section image STOP from tools/include/images/MATE01.png --->
+
+
+<!--- header START from tools/include/markdown/MATE01-header.md --->
+MATE is a continuation of GNOME 2, providing a traditional desktop experience with a classic two-panel layout. It is lightweight, stable, and fully customizable — a good choice for users who prefer a familiar desktop without the overhead of modern compositing effects.
+
+!!! warning "Desktop installation is resource-intensive"
+
+    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
+
+<!--- header STOP from tools/include/markdown/MATE01-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MATE01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MATE01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd MATE01
+~~~
+
+
+<!--- footer START from tools/include/markdown/MATE01-footer.md --->
+=== "Display Manager"
+
+    MATE uses **LightDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/mate.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/MATE01-footer.md --->
+
+
+~~~ bash title="Uninstall:"
+armbian-config --cmd MATE02
+~~~
+
+
+~~~ bash title="Enable autologin:"
+armbian-config --cmd MATE03
+~~~
+
+
+~~~ bash title="Disable autologin:"
+armbian-config --cmd MATE04
 ~~~
 
 
