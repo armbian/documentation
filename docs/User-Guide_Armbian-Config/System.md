@@ -264,14 +264,11 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 #### Cinnamon
 
 
-Cinnamon - traditional layout with modern features
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/CINMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CINMDE-header.md)  
-###### Cinnamon desktop Install
+Install Cinnamon
 
 
 <!--- section image START from tools/include/images/CINM01.png --->
-[![Cinnamon desktop Install](/images/CINM01.png)](#)
+[![Cinnamon](/images/CINM01.png)](#)
 <!--- section image STOP from tools/include/images/CINM01.png --->
 
 
@@ -311,17 +308,17 @@ armbian-config --cmd CINM01
 <!--- footer STOP from tools/include/markdown/CINM01-footer.md --->
 
 
-~~~ bash title="Cinnamon desktop uninstall:"
+~~~ bash title="Uninstall Cinnamon:"
 armbian-config --cmd CINM02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (Cinnamon):"
 armbian-config --cmd CINM03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (Cinnamon):"
 armbian-config --cmd CINM04
 ~~~
 
@@ -332,14 +329,11 @@ armbian-config --cmd CINM04
 #### GNOME
 
 
-GNOME - modern, full-featured desktop
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GNOMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GNOMDE-header.md)  
-###### Gnome desktop Install
+Install GNOME
 
 
 <!--- section image START from tools/include/images/GNME01.png --->
-[![Gnome desktop Install](/images/GNME01.png)](#)
+[![GNOME](/images/GNME01.png)](#)
 <!--- section image STOP from tools/include/images/GNME01.png --->
 
 
@@ -378,17 +372,17 @@ armbian-config --cmd GNME01
 <!--- footer STOP from tools/include/markdown/GNME01-footer.md --->
 
 
-~~~ bash title="Uninstall:"
+~~~ bash title="Uninstall GNOME:"
 armbian-config --cmd GNME02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (GNOME):"
 armbian-config --cmd GNME03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (GNOME):"
 armbian-config --cmd GNME04
 ~~~
 
@@ -399,14 +393,11 @@ armbian-config --cmd GNME04
 #### MATE
 
 
-MATE - traditional GNOME 2 desktop
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MATEDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MATEDE-header.md)  
-###### MATE desktop Install
+Install MATE
 
 
 <!--- section image START from tools/include/images/MATE01.png --->
-[![MATE desktop Install](/images/MATE01.png)](#)
+[![MATE](/images/MATE01.png)](#)
 <!--- section image STOP from tools/include/images/MATE01.png --->
 
 
@@ -445,17 +436,17 @@ armbian-config --cmd MATE01
 <!--- footer STOP from tools/include/markdown/MATE01-footer.md --->
 
 
-~~~ bash title="Uninstall:"
+~~~ bash title="Uninstall MATE:"
 armbian-config --cmd MATE02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (MATE):"
 armbian-config --cmd MATE03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (MATE):"
 armbian-config --cmd MATE04
 ~~~
 
@@ -463,17 +454,14 @@ armbian-config --cmd MATE04
 
 
 
-#### i3-wm
+#### i3
 
 
-i3 - lightweight tiling window manager
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/I3WMDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/I3WMDE-header.md)  
-###### i3 desktop Install
+Install i3
 
 
 <!--- section image START from tools/include/images/I3WM01.png --->
-[![i3 desktop Install](/images/I3WM01.png)](#)
+[![i3](/images/I3WM01.png)](#)
 <!--- section image STOP from tools/include/images/I3WM01.png --->
 
 
@@ -516,17 +504,17 @@ armbian-config --cmd I3WM01
 <!--- footer STOP from tools/include/markdown/I3WM01-footer.md --->
 
 
-~~~ bash title="i3 desktop uninstall:"
+~~~ bash title="Uninstall i3:"
 armbian-config --cmd I3WM02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (i3):"
 armbian-config --cmd I3WM03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (i3):"
 armbian-config --cmd I3WM04
 ~~~
 
@@ -537,14 +525,11 @@ armbian-config --cmd I3WM04
 #### KDE Plasma
 
 
-KDE Plasma - feature-rich customizable desktop
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/KDEPDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/KDEPDE-header.md)  
-###### KDE Plasma Install
+Install KDE Plasma
 
 
 <!--- section image START from tools/include/images/KDEP01.png --->
-[![KDE Plasma Install](/images/KDEP01.png)](#)
+[![KDE Plasma](/images/KDEP01.png)](#)
 <!--- section image STOP from tools/include/images/KDEP01.png --->
 
 
@@ -583,44 +568,7 @@ armbian-config --cmd KDEP01
 <!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
 
 
-~~~ bash title="Uninstall:"
-armbian-config --cmd KDEP02
-~~~
-
-
-~~~ bash title="Enable autologin:"
-armbian-config --cmd KDEP03
-~~~
-
-
-~~~ bash title="Disable autologin:"
-armbian-config --cmd KDEP04
-~~~
-
-
-
-
-
-###### KDE Neon Install
-
-
-<!--- header START from tools/include/markdown/KDEN01-header.md --->
-KDE Neon provides the latest KDE Plasma desktop built on top of Ubuntu. It uses the KDE Neon repository to deliver cutting-edge Plasma releases, offering the newest features and improvements ahead of distribution packages. Ubuntu Noble/Plucky only.
-
-!!! warning "Desktop installation is resource-intensive"
-
-    Installing a desktop environment will download and install a large number of packages. This process may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.
-
-!!! note "KDE Neon vs KDE Plasma"
-
-    **KDE Neon** uses the KDE Neon repository for the latest Plasma releases (Ubuntu only). **KDE Plasma** uses distribution packages and works on both Debian and Ubuntu.
-
-<!--- header STOP from tools/include/markdown/KDEN01-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEN01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEN01-header.md)  
-__Status:__ Stable  
-
-~~~ custombash
+~~~ bash title="KDE Neon:"
 armbian-config --cmd KDEN01
 ~~~
 
@@ -644,19 +592,38 @@ armbian-config --cmd KDEN01
 <!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
 
 
-~~~ bash title="Uninstall:"
+~~~ bash title="Uninstall KDE Plasma:"
+armbian-config --cmd KDEP02
+~~~
+
+
+~~~ bash title="Uninstall KDE Neon:"
 armbian-config --cmd KDEN02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (KDE Plasma):"
+armbian-config --cmd KDEP03
+~~~
+
+
+~~~ bash title="Enable autologin (KDE Neon):"
 armbian-config --cmd KDEN03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (KDE Plasma):"
+armbian-config --cmd KDEP04
+~~~
+
+
+~~~ bash title="Disable autologin (KDE Neon):"
 armbian-config --cmd KDEN04
 ~~~
+
+
+
+
 
 
 
@@ -665,14 +632,11 @@ armbian-config --cmd KDEN04
 #### XFCE
 
 
-XFCE - lightweight and fast desktop
-
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/XFCEDE-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/XFCEDE-header.md)  
-###### XFCE desktop Install
+Install XFCE
 
 
 <!--- section image START from tools/include/images/XFCE01.png --->
-[![XFCE desktop Install](/images/XFCE01.png)](#)
+[![XFCE](/images/XFCE01.png)](#)
 <!--- section image STOP from tools/include/images/XFCE01.png --->
 
 
@@ -711,17 +675,17 @@ armbian-config --cmd XFCE01
 <!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
 
 
-~~~ bash title="Uninstall:"
+~~~ bash title="Uninstall XFCE:"
 armbian-config --cmd XFCE02
 ~~~
 
 
-~~~ bash title="Enable autologin:"
+~~~ bash title="Enable autologin (XFCE):"
 armbian-config --cmd XFCE03
 ~~~
 
 
-~~~ bash title="Disable autologin:"
+~~~ bash title="Disable autologin (XFCE):"
 armbian-config --cmd XFCE04
 ~~~
 
