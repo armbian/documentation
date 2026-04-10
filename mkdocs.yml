@@ -162,6 +162,7 @@ nav:
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
         - 'Extensions' : 'Developer-Guide_Extensions.md'
+        - 'Desktops' : 'Developer-Guide_Desktops.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'
