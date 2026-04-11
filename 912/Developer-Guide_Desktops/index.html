@@ -3962,117 +3962,67 @@
 <p>Not called from the desktop install path by default. The <code>armbian-imager</code> AppImage is available via <code>armbian-config --api module_appimage install app=armbian-imager</code> for users who explicitly want it.</p>
 <h2 id="lifecycle-install">Lifecycle: install<a class="headerlink" href="#lifecycle-install" title="Permanent link">&para;</a></h2>
 <p>The install pipeline in <code>module_desktops install</code> is intentionally linear and idempotent-friendly. <strong>Every step that touches system state is gated on the previous step&rsquo;s success.</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-18-10">10</a></span>
-<span class="normal"><a href="#__codelineno-18-11">11</a></span>
-<span class="normal"><a href="#__codelineno-18-12">12</a></span>
-<span class="normal"><a href="#__codelineno-18-13">13</a></span>
-<span class="normal"><a href="#__codelineno-18-14">14</a></span>
-<span class="normal"><a href="#__codelineno-18-15">15</a></span>
-<span class="normal"><a href="#__codelineno-18-16">16</a></span>
-<span class="normal"><a href="#__codelineno-18-17">17</a></span>
-<span class="normal"><a href="#__codelineno-18-18">18</a></span>
-<span class="normal"><a href="#__codelineno-18-19">19</a></span>
-<span class="normal"><a href="#__codelineno-18-20">20</a></span>
-<span class="normal"><a href="#__codelineno-18-21">21</a></span>
-<span class="normal"><a href="#__codelineno-18-22">22</a></span>
-<span class="normal"><a href="#__codelineno-18-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a>2.  Resolve target user           module_desktop_getuser
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a>3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a>4.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5"></a>5.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6"></a>6.  Suppress encfs prompt         debconf-set-selections
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7"></a>7.  Configure custom repo         module_desktop_repo $de  (no-op if no repo: block)
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8"></a>8.  apt update                    pkg_update
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9"></a>9.  Reset ACTUALLY_INSTALLED      array used by pkg_install to record new packages
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10"></a>10. apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES        ← bail on failure
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11"></a>11. apt install + register DM     pkg_install $DESKTOP_DM              ← bail on failure
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12"></a>                                  /etc/X11/default-display-manager
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13"></a>12. (Armbian) install plymouth    if /etc/apt/sources.list.d/armbian.{list,sources} present
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14"></a>13. Save install manifest         /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15"></a>14. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16"></a>15. Install branding              module_desktop_branding $de
-</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17"></a>16. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
-</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18"></a>17. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
-</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19"></a>18. Sync skel to existing users   module_update_skel install   (with chown -R safety net)
-</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20"></a>19. Stop other DMs                gdm3/lightdm/sddm one by one
-</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21"></a>20. Start display manager         systemctl start display-manager      ← container path skips this
-</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22"></a>21. Switch default.target         systemctl set-default graphical.target  ONLY if step 20 succeeded
-</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23"></a>22. Enable auto-login             module_desktops auto de=$de
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2.  Resolve target user           module_desktop_getuser
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>4.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>5.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>6.  Suppress encfs prompt         debconf-set-selections
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>7.  Configure custom repo         module_desktop_repo $de  (no-op if no repo: block)
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>8.  apt update                    pkg_update
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>9.  Reset ACTUALLY_INSTALLED      array used by pkg_install to record new packages
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>10. apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES        ← bail on failure
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>11. apt install + register DM     pkg_install $DESKTOP_DM              ← bail on failure
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>                                  /etc/X11/default-display-manager
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>12. (Armbian) install plymouth    if /etc/apt/sources.list.d/armbian.{list,sources} present
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>13. Save install manifest         /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>14. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>15. Install branding              module_desktop_branding $de
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>16. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>17. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>18. Sync skel to existing users   module_update_skel install   (with chown -R safety net)
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>19. Stop other DMs                gdm3/lightdm/sddm one by one
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>20. Start display manager         systemctl start display-manager      ← container path skips this
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>21. Switch default.target         systemctl set-default graphical.target  ONLY if step 20 succeeded
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>22. Enable auto-login             module_desktops auto de=$de
+</span></code></pre></div>
 <p>If step 10 or 11 fails, the function returns 1 with no further state changes — the manifest is not written, <code>default.target</code> stays at <code>multi-user</code>, no DM is started. The system is in the same state as if the install had never run.</p>
 <h2 id="lifecycle-remove">Lifecycle: remove<a class="headerlink" href="#lifecycle-remove" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-19-10">10</a></span>
-<span class="normal"><a href="#__codelineno-19-11">11</a></span>
-<span class="normal"><a href="#__codelineno-19-12">12</a></span>
-<span class="normal"><a href="#__codelineno-19-13">13</a></span>
-<span class="normal"><a href="#__codelineno-19-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>1.  Validate args                 de= required
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a>3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a>    tier
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a>4.  Disable auto-login            module_desktops manual de=$de
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6"></a>5.  Stop display manager          systemctl stop display-manager
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7"></a>6.  Switch default.target         systemctl set-default multi-user.target
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8"></a>7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9"></a>                                  to console immediately, no reboot needed)
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10"></a>8.  Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11"></a>                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12"></a>9.  pkg_remove                    apt-get autopurge
-</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13"></a>10. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14"></a>11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>1.  Validate args                 de= required
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    tier
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>4.  Disable auto-login            module_desktops manual de=$de
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>5.  Stop display manager          systemctl stop display-manager
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>6.  Switch default.target         systemctl set-default multi-user.target
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>                                  to console immediately, no reboot needed)
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>8.  Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>9.  pkg_remove                    apt-get autopurge
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>10. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
+</span></code></pre></div>
 <p>The <code>set-default</code> and <code>isolate</code> calls together ensure the user gets a console login on tty1 immediately after the uninstall, without needing to reboot. Without them, the system stays pinned to <code>graphical.target</code> with no DM behind it and the local console is blank.</p>
 <h2 id="lifecycle-upgrade-and-downgrade">Lifecycle: upgrade and downgrade<a class="headerlink" href="#lifecycle-upgrade-and-downgrade" title="Permanent link">&para;</a></h2>
 <p><code>upgrade</code> and <code>downgrade</code> are the two halves of <code>_module_desktops_change_tier</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-20-10">10</a></span>
-<span class="normal"><a href="#__codelineno-20-11">11</a></span>
-<span class="normal"><a href="#__codelineno-20-12">12</a></span>
-<span class="normal"><a href="#__codelineno-20-13">13</a></span>
-<span class="normal"><a href="#__codelineno-20-14">14</a></span>
-<span class="normal"><a href="#__codelineno-20-15">15</a></span>
-<span class="normal"><a href="#__codelineno-20-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a>2.  Read current tier marker      /etc/armbian/desktop/&lt;de&gt;.tier (must exist)
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a>3.  Validate direction            upgrade refuses target &lt;= current
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4"></a>                                  downgrade refuses target &gt;= current
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5"></a>                                  same tier → no-op message, exit 0
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6"></a>4.  Parse YAML twice              once at current tier, once at target tier
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7"></a>                                  store the package lists in two bash arrays
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8"></a>5.  Compute set difference        (awk on per-line printf input)
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9"></a>                                  upgrade:   to_install = target - current
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10"></a>                                  downgrade: removable  = current - target
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11"></a>6.  (downgrade only) intersect    removable ∩ &lt;de&gt;.packages — never touch
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12"></a>                                  packages the user installed manually
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13"></a>                                  outside the desktop install path
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14"></a>7.  Apply                         pkg_install (upgrade) or pkg_remove (downgrade)
-</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15"></a>8.  Update manifest               append new packages, or remove drained ones
-</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16"></a>9.  Update tier marker            /etc/armbian/desktop/&lt;de&gt;.tier
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2.  Read current tier marker      /etc/armbian/desktop/&lt;de&gt;.tier (must exist)
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>3.  Validate direction            upgrade refuses target &lt;= current
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>                                  downgrade refuses target &gt;= current
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>                                  same tier → no-op message, exit 0
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>4.  Parse YAML twice              once at current tier, once at target tier
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>                                  store the package lists in two bash arrays
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>5.  Compute set difference        (awk on per-line printf input)
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>                                  upgrade:   to_install = target - current
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>                                  downgrade: removable  = current - target
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>6.  (downgrade only) intersect    removable ∩ &lt;de&gt;.packages — never touch
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>                                  packages the user installed manually
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>                                  outside the desktop install path
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>7.  Apply                         pkg_install (upgrade) or pkg_remove (downgrade)
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>8.  Update manifest               append new packages, or remove drained ones
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>9.  Update tier marker            /etc/armbian/desktop/&lt;de&gt;.tier
+</span></code></pre></div>
 <p><code>set-tier</code> is a thin front-end over the same helper that auto-detects direction from the current tier vs the target. It&rsquo;s the entry point used by the dialog menu&rsquo;s &ldquo;Change <DE> to <tier>&rdquo; buttons.</p>
 <h2 id="container-and-ci-awareness">Container and CI awareness<a class="headerlink" href="#container-and-ci-awareness" title="Permanent link">&para;</a></h2>
 <p><code>_desktop_in_container</code> returns true when any of the following holds:</p>
