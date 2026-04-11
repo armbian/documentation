@@ -6,6 +6,17 @@
     display: table;
 }
 
+/* Prevent the first column of schema/reference tables from wrapping
+ * mid-identifier. Identifiers like 'display_manager' or 'gnome-control-center'
+ * are common in the developer-guide tables and look terrible when broken
+ * across lines (e.g. 'display_manage' / 'r').
+ * Scope to <code> in the first cell so prose tables are unaffected.
+ */
+.md-typeset table:not([class]) td:first-child code,
+.md-typeset table:not([class]) th:first-child code {
+    white-space: nowrap;
+}
+
 /* Style for only specially tagged bash blocks */
 pre.custom-bash-block, code.custom-bash-block {
   font-size: 24pt;
