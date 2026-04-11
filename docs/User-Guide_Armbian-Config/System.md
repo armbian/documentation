@@ -264,7 +264,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 #### Cinnamon
 
 
-Install Cinnamon
+Install Cinnamon (minimal)
 
 
 <!--- section image START from tools/include/images/CINM01.png --->
@@ -308,6 +308,16 @@ armbian-config --cmd CINM01
 <!--- footer STOP from tools/include/markdown/CINM01-footer.md --->
 
 
+~~~ bash title="Cinnamon mid:"
+armbian-config --cmd CINM05
+~~~
+
+
+~~~ bash title="Cinnamon full:"
+armbian-config --cmd CINM06
+~~~
+
+
 ~~~ bash title="Uninstall Cinnamon:"
 armbian-config --cmd CINM02
 ~~~
@@ -323,13 +333,33 @@ armbian-config --cmd CINM04
 ~~~
 
 
+~~~ bash title="Change Cinnamon to minimal:"
+armbian-config --cmd CINM07
+~~~
+
+
+~~~ bash title="Change Cinnamon to mid:"
+armbian-config --cmd CINM08
+~~~
+
+
+~~~ bash title="Change Cinnamon to full:"
+armbian-config --cmd CINM09
+~~~
+
+
+
+
+
+
+
 
 
 
 #### GNOME
 
 
-Install GNOME
+Install GNOME (minimal)
 
 
 <!--- section image START from tools/include/images/GNME01.png --->
@@ -372,6 +402,16 @@ armbian-config --cmd GNME01
 <!--- footer STOP from tools/include/markdown/GNME01-footer.md --->
 
 
+~~~ bash title="GNOME mid:"
+armbian-config --cmd GNME05
+~~~
+
+
+~~~ bash title="GNOME full:"
+armbian-config --cmd GNME06
+~~~
+
+
 ~~~ bash title="Uninstall GNOME:"
 armbian-config --cmd GNME02
 ~~~
@@ -387,13 +427,33 @@ armbian-config --cmd GNME04
 ~~~
 
 
+~~~ bash title="Change GNOME to minimal:"
+armbian-config --cmd GNME07
+~~~
+
+
+~~~ bash title="Change GNOME to mid:"
+armbian-config --cmd GNME08
+~~~
+
+
+~~~ bash title="Change GNOME to full:"
+armbian-config --cmd GNME09
+~~~
+
+
+
+
+
+
+
 
 
 
 #### MATE
 
 
-Install MATE
+Install MATE (minimal)
 
 
 <!--- section image START from tools/include/images/MATE01.png --->
@@ -436,6 +496,16 @@ armbian-config --cmd MATE01
 <!--- footer STOP from tools/include/markdown/MATE01-footer.md --->
 
 
+~~~ bash title="MATE mid:"
+armbian-config --cmd MATE05
+~~~
+
+
+~~~ bash title="MATE full:"
+armbian-config --cmd MATE06
+~~~
+
+
 ~~~ bash title="Uninstall MATE:"
 armbian-config --cmd MATE02
 ~~~
@@ -451,13 +521,33 @@ armbian-config --cmd MATE04
 ~~~
 
 
+~~~ bash title="Change MATE to minimal:"
+armbian-config --cmd MATE07
+~~~
+
+
+~~~ bash title="Change MATE to mid:"
+armbian-config --cmd MATE08
+~~~
+
+
+~~~ bash title="Change MATE to full:"
+armbian-config --cmd MATE09
+~~~
+
+
+
+
+
+
+
 
 
 
 #### i3
 
 
-Install i3
+Install i3 (minimal)
 
 
 <!--- section image START from tools/include/images/I3WM01.png --->
@@ -504,6 +594,16 @@ armbian-config --cmd I3WM01
 <!--- footer STOP from tools/include/markdown/I3WM01-footer.md --->
 
 
+~~~ bash title="i3 mid:"
+armbian-config --cmd I3WM05
+~~~
+
+
+~~~ bash title="i3 full:"
+armbian-config --cmd I3WM06
+~~~
+
+
 ~~~ bash title="Uninstall i3:"
 armbian-config --cmd I3WM02
 ~~~
@@ -519,13 +619,33 @@ armbian-config --cmd I3WM04
 ~~~
 
 
+~~~ bash title="Change i3 to minimal:"
+armbian-config --cmd I3WM07
+~~~
+
+
+~~~ bash title="Change i3 to mid:"
+armbian-config --cmd I3WM08
+~~~
+
+
+~~~ bash title="Change i3 to full:"
+armbian-config --cmd I3WM09
+~~~
+
+
+
+
+
+
+
 
 
 
 #### KDE Plasma
 
 
-Install KDE Plasma
+Install KDE Plasma (minimal)
 
 
 <!--- section image START from tools/include/images/KDEP01.png --->
@@ -566,6 +686,16 @@ armbian-config --cmd KDEP01
     - `/etc/sddm.conf.d/autologin.conf`
 
 <!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
+
+
+~~~ bash title="KDE Plasma mid:"
+armbian-config --cmd KDEP05
+~~~
+
+
+~~~ bash title="KDE Plasma full:"
+armbian-config --cmd KDEP06
+~~~
 
 
 ~~~ bash title="KDE Neon:"
@@ -622,6 +752,26 @@ armbian-config --cmd KDEN04
 ~~~
 
 
+~~~ bash title="Change KDE Plasma to minimal:"
+armbian-config --cmd KDEP07
+~~~
+
+
+~~~ bash title="Change KDE Plasma to mid:"
+armbian-config --cmd KDEP08
+~~~
+
+
+~~~ bash title="Change KDE Plasma to full:"
+armbian-config --cmd KDEP09
+~~~
+
+
+
+
+
+
+
 
 
 
@@ -632,7 +782,7 @@ armbian-config --cmd KDEN04
 #### XFCE
 
 
-Install XFCE
+Install XFCE (minimal)
 
 
 <!--- section image START from tools/include/images/XFCE01.png --->
@@ -675,6 +825,16 @@ armbian-config --cmd XFCE01
 <!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
 
 
+~~~ bash title="XFCE mid:"
+armbian-config --cmd XFCE05
+~~~
+
+
+~~~ bash title="XFCE full:"
+armbian-config --cmd XFCE06
+~~~
+
+
 ~~~ bash title="Uninstall XFCE:"
 armbian-config --cmd XFCE02
 ~~~
@@ -688,6 +848,26 @@ armbian-config --cmd XFCE03
 ~~~ bash title="Disable autologin (XFCE):"
 armbian-config --cmd XFCE04
 ~~~
+
+
+~~~ bash title="Change XFCE to minimal:"
+armbian-config --cmd XFCE07
+~~~
+
+
+~~~ bash title="Change XFCE to mid:"
+armbian-config --cmd XFCE08
+~~~
+
+
+~~~ bash title="Change XFCE to full:"
+armbian-config --cmd XFCE09
+~~~
+
+
+
+
+
 
 
 
