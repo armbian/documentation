@@ -587,7 +587,7 @@ Not called from the desktop install path by default. The `armbian-imager` AppIma
 
 The install pipeline in `module_desktops install` is intentionally linear and idempotent-friendly. **Every step that touches system state is gated on the previous step's success.**
 
-```text
+```{ .text linenums="0" }
 1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
 2.  Resolve target user           module_desktop_getuser
 3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
@@ -617,7 +617,7 @@ If step 10 or 11 fails, the function returns 1 with no further state changes —
 
 ## Lifecycle: remove
 
-```text
+```{ .text linenums="0" }
 1.  Validate args                 de= required
 2.  Read installed tier marker    /etc/armbian/desktop/<de>.tier (default: minimal)
 3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
@@ -640,7 +640,7 @@ The `set-default` and `isolate` calls together ensure the user gets a console lo
 
 `upgrade` and `downgrade` are the two halves of `_module_desktops_change_tier`:
 
-```text
+```{ .text linenums="0" }
 1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
 2.  Read current tier marker      /etc/armbian/desktop/<de>.tier (must exist)
 3.  Validate direction            upgrade refuses target <= current
