@@ -134,7 +134,7 @@ The release block is **orthogonal** to the tier walk: it applies to whatever tie
 | `packages_remove` | list | Packages filtered out of the merged install list. |
 | `packages_uninstall` | list | Packages purged after install on this release only. |
 
-### tier_overrides
+### tier_overrides {#tier-overrides}
 
 `tier_overrides` is for **package availability holes**: a tier package that exists on most arches/releases but is missing on one specific combination. The schema has two layers:
 
