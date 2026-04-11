@@ -113,7 +113,7 @@ Each desktop is defined in a single YAML file under `tools/modules/desktops/yaml
 | `releases` | mapping | yes | Per-release overrides keyed by release codename (`bookworm`, `trixie`, `noble`, `plucky`, ...). |
 | `repo` | mapping | optional | Custom APT repository, see below. |
 
-### Tier blocks (`tiers.<tier>`)
+### Tier blocks
 
 | Field | Type | Description |
 |---|---|---|
@@ -123,7 +123,7 @@ Each desktop is defined in a single YAML file under `tools/modules/desktops/yaml
 
 The first DE-specific package that survives all filters becomes `DESKTOP_PRIMARY_PKG`, used by `module_desktops status` for `dpkg -l` checks. It must come from the DE's own `tiers.minimal.packages` block, not from `common.yaml`, otherwise every DE would share the same primary package.
 
-### Per-release block (`releases.<codename>`)
+### Per-release block
 
 The release block is **orthogonal** to the tier walk: it applies to whatever tier is being installed. Use it for things that vary by release rather than by user choice (e.g. trixie's pulseaudio→pipewire swap, bookworm's `gnome-calculator` addition).
 
@@ -155,7 +155,7 @@ Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always miss
 
 `tier_overrides` can live in `common.yaml` (applies to every DE) or in a per-DE YAML (applies only to that DE). The parser merges common first, then per-DE.
 
-### Custom repository block (`repo`)
+### Custom repository block
 
 | Field | Type | Description |
 |---|---|---|
@@ -253,7 +253,7 @@ releases:
     architectures: [arm64, amd64]
 ```
 
-### `common.yaml`
+### common.yaml
 
 `common.yaml` carries the per-tier defaults that apply to every desktop, the browser substitution table, and any cross-DE `tier_overrides`. Per-DE YAMLs only declare a `tiers` block when they want to add packages on top of common or override common-tier entries.
 
@@ -359,7 +359,7 @@ The per-release layer is needed because the same arch can resolve differently ac
 - `chromium` isn't built for riscv64 in either Debian or Ubuntu.
 - `firefox` isn't built for noble/plucky riscv64 either.
 
-## Python helper: `parse_desktop_yaml.py`
+## Python helper: parse_desktop_yaml.py
 
 Single-purpose CLI that bash modules invoke via `python3`. All YAML parsing and validation happens here so the bash side stays free of YAML logic.
 
@@ -421,7 +421,7 @@ The parser is strict about top-level structure but tolerant of malformed sub-nod
 - **Path traversal guard** — `de_name` is resolved against `yaml_dir` via `os.path.realpath`/`commonpath`. Anything outside the directory (`../...`, absolute paths, symlink escapes) is rejected with `Error: invalid desktop name '<name>'` and exit 1.
 - **Tolerant normalization** — `tiers`, `releases`, `architectures`, `tier_overrides`, `repo`, every list field passes through `_as_dict` / `_as_list` helpers. Wrong-typed nodes coerce to safe empty defaults (`{}` or `[]`) instead of raising `AttributeError` or doing surprising substring matches like `arch in "arm64"`.
 
-### `--list` / `--list-json` mode
+### List and JSON list modes
 
 Iterates every `*.yaml` (excluding `common.yaml`), parses each one's release block, and prints **only entries supported on the requested (release, arch)**. Used by `module_desktops install` to show available desktops on error and by `module_desktops supported` to expose a machine-readable catalog. These modes do not require `--tier`.
 
@@ -429,7 +429,11 @@ Iterates every `*.yaml` (excluding `common.yaml`), parses each one's release blo
 
 All functions are loaded by configng's module loader. They share global state (`DESKTOP_*` variables, `desktops_dir`, `DISTROID`) — call sites must follow the documented order.
 
-### `module_desktops <command> [de=<name>] [tier=<tier>] [arch=<arch>] [release=<release>]`
+### module_desktops
+
+```text
+module_desktops <command> [de=<name>] [tier=<tier>] [arch=<arch>] [release=<release>]
+```
 
 Top-level dispatcher. The `de=`, `tier=`, `arch=`, `release=` arguments are parsed positionally from `$@`.
 
@@ -469,7 +473,11 @@ Two files per installed desktop, both under `/etc/armbian/desktop/`:
 | `sddm`    | `/etc/sddm.conf.d/autologin.conf` (drop-in, non-destructive) |
 | `lightdm` | `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf` (drop-in, non-destructive) |
 
-### `module_desktop_yamlparse <de_name> [arch] [release] [tier]`
+### module_desktop_yamlparse
+
+```text
+module_desktop_yamlparse <de_name> [arch] [release] [tier]
+```
 
 Wraps `parse_desktop_yaml.py`. Resets all `DESKTOP_*` globals, runs the helper, and `eval`s its stdout. Returns 1 on parse failure (with the parser's stderr surfaced).
 
@@ -487,15 +495,27 @@ echo "$DESKTOP_TIER"          # → full
 echo "$DESKTOP_PACKAGES"      # → minimal + mid + full set, with browser resolved
 ```
 
-### `module_desktop_yamlparse_list [arch] [release]`
+### module_desktop_yamlparse_list
+
+```text
+module_desktop_yamlparse_list [arch] [release]
+```
 
 Calls the parser with `--list` and prints TSV to stdout. Used to assemble the "Available: ..." hint shown when `install` is invoked without `de=`.
 
-### `module_desktop_supported <de_name> [arch] [release]`
+### module_desktop_supported
+
+```text
+module_desktop_supported <de_name> [arch] [release]
+```
 
 Convenience wrapper around `module_desktop_yamlparse` that returns 0/1 based on `DESKTOP_SUPPORTED`. Suppresses parser stderr — meant for predicates and CI gates.
 
-### `module_desktop_repo <de_name>`
+### module_desktop_repo
+
+```text
+module_desktop_repo <de_name>
+```
 
 Sets up a custom APT source. Must be called **after** `module_desktop_yamlparse` because it consumes `DESKTOP_REPO_URL`, `DESKTOP_REPO_KEY_URL`, `DESKTOP_REPO_KEYRING`.
 
@@ -508,7 +528,11 @@ Behavior:
 
 A no-op if the YAML has no `repo:` block.
 
-### `module_desktop_branding <de_name>`
+### module_desktop_branding
+
+```text
+module_desktop_branding <de_name>
+```
 
 Copies branding assets and runs the optional postinst hook. Idempotent — every step is guarded with `[[ -d ... ]]`.
 
@@ -526,11 +550,19 @@ Copies branding assets and runs the optional postinst hook. Idempotent — every
 
 The distributor logo for GNOME Settings → About / KDE Info Center / etc. is **not** installed from here — that file ships from `armbian-base-files` so it stays in sync with the `LOGO=` line in `/etc/os-release`.
 
-### `module_desktop_getuser`
+### module_desktop_getuser
+
+```text
+module_desktop_getuser
+```
 
 Returns the first non-root, non-system user with a real login shell. Prefers `$SUDO_USER` if set and not root, otherwise scans `/etc/passwd` for the first entry with `1000 ≤ uid < 65534` and a shell that does not match `nologin|false`. Exits 1 if none is found.
 
-### `module_update_skel install`
+### module_update_skel
+
+```text
+module_update_skel install
+```
 
 Walks `getent passwd`, and for every regular user (`1000 ≤ uid < 65534`, home directory exists, not root):
 
@@ -541,7 +573,11 @@ Walks `getent passwd`, and for every regular user (`1000 ≤ uid < 65534`, home 
 
 The recursive `chown` is critical: other package postinst scripts (caja, nemo, gnome-keyring, …) routinely leak root-owned files into the user's `~/.config` directory on first install. Without the recursive chown, those tools refuse to start on first login because they can't write their own config dirs.
 
-### `module_appimage <install|remove|status> app=<name>`
+### module_appimage
+
+```text
+module_appimage <install|remove|status> app=<name>
+```
 
 Standalone AppImage helper. The internal `APPIMAGE_REPO` registry maps logical app names (e.g. `armbian-imager`) to GitHub `owner/repo` slugs and downloads the appropriate architecture-suffixed AppImage from the latest release. `module_appimage install` also installs `libfuse2`, `fuse3`, and the `libgles2`/`libegl1`/`libgl1`/`libgl1-mesa-dri` runtime so the AppImage can launch.
 
@@ -702,7 +738,7 @@ This makes the same code path usable for image preseeding inside Docker without 
 
 ## Common pitfalls
 
-### `packages_uninstall` cascade
+### packages_uninstall cascade
 
 Listing a package in `tiers.minimal.packages_uninstall` runs `apt-get remove --purge` on it after the install. If that package is a hard `Depends:` of any meta package the DE install pulled in, apt's autoremove cascade will yank the meta package along with it — and on systems with `APT::Get::AutomaticRemove "true"` (Ubuntu noble/plucky), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:
 
@@ -712,7 +748,7 @@ Listing a package in `tiers.minimal.packages_uninstall` runs `apt-get remove --p
 
 **Rule**: never put a `Depends:` of a metapackage you ship into `packages_uninstall`. Verify with `apt-cache rdepends --installed <pkg>` before adding anything.
 
-### Gnome `daemon.conf` vs `custom.conf`
+### Gnome daemon.conf vs custom.conf
 
 Both Debian and Ubuntu ship a `gdm3` package, but they read different config files:
 
@@ -723,7 +759,7 @@ Both Debian and Ubuntu ship a `gdm3` package, but they read different config fil
 
 The `auto` path also edits the file in place via sed (preserving any user customization like `WaylandEnable=false`) rather than overwriting it with a fresh `cat > $file`.
 
-### `login` regex anchoring
+### login regex anchoring
 
 The stock Ubuntu noble `/etc/gdm3/custom.conf` template ships with a commented sample line:
 
