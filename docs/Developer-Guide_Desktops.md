@@ -10,29 +10,46 @@ The desktop submodule replaces hand-rolled per-distro install scripts with a sin
 
 The submodule provides:
 
-- **Install / remove** of a desktop environment, including its display manager, custom APT repositories, branding, AppImage extras, group memberships, and skel sync.
-- **Auto-login** management for `gdm3`, `sddm`, and `lightdm`.
-- **Support queries** that report which desktops are available for a given (release, architecture) pair as TSV or JSON.
+- **Tiered install** — every desktop ships at one of three sizes (`minimal`, `mid`, `full`), and users can move between tiers after install via `upgrade`/`downgrade`/`set-tier`.
+- **Per-install manifest** — every install records exactly which packages it added so removal and downgrades only undo what they themselves did.
+- **Custom APT repositories**, branding, group memberships, and skel sync.
+- **Auto-login** management for `gdm3`, `sddm`, and `lightdm`, with non-destructive in-place edits of the underlying config files.
+- **Per-release / per-arch package overrides** so the same YAML works across Debian bookworm/trixie and Ubuntu noble/plucky on amd64/arm64/armhf/riscv64 with different package availability.
+- **Browser virtual token** that resolves per-release-per-arch (chromium on Debian, epiphany-browser on Ubuntu, firefox-esr on Debian riscv64, …).
 - **Container/CI awareness** so the same code path can be used inside Docker without trying to start a display manager.
+
+## Tier model
+
+Every desktop install is run at one of three tiers, in order of inclusion: `minimal -> mid -> full`. Each tier is the union of itself plus all lower tiers, so installing `full` implies `mid` implies `minimal`. Tiers are mandatory; there is no flat "install everything from this YAML" mode.
+
+| Tier | Contents | Approximate size |
+|---|---|---|
+| `minimal` | DE itself + display manager + base utilities. No browser, no office, no user-facing apps beyond a terminal and a file manager. | ~500 MB |
+| `mid` | `minimal` + browser + everyday user apps (text editor, calculator, image/PDF viewer, media player, archive tool, torrent client). | ~1 GB |
+| `full` | `mid` + office suite + creative tools (LibreOffice, GIMP, Inkscape, Thunderbird, Audacity). | ~2.5 GB |
+
+The per-tier package lists for `mid` and `full` live in `common.yaml` so every DE inherits them. Per-DE YAMLs override only what they need (e.g. KDE Plasma swaps `gnome-text-editor` for `kate` at the mid tier).
+
+The currently-installed tier is recorded in `/etc/armbian/desktop/<de>.tier`. The full set of packages installed for a given DE is recorded in `/etc/armbian/desktop/<de>.packages`.
 
 ## Component map
 
 ```text
 tools/modules/desktops/
-├── module_desktops.sh              # main dispatcher: install/remove/auto/manual/...
-├── module_desktop_yamlparse.sh     # bash wrapper around the YAML parser
+├── module_desktops.sh              # main dispatcher: install/remove/auto/manual/upgrade/downgrade/...
+├── module_desktop_yamlparse.sh     # bash wrapper around the YAML parser (now takes a tier arg)
 ├── module_desktop_supported.sh     # arch/release support check
 ├── module_desktop_repo.sh          # custom APT repo + GPG keyring setup
 ├── module_desktop_branding.sh      # wallpapers, greeters, skel, postinst hook
 ├── module_desktop_getuser.sh       # detects first regular user
-├── module_update_skel.sh           # propagate /etc/skel into existing $HOME
-├── module_appimage.sh              # AppImage helper (used for armbian-imager)
+├── module_update_skel.sh           # propagate /etc/skel into existing $HOME (with chown -R safety net)
+├── module_appimage.sh              # AppImage helper (used for armbian-imager via the CLI)
 │
 ├── scripts/
 │   └── parse_desktop_yaml.py       # YAML → bash-eval variables (or TSV/JSON listings)
 │
 ├── yaml/
-│   ├── common.yaml                 # packages installed for every DE
+│   ├── common.yaml                 # per-tier defaults installed for every DE; browser map; tier_overrides
 │   └── <de_name>.yaml              # per-desktop definition
 │
 ├── postinst/<de_name>.sh           # optional DE-specific post-install hook
@@ -43,35 +60,41 @@ tools/modules/desktops/
 │   ├── icons/                      # /usr/share/icons/armbian
 │   ├── pixmaps/                    # /usr/share/pixmaps/armbian
 │   └── armbian.xml                 # GNOME background-properties
-└── skel/                           # files copied into /etc/skel
+└── skel/                           # files copied into /etc/skel and propagated to existing $HOME
 ```
 
-Every shell file is loaded by configng's module loader, which exposes them as bash functions in the running shell. `script_dir` points at the configng install root and is used to resolve paths relative to the desktops directory.
+Every shell file is loaded by configng's module loader, which exposes them as bash functions in the running shell. `desktops_dir` points at the desktops directory and is used to resolve paths from any module function.
 
 ## Data flow
 
 ```text
-       CLI:  armbian-config desktop install de=xfce
+       CLI:  armbian-config --api module_desktops install de=xfce tier=mid
               │
               ▼
-   module_desktops install de=xfce
+   module_desktops install de=xfce tier=mid
               │
-              │  1. resolves user via module_desktop_getuser
-              │  2. parses xfce.yaml via module_desktop_yamlparse → DESKTOP_* vars
-              │  3. sets up custom repo  via module_desktop_repo
-              │  4. apt install $DESKTOP_PACKAGES + $DESKTOP_DM
-              │  5. apt remove  $DESKTOP_PACKAGES_UNINSTALL
-              │  6. installs branding via module_desktop_branding
-              │  7. installs Armbian Imager AppImage
-              │  8. adds user to sudo/audio/video/... groups
-              │  9. propagates /etc/skel via module_update_skel
-              │ 10. starts display-manager (skipped in containers)
-              │ 11. enables auto-login via `module_desktops auto`
+              │  1. validates tier= (mandatory; minimal|mid|full only)
+              │  2. resolves user via module_desktop_getuser
+              │  3. parses xfce.yaml at the requested tier via module_desktop_yamlparse
+              │     → DESKTOP_PACKAGES, DESKTOP_TIER, DESKTOP_DM, DESKTOP_PRIMARY_PKG, ...
+              │  4. sets up custom repo via module_desktop_repo
+              │  5. apt update
+              │  6. apt install $DESKTOP_PACKAGES         ← bail on failure (no state changes)
+              │  7. apt install $DESKTOP_DM               ← bail on failure
+              │  8. (Armbian only) install armbian-plymouth-theme if armbian repo present
+              │  9. write /etc/armbian/desktop/<de>.packages and <de>.tier
+              │ 10. apt remove --purge $DESKTOP_PACKAGES_UNINSTALL
+              │ 11. installs branding via module_desktop_branding
+              │ 12. adds user to sudo/audio/video/... groups
+              │ 13. propagates /etc/skel via module_update_skel install (with recursive chown)
+              │ 14. systemctl start display-manager      ← skipped in containers
+              │ 15. systemctl set-default graphical.target ← only AFTER step 14 succeeds
+              │ 16. enables auto-login via module_desktops auto
               ▼
-         desktop ready
+         desktop ready, marker files in /etc/armbian/desktop/
 ```
 
-The Python helper is the single source of truth for what packages get installed for a given (desktop, release, arch) combination. The bash side never reads YAML directly.
+The Python helper is the single source of truth for what packages get installed for a given (desktop, release, arch, tier) combination. The bash side never reads YAML directly.
 
 ## YAML schema
 
@@ -85,19 +108,52 @@ Each desktop is defined in a single YAML file under `tools/modules/desktops/yaml
 | `description` | string | informational | One-line summary, exposed via `DESKTOP_DESC`. |
 | `display_manager` | string | yes | Greeter package: `gdm3`, `sddm`, `lightdm`, or `none`. |
 | `status` | string | yes | `supported` or `unsupported`. Reported via `DESKTOP_STATUS`. Affects only labelling — does not block install. |
-| `packages` | list | yes | DE-specific packages. The first element is treated as the **primary package** and used by `module_desktops status` to detect installation. |
-| `packages_uninstall` | list | optional | Packages to purge after the install (junk that the DE metapackage pulls in). |
+| `tiers` | mapping | yes | Per-tier package lists, keyed by `minimal`, `mid`, `full`. See [Tier blocks](#tier-blocks). |
+| `tier_overrides` | mapping | optional | Per-arch and/or per-release-per-arch package removals (and additions) for tier holes. See [tier_overrides](#tier-overrides). |
 | `releases` | mapping | yes | Per-release overrides keyed by release codename (`bookworm`, `trixie`, `noble`, `plucky`, ...). |
 | `repo` | mapping | optional | Custom APT repository, see below. |
 
+### Tier blocks (`tiers.<tier>`)
+
+| Field | Type | Description |
+|---|---|---|
+| `packages` | list | Packages added at this tier. Combined with `common.yaml`'s same-tier packages and any earlier tiers in the walk. |
+| `packages_remove` | list | Packages dropped from the accumulated list at this tier. Use this to remove a `common.yaml` entry that doesn't fit the DE (e.g. KDE Plasma drops `gnome-text-editor` and inserts `kate` at the mid tier). |
+| `packages_uninstall` | list | (minimal tier only) Packages purged after install. Used for orthogonal junk that the metapackage pulls in but we want gone (e.g. `apport`, `python3-apport`). **Important**: never list a package that is a hard `Depends:` of any meta package the install ships, or apt's autoremove will cascade and yank a chunk of the desktop. |
+
+The first DE-specific package that survives all filters becomes `DESKTOP_PRIMARY_PKG`, used by `module_desktops status` for `dpkg -l` checks. It must come from the DE's own `tiers.minimal.packages` block, not from `common.yaml`, otherwise every DE would share the same primary package.
+
 ### Per-release block (`releases.<codename>`)
+
+The release block is **orthogonal** to the tier walk: it applies to whatever tier is being installed. Use it for things that vary by release rather than by user choice (e.g. trixie's pulseaudio→pipewire swap, bookworm's `gnome-calculator` addition).
 
 | Field | Type | Description |
 |---|---|---|
 | `architectures` | list | Architectures supported on this release. Used to compute `DESKTOP_SUPPORTED`. |
-| `packages` | list | Extra packages added on top of the top-level `packages`. |
-| `packages_remove` | list | Packages filtered out of the merged install list (used to drop a top-level package on a specific release). |
+| `packages` | list | Extra packages added on top of the tier-resolved set. |
+| `packages_remove` | list | Packages filtered out of the merged install list. |
 | `packages_uninstall` | list | Packages purged after install on this release only. |
+
+### tier_overrides
+
+`tier_overrides` is for **package availability holes**: a tier package that exists on most arches/releases but is missing on one specific combination. The schema has two layers:
+
+```yaml
+tier_overrides:
+  <tier>:
+    architectures:
+      <arch>:
+        packages_remove: [...]    # apply on this arch in any release
+    releases:
+      <release>:
+        architectures:
+          <arch>:
+            packages_remove: [...]    # apply only on this release+arch combo
+```
+
+Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always missing on armhf). Use the per-release-per-arch layer for transient holes (e.g. `loupe` missing on bookworm because GNOME 43 didn't have it). The parser walks tier_overrides at every tier step in its walk, so a hole declared at the mid tier is honoured for both `mid` and `full` installs.
+
+`tier_overrides` can live in `common.yaml` (applies to every DE) or in a per-DE YAML (applies only to that DE). The parser merges common first, then per-DE.
 
 ### Custom repository block (`repo`)
 
@@ -115,16 +171,19 @@ description: "XFCE - lightweight and fast desktop"
 display_manager: lightdm
 status: supported
 
-packages:
-  - xfce4
-  - xfce4-goodies
-  - lightdm
-  - slick-greeter
-  # ...
-
-packages_uninstall:
-  - ristretto
-  - xfburn
+tiers:
+  minimal:
+    packages:
+      - xfce4
+      - xfce4-goodies
+      - lightdm
+      - slick-greeter
+      # ...
+    packages_uninstall:
+      - apport
+      - python3-apport
+      - python3-problem-report
+      - libsnapd-glib-2-1
 
 releases:
   trixie:
@@ -138,6 +197,40 @@ releases:
       - pulseaudio-module-bluetooth
 ```
 
+```yaml title="yaml/kde-plasma.yaml — per-DE tier overrides"
+name: kde-plasma
+description: "KDE Plasma - feature-rich customizable desktop"
+display_manager: sddm
+status: supported
+
+tiers:
+  minimal:
+    packages:
+      - kde-plasma-desktop
+      - sddm
+      - konsole
+      - dolphin
+      - ark
+      - gwenview
+      - okular
+      # ...
+  mid:
+    # KDE already ships ark / gwenview / okular at minimal — drop the
+    # GTK equivalents that common.yaml's mid tier adds.
+    packages_remove:
+      - gnome-text-editor
+      - file-roller
+      - loupe
+    packages:
+      - kate
+  full:
+    # libreoffice-gtk3 vs default LibreOffice integration: KDE picks
+    # up the breeze style automatically when LibreOffice is installed
+    # alongside Plasma, so just drop the GTK frontend.
+    packages_remove:
+      - libreoffice-gtk3
+```
+
 ```yaml title="yaml/kde-neon.yaml — with custom repo"
 name: kde-neon
 description: "KDE Neon - latest Plasma from KDE repos (Ubuntu only)"
@@ -148,10 +241,12 @@ repo:
   key_url: "https://archive.neon.kde.org/public.key"
   keyring: "/usr/share/keyrings/neon.gpg"
 
-packages:
-  - neon-desktop
-  - sddm
-  # ...
+tiers:
+  minimal:
+    packages:
+      - neon-desktop
+      - sddm
+      # ...
 
 releases:
   noble:
@@ -160,19 +255,109 @@ releases:
 
 ### `common.yaml`
 
-Packages listed in `common.yaml` are added to every desktop install. Keep it minimal — anything desktop-specific belongs in the per-desktop file.
+`common.yaml` carries the per-tier defaults that apply to every desktop, the browser substitution table, and any cross-DE `tier_overrides`. Per-DE YAMLs only declare a `tiers` block when they want to add packages on top of common or override common-tier entries.
 
 ```yaml title="yaml/common.yaml"
 name: common
-description: "Common packages for all desktop environments"
-packages:
-  - adwaita-icon-theme
-  - cups
-  - dconf-cli
-  - profile-sync-daemon
-  - terminator
-  - upower
+description: "Packages installed for every desktop, in tiers"
+
+tiers:
+  minimal:
+    packages:
+      - adwaita-icon-theme
+      - cups
+      - dconf-cli
+      - profile-sync-daemon
+      - terminator
+      - upower
+  mid:
+    packages:
+      - browser              # virtual — resolved per-arch from `browser:` below
+      - gnome-text-editor
+      - gnome-calculator
+      - loupe
+      - vlc
+      - file-roller
+      - transmission-gtk
+  full:
+    packages:
+      - libreoffice
+      - libreoffice-gtk3
+      - gimp
+      - inkscape
+      - thunderbird
+      - audacity
+
+browser:
+  bookworm:
+    amd64:   chromium
+    arm64:   chromium
+    armhf:   chromium
+  trixie:
+    amd64:   chromium
+    arm64:   chromium
+    armhf:   chromium
+    riscv64: firefox-esr     # 'firefox' does not exist in Debian
+  noble:
+    amd64:   epiphany-browser    # 'chromium' deb is a snap-shim
+    arm64:   epiphany-browser
+    armhf:   epiphany-browser
+    riscv64: epiphany-browser
+  plucky:
+    amd64:   epiphany-browser
+    arm64:   epiphany-browser
+    armhf:   epiphany-browser
+    riscv64: epiphany-browser
+
+tier_overrides:
+  mid:
+    releases:
+      bookworm:
+        architectures:
+          amd64:  { packages_remove: [loupe] }   # GNOME 43 era — no loupe
+          arm64:  { packages_remove: [loupe] }
+          armhf:  { packages_remove: [loupe] }
+      plucky:
+        architectures:
+          armhf:  { packages_remove: [loupe] }   # dropped on plucky/armhf
+  full:
+    releases:
+      bookworm:
+        architectures:
+          armhf:  { packages_remove: [thunderbird] }
+      trixie:
+        architectures:
+          armhf:  { packages_remove: [thunderbird] }
+      noble:
+        # thunderbird on Ubuntu is a snap-shim that requires snapd
+        # which Armbian doesn't ship — strip it on every arch.
+        architectures:
+          amd64:    { packages_remove: [thunderbird] }
+          arm64:    { packages_remove: [thunderbird] }
+          armhf:    { packages_remove: [thunderbird] }
+          riscv64:  { packages_remove: [thunderbird] }
+      plucky:
+        architectures:
+          amd64:    { packages_remove: [thunderbird] }
+          arm64:    { packages_remove: [thunderbird] }
+          armhf:    { packages_remove: [thunderbird] }
+          riscv64:  { packages_remove: [thunderbird] }
 ```
+
+### Browser virtual token
+
+The literal string `browser` inside any tier block resolves to a real package name from the `browser:` map at parse time. Lookup order:
+
+1. `browser.<release>.<arch>` — most specific
+2. `browser.<arch>` — per-arch fallback if no per-release entry exists
+3. drop the token entirely (silent — install proceeds without a browser rather than failing on a literal `browser` apt name)
+
+The per-release layer is needed because the same arch can resolve differently across releases:
+
+- Debian has `firefox-esr` but **no** `firefox` package.
+- Ubuntu's `chromium` deb is a snap-shim wrapper that requires `snapd`. Armbian doesn't ship snapd, so the shim is broken at runtime — substitute a real GTK browser instead. `epiphany-browser` (GNOME Web) is small, native deb, and available on every Ubuntu arch.
+- `chromium` isn't built for riscv64 in either Debian or Ubuntu.
+- `firefox` isn't built for noble/plucky riscv64 either.
 
 ## Python helper: `parse_desktop_yaml.py`
 
@@ -181,14 +366,18 @@ Single-purpose CLI that bash modules invoke via `python3`. All YAML parsing and 
 ### Usage
 
 ```bash
-# Parse one desktop and emit DESKTOP_* shell variables
-parse_desktop_yaml.py <yaml_dir> <de_name> <release> <arch>
+# Parse one desktop at a tier and emit DESKTOP_* shell variables.
+# --tier is mandatory.
+parse_desktop_yaml.py <yaml_dir> <de_name> <release> <arch> --tier <minimal|mid|full>
 
 # List all desktops as TSV (name<TAB>status<TAB>supported<TAB>archs)
 parse_desktop_yaml.py <yaml_dir> --list <release> <arch>
 
 # Same as --list but JSON-formatted
 parse_desktop_yaml.py <yaml_dir> --list-json <release> <arch>
+
+# Print "<name>\t<primary_pkg>" for every desktop, used by `installed`
+parse_desktop_yaml.py <yaml_dir> --primaries <release> <arch>
 ```
 
 ### Variables emitted (per-desktop mode)
@@ -197,68 +386,105 @@ All values are double-quoted and shell-escaped via `shell_escape()` (escapes `\`
 
 | Variable | Source | Notes |
 |---|---|---|
-| `DESKTOP_PACKAGES` | merged: `common.yaml` + top-level `packages` + release `packages` − release `packages_remove` | Space-separated, ready to feed to `apt install`. |
-| `DESKTOP_PACKAGES_UNINSTALL` | top-level `packages_uninstall` + release `packages_uninstall` | Space-separated. |
-| `DESKTOP_PRIMARY_PKG` | first element of top-level `packages` | Used by `module_desktops status` for `dpkg -l` checks. |
+| `DESKTOP_PACKAGES` | full tier walk: common minimal/mid/full + DE minimal/mid/full + release `packages` − every layer's `packages_remove` and `tier_overrides` removals. The `browser` virtual token is resolved here. | Space-separated, ready to feed to `apt install`. |
+| `DESKTOP_PACKAGES_UNINSTALL` | minimal-tier `packages_uninstall` from common + DE + release | Space-separated. |
+| `DESKTOP_PRIMARY_PKG` | first DE-specific package (not from common) that survives all filters | Used by `module_desktops status` for `dpkg -l` checks. |
 | `DESKTOP_DM` | `display_manager`, default `lightdm` | |
 | `DESKTOP_STATUS` | `status`, default `unsupported` | |
 | `DESKTOP_SUPPORTED` | `yes` if `arch` is in the release's `architectures` and `release` is a key in `releases`, else `no` | |
 | `DESKTOP_DESC` | `description`, default `de_name` | |
+| `DESKTOP_TIER` | the requested tier name | Set verbatim from the `--tier` arg. |
 | `DESKTOP_REPO_URL` | `repo.url` | Only emitted when `repo:` exists. |
 | `DESKTOP_REPO_KEY_URL` | `repo.key_url` | Only emitted when `repo:` exists. |
 | `DESKTOP_REPO_KEYRING` | `repo.keyring` | Only emitted when `repo:` exists. |
+
+### Resolution algorithm
+
+For a given `(de_name, release, arch, tier)`:
+
+1. Start with empty `packages` and `removes` lists.
+2. **Walk tiers** from `minimal` up to the target tier. At each step:
+    - Merge `common.tiers.<tier>.packages`, then `de.tiers.<tier>.packages`, applying each layer's `packages_remove` to filter.
+    - Apply `common.tier_overrides.<tier>` for the (release, arch).
+    - Apply `de.tier_overrides.<tier>` for the (release, arch).
+3. **Resolve the `browser` token** to a real package via `common.browser.<release>.<arch>` (with fallback to `common.browser.<arch>`, or drop the token).
+4. **Apply the release block**: filter `release.<release>.packages_remove`, then add `release.<release>.packages`.
+5. **Compute `packages_uninstall`** by unioning the minimal-tier `packages_uninstall` from common, DE, and the release block.
+6. **Compute `DESKTOP_PRIMARY_PKG`** as the first DE-specific tier-walk package that survived release and per-arch removals.
+7. Emit all `DESKTOP_*` variables.
 
 ### Error handling and validation
 
 The parser is strict about top-level structure but tolerant of malformed sub-nodes:
 
+- **Mandatory `--tier` arg.** Calling without it prints usage and exits 1. Invalid tier values (`ultra`, etc.) error out with a clear message.
 - **Path traversal guard** — `de_name` is resolved against `yaml_dir` via `os.path.realpath`/`commonpath`. Anything outside the directory (`../...`, absolute paths, symlink escapes) is rejected with `Error: invalid desktop name '<name>'` and exit 1.
-- **Required structural checks** — top-level YAML must be a mapping; `common.yaml` and per-desktop `packages` must be lists. Failures print a clear `Error: ...` and exit 1.
-- **Tolerant normalization** — `releases`, per-release blocks, `architectures`, release-level package lists, top-level `packages_uninstall`, and `repo` all pass through `_as_dict` / `_as_list` helpers. Wrong-typed nodes coerce to safe empty defaults (`{}` or `[]`) instead of raising `AttributeError` or doing surprising substring matches like `arch in "arm64"`.
+- **Tolerant normalization** — `tiers`, `releases`, `architectures`, `tier_overrides`, `repo`, every list field passes through `_as_dict` / `_as_list` helpers. Wrong-typed nodes coerce to safe empty defaults (`{}` or `[]`) instead of raising `AttributeError` or doing surprising substring matches like `arch in "arm64"`.
 
 ### `--list` / `--list-json` mode
 
-Iterates every `*.yaml` (excluding `common.yaml`), parses each one, and prints **only entries supported on the requested (release, arch)**. Used by `module_desktops install` to show available desktops on error and by `module_desktops supported` to expose a machine-readable catalog.
+Iterates every `*.yaml` (excluding `common.yaml`), parses each one's release block, and prints **only entries supported on the requested (release, arch)**. Used by `module_desktops install` to show available desktops on error and by `module_desktops supported` to expose a machine-readable catalog. These modes do not require `--tier`.
 
 ## Bash module API
 
-All functions are loaded by configng's module loader. They share global state (`DESKTOP_*` variables, `script_dir`, `DISTROID`) — call sites must follow the documented order.
+All functions are loaded by configng's module loader. They share global state (`DESKTOP_*` variables, `desktops_dir`, `DISTROID`) — call sites must follow the documented order.
 
-### `module_desktops <command> [de=<name>] [arch=<arch>] [release=<release>]`
+### `module_desktops <command> [de=<name>] [tier=<tier>] [arch=<arch>] [release=<release>]`
 
-Top-level dispatcher. The `de=`, `arch=`, `release=` arguments are parsed positionally from `$@`.
+Top-level dispatcher. The `de=`, `tier=`, `arch=`, `release=` arguments are parsed positionally from `$@`.
 
 | Command | Behavior | Required args |
 |---|---|---|
-| `install`  | Full install pipeline (see [Lifecycle](#lifecycle-install)). | `de=` |
-| `remove`   | Disables auto-login, stops the display manager, purges the DM and primary package. | `de=` |
-| `disable`  | `systemctl stop && disable display-manager`. | — |
-| `enable`   | `systemctl enable && start display-manager`. | — |
-| `status`   | Returns 0 if `DESKTOP_PRIMARY_PKG` is `dpkg -l` installed. | `de=` |
-| `auto`     | Configures auto-login for `DESKTOP_DM` (gdm3/sddm/lightdm). | `de=` |
-| `manual`   | Reverts auto-login. | `de=` |
-| `login`    | Returns 0 if auto-login is currently configured. | `de=` |
-| `supported`| With `de=`: prints `true`/`false`. Without `de=`: prints JSON catalog of supported desktops. | optional |
-| `help`     | Shows help and exits. | — |
+| `install`   | Full install pipeline (see [Lifecycle](#lifecycle-install)). Bails out cleanly on `pkg_install` failure without changing system state. | `de=`, `tier=` |
+| `remove`    | Disables auto-login, stops the display manager, purges every package recorded in `<de>.packages`, runs `pkg_clean`, switches `default.target` back to `multi-user`, isolates to multi-user.target so the running session also drops to console. | `de=` |
+| `upgrade`   | Move an installed desktop to a higher tier. Refuses if the target is the same or lower (use `downgrade`). | `de=`, `tier=` |
+| `downgrade` | Move an installed desktop to a lower tier. Removable set is intersected with the install manifest so user-installed packages are never touched. | `de=`, `tier=` |
+| `set-tier`  | Direction-agnostic tier change — auto-detects upgrade vs downgrade from the current marker. Same arg shape as `upgrade`/`downgrade`. Refuses with a friendly message if not installed or already at the target tier. Used by the dialog menu's "Change to <tier>" entries. | `de=`, `tier=` |
+| `tier`      | Print the installed tier name (`minimal`/`mid`/`full`) on stdout, or `not installed`. Returns 0 if installed, 1 if not. Use this from the CLI when you want the actual tier value. | `de=` |
+| `at-tier`   | Silent gate: exit 0 if the DE is installed AND its current tier marker matches the given target. Used by dialog menu condition gates. | `de=`, `tier=` |
+| `status`    | Silent exit-code query. Returns 0 if `DESKTOP_PRIMARY_PKG` is `dpkg -l` installed, 1 if not. **Prints nothing on either path** so it can be used safely from menu condition gates that fire dozens of times per render. | `de=` |
+| `disable`   | `systemctl stop && disable display-manager`. | — |
+| `enable`    | `systemctl enable && start display-manager`. | — |
+| `auto`      | Configures auto-login for `DESKTOP_DM` (gdm3/sddm/lightdm). Edits the gdm config in place — never overwrites the file — so user customization is preserved. | `de=` |
+| `manual`    | Reverts auto-login. Idempotent. | `de=` |
+| `login`     | Returns 0 if auto-login is currently configured. Anchored regex; safely ignores commented sample lines in the stock noble `custom.conf`. | `de=` |
+| `supported` | With `de=`: prints `true`/`false`. Without `de=`: prints JSON catalog of supported desktops. | optional |
+| `installed` | Returns 0 if any desktop is installed (uses cached `--primaries` lookup). | — |
+| `help`      | Shows help and exits. | — |
+
+#### Manifest files
+
+Two files per installed desktop, both under `/etc/armbian/desktop/`:
+
+| File | Format | Purpose |
+|---|---|---|
+| `<de>.packages` | newline-separated package names | The exact set of packages newly installed by `module_desktops install` (captured from `apt-get -s install` dry-run via `pkg_install`'s `ACTUALLY_INSTALLED` array). The `remove` path passes this to `pkg_remove`; the `downgrade` path uses it to constrain what may be removed. |
+| `<de>.tier` | one line: `minimal`, `mid`, or `full` | Source of truth for the currently-installed tier. Read by `status`, `tier`, `at-tier`, `upgrade`, `downgrade`, `set-tier`. Written by `install` and the tier-change commands. |
 
 #### Auto-login files written
 
 | Display manager | File |
 |---|---|
-| `gdm3`    | `/etc/gdm3/custom.conf` (or `daemon.conf` on `trixie`/`forky`) |
-| `sddm`    | `/etc/sddm.conf.d/autologin.conf` |
-| `lightdm` | `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf` |
+| `gdm3`    | `/etc/gdm3/custom.conf` on Ubuntu, `/etc/gdm3/daemon.conf` on Debian. Branched on `ID=` from `/etc/os-release` (not on release codename — both `bookworm` and `trixie` use `daemon.conf`). The file is edited in place via sed, NOT overwritten — any user customization (`WaylandEnable=false`, etc.) is preserved. |
+| `sddm`    | `/etc/sddm.conf.d/autologin.conf` (drop-in, non-destructive) |
+| `lightdm` | `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf` (drop-in, non-destructive) |
 
-### `module_desktop_yamlparse <de_name> [arch] [release]`
+### `module_desktop_yamlparse <de_name> [arch] [release] [tier]`
 
 Wraps `parse_desktop_yaml.py`. Resets all `DESKTOP_*` globals, runs the helper, and `eval`s its stdout. Returns 1 on parse failure (with the parser's stderr surfaced).
 
-`arch` defaults to `dpkg --print-architecture`. `release` defaults to `$DISTROID`.
+Defaults:
+- `arch` → `dpkg --print-architecture`
+- `release` → `$DISTROID`
+- `tier` → `minimal` — passed through to the parser's `--tier` arg, so callers that only need `DESKTOP_DM` / `DESKTOP_PRIMARY_PKG` (status checks, autologin paths) don't need to know the actual installed tier.
 
 ```bash
 module_desktop_yamlparse xfce
 echo "$DESKTOP_PRIMARY_PKG"   # → xfce4
-echo "$DESKTOP_SUPPORTED"     # → yes / no
+
+module_desktop_yamlparse xfce arm64 trixie full
+echo "$DESKTOP_TIER"          # → full
+echo "$DESKTOP_PACKAGES"      # → minimal + mid + full set, with browser resolved
 ```
 
 ### `module_desktop_yamlparse_list [arch] [release]`
@@ -298,43 +524,106 @@ Copies branding assets and runs the optional postinst hook. Idempotent — every
 | `greeters/sddm/themes/*` | `/usr/share/sddm/themes/` (only when `DESKTOP_DM=sddm`) |
 | `postinst/<de_name>.sh` | Executed via `bash` (skipped inside containers/CI) |
 
+The distributor logo for GNOME Settings → About / KDE Info Center / etc. is **not** installed from here — that file ships from `armbian-base-files` so it stays in sync with the `LOGO=` line in `/etc/os-release`.
+
 ### `module_desktop_getuser`
 
 Returns the first non-root, non-system user with a real login shell. Prefers `$SUDO_USER` if set and not root, otherwise scans `/etc/passwd` for the first entry with `1000 ≤ uid < 65534` and a shell that does not match `nologin|false`. Exits 1 if none is found.
 
 ### `module_update_skel install`
 
-Walks `getent passwd`, and for every regular user (`1000 ≤ uid < 65534`, home directory exists, not root) copies any file present in `/etc/skel` but missing in the user's home, fixing ownership to `uid:gid`. Existing files are never overwritten.
+Walks `getent passwd`, and for every regular user (`1000 ≤ uid < 65534`, home directory exists, not root):
+
+1. Walks `/etc/skel` with `find -mindepth 1`. For each entry:
+    - Directory: create at the destination if missing.
+    - File: copy if the destination doesn't exist; never overwrite.
+2. Runs `chown -R "$uid:$gid" "$home/"` as a safety net.
+
+The recursive `chown` is critical: other package postinst scripts (caja, nemo, gnome-keyring, …) routinely leak root-owned files into the user's `~/.config` directory on first install. Without the recursive chown, those tools refuse to start on first login because they can't write their own config dirs.
 
 ### `module_appimage <install|remove|status> app=<name>`
 
-Used by `module_desktops install` to install `armbian-imager`. The internal `APPIMAGE_REPO` registry maps logical app names to GitHub `owner/repo` slugs and downloads the appropriate architecture-suffixed AppImage from the latest release.
+Standalone AppImage helper. The internal `APPIMAGE_REPO` registry maps logical app names (e.g. `armbian-imager`) to GitHub `owner/repo` slugs and downloads the appropriate architecture-suffixed AppImage from the latest release. `module_appimage install` also installs `libfuse2`, `fuse3`, and the `libgles2`/`libegl1`/`libgl1`/`libgl1-mesa-dri` runtime so the AppImage can launch.
+
+Not called from the desktop install path by default. The `armbian-imager` AppImage is available via `armbian-config --api module_appimage install app=armbian-imager` for users who explicitly want it.
 
 ## Lifecycle: install {#lifecycle-install}
 
-The install pipeline in `module_desktops install` is intentionally linear and idempotent-friendly.
+The install pipeline in `module_desktops install` is intentionally linear and idempotent-friendly. **Every step that touches system state is gated on the previous step's success.**
 
 ```text
-1.  Resolve target user           module_desktop_getuser
-2.  Parse YAML                    module_desktop_yamlparse $de
-3.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
-4.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
-5.  Suppress encfs prompt         debconf-set-selections
-6.  Configure custom repo         module_desktop_repo $de
-7.  apt update                    pkg_update
-8.  apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES
-9.  apt install + register DM     /etc/X11/default-display-manager
-10. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
-11. Install branding              module_desktop_branding $de
-12. Install Armbian Imager        module_appimage install app=armbian-imager
-13. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
-14. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
-15. Sync skel to existing users   module_update_skel install
-16. Start display manager         skipped if _desktop_in_container
-17. Enable auto-login             module_desktops auto de=$de
+1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
+2.  Resolve target user           module_desktop_getuser
+3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
+4.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
+5.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
+6.  Suppress encfs prompt         debconf-set-selections
+7.  Configure custom repo         module_desktop_repo $de  (no-op if no repo: block)
+8.  apt update                    pkg_update
+9.  Reset ACTUALLY_INSTALLED      array used by pkg_install to record new packages
+10. apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES        ← bail on failure
+11. apt install + register DM     pkg_install $DESKTOP_DM              ← bail on failure
+                                  /etc/X11/default-display-manager
+12. (Armbian) install plymouth    if /etc/apt/sources.list.d/armbian.{list,sources} present
+13. Save install manifest         /etc/armbian/desktop/<de>.packages and <de>.tier
+14. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
+15. Install branding              module_desktop_branding $de
+16. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
+17. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
+18. Sync skel to existing users   module_update_skel install   (with chown -R safety net)
+19. Stop other DMs                gdm3/lightdm/sddm one by one
+20. Start display manager         systemctl start display-manager      ← container path skips this
+21. Switch default.target         systemctl set-default graphical.target  ONLY if step 20 succeeded
+22. Enable auto-login             module_desktops auto de=$de
 ```
 
-The remove pipeline (`module_desktops remove`) reverses the user-visible parts: disables auto-login, stops the display manager, purges the DM and primary package (`apt`'s autoremove handles dependencies), and removes the Armbian Imager AppImage. It does **not** uninstall the full `DESKTOP_PACKAGES` set or undo branding — both are deliberate to avoid removing things the user may now depend on.
+If step 10 or 11 fails, the function returns 1 with no further state changes — the manifest is not written, `default.target` stays at `multi-user`, no DM is started. The system is in the same state as if the install had never run.
+
+## Lifecycle: remove
+
+```text
+1.  Validate args                 de= required
+2.  Read installed tier marker    /etc/armbian/desktop/<de>.tier (default: minimal)
+3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
+    tier
+4.  Disable auto-login            module_desktops manual de=$de
+5.  Stop display manager          systemctl stop display-manager
+6.  Switch default.target         systemctl set-default multi-user.target
+7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
+                                  to console immediately, no reboot needed)
+8.  Compute removable set         from /etc/armbian/desktop/<de>.packages
+                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
+9.  pkg_remove                    apt-get autopurge
+10. Delete manifest files         rm /etc/armbian/desktop/<de>.{packages,tier}
+11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
+```
+
+The `set-default` and `isolate` calls together ensure the user gets a console login on tty1 immediately after the uninstall, without needing to reboot. Without them, the system stays pinned to `graphical.target` with no DM behind it and the local console is blank.
+
+## Lifecycle: upgrade and downgrade
+
+`upgrade` and `downgrade` are the two halves of `_module_desktops_change_tier`:
+
+```text
+1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
+2.  Read current tier marker      /etc/armbian/desktop/<de>.tier (must exist)
+3.  Validate direction            upgrade refuses target <= current
+                                  downgrade refuses target >= current
+                                  same tier → no-op message, exit 0
+4.  Parse YAML twice              once at current tier, once at target tier
+                                  store the package lists in two bash arrays
+5.  Compute set difference        (awk on per-line printf input)
+                                  upgrade:   to_install = target - current
+                                  downgrade: removable  = current - target
+6.  (downgrade only) intersect    removable ∩ <de>.packages — never touch
+                                  packages the user installed manually
+                                  outside the desktop install path
+7.  Apply                         pkg_install (upgrade) or pkg_remove (downgrade)
+8.  Update manifest               append new packages, or remove drained ones
+9.  Update tier marker            /etc/armbian/desktop/<de>.tier
+```
+
+`set-tier` is a thin front-end over the same helper that auto-detects direction from the current tier vs the target. It's the entry point used by the dialog menu's "Change <DE> to <tier>" buttons.
 
 ## Container and CI awareness
 
@@ -348,28 +637,35 @@ The remove pipeline (`module_desktops remove`) reverses the user-visible parts: 
 Inside a container the install pipeline still does packages, branding, and skel work, but **skips**:
 
 - Stopping or starting any display manager
+- The `set-default graphical.target` switch
 - Restarting the display manager after auto-login changes
+- The `systemctl isolate` call on remove
 - Running per-desktop `postinst/<de_name>.sh` hooks
 
 This makes the same code path usable for image preseeding inside Docker without needing parallel "container mode" branches.
 
 ## Adding a new desktop
 
-1. **Create the YAML.** Drop a new file at `tools/modules/desktops/yaml/<de_name>.yaml` following the [schema](#yaml-schema). Minimum required fields: `display_manager`, `status`, `packages`, and at least one entry under `releases.<codename>` with an `architectures` list.
-2. **(Optional) Custom repo.** Add a `repo:` block if the DE is not in the distro's default repositories. Pin the keyring path under `/usr/share/keyrings/`.
-3. **(Optional) Postinst hook.** Drop `tools/modules/desktops/postinst/<de_name>.sh` for any per-DE configuration that has to run after `apt install`. Container/CI runs are skipped automatically.
-4. **(Optional) Branding overrides.** Branding lives in shared directories, so most desktops do not need any per-DE assets — only add files when the DE needs something different.
-5. **Smoke test the parser:**
+1. **Create the YAML.** Drop a new file at `tools/modules/desktops/yaml/<de_name>.yaml` following the [schema](#yaml-schema). Minimum required fields: `display_manager`, `status`, `tiers.minimal.packages`, and at least one entry under `releases.<codename>` with an `architectures` list.
+2. **(Optional) Per-DE tier overrides.** Add a `tiers.mid` and/or `tiers.full` block only if you need to override common defaults. Most DEs inherit common's mid/full unchanged.
+3. **(Optional) `tier_overrides`.** Add per-arch or per-release-per-arch removals only when there's a known package availability hole specific to this DE. Cross-DE holes belong in `common.yaml`.
+4. **(Optional) Custom repo.** Add a `repo:` block if the DE is not in the distro's default repositories. Pin the keyring path under `/usr/share/keyrings/`.
+5. **(Optional) Postinst hook.** Drop `tools/modules/desktops/postinst/<de_name>.sh` for any per-DE configuration that has to run after `apt install`. Container/CI runs are skipped automatically.
+6. **(Optional) Branding overrides.** Branding lives in shared directories, so most desktops do not need any per-DE assets — only add files when the DE needs something different.
+7. **Smoke test the parser at every tier:**
 
     ```bash
     cd configng
-    python3 tools/modules/desktops/scripts/parse_desktop_yaml.py \
-        tools/modules/desktops/yaml <de_name> trixie arm64
+    for tier in minimal mid full; do
+        python3 tools/modules/desktops/scripts/parse_desktop_yaml.py \
+            tools/modules/desktops/yaml <de_name> trixie arm64 --tier $tier
+        echo "---"
+    done
     ```
 
-    All `DESKTOP_*` variables should print, and `DESKTOP_SUPPORTED="yes"` for any (release, arch) pair you listed in the YAML.
+    All `DESKTOP_*` variables should print, `DESKTOP_SUPPORTED="yes"` for any (release, arch) pair you listed in the YAML, and `DESKTOP_TIER` should match the requested tier.
 
-6. **List-mode sanity check:**
+8. **List-mode sanity check:**
 
     ```bash
     python3 tools/modules/desktops/scripts/parse_desktop_yaml.py \
@@ -378,7 +674,64 @@ This makes the same code path usable for image preseeding inside Docker without 
 
     Your new desktop should appear in the TSV output for the (release, arch) combinations you declared.
 
-7. **End-to-end test** in a disposable VM or container with `armbian-config desktop install de=<de_name>`.
+9. **End-to-end test** in a disposable VM or container:
+
+    ```bash
+    armbian-config --api module_desktops install de=<de_name> tier=minimal
+    armbian-config --api module_desktops upgrade de=<de_name> tier=mid
+    armbian-config --api module_desktops upgrade de=<de_name> tier=full
+    armbian-config --api module_desktops downgrade de=<de_name> tier=minimal
+    armbian-config --api module_desktops remove de=<de_name>
+    ```
+
+10. **Add menu entries** in `tools/json/config.system.json` if you want the DE to appear in the dialog menu. Existing desktops use this slot allocation per DE:
+
+    | ID slot | Action |
+    |---|---|
+    | `*01` | install minimal |
+    | `*02` | uninstall |
+    | `*03` | enable autologin |
+    | `*04` | disable autologin |
+    | `*05` | install mid |
+    | `*06` | install full |
+    | `*07` | change to minimal |
+    | `*08` | change to mid |
+    | `*09` | change to full |
+
+    The `*07-*09` change-tier entries use `module_desktops set-tier` and gate visibility with `module_desktops status de=<X> && ! module_desktops at-tier de=<X> tier=<target>`.
+
+## Common pitfalls
+
+### `packages_uninstall` cascade
+
+Listing a package in `tiers.minimal.packages_uninstall` runs `apt-get remove --purge` on it after the install. If that package is a hard `Depends:` of any meta package the DE install pulled in, apt's autoremove cascade will yank the meta package along with it — and on systems with `APT::Get::AutomaticRemove "true"` (Ubuntu noble/plucky), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:
+
+- Listing any `xfce4-goodies` plugin (e.g. `xfce4-clipman-plugin`) yanks `xfce4-goodies` itself, then half the desktop.
+- Listing `language-selector-gnome` yanks `gnome-control-center` (which has it as a hard Depends on Ubuntu), so the user loses Settings.
+- Listing `kdeconnect` or `khelpcenter` yanks `neon-desktop`.
+
+**Rule**: never put a `Depends:` of a metapackage you ship into `packages_uninstall`. Verify with `apt-cache rdepends --installed <pkg>` before adding anything.
+
+### Gnome `daemon.conf` vs `custom.conf`
+
+Both Debian and Ubuntu ship a `gdm3` package, but they read different config files:
+
+- Debian (any release): `/etc/gdm3/daemon.conf`
+- Ubuntu (any release): `/etc/gdm3/custom.conf`
+
+`module_desktops auto` branches on `ID=ubuntu` from `/etc/os-release`, **not** on the release codename. Earlier versions of the code branched on codename and wrote to the wrong file on Debian bookworm.
+
+The `auto` path also edits the file in place via sed (preserving any user customization like `WaylandEnable=false`) rather than overwriting it with a fresh `cat > $file`.
+
+### `login` regex anchoring
+
+The stock Ubuntu noble `/etc/gdm3/custom.conf` template ships with a commented sample line:
+
+```
+#  AutomaticLoginEnable = true
+```
+
+An unanchored `grep` for `AutomaticLoginEnable\s*=\s*true` matches this comment, and `module_desktops login` returns 0 (autologin enabled) on every fresh install where the user has never touched autologin. The fix is `^AutomaticLoginEnable[[:space:]]*=[[:space:]]*true` — anchored at line start so the comment doesn't match.
 
 ## Security notes
 
