@@ -1097,6 +1097,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#device-tree-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device Tree Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#odroid-boards-config" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1112,6 +1123,89 @@
     <span class="md-ellipsis">
       
         Boot Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desktop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cinnamon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GNOME
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MATE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        i3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kde-plasma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KDE Plasma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XFCE
       
     </span>
   </a>
@@ -2928,6 +3022,59 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd DTO001</code></pre>
+<h4 id="device-tree-editor">Device Tree Editor<a class="headerlink" href="#device-tree-editor" title="Permanent link">&para;</a></h4>
+<p>Edit device tree</p>
+<!--- section image START from tools/include/images/DTE001.png --->
+<p><a href="#"><img alt="Device Tree Editor" src="/images/DTE001.png" /></a></p>
+<!--- section image STOP from tools/include/images/DTE001.png --->
+
+<!--- header START from tools/include/markdown/DTE001-header.md --->
+<p>The Device Tree Editor allows you to decompile, edit, and recompile device tree blobs (DTB) directly on your system. Device trees describe the hardware layout of your board to the Linux kernel. This tool provides a safe way to modify DTB files by decompiling them to human-readable DTS source, opening them in a text editor, validating the changes, and recompiling back to binary format.</p>
+<div class="admonition danger">
+<p class="admonition-title">Incorrect device tree changes can prevent your system from booting!</p>
+<ul>
+<li>Modifying the device tree can cause <strong>hardware to stop functioning</strong> or the system to <strong>fail to boot entirely</strong>.</li>
+<li>Always verify your changes carefully before applying them.</li>
+<li>A backup is created automatically before any modification, and can be restored from the module menu.</li>
+<li><strong>Keep a rescue method available</strong>, such as a bootable SD card or serial console access, to recover the system if necessary.</li>
+</ul>
+</div>
+<!--- header STOP from tools/include/markdown/DTE001-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/DTE001-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/DTE001-header.md">header</a><br />
+<strong>Status:</strong> Preview<br />
+<strong>Architecture:</strong> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span><br />
+<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
+<strong>Documentation:</strong> <a href="https://docs.kernel.org/devicetree/usage-model.html">Link</a>  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd DTE001</code></pre>
+<!--- footer START from tools/include/markdown/DTE001-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="device-tree-editor-features" name="__tabbed_1" type="radio" /><input id="device-tree-editor-requirements" name="__tabbed_1" type="radio" /><input id="device-tree-editor-backup-location" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="device-tree-editor-features">Features</label><label for="device-tree-editor-requirements">Requirements</label><label for="device-tree-editor-backup-location">Backup location</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Select and edit</strong> any DTB file from the device tree directory</li>
+<li><strong>Edit active DTB</strong> directly based on the <code>fdtfile</code> setting in <code>/boot/armbianEnv.txt</code></li>
+<li><strong>Automatic backups</strong> before every modification with timestamped filenames</li>
+<li><strong>Restore from backup</strong> to revert to a previous device tree</li>
+<li><strong>Validation</strong> of edited DTS source before applying changes</li>
+<li><strong>View device tree info</strong> including model, compatible strings, and DTC version</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Package: <code>device-tree-compiler</code> (installed automatically if missing)</li>
+<li>Device tree directory: <code>/boot/dtb/</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Backups are stored in <code>/boot/dtb/backup/</code> with the naming format:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;original-name&gt;.dtb.&lt;YYYYMMDD_HHMMSS&gt;.bak
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/DTE001-footer.md --->
+
 <h4 id="odroid-boards-config">Odroid Boards Config<a class="headerlink" href="#odroid-boards-config" title="Permanent link">&para;</a></h4>
 <p>Select Odroid board configuration</p>
 <p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/ODR001-footer.md">footer</a> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/ODR001-header.md">header</a><br />
@@ -2950,6 +3097,456 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd BOOT01</code></pre>
+<h2 id="desktop">Desktop<a class="headerlink" href="#desktop" title="Permanent link">&para;</a></h2>
+<p>Install, remove and configure desktop environments</p>
+<!--- header START from tools/include/markdown/Desktops-header.md --->
+<p>Armbian desktop installation uses upstream meta-packages from Debian and Ubuntu repositories, making it distro-agnostic and independent of pre-built Armbian desktop packages.</p>
+<p><strong>Tiered installs</strong></p>
+<p>Every desktop ships at one of three sizes. You can install at any tier and switch between tiers later without uninstalling.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Contents</th>
+<th>Approximate size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimal</strong></td>
+<td>Desktop environment + display manager + base utilities. No browser, no office suite.</td>
+<td>~500 MB</td>
+</tr>
+<tr>
+<td><strong>Mid</strong></td>
+<td>Minimal plus a browser, text editor, calculator, image and PDF viewer, media player, archive manager and torrent client.</td>
+<td>~1 GB</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>Mid plus LibreOffice, GIMP, Inkscape, Thunderbird and Audacity.</td>
+<td>~2.5 GB</td>
+</tr>
+</tbody>
+</table>
+<p>The browser shipped at mid and full tiers is chosen automatically: <code>chromium</code> on Debian, <code>firefox-esr</code> on Debian riscv64, and <code>epiphany-browser</code> on Ubuntu (Ubuntu&rsquo;s <code>chromium</code> and <code>firefox</code> packages are snap-shim wrappers that don&rsquo;t work without <code>snapd</code>, which Armbian doesn&rsquo;t ship).</p>
+<p><strong>How it works</strong></p>
+<ul>
+<li>Installs the desktop meta-package (e.g. <code>xfce4</code>, <code>gnome-session</code>) plus the per-tier extras and any release-specific packages your distribution needs.</li>
+<li>Tracks every package the install pulls in. The list is saved to <code>/etc/armbian/desktop/&lt;de&gt;.packages</code>, the chosen tier to <code>/etc/armbian/desktop/&lt;de&gt;.tier</code>. Uninstall and downgrade use these files so they only ever remove packages the desktop install added — packages you installed manually after the fact are never touched.</li>
+<li>Applies Armbian branding: wallpapers, icons, login screen theme, and default user settings.</li>
+<li>Configures the display manager (LightDM, GDM3 or SDDM) with auto-login enabled by default. You can disable auto-login from the desktop menu without removing the desktop.</li>
+<li>Sets up Profile Sync Daemon (psd) to keep browser profiles in RAM, reducing flash media wear.</li>
+<li>Removes a small set of unwanted extras pulled in by some meta-packages (e.g. Ubuntu&rsquo;s <code>apport</code> crash reporter, snap-related stubs).</li>
+</ul>
+<p><strong>Switching tiers after install</strong></p>
+<p>You don&rsquo;t need to reinstall to add or remove tier extras. The desktop menu offers &ldquo;Change <em>desktop</em> to <em>tier</em>&rdquo; entries for any tier other than the one currently installed. Behind the scenes:</p>
+<ul>
+<li>Going up (minimal → mid → full) installs only the new packages introduced by the higher tier.</li>
+<li>Going down (full → mid → minimal) removes only the packages the install added that aren&rsquo;t in the lower tier. Your manually-installed packages are not touched.</li>
+</ul>
+<p><strong>Networking</strong></p>
+<p>Some desktops (notably GNOME) require NetworkManager. When installed, NetworkManager is configured to coexist with Armbian&rsquo;s existing <code>systemd-networkd</code>: wired Ethernet stays managed by <code>systemd-networkd</code>, while NetworkManager handles WiFi and VPN connections. This avoids disrupting your existing network configuration.</p>
+<p><strong>Supported desktops</strong></p>
+<table>
+<thead>
+<tr>
+<th>Desktop</th>
+<th>Best for</th>
+<th>Approximate RAM (minimal tier)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XFCE</td>
+<td>Single board computers, low-end hardware</td>
+<td>~300 MB</td>
+</tr>
+<tr>
+<td>GNOME</td>
+<td>Modern desktops, touchscreen devices</td>
+<td>~800 MB</td>
+</tr>
+<tr>
+<td>Cinnamon</td>
+<td>Users familiar with Windows layout</td>
+<td>~500 MB</td>
+</tr>
+<tr>
+<td>MATE</td>
+<td>Classic GNOME 2 fans, low-resource systems</td>
+<td>~350 MB</td>
+</tr>
+<tr>
+<td>KDE Plasma</td>
+<td>Power users, heavy customization</td>
+<td>~600 MB</td>
+</tr>
+<tr>
+<td>i3-wm</td>
+<td>Developers, keyboard-driven workflows</td>
+<td>~150 MB</td>
+</tr>
+<tr>
+<td>Xmonad</td>
+<td>Haskell tiling window manager</td>
+<td>~120 MB</td>
+</tr>
+<tr>
+<td>Enlightenment</td>
+<td>EFL-based, lightweight and stylish</td>
+<td>~250 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Mid and full tiers add roughly 500 MB and 2 GB on top of these minimum figures, depending on which tier extras your release/architecture combination ships.</p>
+<div class="admonition warning">
+<p class="admonition-title">Desktop installation is resource-intensive</p>
+<p>Installing a desktop environment will download and install a large number of packages. The full tier on a fresh Ubuntu image pulls in roughly 2.5 GB and may take a significant amount of time depending on your internet connection and device performance. A reboot is required after installation.</p>
+<p>Running <code>module_desktops remove</code> reclaims the disk space; <code>apt-get clean</code> is run automatically as part of the remove path.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Switching desktops</p>
+<p>Only one desktop environment should be installed at a time. Remove the current desktop before installing a different one to avoid package conflicts and mixed configurations.</p>
+</div>
+<!--- header STOP from tools/include/markdown/Desktops-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/Desktops-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/Desktops-header.md">header</a>  </p>
+<h4 id="cinnamon">Cinnamon<a class="headerlink" href="#cinnamon" title="Permanent link">&para;</a></h4>
+<p>Install Cinnamon (minimal)</p>
+<!--- section image START from tools/include/images/CINM01.png --->
+<p><a href="#"><img alt="Cinnamon" src="/images/CINM01.png" /></a></p>
+<!--- section image STOP from tools/include/images/CINM01.png --->
+
+<!--- header START from tools/include/markdown/CINM01-header.md --->
+<p>Cinnamon is a Linux desktop environment that provides advanced innovative features and a traditional user experience. The desktop layout is similar to GNOME 2 with underlying technology forked from GNOME Shell. Cinnamon makes users feel at home with an easy-to-use and comfortable desktop experience.</p>
+<!--- header STOP from tools/include/markdown/CINM01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/CINM01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/CINM01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd CINM01</code></pre>
+<!--- footer START from tools/include/markdown/CINM01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="cinnamon-display-manager" name="__tabbed_2" type="radio" /><input id="cinnamon-session-files" name="__tabbed_2" type="radio" /><input id="cinnamon-autologin" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="cinnamon-display-manager">Display Manager</label><label for="cinnamon-session-files">Session files</label><label for="cinnamon-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Cinnamon uses <strong>LightDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/cinnamon.desktop</code></li>
+<li><code>/usr/share/xsessions/cinnamon2d.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/CINM01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Cinnamon mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Cinnamon full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall Cinnamon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (Cinnamon):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (Cinnamon):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change Cinnamon to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change Cinnamon to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change Cinnamon to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CINM09
+</span></code></pre></div></td></tr></table></div>
+<h4 id="gnome">GNOME<a class="headerlink" href="#gnome" title="Permanent link">&para;</a></h4>
+<p>Install GNOME (minimal)</p>
+<!--- section image START from tools/include/images/GNME01.png --->
+<p><a href="#"><img alt="GNOME" src="/images/GNME01.png" /></a></p>
+<!--- section image STOP from tools/include/images/GNME01.png --->
+
+<!--- header START from tools/include/markdown/GNME01-header.md --->
+<p>GNOME is a modern, user-friendly desktop environment for Linux, offering a clean interface, essential apps, and customization through extensions. It prioritizes simplicity, accessibility, and efficiency.</p>
+<!--- header STOP from tools/include/markdown/GNME01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/GNME01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/GNME01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd GNME01</code></pre>
+<!--- footer START from tools/include/markdown/GNME01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="gnome-display-manager" name="__tabbed_3" type="radio" /><input id="gnome-session-files" name="__tabbed_3" type="radio" /><input id="gnome-autologin" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="gnome-display-manager">Display Manager</label><label for="gnome-session-files">Session files</label><label for="gnome-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>GNOME uses <strong>GDM3</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/gnome.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/gdm3/custom.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/GNME01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">GNOME mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">GNOME full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall GNOME:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (GNOME):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (GNOME):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change GNOME to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change GNOME to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change GNOME to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GNME09
+</span></code></pre></div></td></tr></table></div>
+<h4 id="mate">MATE<a class="headerlink" href="#mate" title="Permanent link">&para;</a></h4>
+<p>Install MATE (minimal)</p>
+<!--- section image START from tools/include/images/MATE01.png --->
+<p><a href="#"><img alt="MATE" src="/images/MATE01.png" /></a></p>
+<!--- section image STOP from tools/include/images/MATE01.png --->
+
+<!--- header START from tools/include/markdown/MATE01-header.md --->
+<p>MATE is a continuation of GNOME 2, providing a traditional desktop experience with a classic two-panel layout. It is lightweight, stable, and fully customizable — a good choice for users who prefer a familiar desktop without the overhead of modern compositing effects.</p>
+<!--- header STOP from tools/include/markdown/MATE01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/MATE01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/MATE01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd MATE01</code></pre>
+<!--- footer START from tools/include/markdown/MATE01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="mate-display-manager" name="__tabbed_4" type="radio" /><input id="mate-session-files" name="__tabbed_4" type="radio" /><input id="mate-autologin" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="mate-display-manager">Display Manager</label><label for="mate-session-files">Session files</label><label for="mate-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>MATE uses <strong>LightDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/mate.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/MATE01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">MATE mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">MATE full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall MATE:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (MATE):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (MATE):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change MATE to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change MATE to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change MATE to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MATE09
+</span></code></pre></div></td></tr></table></div>
+<h4 id="i3">i3<a class="headerlink" href="#i3" title="Permanent link">&para;</a></h4>
+<p>Install i3 (minimal)</p>
+<!--- section image START from tools/include/images/I3WM01.png --->
+<p><a href="#"><img alt="i3" src="/images/I3WM01.png" /></a></p>
+<!--- section image STOP from tools/include/images/I3WM01.png --->
+
+<!--- header START from tools/include/markdown/I3WM01-header.md --->
+<p>i3 is a tiling window manager designed for power users and developers. It is keyboard-driven, highly configurable, and extremely lightweight — making it ideal for single board computers and headless-to-desktop conversions.</p>
+<div class="admonition info">
+<p class="admonition-title">Keyboard shortcuts</p>
+<p>i3 is controlled primarily via keyboard. The default modifier key is <strong>$mod</strong> (Super/Windows key). Press <strong>$mod+Enter</strong> to open a terminal, <strong>$mod+d</strong> to launch applications via rofi, and <strong>$mod+Shift+e</strong> to exit.</p>
+</div>
+<!--- header STOP from tools/include/markdown/I3WM01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/I3WM01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/I3WM01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd I3WM01</code></pre>
+<!--- footer START from tools/include/markdown/I3WM01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="i3-display-manager" name="__tabbed_5" type="radio" /><input id="i3-session-files" name="__tabbed_5" type="radio" /><input id="i3-autologin" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="i3-display-manager">Display Manager</label><label for="i3-session-files">Session files</label><label for="i3-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>i3 uses <strong>LightDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/i3.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/I3WM01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">i3 mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">i3 full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall i3:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (i3):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (i3):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change i3 to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change i3 to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change i3 to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>I3WM09
+</span></code></pre></div></td></tr></table></div>
+<h4 id="kde-plasma">KDE Plasma<a class="headerlink" href="#kde-plasma" title="Permanent link">&para;</a></h4>
+<p>Install KDE Plasma (minimal)</p>
+<!--- section image START from tools/include/images/KDEP01.png --->
+<p><a href="#"><img alt="KDE Plasma" src="/images/KDEP01.png" /></a></p>
+<!--- section image STOP from tools/include/images/KDEP01.png --->
+
+<!--- header START from tools/include/markdown/KDEP01-header.md --->
+<p>KDE Plasma is a feature-rich desktop environment with extensive customization options. It provides a familiar taskbar and start menu layout with modern effects, widgets, and a powerful system settings application.</p>
+<!--- header STOP from tools/include/markdown/KDEP01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEP01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/KDEP01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd KDEP01</code></pre>
+<!--- footer START from tools/include/markdown/KDEP01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="kde-plasma-display-manager" name="__tabbed_6" type="radio" /><input id="kde-plasma-session-files" name="__tabbed_6" type="radio" /><input id="kde-plasma-autologin" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="kde-plasma-display-manager">Display Manager</label><label for="kde-plasma-session-files">Session files</label><label for="kde-plasma-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>KDE Plasma uses <strong>SDDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/plasma.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/sddm.conf.d/autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">KDE Plasma mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">KDE Plasma full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">KDE Neon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEN01
+</span></code></pre></div></td></tr></table></div>
+<!--- footer START from tools/include/markdown/KDEN01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="kde-plasma-display-manager_1" name="__tabbed_7" type="radio" /><input id="kde-plasma-session-files_1" name="__tabbed_7" type="radio" /><input id="kde-plasma-autologin_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="kde-plasma-display-manager_1">Display Manager</label><label for="kde-plasma-session-files_1">Session files</label><label for="kde-plasma-autologin_1">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>KDE Neon uses <strong>SDDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/wayland-sessions/plasma.desktop</code></li>
+<li><code>/usr/share/xsessions/plasmax11.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/sddm.conf.d/autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall KDE Plasma:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall KDE Neon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEN02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (KDE Plasma):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (KDE Neon):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEN03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (KDE Plasma):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (KDE Neon):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEN04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change KDE Plasma to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change KDE Plasma to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change KDE Plasma to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KDEP09
+</span></code></pre></div></td></tr></table></div>
+<h4 id="xfce">XFCE<a class="headerlink" href="#xfce" title="Permanent link">&para;</a></h4>
+<p>Install XFCE (minimal)</p>
+<!--- section image START from tools/include/images/XFCE01.png --->
+<p><a href="#"><img alt="XFCE" src="/images/XFCE01.png" /></a></p>
+<!--- section image STOP from tools/include/images/XFCE01.png --->
+
+<!--- header START from tools/include/markdown/XFCE01-header.md --->
+<p>Xfce is a lightweight, fast, and user-friendly desktop environment for Linux, offering a classic interface, essential apps, and customization. It prioritizes performance, simplicity, and efficiency, making it an excellent choice for devices with limited resources.</p>
+<!--- header STOP from tools/include/markdown/XFCE01-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/XFCE01-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/XFCE01-header.md">header</a><br />
+<strong>Status:</strong> Stable  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd XFCE01</code></pre>
+<!--- footer START from tools/include/markdown/XFCE01-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="xfce-display-manager" name="__tabbed_8" type="radio" /><input id="xfce-session-files" name="__tabbed_8" type="radio" /><input id="xfce-autologin" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="xfce-display-manager">Display Manager</label><label for="xfce-session-files">Session files</label><label for="xfce-autologin">Autologin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Xfce uses <strong>LightDM</strong> as its default display manager.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/usr/share/xsessions/xfce.desktop</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Autologin configuration is stored in:</p>
+<ul>
+<li><code>/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XFCE mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE05
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XFCE full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE06
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uninstall XFCE:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE02
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable autologin (XFCE):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE03
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable autologin (XFCE):</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE04
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change XFCE to minimal:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE07
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change XFCE to mid:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE08
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change XFCE to full:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>XFCE09
+</span></code></pre></div></td></tr></table></div>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
 <p>Install to internal media, ZFS, NFS, read-only rootfs</p>
 <p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/Storage-footer.md">footer</a> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/Storage-header.md">header</a><br />
@@ -2999,7 +3596,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 
 <!--- footer STOP from tools/include/markdown/FLASH1-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove cached images:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>FLASH2
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove cached images:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>FLASH2
 </span></code></pre></div></td></tr></table></div>
 <h4 id="read-only-fs">Read Only FS<a class="headerlink" href="#read-only-fs" title="Permanent link">&para;</a></h4>
 <p>Enable read only filesystem</p>
@@ -3013,7 +3610,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd ROO001</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable read only filesystem:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ROO002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable read only filesystem:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ROO002
 </span></code></pre></div></td></tr></table></div>
 <h4 id="nfs">NFS<a class="headerlink" href="#nfs" title="Permanent link">&para;</a></h4>
 <p>Enable Network filesystem (NFS) support</p>
@@ -3023,7 +3620,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd NETF01</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Network filesystem (NFS) support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF02
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Network filesystem (NFS) support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF02
 </span></code></pre></div></td></tr></table></div>
 <h6 id="nfs-server">NFS server<a class="headerlink" href="#nfs-server" title="Permanent link">&para;</a></h6>
 <p>Enable network filesystem (NFS) daemon</p>
@@ -3033,11 +3630,11 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd NETF04</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configure network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF05
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configure network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF05
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF06
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove network filesystem (NFS) daemon:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF06
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show network filesystem (NFS) daemon clients:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF07
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show network filesystem (NFS) daemon clients:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF07
 </span></code></pre></div></td></tr></table></div>
 <h6 id="find-nfs-servers">Find NFS servers<a class="headerlink" href="#find-nfs-servers" title="Permanent link">&para;</a></h6>
 <p>Find NFS servers in subnet and mount shares</p>
@@ -3047,7 +3644,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd NETF09</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show and manage NFS mounts:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF10
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show and manage NFS mounts:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NETF10
 </span></code></pre></div></td></tr></table></div>
 <h4 id="zfs">ZFS<a class="headerlink" href="#zfs" title="Permanent link">&para;</a></h4>
 <p>ZFS filesystem - enable support</p>
@@ -3058,7 +3655,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <!--- header START from tools/include/markdown/ZFS001-header.md --->
 <p>ZFS is an advanced, high-performance file system and volume manager designed for data integrity, scalability, and ease of use. It offers features like copy-on-write snapshots, native compression, data deduplication, automatic repair, and efficient storage pooling. Originally developed by Sun Microsystems, ZFS is ideal for handling large amounts of data reliably with minimal maintenance.</p>
 <p>When enabling ZFS support, Armbian checks if the running kernel can support ZFS, installs matching kernel headers if necessary, and builds the ZFS DKMS (Dynamic Kernel Module Support) module automatically.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="zfs-arc-cache-tuning" name="__tabbed_1" type="radio" /><input id="zfs-dirty-data-tuning" name="__tabbed_1" type="radio" /><input id="zfs-txg-timeout-tuning" name="__tabbed_1" type="radio" /><input id="zfs-compression" name="__tabbed_1" type="radio" /><input id="zfs-applying-configuration" name="__tabbed_1" type="radio" /><input id="zfs-reset-to-defaults" name="__tabbed_1" type="radio" /><input id="zfs-pool-import" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="zfs-arc-cache-tuning">ARC Cache Tuning</label><label for="zfs-dirty-data-tuning">Dirty Data Tuning</label><label for="zfs-txg-timeout-tuning">TXG Timeout Tuning</label><label for="zfs-compression">Compression</label><label for="zfs-applying-configuration">Applying Configuration</label><label for="zfs-reset-to-defaults">Reset to Defaults</label><label for="zfs-pool-import">Pool Import</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:7"><input checked="checked" id="zfs-arc-cache-tuning" name="__tabbed_9" type="radio" /><input id="zfs-dirty-data-tuning" name="__tabbed_9" type="radio" /><input id="zfs-txg-timeout-tuning" name="__tabbed_9" type="radio" /><input id="zfs-compression" name="__tabbed_9" type="radio" /><input id="zfs-applying-configuration" name="__tabbed_9" type="radio" /><input id="zfs-reset-to-defaults" name="__tabbed_9" type="radio" /><input id="zfs-pool-import" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="zfs-arc-cache-tuning">ARC Cache Tuning</label><label for="zfs-dirty-data-tuning">Dirty Data Tuning</label><label for="zfs-txg-timeout-tuning">TXG Timeout Tuning</label><label for="zfs-compression">Compression</label><label for="zfs-applying-configuration">Applying Configuration</label><label for="zfs-reset-to-defaults">Reset to Defaults</label><label for="zfs-pool-import">Pool Import</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The <strong>ARC (Adaptive Replacement Cache)</strong> is ZFS&rsquo;s intelligent caching system.</p>
@@ -3116,19 +3713,19 @@ If your device fails to boot after a kernel change, you may need to:</p>
 </div>
 <div class="tabbed-block">
 <p>Configuration is saved to <code>/etc/modprobe.d/zfs.conf</code> and requires reloading the ZFS module:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Option 1: Reboot (simplest)</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>reboot
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1"># Option 2: Reload module (requires exporting all ZFS pools)</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>zpool<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-a
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>rmmod<span class="w"> </span>zfs
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>modprobe<span class="w"> </span>zfs
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
+<span class="normal"><a href="#__codelineno-61-2">2</a></span>
+<span class="normal"><a href="#__codelineno-61-3">3</a></span>
+<span class="normal"><a href="#__codelineno-61-4">4</a></span>
+<span class="normal"><a href="#__codelineno-61-5">5</a></span>
+<span class="normal"><a href="#__codelineno-61-6">6</a></span>
+<span class="normal"><a href="#__codelineno-61-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="c1"># Option 1: Reboot (simplest)</span>
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2"></a>reboot
+</span><span id="__span-61-3"><a id="__codelineno-61-3" name="__codelineno-61-3"></a>
+</span><span id="__span-61-4"><a id="__codelineno-61-4" name="__codelineno-61-4"></a><span class="c1"># Option 2: Reload module (requires exporting all ZFS pools)</span>
+</span><span id="__span-61-5"><a id="__codelineno-61-5" name="__codelineno-61-5"></a>zpool<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-a
+</span><span id="__span-61-6"><a id="__codelineno-61-6" name="__codelineno-61-6"></a>rmmod<span class="w"> </span>zfs
+</span><span id="__span-61-7"><a id="__codelineno-61-7" name="__codelineno-61-7"></a>modprobe<span class="w"> </span>zfs
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -3202,11 +3799,11 @@ If your device fails to boot after a kernel change, you may need to:</p>
 </ul>
 <!--- footer STOP from tools/include/markdown/ZFS001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZFS filesystem - remove support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ZFS filesystem - remove support:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tune ZFS:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tune ZFS:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS003
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Import ZFS Pool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS004
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Import ZFS Pool:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ZFS004
 </span></code></pre></div></td></tr></table></div>
 <h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
 <p>Memory management - enable features</p>
@@ -3237,7 +3834,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd MEM001</code></pre>
 <!--- footer START from tools/include/markdown/MEM001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="memory-recommended-settings" name="__tabbed_2" type="radio" /><input id="memory-tuning-parameters" name="__tabbed_2" type="radio" /><input id="memory-troubleshooting" name="__tabbed_2" type="radio" /><input id="memory-advanced-configuration" name="__tabbed_2" type="radio" /><input id="memory-configuration-files" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="memory-recommended-settings">Recommended Settings</label><label for="memory-tuning-parameters">Tuning Parameters</label><label for="memory-troubleshooting">Troubleshooting</label><label for="memory-advanced-configuration">Advanced Configuration</label><label for="memory-configuration-files">Configuration Files</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:5"><input checked="checked" id="memory-recommended-settings" name="__tabbed_10" type="radio" /><input id="memory-tuning-parameters" name="__tabbed_10" type="radio" /><input id="memory-troubleshooting" name="__tabbed_10" type="radio" /><input id="memory-advanced-configuration" name="__tabbed_10" type="radio" /><input id="memory-configuration-files" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="memory-recommended-settings">Recommended Settings</label><label for="memory-tuning-parameters">Tuning Parameters</label><label for="memory-troubleshooting">Troubleshooting</label><label for="memory-advanced-configuration">Advanced Configuration</label><label for="memory-configuration-files">Configuration Files</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Settings are automatically selected based on system memory:</p>
@@ -3289,37 +3886,37 @@ If your device fails to boot after a kernel change, you may need to:</p>
 </div>
 <div class="tabbed-block">
 <p>Edit <code>/etc/default/armbian-zram-config</code> directly for advanced options:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span>
-<span class="normal"><a href="#__codelineno-12-5">5</a></span>
-<span class="normal"><a href="#__codelineno-12-6">6</a></span>
-<span class="normal"><a href="#__codelineno-12-7">7</a></span>
-<span class="normal"><a href="#__codelineno-12-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Backup first</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a>cp<span class="w"> </span>/etc/default/armbian-zram-config<span class="w"> </span>/etc/default/armbian-zram-config.bak
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1"># Edit configuration</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a>nano<span class="w"> </span>/etc/default/armbian-zram-config
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1"># Restart to apply</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>armbian-zram-config
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1">1</a></span>
+<span class="normal"><a href="#__codelineno-65-2">2</a></span>
+<span class="normal"><a href="#__codelineno-65-3">3</a></span>
+<span class="normal"><a href="#__codelineno-65-4">4</a></span>
+<span class="normal"><a href="#__codelineno-65-5">5</a></span>
+<span class="normal"><a href="#__codelineno-65-6">6</a></span>
+<span class="normal"><a href="#__codelineno-65-7">7</a></span>
+<span class="normal"><a href="#__codelineno-65-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1"></a><span class="c1"># Backup first</span>
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2"></a>cp<span class="w"> </span>/etc/default/armbian-zram-config<span class="w"> </span>/etc/default/armbian-zram-config.bak
+</span><span id="__span-65-3"><a id="__codelineno-65-3" name="__codelineno-65-3"></a>
+</span><span id="__span-65-4"><a id="__codelineno-65-4" name="__codelineno-65-4"></a><span class="c1"># Edit configuration</span>
+</span><span id="__span-65-5"><a id="__codelineno-65-5" name="__codelineno-65-5"></a>nano<span class="w"> </span>/etc/default/armbian-zram-config
+</span><span id="__span-65-6"><a id="__codelineno-65-6" name="__codelineno-65-6"></a>
+</span><span id="__span-65-7"><a id="__codelineno-65-7" name="__codelineno-65-7"></a><span class="c1"># Restart to apply</span>
+</span><span id="__span-65-8"><a id="__codelineno-65-8" name="__codelineno-65-8"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>armbian-zram-config
 </span></code></pre></div></td></tr></table></div>
 <p><strong>ZRAM backing device</strong> - for systems with fast NVMe storage:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1"># Add to /etc/default/armbian-zram-config</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="nv">ZRAM_BACKING_DEV</span><span class="o">=</span>/dev/nvme0n1p4
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span>
+<span class="normal"><a href="#__codelineno-66-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="c1"># Add to /etc/default/armbian-zram-config</span>
+</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2"></a><span class="nv">ZRAM_BACKING_DEV</span><span class="o">=</span>/dev/nvme0n1p4
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Monitoring</strong>:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span>
-<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1"># Check compression ratio</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;scale=2; </span><span class="k">$(</span>cat<span class="w"> </span>/sys/block/zram0/orig_data_size<span class="k">)</span><span class="s2"> / </span><span class="k">$(</span>cat<span class="w"> </span>/sys/block/zram0/compr_data_size<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>bc
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="c1"># Monitor swap usage</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">&#39;swapon --show &amp;&amp; free -h&#39;</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span>
+<span class="normal"><a href="#__codelineno-67-2">2</a></span>
+<span class="normal"><a href="#__codelineno-67-3">3</a></span>
+<span class="normal"><a href="#__codelineno-67-4">4</a></span>
+<span class="normal"><a href="#__codelineno-67-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="c1"># Check compression ratio</span>
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;scale=2; </span><span class="k">$(</span>cat<span class="w"> </span>/sys/block/zram0/orig_data_size<span class="k">)</span><span class="s2"> / </span><span class="k">$(</span>cat<span class="w"> </span>/sys/block/zram0/compr_data_size<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>bc
+</span><span id="__span-67-3"><a id="__codelineno-67-3" name="__codelineno-67-3"></a>
+</span><span id="__span-67-4"><a id="__codelineno-67-4" name="__codelineno-67-4"></a><span class="c1"># Monitor swap usage</span>
+</span><span id="__span-67-5"><a id="__codelineno-67-5" name="__codelineno-67-5"></a>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">&#39;swapon --show &amp;&amp; free -h&#39;</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -3334,9 +3931,9 @@ If your device fails to boot after a kernel change, you may need to:</p>
 </div>
 <!--- footer STOP from tools/include/markdown/MEM001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Memory:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MEM002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Memory:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MEM002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tune Memory:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MEM003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tune Memory:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>MEM003
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ssh-daemon">SSH daemon<a class="headerlink" href="#ssh-daemon" title="Permanent link">&para;</a></h2>
 <p>Manage SSH daemon options, enable 2FA</p>
@@ -3357,27 +3954,27 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd ACC001</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable root login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable password login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable password login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC003
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable password login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC004
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable password login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC004
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Public key authentication login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC005
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Public key authentication login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC005
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable Public key authentication login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC006
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable Public key authentication login:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC006
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable OTP authentication:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC007
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable OTP authentication:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC007
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable OTP authentication:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC008
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable OTP authentication:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC008
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Generate new OTP authentication QR code:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC009
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Generate new OTP authentication QR code:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC009
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show OTP authentication QR code:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC010
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Show OTP authentication QR code:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC010
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable last login banner:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC011
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable last login banner:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC011
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable last login banner:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC012
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enable last login banner:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>ACC012
 </span></code></pre></div></td></tr></table></div>
 <h4 id="containerised">Containerised<a class="headerlink" href="#containerised" title="Permanent link">&para;</a></h4>
 <p>Sandboxed &amp; containerised SSH server</p>
@@ -3397,7 +3994,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd SSH001</code></pre>
 <!--- footer START from tools/include/markdown/SSH001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="containerised-access-to-ssh-server" name="__tabbed_3" type="radio" /><input id="containerised-directories" name="__tabbed_3" type="radio" /><input id="containerised-view-logs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="containerised-access-to-ssh-server">Access to SSH server</label><label for="containerised-directories">Directories</label><label for="containerised-view-logs">View logs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="containerised-access-to-ssh-server" name="__tabbed_11" type="radio" /><input id="containerised-directories" name="__tabbed_11" type="radio" /><input id="containerised-view-logs" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="containerised-access-to-ssh-server">Access to SSH server</label><label for="containerised-directories">Directories</label><label for="containerised-view-logs">View logs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -3412,16 +4009,16 @@ If your device fails to boot after a kernel change, you may need to:</p>
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>openssh-server
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-81-1"><a id="__codelineno-81-1" name="__codelineno-81-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>openssh-server
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <!--- footer STOP from tools/include/markdown/SSH001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove sandboxed SSH server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SSH002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove sandboxed SSH server:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-82-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-82-1"><a id="__codelineno-82-1" name="__codelineno-82-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SSH002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge sandboxed SSH server with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SSH003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge sandboxed SSH server with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-83-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SSH003
 </span></code></pre></div></td></tr></table></div>
 <h2 id="shell-and-motd">Shell and MOTD<a class="headerlink" href="#shell-and-motd" title="Permanent link">&para;</a></h2>
 <p>Change shell, adjust MOTD</p>
@@ -3442,7 +4039,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd SHELL1</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to BASH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SHELL2
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Change shell system wide to BASH:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-84-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>SHELL2
 </span></code></pre></div></td></tr></table></div>
 <h4 id="adjust-motd">Adjust MOTD<a class="headerlink" href="#adjust-motd" title="Permanent link">&para;</a></h4>
 <p>Adjust welcome screen (motd)</p>
@@ -3472,7 +4069,7 @@ If your device fails to boot after a kernel change, you may need to:</p>
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd UPD001</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Armbian firmware upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable Armbian firmware upgrades:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UPD002
 </span></code></pre></div></td></tr></table></div>
 <h4 id="rolling">Rolling<a class="headerlink" href="#rolling" title="Permanent link">&para;</a></h4>
 <p>Switch system to rolling packages repository</p>
@@ -3570,7 +4167,7 @@ Watchtower is fully configurable, allowing you to control update frequency, sele
 <strong>Documentation:</strong> <a href="https://containrrr.dev/watchtower/">Link</a><br />
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd WTC001</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable automating Docker container base images updating:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WTC002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable automating Docker container base images updating:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-86-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>WTC002
 </span></code></pre></div></td></tr></table></div>
 <h4 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">&para;</a></h4>
 <p>Enable automatic package updates.</p>
@@ -3588,9 +4185,9 @@ Watchtower is fully configurable, allowing you to control update frequency, sele
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/armbian" title="GitHub User: armbian">@armbian</a><br />
 <strong>Documentation:</strong> <a href="https://forum.armbian.com/">Link</a>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd UNAT01</code></pre>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configure automatic package updates:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNAT02
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configure automatic package updates:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-87-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNAT02
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable automatic package updates:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNAT03
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Disable automatic package updates:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-88-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-88-1"><a id="__codelineno-88-1" name="__codelineno-88-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>UNAT03
 </span></code></pre></div></td></tr></table></div>
 
 
