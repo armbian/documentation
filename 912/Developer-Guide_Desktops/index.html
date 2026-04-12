@@ -2430,6 +2430,89 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#matrix-audit-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix audit automation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix audit automation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        audit.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit_promptpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        audit_prompt.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-desktop-audityml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maintenance-desktop-audit.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-a-bot-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewing a bot PR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4137,6 +4220,107 @@
 <p>The <code>*07-*09</code> change-tier entries use <code>module_desktops set-tier</code> and gate visibility with <code>module_desktops status de=&lt;X&gt; &amp;&amp; ! module_desktops at-tier de=&lt;X&gt; tier=&lt;target&gt;</code>.</p>
 </li>
 </ol>
+<h2 id="matrix-audit-automation">Matrix audit automation<a class="headerlink" href="#matrix-audit-automation" title="Permanent link">&para;</a></h2>
+<p>The desktop matrix covers several DEs × several releases × several architectures, and two kinds of drift tend to accumulate silently:</p>
+<ol>
+<li><strong>Missing releases</strong> — <code>armbian/build</code> adds a new release to <code>config/distributions/</code> (e.g. Ubuntu <code>resolute</code>) but no DE YAML grows a release block for it, so the desktop can&rsquo;t be installed on that release at all.</li>
+<li><strong>Package holes</strong> — an entry in the resolved <code>DESKTOP_PACKAGES</code> set is no longer published for some <code>(release, arch)</code> pair (archive removed it, or it was never built for that arch), so <code>apt</code> fails at install time with <code>E: Unable to locate package</code>.</li>
+</ol>
+<p>A weekly GitHub Actions workflow detects both, hands the findings to Claude Code to propose YAML edits, and opens a draft PR for a maintainer to review.</p>
+<h3 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span>
+<span class="normal"><a href="#__codelineno-24-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>tools/modules/desktops/github/
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a>├── audit.py           # deterministic scanner — emits audit-report.json
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a>├── audit_prompt.py    # renders the report into a Claude prompt
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a>└── audit_apply.py     # legacy direct-API applier (unused by the workflow)
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6"></a>.github/workflows/
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7"></a>└── maintenance-desktop-audit.yml   # the scheduled workflow
+</span></code></pre></div></td></tr></table></div>
+<p>Only the scanner talks to the network; the LLM never fetches package metadata itself. That keeps the &ldquo;what is broken&rdquo; signal reproducible and cache-friendly, and confines all non-determinism to the &ldquo;how should we fix it&rdquo; step.</p>
+<h3 id="auditpy"><code>audit.py</code><a class="headerlink" href="#auditpy" title="Permanent link">&para;</a></h3>
+<p>Walks <code>tools/modules/desktops/yaml/</code> against:</p>
+<ul>
+<li><code>armbian/build</code>&rsquo;s <code>config/distributions/&lt;release&gt;.conf</code> (loaded from a sibling checkout passed via <code>--build-repo</code>) to get the set of releases and their support statuses (<code>supported</code>, <code>csc</code>, <code>eos</code>, …). Anything <code>eos</code> is skipped.</li>
+<li><code>packages.debian.org</code> and <code>packages.ubuntu.com</code> — one <code>urllib</code> request per <code>(release, arch, package)</code> tuple, parallelised with <code>ThreadPoolExecutor</code>. Responses are cached in-process for the run.</li>
+</ul>
+<p>Report shape (<code>audit-report.json</code>):</p>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span>
+<span class="normal"><a href="#__codelineno-25-6">6</a></span>
+<span class="normal"><a href="#__codelineno-25-7">7</a></span>
+<span class="normal"><a href="#__codelineno-25-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="p">{</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">  </span><span class="nt">&quot;scanned_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bookworm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noble&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plucky&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">],</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">  </span><span class="nt">&quot;build_distributions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;&lt;release&gt;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;supported|csc|eos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">  </span><span class="nt">&quot;missing_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;resolute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csc&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">  </span><span class="nt">&quot;package_holes&quot;</span><span class="p">:</span><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;de&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xfce&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;arch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;riscv64&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;libfoo&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">  </span><span class="nt">&quot;skipped_desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bianbu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;budgie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deepin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;kde-neon&quot;</span><span class="p">],</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">  </span><span class="nt">&quot;stats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;holes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;package_lookups&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Desktops with <code>status: unsupported</code> in their YAML are listed in <code>skipped_desktops</code> and not audited — drift in an unsupported DE isn&rsquo;t actionable.</p>
+<p>Flags: <code>--tier {minimal,mid,full}</code> narrows the scope; <code>--release &lt;codename&gt;</code> audits a single release; <code>--skip-network</code> is a dry-run that only reports <code>missing_releases</code>.</p>
+<h3 id="audit_promptpy"><code>audit_prompt.py</code><a class="headerlink" href="#audit_promptpy" title="Permanent link">&para;</a></h3>
+<p>Renders the JSON report into a single text prompt (no markdown-in-markdown gymnastics; the report JSON is embedded in fenced blocks). The prompt pins Claude to:</p>
+<ul>
+<li>touch only YAML files under <code>tools/modules/desktops/yaml/</code></li>
+<li>address <strong>every</strong> finding, not just the first</li>
+<li>prefer edits to <code>common.yaml</code>&rsquo;s <code>tier_overrides</code> block for package holes (one place, applies to every DE) over duplicating <code>packages_remove</code> entries in per-DE YAMLs</li>
+<li>for missing releases, add a release block to each <code>status: supported</code> DE YAML, copying the shape from an existing block and adjusting per-release deltas only where needed</li>
+<li>always add an inline comment explaining <strong>why</strong> a hole exists, so future readers can distinguish a transient archive gap from a permanent upstream-port limitation</li>
+<li>preserve the existing 2-space indentation</li>
+<li>if the report is empty, say so and make no edits</li>
+</ul>
+<h3 id="maintenance-desktop-audityml"><code>maintenance-desktop-audit.yml</code><a class="headerlink" href="#maintenance-desktop-audityml" title="Permanent link">&para;</a></h3>
+<p>Triggers:</p>
+<ul>
+<li><code>schedule: '0 6 * * 1'</code> — Mondays 06:00 UTC. Release and package availability change slowly, so weekly is enough and cheap.</li>
+<li><code>workflow_dispatch</code> — with optional <code>tier</code>, <code>release</code>, and <code>dry_run</code> inputs. <code>dry_run: true</code> stops after the deterministic audit and attaches <code>audit-report.json</code> without calling Claude or opening a PR.</li>
+</ul>
+<p>Concurrency: <code>group: desktop-audit</code>, <code>cancel-in-progress: false</code> — two scheduled runs will never race, and a manual dispatch queues behind the scheduled run rather than killing it.</p>
+<p>Job steps, in order:</p>
+<ol>
+<li><strong>Checkout configng</strong> at the workspace root (no <code>path:</code>) so <code>claude-code-action</code> finds <code>.git</code>.</li>
+<li><strong>Checkout <code>armbian/build</code></strong> into <code>armbian-build/</code> with <code>fetch-depth: 1</code> — the audit only reads <code>config/distributions/</code>, so shallow is fine.</li>
+<li><strong>Set up Python 3.12</strong> and <code>pip install pyyaml</code>.</li>
+<li><strong>Run <code>audit.py</code></strong> — writes <code>audit-report.json</code>, appends a markdown summary table to <code>$GITHUB_STEP_SUMMARY</code>, and sets <code>steps.audit.outputs.actionable</code> to <code>true</code> iff <code>missing_releases</code> or <code>package_holes</code> is non-empty.</li>
+<li><strong>Prepare Claude prompt</strong> (<code>audit_prompt.py</code>) — only if <code>actionable</code> and not a dry run.</li>
+<li><strong>Upload <code>audit-report</code></strong> artifact (always, 30-day retention) — useful even on zero-hole runs as historical record.</li>
+<li><strong><code>anthropics/claude-code-action@v1</code></strong> with:
+    - <code>claude_code_oauth_token: secrets.CLAUDE_CODE_OAUTH_TOKEN</code> (Max subscription token — no per-run API charges).
+    - <code>claude_args: --max-turns 30 --permission-mode acceptEdits --allowed-tools Edit,Write,Read,Glob,Grep,Bash(git:*)</code>. <code>acceptEdits</code> plus the explicit allow-list is required: without them the action&rsquo;s default tool gate denies Edit/Write and the branch stays empty. <code>Bash(git:*)</code> only permits read-only git inspection; no shell execution surface.</li>
+<li><strong>Stash Claude execution log</strong> — copies <code>${RUNNER_TEMP}/claude-execution-output.json</code> into the workspace; uploaded as the <code>claude-execution-output</code> artifact with <code>if: always()</code> so a failed or zero-edit run is debuggable from the transcript without a re-run.</li>
+<li><strong>Clean up temp files</strong> — removes <code>armbian-build/</code>, <code>audit-report.json</code>, <code>claude-prompt.txt</code>, and <code>claude-execution-output.json</code> from the working tree so <code>peter-evans/create-pull-request</code> sees only Claude&rsquo;s YAML edits.</li>
+<li><strong><code>peter-evans/create-pull-request@v6</code></strong> — branch <code>bot/desktop-matrix-audit</code>, base <code>main</code>, <code>add-paths: tools/modules/desktops/yaml/*</code>, <code>delete-branch: true</code>, <code>draft: true</code>, labels <code>bot</code>, <code>desktops</code>, <code>documentation</code>. PR body is <code>steps.claude.outputs.structured_output</code> (Claude&rsquo;s own summary of what it changed and why). If Claude produced no diff, the branch is not ahead of main and no PR is opened — the workflow finishes green with only the audit artifact.</li>
+</ol>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nt">permissions</span><span class="p">:</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># push to bot/desktop-matrix-audit</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">   </span><span class="c1"># open the PR</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># claude-code-action OIDC</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="reviewing-a-bot-pr">Reviewing a bot PR<a class="headerlink" href="#reviewing-a-bot-pr" title="Permanent link">&para;</a></h3>
+<p>Bot PRs open as <strong>draft</strong> on purpose. A human check before merge:</p>
+<ol>
+<li>Read Claude&rsquo;s PR body — it should list every file it changed and the reason.</li>
+<li>Confirm the diff is scoped to <code>tools/modules/desktops/yaml/</code>. Any out-of-scope file is a red flag (the workflow&rsquo;s <code>add-paths</code> should already prevent this, but verify).</li>
+<li>For each missing-release addition: spot-check that the new release block is a sensible copy of an existing one (e.g. a <code>resolute</code> block for <code>xfce.yaml</code> should look like the <code>trixie</code> or <code>noble</code> block, not a half-written stub).</li>
+<li>For each package-hole edit: confirm it lives in <code>common.yaml</code>&rsquo;s <code>tier_overrides</code> where it belongs, not duplicated per-DE.</li>
+<li>For each WHY comment: confirm it&rsquo;s accurate. &ldquo;not yet in trixie&rdquo; ages out; &ldquo;no upstream riscv64 port&rdquo; doesn&rsquo;t.</li>
+<li>Mark ready for review and merge normally. <code>delete-branch: true</code> cleans up on merge.</li>
+</ol>
+<p>If Claude judged the report non-actionable (e.g. the only finding is a <code>csc</code>-tier release a maintainer wants to hold off on), the run ends with the <code>audit-report</code> artifact present and no PR — inspect the artifact and the <code>claude-execution-output</code> log to confirm.</p>
 <h2 id="common-pitfalls">Common pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
 <h3 id="packages_uninstall-cascade">packages_uninstall cascade<a class="headerlink" href="#packages_uninstall-cascade" title="Permanent link">&para;</a></h3>
 <p>Listing a package in <code>tiers.minimal.packages_uninstall</code> runs <code>apt-get remove --purge</code> on it after the install. If that package is a hard <code>Depends:</code> of any meta package the DE install pulled in, apt&rsquo;s autoremove cascade will yank the meta package along with it — and on systems with <code>APT::Get::AutomaticRemove "true"</code> (Ubuntu noble/plucky), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:</p>
@@ -4156,7 +4340,7 @@
 <p>The <code>auto</code> path also edits the file in place via sed (preserving any user customization like <code>WaylandEnable=false</code>) rather than overwriting it with a fresh <code>cat &gt; $file</code>.</p>
 <h3 id="login-regex-anchoring">login regex anchoring<a class="headerlink" href="#login-regex-anchoring" title="Permanent link">&para;</a></h3>
 <p>The stock Ubuntu noble <code>/etc/gdm3/custom.conf</code> template ships with a commented sample line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>#  AutomaticLoginEnable = true
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>#  AutomaticLoginEnable = true
 </span></code></pre></div></td></tr></table></div>
 <p>An unanchored <code>grep</code> for <code>AutomaticLoginEnable\s*=\s*true</code> matches this comment, and <code>module_desktops login</code> returns 0 (autologin enabled) on every fresh install where the user has never touched autologin. The fix is <code>^AutomaticLoginEnable[[:space:]]*=[[:space:]]*true</code> — anchored at line start so the comment doesn&rsquo;t match.</p>
 <h2 id="security-notes">Security notes<a class="headerlink" href="#security-notes" title="Permanent link">&para;</a></h2>
