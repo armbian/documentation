@@ -162,6 +162,17 @@ Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always miss
 | `url` | string | Base URL for `deb [signed-by=...] <url> <release> main`. |
 | `key_url` | string | URL to the GPG key (ASCII-armored). |
 | `keyring` | string | Path to the dearmored keyring file, e.g. `/usr/share/keyrings/neon.gpg`. |
+| `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry needs `origin`, `suite`, and `priority` (integer). Removed on uninstall. |
+
+`preferences` is rarely needed — only when a vendor archive must outrank the distro for a given `(origin, suite)` pair. Each list entry becomes one stanza:
+
+```
+Package: *
+Pin: release o=<origin>, n=<suite>
+Pin-Priority: <priority>
+```
+
+Priorities above 1000 let apt downgrade a package from the distro to the pinned archive's version; below 1000 only allows upgrades. Entries missing any required field are skipped with a warning from `parse_desktop_yaml.py`.
 
 ### Example
 
