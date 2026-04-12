@@ -162,7 +162,7 @@ Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always miss
 | `url` | string | Base URL for `deb [signed-by=...] <url> <suite> <components>`. |
 | `key_url` | string | URL to the GPG key (ASCII-armored). |
 | `keyring` | string | Path to the dearmored keyring file, e.g. `/usr/share/keyrings/neon.gpg`. |
-| `suite` | string (optional) | Suite path that follows the URL in the source line. Defaults to the release codename (e.g. `noble`). Regex-validated to `^[A-Za-z0-9._/-]+$`. Per-release override: `releases.<release>.repo_suite`. |
+| `suite` | string or list of strings (optional) | Suite path(s) that follow the URL. A list emits one `deb [...]` line per entry — all sharing url/keyring/components — for vendors whose archive spans multiple parallel suites (base, -security, -updates, -porting, -customization, …). Defaults to the release codename. Regex-validated to `^[A-Za-z0-9._/-]+$`. Per-release override: `releases.<release>.repo_suite`. |
 | `components` | list (optional) | Components that follow the suite. Defaults to `[main]`. Each entry regex-validated to `^[A-Za-z0-9._-]+$`; invalid entries are dropped with a warning. Per-release override: `releases.<release>.repo_components`. |
 | `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry needs `origin`, `suite`, and `priority` (positive integer). Removed on uninstall. |
 
