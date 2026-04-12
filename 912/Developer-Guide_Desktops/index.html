@@ -3314,7 +3314,7 @@
 <tr>
 <td><code>url</code></td>
 <td>string</td>
-<td>Base URL for <code>deb [signed-by=...] &lt;url&gt; &lt;release&gt; main</code>.</td>
+<td>Base URL for <code>deb [signed-by=...] &lt;url&gt; &lt;suite&gt; &lt;components&gt;</code>.</td>
 </tr>
 <tr>
 <td><code>key_url</code></td>
@@ -3327,12 +3327,23 @@
 <td>Path to the dearmored keyring file, e.g. <code>/usr/share/keyrings/neon.gpg</code>.</td>
 </tr>
 <tr>
+<td><code>suite</code></td>
+<td>string (optional)</td>
+<td>Suite path that follows the URL in the source line. Defaults to the release codename (e.g. <code>noble</code>). Regex-validated to <code>^[A-Za-z0-9._/-]+$</code>. Per-release override: <code>releases.&lt;release&gt;.repo_suite</code>.</td>
+</tr>
+<tr>
+<td><code>components</code></td>
+<td>list (optional)</td>
+<td>Components that follow the suite. Defaults to <code>[main]</code>. Each entry regex-validated to <code>^[A-Za-z0-9._-]+$</code>; invalid entries are dropped with a warning. Per-release override: <code>releases.&lt;release&gt;.repo_components</code>.</td>
+</tr>
+<tr>
 <td><code>preferences</code></td>
 <td>list (optional)</td>
-<td>APT pin preferences written to <code>/etc/apt/preferences.d/&lt;de_name&gt;</code>. Each entry needs <code>origin</code>, <code>suite</code>, and <code>priority</code> (integer). Removed on uninstall.</td>
+<td>APT pin preferences written to <code>/etc/apt/preferences.d/&lt;de_name&gt;</code>. Each entry needs <code>origin</code>, <code>suite</code>, and <code>priority</code> (positive integer). Removed on uninstall.</td>
 </tr>
 </tbody>
 </table>
+<p><code>suite</code> and <code>components</code> exist for vendor archives whose layout doesn&rsquo;t match the default <code>&lt;codename&gt; main</code> convention. For example, SpacemiT&rsquo;s K1 RISC-V archive pins a frozen snapshot per Ubuntu release (<code>noble/snapshots/v2.2</code>, <code>resolute/snapshots/v3.0</code>) and mirrors all four Ubuntu components, so <code>bianbu.yaml</code> sets <code>components: [main, universe, restricted, multiverse]</code> at the <code>repo:</code> level and overrides <code>repo_suite</code> in each release block.</p>
 <p><code>preferences</code> is rarely needed — only when a vendor archive must outrank the distro for a given <code>(origin, suite)</code> pair. Each list entry becomes one stanza:</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
