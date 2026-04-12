@@ -736,6 +736,111 @@ This makes the same code path usable for image preseeding inside Docker without 
 
     The `*07-*09` change-tier entries use `module_desktops set-tier` and gate visibility with `module_desktops status de=<X> && ! module_desktops at-tier de=<X> tier=<target>`.
 
+## Matrix audit automation
+
+The desktop matrix covers several DEs × several releases × several architectures, and two kinds of drift tend to accumulate silently:
+
+1. **Missing releases** — `armbian/build` adds a new release to `config/distributions/` (e.g. Ubuntu `resolute`) but no DE YAML grows a release block for it, so the desktop can't be installed on that release at all.
+2. **Package holes** — an entry in the resolved `DESKTOP_PACKAGES` set is no longer published for some `(release, arch)` pair (archive removed it, or it was never built for that arch), so `apt` fails at install time with `E: Unable to locate package`.
+
+A weekly GitHub Actions workflow detects both, hands the findings to Claude Code to propose YAML edits, and opens a draft PR for a maintainer to review.
+
+### Components
+
+```text
+tools/modules/desktops/github/
+├── audit.py           # deterministic scanner — emits audit-report.json
+├── audit_prompt.py    # renders the report into a Claude prompt
+└── audit_apply.py     # legacy direct-API applier (unused by the workflow)
+
+.github/workflows/
+└── maintenance-desktop-audit.yml   # the scheduled workflow
+```
+
+Only the scanner talks to the network; the LLM never fetches package metadata itself. That keeps the "what is broken" signal reproducible and cache-friendly, and confines all non-determinism to the "how should we fix it" step.
+
+### `audit.py`
+
+Walks `tools/modules/desktops/yaml/` against:
+
+- `armbian/build`'s `config/distributions/<release>.conf` (loaded from a sibling checkout passed via `--build-repo`) to get the set of releases and their support statuses (`supported`, `csc`, `eos`, …). Anything `eos` is skipped.
+- `packages.debian.org` and `packages.ubuntu.com` — one `urllib` request per `(release, arch, package)` tuple, parallelised with `ThreadPoolExecutor`. Responses are cached in-process for the run.
+
+Report shape (`audit-report.json`):
+
+```json
+{
+  "scanned_releases": ["bookworm", "noble", "plucky", "trixie"],
+  "build_distributions": { "<release>": { "name": "...", "support": "supported|csc|eos", "architectures": [...] } },
+  "missing_releases": [ { "release": "resolute", "support_status": "csc", "architectures": [...] } ],
+  "package_holes":    [ { "de": "xfce", "release": "trixie", "arch": "riscv64", "tier": "full", "missing": ["libfoo"] } ],
+  "skipped_desktops": ["bianbu", "budgie", "deepin", "kde-neon"],
+  "stats": { "desktops": 8, "scope": 4, "holes": 0, "package_lookups": 0 }
+}
+```
+
+Desktops with `status: unsupported` in their YAML are listed in `skipped_desktops` and not audited — drift in an unsupported DE isn't actionable.
+
+Flags: `--tier {minimal,mid,full}` narrows the scope; `--release <codename>` audits a single release; `--skip-network` is a dry-run that only reports `missing_releases`.
+
+### `audit_prompt.py`
+
+Renders the JSON report into a single text prompt (no markdown-in-markdown gymnastics; the report JSON is embedded in fenced blocks). The prompt pins Claude to:
+
+- touch only YAML files under `tools/modules/desktops/yaml/`
+- address **every** finding, not just the first
+- prefer edits to `common.yaml`'s `tier_overrides` block for package holes (one place, applies to every DE) over duplicating `packages_remove` entries in per-DE YAMLs
+- for missing releases, add a release block to each `status: supported` DE YAML, copying the shape from an existing block and adjusting per-release deltas only where needed
+- always add an inline comment explaining **why** a hole exists, so future readers can distinguish a transient archive gap from a permanent upstream-port limitation
+- preserve the existing 2-space indentation
+- if the report is empty, say so and make no edits
+
+### `maintenance-desktop-audit.yml`
+
+Triggers:
+
+- `schedule: '0 6 * * 1'` — Mondays 06:00 UTC. Release and package availability change slowly, so weekly is enough and cheap.
+- `workflow_dispatch` — with optional `tier`, `release`, and `dry_run` inputs. `dry_run: true` stops after the deterministic audit and attaches `audit-report.json` without calling Claude or opening a PR.
+
+Concurrency: `group: desktop-audit`, `cancel-in-progress: false` — two scheduled runs will never race, and a manual dispatch queues behind the scheduled run rather than killing it.
+
+Job steps, in order:
+
+1. **Checkout configng** at the workspace root (no `path:`) so `claude-code-action` finds `.git`.
+2. **Checkout `armbian/build`** into `armbian-build/` with `fetch-depth: 1` — the audit only reads `config/distributions/`, so shallow is fine.
+3. **Set up Python 3.12** and `pip install pyyaml`.
+4. **Run `audit.py`** — writes `audit-report.json`, appends a markdown summary table to `$GITHUB_STEP_SUMMARY`, and sets `steps.audit.outputs.actionable` to `true` iff `missing_releases` or `package_holes` is non-empty.
+5. **Prepare Claude prompt** (`audit_prompt.py`) — only if `actionable` and not a dry run.
+6. **Upload `audit-report`** artifact (always, 30-day retention) — useful even on zero-hole runs as historical record.
+7. **`anthropics/claude-code-action@v1`** with:
+    - `claude_code_oauth_token: secrets.CLAUDE_CODE_OAUTH_TOKEN` (Max subscription token — no per-run API charges).
+    - `claude_args: --max-turns 30 --permission-mode acceptEdits --allowed-tools Edit,Write,Read,Glob,Grep,Bash(git:*)`. `acceptEdits` plus the explicit allow-list is required: without them the action's default tool gate denies Edit/Write and the branch stays empty. `Bash(git:*)` only permits read-only git inspection; no shell execution surface.
+8. **Stash Claude execution log** — copies `${RUNNER_TEMP}/claude-execution-output.json` into the workspace; uploaded as the `claude-execution-output` artifact with `if: always()` so a failed or zero-edit run is debuggable from the transcript without a re-run.
+9. **Clean up temp files** — removes `armbian-build/`, `audit-report.json`, `claude-prompt.txt`, and `claude-execution-output.json` from the working tree so `peter-evans/create-pull-request` sees only Claude's YAML edits.
+10. **`peter-evans/create-pull-request@v6`** — branch `bot/desktop-matrix-audit`, base `main`, `add-paths: tools/modules/desktops/yaml/*`, `delete-branch: true`, `draft: true`, labels `bot`, `desktops`, `documentation`. PR body is `steps.claude.outputs.structured_output` (Claude's own summary of what it changed and why). If Claude produced no diff, the branch is not ahead of main and no PR is opened — the workflow finishes green with only the audit artifact.
+
+### Permissions
+
+```yaml
+permissions:
+  contents: write        # push to bot/desktop-matrix-audit
+  pull-requests: write   # open the PR
+  id-token: write        # claude-code-action OIDC
+```
+
+### Reviewing a bot PR
+
+Bot PRs open as **draft** on purpose. A human check before merge:
+
+1. Read Claude's PR body — it should list every file it changed and the reason.
+2. Confirm the diff is scoped to `tools/modules/desktops/yaml/`. Any out-of-scope file is a red flag (the workflow's `add-paths` should already prevent this, but verify).
+3. For each missing-release addition: spot-check that the new release block is a sensible copy of an existing one (e.g. a `resolute` block for `xfce.yaml` should look like the `trixie` or `noble` block, not a half-written stub).
+4. For each package-hole edit: confirm it lives in `common.yaml`'s `tier_overrides` where it belongs, not duplicated per-DE.
+5. For each WHY comment: confirm it's accurate. "not yet in trixie" ages out; "no upstream riscv64 port" doesn't.
+6. Mark ready for review and merge normally. `delete-branch: true` cleans up on merge.
+
+If Claude judged the report non-actionable (e.g. the only finding is a `csc`-tier release a maintainer wants to hold off on), the run ends with the `audit-report` artifact present and no PR — inspect the artifact and the `claude-execution-output` log to confirm.
+
 ## Common pitfalls
 
 ### packages_uninstall cascade
