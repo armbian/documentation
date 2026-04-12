@@ -3328,8 +3328,8 @@
 </tr>
 <tr>
 <td><code>suite</code></td>
-<td>string (optional)</td>
-<td>Suite path that follows the URL in the source line. Defaults to the release codename (e.g. <code>noble</code>). Regex-validated to <code>^[A-Za-z0-9._/-]+$</code>. Per-release override: <code>releases.&lt;release&gt;.repo_suite</code>.</td>
+<td>string or list of strings (optional)</td>
+<td>Suite path(s) that follow the URL. A list emits one <code>deb [...]</code> line per entry — all sharing url/keyring/components — for vendors whose archive spans multiple parallel suites (base, -security, -updates, -porting, -customization, …). Defaults to the release codename. Regex-validated to <code>^[A-Za-z0-9._/-]+$</code>. Per-release override: <code>releases.&lt;release&gt;.repo_suite</code>.</td>
 </tr>
 <tr>
 <td><code>components</code></td>
