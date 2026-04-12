@@ -159,10 +159,14 @@ Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always miss
 
 | Field | Type | Description |
 |---|---|---|
-| `url` | string | Base URL for `deb [signed-by=...] <url> <release> main`. |
+| `url` | string | Base URL for `deb [signed-by=...] <url> <suite> <components>`. |
 | `key_url` | string | URL to the GPG key (ASCII-armored). |
 | `keyring` | string | Path to the dearmored keyring file, e.g. `/usr/share/keyrings/neon.gpg`. |
-| `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry needs `origin`, `suite`, and `priority` (integer). Removed on uninstall. |
+| `suite` | string (optional) | Suite path that follows the URL in the source line. Defaults to the release codename (e.g. `noble`). Regex-validated to `^[A-Za-z0-9._/-]+$`. Per-release override: `releases.<release>.repo_suite`. |
+| `components` | list (optional) | Components that follow the suite. Defaults to `[main]`. Each entry regex-validated to `^[A-Za-z0-9._-]+$`; invalid entries are dropped with a warning. Per-release override: `releases.<release>.repo_components`. |
+| `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry needs `origin`, `suite`, and `priority` (positive integer). Removed on uninstall. |
+
+`suite` and `components` exist for vendor archives whose layout doesn't match the default `<codename> main` convention. For example, SpacemiT's K1 RISC-V archive pins a frozen snapshot per Ubuntu release (`noble/snapshots/v2.2`, `resolute/snapshots/v3.0`) and mirrors all four Ubuntu components, so `bianbu.yaml` sets `components: [main, universe, restricted, multiverse]` at the `repo:` level and overrides `repo_suite` in each release block.
 
 `preferences` is rarely needed — only when a vendor archive must outrank the distro for a given `(origin, suite)` pair. Each list entry becomes one stanza:
 
