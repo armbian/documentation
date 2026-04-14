@@ -3,7 +3,7 @@ site_name: Armbian Documentation
 site_author: "Armbian team"
 site_url: https://docs.armbian.com
 site_description: Official documentation for Armbian OS and Armbian build framework
-copyright: Copyright &copy; 2013 - 2024 Armbian.com
+copyright: &copy; 2026 Armbian. Open source Linux for ARM boards.
 repo_url: https://github.com/armbian/documentation
 edit_uri: edit/main/docs/
 repo_name: armbian/documentation
