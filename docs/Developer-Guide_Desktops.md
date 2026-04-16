@@ -447,14 +447,14 @@ All functions are loaded by configng's module loader. They share global state (`
 ### module_desktops
 
 ```text
-module_desktops <command> [de=<name>] [tier=<tier>] [arch=<arch>] [release=<release>]
+module_desktops <command> [de=<name>] [tier=<tier>] [arch=<arch>] [release=<release>] [mode=<mode>]
 ```
 
-Top-level dispatcher. The `de=`, `tier=`, `arch=`, `release=` arguments are parsed positionally from `$@`.
+Top-level dispatcher. The `de=`, `tier=`, `arch=`, `release=`, `mode=` arguments are parsed positionally from `$@`.
 
 | Command | Behavior | Required args |
 |---|---|---|
-| `install`   | Full install pipeline (see [Lifecycle](#lifecycle-install)). Bails out cleanly on `pkg_install` failure without changing system state. | `de=`, `tier=` |
+| `install`   | Full install pipeline (see [Lifecycle](#lifecycle-install)). Bails out cleanly on `pkg_install` failure without changing system state. With `mode=build`: skips user detection, group membership, skel propagation, and DM start/autologin — intended for image-build time when no real user exists. | `de=`, `tier=` (optional: `mode=build`) |
 | `remove`    | Disables auto-login, stops the display manager, purges every package recorded in `<de>.packages`, runs `pkg_clean`, switches `default.target` back to `multi-user`, isolates to multi-user.target so the running session also drops to console. | `de=` |
 | `upgrade`   | Move an installed desktop to a higher tier. Refuses if the target is the same or lower (use `downgrade`). | `de=`, `tier=` |
 | `downgrade` | Move an installed desktop to a lower tier. Removable set is intersected with the install manifest so user-installed packages are never touched. | `de=`, `tier=` |
@@ -602,33 +602,38 @@ Not called from the desktop install path by default. The `armbian-imager` AppIma
 
 The install pipeline in `module_desktops install` is intentionally linear and idempotent-friendly. **Every step that touches system state is gated on the previous step's success.**
 
+Steps marked with `[R]` are **runtime-only** — skipped when `mode=build` is passed (image build time, no real user exists). Steps marked with `[B]` run in **both** modes.
+
 ```{ .text linenums="0" }
-1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
-2.  Resolve target user           module_desktop_getuser
-3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
-4.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
-5.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
-6.  Suppress encfs prompt         debconf-set-selections
-7.  Configure custom repo         module_desktop_repo $de  (no-op if no repo: block)
-8.  apt update                    pkg_update
-9.  Reset ACTUALLY_INSTALLED      array used by pkg_install to record new packages
-10. apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES        ← bail on failure
-11. apt install + register DM     pkg_install $DESKTOP_DM              ← bail on failure
-                                  /etc/X11/default-display-manager
-12. (Armbian) install plymouth    if /etc/apt/sources.list.d/armbian.{list,sources} present
-13. Save install manifest         /etc/armbian/desktop/<de>.packages and <de>.tier
-14. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
-15. Install branding              module_desktop_branding $de
-16. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
-17. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
-18. Sync skel to existing users   module_update_skel install   (with chown -R safety net)
-19. Stop other DMs                gdm3/lightdm/sddm one by one
-20. Start display manager         systemctl start display-manager      ← container path skips this
-21. Switch default.target         systemctl set-default graphical.target  ONLY if step 20 succeeded
-22. Enable auto-login             module_desktops auto de=$de
+ 1. [B] Validate args              de= and tier= both required; tier must be minimal|mid|full
+ 2. [R] Resolve target user        module_desktop_getuser (skipped in mode=build)
+ 3. [B] Parse YAML at target tier  module_desktop_yamlparse $de $arch $release $tier
+ 4. [B] Validate package list      exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
+ 5. [B] Warn on unsupported        DESKTOP_SUPPORTED != yes → stderr warning, continue
+ 6. [B] Suppress interactive       debconf-set-selections + DEBIAN_FRONTEND=noninteractive
+ 7. [B] Configure custom repo      module_desktop_repo $de  (no-op if no repo: block)
+ 8. [B] Write apt pin              _module_desktops_write_apt_pin  (force apt.armbian.com .debs)
+ 9. [B] apt update                 pkg_update
+10. [B] Reset ACTUALLY_INSTALLED   array used by pkg_install to record new packages
+11. [B] apt install desktop pkgs   pkg_install $DESKTOP_PACKAGES        ← bail on failure
+12. [B] apt install + register DM  pkg_install $DESKTOP_DM              ← bail on failure
+                                   /etc/X11/default-display-manager
+13. [B] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present
+14. [B] Save install manifest      /etc/armbian/desktop/<de>.packages and <de>.tier
+15. [B] Purge unwanted packages    apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
+16. [B] Install branding           module_desktop_branding $de (browser policies, VPU flags, etc.)
+17. [R] Add user to groups         sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
+18. [R] Profile sync daemon (psd)  touch ~/.activate_psd, sudoers entry
+19. [R] Sync skel to existing users module_update_skel install  (with chown -R safety net)
+20. [R] Stop other DMs             gdm3/lightdm/sddm one by one
+21. [R] Start display manager      systemctl start display-manager      ← container path also skips
+22. [R] Switch default.target      systemctl set-default graphical.target  ONLY if step 21 succeeded
+23. [R] Enable auto-login          module_desktops auto de=$de
 ```
 
-If step 10 or 11 fails, the function returns 1 with no further state changes — the manifest is not written, `default.target` stays at `multi-user`, no DM is started. The system is in the same state as if the install had never run.
+**`mode=build`** is used by the Armbian build framework at image-creation time. At that point the rootfs has no regular user (armbian-firstrun creates the first user on first boot), and DM/systemd operations make no sense inside a chroot. The packages, branding, manifests, and `/etc/skel` all land correctly; the first user inherits skel at `useradd` time and armbian-firstrun manages `graphical.target`.
+
+If step 11 or 12 fails, the function returns 1 with no further state changes — the manifest is not written, `default.target` stays at `multi-user`, no DM is started. The system is in the same state as if the install had never run.
 
 ## Lifecycle: remove
 
