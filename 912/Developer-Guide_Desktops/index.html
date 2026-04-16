@@ -3816,9 +3816,9 @@
 <h2 id="bash-module-api">Bash module API<a class="headerlink" href="#bash-module-api" title="Permanent link">&para;</a></h2>
 <p>All functions are loaded by configng&rsquo;s module loader. They share global state (<code>DESKTOP_*</code> variables, <code>desktops_dir</code>, <code>DISTROID</code>) — call sites must follow the documented order.</p>
 <h3 id="module_desktops">module_desktops<a class="headerlink" href="#module_desktops" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>module_desktops &lt;command&gt; [de=&lt;name&gt;] [tier=&lt;tier&gt;] [arch=&lt;arch&gt;] [release=&lt;release&gt;]
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>module_desktops &lt;command&gt; [de=&lt;name&gt;] [tier=&lt;tier&gt;] [arch=&lt;arch&gt;] [release=&lt;release&gt;] [mode=&lt;mode&gt;]
 </span></code></pre></div></td></tr></table></div>
-<p>Top-level dispatcher. The <code>de=</code>, <code>tier=</code>, <code>arch=</code>, <code>release=</code> arguments are parsed positionally from <code>$@</code>.</p>
+<p>Top-level dispatcher. The <code>de=</code>, <code>tier=</code>, <code>arch=</code>, <code>release=</code>, <code>mode=</code> arguments are parsed positionally from <code>$@</code>.</p>
 <table>
 <thead>
 <tr>
@@ -3830,8 +3830,8 @@
 <tbody>
 <tr>
 <td><code>install</code></td>
-<td>Full install pipeline (see <a href="#lifecycle-install">Lifecycle</a>). Bails out cleanly on <code>pkg_install</code> failure without changing system state.</td>
-<td><code>de=</code>, <code>tier=</code></td>
+<td>Full install pipeline (see <a href="#lifecycle-install">Lifecycle</a>). Bails out cleanly on <code>pkg_install</code> failure without changing system state. With <code>mode=build</code>: skips user detection, group membership, skel propagation, and DM start/autologin — intended for image-build time when no real user exists.</td>
+<td><code>de=</code>, <code>tier=</code> (optional: <code>mode=build</code>)</td>
 </tr>
 <tr>
 <td><code>remove</code></td>
@@ -4069,31 +4069,34 @@
 <p>Not called from the desktop install path by default. The <code>armbian-imager</code> AppImage is available via <code>armbian-config --api module_appimage install app=armbian-imager</code> for users who explicitly want it.</p>
 <h2 id="lifecycle-install">Lifecycle: install<a class="headerlink" href="#lifecycle-install" title="Permanent link">&para;</a></h2>
 <p>The install pipeline in <code>module_desktops install</code> is intentionally linear and idempotent-friendly. <strong>Every step that touches system state is gated on the previous step&rsquo;s success.</strong></p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>1.  Validate args                 de= and tier= both required; tier must be minimal|mid|full
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2.  Resolve target user           module_desktop_getuser
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>3.  Parse YAML at target tier     module_desktop_yamlparse $de $arch $release $tier
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>4.  Validate package list         exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>5.  Warn on unsupported           DESKTOP_SUPPORTED != yes → stderr warning, continue
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>6.  Suppress encfs prompt         debconf-set-selections
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>7.  Configure custom repo         module_desktop_repo $de  (no-op if no repo: block)
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>8.  apt update                    pkg_update
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>9.  Reset ACTUALLY_INSTALLED      array used by pkg_install to record new packages
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>10. apt install desktop pkgs      pkg_install $DESKTOP_PACKAGES        ← bail on failure
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>11. apt install + register DM     pkg_install $DESKTOP_DM              ← bail on failure
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>                                  /etc/X11/default-display-manager
-</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>12. (Armbian) install plymouth    if /etc/apt/sources.list.d/armbian.{list,sources} present
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>13. Save install manifest         /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
-</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>14. Purge unwanted packages       apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
-</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>15. Install branding              module_desktop_branding $de
-</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>16. Add user to groups            sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
-</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>17. Profile sync daemon (psd)     touch ~/.activate_psd, sudoers entry
-</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>18. Sync skel to existing users   module_update_skel install   (with chown -R safety net)
-</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>19. Stop other DMs                gdm3/lightdm/sddm one by one
-</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>20. Start display manager         systemctl start display-manager      ← container path skips this
-</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>21. Switch default.target         systemctl set-default graphical.target  ONLY if step 20 succeeded
-</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>22. Enable auto-login             module_desktops auto de=$de
+<p>Steps marked with <code>[R]</code> are <strong>runtime-only</strong> — skipped when <code>mode=build</code> is passed (image build time, no real user exists). Steps marked with <code>[B]</code> run in <strong>both</strong> modes.</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a> 1. [B] Validate args              de= and tier= both required; tier must be minimal|mid|full
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a> 2. [R] Resolve target user        module_desktop_getuser (skipped in mode=build)
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a> 3. [B] Parse YAML at target tier  module_desktop_yamlparse $de $arch $release $tier
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a> 4. [B] Validate package list      exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a> 5. [B] Warn on unsupported        DESKTOP_SUPPORTED != yes → stderr warning, continue
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a> 6. [B] Suppress interactive       debconf-set-selections + DEBIAN_FRONTEND=noninteractive
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a> 7. [B] Configure custom repo      module_desktop_repo $de  (no-op if no repo: block)
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a> 8. [B] Write apt pin              _module_desktops_write_apt_pin  (force apt.armbian.com .debs)
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a> 9. [B] apt update                 pkg_update
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>10. [B] Reset ACTUALLY_INSTALLED   array used by pkg_install to record new packages
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>11. [B] apt install desktop pkgs   pkg_install $DESKTOP_PACKAGES        ← bail on failure
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>12. [B] apt install + register DM  pkg_install $DESKTOP_DM              ← bail on failure
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>                                   /etc/X11/default-display-manager
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>13. [B] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>14. [B] Save install manifest      /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>15. [B] Purge unwanted packages    apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>16. [B] Install branding           module_desktop_branding $de (browser policies, VPU flags, etc.)
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>17. [R] Add user to groups         sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>18. [R] Profile sync daemon (psd)  touch ~/.activate_psd, sudoers entry
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>19. [R] Sync skel to existing users module_update_skel install  (with chown -R safety net)
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>20. [R] Stop other DMs             gdm3/lightdm/sddm one by one
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>21. [R] Start display manager      systemctl start display-manager      ← container path also skips
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>22. [R] Switch default.target      systemctl set-default graphical.target  ONLY if step 21 succeeded
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>23. [R] Enable auto-login          module_desktops auto de=$de
 </span></code></pre></div>
-<p>If step 10 or 11 fails, the function returns 1 with no further state changes — the manifest is not written, <code>default.target</code> stays at <code>multi-user</code>, no DM is started. The system is in the same state as if the install had never run.</p>
+<p><strong><code>mode=build</code></strong> is used by the Armbian build framework at image-creation time. At that point the rootfs has no regular user (armbian-firstrun creates the first user on first boot), and DM/systemd operations make no sense inside a chroot. The packages, branding, manifests, and <code>/etc/skel</code> all land correctly; the first user inherits skel at <code>useradd</code> time and armbian-firstrun manages <code>graphical.target</code>.</p>
+<p>If step 11 or 12 fails, the function returns 1 with no further state changes — the manifest is not written, <code>default.target</code> stays at <code>multi-user</code>, no DM is started. The system is in the same state as if the install had never run.</p>
 <h2 id="lifecycle-remove">Lifecycle: remove<a class="headerlink" href="#lifecycle-remove" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>1.  Validate args                 de= required
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
