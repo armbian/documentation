@@ -3188,7 +3188,7 @@
 <td><code>status</code></td>
 <td>string</td>
 <td>yes</td>
-<td><code>supported</code> or <code>unsupported</code>. Reported via <code>DESKTOP_STATUS</code>. Affects only labelling — does not block install.</td>
+<td>Editorial label — one of <code>supported</code>, <code>community</code>, <code>unsupported</code>. Reported via <code>DESKTOP_STATUS</code>. Affects only labelling and catalog filtering — does not block install. <code>community</code> is used for DEs that work but are maintained on a best-effort basis; <code>unsupported</code> for DEs that are known-broken or not vetted.</td>
 </tr>
 <tr>
 <td><code>tiers</code></td>
@@ -3258,7 +3258,7 @@
 <tr>
 <td><code>architectures</code></td>
 <td>list</td>
-<td>Architectures supported on this release. Used to compute <code>DESKTOP_SUPPORTED</code>.</td>
+<td>Architectures supported on this release. Used to compute <code>DESKTOP_AVAILABLE</code> (the &ldquo;does this YAML declare the requested release+arch combo?&rdquo; bool — distinct from the editorial <code>status</code> above).</td>
 </tr>
 <tr>
 <td><code>packages</code></td>
@@ -3494,7 +3494,7 @@
 <span class="normal"><a href="#__codelineno-6-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kde-neon</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;KDE</span><span class="nv"> </span><span class="s">Neon</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">latest</span><span class="nv"> </span><span class="s">Plasma</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">KDE</span><span class="nv"> </span><span class="s">repos</span><span class="nv"> </span><span class="s">(Ubuntu</span><span class="nv"> </span><span class="s">only)&quot;</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nt">display_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sddm</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unsupported</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nt">repo</span><span class="p">:</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://archive.neon.kde.org/testing&quot;</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="nt">key_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://archive.neon.kde.org/public.key&quot;</span>
@@ -3709,19 +3709,34 @@
 <span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
 <span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Parse one desktop at a tier and emit DESKTOP_* shell variables.</span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Parse one desktop at a tier and emit DESKTOP_* shell variables.</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># --tier is mandatory.</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>&lt;de_name&gt;<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;<span class="w"> </span>--tier<span class="w"> </span>&lt;minimal<span class="p">|</span>mid<span class="p">|</span>full&gt;
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="c1"># List all desktops as TSV (name&lt;TAB&gt;status&lt;TAB&gt;supported&lt;TAB&gt;archs)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--list<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="c1"># Same as --list but JSON-formatted</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--list-json<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="c1"># List all desktops as TSV (name&lt;TAB&gt;status&lt;TAB&gt;available&lt;TAB&gt;archs)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="c1"># The third column is &quot;yes&quot;/&quot;no&quot; for the computed DESKTOP_AVAILABLE.</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--list<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="o">[</span>--filter<span class="w"> </span>&lt;available<span class="p">|</span>unavailable<span class="p">|</span>all&gt;<span class="o">]</span><span class="w">   </span><span class="se">\</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="o">[</span>--status<span class="w"> </span>&lt;supported,community,unsupported&gt;<span class="o">]</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="c1"># Print &quot;&lt;name&gt;\t&lt;primary_pkg&gt;&quot; for every desktop, used by `installed`</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--primaries<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="c1"># Same as --list but JSON-formatted.</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--list-json<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="o">[</span>--filter<span class="w"> </span>&lt;available<span class="p">|</span>unavailable<span class="p">|</span>all&gt;<span class="o">]</span><span class="w">   </span><span class="se">\</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="o">[</span>--status<span class="w"> </span>&lt;supported,community,unsupported&gt;<span class="o">]</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="c1"># Print &quot;&lt;name&gt;\t&lt;primary_pkg&gt;&quot; for every desktop, used by `installed`</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a>parse_desktop_yaml.py<span class="w"> </span>&lt;yaml_dir&gt;<span class="w"> </span>--primaries<span class="w"> </span>&lt;release&gt;<span class="w"> </span>&lt;arch&gt;
 </span></code></pre></div></td></tr></table></div>
+<p>The two filter flags on <code>--list</code> / <code>--list-json</code> select on two orthogonal axes, both default to permissive (backwards-compatible with pre-filter callers):</p>
+<ul>
+<li><code>--filter</code> selects on the <strong>computed</strong> <code>DESKTOP_AVAILABLE</code> axis (does the YAML declare this release+arch combo?). Values: <code>available</code> (default — hides DEs without an entry for this combo), <code>unavailable</code> (only the non-declared DEs), or <code>all</code> (no filtering on this axis).</li>
+<li><code>--status</code> selects on the <strong>editorial</strong> <code>DESKTOP_STATUS</code> axis. Takes a comma-separated <em>keep-list</em> of status values to retain. Omit the flag to keep all statuses. Example: <code>--status supported,community</code> drops <code>unsupported</code> DEs from the output.</li>
+</ul>
 <h3 id="variables-emitted-per-desktop-mode">Variables emitted (per-desktop mode)<a class="headerlink" href="#variables-emitted-per-desktop-mode" title="Permanent link">&para;</a></h3>
 <p>All values are double-quoted and shell-escaped via <code>shell_escape()</code> (escapes <code>\</code>, <code>"</code>, <code>$</code>, and <code>`</code>), so the bash caller can safely <code>eval</code> the output.</p>
 <table>
@@ -3755,13 +3770,13 @@
 </tr>
 <tr>
 <td><code>DESKTOP_STATUS</code></td>
-<td><code>status</code>, default <code>unsupported</code></td>
-<td></td>
+<td>editorial <code>status</code> from the YAML, default <code>unsupported</code>. One of <code>supported</code> / <code>community</code> / <code>unsupported</code>.</td>
+<td>Orthogonal to <code>DESKTOP_AVAILABLE</code> — a community DE may be available on a combo (its YAML declares the release+arch) or not.</td>
 </tr>
 <tr>
-<td><code>DESKTOP_SUPPORTED</code></td>
+<td><code>DESKTOP_AVAILABLE</code></td>
 <td><code>yes</code> if <code>arch</code> is in the release&rsquo;s <code>architectures</code> and <code>release</code> is a key in <code>releases</code>, else <code>no</code></td>
-<td></td>
+<td>Computed axis — whether the YAML declares this release+arch combo. Named <code>DESKTOP_SUPPORTED</code> before 2026-04 (the rename disambiguates this from the editorial <code>status</code> field).</td>
 </tr>
 <tr>
 <td><code>DESKTOP_DESC</code></td>
@@ -3812,11 +3827,28 @@
 <li><strong>Tolerant normalization</strong> — <code>tiers</code>, <code>releases</code>, <code>architectures</code>, <code>tier_overrides</code>, <code>repo</code>, every list field passes through <code>_as_dict</code> / <code>_as_list</code> helpers. Wrong-typed nodes coerce to safe empty defaults (<code>{}</code> or <code>[]</code>) instead of raising <code>AttributeError</code> or doing surprising substring matches like <code>arch in "arm64"</code>.</li>
 </ul>
 <h3 id="list-and-json-list-modes">List and JSON list modes<a class="headerlink" href="#list-and-json-list-modes" title="Permanent link">&para;</a></h3>
-<p>Iterates every <code>*.yaml</code> (excluding <code>common.yaml</code>), parses each one&rsquo;s release block, and prints <strong>only entries supported on the requested (release, arch)</strong>. Used by <code>module_desktops install</code> to show available desktops on error and by <code>module_desktops supported</code> to expose a machine-readable catalog. These modes do not require <code>--tier</code>.</p>
+<p>Iterates every <code>*.yaml</code> (excluding <code>common.yaml</code>), parses each one&rsquo;s release block, and emits one row per DE. By default only entries with <code>DESKTOP_AVAILABLE=yes</code> for the requested <code>(release, arch)</code> are printed — pass <code>--filter unavailable</code> or <code>--filter all</code> to override. Pass <code>--status &lt;csv&gt;</code> to additionally narrow by the editorial <code>status</code> field. Used by <code>module_desktops install</code> to show available desktops on error and by <code>module_desktops supported</code> to expose a machine-readable catalog. These modes do not require <code>--tier</code>.</p>
+<p>Each JSON entry has this shape (two orthogonal status axes):</p>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;budgie&quot;</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Budgie - elegant desktop from Solus project&quot;</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="nt">&quot;display_manager&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lightdm&quot;</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;community&quot;</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nt">&quot;available&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;arm64&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;amd64&quot;</span><span class="p">]</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="bash-module-api">Bash module API<a class="headerlink" href="#bash-module-api" title="Permanent link">&para;</a></h2>
 <p>All functions are loaded by configng&rsquo;s module loader. They share global state (<code>DESKTOP_*</code> variables, <code>desktops_dir</code>, <code>DISTROID</code>) — call sites must follow the documented order.</p>
 <h3 id="module_desktops">module_desktops<a class="headerlink" href="#module_desktops" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>module_desktops &lt;command&gt; [de=&lt;name&gt;] [tier=&lt;tier&gt;] [arch=&lt;arch&gt;] [release=&lt;release&gt;] [mode=&lt;mode&gt;]
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>module_desktops &lt;command&gt; [de=&lt;name&gt;] [tier=&lt;tier&gt;] [arch=&lt;arch&gt;] [release=&lt;release&gt;] [mode=&lt;mode&gt;]
 </span></code></pre></div></td></tr></table></div>
 <p>Top-level dispatcher. The <code>de=</code>, <code>tier=</code>, <code>arch=</code>, <code>release=</code>, <code>mode=</code> arguments are parsed positionally from <code>$@</code>.</p>
 <table>
@@ -3895,8 +3927,8 @@
 </tr>
 <tr>
 <td><code>supported</code></td>
-<td>With <code>de=</code>: prints <code>true</code>/<code>false</code>. Without <code>de=</code>: prints JSON catalog of supported desktops.</td>
-<td>optional</td>
+<td>With <code>de=</code>: prints <code>true</code>/<code>false</code> based on <code>DESKTOP_AVAILABLE</code> for the DE on <code>arch=</code>/<code>release=</code>. Without <code>de=</code>: prints a JSON catalog. Two optional filter knobs: <code>filter=available\|unavailable\|all</code> (computed-availability axis, default <code>available</code>) and <code>status=&lt;csv&gt;</code> (editorial-status keep-list — e.g. <code>status=supported,community</code> hides editorially <code>unsupported</code> DEs).</td>
+<td>optional <code>de=</code>, <code>arch=</code>, <code>release=</code>, <code>filter=</code>, <code>status=</code></td>
 </tr>
 <tr>
 <td><code>installed</code></td>
@@ -3957,35 +3989,35 @@
 </tbody>
 </table>
 <h3 id="module_desktop_yamlparse">module_desktop_yamlparse<a class="headerlink" href="#module_desktop_yamlparse" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>module_desktop_yamlparse &lt;de_name&gt; [arch] [release] [tier]
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>module_desktop_yamlparse &lt;de_name&gt; [arch] [release] [tier]
 </span></code></pre></div></td></tr></table></div>
 <p>Wraps <code>parse_desktop_yaml.py</code>. Resets all <code>DESKTOP_*</code> globals, runs the helper, and <code>eval</code>s its stdout. Returns 1 on parse failure (with the parser&rsquo;s stderr surfaced).</p>
 <p>Defaults:
 - <code>arch</code> → <code>dpkg --print-architecture</code>
 - <code>release</code> → <code>$DISTROID</code>
 - <code>tier</code> → <code>minimal</code> — passed through to the parser&rsquo;s <code>--tier</code> arg, so callers that only need <code>DESKTOP_DM</code> / <code>DESKTOP_PRIMARY_PKG</code> (status checks, autologin paths) don&rsquo;t need to know the actual installed tier.</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>module_desktop_yamlparse<span class="w"> </span>xfce
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_PRIMARY_PKG</span><span class="s2">&quot;</span><span class="w">   </span><span class="c1"># → xfce4</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>module_desktop_yamlparse<span class="w"> </span>xfce<span class="w"> </span>arm64<span class="w"> </span>trixie<span class="w"> </span>full
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_TIER</span><span class="s2">&quot;</span><span class="w">          </span><span class="c1"># → full</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_PACKAGES</span><span class="s2">&quot;</span><span class="w">      </span><span class="c1"># → minimal + mid + full set, with browser resolved</span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>module_desktop_yamlparse<span class="w"> </span>xfce
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_PRIMARY_PKG</span><span class="s2">&quot;</span><span class="w">   </span><span class="c1"># → xfce4</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a>module_desktop_yamlparse<span class="w"> </span>xfce<span class="w"> </span>arm64<span class="w"> </span>trixie<span class="w"> </span>full
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_TIER</span><span class="s2">&quot;</span><span class="w">          </span><span class="c1"># → full</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DESKTOP_PACKAGES</span><span class="s2">&quot;</span><span class="w">      </span><span class="c1"># → minimal + mid + full set, with browser resolved</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="module_desktop_yamlparse_list">module_desktop_yamlparse_list<a class="headerlink" href="#module_desktop_yamlparse_list" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>module_desktop_yamlparse_list [arch] [release]
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>module_desktop_yamlparse_list [arch] [release]
 </span></code></pre></div></td></tr></table></div>
 <p>Calls the parser with <code>--list</code> and prints TSV to stdout. Used to assemble the &ldquo;Available: &hellip;&rdquo; hint shown when <code>install</code> is invoked without <code>de=</code>.</p>
 <h3 id="module_desktop_supported">module_desktop_supported<a class="headerlink" href="#module_desktop_supported" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>module_desktop_supported &lt;de_name&gt; [arch] [release]
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>module_desktop_supported &lt;de_name&gt; [arch] [release]
 </span></code></pre></div></td></tr></table></div>
-<p>Convenience wrapper around <code>module_desktop_yamlparse</code> that returns 0/1 based on <code>DESKTOP_SUPPORTED</code>. Suppresses parser stderr — meant for predicates and CI gates.</p>
+<p>Convenience wrapper around <code>module_desktop_yamlparse</code> that returns 0/1 based on <code>DESKTOP_AVAILABLE</code> (the computed-availability axis). Suppresses parser stderr — meant for predicates and CI gates. Note: this function does not consider the editorial <code>DESKTOP_STATUS</code> axis — a DE with <code>status: unsupported</code> can still return 0 here if its YAML declares the requested release+arch. Filter on <code>DESKTOP_STATUS</code> separately if you need to exclude unsupported DEs.</p>
 <h3 id="module_desktop_repo">module_desktop_repo<a class="headerlink" href="#module_desktop_repo" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>module_desktop_repo &lt;de_name&gt;
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>module_desktop_repo &lt;de_name&gt;
 </span></code></pre></div></td></tr></table></div>
 <p>Sets up a custom APT source. Must be called <strong>after</strong> <code>module_desktop_yamlparse</code> because it consumes <code>DESKTOP_REPO_URL</code>, <code>DESKTOP_REPO_KEY_URL</code>, <code>DESKTOP_REPO_KEYRING</code>.</p>
 <p>Behavior:</p>
@@ -3997,7 +4029,7 @@
 </ol>
 <p>A no-op if the YAML has no <code>repo:</code> block.</p>
 <h3 id="module_desktop_branding">module_desktop_branding<a class="headerlink" href="#module_desktop_branding" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>module_desktop_branding &lt;de_name&gt;
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>module_desktop_branding &lt;de_name&gt;
 </span></code></pre></div></td></tr></table></div>
 <p>Copies branding assets and runs the optional postinst hook. Idempotent — every step is guarded with <code>[[ -d ... ]]</code>.</p>
 <table>
@@ -4048,11 +4080,11 @@
 </table>
 <p>The distributor logo for GNOME Settings → About / KDE Info Center / etc. is <strong>not</strong> installed from here — that file ships from <code>armbian-base-files</code> so it stays in sync with the <code>LOGO=</code> line in <code>/etc/os-release</code>.</p>
 <h3 id="module_desktop_getuser">module_desktop_getuser<a class="headerlink" href="#module_desktop_getuser" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>module_desktop_getuser
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>module_desktop_getuser
 </span></code></pre></div></td></tr></table></div>
 <p>Returns the first non-root, non-system user with a real login shell. Prefers <code>$SUDO_USER</code> if set and not root, otherwise scans <code>/etc/passwd</code> for the first entry with <code>1000 ≤ uid &lt; 65534</code> and a shell that does not match <code>nologin|false</code>. Exits 1 if none is found.</p>
 <h3 id="module_update_skel">module_update_skel<a class="headerlink" href="#module_update_skel" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>module_update_skel install
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>module_update_skel install
 </span></code></pre></div></td></tr></table></div>
 <p>Walks <code>getent passwd</code>, and for every regular user (<code>1000 ≤ uid &lt; 65534</code>, home directory exists, not root):</p>
 <ol>
@@ -4063,75 +4095,75 @@
 </ol>
 <p>The recursive <code>chown</code> is critical: other package postinst scripts (caja, nemo, gnome-keyring, …) routinely leak root-owned files into the user&rsquo;s <code>~/.config</code> directory on first install. Without the recursive chown, those tools refuse to start on first login because they can&rsquo;t write their own config dirs.</p>
 <h3 id="module_appimage">module_appimage<a class="headerlink" href="#module_appimage" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>module_appimage &lt;install|remove|status&gt; app=&lt;name&gt;
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>module_appimage &lt;install|remove|status&gt; app=&lt;name&gt;
 </span></code></pre></div></td></tr></table></div>
 <p>Standalone AppImage helper. The internal <code>APPIMAGE_REPO</code> registry maps logical app names (e.g. <code>armbian-imager</code>) to GitHub <code>owner/repo</code> slugs and downloads the appropriate architecture-suffixed AppImage from the latest release. <code>module_appimage install</code> also installs <code>libfuse2</code>, <code>fuse3</code>, and the <code>libgles2</code>/<code>libegl1</code>/<code>libgl1</code>/<code>libgl1-mesa-dri</code> runtime so the AppImage can launch.</p>
 <p>Not called from the desktop install path by default. The <code>armbian-imager</code> AppImage is available via <code>armbian-config --api module_appimage install app=armbian-imager</code> for users who explicitly want it.</p>
 <h2 id="lifecycle-install">Lifecycle: install<a class="headerlink" href="#lifecycle-install" title="Permanent link">&para;</a></h2>
 <p>The install pipeline in <code>module_desktops install</code> is intentionally linear and idempotent-friendly. <strong>Every step that touches system state is gated on the previous step&rsquo;s success.</strong></p>
 <p>Steps marked with <code>[R]</code> are <strong>runtime-only</strong> — skipped when <code>mode=build</code> is passed (image build time, no real user exists). Steps marked with <code>[B]</code> run in <strong>both</strong> modes.</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a> 1. [B] Validate args              de= and tier= both required; tier must be minimal|mid|full
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a> 2. [R] Resolve target user        module_desktop_getuser (skipped in mode=build)
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a> 3. [B] Parse YAML at target tier  module_desktop_yamlparse $de $arch $release $tier
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a> 4. [B] Validate package list      exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a> 5. [B] Warn on unsupported        DESKTOP_SUPPORTED != yes → stderr warning, continue
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a> 6. [B] Suppress interactive       debconf-set-selections + DEBIAN_FRONTEND=noninteractive
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a> 7. [B] Configure custom repo      module_desktop_repo $de  (no-op if no repo: block)
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a> 8. [B] Write apt pin              _module_desktops_write_apt_pin  (force apt.armbian.com .debs)
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a> 9. [B] apt update                 pkg_update
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>10. [B] Reset ACTUALLY_INSTALLED   array used by pkg_install to record new packages
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>11. [B] apt install desktop pkgs   pkg_install $DESKTOP_PACKAGES        ← bail on failure
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>12. [B] apt install + register DM  pkg_install $DESKTOP_DM              ← bail on failure
-</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>                                   /etc/X11/default-display-manager
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>13. [B] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present
-</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>14. [B] Save install manifest      /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
-</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>15. [B] Purge unwanted packages    apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
-</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>16. [B] Install branding           module_desktop_branding $de (browser policies, VPU flags, etc.)
-</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>17. [R] Add user to groups         sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
-</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>18. [R] Profile sync daemon (psd)  touch ~/.activate_psd, sudoers entry
-</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>19. [R] Sync skel to existing users module_update_skel install  (with chown -R safety net)
-</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>20. [R] Stop other DMs             gdm3/lightdm/sddm one by one
-</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>21. [R] Start display manager      systemctl start display-manager      ← container path also skips
-</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>22. [R] Switch default.target      systemctl set-default graphical.target  ONLY if step 21 succeeded
-</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>23. [R] Enable auto-login          module_desktops auto de=$de
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a> 1. [B] Validate args              de= and tier= both required; tier must be minimal|mid|full
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a> 2. [R] Resolve target user        module_desktop_getuser (skipped in mode=build)
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a> 3. [B] Parse YAML at target tier  module_desktop_yamlparse $de $arch $release $tier
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a> 4. [B] Validate package list      exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a> 5. [B] Warn on unavailable        DESKTOP_AVAILABLE != yes → stderr warning, continue
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a> 6. [B] Suppress interactive       debconf-set-selections + DEBIAN_FRONTEND=noninteractive
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a> 7. [B] Configure custom repo      module_desktop_repo $de  (no-op if no repo: block)
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a> 8. [B] Write apt pin              _module_desktops_write_apt_pin  (force apt.armbian.com .debs)
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a> 9. [B] apt update                 pkg_update
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>10. [B] Reset ACTUALLY_INSTALLED   array used by pkg_install to record new packages
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>11. [B] apt install desktop pkgs   pkg_install $DESKTOP_PACKAGES        ← bail on failure
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>12. [B] apt install + register DM  pkg_install $DESKTOP_DM              ← bail on failure
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>                                   /etc/X11/default-display-manager
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>13. [B] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>14. [B] Save install manifest      /etc/armbian/desktop/&lt;de&gt;.packages and &lt;de&gt;.tier
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>15. [B] Purge unwanted packages    apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>16. [B] Install branding           module_desktop_branding $de (browser policies, VPU flags, etc.)
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>17. [R] Add user to groups         sudo netdev audio video dialout plugdev input bluetooth systemd-journal ssh
+</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>18. [R] Profile sync daemon (psd)  touch ~/.activate_psd, sudoers entry
+</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>19. [R] Sync skel to existing users module_update_skel install  (with chown -R safety net)
+</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a>20. [R] Stop other DMs             gdm3/lightdm/sddm one by one
+</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>21. [R] Start display manager      systemctl start display-manager      ← container path also skips
+</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a>22. [R] Switch default.target      systemctl set-default graphical.target  ONLY if step 21 succeeded
+</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>23. [R] Enable auto-login          module_desktops auto de=$de
 </span></code></pre></div>
 <p><strong><code>mode=build</code></strong> is used by the Armbian build framework at image-creation time. At that point the rootfs has no regular user (armbian-firstrun creates the first user on first boot), and DM/systemd operations make no sense inside a chroot. The packages, branding, manifests, and <code>/etc/skel</code> all land correctly; the first user inherits skel at <code>useradd</code> time and armbian-firstrun manages <code>graphical.target</code>.</p>
 <p>If step 11 or 12 fails, the function returns 1 with no further state changes — the manifest is not written, <code>default.target</code> stays at <code>multi-user</code>, no DM is started. The system is in the same state as if the install had never run.</p>
 <h2 id="lifecycle-remove">Lifecycle: remove<a class="headerlink" href="#lifecycle-remove" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>1.  Validate args                 de= required
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    tier
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>4.  Disable auto-login            module_desktops manual de=$de
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>5.  Stop display manager          systemctl stop display-manager
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>6.  Switch default.target         systemctl set-default multi-user.target
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>                                  to console immediately, no reboot needed)
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>8.  Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>9.  pkg_remove                    apt-get autopurge
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>10. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>1.  Validate args                 de= required
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    tier
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>4.  Disable auto-login            module_desktops manual de=$de
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>5.  Stop display manager          systemctl stop display-manager
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>6.  Switch default.target         systemctl set-default multi-user.target
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>                                  to console immediately, no reboot needed)
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>8.  Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>9.  pkg_remove                    apt-get autopurge
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>10. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
 </span></code></pre></div>
 <p>The <code>set-default</code> and <code>isolate</code> calls together ensure the user gets a console login on tty1 immediately after the uninstall, without needing to reboot. Without them, the system stays pinned to <code>graphical.target</code> with no DM behind it and the local console is blank.</p>
 <h2 id="lifecycle-upgrade-and-downgrade">Lifecycle: upgrade and downgrade<a class="headerlink" href="#lifecycle-upgrade-and-downgrade" title="Permanent link">&para;</a></h2>
 <p><code>upgrade</code> and <code>downgrade</code> are the two halves of <code>_module_desktops_change_tier</code>:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>2.  Read current tier marker      /etc/armbian/desktop/&lt;de&gt;.tier (must exist)
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>3.  Validate direction            upgrade refuses target &lt;= current
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>                                  downgrade refuses target &gt;= current
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>                                  same tier → no-op message, exit 0
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>4.  Parse YAML twice              once at current tier, once at target tier
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>                                  store the package lists in two bash arrays
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>5.  Compute set difference        (awk on per-line printf input)
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>                                  upgrade:   to_install = target - current
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>                                  downgrade: removable  = current - target
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>6.  (downgrade only) intersect    removable ∩ &lt;de&gt;.packages — never touch
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>                                  packages the user installed manually
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>                                  outside the desktop install path
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>7.  Apply                         pkg_install (upgrade) or pkg_remove (downgrade)
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>8.  Update manifest               append new packages, or remove drained ones
-</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>9.  Update tier marker            /etc/armbian/desktop/&lt;de&gt;.tier
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>2.  Read current tier marker      /etc/armbian/desktop/&lt;de&gt;.tier (must exist)
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>3.  Validate direction            upgrade refuses target &lt;= current
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>                                  downgrade refuses target &gt;= current
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>                                  same tier → no-op message, exit 0
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>4.  Parse YAML twice              once at current tier, once at target tier
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>                                  store the package lists in two bash arrays
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>5.  Compute set difference        (awk on per-line printf input)
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>                                  upgrade:   to_install = target - current
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>                                  downgrade: removable  = current - target
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>6.  (downgrade only) intersect    removable ∩ &lt;de&gt;.packages — never touch
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>                                  packages the user installed manually
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>                                  outside the desktop install path
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>7.  Apply                         pkg_install (upgrade) or pkg_remove (downgrade)
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>8.  Update manifest               append new packages, or remove drained ones
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>9.  Update tier marker            /etc/armbian/desktop/&lt;de&gt;.tier
 </span></code></pre></div>
 <p><code>set-tier</code> is a thin front-end over the same helper that auto-detects direction from the current tier vs the target. It&rsquo;s the entry point used by the dialog menu&rsquo;s &ldquo;Change <DE> to <tier>&rdquo; buttons.</p>
 <h2 id="container-and-ci-awareness">Container and CI awareness<a class="headerlink" href="#container-and-ci-awareness" title="Permanent link">&para;</a></h2>
@@ -4161,39 +4193,39 @@
 <li><strong>(Optional) Branding overrides.</strong> Branding lives in shared directories, so most desktops do not need any per-DE assets — only add files when the DE needs something different.</li>
 <li>
 <p><strong>Smoke test the parser at every tier:</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
-<span class="normal"><a href="#__codelineno-22-2">2</a></span>
-<span class="normal"><a href="#__codelineno-22-3">3</a></span>
-<span class="normal"><a href="#__codelineno-22-4">4</a></span>
-<span class="normal"><a href="#__codelineno-22-5">5</a></span>
-<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nb">cd</span><span class="w"> </span>configng
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="k">for</span><span class="w"> </span>tier<span class="w"> </span><span class="k">in</span><span class="w"> </span>minimal<span class="w"> </span>mid<span class="w"> </span>full<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span>python3<span class="w"> </span>tools/modules/desktops/scripts/parse_desktop_yaml.py<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">        </span>tools/modules/desktops/yaml<span class="w"> </span>&lt;de_name&gt;<span class="w"> </span>trixie<span class="w"> </span>arm64<span class="w"> </span>--tier<span class="w"> </span><span class="nv">$tier</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;---&quot;</span>
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="k">done</span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="nb">cd</span><span class="w"> </span>configng
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="k">for</span><span class="w"> </span>tier<span class="w"> </span><span class="k">in</span><span class="w"> </span>minimal<span class="w"> </span>mid<span class="w"> </span>full<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span>python3<span class="w"> </span>tools/modules/desktops/scripts/parse_desktop_yaml.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">        </span>tools/modules/desktops/yaml<span class="w"> </span>&lt;de_name&gt;<span class="w"> </span>trixie<span class="w"> </span>arm64<span class="w"> </span>--tier<span class="w"> </span><span class="nv">$tier</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;---&quot;</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="k">done</span>
 </span></code></pre></div></td></tr></table></div>
-<p>All <code>DESKTOP_*</code> variables should print, <code>DESKTOP_SUPPORTED="yes"</code> for any (release, arch) pair you listed in the YAML, and <code>DESKTOP_TIER</code> should match the requested tier.</p>
+<p>All <code>DESKTOP_*</code> variables should print, <code>DESKTOP_AVAILABLE="yes"</code> for any (release, arch) pair you listed in the YAML, and <code>DESKTOP_TIER</code> should match the requested tier.</p>
 </li>
 <li>
 <p><strong>List-mode sanity check:</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
-<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>python3<span class="w"> </span>tools/modules/desktops/scripts/parse_desktop_yaml.py<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span>tools/modules/desktops/yaml<span class="w"> </span>--list<span class="w"> </span>trixie<span class="w"> </span>arm64
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>python3<span class="w"> </span>tools/modules/desktops/scripts/parse_desktop_yaml.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span>tools/modules/desktops/yaml<span class="w"> </span>--list<span class="w"> </span>trixie<span class="w"> </span>arm64
 </span></code></pre></div></td></tr></table></div>
 <p>Your new desktop should appear in the TSV output for the (release, arch) combinations you declared.</p>
 </li>
 <li>
 <p><strong>End-to-end test</strong> in a disposable VM or container:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
-<span class="normal"><a href="#__codelineno-24-2">2</a></span>
-<span class="normal"><a href="#__codelineno-24-3">3</a></span>
-<span class="normal"><a href="#__codelineno-24-4">4</a></span>
-<span class="normal"><a href="#__codelineno-24-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>install<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>minimal
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>upgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>mid
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>upgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>full
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>downgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>minimal
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>remove<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>install<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>minimal
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>upgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>mid
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>upgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>full
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>downgrade<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;<span class="w"> </span><span class="nv">tier</span><span class="o">=</span>minimal
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a>armbian-config<span class="w"> </span>--api<span class="w"> </span>module_desktops<span class="w"> </span>remove<span class="w"> </span><span class="nv">de</span><span class="o">=</span>&lt;de_name&gt;
 </span></code></pre></div></td></tr></table></div>
 </li>
 <li>
@@ -4245,6 +4277,7 @@
 </tbody>
 </table>
 <p>The <code>*07-*09</code> change-tier entries use <code>module_desktops set-tier</code> and gate visibility with <code>module_desktops status de=&lt;X&gt; &amp;&amp; ! module_desktops at-tier de=&lt;X&gt; tier=&lt;target&gt;</code>.</p>
+<p><strong><code>status: community</code> DEs</strong> (the <code>[CSC]</code> tier) follow a shorter allocation — only <code>*01</code> (install minimal), <code>*02</code> (uninstall), <code>*03</code> (autologin), <code>*04</code> (manual-login) — matching the <code>kde-neon</code> precedent. No 3-tier install, no set-tier. Description and <code>short</code> carry a trailing <code>[CSC]</code> marker so the UI can distinguish community DEs from first-class supported ones. Do NOT add menu entries for <code>status: unsupported</code> DEs — they&rsquo;re intentionally kept out of the dialog so users never land on a broken install path from the menu.</p>
 </li>
 </ol>
 <h2 id="matrix-audit-automation">Matrix audit automation<a class="headerlink" href="#matrix-audit-automation" title="Permanent link">&para;</a></h2>
@@ -4255,19 +4288,19 @@
 </ol>
 <p>A weekly GitHub Actions workflow detects both, hands the findings to Claude Code to propose YAML edits, and opens a draft PR for a maintainer to review.</p>
 <h3 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
-<span class="normal"><a href="#__codelineno-25-2">2</a></span>
-<span class="normal"><a href="#__codelineno-25-3">3</a></span>
-<span class="normal"><a href="#__codelineno-25-4">4</a></span>
-<span class="normal"><a href="#__codelineno-25-5">5</a></span>
-<span class="normal"><a href="#__codelineno-25-6">6</a></span>
-<span class="normal"><a href="#__codelineno-25-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>tools/modules/desktops/github/
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a>├── audit.py           # deterministic scanner — emits audit-report.json
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a>├── audit_prompt.py    # renders the report into a Claude prompt
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a>└── audit_apply.py     # legacy direct-API applier (unused by the workflow)
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a>
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6"></a>.github/workflows/
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7"></a>└── maintenance-desktop-audit.yml   # the scheduled workflow
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span>
+<span class="normal"><a href="#__codelineno-26-6">6</a></span>
+<span class="normal"><a href="#__codelineno-26-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>tools/modules/desktops/github/
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a>├── audit.py           # deterministic scanner — emits audit-report.json
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a>├── audit_prompt.py    # renders the report into a Claude prompt
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a>└── audit_apply.py     # legacy direct-API applier (unused by the workflow)
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a>.github/workflows/
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7"></a>└── maintenance-desktop-audit.yml   # the scheduled workflow
 </span></code></pre></div></td></tr></table></div>
 <p>Only the scanner talks to the network; the LLM never fetches package metadata itself. That keeps the &ldquo;what is broken&rdquo; signal reproducible and cache-friendly, and confines all non-determinism to the &ldquo;how should we fix it&rdquo; step.</p>
 <h3 id="auditpy"><code>audit.py</code><a class="headerlink" href="#auditpy" title="Permanent link">&para;</a></h3>
@@ -4277,23 +4310,23 @@
 <li><code>packages.debian.org</code> and <code>packages.ubuntu.com</code> — one <code>urllib</code> request per <code>(release, arch, package)</code> tuple, parallelised with <code>ThreadPoolExecutor</code>. Responses are cached in-process for the run.</li>
 </ul>
 <p>Report shape (<code>audit-report.json</code>):</p>
-<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
-<span class="normal"><a href="#__codelineno-26-2">2</a></span>
-<span class="normal"><a href="#__codelineno-26-3">3</a></span>
-<span class="normal"><a href="#__codelineno-26-4">4</a></span>
-<span class="normal"><a href="#__codelineno-26-5">5</a></span>
-<span class="normal"><a href="#__codelineno-26-6">6</a></span>
-<span class="normal"><a href="#__codelineno-26-7">7</a></span>
-<span class="normal"><a href="#__codelineno-26-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="p">{</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">  </span><span class="nt">&quot;scanned_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bookworm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noble&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plucky&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">],</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">  </span><span class="nt">&quot;build_distributions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;&lt;release&gt;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;supported|csc|eos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">  </span><span class="nt">&quot;missing_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;resolute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csc&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">  </span><span class="nt">&quot;package_holes&quot;</span><span class="p">:</span><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;de&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xfce&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;arch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;riscv64&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;libfoo&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">  </span><span class="nt">&quot;skipped_desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bianbu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;budgie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deepin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;kde-neon&quot;</span><span class="p">],</span>
-</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">  </span><span class="nt">&quot;stats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;holes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;package_lookups&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="p">}</span>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span>
+<span class="normal"><a href="#__codelineno-27-7">7</a></span>
+<span class="normal"><a href="#__codelineno-27-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="p">{</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="nt">&quot;scanned_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bookworm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noble&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plucky&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">],</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">  </span><span class="nt">&quot;build_distributions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;&lt;release&gt;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;supported|csc|eos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">  </span><span class="nt">&quot;missing_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;resolute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csc&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">  </span><span class="nt">&quot;package_holes&quot;</span><span class="p">:</span><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;de&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xfce&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;arch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;riscv64&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;libfoo&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">  </span><span class="nt">&quot;skipped_desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bianbu&quot;</span><span class="p">],</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">  </span><span class="nt">&quot;stats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;desktops&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;holes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;package_lookups&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Desktops with <code>status: unsupported</code> in their YAML are listed in <code>skipped_desktops</code> and not audited — drift in an unsupported DE isn&rsquo;t actionable.</p>
+<p>Desktops with <code>status: unsupported</code> in their YAML are listed in <code>skipped_desktops</code> and not audited — drift in an unsupported DE isn&rsquo;t actionable. <code>status: community</code> DEs <strong>are</strong> audited (drift in a community-tier DE is still worth reporting, even if a maintainer may choose not to act on it immediately).</p>
 <p>Flags: <code>--tier {minimal,mid,full}</code> narrows the scope; <code>--release &lt;codename&gt;</code> audits a single release; <code>--skip-network</code> is a dry-run that only reports <code>missing_releases</code>.</p>
 <h3 id="audit_promptpy"><code>audit_prompt.py</code><a class="headerlink" href="#audit_promptpy" title="Permanent link">&para;</a></h3>
 <p>Renders the JSON report into a single text prompt (no markdown-in-markdown gymnastics; the report JSON is embedded in fenced blocks). The prompt pins Claude to:</p>
@@ -4329,13 +4362,13 @@
 <li><strong><code>peter-evans/create-pull-request@v6</code></strong> — branch <code>bot/desktop-matrix-audit</code>, base <code>main</code>, <code>add-paths: tools/modules/desktops/yaml/*</code>, <code>delete-branch: true</code>, <code>draft: true</code>, labels <code>bot</code>, <code>desktops</code>, <code>documentation</code>. PR body is <code>steps.claude.outputs.structured_output</code> (Claude&rsquo;s own summary of what it changed and why). If Claude produced no diff, the branch is not ahead of main and no PR is opened — the workflow finishes green with only the audit artifact.</li>
 </ol>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
-<span class="normal"><a href="#__codelineno-27-2">2</a></span>
-<span class="normal"><a href="#__codelineno-27-3">3</a></span>
-<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="nt">permissions</span><span class="p">:</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># push to bot/desktop-matrix-audit</span>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">   </span><span class="c1"># open the PR</span>
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># claude-code-action OIDC</span>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="nt">permissions</span><span class="p">:</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># push to bot/desktop-matrix-audit</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">   </span><span class="c1"># open the PR</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w">        </span><span class="c1"># claude-code-action OIDC</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="reviewing-a-bot-pr">Reviewing a bot PR<a class="headerlink" href="#reviewing-a-bot-pr" title="Permanent link">&para;</a></h3>
 <p>Bot PRs open as <strong>draft</strong> on purpose. A human check before merge:</p>
@@ -4367,7 +4400,7 @@
 <p>The <code>auto</code> path also edits the file in place via sed (preserving any user customization like <code>WaylandEnable=false</code>) rather than overwriting it with a fresh <code>cat &gt; $file</code>.</p>
 <h3 id="login-regex-anchoring">login regex anchoring<a class="headerlink" href="#login-regex-anchoring" title="Permanent link">&para;</a></h3>
 <p>The stock Ubuntu noble <code>/etc/gdm3/custom.conf</code> template ships with a commented sample line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>#  AutomaticLoginEnable = true
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a>#  AutomaticLoginEnable = true
 </span></code></pre></div></td></tr></table></div>
 <p>An unanchored <code>grep</code> for <code>AutomaticLoginEnable\s*=\s*true</code> matches this comment, and <code>module_desktops login</code> returns 0 (autologin enabled) on every fresh install where the user has never touched autologin. The fix is <code>^AutomaticLoginEnable[[:space:]]*=[[:space:]]*true</code> — anchored at line start so the comment doesn&rsquo;t match.</p>
 <h2 id="security-notes">Security notes<a class="headerlink" href="#security-notes" title="Permanent link">&para;</a></h2>
