@@ -107,7 +107,7 @@ Each desktop is defined in a single YAML file under `tools/modules/desktops/yaml
 | `name` | string | informational | Human-readable name. |
 | `description` | string | informational | One-line summary, exposed via `DESKTOP_DESC`. |
 | `display_manager` | string | yes | Greeter package: `gdm3`, `sddm`, `lightdm`, or `none`. |
-| `status` | string | yes | `supported` or `unsupported`. Reported via `DESKTOP_STATUS`. Affects only labelling — does not block install. |
+| `status` | string | yes | Editorial label — one of `supported`, `community`, `unsupported`. Reported via `DESKTOP_STATUS`. Affects only labelling and catalog filtering — does not block install. `community` is used for DEs that work but are maintained on a best-effort basis; `unsupported` for DEs that are known-broken or not vetted. |
 | `tiers` | mapping | yes | Per-tier package lists, keyed by `minimal`, `mid`, `full`. See [Tier blocks](#tier-blocks). |
 | `tier_overrides` | mapping | optional | Per-arch and/or per-release-per-arch package removals (and additions) for tier holes. See [tier_overrides](#tier-overrides). |
 | `releases` | mapping | yes | Per-release overrides keyed by release codename (`bookworm`, `trixie`, `noble`, `plucky`, ...). |
@@ -129,7 +129,7 @@ The release block is **orthogonal** to the tier walk: it applies to whatever tie
 
 | Field | Type | Description |
 |---|---|---|
-| `architectures` | list | Architectures supported on this release. Used to compute `DESKTOP_SUPPORTED`. |
+| `architectures` | list | Architectures supported on this release. Used to compute `DESKTOP_AVAILABLE` (the "does this YAML declare the requested release+arch combo?" bool — distinct from the editorial `status` above). |
 | `packages` | list | Extra packages added on top of the tier-resolved set. |
 | `packages_remove` | list | Packages filtered out of the merged install list. |
 | `packages_uninstall` | list | Packages purged after install on this release only. |
@@ -250,7 +250,7 @@ tiers:
 name: kde-neon
 description: "KDE Neon - latest Plasma from KDE repos (Ubuntu only)"
 display_manager: sddm
-status: unsupported
+status: supported
 repo:
   url: "http://archive.neon.kde.org/testing"
   key_url: "https://archive.neon.kde.org/public.key"
@@ -385,15 +385,25 @@ Single-purpose CLI that bash modules invoke via `python3`. All YAML parsing and 
 # --tier is mandatory.
 parse_desktop_yaml.py <yaml_dir> <de_name> <release> <arch> --tier <minimal|mid|full>
 
-# List all desktops as TSV (name<TAB>status<TAB>supported<TAB>archs)
-parse_desktop_yaml.py <yaml_dir> --list <release> <arch>
+# List all desktops as TSV (name<TAB>status<TAB>available<TAB>archs)
+# The third column is "yes"/"no" for the computed DESKTOP_AVAILABLE.
+parse_desktop_yaml.py <yaml_dir> --list <release> <arch> \
+    [--filter <available|unavailable|all>]   \
+    [--status <supported,community,unsupported>]
 
-# Same as --list but JSON-formatted
-parse_desktop_yaml.py <yaml_dir> --list-json <release> <arch>
+# Same as --list but JSON-formatted.
+parse_desktop_yaml.py <yaml_dir> --list-json <release> <arch> \
+    [--filter <available|unavailable|all>]   \
+    [--status <supported,community,unsupported>]
 
 # Print "<name>\t<primary_pkg>" for every desktop, used by `installed`
 parse_desktop_yaml.py <yaml_dir> --primaries <release> <arch>
 ```
+
+The two filter flags on `--list` / `--list-json` select on two orthogonal axes, both default to permissive (backwards-compatible with pre-filter callers):
+
+- `--filter` selects on the **computed** `DESKTOP_AVAILABLE` axis (does the YAML declare this release+arch combo?). Values: `available` (default — hides DEs without an entry for this combo), `unavailable` (only the non-declared DEs), or `all` (no filtering on this axis).
+- `--status` selects on the **editorial** `DESKTOP_STATUS` axis. Takes a comma-separated *keep-list* of status values to retain. Omit the flag to keep all statuses. Example: `--status supported,community` drops `unsupported` DEs from the output.
 
 ### Variables emitted (per-desktop mode)
 
@@ -405,8 +415,8 @@ All values are double-quoted and shell-escaped via `shell_escape()` (escapes `\`
 | `DESKTOP_PACKAGES_UNINSTALL` | minimal-tier `packages_uninstall` from common + DE + release | Space-separated. |
 | `DESKTOP_PRIMARY_PKG` | first DE-specific package (not from common) that survives all filters | Used by `module_desktops status` for `dpkg -l` checks. |
 | `DESKTOP_DM` | `display_manager`, default `lightdm` | |
-| `DESKTOP_STATUS` | `status`, default `unsupported` | |
-| `DESKTOP_SUPPORTED` | `yes` if `arch` is in the release's `architectures` and `release` is a key in `releases`, else `no` | |
+| `DESKTOP_STATUS` | editorial `status` from the YAML, default `unsupported`. One of `supported` / `community` / `unsupported`. | Orthogonal to `DESKTOP_AVAILABLE` — a community DE may be available on a combo (its YAML declares the release+arch) or not. |
+| `DESKTOP_AVAILABLE` | `yes` if `arch` is in the release's `architectures` and `release` is a key in `releases`, else `no` | Computed axis — whether the YAML declares this release+arch combo. Named `DESKTOP_SUPPORTED` before 2026-04 (the rename disambiguates this from the editorial `status` field). |
 | `DESKTOP_DESC` | `description`, default `de_name` | |
 | `DESKTOP_TIER` | the requested tier name | Set verbatim from the `--tier` arg. |
 | `DESKTOP_REPO_URL` | `repo.url` | Only emitted when `repo:` exists. |
@@ -438,7 +448,20 @@ The parser is strict about top-level structure but tolerant of malformed sub-nod
 
 ### List and JSON list modes
 
-Iterates every `*.yaml` (excluding `common.yaml`), parses each one's release block, and prints **only entries supported on the requested (release, arch)**. Used by `module_desktops install` to show available desktops on error and by `module_desktops supported` to expose a machine-readable catalog. These modes do not require `--tier`.
+Iterates every `*.yaml` (excluding `common.yaml`), parses each one's release block, and emits one row per DE. By default only entries with `DESKTOP_AVAILABLE=yes` for the requested `(release, arch)` are printed — pass `--filter unavailable` or `--filter all` to override. Pass `--status <csv>` to additionally narrow by the editorial `status` field. Used by `module_desktops install` to show available desktops on error and by `module_desktops supported` to expose a machine-readable catalog. These modes do not require `--tier`.
+
+Each JSON entry has this shape (two orthogonal status axes):
+
+```json
+{
+  "name": "budgie",
+  "description": "Budgie - elegant desktop from Solus project",
+  "display_manager": "lightdm",
+  "status": "community",
+  "available": true,
+  "architectures": ["arm64", "amd64"]
+}
+```
 
 ## Bash module API
 
@@ -467,7 +490,7 @@ Top-level dispatcher. The `de=`, `tier=`, `arch=`, `release=`, `mode=` arguments
 | `auto`      | Configures auto-login for `DESKTOP_DM` (gdm3/sddm/lightdm). Edits the gdm config in place — never overwrites the file — so user customization is preserved. | `de=` |
 | `manual`    | Reverts auto-login. Idempotent. | `de=` |
 | `login`     | Returns 0 if auto-login is currently configured. Anchored regex; safely ignores commented sample lines in the stock noble `custom.conf`. | `de=` |
-| `supported` | With `de=`: prints `true`/`false`. Without `de=`: prints JSON catalog of supported desktops. | optional |
+| `supported` | With `de=`: prints `true`/`false` based on `DESKTOP_AVAILABLE` for the DE on `arch=`/`release=`. Without `de=`: prints a JSON catalog. Two optional filter knobs: `filter=available\|unavailable\|all` (computed-availability axis, default `available`) and `status=<csv>` (editorial-status keep-list — e.g. `status=supported,community` hides editorially `unsupported` DEs). | optional `de=`, `arch=`, `release=`, `filter=`, `status=` |
 | `installed` | Returns 0 if any desktop is installed (uses cached `--primaries` lookup). | — |
 | `help`      | Shows help and exits. | — |
 
@@ -524,7 +547,7 @@ Calls the parser with `--list` and prints TSV to stdout. Used to assemble the "A
 module_desktop_supported <de_name> [arch] [release]
 ```
 
-Convenience wrapper around `module_desktop_yamlparse` that returns 0/1 based on `DESKTOP_SUPPORTED`. Suppresses parser stderr — meant for predicates and CI gates.
+Convenience wrapper around `module_desktop_yamlparse` that returns 0/1 based on `DESKTOP_AVAILABLE` (the computed-availability axis). Suppresses parser stderr — meant for predicates and CI gates. Note: this function does not consider the editorial `DESKTOP_STATUS` axis — a DE with `status: unsupported` can still return 0 here if its YAML declares the requested release+arch. Filter on `DESKTOP_STATUS` separately if you need to exclude unsupported DEs.
 
 ### module_desktop_repo
 
@@ -609,7 +632,7 @@ Steps marked with `[R]` are **runtime-only** — skipped when `mode=build` is pa
  2. [R] Resolve target user        module_desktop_getuser (skipped in mode=build)
  3. [B] Parse YAML at target tier  module_desktop_yamlparse $de $arch $release $tier
  4. [B] Validate package list      exit if DESKTOP_PACKAGES / DESKTOP_PRIMARY_PKG empty
- 5. [B] Warn on unsupported        DESKTOP_SUPPORTED != yes → stderr warning, continue
+ 5. [B] Warn on unavailable        DESKTOP_AVAILABLE != yes → stderr warning, continue
  6. [B] Suppress interactive       debconf-set-selections + DEBIAN_FRONTEND=noninteractive
  7. [B] Configure custom repo      module_desktop_repo $de  (no-op if no repo: block)
  8. [B] Write apt pin              _module_desktops_write_apt_pin  (force apt.armbian.com .debs)
@@ -719,7 +742,7 @@ This makes the same code path usable for image preseeding inside Docker without 
     done
     ```
 
-    All `DESKTOP_*` variables should print, `DESKTOP_SUPPORTED="yes"` for any (release, arch) pair you listed in the YAML, and `DESKTOP_TIER` should match the requested tier.
+    All `DESKTOP_*` variables should print, `DESKTOP_AVAILABLE="yes"` for any (release, arch) pair you listed in the YAML, and `DESKTOP_TIER` should match the requested tier.
 
 8. **List-mode sanity check:**
 
@@ -755,6 +778,8 @@ This makes the same code path usable for image preseeding inside Docker without 
     | `*09` | change to full |
 
     The `*07-*09` change-tier entries use `module_desktops set-tier` and gate visibility with `module_desktops status de=<X> && ! module_desktops at-tier de=<X> tier=<target>`.
+
+    **`status: community` DEs** (the `[CSC]` tier) follow a shorter allocation — only `*01` (install minimal), `*02` (uninstall), `*03` (autologin), `*04` (manual-login) — matching the `kde-neon` precedent. No 3-tier install, no set-tier. Description and `short` carry a trailing `[CSC]` marker so the UI can distinguish community DEs from first-class supported ones. Do NOT add menu entries for `status: unsupported` DEs — they're intentionally kept out of the dialog so users never land on a broken install path from the menu.
 
 ## Matrix audit automation
 
@@ -794,12 +819,12 @@ Report shape (`audit-report.json`):
   "build_distributions": { "<release>": { "name": "...", "support": "supported|csc|eos", "architectures": [...] } },
   "missing_releases": [ { "release": "resolute", "support_status": "csc", "architectures": [...] } ],
   "package_holes":    [ { "de": "xfce", "release": "trixie", "arch": "riscv64", "tier": "full", "missing": ["libfoo"] } ],
-  "skipped_desktops": ["bianbu", "budgie", "deepin", "kde-neon"],
-  "stats": { "desktops": 8, "scope": 4, "holes": 0, "package_lookups": 0 }
+  "skipped_desktops": ["bianbu"],
+  "stats": { "desktops": 11, "scope": 4, "holes": 0, "package_lookups": 0 }
 }
 ```
 
-Desktops with `status: unsupported` in their YAML are listed in `skipped_desktops` and not audited — drift in an unsupported DE isn't actionable.
+Desktops with `status: unsupported` in their YAML are listed in `skipped_desktops` and not audited — drift in an unsupported DE isn't actionable. `status: community` DEs **are** audited (drift in a community-tier DE is still worth reporting, even if a maintainer may choose not to act on it immediately).
 
 Flags: `--tier {minimal,mid,full}` narrows the scope; `--release <codename>` audits a single release; `--skip-network` is a dry-run that only reports `missing_releases`.
 
