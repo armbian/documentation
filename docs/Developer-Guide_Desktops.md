@@ -14,8 +14,8 @@ The submodule provides:
 - **Per-install manifest** — every install records exactly which packages it added so removal and downgrades only undo what they themselves did.
 - **Custom APT repositories**, branding, group memberships, and skel sync.
 - **Auto-login** management for `gdm3`, `sddm`, and `lightdm`, with non-destructive in-place edits of the underlying config files.
-- **Per-release / per-arch package overrides** so the same YAML works across Debian bookworm/trixie and Ubuntu noble/plucky on amd64/arm64/armhf/riscv64 with different package availability.
-- **Browser virtual token** that resolves per-release-per-arch (chromium on Debian, epiphany-browser on Ubuntu, firefox-esr on Debian riscv64, …).
+- **Per-release / per-arch package overrides** so the same YAML works across Debian bookworm/trixie/forky/sid and Ubuntu jammy/noble/resolute on amd64/arm64/armhf/riscv64/loong64 with different package availability.
+- **Browser virtual token** that resolves per-release-per-arch (google-chrome-stable on amd64, chromium on Debian/Ubuntu arm arches, firefox-esr on Debian riscv64, epiphany-browser on Ubuntu riscv64, …).
 - **Container/CI awareness** so the same code path can be used inside Docker without trying to start a display manager.
 
 ## Tier model
@@ -110,7 +110,7 @@ Each desktop is defined in a single YAML file under `tools/modules/desktops/yaml
 | `status` | string | yes | Editorial label — one of `supported`, `community`, `unsupported`. Reported via `DESKTOP_STATUS`. Affects only labelling and catalog filtering — does not block install. `community` is used for DEs that work but are maintained on a best-effort basis; `unsupported` for DEs that are known-broken or not vetted. |
 | `tiers` | mapping | yes | Per-tier package lists, keyed by `minimal`, `mid`, `full`. See [Tier blocks](#tier-blocks). |
 | `tier_overrides` | mapping | optional | Per-arch and/or per-release-per-arch package removals (and additions) for tier holes. See [tier_overrides](#tier-overrides). |
-| `releases` | mapping | yes | Per-release overrides keyed by release codename (`bookworm`, `trixie`, `noble`, `plucky`, ...). |
+| `releases` | mapping | yes | Per-release overrides keyed by release codename (`bookworm`, `trixie`, `forky`, `sid`, `jammy`, `noble`, `resolute`, ...). |
 | `repo` | mapping | optional | Custom APT repository, see below. |
 
 ### Tier blocks
@@ -305,37 +305,66 @@ tiers:
 
 browser:
   bookworm:
-    amd64:   chromium
+    amd64:   google-chrome-stable
     arm64:   chromium
     armhf:   chromium
+    # bookworm has no riscv64 port — no entry needed
   trixie:
-    amd64:   chromium
+    amd64:   google-chrome-stable
     arm64:   chromium
     armhf:   chromium
-    riscv64: firefox-esr     # 'firefox' does not exist in Debian
+    riscv64: firefox-esr            # 'firefox' does not exist in Debian
   noble:
-    amd64:   epiphany-browser    # 'chromium' deb is a snap-shim
-    arm64:   epiphany-browser
-    armhf:   epiphany-browser
+    amd64:   google-chrome-stable
+    arm64:   chromium               # apt.armbian.com real .deb (Ubuntu's is snap-shim)
+    armhf:   chromium
+    riscv64: epiphany-browser       # firefox/chromium not built for Ubuntu riscv64
+  resolute:
+    amd64:   google-chrome-stable
+    arm64:   chromium
+    armhf:   chromium
     riscv64: epiphany-browser
-  plucky:
-    amd64:   epiphany-browser
-    arm64:   epiphany-browser
-    armhf:   epiphany-browser
-    riscv64: epiphany-browser
+  forky:
+    amd64:   google-chrome-stable
+    arm64:   chromium
+    armhf:   chromium
+    riscv64: firefox-esr
+  sid:
+    amd64:   google-chrome-stable
+    arm64:   chromium
+    armhf:   chromium
+    riscv64: firefox-esr
+    loong64: firefox-esr            # chromium not yet built for loong64
 
 tier_overrides:
   mid:
+    # armbian-imager ships only amd64/arm64 upstream — strip it on
+    # every other arch, across every release.
+    architectures:
+      armhf:    { packages_remove: [armbian-imager] }
+      riscv64:  { packages_remove: [armbian-imager] }
+      loong64:  { packages_remove: [armbian-imager] }
     releases:
       bookworm:
         architectures:
           amd64:  { packages_remove: [loupe] }   # GNOME 43 era — no loupe
           arm64:  { packages_remove: [loupe] }
           armhf:  { packages_remove: [loupe] }
-      plucky:
+      jammy:
         architectures:
-          armhf:  { packages_remove: [loupe] }   # dropped on plucky/armhf
+          amd64:    { packages_remove: [loupe] } # GNOME 42 — no loupe
+          arm64:    { packages_remove: [loupe] }
+          armhf:    { packages_remove: [loupe] }
+          riscv64:  { packages_remove: [loupe] }
   full:
+    # The 'code' (VSCode) .deb on apt.armbian.com links against the
+    # pre-t64 library names, which don't exist on post-t64 releases
+    # (trixie+, noble+). amd64/arm64 were rebuilt; armhf wasn't. No
+    # riscv64 upstream build exists at all. Strip arch-wide on both
+    # until/unless the armhf .deb is refreshed.
+    architectures:
+      armhf:    { packages_remove: [code] }
+      riscv64:  { packages_remove: [code] }
     releases:
       bookworm:
         architectures:
@@ -344,17 +373,14 @@ tier_overrides:
         architectures:
           armhf:  { packages_remove: [thunderbird] }
       noble:
-        # thunderbird on Ubuntu is a snap-shim that requires snapd
-        # which Armbian doesn't ship — strip it on every arch.
+        # thunderbird on Ubuntu noble armhf/riscv64 is absent (no
+        # upstream Ubuntu deb there), so strip on those two arches
+        # only. amd64/arm64 get the real .deb from apt.armbian.com.
         architectures:
-          amd64:    { packages_remove: [thunderbird] }
-          arm64:    { packages_remove: [thunderbird] }
           armhf:    { packages_remove: [thunderbird] }
           riscv64:  { packages_remove: [thunderbird] }
-      plucky:
+      resolute:
         architectures:
-          amd64:    { packages_remove: [thunderbird] }
-          arm64:    { packages_remove: [thunderbird] }
           armhf:    { packages_remove: [thunderbird] }
           riscv64:  { packages_remove: [thunderbird] }
 ```
@@ -370,9 +396,12 @@ The literal string `browser` inside any tier block resolves to a real package na
 The per-release layer is needed because the same arch can resolve differently across releases:
 
 - Debian has `firefox-esr` but **no** `firefox` package.
-- Ubuntu's `chromium` deb is a snap-shim wrapper that requires `snapd`. Armbian doesn't ship snapd, so the shim is broken at runtime — substitute a real GTK browser instead. `epiphany-browser` (GNOME Web) is small, native deb, and available on every Ubuntu arch.
+- Ubuntu's `chromium` / `firefox` debs are snap-shim wrappers that require `snapd`. Armbian doesn't ship snapd, so the shims are broken at runtime — apt.armbian.com hosts real `chromium` / `firefox` / `google-chrome-stable` .debs used instead.
+- amd64 always gets `google-chrome-stable` (Google publishes no arm/riscv builds, so this is amd64-only).
 - `chromium` isn't built for riscv64 in either Debian or Ubuntu.
-- `firefox` isn't built for noble/plucky riscv64 either.
+- Ubuntu doesn't publish `firefox` or `firefox-esr` for riscv64 (Mozilla has no riscv64 binaries, and `firefox-esr` is a Debian-only package name). Fall back to `epiphany-browser` (GNOME Web) there — native GTK, small, and available on every Ubuntu arch.
+- Debian riscv64 gets `firefox-esr` because the Debian archive does publish it for riscv64.
+- `loong64` is only declared for `sid` in the inventory; `chromium` isn't built there yet either, so it uses `firefox-esr`.
 
 ## Python helper: parse_desktop_yaml.py
 
@@ -661,23 +690,34 @@ If step 11 or 12 fails, the function returns 1 with no further state changes —
 ## Lifecycle: remove
 
 ```{ .text linenums="0" }
-1.  Validate args                 de= required
-2.  Read installed tier marker    /etc/armbian/desktop/<de>.tier (default: minimal)
-3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
+ 1. Validate args                 de= required
+ 2. Read installed tier marker    /etc/armbian/desktop/<de>.tier (default: minimal)
+ 3. Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
     tier
-4.  Disable auto-login            module_desktops manual de=$de
-5.  Stop display manager          systemctl stop display-manager
-6.  Switch default.target         systemctl set-default multi-user.target
-7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
+ 4. Disable auto-login            module_desktops manual de=$de
+ 5. Stop display manager          systemctl stop display-manager
+ 6. Switch default.target         systemctl set-default multi-user.target
+ 7. Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
                                   to console immediately, no reboot needed)
-8.  Compute removable set         from /etc/armbian/desktop/<de>.packages
+ 8. Compute removable set         from /etc/armbian/desktop/<de>.packages
                                   fallback: walk DESKTOP_PACKAGES through dpkg-query
-9.  pkg_remove                    apt-get autopurge
-10. Delete manifest files         rm /etc/armbian/desktop/<de>.{packages,tier}
-11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
+ 9. Filter out essentials         apt-get -s -y purge <list>  (simulation, stderr parsed)
+                                  every package apt flags under "WARNING: The following
+                                  essential packages will be removed" is dropped from
+                                  the removable set — see note below
+10. Purge remaining set           apt-get -y purge <filtered list>   ← bail on failure,
+                                  manifest preserved for retry
+11. Delete manifest files         rm /etc/armbian/desktop/<de>.{packages,tier}  (only after 10 succeeds)
+12. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
 ```
 
 The `set-default` and `isolate` calls together ensure the user gets a console login on tty1 immediately after the uninstall, without needing to reboot. Without them, the system stays pinned to `graphical.target` with no DM behind it and the local console is blank.
+
+**Why the essential filter (step 9).** The remove path calls `apt-get -y purge` directly — **not** `pkg_remove` (which wraps `apt-get autopurge`). `autopurge` adds an orphan-cleanup cascade on top of the removal, and on fresh post-t64 images (trixie+, noble+) several shared libs pulled in alongside `e2fsprogs` (`libext2fs2t64`, `libss2`, `logsave`) are marked auto-installed. Once the DE is gone nothing manual depends on them, autopurge proposes to orphan-remove the whole chain, and apt 2.9+ / solver 3.0 vetoes the transaction with `E: Essential packages were removed and -y was used without --allow-remove-essential` — nothing actually gets removed. A plain `apt-get purge` avoids the cascade, and the manifest is already the complete list, so no cascade is needed.
+
+A separate case the filter catches: some base images (notably `armbian/repository-update:*-armhf` tags rebuilt from debian-slim) ship without `e2fsprogs` pre-installed. When a DE's install pulls in `dracut-install` or `gnome-disk-utility` transitively, those pull `e2fsprogs`, it lands in the manifest, and purging it would touch an Essential package. Step 9 simulates the purge, parses apt's essential-warning block (stripping `(due to X)` annotations), and drops every flagged name from the list before the real purge runs.
+
+On failure of step 10 the function returns 1 with the manifest left in place, so the next `remove` retries against the same list rather than falling into the less-precise YAML-walk path.
 
 ## Lifecycle: upgrade and downgrade
 
@@ -815,7 +855,7 @@ Report shape (`audit-report.json`):
 
 ```json
 {
-  "scanned_releases": ["bookworm", "noble", "plucky", "trixie"],
+  "scanned_releases": ["bookworm", "noble", "resolute", "trixie"],
   "build_distributions": { "<release>": { "name": "...", "support": "supported|csc|eos", "architectures": [...] } },
   "missing_releases": [ { "release": "resolute", "support_status": "csc", "architectures": [...] } ],
   "package_holes":    [ { "de": "xfce", "release": "trixie", "arch": "riscv64", "tier": "full", "missing": ["libfoo"] } ],
@@ -890,7 +930,7 @@ If Claude judged the report non-actionable (e.g. the only finding is a `csc`-tie
 
 ### packages_uninstall cascade
 
-Listing a package in `tiers.minimal.packages_uninstall` runs `apt-get remove --purge` on it after the install. If that package is a hard `Depends:` of any meta package the DE install pulled in, apt's autoremove cascade will yank the meta package along with it — and on systems with `APT::Get::AutomaticRemove "true"` (Ubuntu noble/plucky), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:
+Listing a package in `tiers.minimal.packages_uninstall` runs `apt-get remove --purge` on it after the install. If that package is a hard `Depends:` of any meta package the DE install pulled in, apt's autoremove cascade will yank the meta package along with it — and on systems with `APT::Get::AutomaticRemove "true"` (Ubuntu noble/resolute), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:
 
 - Listing any `xfce4-goodies` plugin (e.g. `xfce4-clipman-plugin`) yanks `xfce4-goodies` itself, then half the desktop.
 - Listing `language-selector-gnome` yanks `gnome-control-center` (which has it as a hard Depends on Ubuntu), so the user loses Settings.
