@@ -3015,8 +3015,8 @@
 <li><strong>Per-install manifest</strong> — every install records exactly which packages it added so removal and downgrades only undo what they themselves did.</li>
 <li><strong>Custom APT repositories</strong>, branding, group memberships, and skel sync.</li>
 <li><strong>Auto-login</strong> management for <code>gdm3</code>, <code>sddm</code>, and <code>lightdm</code>, with non-destructive in-place edits of the underlying config files.</li>
-<li><strong>Per-release / per-arch package overrides</strong> so the same YAML works across Debian bookworm/trixie and Ubuntu noble/plucky on amd64/arm64/armhf/riscv64 with different package availability.</li>
-<li><strong>Browser virtual token</strong> that resolves per-release-per-arch (chromium on Debian, epiphany-browser on Ubuntu, firefox-esr on Debian riscv64, …).</li>
+<li><strong>Per-release / per-arch package overrides</strong> so the same YAML works across Debian bookworm/trixie/forky/sid and Ubuntu jammy/noble/resolute on amd64/arm64/armhf/riscv64/loong64 with different package availability.</li>
+<li><strong>Browser virtual token</strong> that resolves per-release-per-arch (google-chrome-stable on amd64, chromium on Debian/Ubuntu arm arches, firefox-esr on Debian riscv64, epiphany-browser on Ubuntu riscv64, …).</li>
 <li><strong>Container/CI awareness</strong> so the same code path can be used inside Docker without trying to start a display manager.</li>
 </ul>
 <h2 id="tier-model">Tier model<a class="headerlink" href="#tier-model" title="Permanent link">&para;</a></h2>
@@ -3206,7 +3206,7 @@
 <td><code>releases</code></td>
 <td>mapping</td>
 <td>yes</td>
-<td>Per-release overrides keyed by release codename (<code>bookworm</code>, <code>trixie</code>, <code>noble</code>, <code>plucky</code>, &hellip;).</td>
+<td>Per-release overrides keyed by release codename (<code>bookworm</code>, <code>trixie</code>, <code>forky</code>, <code>sid</code>, <code>jammy</code>, <code>noble</code>, <code>resolute</code>, &hellip;).</td>
 </tr>
 <tr>
 <td><code>repo</code></td>
@@ -3513,90 +3513,116 @@
 </span></code></pre></div></td></tr></table></div>
 <h3 id="commonyaml">common.yaml<a class="headerlink" href="#commonyaml" title="Permanent link">&para;</a></h3>
 <p><code>common.yaml</code> carries the per-tier defaults that apply to every desktop, the browser substitution table, and any cross-DE <code>tier_overrides</code>. Per-DE YAMLs only declare a <code>tiers</code> block when they want to add packages on top of common or override common-tier entries.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">yaml/common.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span>
-<span class="normal"><a href="#__codelineno-7-28">28</a></span>
-<span class="normal"><a href="#__codelineno-7-29">29</a></span>
-<span class="normal"><a href="#__codelineno-7-30">30</a></span>
-<span class="normal"><a href="#__codelineno-7-31">31</a></span>
-<span class="normal"><a href="#__codelineno-7-32">32</a></span>
-<span class="normal"><a href="#__codelineno-7-33">33</a></span>
-<span class="normal"><a href="#__codelineno-7-34">34</a></span>
-<span class="normal"><a href="#__codelineno-7-35">35</a></span>
-<span class="normal"><a href="#__codelineno-7-36">36</a></span>
-<span class="normal"><a href="#__codelineno-7-37">37</a></span>
-<span class="normal"><a href="#__codelineno-7-38">38</a></span>
-<span class="normal"><a href="#__codelineno-7-39">39</a></span>
-<span class="normal"><a href="#__codelineno-7-40">40</a></span>
-<span class="normal"><a href="#__codelineno-7-41">41</a></span>
-<span class="normal"><a href="#__codelineno-7-42">42</a></span>
-<span class="normal"><a href="#__codelineno-7-43">43</a></span>
-<span class="normal"><a href="#__codelineno-7-44">44</a></span>
-<span class="normal"><a href="#__codelineno-7-45">45</a></span>
-<span class="normal"><a href="#__codelineno-7-46">46</a></span>
-<span class="normal"><a href="#__codelineno-7-47">47</a></span>
-<span class="normal"><a href="#__codelineno-7-48">48</a></span>
-<span class="normal"><a href="#__codelineno-7-49">49</a></span>
-<span class="normal"><a href="#__codelineno-7-50">50</a></span>
-<span class="normal"><a href="#__codelineno-7-51">51</a></span>
-<span class="normal"><a href="#__codelineno-7-52">52</a></span>
-<span class="normal"><a href="#__codelineno-7-53">53</a></span>
-<span class="normal"><a href="#__codelineno-7-54">54</a></span>
-<span class="normal"><a href="#__codelineno-7-55">55</a></span>
-<span class="normal"><a href="#__codelineno-7-56">56</a></span>
-<span class="normal"><a href="#__codelineno-7-57">57</a></span>
-<span class="normal"><a href="#__codelineno-7-58">58</a></span>
-<span class="normal"><a href="#__codelineno-7-59">59</a></span>
-<span class="normal"><a href="#__codelineno-7-60">60</a></span>
-<span class="normal"><a href="#__codelineno-7-61">61</a></span>
-<span class="normal"><a href="#__codelineno-7-62">62</a></span>
-<span class="normal"><a href="#__codelineno-7-63">63</a></span>
-<span class="normal"><a href="#__codelineno-7-64">64</a></span>
-<span class="normal"><a href="#__codelineno-7-65">65</a></span>
-<span class="normal"><a href="#__codelineno-7-66">66</a></span>
-<span class="normal"><a href="#__codelineno-7-67">67</a></span>
-<span class="normal"><a href="#__codelineno-7-68">68</a></span>
-<span class="normal"><a href="#__codelineno-7-69">69</a></span>
-<span class="normal"><a href="#__codelineno-7-70">70</a></span>
-<span class="normal"><a href="#__codelineno-7-71">71</a></span>
-<span class="normal"><a href="#__codelineno-7-72">72</a></span>
-<span class="normal"><a href="#__codelineno-7-73">73</a></span>
-<span class="normal"><a href="#__codelineno-7-74">74</a></span>
-<span class="normal"><a href="#__codelineno-7-75">75</a></span>
-<span class="normal"><a href="#__codelineno-7-76">76</a></span>
-<span class="normal"><a href="#__codelineno-7-77">77</a></span>
-<span class="normal"><a href="#__codelineno-7-78">78</a></span>
-<span class="normal"><a href="#__codelineno-7-79">79</a></span>
-<span class="normal"><a href="#__codelineno-7-80">80</a></span>
-<span class="normal"><a href="#__codelineno-7-81">81</a></span>
-<span class="normal"><a href="#__codelineno-7-82">82</a></span>
-<span class="normal"><a href="#__codelineno-7-83">83</a></span>
-<span class="normal"><a href="#__codelineno-7-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">common</span>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">yaml/common.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-7-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-7-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-7-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-7-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-7-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-7-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-7-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-7-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-7-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-7-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-7-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-7-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-7-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-7-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-7-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-7-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-7-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-7-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-7-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-7-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-7-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-7-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-7-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-7-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-7-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-7-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-7-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-7-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-7-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-7-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-7-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-7-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-7-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-7-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-7-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-7-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-7-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-7-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-7-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-7-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-7-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-7-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-7-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-7-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-7-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-7-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-7-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-7-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-7-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-7-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-7-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-7-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-7-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-7-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-7-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-7-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-7-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-7-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-7-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-7-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-7-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-7-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-7-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-7-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-7-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-7-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-7-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-7-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-7-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-7-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-7-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-7-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-7-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-7-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-7-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-7-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-7-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-7-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-7-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-7-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-7-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-7-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-7-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-7-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-7-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-7-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-7-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-7-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-7-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-7-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-7-100">100</a></span>
+<span class="normal"><a href="#__codelineno-7-101">101</a></span>
+<span class="normal"><a href="#__codelineno-7-102">102</a></span>
+<span class="normal"><a href="#__codelineno-7-103">103</a></span>
+<span class="normal"><a href="#__codelineno-7-104">104</a></span>
+<span class="normal"><a href="#__codelineno-7-105">105</a></span>
+<span class="normal"><a href="#__codelineno-7-106">106</a></span>
+<span class="normal"><a href="#__codelineno-7-107">107</a></span>
+<span class="normal"><a href="#__codelineno-7-108">108</a></span>
+<span class="normal"><a href="#__codelineno-7-109">109</a></span>
+<span class="normal"><a href="#__codelineno-7-110">110</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">common</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Packages</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">every</span><span class="nv"> </span><span class="s">desktop,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">tiers&quot;</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nt">tiers</span><span class="p">:</span>
@@ -3628,58 +3654,84 @@
 </span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30"></a>
 </span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="nt">browser</span><span class="p">:</span>
 </span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">  </span><span class="nt">bookworm</span><span class="p">:</span>
-</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
 </span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
 </span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
-</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">  </span><span class="nt">trixie</span><span class="p">:</span>
-</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
-</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
-</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
-</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firefox-esr</span><span class="w">     </span><span class="c1"># &#39;firefox&#39; does not exist in Debian</span>
-</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="w">  </span><span class="nt">noble</span><span class="p">:</span>
-</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span><span class="w">    </span><span class="c1"># &#39;chromium&#39; deb is a snap-shim</span>
-</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">  </span><span class="nt">plucky</span><span class="p">:</span>
-</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
-</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51"></a>
-</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="nt">tier_overrides</span><span class="p">:</span>
-</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">  </span><span class="nt">mid</span><span class="p">:</span>
-</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54"></a><span class="w">    </span><span class="nt">releases</span><span class="p">:</span>
-</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55"></a><span class="w">      </span><span class="nt">bookworm</span><span class="p">:</span>
-</span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57"></a><span class="w">          </span><span class="nt">amd64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w">   </span><span class="c1"># GNOME 43 era — no loupe</span>
-</span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58"></a><span class="w">          </span><span class="nt">arm64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-60"><a id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="w">      </span><span class="nt">plucky</span><span class="p">:</span>
-</span><span id="__span-7-61"><a id="__codelineno-7-61" name="__codelineno-7-61"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-62"><a id="__codelineno-7-62" name="__codelineno-7-62"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w">   </span><span class="c1"># dropped on plucky/armhf</span>
-</span><span id="__span-7-63"><a id="__codelineno-7-63" name="__codelineno-7-63"></a><span class="w">  </span><span class="nt">full</span><span class="p">:</span>
-</span><span id="__span-7-64"><a id="__codelineno-7-64" name="__codelineno-7-64"></a><span class="w">    </span><span class="nt">releases</span><span class="p">:</span>
-</span><span id="__span-7-65"><a id="__codelineno-7-65" name="__codelineno-7-65"></a><span class="w">      </span><span class="nt">bookworm</span><span class="p">:</span>
-</span><span id="__span-7-66"><a id="__codelineno-7-66" name="__codelineno-7-66"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-67"><a id="__codelineno-7-67" name="__codelineno-7-67"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-68"><a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="w">      </span><span class="nt">trixie</span><span class="p">:</span>
-</span><span id="__span-7-69"><a id="__codelineno-7-69" name="__codelineno-7-69"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-70"><a id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-71"><a id="__codelineno-7-71" name="__codelineno-7-71"></a><span class="w">      </span><span class="nt">noble</span><span class="p">:</span>
-</span><span id="__span-7-72"><a id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="w">        </span><span class="c1"># thunderbird on Ubuntu is a snap-shim that requires snapd</span>
-</span><span id="__span-7-73"><a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="w">        </span><span class="c1"># which Armbian doesn&#39;t ship — strip it on every arch.</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">    </span><span class="c1"># bookworm has no riscv64 port — no entry needed</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">  </span><span class="nt">trixie</span><span class="p">:</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firefox-esr</span><span class="w">            </span><span class="c1"># &#39;firefox&#39; does not exist in Debian</span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">  </span><span class="nt">noble</span><span class="p">:</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span><span class="w">               </span><span class="c1"># apt.armbian.com real .deb (Ubuntu&#39;s is snap-shim)</span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span><span class="w">       </span><span class="c1"># firefox/chromium not built for Ubuntu riscv64</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">  </span><span class="nt">resolute</span><span class="p">:</span>
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epiphany-browser</span>
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">  </span><span class="nt">forky</span><span class="p">:</span>
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firefox-esr</span>
+</span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57"></a><span class="w">  </span><span class="nt">sid</span><span class="p">:</span>
+</span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58"></a><span class="w">    </span><span class="nt">amd64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">google-chrome-stable</span>
+</span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59"></a><span class="w">    </span><span class="nt">arm64</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-60"><a id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="w">    </span><span class="nt">armhf</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">chromium</span>
+</span><span id="__span-7-61"><a id="__codelineno-7-61" name="__codelineno-7-61"></a><span class="w">    </span><span class="nt">riscv64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firefox-esr</span>
+</span><span id="__span-7-62"><a id="__codelineno-7-62" name="__codelineno-7-62"></a><span class="w">    </span><span class="nt">loong64</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firefox-esr</span><span class="w">            </span><span class="c1"># chromium not yet built for loong64</span>
+</span><span id="__span-7-63"><a id="__codelineno-7-63" name="__codelineno-7-63"></a>
+</span><span id="__span-7-64"><a id="__codelineno-7-64" name="__codelineno-7-64"></a><span class="nt">tier_overrides</span><span class="p">:</span>
+</span><span id="__span-7-65"><a id="__codelineno-7-65" name="__codelineno-7-65"></a><span class="w">  </span><span class="nt">mid</span><span class="p">:</span>
+</span><span id="__span-7-66"><a id="__codelineno-7-66" name="__codelineno-7-66"></a><span class="w">    </span><span class="c1"># armbian-imager ships only amd64/arm64 upstream — strip it on</span>
+</span><span id="__span-7-67"><a id="__codelineno-7-67" name="__codelineno-7-67"></a><span class="w">    </span><span class="c1"># every other arch, across every release.</span>
+</span><span id="__span-7-68"><a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="w">    </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-69"><a id="__codelineno-7-69" name="__codelineno-7-69"></a><span class="w">      </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">armbian-imager</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-70"><a id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="w">      </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">armbian-imager</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-71"><a id="__codelineno-7-71" name="__codelineno-7-71"></a><span class="w">      </span><span class="nt">loong64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">armbian-imager</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-72"><a id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="w">    </span><span class="nt">releases</span><span class="p">:</span>
+</span><span id="__span-7-73"><a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="w">      </span><span class="nt">bookworm</span><span class="p">:</span>
 </span><span id="__span-7-74"><a id="__codelineno-7-74" name="__codelineno-7-74"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-75"><a id="__codelineno-7-75" name="__codelineno-7-75"></a><span class="w">          </span><span class="nt">amd64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-76"><a id="__codelineno-7-76" name="__codelineno-7-76"></a><span class="w">          </span><span class="nt">arm64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-77"><a id="__codelineno-7-77" name="__codelineno-7-77"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-78"><a id="__codelineno-7-78" name="__codelineno-7-78"></a><span class="w">          </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-79"><a id="__codelineno-7-79" name="__codelineno-7-79"></a><span class="w">      </span><span class="nt">plucky</span><span class="p">:</span>
-</span><span id="__span-7-80"><a id="__codelineno-7-80" name="__codelineno-7-80"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
-</span><span id="__span-7-81"><a id="__codelineno-7-81" name="__codelineno-7-81"></a><span class="w">          </span><span class="nt">amd64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-82"><a id="__codelineno-7-82" name="__codelineno-7-82"></a><span class="w">          </span><span class="nt">arm64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-83"><a id="__codelineno-7-83" name="__codelineno-7-83"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-84"><a id="__codelineno-7-84" name="__codelineno-7-84"></a><span class="w">          </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-75"><a id="__codelineno-7-75" name="__codelineno-7-75"></a><span class="w">          </span><span class="nt">amd64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w">   </span><span class="c1"># GNOME 43 era — no loupe</span>
+</span><span id="__span-7-76"><a id="__codelineno-7-76" name="__codelineno-7-76"></a><span class="w">          </span><span class="nt">arm64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-77"><a id="__codelineno-7-77" name="__codelineno-7-77"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-78"><a id="__codelineno-7-78" name="__codelineno-7-78"></a><span class="w">      </span><span class="nt">jammy</span><span class="p">:</span>
+</span><span id="__span-7-79"><a id="__codelineno-7-79" name="__codelineno-7-79"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-80"><a id="__codelineno-7-80" name="__codelineno-7-80"></a><span class="w">          </span><span class="nt">amd64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="c1"># GNOME 42 — no loupe</span>
+</span><span id="__span-7-81"><a id="__codelineno-7-81" name="__codelineno-7-81"></a><span class="w">          </span><span class="nt">arm64</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-82"><a id="__codelineno-7-82" name="__codelineno-7-82"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-83"><a id="__codelineno-7-83" name="__codelineno-7-83"></a><span class="w">          </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">loupe</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-84"><a id="__codelineno-7-84" name="__codelineno-7-84"></a><span class="w">  </span><span class="nt">full</span><span class="p">:</span>
+</span><span id="__span-7-85"><a id="__codelineno-7-85" name="__codelineno-7-85"></a><span class="w">    </span><span class="c1"># The &#39;code&#39; (VSCode) .deb on apt.armbian.com links against the</span>
+</span><span id="__span-7-86"><a id="__codelineno-7-86" name="__codelineno-7-86"></a><span class="w">    </span><span class="c1"># pre-t64 library names, which don&#39;t exist on post-t64 releases</span>
+</span><span id="__span-7-87"><a id="__codelineno-7-87" name="__codelineno-7-87"></a><span class="w">    </span><span class="c1"># (trixie+, noble+). amd64/arm64 were rebuilt; armhf wasn&#39;t. No</span>
+</span><span id="__span-7-88"><a id="__codelineno-7-88" name="__codelineno-7-88"></a><span class="w">    </span><span class="c1"># riscv64 upstream build exists at all. Strip arch-wide on both</span>
+</span><span id="__span-7-89"><a id="__codelineno-7-89" name="__codelineno-7-89"></a><span class="w">    </span><span class="c1"># until/unless the armhf .deb is refreshed.</span>
+</span><span id="__span-7-90"><a id="__codelineno-7-90" name="__codelineno-7-90"></a><span class="w">    </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-91"><a id="__codelineno-7-91" name="__codelineno-7-91"></a><span class="w">      </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">code</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-92"><a id="__codelineno-7-92" name="__codelineno-7-92"></a><span class="w">      </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">code</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-93"><a id="__codelineno-7-93" name="__codelineno-7-93"></a><span class="w">    </span><span class="nt">releases</span><span class="p">:</span>
+</span><span id="__span-7-94"><a id="__codelineno-7-94" name="__codelineno-7-94"></a><span class="w">      </span><span class="nt">bookworm</span><span class="p">:</span>
+</span><span id="__span-7-95"><a id="__codelineno-7-95" name="__codelineno-7-95"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-96"><a id="__codelineno-7-96" name="__codelineno-7-96"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-97"><a id="__codelineno-7-97" name="__codelineno-7-97"></a><span class="w">      </span><span class="nt">trixie</span><span class="p">:</span>
+</span><span id="__span-7-98"><a id="__codelineno-7-98" name="__codelineno-7-98"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-99"><a id="__codelineno-7-99" name="__codelineno-7-99"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-100"><a id="__codelineno-7-100" name="__codelineno-7-100"></a><span class="w">      </span><span class="nt">noble</span><span class="p">:</span>
+</span><span id="__span-7-101"><a id="__codelineno-7-101" name="__codelineno-7-101"></a><span class="w">        </span><span class="c1"># thunderbird on Ubuntu noble armhf/riscv64 is absent (no</span>
+</span><span id="__span-7-102"><a id="__codelineno-7-102" name="__codelineno-7-102"></a><span class="w">        </span><span class="c1"># upstream Ubuntu deb there), so strip on those two arches</span>
+</span><span id="__span-7-103"><a id="__codelineno-7-103" name="__codelineno-7-103"></a><span class="w">        </span><span class="c1"># only. amd64/arm64 get the real .deb from apt.armbian.com.</span>
+</span><span id="__span-7-104"><a id="__codelineno-7-104" name="__codelineno-7-104"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-105"><a id="__codelineno-7-105" name="__codelineno-7-105"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-106"><a id="__codelineno-7-106" name="__codelineno-7-106"></a><span class="w">          </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-107"><a id="__codelineno-7-107" name="__codelineno-7-107"></a><span class="w">      </span><span class="nt">resolute</span><span class="p">:</span>
+</span><span id="__span-7-108"><a id="__codelineno-7-108" name="__codelineno-7-108"></a><span class="w">        </span><span class="nt">architectures</span><span class="p">:</span>
+</span><span id="__span-7-109"><a id="__codelineno-7-109" name="__codelineno-7-109"></a><span class="w">          </span><span class="nt">armhf</span><span class="p">:</span><span class="w">    </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-110"><a id="__codelineno-7-110" name="__codelineno-7-110"></a><span class="w">          </span><span class="nt">riscv64</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> packages_remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">thunderbird</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="browser-virtual-token">Browser virtual token<a class="headerlink" href="#browser-virtual-token" title="Permanent link">&para;</a></h3>
 <p>The literal string <code>browser</code> inside any tier block resolves to a real package name from the <code>browser:</code> map at parse time. Lookup order:</p>
@@ -3691,9 +3743,12 @@
 <p>The per-release layer is needed because the same arch can resolve differently across releases:</p>
 <ul>
 <li>Debian has <code>firefox-esr</code> but <strong>no</strong> <code>firefox</code> package.</li>
-<li>Ubuntu&rsquo;s <code>chromium</code> deb is a snap-shim wrapper that requires <code>snapd</code>. Armbian doesn&rsquo;t ship snapd, so the shim is broken at runtime — substitute a real GTK browser instead. <code>epiphany-browser</code> (GNOME Web) is small, native deb, and available on every Ubuntu arch.</li>
+<li>Ubuntu&rsquo;s <code>chromium</code> / <code>firefox</code> debs are snap-shim wrappers that require <code>snapd</code>. Armbian doesn&rsquo;t ship snapd, so the shims are broken at runtime — apt.armbian.com hosts real <code>chromium</code> / <code>firefox</code> / <code>google-chrome-stable</code> .debs used instead.</li>
+<li>amd64 always gets <code>google-chrome-stable</code> (Google publishes no arm/riscv builds, so this is amd64-only).</li>
 <li><code>chromium</code> isn&rsquo;t built for riscv64 in either Debian or Ubuntu.</li>
-<li><code>firefox</code> isn&rsquo;t built for noble/plucky riscv64 either.</li>
+<li>Ubuntu doesn&rsquo;t publish <code>firefox</code> or <code>firefox-esr</code> for riscv64 (Mozilla has no riscv64 binaries, and <code>firefox-esr</code> is a Debian-only package name). Fall back to <code>epiphany-browser</code> (GNOME Web) there — native GTK, small, and available on every Ubuntu arch.</li>
+<li>Debian riscv64 gets <code>firefox-esr</code> because the Debian archive does publish it for riscv64.</li>
+<li><code>loong64</code> is only declared for <code>sid</code> in the inventory; <code>chromium</code> isn&rsquo;t built there yet either, so it uses <code>firefox-esr</code>.</li>
 </ul>
 <h2 id="python-helper-parse_desktop_yamlpy">Python helper: parse_desktop_yaml.py<a class="headerlink" href="#python-helper-parse_desktop_yamlpy" title="Permanent link">&para;</a></h2>
 <p>Single-purpose CLI that bash modules invoke via <code>python3</code>. All YAML parsing and validation happens here so the bash side stays free of YAML logic.</p>
@@ -4130,22 +4185,30 @@
 <p><strong><code>mode=build</code></strong> is used by the Armbian build framework at image-creation time. At that point the rootfs has no regular user (armbian-firstrun creates the first user on first boot), and DM/systemd operations make no sense inside a chroot. The packages, branding, manifests, and <code>/etc/skel</code> all land correctly; the first user inherits skel at <code>useradd</code> time and armbian-firstrun manages <code>graphical.target</code>.</p>
 <p>If step 11 or 12 fails, the function returns 1 with no further state changes — the manifest is not written, <code>default.target</code> stays at <code>multi-user</code>, no DM is started. The system is in the same state as if the install had never run.</p>
 <h2 id="lifecycle-remove">Lifecycle: remove<a class="headerlink" href="#lifecycle-remove" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>1.  Validate args                 de= required
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>2.  Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>3.  Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a> 1. Validate args                 de= required
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a> 2. Read installed tier marker    /etc/armbian/desktop/&lt;de&gt;.tier (default: minimal)
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a> 3. Parse YAML at the installed   module_desktop_yamlparse $de $arch $release $installed_tier
 </span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    tier
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>4.  Disable auto-login            module_desktops manual de=$de
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>5.  Stop display manager          systemctl stop display-manager
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>6.  Switch default.target         systemctl set-default multi-user.target
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>7.  Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a> 4. Disable auto-login            module_desktops manual de=$de
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a> 5. Stop display manager          systemctl stop display-manager
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a> 6. Switch default.target         systemctl set-default multi-user.target
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a> 7. Isolate to multi-user         systemctl isolate multi-user.target  (drops running session
 </span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>                                  to console immediately, no reboot needed)
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>8.  Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a> 8. Compute removable set         from /etc/armbian/desktop/&lt;de&gt;.packages
 </span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>                                  fallback: walk DESKTOP_PACKAGES through dpkg-query
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>9.  pkg_remove                    apt-get autopurge
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>10. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>11. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a> 9. Filter out essentials         apt-get -s -y purge &lt;list&gt;  (simulation, stderr parsed)
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>                                  every package apt flags under &quot;WARNING: The following
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>                                  essential packages will be removed&quot; is dropped from
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>                                  the removable set — see note below
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>10. Purge remaining set           apt-get -y purge &lt;filtered list&gt;   ← bail on failure,
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>                                  manifest preserved for retry
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>11. Delete manifest files         rm /etc/armbian/desktop/&lt;de&gt;.{packages,tier}  (only after 10 succeeds)
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>12. pkg_clean                     apt-get clean — reclaim downloaded .deb cache
 </span></code></pre></div>
 <p>The <code>set-default</code> and <code>isolate</code> calls together ensure the user gets a console login on tty1 immediately after the uninstall, without needing to reboot. Without them, the system stays pinned to <code>graphical.target</code> with no DM behind it and the local console is blank.</p>
+<p><strong>Why the essential filter (step 9).</strong> The remove path calls <code>apt-get -y purge</code> directly — <strong>not</strong> <code>pkg_remove</code> (which wraps <code>apt-get autopurge</code>). <code>autopurge</code> adds an orphan-cleanup cascade on top of the removal, and on fresh post-t64 images (trixie+, noble+) several shared libs pulled in alongside <code>e2fsprogs</code> (<code>libext2fs2t64</code>, <code>libss2</code>, <code>logsave</code>) are marked auto-installed. Once the DE is gone nothing manual depends on them, autopurge proposes to orphan-remove the whole chain, and apt 2.9+ / solver 3.0 vetoes the transaction with <code>E: Essential packages were removed and -y was used without --allow-remove-essential</code> — nothing actually gets removed. A plain <code>apt-get purge</code> avoids the cascade, and the manifest is already the complete list, so no cascade is needed.</p>
+<p>A separate case the filter catches: some base images (notably <code>armbian/repository-update:*-armhf</code> tags rebuilt from debian-slim) ship without <code>e2fsprogs</code> pre-installed. When a DE&rsquo;s install pulls in <code>dracut-install</code> or <code>gnome-disk-utility</code> transitively, those pull <code>e2fsprogs</code>, it lands in the manifest, and purging it would touch an Essential package. Step 9 simulates the purge, parses apt&rsquo;s essential-warning block (stripping <code>(due to X)</code> annotations), and drops every flagged name from the list before the real purge runs.</p>
+<p>On failure of step 10 the function returns 1 with the manifest left in place, so the next <code>remove</code> retries against the same list rather than falling into the less-precise YAML-walk path.</p>
 <h2 id="lifecycle-upgrade-and-downgrade">Lifecycle: upgrade and downgrade<a class="headerlink" href="#lifecycle-upgrade-and-downgrade" title="Permanent link">&para;</a></h2>
 <p><code>upgrade</code> and <code>downgrade</code> are the two halves of <code>_module_desktops_change_tier</code>:</p>
 <div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>1.  Validate args                 de= and tier= required; tier must be minimal|mid|full
@@ -4318,7 +4381,7 @@
 <span class="normal"><a href="#__codelineno-27-6">6</a></span>
 <span class="normal"><a href="#__codelineno-27-7">7</a></span>
 <span class="normal"><a href="#__codelineno-27-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="p">{</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="nt">&quot;scanned_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bookworm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noble&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plucky&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">],</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="nt">&quot;scanned_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bookworm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noble&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;resolute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">],</span>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">  </span><span class="nt">&quot;build_distributions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;&lt;release&gt;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;supported|csc|eos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">  </span><span class="nt">&quot;missing_releases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;resolute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;support_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csc&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;architectures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
 </span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">  </span><span class="nt">&quot;package_holes&quot;</span><span class="p">:</span><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;de&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xfce&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;trixie&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;arch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;riscv64&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;libfoo&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
@@ -4383,7 +4446,7 @@
 <p>If Claude judged the report non-actionable (e.g. the only finding is a <code>csc</code>-tier release a maintainer wants to hold off on), the run ends with the <code>audit-report</code> artifact present and no PR — inspect the artifact and the <code>claude-execution-output</code> log to confirm.</p>
 <h2 id="common-pitfalls">Common pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
 <h3 id="packages_uninstall-cascade">packages_uninstall cascade<a class="headerlink" href="#packages_uninstall-cascade" title="Permanent link">&para;</a></h3>
-<p>Listing a package in <code>tiers.minimal.packages_uninstall</code> runs <code>apt-get remove --purge</code> on it after the install. If that package is a hard <code>Depends:</code> of any meta package the DE install pulled in, apt&rsquo;s autoremove cascade will yank the meta package along with it — and on systems with <code>APT::Get::AutomaticRemove "true"</code> (Ubuntu noble/plucky), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:</p>
+<p>Listing a package in <code>tiers.minimal.packages_uninstall</code> runs <code>apt-get remove --purge</code> on it after the install. If that package is a hard <code>Depends:</code> of any meta package the DE install pulled in, apt&rsquo;s autoremove cascade will yank the meta package along with it — and on systems with <code>APT::Get::AutomaticRemove "true"</code> (Ubuntu noble/resolute), the cascade keeps going and rips out a chunk of the desktop. Real examples that bit us:</p>
 <ul>
 <li>Listing any <code>xfce4-goodies</code> plugin (e.g. <code>xfce4-clipman-plugin</code>) yanks <code>xfce4-goodies</code> itself, then half the desktop.</li>
 <li>Listing <code>language-selector-gnome</code> yanks <code>gnome-control-center</code> (which has it as a hard Depends on Ubuntu), so the user loses Settings.</li>
