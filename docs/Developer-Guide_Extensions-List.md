@@ -68,6 +68,12 @@ Sets up Bluetooth via `hciattach` for boards that require serial attachment.
 
 ---
 
+## brostrend-aic8800-dkms
+
+Installs the AIC8800 WiFi/BT DKMS driver for BroStrend USB adapters. Fetches the latest `aic8800-dkms` release from `Shadowrom2020/aic8800-dkms` GitHub and builds the kernel module in the chroot. Forces `INSTALL_HEADERS=yes` — requires a kernel with working headers package.
+
+---
+
 ## c-plus-plus-compiler
 
 Adds a C++ compiler to host build dependencies. The C++ compiler is no longer included by default; enable this extension when the build requires it.
@@ -136,6 +142,12 @@ Adds XFS filesystem support. Auto-enabled when `ROOTFS_TYPE=xfs`.
 
 ---
 
+## gateway-dk-ask
+
+NXP ASK (Application Solutions Kit) integration for the Mono Gateway Development Kit (LS1046A). Builds ASK kernel modules (CDX, FCI, auto-bridge, sfp-led, lp5812) in-tree with the kernel and packages userspace tools (`fmlib`, `fmc`, `libfci`, `libcli`, `dpa-app`, `cmm`) plus patched system libraries and configs into a single `.deb`. Requires iptables at runtime.
+
+---
+
 ## gen-sample-extension-docs
 
 Generates extension hook documentation and a sample extension file. Useful for extension developers.
@@ -144,13 +156,13 @@ Generates extension hook documentation and a sample extension file. Useful for e
 
 ## grub
 
-Standard GRUB bootloader setup for UEFI-capable boards. Supports `DISTRO_GENERIC_KERNEL` mode.
+Standard GRUB bootloader setup for UEFI-capable boards. Supports `DISTRO_GENERIC_KERNEL` mode (uses distro kernel instead of Armbian's). Sets `GRUB_GFXPAYLOAD_LINUX=text` to keep the framebuffer console bound to `fbcon` (prevents a black local console after Plymouth quits on CLI installs), passes `splash plymouth.ignore-serial-consoles` so kernel boot messages remain visible while Plymouth draws the splash on the framebuffer. Deliberately omits `quiet` and `loglevel=3`, and disables Ubuntu's `vt.handoff=7` injection.
 
 ---
 
 ## grub-riscv64
 
-GRUB bootloader setup for RISC-V 64-bit boards.
+GRUB bootloader setup for RISC-V 64-bit boards. Mirrors the console/splash cmdline conventions of the `grub` extension.
 
 ---
 
@@ -169,6 +181,12 @@ Builds the `gxlimg` tool used for creating Amlogic bootable images.
 ## image-output-abl
 
 Converts the output image to ABL (Android Boot Loader) format using `mkbootimg`.
+
+---
+
+## image-output-arduino
+
+Converts the Armbian image into a QDL-flashable archive for Arduino UNO Q (Qualcomm QRB2210). Fetches Qualcomm flash binaries during image creation.
 
 ---
 
@@ -216,7 +234,7 @@ Adds USB Mass Storage (UMS) gadget support to the initramfs, allowing the board 
 
 ## jethub-burn
 
-Adds JetHub device flashing support to the build.
+Automatically converts the Armbian `.img` into a JetHub burn image after the main build.
 
 ---
 
@@ -320,6 +338,12 @@ Applies preset first-run configuration specific to the Odin2 gaming device.
 
 ---
 
+## photonicat-pm
+
+Installs the `photonicat-pm` DKMS power-management driver for the Ariaboard Photonicat router. Fetches the latest release from `HackingGate/photonicat-pm` GitHub and builds the kernel module in chroot. Skipped on kernels ≥ 6.20. Requires working kernel headers.
+
+---
+
 ## preset-firstrun
 
 Applies preset network and first-run configuration to the image (writes `.not_logged_in_yet`).
@@ -365,6 +389,12 @@ Installs Texas Instruments packages from the official TI Debian package reposito
 ## u-boot-menu
 
 Configures the U-Boot boot menu for boards that support it.
+
+---
+
+## uboot-binman-fix-pkg-resources
+
+Patches U-Boot's `binman` tool to use `importlib.resources` instead of `pkg_resources`, restoring build compatibility on hosts with `setuptools >= 82` (which removed `pkg_resources`). Covers U-Boot v2024.x–v2025.04.
 
 ---
 
