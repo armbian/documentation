@@ -137,6 +137,19 @@ Enables automatic background updates of Docker build images via a system cronjob
     - `/etc/cron.d/armbian-docker-pull` - cronjob (runs at 00:00 and 12:00)
     - `/var/lib/armbian/docker-pull.hash` - configuration hash for update detection
 
+**DOCKER_PRUNE** ( `string` )
+
+- `yes`: prune old Armbian build images from the local Docker daemon at the start of each build
+- `no` (default): leave existing images in place
+
+Whether the build framework automatically reclaims disk space by removing old Armbian build images during setup. Off by default — safe for hosts where multiple build invocations share one Docker daemon (typical for a server running several self-hosted GitHub Actions runners on the same machine), since concurrent pruning can race with another invocation that is still committing a freshly built image and surface as `failed to get digest sha256:…: no such file or directory`, aborting the in-flight build.
+
+Set to `yes` on single-host setups where automatic disk reclaim is desirable.
+
+!!! warning "Behaviour change"
+
+    Earlier releases ran the cleanup unconditionally. The default is now `no`; users who relied on the automatic reclaim need to set `DOCKER_PRUNE=yes` explicitly.
+
 - **CI** ( `string` )
   - true
   - **false**
