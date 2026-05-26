@@ -34,7 +34,11 @@ Enables Armbian Package Archive (APA) in the target image by default.
 
 ## arm64-compat-vdso
 
-Enables 32-bit compat vDSO for arm64 kernels. Requires a 32-bit ARM cross-compiler for GCC builds (`gcc-arm-linux-gnueabi` or custom `CROSS_COMPILE_COMPAT`). For clang builds uses the built-in LLVM backend.
+Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](Developer-Guide_Build-Switches.md#prefer_native_armhf).
+
+Requires a 32-bit ARM cross-compiler for GCC builds (`gcc-arm-linux-gnueabi` or custom `CROSS_COMPILE_COMPAT`). For clang builds uses the built-in LLVM backend.
+
+Limitation: aarch64 silicon without 32-bit ARM userspace support at EL0 (notably Apple M-series) cannot run armhf even with this kernel option enabled.
 
 ---
 
