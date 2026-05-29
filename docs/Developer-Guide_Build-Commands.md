@@ -18,6 +18,15 @@ Usage:
 ./compile.sh kernel-config BOARD=nanopi-r5c BRANCH=edge
 ```
 
+### rewrite-kernel-config
+
+Automatically validates kernel config changes and dependency chains. After manually editing the config for a given family and branch this is needed to ensure the config change will persist our CI.
+
+Usage:
+```bash
+./compile.sh rewrite-kernel-config BOARD=xxxxx BRANCH=current
+```
+
 ### dts-check
 
 Validate dts files and improve board & patch development overall.
