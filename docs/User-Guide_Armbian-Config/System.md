@@ -787,6 +787,160 @@ armbian-config --cmd KDEP09
 
 
 
+#### Budgie [CSC]
+
+
+Install Budgie [CSC]
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/BDGE01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/BDGE01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd BDGE01
+~~~
+
+
+~~~ bash title="Uninstall Budgie [CSC]:"
+armbian-config --cmd BDGE02
+~~~
+
+
+~~~ bash title="Enable autologin (Budgie) [CSC]:"
+armbian-config --cmd BDGE03
+~~~
+
+
+~~~ bash title="Disable autologin (Budgie) [CSC]:"
+armbian-config --cmd BDGE04
+~~~
+
+
+
+
+
+#### Deepin [CSC]
+
+
+Install Deepin [CSC]
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DEEP01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/DEEP01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd DEEP01
+~~~
+
+
+~~~ bash title="Uninstall Deepin [CSC]:"
+armbian-config --cmd DEEP02
+~~~
+
+
+~~~ bash title="Enable autologin (Deepin) [CSC]:"
+armbian-config --cmd DEEP03
+~~~
+
+
+~~~ bash title="Disable autologin (Deepin) [CSC]:"
+armbian-config --cmd DEEP04
+~~~
+
+
+
+
+
+#### Enlightenment [CSC]
+
+
+Install Enlightenment [CSC]
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ENLT01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ENLT01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd ENLT01
+~~~
+
+
+~~~ bash title="Uninstall Enlightenment [CSC]:"
+armbian-config --cmd ENLT02
+~~~
+
+
+~~~ bash title="Enable autologin (Enlightenment) [CSC]:"
+armbian-config --cmd ENLT03
+~~~
+
+
+~~~ bash title="Disable autologin (Enlightenment) [CSC]:"
+armbian-config --cmd ENLT04
+~~~
+
+
+
+
+
+#### Bianbu [CSC]
+
+
+Install Bianbu (minimal) [CSC]
+
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/BIAN01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/BIAN01-header.md)  
+__Status:__ Stable  
+
+~~~ custombash
+armbian-config --cmd BIAN01
+~~~
+
+
+~~~ bash title="Bianbu mid [CSC]:"
+armbian-config --cmd BIAN05
+~~~
+
+
+~~~ bash title="Bianbu full [CSC]:"
+armbian-config --cmd BIAN06
+~~~
+
+
+~~~ bash title="Uninstall Bianbu:"
+armbian-config --cmd BIAN02
+~~~
+
+
+~~~ bash title="Enable autologin (Bianbu):"
+armbian-config --cmd BIAN03
+~~~
+
+
+~~~ bash title="Disable autologin (Bianbu):"
+armbian-config --cmd BIAN04
+~~~
+
+
+~~~ bash title="Change Bianbu to minimal:"
+armbian-config --cmd BIAN07
+~~~
+
+
+~~~ bash title="Change Bianbu to mid:"
+armbian-config --cmd BIAN08
+~~~
+
+
+~~~ bash title="Change Bianbu to full:"
+armbian-config --cmd BIAN09
+~~~
+
+
+
+
+
+
+
+
+
+
 #### XFCE
 
 

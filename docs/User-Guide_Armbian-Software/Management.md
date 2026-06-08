@@ -245,6 +245,78 @@ armbian-config --cmd NBOX03
 
 
 
+## apt-cacher-ng
+
+
+apt-cacher-ng caching proxy install
+
+
+<!--- header START from tools/include/markdown/APT001-header.md --->
+**apt-cacher-ng** is a caching HTTP proxy for Debian and Ubuntu apt repositories. The first host on the LAN to fetch a `.deb` populates the cache; every subsequent `apt-get install` / `apt-get dist-upgrade` on any other host serves the same package from local disk — saving WAN bandwidth and turning multi-minute upgrades into seconds.
+
+**Key Features**
+
+- Transparent HTTP proxy in front of `deb.debian.org` / `archive.ubuntu.com` / vendor mirrors
+- Single-port (`3142`), single-container deployment
+- Per-package hit-rate report at `/acng-report.html`
+- Survives container restart — cache lives on a host bind-mount
+
+<!--- header STOP from tools/include/markdown/APT001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/APT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/APT001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://www.unix-ag.uni-kl.de/~bloch/acng/)  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+
+~~~ custombash
+armbian-config --cmd APT001
+~~~
+
+
+<!--- footer START from tools/include/markdown/APT001-footer.md --->
+=== "Access to the service"
+
+    The proxy listens on port **3142**:
+
+    - URL: `http://<your.IP>:3142`
+    - Hit-rate report: `http://<your.IP>:3142/acng-report.html`
+
+=== "Client configuration"
+
+    On each apt host on the LAN:
+
+    ```sh
+    echo 'Acquire::http::Proxy "http://<your.IP>:3142";' \
+      | sudo tee /etc/apt/apt.conf.d/00aptproxy
+    ```
+
+=== "Directories"
+
+    - Cache: `/armbian/apt-cacher-ng/cache/`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f apt-cacher-ng
+    ```
+
+<!--- footer STOP from tools/include/markdown/APT001-footer.md --->
+
+
+~~~ bash title="apt-cacher-ng remove:"
+armbian-config --cmd APT002
+~~~
+
+
+~~~ bash title="apt-cacher-ng purge with cache folder:"
+armbian-config --cmd APT003
+~~~
+
+
+
+
 ## Samba
 
 
