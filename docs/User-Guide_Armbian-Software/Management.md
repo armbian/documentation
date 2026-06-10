@@ -317,6 +317,83 @@ armbian-config --cmd APT003
 
 
 
+## git_cdn
+
+
+git_cdn GitHub caching proxy install
+
+
+<!--- header START from tools/include/markdown/GCDN001-header.md --->
+**git_cdn** is a caching git+HTTP(s) proxy that mirrors an upstream git server (GitHub) close to your build/CI hosts. The first clone or fetch of a repository populates the cache; every subsequent clone/fetch of the same repo from any host on the LAN pulls only new objects from upstream — saving WAN bandwidth and speeding up repeated GitHub clones.
+
+**Key Features**
+
+- git+http(s) proxy in front of `https://github.com`
+- Single-port (`8000`), single-container deployment
+- Pack-level object cache, configurable size (default 500 GB)
+- Survives container restart — cache lives on a host bind-mount
+
+<!--- header STOP from tools/include/markdown/GCDN001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://gitlab.com/grouperenault/git_cdn)  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+
+~~~ custombash
+armbian-config --cmd GCDN001
+~~~
+
+
+<!--- footer START from tools/include/markdown/GCDN001-footer.md --->
+=== "Access to the service"
+
+    The proxy listens on port **8000**:
+
+    - URL: `http://<your.IP>:8000`
+
+=== "Client configuration"
+
+    On each git host on the LAN, redirect GitHub through the proxy:
+
+    ```sh
+    git config --global \
+      url."http://<your.IP>:8000/".insteadOf https://github.com/
+    ```
+
+    Then clone normally — fetches are served from the local cache:
+
+    ```sh
+    git clone https://github.com/<owner>/<repo>.git
+    ```
+
+=== "Directories"
+
+    - Cache: `/armbian/git_cdn/cache/`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f git_cdn
+    ```
+
+<!--- footer STOP from tools/include/markdown/GCDN001-footer.md --->
+
+
+~~~ bash title="git_cdn remove:"
+armbian-config --cmd GCDN002
+~~~
+
+
+~~~ bash title="git_cdn purge with cache folder:"
+armbian-config --cmd GCDN003
+~~~
+
+
+
+
 ## Samba
 
 
