@@ -430,11 +430,13 @@ Controls the U-Boot bootloader log level during image building. Lower values pro
   - `github`: use the mirror provided by github, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
   - `gitee`: use the mirror provided by Gitee, a Chinese git services
   - leave empty to use the official `source.denx.de`, which may be very slow for mainland China users
-- **GITHUB_MIRROR** ( `fastgit` | `gitclone` | `cnpmjs` ): select download mirror for GitHub hosted repository
+- **GITHUB_MIRROR** ( `fastgit` | `gitclone` | `cnpmjs` | `gitproxy` ): select download mirror for GitHub hosted repository
   - `fastgit`: use the mirror provided by fastgit.org
   - `gitclone`: use the mirror provided by gitclone.com
   - `cnpmjs`: use the mirror provided by cnpmjs.org
+  - `gitproxy`: use a pass-through git proxy whose full base URL is given in `GITPROXY_ADDRESS` (e.g. `https://gitproxy.example.com/github.com`, no trailing slash). Selected automatically when a CI runner exports `GITPROXY_ADDRESS`.
   - leave empty to connect directly to GitHub, which may be very slow for mainland China users
+- **GITPROXY_ADDRESS** ( `string` ): full base URL of the git proxy used by `GITHUB_MIRROR=gitproxy`; it replaces `https://github.com` for all source clones. Usually provided automatically by self-hosted CI runners.
 - **REGIONAL_MIRROR** ( `china` ): select mirrors based on regional setting, will not overwrite explicitly specified mirror option
   - `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
   - leave empty to use default settings
