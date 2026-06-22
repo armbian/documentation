@@ -325,6 +325,15 @@ Use `$DEST/ccache` as ccache home directory. Setting yes to this will enable CCA
 
 Default is to auto-detect based on build host available RAM. If not enough RAM available, use =no to accept building without BTF debug information, or use =yes to force building with BTF even if low RAM. Family code can set this to opt-out of BTF. For more information on BTF see <https://docs.kernel.org/bpf/btf.html>
 
+**KERNEL_DO_STUBBLE**
+
+- `yes`
+- `no` (default)
+
+Build and bundle [stubble](https://github.com/ubuntu/stubble), Canonical's EFI stub (an extension of `systemd-stub`) that loads and auto-selects a device tree at boot from a hardware-ID database. When enabled, the framework cross-compiles `stubble.efi` for the target architecture (`amd64`/`arm64`/`riscv64`) and, during kernel packaging, runs `ukify` to assemble a Unified Kernel Image (UKI) `.efi` bundling the kernel, the stubble stub, the matching device trees (selected by `finddtbs.py` against the hwids database via `--devicetree-auto`) and an SBAT section for Secure Boot revocation.
+
+The result is a single signed UKI that EFI-boots and picks the correct device tree for the running board automatically — intended for generic UEFI-on-devicetree images. It is enabled by default for the `uefidt` family (board `uefi-arm64-dt`) and is opt-in elsewhere; boards that boot through U-Boot do not use it. Requires `ukify` (from systemd) with `--devicetree-auto` support on the build host.
+
 **ARTIFACT_IGNORE_CACHE** ( `string` )
 
 - `yes`
