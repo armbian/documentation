@@ -2425,10 +2425,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ieee-80211ac-wi-fi-5-20-ports" class="md-nav__link">
+  <a href="#ieee-80211ac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.11ac (Wi-Fi 5) — 20 port(s)
+        IEEE 802.11ac
       
     </span>
   </a>
@@ -2436,10 +2436,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ieee-80211ax-wi-fi-6-4-ports" class="md-nav__link">
+  <a href="#ieee-80211ax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.11ax (Wi-Fi 6) — 4 port(s)
+        IEEE 802.11ax
       
     </span>
   </a>
@@ -2447,10 +2447,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ieee-80211be-wi-fi-7-3-ports" class="md-nav__link">
+  <a href="#ieee-80211be" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.11be (Wi-Fi 7) — 3 port(s)
+        IEEE 802.11be
       
     </span>
   </a>
@@ -2458,10 +2458,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ieee-80211n-wi-fi-4-20-ports" class="md-nav__link">
+  <a href="#ieee-80211n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.11n (Wi-Fi 4) — 20 port(s)
+        IEEE 802.11n
       
     </span>
   </a>
@@ -2481,122 +2481,6 @@
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-new-device" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adding a New Device
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Adding a New Device">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-prepare-the-host-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Prepare the Host Machine
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-identify-network-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Identify Network Interfaces
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-create-a-udev-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Create a UDEV Rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-get-vpn-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Get VPN access
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-prepare-the-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Prepare the machine
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-register-your-location" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Register Your Location
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-register-device-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Register Device Type
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-register-device" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Register Device
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-run-initial-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. Run Initial Test
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2761,67 +2645,67 @@
 <li><strong>Power Switches</strong>: APC AP7920  </li>
 <li><strong>Client Devices</strong>:<ul>
 <li>Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards</li>
-<li>USB wireless test server: <a href="https://amzn.to/4crUVKP">Geekom IT13</a> with an <a href="https://amzn.to/42B4B29">i-Tec 16-port USB 3.0 hub</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Infrastructure Database</strong>: <a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> for resource modeling and inventory</li>
-<li><strong>Automation</strong>: <a href="https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/wireless-performance-autotest.yml">GitHub Actions for workflow orchestration and test execution</a></li>
-<li><strong>Networking</strong>: <a href="https://tailscale.com">Tailscale</a> for secure device connectivity across the test environment</li>
-<li><strong>Test Platform</strong>: KVM virtual machine running the latest x86 Armbian image for USB wireless testing</li>
+<li><strong>Inventory &amp; source of truth</strong>: <a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.</li>
+<li><strong>Orchestration</strong>: the <a href="https://github.com/armbian/autotests">Armbian autotests framework</a> reads each board&rsquo;s capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.</li>
+<li><strong>Power control</strong>: dispatched to the <a href="https://github.com/armbian/infra"><code>armbian/infra</code></a> backends (APC PDU, TP-Link PoE, DUT relay); no power port is ever switched by hand during a run.</li>
+<li><strong>Automation</strong>: <a href="https://github.com/armbian/autotests/blob/master/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a> orchestrate the fleet runs and test execution.</li>
+<li><strong>Results</strong>: published as a <strong>time series</strong> to <a href="https://github.com/armbian/armbian.github.io">armbian.github.io</a> so regressions stay visible over time.</li>
 </ul>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
 <p><strong>Overview of the WiFi performance test process:</strong></p>
 <ol>
 <li>
-<p>⚡ <strong>Power On Devices</strong><br />
+<p><strong>Power On Devices</strong><br />
    └─ Embedded WiFi-capable devices and USB wireless adapters are powered on.</p>
 </li>
 <li>
-<p>🌐 <strong>Configure Wireless Connection</strong><br />
+<p><strong>Configure Wireless Connection</strong><br />
    └─ Devices are configured to connect to a predefined access point (SSID).</p>
 </li>
 <li>
-<p>📶 <strong>Connect to WiFi Network</strong><br />
+<p><strong>Connect to WiFi Network</strong><br />
    └─ Network connectivity is validated to ensure the device is routable.</p>
 </li>
 <li>
-<p>📊 <strong>Measure Performance (iperf3)</strong><br />
+<p><strong>Measure Performance (iperf3)</strong><br />
    ├─ Perform reverse (<code>-R</code>) and forward iperf3 tests<br />
    └─ Measure throughput and link quality.</p>
 </li>
 <li>
-<p>🔍 <strong>Collect System &amp; Network Info</strong><br />
+<p><strong>Collect System &amp; Network Info</strong><br />
    ├─ Extract link details (e.g. bitrate, signal strength)<br />
    └─ Record system version, kernel, architecture.</p>
 </li>
 <li>
-<p>🔁 <strong>Restore Wired Network</strong><br />
+<p><strong>Restore Wired Network</strong><br />
    └─ Reapply original routes and configuration.</p>
 </li>
 <li>
-<p>☁️ <strong>Upload Test Results</strong><br />
+<p><strong>Upload Test Results</strong><br />
    └─ Summary, logs, and system info are uploaded as artifacts.</p>
 </li>
 <li>
-<p>📴 <strong>Power Off Devices</strong><br />
+<p><strong>Power Off Devices</strong><br />
    └─ All test devices are safely powered down after testing completes.</p>
 </li>
 </ol>
 <!-- DUT-START -->
 
 <h2 id="wifi-performance">WiFi performance<a class="headerlink" href="#wifi-performance" title="Permanent link">&para;</a></h2>
-<p><em>Measured 2026-07-01 04:55 UTC · <a href="https://github.com/armbian/autotests/actions/runs/28493802162">run</a></em></p>
-<p><strong>47</strong> wireless link(s) · ✅ <strong>47</strong> pass · 📶 peak ↑ <strong>622</strong> / ↓ <strong>891</strong> Mbps</p>
-<h4 id="ieee-80211ac-wi-fi-5-20-ports">IEEE 802.11ac (Wi-Fi 5) — 20 port(s)<a class="headerlink" href="#ieee-80211ac-wi-fi-5-20-ports" title="Permanent link">&para;</a></h4>
+<p><em>Measured 2026-07-01 05:19 UTC · <a href="https://github.com/armbian/autotests/actions/runs/28494640010">run</a></em></p>
+<p><strong>32</strong> wireless link(s) · ✅ <strong>32</strong> pass · 📶 peak ↑ <strong>838</strong> / ↓ <strong>910</strong> Mbps</p>
+<h4 id="ieee-80211ac">IEEE 802.11ac<a class="headerlink" href="#ieee-80211ac" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Board</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Interface</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Attach</th>
 <th style="text-align: left;">Chip</th>
 <th style="text-align: left;">Channel</th>
 <th style="text-align: right;">↑ Up (Mbps)</th>
@@ -2830,475 +2714,340 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Banana Pi CM4IO 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Realtek RTL8822CS</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">43</td>
-<td style="text-align: right;">36</td>
-</tr>
-<tr>
-<td style="text-align: left;">Banana Pi CM4IO 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx00e032c00694</td>
-<td style="text-align: left;">Realtek RTL8821CU</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">42</td>
-<td style="text-align: right;">45</td>
-</tr>
-<tr>
-<td style="text-align: left;">Banana Pi M2Pro 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx60fb00480eb0</td>
-<td style="text-align: left;">Realtek RTL8821CU</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">32</td>
-<td style="text-align: right;">42</td>
-</tr>
-<tr>
-<td style="text-align: left;">BananaPi BPI-F3 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan1</td>
-<td style="text-align: left;">Realtek RTL8822BU</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">207</td>
-<td style="text-align: right;">278</td>
-</tr>
-<tr>
-<td style="text-align: left;">Helios4 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx1cbfce1f85a5</td>
-<td style="text-align: left;">Realtek RTL8821CU</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">242</td>
-<td style="text-align: right;">260</td>
-</tr>
-<tr>
 <td style="text-align: left;">Khadas VIM1 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: right;">22</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: left;">Khadas VIM2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">98</td>
-<td style="text-align: right;">87</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">92</td>
 </tr>
 <tr>
 <td style="text-align: left;">Khadas VIM3 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">40</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">45</td>
 </tr>
 <tr>
 <td style="text-align: left;">NanoPi M4V2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom BCM4356</td>
 <td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">177</td>
-<td style="text-align: right;">208</td>
+<td style="text-align: right;">173</td>
+<td style="text-align: right;">205</td>
 </tr>
 <tr>
 <td style="text-align: left;">NanoPi M4V2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx803f5d16af63</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">MediaTek MT7610</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">186</td>
-</tr>
-<tr>
-<td style="text-align: left;">NanoPi M5 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Realtek RTL8822CS</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">76</td>
-<td style="text-align: right;">82</td>
-</tr>
-<tr>
-<td style="text-align: left;">Orange Pi 3 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">115</td>
+<td style="text-align: left;">2437 MHz @ 20</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">36</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi Lite 2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">121</td>
-<td style="text-align: right;">105</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">134</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi Zero2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx7c023a625db1</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">—</td>
 <td style="text-align: left;">Unisoc UWE5622</td>
 <td style="text-align: left;"></td>
-<td style="text-align: right;">27</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">136</td>
 </tr>
 <tr>
 <td style="text-align: left;">OrangePi 3 LTS 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">—</td>
 <td style="text-align: left;">Unisoc (unisoc_wifi)</td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;">140</td>
-<td style="text-align: right;">139</td>
+<td style="text-align: right;">131</td>
 </tr>
 <tr>
 <td style="text-align: left;">Pine H64 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx5cf3700929c5</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">Realtek RTL8812AU</td>
 <td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">117</td>
-<td style="text-align: right;">173</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">275</td>
 </tr>
 <tr>
 <td style="text-align: left;">Raspberry Pi 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx2ccf6790d3fb</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
 <td style="text-align: right;">47</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rockpi E 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx7ca7b020e87c</td>
-<td style="text-align: left;">Realtek RTL8821CU</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">174</td>
-<td style="text-align: right;">192</td>
-</tr>
-<tr>
-<td style="text-align: left;">Tanix TX6 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Realtek RTL8822CS</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">122</td>
-<td style="text-align: right;">68</td>
-</tr>
-<tr>
-<td style="text-align: left;">UEFI x86 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">21</td>
-</tr>
-</tbody>
-</table>
-<h4 id="ieee-80211ax-wi-fi-6-4-ports">IEEE 802.11ax (Wi-Fi 6) — 4 port(s)<a class="headerlink" href="#ieee-80211ax-wi-fi-6-4-ports" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Board</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Interface</th>
-<th style="text-align: left;">Chip</th>
-<th style="text-align: left;">Channel</th>
-<th style="text-align: right;">↑ Up (Mbps)</th>
-<th style="text-align: right;">↓ Down (Mbps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">BananaPi BPI-F3 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Realtek RTL8852BS</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">386</td>
-<td style="text-align: right;">447</td>
-</tr>
-<tr>
-<td style="text-align: left;">Orange Pi 5 Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlxe0e1a9380c53</td>
-<td style="text-align: left;">MediaTek MT7921</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">622</td>
-<td style="text-align: right;">357</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rock 5B 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlP2p33s0</td>
-<td style="text-align: left;">Realtek RTL8852BE</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">450</td>
-<td style="text-align: right;">544</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rock 5T 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlP2p33s0</td>
-<td style="text-align: left;">Realtek RTL8852BE</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">365</td>
-<td style="text-align: right;">414</td>
-</tr>
-</tbody>
-</table>
-<h4 id="ieee-80211be-wi-fi-7-3-ports">IEEE 802.11be (Wi-Fi 7) — 3 port(s)<a class="headerlink" href="#ieee-80211be-wi-fi-7-3-ports" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Board</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Interface</th>
-<th style="text-align: left;">Chip</th>
-<th style="text-align: left;">Channel</th>
-<th style="text-align: right;">↑ Up (Mbps)</th>
-<th style="text-align: right;">↓ Down (Mbps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Orange Pi 5 Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlP2p33s0</td>
-<td style="text-align: left;">Qualcomm WCN7851</td>
-<td style="text-align: left;">5240 MHz @ 160</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">56</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rock 5B Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlP2p33s0</td>
-<td style="text-align: left;">MediaTek MT7925</td>
-<td style="text-align: left;">6215 MHz @ 160</td>
-<td style="text-align: right;">602</td>
-<td style="text-align: right;">891</td>
-</tr>
-<tr>
-<td style="text-align: left;">Tinker Board 2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlp1s0</td>
-<td style="text-align: left;">Realtek RTL8852AE</td>
-<td style="text-align: left;">5240 MHz @ 80</td>
-<td style="text-align: right;">366</td>
-<td style="text-align: right;">388</td>
-</tr>
-</tbody>
-</table>
-<h4 id="ieee-80211n-wi-fi-4-20-ports">IEEE 802.11n (Wi-Fi 4) — 20 port(s)<a class="headerlink" href="#ieee-80211n-wi-fi-4-20-ports" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Board</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Interface</th>
-<th style="text-align: left;">Chip</th>
-<th style="text-align: left;">Channel</th>
-<th style="text-align: right;">↑ Up (Mbps)</th>
-<th style="text-align: right;">↓ Down (Mbps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Banana Pi M2 Ultra 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">36</td>
 <td style="text-align: right;">34</td>
 </tr>
 <tr>
-<td style="text-align: left;">Banana Pi M5 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx000f13960190</td>
-<td style="text-align: left;">Realtek RTL8192CU</td>
+<td style="text-align: left;">Rockpi E 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
+<td style="text-align: left;">Realtek RTL8821CU</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">41</td>
+<td style="text-align: right;">38</td>
 <td style="text-align: right;">33</td>
 </tr>
 <tr>
-<td style="text-align: left;">Banana Pi Pro 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: left;">Tanix TX6 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
+<td style="text-align: left;">Realtek RTL8822CS</td>
+<td style="text-align: left;">5240 MHz @ 80</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">80</td>
 </tr>
 <tr>
-<td style="text-align: left;">Cubietruck 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: left;">UEFI x86 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">15</td>
+<td style="text-align: left;">5240 MHz @ 40</td>
+<td style="text-align: right;">12</td>
 <td style="text-align: right;">23</td>
 </tr>
+</tbody>
+</table>
+<h4 id="ieee-80211ax">IEEE 802.11ax<a class="headerlink" href="#ieee-80211ax" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
 <tr>
-<td style="text-align: left;">Inovato Quadra 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">XRadio XR819</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">24</td>
+<th style="text-align: left;">Board</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Attach</th>
+<th style="text-align: left;">Chip</th>
+<th style="text-align: left;">Channel</th>
+<th style="text-align: right;">↑ Up (Mbps)</th>
+<th style="text-align: right;">↓ Down (Mbps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Orange Pi 5 Plus 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
+<td style="text-align: left;">MediaTek MT7921</td>
+<td style="text-align: left;">5240 MHz @ 80</td>
+<td style="text-align: right;">562</td>
+<td style="text-align: right;">370</td>
 </tr>
 <tr>
-<td style="text-align: left;">NanoPi Duo 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx14cf922b09d8</td>
-<td style="text-align: left;">Realtek RTL8188EUS 802.11n</td>
+<td style="text-align: left;">Rock 5B 02</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">PCIe</td>
+<td style="text-align: left;">Realtek RTL8852BE</td>
+<td style="text-align: left;">5240 MHz @ 80</td>
+<td style="text-align: right;">695</td>
+<td style="text-align: right;">621</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rock 5T 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">PCIe</td>
+<td style="text-align: left;">Realtek RTL8852BE</td>
+<td style="text-align: left;">5240 MHz @ 80</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">474</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ieee-80211be">IEEE 802.11be<a class="headerlink" href="#ieee-80211be" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Board</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Attach</th>
+<th style="text-align: left;">Chip</th>
+<th style="text-align: left;">Channel</th>
+<th style="text-align: right;">↑ Up (Mbps)</th>
+<th style="text-align: right;">↓ Down (Mbps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Orange Pi 5 Plus 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">PCIe</td>
+<td style="text-align: left;">Qualcomm WCN7851</td>
+<td style="text-align: left;">5240 MHz @ 160</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">450</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rock 5B Plus 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">PCIe</td>
+<td style="text-align: left;">MediaTek MT7925</td>
+<td style="text-align: left;">6215 MHz @ 160</td>
+<td style="text-align: right;">838</td>
+<td style="text-align: right;">910</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tinker Board 2 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">PCIe</td>
+<td style="text-align: left;">Realtek RTL8852AE</td>
+<td style="text-align: left;">5240 MHz @ 80</td>
+<td style="text-align: right;">363</td>
+<td style="text-align: right;">403</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ieee-80211n">IEEE 802.11n<a class="headerlink" href="#ieee-80211n" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Board</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Attach</th>
+<th style="text-align: left;">Chip</th>
+<th style="text-align: left;">Channel</th>
+<th style="text-align: right;">↑ Up (Mbps)</th>
+<th style="text-align: right;">↓ Down (Mbps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Banana Pi M5 01</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
+<td style="text-align: left;">Realtek RTL8192CU</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
+<td style="text-align: right;">40</td>
 <td style="text-align: right;">31</td>
-<td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td style="text-align: left;">NanoPi K2 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
-<td style="text-align: left;">Broadcom (brcmfmac)</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td style="text-align: left;">NanoPi R1 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx1281394ebbec</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
 <td style="text-align: right;">14</td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">22</td>
 </tr>
 <tr>
 <td style="text-align: left;">NanoPi R4S 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx7cdd905518f9</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">Ralink RT5370</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr>
-<td style="text-align: left;">Odroid C4 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx24050fdd332b</td>
-<td style="text-align: left;">Ralink RT5572</td>
-<td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">58</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi R1 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Realtek RTL8189ES</td>
 <td style="text-align: left;"></td>
-<td style="text-align: right;">31</td>
+<td style="text-align: right;">24</td>
 <td style="text-align: right;">30</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi R1 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan1</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Realtek RTL8189ES</td>
 <td style="text-align: left;"></td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">37</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi Zero 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx0087422045f0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">MediaTek MT7601</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">21</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">28</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi Zero Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Realtek RTL8189FS</td>
 <td style="text-align: left;"></td>
-<td style="text-align: right;">33</td>
-<td style="text-align: right;">17</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orange Pi Zero Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan1</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Realtek RTL8189FS</td>
 <td style="text-align: left;"></td>
-<td style="text-align: right;">24</td>
-<td style="text-align: right;">27</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30</td>
 </tr>
 <tr>
 <td style="text-align: left;">Raspberry Pi 02</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Broadcom (brcmfmac)</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">21</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">38</td>
 </tr>
 <tr>
 <td style="text-align: left;">Rock 5B Plus 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx40a5efda9ac9</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">Realtek RTL8723BU 802.11b/g/n</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">39</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">28</td>
 </tr>
 <tr>
 <td style="text-align: left;">Rock 5T 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx7cdd90ebf00a</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">Ralink RT5572</td>
 <td style="text-align: left;">5240 MHz @ 40</td>
-<td style="text-align: right;">69</td>
-<td style="text-align: right;">119</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">116</td>
 </tr>
 <tr>
 <td style="text-align: left;">Tanix TX6 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlx44334c47dec3</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">USB</td>
 <td style="text-align: left;">Ralink RT2870/RT3070</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr>
 <td style="text-align: left;">Tinker Board 01</td>
-<td style="text-align: left;">✅ pass</td>
-<td style="text-align: left;">wlan0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">SDIO</td>
 <td style="text-align: left;">Realtek RTL8723BS</td>
 <td style="text-align: left;">2437 MHz @ 20</td>
 <td style="text-align: right;">37</td>
-<td style="text-align: right;">21</td>
+<td style="text-align: right;">22</td>
 </tr>
 </tbody>
 </table>
@@ -3306,7 +3055,7 @@
 
 <h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize <a href="https://github.com/armbian/armbian.github.io/actions/workflows/usb-wireless-autotest.yml">our test infrastructure</a>. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.</li>
+<li>Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize <a href="https://github.com/armbian/autotests">our test infrastructure</a>. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.</li>
 </ul>
 <ul>
 <li>Donate hardware: Your contribution of new hardware, whether it’s a wireless adapter or any other equipment, helps us expand our testing capabilities. We’re specifically looking for <a href="https://www.amazon.de/hz/wishlist/ls/1GA17IGQ2MF0V?ref_=wl_share">new wireless adapters</a> that haven’t yet been added to our system. Your donation can directly impact the scope and depth of our tests.</li>
@@ -3314,177 +3063,6 @@
 <ul>
 <li>Join our team: Become part of our passionate and dedicated team. We’re looking for <a href="https://forum.armbian.com/staffapplications/">individuals who share our vision and are eager to contribute to the development of innovative testing solutions</a>. Whether you have technical expertise or simply a willingness to learn, there’s a place for you here!</li>
 </ul>
-<h2 id="adding-a-new-device">Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permanent link">&para;</a></h2>
-<p>This guide provides step-by-step instructions to add a new device (SBC SDIO, PCI or USB adapter) to the wireless testing infrastructure.</p>
-<h3 id="1-prepare-the-host-machine">1. Prepare the Host Machine<a class="headerlink" href="#1-prepare-the-host-machine" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Ensure the board and wireless device is supported by Armbian.</li>
-<li>Flash Armbian image and configure basic settings</li>
-<li>Set hostname that reflects wireless test device (eg. rtl3070, wifiserver)</li>
-</ul>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>rtl3070
-</span></code></pre></div></td></tr></table></div>
-<h3 id="2-identify-network-interfaces">2. Identify Network Interfaces<a class="headerlink" href="#2-identify-network-interfaces" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use <code>ip link</code> or <code>iw dev</code> to list available interfaces.</li>
-<li>Identify MAC address and interface name (e.g., <code>wlan0</code>, <code>wlxMAC</code>, etc.).</li>
-</ul>
-<h3 id="3-create-a-udev-rule">3. Create a UDEV Rule<a class="headerlink" href="#3-create-a-udev-rule" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This step is only necessary if your network device does not have a predictable interface name.</p>
-</div>
-<ul>
-<li>Use a predictable name like <code>wl&lt;MAC&gt;</code> to avoid interface conflicts.</li>
-<li>Add rule in <code>/etc/udev/rules.d/70-persistent-net.rules</code>:</li>
-</ul>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;net&quot;</span>,<span class="w"> </span><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&quot;add&quot;</span>,<span class="w"> </span>ATTR<span class="o">{</span>address<span class="o">}==</span><span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span>,<span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;wl&lt;MAC&gt;&quot;</span>
-</span></code></pre></div></td></tr></table></div>
-<h3 id="4-get-vpn-access">4. Get VPN access<a class="headerlink" href="#4-get-vpn-access" title="Permanent link">&para;</a></h3>
-<p>The <code>TAILSCALE_AUTH_KEY</code> and access credentials for NetBox must be provided by the Armbian administration team. For assistance, please contact us via <a href="https://www.armbian.com/contact/">https://www.armbian.com/contact/</a>.</p>
-<h3 id="5-prepare-the-machine">5. Prepare the machine<a class="headerlink" href="#5-prepare-the-machine" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Creates a new user (<code>ci</code>) with sudo privileges</li>
-<li>Configures SSH for key-based authentication only</li>
-<li>Installs and configures Tailscale for secure remote access</li>
-<li>Installs <code>iperf3</code> for network performance testing</li>
-</ul>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span>
-<span class="normal"><a href="#__codelineno-2-37">37</a></span>
-<span class="normal"><a href="#__codelineno-2-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">set</span><span class="w"> </span>-e
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ci&quot;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nv">KEY_URL</span><span class="o">=</span><span class="s2">&quot;https://github.armbian.com/ci.asc&quot;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nv">TAILSCALE_AUTH_KEY</span><span class="o">=</span><span class="s2">&quot;tskey-auth-kXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Creating user &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; without password&quot;</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>passwd<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Setting up SSH key from </span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nv">SSH_DIR</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USERNAME</span><span class="s2">/.ssh&quot;</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$KEY_URL</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">/authorized_keys&quot;</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">:</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_DIR</span><span class="s2">&quot;</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Disabling password authentication in SSH config&quot;</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PasswordAuthentication.*/PasswordAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^#*\s*PermitEmptyPasswords.*/PermitEmptyPasswords no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26"></a>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing Tailscale&quot;</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29"></a>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Bringing up Tailscale with provided auth key&quot;</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--auth-key<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$TAILSCALE_AUTH_KEY</span><span class="s2">&quot;</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32"></a>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[+] Installing iperf3 (non-interactive, no daemon)&quot;</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35"></a>apt-get<span class="w"> </span>update<span class="w"> </span>-qq
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-yqq<span class="w"> </span>iperf3
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37"></a>
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[✔] Setup complete. User &#39;</span><span class="nv">$USERNAME</span><span class="s2">&#39; added, SSH key installed, Tailscale connected.&quot;</span>
-</span></code></pre></div></td></tr></table></div>
-<h3 id="6-register-your-location">6. Register Your Location<a class="headerlink" href="#6-register-your-location" title="Permanent link">&para;</a></h3>
-<p>Access: <a href="https://netbox.armbian.com/dcim/sites/">https://netbox.armbian.com/dcim/sites/</a></p>
-<ul>
-<li>Sites in NetBox represent physical locations of wireless test equipment.</li>
-<li>Each site have devices such as Access Points (APs), iperf3 servers, and wireless test clients.</li>
-<li>Register your testing location first if it doesn&rsquo;t exist yet. Create a new site with a clear name (e.g., Office Berlin, Lab Maribor) and add necessary data.</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Make sure to check if site is not already define to not clutter database!</p>
-</div>
-<details class="success" open="open">
-<summary>Update Relevant Information</summary>
-<ul>
-<li>Access point SSID: <code>Your SSID</code></li>
-<li>Iperf3 server IP: your local <code>IP address</code> that runs iperf3 server and can be accessible from wireless client</li>
-</ul>
-</details>
-<h3 id="7-register-device-type">7. Register Device Type<a class="headerlink" href="#7-register-device-type" title="Permanent link">&para;</a></h3>
-<p>Add <a href="https://netbox.armbian.com/dcim/manufacturers/61/">new device type</a> </p>
-<details class="success" open="open">
-<summary>Relevant data</summary>
-<ul>
-<li>Model name (CAPS): AIC8800</li>
-<li>Manufacturer: Generic</li>
-<li>Add image of the device in full HD (1920x1080) with exact same name as model AIC8800.png (CAPS name, lowercase extension)</li>
-</ul>
-</details>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Skip this step if WiFi SoC already exists in database.</p>
-</div>
-<h3 id="8-register-device">8. Register Device<a class="headerlink" href="#8-register-device" title="Permanent link">&para;</a></h3>
-<details class="success" open="open">
-<summary>Relevant data</summary>
-<ul>
-<li>Name: Compex WLE900VX (use commercial name)</li>
-<li>Device role: WiFi DUT</li>
-<li>Tags: USB Wireless</li>
-<li>Manufacturer: Generic</li>
-<li>Device type: AIC8800 (select the one you added previously)</li>
-<li>Serial number: 04:f0:21:2c:75:14 (MAC address)</li>
-<li>Location: where you are</li>
-<li>Site: name of your office, defined in previous step</li>
-<li>Custom Fields / class: AC (wifi classes: AX, AC, N)</li>
-</ul>
-</details>
-<ul>
-<li>Add virtual interface (Add Components -&gt; Interfaces)</li>
-</ul>
-<details class="success" open="open">
-<summary>Relevant data</summary>
-<ul>
-<li>Name: <code>tailscale0</code></li>
-<li>Type: <code>virtual</code></li>
-</ul>
-</details>
-<p>Then select interface <code>tailscale0</code> and add <code>IP address</code>. Copy <code>IP address</code> from your device (example: 100.115.0.58/32) and select: Make this the primary IP for the device/VM</p>
-<h3 id="9-run-initial-test">9. Run Initial Test<a class="headerlink" href="#9-run-initial-test" title="Permanent link">&para;</a></h3>
-<p>Run the <a href="https://github.com/armbian/armbian.github.io/actions/workflows/wireless-performance-autotest.yml">Wireless Performance Autotest workflow</a> to verify whether the newly added device has been included in the test pool.</p>
 <h2 id="other-resources">Other resources<a class="headerlink" href="#other-resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/morrownr/USB-WiFi">USB WiFi Adapter Information for Linux</a></li>
