@@ -18,43 +18,43 @@ All wireless adapters were tested under consistent conditions - each positioned 
 - **Power Switches**: APC AP7920  
 - **Client Devices**:
   - Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards
-  - USB wireless test server: [Geekom IT13](https://amzn.to/4crUVKP) with an [i-Tec 16-port USB 3.0 hub](https://amzn.to/42B4B29)
 
 ## Software and Infrastructure
 
-- **Infrastructure Database**: [NetBox](https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox) for resource modeling and inventory
-- **Automation**: [GitHub Actions for workflow orchestration and test execution](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/wireless-performance-autotest.yml)
-- **Networking**: [Tailscale](https://tailscale.com) for secure device connectivity across the test environment
-- **Test Platform**: KVM virtual machine running the latest x86 Armbian image for USB wireless testing
+- **Inventory & source of truth**: [NetBox](https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox) holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.
+- **Orchestration**: the [Armbian autotests framework](https://github.com/armbian/autotests) reads each board's capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.
+- **Power control**: dispatched to the [`armbian/infra`](https://github.com/armbian/infra) backends (APC PDU, TP-Link PoE, DUT relay); no power port is ever switched by hand during a run.
+- **Automation**: [GitHub Actions](https://github.com/armbian/autotests/blob/master/.github/workflows/test-fleet-iperf.yml) orchestrate the fleet runs and test execution.
+- **Results**: published as a **time series** to [armbian.github.io](https://github.com/armbian/armbian.github.io) so regressions stay visible over time.
 
 ## Methodology
 
 **Overview of the WiFi performance test process:**
 
-1. ⚡ **Power On Devices**  
+1. **Power On Devices**  
    └─ Embedded WiFi-capable devices and USB wireless adapters are powered on.
 
-2. 🌐 **Configure Wireless Connection**  
+2. **Configure Wireless Connection**  
    └─ Devices are configured to connect to a predefined access point (SSID).
 
-3. 📶 **Connect to WiFi Network**  
+3. **Connect to WiFi Network**  
    └─ Network connectivity is validated to ensure the device is routable.
 
-4. 📊 **Measure Performance (iperf3)**  
+4. **Measure Performance (iperf3)**  
    ├─ Perform reverse (`-R`) and forward iperf3 tests  
    └─ Measure throughput and link quality.
 
-5. 🔍 **Collect System & Network Info**  
+5. **Collect System & Network Info**  
    ├─ Extract link details (e.g. bitrate, signal strength)  
    └─ Record system version, kernel, architecture.
 
-6. 🔁 **Restore Wired Network**  
+6. **Restore Wired Network**  
    └─ Reapply original routes and configuration.
 
-7. ☁️ **Upload Test Results**  
+7. **Upload Test Results**  
    └─ Summary, logs, and system info are uploaded as artifacts.
 
-8. 📴 **Power Off Devices**  
+8. **Power Off Devices**  
    └─ All test devices are safely powered down after testing completes.
 
 <!-- DUT-START -->
