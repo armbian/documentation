@@ -102,64 +102,64 @@ request to update this table — the same mechanism used for the
 
 | Board | IP address | Boot | Link | Switch | Last seen |
 |:--|:--|:--|--:|:--|--:|
-| Banana Pi CM4IO 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Banana Pi M2Pro 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Banana Pi M5 01 | 10.0.50.55 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 | 05 Jul |
-| BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Cubietruck 01 | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Cubox i2eX/i4 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Espressobin 01 | 10.0.50.26 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Helios4 01 | 10.0.50.58 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 | 05 Jul |
+| Banana Pi CM4IO 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300-52X-PoE+ (43) | 05 Jul |
+| Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1 GbE | TP-Link TL-SG3428X (13) | 05 Jul |
+| Banana Pi M2Pro 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300-52X-PoE+ (47) | 05 Jul |
+| Banana Pi M5 01 | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) | 05 Jul |
+| Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) | 05 Jul |
+| BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) | 05 Jul |
+| Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) | 05 Jul |
+| Cubietruck 01 | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) | 05 Jul |
+| Cubox i2eX/i4 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (32) | 05 Jul |
+| Espressobin 01 | 10.0.50.26 | local | 1 GbE | TP-Link TL-SG3428X (11) | 05 Jul |
+| Helios4 01 | 10.0.50.58 | local | 1 GbE | Netgear GS348 (11) | 05 Jul |
+| Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) | 05 Jul |
 | Khadas VIM1 02 | 10.0.20.119 | local | Wi-Fi 5 | Zyxel NWA130BE | 05 Jul |
-| Khadas VIM2 01 | 10.0.50.12 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 | 05 Jul |
-| NanoPi Duo 01 | 10.0.50.48 | local | 100 MbE | Netgear GS348 | 05 Jul |
-| NanoPi K2 01 | 10.0.50.76 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| NanoPi M4V2 01 | 10.0.50.97 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| NanoPi Neo 3 01 | 10.0.50.20 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| NanoPi R4S 01 | 10.0.50.25 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| NanoPi R76S 01 | 10.0.50.67 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
-| Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Odroid C2 01 | 10.0.50.87 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Odroid C4 01 | 10.0.50.13 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Odroid M1 01 | 10.0.50.19 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Odroid N2 02 | 10.0.50.66 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Odroid XU4 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Orange Pi 3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 | 05 Jul |
-| Orange Pi 5 Plus 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Orange Pi One+ 01 | 10.0.50.125 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Orange Pi PC2 01 | 10.0.50.68 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
+| Khadas VIM2 01 | 10.0.50.12 | local | 1 GbE | Netgear GS348 (13) | 05 Jul |
+| Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) | 05 Jul |
+| NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) | 05 Jul |
+| NanoPi Duo 01 | 10.0.50.48 | local | 100 MbE | Netgear GS348 (31) | 05 Jul |
+| NanoPi K2 01 | 10.0.50.76 | local | 1 GbE | Netgear GS348 (20) | 05 Jul |
+| NanoPi M4V2 01 | 10.0.50.97 | local | 1 GbE | Netgear S3300-52X-PoE+ (7) | 05 Jul |
+| NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300-52X-PoE+ (5) | 05 Jul |
+| NanoPi Neo 3 01 | 10.0.50.20 | local | 1 GbE | TP-Link TL-SG3428X (17) | 05 Jul |
+| Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300-52X-PoE+ (12) | 05 Jul |
+| NanoPi R4S 01 | 10.0.50.25 | local | 1 GbE | Netgear GS348 (39) | 05 Jul |
+| NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300-52X-PoE+ (44) | 05 Jul |
+| NanoPi R76S 01 | 10.0.50.67 | local | 2.5 GbE | Netgear XS508M (7) | 05 Jul |
+| Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear GS348 (28) | 05 Jul |
+| Odroid C2 01 | 10.0.50.87 | local | 1 GbE | Netgear GS348 (7) | 05 Jul |
+| Odroid C4 01 | 10.0.50.13 | local | 1 GbE | TP-Link TL-SG3428X (10) | 05 Jul |
+| Odroid M1 01 | 10.0.50.19 | local | 1 GbE | Netgear S3300-52X-PoE+ (3) | 05 Jul |
+| Odroid N2 02 | 10.0.50.66 | local | 1 GbE | TP-Link TL-SG3428X (21) | 05 Jul |
+| Odroid XU4 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300-52X-PoE+ (19) | 05 Jul |
+| Orange Pi 3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300-52X-PoE+ (31) | 05 Jul |
+| Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) | 05 Jul |
+| Orange Pi 5 Plus 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300-52X-PoE+ (8) | 05 Jul |
+| Orange Pi One+ 01 | 10.0.50.125 | local | 1 GbE | TP-Link TL-SG3428X (18) | 05 Jul |
+| Orange Pi PC2 01 | 10.0.50.68 | local | 1 GbE | TP-Link TL-SG3428X (22) | 05 Jul |
 | Orange Pi R1 01 | 10.0.50.50 | local | Wi-Fi 4 | Zyxel NWA130BE | 05 Jul |
-| Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
+| Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300-52X-PoE+ (13) | 05 Jul |
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE | 05 Jul |
-| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
+| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X (20) | 05 Jul |
+| Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ (45) | 05 Jul |
 | OrangePi 3 LTS 02 | 10.0.50.16 | local | Wi-Fi 5 | Zyxel NWA130BE | 05 Jul |
-| Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
+| Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X (9) | 05 Jul |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE | 05 Jul |
-| Raspberry Pi 01 | 10.0.50.15 | local | 1 GbE | Netgear GS348 | 05 Jul |
-| Raspberry Pi 02 | 10.0.50.22 | local | 100 MbE | Netgear GS348 | 05 Jul |
+| Raspberry Pi 01 | 10.0.50.15 | local | 1 GbE | Netgear GS348 (1) | 05 Jul |
+| Raspberry Pi 02 | 10.0.50.22 | local | 100 MbE | Netgear GS348 (21) | 05 Jul |
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE | 05 Jul |
-| Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
-| Rock 5B 02 | 10.0.50.17 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
-| Rock 5B Plus 01 | 10.0.50.41 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
-| Rock 5T 01 | 10.0.50.11 | local | 2.5 GbE | TP-Link SG3218XP-M2 | 05 Jul |
-| Rockpi E 01 | 10.0.50.28 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 | 05 Jul |
-| Tinker Board 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Udoo 01 | 10.0.50.62 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T | 05 Jul |
-| UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear GS348 | 05 Jul |
+| Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) | 05 Jul |
+| Rock 5B 02 | 10.0.50.17 | local | 2.5 GbE | Netgear XS508M (5) | 05 Jul |
+| Rock 5B Plus 01 | 10.0.50.41 | local | 2.5 GbE | Netgear XS508M (4) | 05 Jul |
+| Rock 5T 01 | 10.0.50.11 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) | 05 Jul |
+| Rockpi E 01 | 10.0.50.28 | local | 1 GbE | TP-Link TL-SG3428X (16) | 05 Jul |
+| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Netgear S3300-52X-PoE+ (52) | 05 Jul |
+| Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) | 05 Jul |
+| Tinker Board 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300-52X-PoE+ (15) | 05 Jul |
+| Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link TL-SG3428X (15) | 05 Jul |
+| Udoo 01 | 10.0.50.62 | local | 1 GbE | Netgear S3300-52X-PoE+ (37) | 05 Jul |
+| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) | 05 Jul |
+| UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear GS348 (9) | 05 Jul |
 
 <!-- BOARDS-STOP -->
