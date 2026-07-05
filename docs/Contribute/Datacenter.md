@@ -20,10 +20,11 @@ request to join it themselves:
 - **If you are already an Armbian GitHub organization member** — open the
   [board-maintainers team page](https://github.com/orgs/armbian/teams/board-maintainers)
   and click **Request to join**. A team maintainer reviews and approves it.
-- **If you are not an organization member yet** — you first need to be a member
-  of the [Armbian organization](https://github.com/armbian) (this normally
-  follows from contributing to Armbian and being invited by a maintainer). Once
-  you are an org member, request to join the team as above.
+- **If you are not an organization member yet** — every contributor is
+  automatically invited to become a member of the
+  [Armbian organization](https://github.com/armbian), so contribute (e.g. a
+  merged pull request) and accept the invitation that follows. Once you are an
+  org member, request to join the team as above.
 
 ## Connect via VPN (Netbird)
 
