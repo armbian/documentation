@@ -84,6 +84,11 @@ If a board is unreachable it may be powered off or mid-test. For anything you
 cannot resolve (missing access, a wedged board), reach out on the
 [Armbian Discord](https://discord.com/invite/armbian) channels.
 
+!!! warning "Reflashing is under testing"
+    Automated board reflashing is still experimental. If you reflash a board and
+    accidentally brick it or leave it unresponsive, please report it on the
+    [Armbian Discord](https://discord.com/invite/armbian) so it can be recovered.
+
 ## Boards
 
 The list below is kept up to date automatically by the reconcile action, which
