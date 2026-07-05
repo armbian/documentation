@@ -68,9 +68,8 @@ To disconnect, run `netbird down`.
 Once connected you are on the Datacenter network and can reach the boards
 directly by their IP address.
 
-The inventory — every board with its model, status and IP — lives in NetBox:
-**<https://netbox.armbian.com>**. Look up the board you need there, then SSH in
-as **root**:
+Find the board you need — its model and IP address — in the [Boards](#boards)
+list below, then SSH in as **root**:
 
 ```bash
 ssh root@<board-ip>        # e.g. ssh root@10.0.50.42
@@ -81,15 +80,15 @@ GitHub account (`https://github.com/<your-username>.keys`) into root's
 authorized keys, so make sure the matching private key is on the machine you
 connect from.
 
-If a board is unreachable it may be powered off or mid-test; check its status in
-NetBox. For anything you cannot resolve (missing access, a wedged board), reach
-out on the maintainers channel.
+If a board is unreachable it may be powered off or mid-test. For anything you
+cannot resolve (missing access, a wedged board), reach out on the maintainers
+channel.
 
 ## Boards
 
-The list below is generated from NetBox and kept up to date automatically via
-pull request — the same mechanism used for the
-[wireless performance results](../WifiPerformance.md).
+The list below is kept up to date automatically by the reconcile action, which
+scans the Datacenter and opens a pull request to refresh it — the same mechanism
+used for the [wireless performance results](../WifiPerformance.md).
 
 <!-- BOARDS-START -->
 
