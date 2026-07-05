@@ -99,66 +99,66 @@ used for the [wireless performance results](../WifiPerformance.md).
 
 **59** active boards.
 
-| Board | IP address |
-|:--|:--|
-| BananaPi BPI-F3 01 | 10.0.50.70 |
-| Banana Pi CM4IO 01 | 10.0.50.10 |
-| Banana Pi M2Pro 01 | 10.0.50.43 |
-| Banana Pi M2 Ultra 01 | 10.0.50.47 |
-| Banana Pi M5 01 | 10.0.50.55 |
-| Banana Pi Pro 01 | 10.0.50.52 |
-| Clearfog Pro 01 | 10.0.50.42 |
-| Cubietruck 01 | 10.0.50.49 |
-| Cubox i2eX/i4 01 | 10.0.50.63 |
-| Espressobin 01 | 10.0.50.26 |
-| Helios4 01 | 10.0.50.58 |
-| Inovato Quadra 01 | 10.0.50.36 |
-| Khadas VIM1 02 | 10.0.20.119 |
-| Khadas VIM2 01 | 10.0.50.12 |
-| Khadas VIM3 01 | 10.0.50.38 |
-| NanoPC T6 LTS 01 | 10.0.50.30 |
-| NanoPi Duo 01 | 10.0.50.48 |
-| NanoPi K2 01 | 10.0.50.76 |
-| NanoPi M4V2 01 | 10.0.50.97 |
-| NanoPi M5 01 | 10.0.50.35 |
-| NanoPi Neo 3 01 | 10.0.50.20 |
-| Nanopi R2S 01 | 10.0.50.65 |
-| NanoPi R4S 01 | 10.0.50.25 |
-| NanoPi R6S 01 | 10.0.50.40 |
-| NanoPi R76S 01 | 10.0.50.67 |
-| Odroid C1 01 | 10.0.50.27 |
-| Odroid C2 01 | 10.0.50.87 |
-| Odroid C4 01 | 10.0.50.13 |
-| Odroid M1 01 | 10.0.50.19 |
-| Odroid N2 02 | 10.0.50.66 |
-| Odroid XU4 01 | 10.0.50.51 |
-| Orange Pi 3 01 | 10.0.50.57 |
-| OrangePi 3 LTS 02 | 10.0.50.16 |
-| Orange Pi 5 01 | 10.0.50.39 |
-| Orange Pi 5 Plus 01 | 10.0.50.33 |
-| Orange Pi One+ 01 | 10.0.50.125 |
-| Orange Pi PC2 01 | 10.0.50.68 |
-| Orange Pi R1 01 | 10.0.50.50 |
-| Orange Pi Win 01 | 10.0.50.24 |
-| Orange Pi Zero 02 | 10.0.50.46 |
-| Orange Pi Zero2 01 | 10.0.50.74 |
-| Orange Pi Zero Plus 01 | 10.0.50.54 |
-| Pine H64 01 | 10.0.50.34 |
-| Radxa ZERO 3 01 | 10.0.20.185 |
-| Raspberry Pi 01 | 10.0.50.15 |
-| Raspberry Pi 02 | 10.0.50.22 |
-| ROCK 2F 01 | 10.0.20.164 |
-| Rock 5B 01 | 10.0.50.69 |
-| Rock 5B 02 | 10.0.50.17 |
-| Rock 5B Plus 01 | 10.0.50.41 |
-| Rock 5T 01 | 10.0.50.11 |
-| Rockpi E 01 | 10.0.50.28 |
-| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 |
-| Tanix TX6 01 | 10.0.50.21 |
-| Tinker Board 01 | 10.0.50.29 |
-| Tinker Board 2 01 | 10.0.50.23 |
-| Udoo 01 | 10.0.50.62 |
-| UEFI arm64 01 | 10.0.50.45 |
-| UEFI x86 01 | 10.0.50.53 |
+| Board | IP address | Boot | Link | Switch | PDU | Last seen |
+|:--|:--|:--|:--|:--|:--|:--|
+| Banana Pi CM4IO 01 | 10.0.50.10 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1GbE | TP-Link 24x TL-SG3428X | — | today |
+| Banana Pi M2Pro 01 | 10.0.50.43 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| Banana Pi M5 01 | 10.0.50.55 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| Banana Pi Pro 01 | 10.0.50.52 | local | 100MbE | Netgear 1Gbe 48x | USB PSU bottom | today |
+| BananaPi BPI-F3 01 | 10.0.50.70 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| Clearfog Pro 01 | 10.0.50.42 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Cubietruck 01 | 10.0.50.49 | local | 1GbE | TP-Link 24x TL-SG3428X | USB PSU bottom | today |
+| Cubox i2eX/i4 01 | 10.0.50.63 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| Espressobin 01 | 10.0.50.26 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Helios4 01 | 10.0.50.58 | local | 1GbE | Netgear 1Gbe 48x | Power Strip 8x zgoraj | today |
+| Inovato Quadra 01 | 10.0.50.36 | local | 100MbE | Netgear 1Gbe 48x | DUT PDU | today |
+| Khadas VIM1 02 | 10.0.20.119 | local | 100MbE | — | — | today |
+| Khadas VIM2 01 | 10.0.50.12 | local | 1GbE | Netgear 1Gbe 48x | USB PSU bottom | today |
+| Khadas VIM3 01 | 10.0.50.38 | local | 1GbE | Netgear 1Gbe 48x | — | today |
+| NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5GbE | TP Link 18x 2.5Gb PoE | — | today |
+| NanoPi Duo 01 | 10.0.50.48 | local | 100MbE | Netgear 1Gbe 48x | USB PSU top | today |
+| NanoPi K2 01 | 10.0.50.76 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| NanoPi M4V2 01 | 10.0.50.97 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| NanoPi M5 01 | 10.0.50.35 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| NanoPi Neo 3 01 | 10.0.50.20 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Nanopi R2S 01 | 10.0.50.65 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| NanoPi R4S 01 | 10.0.50.25 | local | 1GbE | Netgear 1Gbe 48x | USB PSU bottom | today |
+| NanoPi R6S 01 | 10.0.50.40 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| NanoPi R76S 01 | 10.0.50.67 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | — | today |
+| Odroid C1 01 | 10.0.50.27 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| Odroid C2 01 | 10.0.50.87 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| Odroid C4 01 | 10.0.50.13 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Odroid M1 01 | 10.0.50.19 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| Odroid N2 02 | 10.0.50.66 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Odroid XU4 01 | 10.0.50.51 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| Orange Pi 3 01 | 10.0.50.57 | local | 1GbE | Netgear 52x PoE+ | USB PSU top | today |
+| Orange Pi 5 01 | 10.0.50.39 | local | 1GbE | TP Link 18x 2.5Gb PoE | — | today |
+| Orange Pi 5 Plus 01 | 10.0.50.33 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| Orange Pi One+ 01 | 10.0.50.125 | local | 1GbE | TP-Link 24x TL-SG3428X | — | today |
+| Orange Pi PC2 01 | 10.0.50.68 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Orange Pi R1 01 | 10.0.50.50 | local | 1GbE | — | — | today |
+| Orange Pi Win 01 | 10.0.50.24 | local | 1GbE | Netgear 52x PoE+ | USB PSU top | today |
+| Orange Pi Zero 02 | 10.0.50.46 | local | 100MbE | — | — | today |
+| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1GbE | TP-Link 24x TL-SG3428X | — | today |
+| Orange Pi Zero2 01 | 10.0.50.74 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| OrangePi 3 LTS 02 | 10.0.50.16 | local | 1GbE | — | — | today |
+| Pine H64 01 | 10.0.50.34 | local | 1GbE | TP-Link 24x TL-SG3428X | USB PSU bottom | today |
+| Radxa ZERO 3 01 | 10.0.20.185 | local | 1GbE | — | USB PSU top | today |
+| Raspberry Pi 01 | 10.0.50.15 | local | 1GbE | Netgear 1Gbe 48x | USB PSU top | today |
+| Raspberry Pi 02 | 10.0.50.22 | local | 100MbE | Netgear 1Gbe 48x | USB PSU top | today |
+| ROCK 2F 01 | 10.0.20.164 | local | — | — | USB PSU top | today |
+| Rock 5B 01 | 10.0.50.69 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | DUT PDU | today |
+| Rock 5B 02 | 10.0.50.17 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | DUT PDU | today |
+| Rock 5B Plus 01 | 10.0.50.41 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | DUT PDU | today |
+| Rock 5T 01 | 10.0.50.11 | local | 2.5GbE | TP Link 18x 2.5Gb PoE | DUT PDU | today |
+| Rockpi E 01 | 10.0.50.28 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10GbE | Netgear 52x PoE+ | Power Strip 8x zgoraj | today |
+| Tanix TX6 01 | 10.0.50.21 | local | 100MbE | Netgear 1Gbe 48x | USB PSU bottom | today |
+| Tinker Board 01 | 10.0.50.29 | local | 1GbE | Netgear 52x PoE+ | — | today |
+| Tinker Board 2 01 | 10.0.50.23 | local | 1GbE | TP-Link 24x TL-SG3428X | DUT PDU | today |
+| Udoo 01 | 10.0.50.62 | local | 1GbE | Netgear 52x PoE+ | DUT PDU | today |
+| UEFI arm64 01 | 10.0.50.45 | local | 10GbE | Netgear 10Gbe 12x | — | today |
+| UEFI x86 01 | 10.0.50.53 | local | 1GbE | Netgear 1Gbe 48x | USB PSU bottom | today |
 
 <!-- BOARDS-STOP -->
