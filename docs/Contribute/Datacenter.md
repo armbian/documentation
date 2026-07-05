@@ -125,7 +125,7 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Nanopi R2S 01 | 10.0.50.65 | local | 1GbE | Netgear 52x PoE+ | today |
 | NanoPi R4S 01 | 10.0.50.25 | local | 1GbE | Netgear 1Gbe 48x | today |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1GbE | Netgear 52x PoE+ | today |
-| NanoPi R76S 01 | 10.0.50.67 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | today |
+| NanoPi R76S 01 | 10.0.50.67 | local | 2.5GbE | Netgear XS508M | today |
 | Odroid C1 01 | 10.0.50.27 | local | 1GbE | Netgear 1Gbe 48x | today |
 | Odroid C2 01 | 10.0.50.87 | local | 1GbE | Netgear 1Gbe 48x | today |
 | Odroid C4 01 | 10.0.50.13 | local | 1GbE | TP-Link 24x TL-SG3428X | today |
@@ -148,9 +148,9 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Raspberry Pi 01 | 10.0.50.15 | local | 1GbE | Netgear 1Gbe 48x | today |
 | Raspberry Pi 02 | 10.0.50.22 | local | 100MbE | Netgear 1Gbe 48x | today |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — | today |
-| Rock 5B 01 | 10.0.50.69 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | today |
-| Rock 5B 02 | 10.0.50.17 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | today |
-| Rock 5B Plus 01 | 10.0.50.41 | local | 2.5GbE | Netgear 10Gbe 5Gbe 2.5Gbe 8x | today |
+| Rock 5B 01 | 10.0.50.69 | local | 2.5GbE | Netgear XS508M | today |
+| Rock 5B 02 | 10.0.50.17 | local | 2.5GbE | Netgear XS508M | today |
+| Rock 5B Plus 01 | 10.0.50.41 | local | 2.5GbE | Netgear XS508M | today |
 | Rock 5T 01 | 10.0.50.11 | local | 2.5GbE | TP Link 18x 2.5Gb PoE | today |
 | Rockpi E 01 | 10.0.50.28 | local | 1GbE | TP-Link 24x TL-SG3428X | today |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10GbE | Netgear 52x PoE+ | today |
