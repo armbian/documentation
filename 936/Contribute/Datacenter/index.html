@@ -2630,10 +2630,11 @@ request to join it themselves:</p>
 <li><strong>If you are already an Armbian GitHub organization member</strong> — open the
   <a href="https://github.com/orgs/armbian/teams/board-maintainers">board-maintainers team page</a>
   and click <strong>Request to join</strong>. A team maintainer reviews and approves it.</li>
-<li><strong>If you are not an organization member yet</strong> — you first need to be a member
-  of the <a href="https://github.com/armbian">Armbian organization</a> (this normally
-  follows from contributing to Armbian and being invited by a maintainer). Once
-  you are an org member, request to join the team as above.</li>
+<li><strong>If you are not an organization member yet</strong> — every contributor is
+  automatically invited to become a member of the
+  <a href="https://github.com/armbian">Armbian organization</a>, so contribute (e.g. a
+  merged pull request) and accept the invitation that follows. Once you are an
+  org member, request to join the team as above.</li>
 </ul>
 <h2 id="connect-via-vpn-netbird">Connect via VPN (Netbird)<a class="headerlink" href="#connect-via-vpn-netbird" title="Permanent link">&para;</a></h2>
 <p>The Datacenter network is reached through <a href="https://netbird.io">Netbird</a>, a
@@ -2661,10 +2662,14 @@ run <code>netbird up</code>.</p>
 <p>Once connected you are on the Datacenter network and can reach the boards
 directly by their IP address.</p>
 <p>The inventory — every board with its model, status and IP — lives in NetBox:
-<strong><a href="https://netbox.armbian.com">https://netbox.armbian.com</a></strong>. Look up the board you need there, then connect
-over SSH:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ssh<span class="w"> </span>&lt;user&gt;@&lt;board-ip&gt;<span class="w">      </span><span class="c1"># e.g. ssh root@10.0.50.42</span>
+<strong><a href="https://netbox.armbian.com">https://netbox.armbian.com</a></strong>. Look up the board you need there, then SSH in
+as <strong>root</strong>:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ssh<span class="w"> </span>root@&lt;board-ip&gt;<span class="w">        </span><span class="c1"># e.g. ssh root@10.0.50.42</span>
 </span></code></pre></div></td></tr></table></div>
+<p>No password is needed — every board installs the SSH public keys from your
+GitHub account (<code>https://github.com/&lt;your-username&gt;.keys</code>) into root&rsquo;s
+authorized keys, so make sure the matching private key is on the machine you
+connect from.</p>
 <p>If a board is unreachable it may be powered off or mid-test; check its status in
 NetBox. For anything you cannot resolve (missing access, a wedged board), reach
 out on the maintainers channel.</p>
