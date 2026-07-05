@@ -25,7 +25,7 @@ request to join it themselves:
   follows from contributing to Armbian and being invited by a maintainer). Once
   you are an org member, request to join the team as above.
 
-## Connect to the VPN (Netbird)
+## Connect via VPN (Netbird)
 
 The Datacenter network is reached through [Netbird](https://netbird.io), a
 WireGuard-based mesh VPN. Authentication is via **GitHub**: you sign in with your
