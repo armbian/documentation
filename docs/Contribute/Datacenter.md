@@ -5,6 +5,8 @@ networks that our CI flashes, powers, boots, tests and measures automatically.
 Board maintainers can reach these boards remotely to debug problems, reproduce
 issues and validate images on actual hardware.
 
+![The Armbian Datacenter rack](../images/dc-rack.png)
+
 Access is over a VPN and is available to members of the
 [**board-maintainers**](https://github.com/orgs/armbian/teams/board-maintainers)
 GitHub team. If you maintain a board and need access, ask to be added to that
