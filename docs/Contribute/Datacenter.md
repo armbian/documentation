@@ -91,9 +91,10 @@ cannot resolve (missing access, a wedged board), reach out on the
 
 ## Boards
 
-The list below is kept up to date automatically by the reconcile action, which
-scans the Datacenter and opens a pull request to refresh it — the same mechanism
-used for the [wireless performance results](../WifiPerformance.md).
+The list below is refreshed by the reconcile action (`Inventory: scan &
+reconcile` in the autotests repo): it scans the Datacenter and opens a pull
+request to update this table — the same mechanism used for the
+[wireless performance results](../WifiPerformance.md).
 
 <!-- BOARDS-START -->
 
