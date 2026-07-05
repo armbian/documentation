@@ -69,12 +69,17 @@ Once connected you are on the Datacenter network and can reach the boards
 directly by their IP address.
 
 The inventory — every board with its model, status and IP — lives in NetBox:
-**<https://netbox.armbian.com>**. Look up the board you need there, then connect
-over SSH:
+**<https://netbox.armbian.com>**. Look up the board you need there, then SSH in
+as **root**:
 
 ```bash
-ssh <user>@<board-ip>      # e.g. ssh root@10.0.50.42
+ssh root@<board-ip>        # e.g. ssh root@10.0.50.42
 ```
+
+No password is needed — every board installs the SSH public keys from your
+GitHub account (`https://github.com/<your-username>.keys`) into root's
+authorized keys, so make sure the matching private key is on the machine you
+connect from.
 
 If a board is unreachable it may be powered off or mid-test; check its status in
 NetBox. For anything you cannot resolve (missing access, a wedged board), reach
