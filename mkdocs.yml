@@ -8,6 +8,12 @@ repo_url: https://github.com/armbian/documentation
 edit_uri: edit/main/docs/
 repo_name: armbian/documentation
 
+# docs/README.md is a folder placeholder for GitHub's directory view; it
+# collides with index.md as the site home. Exclude it from the build so
+# `mkdocs build --strict` does not abort on the conflict warning.
+exclude_docs: |
+  /README.md
+
 theme:
     name: material
     custom_dir: overrides
