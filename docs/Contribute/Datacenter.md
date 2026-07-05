@@ -81,8 +81,8 @@ authorized keys, so make sure the matching private key is on the machine you
 connect from.
 
 If a board is unreachable it may be powered off or mid-test. For anything you
-cannot resolve (missing access, a wedged board), reach out on the maintainers
-channel.
+cannot resolve (missing access, a wedged board), reach out on the
+[Armbian Discord](https://discord.com/invite/armbian) channels.
 
 ## Boards
 
