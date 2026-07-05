@@ -102,15 +102,15 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Board | IP address | Boot | Link | Switch | Last seen |
 |:--|:--|:--|--:|:--|--:|
 | Banana Pi CM4IO 01 | 10.0.50.10 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1GbE | TL-SG3428X | today |
+| Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Banana Pi M2Pro 01 | 10.0.50.43 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | Banana Pi M5 01 | 10.0.50.55 | local | 1GbE | Netgear GS348 | today |
 | Banana Pi Pro 01 | 10.0.50.52 | local | 100MbE | Netgear GS348 | today |
 | BananaPi BPI-F3 01 | 10.0.50.70 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| Clearfog Pro 01 | 10.0.50.42 | local | 1GbE | TL-SG3428X | today |
-| Cubietruck 01 | 10.0.50.49 | local | 1GbE | TL-SG3428X | today |
+| Clearfog Pro 01 | 10.0.50.42 | local | 1GbE | TP-Link TL-SG3428X | today |
+| Cubietruck 01 | 10.0.50.49 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Cubox i2eX/i4 01 | 10.0.50.63 | local | 1GbE | Netgear GS348 | today |
-| Espressobin 01 | 10.0.50.26 | local | 1GbE | TL-SG3428X | today |
+| Espressobin 01 | 10.0.50.26 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Helios4 01 | 10.0.50.58 | local | 1GbE | Netgear GS348 | today |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100MbE | Netgear GS348 | today |
 | Khadas VIM1 02 | 10.0.20.119 | local | 100MbE | — | today |
@@ -121,29 +121,29 @@ used for the [wireless performance results](../WifiPerformance.md).
 | NanoPi K2 01 | 10.0.50.76 | local | 1GbE | Netgear GS348 | today |
 | NanoPi M4V2 01 | 10.0.50.97 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | NanoPi M5 01 | 10.0.50.35 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| NanoPi Neo 3 01 | 10.0.50.20 | local | 1GbE | TL-SG3428X | today |
+| NanoPi Neo 3 01 | 10.0.50.20 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | NanoPi R4S 01 | 10.0.50.25 | local | 1GbE | Netgear GS348 | today |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | NanoPi R76S 01 | 10.0.50.67 | local | 2.5GbE | Netgear XS508M | today |
 | Odroid C1 01 | 10.0.50.27 | local | 1GbE | Netgear GS348 | today |
 | Odroid C2 01 | 10.0.50.87 | local | 1GbE | Netgear GS348 | today |
-| Odroid C4 01 | 10.0.50.13 | local | 1GbE | TL-SG3428X | today |
+| Odroid C4 01 | 10.0.50.13 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Odroid M1 01 | 10.0.50.19 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| Odroid N2 02 | 10.0.50.66 | local | 1GbE | TL-SG3428X | today |
+| Odroid N2 02 | 10.0.50.66 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Odroid XU4 01 | 10.0.50.51 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | Orange Pi 3 01 | 10.0.50.57 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1GbE | TP-Link SG3218XP-M2 | today |
 | Orange Pi 5 Plus 01 | 10.0.50.33 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| Orange Pi One+ 01 | 10.0.50.125 | local | 1GbE | TL-SG3428X | today |
-| Orange Pi PC2 01 | 10.0.50.68 | local | 1GbE | TL-SG3428X | today |
+| Orange Pi One+ 01 | 10.0.50.125 | local | 1GbE | TP-Link TL-SG3428X | today |
+| Orange Pi PC2 01 | 10.0.50.68 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Orange Pi R1 01 | 10.0.50.50 | local | 1GbE | — | today |
 | Orange Pi Win 01 | 10.0.50.24 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | Orange Pi Zero 02 | 10.0.50.46 | local | 100MbE | — | today |
-| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1GbE | TL-SG3428X | today |
+| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | OrangePi 3 LTS 02 | 10.0.50.16 | local | 1GbE | — | today |
-| Pine H64 01 | 10.0.50.34 | local | 1GbE | TL-SG3428X | today |
+| Pine H64 01 | 10.0.50.34 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | 1GbE | — | today |
 | Raspberry Pi 01 | 10.0.50.15 | local | 1GbE | Netgear GS348 | today |
 | Raspberry Pi 02 | 10.0.50.22 | local | 100MbE | Netgear GS348 | today |
@@ -152,11 +152,11 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Rock 5B 02 | 10.0.50.17 | local | 2.5GbE | Netgear XS508M | today |
 | Rock 5B Plus 01 | 10.0.50.41 | local | 2.5GbE | Netgear XS508M | today |
 | Rock 5T 01 | 10.0.50.11 | local | 2.5GbE | TP-Link SG3218XP-M2 | today |
-| Rockpi E 01 | 10.0.50.28 | local | 1GbE | TL-SG3428X | today |
+| Rockpi E 01 | 10.0.50.28 | local | 1GbE | TP-Link TL-SG3428X | today |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10GbE | Netgear S3300-52X-PoE+ | today |
 | Tanix TX6 01 | 10.0.50.21 | local | 100MbE | Netgear GS348 | today |
 | Tinker Board 01 | 10.0.50.29 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
-| Tinker Board 2 01 | 10.0.50.23 | local | 1GbE | TL-SG3428X | today |
+| Tinker Board 2 01 | 10.0.50.23 | local | 1GbE | TP-Link TL-SG3428X | today |
 | Udoo 01 | 10.0.50.62 | local | 1GbE | Netgear S3300-52X-PoE+ | today |
 | UEFI arm64 01 | 10.0.50.45 | local | 10GbE | Netgear XS712T | today |
 | UEFI x86 01 | 10.0.50.53 | local | 1GbE | Netgear GS348 | today |
