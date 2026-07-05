@@ -9,8 +9,21 @@ issues and validate images on actual hardware.
 
 Access is over a VPN and is available to members of the
 [**board-maintainers**](https://github.com/orgs/armbian/teams/board-maintainers)
-GitHub team. If you maintain a board and need access, ask to be added to that
-team first — authentication (below) will only let you in once you are a member.
+GitHub team. Everything below (VPN login and board access) only works once you
+are on that team.
+
+## Requesting access
+
+The `board-maintainers` team is a *visible* team, so organization members can
+request to join it themselves:
+
+- **If you are already an Armbian GitHub organization member** — open the
+  [board-maintainers team page](https://github.com/orgs/armbian/teams/board-maintainers)
+  and click **Request to join**. A team maintainer reviews and approves it.
+- **If you are not an organization member yet** — you first need to be a member
+  of the [Armbian organization](https://github.com/armbian) (this normally
+  follows from contributing to Armbian and being invited by a maintainer). Once
+  you are an org member, request to join the team as above.
 
 ## Connect to the VPN (Netbird)
 
