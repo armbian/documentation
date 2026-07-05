@@ -113,7 +113,7 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Espressobin 01 | 10.0.50.26 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
 | Helios4 01 | 10.0.50.58 | local | 1 GbE | Netgear GS348 | 05 Jul |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 | 05 Jul |
-| Khadas VIM1 02 | 10.0.20.119 | local | 100 MbE | — | 05 Jul |
+| Khadas VIM1 02 | 10.0.20.119 | local | Wi-Fi 5 | Zyxel NWA130BE | 05 Jul |
 | Khadas VIM2 01 | 10.0.50.12 | local | 1 GbE | Netgear GS348 | 05 Jul |
 | Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 | 05 Jul |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 | 05 Jul |
@@ -137,17 +137,17 @@ used for the [wireless performance results](../WifiPerformance.md).
 | Orange Pi 5 Plus 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
 | Orange Pi One+ 01 | 10.0.50.125 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
 | Orange Pi PC2 01 | 10.0.50.68 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Orange Pi R1 01 | 10.0.50.50 | local | 1 GbE | — | 05 Jul |
+| Orange Pi R1 01 | 10.0.50.50 | local | Wi-Fi 4 | Zyxel NWA130BE | 05 Jul |
 | Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| Orange Pi Zero 02 | 10.0.50.46 | local | 100 MbE | — | 05 Jul |
+| Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE | 05 Jul |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ | 05 Jul |
-| OrangePi 3 LTS 02 | 10.0.50.16 | local | 1 GbE | — | 05 Jul |
+| OrangePi 3 LTS 02 | 10.0.50.16 | local | Wi-Fi 5 | Zyxel NWA130BE | 05 Jul |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X | 05 Jul |
-| Radxa ZERO 3 01 | 10.0.20.185 | local | 1 GbE | — | 05 Jul |
+| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE | 05 Jul |
 | Raspberry Pi 01 | 10.0.50.15 | local | 1 GbE | Netgear GS348 | 05 Jul |
 | Raspberry Pi 02 | 10.0.50.22 | local | 100 MbE | Netgear GS348 | 05 Jul |
-| ROCK 2F 01 | 10.0.20.164 | local | — | — | 05 Jul |
+| ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE | 05 Jul |
 | Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
 | Rock 5B 02 | 10.0.50.17 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
 | Rock 5B Plus 01 | 10.0.50.41 | local | 2.5 GbE | Netgear XS508M | 05 Jul |
