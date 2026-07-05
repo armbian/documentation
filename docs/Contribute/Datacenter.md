@@ -100,7 +100,7 @@ used for the [wireless performance results](../WifiPerformance.md).
 **59** active boards.
 
 | Board | IP address | Boot | Link | Switch | Last seen |
-|:--|:--|:--|:--|:--|--:|
+|:--|:--|:--|--:|:--|--:|
 | Banana Pi CM4IO 01 | 10.0.50.10 | local | 1GbE | Netgear 52x PoE+ | today |
 | Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1GbE | TP-Link 24x TL-SG3428X | today |
 | Banana Pi M2Pro 01 | 10.0.50.43 | local | 1GbE | Netgear 52x PoE+ | today |
