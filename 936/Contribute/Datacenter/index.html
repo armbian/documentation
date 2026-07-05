@@ -2661,22 +2661,21 @@ run <code>netbird up</code>.</p>
 <h2 id="access-boards">Access boards<a class="headerlink" href="#access-boards" title="Permanent link">&para;</a></h2>
 <p>Once connected you are on the Datacenter network and can reach the boards
 directly by their IP address.</p>
-<p>The inventory — every board with its model, status and IP — lives in NetBox:
-<strong><a href="https://netbox.armbian.com">https://netbox.armbian.com</a></strong>. Look up the board you need there, then SSH in
-as <strong>root</strong>:</p>
+<p>Find the board you need — its model and IP address — in the <a href="#boards">Boards</a>
+list below, then SSH in as <strong>root</strong>:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ssh<span class="w"> </span>root@&lt;board-ip&gt;<span class="w">        </span><span class="c1"># e.g. ssh root@10.0.50.42</span>
 </span></code></pre></div></td></tr></table></div>
 <p>No password is needed — every board installs the SSH public keys from your
 GitHub account (<code>https://github.com/&lt;your-username&gt;.keys</code>) into root&rsquo;s
 authorized keys, so make sure the matching private key is on the machine you
 connect from.</p>
-<p>If a board is unreachable it may be powered off or mid-test; check its status in
-NetBox. For anything you cannot resolve (missing access, a wedged board), reach
-out on the maintainers channel.</p>
+<p>If a board is unreachable it may be powered off or mid-test. For anything you
+cannot resolve (missing access, a wedged board), reach out on the maintainers
+channel.</p>
 <h2 id="boards">Boards<a class="headerlink" href="#boards" title="Permanent link">&para;</a></h2>
-<p>The list below is generated from NetBox and kept up to date automatically via
-pull request — the same mechanism used for the
-<a href="../../WifiPerformance/">wireless performance results</a>.</p>
+<p>The list below is kept up to date automatically by the reconcile action, which
+scans the Datacenter and opens a pull request to refresh it — the same mechanism
+used for the <a href="../../WifiPerformance/">wireless performance results</a>.</p>
 <!-- BOARDS-START -->
 
 <p><em>The board list is populated automatically; this placeholder is replaced on the
