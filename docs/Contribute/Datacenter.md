@@ -97,7 +97,68 @@ used for the [wireless performance results](../WifiPerformance.md).
 
 <!-- BOARDS-START -->
 
-_The board list is populated automatically; this placeholder is replaced on the
-next update._
+**59** active boards.
+
+| Board | IP address |
+|:--|:--|
+| BananaPi BPI-F3 01 | 10.0.50.70 |
+| Banana Pi CM4IO 01 | 10.0.50.10 |
+| Banana Pi M2Pro 01 | 10.0.50.43 |
+| Banana Pi M2 Ultra 01 | 10.0.50.47 |
+| Banana Pi M5 01 | 10.0.50.55 |
+| Banana Pi Pro 01 | 10.0.50.52 |
+| Clearfog Pro 01 | 10.0.50.42 |
+| Cubietruck 01 | 10.0.50.49 |
+| Cubox i2eX/i4 01 | 10.0.50.63 |
+| Espressobin 01 | 10.0.50.26 |
+| Helios4 01 | 10.0.50.58 |
+| Inovato Quadra 01 | 10.0.50.36 |
+| Khadas VIM1 02 | 10.0.20.119 |
+| Khadas VIM2 01 | 10.0.50.12 |
+| Khadas VIM3 01 | 10.0.50.38 |
+| NanoPC T6 LTS 01 | 10.0.50.30 |
+| NanoPi Duo 01 | 10.0.50.48 |
+| NanoPi K2 01 | 10.0.50.76 |
+| NanoPi M4V2 01 | 10.0.50.97 |
+| NanoPi M5 01 | 10.0.50.35 |
+| NanoPi Neo 3 01 | 10.0.50.20 |
+| Nanopi R2S 01 | 10.0.50.65 |
+| NanoPi R4S 01 | 10.0.50.25 |
+| NanoPi R6S 01 | 10.0.50.40 |
+| NanoPi R76S 01 | 10.0.50.67 |
+| Odroid C1 01 | 10.0.50.27 |
+| Odroid C2 01 | 10.0.50.87 |
+| Odroid C4 01 | 10.0.50.13 |
+| Odroid M1 01 | 10.0.50.19 |
+| Odroid N2 02 | 10.0.50.66 |
+| Odroid XU4 01 | 10.0.50.51 |
+| Orange Pi 3 01 | 10.0.50.57 |
+| OrangePi 3 LTS 02 | 10.0.50.16 |
+| Orange Pi 5 01 | 10.0.50.39 |
+| Orange Pi 5 Plus 01 | 10.0.50.33 |
+| Orange Pi One+ 01 | 10.0.50.125 |
+| Orange Pi PC2 01 | 10.0.50.68 |
+| Orange Pi R1 01 | 10.0.50.50 |
+| Orange Pi Win 01 | 10.0.50.24 |
+| Orange Pi Zero 02 | 10.0.50.46 |
+| Orange Pi Zero2 01 | 10.0.50.74 |
+| Orange Pi Zero Plus 01 | 10.0.50.54 |
+| Pine H64 01 | 10.0.50.34 |
+| Radxa ZERO 3 01 | 10.0.20.185 |
+| Raspberry Pi 01 | 10.0.50.15 |
+| Raspberry Pi 02 | 10.0.50.22 |
+| ROCK 2F 01 | 10.0.20.164 |
+| Rock 5B 01 | 10.0.50.69 |
+| Rock 5B 02 | 10.0.50.17 |
+| Rock 5B Plus 01 | 10.0.50.41 |
+| Rock 5T 01 | 10.0.50.11 |
+| Rockpi E 01 | 10.0.50.28 |
+| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 |
+| Tanix TX6 01 | 10.0.50.21 |
+| Tinker Board 01 | 10.0.50.29 |
+| Tinker Board 2 01 | 10.0.50.23 |
+| Udoo 01 | 10.0.50.62 |
+| UEFI arm64 01 | 10.0.50.45 |
+| UEFI x86 01 | 10.0.50.53 |
 
 <!-- BOARDS-STOP -->
