@@ -183,6 +183,7 @@ nav:
 
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
+        - 'Datacenter access': 'Contribute/Datacenter.md'
         - 'Armbian config': 'Contribute/Armbian-config.md'
         - 'Wifi performance tests': 'WifiPerformance.md'
         - 'Mirrors' : 'Mirrors.md'
