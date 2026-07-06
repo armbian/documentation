@@ -108,7 +108,7 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**74** boards (17 failed).
+**72** boards (15 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
@@ -126,9 +126,7 @@ request to update this table — the same mechanism used for the
 | Espressobin 01 | ✅ | 10.0.50.26 | local | 1 GbE | TP-Link TL-SG3428X (11) | 06 Jul |
 | Helios4 01 | ✅ | 10.0.50.58 | local | 1 GbE | Netgear GS348 (11) | 06 Jul |
 | Inovato Quadra 01 | ✅ | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) | 06 Jul |
-| Khadas VIM1 01 | ❌ | 10.0.50.14 | local | 100 MbE | Netgear GS348 (3) | 04 Jul |
-| Khadas VIM1 02 | ❌ | 10.0.20.119 | local | Wi-Fi 5 | Zyxel NWA130BE | 06 Jul |
-| Khadas VIM1 03 | ✅ | 10.0.50.71 | local | Wi-Fi 5 | Zyxel NWA130BE | 06 Jul |
+| Khadas VIM1 01 | ✅ | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) | 06 Jul |
 | Khadas VIM2 01 | ✅ | 10.0.50.12 | local | 1 GbE | Netgear GS348 (13) | 06 Jul |
 | Khadas VIM3 01 | ✅ | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) | 06 Jul |
 | Le potato 01 | ❌ | 10.0.50.37 | local | 100 MbE | Netgear GS348 (12) | 03 Jul |
