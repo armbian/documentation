@@ -108,7 +108,7 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**72** boards (15 failed).
+**72** boards (14 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
@@ -140,6 +140,7 @@ request to update this table — the same mechanism used for the
 | NanoPi M6 03 | ❌ | 10.0.60.180 | local | Wi-Fi 5 | Zyxel NWA130BE | 29 Jun |
 | NanoPi M6 04 | ❌ | 10.0.60.181 | local | Wi-Fi 5 | Zyxel NWA130BE | 29 Jun |
 | NanoPi Neo 2 Black 01 | ❌ | 10.0.50.59 | local | 1 GbE | — | 02 Jul |
+| NanoPi Neo 2 Black 02 | ✅ | 10.0.50.14 | local | 1 GbE | — | 06 Jul |
 | NanoPi Neo 3 01 | ✅ | 10.0.50.20 | local | 1 GbE | TP-Link TL-SG3428X (17) | 06 Jul |
 | NanoPi R1 01 | ❌ | 10.0.50.31 | local | 1 GbE | Netgear GS348 (14) | 04 Jul |
 | Nanopi R2S 01 | ✅ | 10.0.50.65 | local | 1 GbE | Netgear S3300-52X-PoE+ (12) | 06 Jul |
@@ -165,8 +166,7 @@ request to update this table — the same mechanism used for the
 | Orange Pi Zero 02 | ✅ | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE | 06 Jul |
 | Orange Pi Zero Plus 01 | ✅ | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X (20) | 06 Jul |
 | Orange Pi Zero2 01 | ✅ | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ (45) | 06 Jul |
-| OrangePi 3 LTS 01 | ❌ | 10.0.50.60 | local | 1 GbE | TP-Link TL-SG3428X (19) | 04 Jul |
-| OrangePi 3 LTS 02 | ✅ | 10.0.50.16 | local | Wi-Fi 5 | Zyxel NWA130BE | 06 Jul |
+| OrangePi 3 LTS 01 | ✅ | 10.0.50.16 | nfs | 1 GbE | TP-Link TL-SG3428X (19) | 06 Jul |
 | Pine H64 01 | ❌ | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X (9) | 06 Jul |
 | Radxa ZERO 3 01 | ✅ | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE | 06 Jul |
 | Raspberry Pi 01 | ✅ | 10.0.50.15 | local | 1 GbE | Netgear GS348 (1) | 06 Jul |
