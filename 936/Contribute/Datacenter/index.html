@@ -2650,9 +2650,20 @@ etc.).</p>
 <h3 id="2-connect-to-armbians-netbird">2. Connect to Armbian&rsquo;s Netbird<a class="headerlink" href="#2-connect-to-armbians-netbird" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>netbird<span class="w"> </span>up<span class="w"> </span>--management-url<span class="w"> </span>https://netbird.armbian.com
 </span></code></pre></div></td></tr></table></div>
-<p>This opens your browser to authenticate. Log in with <strong>GitHub</strong> and authorize the
-request. Once you are verified as a <code>board-maintainers</code> member you are connected
-to the Datacenter mesh. The management URL is remembered, so later you can simply
+<p>This opens your browser to authenticate:</p>
+<ol>
+<li>
+<p>On the Netbird sign-in screen, choose <strong>Continue with Authentik</strong>.</p>
+<p><img alt="Netbird sign-in — Continue with Authentik" src="../../images/authentic-2.png" /></p>
+</li>
+<li>
+<p>On the <em>Armbian Auth</em> screen, click the <strong>GitHub</strong> icon (the button below
+    <em>Log in</em> — not the email/username field) and authorize the request.</p>
+<p><img alt="Armbian Auth — sign in with GitHub" src="../../images/authentic-1.png" /></p>
+</li>
+</ol>
+<p>Once GitHub confirms you are a <code>board-maintainers</code> member you are connected to
+the Datacenter mesh. The management URL is remembered, so next time you can just
 run <code>netbird up</code>.</p>
 <p>Check the connection and your assigned VPN address:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>netbird<span class="w"> </span>status
