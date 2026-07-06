@@ -50,9 +50,19 @@ etc.).
 netbird up --management-url https://netbird.armbian.com
 ```
 
-This opens your browser to authenticate. Log in with **GitHub** and authorize the
-request. Once you are verified as a `board-maintainers` member you are connected
-to the Datacenter mesh. The management URL is remembered, so later you can simply
+This opens your browser to authenticate:
+
+1. On the Netbird sign-in screen, choose **Continue with Authentik**.
+
+    ![Netbird sign-in — Continue with Authentik](../images/authentic-2.png)
+
+2. On the *Armbian Auth* screen, click the **GitHub** icon (the button below
+    *Log in* — not the email/username field) and authorize the request.
+
+    ![Armbian Auth — sign in with GitHub](../images/authentic-1.png)
+
+Once GitHub confirms you are a `board-maintainers` member you are connected to
+the Datacenter mesh. The management URL is remembered, so next time you can just
 run `netbird up`.
 
 Check the connection and your assigned VPN address:
