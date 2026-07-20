@@ -1,40 +1,87 @@
 <h2 align="center">
-  <a href=#><img src="https://raw.githubusercontent.com/armbian/.github/master/profile/logosmall.png" alt="Armbian logo"></a>
+  <a href="#"><img src="https://raw.githubusercontent.com/armbian/.github/master/profile/logosmall.png" alt="Armbian logo"></a>
   <br><br>
 </h2>
 
-### Purpose of This Repository
+# Armbian Documentation
 
-Armbian Documentation serves as the central knowledge base for the entire Armbian ecosystem. It covers everything from the **Armbian OS** and **armbian-config** utility to **software modules** and the **Armbian build framework**. Whether you're installing Armbian for the first time, configuring advanced features, or building custom images from source, the documentation provides step-by-step guides, best practices, and technical references to support both beginners and experienced developers.
+[![Create offline documentation to release](https://github.com/armbian/documentation/actions/workflows/release.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/release.yaml)
+[![Create docs preview on PR](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml)
 
-## Contribute
+Source repository for the [Armbian Documentation](https://docs.armbian.com) — the central knowledge base for the Armbian ecosystem, covering the Armbian OS, `armbian-config`, software modules, and the Armbian build framework.
 
-You can contribute to Armbian Documentation directly on [GitHub](docs/) by editing or submitting pull requests.  
-However, to **enjoy a fully rendered local preview** with proper styling and live reload, we recommend setting up the documentation site locally using `mkdocs`.
+## Overview
+
+Documentation is written in [Markdown](https://www.markdownguide.org/basic-syntax/) and stored in the [`docs/`](docs/) subfolder. Images live in `docs/images/`. This repository is intended for storage and quick browsing on GitHub — the official rendered output is published at:
+
+* Website: [https://docs.armbian.com](https://docs.armbian.com)
+* PDF: [Latest release](https://github.com/armbian/documentation/releases/latest)
+
+The site is built with [MkDocs](https://github.com/mkdocs/mkdocs/) using the [mkdocs-material](https://github.com/squidfunk/mkdocs-material) theme (see [`requirements.txt`](requirements.txt) and [`mkdocs.yml`](mkdocs.yml)).
+
+## Repository Layout
+
+```
+docs/            Markdown content, images, and CSS
+  images/        Screenshots and diagrams
+  css/           Custom stylesheets
+overrides/       Theme overrides (main.html)
+tools/           Helper scripts (mkArmbianDocs.py)
+.github/         Workflows, labels, PR/issue templates
+mkdocs.yml       MkDocs site configuration
+requirements.txt Python dependencies
+```
+
+## Contributing
+
+You can contribute directly on GitHub by editing files under [`docs/`](docs/) and opening a pull request. For a fully rendered local preview with styling and live reload, set up MkDocs locally as shown below.
+
+Please review the [document template](.github/DOCUMENT_TEMPLATE.md) before writing new content.
+
+### File naming convention
+
+```
+[Parent-Topic]_[Child-Topic]-example.md
+```
+
+Parent and child topics are separated by an underscore (`_`). Hyphens (`-`) are automatically converted to spaces when rendered. Please avoid creating new parent topics unless absolutely necessary.
+
+Current parent topics:
+
+* User Guide
+* Hardware notes
+* Developer Guide
+* Contributor Process
+* Release management
+* Community
+
+## Building Locally
+
+### Prerequisites
+
+Ensure Python and the required development packages are installed:
 
 ```bash
 sudo apt-get update
 sudo apt-get install python3 python3-pip python3-venv python3-dev
 ```
 
-If using Debian, you may need to install the following packages for `mkdocs-material`:
+On Debian you may additionally need the following packages for `mkdocs-material`:
 
 ```bash
 sudo apt-get install libcairo2 pango1.0-tools
 ```
 
-### Cloning the Repository
-
-Next, clone the Armbian documentation repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/armbian/documentation
 cd documentation
 ```
 
-### Setting Up the Environment
+### Set up the environment
 
-Set up a Python virtual environment to isolate the project dependencies:
+Use a Python virtual environment to isolate dependencies:
 
 ```bash
 python3 -m venv .venv
@@ -42,16 +89,50 @@ source .venv/bin/activate
 pip install --use-pep517 -r requirements.txt
 ```
 
-### Running the Local Server
-
-To preview the documentation locally:
+### Build and serve
 
 ```bash
 mkdocs build --clean
 mkdocs serve -a 0.0.0.0:8000
 ```
 
-Then open your browser and go to http://localhost:8000 
-The site will automatically reload when you make changes to .md files.
+Then open [http://localhost:8000](http://localhost:8000). The site auto-reloads when `.md` files change.
 
-💡 Tip: Use the local preview to verify formatting and layout before committing your changes.
+> 💡 Tip: Use the local preview to verify formatting and layout before committing your changes.
+
+## Tooling
+
+The `tools/` folder contains helper scripts used to maintain the documentation.
+
+### `tools/mkArmbianDocs.py`
+
+Regenerates `mkdocs.yml` from the current contents of the `docs/` folder.
+
+* Only needed when the **structure** of `docs/` changes (new sections, renamed topics, etc.).
+* Supports command-line options for input and output directories — see `mkArmbianDocs.py -h`.
+
+Run from the repository root:
+
+```bash
+python3 tools/mkArmbianDocs.py && mkdocs build
+```
+
+This regenerates `mkdocs.yml` and publishes the built HTML to `site/`.
+
+## Automation
+
+This repository uses several GitHub Actions workflows:
+
+| Workflow | Purpose |
+|----------|---------|
+| `release.yaml` | Builds the site with MkDocs and deploys it to `docs.armbian.com` on pushes to `main`. |
+| `pdf-at-pr.yaml` | Builds a docs preview for each pull request and publishes it to the `www` branch, then comments a preview link on the PR. |
+| `pull-from-armbian-config.yml` | Pulls content generated by [`armbian/configng`](https://github.com/armbian/configng) into `docs/User-Guide_Armbian-Config/` and `docs/User-Guide_Armbian-Software/`, and opens an auto-update PR. |
+| `pull-mirrors-from-db.yml` | Regenerates the mirrors table in `docs/Mirrors.md` from the Armbian NetBox database and opens an auto-update PR. |
+| `pr-announce.yml` / `merge-announce.yml` | Announce new PRs and merges on Discord. |
+| `pr-auto-labeler.yml` / `labels-from-yml.yml` | Automatic PR labeling (category, size) and label sync from `.github/labels.yml`. |
+| `clean-workflow-logs.yml` | Weekly cleanup of old workflow run logs. |
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0](LICENSE).
