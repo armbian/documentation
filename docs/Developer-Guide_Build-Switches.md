@@ -137,6 +137,20 @@ Enables automatic background updates of Docker build images via a system cronjob
     - `/etc/cron.d/armbian-docker-pull` - cronjob (runs at 00:00 and 12:00)
     - `/var/lib/armbian/docker-pull.hash` - configuration hash for update detection
 
+**DOCKER_FORCE_PULL** ( `string` )
+
+- `yes`: force a re-pull of the Docker base image, bypassing the local pull cache
+- `no` (default): reuse the local image if it is present and was pulled within the last ~24 hours
+
+By default the build only pulls the base image when the local copy is missing or its pull marker is older than ~24 hours; otherwise it reuses the local image. Set `DOCKER_FORCE_PULL=yes` to pull the latest published image immediately — useful right after a new framework image is published, so builds pick it up without waiting for the cache to expire or removing the local image by hand.
+
+!!! example "Build switch example"
+
+```sh
+# Force a fresh pull of the base image for this build
+./compile.sh DOCKER_FORCE_PULL=yes BOARD=... BRANCH=...
+```
+
 **DOCKER_PRUNE** ( `string` )
 
 - `yes`: prune old Armbian build images from the local Docker daemon at the start of each build
