@@ -148,7 +148,7 @@ By default the build only pulls the base image when the local copy is missing or
 
 ```sh
 # Force a fresh pull of the base image for this build
-./compile.sh DOCKER_FORCE_PULL=yes BOARD=... BRANCH=...
+./compile.sh DOCKER_FORCE_PULL=yes BOARD=uefi-x86 BRANCH=current
 ```
 
 **DOCKER_PRUNE** ( `string` )
