@@ -2720,6 +2720,19 @@
 - <code>/etc/cron.d/armbian-docker-pull</code> - cronjob (runs at 00:00 and 12:00)
 - <code>/var/lib/armbian/docker-pull.hash</code> - configuration hash for update detection</p>
 </div>
+<p><strong>DOCKER_FORCE_PULL</strong> ( <code>string</code> )</p>
+<ul>
+<li><code>yes</code>: force a re-pull of the Docker base image, bypassing the local pull cache</li>
+<li><code>no</code> (default): reuse the local image if it is present and was pulled within the last ~24 hours</li>
+</ul>
+<p>By default the build only pulls the base image when the local copy is missing or its pull marker is older than ~24 hours; otherwise it reuses the local image. Set <code>DOCKER_FORCE_PULL=yes</code> to pull the latest published image immediately — useful right after a new framework image is published, so builds pick it up without waiting for the cache to expire or removing the local image by hand.</p>
+<div class="admonition example">
+<p class="admonition-title">Build switch example</p>
+</div>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Force a fresh pull of the base image for this build</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>./compile.sh<span class="w"> </span><span class="nv">DOCKER_FORCE_PULL</span><span class="o">=</span>yes<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
+</span></code></pre></div></td></tr></table></div>
 <p><strong>DOCKER_PRUNE</strong> ( <code>string</code> )</p>
 <ul>
 <li><code>yes</code>: prune old Armbian build images from the local Docker daemon at the start of each build</li>
@@ -2751,19 +2764,19 @@
 <p><strong>GHCR_MIRROR_ADDRESS</strong> ( <code>string</code> )</p>
 <p>The default mirror address for ghcr.io, set by <code>GHCR_MIRROR=dockerproxy</code>, is ghcr.dockerproxy.com. When this address is unavailable, an alternative address can be set with <code>GHCR_MIRROR_ADDRESS</code>.</p>
 <p>Example:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span><span class="nv">GHCR_MIRROR</span><span class="o">=</span>dockerproxy<span class="w"> </span><span class="nv">GHCR_MIRROR_ADDRESS</span><span class="o">=</span>ghcr.libcuda.so
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh<span class="w"> </span><span class="nv">GHCR_MIRROR</span><span class="o">=</span>dockerproxy<span class="w"> </span><span class="nv">GHCR_MIRROR_ADDRESS</span><span class="o">=</span>ghcr.libcuda.so
 </span></code></pre></div></td></tr></table></div>
 <p><strong>KERNEL_COMPILER</strong> ( <code>string</code> )</p>
 <p>The compiler used to compile the kernel. Usually, this option is set by the board config, but it can be set to <code>clang</code> to use LLVM to compile the kernel.</p>
 <p>Example:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh<span class="w"> </span><span class="nv">KERNEL_COMPILER</span><span class="o">=</span>clang
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span><span class="nv">KERNEL_COMPILER</span><span class="o">=</span>clang
 </span></code></pre></div></td></tr></table></div>
 <p><strong>OPENSSHD_REGENERATE_HOST_KEYS</strong> ( <code>boolean</code> )</p>
 <p>- false (skip armbian-firstrun&rsquo;s OpenSSH host keys deletion and regeneration (eg: to let cloud-init set the SSH host keys)
   - <strong>true</strong> (execute armbian-firstrun&rsquo;s OpenSSH host keys deletion + regeneration)</p>
 <p>Manage OpenSSH host key regeneration at armbian-firstrun service.</p>
 <p>Example:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span><span class="nv">OPENSSHD_REGENERATE_HOST_KEYS</span><span class="o">=</span><span class="nb">false</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span><span class="nv">OPENSSHD_REGENERATE_HOST_KEYS</span><span class="o">=</span><span class="nb">false</span>
 </span></code></pre></div></td></tr></table></div>
 <hr>
 
@@ -2796,7 +2809,7 @@ btrfs subvolume <code>@</code>. The same subvolume is set as default for mountin
 specifying the <code>subvol=@</code> option at the time the image is mounted.</p>
 <p>Using <code>BTRFS_ROOT_SUBVOLUME</code>, you can set a different name for the
 root filesystem subvolume:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span><span class="nv">ROOTFS_TYPE</span><span class="o">=</span>btrfs<span class="w"> </span><span class="nv">BTRFS_ROOT_SUBVOLUME</span><span class="o">=</span>@root
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>./compile.sh<span class="w"> </span><span class="nv">ROOTFS_TYPE</span><span class="o">=</span>btrfs<span class="w"> </span><span class="nv">BTRFS_ROOT_SUBVOLUME</span><span class="o">=</span>@root
 </span></code></pre></div></td></tr></table></div>
 <p><strong>CRYPTROOT_ENABLE</strong> ( <code>string</code> )</p>
 <ul>
@@ -2804,17 +2817,17 @@ root filesystem subvolume:</p>
 <li>no</li>
 </ul>
 <p>LUKS (Linux Unified Key Setup) is a specification for block device encryption. It establishes an on-disk format for the data, as well as a passphrase/key management policy. LUKS uses the kernel device mapper subsystem via the dm-crypt module.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">When enabled, you need to provide additional information:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>CRYPTROOT_PASSPHRASE=&quot;MYSECRECTPASS&quot;             # Mandatory
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>CRYPTROOT_AUTOUNLOCK=&quot;yes&quot;                       # Default: no. If set to yes you can omit CRYPTROOT_PASSPHRASE to do unattended unlocking
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>CRYPTROOT_SSH_UNLOCK=&quot;yes&quot;                       # Default: yes
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>CRYPTROOT_SSH_UNLOCK_PORT=&quot;2222&quot;                 # Default: 2022
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>CRYPTROOT_PARAMETERS=&quot;custom cryptsetup options&quot; # Default: --pbkdf pbkdf2
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">When enabled, you need to provide additional information:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>CRYPTROOT_PASSPHRASE=&quot;MYSECRECTPASS&quot;             # Mandatory
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>CRYPTROOT_AUTOUNLOCK=&quot;yes&quot;                       # Default: no. If set to yes you can omit CRYPTROOT_PASSPHRASE to do unattended unlocking
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>CRYPTROOT_SSH_UNLOCK=&quot;yes&quot;                       # Default: yes
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>CRYPTROOT_SSH_UNLOCK_PORT=&quot;2222&quot;                 # Default: 2022
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>CRYPTROOT_PARAMETERS=&quot;custom cryptsetup options&quot; # Default: --pbkdf pbkdf2
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition tip">
 <p class="admonition-title">Tips and warnings</p>
@@ -2841,23 +2854,23 @@ root filesystem subvolume:</p>
 <div class="admonition example">
 <p class="admonition-title">Build switch example</p>
 </div>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span>
-<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>./compile.sh<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>build<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nv">BRANCH</span><span class="o">=</span>current<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nv">BUILD_DESKTOP</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nv">BUILD_MINIMAL</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nv">KERNEL_CONFIGURE</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="nv">RELEASE</span><span class="o">=</span>noble<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="nv">ENABLE_EXTENSIONS</span><span class="o">=</span>mesa-vpu,nvidia<span class="w"> </span><span class="se">\</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>./compile.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>build<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="nv">BRANCH</span><span class="o">=</span>current<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nv">BUILD_DESKTOP</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="nv">BUILD_MINIMAL</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="nv">KERNEL_CONFIGURE</span><span class="o">=</span>no<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="nv">RELEASE</span><span class="o">=</span>noble<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="nv">ENABLE_EXTENSIONS</span><span class="o">=</span>mesa-vpu,nvidia<span class="w"> </span><span class="se">\</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>CONSOLE_AUTOLOGIN</strong> ( <code>string</code> )</p>
 <ul>
@@ -2906,12 +2919,12 @@ root filesystem subvolume:</p>
 <li><code>CONFIG_COMPAT_VDSO=y</code> — optional but recommended; provides fast <code>gettimeofday</code>/<code>clock_gettime</code> for 32-bit processes via vDSO.</li>
 </ul>
 <p>To check what a given host kernel ships with:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>zcat<span class="w"> </span>/proc/config.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;^CONFIG_(COMPAT|COMPAT_VDSO)=&#39;</span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>zcat<span class="w"> </span>/proc/config.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;^CONFIG_(COMPAT|COMPAT_VDSO)=&#39;</span>
 </span></code></pre></div></td></tr></table></div>
 <p>A host with native armhf support will print at least <code>CONFIG_COMPAT=y</code>; for example:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nv">CONFIG_COMPAT</span><span class="o">=</span>y
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nv">CONFIG_COMPAT_VDSO</span><span class="o">=</span>y
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nv">CONFIG_COMPAT</span><span class="o">=</span>y
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nv">CONFIG_COMPAT_VDSO</span><span class="o">=</span>y
 </span></code></pre></div></td></tr></table></div>
 <p>If the command prints nothing, or <code>CONFIG_COMPAT</code> is unset, the host kernel cannot run armhf userspace natively and the build framework will use qemu emulation regardless of this switch.</p>
 <p><strong>ARTIFACT_IGNORE_CACHE</strong> ( <code>string</code> )</p>
@@ -2937,7 +2950,7 @@ root filesystem subvolume:</p>
 </ul>
 <p>Automatically upload full build logs for debugging to one of Armbian&rsquo;s paste servers at the end of the build process.</p>
 <p>Example:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span><span class="nv">SHARE_LOG</span><span class="o">=</span>yes
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>./compile.sh<span class="w"> </span><span class="nv">SHARE_LOG</span><span class="o">=</span>yes
 </span></code></pre></div></td></tr></table></div>
 <p><strong>UBOOT_LOGLEVEL</strong> ( <code>integer</code> )</p>
 <ul>
