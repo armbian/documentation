@@ -106,6 +106,10 @@ They're the same, except:
 - [uboot-btrfs](https://github.com/armbian/build/blob/main/extensions/uboot-btrfs.sh): Add btrfs support for u-boot
 - [watchdog](https://github.com/armbian/build/blob/main/extensions/watchdog.sh): Add watchdog alert support
 
+#### Which hook points can I implement?
+
+The reference list is [Extension Hooks](Developer-Guide_Extensions-Hooks.md). To get the list for the exact tree you are building from, userpatches included, run [`./compile.sh show-extensions`](Developer-Guide_Build-Commands.md#show-extensions); add `SHOW_EXTENSIONS=docs` to get each hook's documentation instead of just its name.
+
 #### How to opt out of a specific hook function?
 
 Any function making use of the extension framework [generally of the form `hook_name__individual_function`] can be skipped in a board or family config, by way of
