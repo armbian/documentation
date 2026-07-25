@@ -360,10 +360,9 @@ Allows speeding up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `n
 
     This feature is experimental. It is recommended to check the output against a classic sequential rewrite to make sure the diff is 0.
 
-
 **"PARALLEL_WORKERS** ( `integer` )
 
-- `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES` is set. Default is auto-calculate based on `nproc`.
+- `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES=yes` is set. Default is auto-calculate based on `nproc`.
 
 <a id="prefer_native_armhf"></a>
 **PREFER_NATIVE_ARMHF** ( `string` )
