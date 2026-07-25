@@ -348,6 +348,23 @@ Build and bundle [stubble](https://github.com/ubuntu/stubble), Canonical's EFI s
 
 The result is a single signed UKI that EFI-boots and picks the correct device tree for the running board automatically — intended for generic UEFI-on-devicetree images. It is enabled by default for the `uefidt` family (board `uefi-arm64-dt`) and is opt-in elsewhere; boards that boot through U-Boot do not use it. Requires `ukify` (from systemd) with `--devicetree-auto` support on the build host.
 
+
+**PARALLEL_PATCHES** ( `string` )
+
+- `yes`
+- `no` (default)
+
+Allows speeding up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` level by spining up overlayfs-based worktress and process patches in parallel. Cross-patch dependencies (e.g. a single file is touched by two or more patches) are detected beforehand and grouped for sequential processing in order to preserve context line changes.
+
+!!! tip "Note:"
+
+    This feature is experimental. It is recommended to check the output against a classic sequential rewrite to make sure the diff is 0.
+
+
+**"PARALLEL_WORKERS** ( `integer` )
+
+- `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES` is set. Default is auto-calculate based on `nproc`.
+
 <a id="prefer_native_armhf"></a>
 **PREFER_NATIVE_ARMHF** ( `string` )
 
