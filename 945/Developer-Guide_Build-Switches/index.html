@@ -2911,12 +2911,12 @@ root filesystem subvolume:</p>
 <li><code>yes</code></li>
 <li><code>no</code> (default)</li>
 </ul>
-<p>Allows speeding up <code>rewrite-kernel-patches</code> and <code>rewrite-uboot-patches</code> up to <code>nproc</code> level by spining up overlayfs-based worktress and process patches in parallel. Cross-patch dependencies (e.g. a single file is touched by two or more patches) are detected beforehand and grouped for sequential processing in order to preserve context line changes.</p>
+<p>Allows speeding up <code>rewrite-kernel-patches</code> and <code>rewrite-uboot-patches</code> up to <code>nproc</code> level by spinning up overlayfs-based worktrees and process patches in parallel. Cross-patch dependencies (e.g. a single file is touched by two or more patches) are detected beforehand and grouped for sequential processing to preserve context line changes.</p>
 <div class="admonition tip">
 <p class="admonition-title">Note:</p>
 <p>This feature is experimental. It is recommended to check the output against a classic sequential rewrite to make sure the diff is 0.</p>
 </div>
-<p><strong>&ldquo;PARALLEL_WORKERS</strong> ( <code>integer</code> )</p>
+<p><strong>PARALLEL_WORKERS</strong> ( <code>integer</code> )</p>
 <ul>
 <li><code>1</code> to <code>32</code>: manually set the number of workers when <code>PARALLEL_PATCHES=yes</code> is set. Default is auto-calculate based on <code>nproc</code>.</li>
 </ul>
