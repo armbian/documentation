@@ -354,13 +354,13 @@ The result is a single signed UKI that EFI-boots and picks the correct device tr
 - `yes`
 - `no` (default)
 
-Allows speeding up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` level by spining up overlayfs-based worktress and process patches in parallel. Cross-patch dependencies (e.g. a single file is touched by two or more patches) are detected beforehand and grouped for sequential processing in order to preserve context line changes.
+Allows speeding up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` level by spinning up overlayfs-based worktrees and process patches in parallel. Cross-patch dependencies (e.g. a single file is touched by two or more patches) are detected beforehand and grouped for sequential processing to preserve context line changes.
 
 !!! tip "Note:"
 
     This feature is experimental. It is recommended to check the output against a classic sequential rewrite to make sure the diff is 0.
 
-**"PARALLEL_WORKERS** ( `integer` )
+**PARALLEL_WORKERS** ( `integer` )
 
 - `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES=yes` is set. Default is auto-calculate based on `nproc`.
 
