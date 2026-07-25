@@ -140,19 +140,22 @@ Usage:
 
 ### show-extensions
 
-Lists the [extension hook points](Developer-Guide_Extensions-Hooks.md) that exist in the build sources, together with their inline documentation.
+Lists the [extension hook points](Developer-Guide_Extensions-Hooks.md) that exist in the build sources, optionally with their inline documentation.
 
 The list is produced by statically scanning `lib/`, `extensions/` and `config/` for `call_extension_method` call sites, so it always describes the checked-out tree — including hooks added by userpatches — without running a build.
 
 No board configuration is needed, the command does not relaunch into Docker and does not install host dependencies.
 
 Usage:
+
 ```bash
 ./compile.sh show-extensions
 ```
+
 Outputs one hook name per line, sorted alphabetically.
 
 ```bash
 ./compile.sh show-extensions SHOW_EXTENSIONS=docs
 ```
+
 Outputs a Markdown document with the documentation of every hook; this is what [Extension Hooks](Developer-Guide_Extensions-Hooks.md) is generated from.
