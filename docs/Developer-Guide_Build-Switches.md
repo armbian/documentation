@@ -225,6 +225,19 @@ Example:
 
 Create image with different root filesystems instead of default `ext4`. Requires setting `FIXED_IMAGE_SIZE` to something smaller than the size of your SD card for `F2FS`
 
+**BTRFS_CHECKSUM** ( `string` )
+
+- `crc32c`
+- `xxhash`
+- `sha256`
+- `blake2`
+
+Override the default `btrfs` filesystem [checksum algorithm](https://btrfs.readthedocs.io/en/stable/Checksumming.html).  If `BTRFS_CHECKSUM` is unspecified, the checksum is chosen automatically by `mkfs.btrfs`, which currently defaults to `crc32c`.
+
+!!! tip "Tip"
+
+    Choose `BTRFS_CHECKSUM=blake2` for better error detection at the cost of increased CPU usage.
+
 **BTRFS_COMPRESSION** ( `string` )
 
 - `lzo`
