@@ -1,6 +1,9 @@
 # Automation for developers and maintainers
 
-Core automation for generating images for release are held at <https://github.com/armbian/os>
+Core automation for generating images for release is held at <https://github.com/armbian/ci> (the reusable build pipeline and its track wrappers). Repository, download-page and mirror automation lives at [`armbian/armbian.github.io`](https://github.com/armbian/armbian.github.io).
+
+???+ Warning
+    The old [`armbian/os`](https://github.com/armbian/os) repository is deprecated and no longer used for build automation. All workflows have moved to `armbian/ci` (builds) and `armbian.github.io` (publishing/repository).
 
 ???+ Note
     For monitoring Armbian action scripts status and execution details, visit [https://actions.armbian.com/](https://actions.armbian.com/)
@@ -116,7 +119,7 @@ Unfortunatelly this part does not have testing at PR stage.
 ???+ Info
     Manual executing permissions are tied to [release manager role](/Process_Contribute/#release-manager).
 
-[![Build Standard Support Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml)
+[![Build Standard Support Images](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml/badge.svg)](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml)
 
 This build workflow is executed manually when making:
 
@@ -130,7 +133,7 @@ This build workflow is executed manually when making:
 - you can only generate images that are defined in [targets-release-standard-support.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-standard-support.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
-### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-standard-support.yml) and click
+### 1. Open [workflow](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml) and click
 
 ![Run Workflow](images/run-workflow.png)
 
@@ -141,10 +144,7 @@ This build workflow is executed manually when making:
 **Bump version**: Select if you want to trigger system wide version bump.
 **Version override**: Set version under which you want to release images.
 
-Images versions are stored in JSON files:
-
-- https://github.com/armbian/os/blob/main/stable.json
-- https://github.com/armbian/os/blob/main/nightly.json
+Versioning is driven by the GitHub releases on the target repository — there is no version file to edit. Stable builds require an explicit `versionOverride` (e.g. `26.8.0`); nightly builds pick the newest `<base>-trunk.N` release and bump `N`.
 
 ### 3. Run workflow
 
@@ -176,7 +176,7 @@ Images generation can be customized:
 
 ## Prepare application images for release (release manager)
 
-[![Build Dedicated Application Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml)
+[![Build Dedicated Application Images](https://github.com/armbian/ci/actions/workflows/build-apps.yml/badge.svg)](https://github.com/armbian/ci/actions/workflows/build-apps.yml)
 
 This build workflow is executed manually when making:
 
@@ -190,7 +190,7 @@ This build workflow is executed manually when making:
 - you can only generate images for applications that are defined in [targets-release-apps.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-apps.yaml) build lists!
 - images generation workflows are compiled and are pretty much the same, just with different defaults
 
-### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-apps.yml) and click
+### 1. Open [workflow](https://github.com/armbian/ci/actions/workflows/build-apps.yml) and click
 
 ![Run Workflow](images/run-workflow.png)
 
@@ -231,7 +231,7 @@ This pulls packages from build framework OCI cache located at GitHub and from [v
 - `apt.armbian.com` (only new packages are added)
 - `beta.armbian.com` (whole repository is recreated from scratch)
 
-### 1. Open [workflow](https://github.com/armbian/os/actions/workflows/repository-update.yml) and click
+### 1. Open [workflow](https://github.com/armbian/armbian.github.io/actions/workflows/infrastructure-repository-update.yml) and click
 
 ![Run Workflow](images/run-workflow.png)
 
@@ -252,33 +252,21 @@ is selected.
 
 ## Build all artifacts (cronjob)
 
-[![Build All Artifacts](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-all.yml)
+[![Build All Artifacts](https://github.com/armbian/ci/actions/workflows/build-all.yml/badge.svg)](https://github.com/armbian/ci/actions/workflows/build-all.yml)
 
-Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/os/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs **every 8 hours** and can also be run manually when needed.
+Generates all build artifacts cache for targets defined in [targets-all-not-eos.yaml](https://github.com/armbian/ci/blob/main/userpatches/targets-all-not-eos.yaml). This build job runs on a schedule and can also be run manually when needed.
 
 This build job **needs to be successfully completed** in order to proceed generating any OS images!
 
 ## Build Rolling Release Images (cronjob)
 
-[![Build Nightly Images](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/complete-artifact-matrix-nightly.yml)
+[![Build Nightly Images](https://github.com/armbian/ci/actions/workflows/build-nightly.yml/badge.svg)](https://github.com/armbian/ci/actions/workflows/build-nightly.yml)
 
 Generates all nightly (Rolling Release) images defined in [targets-release-nightly.yaml](https://github.com/armbian/armbian.github.io/blob/main/release-targets/targets-release-nightly.yaml). This file is automatically generated from `image-info.json` by the [generate-targets workflow](https://github.com/armbian/armbian.github.io/blob/main/.github/workflows/generate-targets.yaml).
 
-This build job runs every day at 9 a.m. UTC and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/os/actions/workflows/webindex-update.yml) after successful build.
+This build job runs every night and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/armbian.github.io/actions/workflows/data-update-download-index.yml) after successful build.
 
 ![Build](images/rolling-releases.png)
-
-## Full distro test builds (cronjob/release manager)
-
-[![Build Nightly Images](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml/badge.svg)](https://github.com/armbian/os/actions/workflows/full-distro-build-and-test.yml)
-
-Generates all supported build combinations (minimal, cli, desktops) for x86 architecture to check package level changes inconsistency and dependencies.
-
-Options:
-
-- Framework build branch
-  - **main**
-  - testing_branch (string)
 
 ## Build all artifacts (admin/PR)
 
