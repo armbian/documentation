@@ -414,6 +414,16 @@ Integrates UEFI EDK2 firmware for Rockchip RK3588 boards.
 
 ---
 
+## uefi-iso
+
+Builds a bootable **live `.iso`** from a UEFI image so it can be booted from a BMC/IPMI **virtual CD-ROM** (cloud, IPMI, KVM) — the shape a virtual CD actually boots (kernel + initrd + a squashfs of the rootfs inside the ISO9660, with `live-boot` and a self-contained GRUB). Boot the live system, then install to disk with `armbian-install`. Works on `amd64` and `arm64` UEFI targets (uefi-x86 / uefi-arm64); `riscv64` is experimental/untested. Requires the `grub` extension. By default the `.img` is dropped (the ISO carries the rootfs).
+
+The ISO is **UEFI-only** (no legacy BIOS boot) and **Secure Boot must be disabled** (GRUB and the kernel are unsigned).
+
+Parameters: `SKIP_UEFI_ISO` (skip), `UEFI_ISO_VOLID` (volume id, default `ARMBIAN`), `UEFI_ISO_COMP` (squashfs compressor: `zstd`/`xz`/`gzip`), `UEFI_ISO_TIMEOUT` (GRUB menu seconds, `0` = boot immediately), `UEFI_ISO_KEEP_IMG` (`yes` keeps the `.img` alongside the `.iso`).
+
+---
+
 ## ufs
 
 Creates a UFS-sector-aligned image. Requires Debian Trixie (13) or newer as the build host. Set `DOCKER_ARMBIAN_BASE_IMAGE=debian:trixie` when building in Docker.
