@@ -194,6 +194,16 @@ Converts the Armbian image into a QDL-flashable archive for Arduino UNO Q (Qualc
 
 ---
 
+## image-output-iso
+
+Builds a bootable **live `.iso`** from a UEFI image so it can be booted from a BMC/IPMI **virtual CD-ROM** (cloud, IPMI, KVM). The ISO carries the kernel, initrd and a squashfs of the rootfs inside ISO9660, with `live-boot` and a self-contained GRUB. Boot the live system, then install to disk with `armbian-install`. Works on `amd64` and `arm64` UEFI targets (uefi-x86 / uefi-arm64); `riscv64` is experimental/untested. Requires the `grub` extension. By default the `.img` is dropped (the ISO carries the rootfs).
+
+The ISO is **UEFI-only** (no legacy BIOS boot) and **Secure Boot must be disabled** (GRUB and the kernel are unsigned).
+
+Parameters: `SKIP_ISO` (skip), `ISO_VOLID` (volume id, max 32 chars, default `ARMBIAN`), `ISO_COMP` (squashfs compressor: `zstd`/`xz`/`gzip`, default `zstd`), `ISO_TIMEOUT` (GRUB menu seconds, default `1`, `0` = boot immediately), `ISO_KEEP_IMG` (`yes` keeps the `.img` alongside the `.iso`).
+
+---
+
 ## image-output-oowow
 
 Creates an image compatible with the OOWOW recovery system for Khadas boards.
@@ -411,16 +421,6 @@ Enables Btrfs filesystem support in U-Boot (`CONFIG_CMD_BTRFS`).
 ## uefi-edk2-rk3588
 
 Integrates UEFI EDK2 firmware for Rockchip RK3588 boards.
-
----
-
-## uefi-iso
-
-Builds a bootable **live `.iso`** from a UEFI image so it can be booted from a BMC/IPMI **virtual CD-ROM** (cloud, IPMI, KVM). The ISO carries the kernel, initrd and a squashfs of the rootfs inside ISO9660, with `live-boot` and a self-contained GRUB. Boot the live system, then install to disk with `armbian-install`. Works on `amd64` and `arm64` UEFI targets (uefi-x86 / uefi-arm64); `riscv64` is experimental/untested. Requires the `grub` extension. By default the `.img` is dropped (the ISO carries the rootfs).
-
-The ISO is **UEFI-only** (no legacy BIOS boot) and **Secure Boot must be disabled** (GRUB and the kernel are unsigned).
-
-Parameters: `SKIP_UEFI_ISO` (skip), `UEFI_ISO_VOLID` (volume id, max 32 chars, default `ARMBIAN`), `UEFI_ISO_COMP` (squashfs compressor: `zstd`/`xz`/`gzip`, default `zstd`), `UEFI_ISO_TIMEOUT` (GRUB menu seconds, default `1`, `0` = boot immediately), `UEFI_ISO_KEEP_IMG` (`yes` keeps the `.img` alongside the `.iso`).
 
 ---
 
