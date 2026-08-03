@@ -2329,6 +2329,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#image-output-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        image-output-iso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#image-output-oowow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2718,17 +2729,6 @@
     <span class="md-ellipsis">
       
         uefi-edk2-rk3588
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uefi-iso" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        uefi-iso
       
     </span>
   </a>
@@ -3465,6 +3465,11 @@ All others are documented by a short description and key parameters.</p>
 <h2 id="image-output-arduino">image-output-arduino<a class="headerlink" href="#image-output-arduino" title="Permanent link">&para;</a></h2>
 <p>Converts the Armbian image into a QDL-flashable archive for Arduino UNO Q (Qualcomm QRB2210). Fetches Qualcomm flash binaries during image creation.</p>
 <hr />
+<h2 id="image-output-iso">image-output-iso<a class="headerlink" href="#image-output-iso" title="Permanent link">&para;</a></h2>
+<p>Builds a bootable <strong>live <code>.iso</code></strong> from a UEFI image so it can be booted from a BMC/IPMI <strong>virtual CD-ROM</strong> (cloud, IPMI, KVM). The ISO carries the kernel, initrd and a squashfs of the rootfs inside ISO9660, with <code>live-boot</code> and a self-contained GRUB. Boot the live system, then install to disk with <code>armbian-install</code>. Works on <code>amd64</code> and <code>arm64</code> UEFI targets (uefi-x86 / uefi-arm64); <code>riscv64</code> is experimental/untested. Requires the <code>grub</code> extension. By default the <code>.img</code> is dropped (the ISO carries the rootfs).</p>
+<p>The ISO is <strong>UEFI-only</strong> (no legacy BIOS boot) and <strong>Secure Boot must be disabled</strong> (GRUB and the kernel are unsigned).</p>
+<p>Parameters: <code>SKIP_ISO</code> (skip), <code>ISO_VOLID</code> (volume id, max 32 chars, default <code>ARMBIAN</code>), <code>ISO_COMP</code> (squashfs compressor: <code>zstd</code>/<code>xz</code>/<code>gzip</code>, default <code>zstd</code>), <code>ISO_TIMEOUT</code> (GRUB menu seconds, default <code>1</code>, <code>0</code> = boot immediately), <code>ISO_KEEP_IMG</code> (<code>yes</code> keeps the <code>.img</code> alongside the <code>.iso</code>).</p>
+<hr />
 <h2 id="image-output-oowow">image-output-oowow<a class="headerlink" href="#image-output-oowow" title="Permanent link">&para;</a></h2>
 <p>Creates an image compatible with the OOWOW recovery system for Khadas boards.</p>
 <hr />
@@ -3574,11 +3579,6 @@ All others are documented by a short description and key parameters.</p>
 <hr />
 <h2 id="uefi-edk2-rk3588">uefi-edk2-rk3588<a class="headerlink" href="#uefi-edk2-rk3588" title="Permanent link">&para;</a></h2>
 <p>Integrates UEFI EDK2 firmware for Rockchip RK3588 boards.</p>
-<hr />
-<h2 id="uefi-iso">uefi-iso<a class="headerlink" href="#uefi-iso" title="Permanent link">&para;</a></h2>
-<p>Builds a bootable <strong>live <code>.iso</code></strong> from a UEFI image so it can be booted from a BMC/IPMI <strong>virtual CD-ROM</strong> (cloud, IPMI, KVM). The ISO carries the kernel, initrd and a squashfs of the rootfs inside ISO9660, with <code>live-boot</code> and a self-contained GRUB. Boot the live system, then install to disk with <code>armbian-install</code>. Works on <code>amd64</code> and <code>arm64</code> UEFI targets (uefi-x86 / uefi-arm64); <code>riscv64</code> is experimental/untested. Requires the <code>grub</code> extension. By default the <code>.img</code> is dropped (the ISO carries the rootfs).</p>
-<p>The ISO is <strong>UEFI-only</strong> (no legacy BIOS boot) and <strong>Secure Boot must be disabled</strong> (GRUB and the kernel are unsigned).</p>
-<p>Parameters: <code>SKIP_UEFI_ISO</code> (skip), <code>UEFI_ISO_VOLID</code> (volume id, max 32 chars, default <code>ARMBIAN</code>), <code>UEFI_ISO_COMP</code> (squashfs compressor: <code>zstd</code>/<code>xz</code>/<code>gzip</code>, default <code>zstd</code>), <code>UEFI_ISO_TIMEOUT</code> (GRUB menu seconds, default <code>1</code>, <code>0</code> = boot immediately), <code>UEFI_ISO_KEEP_IMG</code> (<code>yes</code> keeps the <code>.img</code> alongside the <code>.iso</code>).</p>
 <hr />
 <h2 id="ufs">ufs<a class="headerlink" href="#ufs" title="Permanent link">&para;</a></h2>
 <p>Creates a UFS-sector-aligned image. Requires Debian Trixie (13) or newer as the build host. Set <code>DOCKER_ARMBIAN_BASE_IMAGE=debian:trixie</code> when building in Docker.</p>
