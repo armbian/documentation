@@ -1923,6 +1923,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#show-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        show-extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2743,6 +2754,17 @@ same as kernel, it does git archeology for mbox-less patches, etc.</p>
 <p>Usage:
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>./compile.sh<span class="w"> </span>targets
 </span></code></pre></div></td></tr></table></div></p>
+<h3 id="show-extensions">show-extensions<a class="headerlink" href="#show-extensions" title="Permanent link">&para;</a></h3>
+<p>Lists the <a href="../Developer-Guide_Extensions-Hooks/">extension hook points</a> that exist in the build sources, optionally with their inline documentation.</p>
+<p>The list is produced by statically scanning <code>lib/</code>, <code>extensions/</code> and <code>config/</code> for <code>call_extension_method</code> call sites, so it always describes the checked-out tree — including hooks added by userpatches — without running a build.</p>
+<p>No board configuration is needed, the command does not relaunch into Docker and does not install host dependencies.</p>
+<p>Usage:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>./compile.sh<span class="w"> </span>show-extensions
+</span></code></pre></div></td></tr></table></div>
+<p>Outputs one hook name per line, sorted alphabetically.</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>show-extensions<span class="w"> </span><span class="nv">SHOW_EXTENSIONS</span><span class="o">=</span>docs
+</span></code></pre></div></td></tr></table></div>
+<p>Outputs a Markdown document with the documentation of every hook; this is what <a href="../Developer-Guide_Extensions-Hooks/">Extension Hooks</a> is generated from.</p>
 
 
 
