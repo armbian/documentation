@@ -445,6 +445,13 @@ Example:
 
 Controls the U-Boot bootloader log level during image building. Lower values produce less verbose output. This affects `CONFIG_LOGLEVEL` and `CONFIG_LOG_MAX_LEVEL` in U-Boot configuration.
 
+**SKIP_COMPRESSING** ( comma/space-separated list of file extensions )
+
+- e.g. `iso,qcow2`: leave images of these formats uncompressed even when `COMPRESS_OUTPUTIMAGE` enables `xz`/`zstd`
+- empty: (default) compress everything
+
+Images left uncompressed are still checksummed when `COMPRESS_OUTPUTIMAGE` includes `sha`. Useful for formats consumed as-is — `qcow2` (imported into a hypervisor) or `iso` (mounted as a virtual CD) — where compression only adds an extra decompress step.
+
 # Build options below need to be retested and added above (COULD BE DEPRECATED)
 
 :warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
@@ -487,7 +494,6 @@ Controls the U-Boot bootloader log level during image building. Lower values pro
     - **IMAGE_XZ_COMPRESSION_RATIO** ( 0 - **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
   - zstd: compress image only using zstd format
     - **ZSTD_COMPRESSION_LEVEL** ( 1 - **9** - 19 ) images compression levels when using zstd compressor. Beware of memory consumption when going higher
-  - **SKIP_COMPRESSING** (comma/space-separated list of file extensions, e.g. `iso,qcow2`): leave images of these formats **uncompressed** even when `xz`/`zstd` is enabled. They are still checksummed when `sha` is set. Useful for formats consumed as-is — `qcow2` (imported into a hypervisor) or `iso` (mounted as a virtual CD) — where compression only adds a decompress step. Empty by default (compress everything).
 - **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
 - **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
 - **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image
