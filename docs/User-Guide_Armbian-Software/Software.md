@@ -2152,6 +2152,104 @@ armbian-config --cmd CPT003
 
 
 
+#### Proxmox VE
+
+
+Proxmox VE virtualization platform (keeps the Armbian kernel)
+
+
+<!--- section image START from tools/include/images/PVE001.png --->
+[![Proxmox VE](/images/PVE001.png)](#)
+<!--- section image STOP from tools/include/images/PVE001.png --->
+
+
+<!--- header START from tools/include/markdown/PVE001-header.md --->
+[Proxmox VE](https://www.proxmox.com/en/proxmox-virtual-environment) is a complete, open-source server virtualization platform for running **KVM virtual machines** and **LXC containers** from a single, integrated web interface. It combines the tooling for compute, storage and software-defined networking so you can manage a whole host — or a cluster of them — from your browser.
+
+This module installs Proxmox VE 9 from the official *no-subscription* repository on **Debian 13 (trixie)**, on both **amd64 and arm64**, and — unlike the upstream guide — **keeps the running Armbian kernel** instead of pulling the Proxmox one.
+
+*Key Features*
+
+- **KVM virtual machines**: Full hardware-accelerated VMs via the board's KVM-enabled Armbian kernel.
+- **LXC containers**: Lightweight, fast system containers alongside your VMs.
+- **Web management**: Manage guests, storage, backups and networking from `https://<ip>:8006`.
+- **ZFS storage**: Installs ZFS (via DKMS, built against the Armbian kernel) so you can create ZFS pools and datasets for VM/container storage.
+- **Keeps your kernel**: Installs `pve-manager` (no kernel dependency) rather than the `proxmox-ve` meta, so your Armbian kernel and DTBs stay in place.
+- **No subscription needed**: Uses the public `pve-no-subscription` repository.
+
+---
+
+Ideal for turning an Armbian board into a lightweight hypervisor without giving up the board's own kernel and hardware support.
+
+<!--- header STOP from tools/include/markdown/PVE001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_13_Trixie)  
+
+~~~ custombash
+armbian-config --cmd PVE001
+~~~
+
+
+<!--- footer START from tools/include/markdown/PVE001-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8006**:
+
+    - URL: `https://<your.IP>:8006`
+    - Username: `root` (your system root password)
+
+    Official documentation: <https://pve.proxmox.com/pve-docs/>
+
+=== "Runs on the Armbian kernel"
+
+    This install intentionally omits the Proxmox kernel and runs on the board's
+    Armbian kernel:
+
+    - KVM virtual machines and LXC containers work provided the running kernel
+      offers the needed support (KVM / `/dev/kvm` and container
+      cgroups/namespaces) — which the Armbian kernels for these arches normally do.
+    - This module **installs ZFS** for you (via DKMS, built against the Armbian
+      kernel), so ZFS storage pools work out of the box; only ZFS-on-**root**
+      (boot) is out of scope.
+
+=== "Requirements"
+
+    - **Armbian Trixie** (Debian 13) on **amd64** or **arm64** (enforced by the installer).
+    - **Recommended:** the hostname should resolve to a non-loopback IP in
+      `/etc/hosts`, e.g.:
+
+        ```
+        192.168.1.50   pve.local pve
+        ```
+
+        If it resolves only to a loopback address (`127.x` or IPv6 `::1`), the
+        installer warns and lets you continue, but the web UI and clustering
+        may not work until you fix `/etc/hosts`.
+
+=== "Directories"
+
+    - Configuration: `/etc/pve`
+    - Cluster data: `/var/lib/pve-cluster`
+
+<!--- footer STOP from tools/include/markdown/PVE001-footer.md --->
+
+
+~~~ bash title="Remove Proxmox VE:"
+armbian-config --cmd PVE002
+~~~
+
+
+~~~ bash title="Purge Proxmox VE with cluster data:"
+armbian-config --cmd PVE003
+~~~
+
+
+
+
 #### Homepage
 
 
@@ -2400,20 +2498,7 @@ armbian-config --cmd APT003
 
 git_cdn GitHub caching proxy install
 
-
-<!--- header START from tools/include/markdown/GCDN001-header.md --->
-**git_cdn** is a caching git+HTTP(s) proxy that mirrors an upstream git server (GitHub) close to your build/CI hosts. The first clone or fetch of a repository populates the cache; every subsequent clone/fetch of the same repo from any host on the LAN pulls only new objects from upstream — saving WAN bandwidth and speeding up repeated GitHub clones.
-
-**Key Features**
-
-- git+http(s) proxy in front of `https://github.com`
-- Single-port (`8000`), single-container deployment
-- Pack-level object cache, configurable size (default 500 GB)
-- Survives container restart — cache lives on a host bind-mount
-
-<!--- header STOP from tools/include/markdown/GCDN001-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-header.md)  
+__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -2421,52 +2506,17 @@ __Documentation:__ [Link](https://gitlab.com/grouperenault/git_cdn)
 __Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
-armbian-config --cmd GCDN001
+armbian-config --cmd GCD001
 ~~~
 
 
-<!--- footer START from tools/include/markdown/GCDN001-footer.md --->
-=== "Access to the service"
-
-    The proxy listens on port **8000**:
-
-    - URL: `http://<your.IP>:8000`
-
-=== "Client configuration"
-
-    On each git host on the LAN, redirect GitHub through the proxy:
-
-    ```sh
-    git config --global \
-      url."http://<your.IP>:8000/".insteadOf https://github.com/
-    ```
-
-    Then clone normally — fetches are served from the local cache:
-
-    ```sh
-    git clone https://github.com/<owner>/<repo>.git
-    ```
-
-=== "Directories"
-
-    - Cache: `/armbian/git_cdn/cache/`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f git_cdn
-    ```
-
-<!--- footer STOP from tools/include/markdown/GCDN001-footer.md --->
-
-
 ~~~ bash title="git_cdn remove:"
-armbian-config --cmd GCDN002
+armbian-config --cmd GCD002
 ~~~
 
 
 ~~~ bash title="git_cdn purge with cache folder:"
-armbian-config --cmd GCDN003
+armbian-config --cmd GCD003
 ~~~
 
 
