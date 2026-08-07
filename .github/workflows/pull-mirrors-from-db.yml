@@ -67,6 +67,21 @@ jobs:
           JQ=$(curl -s -H "Authorization: Token ${{ secrets.NETBOX_TOKEN }}" \
                     -H "Accept: application/json; indent=4" \
                     "${{ secrets.NETBOX_API }}/virtualization/virtual-machines/?limit=500&name__empty=false&role=mirror&status=active")
+          # Country flag comes from the site's NetBox region slug, not a live
+          # GeoIP lookup: it's human-maintained, deterministic, has no rate
+          # limits, and doesn't mis-flag CDN-fronted mirrors (GeoIP put Hetzner
+          # in FI and Macarne in US). NetBox regions are continent > country;
+          # US mirrors sit under North America as coast regions, so those map to
+          # US. A region with no country here (e.g. "Dynamic") renders flagless.
+          # Add a line when a mirror lands in a new country/region.
+          declare -A CC_BY_REGION=(
+            [china]=CN [india]=IN [japan]=JP [korea]=KR [singapore]=SG [taiwan]=TW
+            [austria]=AT [bulgaria]=BG [denmark]=DK [estonia]=EE [finland]=FI
+            [france]=FR [germany]=DE [italy]=IT [netherlands]=NL [russia]=RU
+            [slovenia]=SI [spain]=ES [ukraine]=UA [united-kingdom]=GB
+            [australia]=AU
+            [north-america]=US [east-coast]=US [west-coast]=US [virginia]=US
+          )
           for i in $(echo $JQ | jq '.results[] | .id'); do
             NAME=$(echo $JQ | jq ".results[] | select(.id == $i) | .name" | sed "s/\"//g")
             SITE_ID=$(echo $JQ | jq ".results[] | select(.id == $i) | .site.id")
@@ -77,35 +92,16 @@ jobs:
                           "${{ secrets.NETBOX_API }}/dcim/sites/?limit=500&name__empty=false&id=$SITE_ID")
             SITE_NAME=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .name" | sed 's/ /\&nbsp;/g')
             SITE_REGION=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .region.display")
+            SITE_REGION_SLUG=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .region.slug // empty")
             SITE_TZ=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .time_zone")
             SITE_LATITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .latitude")
             SITE_LONGITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .longitude")
             SITE_SPEED=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .custom_fields.download_speed")
-            # Drop decommissioning mirrors before any network work - no point
-            # resolving or geolocating a mirror we're going to skip.
+            # Drop decommissioning mirrors before we render a row for them.
             [[ $SITE_STATUS == "decommissioning" ]] && continue
-            IP=$(dig +short "${NAME}" | tail -1)
-            # Resolve the mirror's country for the flag. ipwhois.app was dropped:
-            # its free tier now rate-limits after ~2 requests and returns
-            # {"success":false,"country_code":null}, so in this ~40-mirror loop
-            # nearly every flag became flagsapi.com/null. ip-api.com is free
-            # (45 req/min, no key) and returns countryCode. Retry a few times on
-            # a transient/rate-limited response and validate a 2-letter code;
-            # leave it empty (no broken flag) rather than emitting "null".
-            # Guard the empty-IP case: ip-api.com/json/ with no address geolocates
-            # the *runner's* IP, which would stamp a wrong flag on a mirror whose
-            # DNS didn't resolve. Only look up a real address.
-            SITE_FLAG=""
-            if [[ -n "$IP" ]]; then
-              for attempt in 1 2 3; do
-                GEO=$(curl --max-time 8 -s "http://ip-api.com/json/${IP}?fields=status,countryCode")
-                if [[ "$(echo "$GEO" | jq -r '.status')" == "success" ]]; then
-                  CC=$(echo "$GEO" | jq -r '.countryCode')
-                  if [[ "$CC" =~ ^[A-Za-z]{2}$ ]]; then SITE_FLAG="$CC"; break; fi
-                fi
-                sleep 3
-              done
-            fi
+            # Country code for the flag, from the region slug (empty if the
+            # region has no country mapping, e.g. "Dynamic").
+            SITE_FLAG="${CC_BY_REGION[$SITE_REGION_SLUG]:-}"
             if [[ $SITE_STATUS != "active" ]]; then
               LABEL=":x:"
             else
@@ -123,7 +119,6 @@ jobs:
               FLAG_CELL="[$SITE_REGION](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
             fi
             echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | $FLAG_CELL | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> tmp.md
-            sleep 1
           done
           sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' tmp.md
           mv tmp.md "$FILE"
