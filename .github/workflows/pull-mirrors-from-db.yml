@@ -81,6 +81,9 @@ jobs:
             SITE_LATITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .latitude")
             SITE_LONGITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .longitude")
             SITE_SPEED=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .custom_fields.download_speed")
+            # Drop decommissioning mirrors before any network work - no point
+            # resolving or geolocating a mirror we're going to skip.
+            [[ $SITE_STATUS == "decommissioning" ]] && continue
             IP=$(dig +short "${NAME}" | tail -1)
             # Resolve the mirror's country for the flag. ipwhois.app was dropped:
             # its free tier now rate-limits after ~2 requests and returns
@@ -103,7 +106,6 @@ jobs:
                 sleep 3
               done
             fi
-            [[ $SITE_STATUS == "decommissioning" ]] && continue
             if [[ $SITE_STATUS != "active" ]]; then
               LABEL=":x:"
             else
