@@ -82,6 +82,15 @@ jobs:
             [australia]=AU
             [north-america]=US [east-coast]=US [west-coast]=US [virginia]=US
           )
+          # Country name per ISO code, used as the flag image's alt text so it
+          # reads as the country (not the region label, which can be a coast).
+          declare -A COUNTRY_BY_CC=(
+            [CN]="China" [IN]="India" [JP]="Japan" [KR]="Korea" [SG]="Singapore" [TW]="Taiwan"
+            [AT]="Austria" [BG]="Bulgaria" [DK]="Denmark" [EE]="Estonia" [FI]="Finland"
+            [FR]="France" [DE]="Germany" [IT]="Italy" [NL]="Netherlands" [RU]="Russia"
+            [SI]="Slovenia" [ES]="Spain" [UA]="Ukraine" [GB]="United Kingdom"
+            [AU]="Australia" [US]="United States"
+          )
           for i in $(echo $JQ | jq '.results[] | .id'); do
             NAME=$(echo $JQ | jq ".results[] | select(.id == $i) | .name" | sed "s/\"//g")
             SITE_ID=$(echo $JQ | jq ".results[] | select(.id == $i) | .site.id")
@@ -111,10 +120,15 @@ jobs:
             if [[ "${SITE_TAGS}" == *"images"* ]]; then FIELD2="$LABEL"; else FIELD2=""; fi
             if [[ "${SITE_TAGS}" == *"archive"* ]]; then FIELD3="$LABEL"; else FIELD3=""; fi
             if [[ "${SITE_TAGS}" == *"rsync"* ]]; then FIELD4="$LABEL"; else FIELD4=""; fi
-            # With a country code, link the flag; without one, fall back to a
-            # plain region link so the cell never renders a broken flagsapi/null image.
+            # Flag cell: a country flag (alt = country name) linked to the site
+            # location; the "Dynamic" region is a Cloudflare-anycast mirror with
+            # no single country, so it gets the UN "global" flag as an icon
+            # (flagsapi has no UN flag; flagcdn does) with a Cloudflare alt.
             if [[ -n "$SITE_FLAG" ]]; then
-              FLAG_CELL="[![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
+              COUNTRY_NAME="${COUNTRY_BY_CC[$SITE_FLAG]:-$SITE_REGION}"
+              FLAG_CELL="[![$COUNTRY_NAME](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
+            elif [[ "$SITE_REGION_SLUG" == "dynamic" ]]; then
+              FLAG_CELL="![Cloudflare anycast](https://flagcdn.com/32x24/un.png)"
             else
               FLAG_CELL="[$SITE_REGION](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
             fi
