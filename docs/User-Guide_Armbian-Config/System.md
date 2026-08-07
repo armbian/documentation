@@ -1043,7 +1043,7 @@ __Documentation:__ [Link](https://forum.armbian.com/)
 #### Install
 
 
-Copy the running Armbian system to another device
+Install the running system to internal media (eMMC/NVMe/SATA/USB/UFS, or Windows dual-boot)
 
 
 <!--- header START from tools/include/markdown/STO001-header.md --->
@@ -1057,9 +1057,8 @@ Use this option to **transfer your current live Armbian system** to another stor
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STO001-header.md)  
 __Status:__ Preview  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://docs.armbian.com)  
 
 ~~~ custombash
 armbian-config --cmd STO001
@@ -1815,7 +1814,7 @@ The stable repository provides thoroughly tested packages intended for productio
 <!--- header STOP from tools/include/markdown/STABLE-header.md --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/STABLE-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STABLE-header.md)  
-__Status:__ Stable  
+__Status:__ Rolling  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
 __Maintainer:__ @armbian  
 __Documentation:__ [Link](https://forum.armbian.com/)  
