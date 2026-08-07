@@ -82,7 +82,27 @@ jobs:
             SITE_LONGITUDE=$(echo $SITEQ | jq ".results[] | select(.id == $SITE_ID) | .longitude")
             SITE_SPEED=$(echo $SITEQ | jq -r ".results[] | select(.id == $SITE_ID) | .custom_fields.download_speed")
             IP=$(dig +short "${NAME}" | tail -1)
-            SITE_FLAG=$(curl --max-time 5 -s http://ipwhois.app/json/"${IP}" | jq -r '.country_code')
+            # Resolve the mirror's country for the flag. ipwhois.app was dropped:
+            # its free tier now rate-limits after ~2 requests and returns
+            # {"success":false,"country_code":null}, so in this ~40-mirror loop
+            # nearly every flag became flagsapi.com/null. ip-api.com is free
+            # (45 req/min, no key) and returns countryCode. Retry a few times on
+            # a transient/rate-limited response and validate a 2-letter code;
+            # leave it empty (no broken flag) rather than emitting "null".
+            # Guard the empty-IP case: ip-api.com/json/ with no address geolocates
+            # the *runner's* IP, which would stamp a wrong flag on a mirror whose
+            # DNS didn't resolve. Only look up a real address.
+            SITE_FLAG=""
+            if [[ -n "$IP" ]]; then
+              for attempt in 1 2 3; do
+                GEO=$(curl --max-time 8 -s "http://ip-api.com/json/${IP}?fields=status,countryCode")
+                if [[ "$(echo "$GEO" | jq -r '.status')" == "success" ]]; then
+                  CC=$(echo "$GEO" | jq -r '.countryCode')
+                  if [[ "$CC" =~ ^[A-Za-z]{2}$ ]]; then SITE_FLAG="$CC"; break; fi
+                fi
+                sleep 3
+              done
+            fi
             [[ $SITE_STATUS == "decommissioning" ]] && continue
             if [[ $SITE_STATUS != "active" ]]; then
               LABEL=":x:"
@@ -93,11 +113,21 @@ jobs:
             if [[ "${SITE_TAGS}" == *"images"* ]]; then FIELD2="$LABEL"; else FIELD2=""; fi
             if [[ "${SITE_TAGS}" == *"archive"* ]]; then FIELD3="$LABEL"; else FIELD3=""; fi
             if [[ "${SITE_TAGS}" == *"rsync"* ]]; then FIELD4="$LABEL"; else FIELD4=""; fi
-            echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | [![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE) | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> tmp.md
+            # With a country code, link the flag; without one, fall back to a
+            # plain region link so the cell never renders a broken flagsapi/null image.
+            if [[ -n "$SITE_FLAG" ]]; then
+              FLAG_CELL="[![$SITE_REGION](https://flagsapi.com/$SITE_FLAG/shiny/32.png)](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
+            else
+              FLAG_CELL="[$SITE_REGION](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
+            fi
+            echo "| [$SITE_NAME](https://$NAME) | $SITE_TZ | $FLAG_CELL | $SITE_SPEED&nbsp;Mbps | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> tmp.md
             sleep 1
           done
           sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' tmp.md
           mv tmp.md "$FILE"
+
+          # Surface the rendered mirror table in the workflow run summary.
+          sed -n '/^## Current Mirrors/,$p' "$FILE" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v8
