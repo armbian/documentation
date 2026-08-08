@@ -108,7 +108,7 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**72** boards (14 failed).
+**73** boards (13 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
@@ -118,8 +118,8 @@ request to update this table — the same mechanism used for the
 | Banana Pi M2Pro 01 | ✅ | 10.0.50.43 | local | 1 GbE | Netgear S3300-52X-PoE+ (47) | 08 Aug |
 | Banana Pi M5 01 | ✅ | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) | 08 Aug |
 | Banana Pi Pro 01 | ✅ | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) | 08 Aug |
-| BananaPi BPI-F3 01 | ❌ | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) | 07 Aug |
-| BigTreeTech CB1 01 | ✅ | 10.0.50.175 | local | 100 MbE | Netgear S3300-52X-PoE+ (29) | 08 Aug |
+| BananaPi BPI-F3 01 | ✅ | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) | 08 Aug |
+| BigTreeTech CB1 01 | ❌ | 10.0.50.175 | local | 100 MbE | Netgear S3300-52X-PoE+ (29) | 08 Aug |
 | Clearfog Pro 01 | ✅ | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) | 08 Aug |
 | Cubietruck 01 | ✅ | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) | 08 Aug |
 | Cubox i2eX/i4 01 | ✅ | 10.0.50.63 | local | 1 GbE | Netgear GS348 (32) | 08 Aug |
@@ -148,9 +148,10 @@ request to update this table — the same mechanism used for the
 | Odroid C4 01 | ✅ | 10.0.50.13 | local | 1 GbE | TP-Link TL-SG3428X (10) | 08 Aug |
 | Odroid M1 01 | ❌ | 10.0.50.61 | local | 1 GbE | Netgear S3300-52X-PoE+ (3) | 07 Aug |
 | Odroid M1 02 | ❌ | 10.0.50.26 | local | Wi-Fi 5 | Zyxel NWA130BE | 07 Aug |
+| Odroid M1 03 | ✅ | 10.0.50.50 | local | Wi-Fi 5 | Zyxel NWA130BE | 08 Aug |
 | Odroid N2 02 | ✅ | 10.0.50.66 | local | 1 GbE | TP-Link TL-SG3428X (21) | 08 Aug |
 | Odroid N2 03 | ✅ | 10.0.60.10 | local | 1 GbE | — | 08 Aug |
-| Odroid XU4 01 | ✅ | 10.0.50.51 | local | 1 GbE | Netgear S3300-52X-PoE+ (19) | 08 Aug |
+| Odroid XU4 01 | ✅ | 10.0.50.51 | local | 100 MbE | Netgear S3300-52X-PoE+ (19) | 08 Aug |
 | Orange Pi 3 01 | ✅ | 10.0.50.57 | local | 1 GbE | Netgear S3300-52X-PoE+ (31) | 08 Aug |
 | Orange Pi 5 01 | ✅ | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) | 08 Aug |
 | Orange Pi 5 Plus 01 | ✅ | 10.0.50.33 | local | 1 GbE | Netgear S3300-52X-PoE+ (8) | 08 Aug |
@@ -181,7 +182,7 @@ request to update this table — the same mechanism used for the
 | Tinker Board 01 | ✅ | 10.0.50.29 | local | 1 GbE | Netgear S3300-52X-PoE+ (15) | 08 Aug |
 | Tinker Board 2 01 | ✅ | 10.0.50.23 | local | 1 GbE | TP-Link TL-SG3428X (15) | 08 Aug |
 | Udoo 01 | ✅ | 10.0.50.62 | local | 1 GbE | Netgear S3300-52X-PoE+ (37) | 08 Aug |
-| UEFI arm64 01 | ❌ | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) | 07 Aug |
+| UEFI arm64 01 | ✅ | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) | 08 Aug |
 | UEFI x86 01 | ✅ | 10.0.50.53 | local | 1 GbE | Netgear GS348 (9) | 08 Aug |
 | Z28 PRO 01 | ✅ | 10.0.50.73 | local | 1 GbE | Netgear S3300-52X-PoE+ (17) | 08 Aug |
 
