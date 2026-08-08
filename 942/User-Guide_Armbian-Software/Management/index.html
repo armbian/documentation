@@ -1486,6 +1486,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#proxmox-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxmox VE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#homepage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2671,6 +2682,85 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge Cockpit with virtual machines:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>CPT003
 </span></code></pre></div></td></tr></table></div>
+<h2 id="proxmox-ve">Proxmox VE<a class="headerlink" href="#proxmox-ve" title="Permanent link">&para;</a></h2>
+<p>Proxmox VE virtualization platform (keeps the Armbian kernel)</p>
+<!--- section image START from tools/include/images/PVE001.png --->
+<p><a href="#"><img alt="Proxmox VE" src="/images/PVE001.png" /></a></p>
+<!--- section image STOP from tools/include/images/PVE001.png --->
+
+<!--- header START from tools/include/markdown/PVE001-header.md --->
+<p><a href="https://www.proxmox.com/en/proxmox-virtual-environment">Proxmox VE</a> is a complete, open-source server virtualization platform for running <strong>KVM virtual machines</strong> and <strong>LXC containers</strong> from a single, integrated web interface. It combines the tooling for compute, storage and software-defined networking so you can manage a whole host — or a cluster of them — from your browser.</p>
+<p>This module installs Proxmox VE 9 from the official <em>no-subscription</em> repository on <strong>Debian 13 (trixie)</strong>, on both <strong>amd64 and arm64</strong>, and — unlike the upstream guide — <strong>keeps the running Armbian kernel</strong> instead of pulling the Proxmox one.</p>
+<p><em>Key Features</em></p>
+<ul>
+<li><strong>KVM virtual machines</strong>: Full hardware-accelerated VMs via the board&rsquo;s KVM-enabled Armbian kernel.</li>
+<li><strong>LXC containers</strong>: Lightweight, fast system containers alongside your VMs.</li>
+<li><strong>Web management</strong>: Manage guests, storage, backups and networking from <code>https://&lt;ip&gt;:8006</code>.</li>
+<li><strong>ZFS storage</strong>: Installs ZFS (via DKMS, built against the Armbian kernel) so you can create ZFS pools and datasets for VM/container storage.</li>
+<li><strong>Keeps your kernel</strong>: Installs <code>pve-manager</code> (no kernel dependency) rather than the <code>proxmox-ve</code> meta, so your Armbian kernel and DTBs stay in place.</li>
+<li><strong>No subscription needed</strong>: Uses the public <code>pve-no-subscription</code> repository.</li>
+</ul>
+<hr />
+<p>Ideal for turning an Armbian board into a lightweight hypervisor without giving up the board&rsquo;s own kernel and hardware support.</p>
+<!--- header STOP from tools/include/markdown/PVE001-header.md --->
+
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-header.md">header</a><br />
+<strong>Status:</strong> Stable<br />
+<strong>Architecture:</strong> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span><br />
+<strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
+<strong>Documentation:</strong> <a href="https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_13_Trixie">Link</a>  </p>
+<pre class="custom-bash-block"><code>armbian-config --cmd PVE001</code></pre>
+<!--- footer START from tools/include/markdown/PVE001-footer.md --->
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="proxmox-ve-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="proxmox-ve-runs-on-the-armbian-kernel" name="__tabbed_2" type="radio" /><input id="proxmox-ve-requirements" name="__tabbed_2" type="radio" /><input id="proxmox-ve-directories" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="proxmox-ve-access-to-the-web-interface">Access to the web interface</label><label for="proxmox-ve-runs-on-the-armbian-kernel">Runs on the Armbian kernel</label><label for="proxmox-ve-requirements">Requirements</label><label for="proxmox-ve-directories">Directories</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The web interface is accessible via port <strong>8006</strong>:</p>
+<ul>
+<li>URL: <code>https://&lt;your.IP&gt;:8006</code></li>
+<li>Username: <code>root</code> (your system root password)</li>
+</ul>
+<p>Official documentation: <a href="https://pve.proxmox.com/pve-docs/">https://pve.proxmox.com/pve-docs/</a></p>
+</div>
+<div class="tabbed-block">
+<p>This install intentionally omits the Proxmox kernel and runs on the board&rsquo;s
+Armbian kernel:</p>
+<ul>
+<li>KVM virtual machines and LXC containers work provided the running kernel
+  offers the needed support (KVM / <code>/dev/kvm</code> and container
+  cgroups/namespaces) — which the Armbian kernels for these arches normally do.</li>
+<li>This module <strong>installs ZFS</strong> for you (via DKMS, built against the Armbian
+  kernel), so ZFS storage pools work out of the box; only ZFS-on-<strong>root</strong>
+  (boot) is out of scope.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Armbian Trixie</strong> (Debian 13) on <strong>amd64</strong> or <strong>arm64</strong> (enforced by the installer).</li>
+<li>
+<p><strong>Recommended:</strong> the hostname should resolve to a non-loopback IP in
+  <code>/etc/hosts</code>, e.g.:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>192.168.1.50   pve.local pve
+</span></code></pre></div></td></tr></table></div>
+<p>If it resolves only to a loopback address (<code>127.x</code> or IPv6 <code>::1</code>), the
+installer warns and lets you continue, but the web UI and clustering
+may not work until you fix <code>/etc/hosts</code>.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Configuration: <code>/etc/pve</code></li>
+<li>Cluster data: <code>/var/lib/pve-cluster</code></li>
+</ul>
+</div>
+</div>
+</div>
+<!--- footer STOP from tools/include/markdown/PVE001-footer.md --->
+
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Proxmox VE:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PVE002
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge Proxmox VE with cluster data:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>PVE003
+</span></code></pre></div></td></tr></table></div>
 <h2 id="homepage">Homepage<a class="headerlink" href="#homepage" title="Permanent link">&para;</a></h2>
 <p>Install Homepage startpage / application dashboard</p>
 <!--- section image START from tools/include/images/HPG001.png --->
@@ -2701,7 +2791,7 @@
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd HPG001</code></pre>
 <!--- footer START from tools/include/markdown/HPG001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="homepage-access-to-the-web-interface" name="__tabbed_2" type="radio" /><input id="homepage-directories" name="__tabbed_2" type="radio" /><input id="homepage-view-logs" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="homepage-access-to-the-web-interface">Access to the web interface</label><label for="homepage-directories">Directories</label><label for="homepage-view-logs">View logs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="homepage-access-to-the-web-interface" name="__tabbed_3" type="radio" /><input id="homepage-directories" name="__tabbed_3" type="radio" /><input id="homepage-view-logs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="homepage-access-to-the-web-interface">Access to the web interface</label><label for="homepage-directories">Directories</label><label for="homepage-view-logs">View logs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The web interface is accessible via port <strong>3021</strong>:</p>
@@ -2718,16 +2808,16 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>homepage
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>homepage
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <!--- footer STOP from tools/include/markdown/HPG001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Homepage:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HPG002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Remove Homepage:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HPG002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge Homepage with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HPG003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Purge Homepage with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>HPG003
 </span></code></pre></div></td></tr></table></div>
 <h2 id="netbox">NetBox<a class="headerlink" href="#netbox" title="Permanent link">&para;</a></h2>
 <p>NetBox infrastructure resource modeling install</p>
@@ -2762,7 +2852,7 @@
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd NBOX01</code></pre>
 <!--- footer START from tools/include/markdown/NBOX01-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="netbox-access-to-the-service" name="__tabbed_3" type="radio" /><input id="netbox-default-credentials" name="__tabbed_3" type="radio" /><input id="netbox-directories" name="__tabbed_3" type="radio" /><input id="netbox-view-logs" name="__tabbed_3" type="radio" /><input id="netbox-manage-the-service" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="netbox-access-to-the-service">Access to the service</label><label for="netbox-default-credentials">Default credentials</label><label for="netbox-directories">Directories</label><label for="netbox-view-logs">View logs</label><label for="netbox-manage-the-service">Manage the service</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="netbox-access-to-the-service" name="__tabbed_4" type="radio" /><input id="netbox-default-credentials" name="__tabbed_4" type="radio" /><input id="netbox-directories" name="__tabbed_4" type="radio" /><input id="netbox-view-logs" name="__tabbed_4" type="radio" /><input id="netbox-manage-the-service" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="netbox-access-to-the-service">Access to the service</label><label for="netbox-default-credentials">Default credentials</label><label for="netbox-directories">Directories</label><label for="netbox-view-logs">View logs</label><label for="netbox-manage-the-service">Manage the service</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>NetBox is accessible via HTTP on port <strong>8222</strong>:</p>
@@ -2786,20 +2876,20 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>netbox
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>netbox
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>netbox<span class="w"> </span>bash
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>netbox<span class="w"> </span>bash
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <!--- footer STOP from tools/include/markdown/NBOX01-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NetBox remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NBOX02
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NetBox remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NBOX02
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NetBox purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NBOX03
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NetBox purge with data folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>NBOX03
 </span></code></pre></div></td></tr></table></div>
 <h2 id="apt-cacher-ng">apt-cacher-ng<a class="headerlink" href="#apt-cacher-ng" title="Permanent link">&para;</a></h2>
 <p>apt-cacher-ng caching proxy install</p>
@@ -2822,7 +2912,7 @@
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
 <pre class="custom-bash-block"><code>armbian-config --cmd APT001</code></pre>
 <!--- footer START from tools/include/markdown/APT001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="apt-cacher-ng-access-to-the-service" name="__tabbed_4" type="radio" /><input id="apt-cacher-ng-client-configuration" name="__tabbed_4" type="radio" /><input id="apt-cacher-ng-directories" name="__tabbed_4" type="radio" /><input id="apt-cacher-ng-view-logs" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="apt-cacher-ng-access-to-the-service">Access to the service</label><label for="apt-cacher-ng-client-configuration">Client configuration</label><label for="apt-cacher-ng-directories">Directories</label><label for="apt-cacher-ng-view-logs">View logs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="apt-cacher-ng-access-to-the-service" name="__tabbed_5" type="radio" /><input id="apt-cacher-ng-client-configuration" name="__tabbed_5" type="radio" /><input id="apt-cacher-ng-directories" name="__tabbed_5" type="radio" /><input id="apt-cacher-ng-view-logs" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="apt-cacher-ng-access-to-the-service">Access to the service</label><label for="apt-cacher-ng-client-configuration">Client configuration</label><label for="apt-cacher-ng-directories">Directories</label><label for="apt-cacher-ng-view-logs">View logs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The proxy listens on port <strong>3142</strong>:</p>
@@ -2833,9 +2923,9 @@
 </div>
 <div class="tabbed-block">
 <p>On each apt host on the LAN:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Acquire::http::Proxy &quot;http://&lt;your.IP&gt;:3142&quot;;&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/apt.conf.d/00aptproxy
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Acquire::http::Proxy &quot;http://&lt;your.IP&gt;:3142&quot;;&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/apt.conf.d/00aptproxy
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -2844,72 +2934,29 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>apt-cacher-ng
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>apt-cacher-ng
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <!--- footer STOP from tools/include/markdown/APT001-footer.md --->
 
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">apt-cacher-ng remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>APT002
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">apt-cacher-ng remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>APT002
 </span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">apt-cacher-ng purge with cache folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>APT003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">apt-cacher-ng purge with cache folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>APT003
 </span></code></pre></div></td></tr></table></div>
 <h2 id="git_cdn">git_cdn<a class="headerlink" href="#git_cdn" title="Permanent link">&para;</a></h2>
 <p>git_cdn GitHub caching proxy install</p>
-<!--- header START from tools/include/markdown/GCDN001-header.md --->
-<p><strong>git_cdn</strong> is a caching git+HTTP(s) proxy that mirrors an upstream git server (GitHub) close to your build/CI hosts. The first clone or fetch of a repository populates the cache; every subsequent clone/fetch of the same repo from any host on the LAN pulls only new objects from upstream — saving WAN bandwidth and speeding up repeated GitHub clones.</p>
-<p><strong>Key Features</strong></p>
-<ul>
-<li>git+http(s) proxy in front of <code>https://github.com</code></li>
-<li>Single-port (<code>8000</code>), single-container deployment</li>
-<li>Pack-level object cache, configurable size (default 500 GB)</li>
-<li>Survives container restart — cache lives on a host bind-mount</li>
-</ul>
-<!--- header STOP from tools/include/markdown/GCDN001-header.md --->
-
-<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-footer.md">footer</a> <a href="https://github.com/armbian/configng/edit/main/tools/include/markdown/GCDN001-header.md">header</a><br />
+<p><strong>Edit:</strong> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-footer.md">footer</a> <a href="https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-header.md">header</a><br />
 <strong>Status:</strong> Stable<br />
 <strong>Architecture:</strong> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span><br />
 <strong>Maintainer:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a><br />
 <strong>Documentation:</strong> <a href="https://gitlab.com/grouperenault/git_cdn">Link</a><br />
 <strong>Installation:</strong> <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  </p>
-<pre class="custom-bash-block"><code>armbian-config --cmd GCDN001</code></pre>
-<!--- footer START from tools/include/markdown/GCDN001-footer.md --->
-<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="git_cdn-access-to-the-service" name="__tabbed_5" type="radio" /><input id="git_cdn-client-configuration" name="__tabbed_5" type="radio" /><input id="git_cdn-directories" name="__tabbed_5" type="radio" /><input id="git_cdn-view-logs" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="git_cdn-access-to-the-service">Access to the service</label><label for="git_cdn-client-configuration">Client configuration</label><label for="git_cdn-directories">Directories</label><label for="git_cdn-view-logs">View logs</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>The proxy listens on port <strong>8000</strong>:</p>
-<ul>
-<li>URL: <code>http://&lt;your.IP&gt;:8000</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p>On each git host on the LAN, redirect GitHub through the proxy:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span>url.<span class="s2">&quot;http://&lt;your.IP&gt;:8000/&quot;</span>.insteadOf<span class="w"> </span>https://github.com/
+<pre class="custom-bash-block"><code>armbian-config --cmd GCD001</code></pre>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">git_cdn remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GCD002
 </span></code></pre></div></td></tr></table></div>
-<p>Then clone normally — fetches are served from the local cache:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;owner&gt;/&lt;repo&gt;.git
-</span></code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>Cache: <code>/armbian/git_cdn/cache/</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>git_cdn
-</span></code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-<!--- footer STOP from tools/include/markdown/GCDN001-footer.md --->
-
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">git_cdn remove:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GCDN002
-</span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">git_cdn purge with cache folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GCDN003
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">git_cdn purge with cache folder:</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>GCD003
 </span></code></pre></div></td></tr></table></div>
 <h2 id="samba">Samba<a class="headerlink" href="#samba" title="Permanent link">&para;</a></h2>
 <p>SAMBA Remote File share</p>

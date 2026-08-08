@@ -2984,6 +2984,12 @@ root filesystem subvolume:</p>
 <li><code>6</code>: (default)</li>
 </ul>
 <p>Controls the U-Boot bootloader log level during image building. Lower values produce less verbose output. This affects <code>CONFIG_LOGLEVEL</code> and <code>CONFIG_LOG_MAX_LEVEL</code> in U-Boot configuration.</p>
+<p><strong>SKIP_COMPRESSING</strong> ( comma/space-separated list of file extensions )</p>
+<ul>
+<li>e.g. <code>iso,qcow2</code>: leave images of these formats uncompressed even when <code>COMPRESS_OUTPUTIMAGE</code> enables <code>xz</code>/<code>zstd</code></li>
+<li>empty: (default) compress everything</li>
+</ul>
+<p>Images left uncompressed are still checksummed when <code>COMPRESS_OUTPUTIMAGE</code> includes <code>sha</code>. Useful for formats consumed as-is — <code>qcow2</code> (imported into a hypervisor) or <code>iso</code> (mounted as a virtual CD) — where compression only adds an extra decompress step.</p>
 <h1 id="build-options-below-need-to-be-retested-and-added-above-could-be-deprecated">Build options below need to be retested and added above (COULD BE DEPRECATED)<a class="headerlink" href="#build-options-below-need-to-be-retested-and-added-above-could-be-deprecated" title="Permanent link">&para;</a></h1>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> DO NOT USE! Obsolete documentation, new documentation above is in progress.</p>
 <ul>
