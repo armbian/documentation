@@ -108,11 +108,11 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**73** boards (17 failed).
+**73** boards (16 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
-| Arduino UNO Q 01 | ❌ | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE | 10 Aug |
+| Arduino UNO Q 01 | ✅ | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE | 10 Aug |
 | Banana Pi CM4IO 01 | ✅ | 10.0.50.10 | local | 1 GbE | Netgear S3300-52X-PoE+ (43) | 10 Aug |
 | Banana Pi M2 Ultra 01 | ✅ | 10.0.50.47 | local | 1 GbE | TP-Link TL-SG3428X (13) | 10 Aug |
 | Banana Pi M2Pro 01 | ✅ | 10.0.50.43 | local | 1 GbE | Netgear S3300-52X-PoE+ (47) | 10 Aug |
