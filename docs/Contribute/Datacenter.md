@@ -108,7 +108,7 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**72** boards (13 failed).
+**71** boards (10 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
@@ -119,8 +119,7 @@ request to update this table — the same mechanism used for the
 | Banana Pi M5 01 | ✅ | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) | 13 Aug |
 | Banana Pi Pro 01 | ✅ | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) | 13 Aug |
 | BananaPi BPI-F3 01 | ✅ | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) | 13 Aug |
-| BigTreeTech CB1 01 | ❌ | 10.0.50.72 | local | 100 MbE | Aruba 48P Poe (3) | 11 Aug |
-| BigTreeTech CB1 02 | ✅ | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE | 13 Aug |
+| BigTreeTech CB1 01 | ✅ | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE | 13 Aug |
 | Clearfog Pro 01 | ✅ | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) | 13 Aug |
 | Cubie A5E 01 | ✅ | 10.0.50.10 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) | 13 Aug |
 | Cubietruck 01 | ✅ | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) | 13 Aug |
@@ -139,6 +138,7 @@ request to update this table — the same mechanism used for the
 | NanoPi M4V2 01 | ✅ | 10.0.50.97 | local | 1 GbE | Netgear S3300-52X-PoE+ (7) | 13 Aug |
 | NanoPi M5 01 | ✅ | 10.0.50.35 | local | 1 GbE | Netgear S3300-52X-PoE+ (5) | 13 Aug |
 | NanoPi M6 01 | ❌ | 10.0.50.18 | local | 1 GbE | Netgear S3300-52X-PoE+ (39) | 25 Jun |
+| NanoPi M6 03 | ✅ | 10.0.50.165 | local | 1 GbE | — | 13 Aug |
 | NanoPi Neo 2 Black 01 | ✅ | 10.0.50.14 | local | 1 GbE | — | 13 Aug |
 | NanoPi Neo 3 01 | ✅ | 10.0.50.20 | local | 1 GbE | TP-Link TL-SG3428X (17) | 13 Aug |
 | NanoPi R1 01 | ✅ | 10.0.50.59 | local | 1 GbE | Netgear GS348 (14) | 13 Aug |
@@ -156,7 +156,6 @@ request to update this table — the same mechanism used for the
 | Orange Pi 5 Plus 01 | ✅ | 10.0.50.33 | local | 1 GbE | Netgear S3300-52X-PoE+ (8) | 13 Aug |
 | Orange Pi Lite 2 01 | ❌ | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE | 01 Jul |
 | Orange Pi One+ 01 | ✅ | 10.0.50.37 | local | 1 GbE | TP-Link TL-SG3428X (18) | 13 Aug |
-| Orange Pi PC + 01 | ❌ | 10.0.50.32 | local | 100 MbE | Netgear GS348 (47) | 04 Jul |
 | Orange Pi PC2 01 | ✅ | 10.0.50.68 | local | 1 GbE | TP-Link TL-SG3428X (22) | 13 Aug |
 | Orange Pi Prime 01 | ✅ | 10.0.50.16 | local | 1 GbE | Netgear S3300-52X-PoE+ (23) | 13 Aug |
 | Orange Pi R1 01 | ✅ | 10.0.50.25 | local | Wi-Fi 4 | Zyxel NWA130BE | 13 Aug |
@@ -173,7 +172,7 @@ request to update this table — the same mechanism used for the
 | Rock 5B 01 | ✅ | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) | 13 Aug |
 | Rock 5B 02 | ✅ | 10.0.50.17 | local | 2.5 GbE | Netgear XS508M (5) | 13 Aug |
 | Rock 5B Plus 01 | ✅ | 10.0.50.41 | local | 2.5 GbE | Netgear XS508M (4) | 13 Aug |
-| Rock 5T 01 | ❌ | 10.0.50.66 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) | 13 Aug |
+| Rock 5T 01 | ✅ | 10.0.50.66 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) | 13 Aug |
 | Rockpi 4B+ 01 | ❌ | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE | 10 Aug |
 | Rockpi E 01 | ✅ | 10.0.50.61 | local | 1 GbE | TP-Link TL-SG3428X (16) | 13 Aug |
 | SpacemiT K3 Pico-ITX 01 | ✅ | 10.0.50.44 | local | 1 GbE | Netgear S3300-52X-PoE+ (52) | 13 Aug |
