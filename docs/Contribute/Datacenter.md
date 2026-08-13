@@ -108,7 +108,7 @@ request to update this table — the same mechanism used for the
 
 <!-- BOARDS-START -->
 
-**71** boards (10 failed).
+**72** boards (11 failed).
 
 | Board | Status | IP address | Boot | Link | Switch | Last seen |
 |:--|:--:|:--|:--|--:|:--|--:|
@@ -138,7 +138,8 @@ request to update this table — the same mechanism used for the
 | NanoPi M4V2 01 | ✅ | 10.0.50.97 | local | 1 GbE | Netgear S3300-52X-PoE+ (7) | 13 Aug |
 | NanoPi M5 01 | ✅ | 10.0.50.35 | local | 1 GbE | Netgear S3300-52X-PoE+ (5) | 13 Aug |
 | NanoPi M6 01 | ❌ | 10.0.50.18 | local | 1 GbE | Netgear S3300-52X-PoE+ (39) | 25 Jun |
-| NanoPi M6 03 | ✅ | 10.0.50.165 | local | 1 GbE | — | 13 Aug |
+| NanoPi M6 03 | ❌ | 10.0.50.165 | local | 1 GbE | — | 13 Aug |
+| NanoPi M6 04 | ✅ | 10.0.50.164 | local | 1 GbE | — | 13 Aug |
 | NanoPi Neo 2 Black 01 | ✅ | 10.0.50.14 | local | 1 GbE | — | 13 Aug |
 | NanoPi Neo 3 01 | ✅ | 10.0.50.20 | local | 1 GbE | TP-Link TL-SG3428X (17) | 13 Aug |
 | NanoPi R1 01 | ✅ | 10.0.50.59 | local | 1 GbE | Netgear GS348 (14) | 13 Aug |
