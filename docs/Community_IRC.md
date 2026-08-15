@@ -13,7 +13,7 @@ Armbian short announcements are done via 𝕏 (formerly known as Twitter): <http
 
 ## 👏 Overview
 
-As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in realtime using the [internet relay chat (or *IRC* for short)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
+As announced in the [forums](https://forum.armbian.com/topic/12803-armbian-irc-channel/) everyone interested can communicate in real-time using the [internet relay chat (or *IRC* for short)](https://de.wikipedia.org/wiki/Internet_Relay_Chat).
 Well known IRC clients for CLI are [Weechat](https://weechat.org/) or [Irssi](https://irssi.org/) and for GUI [Hexchat](https://hexchat.github.io/) or [Konversation](https://konversation.kde.org/).  
 
 Besides that communication is also possible via *Discord*.
@@ -47,11 +47,10 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 - **`#armbian-announcements`** : important messages from the Armbian team. You definitely want to idle here. Moderated channel
 - **`#armbian-devel`** : build engine development topics
 - **`#armbian-desktop`** : desktop environment development
-- **`#armbian-csc`** unsupported/stating board talk
 - **`#armbian-allwinner`** Allwinner-related SoC talk
 - **`#armbian-amlogic`** Amlogic-related SoC talk
-- **`#armbian-broadcom`** Broadcom-related SoC talk
 - **`#armbian-rockchip`** Rockchip-related SoC talk
+- **`#armbian-other`** Other SoCs and SoC families
 - **`#armbian-offtopic`** General chit chat, whatever that does not fit other channels
 - **`#armbian-commits`** Whenever a new interaction with a [repository on Github](https://github.com/armbian/) happens it will be announced. Moderated channel
 
@@ -66,16 +65,6 @@ Besides the services offered by IRC (like Nickserv or Chanserv) Armbian has set 
 **`DC-IRC`**
 
 - Has the purpose to relay messages between IRC and Discord. Applies for all channels beginning with `#armbian-` as well as `#armbian`.
-
-**`ArmbianHelper`**
-
-- Allows searching forums via Google API (not very precise though)
-  - Example: `,g Allwinner H6 panfrost`
-- A few more minor commands, mostly used by staff or do not need introduction
-  - `.nonprofit`, `.sed`, `.contribute`, `.rtfm`, `.fortune`, `.sunxi`, `.meson`, `help`, `help irc`, `.tvboxes`
-- Translation for non-native English speakers
-  - Simply start your sentence with `--` at the beginning and the bot will translate your message regardless of the source language into English.  
-          *Note*: This services will be activated manually on demand (like planned meetings for example) since its backend generates cost.
 
 ## ❔ FAQ
 
