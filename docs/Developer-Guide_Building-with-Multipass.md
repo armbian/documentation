@@ -1,6 +1,6 @@
 # Building with Multipass
 
-In order to build an Armbian image from scratch, whether for development purposes or to [apply user customizations](https://docs.armbian.com/Developer-Guide_User-Configurations/) on top of a base image, a build environment is required. Per the Armbian documentation, Debian Trixie is [the officially supported](https://docs.armbian.com/Developer-Guide_Build-Preparation/) build platform. Multipass images are Ubuntu, so this route is a convenience rather than the supported one - for the officially supported host, build natively on Debian Trixie or use [Docker](https://docs.armbian.com/Developer-Guide_Building-with-Docker/).
+In order to build an Armbian image from scratch, whether for development purposes or to [apply user customizations](https://docs.armbian.com/Developer-Guide_User-Configurations/) on top of a base image, a build environment is required. Per the Armbian documentation, Armbian/Debian 13 (Trixie) is [the officially supported](https://docs.armbian.com/Developer-Guide_Build-Preparation/) build platform. Multipass images are Ubuntu, so this route is a convenience rather than the supported one - for the officially supported host, build natively on Armbian/Debian 13 (Trixie) or use [Docker](https://docs.armbian.com/Developer-Guide_Building-with-Docker/).
 
 [Multipass](https://multipass.run/) that is designed for quick and painless provisioning of Ubuntu VMs.
 
