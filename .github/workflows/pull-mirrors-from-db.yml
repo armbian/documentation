@@ -77,8 +77,9 @@ jobs:
           declare -A CC_BY_REGION=(
             [china]=CN [india]=IN [japan]=JP [korea]=KR [singapore]=SG [taiwan]=TW
             [austria]=AT [bulgaria]=BG [denmark]=DK [estonia]=EE [finland]=FI
-            [france]=FR [germany]=DE [italy]=IT [netherlands]=NL [russia]=RU
-            [slovenia]=SI [spain]=ES [ukraine]=UA [united-kingdom]=GB
+            [france]=FR [germany]=DE [italy]=IT [netherlands]=NL [poland]=PL
+            [russia]=RU [slovenia]=SI [spain]=ES [sweden]=SE [ukraine]=UA
+            [united-kingdom]=GB
             [australia]=AU
             [north-america]=US [east-coast]=US [west-coast]=US [virginia]=US
           )
@@ -87,8 +88,9 @@ jobs:
           declare -A COUNTRY_BY_CC=(
             [CN]="China" [IN]="India" [JP]="Japan" [KR]="Korea" [SG]="Singapore" [TW]="Taiwan"
             [AT]="Austria" [BG]="Bulgaria" [DK]="Denmark" [EE]="Estonia" [FI]="Finland"
-            [FR]="France" [DE]="Germany" [IT]="Italy" [NL]="Netherlands" [RU]="Russia"
-            [SI]="Slovenia" [ES]="Spain" [UA]="Ukraine" [GB]="United Kingdom"
+            [FR]="France" [DE]="Germany" [IT]="Italy" [NL]="Netherlands" [PL]="Poland"
+            [RU]="Russia" [SI]="Slovenia" [ES]="Spain" [SE]="Sweden" [UA]="Ukraine"
+            [GB]="United Kingdom"
             [AU]="Australia" [US]="United States"
           )
           for i in $(echo $JQ | jq '.results[] | .id'); do
