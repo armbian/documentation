@@ -40,11 +40,11 @@ jobs:
           # System is split into per-subcategory pages (Kernel/Desktops/Storage/
           # Access/User/Updates); sync those (lowercased) and skip System.md.
           # armbian-config/index.md (the overview) is hand-maintained, not synced.
-          mkdir -p ../documentation/docs/armbian-config/
-          rsync -avr docs/Localisation/Localisation.md ../documentation/docs/armbian-config/localisation.md
-          rsync -avr docs/Network/Network.md ../documentation/docs/armbian-config/network.md
+          mkdir -p ../documentation/docs/config/
+          rsync -avr docs/Localisation/Localisation.md ../documentation/docs/config/localisation.md
+          rsync -avr docs/Network/Network.md ../documentation/docs/config/network.md
           for f in Kernel Desktops Storage Access User Updates; do
-            rsync -avr "docs/System/$f.md" "../documentation/docs/armbian-config/$(echo "$f" | tr 'A-Z' 'a-z').md"
+            rsync -avr "docs/System/$f.md" "../documentation/docs/config/$(echo "$f" | tr 'A-Z' 'a-z').md"
           done
 
           # the rest goes under armbian-software (category hubs + section pages)

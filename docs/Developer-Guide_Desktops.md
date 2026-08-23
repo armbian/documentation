@@ -2,7 +2,7 @@
 
 Technical reference for the desktop submodule of `armbian-config` (the [configng](https://github.com/armbian/configng) repository), under `tools/modules/desktops/`. This guide is aimed at developers who want to add a new desktop environment, modify the install/remove pipeline, or integrate the YAML-driven desktop API from another tool.
 
-End-user instructions for installing a desktop with `armbian-config` live in the [Armbian Config](armbian-config/index.md) section.
+End-user instructions for installing a desktop with `armbian-config` live in the [Armbian Config](config/index.md) section.
 
 ## Overview
 
@@ -969,5 +969,5 @@ An unanchored `grep` for `AutomaticLoginEnable\s*=\s*true` matches this comment,
 ## See also
 
 - [Extensions](Developer-Guide_Extensions.md) — the Armbian build framework's extension system, used by board configs to inject build-time hooks.
-- [Armbian Config](armbian-config/index.md) — end-user docs for `armbian-config`.
+- [Armbian Config](config/index.md) — end-user docs for `armbian-config`.
 - [configng repository](https://github.com/armbian/configng) — source for everything described here.

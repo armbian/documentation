@@ -75,7 +75,7 @@ Use the following images only if these are the only ones provided, or if you wan
 - **edge** is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.
 - **legacy** is the old stable current kernel. Use it if _current_ is not available or if something does not work well with it.
 
-The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](armbian-config/index.md).
+The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with [armbian-config](config/index.md).
 
 
 ### Rolling releases
@@ -345,9 +345,9 @@ After logging in, you will be prompted to change the default password. You will 
 
 ## First steps
 
-You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](armbian-config/index.md) or [install preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
+You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](config/index.md) or [install preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
-Please note that the typical tool for all tasks is [_armbian-config_](armbian-config/index.md). The section [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
+Please note that the typical tool for all tasks is [_armbian-config_](config/index.md). The section [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
 
 
 ### Configuration
@@ -434,7 +434,7 @@ Armbian provides a firmware package freeze feature to provide you with the possi
 
     Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 
-within [armbian-config](armbian-config/index.md).
+within [armbian-config](config/index.md).
 
 If the kernel was upgraded during this process, you will be prompted to reboot at the next login.
 
@@ -442,7 +442,7 @@ If the kernel was upgraded during this process, you will be prompted to reboot a
 
 !!! danger "Upgrade the Armbian OS"
 
-    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](armbian-config/index.md).
+    When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a _"dist-upgrade"_, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental `Distribution upgrades` feature for [armbian-config](config/index.md).
 
     Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.
 
