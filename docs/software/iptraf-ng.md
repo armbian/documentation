@@ -1,6 +1,7 @@
 ---
 title: "iptraf-ng"
 description: "Install and run iptraf-ng on Armbian — iptraf-ng IP LAN monitor. Runs on ARM64 and x86 single-board computers."
+image: /images/IPT001.png
 category: "Netconfig"
 comments: true
 ---
@@ -8,6 +9,11 @@ comments: true
 
 
 iptraf-ng IP LAN monitor
+
+
+<!--- section image START from tools/include/images/IPT001.png --->
+![iptraf-ng](/images/IPT001.png)
+<!--- section image STOP from tools/include/images/IPT001.png --->
 
 
 :material-cpu-64-bit:{ title="Architecture" } <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> · :material-book-open-variant:{ title="Documentation" } [Documentation](https://netbox.readthedocs.io/en/stable/) · :material-lan-connect:{ title="Access port" } `http://<your.IP>:8222`
