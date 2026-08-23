@@ -1,13 +1,13 @@
 # Advanced features and tasks
 
-While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](User-Guide_Armbian-Config.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
+While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](armbian-config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
 
 Usually, all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
 
 ## Keyboard layout
 
-This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-keyboard-layout). For some corner cases, changing the keyboard layout can also be done with:
+This is typically handled by [_armbian-config_](armbian-config/localisation.md#change-keyboard-layout). For some corner cases, changing the keyboard layout can also be done with:
 
 ```sh
 dpkg-reconfigure keyboard-configuration
@@ -26,7 +26,7 @@ localectl set-keymap br-abnt2
 
 ## System language
 
-This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-locales-reconfigure-the-language-and-character-set). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
+This is typically handled by [_armbian-config_](armbian-config/localisation.md#change-locales-reconfigure-the-language-and-character-set). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
 
 ```sh
 dpkg-reconfigure locales
@@ -48,7 +48,7 @@ dpkg-reconfigure console-setup
 
 ## Time zone
 
-This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Localisation.md#change-global-timezone). If necessary, one can also run:
+This is typically handled by [_armbian-config_](armbian-config/localisation.md#change-global-timezone). If necessary, one can also run:
 
 ```sh
 dpkg-reconfigure tzdata
@@ -176,7 +176,7 @@ Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in p
 
 ## Switch or downgrade kernels
 
-This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Kernel.md#alternative-kernels).
+This is typically handled by [_armbian-config_](armbian-config/kernel.md#alternative-kernels).
 
 ```bash
 armbian-config --cmd KER001
