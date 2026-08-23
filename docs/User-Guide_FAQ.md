@@ -90,7 +90,7 @@ Yes! The simple `armbian-upgrade` command, which is an alias for `apt update && 
 
 Distribution upgrades (e.g. Bookworm → Trixie, Jammy → Noble) are **outside the scope of Armbian support**. If you attempt such an upgrade, we cannot assist if problems occur.
 
-An **experimental upgrade option** is available in [armbian-config](https://docs.armbian.com/User-Guide_Armbian-Config/Updates/#stable-distro-upgrade), but it is provided *as-is* and without support.
+An **experimental upgrade option** is available in [armbian-config](https://docs.armbian.com/armbian-config/updates/#stable-distro-upgrade), but it is provided *as-is* and without support.
 
 Keep in mind:
 
