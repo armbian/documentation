@@ -1,10 +1,16 @@
 ---
 title: "Medusa"
 description: "Install and run Medusa on Armbian — Medusa automatic downloader for TV shows. Runs on ARM64 and x86 single-board computers."
+image: /images/MDS001.png
 category: "Downloaders"
 comments: true
 ---
 # Medusa
+
+
+<!--- section image START from tools/include/images/MDS001.png --->
+![Medusa](/images/MDS001.png)
+<!--- section image STOP from tools/include/images/MDS001.png --->
 
 
 :material-cpu-64-bit:{ title="Architecture" } <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> · <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span> · :material-book-open-variant:{ title="Documentation" } [Documentation](https://github.com/pymedusa/Medusa/wiki) · :material-lan-connect:{ title="Access port" } `http://<your.IP>:8081`

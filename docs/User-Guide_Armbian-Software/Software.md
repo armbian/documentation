@@ -815,6 +815,11 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 
 Install tools for cloning and managing repositories (git)
 
+
+<!--- section image START from tools/include/images/GIT001.png --->
+![Git CLI](/images/GIT001.png)
+<!--- section image STOP from tools/include/images/GIT001.png --->
+
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
@@ -1290,6 +1295,11 @@ armbian-config --cmd LID003
 
 
 Medusa automatic downloader for TV shows
+
+
+<!--- section image START from tools/include/images/MDS001.png --->
+![Medusa](/images/MDS001.png)
+<!--- section image STOP from tools/include/images/MDS001.png --->
 
 
 <!--- header START from tools/include/markdown/MDS001-header.md --->
@@ -2357,6 +2367,11 @@ armbian-config --cmd NBOX03
 apt-cacher-ng caching proxy install
 
 
+<!--- section image START from tools/include/images/APT001.png --->
+![apt-cacher-ng](/images/APT001.png)
+<!--- section image STOP from tools/include/images/APT001.png --->
+
+
 <!--- header START from tools/include/markdown/APT001-header.md --->
 **apt-cacher-ng** is a caching HTTP proxy for Debian and Ubuntu apt repositories. The first host on the LAN to fetch a `.deb` populates the cache; every subsequent `apt-get install` / `apt-get dist-upgrade` on any other host serves the same package from local disk — saving WAN bandwidth and turning multi-minute upgrades into seconds.
 
@@ -2420,6 +2435,11 @@ armbian-config --cmd APT003
 
 
 git_cdn GitHub caching proxy install
+
+
+<!--- section image START from tools/include/images/GCD001.png --->
+![git_cdn](/images/GCD001.png)
+<!--- section image STOP from tools/include/images/GCD001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-header.md)  
 __Status:__ Stable  
@@ -3571,6 +3591,11 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 
 avahi-daemon hostname broadcast via mDNS
 
+
+<!--- section image START from tools/include/images/AVH001.png --->
+![avahi-daemon](/images/AVH001.png)
+<!--- section image STOP from tools/include/images/AVH001.png --->
+
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
@@ -3592,6 +3617,11 @@ armbian-config --cmd AVH002
 
 
 iperf3 bandwidth measuring tool
+
+
+<!--- section image START from tools/include/images/IPR001.png --->
+![iperf3](/images/IPR001.png)
+<!--- section image STOP from tools/include/images/IPR001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-header.md)  
 __Status:__ Stable  
@@ -3615,6 +3645,11 @@ armbian-config --cmd IPR002
 
 iptraf-ng IP LAN monitor
 
+
+<!--- section image START from tools/include/images/IPT001.png --->
+![iptraf-ng](/images/IPT001.png)
+<!--- section image STOP from tools/include/images/IPT001.png --->
+
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
@@ -3636,6 +3671,11 @@ armbian-config --cmd IPT002
 
 
 nload - realtime console network usage monitor
+
+
+<!--- section image START from tools/include/images/NLD001.png --->
+![nload](/images/NLD001.png)
+<!--- section image STOP from tools/include/images/NLD001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-header.md)  
 __Status:__ Stable  
