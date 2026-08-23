@@ -1,42 +1,39 @@
 # Armbian Config
 
-``` mermaid
-flowchart LR
-  A[armbian-config] -----> B["System"];
-  A[armbian-config] -----> C["Network"];
-  A[armbian-config] -----> D["Localisation"];
-  A[armbian-config] -----> E["Software"];
-  A[armbian-config] -----> F["Help"];
-```
+**Armbian Config** (`armbian-config`) is a lightweight, **interactive and scriptable** configuration utility that automates the common tasks of setting up and maintaining an Armbian system. It ships **preinstalled** on every Armbian image and is especially handy on single-board computers (SBCs) — it gets you to a ready-to-use system without editing config files by hand.
 
-<img src="https://raw.githubusercontent.com/armbian/configng/main/share/icons/hicolor/scalable/configng-tux.svg">
+## What it can do
 
-Utility for configuring your board, adjusting services, and installing applications. It comes with Armbian by default.
+- **Initial setup & personalization** — hostname, timezone, locales, keyboard, users, MOTD
+- **Networking** — Wi-Fi, VPN, static IP, and advanced/bridged configurations
+- **Kernel & firmware** — select, switch and manage kernels, headers, device-tree overlays and firmware
+- **Hardware features** — enable and manage board-specific options
+- **Storage** — install to internal media, ZFS, NFS, read-only root, and more
+- **Software** — sandboxed installation of third-party applications and services, plus system and distribution updates
+- **Desktop environments** — install and tier-manage XFCE, GNOME, KDE Plasma, MATE, Cinnamon and others
 
-To start the Armbian configuration utility, use the following command:
-~~~
+## Quick start
+
+Open a terminal (locally or over SSH) and run:
+
+~~~ bash
 armbian-config
 ~~~
 
-## Adding a new feature
+Every menu action can also be driven **non-interactively** for scripting and automation:
 
-Please check [instructions](/Contribute/Armbian-config/).
-
-## Sources
-
-<https://github.com/armbian/configng>
-
-## Installation on 3rd party Linux OS
-
-This tool is tailored to works best with Armbian Linux but it has also been automatically tested on:
-
-- Debian Bookworm
-- Ubuntu Jammy
-- Ubuntu Noble
-
-In theory it should work on any systemd APT based Linux distributions such as: Linux Mint, Elementary OS, Kali Linux, MX Linux, Parrot OS, Proxmox, Raspberry Pi OS, ...
-
+~~~ bash
+armbian-config --cmd <ID>        # run a menu command
+armbian-config --api <helper>    # call a module helper directly
 ~~~
+
+## Compatibility
+
+Armbian Config is optimized for **[Armbian Linux](https://www.armbian.com)**, but in theory it works on any systemd-based, APT-compatible distribution — Linux Mint, Elementary OS, Kali Linux, MX Linux, Parrot OS, Proxmox, Raspberry Pi OS, and others. It is continuously and automatically tested on current versions of Debian and Ubuntu.
+
+<details><summary>Install on a non-Armbian distribution</summary>
+
+~~~ bash
 wget -qO - https://apt.armbian.com/armbian.key | gpg --dearmor | \
 sudo tee /usr/share/keyrings/armbian.gpg > /dev/null
 cat << EOF | sudo tee /etc/apt/sources.list.d/armbian-config.sources > /dev/null
@@ -49,3 +46,12 @@ EOF
 sudo apt update
 sudo apt -y install armbian-config
 ~~~
+</details>
+
+## Contribute
+
+Want to expand Armbian Config with a new feature, software title, or configuration module? Contributions are welcome — see the [contribution guide](/Contribute/Armbian-config/). Keep changes modular and easy to maintain, so they are quick to review and merge.
+
+## Sources
+
+<https://github.com/armbian/configng>
