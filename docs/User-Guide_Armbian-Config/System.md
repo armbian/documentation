@@ -17,7 +17,7 @@ Use alternative kernels
 
 
 <!--- section image START from tools/include/images/KER001.png --->
-[![Alternative kernels](/images/KER001.png)](#)
+![Alternative kernels](/images/KER001.png)
 <!--- section image STOP from tools/include/images/KER001.png --->
 
 
@@ -66,7 +66,7 @@ Install Linux headers
 
 
 <!--- section image START from tools/include/images/HEAD01.png --->
-[![Kernel Headers](/images/HEAD01.png)](#)
+![Kernel Headers](/images/HEAD01.png)
 <!--- section image STOP from tools/include/images/HEAD01.png --->
 
 
@@ -99,7 +99,7 @@ Manage device tree overlays
 
 
 <!--- section image START from tools/include/images/DTO001.png --->
-[![Device Tree Overlays](/images/DTO001.png)](#)
+![Device Tree Overlays](/images/DTO001.png)
 <!--- section image STOP from tools/include/images/DTO001.png --->
 
 
@@ -126,7 +126,7 @@ Edit device tree
 
 
 <!--- section image START from tools/include/images/DTE001.png --->
-[![Device Tree Editor](/images/DTE001.png)](#)
+![Device Tree Editor](/images/DTE001.png)
 <!--- section image STOP from tools/include/images/DTE001.png --->
 
 
@@ -200,7 +200,7 @@ Edit the boot environment
 
 
 <!--- section image START from tools/include/images/BOOT01.png --->
-[![Boot Environment](/images/BOOT01.png)](#)
+![Boot Environment](/images/BOOT01.png)
 <!--- section image STOP from tools/include/images/BOOT01.png --->
 
 
@@ -296,7 +296,7 @@ Install Cinnamon (minimal)
 
 
 <!--- section image START from tools/include/images/CINM01.png --->
-[![Cinnamon](/images/CINM01.png)](#)
+![Cinnamon](/images/CINM01.png)
 <!--- section image STOP from tools/include/images/CINM01.png --->
 
 
@@ -387,7 +387,7 @@ Install GNOME (minimal)
 
 
 <!--- section image START from tools/include/images/GNME01.png --->
-[![GNOME](/images/GNME01.png)](#)
+![GNOME](/images/GNME01.png)
 <!--- section image STOP from tools/include/images/GNME01.png --->
 
 
@@ -477,7 +477,7 @@ Install MATE (minimal)
 
 
 <!--- section image START from tools/include/images/MATE01.png --->
-[![MATE](/images/MATE01.png)](#)
+![MATE](/images/MATE01.png)
 <!--- section image STOP from tools/include/images/MATE01.png --->
 
 
@@ -567,7 +567,7 @@ Install i3 (minimal)
 
 
 <!--- section image START from tools/include/images/I3WM01.png --->
-[![i3](/images/I3WM01.png)](#)
+![i3](/images/I3WM01.png)
 <!--- section image STOP from tools/include/images/I3WM01.png --->
 
 
@@ -661,7 +661,7 @@ Install KDE Plasma (minimal)
 
 
 <!--- section image START from tools/include/images/KDEP01.png --->
-[![KDE Plasma](/images/KDEP01.png)](#)
+![KDE Plasma](/images/KDEP01.png)
 <!--- section image STOP from tools/include/images/KDEP01.png --->
 
 
@@ -948,7 +948,7 @@ Install XFCE (minimal)
 
 
 <!--- section image START from tools/include/images/XFCE01.png --->
-[![XFCE](/images/XFCE01.png)](#)
+![XFCE](/images/XFCE01.png)
 <!--- section image STOP from tools/include/images/XFCE01.png --->
 
 
@@ -1072,7 +1072,7 @@ Download a fresh, official Armbian OS image and write it to a device
 
 
 <!--- section image START from tools/include/images/FLASH1.png --->
-[![Download and flash](/images/FLASH1.png)](#)
+![Download and flash](/images/FLASH1.png)
 <!--- section image STOP from tools/include/images/FLASH1.png --->
 
 
@@ -1221,7 +1221,7 @@ ZFS filesystem - enable support
 
 
 <!--- section image START from tools/include/images/ZFS001.png --->
-[![ZFS](/images/ZFS001.png)](#)
+![ZFS](/images/ZFS001.png)
 <!--- section image STOP from tools/include/images/ZFS001.png --->
 
 
@@ -1405,7 +1405,7 @@ Memory management - enable features
 
 
 <!--- section image START from tools/include/images/MEM001.png --->
-[![Memory](/images/MEM001.png)](#)
+![Memory](/images/MEM001.png)
 <!--- section image STOP from tools/include/images/MEM001.png --->
 
 
@@ -1535,7 +1535,7 @@ Disable root login
 
 
 <!--- section image START from tools/include/images/ACC001.png --->
-[![Native](/images/ACC001.png)](#)
+![Native](/images/ACC001.png)
 <!--- section image STOP from tools/include/images/ACC001.png --->
 
 
@@ -1628,7 +1628,7 @@ Sandboxed & containerised SSH server
 
 
 <!--- section image START from tools/include/images/SSH001.png --->
-[![Containerised](/images/SSH001.png)](#)
+![Containerised](/images/SSH001.png)
 <!--- section image STOP from tools/include/images/SSH001.png --->
 
 
@@ -1693,7 +1693,7 @@ Change shell system wide to ZSH
 
 
 <!--- section image START from tools/include/images/SHELL1.png --->
-[![Change shell](/images/SHELL1.png)](#)
+![Change shell](/images/SHELL1.png)
 <!--- section image STOP from tools/include/images/SHELL1.png --->
 
 
@@ -1726,7 +1726,7 @@ Adjust welcome screen (motd)
 
 
 <!--- section image START from tools/include/images/MOTD01.png --->
-[![Adjust MOTD](/images/MOTD01.png)](#)
+![Adjust MOTD](/images/MOTD01.png)
 <!--- section image STOP from tools/include/images/MOTD01.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MOTD01-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MOTD01-header.md)  
@@ -1754,7 +1754,7 @@ Enable Armbian firmware upgrades
 
 
 <!--- section image START from tools/include/images/UPD001.png --->
-[![Firmware](/images/UPD001.png)](#)
+![Firmware](/images/UPD001.png)
 <!--- section image STOP from tools/include/images/UPD001.png --->
 
 
@@ -1905,7 +1905,7 @@ Enable automating Docker container base images updating
 
 
 <!--- section image START from tools/include/images/WTC001.png --->
-[![Docker images](/images/WTC001.png)](#)
+![Docker images](/images/WTC001.png)
 <!--- section image STOP from tools/include/images/WTC001.png --->
 
 
@@ -1941,7 +1941,7 @@ Enable automatic package updates.
 
 
 <!--- section image START from tools/include/images/UNAT01.png --->
-[![Packages](/images/UNAT01.png)](#)
+![Packages](/images/UNAT01.png)
 <!--- section image STOP from tools/include/images/UNAT01.png --->
 
 

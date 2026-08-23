@@ -11,7 +11,7 @@ Basic network setup
 
 
 <!--- section image START from tools/include/images/BNS001.png --->
-[![Basic setup](/images/BNS001.png)](#)
+![Basic setup](/images/BNS001.png)
 <!--- section image STOP from tools/include/images/BNS001.png --->
 
 
@@ -91,7 +91,7 @@ View Network Configuration
 
 
 <!--- section image START from tools/include/images/VNS001.png --->
-[![View configuration](/images/VNS001.png)](#)
+![View configuration](/images/VNS001.png)
 <!--- section image STOP from tools/include/images/VNS001.png --->
 
 
