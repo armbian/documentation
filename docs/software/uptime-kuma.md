@@ -25,7 +25,7 @@ You can receive instant notifications when a service goes down via Telegram, Dis
 <!--- header STOP from tools/include/markdown/UPK001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Monitoring → Uptime Kuma**
+Install from **[armbian-config](/armbian-config/) → Software → Monitoring → Uptime Kuma**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd UPK001

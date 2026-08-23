@@ -22,7 +22,7 @@ Navidrome is a modern, lightweight, and self-hosted music server and streamer. I
 <!--- header STOP from tools/include/markdown/NAV001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → Navidrome**
+Install from **[armbian-config](/armbian-config/) → Software → Media → Navidrome**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd NAV001

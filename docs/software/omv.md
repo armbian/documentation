@@ -29,7 +29,7 @@ Whether used on a dedicated server, a Raspberry Pi, or virtualized hardware, OMV
 <!--- header STOP from tools/include/markdown/OMV001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → OMV**
+Install from **[armbian-config](/armbian-config/) → Software → Media → OMV**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd OMV001

@@ -32,7 +32,7 @@ Redis is widely used for real-time applications, caching layers, session stores,
 <!--- header STOP from tools/include/markdown/REDIS1-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Database → Redis**
+Install from **[armbian-config](/armbian-config/) → Software → Database → Redis**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd REDIS1

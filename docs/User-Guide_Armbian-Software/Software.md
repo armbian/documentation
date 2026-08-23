@@ -6,7 +6,6 @@ comments: true
 
 ## Armbian infrastructure services
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Armbian-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Armbian-header.md)  
 #### CDN router
 
 
@@ -23,18 +22,13 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 
 <!--- header STOP from tools/include/markdown/ART001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ART001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ART001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="CDN router"
 armbian-config --cmd ART001
 ~~~
 
 
-~~~ bash title="Remove CDN router:"
+~~~ bash title="Remove CDN router"
 armbian-config --cmd ART002
 ~~~
 
@@ -56,13 +50,8 @@ This module automates the installation, removal, and status checking of GitHub s
 
 <!--- header STOP from tools/include/markdown/GHR001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHR001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="GH runners"
 armbian-config --cmd GHR001
 ~~~
 
@@ -104,7 +93,7 @@ armbian-config --cmd GHR001
 <!--- footer STOP from tools/include/markdown/GHR001-footer.md --->
 
 
-~~~ bash title="Remove GitHub runners for Armbian automation:"
+~~~ bash title="Remove GitHub runners for Armbian automation"
 armbian-config --cmd GHR002
 ~~~
 
@@ -117,18 +106,13 @@ armbian-config --cmd GHR002
 ![Rsyncd server](/images/RSD001.png)
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="Rsyncd server"
 armbian-config --cmd RSD001
 ~~~
 
 
-~~~ bash title="Remove Armbian rsyncd server:"
+~~~ bash title="Remove Armbian rsyncd server"
 armbian-config --cmd RSD002
 ~~~
 
@@ -136,7 +120,6 @@ armbian-config --cmd RSD002
 
 ## Backup solutions for your data
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Backup-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Backup-header.md)  
 #### Duplicati
 
 
@@ -162,14 +145,8 @@ Thanks to Duplicati’s smart design — working through standard protocols and 
 
 <!--- header STOP from tools/include/markdown/DPL001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://prev-docs.duplicati.com/en/latest/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Duplicati"
 armbian-config --cmd DPL001
 ~~~
 
@@ -190,12 +167,12 @@ armbian-config --cmd DPL001
 <!--- footer STOP from tools/include/markdown/DPL001-footer.md --->
 
 
-~~~ bash title="Duplicati remove:"
+~~~ bash title="Duplicati remove"
 armbian-config --cmd DPL002
 ~~~
 
 
-~~~ bash title="Duplicati purge with data folder:"
+~~~ bash title="Duplicati purge with data folder"
 armbian-config --cmd DPL003
 ~~~
 
@@ -204,7 +181,6 @@ armbian-config --cmd DPL003
 
 ## Docker containerization and KVM virtual machines
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Containers-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Containers-header.md)  
 #### Docker
 
 
@@ -212,14 +188,8 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 ![Docker](/images/CON001.png)
 <!--- section image STOP from tools/include/images/CON001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CON001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CON001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.docker.com)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Docker"
 armbian-config --cmd CON001
 ~~~
 
@@ -230,12 +200,12 @@ What is Docker? Docker helps developers build, share, run, and verify applicatio
 <!--- footer STOP from tools/include/markdown/CON001-footer.md --->
 
 
-~~~ bash title="Docker remove:"
+~~~ bash title="Docker remove"
 armbian-config --cmd CON003
 ~~~
 
 
-~~~ bash title="Docker purge with all images, containers, and volumes:"
+~~~ bash title="Docker purge with all images, containers, and volumes"
 armbian-config --cmd CON004
 ~~~
 
@@ -258,14 +228,8 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 <!--- header STOP from tools/include/markdown/POR001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/POR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/POR001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @schwar3kat  
-__Documentation:__ [Link](https://docs.portainer.io/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Portainer"
 armbian-config --cmd POR001
 ~~~
 
@@ -276,12 +240,12 @@ armbian-config --cmd POR001
 <!--- footer STOP from tools/include/markdown/POR001-footer.md --->
 
 
-~~~ bash title="Portainer remove:"
+~~~ bash title="Portainer remove"
 armbian-config --cmd POR002
 ~~~
 
 
-~~~ bash title="Portainer purge with with data folder:"
+~~~ bash title="Portainer purge with with data folder"
 armbian-config --cmd POR003
 ~~~
 
@@ -290,7 +254,6 @@ armbian-config --cmd POR003
 
 ## Network-wide ad blockers servers
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DNS-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/DNS-header.md)  
 #### AdGuardHome
 
 
@@ -307,13 +270,8 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ADG001-header.md)  
-__Status:__ Stable  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/AdguardTeam/AdGuardHome/wiki)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="AdGuardHome"
 armbian-config --cmd ADG001
 ~~~
 
@@ -352,12 +310,12 @@ armbian-config --cmd ADG001
 <!--- footer STOP from tools/include/markdown/ADG001-footer.md --->
 
 
-~~~ bash title="AdGuardHome remove:"
+~~~ bash title="AdGuardHome remove"
 armbian-config --cmd ADG002
 ~~~
 
 
-~~~ bash title="AdGuardHome purge with data folder:"
+~~~ bash title="AdGuardHome purge with data folder"
 armbian-config --cmd ADG003
 ~~~
 
@@ -405,14 +363,8 @@ Pi-hole offers an effective and centralized way to enhance privacy and reduce un
 
 <!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PIH001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.pi-hole.net/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Pi-hole"
 armbian-config --cmd PIH001
 ~~~
 
@@ -425,17 +377,17 @@ armbian-config --cmd PIH001
 <!--- footer STOP from tools/include/markdown/PIH001-footer.md --->
 
 
-~~~ bash title="Pi-hole change web admin password:"
+~~~ bash title="Pi-hole change web admin password"
 armbian-config --cmd PIH002
 ~~~
 
 
-~~~ bash title="Pi-hole remove:"
+~~~ bash title="Pi-hole remove"
 armbian-config --cmd PIH003
 ~~~
 
 
-~~~ bash title="Pi-hole purge with data folder:"
+~~~ bash title="Pi-hole purge with data folder"
 armbian-config --cmd PIH004
 ~~~
 
@@ -458,14 +410,8 @@ Unbound caching DNS resolver
 Unbound is a high-performance, open-source DNS resolver. It primarily serves to resolve domain names into IP addresses for devices on a network. Unlike regular DNS servers, Unbound performs DNS lookups directly and securely, providing features like DNSSEC validation (ensuring data integrity) and privacy protections. It's often used to improve speed, security, and privacy by resolving queries locally rather than relying on external DNS services.
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UNB001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://unbound.docs.nlnetlabs.nl/en/latest/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Unbound"
 armbian-config --cmd UNB001
 ~~~
 
@@ -489,12 +435,12 @@ armbian-config --cmd UNB001
 <!--- footer STOP from tools/include/markdown/UNB001-footer.md --->
 
 
-~~~ bash title="Unbound remove:"
+~~~ bash title="Unbound remove"
 armbian-config --cmd UNB002
 ~~~
 
 
-~~~ bash title="Unbound purge with data folder:"
+~~~ bash title="Unbound purge with data folder"
 armbian-config --cmd UNB003
 ~~~
 
@@ -503,7 +449,6 @@ armbian-config --cmd UNB003
 
 ## SQL database servers and web interface managers
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Database-header.md)  
 #### MySQL
 
 
@@ -520,14 +465,8 @@ MySQL is one of the world’s most widely used open-source database servers. Tru
 
 <!--- header STOP from tools/include/markdown/MYSQL1-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MYSQL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MYSQL1-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://hub.docker.com/_/mysql)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="MySQL"
 armbian-config --cmd MYSQL1
 ~~~
 
@@ -558,12 +497,12 @@ armbian-config --cmd MYSQL1
 <!--- footer STOP from tools/include/markdown/MYSQL1-footer.md --->
 
 
-~~~ bash title="MySQL remove:"
+~~~ bash title="MySQL remove"
 armbian-config --cmd MYSQL2
 ~~~
 
 
-~~~ bash title="MySQL purge with data folder:"
+~~~ bash title="MySQL purge with data folder"
 armbian-config --cmd MYSQL3
 ~~~
 
@@ -589,14 +528,8 @@ MariaDB supports a wide range of storage engines, advanced SQL capabilities, and
 
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DAT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://mariadb.org/documentation/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Mariadb"
 armbian-config --cmd DAT001
 ~~~
 
@@ -626,12 +559,12 @@ armbian-config --cmd DAT001
 <!--- footer STOP from tools/include/markdown/DAT001-footer.md --->
 
 
-~~~ bash title="Mariadb remove:"
+~~~ bash title="Mariadb remove"
 armbian-config --cmd DAT002
 ~~~
 
 
-~~~ bash title="Mariadb purge with data folder:"
+~~~ bash title="Mariadb purge with data folder"
 armbian-config --cmd DAT003
 ~~~
 
@@ -648,24 +581,18 @@ phpMyAdmin web interface manager
 ![phpMyAdmin](/images/MYA001.png)
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://www.phpmyadmin.net/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="phpMyAdmin"
 armbian-config --cmd MYA001
 ~~~
 
 
-~~~ bash title="phpMyAdmin remove:"
+~~~ bash title="phpMyAdmin remove"
 armbian-config --cmd MYA002
 ~~~
 
 
-~~~ bash title="phpMyAdmin purge with data folder:"
+~~~ bash title="phpMyAdmin purge with data folder"
 armbian-config --cmd MYA003
 ~~~
 
@@ -699,14 +626,8 @@ Thanks to its proven architecture and open-source nature, PostgreSQL fits seamle
 
 <!--- header STOP from tools/include/markdown/PGSQL1-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PGSQL1-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://www.postgresql.org/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="PostgreSQL"
 armbian-config --cmd PGSQL1
 ~~~
 
@@ -731,12 +652,12 @@ armbian-config --cmd PGSQL1
 <!--- footer STOP from tools/include/markdown/PGSQL1-footer.md --->
 
 
-~~~ bash title="PostgreSQL remove:"
+~~~ bash title="PostgreSQL remove"
 armbian-config --cmd PGSQL2
 ~~~
 
 
-~~~ bash title="PostgreSQL purge with data folder:"
+~~~ bash title="PostgreSQL purge with data folder"
 armbian-config --cmd PGSQL3
 ~~~
 
@@ -769,14 +690,8 @@ Redis is widely used for real-time applications, caching layers, session stores,
 
 <!--- header STOP from tools/include/markdown/REDIS1-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/REDIS1-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://redis.io/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Redis"
 armbian-config --cmd REDIS1
 ~~~
 
@@ -795,12 +710,12 @@ armbian-config --cmd REDIS1
 <!--- footer STOP from tools/include/markdown/REDIS1-footer.md --->
 
 
-~~~ bash title="Redis remove:"
+~~~ bash title="Redis remove"
 armbian-config --cmd REDIS2
 ~~~
 
 
-~~~ bash title="Redis purge with data folder:"
+~~~ bash title="Redis purge with data folder"
 armbian-config --cmd REDIS3
 ~~~
 
@@ -809,7 +724,6 @@ armbian-config --cmd REDIS3
 
 ## Applications and tools for development
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DevTools-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/DevTools-header.md)  
 #### Git CLI
 
 
@@ -820,18 +734,13 @@ Install tools for cloning and managing repositories (git)
 ![Git CLI](/images/GIT001.png)
 <!--- section image STOP from tools/include/images/GIT001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://git-scm.com/doc)  
 
-~~~ custombash
+~~~ bash title="Git CLI"
 armbian-config --cmd GIT001
 ~~~
 
 
-~~~ bash title="Remove tools for cloning and managing repositories (git):"
+~~~ bash title="Remove tools for cloning and managing repositories (git)"
 armbian-config --cmd GIT002
 ~~~
 
@@ -870,14 +779,8 @@ Perfect for developers working on **ARM-based SBCs**, **cloud instances**, or **
 
 <!--- header STOP from tools/include/markdown/COD001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/COD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/COD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/linuxserver/docker-code-server)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Code-server"
 armbian-config --cmd COD001
 ~~~
 
@@ -937,12 +840,12 @@ armbian-config --cmd COD001
 <!--- footer STOP from tools/include/markdown/COD001-footer.md --->
 
 
-~~~ bash title="Code-server remove:"
+~~~ bash title="Code-server remove"
 armbian-config --cmd COD002
 ~~~
 
 
-~~~ bash title="Code-server purge with data folder:"
+~~~ bash title="Code-server purge with data folder"
 armbian-config --cmd COD003
 ~~~
 
@@ -951,7 +854,6 @@ armbian-config --cmd COD003
 
 ## Download apps for movies, TV shows, music and subtitles
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Downloaders-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Downloaders-header.md)  
 #### Bazarr
 
 
@@ -968,14 +870,8 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 
 <!--- header STOP from tools/include/markdown/BAZ001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BAZ001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.bazarr.media/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Bazarr"
 armbian-config --cmd BAZ001
 ~~~
 
@@ -1000,12 +896,12 @@ armbian-config --cmd BAZ001
 <!--- footer STOP from tools/include/markdown/BAZ001-footer.md --->
 
 
-~~~ bash title="Bazarr remove:"
+~~~ bash title="Bazarr remove"
 armbian-config --cmd BAZ002
 ~~~
 
 
-~~~ bash title="Bazarr purge with data folder:"
+~~~ bash title="Bazarr purge with data folder"
 armbian-config --cmd BAZ003
 ~~~
 
@@ -1028,14 +924,8 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DEL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://deluge-torrent.org/userguide/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Deluge"
 armbian-config --cmd DEL001
 ~~~
 
@@ -1060,12 +950,12 @@ armbian-config --cmd DEL001
 <!--- footer STOP from tools/include/markdown/DEL001-footer.md --->
 
 
-~~~ bash title="Deluge remove:"
+~~~ bash title="Deluge remove"
 armbian-config --cmd DEL002
 ~~~
 
 
-~~~ bash title="Deluge purge with data folder:"
+~~~ bash title="Deluge purge with data folder"
 armbian-config --cmd DEL003
 ~~~
 
@@ -1088,14 +978,8 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 <!--- header STOP from tools/include/markdown/QBT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/QBT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/QBT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/qbittorrent/qBittorrent/wiki/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="qBittorrent"
 armbian-config --cmd QBT001
 ~~~
 
@@ -1120,12 +1004,12 @@ armbian-config --cmd QBT001
 <!--- footer STOP from tools/include/markdown/QBT001-footer.md --->
 
 
-~~~ bash title="qBittorrent remove:"
+~~~ bash title="qBittorrent remove"
 armbian-config --cmd QBT002
 ~~~
 
 
-~~~ bash title="qBittorrent purge with data folder:"
+~~~ bash title="qBittorrent purge with data folder"
 armbian-config --cmd QBT003
 ~~~
 
@@ -1148,14 +1032,8 @@ Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base s
 
 <!--- header STOP from tools/include/markdown/PRW001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRW001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRW001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://prowlarr.com/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Prowlarr"
 armbian-config --cmd PRW001
 ~~~
 
@@ -1179,12 +1057,12 @@ armbian-config --cmd PRW001
 <!--- footer STOP from tools/include/markdown/PRW001-footer.md --->
 
 
-~~~ bash title="Prowlarr remove:"
+~~~ bash title="Prowlarr remove"
 armbian-config --cmd PRW002
 ~~~
 
 
-~~~ bash title="Prowlarr purge with data folder:"
+~~~ bash title="Prowlarr purge with data folder"
 armbian-config --cmd PRW003
 ~~~
 
@@ -1207,24 +1085,18 @@ Jellyseerr is a free and open source software application for managing requests 
 
 <!--- header STOP from tools/include/markdown/JEL001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/JEL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JEL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.jellyseerr.dev/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Jellyseerr"
 armbian-config --cmd JEL001
 ~~~
 
 
-~~~ bash title="Jellyseerr remove:"
+~~~ bash title="Jellyseerr remove"
 armbian-config --cmd JEL002
 ~~~
 
 
-~~~ bash title="Jellyseerr purge with data folder:"
+~~~ bash title="Jellyseerr purge with data folder"
 armbian-config --cmd JEL003
 ~~~
 
@@ -1247,14 +1119,8 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 <!--- header STOP from tools/include/markdown/LID001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/LID001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.servarr.com/lidarr)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Lidarr"
 armbian-config --cmd LID001
 ~~~
 
@@ -1279,12 +1145,12 @@ armbian-config --cmd LID001
 <!--- footer STOP from tools/include/markdown/LID001-footer.md --->
 
 
-~~~ bash title="Lidarr remove:"
+~~~ bash title="Lidarr remove"
 armbian-config --cmd LID002
 ~~~
 
 
-~~~ bash title="Lidarr purge with data folder:"
+~~~ bash title="Lidarr purge with data folder"
 armbian-config --cmd LID003
 ~~~
 
@@ -1307,14 +1173,8 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/MDS001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/pymedusa/Medusa/wiki)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Medusa"
 armbian-config --cmd MDS001
 ~~~
 
@@ -1336,12 +1196,12 @@ armbian-config --cmd MDS001
 <!--- footer STOP from tools/include/markdown/MDS001-footer.md --->
 
 
-~~~ bash title="Medusa TV shows downloader remove:"
+~~~ bash title="Medusa TV shows downloader remove"
 armbian-config --cmd MDS002
 ~~~
 
 
-~~~ bash title="Medusa TV shows downloader purge:"
+~~~ bash title="Medusa TV shows downloader purge"
 armbian-config --cmd MDS003
 ~~~
 
@@ -1364,14 +1224,8 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
 <!--- header STOP from tools/include/markdown/RAD001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/RAD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.servarr.com/radarr)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Radarr"
 armbian-config --cmd RAD001
 ~~~
 
@@ -1397,12 +1251,12 @@ armbian-config --cmd RAD001
 <!--- footer STOP from tools/include/markdown/RAD001-footer.md --->
 
 
-~~~ bash title="Radarr remove:"
+~~~ bash title="Radarr remove"
 armbian-config --cmd RAD002
 ~~~
 
 
-~~~ bash title="Radarr purge with data folder:"
+~~~ bash title="Radarr purge with data folder"
 armbian-config --cmd RAD003
 ~~~
 
@@ -1425,14 +1279,8 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 
 <!--- header STOP from tools/include/markdown/SABN01-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SABN01-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://sabnzbd.org/wiki/faq)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="SABnzbd"
 armbian-config --cmd SABN01
 ~~~
 
@@ -1458,12 +1306,12 @@ armbian-config --cmd SABN01
 <!--- footer STOP from tools/include/markdown/SABN01-footer.md --->
 
 
-~~~ bash title="SABnzbd remove:"
+~~~ bash title="SABnzbd remove"
 armbian-config --cmd SABN02
 ~~~
 
 
-~~~ bash title="SABnzbd purge with data folder:"
+~~~ bash title="SABnzbd purge with data folder"
 armbian-config --cmd SABN03
 ~~~
 
@@ -1486,14 +1334,8 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 
 <!--- header STOP from tools/include/markdown/SON001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SON001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.servarr.com/sonarr)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Sonarr"
 armbian-config --cmd SON001
 ~~~
 
@@ -1515,12 +1357,12 @@ armbian-config --cmd SON001
 <!--- footer STOP from tools/include/markdown/SON001-footer.md --->
 
 
-~~~ bash title="Sonarr remove:"
+~~~ bash title="Sonarr remove"
 armbian-config --cmd SON002
 ~~~
 
 
-~~~ bash title="Sonarr purge with data folder:"
+~~~ bash title="Sonarr purge with data folder"
 armbian-config --cmd SON003
 ~~~
 
@@ -1543,14 +1385,8 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/TRA001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://transmissionbt.com/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Transmission"
 armbian-config --cmd TRA001
 ~~~
 
@@ -1576,12 +1412,12 @@ armbian-config --cmd TRA001
 <!--- footer STOP from tools/include/markdown/TRA001-footer.md --->
 
 
-~~~ bash title="Transmission remove:"
+~~~ bash title="Transmission remove"
 armbian-config --cmd TRA002
 ~~~
 
 
-~~~ bash title="Transmission purge with data folder:"
+~~~ bash title="Transmission purge with data folder"
 armbian-config --cmd TRA003
 ~~~
 
@@ -1590,7 +1426,6 @@ armbian-config --cmd TRA003
 
 ## Manage your finances
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Finance-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Finance-header.md)  
 #### Actual Budget
 
 
@@ -1615,14 +1450,8 @@ Do your finances with Actual Budget
 
 <!--- header STOP from tools/include/markdown/ABU001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/ABU001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://actualbudget.org/docs)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Actual Budget"
 armbian-config --cmd ABU001
 ~~~
 
@@ -1642,12 +1471,12 @@ armbian-config --cmd ABU001
 <!--- footer STOP from tools/include/markdown/ABU001-footer.md --->
 
 
-~~~ bash title="Actual Budget remove:"
+~~~ bash title="Actual Budget remove"
 armbian-config --cmd ABU002
 ~~~
 
 
-~~~ bash title="Actual Budget purge with data folder:"
+~~~ bash title="Actual Budget purge with data folder"
 armbian-config --cmd ABU003
 ~~~
 
@@ -1740,14 +1569,8 @@ This Docker-based application runs as a lightweight web service, providing an in
 
 <!--- header STOP from tools/include/markdown/WAL001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WAL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WAL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Wallos"
 armbian-config --cmd WAL001
 ~~~
 
@@ -1777,12 +1600,12 @@ Small Business
 <!--- footer STOP from tools/include/markdown/WAL001-footer.md --->
 
 
-~~~ bash title="Remove Wallos:"
+~~~ bash title="Remove Wallos"
 armbian-config --cmd WAL002
 ~~~
 
 
-~~~ bash title="Purge Wallos:"
+~~~ bash title="Purge Wallos"
 armbian-config --cmd WAL003
 ~~~
 
@@ -1791,7 +1614,6 @@ armbian-config --cmd WAL003
 
 ## Home Automation for control home appliances
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HomeAutomation-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/HomeAutomation-header.md)  
 #### Domoticz
 
 
@@ -1821,23 +1643,18 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/DOM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOM001-header.md)  
-__Status:__ Preview  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://wiki.domoticz.com)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Domoticz"
 armbian-config --cmd DOM001
 ~~~
 
 
-~~~ bash title="Domoticz remove:"
+~~~ bash title="Domoticz remove"
 armbian-config --cmd DOM002
 ~~~
 
 
-~~~ bash title="Domoticz purge with data folder:"
+~~~ bash title="Domoticz purge with data folder"
 armbian-config --cmd DOM003
 ~~~
 
@@ -1860,13 +1677,8 @@ evcc is an energy management system with a focus on electromobility. The softwar
 
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EVCC01-header.md)  
-__Status:__ Preview  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.evcc.io/en)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="EVCC"
 armbian-config --cmd EVCC01
 ~~~
 
@@ -1890,12 +1702,12 @@ armbian-config --cmd EVCC01
 <!--- footer STOP from tools/include/markdown/EVCC01-footer.md --->
 
 
-~~~ bash title="EVCC - solar charging automation remove:"
+~~~ bash title="EVCC - solar charging automation remove"
 armbian-config --cmd EVCC02
 ~~~
 
 
-~~~ bash title="EVCC purge with data folder:"
+~~~ bash title="EVCC purge with data folder"
 armbian-config --cmd EVCC03
 ~~~
 
@@ -1912,14 +1724,8 @@ openHAB empowering the smart home
 ![openHAB](/images/HAB001.png)
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAB001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/HAB001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://www.openhab.org/docs/tutorial)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="openHAB"
 armbian-config --cmd HAB001
 ~~~
 
@@ -1947,12 +1753,12 @@ armbian-config --cmd HAB001
 <!--- footer STOP from tools/include/markdown/HAB001-footer.md --->
 
 
-~~~ bash title="openHAB remove:"
+~~~ bash title="openHAB remove"
 armbian-config --cmd HAB002
 ~~~
 
 
-~~~ bash title="openHAB purge with data folder:"
+~~~ bash title="openHAB purge with data folder"
 armbian-config --cmd HAB003
 ~~~
 
@@ -1985,14 +1791,8 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAS001-header.md)  
-__Status:__ Preview  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/home-assistant/supervised-installer)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Home Assistant"
 armbian-config --cmd HAS001
 ~~~
 
@@ -2024,12 +1824,12 @@ armbian-config --cmd HAS001
 <!--- footer STOP from tools/include/markdown/HAS001-footer.md --->
 
 
-~~~ bash title="Home Assistant remove:"
+~~~ bash title="Home Assistant remove"
 armbian-config --cmd HAS002
 ~~~
 
 
-~~~ bash title="Home Assistant purge with data folder:"
+~~~ bash title="Home Assistant purge with data folder"
 armbian-config --cmd HAS003
 ~~~
 
@@ -2038,7 +1838,6 @@ armbian-config --cmd HAS003
 
 ## Remote File & Management tools
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Management-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Management-header.md)  
 #### Cockpit
 
 
@@ -2070,13 +1869,8 @@ Here’s a subset of tasks you can perform on each host running Cockpit
 
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/CPT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://cockpit-project.org/guide/latest/)  
 
-~~~ custombash
+~~~ bash title="Cockpit"
 armbian-config --cmd CPT001
 ~~~
 
@@ -2093,12 +1887,12 @@ armbian-config --cmd CPT001
 <!--- footer STOP from tools/include/markdown/CPT001-footer.md --->
 
 
-~~~ bash title="Remove Cockpit:"
+~~~ bash title="Remove Cockpit"
 armbian-config --cmd CPT002
 ~~~
 
 
-~~~ bash title="Purge Cockpit with virtual machines:"
+~~~ bash title="Purge Cockpit with virtual machines"
 armbian-config --cmd CPT003
 ~~~
 
@@ -2136,13 +1930,8 @@ Ideal for turning an Armbian board into a lightweight hypervisor without giving 
 
 <!--- header STOP from tools/include/markdown/PVE001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PVE001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_13_Trixie)  
 
-~~~ custombash
+~~~ bash title="Proxmox VE"
 armbian-config --cmd PVE001
 ~~~
 
@@ -2188,12 +1977,12 @@ armbian-config --cmd PVE001
 <!--- footer STOP from tools/include/markdown/PVE001-footer.md --->
 
 
-~~~ bash title="Remove Proxmox VE:"
+~~~ bash title="Remove Proxmox VE"
 armbian-config --cmd PVE002
 ~~~
 
 
-~~~ bash title="Purge Proxmox VE with cluster data:"
+~~~ bash title="Purge Proxmox VE with cluster data"
 armbian-config --cmd PVE003
 ~~~
 
@@ -2232,13 +2021,8 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 
 <!--- header STOP from tools/include/markdown/HPG001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPG001-header.md)  
-__Status:__ Stable  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://gethomepage.dev/configs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Homepage"
 armbian-config --cmd HPG001
 ~~~
 
@@ -2264,12 +2048,12 @@ armbian-config --cmd HPG001
 <!--- footer STOP from tools/include/markdown/HPG001-footer.md --->
 
 
-~~~ bash title="Remove Homepage:"
+~~~ bash title="Remove Homepage"
 armbian-config --cmd HPG002
 ~~~
 
 
-~~~ bash title="Purge Homepage with data folder:"
+~~~ bash title="Purge Homepage with data folder"
 armbian-config --cmd HPG003
 ~~~
 
@@ -2309,14 +2093,8 @@ Originally developed by DigitalOcean, NetBox is widely adopted by network engine
 
 <!--- header STOP from tools/include/markdown/NBOX01-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NBOX01-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="NetBox"
 armbian-config --cmd NBOX01
 ~~~
 
@@ -2349,12 +2127,12 @@ armbian-config --cmd NBOX01
 <!--- footer STOP from tools/include/markdown/NBOX01-footer.md --->
 
 
-~~~ bash title="NetBox remove:"
+~~~ bash title="NetBox remove"
 armbian-config --cmd NBOX02
 ~~~
 
 
-~~~ bash title="NetBox purge with data folder:"
+~~~ bash title="NetBox purge with data folder"
 armbian-config --cmd NBOX03
 ~~~
 
@@ -2384,14 +2162,8 @@ apt-cacher-ng caching proxy install
 
 <!--- header STOP from tools/include/markdown/APT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/APT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/APT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://www.unix-ag.uni-kl.de/~bloch/acng/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="apt-cacher-ng"
 armbian-config --cmd APT001
 ~~~
 
@@ -2419,12 +2191,12 @@ armbian-config --cmd APT001
 <!--- footer STOP from tools/include/markdown/APT001-footer.md --->
 
 
-~~~ bash title="apt-cacher-ng remove:"
+~~~ bash title="apt-cacher-ng remove"
 armbian-config --cmd APT002
 ~~~
 
 
-~~~ bash title="apt-cacher-ng purge with cache folder:"
+~~~ bash title="apt-cacher-ng purge with cache folder"
 armbian-config --cmd APT003
 ~~~
 
@@ -2441,24 +2213,18 @@ git_cdn GitHub caching proxy install
 ![git_cdn](/images/GCD001.png)
 <!--- section image STOP from tools/include/images/GCD001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GCD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://gitlab.com/grouperenault/git_cdn)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="git_cdn"
 armbian-config --cmd GCD001
 ~~~
 
 
-~~~ bash title="git_cdn remove:"
+~~~ bash title="git_cdn remove"
 armbian-config --cmd GCD002
 ~~~
 
 
-~~~ bash title="git_cdn purge with cache folder:"
+~~~ bash title="git_cdn purge with cache folder"
 armbian-config --cmd GCD003
 ~~~
 
@@ -2481,13 +2247,8 @@ Samba is an open-source software suite that enables seamless file and printer sh
 
 <!--- header STOP from tools/include/markdown/SMB001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SMB001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="Samba"
 armbian-config --cmd SMB001
 ~~~
 
@@ -2508,13 +2269,8 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 
 <!--- header STOP from tools/include/markdown/WBM001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WBM001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="Webmin"
 armbian-config --cmd WBM001
 ~~~
 
@@ -2529,7 +2285,6 @@ armbian-config --cmd WBM001
 
 ## Media servers, organizers and editors
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Media-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Media-header.md)  
 #### Emby
 
 
@@ -2546,14 +2301,8 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 <!--- header STOP from tools/include/markdown/EMB001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/EMB001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @schwar3kat  
-__Documentation:__ [Link](https://emby.media)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Emby"
 armbian-config --cmd EMB001
 ~~~
 
@@ -2574,12 +2323,12 @@ armbian-config --cmd EMB001
 <!--- footer STOP from tools/include/markdown/EMB001-footer.md --->
 
 
-~~~ bash title="Emby server remove:"
+~~~ bash title="Emby server remove"
 armbian-config --cmd EMB002
 ~~~
 
 
-~~~ bash title="Emby server purge with data folder:"
+~~~ bash title="Emby server purge with data folder"
 armbian-config --cmd EMB003
 ~~~
 
@@ -2613,14 +2362,8 @@ Official site: [https://filebrowser.org](https://filebrowser.org)
 
 <!--- header STOP from tools/include/markdown/FIL001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/FIL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://filebrowser.org/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Filebrowser"
 armbian-config --cmd FIL001
 ~~~
 
@@ -2647,12 +2390,12 @@ armbian-config --cmd FIL001
 <!--- footer STOP from tools/include/markdown/FIL001-footer.md --->
 
 
-~~~ bash title="Filebrowser container remove:"
+~~~ bash title="Filebrowser container remove"
 armbian-config --cmd FIL002
 ~~~
 
 
-~~~ bash title="Filebrowser container purge with data folder:"
+~~~ bash title="Filebrowser container purge with data folder"
 armbian-config --cmd FIL003
 ~~~
 
@@ -2675,24 +2418,18 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 
 <!--- header STOP from tools/include/markdown/HPS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/HPS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/HPS001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @efectn  
-__Documentation:__ [Link](https://github.com/rpardini/ansi-hastebin)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Hastebin"
 armbian-config --cmd HPS001
 ~~~
 
 
-~~~ bash title="Hastebin remove:"
+~~~ bash title="Hastebin remove"
 armbian-config --cmd HPS002
 ~~~
 
 
-~~~ bash title="Hastebin purge with data folder:"
+~~~ bash title="Hastebin purge with data folder"
 armbian-config --cmd HPS003
 ~~~
 
@@ -2728,14 +2465,8 @@ Thanks to Immich being built with modern technologies like NestJS, TypeScript, a
 
 <!--- header STOP from tools/include/markdown/IMM001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/IMM001-header.md)  
-__Status:__ Preview  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://immich.app/docs)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Immich"
 armbian-config --cmd IMM001
 ~~~
 
@@ -2783,12 +2514,12 @@ armbian-config --cmd IMM001
 <!--- footer STOP from tools/include/markdown/IMM001-footer.md --->
 
 
-~~~ bash title="Immich remove:"
+~~~ bash title="Immich remove"
 armbian-config --cmd IMM002
 ~~~
 
 
-~~~ bash title="Immich purge with data folder:"
+~~~ bash title="Immich purge with data folder"
 armbian-config --cmd IMM003
 ~~~
 
@@ -2811,14 +2542,8 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 <!--- header STOP from tools/include/markdown/JMS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/JMS001-header.md)  
-__Status:__ Preview  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://jellyfin.org/docs/general/quick-start/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Jellyfin"
 armbian-config --cmd JMS001
 ~~~
 
@@ -2844,12 +2569,12 @@ armbian-config --cmd JMS001
 <!--- footer STOP from tools/include/markdown/JMS001-footer.md --->
 
 
-~~~ bash title="Jellyfin remove:"
+~~~ bash title="Jellyfin remove"
 armbian-config --cmd JMS002
 ~~~
 
 
-~~~ bash title="Jellyfin purge with data folder:"
+~~~ bash title="Jellyfin purge with data folder"
 armbian-config --cmd JMS003
 ~~~
 
@@ -2872,24 +2597,18 @@ Navidrome is a modern, lightweight, and self-hosted music server and streamer. I
 
 <!--- header STOP from tools/include/markdown/NAV001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NAV001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAV001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/pynavidrome/navidrome/wiki)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Navidrome"
 armbian-config --cmd NAV001
 ~~~
 
 
-~~~ bash title="Navidrome remove:"
+~~~ bash title="Navidrome remove"
 armbian-config --cmd NAV002
 ~~~
 
 
-~~~ bash title="Navidrome purge with data folder:"
+~~~ bash title="Navidrome purge with data folder"
 armbian-config --cmd NAV003
 ~~~
 
@@ -2912,14 +2631,8 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 
 <!--- header STOP from tools/include/markdown/NCT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NCT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://nextcloud.com/support/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Nextcloud"
 armbian-config --cmd NCT001
 ~~~
 
@@ -2944,12 +2657,12 @@ armbian-config --cmd NCT001
 <!--- footer STOP from tools/include/markdown/NCT001-footer.md --->
 
 
-~~~ bash title="Nextcloud remove:"
+~~~ bash title="Nextcloud remove"
 armbian-config --cmd NCT002
 ~~~
 
 
-~~~ bash title="Nextcloud purge with data folder:"
+~~~ bash title="Nextcloud purge with data folder"
 armbian-config --cmd NCT003
 ~~~
 
@@ -2979,13 +2692,8 @@ Whether used on a dedicated server, a Raspberry Pi, or virtualized hardware, OMV
 **Warning**: installation works only on Debian (bookworm) based Armbian image.
 <!--- header STOP from tools/include/markdown/OMV001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OMV001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">amd64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">i386</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.openmediavault.org/en/stable/)  
 
-~~~ custombash
+~~~ bash title="OMV"
 armbian-config --cmd OMV001
 ~~~
 
@@ -3028,7 +2736,7 @@ armbian-config --cmd OMV001
 <!--- footer STOP from tools/include/markdown/OMV001-footer.md --->
 
 
-~~~ bash title="OpenMediaVault remove:"
+~~~ bash title="OpenMediaVault remove"
 armbian-config --cmd OMV002
 ~~~
 
@@ -3050,14 +2758,8 @@ ownCloud is a free and open-source software project for content collaboration an
 
 <!--- header STOP from tools/include/markdown/OWC001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OWC001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://doc.owncloud.com/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Owncloud"
 armbian-config --cmd OWC001
 ~~~
 
@@ -3082,12 +2784,12 @@ armbian-config --cmd OWC001
 <!--- footer STOP from tools/include/markdown/OWC001-footer.md --->
 
 
-~~~ bash title="Owncloud remove:"
+~~~ bash title="Owncloud remove"
 armbian-config --cmd OWC002
 ~~~
 
 
-~~~ bash title="Owncloud purge with data folder:"
+~~~ bash title="Owncloud purge with data folder"
 armbian-config --cmd OWC003
 ~~~
 
@@ -3110,14 +2812,8 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 <!--- header STOP from tools/include/markdown/STC001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STC001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.syncthing.net/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Syncthing"
 armbian-config --cmd STC001
 ~~~
 
@@ -3142,12 +2838,12 @@ armbian-config --cmd STC001
 <!--- footer STOP from tools/include/markdown/STC001-footer.md --->
 
 
-~~~ bash title="Syncthing remove:"
+~~~ bash title="Syncthing remove"
 armbian-config --cmd STC002
 ~~~
 
 
-~~~ bash title="Syncthing purge with data folder:"
+~~~ bash title="Syncthing purge with data folder"
 armbian-config --cmd STC003
 ~~~
 
@@ -3170,14 +2866,8 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 <!--- header STOP from tools/include/markdown/STR001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/STR001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.stirlingpdf.com)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Stirling"
 armbian-config --cmd STR001
 ~~~
 
@@ -3196,12 +2886,12 @@ armbian-config --cmd STR001
 <!--- footer STOP from tools/include/markdown/STR001-footer.md --->
 
 
-~~~ bash title="Stirling PDF remove:"
+~~~ bash title="Stirling PDF remove"
 armbian-config --cmd STR002
 ~~~
 
 
-~~~ bash title="Stirling PDF purge with data folder:"
+~~~ bash title="Stirling PDF purge with data folder"
 armbian-config --cmd STR003
 ~~~
 
@@ -3210,7 +2900,6 @@ armbian-config --cmd STR003
 
 ## Real-time monitoring, collecting metrics, up-time status
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Monitoring-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Monitoring-header.md)  
 #### Grafana
 
 
@@ -3226,14 +2915,8 @@ Grafana data analytics
 Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
 <!--- header STOP from tools/include/markdown/GRA001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GRA001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GRA001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://grafana.com/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Grafana"
 armbian-config --cmd GRA001
 ~~~
 
@@ -3252,12 +2935,12 @@ armbian-config --cmd GRA001
 <!--- footer STOP from tools/include/markdown/GRA001-footer.md --->
 
 
-~~~ bash title="Grafana remove:"
+~~~ bash title="Grafana remove"
 armbian-config --cmd GRA002
 ~~~
 
 
-~~~ bash title="Grafana purge with data folder:"
+~~~ bash title="Grafana purge with data folder"
 armbian-config --cmd GRA003
 ~~~
 
@@ -3298,14 +2981,8 @@ For more information and installation guides, visit the official [NetAlertX docu
 
 <!--- header STOP from tools/include/markdown/NAX001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAX001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NAX001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netalertx.com)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="NetAlertX"
 armbian-config --cmd NAX001
 ~~~
 
@@ -3324,12 +3001,12 @@ armbian-config --cmd NAX001
 <!--- footer STOP from tools/include/markdown/NAX001-footer.md --->
 
 
-~~~ bash title="NetAlertX network scanner remove:"
+~~~ bash title="NetAlertX network scanner remove"
 armbian-config --cmd NAX002
 ~~~
 
 
-~~~ bash title="NetAlertX network scanner purge with data folder:"
+~~~ bash title="NetAlertX network scanner purge with data folder"
 armbian-config --cmd NAX003
 ~~~
 
@@ -3352,24 +3029,18 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 
 <!--- header STOP from tools/include/markdown/NTD001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NTD001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NTD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://learn.netdata.cloud/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Netdata"
 armbian-config --cmd NTD001
 ~~~
 
 
-~~~ bash title="Netdata remove:"
+~~~ bash title="Netdata remove"
 armbian-config --cmd NTD002
 ~~~
 
 
-~~~ bash title="Netdata purge with data folder:"
+~~~ bash title="Netdata purge with data folder"
 armbian-config --cmd NTD003
 ~~~
 
@@ -3392,14 +3063,8 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 <!--- header STOP from tools/include/markdown/PRO001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRO001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRO001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @efectn  
-__Documentation:__ [Link](https://prometheus.io/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Prometheus"
 armbian-config --cmd PRO001
 ~~~
 
@@ -3418,12 +3083,12 @@ armbian-config --cmd PRO001
 <!--- footer STOP from tools/include/markdown/PRO001-footer.md --->
 
 
-~~~ bash title="Prometheus remove:"
+~~~ bash title="Prometheus remove"
 armbian-config --cmd PRO002
 ~~~
 
 
-~~~ bash title="Prometheus purge with data folder:"
+~~~ bash title="Prometheus purge with data folder"
 armbian-config --cmd PRO003
 ~~~
 
@@ -3449,14 +3114,8 @@ You can receive instant notifications when a service goes down via Telegram, Dis
 
 <!--- header STOP from tools/include/markdown/UPK001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/UPK001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/UPK001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/louislam/uptime-kuma/wiki)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Uptime Kuma"
 armbian-config --cmd UPK001
 ~~~
 
@@ -3483,12 +3142,12 @@ armbian-config --cmd UPK001
 <!--- footer STOP from tools/include/markdown/UPK001-footer.md --->
 
 
-~~~ bash title="Uptime Kuma remove:"
+~~~ bash title="Uptime Kuma remove"
 armbian-config --cmd UPK002
 ~~~
 
 
-~~~ bash title="Uptime Kuma purge with data folder:"
+~~~ bash title="Uptime Kuma purge with data folder"
 armbian-config --cmd UPK003
 ~~~
 
@@ -3531,14 +3190,8 @@ For more information and usage examples, visit the official [Dozzle documentatio
 
 <!--- header STOP from tools/include/markdown/DOZ001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOZ001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOZ001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://dozzle.dev/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Dozzle"
 armbian-config --cmd DOZ001
 ~~~
 
@@ -3571,12 +3224,12 @@ armbian-config --cmd DOZ001
 <!--- footer STOP from tools/include/markdown/DOZ001-footer.md --->
 
 
-~~~ bash title="Dozzle remove:"
+~~~ bash title="Dozzle remove"
 armbian-config --cmd DOZ002
 ~~~
 
 
-~~~ bash title="Dozzle purge:"
+~~~ bash title="Dozzle purge"
 armbian-config --cmd DOZ003
 ~~~
 
@@ -3585,7 +3238,6 @@ armbian-config --cmd DOZ003
 
 ## Console network tools for measuring load and bandwidth
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Netconfig-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Netconfig-header.md)  
 #### avahi-daemon
 
 
@@ -3596,18 +3248,13 @@ avahi-daemon hostname broadcast via mDNS
 ![avahi-daemon](/images/AVH001.png)
 <!--- section image STOP from tools/include/images/AVH001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/AVH001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
-~~~ custombash
+~~~ bash title="avahi-daemon"
 armbian-config --cmd AVH001
 ~~~
 
 
-~~~ bash title="avahi-daemon remove:"
+~~~ bash title="avahi-daemon remove"
 armbian-config --cmd AVH002
 ~~~
 
@@ -3623,18 +3270,13 @@ iperf3 bandwidth measuring tool
 ![iperf3](/images/IPR001.png)
 <!--- section image STOP from tools/include/images/IPR001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPR001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
-~~~ custombash
+~~~ bash title="iperf3"
 armbian-config --cmd IPR001
 ~~~
 
 
-~~~ bash title="iperf3 remove:"
+~~~ bash title="iperf3 remove"
 armbian-config --cmd IPR002
 ~~~
 
@@ -3650,18 +3292,13 @@ iptraf-ng IP LAN monitor
 ![iptraf-ng](/images/IPT001.png)
 <!--- section image STOP from tools/include/images/IPT001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/IPT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
-~~~ custombash
+~~~ bash title="iptraf-ng"
 armbian-config --cmd IPT001
 ~~~
 
 
-~~~ bash title="iptraf-ng remove:"
+~~~ bash title="iptraf-ng remove"
 armbian-config --cmd IPT002
 ~~~
 
@@ -3677,18 +3314,13 @@ nload - realtime console network usage monitor
 ![nload](/images/NLD001.png)
 <!--- section image STOP from tools/include/images/NLD001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NLD001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://netbox.readthedocs.io/en/stable/)  
 
-~~~ custombash
+~~~ bash title="nload"
 armbian-config --cmd NLD001
 ~~~
 
 
-~~~ bash title="nload - remove:"
+~~~ bash title="nload - remove"
 armbian-config --cmd NLD002
 ~~~
 
@@ -3696,7 +3328,6 @@ armbian-config --cmd NLD002
 
 ## Tools for printing and 3D printing
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/Printing-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/Printing-header.md)  
 #### OctoPrint
 
 
@@ -3712,14 +3343,8 @@ OctoPrint web-based 3D printers management tool
 OctoPrint is an open source 3D printer controller application, which provides a web interface for the connected printers. It displays printers status and key parameters and allows user to schedule prints and remotely control the printer.
 <!--- header STOP from tools/include/markdown/OCT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/OCT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/OCT001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://transmissionbt.com/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="OctoPrint"
 armbian-config --cmd OCT001
 ~~~
 
@@ -3738,12 +3363,12 @@ armbian-config --cmd OCT001
 <!--- footer STOP from tools/include/markdown/OCT001-footer.md --->
 
 
-~~~ bash title="OctoPrint remove:"
+~~~ bash title="OctoPrint remove"
 armbian-config --cmd OCT002
 ~~~
 
 
-~~~ bash title="OctoPrint purge with data folder:"
+~~~ bash title="OctoPrint purge with data folder"
 armbian-config --cmd OCT003
 ~~~
 
@@ -3752,7 +3377,6 @@ armbian-config --cmd OCT003
 
 ## Virtual Private Network tools
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/VPN-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/VPN-header.md)  
 #### WireGuard
 
 
@@ -3768,14 +3392,8 @@ WireGuard VPN server
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. Regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 <!--- header STOP from tools/include/markdown/WRG001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/WRG001-header.md)  
-__Status:__ Enabled  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://docs.linuxserver.io/images/docker-wireguard/#server-mode)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="WireGuard"
 armbian-config --cmd WRG001
 ~~~
 
@@ -3846,22 +3464,22 @@ armbian-config --cmd WRG001
 <!--- footer STOP from tools/include/markdown/WRG001-footer.md --->
 
 
-~~~ bash title="WireGuard VPN client:"
+~~~ bash title="WireGuard VPN client"
 armbian-config --cmd WRG002
 ~~~
 
 
-~~~ bash title="WireGuard remove:"
+~~~ bash title="WireGuard remove"
 armbian-config --cmd WRG003
 ~~~
 
 
-~~~ bash title="WireGuard VPN server QR codes for clients:"
+~~~ bash title="WireGuard VPN server QR codes for clients"
 armbian-config --cmd WRG004
 ~~~
 
 
-~~~ bash title="WireGuard purge with data folder:"
+~~~ bash title="WireGuard purge with data folder"
 armbian-config --cmd WRG005
 ~~~
 
@@ -3880,17 +3498,14 @@ ZeroTier connect devices over your own private network in the world.
 ![ZeroTier](/images/ZTR001.png)
 <!--- section image STOP from tools/include/images/ZTR001.png --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-header.md)  
-__Status:__ Stable  
 
-~~~ custombash
+~~~ bash title="ZeroTier"
 armbian-config --cmd ZTR001
 ~~~
 
 
 ## Web server, LEMP, reverse proxy, Let's Encrypt SSL
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/WebHosting-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/WebHosting-header.md)  
 #### SWAG
 
 
@@ -3925,29 +3540,23 @@ After entering required information, your server will have auto updating SSL sec
 
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/SWAG01-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/SWAG01-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://github.com/linuxserver/docker-swag)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="SWAG"
 armbian-config --cmd SWAG01
 ~~~
 
 
-~~~ bash title="SWAG reverse proxy .htpasswd set:"
+~~~ bash title="SWAG reverse proxy .htpasswd set"
 armbian-config --cmd SWAG02
 ~~~
 
 
-~~~ bash title="SWAG remove:"
+~~~ bash title="SWAG remove"
 armbian-config --cmd SWAG03
 ~~~
 
 
-~~~ bash title="SWAG purge with data folder:"
+~~~ bash title="SWAG purge with data folder"
 armbian-config --cmd SWAG04
 ~~~
 
@@ -3971,14 +3580,8 @@ Ghost is a powerful open-source publishing platform designed for professional pu
 
 <!--- header STOP from tools/include/markdown/GHOST1-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHOST1-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/GHOST1-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://ghost.org/docs/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
-~~~ custombash
+~~~ bash title="Ghost"
 armbian-config --cmd GHOST1
 ~~~
 
@@ -4007,12 +3610,12 @@ armbian-config --cmd GHOST1
 <!--- footer STOP from tools/include/markdown/GHOST1-footer.md --->
 
 
-~~~ bash title="Ghost CMS remove:"
+~~~ bash title="Ghost CMS remove"
 armbian-config --cmd GHOST2
 ~~~
 
 
-~~~ bash title="Ghost CMS purge with data folder:"
+~~~ bash title="Ghost CMS purge with data folder"
 armbian-config --cmd GHOST3
 ~~~
 

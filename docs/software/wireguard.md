@@ -21,7 +21,7 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 <!--- header STOP from tools/include/markdown/WRG001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → VPN → WireGuard**
+Install from **[armbian-config](/armbian-config/) → Software → VPN → WireGuard**
 
 ~~~ custombash title="WireGuard VPN server"
 armbian-config --cmd WRG001

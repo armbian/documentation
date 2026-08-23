@@ -6,7 +6,7 @@ comments: true
 # Real-time monitoring, collecting metrics, up-time status
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [Grafana](/software/grafana/) — Grafana data analytics
 - [NetAlertX](/software/netalertx/) — NetAlertX network scanner & notification framework

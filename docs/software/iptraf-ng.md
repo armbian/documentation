@@ -19,7 +19,7 @@ iptraf-ng IP LAN monitor
 :material-cpu-64-bit:{ title="Architecture" } <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> · :material-book-open-variant:{ title="Documentation" } [Documentation](https://netbox.readthedocs.io/en/stable/) · :material-lan-connect:{ title="Access port" } `http://<your.IP>:8222`
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Netconfig → iptraf-ng**
+Install from **[armbian-config](/armbian-config/) → Software → Netconfig → iptraf-ng**
 
 ~~~ custombash title="iptraf-ng IP LAN monitor"
 armbian-config --cmd IPT001

@@ -22,7 +22,7 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 <!--- header STOP from tools/include/markdown/NTD001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Monitoring → Netdata**
+Install from **[armbian-config](/armbian-config/) → Software → Monitoring → Netdata**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd NTD001

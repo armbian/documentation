@@ -21,7 +21,7 @@ OctoPrint is an open source 3D printer controller application, which provides a 
 <!--- header STOP from tools/include/markdown/OCT001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Printing → OctoPrint**
+Install from **[armbian-config](/armbian-config/) → Software → Printing → OctoPrint**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd OCT001

@@ -22,7 +22,7 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 <!--- header STOP from tools/include/markdown/MDS001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Downloaders → Medusa**
+Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Medusa**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd MDS001

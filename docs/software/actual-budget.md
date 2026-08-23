@@ -30,7 +30,7 @@ comments: true
 <!--- header STOP from tools/include/markdown/ABU001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Finance → Actual Budget**
+Install from **[armbian-config](/armbian-config/) → Software → Finance → Actual Budget**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd ABU001

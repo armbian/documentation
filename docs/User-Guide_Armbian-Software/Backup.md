@@ -6,6 +6,6 @@ comments: true
 # Backup solutions for your data
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [Duplicati](/software/duplicati/) — Duplicati install

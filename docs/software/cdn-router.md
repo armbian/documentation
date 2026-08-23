@@ -22,7 +22,7 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 <!--- header STOP from tools/include/markdown/ART001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Armbian → CDN router**
+Install from **[armbian-config](/armbian-config/) → Software → Armbian → CDN router**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd ART001

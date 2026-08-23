@@ -22,7 +22,7 @@ Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base s
 <!--- header STOP from tools/include/markdown/PRW001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Downloaders → Prowlarr**
+Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Prowlarr**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd PRW001

@@ -22,7 +22,7 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 <!--- header STOP from tools/include/markdown/HPS001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → Hastebin**
+Install from **[armbian-config](/armbian-config/) → Software → Media → Hastebin**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd HPS001

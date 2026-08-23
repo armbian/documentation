@@ -33,7 +33,7 @@ Thanks to its proven architecture and open-source nature, PostgreSQL fits seamle
 <!--- header STOP from tools/include/markdown/PGSQL1-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Database → PostgreSQL**
+Install from **[armbian-config](/armbian-config/) → Software → Database → PostgreSQL**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd PGSQL1
