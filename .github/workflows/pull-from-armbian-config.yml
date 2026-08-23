@@ -42,9 +42,18 @@ jobs:
           rsync -avr docs/Network/Network.md ../documentation/docs/User-Guide_Armbian-Config/
           rsync -avr docs/System/System.md ../documentation/docs/User-Guide_Armbian-Config/
 
-          # the rest goes under armbian-software
+          # the rest goes under armbian-software (category hubs + section pages)
           mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
           rsync -avr --exclude="Software.user.md" docs/Software/* ../documentation/docs/User-Guide_Armbian-Software/
+
+          # per-app SEO pages get their own top-level /software/<slug>/ URLs
+          mkdir -p ../documentation/docs/software/
+          rsync -avr --delete docs/software/. ../documentation/docs/software/
+
+      - name: Regenerate the software navigation
+        # Rebuild the "ARMBIAN SOFTWARE" nav (category -> app pages) from the
+        # freshly synced app pages, so new/removed apps appear in the left nav.
+        run: python3 documentation/tools/build-software-nav.py
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v8

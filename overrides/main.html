@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 
+<!-- Open Graph / Twitter card tags, per page, from front-matter meta.
+     Material already emits <meta name="description"> from page.meta.description;
+     this adds the social equivalents plus og:image (the app logo shipped as
+     `image:` in front-matter). Falls back to the site defaults elsewhere. -->
+{% block extrahead %}
+  {{ super() }}
+  {% set _title = (page.title ~ " - " ~ config.site_name) if page and page.title else config.site_name %}
+  {% set _desc = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ _title }}">
+  <meta property="og:description" content="{{ _desc }}">
+  <meta name="twitter:title" content="{{ _title }}">
+  <meta name="twitter:description" content="{{ _desc }}">
+  {% if page and page.meta and page.meta.image %}
+    {% set _img = page.meta.image %}
+    {% if _img[:4] != "http" %}{% set _img = (config.site_url | default("", true)).rstrip("/") ~ "/" ~ _img.lstrip("/") %}{% endif %}
+    <meta property="og:image" content="{{ _img }}">
+    <meta name="twitter:image" content="{{ _img }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+  {% endif %}
+{% endblock %}
+
 <!-- Announcement bar -->
 {% block announce %}
   <a href="https://www.armbian.com">
