@@ -13,7 +13,7 @@ The table of contents in the sidebar and the links at the top of the page should
 
 If you are **new to Armbian**, the [_Introduction_](index.md) and the [_Getting Started_](User-Guide_Getting-Started.md) sections provide everything you need to know about the project, where to find the resources for your board, and a tutorial for everything you need to get Armbian running and configured.
 
-It then continues on to [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) tasks and tools for **advanced users**. The topics in this section cover a wide range of tasks: configuring the system or the network without using [`armbian-config`](armbian-config/index.md), configuring your device automatically at first boot, and creating a custom image using the [`Armbian Build Framework`](Developer-Guide_Overview.md).
+It then continues on to [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) tasks and tools for **advanced users**. The topics in this section cover a wide range of tasks: configuring the system or the network without using [`armbian-config`](config/index.md), configuring your device automatically at first boot, and creating a custom image using the [`Armbian Build Framework`](Developer-Guide_Overview.md).
 
 If you have read through the documentation and still **need help**, check out our [_Troubleshooting_](User-Guide_Troubleshooting.md) advice.
 
@@ -59,7 +59,7 @@ In any case, you will get these key advantages:
 - you get a lean and standard **Debian** or **Ubuntu** based user space with the well known APT package manager
 - we provide independent kernel development and maintenance with **long term support**
 - we provide an extensive [build framework](https://github.com/armbian/build) with fast **hybrid assembly** of the whole operating system and **endless capabilities**
-- we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](armbian-config/index.md) tool
+- we provide advanced **hardware and OS configuration** and **software installation** with the built-in [armbian-config](config/index.md) tool
 - we provide exclusive support for **exotic hardware** that nobody else supports
 - we provide **stabilized point** and **rolling** distribution of upgrades and OS images
 - we provide a global download infrastructure with **perfect coverage, also in China mainland**
