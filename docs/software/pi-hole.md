@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/PIH001.png --->
-![Pi-hole](/images/PIH001.png)
+![Pi-hole](/images/PIH001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/PIH001.png --->
 
 

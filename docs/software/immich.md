@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/IMM001.png --->
-![Immich](/images/IMM001.png)
+![Immich](/images/IMM001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/IMM001.png --->
 
 

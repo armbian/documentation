@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/RSD001.png --->
-![Rsyncd server](/images/RSD001.png)
+![Rsyncd server](/images/RSD001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
 

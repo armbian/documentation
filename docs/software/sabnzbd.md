@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
-![SABnzbd](/images/SABN01.png)
+![SABnzbd](/images/SABN01.png){ .app-logo }
 <!--- section image STOP from tools/include/images/SABN01.png --->
 
 

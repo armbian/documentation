@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/APT001.png --->
-![apt-cacher-ng](/images/APT001.png)
+![apt-cacher-ng](/images/APT001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/APT001.png --->
 
 

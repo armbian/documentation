@@ -12,7 +12,7 @@ openHAB empowering the smart home
 
 
 <!--- section image START from tools/include/images/HAB001.png --->
-![openHAB](/images/HAB001.png)
+![openHAB](/images/HAB001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
 

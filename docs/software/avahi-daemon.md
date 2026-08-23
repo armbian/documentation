@@ -12,7 +12,7 @@ avahi-daemon hostname broadcast via mDNS
 
 
 <!--- section image START from tools/include/images/AVH001.png --->
-![avahi-daemon](/images/AVH001.png)
+![avahi-daemon](/images/AVH001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/AVH001.png --->
 
 

@@ -12,7 +12,7 @@ phpMyAdmin web interface manager
 
 
 <!--- section image START from tools/include/images/MYA001.png --->
-![phpMyAdmin](/images/MYA001.png)
+![phpMyAdmin](/images/MYA001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
 

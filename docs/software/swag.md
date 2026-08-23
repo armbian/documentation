@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/SWAG01.png --->
-![SWAG](/images/SWAG01.png)
+![SWAG](/images/SWAG01.png){ .app-logo }
 <!--- section image STOP from tools/include/images/SWAG01.png --->
 
 

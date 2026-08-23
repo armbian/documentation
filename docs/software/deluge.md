@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
-![Deluge](/images/DEL001.png)
+![Deluge](/images/DEL001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/DEL001.png --->
 
 

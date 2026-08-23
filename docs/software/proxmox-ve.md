@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/PVE001.png --->
-![Proxmox VE](/images/PVE001.png)
+![Proxmox VE](/images/PVE001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/PVE001.png --->
 
 

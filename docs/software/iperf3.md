@@ -12,7 +12,7 @@ iperf3 bandwidth measuring tool
 
 
 <!--- section image START from tools/include/images/IPR001.png --->
-![iperf3](/images/IPR001.png)
+![iperf3](/images/IPR001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/IPR001.png --->
 
 

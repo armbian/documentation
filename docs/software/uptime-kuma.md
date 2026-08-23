@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/UPK001.png --->
-![Uptime Kuma](/images/UPK001.png)
+![Uptime Kuma](/images/UPK001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/UPK001.png --->
 
 

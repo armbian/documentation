@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/GHR001.png --->
-![GH runners](/images/GHR001.png)
+![GH runners](/images/GHR001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/GHR001.png --->
 
 
