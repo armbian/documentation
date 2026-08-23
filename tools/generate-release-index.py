@@ -2,9 +2,12 @@
 """Regenerate docs/releases/index.md from the release pages beside it.
 
 The release pages are written by the quarterly digest workflow in
-armbian/armbian.github.io, one per version. This keeps the landing page in step
+armbian/armbian.github.io, one per quarter. This keeps the landing page in step
 with them without anyone having to remember to edit it, and it is safe to run
 repeatedly: the output depends only on the pages present.
+
+Pages are named by quarter (MAJOR.MINOR), not by patch release, so every
+patch inside a quarter rewrites one page instead of adding another.
 
 Only the newest few releases get a full entry; older ones roll over to a
 compact line as new releases publish, so the page stays short indefinitely.
