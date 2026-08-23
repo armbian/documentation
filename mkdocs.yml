@@ -147,7 +147,7 @@ nav:
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Appendix' :
             - 'Release Model' : 'Process_Release-Model.md'
-            - 'Unit Test Status' : '/'
+            - 'Unit Test Status' : 'https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml'
   - 'RELEASES':
         - 'Release notes': 'releases/index.md'
   - 'ARMBIAN CONFIG':
