@@ -23,15 +23,10 @@ Notes for each Armbian stable release, newest first. Each page carries the relea
 
     Armbian 25.8.1 release notes, published 26 August 2025: all 319 merged pull requests across boards, kernels, desktops and the build framework.
 
-* **[Armbian 25.5.1](25.5.1.md)** &mdash; 26 May 2025
-
-    Armbian 25.5.1 release notes, published 26 May 2025: all 219 merged pull requests across boards, kernels, desktops, tooling and the build framework.
-
-* **[Armbian 25.2.2](25.2.2.md)** &mdash; 25 February 2025
-
-    Armbian 25.2.2 release notes, published 25 February 2025: all 309 merged pull requests across boards, kernels, desktops and the build framework.
-
 
 ## Earlier releases
+
+* [Armbian 25.5.1](25.5.1.md) &mdash; 26 May 2025
+* [Armbian 25.2.2](25.2.2.md) &mdash; 25 February 2025
 
 Releases before 25.x are collected in the [release history](history.md) archive.
