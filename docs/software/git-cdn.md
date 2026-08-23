@@ -12,7 +12,7 @@ git_cdn GitHub caching proxy install
 
 
 <!--- section image START from tools/include/images/GCD001.png --->
-![git_cdn](/images/GCD001.png)
+![git_cdn](/images/GCD001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/GCD001.png --->
 
 

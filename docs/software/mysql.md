@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/MYSQL1.png --->
-![MySQL](/images/MYSQL1.png)
+![MySQL](/images/MYSQL1.png){ .app-logo }
 <!--- section image STOP from tools/include/images/MYSQL1.png --->
 
 

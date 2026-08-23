@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/COD001.png --->
-![Code-server](/images/COD001.png)
+![Code-server](/images/COD001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/COD001.png --->
 
 

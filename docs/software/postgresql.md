@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/PGSQL1.png --->
-![PostgreSQL](/images/PGSQL1.png)
+![PostgreSQL](/images/PGSQL1.png){ .app-logo }
 <!--- section image STOP from tools/include/images/PGSQL1.png --->
 
 

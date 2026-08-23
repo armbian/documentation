@@ -12,7 +12,7 @@ Install tools for cloning and managing repositories (git)
 
 
 <!--- section image START from tools/include/images/GIT001.png --->
-![Git CLI](/images/GIT001.png)
+![Git CLI](/images/GIT001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/GIT001.png --->
 
 

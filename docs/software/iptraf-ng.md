@@ -12,7 +12,7 @@ iptraf-ng IP LAN monitor
 
 
 <!--- section image START from tools/include/images/IPT001.png --->
-![iptraf-ng](/images/IPT001.png)
+![iptraf-ng](/images/IPT001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/IPT001.png --->
 
 

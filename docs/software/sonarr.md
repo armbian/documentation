@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/SON001.png --->
-![Sonarr](/images/SON001.png)
+![Sonarr](/images/SON001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/SON001.png --->
 
 

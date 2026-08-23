@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/REDIS1.png --->
-![Redis](/images/REDIS1.png)
+![Redis](/images/REDIS1.png){ .app-logo }
 <!--- section image STOP from tools/include/images/REDIS1.png --->
 
 

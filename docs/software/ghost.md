@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/GHOST1.png --->
-![Ghost](/images/GHOST1.png)
+![Ghost](/images/GHOST1.png){ .app-logo }
 <!--- section image STOP from tools/include/images/GHOST1.png --->
 
 

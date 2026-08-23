@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/FIL001.png --->
-![Filebrowser](/images/FIL001.png)
+![Filebrowser](/images/FIL001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/FIL001.png --->
 
 

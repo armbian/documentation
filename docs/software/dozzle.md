@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/DOZ001.png --->
-![Dozzle](/images/DOZ001.png)
+![Dozzle](/images/DOZ001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/DOZ001.png --->
 
 

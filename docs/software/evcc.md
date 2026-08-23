@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->
-![EVCC](/images/EVCC01.png)
+![EVCC](/images/EVCC01.png){ .app-logo }
 <!--- section image STOP from tools/include/images/EVCC01.png --->
 
 

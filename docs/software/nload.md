@@ -12,7 +12,7 @@ realtime console network usage monitor
 
 
 <!--- section image START from tools/include/images/NLD001.png --->
-![nload](/images/NLD001.png)
+![nload](/images/NLD001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/NLD001.png --->
 
 

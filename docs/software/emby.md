@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/EMB001.png --->
-![Emby](/images/EMB001.png)
+![Emby](/images/EMB001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/EMB001.png --->
 
 

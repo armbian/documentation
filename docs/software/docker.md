@@ -12,7 +12,7 @@ Docker helps developers build, share, run, and verify applications anywhere - wi
 
 
 <!--- section image START from tools/include/images/CON001.png --->
-![Docker](/images/CON001.png)
+![Docker](/images/CON001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/CON001.png --->
 
 

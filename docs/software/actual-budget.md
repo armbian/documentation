@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/ABU001.png --->
-![Actual Budget](/images/ABU001.png)
+![Actual Budget](/images/ABU001.png){ .app-logo }
 <!--- section image STOP from tools/include/images/ABU001.png --->
 
 

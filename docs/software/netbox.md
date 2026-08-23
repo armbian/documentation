@@ -9,7 +9,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/NBOX01.png --->
-![NetBox](/images/NBOX01.png)
+![NetBox](/images/NBOX01.png){ .app-logo }
 <!--- section image STOP from tools/include/images/NBOX01.png --->
 
 
