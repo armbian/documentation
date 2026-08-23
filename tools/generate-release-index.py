@@ -140,6 +140,12 @@ def main():
     ap.add_argument("--featured", type=int, default=FEATURED,
                     help="releases shown with a full entry (default: %(default)s)")
     args = ap.parse_args()
+    # Negative slices count from the end, so a negative value would quietly
+    # feature all but the last few while the status output below reported
+    # none as featured -- the log and the page disagreeing about what was
+    # written. Zero is legitimate: every release goes to the compact list.
+    if args.featured < 0:
+        ap.error("--featured must be zero or more")
 
     releases_dir = os.path.join(args.docs, "releases")
     if not os.path.isdir(releases_dir):
