@@ -7,6 +7,10 @@ description: "Release notes for every Armbian stable release, newest first: what
 
 Notes for each Armbian stable release, newest first. Each page carries the release summary, any board support-tier changes, and the full list of merged pull requests.
 
+* **[Armbian 26.8.3](26.8.md)** &mdash; 23 August 2026
+
+    Armbian 26.8.3, released 23 August 2026: broad board expansion, kernel and U-Boot modernization, and reworked build, installer, and imaging tooling.
+
 * **[Armbian 26.5.1](26.5.md)** &mdash; 29 May 2026
 
     Armbian 26.5.1, released 29 May 2026: mainline Linux 7.0 across the SoC families, a rebuilt YAML-driven desktop subsystem, and wide new board support.
@@ -19,13 +23,10 @@ Notes for each Armbian stable release, newest first. Each page carries the relea
 
     Armbian 25.11.1, released 30 November 2025: the Linux 6.17 rollout, new RK3506 and Radxa Rock 4D support, and 411 merged changes across the project.
 
-* **[Armbian 25.8.1](25.8.md)** &mdash; 26 August 2025
-
-    Armbian 25.8.1, released 26 August 2025: Linux 6.16 on edge, new KickPi K2B and DshanPi A1 boards, dual repository signing, and 319 merged changes.
-
 
 ## Earlier releases
 
+* [Armbian 25.8.1](25.8.md) &mdash; 26 August 2025
 * [Armbian 25.5.1](25.5.md) &mdash; 26 May 2025
 * [Armbian 25.2.2](25.2.md) &mdash; 25 February 2025
 
