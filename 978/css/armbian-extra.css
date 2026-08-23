@@ -34,7 +34,7 @@
     white-space: nowrap;
 }
 
-/* Style for only specially tagged bash blocks */
+/* The primary "CLI install" block — large, to stand out as the main action. */
 pre.custom-bash-block, code.custom-bash-block {
   font-size: 24pt;
 }
