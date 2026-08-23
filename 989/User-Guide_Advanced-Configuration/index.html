@@ -337,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../User-Guide_Armbian-Config/" class="md-tabs__link">
+        <a href="../armbian-config/" class="md-tabs__link">
           
   
   
@@ -1270,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/" class="md-nav__link">
+      <a href="../armbian-config/" class="md-nav__link">
         
   
   
@@ -1348,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Kernel/" class="md-nav__link">
+      <a href="../armbian-config/kernel/" class="md-nav__link">
         
   
   
@@ -1376,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Desktops/" class="md-nav__link">
+      <a href="../armbian-config/desktops/" class="md-nav__link">
         
   
   
@@ -1404,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Storage/" class="md-nav__link">
+      <a href="../armbian-config/storage/" class="md-nav__link">
         
   
   
@@ -1432,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Access/" class="md-nav__link">
+      <a href="../armbian-config/access/" class="md-nav__link">
         
   
   
@@ -1460,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/User/" class="md-nav__link">
+      <a href="../armbian-config/user/" class="md-nav__link">
         
   
   
@@ -1488,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Updates/" class="md-nav__link">
+      <a href="../armbian-config/updates/" class="md-nav__link">
         
   
   
@@ -1524,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Network/" class="md-nav__link">
+      <a href="../armbian-config/network/" class="md-nav__link">
         
   
   
@@ -1552,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Localisation/" class="md-nav__link">
+      <a href="../armbian-config/localisation/" class="md-nav__link">
         
   
   
@@ -5521,10 +5521,10 @@
 
 
 <h1 id="advanced-features-and-tasks">Advanced features and tasks<a class="headerlink" href="#advanced-features-and-tasks" title="Permanent link">&para;</a></h1>
-<p>While the underlying operating system offers tools and processes to make customizations, the <strong>preferred method</strong> to change most settings is using the interactive <a href="../User-Guide_Armbian-Config/"><em>armbian-config</em></a> tool which is shipped with all Armbian images. It also provides means to install <a href="../User-Guide_Armbian-Software/">preconfigured applications and advanced services</a>.</p>
+<p>While the underlying operating system offers tools and processes to make customizations, the <strong>preferred method</strong> to change most settings is using the interactive <a href="../armbian-config/"><em>armbian-config</em></a> tool which is shipped with all Armbian images. It also provides means to install <a href="../User-Guide_Armbian-Software/">preconfigured applications and advanced services</a>.</p>
 <p>Usually, all of the following commands require elevated permissions, and must be run as root or prefixed by the <em>sudo</em> command.</p>
 <h2 id="keyboard-layout">Keyboard layout<a class="headerlink" href="#keyboard-layout" title="Permanent link">&para;</a></h2>
-<p>This is typically handled by <a href="../User-Guide_Armbian-Config/Localisation/#change-keyboard-layout"><em>armbian-config</em></a>. For some corner cases, changing the keyboard layout can also be done with:</p>
+<p>This is typically handled by <a href="../armbian-config/localisation/#change-keyboard-layout"><em>armbian-config</em></a>. For some corner cases, changing the keyboard layout can also be done with:</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>dpkg-reconfigure<span class="w"> </span>keyboard-configuration
 </span></code></pre></div></td></tr></table></div>
 <p>If the chosen standard is not available with the previous command, you may also need to set the keymap config.</p>
@@ -5539,7 +5539,7 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>localectl<span class="w"> </span>set-keymap<span class="w"> </span>br-abnt2
 </span></code></pre></div></td></tr></table></div>
 <h2 id="system-language">System language<a class="headerlink" href="#system-language" title="Permanent link">&para;</a></h2>
-<p>This is typically handled by <a href="../User-Guide_Armbian-Config/Localisation/#change-locales-reconfigure-the-language-and-character-set"><em>armbian-config</em></a>. If necessary, to handle it with system tools, for <a href="https://wiki.debian.org/ChangeLanguage">Debian</a> run:</p>
+<p>This is typically handled by <a href="../armbian-config/localisation/#change-locales-reconfigure-the-language-and-character-set"><em>armbian-config</em></a>. If necessary, to handle it with system tools, for <a href="https://wiki.debian.org/ChangeLanguage">Debian</a> run:</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>dpkg-reconfigure<span class="w"> </span>locales
 </span></code></pre></div></td></tr></table></div>
 <p>And for <a href="https://help.ubuntu.com/community/Locale">Ubuntu</a></p>
@@ -5549,7 +5549,7 @@
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>dpkg-reconfigure<span class="w"> </span>console-setup
 </span></code></pre></div></td></tr></table></div>
 <h2 id="time-zone">Time zone<a class="headerlink" href="#time-zone" title="Permanent link">&para;</a></h2>
-<p>This is typically handled by <a href="../User-Guide_Armbian-Config/Localisation/#change-global-timezone"><em>armbian-config</em></a>. If necessary, one can also run:</p>
+<p>This is typically handled by <a href="../armbian-config/localisation/#change-global-timezone"><em>armbian-config</em></a>. If necessary, one can also run:</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>dpkg-reconfigure<span class="w"> </span>tzdata
 </span></code></pre></div></td></tr></table></div>
 <h2 id="default-sound-output">Default sound output<a class="headerlink" href="#default-sound-output" title="Permanent link">&para;</a></h2>
@@ -5628,7 +5628,7 @@
 <p>should return some output. If that is the case, create a swapfile or a swap partition the traditional way: edit <code>/etc/default/armbian-zram-config</code> so that it reads <code>SWAP=false</code>. Reboot, and you&rsquo;re done.</p>
 <p>Zswap performs a lot better than the combination of ZRAM and &lsquo;swap on disk&rsquo; in parallel.</p>
 <h2 id="switch-or-downgrade-kernels">Switch or downgrade kernels<a class="headerlink" href="#switch-or-downgrade-kernels" title="Permanent link">&para;</a></h2>
-<p>This is typically handled by <a href="../User-Guide_Armbian-Config/Kernel/#alternative-kernels"><em>armbian-config</em></a>.</p>
+<p>This is typically handled by <a href="../armbian-config/kernel/#alternative-kernels"><em>armbian-config</em></a>.</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>armbian-config<span class="w"> </span>--cmd<span class="w"> </span>KER001
 </span></code></pre></div></td></tr></table></div>
 <p>In rare cases, it can be necessary to downgrade a kernel package, e.g. to fall back to a previous version.</p>

@@ -337,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../User-Guide_Armbian-Config/" class="md-tabs__link">
+        <a href="../armbian-config/" class="md-tabs__link">
           
   
   
@@ -1359,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/" class="md-nav__link">
+      <a href="../armbian-config/" class="md-nav__link">
         
   
   
@@ -1437,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Kernel/" class="md-nav__link">
+      <a href="../armbian-config/kernel/" class="md-nav__link">
         
   
   
@@ -1465,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Desktops/" class="md-nav__link">
+      <a href="../armbian-config/desktops/" class="md-nav__link">
         
   
   
@@ -1493,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Storage/" class="md-nav__link">
+      <a href="../armbian-config/storage/" class="md-nav__link">
         
   
   
@@ -1521,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Access/" class="md-nav__link">
+      <a href="../armbian-config/access/" class="md-nav__link">
         
   
   
@@ -1549,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/User/" class="md-nav__link">
+      <a href="../armbian-config/user/" class="md-nav__link">
         
   
   
@@ -1577,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Updates/" class="md-nav__link">
+      <a href="../armbian-config/updates/" class="md-nav__link">
         
   
   
@@ -1613,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Network/" class="md-nav__link">
+      <a href="../armbian-config/network/" class="md-nav__link">
         
   
   
@@ -1641,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Armbian-Config/Localisation/" class="md-nav__link">
+      <a href="../armbian-config/localisation/" class="md-nav__link">
         
   
   
@@ -5776,7 +5776,7 @@
 <li><strong>edge</strong> is, as the name implies, cutting-edge fresh / development / latest stable. It is only automatically tested, it can break at any time, and it is recommended only for experienced users.</li>
 <li><strong>legacy</strong> is the old stable current kernel. Use it if <em>current</em> is not available or if something does not work well with it.</li>
 </ul>
-<p>The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with <a href="../User-Guide_Armbian-Config/">armbian-config</a>.</p>
+<p>The level of kernel support, however, always depends on the board family. If in your specific case something does not work well, you are always free to try an image with another kernel included, or change the kernel with <a href="../armbian-config/">armbian-config</a>.</p>
 <h3 id="rolling-releases">Rolling releases<a class="headerlink" href="#rolling-releases" title="Permanent link">&para;</a></h3>
 <!-- TODO: this might be too much here; explanation could go into development docs, or appendix maybe?? -->
 
@@ -6059,8 +6059,8 @@ root@bananapim2pro:~#
 <!-- TODO: it must be made clear that this just preps the SD card -->
 
 <h2 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Permanent link">&para;</a></h2>
-<p>You can customize your Armbian Linux before or after installing it onto your device&rsquo;s hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your <a href="../User-Guide_Armbian-Config/">system or hardware configuration</a> or <a href="../User-Guide_Armbian-Software/">install preconfigured applications and advanced services</a>.</p>
-<p>Please note that the typical tool for all tasks is <a href="../User-Guide_Armbian-Config/"><em>armbian-config</em></a>. The section <a href="../User-Guide_Advanced-Configuration/"><em>Advanced Configuration</em></a> contains a selection of tasks that require a deeper understanding of the operating system.</p>
+<p>You can customize your Armbian Linux before or after installing it onto your device&rsquo;s hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your <a href="../armbian-config/">system or hardware configuration</a> or <a href="../User-Guide_Armbian-Software/">install preconfigured applications and advanced services</a>.</p>
+<p>Please note that the typical tool for all tasks is <a href="../armbian-config/"><em>armbian-config</em></a>. The section <a href="../User-Guide_Advanced-Configuration/"><em>Advanced Configuration</em></a> contains a selection of tasks that require a deeper understanding of the operating system.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
 <p>Typical tasks include for example:</p>
 <ul>
@@ -6128,13 +6128,13 @@ apt upgrade
 <p>Armbian provides a firmware package freeze feature to provide you with the possibility to upgrade all packages <strong>but</strong> the firmware. This prevents unpleasant surprises on functionality regressions that can come with kernel upgrades. To enable or disable this feature, look for</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Enable Armbian kernel/firmware upgrades / Disable Armbian kernel upgrades
 </code></pre></div></td></tr></table></div>
-<p>within <a href="../User-Guide_Armbian-Config/">armbian-config</a>.</p>
+<p>within <a href="../armbian-config/">armbian-config</a>.</p>
 <p>If the kernel was upgraded during this process, you will be prompted to reboot at the next login.</p>
 <!-- TODO: maybe move this to advanced? Definitely not for novice users -->
 
 <div class="admonition danger">
 <p class="admonition-title">Upgrade the Armbian OS</p>
-<p>When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a <em>&ldquo;dist-upgrade&rdquo;</em>, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental <code>Distribution upgrades</code> feature for <a href="../User-Guide_Armbian-Config/">armbian-config</a>.</p>
+<p>When a new major release of Debian or Ubuntu is out, we recommend to start with a fresh image. While it is possible to do what is called a <em>&ldquo;dist-upgrade&rdquo;</em>, the process is largerly in the domain of the underlaying Debian or Ubuntu user space. We provide only an experimental <code>Distribution upgrades</code> feature for <a href="../armbian-config/">armbian-config</a>.</p>
 <p>Userspaces distribution upgrades are neither tested nor supported. Therefore Armbian cannot provide any support if something goes wrong.</p>
 </div>
 <h3 id="update-the-boot-loader">Update the boot loader<a class="headerlink" href="#update-the-boot-loader" title="Permanent link">&para;</a></h3>

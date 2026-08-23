@@ -121,10 +121,6 @@
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/User-Guide_Armbian-Software/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
@@ -166,38 +162,6 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/Contribute/Datacenter/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Access/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Desktops/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Kernel/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Localisation/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Network/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Storage/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/Updates/</loc>
-         <lastmod>2026-08-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Armbian-Config/User/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
@@ -274,6 +238,42 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/User-Guide_Armbian-Software/WebHosting/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/access/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/desktops/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/kernel/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/localisation/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/network/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/storage/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/updates/</loc>
+         <lastmod>2026-08-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/armbian-config/user/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
