@@ -22,7 +22,7 @@ Jellyseerr is a free and open source software application for managing requests 
 <!--- header STOP from tools/include/markdown/JEL001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Downloaders → Jellyseerr**
+Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Jellyseerr**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd JEL001

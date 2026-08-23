@@ -6,7 +6,7 @@ comments: true
 # Armbian infrastructure services
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [CDN router](/software/cdn-router/) — Router for repository mirror automation
 - [GH runners](/software/gh-runners/) — GitHub runners for Armbian automation

@@ -22,7 +22,7 @@ ownCloud is a free and open-source software project for content collaboration an
 <!--- header STOP from tools/include/markdown/OWC001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → Owncloud**
+Install from **[armbian-config](/armbian-config/) → Software → Media → Owncloud**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd OWC001

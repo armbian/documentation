@@ -32,7 +32,7 @@ Perfect to run on any single board computer with 4 cores and at least 512Mb of m
 <!--- header STOP from tools/include/markdown/HAS001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Home Automation → Home Assistant**
+Install from **[armbian-config](/armbian-config/) → Software → Home Automation → Home Assistant**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd HAS001

@@ -35,7 +35,7 @@ Domoticz is an open-source home automation platform that allows you to control a
 <!--- header STOP from tools/include/markdown/DOM001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Home Automation → Domoticz**
+Install from **[armbian-config](/armbian-config/) → Software → Home Automation → Domoticz**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd DOM001

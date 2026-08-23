@@ -22,7 +22,7 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 <!--- header STOP from tools/include/markdown/EMB001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → Emby**
+Install from **[armbian-config](/armbian-config/) → Software → Media → Emby**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd EMB001

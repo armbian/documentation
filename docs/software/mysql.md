@@ -22,7 +22,7 @@ MySQL is one of the world’s most widely used open-source database servers. Tru
 <!--- header STOP from tools/include/markdown/MYSQL1-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Database → MySQL**
+Install from **[armbian-config](/armbian-config/) → Software → Database → MySQL**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd MYSQL1

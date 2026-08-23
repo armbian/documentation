@@ -37,7 +37,7 @@ Ideal for turning an Armbian board into a lightweight hypervisor without giving 
 <!--- header STOP from tools/include/markdown/PVE001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Management → Proxmox VE**
+Install from **[armbian-config](/armbian-config/) → Software → Management → Proxmox VE**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd PVE001

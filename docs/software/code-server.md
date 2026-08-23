@@ -39,7 +39,7 @@ Perfect for developers working on **ARM-based SBCs**, **cloud instances**, or **
 <!--- header STOP from tools/include/markdown/COD001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Dev Tools → Code-server**
+Install from **[armbian-config](/armbian-config/) → Software → Dev Tools → Code-server**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd COD001

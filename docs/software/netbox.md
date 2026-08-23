@@ -39,7 +39,7 @@ Originally developed by DigitalOcean, NetBox is widely adopted by network engine
 <!--- header STOP from tools/include/markdown/NBOX01-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Management → NetBox**
+Install from **[armbian-config](/armbian-config/) → Software → Management → NetBox**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd NBOX01

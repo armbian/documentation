@@ -42,7 +42,7 @@ For more information and usage examples, visit the official [Dozzle documentatio
 <!--- header STOP from tools/include/markdown/DOZ001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Monitoring → Dozzle**
+Install from **[armbian-config](/armbian-config/) → Software → Monitoring → Dozzle**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd DOZ001

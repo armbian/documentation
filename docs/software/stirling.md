@@ -22,7 +22,7 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 <!--- header STOP from tools/include/markdown/STR001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Media → Stirling**
+Install from **[armbian-config](/armbian-config/) → Software → Media → Stirling**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd STR001

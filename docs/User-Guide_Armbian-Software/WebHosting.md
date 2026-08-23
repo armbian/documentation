@@ -6,7 +6,7 @@ comments: true
 # Web server, LEMP, reverse proxy, Let's Encrypt SSL
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [SWAG](/software/swag/) — SWAG reverse proxy
 - [Ghost](/software/ghost/) — Ghost CMS install

@@ -6,7 +6,7 @@ comments: true
 # Media servers, organizers and editors
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [Emby](/software/emby/) — Emby organizes video, music, live TV, and photos
 - [Filebrowser](/software/filebrowser/) — Filebrowser provides a web-based file manager accessible via a browser

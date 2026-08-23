@@ -37,7 +37,7 @@ Here’s a subset of tasks you can perform on each host running Cockpit
 <!--- header STOP from tools/include/markdown/CPT001-header.md --->
 
 
-Install from **[armbian-config](/User-Guide_Armbian-Config/) → Software → Management → Cockpit**
+Install from **[armbian-config](/armbian-config/) → Software → Management → Cockpit**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd CPT001

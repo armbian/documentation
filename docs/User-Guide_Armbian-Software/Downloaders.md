@@ -6,7 +6,7 @@ comments: true
 # Download apps for movies, TV shows, music and subtitles
 
 
-Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
 
 - [Bazarr](/software/bazarr/) — Bazarr automatic subtitles downloader for Sonarr and Radarr
 - [Deluge](/software/deluge/) — Deluge BitTorrent client
