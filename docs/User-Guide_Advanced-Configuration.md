@@ -176,7 +176,7 @@ Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in p
 
 ## Switch or downgrade kernels
 
-This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/System.md#alternative-kernels).
+This is typically handled by [_armbian-config_](User-Guide_Armbian-Config/Kernel.md#alternative-kernels).
 
 ```bash
 armbian-config --cmd KER001

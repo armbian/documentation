@@ -147,7 +147,13 @@ nav:
         - 'Release notes': 'releases/index.md'
   - 'ARMBIAN CONFIG':
         - 'Overview': 'User-Guide_Armbian-Config.md'
-        - 'System': 'User-Guide_Armbian-Config/System.md'
+        - 'System':
+            - 'Kernel': 'User-Guide_Armbian-Config/Kernel.md'
+            - 'Desktops': 'User-Guide_Armbian-Config/Desktops.md'
+            - 'Storage': 'User-Guide_Armbian-Config/Storage.md'
+            - 'Access': 'User-Guide_Armbian-Config/Access.md'
+            - 'User': 'User-Guide_Armbian-Config/User.md'
+            - 'Updates': 'User-Guide_Armbian-Config/Updates.md'
         - 'Network': 'User-Guide_Armbian-Config/Network.md'
         - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
   - 'ARMBIAN SOFTWARE':

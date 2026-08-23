@@ -29,13 +29,8 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/BNS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/BNS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/BNS001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="Basic setup"
 armbian-config --cmd BNS001
 ~~~
 
@@ -78,7 +73,7 @@ If you experience issues or prefer full control, follow the [manual networking s
 <!--- footer STOP from tools/include/markdown/BNS001-footer.md --->
 
 
-~~~ bash title="Remove Fallback DHCP Configuration:"
+~~~ bash title="Remove Fallback DHCP Configuration"
 armbian-config --cmd BNS002
 ~~~
 
@@ -100,13 +95,8 @@ View Network Configuration allows you to display the system’s active network s
 
 <!--- header STOP from tools/include/markdown/VNS001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/VNS001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/VNS001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="View configuration"
 armbian-config --cmd VNS001
 ~~~
 
@@ -116,10 +106,6 @@ armbian-config --cmd VNS001
 
 Advanced bridged network configuration
 
-__Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/NEA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/NEA001-header.md)  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 #### Add or Change
 
 
@@ -143,13 +129,8 @@ graph LR
 
 <!--- header STOP from tools/include/markdown/NEA002-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/NEA002-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/NEA002-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
 
-~~~ custombash
+~~~ bash title="Add or Change"
 armbian-config --cmd NEA002
 ~~~
 
@@ -182,17 +163,17 @@ armbian-config --cmd NEA002
 <!--- footer STOP from tools/include/markdown/NEA002-footer.md --->
 
 
-~~~ bash title="Revert to Armbian defaults:"
+~~~ bash title="Revert to Armbian defaults"
 armbian-config --cmd NEA003
 ~~~
 
 
-~~~ bash title="Show configuration:"
+~~~ bash title="Show configuration"
 armbian-config --cmd NEA004
 ~~~
 
 
-~~~ bash title="Show active status:"
+~~~ bash title="Show active status"
 armbian-config --cmd NEA005
 ~~~
 
