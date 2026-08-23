@@ -14,7 +14,7 @@ Router for repository mirror automation
 
 
 <!--- section image START from tools/include/images/ART001.png --->
-[![CDN router](/images/ART001.png)](#)
+![CDN router](/images/ART001.png)
 <!--- section image STOP from tools/include/images/ART001.png --->
 
 
@@ -47,7 +47,7 @@ GitHub runners for Armbian automation
 
 
 <!--- section image START from tools/include/images/GHR001.png --->
-[![GH runners](/images/GHR001.png)](#)
+![GH runners](/images/GHR001.png)
 <!--- section image STOP from tools/include/images/GHR001.png --->
 
 
@@ -114,7 +114,7 @@ armbian-config --cmd GHR002
 
 
 <!--- section image START from tools/include/images/RSD001.png --->
-[![Rsyncd server](/images/RSD001.png)](#)
+![Rsyncd server](/images/RSD001.png)
 <!--- section image STOP from tools/include/images/RSD001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/RSD001-header.md)  
@@ -144,7 +144,7 @@ Duplicati install
 
 
 <!--- section image START from tools/include/images/DPL001.png --->
-[![Duplicati](/images/DPL001.png)](#)
+![Duplicati](/images/DPL001.png)
 <!--- section image STOP from tools/include/images/DPL001.png --->
 
 
@@ -175,12 +175,6 @@ armbian-config --cmd DPL001
 
 
 <!--- footer START from tools/include/markdown/DPL001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8200**:
-
-    - URL: `http://<your.IP>:8200`
-
 === "Directories"
 
     - Install directory: `/armbian/duplicati`
@@ -215,7 +209,7 @@ __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/ma
 
 
 <!--- section image START from tools/include/images/CON001.png --->
-[![Docker](/images/CON001.png)](#)
+![Docker](/images/CON001.png)
 <!--- section image STOP from tools/include/images/CON001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/CON001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/CON001-header.md)  
@@ -255,7 +249,7 @@ Portainer container management platform
 
 
 <!--- section image START from tools/include/images/POR001.png --->
-[![Portainer](/images/POR001.png)](#)
+![Portainer](/images/POR001.png)
 <!--- section image STOP from tools/include/images/POR001.png --->
 
 
@@ -277,11 +271,7 @@ armbian-config --cmd POR001
 
 
 <!--- footer START from tools/include/markdown/POR001-footer.md --->
-=== "Access to the web interface"
 
-    The web interface is accessible via port **9002**:
-
-    - URL = `http://<your.IP>:9002`
 
 <!--- footer STOP from tools/include/markdown/POR001-footer.md --->
 
@@ -308,7 +298,7 @@ AdGuardHome DNS sinkhole
 
 
 <!--- section image START from tools/include/images/ADG001.png --->
-[![AdGuardHome](/images/ADG001.png)](#)
+![AdGuardHome](/images/ADG001.png)
 <!--- section image STOP from tools/include/images/ADG001.png --->
 
 
@@ -331,9 +321,6 @@ armbian-config --cmd ADG001
 <!--- footer START from tools/include/markdown/ADG001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
-
-    - URL: `https://<your.IP>:3000`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -384,7 +371,7 @@ Pi-hole DNS ad blocker with Unbound support
 
 
 <!--- section image START from tools/include/images/PIH001.png --->
-[![Pi-hole](/images/PIH001.png)](#)
+![Pi-hole](/images/PIH001.png)
 <!--- section image STOP from tools/include/images/PIH001.png --->
 
 
@@ -433,10 +420,8 @@ armbian-config --cmd PIH001
 <!--- footer START from tools/include/markdown/PIH001-footer.md --->
 === "Access the web interface"
 
-    The web interface of Pi-hole can be accessed via:
-
-    - URL = `http://<your.IP>:8811/admin`
     - Password is set on install and can be adjusted from `armbian-config`
+
 <!--- footer STOP from tools/include/markdown/PIH001-footer.md --->
 
 
@@ -465,7 +450,7 @@ Unbound caching DNS resolver
 
 
 <!--- section image START from tools/include/images/UNB001.png --->
-[![Unbound](/images/UNB001.png)](#)
+![Unbound](/images/UNB001.png)
 <!--- section image STOP from tools/include/images/UNB001.png --->
 
 
@@ -526,7 +511,7 @@ MySQL SQL database server
 
 
 <!--- section image START from tools/include/images/MYSQL1.png --->
-[![MySQL](/images/MYSQL1.png)](#)
+![MySQL](/images/MYSQL1.png)
 <!--- section image STOP from tools/include/images/MYSQL1.png --->
 
 
@@ -592,7 +577,7 @@ Mariadb SQL database server
 
 
 <!--- section image START from tools/include/images/DAT001.png --->
-[![Mariadb](/images/DAT001.png)](#)
+![Mariadb](/images/DAT001.png)
 <!--- section image STOP from tools/include/images/DAT001.png --->
 
 
@@ -660,7 +645,7 @@ phpMyAdmin web interface manager
 
 
 <!--- section image START from tools/include/images/MYA001.png --->
-[![phpMyAdmin](/images/MYA001.png)](#)
+![phpMyAdmin](/images/MYA001.png)
 <!--- section image STOP from tools/include/images/MYA001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/MYA001-header.md)  
@@ -694,7 +679,7 @@ PostgreSQL install
 
 
 <!--- section image START from tools/include/images/PGSQL1.png --->
-[![PostgreSQL](/images/PGSQL1.png)](#)
+![PostgreSQL](/images/PGSQL1.png)
 <!--- section image STOP from tools/include/images/PGSQL1.png --->
 
 
@@ -729,9 +714,6 @@ armbian-config --cmd PGSQL1
 <!--- footer START from tools/include/markdown/PGSQL1-footer.md --->
 === "Access to the database"
 
-    PostgreSQL is accessible via port **5432**:
-
-    - Host: `postgresql://<your.IP>:5432`
     - Default user: `armbian`
     - Default password: `armbian`
     - Default database: `armbian`
@@ -768,7 +750,7 @@ Redis install
 
 
 <!--- section image START from tools/include/images/REDIS1.png --->
-[![Redis](/images/REDIS1.png)](#)
+![Redis](/images/REDIS1.png)
 <!--- section image STOP from tools/include/images/REDIS1.png --->
 
 
@@ -800,12 +782,6 @@ armbian-config --cmd REDIS1
 
 
 <!--- footer START from tools/include/markdown/REDIS1-footer.md --->
-=== "Access to the service"
-
-    Redis server is accessible on port **6379**:
-
-    - Host: `redis://<your.IP>:6379`
-
 === "Directories"
 
     - Data directory: `/armbian/redis/data`
@@ -841,9 +817,9 @@ Install tools for cloning and managing repositories (git)
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GIT001-header.md)  
 __Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
-__Maintainer:__ @armbian  
-__Documentation:__ [Link](https://forum.armbian.com/)  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span>  
+__Maintainer:__ @igorpecovnik  
+__Documentation:__ [Link](https://git-scm.com/doc)  
 
 ~~~ custombash
 armbian-config --cmd GIT001
@@ -863,7 +839,7 @@ Code-server VS Code in browser
 
 
 <!--- section image START from tools/include/images/COD001.png --->
-[![Code-server](/images/COD001.png)](#)
+![Code-server](/images/COD001.png)
 <!--- section image STOP from tools/include/images/COD001.png --->
 
 
@@ -904,9 +880,6 @@ armbian-config --cmd COD001
 <!--- footer START from tools/include/markdown/COD001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8443**:
-
-    - URL: `https://<your.IP>:8443`
     - Default Login: No password required by default (see optional variables below)
 
     **Note**: Code-server uses HTTPS with a self-signed certificate by default. Your browser may show a security warning - this is normal for self-signed certificates.
@@ -981,7 +954,7 @@ Bazarr automatic subtitles downloader for Sonarr and Radarr
 
 
 <!--- section image START from tools/include/images/BAZ001.png --->
-[![Bazarr](/images/BAZ001.png)](#)
+![Bazarr](/images/BAZ001.png)
 <!--- section image STOP from tools/include/images/BAZ001.png --->
 
 
@@ -1005,9 +978,6 @@ armbian-config --cmd BAZ001
 <!--- footer START from tools/include/markdown/BAZ001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **6767**:
-
-    - URL: `https://<your.IP>:6767`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1044,7 +1014,7 @@ Deluge BitTorrent client
 
 
 <!--- section image START from tools/include/images/DEL001.png --->
-[![Deluge](/images/DEL001.png)](#)
+![Deluge](/images/DEL001.png)
 <!--- section image STOP from tools/include/images/DEL001.png --->
 
 
@@ -1068,9 +1038,6 @@ armbian-config --cmd DEL001
 <!--- footer START from tools/include/markdown/DEL001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8112**:
-
-    - URL: `https://<your.IP>:8112`
     - Username/Password: default user/password of admin/deluge
 
 === "Directories"
@@ -1106,17 +1073,17 @@ armbian-config --cmd DEL003
 qBittorrent BitTorrent client 
 
 
-<!--- section image START from tools/include/images/DOW001.png --->
-[![qBittorrent](/images/DOW001.png)](#)
-<!--- section image STOP from tools/include/images/DOW001.png --->
+<!--- section image START from tools/include/images/QBT001.png --->
+![qBittorrent](/images/QBT001.png)
+<!--- section image STOP from tools/include/images/QBT001.png --->
 
 
-<!--- header START from tools/include/markdown/DOW001-header.md --->
+<!--- header START from tools/include/markdown/QBT001-header.md --->
 The Qbittorrent⁠ project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
-<!--- header STOP from tools/include/markdown/DOW001-header.md --->
+<!--- header STOP from tools/include/markdown/QBT001-header.md --->
 
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DOW001-header.md)  
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/QBT001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/QBT001-header.md)  
 __Status:__ Stable  
 __Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
 __Maintainer:__ @igorpecovnik  
@@ -1124,16 +1091,13 @@ __Documentation:__ [Link](https://github.com/qbittorrent/qBittorrent/wiki/)
 __Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
 
 ~~~ custombash
-armbian-config --cmd DOW001
+armbian-config --cmd QBT001
 ~~~
 
 
-<!--- footer START from tools/include/markdown/DOW001-footer.md --->
+<!--- footer START from tools/include/markdown/QBT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8090**:
-
-    - URL: `https://<your.IP>:8090`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1148,30 +1112,52 @@ armbian-config --cmd DOW001
     docker logs -f qbittorrent
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW001-footer.md --->
+<!--- footer STOP from tools/include/markdown/QBT001-footer.md --->
 
 
 ~~~ bash title="qBittorrent remove:"
-armbian-config --cmd DOW002
+armbian-config --cmd QBT002
 ~~~
 
 
 ~~~ bash title="qBittorrent purge with data folder:"
-armbian-config --cmd DOW003
+armbian-config --cmd QBT003
 ~~~
 
 
-~~~ bash title="Prowlarr:"
-armbian-config --cmd DOW025
+
+
+#### Prowlarr
+
+
+Prowlarr index manager and proxy for PVR
+
+
+<!--- section image START from tools/include/images/PRW001.png --->
+![Prowlarr](/images/PRW001.png)
+<!--- section image STOP from tools/include/images/PRW001.png --->
+
+
+<!--- header START from tools/include/markdown/PRW001-header.md --->
+Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+
+<!--- header STOP from tools/include/markdown/PRW001-header.md --->
+
+__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRW001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/PRW001-header.md)  
+__Status:__ Stable  
+__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
+__Maintainer:__ @armbian  
+__Documentation:__ [Link](https://prowlarr.com/)  
+__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
+
+~~~ custombash
+armbian-config --cmd PRW001
 ~~~
 
 
-<!--- footer START from tools/include/markdown/DOW025-footer.md --->
+<!--- footer START from tools/include/markdown/PRW001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9696**:
-
-    - URL: `https://<your.IP>:9696`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1185,20 +1171,17 @@ armbian-config --cmd DOW025
     docker logs -f prowlarr
     ```
 
-<!--- footer STOP from tools/include/markdown/DOW025-footer.md --->
+<!--- footer STOP from tools/include/markdown/PRW001-footer.md --->
 
 
 ~~~ bash title="Prowlarr remove:"
-armbian-config --cmd DOW026
+armbian-config --cmd PRW002
 ~~~
 
 
 ~~~ bash title="Prowlarr purge with data folder:"
-armbian-config --cmd DOW027
+armbian-config --cmd PRW003
 ~~~
-
-
-
 
 
 
@@ -1210,7 +1193,7 @@ Jellyseerr Jellyfin/Emby/Plex integration install
 
 
 <!--- section image START from tools/include/images/JEL001.png --->
-[![Jellyseerr](/images/JEL001.png)](#)
+![Jellyseerr](/images/JEL001.png)
 <!--- section image STOP from tools/include/images/JEL001.png --->
 
 
@@ -1250,7 +1233,7 @@ Lidarr automatic music downloader
 
 
 <!--- section image START from tools/include/images/LID001.png --->
-[![Lidarr](/images/LID001.png)](#)
+![Lidarr](/images/LID001.png)
 <!--- section image STOP from tools/include/images/LID001.png --->
 
 
@@ -1274,9 +1257,6 @@ armbian-config --cmd LID001
 <!--- footer START from tools/include/markdown/LID001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8686**:
-
-    - URL: `https://<your.IP>:8686`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1330,12 +1310,6 @@ armbian-config --cmd MDS001
 
 
 <!--- footer START from tools/include/markdown/MDS001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8081**:
-
-    - URL: `https://<your.IP>:8081`
-
 === "Directories"
 
     - Install directory: `/armbian/medusa`
@@ -1371,7 +1345,7 @@ Radarr automatic downloader for movies
 
 
 <!--- section image START from tools/include/images/RAD001.png --->
-[![Radarr](/images/RAD001.png)](#)
+![Radarr](/images/RAD001.png)
 <!--- section image STOP from tools/include/images/RAD001.png --->
 
 
@@ -1395,9 +1369,6 @@ armbian-config --cmd RAD001
 <!--- footer START from tools/include/markdown/RAD001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **7878**:
-
-    - URL: `https://<your.IP>:7878`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1435,7 +1406,7 @@ SABnzbd newsgroup downloader
 
 
 <!--- section image START from tools/include/images/SABN01.png --->
-[![SABnzbd](/images/SABN01.png)](#)
+![SABnzbd](/images/SABN01.png)
 <!--- section image STOP from tools/include/images/SABN01.png --->
 
 
@@ -1459,9 +1430,6 @@ armbian-config --cmd SABN01
 <!--- footer START from tools/include/markdown/SABN01-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8380**:
-
-    - URL: `https://<your.IP>:8380`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1499,7 +1467,7 @@ Sonarr automatic downloader for TV shows
 
 
 <!--- section image START from tools/include/images/SON001.png --->
-[![Sonarr](/images/SON001.png)](#)
+![Sonarr](/images/SON001.png)
 <!--- section image STOP from tools/include/images/SON001.png --->
 
 
@@ -1521,12 +1489,6 @@ armbian-config --cmd SON001
 
 
 <!--- footer START from tools/include/markdown/SON001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8989**:
-
-    - URL: `https://<your.IP>:8989`
-
 === "Directories"
 
     - Install directory: `/armbian/sonarr`
@@ -1562,7 +1524,7 @@ Transmission BitTorrent client
 
 
 <!--- section image START from tools/include/images/TRA001.png --->
-[![Transmission](/images/TRA001.png)](#)
+![Transmission](/images/TRA001.png)
 <!--- section image STOP from tools/include/images/TRA001.png --->
 
 
@@ -1586,9 +1548,6 @@ armbian-config --cmd TRA001
 <!--- footer START from tools/include/markdown/TRA001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9091**:
-
-    - URL: `https://<your.IP>:9091`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -1629,7 +1588,7 @@ Do your finances with Actual Budget
 
 
 <!--- section image START from tools/include/images/ABU001.png --->
-[![Actual Budget](/images/ABU001.png)](#)
+![Actual Budget](/images/ABU001.png)
 <!--- section image STOP from tools/include/images/ABU001.png --->
 
 
@@ -1692,7 +1651,7 @@ Install Wallos subscription tracker
 
 
 <!--- section image START from tools/include/images/WAL001.png --->
-[![Wallos](/images/WAL001.png)](#)
+![Wallos](/images/WAL001.png)
 <!--- section image STOP from tools/include/images/WAL001.png --->
 
 
@@ -1830,7 +1789,7 @@ Domoticz open source home automation
 
 
 <!--- section image START from tools/include/images/DOM001.png --->
-[![Domoticz](/images/DOM001.png)](#)
+![Domoticz](/images/DOM001.png)
 <!--- section image STOP from tools/include/images/DOM001.png --->
 
 
@@ -1839,9 +1798,6 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8780**:
-
-    - URL: `https://<your.IP>:8780`
     - Username/Password: admin / domoticz
 
 === "Directories"
@@ -1885,7 +1841,7 @@ EVCC - solar charging automation
 
 
 <!--- section image START from tools/include/images/EVCC01.png --->
-[![EVCC](/images/EVCC01.png)](#)
+![EVCC](/images/EVCC01.png)
 <!--- section image STOP from tools/include/images/EVCC01.png --->
 
 
@@ -1908,9 +1864,6 @@ armbian-config --cmd EVCC01
 <!--- footer START from tools/include/markdown/EVCC01-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **7070**:
-
-    - URL: `https://<your.IP>:7070`
     - Admin password is generated at first web interface login
 
 === "Directories"
@@ -1946,7 +1899,7 @@ openHAB empowering the smart home
 
 
 <!--- section image START from tools/include/images/HAB001.png --->
-[![openHAB](/images/HAB001.png)](#)
+![openHAB](/images/HAB001.png)
 <!--- section image STOP from tools/include/images/HAB001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/HAB001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/HAB001-header.md)  
@@ -1964,9 +1917,6 @@ armbian-config --cmd HAB001
 <!--- footer START from tools/include/markdown/HAB001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **2080**:
-
-    - URL: `https://<your.IP>:2080`
     - Username/Password: Are set at first web interface login
 
 === "Directories"
@@ -2006,7 +1956,7 @@ Home Assistant open source home automation
 
 
 <!--- section image START from tools/include/images/HAS001.png --->
-[![Home Assistant](/images/HAS001.png)](#)
+![Home Assistant](/images/HAS001.png)
 <!--- section image STOP from tools/include/images/HAS001.png --->
 
 
@@ -2040,9 +1990,6 @@ armbian-config --cmd HAS001
 <!--- footer START from tools/include/markdown/HAS001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8123**:
-
-    - URL: `https://<your.IP>:8123`
     - Username/Password: Are set at first web interface login
 
 === "Directories"
@@ -2089,7 +2036,7 @@ Cockpit OS and VM management tool
 
 
 <!--- section image START from tools/include/images/CPT001.png --->
-[![Cockpit](/images/CPT001.png)](#)
+![Cockpit](/images/CPT001.png)
 <!--- section image STOP from tools/include/images/CPT001.png --->
 
 
@@ -2127,13 +2074,9 @@ armbian-config --cmd CPT001
 <!--- footer START from tools/include/markdown/CPT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **9890**:
-
-    - URL: `https://<your.IP>:9890`
     - Username/Password: your system login credentials
 
 === "Video instructions"
-
 
     <iframe width="1200" height="676" src="https://www.youtube.com/embed/L9fMWCRcqIE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -2159,7 +2102,7 @@ Proxmox VE virtualization platform (keeps the Armbian kernel)
 
 
 <!--- section image START from tools/include/images/PVE001.png --->
-[![Proxmox VE](/images/PVE001.png)](#)
+![Proxmox VE](/images/PVE001.png)
 <!--- section image STOP from tools/include/images/PVE001.png --->
 
 
@@ -2197,9 +2140,6 @@ armbian-config --cmd PVE001
 <!--- footer START from tools/include/markdown/PVE001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8006**:
-
-    - URL: `https://<your.IP>:8006`
     - Username: `root` (your system root password)
 
     Official documentation: <https://pve.proxmox.com/pve-docs/>
@@ -2257,7 +2197,7 @@ Install Homepage startpage / application dashboard
 
 
 <!--- section image START from tools/include/images/HPG001.png --->
-[![Homepage](/images/HPG001.png)](#)
+![Homepage](/images/HPG001.png)
 <!--- section image STOP from tools/include/images/HPG001.png --->
 
 
@@ -2296,9 +2236,6 @@ armbian-config --cmd HPG001
 <!--- footer START from tools/include/markdown/HPG001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3021**:
-
-    - URL: `https://<your.IP>:3021`
     - Username/Password: none
 
     Configuration: Please reffer to official manual <https://gethomepage.dev/configs/>
@@ -2336,7 +2273,7 @@ NetBox infrastructure resource modeling install
 
 
 <!--- section image START from tools/include/images/NBOX01.png --->
-[![NetBox](/images/NBOX01.png)](#)
+![NetBox](/images/NBOX01.png)
 <!--- section image STOP from tools/include/images/NBOX01.png --->
 
 
@@ -2375,13 +2312,6 @@ armbian-config --cmd NBOX01
 
 
 <!--- footer START from tools/include/markdown/NBOX01-footer.md --->
-=== "Access to the service"
-
-    NetBox is accessible via HTTP on port **8222**:
-
-    - URL: `http://<your.IP>:8222`
-    - API root: `http://<your.IP>:8222/api/`
-
 === "Default credentials"
 
     - Username: `admin`
@@ -2452,13 +2382,6 @@ armbian-config --cmd APT001
 
 
 <!--- footer START from tools/include/markdown/APT001-footer.md --->
-=== "Access to the service"
-
-    The proxy listens on port **3142**:
-
-    - URL: `http://<your.IP>:3142`
-    - Hit-rate report: `http://<your.IP>:3142/acng-report.html`
-
 === "Client configuration"
 
     On each apt host on the LAN:
@@ -2529,7 +2452,7 @@ SAMBA Remote File share
 
 
 <!--- section image START from tools/include/images/SMB001.png --->
-[![Samba](/images/SMB001.png)](#)
+![Samba](/images/SMB001.png)
 <!--- section image STOP from tools/include/images/SMB001.png --->
 
 
@@ -2556,7 +2479,7 @@ Webmin web-based management tool
 
 
 <!--- section image START from tools/include/images/WBM001.png --->
-[![Webmin](/images/WBM001.png)](#)
+![Webmin](/images/WBM001.png)
 <!--- section image STOP from tools/include/images/WBM001.png --->
 
 
@@ -2579,11 +2502,7 @@ armbian-config --cmd WBM001
 <!--- footer START from tools/include/markdown/WBM001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **10000**:
-
-    - URL: `https://<your.IP>:10000`
     - Username/Password: your system login credentials
-
 
 <!--- footer STOP from tools/include/markdown/WBM001-footer.md --->
 
@@ -2598,7 +2517,7 @@ Emby organizes video, music, live TV, and photos
 
 
 <!--- section image START from tools/include/images/EMB001.png --->
-[![Emby](/images/EMB001.png)](#)
+![Emby](/images/EMB001.png)
 <!--- section image STOP from tools/include/images/EMB001.png --->
 
 
@@ -2620,12 +2539,6 @@ armbian-config --cmd EMB001
 
 
 <!--- footer START from tools/include/markdown/EMB001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8091**:
-
-    - URL: `https://<your.IP>:8091`
-
 === "Directories"
 
     - Install directory: `/armbian/emby`
@@ -2660,7 +2573,7 @@ Filebrowser provides a web-based file manager accessible via a browser
 
 
 <!--- section image START from tools/include/images/FIL001.png --->
-[![Filebrowser](/images/FIL001.png)](#)
+![Filebrowser](/images/FIL001.png)
 <!--- section image STOP from tools/include/images/FIL001.png --->
 
 
@@ -2695,9 +2608,6 @@ armbian-config --cmd FIL001
 <!--- footer START from tools/include/markdown/FIL001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8095**:
-
-    - URL: `http://<your.IP>:8095`
     - Username/Password: admin / admin
 
 === "Directories"
@@ -2736,7 +2646,7 @@ Hastebin Paste Server
 
 
 <!--- section image START from tools/include/images/HPS001.png --->
-[![Hastebin](/images/HPS001.png)](#)
+![Hastebin](/images/HPS001.png)
 <!--- section image STOP from tools/include/images/HPS001.png --->
 
 
@@ -2776,7 +2686,7 @@ Immich - high-performance self-hosted photo and video backup solution
 
 
 <!--- section image START from tools/include/images/IMM001.png --->
-[![Immich](/images/IMM001.png)](#)
+![Immich](/images/IMM001.png)
 <!--- section image STOP from tools/include/images/IMM001.png --->
 
 
@@ -2811,12 +2721,6 @@ armbian-config --cmd IMM001
 
 
 <!--- footer START from tools/include/markdown/IMM001-footer.md --->
-=== "Access to the service"
-
-    Immich is accessible via HTTP on port **8077**:
-
-    - URL: `http://<your.IP>:8077`
-
 === "Default credentials"
 
     - Email: *(set during initial setup)*
@@ -2878,7 +2782,7 @@ Jellyfin Media System
 
 
 <!--- section image START from tools/include/images/JMS001.png --->
-[![Jellyfin](/images/JMS001.png)](#)
+![Jellyfin](/images/JMS001.png)
 <!--- section image STOP from tools/include/images/JMS001.png --->
 
 
@@ -2902,9 +2806,6 @@ armbian-config --cmd JMS001
 <!--- footer START from tools/include/markdown/JMS001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8096**:
-
-    - URL: `http://<your.IP>:8096`
     - Username and password are set at first login
 
 === "Directories"
@@ -2942,7 +2843,7 @@ Navidrome music server and streamer compatible with Subsonic/Airsonic
 
 
 <!--- section image START from tools/include/images/NAV001.png --->
-[![Navidrome](/images/NAV001.png)](#)
+![Navidrome](/images/NAV001.png)
 <!--- section image STOP from tools/include/images/NAV001.png --->
 
 
@@ -2982,7 +2883,7 @@ Nextcloud content collaboration platform
 
 
 <!--- section image START from tools/include/images/NCT001.png --->
-[![Nextcloud](/images/NCT001.png)](#)
+![Nextcloud](/images/NCT001.png)
 <!--- section image STOP from tools/include/images/NCT001.png --->
 
 
@@ -3006,9 +2907,6 @@ armbian-config --cmd NCT001
 <!--- footer START from tools/include/markdown/NCT001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **1443**:
-
-    - URL: `https://<your.IP>:1443`
     - Username/Password: admin / generate at first web interface login
 
 === "Directories"
@@ -3045,7 +2943,7 @@ Deploy NAS using OpenMediaVault
 
 
 <!--- section image START from tools/include/images/OMV001.png --->
-[![OMV](/images/OMV001.png)](#)
+![OMV](/images/OMV001.png)
 <!--- section image STOP from tools/include/images/OMV001.png --->
 
 
@@ -3075,9 +2973,6 @@ armbian-config --cmd OMV001
 <!--- footer START from tools/include/markdown/OMV001-footer.md --->
 === "Access to the web interface"
 
-    The OpenMediaVault web interface is accessible via the default HTTP port:
-
-    - URL: `http://<your.IP>:80`
     - Username/Password: admin / openmediavault (change after first login)
 
 === "Directories"
@@ -3126,7 +3021,7 @@ Owncloud share files and folders, easy and secure
 
 
 <!--- section image START from tools/include/images/OWC001.png --->
-[![Owncloud](/images/OWC001.png)](#)
+![Owncloud](/images/OWC001.png)
 <!--- section image STOP from tools/include/images/OWC001.png --->
 
 
@@ -3150,9 +3045,6 @@ armbian-config --cmd OWC001
 <!--- footer START from tools/include/markdown/OWC001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **7787**:
-
-    - URL: `http://<your.IP>:7787`
     - Username/Password: admin / admin
 
 === "Directories"
@@ -3189,7 +3081,7 @@ Syncthing continuous file synchronization
 
 
 <!--- section image START from tools/include/images/STC001.png --->
-[![Syncthing](/images/STC001.png)](#)
+![Syncthing](/images/STC001.png)
 <!--- section image STOP from tools/include/images/STC001.png --->
 
 
@@ -3213,9 +3105,6 @@ armbian-config --cmd STC001
 <!--- footer START from tools/include/markdown/STC001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **8884**:
-
-    - URL: `https://<your.IP>:8884`
     - Username/Password: There is none, but it is highly suggested setting a password for this container. To do this go to Actions -> Settings -> set user/password for the webUI.
 
 === "Directories"
@@ -3252,7 +3141,7 @@ Stirling PDF tools for viewing and editing PDF files
 
 
 <!--- section image START from tools/include/images/STR001.png --->
-[![Stirling](/images/STR001.png)](#)
+![Stirling](/images/STR001.png)
 <!--- section image STOP from tools/include/images/STR001.png --->
 
 
@@ -3274,12 +3163,6 @@ armbian-config --cmd STR001
 
 
 <!--- footer START from tools/include/markdown/STR001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8075**:
-
-    - URL: `https://<your.IP>:8075`
-
 === "Directories"
 
     - Install directory: `/armbian/stirling`
@@ -3315,7 +3198,7 @@ Grafana data analytics
 
 
 <!--- section image START from tools/include/images/GRA001.png --->
-[![Grafana](/images/GRA001.png)](#)
+![Grafana](/images/GRA001.png)
 <!--- section image STOP from tools/include/images/GRA001.png --->
 
 
@@ -3336,12 +3219,6 @@ armbian-config --cmd GRA001
 
 
 <!--- footer START from tools/include/markdown/GRA001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **3022**:
-
-    - URL: `https://<your.IP>:3022`
-
 === "Directories"
 
     - Install directory: `/armbian/grafana`
@@ -3374,7 +3251,7 @@ NetAlertX network scanner & notification framework
 
 
 <!--- section image START from tools/include/images/NAX001.png --->
-[![NetAlertX](/images/NAX001.png)](#)
+![NetAlertX](/images/NAX001.png)
 <!--- section image STOP from tools/include/images/NAX001.png --->
 
 
@@ -3414,12 +3291,6 @@ armbian-config --cmd NAX001
 
 
 <!--- footer START from tools/include/markdown/NAX001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **20211**:
-
-    - URL: `https://<your.IP>:20211`
-
 === "Directories"
 
     - Config directory: `/armbian/netalertx/config`
@@ -3452,7 +3323,7 @@ Netdata - monitoring real-time metrics
 
 
 <!--- section image START from tools/include/images/NTD001.png --->
-[![Netdata](/images/NTD001.png)](#)
+![Netdata](/images/NTD001.png)
 <!--- section image STOP from tools/include/images/NTD001.png --->
 
 
@@ -3492,7 +3363,7 @@ Prometheus monitoring and alerting toolkit
 
 
 <!--- section image START from tools/include/images/PRO001.png --->
-[![Prometheus](/images/PRO001.png)](#)
+![Prometheus](/images/PRO001.png)
 <!--- section image STOP from tools/include/images/PRO001.png --->
 
 
@@ -3514,12 +3385,6 @@ armbian-config --cmd PRO001
 
 
 <!--- footer START from tools/include/markdown/PRO001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **9191**:
-
-    - URL: `http://<your.IP>:9191`
-
 === "Directories"
 
     - Config directory: `/armbian/prometheus`
@@ -3552,7 +3417,7 @@ Uptime Kuma self-hosted monitoring tool
 
 
 <!--- section image START from tools/include/images/UPK001.png --->
-[![Uptime Kuma](/images/UPK001.png)](#)
+![Uptime Kuma](/images/UPK001.png)
 <!--- section image STOP from tools/include/images/UPK001.png --->
 
 
@@ -3579,9 +3444,6 @@ armbian-config --cmd UPK001
 <!--- footer START from tools/include/markdown/UPK001-footer.md --->
 === "Access to the web interface"
 
-    The web interface is accessible via port **3001**:
-
-    - URL: `https://<your.IP>:3001`
     - Username/Password: Are set at first web interface login
 
 === "Features"
@@ -3620,7 +3482,7 @@ Dozzle real-time Docker log viewer
 
 
 <!--- section image START from tools/include/images/DOZ001.png --->
-[![Dozzle](/images/DOZ001.png)](#)
+![Dozzle](/images/DOZ001.png)
 <!--- section image STOP from tools/include/images/DOZ001.png --->
 
 
@@ -3662,12 +3524,6 @@ armbian-config --cmd DOZ001
 
 
 <!--- footer START from tools/include/markdown/DOZ001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8888**:
-
-    - URL: `http://<your.IP>:8888`
-
 === "View logs"
 
     View real-time logs from the Dozzle container:
@@ -3691,7 +3547,6 @@ armbian-config --cmd DOZ001
     - Ensure the Docker socket is properly mounted
     - Check that the container has logs available: `docker logs <container_name>`
     - Verify Dozzle container is running: `docker ps | grep dozzle`
-
 
 <!--- footer STOP from tools/include/markdown/DOZ001-footer.md --->
 
@@ -3809,7 +3664,7 @@ OctoPrint web-based 3D printers management tool
 
 
 <!--- section image START from tools/include/images/OCT001.png --->
-[![OctoPrint](/images/OCT001.png)](#)
+![OctoPrint](/images/OCT001.png)
 <!--- section image STOP from tools/include/images/OCT001.png --->
 
 
@@ -3830,12 +3685,6 @@ armbian-config --cmd OCT001
 
 
 <!--- footer START from tools/include/markdown/OCT001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **7981**:
-
-    - URL: `https://<your.IP>:7981`
-
 === "Directories"
 
     - Install directory: `/armbian/octoprint`
@@ -3871,7 +3720,7 @@ WireGuard VPN server
 
 
 <!--- section image START from tools/include/images/WRG001.png --->
-[![WireGuard](/images/WRG001.png)](#)
+![WireGuard](/images/WRG001.png)
 <!--- section image STOP from tools/include/images/WRG001.png --->
 
 
@@ -3894,7 +3743,7 @@ armbian-config --cmd WRG001
 <!--- footer START from tools/include/markdown/WRG001-footer.md --->
 === "Server"
 
-    1. Launch `armbian-config --cmd WRG001`.
+    1. Launch `armbian-config --api module_wireguard server`.
 
     2. When prompted, enter a comma-separated list of peer names (e.g., laptop,phone,router).
 
@@ -3909,7 +3758,7 @@ armbian-config --cmd WRG001
 
 === "Client"
 
-    1. Launch `armbian-config --cmd WRG002`.
+    1. Launch `armbian-config --api module_wireguard client`.
 
     2. You will be asked to edit or paste a valid WireGuard configuration.
 
@@ -3988,7 +3837,7 @@ ZeroTier connect devices over your own private network in the world.
 
 
 <!--- section image START from tools/include/images/ZTR001.png --->
-[![ZeroTier](/images/ZTR001.png)](#)
+![ZeroTier](/images/ZTR001.png)
 <!--- section image STOP from tools/include/images/ZTR001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/ZTR001-header.md)  
@@ -4009,7 +3858,7 @@ SWAG reverse proxy
 
 
 <!--- section image START from tools/include/images/SWAG01.png --->
-[![SWAG](/images/SWAG01.png)](#)
+![SWAG](/images/SWAG01.png)
 <!--- section image STOP from tools/include/images/SWAG01.png --->
 
 
@@ -4073,7 +3922,7 @@ Ghost CMS install
 
 
 <!--- section image START from tools/include/images/GHOST1.png --->
-[![Ghost](/images/GHOST1.png)](#)
+![Ghost](/images/GHOST1.png)
 <!--- section image STOP from tools/include/images/GHOST1.png --->
 
 

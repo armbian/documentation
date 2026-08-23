@@ -1,76 +1,11 @@
 ---
+title: "Backup"
+description: "Backup solutions for your data for Armbian on ARM64 and x86 single-board computers: Duplicati."
 comments: true
 ---
-
 # Backup solutions for your data
 
-## Duplicati
 
+Install and configure these applications through [`armbian-config`](/User-Guide_Armbian-Config/) or from the pages below:
 
-Duplicati install
-
-
-<!--- section image START from tools/include/images/DPL001.png --->
-[![Duplicati](/images/DPL001.png)](#)
-<!--- section image STOP from tools/include/images/DPL001.png --->
-
-
-<!--- header START from tools/include/markdown/DPL001-header.md --->
-Duplicati is a versatile and secure backup tool designed for everyone, including:
-
-- Users new to backup systems who need a simple and reliable solution.
-- Experienced users who want full control over encrypted backups and storage destinations.
-- System administrators who require automated, encrypted backups across multiple platforms.
-
-Duplicati offers powerful features such as strong AES-256 encryption, backup scheduling, and flexible storage support (local folders, NAS, cloud providers like Google Drive, Dropbox, S3, and more).  
-Through its web-based interface, users can easily configure, monitor, and restore backups from any browser.
-
-Thanks to Duplicati’s smart design — working through standard protocols and containerized deployment — it fits seamlessly into any environment, from personal setups to enterprise infrastructures.
-
-<!--- header STOP from tools/include/markdown/DPL001-header.md --->
-
-__Edit:__ [footer](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-footer.md) [header](https://github.com/armbian/configng/edit/main/tools/include/markdown/DPL001-header.md)  
-__Status:__ Stable  
-__Architecture:__ <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#d3f9d8; color:#1b5e20; padding:3px 6px; border-radius:4px; font-size:90%;">arm64</span>  
-__Maintainer:__ @igorpecovnik  
-__Documentation:__ [Link](https://prev-docs.duplicati.com/en/latest/)  
-__Installation:__ <span style="background-color:#ffffff; color:#039BE5; padding:3px 6px; border-radius:4px; font-size:90%;">🐳 Docker</span>  
-
-~~~ custombash
-armbian-config --cmd DPL001
-~~~
-
-
-<!--- footer START from tools/include/markdown/DPL001-footer.md --->
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8200**:
-
-    - URL: `http://<your.IP>:8200`
-
-=== "Directories"
-
-    - Install directory: `/armbian/duplicati`
-    - Configuration directory: `/armbian/duplicati/config`
-    - Backup target directory: `/armbian/duplicati/backups`
-
-=== "View logs"
-
-    ```sh
-    docker logs -f duplicati
-    ```
-
-<!--- footer STOP from tools/include/markdown/DPL001-footer.md --->
-
-
-~~~ bash title="Duplicati remove:"
-armbian-config --cmd DPL002
-~~~
-
-
-~~~ bash title="Duplicati purge with data folder:"
-armbian-config --cmd DPL003
-~~~
-
-
-
+- [Duplicati](/software/duplicati/) — Duplicati install

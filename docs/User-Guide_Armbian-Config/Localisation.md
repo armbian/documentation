@@ -8,7 +8,7 @@ comments: true
 
 
 <!--- section image START from tools/include/images/GTZ001.png --->
-[![Change Global timezone](/images/GTZ001.png)](#)
+![Change Global timezone](/images/GTZ001.png)
 <!--- section image STOP from tools/include/images/GTZ001.png --->
 
 __Edit:__ [footer](https://github.com/armbian/configng/new/main/tools/include/markdown/GTZ001-footer.md) [header](https://github.com/armbian/configng/new/main/tools/include/markdown/GTZ001-header.md)  
