@@ -13,7 +13,7 @@ Each installation is isolated and designed with **clean setup and teardown** in 
 - **One-command installs** with sensible defaults  
 - **No leftover files or dangling containers** after uninstallation  
 - **Service isolation** via Docker networks and volume mappings  
-- **Support for both manual and automatic updates**, [including container image refresh](/User-Guide_Armbian-Config/System/#docker-images)
+- **Support for both manual and automatic updates**, [including container image refresh](/User-Guide_Armbian-Config/Updates/#docker-images)
 - Daily-tested [CI pipelines](https://github.com/armbian/configng/actions/workflows/unit-tests.yml) ensure that software definitions remain reliable and compatible with the latest system changes  
 
 All configurations are streamlined to work **out of the box**, reducing the need for manual intervention or deep technical know-how.

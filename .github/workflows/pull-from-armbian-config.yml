@@ -36,11 +36,13 @@ jobs:
           # rsync images first
           rsync -avr tools/include/images/. ../documentation/docs/images/
 
-          # this section goes under armbian-config
+          # this section goes under armbian-config; System is split into
+          # per-subcategory pages (Kernel/Desktops/Storage/Access/User/Updates),
+          # so sync those and skip the giant System.md overview.
           mkdir -p ../documentation/docs/User-Guide_Armbian-Config/
           rsync -avr docs/Localisation/Localisation.md ../documentation/docs/User-Guide_Armbian-Config/
           rsync -avr docs/Network/Network.md ../documentation/docs/User-Guide_Armbian-Config/
-          rsync -avr docs/System/System.md ../documentation/docs/User-Guide_Armbian-Config/
+          rsync -avr --exclude="System.md" docs/System/*.md ../documentation/docs/User-Guide_Armbian-Config/
 
           # the rest goes under armbian-software (category hubs + section pages)
           mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
