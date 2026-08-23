@@ -9,7 +9,7 @@ Notes for each Armbian stable release, newest first. Each page carries the relea
 
 * **[Armbian 26.8.3](26.8.md)** &mdash; 23 August 2026
 
-    Armbian 26.8.3, released 23 August 2026: broad board expansion, kernel and U-Boot modernization, and reworked build, installer, and imaging tooling.
+    Armbian 26.8.3, released 23 August 2026: broad SoC enablement, CI migration to a dedicated repo on Debian Trixie, and a rewritten installer with UEFI ISOs.
 
 * **[Armbian 26.5.1](26.5.md)** &mdash; 29 May 2026
 
