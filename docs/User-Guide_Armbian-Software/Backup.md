@@ -1,5 +1,6 @@
 ---
 title: "Backup"
+seo_title: "Backup apps for Armbian"
 description: "Backup solutions for your data for Armbian on ARM64 and x86 single-board computers: Duplicati."
 comments: true
 ---

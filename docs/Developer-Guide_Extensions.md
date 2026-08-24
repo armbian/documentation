@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build extensions framework & hooks"
 description: "Armbian build framework extensions: extend the build with Bash hooks and extension methods without overloading the core, plus terminology and examples."
 ---
 

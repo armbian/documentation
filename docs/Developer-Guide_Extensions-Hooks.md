@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build extension hooks reference"
 description: "Reference of Armbian build framework extension hooks in call order, such as post_family_config and user_config, for customizing the ARM image build."
 ---
 

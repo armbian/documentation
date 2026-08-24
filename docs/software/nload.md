@@ -1,5 +1,6 @@
 ---
 title: "nload"
+seo_title: "Install nload on Armbian"
 description: "Install and run nload on Armbian — realtime console network usage monitor. Runs on ARM64 and x86 single-board computers."
 image: /images/NLD001.png
 category: "Netconfig"

@@ -1,5 +1,6 @@
 ---
 title: "EVCC"
+seo_title: "Install EVCC on Armbian"
 description: "Install and run EVCC on Armbian — solar charging automation. Runs on ARM64 and x86 single-board computers."
 image: /images/EVCC01.png
 category: "HomeAutomation"

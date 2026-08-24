@@ -1,5 +1,6 @@
 ---
 title: If something goes wrong
+seo_title: "Armbian first-boot troubleshooting"
 description: "What to do when a step in the Armbian Getting Started guide fails, where the troubleshooting and recovery guide lives, and how to report a real bug."
 ---
 # If something goes wrong

@@ -1,5 +1,6 @@
 ---
 title: "qBittorrent"
+seo_title: "Install qBittorrent on Armbian"
 description: "Install and run qBittorrent on Armbian — qBittorrent BitTorrent client. Runs on ARM64 and x86 single-board computers."
 image: /images/QBT001.png
 category: "Downloaders"

@@ -1,5 +1,6 @@
 ---
 title: "iperf3"
+seo_title: "Install iperf3 on Armbian"
 description: "Install and run iperf3 on Armbian — iperf3 bandwidth measuring tool. Runs on ARM64 and x86 single-board computers."
 image: /images/IPR001.png
 category: "Netconfig"

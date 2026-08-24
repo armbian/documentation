@@ -4,13 +4,25 @@
      Material already emits <meta name="description"> from page.meta.description;
      this adds the social equivalents plus og:image (the app logo shipped as
      `image:` in front-matter). Falls back to the site defaults elsewhere. -->
+{# Keyword-rich browser <title> from a dedicated `seo_title:` front-matter
+   field. Unlike Material's `title:`, this does NOT change the (short) left-nav
+   label — it only rewrites the <title> tag, so nav stays clean while the title
+   leads with search keywords. #}
+{% block htmltitle %}
+  {% if page and page.meta and page.meta.seo_title %}
+    <title>{{ page.meta.seo_title }}</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
-  {# page.title is the nav label, which the theme's <title> overrides with
-     page.meta.title when a page sets one. Follow the same order here so the
-     social cards do not disagree with the browser title. #}
+  {# Prefer seo_title so the social cards match the browser <title>; else fall
+     back to page.meta.title / nav title + site name (Material's own order). #}
+  {% set _seo_title = (page.meta.seo_title if page and page.meta and page.meta.seo_title else None) %}
   {% set _page_title = (page.meta.title if page and page.meta and page.meta.title else (page.title if page else None)) %}
-  {% set _title = (_page_title ~ " - " ~ config.site_name) if _page_title else config.site_name %}
+  {% set _title = _seo_title if _seo_title else ((_page_title ~ " - " ~ config.site_name) if _page_title else config.site_name) %}
   {% set _desc = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ _title }}">

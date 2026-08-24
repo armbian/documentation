@@ -1,5 +1,6 @@
 ---
 title: "NetAlertX"
+seo_title: "Install NetAlertX on Armbian"
 description: "Install and run NetAlertX on Armbian — NetAlertX network scanner & notification framework. Runs on ARM64 and x86 single-board computers."
 image: /images/NAX001.png
 category: "Monitoring"

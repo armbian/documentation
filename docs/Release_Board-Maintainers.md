@@ -1,4 +1,5 @@
 ---
+seo_title: "Become an Armbian board maintainer"
 description: "Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images."
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "git_cdn"
+seo_title: "Install git_cdn on Armbian"
 description: "Install and run git_cdn on Armbian — git_cdn GitHub caching proxy install. Runs on ARM64 and x86 single-board computers."
 image: /images/GCD001.png
 category: "Management"

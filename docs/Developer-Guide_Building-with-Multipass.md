@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build with Multipass Ubuntu VM"
 description: "Build Armbian images in a Multipass Ubuntu VM: provision the instance, clone the build repository and run compile.sh on macOS, Windows or Linux."
 ---
 

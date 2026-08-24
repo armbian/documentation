@@ -1,5 +1,6 @@
 ---
 title: "Filebrowser"
+seo_title: "Install Filebrowser on Armbian"
 description: "Install and run Filebrowser on Armbian — Filebrowser provides a web-based file manager accessible via a browser. Runs on ARM64 and x86 single-board computers."
 image: /images/FIL001.png
 category: "Media"

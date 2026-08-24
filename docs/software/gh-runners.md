@@ -1,5 +1,6 @@
 ---
 title: "GH runners"
+seo_title: "Install GH runners on Armbian"
 description: "Install and run GH runners on Armbian — GitHub runners for Armbian automation. Runs on ARM64 and x86 single-board computers."
 image: /images/GHR001.png
 category: "Armbian"

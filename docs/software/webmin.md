@@ -1,5 +1,6 @@
 ---
 title: "Webmin"
+seo_title: "Install Webmin on Armbian"
 description: "Install and run Webmin on Armbian — Webmin web-based management tool. Runs on ARM64 and x86 single-board computers."
 image: /images/WBM001.png
 category: "Management"

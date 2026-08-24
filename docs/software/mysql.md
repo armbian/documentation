@@ -1,5 +1,6 @@
 ---
 title: "MySQL"
+seo_title: "Install MySQL on Armbian"
 description: "Install and run MySQL on Armbian — MySQL SQL database server. Runs on ARM64 and x86 single-board computers."
 image: /images/MYSQL1.png
 category: "Database"

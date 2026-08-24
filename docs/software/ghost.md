@@ -1,5 +1,6 @@
 ---
 title: "Ghost"
+seo_title: "Install Ghost on Armbian"
 description: "Install and run Ghost on Armbian — Ghost CMS install. Runs on ARM64 and x86 single-board computers."
 image: /images/GHOST1.png
 category: "WebHosting"

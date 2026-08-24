@@ -1,5 +1,6 @@
 ---
 title: "Netdata"
+seo_title: "Install Netdata on Armbian"
 description: "Install and run Netdata on Armbian — monitoring real-time metrics. Runs on ARM64 and x86 single-board computers."
 image: /images/NTD001.png
 category: "Monitoring"

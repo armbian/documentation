@@ -1,5 +1,6 @@
 ---
 title: First boot and login
+seo_title: "First boot & login on Armbian"
 description: "Power the board up for the first time, log in as root, set a password, create your everyday user account and connect to a wireless network."
 ---
 # First boot and login

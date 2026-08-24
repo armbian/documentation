@@ -1,5 +1,6 @@
 ---
 title: "Unbound"
+seo_title: "Install Unbound on Armbian"
 description: "Install and run Unbound on Armbian — Unbound caching DNS resolver. Runs on ARM64 and x86 single-board computers."
 image: /images/UNB001.png
 category: "DNS"

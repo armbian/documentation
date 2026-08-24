@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build with Docker: images & kernels"
 description: "Build Armbian images, kernels and U-Boot packages with Docker, the officially supported containerized method, including requirements and privileged-mode setup."
 ---
 

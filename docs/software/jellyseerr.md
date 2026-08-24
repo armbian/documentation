@@ -1,5 +1,6 @@
 ---
 title: "Jellyseerr"
+seo_title: "Install Jellyseerr on Armbian"
 description: "Install and run Jellyseerr on Armbian — Jellyseerr Jellyfin/Emby/Plex integration install. Runs on ARM64 and x86 single-board computers."
 image: /images/JEL001.png
 category: "Downloaders"

@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build extensions list & ENABLE_EXTENSIONS"
 description: "Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and their key parameters and descriptions."
 ---
 

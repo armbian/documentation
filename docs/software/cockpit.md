@@ -1,5 +1,6 @@
 ---
 title: "Cockpit"
+seo_title: "Install Cockpit on Armbian"
 description: "Install and run Cockpit on Armbian — Cockpit OS and VM management tool. Runs on ARM64 and x86 single-board computers."
 image: /images/CPT001.png
 category: "Management"

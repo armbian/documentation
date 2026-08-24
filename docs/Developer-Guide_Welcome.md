@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build framework: compile.sh CLI intro"
 description: "Armbian build framework introduction: compile.sh command-line syntax, config files, logging and artifact caching for building custom ARM Linux images."
 ---
 

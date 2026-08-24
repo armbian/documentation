@@ -1,5 +1,6 @@
 ---
 title: "NetBox"
+seo_title: "Install NetBox on Armbian"
 description: "Install and run NetBox on Armbian — NetBox infrastructure resource modeling install. Runs on ARM64 and x86 single-board computers."
 image: /images/NBOX01.png
 category: "Management"

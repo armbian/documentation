@@ -1,5 +1,6 @@
 ---
 title: "Homepage"
+seo_title: "Install Homepage on Armbian"
 description: "Install and run Homepage on Armbian — Install Homepage startpage / application dashboard. Runs on ARM64 and x86 single-board computers."
 image: /images/HPG001.png
 category: "Management"

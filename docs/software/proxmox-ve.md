@@ -1,5 +1,6 @@
 ---
 title: "Proxmox VE"
+seo_title: "Install Proxmox VE on Armbian"
 description: "Install and run Proxmox VE on Armbian — Proxmox VE virtualization platform (keeps the Armbian kernel). Runs on ARM64 and x86 single-board computers."
 image: /images/PVE001.png
 category: "Management"

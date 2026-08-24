@@ -1,5 +1,6 @@
 ---
 title: "openHAB"
+seo_title: "Install openHAB on Armbian"
 description: "Install and run openHAB on Armbian — openHAB empowering the smart home. Runs on ARM64 and x86 single-board computers."
 image: /images/HAB001.png
 category: "HomeAutomation"

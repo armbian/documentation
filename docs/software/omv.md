@@ -1,5 +1,6 @@
 ---
 title: "OMV"
+seo_title: "Install OMV on Armbian"
 description: "Install and run OMV on Armbian — Deploy NAS using OpenMediaVault. Runs on ARM64 and x86 single-board computers."
 image: /images/OMV001.png
 category: "Media"

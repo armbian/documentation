@@ -1,5 +1,6 @@
 ---
 title: "Rsyncd server"
+seo_title: "Install Rsyncd server on Armbian"
 description: "Install and run Rsyncd server on Armbian — Rsyncd server. Runs on ARM64 and x86 single-board computers."
 image: /images/RSD001.png
 category: "Armbian"

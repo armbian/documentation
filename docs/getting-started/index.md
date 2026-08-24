@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+seo_title: "Armbian getting started: flash, boot & update"
 description: "Step-by-step guide to running Armbian on a single-board computer: choose an image, write it to media, first boot and login, then install and keep it updated."
 ---
 # Armbian Getting Started Guide

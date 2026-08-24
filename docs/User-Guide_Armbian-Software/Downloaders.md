@@ -1,5 +1,6 @@
 ---
 title: "Downloaders"
+seo_title: "Downloaders apps for Armbian"
 description: "Download apps for movies, TV shows, music and subtitles for Armbian on ARM64 and x86 single-board computers: Bazarr, Deluge, qBittorrent, Prowlarr, Jellyseerr, Lidarr, Medusa, Rada"
 comments: true
 ---

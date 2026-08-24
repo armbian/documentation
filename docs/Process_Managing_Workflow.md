@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian development workflow in Jira"
 description: "Managing the Armbian development workflow in Jira: epics, stories, tasks and bugs, fix versions and the upcoming-release Kanban board for prioritizing work."
 ---
 

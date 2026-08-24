@@ -1,5 +1,6 @@
 ---
 title: "Samba"
+seo_title: "Install Samba on Armbian"
 description: "Install and run Samba on Armbian — SAMBA Remote File share. Runs on ARM64 and x86 single-board computers."
 image: /images/SMB001.png
 category: "Management"

@@ -1,5 +1,6 @@
 ---
 title: "Lidarr"
+seo_title: "Install Lidarr on Armbian"
 description: "Install and run Lidarr on Armbian — Lidarr automatic music downloader. Runs on ARM64 and x86 single-board computers."
 image: /images/LID001.png
 category: "Downloaders"

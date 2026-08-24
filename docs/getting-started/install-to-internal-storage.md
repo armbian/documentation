@@ -1,5 +1,6 @@
 ---
 title: Installing to internal storage
+seo_title: "Install Armbian to eMMC, SSD or NVMe"
 description: "Move Armbian off the SD card with armbian-install: boot from eMMC, NAND, SPI or UEFI disk with the system on eMMC, SATA, USB or NVMe."
 ---
 # Installing to internal storage

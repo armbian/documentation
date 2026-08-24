@@ -1,5 +1,6 @@
 ---
 title: "Prometheus"
+seo_title: "Install Prometheus on Armbian"
 description: "Install and run Prometheus on Armbian — Prometheus monitoring and alerting toolkit. Runs on ARM64 and x86 single-board computers."
 image: /images/PRO001.png
 category: "Monitoring"

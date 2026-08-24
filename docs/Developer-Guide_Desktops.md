@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian desktops: armbian-config developer guide"
 description: "Armbian desktop submodule reference for armbian-config: YAML-driven install pipeline, tiered minimal, mid and full desktops, auto-login and package overrides."
 ---
 

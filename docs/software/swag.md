@@ -1,5 +1,6 @@
 ---
 title: "SWAG"
+seo_title: "Install SWAG on Armbian"
 description: "Install and run SWAG on Armbian — SWAG reverse proxy. Runs on ARM64 and x86 single-board computers."
 image: /images/SWAG01.png
 category: "WebHosting"

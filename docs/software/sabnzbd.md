@@ -1,5 +1,6 @@
 ---
 title: "SABnzbd"
+seo_title: "Install SABnzbd on Armbian"
 description: "Install and run SABnzbd on Armbian — SABnzbd newsgroup downloader. Runs on ARM64 and x86 single-board computers."
 image: /images/SABN01.png
 category: "Downloaders"

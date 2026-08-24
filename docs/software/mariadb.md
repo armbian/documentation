@@ -1,5 +1,6 @@
 ---
 title: "Mariadb"
+seo_title: "Install Mariadb on Armbian"
 description: "Install and run Mariadb on Armbian — Mariadb SQL database server. Runs on ARM64 and x86 single-board computers."
 image: /images/DAT001.png
 category: "Database"

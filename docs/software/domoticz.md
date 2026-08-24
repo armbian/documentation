@@ -1,5 +1,6 @@
 ---
 title: "Domoticz"
+seo_title: "Install Domoticz on Armbian"
 description: "Install and run Domoticz on Armbian — Domoticz open source home automation. Runs on ARM64 and x86 single-board computers."
 image: /images/DOM001.png
 category: "HomeAutomation"

@@ -1,5 +1,6 @@
 ---
 title: "Syncthing"
+seo_title: "Install Syncthing on Armbian"
 description: "Install and run Syncthing on Armbian — Syncthing continuous file synchronization. Runs on ARM64 and x86 single-board computers."
 image: /images/STC001.png
 category: "Media"

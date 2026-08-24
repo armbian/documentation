@@ -1,5 +1,6 @@
 ---
 title: "Radarr"
+seo_title: "Install Radarr on Armbian"
 description: "Install and run Radarr on Armbian — Radarr automatic downloader for movies. Runs on ARM64 and x86 single-board computers."
 image: /images/RAD001.png
 category: "Downloaders"

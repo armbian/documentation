@@ -1,5 +1,6 @@
 ---
 title: "Redis"
+seo_title: "Install Redis on Armbian"
 description: "Install and run Redis on Armbian — Redis install. Runs on ARM64 and x86 single-board computers."
 image: /images/REDIS1.png
 category: "Database"

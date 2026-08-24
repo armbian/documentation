@@ -1,5 +1,6 @@
 ---
 title: "Git CLI"
+seo_title: "Install Git CLI on Armbian"
 description: "Install and run Git CLI on Armbian — Install tools for cloning and managing repositories (git). Runs on ARM64 and x86 single-board computers."
 image: /images/GIT001.png
 category: "DevTools"

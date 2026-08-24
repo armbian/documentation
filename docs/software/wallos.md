@@ -1,5 +1,6 @@
 ---
 title: "Wallos"
+seo_title: "Install Wallos on Armbian"
 description: "Install and run Wallos on Armbian — Install Wallos subscription tracker. Runs on ARM64 and x86 single-board computers."
 image: /images/WAL001.png
 category: "Finance"

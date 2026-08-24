@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian Datacenter access for board maintainers"
 description: "Access the Armbian Datacenter hardware lab: request board-maintainers GitHub team membership and connect over VPN to debug and test boards on real hardware."
 ---
 
