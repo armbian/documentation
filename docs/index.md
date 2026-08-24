@@ -92,24 +92,23 @@ In any case, you will get these key advantages:
 
 <!-- TODO: where to??? -->
 
-| Distributions | Armbian  | Downstream | Upstream |
-| -------- | -------- | -------- |-------- |
-| Primary focus     | making a value     | sales, profiting | making a value |
-| User-space     | clean & minimal | bloated with proprietary scripts | clean |
-| Experience across hardware | universal, predictable, reproducible | random, chaotic, manually assembled | porting, unofficial builds |
-| Contributing to FOSS | extreme | close to none | great |
-| System config | universal | proprietary | all / none |
-| Maintenance | modular with review and unit tests | endless spaghetti code | traditional and modern |
-| Build framework | advanced and user friendly | none | none |
-| Hardware maintainers | 50+, teams per SoC, per vendor | none | none |
-| Upstream contribution | 1000+ | none | little |
-| Downstream projects | 10+ | none | 100+ |
-| Switching to upstream | easy | impossible | / |
-| User-space changes | standard | proprietary | standard |
-| Initial memory usage | optimal | bad | bad |
-| Process usage | optimal | only hidden | too broad |
-| Pre-installed packages | optimized for fast install | makes install of anything slower | optimized for fast install |
-| Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
+Two categories are compared alongside Armbian:
+
+- **Downstream** &mdash; a board or SoC vendor's own OS release for its own hardware.
+- **Upstream** &mdash; the mainline Linux and U-Boot trees, and distributions that ship only mainline.
+
+Each Armbian claim links to the evidence for it. The other two columns state what
+those categories are by construction, and say *varies by vendor* wherever nothing
+general can be checked. They are not findings about any particular vendor or
+distribution.
+
+| | Armbian | Downstream | Upstream |
+| -------- | -------- | -------- | -------- |
+| Hardware maintainers | [named per board](https://armbian.com/authors) | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
+| Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
+| Maintenance | modular and reviewed; `armbian-config` is [unit tested per pull request](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
+| User-space | Debian or Ubuntu based, with Armbian packages and configuration | the vendor's own image | stock distribution user space |
+| Declaring support | Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the [Board Support Rules](User-Guide_Board-Support-Rules.md) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
 
 
 ## Which hardware is supported?
