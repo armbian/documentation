@@ -19,5 +19,5 @@ Commands are grouped by audience:
 
 | Page | Commands |
 |---|---|
-| [Basic commands](basic.md) | `build`, `flash`, `docker-shell`, `docker-purge` |
-| [Advanced commands](advanced.md) | kernel, U-Boot/patch, board-development and inspection tooling |
+| [Basic commands](basic.md) | Set up the host and build a full image, kernel or bootloader — including their interactive config |
+| [Advanced commands](advanced.md) | Container management, flashing, patch creation and rewriting, device-tree checks, and release and inspection tooling |
