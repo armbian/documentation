@@ -16,9 +16,9 @@ Usage:
 
 ### flash
 
-Writes an already-built image to a block device (SD card, USB, eMMC). There is
-no interactive picker: the target device is required, and the image is chosen
-for you.
+Writes an already-built image to a block device (SD card, USB, eMMC). Name the
+target device; the newest image in `output/images` is used unless you name one
+too.
 
 Usage:
 ```bash
@@ -34,8 +34,8 @@ set (`DOCKER_SKIP_CARD_DEVICE=yes` opts out).
     Everything on `CARD_DEVICE` is overwritten. Naming the wrong disk destroys
     it, and the command does not ask for confirmation beyond a short countdown.
 
-By default the newest `.img` in `output/images` is flashed. Pass `BOARD`,
-`RELEASE` or `BRANCH` to narrow that down, or `IMAGE` to name a file outright:
+Pass `BOARD`, `RELEASE` or `BRANCH` to narrow which image is picked, or `IMAGE`
+to name a file outright:
 
 ```bash
 ./compile.sh flash CARD_DEVICE=/dev/sdX BOARD=rockpi-4a BRANCH=current
