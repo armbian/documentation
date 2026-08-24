@@ -5952,6 +5952,30 @@ are compressed and moved to <strong>output/logs/archive</strong>.</p>
 <td>GitHub Release tag; defaults to the computed version</td>
 </tr>
 <tr>
+<td><code>armbian_release_prerelease</code></td>
+<td>no</td>
+<td><code>false</code></td>
+<td>Publish the release as a pre-release (useful for matrix builds; promote later)</td>
+</tr>
+<tr>
+<td><code>armbian_download_base_url</code></td>
+<td>no</td>
+<td><code>https://dl.armbian.com</code></td>
+<td>Base URL where published images live (used to build the assets manifest URLs)</td>
+</tr>
+<tr>
+<td><code>armbian_download_repository</code></td>
+<td>no</td>
+<td><code>archive</code></td>
+<td>Repository segment under <code>&lt;base&gt;/&lt;board&gt;/&lt;repo&gt;/</code>; empty string gives a flat URL shape</td>
+</tr>
+<tr>
+<td><code>armbian_index_url</code></td>
+<td>no</td>
+<td><code>https://github.armbian.com/armbian-images.json</code></td>
+<td>Canonical <code>armbian-images.json</code> used to enrich entries; empty string skips enrichment</td>
+</tr>
+<tr>
 <td><code>armbian_artifacts</code></td>
 <td>no</td>
 <td><code>build/output/images/</code></td>
