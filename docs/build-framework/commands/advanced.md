@@ -43,21 +43,7 @@ Usage:
     Everything on `CARD_DEVICE` is overwritten. Naming the wrong disk destroys
     it.
 
-Pass `BOARD`, `RELEASE` or `BRANCH` to narrow which image is picked, or `IMAGE`
-to name a file outright:
-
-```bash
-./compile.sh flash CARD_DEVICE=/dev/sdX BOARD=rockpi-4a BRANCH=current
-./compile.sh flash CARD_DEVICE=/dev/sdX IMAGE=output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
-```
-
-When the image is picked for you, the choice is reported before anything is
-written, so you can check it is the one you meant:
-
-```text
-[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-[🌱] cli_flash [ Flashing image file: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-```
+Pass `BOARD`, `RELEASE` or `BRANCH` to narrow which image is picked, or `IMAGE` to name a file outright.
 
 The image is read back and verified against its checksum after writing. Set
 `SKIP_VERIFY=yes` to skip that.

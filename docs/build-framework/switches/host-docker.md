@@ -75,8 +75,6 @@ skipping releases marked `eos` plus `sid` and `forky`; see the
 
 Enables automatic background updates of Docker build images via a system cronjob that runs every 12 hours. This prevents waiting for image pulls during builds and keeps images fresh. The feature also includes automatic cleanup of old images (keeps only the 2 most recent per tag).
 
-!!! example "Build switch example"
-
 ```sh
 # Enable auto-pull cronjob
 ./compile.sh docker ARMBIAN_DOCKER_AUTO_PULL=yes
@@ -100,8 +98,6 @@ Enables automatic background updates of Docker build images via a system cronjob
 - `no` (default): reuse the local image if it is present and was pulled within the last ~24 hours
 
 By default the build only pulls the base image when the local copy is missing or its pull marker is older than ~24 hours; otherwise it reuses the local image. Set `DOCKER_FORCE_PULL=yes` to pull the latest published image immediately — useful right after a new framework image is published, so builds pick it up without waiting for the cache to expire or removing the local image by hand.
-
-!!! example "Build switch example"
 
 ```sh
 # Force a fresh pull of the base image for this build

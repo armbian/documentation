@@ -79,8 +79,6 @@ Include directories created inside /home in final image.
 
 Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (BUILD_MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
 
-!!! example "Build switch example"
-
 ```sh
 ./compile.sh NETWORKING_STACK="network-manager"
 ```
@@ -126,8 +124,6 @@ Keep the distro's original `/etc/os-release` instead of overwriting it with Armb
 `comma-separated list`
 
 [Extensions](/build-framework/extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
-
-!!! example "Build switch example"
 
 ```sh
 ./compile.sh \
