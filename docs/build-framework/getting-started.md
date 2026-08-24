@@ -19,7 +19,7 @@ description: "Armbian build framework quick start: hardware requirements, Debian
 
 The build runs inside a Docker container by default (`./compile.sh` relaunches itself in one), so the host needs a working Docker install.
 
-On an **Armbian** host, install it from `armbian-config` → **Software** (see [Armbian Software](/software/)).
+On an **Armbian** host, install it with `armbian-config` → **Software → Containers → Docker** (see [Docker](/software/docker/)).
 
 On other Debian/Ubuntu hosts (including WSL2):
 
