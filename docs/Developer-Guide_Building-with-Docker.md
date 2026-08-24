@@ -60,8 +60,8 @@ First, start docker-shell on the host build system:
 ```
 @droid:~/armbian$ ./compile.sh docker-shell RELEASE=trixie BOARD=rockpi-4a BRANCH=edge
 ```
-From there, `RELEASE=trixie BOARD=rockpi-4a BRANCH=edge` are passed into shell and will be set into
-envirounment variables. 
+From there, `RELEASE=trixie BOARD=rockpi-4a BRANCH=edge` are passed to the shell and set as
+environment variables.
 
 Next, we can simply start building an image:
 ```
