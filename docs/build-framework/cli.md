@@ -107,6 +107,6 @@ We can build u-boot twice, using `UBOOT_TARGET_MAP`. Some example I did in https
 
 ---
 
-**Previous:** [Building with Docker](building-with-docker.md)
+**Previous:** [Getting started](getting-started.md)
 
 Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

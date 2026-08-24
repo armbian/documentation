@@ -15,6 +15,23 @@ description: "Armbian build framework quick start: hardware requirements, Debian
 - Make sure your system is up-to-date! Outdated Docker binaries, for example, can cause trouble
 
 
+## Install Docker
+
+The build runs inside a Docker container by default (`./compile.sh` relaunches itself in one), so the host needs a working Docker install.
+
+On an **Armbian** host, install it from `armbian-config` → **Software** (see [Armbian Software](/software/)).
+
+On other Debian/Ubuntu hosts (including WSL2):
+
+```bash
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo usermod -aG docker "$USER"   # log out and back in so the group applies
+```
+
+Or follow the [official Docker install guide](https://docs.docker.com/engine/install/).
+
+
 ## Clone repository
 
 ```bash
@@ -26,33 +43,13 @@ cd build
     - For stable branch use last point release `--branch=v24.11`
 
 
-    ``` mermaid
-    gitGraph
-       commit
-       commit
-       checkout main
-       commit id: "v24.08" tag: "v24.08"
-       branch v24.08
-       commit
-       commit
-       commit
-       commit
-       checkout main
-       commit id: "v24.11" tag: "v24.11"
-       branch v24.11
-       commit
-       commit
-       commit
-       commit
-       checkout main
-       commit
-       commit
-       commit
-       commit
-       commit
-       commit
-       commit id: "main" type: REVERSE tag: "Trunk"
-    ```
+## Install host requirements
+
+Install the build host prerequisites. You only need to run this once:
+
+```bash
+./compile.sh requirements
+```
 
 
 ## Interactive
@@ -201,6 +198,6 @@ If your repository contains a `userpatches/` directory, it will be merged into t
 
 **Previous:** [Overview](index.md)
 
-**Next:** [Building with Docker](building-with-docker.md)
+**Next:** [Command line interface](cli.md)
 
 Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

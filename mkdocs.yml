@@ -77,7 +77,7 @@ plugins:
         'Release_Changelog.md': 'releases/index.md'
         # Multipass is no longer referenced anywhere in armbian/build; Docker is
         # the supported containerised host.
-        'Developer-Guide_Building-with-Multipass.md': 'build-framework/building-with-docker.md'
+        'Developer-Guide_Building-with-Multipass.md': 'build-framework/getting-started.md'
         'Process_Release-Model.md': 'releases/release-model.md'
         # Armbian Software overview moved to /software/
         'User-Guide_Armbian-Software.md': 'software/index.md'
@@ -100,7 +100,7 @@ plugins:
         'Developer-Guide_Build-Commands.md': 'build-framework/commands.md'
         'Developer-Guide_Build-Preparation.md': 'build-framework/getting-started.md'
         'Developer-Guide_Build-Switches.md': 'build-framework/switches.md'
-        'Developer-Guide_Building-with-Docker.md': 'build-framework/building-with-docker.md'
+        'Developer-Guide_Building-with-Docker.md': 'build-framework/getting-started.md'
         'Developer-Guide_Desktops.md': 'build-framework/desktops.md'
         'Developer-Guide_Extension-ccache-remote.md': 'build-framework/extensions/ccache-remote.md'
         'Developer-Guide_Extension-kernel-rust.md': 'build-framework/extensions/kernel-rust.md'
@@ -289,7 +289,6 @@ nav:
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'build-framework/index.md'
         - 'Getting Started' : 'build-framework/getting-started.md'
-        - 'Building with Docker' : 'build-framework/building-with-docker.md'
         - 'Command Line Interface' : 'build-framework/cli.md'
         - 'Reference' :
             - 'Build Commands' : 'build-framework/commands.md'
