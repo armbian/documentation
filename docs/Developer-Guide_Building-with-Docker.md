@@ -1,3 +1,7 @@
+---
+description: "Build Armbian images, kernels and U-Boot packages with Docker, the officially supported containerized method, including requirements and privileged-mode setup."
+---
+
 # Building with Docker
 
 ## Officially supported and tested method for building with Docker

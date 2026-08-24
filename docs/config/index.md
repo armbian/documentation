@@ -1,3 +1,7 @@
+---
+description: "armbian-config is the interactive, scriptable setup tool preinstalled on every Armbian image: configure networking, kernels, storage, users and software on your SBC."
+---
+
 # Armbian Config
 
 **Armbian Config** (`armbian-config`) is a lightweight, **interactive and scriptable** configuration utility that automates the common tasks of setting up and maintaining an Armbian system. It ships **preinstalled** on every Armbian image and is especially handy on single-board computers (SBCs) — it gets you to a ready-to-use system without editing config files by hand.

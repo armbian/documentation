@@ -78,6 +78,9 @@ plugins:
         'Process_Release-Model.md': 'releases/release-model.md'
         # Armbian Software overview moved to /software/
         'User-Guide_Armbian-Software.md': 'software/index.md'
+        # Emptied legacy software category hubs -> software overview
+        'User-Guide_Armbian-Software/Desktops.md': 'software/index.md'
+        'User-Guide_Armbian-Software/Music.md': 'software/index.md'
         # Getting Started moved to short /getting-started/ URLs
         'User-Guide_Getting-Started.md': 'getting-started/index.md'
         # armbian-config pages live at /config/; keep every earlier URL working

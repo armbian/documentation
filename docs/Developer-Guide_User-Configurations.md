@@ -1,3 +1,7 @@
+---
+description: "Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script."
+---
+
 # User Configuration
 
 ## User provided patches

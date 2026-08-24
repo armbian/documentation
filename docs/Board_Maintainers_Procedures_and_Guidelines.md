@@ -1,3 +1,7 @@
+---
+description: "Armbian board maintainer procedures and guidelines: requirements, responsibilities and expectations for maintaining single-board computer support in Armbian."
+---
+
 <h2>Board Maintainers Procedures and Guidelines</h2>
 <p>
 	This topic should give you as new board maintainers a brief overview about what you should do, must do, and can do. What you as maintainer can expect from Armbian and what we expect from you.

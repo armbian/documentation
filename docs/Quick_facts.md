@@ -1,3 +1,7 @@
+---
+description: "Quick facts about Armbian Linux: optimized Debian and Ubuntu images for 100+ ARM single-board computers, the project's mission, challenges and key benefits."
+---
+
 # Quick Facts
 
 ## What is Armbian Linux?

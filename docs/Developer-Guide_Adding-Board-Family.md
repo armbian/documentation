@@ -1,3 +1,7 @@
+---
+description: "Add a new board or board family to the Armbian build framework, with example pull requests showing the config and patch changes needed for ARM SBCs."
+---
+
 # Adding a new board or board family
 
 There are no detailed instructions on how to add a new board or even a whole new board family to the build script yet. However there are a few commits / pull requests that give clues how to achieve that like

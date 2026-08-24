@@ -1,3 +1,7 @@
+---
+description: "Armbian development code review procedures and guidelines: who can review, approve and merge pull requests, and the requirements expected of contributors."
+---
+
 <div id="doc" class="markdown-body container-fluid"><h2 id="Development-Code-Review-Procedures-and-Guidelines">Development Code Review Procedures and Guidelines</h2><p>
     This topic should give you as a developer a brief overview about what you <em>should</em> do, <em>must</em> do, aswell as <em>can</em> and <em>can not</em> do. What you as devepoler can expect from Armbian and what we expect from you.
 </p><p>

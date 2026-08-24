@@ -1,3 +1,7 @@
+---
+description: "Main Armbian GitHub repositories: the build framework, the armbian-config configuration utility and the Armbian OS assembly line for rolling and point releases."
+---
+
 # Main project repositories
 
 ## Armbian Build

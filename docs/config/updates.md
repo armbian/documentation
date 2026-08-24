@@ -1,4 +1,5 @@
 ---
+description: "Apply OS updates and run Debian and Ubuntu distribution upgrades on Armbian single-board computers with the armbian-config utility."
 comments: true
 ---
 

@@ -1,3 +1,7 @@
+---
+description: "Armbian advanced configuration for single-board computers: change keyboard layout, system language and locales via armbian-config or Debian and Ubuntu tools."
+---
+
 # Advanced features and tasks
 
 While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](software/index.md).

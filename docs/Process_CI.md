@@ -1,3 +1,7 @@
+---
+description: "Armbian release automation and CI: how image build lists, recommended targets and download-page publishing are generated from the armbian/ci pipeline."
+---
+
 # Automation for developers and maintainers
 
 Core automation for generating images for release is held at <https://github.com/armbian/ci> (the reusable build pipeline and its track wrappers). Repository, download-page and mirror automation lives at [`armbian/armbian.github.io`](https://github.com/armbian/armbian.github.io).

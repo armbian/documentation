@@ -1,3 +1,7 @@
+---
+description: "Armbian build framework switches for compile.sh: BOARD, BRANCH, RELEASE and other optional parameters to customize kernel, U-Boot and image builds."
+---
+
 # Build Switches
 
 These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional. They can also be added to your [build configuration file](Developer-Guide_Build-Preparation.md#providing-build-configuration) to save time. Default values are marked **bold** if applicable.

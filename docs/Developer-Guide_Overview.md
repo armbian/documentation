@@ -1,3 +1,7 @@
+---
+description: "Overview of the Armbian build framework: build custom kernels, bootloaders and Debian or Ubuntu images for low-resource ARM single-board computers."
+---
+
 ## What it does?
 
 - Builds custom **kernel**, **image** or a Debian based Linux **distribution** optimized for low-resource hardware,

@@ -1,3 +1,7 @@
+---
+description: "Build Armbian images in a Multipass Ubuntu VM: provision the instance, clone the build repository and run compile.sh on macOS, Windows or Linux."
+---
+
 # Building with Multipass
 
 In order to build an Armbian image from scratch, whether for development purposes or to [apply user customizations](https://docs.armbian.com/Developer-Guide_User-Configurations/) on top of a base image, a build environment is required. Per the Armbian documentation, Armbian/Debian 13 (Trixie) is [the officially supported](https://docs.armbian.com/Developer-Guide_Build-Preparation/) build platform. Multipass images are Ubuntu, so this route is a convenience rather than the supported one - for the officially supported host, build natively on Armbian/Debian 13 (Trixie) or use [Docker](https://docs.armbian.com/Developer-Guide_Building-with-Docker/).
