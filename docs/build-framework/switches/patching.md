@@ -54,11 +54,3 @@ Runs `debsums` over the freshly built rootfs to verify that every installed pack
 `string` · default: `yes`
 
 Records which extensions were called at each hook point during the build and writes that metadata out, so tooling such as `show-extensions` can report exactly what ran and where. Left on by default because the cost is negligible and the data is useful for debugging extension behaviour. Set `no` to skip it — a few info-only helper commands (for example the deb-download tooling) do this automatically, since they run the config machinery but never actually build and have no use for the metadata.
-
-#### CREATE_PATCHES
-
-`yes` | `no` (default)
-
-:warning: **Deprecated** — use the `kernel-patch` / `uboot-patch` / `atf-patch` CLI commands instead.
-
-Prompts right before compilation to make changes to the U-Boot and kernel source; the resulting diffs are written as patch files in the `output` directory. To include them in a normal run, copy them to the appropriate directories.

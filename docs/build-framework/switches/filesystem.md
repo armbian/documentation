@@ -81,7 +81,7 @@ CRYPTROOT_PASSPHRASE="MYSECRECTPASS"             # Mandatory
 CRYPTROOT_AUTOUNLOCK="yes"                       # Default: no. If set to yes you can omit CRYPTROOT_PASSPHRASE to do unattended unlocking
 CRYPTROOT_SSH_UNLOCK="yes"                       # Default: yes
 CRYPTROOT_SSH_UNLOCK_PORT="2222"                 # Default: 2022
-CRYPTROOT_MAPPER=armbian-root`                   # Default: armbian-root
+CRYPTROOT_MAPPER=armbian-root                   # Default: armbian-root
 CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
 ```
 

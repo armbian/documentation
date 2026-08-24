@@ -7,8 +7,6 @@ description: "Configure the Armbian build host and Docker container: base image,
 
 Control the build host, the Docker build container, network proxies and mirrors, and the apt package cache.
 
-## Build host & Docker
-
 #### EXPERT
 
 `string`

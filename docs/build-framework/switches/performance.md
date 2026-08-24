@@ -96,12 +96,3 @@ Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and 
 - `no` (default)
 
 Forces artifacts (kernel, U-Boot, rootfs and so on) to be rebuilt from source, bypassing both the local cache and the remote OCI registry that the framework would otherwise pull a ready-made artifact from. Off by default, since reusing cached artifacts is what keeps everyday builds fast. Set `yes` when you suspect a cached artifact is stale or corrupt, or when you have changed something the cache key does not capture and need to be certain the output is freshly compiled.
-
-#### ROOT_FS_CREATE_ONLY
-
-`string`
-
-- `yes`
-- `no` (default)
-
-Historically this stopped the build after creating the root filesystem cache, without going on to assemble a full image. It is now deprecated: setting `yes` aborts the build with an error pointing you to the dedicated `rootfs` CLI command, which is the supported way to build just the rootfs artifact. Leave it at `no` (the default) and use `./compile.sh rootfs` instead when you only want the cached root filesystem.
