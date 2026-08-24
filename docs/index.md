@@ -6,8 +6,6 @@ image: /images/armbian-logo.png
 
 # Armbian OS
 
-![Armbian logo](images/logo-small.png){ width=25% }
-
 ## Preface
 
 Welcome to the official documentation of Armbian Linux, a highly optimized base operating system specialized for single board computers (*SBCs*) and its extensive build framework.
