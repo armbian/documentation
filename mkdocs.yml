@@ -77,7 +77,7 @@ plugins:
         'Release_Changelog.md': 'releases/index.md'
         # Multipass is no longer referenced anywhere in armbian/build; Docker is
         # the supported containerised host.
-        'Developer-Guide_Building-with-Multipass.md': 'Developer-Guide_Building-with-Docker.md'
+        'Developer-Guide_Building-with-Multipass.md': 'build-framework/building-with-docker.md'
         'Process_Release-Model.md': 'releases/release-model.md'
         # Armbian Software overview moved to /software/
         'User-Guide_Armbian-Software.md': 'software/index.md'
@@ -94,6 +94,22 @@ plugins:
         # Recovery was folded into Troubleshooting in March 2025; the nav
         # section is still titled 'Troubleshooting and Recovery'.
         'User-Guide_Recovery.md': 'User-Guide_Troubleshooting.md'
+        # The build framework section moved to /build-framework/; keep every
+        # Developer-Guide_* URL working.
+        'Developer-Guide_Adding-Board-Family.md': 'build-framework/adding-a-board.md'
+        'Developer-Guide_Build-Commands.md': 'build-framework/commands.md'
+        'Developer-Guide_Build-Preparation.md': 'build-framework/getting-started.md'
+        'Developer-Guide_Build-Switches.md': 'build-framework/switches.md'
+        'Developer-Guide_Building-with-Docker.md': 'build-framework/building-with-docker.md'
+        'Developer-Guide_Desktops.md': 'build-framework/desktops.md'
+        'Developer-Guide_Extension-ccache-remote.md': 'build-framework/extensions/ccache-remote.md'
+        'Developer-Guide_Extension-kernel-rust.md': 'build-framework/extensions/kernel-rust.md'
+        'Developer-Guide_Extensions-Hooks.md': 'build-framework/extensions/hooks.md'
+        'Developer-Guide_Extensions-List.md': 'build-framework/extensions/list.md'
+        'Developer-Guide_Extensions.md': 'build-framework/extensions/index.md'
+        'Developer-Guide_Overview.md': 'build-framework/index.md'
+        'Developer-Guide_User-Configurations.md': 'build-framework/user-configurations.md'
+        'Developer-Guide_Welcome.md': 'build-framework/cli.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
@@ -271,18 +287,22 @@ nav:
         # END software-nav
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
   - 'ARMBIAN BUILD FRAMEWORK' :
-        - 'Overview' : 'Developer-Guide_Overview.md'
-        - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
-        - 'Build Commands' : 'Developer-Guide_Build-Commands.md'
-        - 'Build Switches' : 'Developer-Guide_Build-Switches.md'
-        - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
-        - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
-        - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
-        - 'Extensions Framework' : 'Developer-Guide_Extensions.md'
-        - 'Extensions List' : 'Developer-Guide_Extensions-List.md'
-        - 'Extension: kernel-rust' : 'Developer-Guide_Extension-kernel-rust.md'
-        - 'Extension: ccache-remote' : 'Developer-Guide_Extension-ccache-remote.md'
-        - 'Desktops' : 'Developer-Guide_Desktops.md'
+        - 'Overview' : 'build-framework/index.md'
+        - 'Getting Started' : 'build-framework/getting-started.md'
+        - 'Building with Docker' : 'build-framework/building-with-docker.md'
+        - 'Command Line Interface' : 'build-framework/cli.md'
+        - 'Reference' :
+            - 'Build Commands' : 'build-framework/commands.md'
+            - 'Build Switches' : 'build-framework/switches.md'
+            - 'User Configurations' : 'build-framework/user-configurations.md'
+            - 'Adding a Board' : 'build-framework/adding-a-board.md'
+        - 'Extensions' :
+            - 'Overview' : 'build-framework/extensions/index.md'
+            - 'Hooks' : 'build-framework/extensions/hooks.md'
+            - 'Reference' : 'build-framework/extensions/list.md'
+            - 'kernel-rust' : 'build-framework/extensions/kernel-rust.md'
+            - 'ccache-remote' : 'build-framework/extensions/ccache-remote.md'
+        - 'Desktops' : 'build-framework/desktops.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'

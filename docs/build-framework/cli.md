@@ -105,4 +105,8 @@ This is (by far) not a complete list:
 
 We can build u-boot twice, using `UBOOT_TARGET_MAP`. Some example I did in https://github.com/armbian/build/blob/main/config/boards/odroidhc4.conf#L15-L20 may help.
 
+---
 
+**Previous:** [Building with Docker](building-with-docker.md)
+
+Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

@@ -97,7 +97,7 @@ the argument from the command line): one or the other, but not both.
 Switches set on the commandline override settings from the config files,
 regardless of the order they appear on the comandline.
 
-Comprehensive list of build [Commands](Developer-Guide_Build-Commands.md) and [Switches](Developer-Guide_Build-Switches.md)
+Comprehensive list of build [Commands](/build-framework/commands/) and [Switches](/build-framework/switches/)
 
 Example:
 
@@ -196,3 +196,11 @@ The action will build the image, create a GitHub Release in your repository and 
 ### Customisation
 
 If your repository contains a `userpatches/` directory, it will be merged into the build framework automatically. This allows you to add custom kernel configs, patches, or overlay files without forking the main build repository.
+
+---
+
+**Previous:** [Overview](index.md)
+
+**Next:** [Building with Docker](building-with-docker.md)
+
+Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

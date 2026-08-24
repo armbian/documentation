@@ -5,7 +5,7 @@ description: "Armbian build framework switches for compile.sh: BOARD, BRANCH, RE
 
 # Build Switches
 
-These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional. They can also be added to your [build configuration file](Developer-Guide_Build-Preparation.md#providing-build-configuration) to save time. Default values are marked **bold** if applicable.
+These parameters are meant to be applied to the `./compile.sh` command. They are **all** optional. They can also be added to your [build configuration file](/build-framework/getting-started/#providing-build-configuration) to save time. Default values are marked **bold** if applicable.
 
 ### User space
 
@@ -321,7 +321,7 @@ Include directories created inside /home in final image.
 
 **ENABLE_EXTENSIONS** ( `comma-separated list` )
 
-[Extensions](/Developer-Guide_Extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
+[Extensions](/build-framework/extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
 
 !!! example "Build switch example"
 
@@ -404,7 +404,7 @@ Allows speeding up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `n
 
 On arm64 build hosts whose kernel supports `CONFIG_COMPAT`, run armhf binaries (rootfs/chroot, package post-install) natively at full speed instead of through `qemu-user-static`. Native execution is roughly 10× faster than qemu emulation. On hosts without 32-bit ARM userspace support (notably Apple Silicon) the framework transparently falls back to qemu. Set `no` to force qemu even when native COMPAT is available.
 
-To build an arm64 Armbian kernel that exposes this capability for the host that runs it, enable the [arm64-compat-vdso extension](Developer-Guide_Extensions-List.md#arm64-compat-vdso) via `ENABLE_EXTENSIONS`. The relevant kernel options are documented in the [arm64 Kconfig](https://elixir.bootlin.com/linux/latest/source/arch/arm64/Kconfig):
+To build an arm64 Armbian kernel that exposes this capability for the host that runs it, enable the [arm64-compat-vdso extension](/build-framework/extensions/list/#arm64-compat-vdso) via `ENABLE_EXTENSIONS`. The relevant kernel options are documented in the [arm64 Kconfig](https://elixir.bootlin.com/linux/latest/source/arch/arm64/Kconfig):
 
 - `CONFIG_COMPAT=y` — required; enables 32-bit EL0 support, without which armhf binaries cannot run at all.
 - `CONFIG_COMPAT_VDSO=y` — optional but recommended; provides fast `gettimeofday`/`clock_gettime` for 32-bit processes via vDSO.
@@ -484,7 +484,7 @@ descriptions as a starting point rather than a guarantee.
   - yes: build an image with a minimal desktop environment
   - no: build image with console interface only
 - **CREATE_PATCHES** ( yes | **no** ) :warning: **Warning:** This option is deprecated and may be removed in future releases - use the new `kernel-patch` / `uboot-patch` / `atf-patch` CLI commands instead.
-  - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes, patch files will be created and placed in the `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say), these files must be copied to the appropriate directories. Also, see [user-provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches).
+  - yes: prompt right before the compilation starts to make changes to the source code for both U-Boot and kernel. From these changes, patch files will be created and placed in the `output` directory. If you want these patches included in a normal run (without CREATE_PATCHES to say), these files must be copied to the appropriate directories. Also, see [user-provided patches](https://docs.armbian.com/build-framework/user-configurations/#user-provided-patches).
 - **EXT=rkdevflash** to flash Rockchip images to eMMC either during image build or separately with flash CLI command ([only works bare Linux, not Docker](https://github.com/armbian/build/pull/5058))
 
 ## Hidden options to minimize user input for build automation

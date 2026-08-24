@@ -83,3 +83,11 @@ To compile only the source code as it is without patching or modifications, run:
 ```
 Note that you must enter docker-shell after a docker build, as you must
 download all of the required toolchains and sourcecodes beforehand.
+
+---
+
+**Previous:** [Getting started](getting-started.md)
+
+**Next:** [Command line interface](cli.md)
+
+Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

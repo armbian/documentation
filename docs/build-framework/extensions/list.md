@@ -39,7 +39,7 @@ Enables Armbian Package Archive (APA) in the target image by default.
 
 ## arm64-compat-vdso
 
-Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](Developer-Guide_Build-Switches.md#prefer_native_armhf).
+Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](/build-framework/switches/#prefer_native_armhf).
 
 Requires a 32-bit ARM cross-compiler for GCC builds (`gcc-arm-linux-gnueabi` or custom `CROSS_COMPILE_COMPAT`). For clang builds uses the built-in LLVM backend.
 
@@ -93,7 +93,7 @@ Adds a C++ compiler to host build dependencies. The C++ compiler is no longer in
 
 Enables ccache with a remote storage backend (Redis or HTTP/WebDAV) for sharing the compilation cache across multiple build hosts. Requires ccache 4.4+.
 
-See: [ccache-remote extension](Developer-Guide_Extension-ccache-remote.md)
+See: [ccache-remote extension](/build-framework/extensions/ccache-remote/)
 
 ---
 
@@ -261,7 +261,7 @@ Automatically converts the Armbian `.img` into a JetHub burn image after the mai
 
 Enables Rust language support in the Linux kernel (`CONFIG_RUST`). Installs a rustup-managed toolchain into `${SRC}/cache/tools/rustup/` and configures all required make parameters.
 
-See: [kernel-rust extension](Developer-Guide_Extension-kernel-rust.md)
+See: [kernel-rust extension](/build-framework/extensions/kernel-rust/)
 
 ---
 

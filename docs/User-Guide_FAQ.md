@@ -83,7 +83,7 @@ Note: **Results may vary by board**, due to **power limits, USB/PCI quirks**, an
 
 Creating and maintaining images for **all combinations** of kernel, userspace, and desktop across all boards is **technically and financially unfeasible**. We provide **[a carefully chosen set of default images](https://github.com/armbian/os/blob/main/userpatches/targets-release-standard-support.yaml)** per board.
 
-However, using the [**Armbian build framework**](https://docs.armbian.com/Developer-Guide_Build-Preparation/), you can **easily create custom images**. It’s well-documented and accessible to moderately experienced users.
+However, using the [**Armbian build framework**](https://docs.armbian.com/build-framework/getting-started/), you can **easily create custom images**. It’s well-documented and accessible to moderately experienced users.
 
 If enough users show interest in a specific configuration, we may **adjust build targets** accordingly.
 

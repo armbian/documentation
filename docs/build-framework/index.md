@@ -122,3 +122,9 @@ Function | Armbian | Yocto | Buildroot |
     ├── misc                             User: various
     └── u-boot                           User: universal boot loader patches
 ```
+
+---
+
+**Next:** [Getting started](getting-started.md)
+
+Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).
