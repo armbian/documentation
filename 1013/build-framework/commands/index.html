@@ -5782,7 +5782,7 @@ set (<code>DOCKER_SKIP_CARD_DEVICE=yes</code> opts out).</p>
 <div class="admonition danger">
 <p class="admonition-title">Check the device name first</p>
 <p>Everything on <code>CARD_DEVICE</code> is overwritten. Naming the wrong disk destroys
-it, and the command does not ask for confirmation beyond a short countdown.</p>
+it.</p>
 </div>
 <p>Pass <code>BOARD</code>, <code>RELEASE</code> or <code>BRANCH</code> to narrow which image is picked, or <code>IMAGE</code>
 to name a file outright:</p>
@@ -5790,18 +5790,12 @@ to name a file outright:</p>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">IMAGE</span><span class="o">=</span>output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
 </span></code></pre></div></td></tr></table></div>
-<p>When the image is picked for you, the choice is announced before the countdown,
-so you can check it is the one you meant before anything is written:</p>
+<p>When the image is picked for you, the choice is reported before anything is
+written, so you can check it is the one you meant:</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>[🌱] cli_flash [ Flashing image file: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>Counting down: 2... 1... 0...
 </span></code></pre></div></td></tr></table></div>
-<p>If that is not the image you wanted, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> during the countdown and
-rerun with <code>BOARD</code>, <code>RELEASE</code>, <code>BRANCH</code> or <code>IMAGE</code> to pin it down. Pressing any
-other key makes the countdown finish <em>sooner</em>, it does not cancel it, and a run
-with no terminal attached (CI, or piped input) skips the countdown altogether.</p>
 <p>The image is read back and verified against its checksum after writing. Set
 <code>SKIP_VERIFY=yes</code> to skip that.</p>
 <h3 id="docker-docker-shell-docker-purge">docker / docker-shell / docker-purge<a class="headerlink" href="#docker-docker-shell-docker-purge" title="Permanent link">&para;</a></h3>
