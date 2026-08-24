@@ -113,15 +113,15 @@ distribution.
 
 Armbian distributes stable images for many different single board computers (SBCs). But not each model receives the same amount of support and maintenance. This might be due to lack of man-power, lack of support by the manufacturer, etc. We have therefore a system that shows the support status for each board:
 
-[Platinum Support](https://www.armbian.com/download/?device_support=Platinum%20support){ .md-button .md-button--primary }
+[Platinum Support](https://armbian.com/boards?support=platinum){ .md-button .md-button--primary }
 
 At least one person is providing constant maintenance and support.
 
-[Standard Support](https://www.armbian.com/download/?device_support=Standard%20support){ .md-button }
+[Standard Support](https://armbian.com/boards?support=standard){ .md-button }
 
 Support is not secured, but it is still overall good.
 
-[Community maintained](https://www.armbian.com/download/?device_support=Community%20maintained){ .md-button }
+[Community maintained](https://armbian.com/boards?support=community){ .md-button }
 
 Most of the images for boards in this category will also work, but no warranty can be given as Armbian does not monitor their status.
 
