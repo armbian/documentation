@@ -24,9 +24,7 @@ On an **Armbian** host, install it with `armbian-config` → **Software → Cont
 On other Debian/Ubuntu hosts (including WSL2):
 
 ```bash
-sudo apt-get update
-sudo apt-get install -y docker.io
-sudo usermod -aG docker "$USER"   # log out and back in so the group applies
+sudo apt install -y docker.io docker-buildx
 ```
 
 Or follow the [official Docker install guide](https://docs.docker.com/engine/install/).
