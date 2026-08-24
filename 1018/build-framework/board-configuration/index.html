@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, filesystems and more.">
+        <meta name="description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARD_VENDOR, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, partitions, console and more.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian board configuration variables">
-  <meta property="og:description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, filesystems and more.">
+  <meta property="og:description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARD_VENDOR, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, partitions, console and more.">
   <meta name="twitter:title" content="Armbian board configuration variables">
-  <meta name="twitter:description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, filesystems and more.">
+  <meta name="twitter:description" content="Reference of every variable in an Armbian board .conf file: BOARD_NAME, BOARD_VENDOR, BOARDFAMILY, BOOTCONFIG, KERNEL_TARGET, kernel modules, partitions, console and more.">
   
     <meta name="twitter:card" content="summary">
   
@@ -5096,13 +5096,456 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-options" class="md-nav__link">
+  <a href="#identity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build options
+        Identity
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_NAME
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_VENDOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boardfamily" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARDFAMILY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_maintainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_MAINTAINER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTRODUCED
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloader-u-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootloader &amp; U-Boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bootloader &amp; U-Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTCONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crustconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUSTCONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot_logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOT_LOGO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot_fdt_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOT_FDT_FILE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overlay_prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OVERLAY_PREFIX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_OVERLAYS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force_bootscript_update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_BOOTSCRIPT_UPDATE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kernel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernel_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KERNEL_TARGET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel_test_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KERNEL_TEST_TARGET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_current-modules_legacy-modules_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_CURRENT / MODULES_LEGACY / MODULES_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_blacklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_BLACKLIST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_blacklist_current-modules_blacklist_legacy-modules_blacklist_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_BLACKLIST_CURRENT / MODULES_BLACKLIST_LEGACY / MODULES_BLACKLIST_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitions-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions &amp; filesystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partitions &amp; filesystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image_partition_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IMAGE_PARTITION_TABLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootfs_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTFS_TYPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTSIZE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console &amp; hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Console &amp; hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialcon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SERIALCON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_CONSOLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_video_output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HAS_VIDEO_OUTPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power_management_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POWER_MANAGEMENT_FEATURES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMAX
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skip_armbian_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKIP_ARMBIAN_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board_remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD_REMOVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full_desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FULL_DESKTOP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_autologin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESKTOP_AUTOLOGIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5114,6 +5557,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Deprecated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootconfig_legacy-bootconfig_current-bootconfig_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTCONFIG_LEGACY / BOOTCONFIG_CURRENT / BOOTCONFIG_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board_desktop-package_list_board_desktop_remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD_DESKTOP / PACKAGE_LIST_BOARD_DESKTOP_REMOVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5819,13 +6290,456 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-options" class="md-nav__link">
+  <a href="#identity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build options
+        Identity
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_NAME
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_VENDOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boardfamily" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARDFAMILY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_maintainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOARD_MAINTAINER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTRODUCED
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloader-u-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootloader &amp; U-Boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bootloader &amp; U-Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTCONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crustconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUSTCONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot_logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOT_LOGO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot_fdt_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOT_FDT_FILE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overlay_prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OVERLAY_PREFIX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_OVERLAYS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force_bootscript_update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_BOOTSCRIPT_UPDATE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kernel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernel_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KERNEL_TARGET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel_test_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KERNEL_TEST_TARGET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_current-modules_legacy-modules_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_CURRENT / MODULES_LEGACY / MODULES_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_blacklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_BLACKLIST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules_blacklist_current-modules_blacklist_legacy-modules_blacklist_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODULES_BLACKLIST_CURRENT / MODULES_BLACKLIST_LEGACY / MODULES_BLACKLIST_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitions-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions &amp; filesystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partitions &amp; filesystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image_partition_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IMAGE_PARTITION_TABLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootfs_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTFS_TYPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTSIZE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console &amp; hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Console &amp; hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialcon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SERIALCON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_CONSOLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_video_output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HAS_VIDEO_OUTPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power_management_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POWER_MANAGEMENT_FEATURES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMAX
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skip_armbian_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKIP_ARMBIAN_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board_remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD_REMOVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full_desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FULL_DESKTOP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_autologin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESKTOP_AUTOLOGIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5837,6 +6751,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Deprecated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootconfig_legacy-bootconfig_current-bootconfig_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOOTCONFIG_LEGACY / BOOTCONFIG_CURRENT / BOOTCONFIG_EDGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package_list_board_desktop-package_list_board_desktop_remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PACKAGE_LIST_BOARD_DESKTOP / PACKAGE_LIST_BOARD_DESKTOP_REMOVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5888,102 +6830,265 @@
 <h1 id="board-configuration">Board configuration<a class="headerlink" href="#board-configuration" title="Permanent link">&para;</a></h1>
 <p>Every board Armbian supports is described by a configuration file in
 <a href="https://github.com/armbian/build/tree/main/config/boards"><code>config/boards/&lt;board&gt;.conf</code></a>
-(or <code>.csc</code> / <code>.wip</code> / <code>.eos</code> depending on <a href="#support-status">support status</a>). These
-variables declare the board name, family, bootloader, kernel targets and other
-build-time settings the framework applies when building that board. This page is
-the reference for all of them; to add a whole new board, start with
+(or <code>.csc</code> / <code>.tvb</code> / <code>.wip</code> / <code>.eos</code> depending on <a href="#support-status">support status</a>).
+Its variables declare the board&rsquo;s name, family, bootloader, kernel targets and the
+other build-time settings the framework applies when building that board. This page
+is the reference for all of them; to add a whole new board from scratch, start with
 <a href="/build-framework/adding-a-board/">Adding a Board</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If a variable is unclear, grep the source for context:
-<code>grep -r -A5 -B5 "BUILD_OPTION_HERE" /path/to/armbian/build</code></p>
+<code>grep -r -A5 -B5 "VARIABLE_HERE" /path/to/armbian/build</code></p>
 </div>
-<h2 id="build-options">Build options<a class="headerlink" href="#build-options" title="Permanent link">&para;</a></h2>
+<h2 id="identity">Identity<a class="headerlink" href="#identity" title="Permanent link">&para;</a></h2>
+<h4 id="board_name">BOARD_NAME<a class="headerlink" href="#board_name" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · required</p>
+<p>Human-readable board name used in the welcome text, hostname and other places. The
+convention is <code>COMPANY PRODUCT VERSION</code>. It is frequently referenced by scripting
+logic (and hacks), so keep it consistent with the name declared in the board
+configuration.</p>
 <ul>
-<li><strong>BOARD_NAME</strong> ( <code>company product version</code> ): board name used in the welcome text, hostname and other places. The convention is <code>COMPANY PRODUCT VERSION</code>; it is often used in scripting logic, so follow the name declared in the board configuration.
-    - Example: <code>OLIMEX Teres A64</code></li>
-<li><strong>BOARDFAMILY</strong> ( <code>board-family</code> ): family of the board, used to apply family-specific configuration at build time (temperature, LED behaviour, etc.).
-    - Refer to the <a href="https://github.com/armbian/build/blob/main/config/sources/README.md">sources table</a>.
-    - Example: <code>sun50iw1</code></li>
-<li><strong>BOARD_MAINTAINER</strong> ( space-separated list of GitHub logins ): the board&rsquo;s maintainer(s).</li>
-<li><strong>INTRODUCED</strong> ( <code>year</code> ): when the board first came to market.
-    - Example: <code>2022</code></li>
-<li><strong>BOOTCONFIG</strong> ( u-boot identifier ): name of the u-boot configuration for the build, without the <code>_defconfig</code> suffix.
-    - Refer to the <a href="https://github.com/u-boot/u-boot/tree/master/configs">u-boot source tree</a> to find the configuration for the board.
-    - Example: <code>teres-i</code></li>
-<li><strong>BOOTSIZE</strong> ( int ): size of the boot partition in MiB.
-    - Default: <code>256</code></li>
-<li><strong>BOOT_LOGO</strong> ( <code>string</code> ): whether to show an eyecandy splash during the bootloader phase.
-    - <code>yes</code>: show the Armbian boot logo
-    - <code>desktop</code>: show the Armbian boot logo when <code>BUILD_DESKTOP=yes</code>
-    - Default: not set</li>
-<li><strong>CRUSTCONFIG</strong> ( crust identifier ): name of the crust defconfig for the build. Specify only if the board has an Allwinner CPU with an AR100 coprocessor and the SoC is supported by <a href="https://github.com/crust-firmware/crust">crust firmware</a>.
-    - Refer to the <a href="https://github.com/crust-firmware/crust/tree/master/configs">crust source tree</a>.
-    - Example: <code>nanopi_m1_defconfig</code></li>
-<li><strong>IMAGE_PARTITION_TABLE</strong> ( <code>string</code> ): disklabel type.
-    - <code>msdos</code>: use a dos/msdos disklabel
-    - <code>gpt</code>: use a GPT disklabel
-    - Default: <code>msdos</code></li>
-<li><strong>BOOTFS_TYPE</strong> ( filesystem ): filesystem for the boot partition.
-    - <code>none</code>: keep <code>/boot</code> on the root filesystem
-    - <code>ext4</code>: <a href="https://en.wikipedia.org/wiki/Ext4">Fourth Extended Filesystem</a>
-    - <code>ext2</code>: <a href="https://en.wikipedia.org/wiki/Ext2">Second Extended Filesystem</a>
-    - <code>fat</code>: <a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT32</a>
-    - Default: <code>ext4</code></li>
-<li><strong>DEFAULT_OVERLAYS</strong> ( space-separated list of dtb overlays ): device-tree overlays enabled by default. Each family has a basic dtb, but boards use different SoC features (e.g. one board exposes four USB ports, another does not), so overlays are enabled per board.
-    - Examples: <code>usbhost0</code>, <code>usbhost2</code>, <code>usbhost3</code>, <code>cir</code>, <code>analog-codec</code>, <code>gpio-regulator-1.3v</code>, <code>uart1</code></li>
-<li><strong>DEFAULT_CONSOLE</strong> ( <code>string</code> ): default console for boot output.
-    - <code>serial</code>: output boot messages to the serial console
-    - Default: not set</li>
-<li><strong>MODULES</strong> ( space-separated list of kernel modules ): modules appended to the kernel command line for <strong>all</strong> kernel branches.</li>
-<li><strong>MODULES_LEGACY</strong> / <strong>MODULES_CURRENT</strong> / <strong>MODULES_EDGE</strong>: as above, for the <strong>legacy</strong> / <strong>current</strong> / <strong>edge</strong> kernel respectively.</li>
-<li><strong>MODULES_BLACKLIST</strong> ( space-separated list of kernel modules ): modules added to the kernel&rsquo;s blacklist/deny list for <strong>all</strong> kernel branches.</li>
-<li><strong>MODULES_BLACKLIST_LEGACY</strong> / <strong>MODULES_BLACKLIST_CURRENT</strong> / <strong>MODULES_BLACKLIST_EDGE</strong>: as above, for the <strong>legacy</strong> / <strong>current</strong> / <strong>edge</strong> kernel respectively.</li>
-<li><strong>SERIALCON</strong> ( comma-separated list of terminal interfaces <code>[:bandwidth]</code> ): which serial console(s) the system should use.
-    - Example: <code>ttyS0:15000000,ttyGS1</code></li>
-<li><strong>SKIP_ARMBIAN_REPO</strong> ( boolean ): whether to exclude the Armbian repository from the built image.
-    - <code>yes</code>: exclude the Armbian repo (<code>armbian.sources</code> stays <code>.disabled</code>)
-    - <code>no</code>: include the Armbian repo (default)</li>
-<li><strong>POWER_MANAGEMENT_FEATURES</strong> ( boolean ): whether system sleep (suspend, hibernate, hybrid sleep) is allowed on the built image.
-    - <code>yes</code>: enable systemd sleep modes
-    - <code>no</code> (default): disable all sleep modes — suspend/hibernate are unstable on most single-board computers</li>
-<li><strong>HAS_VIDEO_OUTPUT</strong> ( boolean ): whether the board has video output (splash, eyecandy, etc.).
-    - <code>yes</code>: enable video-related configuration
-    - <code>no</code>: disable video-related configuration</li>
-<li><strong>KERNEL_TARGET</strong> ( comma-separated list of kernel releases or branches ): which kernels are built for the board.
-    - <code>legacy</code> / <code>current</code> / <code>edge</code>: use that kernel
-    - <code>[branch]</code>: use the specified branch kernel
-    - none: exits with an error</li>
-<li><strong>KERNEL_TEST_TARGET</strong> ( comma-separated list of kernel releases or branches ): test targets when they differ from the build targets; also applies to build-list generation. (internal switch)</li>
-<li><strong>FULL_DESKTOP</strong> ( boolean ): whether to install the full desktop application stack (office, Thunderbird, etc.).
-    - <code>yes</code>: install the desktop stack
-    - <code>no</code>: do not</li>
-<li><strong>DESKTOP_AUTOLOGIN</strong> ( boolean ): toggle desktop autologin.
-    - <code>yes</code>: automatically log in to the desktop
-    - <code>no</code> (default): disable desktop autologin</li>
-<li><strong>PACKAGE_LIST_BOARD</strong> ( space-separated list of packages ): extra packages to install on the system.</li>
-<li><strong>PACKAGE_LIST_BOARD_REMOVE</strong> ( space-separated list of packages ): packages to remove from the system.</li>
-<li><strong>BOOT_FDT_FILE</strong> ( device tree configuration ): force a specific device tree if it differs from the one u-boot selects.
-    - <code>[family]/[file.dtb]</code>: replace the device tree with the one specified
-    - <code>none</code>: do not use a device tree configuration
-    - Example: <code>rockchip/rk3568-rock-3-a.dtb</code></li>
-<li><strong>CPUMIN</strong> ( minimum CPU frequency in Hz ): minimum CPU frequency the system scales to.
-    - Default: differs per family (e.g. <code>480000</code> for sunxi8 boards)</li>
-<li><strong>CPUMAX</strong> ( maximum CPU frequency in Hz ): maximum CPU frequency the system scales to.
-    - Default: differs per family (e.g. <code>1400000</code> for sunxi8 boards)</li>
-<li><strong>FORCE_BOOTSCRIPT_UPDATE</strong> ( boolean ): force bootscript installation if not present.
-    - <code>yes</code>: enable
-    - <code>no</code>: disable</li>
-<li><strong>OVERLAY_PREFIX</strong> ( prefix ): prefix for device-tree and overlay file paths, set while creating an image.
-    - Example: <code>sun8i-h3</code></li>
+<li>Example: <code>OLIMEX Teres A64</code></li>
+</ul>
+<h4 id="board_vendor">BOARD_VENDOR<a class="headerlink" href="#board_vendor" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · required</p>
+<p>Vendor / manufacturer slug for the board, written in lowercase (for example <code>radxa</code>,
+<code>xunlong</code>, <code>sinovoip</code>, <code>amlogic</code>). It groups boards by their maker and is validated in
+CI, which rejects a board config that leaves it empty.</p>
+<ul>
+<li>Example: <code>radxa</code></li>
+</ul>
+<h4 id="boardfamily">BOARDFAMILY<a class="headerlink" href="#boardfamily" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · required</p>
+<p>Family the board belongs to. It selects the family-specific configuration applied at
+build time — temperature limits, LED behaviour, default CPU frequencies and similar.
+The value must match a family defined under
+<a href="https://github.com/armbian/build/blob/main/config/sources/README.md"><code>config/sources/families/</code></a>.</p>
+<ul>
+<li>Example: <code>sun50iw1</code></li>
+</ul>
+<h4 id="board_maintainer">BOARD_MAINTAINER<a class="headerlink" href="#board_maintainer" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of GitHub logins</code> · recommended</p>
+<p>The board&rsquo;s maintainer(s), by GitHub username. Boards left without a maintainer tend
+to rot, so CI warns when this is empty; it is left blank on unmaintained (<code>.csc</code>)
+boards.</p>
+<h4 id="introduced">INTRODUCED<a class="headerlink" href="#introduced" title="Permanent link">&para;</a></h4>
+<p><code>year</code> · recommended</p>
+<p>The year the board first came to market. Used for inventory and ordering; CI warns
+when it is missing.</p>
+<ul>
+<li>Example: <code>2022</code></li>
+</ul>
+<h2 id="bootloader-u-boot">Bootloader &amp; U-Boot<a class="headerlink" href="#bootloader-u-boot" title="Permanent link">&para;</a></h2>
+<h4 id="bootconfig">BOOTCONFIG<a class="headerlink" href="#bootconfig" title="Permanent link">&para;</a></h4>
+<p><code>u-boot identifier</code></p>
+<p>Name of the U-Boot defconfig for the build, without the <code>_defconfig</code> suffix. Look up
+the matching configuration in the
+<a href="https://github.com/u-boot/u-boot/tree/master/configs">U-Boot source tree</a>.</p>
+<ul>
+<li>Example: <code>teres-i</code></li>
+</ul>
+<h4 id="crustconfig">CRUSTCONFIG<a class="headerlink" href="#crustconfig" title="Permanent link">&para;</a></h4>
+<p><code>crust identifier</code></p>
+<p>Name of the <a href="https://github.com/crust-firmware/crust">crust</a> defconfig for the build.
+Set this only when the board has an Allwinner CPU with an AR100 coprocessor whose SoC
+is supported by crust firmware; look up the value in the
+<a href="https://github.com/crust-firmware/crust/tree/master/configs">crust source tree</a>.</p>
+<ul>
+<li>Example: <code>nanopi_m1_defconfig</code></li>
+</ul>
+<h4 id="boot_logo">BOOT_LOGO<a class="headerlink" href="#boot_logo" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: not set</p>
+<p>Whether to show the Armbian splash during the bootloader phase.</p>
+<ul>
+<li><code>yes</code>: always show the Armbian boot logo</li>
+<li><code>desktop</code>: show it only when <code>BUILD_DESKTOP=yes</code></li>
+<li>unset (default): no boot logo</li>
+</ul>
+<h4 id="boot_fdt_file">BOOT_FDT_FILE<a class="headerlink" href="#boot_fdt_file" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Force a specific device tree when it differs from the one U-Boot would pick itself.</p>
+<ul>
+<li><code>[family]/[file.dtb]</code>: use this device tree instead</li>
+<li><code>none</code>: do not use a device tree configuration</li>
+<li>Example: <code>rockchip/rk3568-rock-3-a.dtb</code></li>
+</ul>
+<h4 id="overlay_prefix">OVERLAY_PREFIX<a class="headerlink" href="#overlay_prefix" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Prefix for device-tree and overlay file paths. It is used to build the overlay path
+for <a href="#default_overlays"><code>DEFAULT_OVERLAYS</code></a> and is written to <code>armbianEnv.txt</code> as
+<code>overlay_prefix=</code> so the running system loads overlays from the right directory.</p>
+<ul>
+<li>Example: <code>sun8i-h3</code></li>
+</ul>
+<h4 id="default_overlays">DEFAULT_OVERLAYS<a class="headerlink" href="#default_overlays" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of dtb overlays</code></p>
+<p>Device-tree overlays enabled by default. Each family ships a basic dtb, but boards
+expose different SoC features (one board might wire up four USB ports where another
+does not), so the relevant overlays are switched on per board. Combined with
+<a href="#overlay_prefix"><code>OVERLAY_PREFIX</code></a> to locate the overlay files.</p>
+<ul>
+<li>Examples: <code>usbhost0</code>, <code>usbhost2</code>, <code>usbhost3</code>, <code>cir</code>, <code>analog-codec</code>, <code>gpio-regulator-1.3v</code>, <code>uart1</code></li>
+</ul>
+<h4 id="force_bootscript_update">FORCE_BOOTSCRIPT_UPDATE<a class="headerlink" href="#force_bootscript_update" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code></p>
+<ul>
+<li><code>yes</code>: force the boot script to be overwritten on every BSP package upgrade</li>
+<li><code>no</code> (default): treat the boot script as user-editable and leave it alone</li>
+</ul>
+<p>Normally the boot script (<code>boot.cmd</code> / <code>boot.scr</code>) is left untouched once installed so
+that a board-support-package upgrade does not clobber local edits. Set <code>yes</code> on boards
+whose boot script must always track the packaged version; roughly two dozen board
+configs do. Leave it unset unless you specifically need that behaviour.</p>
+<h2 id="kernel">Kernel<a class="headerlink" href="#kernel" title="Permanent link">&para;</a></h2>
+<h4 id="kernel_target">KERNEL_TARGET<a class="headerlink" href="#kernel_target" title="Permanent link">&para;</a></h4>
+<p><code>comma-separated list of kernel branches</code> · required</p>
+<p>Which kernel branches are built for the board. Standard values are <code>legacy</code>,
+<code>current</code> and <code>edge</code>; many boards also build a SoC-vendor kernel via <code>vendor</code> (and
+variants such as <code>vendor-edge</code>). Any valid branch name may be listed. A board with no
+<code>KERNEL_TARGET</code> fails the build.</p>
+<ul>
+<li>Example: <code>current,edge</code> or <code>vendor,current,edge</code></li>
+</ul>
+<h4 id="kernel_test_target">KERNEL_TEST_TARGET<a class="headerlink" href="#kernel_test_target" title="Permanent link">&para;</a></h4>
+<p><code>comma-separated list of kernel branches</code> · recommended</p>
+<p>Kernel branches to test when they differ from the build targets; it also drives
+build-list generation and is recorded in <code>/etc/armbian-release</code>. CI warns when it is
+empty. (Internal switch.)</p>
+<ul>
+<li>Example: <code>current,edge</code></li>
+</ul>
+<h4 id="modules">MODULES<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of kernel modules</code></p>
+<p>Kernel modules to load at boot for <strong>all</strong> kernel branches. The build writes each
+name into <code>/etc/modules</code> on the image, so the modules are auto-loaded early on the
+running board.</p>
+<h4 id="modules_current-modules_legacy-modules_edge">MODULES_CURRENT / MODULES_LEGACY / MODULES_EDGE<a class="headerlink" href="#modules_current-modules_legacy-modules_edge" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of kernel modules</code></p>
+<p>Same as <a href="#modules"><code>MODULES</code></a>, but scoped to a single kernel branch (the suffix names
+the branch — any branch works, e.g. <code>MODULES_VENDOR</code>). When a branch-specific list is
+set it is used <strong>instead of</strong> the generic <code>MODULES</code> for that branch, not in addition
+to it.</p>
+<h4 id="modules_blacklist">MODULES_BLACKLIST<a class="headerlink" href="#modules_blacklist" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of kernel modules</code></p>
+<p>Kernel modules to blacklist / deny for <strong>all</strong> kernel branches. Each name is written
+to <code>/etc/modprobe.d/blacklist-&lt;board&gt;.conf</code> on the image so it is not auto-loaded.</p>
+<h4 id="modules_blacklist_current-modules_blacklist_legacy-modules_blacklist_edge">MODULES_BLACKLIST_CURRENT / MODULES_BLACKLIST_LEGACY / MODULES_BLACKLIST_EDGE<a class="headerlink" href="#modules_blacklist_current-modules_blacklist_legacy-modules_blacklist_edge" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of kernel modules</code></p>
+<p>Same as <a href="#modules_blacklist"><code>MODULES_BLACKLIST</code></a>, but scoped to a single kernel
+branch (the suffix names the branch). A branch-specific blacklist replaces the generic
+<code>MODULES_BLACKLIST</code> for that branch rather than adding to it.</p>
+<h2 id="partitions-filesystem">Partitions &amp; filesystem<a class="headerlink" href="#partitions-filesystem" title="Permanent link">&para;</a></h2>
+<h4 id="image_partition_table">IMAGE_PARTITION_TABLE<a class="headerlink" href="#image_partition_table" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>msdos</code></p>
+<p>Disklabel type for the image.</p>
+<ul>
+<li><code>msdos</code> (default): DOS/MBR disklabel</li>
+<li><code>gpt</code>: GPT disklabel</li>
+</ul>
+<h4 id="bootfs_type">BOOTFS_TYPE<a class="headerlink" href="#bootfs_type" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>ext4</code></p>
+<p>Filesystem for the boot partition.</p>
+<ul>
+<li><code>none</code>: keep <code>/boot</code> on the root filesystem (no separate boot partition)</li>
+<li><code>ext4</code> (default): <a href="https://en.wikipedia.org/wiki/Ext4">Fourth Extended Filesystem</a></li>
+<li><code>ext2</code>: <a href="https://en.wikipedia.org/wiki/Ext2">Second Extended Filesystem</a></li>
+<li><code>fat</code>: <a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT32</a></li>
+</ul>
+<h4 id="bootsize">BOOTSIZE<a class="headerlink" href="#bootsize" title="Permanent link">&para;</a></h4>
+<p><code>integer</code> (MiB) · default: <code>256</code></p>
+<p>Size of a separate <code>/boot</code> partition, in MiB, created when one is required. Override
+it where a board&rsquo;s bootloader needs more room; the partitioning step falls back to
+256 MiB when a boot partition is required but the value is left empty or unusably
+small.</p>
+<h2 id="console-hardware">Console &amp; hardware<a class="headerlink" href="#console-hardware" title="Permanent link">&para;</a></h2>
+<h4 id="serialcon">SERIALCON<a class="headerlink" href="#serialcon" title="Permanent link">&para;</a></h4>
+<p><code>comma-separated list of terminal interfaces [:bandwidth]</code> · default: <code>ttyS0</code></p>
+<p>Which serial console(s) the system enables (a getty is started on each, and the value
+also feeds the boot script and U-Boot). Append <code>:bandwidth</code> to run a console at a
+non-default speed. Defaults to <code>ttyS0</code> when unset.</p>
+<ul>
+<li>Example: <code>ttyS0:15000000,ttyGS1</code></li>
+</ul>
+<h4 id="default_console">DEFAULT_CONSOLE<a class="headerlink" href="#default_console" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: not set</p>
+<p>Default console for boot output, written as <code>console=</code> into <code>armbianEnv.txt</code> — useful
+for headless devices.</p>
+<ul>
+<li><code>serial</code>: send boot messages to the serial console</li>
+<li><code>both</code>: serial and display</li>
+<li>unset (default): leave the family default</li>
+</ul>
+<h4 id="has_video_output">HAS_VIDEO_OUTPUT<a class="headerlink" href="#has_video_output" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code></p>
+<ul>
+<li><code>yes</code> (default): the board has video output; video-related configuration is enabled</li>
+<li><code>no</code>: no video output; desktop builds are refused (<code>BUILD_DESKTOP</code> is forced off)</li>
+</ul>
+<p>Declares whether the board can drive a display (for splash, desktop and other
+eyecandy). Setting <code>no</code> on a headless board disables the video stack and prevents a
+desktop image from being built for it.</p>
+<h4 id="power_management_features">POWER_MANAGEMENT_FEATURES<a class="headerlink" href="#power_management_features" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code></p>
+<ul>
+<li><code>yes</code>: enable systemd sleep modes (suspend, hibernate, hybrid sleep)</li>
+<li><code>no</code> (default): disable all sleep modes</li>
+</ul>
+<p>Controls whether system sleep is allowed on the built image. Off by default because
+suspend/hibernate are unstable on most single-board computers; enable it only on
+hardware where sleep is known to work.</p>
+<h4 id="cpumin">CPUMIN<a class="headerlink" href="#cpumin" title="Permanent link">&para;</a></h4>
+<p><code>integer</code> (Hz)</p>
+<p>Minimum CPU frequency the system scales down to. The default differs per family (for
+example <code>480000</code> on sunxi8 boards); set it only to override the family default.</p>
+<h4 id="cpumax">CPUMAX<a class="headerlink" href="#cpumax" title="Permanent link">&para;</a></h4>
+<p><code>integer</code> (Hz)</p>
+<p>Maximum CPU frequency the system scales up to. The default differs per family (for
+example <code>1400000</code> on sunxi8 boards); set it only to override the family default.</p>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<h4 id="skip_armbian_repo">SKIP_ARMBIAN_REPO<a class="headerlink" href="#skip_armbian_repo" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code> · default: <code>no</code></p>
+<ul>
+<li><code>yes</code>: exclude the Armbian apt repository from the image (<code>armbian.sources</code> stays <code>.disabled</code>)</li>
+<li><code>no</code> (default): include the Armbian repo</li>
+</ul>
+<p>Builds the image without Armbian&rsquo;s apt repository, so the system sees only the base
+Debian/Ubuntu repositories. Useful when developing a new release before its repository
+exists, or for custom images that must not pull packages from Armbian.</p>
+<h4 id="package_list_board">PACKAGE_LIST_BOARD<a class="headerlink" href="#package_list_board" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of packages</code></p>
+<p>Extra packages to install on images for this board, on top of the family and
+distribution defaults.</p>
+<h4 id="package_list_board_remove">PACKAGE_LIST_BOARD_REMOVE<a class="headerlink" href="#package_list_board_remove" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of packages</code></p>
+<p>Packages to remove from images for this board.</p>
+<h4 id="full_desktop">FULL_DESKTOP<a class="headerlink" href="#full_desktop" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code></p>
+<ul>
+<li><code>yes</code>: install the full desktop application stack (office, Thunderbird, etc.)</li>
+<li><code>no</code>: install only the minimal desktop</li>
+</ul>
+<p>Whether desktop images for this board carry the full application stack or a leaner
+selection.</p>
+<h4 id="desktop_autologin">DESKTOP_AUTOLOGIN<a class="headerlink" href="#desktop_autologin" title="Permanent link">&para;</a></h4>
+<p><code>boolean</code> · default: <code>no</code></p>
+<ul>
+<li><code>yes</code>: automatically log in to the desktop</li>
+<li><code>no</code> (default): show the desktop login prompt</li>
 </ul>
 <h2 id="deprecated">Deprecated<a class="headerlink" href="#deprecated" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>BOOTCONFIG_LEGACY</strong> / <strong>BOOTCONFIG_CURRENT</strong> / <strong>BOOTCONFIG_EDGE</strong> ( u-boot identifier ): use <strong>BOOTCONFIG</strong> instead.</li>
-<li><strong>PACKAGE_LIST_BOARD_DESKTOP</strong> / <strong>PACKAGE_LIST_BOARD_DESKTOP_REMOVE</strong> ( space-separated list of packages ): use <strong>PACKAGE_LIST_BOARD</strong> / <strong>PACKAGE_LIST_BOARD_REMOVE</strong> instead.</li>
-</ul>
+<h4 id="bootconfig_legacy-bootconfig_current-bootconfig_edge">BOOTCONFIG_LEGACY / BOOTCONFIG_CURRENT / BOOTCONFIG_EDGE<a class="headerlink" href="#bootconfig_legacy-bootconfig_current-bootconfig_edge" title="Permanent link">&para;</a></h4>
+<p><code>u-boot identifier</code></p>
+<p>Per-branch U-Boot defconfig overrides. Deprecated — use <a href="#bootconfig"><code>BOOTCONFIG</code></a>
+instead.</p>
+<h4 id="package_list_board_desktop-package_list_board_desktop_remove">PACKAGE_LIST_BOARD_DESKTOP / PACKAGE_LIST_BOARD_DESKTOP_REMOVE<a class="headerlink" href="#package_list_board_desktop-package_list_board_desktop_remove" title="Permanent link">&para;</a></h4>
+<p><code>space-separated list of packages</code></p>
+<p>Desktop-only package add/remove lists. Deprecated — use
+<a href="#package_list_board"><code>PACKAGE_LIST_BOARD</code></a> /
+<a href="#package_list_board_remove"><code>PACKAGE_LIST_BOARD_REMOVE</code></a> instead.</p>
 <h2 id="support-status">Support status<a class="headerlink" href="#support-status" title="Permanent link">&para;</a></h2>
-<p>A board&rsquo;s support status is encoded in its configuration file&rsquo;s extension, and is shown at the login prompt:</p>
+<p>A board&rsquo;s support status is encoded in the extension of its configuration file, and is
+shown at the login prompt:</p>
 <table>
 <thead>
 <tr>
