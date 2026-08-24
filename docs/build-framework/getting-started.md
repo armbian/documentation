@@ -136,6 +136,12 @@ Log formats are:
 
 For much more verbose logs set switch 'DEBUG=yes'.
 
+To share a build log when asking for help, set `SHARE_LOG=yes`. The build uploads the log to Armbian's paste service (`paste.armbian.com`) and prints a URL you can post in the forum or a bug report:
+
+```bash
+./compile.sh build BOARD=uefi-x86 BRANCH=current SHARE_LOG=yes
+```
+
 ## GitHub Actions
 
 If you do not have the proper equipment to build images on your own, you can use our [GitHub Action](https://github.com/marketplace/actions/rebuild-armbian).
