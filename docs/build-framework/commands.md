@@ -15,6 +15,10 @@ The build framework is driven by a single script, `compile.sh`:
 - Parameters (`PARAM=value`, see [Build Switches](/build-framework/switches/)), config files and the command may be given in **any order**.
 - There is **no default config file** — if you keep your settings in `userpatches/config-<name>.conf`, name it explicitly on the command line (`./compile.sh BOARD=... <name>`). A config file must not share a name with a command.
 
+## Basic commands
+
+Everyday commands for building an image, writing it to media, and managing the build container.
+
 ### build
 
 The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke `./compile.sh` with no command, or explicitly:
@@ -80,6 +84,10 @@ Usage:
 ```bash
 ./compile.sh docker-purge
 ```
+
+## Advanced commands
+
+Kernel, bootloader and board-development commands, plus release and inspection tooling.
 
 ### kernel
 
