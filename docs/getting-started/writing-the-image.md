@@ -100,6 +100,65 @@ When a Rockchip device is placed into **Maskrom mode**, you can use `rkdevelopto
 6. Now you can flash the extracted image with `sudo rkdeveloptool wl 0 Armbian-YourBoard.img` (make sure the file ends with **.img**)
 7. Reboot your board with `sudo rkdeveloptool rd` which stands for (power) reset device
 
+### Qualcomm
+
+Qualcomm boards are flashed with **[Armbian Imager](https://imager.armbian.com/)** over
+**EDL** (Emergency Download Mode), so no extra tooling is needed. Imager writes
+straight to the board's built-in **eMMC** or **UFS**, depending on the board.
+
+Which boards can be flashed this way, which storage each one uses, and how each
+one enters EDL all come from the Armbian board registry, so the list grows
+without an Imager update. Boards covered so far include the **Arduino UNO Q**
+(QRB2210, eMMC) and the **Radxa Dragon** series &mdash; **Q6A** (QCS6490, UFS)
+and **Q8B** (SC8280XP, UFS).
+
+Steps:
+
+1. Put the board into **EDL mode**. Imager tells you which method your board
+   uses &mdash; either place the jumper on the **JCTL** pins, or hold the **EDL**
+   button while powering on.
+2. Connect the board to your computer with a USB cable.
+3. Open **Armbian Imager** and select your board and image.
+4. Flash. Imager uploads the firmware loader, then writes the partitions.
+
+!!! warning "UFS images are a separate download"
+
+    Boards that flash to UFS need an image built for UFS &mdash; its filename
+    carries a `-ufs` marker. An ordinary SD-card image will not boot from UFS.
+
+!!! question "Linux: `USB access denied`"
+
+    An EDL device appears as USB ID `05c6:9008`, and the in-tree `qcserial`
+    driver claims that same ID. Give your user access to the device and stop
+    `qcserial` from taking it:
+
+    ``` bash
+    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", ATTR{idProduct}=="9008", MODE="0660", GROUP="plugdev", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/51-qdl.rules
+    echo 'blacklist qcserial' | sudo tee /etc/modprobe.d/blacklist-qcserial.conf
+    sudo udevadm control --reload-rules
+    ```
+
+    `uaccess` covers you when you are logged in at the machine itself; over SSH,
+    add yourself to `plugdev` with `sudo usermod -aG plugdev $USER` and log back
+    in.
+
+    The blacklist only stops `qcserial` loading in future &mdash; it does not
+    release a board it has already taken. If the module is loaded, unplug the
+    board, unload it, then plug the board back in:
+
+    ``` bash
+    sudo modprobe -r qcserial
+    ```
+
+    Reboot instead if it will not unload. Note that the blacklist is permanent
+    and also stops `qcserial` driving other Qualcomm serial devices, such as USB
+    modems; delete `/etc/modprobe.d/blacklist-qcserial.conf` to undo it.
+
+!!! tip "`No EDL device found`"
+
+    The board is not in EDL mode, or the cable is data-only. Re-enter EDL mode as
+    in step 1, try a different USB cable or port, and reconnect.
+
 ---
 
 **Previous:** [Choosing an Armbian image](choosing-an-image.md)
