@@ -38,7 +38,7 @@ There are 3 options to start build process:
 ```
 3\. Interactively run inside docker container
 ```
-./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=jammy
+./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
 ```
 
 The process creates and runs a named Docker container `armbian` with two named volumes `armbian-cache` and `armbian-ccache`,
@@ -58,10 +58,10 @@ This mode also allows you to manually run individual steps of the build process.
 
 First, start docker-shell on the host build system:
 ```
-@droid:~/armbian$ ./compile.sh docker-shell RELEASE=bullseye BOARD=rockpi-4a BRANCH=edge
+@droid:~/armbian$ ./compile.sh docker-shell RELEASE=trixie BOARD=rockpi-4a BRANCH=edge
 ```
-From there, `RELEASE=bullseye BOARD=rockpi-4a BRANCH=edge` are passed into shell and will be set into
-envirounment variables. 
+From there, `RELEASE=trixie BOARD=rockpi-4a BRANCH=edge` are passed to the shell and set as
+environment variables.
 
 Next, we can simply start building an image:
 ```
