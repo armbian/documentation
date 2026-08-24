@@ -6,7 +6,7 @@ comments: true
 # Manage your finances
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [Actual Budget](/software/actual-budget/) — Do your finances with Actual Budget
 - [Wallos](/software/wallos/) — Install Wallos subscription tracker

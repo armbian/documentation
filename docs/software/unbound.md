@@ -21,7 +21,7 @@ Unbound is a high-performance, open-source DNS resolver. It primarily serves to 
 <!--- header STOP from tools/include/markdown/UNB001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → DNS → Unbound**
+Install from **[armbian-config](/config/) → Software → DNS → Unbound**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd UNB001

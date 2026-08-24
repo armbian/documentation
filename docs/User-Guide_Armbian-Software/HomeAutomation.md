@@ -6,7 +6,7 @@ comments: true
 # Home Automation for control home appliances
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [Domoticz](/software/domoticz/) — Domoticz open source home automation
 - [EVCC](/software/evcc/) — EVCC - solar charging automation

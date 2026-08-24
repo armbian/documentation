@@ -22,7 +22,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 <!--- header STOP from tools/include/markdown/LID001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Lidarr**
+Install from **[armbian-config](/config/) → Software → Downloaders → Lidarr**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd LID001

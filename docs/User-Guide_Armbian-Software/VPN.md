@@ -6,7 +6,7 @@ comments: true
 # Virtual Private Network tools
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [WireGuard](/software/wireguard/) — WireGuard VPN server
 - [ZeroTier](/software/zerotier/) — ZeroTier connect devices over your own private network in the world

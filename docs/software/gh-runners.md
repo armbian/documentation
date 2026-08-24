@@ -22,7 +22,7 @@ This module automates the installation, removal, and status checking of GitHub s
 <!--- header STOP from tools/include/markdown/GHR001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Armbian → GH runners**
+Install from **[armbian-config](/config/) → Software → Armbian → GH runners**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd GHR001

@@ -22,7 +22,7 @@ evcc is an energy management system with a focus on electromobility. The softwar
 <!--- header STOP from tools/include/markdown/EVCC01-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Home Automation → EVCC**
+Install from **[armbian-config](/config/) → Software → Home Automation → EVCC**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd EVCC01

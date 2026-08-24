@@ -35,7 +35,7 @@ Thanks to Immich being built with modern technologies like NestJS, TypeScript, a
 <!--- header STOP from tools/include/markdown/IMM001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Media → Immich**
+Install from **[armbian-config](/config/) → Software → Media → Immich**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd IMM001

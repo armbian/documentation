@@ -25,7 +25,7 @@ MariaDB supports a wide range of storage engines, advanced SQL capabilities, and
 <!--- header STOP from tools/include/markdown/DAT001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Database → Mariadb**
+Install from **[armbian-config](/config/) → Software → Database → Mariadb**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd DAT001

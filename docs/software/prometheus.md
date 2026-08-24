@@ -22,7 +22,7 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 <!--- header STOP from tools/include/markdown/PRO001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Monitoring → Prometheus**
+Install from **[armbian-config](/config/) → Software → Monitoring → Prometheus**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd PRO001

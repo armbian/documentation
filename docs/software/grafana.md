@@ -21,7 +21,7 @@ Grafana is a multi-platform open source analytics and interactive visualization 
 <!--- header STOP from tools/include/markdown/GRA001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Monitoring → Grafana**
+Install from **[armbian-config](/config/) → Software → Monitoring → Grafana**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd GRA001

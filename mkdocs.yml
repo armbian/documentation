@@ -79,15 +79,9 @@ plugins:
         'User-Guide_Armbian-Config/System.md': 'config/index.md'
         'User-Guide_Armbian-Config/Network.md': 'config/network.md'
         'User-Guide_Armbian-Config/Localisation.md': 'config/localisation.md'
-        'armbian-config/index.md': 'config/index.md'
-        'armbian-config/kernel.md': 'config/kernel.md'
-        'armbian-config/desktops.md': 'config/desktops.md'
-        'armbian-config/storage.md': 'config/storage.md'
-        'armbian-config/access.md': 'config/access.md'
-        'armbian-config/user.md': 'config/user.md'
-        'armbian-config/updates.md': 'config/updates.md'
-        'armbian-config/network.md': 'config/network.md'
-        'armbian-config/localisation.md': 'config/localisation.md'
+        # Recovery was folded into Troubleshooting in March 2025; the nav
+        # section is still titled 'Troubleshooting and Recovery'.
+        'User-Guide_Recovery.md': 'User-Guide_Troubleshooting.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian

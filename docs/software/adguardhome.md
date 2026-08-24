@@ -22,7 +22,7 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 <!--- header STOP from tools/include/markdown/ADG001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → DNS → AdGuardHome**
+Install from **[armbian-config](/config/) → Software → DNS → AdGuardHome**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd ADG001

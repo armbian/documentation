@@ -38,7 +38,7 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 <!--- header STOP from tools/include/markdown/HPG001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Management → Homepage**
+Install from **[armbian-config](/config/) → Software → Management → Homepage**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd HPG001

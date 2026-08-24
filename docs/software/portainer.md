@@ -22,7 +22,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 <!--- header STOP from tools/include/markdown/POR001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Containers → Portainer**
+Install from **[armbian-config](/config/) → Software → Containers → Portainer**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd POR001

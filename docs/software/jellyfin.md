@@ -22,7 +22,7 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 <!--- header STOP from tools/include/markdown/JMS001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Media → Jellyfin**
+Install from **[armbian-config](/config/) → Software → Media → Jellyfin**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd JMS001

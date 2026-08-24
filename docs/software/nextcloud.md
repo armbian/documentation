@@ -22,7 +22,7 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 <!--- header STOP from tools/include/markdown/NCT001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Media → Nextcloud**
+Install from **[armbian-config](/config/) → Software → Media → Nextcloud**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd NCT001

@@ -6,7 +6,7 @@ comments: true
 # Console network tools for measuring load and bandwidth
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [avahi-daemon](/software/avahi-daemon/) — avahi-daemon hostname broadcast via mDNS
 - [iperf3](/software/iperf3/) — iperf3 bandwidth measuring tool

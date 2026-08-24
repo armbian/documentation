@@ -6,7 +6,7 @@ comments: true
 # Network-wide ad blockers servers
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [AdGuardHome](/software/adguardhome/) — AdGuardHome DNS sinkhole
 - [Pi-hole](/software/pi-hole/) — Pi-hole DNS ad blocker with Unbound support

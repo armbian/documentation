@@ -22,7 +22,7 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 <!--- header STOP from tools/include/markdown/WBM001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Management → Webmin**
+Install from **[armbian-config](/config/) → Software → Management → Webmin**
 
 ~~~ custombash title="Webmin web-based management tool"
 armbian-config --cmd WBM001

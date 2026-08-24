@@ -22,7 +22,7 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 <!--- header STOP from tools/include/markdown/RAD001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Radarr**
+Install from **[armbian-config](/config/) → Software → Downloaders → Radarr**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd RAD001

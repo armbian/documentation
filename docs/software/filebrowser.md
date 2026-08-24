@@ -33,7 +33,7 @@ Official site: [https://filebrowser.org](https://filebrowser.org)
 <!--- header STOP from tools/include/markdown/FIL001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Media → Filebrowser**
+Install from **[armbian-config](/config/) → Software → Media → Filebrowser**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd FIL001

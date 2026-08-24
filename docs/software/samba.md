@@ -22,7 +22,7 @@ Samba is an open-source software suite that enables seamless file and printer sh
 <!--- header STOP from tools/include/markdown/SMB001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Management → Samba**
+Install from **[armbian-config](/config/) → Software → Management → Samba**
 
 ~~~ custombash title="SAMBA Remote File share"
 armbian-config --cmd SMB001

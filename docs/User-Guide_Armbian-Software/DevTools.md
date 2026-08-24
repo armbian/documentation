@@ -6,7 +6,7 @@ comments: true
 # Applications and tools for development
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [Git CLI](/software/git-cli/) — Install tools for cloning and managing repositories (git)
 - [Code-server](/software/code-server/) — Code-server VS Code in browser

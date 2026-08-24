@@ -22,7 +22,7 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 <!--- header STOP from tools/include/markdown/QBT001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → qBittorrent**
+Install from **[armbian-config](/config/) → Software → Downloaders → qBittorrent**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd QBT001

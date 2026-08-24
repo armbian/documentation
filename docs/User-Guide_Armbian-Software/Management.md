@@ -6,7 +6,7 @@ comments: true
 # Remote File & Management tools
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [Cockpit](/software/cockpit/) — Cockpit OS and VM management tool
 - [Proxmox VE](/software/proxmox-ve/) — Proxmox VE virtualization platform (keeps the Armbian kernel)
