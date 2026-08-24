@@ -5076,17 +5076,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#root_fs_create_only" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ROOT_FS_CREATE_ONLY
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5996,17 +5985,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#root_fs_create_only" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ROOT_FS_CREATE_ONLY
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6110,13 +6088,6 @@
 <li><code>no</code> (default)</li>
 </ul>
 <p>Forces artifacts (kernel, U-Boot, rootfs and so on) to be rebuilt from source, bypassing both the local cache and the remote OCI registry that the framework would otherwise pull a ready-made artifact from. Off by default, since reusing cached artifacts is what keeps everyday builds fast. Set <code>yes</code> when you suspect a cached artifact is stale or corrupt, or when you have changed something the cache key does not capture and need to be certain the output is freshly compiled.</p>
-<h4 id="root_fs_create_only">ROOT_FS_CREATE_ONLY<a class="headerlink" href="#root_fs_create_only" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<ul>
-<li><code>yes</code></li>
-<li><code>no</code> (default)</li>
-</ul>
-<p>Historically this stopped the build after creating the root filesystem cache, without going on to assemble a full image. It is now deprecated: setting <code>yes</code> aborts the build with an error pointing you to the dedicated <code>rootfs</code> CLI command, which is the supported way to build just the rootfs artifact. Leave it at <code>no</code> (the default) and use <code>./compile.sh rootfs</code> instead when you only want the cached root filesystem.</p>
 
 
 

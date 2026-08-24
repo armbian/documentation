@@ -5093,17 +5093,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#create_patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CREATE_PATCHES
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5974,17 +5963,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#create_patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CREATE_PATCHES
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6045,10 +6023,6 @@
 <h4 id="write_extensions_metadata">WRITE_EXTENSIONS_METADATA<a class="headerlink" href="#write_extensions_metadata" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
 <p>Records which extensions were called at each hook point during the build and writes that metadata out, so tooling such as <code>show-extensions</code> can report exactly what ran and where. Left on by default because the cost is negligible and the data is useful for debugging extension behaviour. Set <code>no</code> to skip it — a few info-only helper commands (for example the deb-download tooling) do this automatically, since they run the config machinery but never actually build and have no use for the metadata.</p>
-<h4 id="create_patches">CREATE_PATCHES<a class="headerlink" href="#create_patches" title="Permanent link">&para;</a></h4>
-<p><code>yes</code> | <code>no</code> (default)</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Deprecated</strong> — use the <code>kernel-patch</code> / <code>uboot-patch</code> / <code>atf-patch</code> CLI commands instead.</p>
-<p>Prompts right before compilation to make changes to the U-Boot and kernel source; the resulting diffs are written as patch files in the <code>output</code> directory. To include them in a normal run, copy them to the appropriate directories.</p>
 
 
 
