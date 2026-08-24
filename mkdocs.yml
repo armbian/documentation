@@ -109,7 +109,9 @@ plugins:
         'Developer-Guide_Extensions.md': 'build-framework/extensions/index.md'
         'Developer-Guide_Overview.md': 'build-framework/index.md'
         'Developer-Guide_User-Configurations.md': 'build-framework/user-configurations.md'
-        'Developer-Guide_Welcome.md': 'build-framework/cli.md'
+        'Developer-Guide_Welcome.md': 'build-framework/getting-started.md'
+        # The transition-era CLI page was folded into Commands/Switches
+        'build-framework/cli.md': 'build-framework/commands.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
@@ -289,11 +291,11 @@ nav:
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'build-framework/index.md'
         - 'Getting Started' : 'build-framework/getting-started.md'
-        - 'Command Line Interface' : 'build-framework/cli.md'
         - 'Reference' :
             - 'Build Commands' : 'build-framework/commands.md'
             - 'Build Switches' : 'build-framework/switches.md'
             - 'User Configurations' : 'build-framework/user-configurations.md'
+            - 'Board Configuration' : 'build-framework/board-configuration.md'
             - 'Adding a Board' : 'build-framework/adding-a-board.md'
         - 'Extensions' :
             - 'Overview' : 'build-framework/extensions/index.md'

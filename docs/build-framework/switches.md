@@ -223,6 +223,17 @@ Example:
 ./compile.sh GHCR_MIRROR=dockerproxy GHCR_MIRROR_ADDRESS=ghcr.libcuda.so
 ```
 
+**KERNEL_GIT** ( `string` )
+
+- `shallow`
+- `full`
+- unset (default): let the system decide
+
+Selects how the Linux kernel git tree is fetched when a kernel has to be built from scratch. The kernel repo is huge; to avoid hammering upstream git servers, Armbian caches daily git-tree exports on ghcr.io and only `git fetch`es the small delta.
+
+- `shallow` — a shallow tree for a single `stable` branch. Small download, less disk; ideal for restricted devices (SBCs) building a single kernel.
+- `full` — the complete tree (Torvalds' `master` plus all supported `stable` branches). Large download and disk footprint, but more efficient over time when building several kernels on one machine (CI servers, developer workstations).
+
 **KERNEL_COMPILER** ( `string` )
 
 The compiler used to compile the kernel. Usually, this option is set by the board config, but it can be set to `clang` to use LLVM to compile the kernel.

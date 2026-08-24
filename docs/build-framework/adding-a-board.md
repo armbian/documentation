@@ -51,7 +51,7 @@ SERIALCON="ttyAML0"                # serial console device (optionally :baud)
 Commonly-used extras include `HAS_VIDEO_OUTPUT`, `BOOT_LOGO`, `MODULES_BLACKLIST`, `DEFAULT_OVERLAYS`, `OVERLAY_PREFIX`, `IMAGE_PARTITION_TABLE`, `BOOTFS_TYPE`, `CPUMIN`/`CPUMAX`, and `PACKAGE_LIST_BOARD`. The board file can also define **hook functions** for board-specific steps — the Banana Pi M5 config, for example, fetches Amlogic FIP blobs and post-processes U-Boot via `fetch_sources_tools__…` and `post_uboot_custom_postprocess__…` hooks.
 
 !!! tip "Full field reference"
-    Every board option is documented in [`config/boards/README.md`](https://github.com/armbian/build/blob/main/config/boards/README.md) in the build repository. If a field is unclear, grep the framework for it:
+    Every board option is documented in [Board configuration](board-configuration.md). If a field is unclear, grep the framework for it:
     ```bash
     grep -r -A5 -B5 "BOOT_FDT_FILE" lib/ config/
     ```
