@@ -102,11 +102,10 @@ BOARD=uefi-x86 \
 BRANCH=current \
 BUILD_DESKTOP=yes \
 BUILD_MINIMAL=no \
-DESKTOP_APPGROUPS_SELECTED='browsers chat desktop_tools' \
 DESKTOP_ENVIRONMENT=gnome \
-DESKTOP_ENVIRONMENT_CONFIG_NAME=config_base \
+DESKTOP_TIER=full \
 KERNEL_CONFIGURE=no \
-RELEASE=noble
+RELEASE=resolute
 ```
 
 Or, using config file `userpatches/config-myboard.conf`
@@ -119,7 +118,7 @@ myboard
 
 !!! question "Interpretation?"
 
-    This command will generate **Ubuntu 24.04 Noble** based **Gnome desktop** environment image for Intel based hardware (**uefi-x86**). Besides bare desktop, it will contain packages from **browsers** and **desktop_tool** sections and it will use unchanged kernel from **current kernel** branch.
+    This command will generate an **Ubuntu 26.04 Resolute** based **GNOME desktop** image for Intel based hardware (**uefi-x86**), using the **full** desktop tier (the bare desktop plus its bundled application set) and an unchanged kernel from the **current** branch.
 
 
 ## Logging
