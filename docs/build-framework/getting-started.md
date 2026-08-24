@@ -102,11 +102,10 @@ BOARD=uefi-x86 \
 BRANCH=current \
 BUILD_DESKTOP=yes \
 BUILD_MINIMAL=no \
-DESKTOP_APPGROUPS_SELECTED='browsers chat desktop_tools' \
 DESKTOP_ENVIRONMENT=gnome \
-DESKTOP_ENVIRONMENT_CONFIG_NAME=config_base \
+DESKTOP_TIER=full \
 KERNEL_CONFIGURE=no \
-RELEASE=noble
+RELEASE=resolute
 ```
 
 Or, using config file `userpatches/config-myboard.conf`
@@ -119,7 +118,7 @@ myboard
 
 !!! question "Interpretation?"
 
-    This command will generate **Ubuntu 24.04 Noble** based **Gnome desktop** environment image for Intel based hardware (**uefi-x86**). Besides bare desktop, it will contain packages from **browsers** and **desktop_tool** sections and it will use unchanged kernel from **current kernel** branch.
+    This command will generate an **Ubuntu 26.04 Resolute** based **GNOME desktop** image for Intel based hardware (**uefi-x86**), using the **full** desktop tier (the bare desktop plus its bundled application set) and an unchanged kernel from the **current** branch.
 
 
 ## Logging
@@ -136,6 +135,12 @@ Log formats are:
 - Raw (if RAW_LOG=yes) - tar file containg all the raw logs - \*.raw.tar
 
 For much more verbose logs set switch 'DEBUG=yes'.
+
+To share a build log when asking for help, set `SHARE_LOG=yes`. The build uploads the log to Armbian's paste service (`paste.armbian.com`) and prints a URL you can post in the forum or a bug report:
+
+```bash
+./compile.sh build BOARD=uefi-x86 BRANCH=current SHARE_LOG=yes
+```
 
 ## GitHub Actions
 
@@ -185,6 +190,10 @@ The action will build the image, create a GitHub Release in your repository and 
 | `armbian_release_title` | no | `Armbian image` | GitHub Release title |
 | `armbian_release_body` | no | *(link to build tools)* | GitHub Release body text |
 | `armbian_release_tag` | no | *auto* | GitHub Release tag; defaults to the computed version |
+| `armbian_release_prerelease` | no | `false` | Publish the release as a pre-release (useful for matrix builds; promote later) |
+| `armbian_download_base_url` | no | `https://dl.armbian.com` | Base URL where published images live (used to build the assets manifest URLs) |
+| `armbian_download_repository` | no | `archive` | Repository segment under `<base>/<board>/<repo>/`; empty string gives a flat URL shape |
+| `armbian_index_url` | no | `https://github.armbian.com/armbian-images.json` | Canonical `armbian-images.json` used to enrich entries; empty string skips enrichment |
 | `armbian_artifacts` | no | `build/output/images/` | Path to artifacts for upload |
 | `armbian_runner_clean` | no | — | Set to any non-empty value to free disk space on GitHub-hosted runners |
 
