@@ -5770,9 +5770,9 @@
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span>build<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span>trixie
 </span></code></pre></div></td></tr></table></div></p>
 <h3 id="flash">flash<a class="headerlink" href="#flash" title="Permanent link">&para;</a></h3>
-<p>Writes an already-built image to a block device (SD card, USB, eMMC). There is
-no interactive picker: the target device is required, and the image is chosen
-for you.</p>
+<p>Writes an already-built image to a block device (SD card, USB, eMMC). Name the
+target device; the newest image in <code>output/images</code> is used unless you name one
+too.</p>
 <p>Usage:
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX
 </span></code></pre></div></td></tr></table></div></p>
@@ -5784,8 +5784,8 @@ set (<code>DOCKER_SKIP_CARD_DEVICE=yes</code> opts out).</p>
 <p>Everything on <code>CARD_DEVICE</code> is overwritten. Naming the wrong disk destroys
 it, and the command does not ask for confirmation beyond a short countdown.</p>
 </div>
-<p>By default the newest <code>.img</code> in <code>output/images</code> is flashed. Pass <code>BOARD</code>,
-<code>RELEASE</code> or <code>BRANCH</code> to narrow that down, or <code>IMAGE</code> to name a file outright:</p>
+<p>Pass <code>BOARD</code>, <code>RELEASE</code> or <code>BRANCH</code> to narrow which image is picked, or <code>IMAGE</code>
+to name a file outright:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">IMAGE</span><span class="o">=</span>output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
