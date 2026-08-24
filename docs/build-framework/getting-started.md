@@ -3,7 +3,7 @@ seo_title: "Armbian build host setup & requirements"
 description: "Armbian build framework quick start: hardware requirements, Debian 13 Trixie or Docker host setup and cloning the repository to build ARM Linux images."
 ---
 
-# Armbian Build Framework Quick Start Guide
+# Getting started
 
 ## Requirements
 
