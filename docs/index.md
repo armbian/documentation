@@ -86,24 +86,14 @@ In any case, you will get these key advantages:
 
 <!-- TODO: where to??? -->
 
-| Distributions | Armbian  | Downstream | Upstream |
-| -------- | -------- | -------- |-------- |
-| Primary focus     | making a value     | sales, profiting | making a value |
-| User-space     | clean & minimal | bloated with proprietary scripts | clean |
-| Experience across hardware | universal, predictable, reproducible | random, chaotic, manually assembled | porting, unofficial builds |
-| Contributing to FOSS | extreme | close to none | great |
-| System config | universal | proprietary | all / none |
-| Maintenance | modular with review and unit tests | endless spaghetti code | traditional and modern |
-| Build framework | advanced and user friendly | none | none |
-| Hardware maintainers | 50+, teams per SoC, per vendor | none | none |
-| Upstream contribution | 1000+ | none | little |
-| Downstream projects | 10+ | none | 100+ |
-| Switching to upstream | easy | impossible | / |
-| User-space changes | standard | proprietary | standard |
-| Initial memory usage | optimal | bad | bad |
-| Process usage | optimal | only hidden | too broad |
-| Pre-installed packages | optimized for fast install | makes install of anything slower | optimized for fast install |
-| Declaring support | where we know maintainers | everything is "supported" | everything is "supported" |
+| Distributions | Armbian | Downstream | Upstream |
+| -------- | -------- | -------- | -------- |
+| Hardware maintainers | 50+, teams per SoC, per vendor, [named per board](https://github.com/armbian/build/tree/main/config/boards) in `BOARD_MAINTAINER` | not published per board | per subsystem, not per board |
+| Upstream contribution | 1000+, listed in the [release notes](releases/index.md) | not published | is the upstream tree |
+| Build framework | [builds the whole OS](https://github.com/armbian/build), publicly and reproducibly | per-SoC vendor scripts | kernel and bootloader only |
+| Maintenance | modular, reviewed, and [unit tested on every change](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | not published | upstream review process |
+| User-space | stock Debian or Ubuntu, no vendor overlay | vendor packages added on top | stock Debian or Ubuntu |
+| Declaring support | only where a maintainer is named, per the [Board Support Rules](User-Guide_Board-Support-Rules.md) | not published | not declared per board |
 
 
 ## Which hardware is supported?
