@@ -64,7 +64,7 @@ tools/modules/desktops/
 │   ├── wallpapers-lightdm/         # /usr/share/backgrounds/armbian-lightdm
 │   ├── icons/                      # /usr/share/icons/armbian
 │   ├── pixmaps/                    # /usr/share/pixmaps/armbian
-│   └── armbian.xml                 # GNOME background-properties
+│   └── browsers/                   # browser & mail policy drop-ins -> /etc/
 └── skel/                           # files copied into /etc/skel and propagated to existing $HOME
 ```
 
@@ -86,7 +86,7 @@ Every shell file is loaded by configng's module loader, which exposes them as ba
               │  5. apt update
               │  6. apt install $DESKTOP_PACKAGES         ← bail on failure (no state changes)
               │  7. apt install $DESKTOP_DM               ← bail on failure
-              │  8. (Armbian only) install armbian-plymouth-theme if armbian repo present
+              │  8. (Armbian, runtime only) install armbian-plymouth-theme (skipped when building an image)
               │  9. write /etc/armbian/desktop/<de>.packages and <de>.tier
               │ 10. apt remove --purge $DESKTOP_PACKAGES_UNINSTALL
               │ 11. installs branding via module_desktop_branding
@@ -169,17 +169,27 @@ Use the per-arch layer for permanent arch-wide holes (e.g. `blender` always miss
 | `keyring` | string | Path to the dearmored keyring file, e.g. `/usr/share/keyrings/neon.gpg`. |
 | `suite` | string or list of strings (optional) | Suite path(s) that follow the URL. A list emits one `deb [...]` line per entry — all sharing url/keyring/components — for vendors whose archive spans multiple parallel suites (base, -security, -updates, -porting, -customization, …). Defaults to the release codename. Regex-validated to `^[A-Za-z0-9._/-]+$`. Per-release override: `releases.<release>.repo_suite`. |
 | `components` | list (optional) | Components that follow the suite. Defaults to `[main]`. Each entry regex-validated to `^[A-Za-z0-9._-]+$`; invalid entries are dropped with a warning. Per-release override: `releases.<release>.repo_components`. |
-| `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry needs `origin`, `suite`, and `priority` (positive integer). Removed on uninstall. |
+| `preferences` | list (optional) | APT pin preferences written to `/etc/apt/preferences.d/<de_name>`. Each entry sets a `priority` (positive integer) plus **either** `origin` + `suite` **or** `origin_host`, and may add an optional `packages` list to narrow the pin (default `Package: *`). Removed on uninstall. |
 
 `suite` and `components` exist for vendor archives whose layout doesn't match the default `<codename> main` convention. For example, SpacemiT's K1 RISC-V archive pins a frozen snapshot per Ubuntu release (`noble/snapshots/v2.2`, `resolute/snapshots/v3.0`) and mirrors all four Ubuntu components, so `bianbu.yaml` sets `components: [main, universe, restricted, multiverse]` at the `repo:` level and overrides `repo_suite` in each release block.
 
-`preferences` is rarely needed — only when a vendor archive must outrank the distro for a given `(origin, suite)` pair. Each list entry becomes one stanza:
+`preferences` is rarely needed — only when a vendor archive must outrank the distro. Each list entry becomes one stanza, in one of two forms. The `origin` + `suite` form:
 
 ```
 Package: *
 Pin: release o=<origin>, n=<suite>
 Pin-Priority: <priority>
 ```
+
+or the `origin_host` form (pins by archive host, as `bianbu.yaml` uses):
+
+```
+Package: *
+Pin: origin <host>
+Pin-Priority: <priority>
+```
+
+An optional `packages` list replaces the `Package: *` line to narrow the stanza to specific packages.
 
 Priorities above 1000 let apt downgrade a package from the distro to the pinned archive's version; below 1000 only allows upgrades. Entries missing any required field are skipped with a warning from `parse_desktop_yaml.py`.
 
@@ -456,6 +466,9 @@ All values are double-quoted and shell-escaped via `shell_escape()` (escapes `\`
 | `DESKTOP_REPO_URL` | `repo.url` | Only emitted when `repo:` exists. |
 | `DESKTOP_REPO_KEY_URL` | `repo.key_url` | Only emitted when `repo:` exists. |
 | `DESKTOP_REPO_KEYRING` | `repo.keyring` | Only emitted when `repo:` exists. |
+| `DESKTOP_REPO_SUITES_COUNT`, `DESKTOP_REPO_SUITE_<n>` | one entry per `repo.suite` (defaults to the release codename) | Only emitted when `repo:` exists. |
+| `DESKTOP_REPO_COMPONENTS` | `repo.components`, default `main` | Only emitted when `repo:` exists. |
+| `DESKTOP_REPO_PREFS_COUNT`, `DESKTOP_REPO_PREFS_<n>_{ORIGIN,SUITE,ORIGIN_HOST,PACKAGES,PRIORITY}` | one entry per `repo.preferences` pin (0 when none) | Only emitted when `repo:` exists. |
 
 ### Resolution algorithm
 
@@ -596,7 +609,8 @@ Behavior:
 1. Validates `de_name` against `^[a-zA-Z0-9._-]+$` (defense in depth — the YAML parser already blocks traversal).
 2. `curl --retry 3 --connect-timeout 10 --max-time 30 ... | gpg --dearmor` writes the keyring. Pipefail is set so a curl failure is surfaced.
 3. Verifies the keyring is non-empty before proceeding (catches HTML error pages dearmoring to a zero-byte file).
-4. Writes `/etc/apt/sources.list.d/<de_name>.list` with `deb [signed-by=<keyring>] <url> $DISTROID main`.
+4. Writes `/etc/apt/sources.list.d/<de_name>.list` — one `deb [signed-by=<keyring>] <url> <suite> <components>` line per suite (`DESKTOP_REPO_SUITES_COUNT`), using `DESKTOP_REPO_COMPONENTS` (default `main`) and falling back to `$DISTROID main` when unset.
+5. When the YAML declares `preferences`, writes the matching APT pins to `/etc/apt/preferences.d/<de_name>` (removing that file when there are none).
 
 A no-op if the YAML has no `repo:` block.
 
@@ -616,7 +630,7 @@ Copies branding assets and runs the optional postinst hook. Idempotent — every
 | `branding/wallpapers-lightdm/*.jpg` | `/usr/share/backgrounds/armbian-lightdm/` |
 | `branding/icons/*` | `/usr/share/icons/armbian/` |
 | `branding/pixmaps/*` | `/usr/share/pixmaps/armbian/` |
-| `branding/armbian.xml` | `/usr/share/gnome-background-properties/` |
+| `branding/browsers/etc/` | `/etc/` (chromium/chrome/firefox/thunderbird policy drop-ins + `chromium.d` VPU flags) |
 | `greeters/sddm/themes/*` | `/usr/share/sddm/themes/` (only when `DESKTOP_DM=sddm`) |
 | `postinst/<de_name>.sh` | Executed via `bash` (skipped inside containers/CI) |
 
@@ -675,7 +689,7 @@ Steps marked with `[R]` are **runtime-only** — skipped when `mode=build` is pa
 11. [B] apt install desktop pkgs   pkg_install $DESKTOP_PACKAGES        ← bail on failure
 12. [B] apt install + register DM  pkg_install $DESKTOP_DM              ← bail on failure
                                    /etc/X11/default-display-manager
-13. [B] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present
+13. [R] (Armbian) install plymouth if /etc/apt/sources.list.d/armbian.{list,sources} present   (runtime only; skipped when mode=build)
 14. [B] Save install manifest      /etc/armbian/desktop/<de>.packages and <de>.tier
 15. [B] Purge unwanted packages    apt-get remove --purge $DESKTOP_PACKAGES_UNINSTALL
 16. [B] Install branding           module_desktop_branding $de (browser policies, VPU flags, etc.)
