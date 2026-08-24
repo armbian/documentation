@@ -23,10 +23,10 @@ It's a simple framework, written in Bash, that **works based on function naming 
 
 ##### Core calls extensions
 
-The Armbian core build system has an extension method called `run_after_build`, also known as the "`run_after_build` hook". You can find it in `lib/main.sh` around line 546.
+The Armbian core build system has an extension method called `run_after_build`, also known as the "`run_after_build` hook". You can find it in `lib/functions/main/start-end.sh`.
 
 ```bash
-# in lib/main.sh:546
+# in lib/functions/main/start-end.sh
 call_extension_method "run_after_build" [...]
 ```
 
