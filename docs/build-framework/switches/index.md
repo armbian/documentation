@@ -5,7 +5,7 @@ description: "Reference for every optional compile.sh build switch in the Armbia
 
 # Build switches
 
-Switches are optional parameters passed to `./compile.sh` (or set in your [build configuration file](/build-framework/getting-started/#providing-build-configuration)) that control **what** and **how** a build produces. They are all optional; defaults are noted per entry.
+Switches are optional parameters passed to `./compile.sh` (or set in a [build configuration file](/build-framework/getting-started/#cli)) that control **what** and **how** a build produces. They are all optional; defaults are noted per entry.
 
 ```bash
 ./compile.sh PARAM=value OTHER_PARAM=value [<configfile> ...] [<command>]
