@@ -1354,10 +1354,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-release-candidate-branch-management" class="md-nav__link">
+  <a href="#2-stabilization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Release-candidate branch management
+        2. Stabilization
       
     </span>
   </a>
@@ -5572,10 +5572,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-release-candidate-branch-management" class="md-nav__link">
+  <a href="#2-stabilization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Release-candidate branch management
+        2. Stabilization
       
     </span>
   </a>
@@ -5638,11 +5638,11 @@
 <p>Images are available on the respective board download pages: <a href="https://www.armbian.com/download">https://www.armbian.com/download</a>. Armbian also populates its own package repository, so updates are available as an upgrade for existing installations.</p>
 <h2 id="point-releases">Point releases<a class="headerlink" href="#point-releases" title="Permanent link">&para;</a></h2>
 <p>Armbian runs &ldquo;train&rdquo;-based point releases: whatever is ready to board the train, does so; whatever is not has to wait for the next one. This makes for predictable, easy-to-plan release cycles, and puts the responsibility on developers to have their features ready on time.</p>
-<p>Armbian releases quarterly, at the end of <strong>February, May, August, and November</strong> (the offset is because little happens over half of December). Each cycle opens with a planning meeting, and <strong>feature integration freezes two weeks before the release</strong>.</p>
+<p>Armbian releases quarterly, at the end of <strong>February, May, August, and November</strong> (the offset is because little happens over half of December).</p>
 <h2 id="release-cycle">Release cycle<a class="headerlink" href="#release-cycle" title="Permanent link">&para;</a></h2>
-<p>Releases last three months and start with a planning meeting. Development teams then build their deliverables using whatever methods they like (scrum, kanban, waterfall, …), committing frequently to <code>main</code> — the project does not accept &ldquo;dumps&rdquo; of code at the end, so <strong>commit early and often</strong>. Two weeks before the release date, feature integration halts and only bug fixes are accepted.</p>
-<p>At that point the release-candidate process begins: a release branch is cut from <code>main</code> (freeing <code>main</code> for the next cycle), and release-candidate (RC) tags are chosen on it. Each RC is submitted to automated and manual tests on real hardware. If the tests pass, the RC is tagged as the release; if not, another bug-fix cycle produces a new RC. This usually takes 2–3 cycles over 1–3 weeks.</p>
-<p>Work for each release is tracked on <strong>GitHub</strong> — <a href="https://github.com/armbian/build/issues">issues</a>, <a href="https://github.com/armbian/build/pulls">pull requests</a>, and release milestones.</p>
+<p>Development happens continuously on <code>main</code>, which is kept &ldquo;stable&rdquo; and &ldquo;deployable&rdquo; at all times — the project does not accept &ldquo;dumps&rdquo; of code at the end, so <strong>commit early and often</strong>.</p>
+<p>The <strong>release month</strong> itself is spent <strong>stabilizing the software stack</strong>: feature integration winds down and the focus shifts to bug fixes and testing on real hardware across the supported boards. Once the stack is stable, the sources are frozen into a <strong>release branch</strong> and the release images are built and published.</p>
+<p>Planning and coordination are not tied to a fixed schedule — they happen <strong>ad hoc</strong>: on <a href="https://github.com/armbian/build/issues">GitHub</a> (issues, pull requests, release milestones), in the <a href="https://forum.armbian.com/">forum</a>, and in community meetings on <a href="https://discord.com/invite/armbian">Discord</a>, as work lands.</p>
 <h2 id="release-branching-versioning-and-tags">Release branching, versioning and tags<a class="headerlink" href="#release-branching-versioning-and-tags" title="Permanent link">&para;</a></h2>
 <p>Branches follow this convention:</p>
 <ul>
@@ -5651,36 +5651,31 @@
 </ul>
 <p>Each release uses the version format:</p>
 <p><strong><code>&lt;major&gt;.&lt;minor&gt;.&lt;revision&gt;</code></strong></p>
-<p><code>&lt;major&gt;.&lt;minor&gt;</code> is the release <strong>year and month</strong> (e.g. <code>26.8</code> for August 2026); <code>&lt;revision&gt;</code> is incremented for a fix. Releases are identified by this version number — the animal codename scheme used through <code>26.2</code> has been retired. Historical codenames are preserved in the <a href="../history/">release history</a>.</p>
+<p><code>&lt;major&gt;.&lt;minor&gt;</code> is the release <strong>year and month</strong> (e.g. <code>26.8</code> for August 2026); <code>&lt;revision&gt;</code> is incremented for a fix. Releases are identified by this version number — the animal codename scheme used through <code>26.2</code> has been retired. See <a href="/releases/">releases</a> for the full history.</p>
 <h2 id="release-coordinating">Release coordinating<a class="headerlink" href="#release-coordinating" title="Permanent link">&para;</a></h2>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
-<p>A release starts as an RC branch cut from <code>main</code> at freeze time. Once cut, <code>main</code> is unfrozen and development continues. The RC branch is a rolling release that accepts bug fixes, which are cherry-picked back to <code>main</code>. Once the RC is stable, a final release branch is named after its version. A release is <em>never</em> merged back to <code>main</code>; after release it is updated only for severe bugs and security vulnerabilities, and only until the next release.</p>
+<p>Development stays on <code>main</code> throughout the cycle. During the release month it is stabilized with bug fixes and testing. At the end, a <strong>release branch is created with frozen sources</strong> (named after the version), a GitHub release is tagged from it, and the release images are built and published. A release branch is <em>never</em> merged back to <code>main</code>; after release it is updated only for severe bugs and security vulnerabilities, and only until the next release.</p>
 <h3 id="1-forum-communication">1. Forum communication<a class="headerlink" href="#1-forum-communication" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Create a thread in the <a href="https://forum.armbian.com/forum/39-armbian-project-administration/">Armbian Project Administration forum</a> — e.g. <code>Armbian 26.8 Release Thread</code>.</li>
-<li>Tag it with the release version.</li>
-<li>Begin the body with a template covering: RC code-freeze date, release date, RC branch link, changelog link, release coordinator, and a testing tracking sheet. The goal of the thread is to discuss testing, bug fixes, and the overall quality of the release; once complete, lock and unpin it.</li>
-<li>Before code freeze, note the incomplete GitHub issues tagged for the release.</li>
-<li>After test images are produced, ask the community to help test — forums, social media, and the <a href="https://github.com/armbian/autotests">autotests</a> framework.</li>
+<li>Tag it with the release version, and begin the body with a template covering the release date, changelog link, release coordinator, and a testing tracking sheet. The thread is for discussing testing, bug fixes, and the overall quality of the release; once complete, lock and unpin it.</li>
+<li>Note the incomplete GitHub issues tagged for the release, and once test images are produced, ask the community to help test — forums, social media, and the <a href="https://github.com/armbian/autotests">autotests</a> framework.</li>
 </ul>
-<h3 id="2-release-candidate-branch-management">2. Release-candidate branch management<a class="headerlink" href="#2-release-candidate-branch-management" title="Permanent link">&para;</a></h3>
+<h3 id="2-stabilization">2. Stabilization<a class="headerlink" href="#2-stabilization" title="Permanent link">&para;</a></h3>
 <ul>
-<li>At code freeze, create an RC branch as <code>version-rc</code> (e.g. <code>v26.8-rc</code>).</li>
-<li>Begin the testing process. Do not modify the branch directly — accept PRs only, and only for bug fixes (no features).</li>
-<li>Bump the <code>main</code> version to the next release with <code>-trunk</code> (e.g. if the RC is <code>v26.8</code>, <code>main</code> becomes <code>v26.11-trunk</code>).</li>
+<li>During the release month, development on <code>main</code> shifts to bug fixes only — feature integration stops.</li>
 <li>CI must pass on every PR; test images build automatically.</li>
-<li>Repeat build/test/bug-fix until stable, cherry-picking fixes back to <code>main</code>, then cut the final release branch from the RC.</li>
+<li>Repeat build, test, and bug-fix on real hardware until the software stack is stable.</li>
 </ul>
 <h3 id="3-release">3. Release<a class="headerlink" href="#3-release" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Create a GitHub release from the final release branch. Enable <a href="https://github.com/armbian/build/pull/6318">source freezing</a> for it:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<li>Cut the <strong>release branch</strong> and freeze its external sources — enable <a href="https://github.com/armbian/build/pull/6318">source freezing</a>:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh targets
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>cp output/info/git_sources.json config/sources/
 </span></code></pre></div></td></tr></table></div>
 <p>and commit this to the build framework.
-- Release notes are generated from the merged pull requests (see the <a href="../">release notes</a>); add any extra highlights to the GitHub release.
-- Point the Armbian build system at the new release.
-- Update the documentation to reflect the current release.
+- Create a GitHub release from the release branch. Release notes are generated from the merged pull requests (see <a href="/releases/">releases</a>); add any extra highlights.
+- Build and publish the release images, point the Armbian build system at the new release, and update the documentation.
 - Celebrate.</p>
 </li>
 </ul>
