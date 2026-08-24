@@ -28,13 +28,22 @@ Set kernel and U-Boot branch manually to skip dialog prompt
 
 **RELEASE** ( `string` )
 
-- `bookworm`
-- `trixie`
-- `sid`
-- `jammy`
-- `noble`
+Supported:
 
-Set packages release base manually to skip dialog prompt. Check here for [currently available releases](https://github.com/armbian/build/tree/main/config/distributions).
+- `trixie` (Debian 13)
+- `noble` (Ubuntu 24.04)
+- `resolute` (Ubuntu 26.04)
+
+Community supported:
+
+- `bookworm` (Debian 12)
+- `forky` (Debian 14)
+- `sid` (Debian unstable)
+- `jammy` (Ubuntu 22.04)
+
+Set packages release base manually to skip dialog prompt. Each release carries its
+own support status in [`config/distributions/<release>/support`](https://github.com/armbian/build/tree/main/config/distributions);
+releases marked `eos` there are end of service and are not listed here.
 
 !!! tip "Note"
 
@@ -111,11 +120,16 @@ Docker assisted compilation is on by default. Set to `no` if you prefer running 
 
 **DOCKER_ARMBIAN_BASE_IMAGE** ( `string` )
 
-- `ubuntu:jammy` (default)
-- `ubuntu:noble`
+- `debian:trixie` (default)
 - `debian:bookworm`
+- `ubuntu:jammy`
+- `ubuntu:noble`
+- `ubuntu:resolute`
 
-Defines the build host when using a Docker container (default). [Here](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build), you can see which other options are available.
+Defines the build host when using a Docker container (default). The image set is
+generated from [`config/distributions`](https://github.com/armbian/build/tree/main/config/distributions),
+skipping releases marked `eos` plus `sid` and `forky`; see the
+[published images](https://github.com/armbian/docker-armbian-build/pkgs/container/docker-armbian-build).
 
 **ARMBIAN_DOCKER_AUTO_PULL** ( `string` )
 
@@ -457,9 +471,11 @@ Controls the U-Boot bootloader log level during image building. Lower values pro
 
 Images left uncompressed are still checksummed when `COMPRESS_OUTPUTIMAGE` includes `sha`. Useful for formats consumed as-is — `qcow2` (imported into a hypervisor) or `iso` (mounted as a virtual CD) — where compression only adds an extra decompress step.
 
-# Build options below need to be retested and added above (COULD BE DEPRECATED)
+## Options pending review
 
-:warning: DO NOT USE! Obsolete documentation, new documentation above is in progress.
+The switches below still exist in the build framework, but have not been
+re-verified against current behaviour the way the sections above have. Treat the
+descriptions as a starting point rather than a guarantee.
 
 - **KERNEL_KEEP_CONFIG** ( yes | no ):
   - yes: use kernel config file from previous compilation for the same branch, device family, and version
@@ -473,16 +489,9 @@ Images left uncompressed are still checksummed when `COMPRESS_OUTPUTIMAGE` inclu
 
 ## Hidden options to minimize user input for build automation
 
-- **ARMBIAN_CACHE_ROOTFS_PATH** ( `string` ): bind mount cache/rootfs to defined folder
-- **ARMBIAN_CACHE_TOOLCHAIN_PATH** ( `string` ): bind mount cache/toolchain path to defined folder
-
 ## Hidden options for advanced users (default values are marked **bold**)
 
 - **USERPATCHES_PATH** ( **userpatches/** ): set alternate path for the location of the `userpatches` folder
-- **SKIP_EXTERNAL_TOOLCHAINS** ( yes | **no** ): don't download and use Linaro toolchains, by default placed in cache/toolchain (and configurable with **ARMBIAN_CACHE_TOOLCHAIN_PATH**)
-- **PROGRESS_DISPLAY** ( none | **plain** | dialog ): way to display output of verbose processes - compilation, packaging, debootstrap
-- **PROGRESS_LOG_TO_FILE** ( yes | **no** ): duplicate output, affected by the previous option, to log files `output/debug/*.log`
-- **NO_APT_CACHER** ( **yes** | no ): disable usage of APT cache. Default `yes` in containers, but can be overridden
 - **DISABLE_IPV6** ( **true** | false ): The distant future, the year Two-Thousand. Set false to allow Aria2c to use a modern ip protocol.
 - **NO_HOST_RELEASE_CHECK** ( yes | **no** ): overrides the check for a supported host system
 - **USE_MAINLINE_GOOGLE_MIRROR** ( yes | **no** ): use the `googlesource.com` mirror for downloading mainline kernel sources, which may be faster than `git.kernel.org` depending on your location
@@ -499,9 +508,6 @@ Images left uncompressed are still checksummed when `COMPRESS_OUTPUTIMAGE` inclu
     - **IMAGE_XZ_COMPRESSION_RATIO** ( 0 - **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
   - zstd: compress image only using zstd format
     - **ZSTD_COMPRESSION_LEVEL** ( 1 - **9** - 19 ) images compression levels when using zstd compressor. Beware of memory consumption when going higher
-- **SEVENZIP** ( yes | **no** ): create .7z archive with extreme compression ratio instead of .zip
-- **BUILD_KSRC** ( **yes** | no ): create kernel source packages while building...
-- **INSTALL_KSRC** ( yes | **no** ): ... and pre-install these kernel sources on the image
 - **FORCE_BOOTSCRIPT_UPDATE** ( yes | no ):
   - yes: force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** ( `IPv4 address` ): the DNS resolver used inside the build chroot. Does not affect the final image. Default: `1.0.0.1`
@@ -536,4 +542,3 @@ Images left uncompressed are still checksummed when `COMPRESS_OUTPUTIMAGE` inclu
 - **EXTRAWIFI** ( **yes** | no ): include several drivers for [WiFi adapters](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507)
 - **DISABLE_KERNEL_PATCHES** ( yes | **no** ): Disable all Armbian-specific kernel patches and build a vanilla kernel instead. Also disables `EXTRAWIFI`
 - **DOCKER_NICE** ( `integer`, -20 to 19 ): automatically propagated from the initial `compile.sh`'s `nice` value.
-- **LEGACY_DEBOOTSTRAP** ( yes | **no** ): if yes, use `debootstrap`, else use `mmdebstrap`

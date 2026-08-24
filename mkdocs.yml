@@ -75,6 +75,9 @@ plugins:
       redirect_maps:
         'User-Guide_Allwinner_overlays.md': 'User-Guide_Armbian_overlays.md'
         'Release_Changelog.md': 'releases/index.md'
+        # Multipass is no longer referenced anywhere in armbian/build; Docker is
+        # the supported containerised host.
+        'Developer-Guide_Building-with-Multipass.md': 'Developer-Guide_Building-with-Docker.md'
         'Process_Release-Model.md': 'releases/release-model.md'
         # Armbian Software overview moved to /software/
         'User-Guide_Armbian-Software.md': 'software/index.md'
@@ -274,7 +277,6 @@ nav:
         - 'Build Switches' : 'Developer-Guide_Build-Switches.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
-        - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
         - 'Extensions Framework' : 'Developer-Guide_Extensions.md'
         - 'Extensions List' : 'Developer-Guide_Extensions-List.md'

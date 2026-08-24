@@ -297,12 +297,6 @@ Fetches Marvell Armada A3700 build tools, DDR library, and binary blobs needed f
 
 ---
 
-## mesa-vpu
-
-Installs Mesa 3D and VPU/Chromium acceleration packages. On Ubuntu: full 3D + 4K VPU. On Debian: 3D only.
-
----
-
 ## mtkflash
 
 Adds MediaTek device flashing tool support to the build.
