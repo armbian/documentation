@@ -11,54 +11,58 @@ Control what lands inside the rootfs — firmware and kernel packages, the netwo
 
 `string` · default: `yes`
 
-Install the armbian-firmware package into the rootfs.
+Installs the `armbian-firmware` package, a curated collection of binary firmware blobs (Wi-Fi, Bluetooth, GPU and other peripherals) that many boards need to bring their hardware up. Left on by default; set `no` only for images where you supply firmware yourself or want the smallest possible rootfs.
 
 #### BOARD_FIRMWARE_INSTALL
 
 `string` · default: empty
 
-Set to `-full` to install the full firmware variant instead of the base one.
+Selects which firmware variant is installed. Empty installs the standard `armbian-firmware`; set to `-full` to install `armbian-firmware-full`, the much larger package covering a far wider range of devices — useful when one image has to support many different peripherals, at the cost of extra size.
 
 #### INSTALL_HEADERS
 
 `string`
 
 - `yes`: pre-install kernel headers
-- `no`: (default)
+- `no` (default)
+
+Pre-installs the matching kernel headers into the image so that DKMS and other out-of-tree kernel modules can be compiled directly on the running board. Off by default because the headers add noticeable size; enable it when the board's users will build kernel modules themselves.
 
 #### EXTRAWIFI
 
 `yes` (default) | `no`
 
-Include several out-of-tree WiFi/BT adapter drivers. See the [driver list](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507).
+Builds and includes a set of out-of-tree Wi-Fi and Bluetooth adapter drivers that are not in the mainline kernel, covering many popular USB and SDIO chipsets. On by default; set `no` to build with in-kernel drivers only — for a leaner image, or when a mainline driver already covers your adapter. See the [driver list](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507).
 
 #### BSPFREEZE
 
 `string`
 
-- `yes`: freeze (from upgrade) armbian firmware packages when building images (U-Boot, kernel, DTB, BSP)
-- `no`: (default)
+- `yes`: hold the Armbian board-support packages so they are not upgraded
+- `no` (default)
+
+Marks the Armbian board-support packages (U-Boot, kernel, DTB and the BSP metapackage) as held, so `apt upgrade` on the running system will not replace them. Use it to pin a known-good board-support stack — handy for reproducible or long-lived deployments where an unattended kernel or U-Boot bump would be disruptive.
 
 #### SKIP_ARMBIAN_REPO
 
 `string`
 
 - `yes`
-- `no`  (default)
+- `no` (default)
 
-Enforce building without Armbian repository. Suitable for developing new releases or making custom images that don't need Armbian repository.
+Builds the image without adding Armbian's apt repository, so the system sees only the base Debian/Ubuntu repositories. Suitable when developing a new release before its repository exists, or for custom images that must not pull packages from Armbian.
 
 #### ARMBIAN_ZSH_SOURCE
 
 `string` · default: `https://github.com/ohmyzsh/ohmyzsh`
 
-Git source repo for oh-my-zsh in the armbian-zsh package.
+Git repository that the `armbian-zsh` package fetches oh-my-zsh from. Override it to build against a fork or a local mirror — for example when building behind a firewall, or to pin a specific oh-my-zsh revision.
 
 #### EXTRA_ROOTFS_NAME
 
 `string` · default: empty
 
-Suffix appended to the rootfs cache name to force a distinct cache variant.
+Appends a suffix to the cached root filesystem's name so a customised build gets its own cache entry instead of reusing — or overwriting — the standard one. Set it when your userpatches change the rootfs in a way the cache key would not otherwise capture, to avoid stale-cache surprises.
 
 #### INCLUDE_HOME_DIR
 
@@ -67,7 +71,7 @@ Suffix appended to the rootfs cache name to force a distinct cache variant.
 - `yes`
 - `no` (default)
 
-Include directories created inside /home in final image.
+Includes files placed under `/home` in the build tree in the final image, letting you bake user data or dotfiles into the rootfs. Off by default so that `/home` starts empty on a fresh image.
 
 #### NETWORKING_STACK
 
@@ -77,7 +81,7 @@ Include directories created inside /home in final image.
 - `systemd-networkd`
 - `none` (to not-add any networking extensions)
 
-Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (BUILD_MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
+Installs the desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (`BUILD_MINIMAL=yes`) and `network-manager` for the rest. Time synchronization is also changed accordingly: chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, network settings are controlled through **Netplan**.
 
 ```sh
 ./compile.sh NETWORKING_STACK="network-manager"
@@ -87,7 +91,7 @@ Installs desired networking stack. If the parameter is undefined, it sets `syste
 
 `string` · default: `pool.ntp.org`
 
-NTP server used by ntpdate during host prep.
+NTP server used to synchronise the clock on the **build host** during preparation (via `ntpdate`); it does not change the time source in the finished image. Point it at an internal server when the default `pool.ntp.org` is unreachable on your network.
 
 #### CONSOLE_AUTOLOGIN
 
@@ -96,18 +100,16 @@ NTP server used by ntpdate during host prep.
 - `yes` (default)
 - `no`
 
-Automatically login as root for local consoles at first run. Disable if your security threat model requires.
+Automatically logs in as root on the local serial/HDMI console at first boot, so a freshly flashed board is immediately usable without a keyboard-and-password step. Set `no` if your security threat model requires a login prompt on the physical console.
 
 #### OPENSSHD_REGENERATE_HOST_KEYS
 
 `boolean`
 
-  - false (skip armbian-firstrun's OpenSSH host keys deletion and regeneration (eg: to let cloud-init set the SSH host keys)
-  - **true** (execute armbian-firstrun's OpenSSH host keys deletion + regeneration)
+- `true` (default): armbian-firstrun deletes the shipped OpenSSH host keys and regenerates them
+- `false`: keep the shipped keys untouched
 
-Manage OpenSSH host key regeneration at armbian-firstrun service.
-
-Example:
+Controls whether `armbian-firstrun` deletes the image's shipped OpenSSH host keys and regenerates fresh ones on first boot, so every device ends up with unique keys. Set `false` to keep the keys as-is — for example when cloud-init or another provisioning tool is responsible for setting them.
 
 ```sh
 ./compile.sh OPENSSHD_REGENERATE_HOST_KEYS=false
@@ -117,13 +119,13 @@ Example:
 
 `string` · default: `no`
 
-Keep the distro's original `/etc/os-release` instead of overwriting it with Armbian's.
+Keeps the base distribution's `/etc/os-release` instead of replacing it with Armbian's. By default Armbian overwrites the file so the system identifies itself as Armbian; set `yes` when software or tooling keys off the upstream Debian/Ubuntu identity.
 
 #### ENABLE_EXTENSIONS
 
 `comma-separated list`
 
-[Extensions](/build-framework/extensions/) allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder `extensions` are called
+[Extensions](/build-framework/extensions/) add optional functionality to a build without bloating the core — extra image formats, drivers, tooling and more. Pass a comma-separated list of extension names (the filenames under `extensions/`) to enable them for this build.
 
 ```sh
 ./compile.sh \
