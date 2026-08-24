@@ -1320,63 +1320,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#release-coordinating" class="md-nav__link">
+  <a href="#cutting-a-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Release coordinating
+        Cutting a release
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Release coordinating">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-forum-communication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Forum communication
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-stabilization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Stabilization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Release
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5538,63 +5488,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#release-coordinating" class="md-nav__link">
+  <a href="#cutting-a-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Release coordinating
+        Cutting a release
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Release coordinating">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-forum-communication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Forum communication
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-stabilization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Stabilization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Release
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5652,33 +5552,19 @@
 <p>Each release uses the version format:</p>
 <p><strong><code>&lt;major&gt;.&lt;minor&gt;.&lt;revision&gt;</code></strong></p>
 <p><code>&lt;major&gt;.&lt;minor&gt;</code> is the release <strong>year and month</strong> (e.g. <code>26.8</code> for August 2026); <code>&lt;revision&gt;</code> is incremented for a fix. Releases are identified by this version number — the animal codename scheme used through <code>26.2</code> has been retired. See <a href="/releases/">releases</a> for the full history.</p>
-<h2 id="release-coordinating">Release coordinating<a class="headerlink" href="#release-coordinating" title="Permanent link">&para;</a></h2>
-<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
-<p>Development stays on <code>main</code> throughout the cycle. During the release month it is stabilized with bug fixes and testing. At the end, a <strong>release branch is created with frozen sources</strong> (named after the version), a GitHub release is tagged from it, and the release images are built and published. A release branch is <em>never</em> merged back to <code>main</code>; after release it is updated only for severe bugs and security vulnerabilities, and only until the next release.</p>
-<h3 id="1-forum-communication">1. Forum communication<a class="headerlink" href="#1-forum-communication" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Create a thread in the <a href="https://forum.armbian.com/forum/39-armbian-project-administration/">Armbian Project Administration forum</a> — e.g. <code>Armbian 26.8 Release Thread</code>.</li>
-<li>Tag it with the release version, and begin the body with a template covering the release date, changelog link, release coordinator, and a testing tracking sheet. The thread is for discussing testing, bug fixes, and the overall quality of the release; once complete, lock and unpin it.</li>
-<li>Note the incomplete GitHub issues tagged for the release, and once test images are produced, ask the community to help test — forums, social media, and the <a href="https://github.com/armbian/autotests">autotests</a> framework.</li>
-</ul>
-<h3 id="2-stabilization">2. Stabilization<a class="headerlink" href="#2-stabilization" title="Permanent link">&para;</a></h3>
-<ul>
-<li>During the release month, development on <code>main</code> shifts to bug fixes only — feature integration stops.</li>
-<li>CI must pass on every PR; test images build automatically.</li>
-<li>Repeat build, test, and bug-fix on real hardware until the software stack is stable.</li>
-</ul>
-<h3 id="3-release">3. Release<a class="headerlink" href="#3-release" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Cut the <strong>release branch</strong> and freeze its external sources — enable <a href="https://github.com/armbian/build/pull/6318">source freezing</a>:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h2 id="cutting-a-release">Cutting a release<a class="headerlink" href="#cutting-a-release" title="Permanent link">&para;</a></h2>
+<p>Once the software stack is stable, the release is cut from <code>main</code>:</p>
+<ol>
+<li>Create the <strong>release branch</strong> and freeze its external sources — see <a href="https://github.com/armbian/build/pull/6318">source freezing</a>:<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh targets
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>cp output/info/git_sources.json config/sources/
 </span></code></pre></div></td></tr></table></div>
-<p>and commit this to the build framework.
-- Create a GitHub release from the release branch. Release notes are generated from the merged pull requests (see <a href="/releases/">releases</a>); add any extra highlights.
-- Build and publish the release images, point the Armbian build system at the new release, and update the documentation.
-- Celebrate.</p>
+<p>then commit the pinned sources to the build framework.
+2. Tag a <strong>GitHub release</strong> from the release branch. Release notes are generated from the merged pull requests (see <a href="/releases/">releases</a>); add any extra highlights.
+3. Build and publish the release images, point the Armbian build system at the new release, and update the documentation.</p>
 </li>
-</ul>
+</ol>
+<p>A release branch is never merged back to <code>main</code>; after release it is maintained only for severe bugs and security vulnerabilities, and only until the next release.</p>
 
 
 
