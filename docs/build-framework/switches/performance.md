@@ -11,7 +11,7 @@ Switches that trade disk, RAM or cache for faster builds.
 
 `integer`
 
-Override `CTHREADS` if set to a valid positive integer. If not defined, defaults to 150% of the CPU threads available, to maximize compilation speed.
+Sets the `make -j` parallelism used for every compilation stage — kernel, U-Boot, ATF, crust and friends. When left undefined the framework auto-picks 150% of the detected CPU count (`nproc + nproc/2`) so that cores stay busy even while some jobs stall on I/O. Set it to a valid positive integer to override that, for example to cap the load on a shared build server or to avoid the peak memory of an oversubscribed link stage. The value is also forwarded into the build container, so it applies to Docker builds as well.
 
 #### USE_CCACHE
 
@@ -20,7 +20,7 @@ Override `CTHREADS` if set to a valid positive integer. If not defined, defaults
 - `yes`
 - `no` (default)
 
-Use a C compiler cache. Generally not needed thanks to git-worktree, and can slow down clean builds.
+Wraps the compiler in `ccache` so unchanged translation units are served from a cache instead of recompiled, putting `/usr/lib/ccache` first on `PATH`. Off by default because the framework already caches whole kernel and U-Boot artifacts through git-worktree, which usually saves more than object-level caching would; on a cold cache the extra bookkeeping can actually make a clean build slower. Turn it on only if you repeatedly recompile the same source tree with small local changes and want ccache to short-circuit the unchanged files.
 
 #### PRIVATE_CCACHE
 
@@ -29,13 +29,13 @@ Use a C compiler cache. Generally not needed thanks to git-worktree, and can slo
 - `yes`
 - `no` (default)
 
-Use `$DEST/ccache` as the ccache home directory. Setting `yes` enables `USE_CCACHE` as well.
+Points ccache at a private cache directory inside the build tree rather than the shared one, which avoids the file-ownership problems that arise when the build is run under `sudo`. Because a private cache only makes sense with caching active, setting `yes` implicitly enables `USE_CCACHE` too, so you do not have to set both. Reach for it when you want ccache but are building as root and do not want to share the cache with other users on the host.
 
 #### CCACHE_DIR
 
-`string` · default: `$SRC/cache/ccache` (or `$DEST/ccache` when `PRIVATE_CCACHE=yes`)
+`string` · default: `$SRC/cache/ccache`
 
-Directory for the ccache compiler cache. Point it at a persistent location to share the cache across builds.
+Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from `CCACHE_TEMPDIR`, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away.
 
 #### USE_TMPFS
 
@@ -44,7 +44,7 @@ Directory for the ccache compiler cache. Point it at a persistent location to sh
 - `yes`
 - `no` (default)
 
-Use tmpfs (RAM) for build working directories. Speeds up I/O-heavy stages on hosts with plenty of RAM; needs enough memory to hold the working set.
+Mounts a RAM-backed tmpfs over the build working directories, so the churn of unpacking, patching and compiling never touches a physical disk. This can noticeably speed up I/O-heavy stages, but the mount is sized at up to 99% of RAM, so the host needs enough free memory to hold the entire working set or the build will run out of space. It is honoured only when the build runs as root on Linux and outside a Dockerfile build; in those unsupported contexts the setting is quietly skipped. Off by default; enable it on a well-provisioned host where the working directory is the bottleneck.
 
 #### PREFER_NATIVE_ARMHF
 
@@ -86,6 +86,8 @@ Speeds up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` lev
 
 - `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES=yes`. Default is auto-calculated from `nproc`.
 
+Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and only takes effect when `PARALLEL_PATCHES=yes`. Leave it unset to let the framework size the pool automatically from the available cores, which is the right choice on most machines. Set an explicit count to throttle back the parallelism — for instance to reduce peak memory or disk pressure from the overlay mounts; a value that is out of range or otherwise invalid is ignored and the auto-calculation is used instead.
+
 #### ARTIFACT_IGNORE_CACHE
 
 `string`
@@ -93,7 +95,7 @@ Speeds up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` lev
 - `yes`
 - `no` (default)
 
-Enforce building from source instead of using pre-built (OCI-cached) artifacts.
+Forces artifacts (kernel, U-Boot, rootfs and so on) to be rebuilt from source, bypassing both the local cache and the remote OCI registry that the framework would otherwise pull a ready-made artifact from. Off by default, since reusing cached artifacts is what keeps everyday builds fast. Set `yes` when you suspect a cached artifact is stale or corrupt, or when you have changed something the cache key does not capture and need to be certain the output is freshly compiled.
 
 #### ROOT_FS_CREATE_ONLY
 
@@ -102,4 +104,4 @@ Enforce building from source instead of using pre-built (OCI-cached) artifacts.
 - `yes`
 - `no` (default)
 
-Force local rootfs cache creation only, without proceeding to a full image build.
+Historically this stopped the build after creating the root filesystem cache, without going on to assemble a full image. It is now deprecated: setting `yes` aborts the build with an error pointing you to the dedicated `rootfs` CLI command, which is the supported way to build just the rootfs artifact. Leave it at `no` (the default) and use `./compile.sh rootfs` instead when you only want the cached root filesystem.
