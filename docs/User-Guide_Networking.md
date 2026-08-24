@@ -1,3 +1,7 @@
+---
+description: "Configure Armbian networking on single-board computers with Netplan, systemd-networkd and NetworkManager, including static IP addresses and DHCP examples."
+---
+
 ## Networking
 
 Armbian uses [**Netplan.io**](https://netplan.io/) to describe networking configurations. Netplan is a utility to easily configure Linux networking, using a declarative approach.

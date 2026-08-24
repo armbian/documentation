@@ -1,3 +1,7 @@
+---
+description: "Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images."
+---
+
 # Board Maintainers
 
 ## How to become a maintainer?

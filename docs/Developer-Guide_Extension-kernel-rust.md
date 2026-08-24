@@ -1,3 +1,7 @@
+---
+description: "Armbian kernel-rust extension: enable CONFIG_RUST and install a pinned rustup toolchain to build Rust kernel modules alongside C in Armbian ARM kernels."
+---
+
 # Extension: kernel-rust
 
 The Linux kernel has been gaining Rust support since version 6.1, with more

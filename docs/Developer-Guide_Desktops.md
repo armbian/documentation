@@ -1,3 +1,7 @@
+---
+description: "Armbian desktop submodule reference for armbian-config: YAML-driven install pipeline, tiered minimal, mid and full desktops, auto-login and package overrides."
+---
+
 # Desktops
 
 Technical reference for the desktop submodule of `armbian-config` (the [configng](https://github.com/armbian/configng) repository), under `tools/modules/desktops/`. This guide is aimed at developers who want to add a new desktop environment, modify the install/remove pipeline, or integrate the YAML-driven desktop API from another tool.

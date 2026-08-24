@@ -1,3 +1,7 @@
+---
+description: "Enable Armbian Device Tree overlays on single-board computers to activate SPI, I2C, I2S, UART and GPIO interfaces via armbianEnv.txt or custom DTS files."
+---
+
 # Device Tree overlays
 
 Most in-circuit and GPIO based interfaces (SPI, I2C, I2S, UART, ...) don't have a mechanism for detecting and identifying devices connected to the bus,

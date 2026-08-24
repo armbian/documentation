@@ -1,3 +1,7 @@
+---
+description: "Contribute to Armbian on GitHub: fork the build, configng or documentation repositories, open issues and submit pull requests to the ARM Linux project."
+---
+
 # Collaborate on the project
 
 ## Overview

@@ -1,4 +1,5 @@
 ---
+description: "Armbian board support rules and levels for single-board computers: Platinum, Standard and community-maintained tiers, their benefits and maintainer criteria."
 comments: true
 ---
 # Board support Rules

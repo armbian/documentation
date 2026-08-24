@@ -1,4 +1,5 @@
 ---
+description: "Install Armbian to eMMC, SATA or NVMe and set up ZFS, NFS and a read-only root filesystem on single-board computers using armbian-config."
 comments: true
 ---
 

@@ -1,3 +1,7 @@
+---
+description: "Add a new software title to armbian-config: test the install manually, clone configng, design the JSON menu and write the install and uninstall module."
+---
+
 # Adding software title to Armbian config
 
 ### Tinkering

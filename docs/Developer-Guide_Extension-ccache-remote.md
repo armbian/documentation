@@ -1,3 +1,7 @@
+---
+description: "Armbian ccache-remote extension: share a remote ccache across build hosts using Redis or HTTP WebDAV to speed up repeated kernel and U-Boot compilation."
+---
+
 # Extension: ccache-remote
 
 [ccache](https://ccache.dev/) significantly speeds up repeated kernel and

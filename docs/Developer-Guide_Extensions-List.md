@@ -1,3 +1,7 @@
+---
+description: "Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and their key parameters and descriptions."
+---
+
 # Extensions Reference
 
 Alphabetical reference of all official Armbian build framework extensions.

@@ -1,3 +1,7 @@
+---
+description: "Armbian hardware troubleshooting for single-board computers: diagnose boot failures, freezes, crashes and USB issues caused by power supply or SD card problems."
+---
+
 # Hardware troubleshooting guide
 
 First aid video guide:

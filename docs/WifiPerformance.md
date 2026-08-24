@@ -1,4 +1,5 @@
 ---
+description: "Armbian WiFi performance benchmarks: throughput of USB, SDIO and PCI wireless adapters on single-board computers, tested in the Armbian autotests lab."
 comments: true
 ---
 # Testing the speed of wireless adapters

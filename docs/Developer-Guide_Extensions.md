@@ -1,3 +1,7 @@
+---
+description: "Armbian build framework extensions: extend the build with Bash hooks and extension methods without overloading the core, plus terminology and examples."
+---
+
 # Extensions
 
 > "I'm gonna create a `prepare_bootloader` hook [in core] so we can refactor `u-boot` [into an extension]"

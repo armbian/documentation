@@ -1,3 +1,7 @@
+---
+description: "How Armbian releases: daily and weekly rolling builds, quarterly point releases (Feb/May/Aug/Nov), the release branch and source-freeze process, and version numbering."
+---
+
 # Release model
 
 ## Rolling releases

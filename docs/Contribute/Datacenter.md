@@ -1,3 +1,7 @@
+---
+description: "Access the Armbian Datacenter hardware lab: request board-maintainers GitHub team membership and connect over VPN to debug and test boards on real hardware."
+---
+
 # Datacenter access
 
 Armbian runs a hardware lab — *the Datacenter* — a rack of real boards on real

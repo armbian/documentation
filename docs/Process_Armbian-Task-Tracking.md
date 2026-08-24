@@ -1,3 +1,7 @@
+---
+description: "Armbian task tracking process: create a GitHub issue for code-related tasks and keep all discussion in a matching forum topic named by the issue ID."
+---
+
 # Armbian Task Management #
 
 ## Overview ##

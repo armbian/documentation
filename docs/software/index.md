@@ -1,3 +1,7 @@
+---
+description: "Install self-hosted apps and services on Armbian single-board computers with armbian-config: Docker and native packages for media servers, dashboards, VPNs and more."
+---
+
 # Armbian Software
 
 Lightweight, Secure, and Optimized Services for Embedded Systems

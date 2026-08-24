@@ -1,4 +1,5 @@
 ---
+description: "How the Armbian mirror system works: a redirector routes downloads to the fastest nearby mirror, plus mirror specs and steps to contribute a new server."
 comments: true
 ---
 # How the Armbian Mirror System Works  

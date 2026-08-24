@@ -1,4 +1,5 @@
 ---
+description: "Configure wired and wireless networking on Armbian: Wi-Fi, static IP, DHCP and advanced bridged setups on single-board computers with armbian-config."
 comments: true
 ---
 

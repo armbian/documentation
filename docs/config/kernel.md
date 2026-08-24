@@ -1,4 +1,5 @@
 ---
+description: "Switch kernels, install headers and manage device-tree overlays and the boot environment on Armbian single-board computers with armbian-config."
 comments: true
 ---
 
