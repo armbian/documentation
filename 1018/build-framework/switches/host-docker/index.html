@@ -6921,10 +6921,10 @@
 <ul>
 <li><code>yes</code></li>
 </ul>
-<p>Show development features and boards regardless of their support status in interactive mode.</p>
+<p>Unlocks development features in the interactive menus, exposing boards, kernel branches and distribution releases that are otherwise hidden because they are unsupported or still in development. Off by default so the menus only offer combinations Armbian officially supports; set <code>yes</code> when you knowingly want to build for a board or release below &ldquo;supported&rdquo; status. This only affects interactive mode — passing the relevant parameters on the command line already bypasses the filter.</p>
 <h4 id="clean_level">CLEAN_LEVEL<a class="headerlink" href="#clean_level" title="Permanent link">&para;</a></h4>
 <p><code>comma-separated list</code></p>
-<p>Defines what should be cleaned. Changing this option can be useful when rebuilding images or building more than one image</p>
+<p>Selects which build artifacts and caches are wiped before the build runs, given as a comma-separated list of the targets below. Useful when rebuilding after source changes, or when building several images in a row and you need to force fresh compilation instead of reusing a stale tree. Include only the targets you actually need to invalidate — the <code>make-kernel</code> clean in particular is very slow, as it forces a full kernel rebuild.</p>
 <ul>
 <li><code>make-atf</code> = make clean for ATF, if it is built.</li>
 <li><code>make-uboot</code> = make clean for uboot, if it is built.</li>
@@ -6941,14 +6941,14 @@
 <ul>
 <li><code>/dev/sdX</code></li>
 </ul>
-<p>After successful compilation, do a verified burn of the image to the specified storage device (flash media / SD card).</p>
+<p>After a successful build, writes the finished image to the named block device and verifies it by reading the data back and comparing sha256 checksums. Left empty by default, so a build only produces an image file; set it to the card&rsquo;s device node — check <code>lsblk</code> for the right name — to flash in the same run. Double-check the path, as the target device is overwritten completely.</p>
 <h4 id="prefer_docker">PREFER_DOCKER<a class="headerlink" href="#prefer_docker" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
 <li><code>yes</code> (default)</li>
 <li><code>no</code></li>
 </ul>
-<p>Docker assisted compilation is on by default. Set to <code>no</code> if you prefer running compilation natively.</p>
+<p>Armbian runs the build inside a Docker container by default, which isolates the toolchain from the host and gives reproducible results across different machines. Set to <code>no</code> to compile natively on the host instead — appropriate when Docker is unavailable, or when you have already prepared the host with all build dependencies and want to skip the container. Native builds place tighter requirements on the host OS, which is why the containerised path is preferred.</p>
 <h4 id="docker_armbian_base_image">DOCKER_ARMBIAN_BASE_IMAGE<a class="headerlink" href="#docker_armbian_base_image" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -7016,70 +7016,69 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 <li><code>true</code></li>
 <li><code>false</code> (default)</li>
 </ul>
-<p>If enabled (<code>true</code>), the Docker build container will receive Docker credentials from the host
-(<code>${HOME}/.docker/config.json</code>) and the <code>OCI_TARGET_BASE</code> environment variable.</p>
+<p>Marks the build as running in a continuous-integration environment. When enabled (<code>true</code>), the Docker build container receives the host&rsquo;s Docker credentials (<code>${HOME}/.docker/config.json</code>) and the <code>OCI_TARGET_BASE</code> environment variable, so it can authenticate to and push cached artifacts to a registry. Left <code>false</code> for ordinary local builds; Armbian&rsquo;s own CI runners set it, and you rarely need to set it by hand.</p>
 <h4 id="oci_target_base">OCI_TARGET_BASE<a class="headerlink" href="#oci_target_base" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
 <li>url/to/container_registry/path</li>
 <li><code>${GHCR_SOURCE}/armbian/*</code> (default; GHCR_SOURCE is defined in <code>lib/functions/configuration/main-config.sh</code>)</li>
 </ul>
-<p>Select the target for pull/push OCI cached images. If not set, default is used.</p>
+<p>Base registry path the build uses to pull and push its OCI-cached artifacts — compiled kernels, U-Boot, rootfs and similar — so that work can be shared and reused instead of rebuilt from scratch. Defaults to Armbian&rsquo;s GHCR namespace (<code>${GHCR_SOURCE}/armbian/*</code>); point it at your own registry path when you run a private OCI cache. It is only passed into the build container when <code>CI=true</code>.</p>
 <h4 id="ghcr_mirror_address">GHCR_MIRROR_ADDRESS<a class="headerlink" href="#ghcr_mirror_address" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>The default mirror address for ghcr.io, set by <code>GHCR_MIRROR=dockerproxy</code>, is ghcr.dockerproxy.net. When this address is unavailable, an alternative address can be set with <code>GHCR_MIRROR_ADDRESS</code>.</p>
+<p>When ghcr.io is reached through a mirror — selected with <code>GHCR_MIRROR=dockerproxy</code> — this sets the mirror&rsquo;s hostname. The default is <code>ghcr.dockerproxy.net</code>; override it with <code>GHCR_MIRROR_ADDRESS</code> when that host is unavailable or a different mirror is faster for you. This mainly matters in regions where ghcr.io itself is slow or unreachable.</p>
 <p>Example:</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span><span class="nv">GHCR_MIRROR</span><span class="o">=</span>dockerproxy<span class="w"> </span><span class="nv">GHCR_MIRROR_ADDRESS</span><span class="o">=</span>ghcr.libcuda.so
 </span></code></pre></div></td></tr></table></div>
 <h4 id="userpatches_path">USERPATCHES_PATH<a class="headerlink" href="#userpatches_path" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>userpatches/</code></p>
-<p>Set an alternate path for the location of the <code>userpatches</code> folder.</p>
+<p>Points the build at a different location for the <code>userpatches</code> folder, which holds your custom patches, overlays, config hooks, board definitions and first-run files. Defaults to <code>userpatches/</code> inside the build tree; set an absolute path to keep your customisations in a separate repository, or to share one set of patches across several checkouts.</p>
 <h4 id="no_host_release_check">NO_HOST_RELEASE_CHECK<a class="headerlink" href="#no_host_release_check" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Overrides the check for a supported host system.</p>
+<p>Bypasses the guard that refuses to build on host OS releases Armbian has not validated. Off by default, so an unsupported host fails early with a clear message instead of part-way through; set <code>yes</code> to force the build to proceed anyway. Useful on a newer or derivative distribution not yet on the supported list, at the risk of build failures the check would otherwise catch up front.</p>
 <h4 id="sync_clock">SYNC_CLOCK<a class="headerlink" href="#sync_clock" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
-<p>Sync system clock on builder before start image creation process.</p>
+<p>Synchronises the build host&rsquo;s clock with <code>ntpdate</code> (against <code>NTP_SERVER</code>) before image creation, since a badly skewed clock can break TLS certificate validation and produce misleading file timestamps. On by default; the build automatically skips it when <code>ntpd</code> is already running, and clock-sync failures are tolerated. Set <code>no</code> on hosts where you manage time yourself or have no network path to an NTP server.</p>
 <h4 id="offline_work">OFFLINE_WORK<a class="headerlink" href="#offline_work" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Skip downloading and updating sources and time and host check. Set to &ldquo;yes,&rdquo; and you can collect packages without accessing the internet.</p>
+<p>Runs the build without touching the network: it skips git fetches and updates, the host clock sync and host checks, and serves cached sources and memoized data even when they are past their normal expiry. Set <code>yes</code> to build from what is already cached — for example on an air-gapped machine, or to guarantee a repeatable build against pinned sources. Anything not already present in the cache will make the build fail rather than trigger a download.</p>
 <h4 id="force_use_ramdisk">FORCE_USE_RAMDISK<a class="headerlink" href="#force_use_ramdisk" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Overrides autodetect for using tmpfs in new debootstrap and image creation process.</p>
+<p>Overrides the automatic decision on whether to build the rootfs and image on a tmpfs ramdisk. Normally the framework weighs available memory against the expected rootfs size and enables tmpfs only when it will comfortably fit; set <code>yes</code> to force the ramdisk on — much faster, but it needs plenty of RAM — or <code>no</code> to force it off, which is safer on memory-constrained hosts. Leave it unset to keep the autodetection.</p>
 <h4 id="disable_ipv6">DISABLE_IPV6<a class="headerlink" href="#disable_ipv6" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>true</code></p>
-<p>The distant future, the year Two-Thousand. Set false to allow Aria2c to use a modern ip protocol.</p>
+<p>Defaults to <code>true</code>, which keeps the downloader (aria2c) on IPv4 only. This avoids stalled or hanging downloads on hosts that advertise IPv6 connectivity but cannot actually route it — a surprisingly common failure. Set <code>false</code> to allow IPv6 for downloads when your network genuinely supports it.</p>
 <h4 id="docker_nice">DOCKER_NICE<a class="headerlink" href="#docker_nice" title="Permanent link">&para;</a></h4>
 <p><code>integer</code>, -20 to 19</p>
-<p>Automatically propagated from the initial <code>compile.sh</code>&rsquo;s <code>nice</code> value.</p>
+<p>Sets the scheduling priority (niceness) of the build process inside the Docker container. It is captured automatically from the <code>nice</code> value of the initial <code>compile.sh</code> invocation and propagated into the container, so a build you launch with <code>nice</code> stays equally polite to the rest of the host. You normally do not set this by hand; lower values mean higher priority, higher values yield CPU to other work.</p>
 <h4 id="docker_privileged">DOCKER_PRIVILEGED<a class="headerlink" href="#docker_privileged" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
-<p>Run the build container privileged; set <code>no</code> for a narrow capability set.</p>
+<p>Controls whether the build container runs with Docker&rsquo;s <code>--privileged</code> flag. On (<code>yes</code>) by default because the build needs loop devices, mounts and other host-level operations to assemble an image; set <code>no</code> to run with a narrower profile instead (loop-control device plus unconfined seccomp), which is more restrictive but may not support every build type. Leave it at the default unless you have a specific reason to tighten container privileges.</p>
 <h4 id="docker_skip_card_device">DOCKER_SKIP_CARD_DEVICE<a class="headerlink" href="#docker_skip_card_device" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Do not pass <code>CARD_DEVICE</code> into the container.</p>
+<p>Stops the launcher from passing <code>CARD_DEVICE</code> through to the Docker container. Off by default, so when you set <code>CARD_DEVICE</code> the target card is exposed inside the container and the image is flashed after the build; set <code>yes</code> to keep the device off the container even though <code>CARD_DEVICE</code> is set — useful when you would rather flash the resulting image manually on the host.</p>
 <h4 id="fast_docker">FAST_DOCKER<a class="headerlink" href="#fast_docker" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Skip slow container-image refresh checks for a faster launch.</p>
+<p>Skips the step that regenerates and rebuilds the container&rsquo;s Dockerfile before launch, so the build starts straight from the existing image. Off by default, which keeps the container image in step with the framework; set <code>yes</code> when you know the image is already current and want to shave the refresh time off each launch — common in CI, where the image is pulled or built once up front.</p>
 <h4 id="pre_prepared_host">PRE_PREPARED_HOST<a class="headerlink" href="#pre_prepared_host" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Assume host dependencies are already installed; skip host preparation steps.</p>
+<p>Tells the build that the host already has every required dependency installed, so it skips the host-preparation stage that would otherwise check and install packages. Off by default; set <code>yes</code> on a pre-provisioned image — such as a purpose-built CI runner or a container that was baked with all build tools — to save the preparation time. Enabling it on an incompletely prepared host will surface as missing-tool errors later in the build.</p>
 <h4 id="armbian_docker_pull_user">ARMBIAN_DOCKER_PULL_USER<a class="headerlink" href="#armbian_docker_pull_user" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>$SUDO_USER</code></p>
-<p>User for the Docker image auto-pull cron.</p>
+<p>Chooses the user account that owns the Docker image auto-pull cronjob (see <code>ARMBIAN_DOCKER_AUTO_PULL</code>). Defaults to the invoking user — <code>$SUDO_USER</code> when running under sudo, falling back to the current user — so the scheduled pull runs as the same person who builds. Set it explicitly when the cron should run as a different, dedicated build user.</p>
 <h4 id="needs_binfmt">NEEDS_BINFMT<a class="headerlink" href="#needs_binfmt" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Require binfmt_misc/qemu-static; automatically set <code>yes</code> for image and rootfs builds.</p>
+<p>Requires that <code>binfmt_misc</code> and <code>qemu-user-static</code> are set up so the build can run foreign-architecture binaries inside the rootfs (for example running arm64 tools on an x86 host). Set to <code>no</code> by default, but the framework forces it to <code>yes</code> for any build that assembles a rootfs or image, since those must execute target-architecture code in a chroot. You rarely set it yourself; it exists so lighter operations that never enter a foreign chroot can skip the binfmt setup.</p>
 <h2 id="proxies-mirrors">Proxies &amp; mirrors<a class="headerlink" href="#proxies-mirrors" title="Permanent link">&para;</a></h2>
 <h4 id="use_mainline_google_mirror">USE_MAINLINE_GOOGLE_MIRROR<a class="headerlink" href="#use_mainline_google_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Use the <code>googlesource.com</code> mirror for downloading mainline kernel sources, which may be faster than <code>git.kernel.org</code> depending on your location.</p>
+<p>Fetches mainline kernel sources from the <code>googlesource.com</code> mirror instead of the official <code>git.kernel.org</code>. Off by default; enable it when <code>git.kernel.org</code> is slow or unreliable from your location, as the Google mirror is often faster. This is a shorthand for <code>MAINLINE_MIRROR=google</code>.</p>
 <h4 id="use_github_uboot_mirror">USE_GITHUB_UBOOT_MIRROR<a class="headerlink" href="#use_github_uboot_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Use an unofficial GitHub mirror for downloading mainline U-Boot sources, may be faster than <code>git.denx.de</code> depending on your location.</p>
+<p>Fetches mainline U-Boot sources from an unofficial GitHub mirror instead of the official <code>git.denx.de</code>. Off by default; enable it when the DENX server is slow or unreachable from your location, since GitHub is often faster and more reliable. This is a shorthand for <code>UBOOT_MIRROR=github</code>.</p>
 <h4 id="download_mirror">DOWNLOAD_MIRROR<a class="headerlink" href="#download_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Select download mirror for <code>toolchain</code> and <code>debian/ubuntu packages</code></p>
+<p>Selects the download mirror used for the cross-toolchain and the Debian/Ubuntu package repositories. Leave it empty to use the official sources; choose one of the regional mirrors below when the defaults are slow, which is typically the case for users in mainland China.</p>
 <ul>
 <li><code>china</code>: use <code>mirrors.tuna.tsinghua.edu.cn</code>; it will be very fast thanks to Tsinghua University</li>
 <li><code>bfsu</code>: use <code>mirrors.bfsu.edu.cn</code>, the mirror of Beijing Foreign Studies University</li>
@@ -7087,10 +7086,10 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 </ul>
 <h4 id="local_mirror">LOCAL_MIRROR<a class="headerlink" href="#local_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: auto</p>
-<p>Override automated mirror selection, example &lsquo;LOCAL_MIRROR=&rdquo;<a href="https://yourlocalmirror.com">https://yourlocalmirror.com</a>&rdquo;&lsquo;.</p>
+<p>Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Left on auto by default so it picks a suitable mirror for you; set it to your own mirror&rsquo;s URL — for example <code>LOCAL_MIRROR="https://yourlocalmirror.com"</code> — to build against an internal or geographically closer mirror. Handy on isolated networks or to reduce load on the public infrastructure.</p>
 <h4 id="mainline_mirror">MAINLINE_MIRROR<a class="headerlink" href="#mainline_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Select mainline mirror of <code>linux-stable.git</code></p>
+<p>Selects which mirror of <code>linux-stable.git</code> the mainline kernel sources are cloned from. Leave it empty to use the official <code>git.kernel.org</code>; pick one of the mirrors below when that server is slow for you, as it commonly is for users in mainland China.</p>
 <ul>
 <li><code>google</code>: use the mirror provided by Google, the same as <code>USE_MAINLINE_GOOGLE_MIRROR=yes</code></li>
 <li><code>tuna</code>: use the mirror provided by Tsinghua University</li>
@@ -7099,7 +7098,7 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 </ul>
 <h4 id="uboot_mirror">UBOOT_MIRROR<a class="headerlink" href="#uboot_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Select mainline mirror of <code>u-boot.git</code></p>
+<p>Selects which mirror of <code>u-boot.git</code> the mainline U-Boot sources are cloned from. Leave it empty to use the official <code>source.denx.de</code>; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.</p>
 <ul>
 <li><code>github</code>: use the mirror provided by github, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code></li>
 <li><code>gitee</code>: use the mirror provided by Gitee, a Chinese git services</li>
@@ -7107,7 +7106,7 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 </ul>
 <h4 id="github_mirror">GITHUB_MIRROR<a class="headerlink" href="#github_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Select download mirror for GitHub hosted repository</p>
+<p>Selects a mirror or proxy for the many GitHub-hosted repositories the build clones. Leave it empty to connect to GitHub directly; choose one of the options below when GitHub is slow or unreachable — again, most relevant for users in mainland China or behind a corporate git proxy.</p>
 <ul>
 <li><code>fastgit</code>: use the mirror provided by fastgit.org</li>
 <li><code>gitclone</code>: use the mirror provided by gitclone.com</li>
@@ -7117,55 +7116,55 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 </ul>
 <h4 id="gitproxy_address">GITPROXY_ADDRESS<a class="headerlink" href="#gitproxy_address" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Full base URL of the git proxy used by <code>GITHUB_MIRROR=gitproxy</code>; it replaces <code>https://github.com</code> for all source clones. Usually provided automatically by self-hosted CI runners.</p>
+<p>Full base URL of the pass-through git proxy used by <code>GITHUB_MIRROR=gitproxy</code>; it replaces <code>https://github.com</code> for all source clones (for example <code>https://gitproxy.example.com/github.com</code>, no trailing slash). When a CI runner exports this variable, <code>GITHUB_MIRROR</code> is switched to <code>gitproxy</code> automatically, so self-hosted runners route their clones through the proxy without extra configuration. Set it by hand only if you run such a proxy yourself.</p>
 <h4 id="regional_mirror">REGIONAL_MIRROR<a class="headerlink" href="#regional_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Select mirrors based on regional setting, will not overwrite explicitly specified mirror option</p>
+<p>Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.</p>
 <ul>
 <li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>fastgit</code>, DOWNLOAD_MIRROR=<code>china</code></li>
 <li>leave empty to use default settings</li>
 </ul>
 <h4 id="http_proxy">HTTP_PROXY<a class="headerlink" href="#http_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>HTTP proxy propagated into container/tool environments.</p>
+<p>Proxy URL for HTTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTP proxy.</p>
 <h4 id="https_proxy">HTTPS_PROXY<a class="headerlink" href="#https_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>HTTPS proxy propagated into container/tool environments.</p>
+<p>Proxy URL for HTTPS traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTPS proxy.</p>
 <h4 id="ftp_proxy">FTP_PROXY<a class="headerlink" href="#ftp_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>FTP proxy propagated into container/tool environments.</p>
+<p>Proxy URL for FTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches FTP resources only through a proxy.</p>
 <h4 id="no_proxy">NO_PROXY<a class="headerlink" href="#no_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>Proxy-bypass list propagated into container/tool environments.</p>
+<p>Comma-separated list of hosts and domains that should bypass the proxies above, propagated into the build container and the tools it runs. Empty by default; set it to keep local mirrors, registries or internal hosts off the proxy.</p>
 <h4 id="github_source">GITHUB_SOURCE<a class="headerlink" href="#github_source" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>https://github.com</code></p>
-<p>Base GitHub URL for tool/source downloads (mirror override).</p>
+<p>Base GitHub URL used when the build downloads helper tools and some sources (for example <code>bat</code>, <code>oras</code> and oh-my-zsh). Defaults to <code>https://github.com</code>; override it to route those fetches through a GitHub mirror or a caching proxy. Unlike <code>GITHUB_MIRROR</code>, this substitutes the URL directly rather than selecting a named mirror preset.</p>
 <h4 id="armbian_firmware_git_source">ARMBIAN_FIRMWARE_GIT_SOURCE<a class="headerlink" href="#armbian_firmware_git_source" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>https://github.com/armbian/firmware</code></p>
-<p>Git source repo for Armbian firmware.</p>
+<p>Git repository the build clones the Armbian firmware blobs from when building the firmware packages. Defaults to <code>https://github.com/armbian/firmware</code>; point it at a fork or a local mirror to build against custom firmware or when working behind a firewall. Pair it with <code>ARMBIAN_FIRMWARE_GIT_BRANCH</code> to select the branch.</p>
 <h4 id="armbian_firmware_git_branch">ARMBIAN_FIRMWARE_GIT_BRANCH<a class="headerlink" href="#armbian_firmware_git_branch" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>master</code></p>
-<p>Git branch of the Armbian firmware repo.</p>
+<p>Branch of the Armbian firmware repository (<code>ARMBIAN_FIRMWARE_GIT_SOURCE</code>) to check out when building the firmware packages. Defaults to <code>master</code>; change it to build from a development branch or to pin firmware from a specific branch of your own fork.</p>
 <h2 id="apt-cache">APT cache<a class="headerlink" href="#apt-cache" title="Permanent link">&para;</a></h2>
 <h4 id="manage_acng">MANAGE_ACNG<a class="headerlink" href="#manage_acng" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Configures use of <code>apt-cacher-ng</code>, a cache for debian/ubuntu/etc apt repositories.</p>
+<p>Controls use of <code>apt-cacher-ng</code>, a caching proxy for Debian/Ubuntu apt repositories that speeds up repeated builds by serving already-downloaded packages from disk. Off by default. It accepts either a plain <code>yes</code>/<code>no</code> or a full URL, as described below; anything that is not <code>yes</code>, <code>no</code> or empty must be a valid <code>http</code>/<code>https</code> URL, or the build aborts.</p>
 <ul>
 <li><code>yes</code> sets up an automatically managed <code>apt-cacher-ng</code> instance on the build host. This mode is incompatible with container builds.</li>
 <li>but you can provide a URL for a self-managed <code>apt-cacher-ng</code> instance, e.g. <code>"http://apt-cacher.example.com:3142"</code></li>
 </ul>
 <h4 id="apt_proxy_addr">APT_PROXY_ADDR<a class="headerlink" href="#apt_proxy_addr" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>localhost:3142</code></p>
-<p>Address of the apt proxy/cacher used for package downloads.</p>
+<p>Address of the apt caching proxy that package downloads are routed through during the rootfs bootstrap. Defaults to <code>localhost:3142</code>, the standard <code>apt-cacher-ng</code> port; when it is set and <code>MANAGE_ACNG</code> is not managing its own instance, the debootstrap and chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared cache; leave it as-is if you have no external proxy.</p>
 <h4 id="apt_cacher_ng_cache_dir">APT_CACHER_NG_CACHE_DIR<a class="headerlink" href="#apt_cacher_ng_cache_dir" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>/var/cache/apt-cacher-ng</code></p>
-<p>Cache directory for the managed apt-cacher-ng instance.</p>
+<p>Filesystem directory where the managed <code>apt-cacher-ng</code> instance (<code>MANAGE_ACNG=yes</code>) stores its cached packages. Defaults to <code>/var/cache/apt-cacher-ng</code>; point it at a larger or faster volume when the default location lacks space, or to keep the cache on persistent storage across builds.</p>
 <h4 id="use_local_apt_deb_cache">USE_LOCAL_APT_DEB_CACHE<a class="headerlink" href="#use_local_apt_deb_cache" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
-<p>Use <code>$SRC/cache/aptcache</code> as a local <code>.deb</code> apt cache.</p>
+<p>Keeps a local cache of downloaded <code>.deb</code> packages under <code>$SRC/cache/aptcache</code> and reuses it across builds, so unchanged packages are not fetched again. On by default because it noticeably speeds up repeated builds; set <code>no</code> to always download fresh packages, at the cost of build time and bandwidth — the build warns that this is generally not a good idea.</p>
 <h4 id="oras_repo">ORAS_REPO<a class="headerlink" href="#oras_repo" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>oras-project</code></p>
-<p>GitHub org to download the ORAS OCI client binary from (mirror override).</p>
+<p>GitHub organisation the build downloads the ORAS OCI client binary from, ORAS being the tool used to push and pull OCI-cached artifacts. Defaults to <code>oras-project</code>, the upstream releases; override it to pull the binary from a fork or mirror. The build already switches this automatically for architectures without an official upstream binary (such as loong64), so you rarely set it by hand.</p>
 
 
 

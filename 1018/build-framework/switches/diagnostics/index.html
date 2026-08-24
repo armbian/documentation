@@ -5895,15 +5895,15 @@
 <li><code>yes</code></li>
 <li><code>no</code> (default)</li>
 </ul>
-<p>Automatically upload the full build log to one of Armbian&rsquo;s paste servers at the end of the build, and print the URL. Include it when reporting a build issue.</p>
+<p>At the end of the build the framework assembles the whole run into a single ANSI log file; with <code>SHARE_LOG=yes</code> it uploads that file to Armbian&rsquo;s paste servers — trying <code>paste.armbian.com</code> and its mirrors in turn until one succeeds — and prints the resulting share URL (also exposed as a <code>logs_url</code> output under GitHub Actions). It defaults to <code>no</code> because uploading is a network action and the log embeds local paths and environment details, so when left off the build instead prints the ready-made <code>curl</code> commands to upload it yourself. Turn it on when reporting a build issue, so maintainers can open the complete log from the link.</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span><span class="nv">SHARE_LOG</span><span class="o">=</span>yes
 </span></code></pre></div></td></tr></table></div>
 <h4 id="show_log">SHOW_LOG<a class="headerlink" href="#show_log" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code> when attached to a terminal</p>
-<p>Stream command output to the terminal live as the build runs, instead of only writing it to <code>output/logs</code>.</p>
+<p>Streams the output of every command to the terminal as the build runs, prefixed and interleaved with the high-level progress messages, instead of quietly capturing it into the per-section files under <code>output/logs</code>. It defaults to <code>yes</code> whenever stdout is a terminal (and is also forced on under CI and when <code>DEBUG=yes</code>), on the assumption that an interactive user wants to watch the build; with it off you get only the concise section markers, and the captured output is surfaced only if a command fails. Set it to <code>no</code> for a cleaner console — the full logs are still written to disk either way — or <code>yes</code> to force live streaming when output is being redirected to a file or pipe.</p>
 <h4 id="show_debug">SHOW_DEBUG<a class="headerlink" href="#show_debug" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Emit verbose debug-level messages. Automatically enabled when <code>DEBUG=yes</code>.</p>
+<p>Raises the verbosity of the build to debug level: it lets the many <code>debug</code>-severity <code>display_alert</code> messages through, triggers extra state and variable dumps throughout the pipeline, un-quiets <code>apt</code> inside the chroot (dropping its <code>-qq</code> flag so package <code>Conf</code>/<code>Inst</code> lines appear), and bumps the log level of the Python configuration-aggregation helpers. It defaults to <code>no</code> to keep the log readable and focused on the high-level flow, and is automatically turned on when <code>DEBUG=yes</code>. Enable it when you are diagnosing the build framework itself and need to see exactly what each step is doing.</p>
 
 
 

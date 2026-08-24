@@ -6493,37 +6493,37 @@ root filesystem subvolume:</p>
 <li><code>512</code> (default, for SD/EMMC/&hellip;)</li>
 <li><code>4096</code> (for UFS, requires util-linux &gt;2.41. Tested on Debian Trixie host)</li>
 </ul>
-<p>Enforce sfdisk to align partition sector sizes.</p>
+<p>Logical sector size the build passes to <code>sfdisk --sector-size</code> and to <code>losetup -b</code> when partitioning and attaching the raw image, so the partition table is aligned for the target media. Leave it at <code>512</code>, which suits SD cards, eMMC and most storage; set <code>4096</code> only for UFS-based devices, which expose 4K sectors and need a host with util-linux newer than 2.41.</p>
 <h4 id="uefisize">UEFISIZE<a class="headerlink" href="#uefisize" title="Permanent link">&para;</a></h4>
 <p><code>integer</code> (MiB) · default: <code>0</code></p>
-<p>Size of the UEFI/ESP partition; <code>0</code> = none.</p>
+<p>Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; <code>0</code> disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. Set a size (typically 256) for UEFI images. Do not combine <code>UEFISIZE&gt;0</code> with <code>BOOTSIZE&gt;0</code> — the two describe mutually exclusive boot layouts.</p>
 <h4 id="biossize">BIOSSIZE<a class="headerlink" href="#biossize" title="Permanent link">&para;</a></h4>
 <p><code>integer</code> (MiB) · default: <code>0</code></p>
-<p>Size of the legacy BIOS boot partition on GPT; <code>0</code> = none.</p>
+<p>Size in MiB of a small legacy BIOS boot partition, needed only when a GPT-partitioned image must also boot on old BIOS/CSM x86 firmware so GRUB has somewhere to embed its core. It defaults to <code>0</code> (no such partition), since most images target either UEFI or ARM boards that do not need it. A non-zero value is rejected on MBR partition tables, where it has no meaning.</p>
 <h4 id="bootsize">BOOTSIZE<a class="headerlink" href="#bootsize" title="Permanent link">&para;</a></h4>
-<p><code>integer</code> · default: <code>96</code></p>
-<p>Size in MB for a separate <code>/boot</code> filesystem. Used if <code>ROOTFS_TYPE</code> is set to non-ext4.</p>
+<p><code>integer</code> · default: <code>256</code> (when a separate <code>/boot</code> is required)</p>
+<p>Size in MB of a separate <code>/boot</code> partition, created when the root filesystem cannot hold the boot files itself — typically when <code>ROOTFS_TYPE</code> is something other than <code>ext4</code> (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger <code>/boot</code>.</p>
 <h4 id="fixed_image_size">FIXED_IMAGE_SIZE<a class="headerlink" href="#fixed_image_size" title="Permanent link">&para;</a></h4>
 <p><code>integer</code></p>
-<p>Create an image file of this size (in megabytes) instead of minimal.</p>
+<p>Forces the output image to a fixed size in megabytes instead of the default behaviour, where the build makes the image just large enough to hold the root filesystem. Set it when you need a predictable image size — for example to fit a specific card, to leave free space for later growth, or because a filesystem such as f2fs requires a pre-sized image and the build will refuse to continue without it.</p>
 <h4 id="boot_fs_label">BOOT_FS_LABEL<a class="headerlink" href="#boot_fs_label" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>armbi_boot</code></p>
-<p>Filesystem label for the <code>/boot</code> partition.</p>
+<p>Filesystem label written to the separate <code>/boot</code> partition when one is created, used so <code>/etc/fstab</code> and boot scripts can refer to it by a stable name rather than a shifting device node. The default <code>armbi_boot</code> is fine for almost every build; override it only when a board&rsquo;s bootloader or an external tool expects a particular label.</p>
 <h4 id="root_fs_label">ROOT_FS_LABEL<a class="headerlink" href="#root_fs_label" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>armbi_root</code></p>
-<p>Filesystem label for the root partition.</p>
+<p>Filesystem label written to the root partition, letting the system and the kernel command line locate root by label (<code>root=LABEL=...</code>) rather than by a device path that can change between boards and adapters. The default <code>armbi_root</code> suits standard builds; change it only when something downstream keys off a specific root label.</p>
 <h4 id="uefi_fs_label">UEFI_FS_LABEL<a class="headerlink" href="#uefi_fs_label" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>armbi_efi</code></p>
-<p>Filesystem label for the EFI partition (uppercased for FAT32).</p>
+<p>Filesystem label for the FAT32 EFI System Partition. The build forces it to uppercase before running <code>mkfs.fat</code>, as FAT32 volume labels are case-insensitive and conventionally uppercase, so a value like <code>armbi_efi</code> appears as <code>ARMBI_EFI</code>. Override it when the partition should show a specific name — this is the label Windows or macOS users see if they mount the card.</p>
 <h4 id="uefi_mount_point">UEFI_MOUNT_POINT<a class="headerlink" href="#uefi_mount_point" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>/boot/efi</code></p>
-<p>Mount point for the EFI partition.</p>
+<p>Directory where the EFI System Partition is mounted inside the image, and the path written into <code>/etc/fstab</code>. The default <code>/boot/efi</code> follows the usual Linux convention; some families override it, for example Raspberry Pi mounts it at <code>/boot/firmware</code> where its bootloader and config live. Change it only to match a board&rsquo;s expected firmware layout.</p>
 <h4 id="uefi_mount_point_skip_fstab">UEFI_MOUNT_POINT_SKIP_FSTAB<a class="headerlink" href="#uefi_mount_point_skip_fstab" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Omit the EFI partition from <code>/etc/fstab</code> (comment it out instead).</p>
+<p>Controls whether the EFI partition gets an active <code>/etc/fstab</code> entry. Left at <code>no</code>, the partition is mounted normally at boot; set <code>yes</code> and the build writes the same line commented out instead, so the EFI partition is not auto-mounted. Use it for boards or firmware that access the ESP directly and would be disturbed by it being mounted, or where you want to manage that mount yourself.</p>
 <h4 id="check_loop_for_size">CHECK_LOOP_FOR_SIZE<a class="headerlink" href="#check_loop_for_size" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
-<p>Verify the loop device reports the correct size before writing the image.</p>
+<p>Guards against a race where the kernel has not yet reported the loop device&rsquo;s real size after it is attached, which can lead to a truncated or corrupt image. Left at the default <code>yes</code>, the build waits and checks the loop device reports the expected size before continuing. Set <code>no</code> only to work around a host where the check misbehaves, understanding you lose that safety net.</p>
 <h4 id="force_bootscript_update">FORCE_BOOTSCRIPT_UPDATE<a class="headerlink" href="#force_bootscript_update" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -6532,6 +6532,7 @@ root filesystem subvolume:</p>
 <ul>
 <li>yes: force bootscript to get updated during bsp package upgrade</li>
 </ul>
+<p>Normally the boot script (<code>boot.cmd</code>/<code>boot.scr</code>) is treated as user-editable and left alone once installed, so a board-support package upgrade does not clobber local boot changes. Set <code>yes</code> to force the BSP package to overwrite it on every upgrade instead — used by boards where the boot script must always track the packaged version. Several board configs set this themselves; leave it unset unless you specifically need that behaviour.</p>
 <h2 id="image-compression">Image compression<a class="headerlink" href="#image-compression" title="Permanent link">&para;</a></h2>
 <h4 id="skip_compressing">SKIP_COMPRESSING<a class="headerlink" href="#skip_compressing" title="Permanent link">&para;</a></h4>
 <p><code>comma/space-separated list of file extensions</code></p>
@@ -6539,10 +6540,10 @@ root filesystem subvolume:</p>
 <li>e.g. <code>iso,qcow2</code>: leave images of these formats uncompressed even when <code>COMPRESS_OUTPUTIMAGE</code> enables <code>xz</code>/<code>zstd</code></li>
 <li>empty: (default) compress everything</li>
 </ul>
-<p>Images left uncompressed are still checksummed when <code>COMPRESS_OUTPUTIMAGE</code> includes <code>sha</code>. Useful for formats consumed as-is — <code>qcow2</code> (imported into a hypervisor) or <code>iso</code> (mounted as a virtual CD) — where compression only adds an extra decompress step.</p>
+<p>A global, comma- or space-separated list of image file extensions to leave uncompressed even when <code>COMPRESS_OUTPUTIMAGE</code> requests <code>xz</code> or <code>zstd</code>. It is empty by default, so every produced image is compressed. Images matched here are still checksummed when <code>COMPRESS_OUTPUTIMAGE</code> includes <code>sha</code>; only the compression step is skipped. Use it for formats consumed as-is — <code>qcow2</code> imported straight into a hypervisor, or <code>iso</code> mounted as a virtual CD — where compression would only add a pointless decompress step for the end user.</p>
 <h4 id="compress_outputimage">COMPRESS_OUTPUTIMAGE<a class="headerlink" href="#compress_outputimage" title="Permanent link">&para;</a></h4>
 <p><code>comma-separated list</code></p>
-<p>Create a compressed archive with an image file and GPG signature for redistribution</p>
+<p>Selects the post-processing applied to the finished image for redistribution — checksums, a GPG signature and/or a compressed archive — as a comma-separated list of the tokens below. If it is left empty (or <code>no</code>), the build falls back to <code>sha,img</code>, producing a plain uncompressed image with a SHA256 checksum. Add <code>xz</code> or <code>zstd</code> to ship a compressed image, and <code>gpg</code> to sign it; the two nested ratio switches tune how hard each compressor works.</p>
 <ul>
 <li>sha: generate SHA256 hash for image</li>
 <li>gpg: sign image using gpg</li>
@@ -6557,13 +6558,13 @@ root filesystem subvolume:</p>
 </ul>
 <h4 id="image_xz_memlimit">IMAGE_XZ_MEMLIMIT<a class="headerlink" href="#image_xz_memlimit" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: ~10GiB</p>
-<p><code>xz --memlimit-compress</code> ceiling for image compression.</p>
+<p>Hard memory ceiling handed to <code>xz --memlimit-compress</code> when compressing the image, a backstop that makes the encoder scale its own thread count down rather than risk an out-of-memory kill on a busy or small host. By default the build uses about 10 GiB, automatically lowered to the memory actually available when the host has less. Set an explicit value such as <code>4GiB</code> to cap it further on constrained machines, or raise it if you have plenty of RAM and want xz to parallelise more aggressively.</p>
 <h4 id="rootfs_compression_ratio">ROOTFS_COMPRESSION_RATIO<a class="headerlink" href="#rootfs_compression_ratio" title="Permanent link">&para;</a></h4>
 <p><code>integer</code> · default: <code>5</code></p>
-<p>zstd level for rootfs compression (<code>15</code> when building the rootfs cache).</p>
+<p>zstd compression level applied when packing the root filesystem tarball. The default <code>5</code> is a fast, light setting suited to the throwaway rootfs produced during a normal build; when the build is instead generating the shared rootfs cache artifact it raises this to <code>15</code>, trading CPU time for a smaller cached download that many later builds reuse. Raise it for smaller local rootfs archives at the cost of build time, or lower it to speed builds up.</p>
 <h4 id="compress_max_threads">COMPRESS_MAX_THREADS<a class="headerlink" href="#compress_max_threads" title="Permanent link">&para;</a></h4>
 <p><code>integer</code> · default: <code>16</code></p>
-<p>Cap on the number of xz/zstd threads during image and rootfs compression.</p>
+<p>Upper limit on how many threads xz/zstd may use when compressing the image and rootfs. The build normally uses as many threads as the host has, capped at <code>16</code>, because past that point extra threads give little wall-time gain while consuming a lot of memory. Lower it to leave CPU and RAM for other work, or raise it on a large, well-provisioned build host. A non-numeric or zero value is ignored and falls back to the default <code>16</code>.</p>
 
 
 

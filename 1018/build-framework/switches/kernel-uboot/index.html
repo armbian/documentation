@@ -6261,32 +6261,33 @@
 </span></code></pre></div></td></tr></table></div>
 <h4 id="kernel_menuconfig">KERNEL_MENUCONFIG<a class="headerlink" href="#kernel_menuconfig" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>menuconfig</code></p>
-<p>The <code>make</code> target used for interactive kernel configuration (e.g. <code>nconfig</code>, <code>xconfig</code>).</p>
+<p>Chooses the <code>make</code> target the framework invokes when it opens the interactive kernel configuration editor. The default <code>menuconfig</code> gives the familiar ncurses menu; set it to another kernel config front-end such as <code>nconfig</code>, <code>xconfig</code> or <code>gconfig</code> if you prefer that interface. It only has an effect when the build actually stops to configure the kernel (see <code>KERNEL_CONFIGURE</code>), so most non-interactive builds never touch it.</p>
 <h4 id="kernel_keep_config">KERNEL_KEEP_CONFIG<a class="headerlink" href="#kernel_keep_config" title="Permanent link">&para;</a></h4>
 <p><code>yes</code> | <code>no</code></p>
 <ul>
 <li><code>yes</code>: use kernel config file from previous compilation for the same branch, device family, and version</li>
 <li><code>no</code>: use default or user-provided config file</li>
 </ul>
+<p>Reuses the <code>.config</code> that a previous build for the same branch, device family and version exported to the output <code>config/</code> directory, instead of starting again from the shipped or user-provided defconfig. This is what lets your interactive <code>menuconfig</code> tweaks survive into the next build rather than being discarded. Leave it off for a clean, reproducible build from the tracked config; turn it on while iterating on kernel options so you don&rsquo;t have to re-apply your changes each time.</p>
 <h4 id="kernel_build_dtbs">KERNEL_BUILD_DTBS<a class="headerlink" href="#kernel_build_dtbs" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code></p>
-<p>Build and package the kernel device-tree blobs (dtbs).</p>
+<p>Builds the kernel&rsquo;s device-tree blobs (<code>make dtbs</code>) and packages them alongside the kernel image so boards that boot from a DTB get the matching hardware description. It is on by default because almost every ARM and RISC-V board relies on device trees; architectures that have none, such as amd64, set it to <code>no</code> in their config. There is normally no reason to change it by hand.</p>
 <h4 id="kernel_install_type">KERNEL_INSTALL_TYPE<a class="headerlink" href="#kernel_install_type" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>install</code></p>
-<p>Kernel image <code>make</code>-install target (<code>install</code>/<code>zinstall</code>/<code>uinstall</code>, per architecture).</p>
+<p>Selects the <code>make</code> target used to install the built kernel image, which differs by architecture and image format. Most arches use <code>install</code>; armhf uses <code>zinstall</code> for its compressed <code>zImage</code>, and some families (for example Amlogic Meson) use <code>uinstall</code> for a U-Boot image. The board and architecture configs set the right value, so you only override it when porting a new platform whose kernel produces a different image type.</p>
 <h4 id="kernel_extra_cflags">KERNEL_EXTRA_CFLAGS<a class="headerlink" href="#kernel_extra_cflags" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>Extra <code>KCFLAGS</code> appended to the kernel compile (e.g. to downgrade a specific error).</p>
+<p>Appends extra flags to the kernel&rsquo;s <code>KCFLAGS</code>, passed straight through to the compiler for every kernel object. It is mainly used to soften a compiler error that a newer toolchain raises on older kernel code — for example passing <code>-Wno-error=enum-int-mismatch</code> to demote a specific warning that would otherwise stop the build. Leave it empty for normal builds; some family configs set it automatically for kernels that need it, so only add flags here when you are chasing a build failure you understand.</p>
 <h4 id="disable_kernel_patches">DISABLE_KERNEL_PATCHES<a class="headerlink" href="#disable_kernel_patches" title="Permanent link">&para;</a></h4>
 <p><code>yes</code> | <code>no</code> (default)</p>
-<p>Disable all Armbian-specific kernel patches and build a vanilla kernel; also disables <code>EXTRAWIFI</code>.</p>
+<p>Empties the kernel patch directory so the build applies none of Armbian&rsquo;s kernel patches, producing an as-close-to-vanilla upstream kernel as the source allows. Because the out-of-tree Wi-Fi drivers depend on that patched tree, this also forces <code>EXTRAWIFI=no</code>. Keep it off for normal images — the patches carry board fixes and features — and turn it on only to test whether a problem is caused by Armbian&rsquo;s patches or exists in mainline as well.</p>
 <h4 id="kernel_btf">KERNEL_BTF<a class="headerlink" href="#kernel_btf" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
 <li><code>yes</code></li>
 <li><code>no</code></li>
 </ul>
-<p>Default is to auto-detect based on build host available RAM. If not enough RAM available, use =no to accept building without BTF debug information, or use =yes to force building with BTF even if low RAM. Family code can set this to opt-out of BTF. For more information on BTF see <a href="https://docs.kernel.org/bpf/btf.html">https://docs.kernel.org/bpf/btf.html</a></p>
+<p>Controls whether the kernel is built with BTF (BPF Type Format) debug information, which modern eBPF tooling relies on. By default the framework auto-detects based on the build host&rsquo;s available RAM, because the BTF/LD step is memory-hungry: on a low-RAM host it stops with an error rather than thrashing swap. Set <code>no</code> to accept a build without BTF, or <code>yes</code> to force BTF even on a low-RAM host (at the cost of heavy swap use); family code may set <code>no</code> to opt a platform out entirely. For more information on BTF see <a href="https://docs.kernel.org/bpf/btf.html">https://docs.kernel.org/bpf/btf.html</a></p>
 <h4 id="kernel_do_stubble">KERNEL_DO_STUBBLE<a class="headerlink" href="#kernel_do_stubble" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -6297,35 +6298,35 @@
 <p>The result is a single signed UKI that EFI-boots and picks the correct device tree for the running board automatically — intended for generic UEFI-on-devicetree images. It is enabled by default for the <code>uefidt</code> family (board <code>uefi-arm64-dt</code>) and is opt-in elsewhere; boards that boot through U-Boot do not use it. Requires <code>ukify</code> (from systemd) with <code>--devicetree-auto</code> support on the build host.</p>
 <h4 id="stubble_git_url">STUBBLE_GIT_URL<a class="headerlink" href="#stubble_git_url" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>https://github.com/ubuntu/stubble.git</code></p>
-<p>Git source repo for the stubble UKI/boot tooling (used when <code>KERNEL_DO_STUBBLE=yes</code>).</p>
+<p>Git repository the framework clones to obtain the stubble source when <code>KERNEL_DO_STUBBLE=yes</code>; it has no effect otherwise. It defaults to Canonical&rsquo;s upstream repo. Override it to build against a fork or a local mirror — for example when building behind a firewall or to pin a patched version of stubble.</p>
 <h4 id="stubble_git_branch">STUBBLE_GIT_BRANCH<a class="headerlink" href="#stubble_git_branch" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>branch:main</code></p>
-<p>Git ref of the stubble repo to fetch.</p>
+<p>Selects the git ref checked out from <code>STUBBLE_GIT_URL</code>, in the framework&rsquo;s usual <code>type:name</code> form (<code>branch:</code>, <code>tag:</code> or <code>commit:</code>). It defaults to <code>branch:main</code>, the tip of upstream stubble. Change it to pin a specific tag or commit for a reproducible build, or to follow a different branch on your fork.</p>
 <h4 id="atf_log_level">ATF_LOG_LEVEL<a class="headerlink" href="#atf_log_level" title="Permanent link">&para;</a></h4>
 <p><code>integer</code> · default: <code>40</code></p>
-<p>TF-A <code>LOG_LEVEL</code> passed to the ARM Trusted Firmware build.</p>
+<p>Sets the <code>LOG_LEVEL</code> passed to the ARM Trusted Firmware (TF-A) build, which controls how much the secure firmware prints on the console during early boot. TF-A uses coarse steps — higher numbers are more verbose, with <code>40</code> (info) as the default and lower values such as <code>20</code> (error/warning only) making boot quieter. Some family configs lower it for cleaner boot output; raise it when debugging a TF-A or secure-world boot problem.</p>
 <h4 id="atf_skip_ldflags">ATF_SKIP_LDFLAGS<a class="headerlink" href="#atf_skip_ldflags" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Skip adding the <code>--no-warn-rwx-segment</code> LD flag to the TF-A build.</p>
+<p>Suppresses the <code>--no-warn-rwx-segment</code> linker flag that Armbian normally adds to the TF-A build to quiet a harmless warning from newer binutils about writable-and-executable segments. Set it to <code>yes</code> for TF-A trees whose linker invocation rejects or mishandles that flag, so the build stops trying to pass it at all. Most platforms leave it at <code>no</code>; it is a per-board escape hatch, not something to change globally.</p>
 <h4 id="atf_skip_ldflags_wl">ATF_SKIP_LDFLAGS_WL<a class="headerlink" href="#atf_skip_ldflags_wl" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Pass the TF-A LD flag directly (omit the <code>-Wl,</code> gcc prefix).</p>
+<p>Controls how the <code>--no-warn-rwx-segment</code> LD flag is handed to the TF-A build. By default it is passed through the compiler with the <code>-Wl,</code> prefix that gcc uses to forward options to the linker; set this to <code>yes</code> for TF-A builds that give their <code>TF_LDFLAGS</code> straight to the linker (<code>ld</code>) rather than through gcc, where the <code>-Wl,</code> prefix would be wrong. Several families that link TF-A directly set it to <code>yes</code>. It is ignored when <code>ATF_SKIP_LDFLAGS=yes</code> drops the flag entirely.</p>
 <h4 id="uboot_loglevel">UBOOT_LOGLEVEL<a class="headerlink" href="#uboot_loglevel" title="Permanent link">&para;</a></h4>
 <p><code>integer</code></p>
 <ul>
 <li><code>0</code> to <code>9</code>: set U-Boot log verbosity level</li>
 <li><code>6</code>: (default)</li>
 </ul>
-<p>Controls the U-Boot bootloader log level during image building. Lower values produce less verbose output. This affects <code>CONFIG_LOGLEVEL</code> and <code>CONFIG_LOG_MAX_LEVEL</code> in U-Boot configuration.</p>
+<p>Sets how verbose the U-Boot bootloader is on the console, baked into the build via <code>CONFIG_LOGLEVEL</code> and <code>CONFIG_LOG_MAX_LEVEL</code>. The scale runs from <code>0</code> (silent) to <code>9</code> (most verbose); the default <code>6</code> corresponds to info-level messages. Lower it (some boards set <code>1</code>) for a quiet, fast-looking boot, or raise it when you need to see what U-Boot is doing while debugging a boot failure.</p>
 <h4 id="force_uboot_update">FORCE_UBOOT_UPDATE<a class="headerlink" href="#force_uboot_update" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Force flashing/updating U-Boot on running systems via the bsp postinst.</p>
+<p>Makes the board-support package&rsquo;s post-install script re-flash U-Boot to the boot device whenever the BSP is upgraded on a running system. This is off by default because rewriting the bootloader in place is risky — an interrupted or wrong write can leave a board unbootable — so Armbian normally ships U-Boot updates without automatically applying them. Some boards where the bootloader lives on soldered storage (SPI/eMMC) and must stay in sync with the rootfs set <code>yes</code> in their config; only enable it yourself if you understand and accept that risk.</p>
 <h4 id="uboot_hash_extra">UBOOT_HASH_EXTRA<a class="headerlink" href="#uboot_hash_extra" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
-<p>Extra string folded into the U-Boot artifact hash to force a repackage when a blob changes.</p>
+<p>Extra text mixed into the U-Boot artifact&rsquo;s cache hash, so that changing it invalidates the cached package and forces U-Boot to be rebuilt and repackaged. It exists because some U-Boot builds pull in external binary blobs (DDR init, TEE, vendor firmware) whose contents the normal hash inputs don&rsquo;t see; board configs set this — often to a version string or a checksum of those blobs — so a blob change reliably triggers a fresh build. Leave it empty unless you are packaging such out-of-tree blobs and need cache busting.</p>
 <h4 id="src_extlinux">SRC_EXTLINUX<a class="headerlink" href="#src_extlinux" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Boot via <code>extlinux.conf</code> instead of Armbian boot scripts.</p>
+<p>Makes the image boot through a standard <code>extlinux/extlinux.conf</code> file rather than Armbian&rsquo;s own boot script and <code>armbianEnv.txt</code>. When set to <code>yes</code>, the framework writes an extlinux config for U-Boot&rsquo;s distro-boot to read and skips installing the traditional boot scripts. It is set per board for platforms whose U-Boot expects the extlinux/distro-boot flow; leave it at <code>no</code> on boards that use Armbian&rsquo;s boot scripts, since the two mechanisms are mutually exclusive.</p>
 
 
 
