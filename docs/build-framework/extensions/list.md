@@ -37,6 +37,24 @@ Enables Armbian Package Archive (APA) in the target image by default.
 
 ---
 
+## applications-ha
+
+Builds a Home Assistant image (adds a `-homeassistant` suffix to the image name).
+
+---
+
+## applications-kali
+
+Installs Kali Linux packages into the image (adds a `-kali` suffix).
+
+---
+
+## applications-omv
+
+Installs OpenMediaVault into the image (adds an `-omv` suffix).
+
+---
+
 ## arm64-compat-vdso
 
 Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](/build-framework/switches/#prefer_native_armhf).
@@ -112,6 +130,12 @@ Installs and configures cloud-init in the target image.
 ## detect-unused-extensions
 
 Developer/testing extension: a hook honeypot used to verify the extension framework works correctly.
+
+---
+
+## docker-ce
+
+Installs Docker CE (packages and apt repository) into the target image.
 
 ---
 
@@ -227,6 +251,12 @@ Produces a qcow2 image suitable for QEMU/KVM virtualization.
 
 ---
 
+## image-output-sophgo-emmc-installer
+
+Directory-based image-output extension that produces a Sophgo eMMC installer image.
+
+---
+
 ## image-output-utm
 
 Produces a UTM-compatible image for macOS virtualization. Depends on `image-output-qcow2`.
@@ -254,6 +284,12 @@ Adds USB Mass Storage (UMS) gadget support to the initramfs, allowing the board 
 ## jethub-burn
 
 Automatically converts the Armbian `.img` into a JetHub burn image after the main build.
+
+---
+
+## kernel-debug-tiers
+
+Enables cumulative kernel debug-information tiers for headless / serial-console debugging.
 
 ---
 
@@ -363,6 +399,12 @@ Applies preset network and first-run configuration to the image (writes `.not_lo
 
 ---
 
+## r8125-dkms
+
+Adds the Realtek RTL8125B 2.5GbE DKMS driver (e.g. EasePi-A2, rk35xx vendor kernel).
+
+---
+
 ## radxa-aic8800
 
 Builds the Radxa AIC8800 WiFi driver as a DKMS kernel module. Requires working kernel headers.
@@ -381,9 +423,27 @@ Adds Rockchip device flashing tool support to the build.
 
 ---
 
+## rkusbboot
+
+Installs host dependencies, then clones and builds Rockchip `rkusbboot`.
+
+---
+
+## sophgo-sg200x-aic8800
+
+Adds the AIC8800D80 Wi-Fi 6 + Bluetooth 5 (SDIO) driver for Sophgo SG200x / Milk-V Duo S.
+
+---
+
 ## sunxi-tools
 
 Adds a 32-bit ARM cross-compiler to host dependencies for Allwinner (sunxi) builds. Only required outside Docker.
+
+---
+
+## sysrq-serial-trigger
+
+Enables Magic SysRq over the serial console for headless boards.
 
 ---
 
@@ -417,6 +477,12 @@ Enables Btrfs filesystem support in U-Boot (`CONFIG_CMD_BTRFS`).
 
 ---
 
+## uboot-fix-pylibfdt-swig
+
+Fixes old U-Boot's pylibfdt build against SWIG >= 4.3 (Debian trixie); companion to `uboot-binman-fix-pkg-resources`.
+
+---
+
 ## uefi-edk2-rk3588
 
 Integrates UEFI EDK2 firmware for Rockchip RK3588 boards.
@@ -447,15 +513,15 @@ Creates a VMware-compatible image (VMDK + OVF) with VMware tools installed. Depe
 
 ---
 
-## wayland-sessions-mask
-
-Masks Wayland desktop session entries for boards with limited or unstable Wayland support.
-
----
-
 ## watchdog
 
 Installs the `watchdog` daemon and enables `CONFIG_WATCHDOG` / hardware watchdog device support in the kernel.
+
+---
+
+## wayland-sessions-mask
+
+Masks Wayland desktop session entries for boards with limited or unstable Wayland support.
 
 ---
 
