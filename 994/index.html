@@ -5471,10 +5471,19 @@
 <h3 id="comparison">Comparison<a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h3>
 <!-- TODO: where to??? -->
 
+<p>Two categories are compared alongside Armbian:</p>
+<ul>
+<li><strong>Downstream</strong> &mdash; a board or SoC vendor&rsquo;s own OS release for its own hardware.</li>
+<li><strong>Upstream</strong> &mdash; the mainline Linux and U-Boot trees, and distributions that ship only mainline.</li>
+</ul>
+<p>Each Armbian claim links to the evidence for it. The other two columns state what
+those categories are by construction, and say <em>varies by vendor</em> wherever nothing
+general can be checked. They are not findings about any particular vendor or
+distribution.</p>
 <table>
 <thead>
 <tr>
-<th>Distributions</th>
+<th></th>
 <th>Armbian</th>
 <th>Downstream</th>
 <th>Upstream</th>
@@ -5483,39 +5492,39 @@
 <tbody>
 <tr>
 <td>Hardware maintainers</td>
-<td>50+, teams per SoC, per vendor, <a href="https://github.com/armbian/build/tree/main/config/boards">named per board</a> in <code>BOARD_MAINTAINER</code></td>
-<td>not published per board</td>
-<td>per subsystem, not per board</td>
+<td><a href="https://github.com/armbian/build/tree/main/config/boards">named per board</a> in <code>BOARD_MAINTAINER</code></td>
+<td>the vendor, for its own hardware</td>
+<td><a href="https://github.com/torvalds/linux/blob/master/MAINTAINERS">per subsystem</a>, not per board</td>
 </tr>
 <tr>
 <td>Upstream contribution</td>
-<td>1000+, listed in the <a href="releases/">release notes</a></td>
-<td>not published</td>
+<td>sent to mainline, listed per release in the <a href="releases/">release notes</a></td>
+<td>varies by vendor</td>
 <td>is the upstream tree</td>
 </tr>
 <tr>
 <td>Build framework</td>
-<td><a href="https://github.com/armbian/build">builds the whole OS</a>, publicly and reproducibly</td>
-<td>per-SoC vendor scripts</td>
-<td>kernel and bootloader only</td>
+<td><a href="https://github.com/armbian/build">builds the whole OS</a> from source</td>
+<td>the vendor&rsquo;s own, for its own hardware</td>
+<td>kernel and bootloader, not an OS image</td>
 </tr>
 <tr>
 <td>Maintenance</td>
 <td>modular, reviewed, and <a href="https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml">unit tested on every change</a></td>
-<td>not published</td>
-<td>upstream review process</td>
+<td>varies by vendor</td>
+<td>public mailing-list review</td>
 </tr>
 <tr>
 <td>User-space</td>
 <td>stock Debian or Ubuntu, no vendor overlay</td>
-<td>vendor packages added on top</td>
-<td>stock Debian or Ubuntu</td>
+<td>the vendor&rsquo;s own image</td>
+<td>stock distribution user space</td>
 </tr>
 <tr>
 <td>Declaring support</td>
 <td>only where a maintainer is named, per the <a href="User-Guide_Board-Support-Rules/">Board Support Rules</a></td>
-<td>not published</td>
-<td>not declared per board</td>
+<td>varies by vendor</td>
+<td>per <a href="https://github.com/torvalds/linux/blob/master/MAINTAINERS"><code>MAINTAINERS</code></a> entry, not per board</td>
 </tr>
 </tbody>
 </table>
