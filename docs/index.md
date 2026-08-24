@@ -99,11 +99,10 @@ distribution.
 | | Armbian | Downstream | Upstream |
 | -------- | -------- | -------- | -------- |
 | Hardware maintainers | [named per board](https://github.com/armbian/build/tree/main/config/boards) in `BOARD_MAINTAINER` | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
-| Upstream contribution | sent to mainline, listed per release in the [release notes](releases/index.md) | varies by vendor | is the upstream tree |
 | Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
-| Maintenance | modular, reviewed, and [unit tested on every change](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
-| User-space | stock Debian or Ubuntu, no vendor overlay | the vendor's own image | stock distribution user space |
-| Declaring support | only where a maintainer is named, per the [Board Support Rules](User-Guide_Board-Support-Rules.md) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
+| Maintenance | modular and reviewed; `armbian-config` is [unit tested per pull request](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
+| User-space | Debian or Ubuntu based, with Armbian packages and configuration | the vendor's own image | stock distribution user space |
+| Declaring support | Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the [Board Support Rules](User-Guide_Board-Support-Rules.md) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
 
 
 ## Which hardware is supported?
