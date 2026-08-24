@@ -43,7 +43,7 @@ Forums registration terms and rules apply for our chats: [https://forum.armbian.
 
 ## 💬 Channels (depending on platform only a limited selection might be available)
 
-- **`#armbian`** is the project's main channel. Issue tracking, peer-to-peer user support or [upcoming release planning talks](https://docs.armbian.com/Process_Release-Model/#release-planning).
+- **`#armbian`** is the project's main channel. Issue tracking, peer-to-peer user support or [upcoming release planning talks](https://docs.armbian.com/releases/release-model/).
 - **`#armbian-announcements`** : important messages from the Armbian team. You definitely want to idle here. Moderated channel
 - **`#armbian-devel`** : build engine development topics
 - **`#armbian-desktop`** : desktop environment development

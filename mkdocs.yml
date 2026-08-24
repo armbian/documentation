@@ -22,6 +22,7 @@ not_in_nav: |
   /User-Guide_Armbian-Software/*.md
   /releases/*.md
   !/releases/index.md
+  !/releases/release-model.md
 
 theme:
     name: material
@@ -74,6 +75,7 @@ plugins:
       redirect_maps:
         'User-Guide_Allwinner_overlays.md': 'User-Guide_Armbian_overlays.md'
         'Release_Changelog.md': 'releases/index.md'
+        'Process_Release-Model.md': 'releases/release-model.md'
         # Armbian Software overview moved to /software/
         'User-Guide_Armbian-Software.md': 'software/index.md'
         # Getting Started moved to short /getting-started/ URLs
@@ -160,11 +162,9 @@ nav:
         - 'Troubleshooting and Recovery' : 'User-Guide_Troubleshooting.md'
         #- 'Recovery' : 'User-Guide_Recovery.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
-        - 'Appendix' :
-            - 'Release Model' : 'Process_Release-Model.md'
-            - 'Unit Test Status' : 'https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml'
   - 'RELEASES':
         - 'Release notes': 'releases/index.md'
+        - 'Release model': 'releases/release-model.md'
   - 'ARMBIAN CONFIG':
         - 'Overview': 'config/index.md'
         - 'System':

@@ -53,7 +53,7 @@
 <ul>
 	<li>
 		You <strong>must </strong>participate in release process:<br>
-		Ideally you attend to the release meetings that usually happen four times a year about a month before release date (end of February, May, August, November). On that occasion you are given the chance to point out critical issues with your board. A typical agenda looks like this: <a href="https://docs.armbian.com/Process_Release-Model/#agenda" ipsnoembed="true" rel="external nofollow"> https://docs.armbian.com/Process_Release-Model/#agenda</a><br>
+		Ideally you attend to the release meetings that usually happen four times a year about a month before release date (end of February, May, August, November). On that occasion you are given the chance to point out critical issues with your board. A typical agenda looks like this: <a href="https://docs.armbian.com/releases/release-model/" ipsnoembed="true" rel="external nofollow"> https://docs.armbian.com/releases/release-model/</a><br>
 		<br>
 		However, while the meeting participation is optional you &quot;<strong>must </strong>sign-off that device has been tested, is stable, and ready for release during release process&quot;.
 		This basically means you take the <abbr title="Release candidate">RC</abbr>-images we provide and test them as best as you can for their functionality hardware-wise:
