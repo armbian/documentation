@@ -64,6 +64,15 @@ written, so you can check it is the one you meant:
 The image is read back and verified against its checksum after writing. Set
 `SKIP_VERIFY=yes` to skip that.
 
+## rootfs
+
+Builds only the root filesystem artifact (the compressed userspace cache) for the selected release and architecture, without assembling a full image.
+
+Usage:
+```bash
+./compile.sh rootfs BOARD=uefi-x86 BRANCH=current RELEASE=trixie
+```
+
 ## rewrite-kernel-config
 
 Automatically validates kernel config changes and dependency chains. After manually editing the config for a given family and branch this is needed to ensure the config change will persist our CI.
@@ -71,6 +80,15 @@ Automatically validates kernel config changes and dependency chains. After manua
 Usage:
 ```bash
 ./compile.sh rewrite-kernel-config BOARD=xxxxx BRANCH=current
+```
+
+## uboot-config
+
+Calls U-Boot's `make menuconfig` so you can change the bootloader configuration interactively — the U-Boot counterpart to `kernel-config`.
+
+Usage:
+```bash
+./compile.sh uboot-config BOARD=nanopi-r5c BRANCH=edge
 ```
 
 ## dts-check
@@ -106,6 +124,15 @@ also outputs the same preprocessed DTS source, ran through `dtc` with input and 
 Usage:
 ```bash
 ./compile.sh kernel-dtb BOARD=xxxxx BRANCH=edge
+```
+
+## kernel-patch
+
+Create patch files for the kernel. Pauses so you can edit the kernel source, then generates a patch from your changes — the kernel counterpart to `uboot-patch` (see its notes below on the workflow and where patches are written).
+
+Usage:
+```bash
+./compile.sh kernel-patch BOARD=nanopi-r5c BRANCH=edge
 ```
 
 ## uboot-patch
@@ -148,6 +175,24 @@ under `patch/u-boot`.
 While the `uboot-patch` command will add these new files to the patch
 if they are created while running `uboot-patch`,
 this is not the preferred way of adding these files.
+
+## atf-patch
+
+Create patch files for the ARM Trusted Firmware (TF-A), using the same interactive edit-then-generate workflow as `uboot-patch`.
+
+Usage:
+```bash
+./compile.sh atf-patch BOARD=nanopi-r5c BRANCH=edge
+```
+
+## crust-patch
+
+Create patch files for the crust management-processor firmware (Allwinner boards with an AR100 coprocessor), using the same interactive workflow as `uboot-patch`.
+
+Usage:
+```bash
+./compile.sh crust-patch BOARD=nanopi-r5c BRANCH=edge
+```
 
 ## rewrite-uboot-patches
 
