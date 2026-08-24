@@ -51,3 +51,12 @@ Usage:
 ```bash
 ./compile.sh uboot BOARD=nanopi-r5c BRANCH=edge
 ```
+
+## uboot-config
+
+Calls U-Boot's `make menuconfig` so you can change the bootloader configuration interactively — the U-Boot counterpart to `kernel-config`.
+
+Usage:
+```bash
+./compile.sh uboot-config BOARD=nanopi-r5c BRANCH=edge
+```

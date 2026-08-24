@@ -82,15 +82,6 @@ Usage:
 ./compile.sh rewrite-kernel-config BOARD=xxxxx BRANCH=current
 ```
 
-## uboot-config
-
-Calls U-Boot's `make menuconfig` so you can change the bootloader configuration interactively — the U-Boot counterpart to `kernel-config`.
-
-Usage:
-```bash
-./compile.sh uboot-config BOARD=nanopi-r5c BRANCH=edge
-```
-
 ## dts-check
 
 Validate dts files and improve board & patch development overall.
