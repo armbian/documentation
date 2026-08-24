@@ -5910,30 +5910,32 @@
 
 
 <h1 id="image-type">Image type<a class="headerlink" href="#image-type" title="Permanent link">&para;</a></h1>
-<p>Whether to build a minimal CLI image or a desktop image, and which desktop to install.</p>
+<p>Armbian builds three image flavours, chosen with the two switches below: a <strong>minimal</strong> bare-CLI image, the <strong>standard</strong> CLI/server image (the default when neither switch is set), and a <strong>desktop</strong> image. For desktop builds you then pick which environment to install and how many applications come with it.</p>
 <h4 id="build_minimal">BUILD_MINIMAL<a class="headerlink" href="#build_minimal" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
-<li><code>yes</code>: build a bare CLI image suitable for application deployment. <strong>Not compatible</strong> with <code>BUILD_DESKTOP=yes</code>.</li>
+<li><code>yes</code>: build a bare command-line image with only the essential packages</li>
 <li><code>no</code> (default)</li>
 </ul>
+<p>Produces the smallest possible image — no desktop and none of the extra server utilities that ship in the standard CLI image — so it boots fast and leaves the most room for your own workload. It suits headless appliances and single-application deployments where you install exactly what you need on top. <strong>Not compatible</strong> with <code>BUILD_DESKTOP=yes</code>; leaving both switches at <code>no</code> builds the standard CLI/server image instead.</p>
 <h4 id="build_desktop">BUILD_DESKTOP<a class="headerlink" href="#build_desktop" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
-<li><code>yes</code>: build a desktop image (pick the environment and tier below)</li>
+<li><code>yes</code>: build a graphical desktop image</li>
 <li><code>no</code> (default)</li>
 </ul>
+<p>Adds a full graphical desktop on top of the base system. When set, choose the desktop with <a href="#desktop_environment"><code>DESKTOP_ENVIRONMENT</code></a> and how much software it bundles with <a href="#desktop_tier"><code>DESKTOP_TIER</code></a>; in interactive mode the build prompts for both. Mutually exclusive with <code>BUILD_MINIMAL=yes</code>.</p>
 <h4 id="desktop_environment">DESKTOP_ENVIRONMENT<a class="headerlink" href="#desktop_environment" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
-<p>Desktop environment to install when <code>BUILD_DESKTOP=yes</code> — e.g. <code>xfce</code>, <code>gnome</code>, <code>kde-plasma</code>, <code>mate</code>, <code>cinnamon</code>. Set manually to skip the dialog prompt; the available environments are provided by armbian-config.</p>
+<p>Which desktop environment to install when <code>BUILD_DESKTOP=yes</code> — for example <code>xfce</code>, <code>gnome</code>, <code>kde-plasma</code>, <code>mate</code> or <code>cinnamon</code>. Setting it on the command line skips the interactive prompt. The list of available environments is defined per release by armbian-config, so not every desktop is offered on every board and release combination.</p>
 <h4 id="desktop_tier">DESKTOP_TIER<a class="headerlink" href="#desktop_tier" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
-<li><code>minimal</code>: bare desktop</li>
-<li><code>mid</code>: desktop plus a common application set (interactive default)</li>
-<li><code>full</code>: desktop plus the full bundled application set</li>
+<li><code>minimal</code>: the desktop environment on its own, with almost no extra applications</li>
+<li><code>mid</code>: the desktop plus a common everyday application set — browser, file manager, media and utilities (the interactive default)</li>
+<li><code>full</code>: the desktop plus the complete bundled application set, including the heavier office and productivity apps</li>
 </ul>
-<p>Selects how many applications are bundled with the desktop. Replaces the removed <code>DESKTOP_APPGROUPS_SELECTED</code> and <code>DESKTOP_ENVIRONMENT_CONFIG_NAME</code> switches.</p>
+<p>Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience. Replaces the removed <code>DESKTOP_APPGROUPS_SELECTED</code> and <code>DESKTOP_ENVIRONMENT_CONFIG_NAME</code> switches.</p>
 
 
 
