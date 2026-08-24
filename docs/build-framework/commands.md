@@ -92,10 +92,6 @@ Usage:
 ./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
 ```
 
-!!! note "Replaces `KERNEL_ONLY`"
-
-    The old `KERNEL_ONLY=yes`/`KERNEL_ONLY=no` switches are deprecated — use the `kernel` command to build only the kernel.
-
 ### kernel-config
 
 Automatically call kernel's `make menuconfig` (add or remove modules or features)
