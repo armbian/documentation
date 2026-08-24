@@ -5,34 +5,38 @@ description: "Choose the Armbian image type: BUILD_MINIMAL for a bare CLI image,
 
 # Image type
 
-Whether to build a minimal CLI image or a desktop image, and which desktop to install.
+Armbian builds three image flavours, chosen with the two switches below: a **minimal** bare-CLI image, the **standard** CLI/server image (the default when neither switch is set), and a **desktop** image. For desktop builds you then pick which environment to install and how many applications come with it.
 
 #### BUILD_MINIMAL
 
 `string`
 
-- `yes`: build a bare CLI image suitable for application deployment. **Not compatible** with `BUILD_DESKTOP=yes`.
+- `yes`: build a bare command-line image with only the essential packages
 - `no` (default)
+
+Produces the smallest possible image — no desktop and none of the extra server utilities that ship in the standard CLI image — so it boots fast and leaves the most room for your own workload. It suits headless appliances and single-application deployments where you install exactly what you need on top. **Not compatible** with `BUILD_DESKTOP=yes`; leaving both switches at `no` builds the standard CLI/server image instead.
 
 #### BUILD_DESKTOP
 
 `string`
 
-- `yes`: build a desktop image (pick the environment and tier below)
+- `yes`: build a graphical desktop image
 - `no` (default)
+
+Adds a full graphical desktop on top of the base system. When set, choose the desktop with [`DESKTOP_ENVIRONMENT`](#desktop_environment) and how much software it bundles with [`DESKTOP_TIER`](#desktop_tier); in interactive mode the build prompts for both. Mutually exclusive with `BUILD_MINIMAL=yes`.
 
 #### DESKTOP_ENVIRONMENT
 
 `string`
 
-Desktop environment to install when `BUILD_DESKTOP=yes` — e.g. `xfce`, `gnome`, `kde-plasma`, `mate`, `cinnamon`. Set manually to skip the dialog prompt; the available environments are provided by armbian-config.
+Which desktop environment to install when `BUILD_DESKTOP=yes` — for example `xfce`, `gnome`, `kde-plasma`, `mate` or `cinnamon`. Setting it on the command line skips the interactive prompt. The list of available environments is defined per release by armbian-config, so not every desktop is offered on every board and release combination.
 
 #### DESKTOP_TIER
 
 `string`
 
-- `minimal`: bare desktop
-- `mid`: desktop plus a common application set (interactive default)
-- `full`: desktop plus the full bundled application set
+- `minimal`: the desktop environment on its own, with almost no extra applications
+- `mid`: the desktop plus a common everyday application set — browser, file manager, media and utilities (the interactive default)
+- `full`: the desktop plus the complete bundled application set, including the heavier office and productivity apps
 
-Selects how many applications are bundled with the desktop. Replaces the removed `DESKTOP_APPGROUPS_SELECTED` and `DESKTOP_ENVIRONMENT_CONFIG_NAME` switches.
+Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience. Replaces the removed `DESKTOP_APPGROUPS_SELECTED` and `DESKTOP_ENVIRONMENT_CONFIG_NAME` switches.
