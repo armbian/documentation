@@ -205,6 +205,6 @@ If your repository contains a `userpatches/` directory, it will be merged into t
 
 **Previous:** [Overview](index.md)
 
-**Next:** [Command line interface](cli.md)
+**Next:** [Build commands](commands.md)
 
-Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).
+Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [board configuration](board-configuration.md), [extensions](extensions/index.md).

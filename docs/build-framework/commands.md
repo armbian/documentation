@@ -5,6 +5,18 @@ description: "Armbian build framework commands for compile.sh: build the kernel,
 
 # Build commands
 
+The build framework is driven by a single script, `compile.sh`:
+
+```bash
+./compile.sh PARAM=value OTHER_PARAM=value [<configfile> ...] [<command>]
+```
+
+- `<command>` defaults to `build` when omitted; the other commands are listed below.
+- Parameters (`PARAM=value`, see [Build Switches](/build-framework/switches/)), config files and the command may be given in **any order**.
+- There is **no default config file** — if you keep your settings in `userpatches/config-<name>.conf`, name it explicitly on the command line (`./compile.sh BOARD=... <name>`). A config file must not share a name with a command.
+- Docker is **auto-managed**: `compile.sh` relaunches itself inside a container when Docker is available (falling back to `sudo` otherwise), so there is no docker config file to maintain — see [Getting Started](/build-framework/getting-started/).
+- Logs are written to `output/logs`; add `SHARE_LOG=yes` to upload them to Armbian's paste service and include the URL when reporting an issue.
+
 ### build
 
 The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke `./compile.sh` with no command, or explicitly:
@@ -70,6 +82,10 @@ Usage:
 ```bash
 ./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
 ```
+
+!!! note "Replaces `KERNEL_ONLY`"
+
+    The old `KERNEL_ONLY=yes`/`KERNEL_ONLY=no` switches are deprecated — use the `kernel` command to build only the kernel.
 
 ### kernel-config
 
