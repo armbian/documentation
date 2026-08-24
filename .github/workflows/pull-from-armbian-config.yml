@@ -53,7 +53,7 @@ jobs:
 
           # per-app SEO pages get their own top-level /software/<slug>/ URLs
           mkdir -p ../documentation/docs/software/
-          rsync -avr --delete docs/software/. ../documentation/docs/software/
+          rsync -avr --delete --exclude=index.md docs/software/. ../documentation/docs/software/
 
       - name: Regenerate the software navigation
         # Rebuild the "ARMBIAN SOFTWARE" nav (category -> app pages) from the
