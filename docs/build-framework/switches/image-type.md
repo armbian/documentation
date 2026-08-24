@@ -39,4 +39,4 @@ Which desktop environment to install when `BUILD_DESKTOP=yes` — for example `x
 - `mid`: the desktop plus a common everyday application set — browser, file manager, media and utilities (the interactive default)
 - `full`: the desktop plus the complete bundled application set, including the heavier office and productivity apps
 
-Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience. Replaces the removed `DESKTOP_APPGROUPS_SELECTED` and `DESKTOP_ENVIRONMENT_CONFIG_NAME` switches.
+Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience.
