@@ -1,6 +1,6 @@
 # Advanced features and tasks
 
-While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](User-Guide_Armbian-Software.md).
+While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](software/index.md).
 
 Usually, all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
