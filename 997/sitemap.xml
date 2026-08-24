@@ -141,10 +141,6 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/User-Guide_Networking/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -241,34 +237,6 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/choosing-an-image/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/first-boot-and-login/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/first-steps/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/install-to-internal-storage/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/troubleshooting/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/updating/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Getting-Started/writing-the-image/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/config/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -302,6 +270,38 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/config/user/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/choosing-an-image/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/first-boot-and-login/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/first-steps/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/install-to-internal-storage/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/troubleshooting/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/updating/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/getting-started/writing-the-image/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
