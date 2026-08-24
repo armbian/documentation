@@ -39,7 +39,7 @@ For a SBC to be considered supported:
 * Armbian team must confirm and agree upon all supported boards statuses
 * a named individual as "*maintainer*" with GitHub ID must be preset in the BOARD_MAINTAINER within [Board Configuration File](https://github.com/armbian/build/tree/main/config/boards)
 * a named individual must commit to providing "*best effort*" support for their SBC on the Armbian forums
-* maintainer must participate in the [Release Process](https://docs.armbian.com/Process_Release-Model/#release-coordinating)
+* maintainer must participate in the [Release Process](https://docs.armbian.com/releases/release-model/#cutting-a-release)
 * maintainer must sign-off that device has been tested, is stable, and ready for release during release process
 * maintainer must have physical access to the SBC they are supporting
 * maintainer can operate under pseudonym but must [reveal his identity](https://www.armbian.com/update-data/) to Armbian management
