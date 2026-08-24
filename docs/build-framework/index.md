@@ -93,7 +93,7 @@ Function | Armbian | Yocto | Buildroot |
 │   │   └── rootfs
 │   └── tools
 ├── output                               Build artifact
-│   └── deb                              Deb packages
+│   └── debs                             Deb packages
 │   └── images                           Bootable images - RAW or compressed
 │   └── debug                            Patch and build logs
 │   └── config                           Kernel configuration export location

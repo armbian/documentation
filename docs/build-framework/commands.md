@@ -5,6 +5,33 @@ description: "Armbian build framework commands for compile.sh: build the kernel,
 
 # Build commands
 
+### build
+
+The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke `./compile.sh` with no command, or explicitly:
+
+Usage:
+```bash
+./compile.sh build BOARD=uefi-x86 BRANCH=current RELEASE=trixie
+```
+
+### flash
+
+Writes an already-built image to a block device (SD card, USB, eMMC), with an interactive picker for the image and the target device.
+
+Usage:
+```bash
+./compile.sh flash
+```
+
+### docker / docker-shell / docker-purge
+
+`docker` runs the build inside Armbian's build container — the default path, since `./compile.sh` relaunches itself in Docker when it is available. `docker-shell` drops you into an interactive shell inside that container (useful for editing sources, inspecting build errors, or running individual build steps), and `docker-purge` removes the container together with its named volumes and cached build image.
+
+Usage:
+```bash
+./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
+```
+
 ### kernel
 
 Builds kernel and device tree (where applicable) and places it to the `output/debs`
@@ -46,13 +73,13 @@ Usage:
 
 Outputs a one-board-per-line CSV inventory of boards.
 
-Sets `TARGETS_FILE` to something that doesn't exist, so the `default-targets.yaml` is used (so same list for everyone, save for userpatched-boards)
+Sets `TARGETS_FILE` to something that doesn't exist, so the `targets-default.yaml` is used (so same list for everyone, save for userpatched-boards)
 
 Usage:
 ```bash
 ./compile.sh inventory-boards
 ```
-Outputs /info/boards-inventory.csv
+Outputs output/info/boards-inventory.csv
 
 ### kernel-dtb
 

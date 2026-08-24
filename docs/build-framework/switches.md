@@ -54,6 +54,23 @@ releases marked `eos` there are end of service and are not listed here.
 - `yes`: build a bare CLI image suitable for application deployment. This option is **not compatible** with `BUILD_DESKTOP="yes"`
 - `no`: (default)
 
+**BUILD_DESKTOP** ( `string` )
+
+- `yes`: build a desktop image (pick the environment and tier below)
+- `no`: (default)
+
+**DESKTOP_ENVIRONMENT** ( `string` )
+
+Desktop environment to install when `BUILD_DESKTOP=yes` — e.g. `xfce`, `gnome`, `kde-plasma`, `mate`, `cinnamon`. Set manually to skip the dialog prompt; the available environments are provided by armbian-config.
+
+**DESKTOP_TIER** ( `string` )
+
+- `minimal`: bare desktop
+- `mid`: desktop plus a common application set (interactive default)
+- `full`: desktop plus the full bundled application set
+
+Selects how many applications are bundled with the desktop. Replaces the removed `DESKTOP_APPGROUPS_SELECTED` and `DESKTOP_ENVIRONMENT_CONFIG_NAME` switches.
+
 **BSPFREEZE** ( `string` )
 
 - `yes`: freeze (from upgrade) armbian firmware packages when building images (U-Boot, kernel, DTB, BSP)
@@ -74,7 +91,7 @@ releases marked `eos` there are end of service and are not listed here.
 - `systemd-networkd`
 - `none` (to not-add any networking extensions)
 
-Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
+Installs desired networking stack. If the parameter is undefined, it sets `systemd-networkd` for minimal images (BUILD_MINIMAL=yes) and `network-manager` for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using **Netplan**.
 
 !!! example "Build switch example"
 
@@ -198,7 +215,7 @@ Select the target for pull/push OCI cached images. If not set, default is used.
 
 **GHCR_MIRROR_ADDRESS** ( `string` )
 
-The default mirror address for ghcr.io, set by `GHCR_MIRROR=dockerproxy`, is ghcr.dockerproxy.com. When this address is unavailable, an alternative address can be set with `GHCR_MIRROR_ADDRESS`.
+The default mirror address for ghcr.io, set by `GHCR_MIRROR=dockerproxy`, is ghcr.dockerproxy.net. When this address is unavailable, an alternative address can be set with `GHCR_MIRROR_ADDRESS`.
 
 Example:
 

@@ -40,12 +40,11 @@ If the file `userpatches/linux-$LINUXFAMILY-$BRANCH.config` exists, it will be u
 
 ## User provided sources config overrides
 
-If file `userpatches/sources/$LINUXFAMILY.conf` exists, it will be used in addition to the default one from `config/sources`. Look for the hint at the beginning of the compilation process to select the proper config file name.
-Please note that there are some exceptions for LINUXFAMILY like `sunxi` (32-bit mainline sunxi) and `sunxi64` (64-bit mainline sunxi)
+If file `userpatches/config/sources/families/$LINUXFAMILY.conf` exists, it is sourced in addition to the default one from `config/sources/families`. Look for the hint at the beginning of the compilation process to confirm the file name being used.
 
 Example:
 	
-	[ o.k. ] Adding user provided sunxi64 overrides
+	[ o.k. ] Sourcing family configuration userpatches/config/sources/families/sunxi64.conf
 	
 ## User provided image customization script
 
