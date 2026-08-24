@@ -5,15 +5,24 @@ description: "Advanced Armbian build commands: build the kernel, run kernel-conf
 
 # Advanced commands
 
-Kernel, bootloader and board-development commands, plus release and inspection tooling.
+Build-container management, kernel and bootloader development, board bring-up, and release and inspection tooling.
 
-## kernel
+## docker-shell
 
-Builds kernel and device tree (where applicable) and places it to the `output/debs`
+Drops you into an interactive shell inside Armbian's build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.
 
 Usage:
 ```bash
-./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
+./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
+```
+
+## docker-purge
+
+Removes the build container together with its named volumes and cached build image, reclaiming that disk space.
+
+Usage:
+```bash
+./compile.sh docker-purge
 ```
 
 ## kernel-config

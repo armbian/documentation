@@ -1,11 +1,11 @@
 ---
-seo_title: "Armbian basic build commands: build & flash"
-description: "Everyday Armbian build commands: build an image with compile.sh, flash it to an SD card or eMMC, and open or purge the Docker build container."
+seo_title: "Armbian basic build commands: build, flash, kernel"
+description: "Everyday Armbian build commands: build a full image or just the kernel with compile.sh, and flash it to an SD card, USB or eMMC."
 ---
 
 # Basic commands
 
-Everyday commands for building an image, writing it to media, and managing the build container.
+Everyday commands for building a full image or just the kernel, and writing it to media.
 
 ## build
 
@@ -55,20 +55,11 @@ written, so you can check it is the one you meant:
 The image is read back and verified against its checksum after writing. Set
 `SKIP_VERIFY=yes` to skip that.
 
-## docker-shell
+## kernel
 
-Drops you into an interactive shell inside Armbian's build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.
-
-Usage:
-```bash
-./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
-```
-
-## docker-purge
-
-Removes the build container together with its named volumes and cached build image, reclaiming that disk space.
+Builds only the kernel and device tree (where applicable) and places the packages in `output/debs`.
 
 Usage:
 ```bash
-./compile.sh docker-purge
+./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
 ```
