@@ -65,13 +65,22 @@ written, so you can check it is the one you meant:
 The image is read back and verified against its checksum after writing. Set
 `SKIP_VERIFY=yes` to skip that.
 
-### docker / docker-shell / docker-purge
+### docker-shell
 
-`docker` runs the build inside Armbian's build container — the default path, since `./compile.sh` relaunches itself in Docker when it is available. `docker-shell` drops you into an interactive shell inside that container (useful for editing sources, inspecting build errors, or running individual build steps), and `docker-purge` removes the container together with its named volumes and cached build image.
+Drops you into an interactive shell inside Armbian's build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.
 
 Usage:
 ```bash
 ./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
+```
+
+### docker-purge
+
+Removes the build container together with its named volumes and cached build image, reclaiming that disk space.
+
+Usage:
+```bash
+./compile.sh docker-purge
 ```
 
 ### kernel
