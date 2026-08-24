@@ -1,5 +1,6 @@
 ---
 title: "PostgreSQL"
+seo_title: "Install PostgreSQL on Armbian"
 description: "Install and run PostgreSQL on Armbian — PostgreSQL install. Runs on ARM64 and x86 single-board computers."
 image: /images/PGSQL1.png
 category: "Database"

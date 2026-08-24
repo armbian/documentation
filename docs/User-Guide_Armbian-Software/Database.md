@@ -1,5 +1,6 @@
 ---
 title: "Database"
+seo_title: "Database apps for Armbian"
 description: "SQL database servers and web interface managers for Armbian on ARM64 and x86 single-board computers: MySQL, Mariadb, phpMyAdmin, PostgreSQL, Redis."
 comments: true
 ---

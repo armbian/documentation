@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian networking: static IP, Wi-Fi & Netplan"
 description: "Configure Armbian networking on single-board computers with Netplan, systemd-networkd and NetworkManager, including static IP addresses and DHCP examples."
 ---
 

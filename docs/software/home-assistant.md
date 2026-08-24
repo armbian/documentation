@@ -1,5 +1,6 @@
 ---
 title: "Home Assistant"
+seo_title: "Install Home Assistant on Armbian"
 description: "Install and run Home Assistant on Armbian — Home Assistant open source home automation. Runs on ARM64 and x86 single-board computers."
 image: /images/HAS001.png
 category: "HomeAutomation"

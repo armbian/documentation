@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian release model & schedule"
 description: "How Armbian releases: daily and weekly rolling builds, quarterly point releases (Feb/May/Aug/Nov), the release branch and source-freeze process, and version numbering."
 ---
 

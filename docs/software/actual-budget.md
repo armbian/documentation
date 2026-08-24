@@ -1,5 +1,6 @@
 ---
 title: "Actual Budget"
+seo_title: "Install Actual Budget on Armbian"
 description: "Install and run Actual Budget on Armbian — Do your finances with Actual Budget. Runs on ARM64 and x86 single-board computers."
 image: /images/ABU001.png
 category: "Finance"

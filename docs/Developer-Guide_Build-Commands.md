@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build commands for compile.sh"
 description: "Armbian build framework commands for compile.sh: build the kernel, run kernel-config menuconfig, rewrite the kernel config, check device trees and more."
 ---
 

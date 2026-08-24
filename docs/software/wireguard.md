@@ -1,5 +1,6 @@
 ---
 title: "WireGuard"
+seo_title: "Install WireGuard on Armbian"
 description: "Install and run WireGuard on Armbian — WireGuard VPN server. Runs on ARM64 and x86 single-board computers."
 image: /images/WRG001.png
 category: "VPN"

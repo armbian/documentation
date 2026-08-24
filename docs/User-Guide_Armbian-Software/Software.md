@@ -1,4 +1,5 @@
 ---
+seo_title: "Install apps & services on Armbian"
 description: "Browse and install third-party applications and services on Armbian single-board computers with armbian-config, as Docker containers or native packages."
 comments: true
 ---

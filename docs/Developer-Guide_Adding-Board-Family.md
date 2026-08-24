@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian: add a new board or board family"
 description: "Add a new board or board family to the Armbian build framework, with example pull requests showing the config and patch changes needed for ARM SBCs."
 ---
 

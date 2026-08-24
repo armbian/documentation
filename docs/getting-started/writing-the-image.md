@@ -1,5 +1,6 @@
 ---
 title: Writing the image to media
+seo_title: "Flash Armbian to an SD card or USB"
 description: "Write an Armbian image to an SD card with Armbian Imager, or flash it straight to a board's internal eMMC, UFS or SPI storage over USB."
 ---
 # Writing the image to your media

@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian software: install apps & services on SBCs"
 description: "Install self-hosted apps and services on Armbian single-board computers with armbian-config: Docker and native packages for media servers, dashboards, VPNs and more."
 ---
 

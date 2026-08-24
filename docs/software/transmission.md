@@ -1,5 +1,6 @@
 ---
 title: "Transmission"
+seo_title: "Install Transmission on Armbian"
 description: "Install and run Transmission on Armbian — Transmission BitTorrent client. Runs on ARM64 and x86 single-board computers."
 image: /images/TRA001.png
 category: "Downloaders"

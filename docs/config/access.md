@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian SSH daemon & 2FA remote access"
 description: "Manage the SSH daemon, harden remote access and enable two-factor authentication (2FA) on Armbian single-board computers with armbian-config."
 comments: true
 ---

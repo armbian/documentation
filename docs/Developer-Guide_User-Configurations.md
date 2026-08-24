@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian userpatches: custom patches & config files"
 description: "Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script."
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Monitoring"
+seo_title: "Monitoring apps for Armbian"
 description: "Real-time monitoring, collecting metrics, up-time status for Armbian on ARM64 and x86 single-board computers: Grafana, NetAlertX, Netdata, Prometheus, Uptime Kuma, Dozzle."
 comments: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Grafana"
+seo_title: "Install Grafana on Armbian"
 description: "Install and run Grafana on Armbian — Grafana data analytics. Runs on ARM64 and x86 single-board computers."
 image: /images/GRA001.png
 category: "Monitoring"

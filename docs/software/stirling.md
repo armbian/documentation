@@ -1,5 +1,6 @@
 ---
 title: "Stirling"
+seo_title: "Install Stirling on Armbian"
 description: "Install and run Stirling on Armbian — Stirling PDF tools for viewing and editing PDF files. Runs on ARM64 and x86 single-board computers."
 image: /images/STR001.png
 category: "Media"

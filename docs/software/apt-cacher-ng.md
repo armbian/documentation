@@ -1,5 +1,6 @@
 ---
 title: "apt-cacher-ng"
+seo_title: "Install apt-cacher-ng on Armbian"
 description: "Install and run apt-cacher-ng on Armbian — apt-cacher-ng caching proxy install. Runs on ARM64 and x86 single-board computers."
 image: /images/APT001.png
 category: "Management"

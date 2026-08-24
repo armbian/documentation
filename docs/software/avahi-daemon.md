@@ -1,5 +1,6 @@
 ---
 title: "avahi-daemon"
+seo_title: "Install avahi-daemon on Armbian"
 description: "Install and run avahi-daemon on Armbian — avahi-daemon hostname broadcast via mDNS. Runs on ARM64 and x86 single-board computers."
 image: /images/AVH001.png
 category: "Netconfig"

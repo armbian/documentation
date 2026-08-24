@@ -1,5 +1,6 @@
 ---
 title: "CDN router"
+seo_title: "Install CDN router on Armbian"
 description: "Install and run CDN router on Armbian — Router for repository mirror automation. Runs on ARM64 and x86 single-board computers."
 image: /images/ART001.png
 category: "Armbian"

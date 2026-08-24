@@ -1,4 +1,5 @@
 ---
+seo_title: "Install a desktop environment on Armbian"
 description: "Install, remove and configure desktop environments such as GNOME, KDE and XFCE on Armbian single-board computers with the armbian-config utility."
 comments: true
 ---

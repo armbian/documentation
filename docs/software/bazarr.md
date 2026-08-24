@@ -1,5 +1,6 @@
 ---
 title: "Bazarr"
+seo_title: "Install Bazarr on Armbian"
 description: "Install and run Bazarr on Armbian — Bazarr automatic subtitles downloader for Sonarr and Radarr. Runs on ARM64 and x86 single-board computers."
 image: /images/BAZ001.png
 category: "Downloaders"

@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian board maintainer procedures & guidelines"
 description: "Armbian board maintainer procedures and guidelines: requirements, responsibilities and expectations for maintaining single-board computer support in Armbian."
 ---
 

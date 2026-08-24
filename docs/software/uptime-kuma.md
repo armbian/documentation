@@ -1,5 +1,6 @@
 ---
 title: "Uptime Kuma"
+seo_title: "Install Uptime Kuma on Armbian"
 description: "Install and run Uptime Kuma on Armbian — Uptime Kuma self-hosted monitoring tool. Runs on ARM64 and x86 single-board computers."
 image: /images/UPK001.png
 category: "Monitoring"

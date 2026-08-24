@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian first boot config: preset password, IP & Wi-Fi"
 description: "Automate Armbian first boot on single-board computers: preset root password, IP address and Wi-Fi via the .not_logged_in_yet file or a remote config."
 ---
 

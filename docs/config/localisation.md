@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian timezone, locale & keyboard"
 description: "Set the timezone, system locale, language, keyboard layout and hostname on Armbian single-board computers with the armbian-config utility."
 comments: true
 ---

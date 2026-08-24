@@ -1,5 +1,6 @@
 ---
 title: "Navidrome"
+seo_title: "Install Navidrome on Armbian"
 description: "Install and run Navidrome on Armbian — Navidrome music server and streamer compatible with Subsonic/Airsonic. Runs on ARM64 and x86 single-board computers."
 image: /images/NAV001.png
 category: "Media"

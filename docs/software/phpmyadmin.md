@@ -1,5 +1,6 @@
 ---
 title: "phpMyAdmin"
+seo_title: "Install phpMyAdmin on Armbian"
 description: "Install and run phpMyAdmin on Armbian — phpMyAdmin web interface manager. Runs on ARM64 and x86 single-board computers."
 image: /images/MYA001.png
 category: "Database"

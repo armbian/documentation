@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian release automation & CI pipeline"
 description: "Armbian release automation and CI: how image build lists, recommended targets and download-page publishing are generated from the armbian/ci pipeline."
 ---
 

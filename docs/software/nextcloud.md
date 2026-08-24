@@ -1,5 +1,6 @@
 ---
 title: "Nextcloud"
+seo_title: "Install Nextcloud on Armbian"
 description: "Install and run Nextcloud on Armbian — Nextcloud content collaboration platform. Runs on ARM64 and x86 single-board computers."
 image: /images/NCT001.png
 category: "Media"

@@ -1,5 +1,6 @@
 ---
 title: "Portainer"
+seo_title: "Install Portainer on Armbian"
 description: "Install and run Portainer on Armbian — Portainer container management platform. Runs on ARM64 and x86 single-board computers."
 image: /images/POR001.png
 category: "Containers"

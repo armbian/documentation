@@ -1,5 +1,6 @@
 ---
 title: "Pi-hole"
+seo_title: "Install Pi-hole on Armbian"
 description: "Install and run Pi-hole on Armbian — Pi-hole DNS ad blocker with Unbound support. Runs on ARM64 and x86 single-board computers."
 image: /images/PIH001.png
 category: "DNS"

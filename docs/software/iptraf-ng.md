@@ -1,5 +1,6 @@
 ---
 title: "iptraf-ng"
+seo_title: "Install iptraf-ng on Armbian"
 description: "Install and run iptraf-ng on Armbian — iptraf-ng IP LAN monitor. Runs on ARM64 and x86 single-board computers."
 image: /images/IPT001.png
 category: "Netconfig"

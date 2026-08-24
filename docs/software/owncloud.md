@@ -1,5 +1,6 @@
 ---
 title: "Owncloud"
+seo_title: "Install Owncloud on Armbian"
 description: "Install and run Owncloud on Armbian — Owncloud share files and folders, easy and secure. Runs on ARM64 and x86 single-board computers."
 image: /images/OWC001.png
 category: "Media"

@@ -1,5 +1,6 @@
 ---
 title: "Sonarr"
+seo_title: "Install Sonarr on Armbian"
 description: "Install and run Sonarr on Armbian — Sonarr automatic downloader for TV shows. Runs on ARM64 and x86 single-board computers."
 image: /images/SON001.png
 category: "Downloaders"

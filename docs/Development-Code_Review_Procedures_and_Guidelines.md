@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian code review procedures & guidelines"
 description: "Armbian development code review procedures and guidelines: who can review, approve and merge pull requests, and the requirements expected of contributors."
 ---
 

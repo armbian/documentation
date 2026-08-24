@@ -1,5 +1,6 @@
 ---
 title: "Duplicati"
+seo_title: "Install Duplicati on Armbian"
 description: "Install and run Duplicati on Armbian — Duplicati install. Runs on ARM64 and x86 single-board computers."
 image: /images/DPL001.png
 category: "Backup"

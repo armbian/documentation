@@ -1,5 +1,6 @@
 ---
 title: "Jellyfin"
+seo_title: "Install Jellyfin on Armbian"
 description: "Install and run Jellyfin on Armbian — Jellyfin Media System. Runs on ARM64 and x86 single-board computers."
 image: /images/JMS001.png
 category: "Media"

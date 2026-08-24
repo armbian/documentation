@@ -1,5 +1,6 @@
 ---
 title: Armbian Social Media Channels
+seo_title: "Armbian IRC, Discord & social media channels"
 description: Social media channels maintained by Armbian project team
 ---
 

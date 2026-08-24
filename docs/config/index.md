@@ -1,4 +1,5 @@
 ---
+seo_title: "armbian-config: setup tool for your SBC"
 description: "armbian-config is the interactive, scriptable setup tool preinstalled on every Armbian image: configure networking, kernels, storage, users and software on your SBC."
 ---
 

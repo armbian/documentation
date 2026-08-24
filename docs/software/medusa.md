@@ -1,5 +1,6 @@
 ---
 title: "Medusa"
+seo_title: "Install Medusa on Armbian"
 description: "Install and run Medusa on Armbian — Medusa automatic downloader for TV shows. Runs on ARM64 and x86 single-board computers."
 image: /images/MDS001.png
 category: "Downloaders"

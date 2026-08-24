@@ -1,5 +1,6 @@
 ---
 title: "OctoPrint"
+seo_title: "Install OctoPrint on Armbian"
 description: "Install and run OctoPrint on Armbian — OctoPrint web-based 3D printers management tool. Runs on ARM64 and x86 single-board computers."
 image: /images/OCT001.png
 category: "Printing"

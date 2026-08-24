@@ -1,5 +1,6 @@
 ---
 title: First steps after login
+seo_title: "First steps after installing Armbian"
 description: "Configure a fresh Armbian system with armbian-config: language, keyboard, SSH, upgrades and networking, then install preconfigured software titles."
 ---
 # First steps

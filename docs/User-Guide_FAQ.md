@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian FAQ: boards, images & support"
 description: "Armbian FAQ: what Armbian is, why there is no universal image, board support statuses like WIP, CSC and EOS, and how this Debian and Ubuntu SBC distro works."
 ---
 

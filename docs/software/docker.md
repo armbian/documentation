@@ -1,5 +1,6 @@
 ---
 title: "Docker"
+seo_title: "Install Docker on Armbian"
 description: "Install and run Docker on Armbian — Docker helps developers build, share, run, and verify applications anywhere - without tedious environment configuration or management. Runs on ARM64 and x86 single-board computers."
 image: /images/CON001.png
 category: "Containers"

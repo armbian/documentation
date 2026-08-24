@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian Linux: quick facts, mission & benefits"
 description: "Quick facts about Armbian Linux: optimized Debian and Ubuntu images for 100+ ARM single-board computers, the project's mission, challenges and key benefits."
 ---
 

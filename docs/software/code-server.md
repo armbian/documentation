@@ -1,5 +1,6 @@
 ---
 title: "Code-server"
+seo_title: "Install Code-server on Armbian"
 description: "Install and run Code-server on Armbian — Code-server VS Code in browser. Runs on ARM64 and x86 single-board computers."
 image: /images/COD001.png
 category: "DevTools"

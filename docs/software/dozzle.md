@@ -1,5 +1,6 @@
 ---
 title: "Dozzle"
+seo_title: "Install Dozzle on Armbian"
 description: "Install and run Dozzle on Armbian — Dozzle real-time Docker log viewer. Runs on ARM64 and x86 single-board computers."
 image: /images/DOZ001.png
 category: "Monitoring"

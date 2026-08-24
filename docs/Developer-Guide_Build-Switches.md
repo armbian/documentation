@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian build switches: BOARD, BRANCH & RELEASE"
 description: "Armbian build framework switches for compile.sh: BOARD, BRANCH, RELEASE and other optional parameters to customize kernel, U-Boot and image builds."
 ---
 

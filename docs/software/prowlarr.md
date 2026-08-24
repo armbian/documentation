@@ -1,5 +1,6 @@
 ---
 title: "Prowlarr"
+seo_title: "Install Prowlarr on Armbian"
 description: "Install and run Prowlarr on Armbian — Prowlarr index manager and proxy for PVR. Runs on ARM64 and x86 single-board computers."
 image: /images/PRW001.png
 category: "Downloaders"

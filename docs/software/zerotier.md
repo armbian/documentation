@@ -1,5 +1,6 @@
 ---
 title: "ZeroTier"
+seo_title: "Install ZeroTier on Armbian"
 description: "Install and run ZeroTier on Armbian — ZeroTier connect devices over your own private network in the world. Runs on ARM64 and x86 single-board computers."
 image: /images/ZTR001.png
 category: "VPN"

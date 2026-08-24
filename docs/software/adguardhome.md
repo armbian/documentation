@@ -1,5 +1,6 @@
 ---
 title: "AdGuardHome"
+seo_title: "Install AdGuardHome on Armbian"
 description: "Install and run AdGuardHome on Armbian — AdGuardHome DNS sinkhole. Runs on ARM64 and x86 single-board computers."
 image: /images/ADG001.png
 category: "DNS"

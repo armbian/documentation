@@ -1,5 +1,6 @@
 ---
 title: "Immich"
+seo_title: "Install Immich on Armbian"
 description: "Install and run Immich on Armbian — high-performance self-hosted photo and video backup solution. Runs on ARM64 and x86 single-board computers."
 image: /images/IMM001.png
 category: "Media"

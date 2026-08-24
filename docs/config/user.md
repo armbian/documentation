@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian login shell & MOTD settings"
 description: "Change the default login shell and customise the MOTD login banner on Armbian single-board computers with the armbian-config utility."
 comments: true
 ---

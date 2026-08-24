@@ -1,5 +1,6 @@
 ---
 title: "Hastebin"
+seo_title: "Install Hastebin on Armbian"
 description: "Install and run Hastebin on Armbian — Hastebin Paste Server. Runs on ARM64 and x86 single-board computers."
 image: /images/HPS001.png
 category: "Media"

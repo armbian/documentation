@@ -1,4 +1,5 @@
 ---
+seo_title: "Armbian advanced config: keyboard, locale & language"
 description: "Armbian advanced configuration for single-board computers: change keyboard layout, system language and locales via armbian-config or Debian and Ubuntu tools."
 ---
 

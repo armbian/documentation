@@ -1,5 +1,6 @@
 ---
 title: "Emby"
+seo_title: "Install Emby on Armbian"
 description: "Install and run Emby on Armbian — Emby organizes video, music, live TV, and photos. Runs on ARM64 and x86 single-board computers."
 image: /images/EMB001.png
 category: "Media"

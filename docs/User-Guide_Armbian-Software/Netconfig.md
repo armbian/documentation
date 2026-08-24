@@ -1,5 +1,6 @@
 ---
 title: "Netconfig"
+seo_title: "Netconfig apps for Armbian"
 description: "Console network tools for measuring load and bandwidth for Armbian on ARM64 and x86 single-board computers: avahi-daemon, iperf3, iptraf-ng, nload."
 comments: true
 ---

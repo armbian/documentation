@@ -1,5 +1,6 @@
 ---
 title: "Deluge"
+seo_title: "Install Deluge on Armbian"
 description: "Install and run Deluge on Armbian — Deluge BitTorrent client. Runs on ARM64 and x86 single-board computers."
 image: /images/DEL001.png
 category: "Downloaders"
