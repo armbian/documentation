@@ -40,4 +40,4 @@ Congratulation. You have successfully installed Armbian onto your board!
 
 **Next:** [Keeping Armbian up to date](updating.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

@@ -11,7 +11,7 @@ Before you start, please make sure you have:
 
 You will also need an existing operating system and an SD card writer tool. We recommend using **[Armbian Imager](https://github.com/armbian/imager/releases)** — the official Armbian flashing tool.
 
-![Armbian Imager workflow](images/armbian-imager-ani.gif)
+![Armbian Imager workflow](../images/armbian-imager-ani.gif)
 
 Armbian Imager is a **lightweight, native flashing tool** that supports both **selecting and downloading an Armbian image before flashing**, as well as **flashing an already downloaded image**.
 
@@ -49,12 +49,12 @@ Armbian Imager is a **lightweight, native flashing tool** that supports both **s
 This guide is split into stages. Work through them in order, or jump
 straight to the one you need.
 
-1. **[Choosing an Armbian image](User-Guide_Getting-Started/choosing-an-image.md)** — Debian or Ubuntu, minimal, server or desktop, and which kernel branch.
-2. **[Writing the image to media](User-Guide_Getting-Started/writing-the-image.md)** — Armbian Imager to an SD card, or straight to eMMC, UFS or SPI.
-3. **[First boot and login](User-Guide_Getting-Started/first-boot-and-login.md)** — Power up, set the root password, create your user, get on the network.
-4. **[First steps after login](User-Guide_Getting-Started/first-steps.md)** — `armbian-config` for the basics, then preconfigured software titles.
-5. **[Installing to internal storage](User-Guide_Getting-Started/install-to-internal-storage.md)** — `armbian-install` moves the system off the SD card.
-6. **[Keeping Armbian up to date](User-Guide_Getting-Started/updating.md)** — APT for the OS, `armbian-install` for the boot loader.
-7. **[If something goes wrong](User-Guide_Getting-Started/troubleshooting.md)** — When a step fails, and how to report a real bug.
+1. **[Choosing an Armbian image](choosing-an-image.md)** — Debian or Ubuntu, minimal, server or desktop, and which kernel branch.
+2. **[Writing the image to media](writing-the-image.md)** — Armbian Imager to an SD card, or straight to eMMC, UFS or SPI.
+3. **[First boot and login](first-boot-and-login.md)** — Power up, set the root password, create your user, get on the network.
+4. **[First steps after login](first-steps.md)** — `armbian-config` for the basics, then preconfigured software titles.
+5. **[Installing to internal storage](install-to-internal-storage.md)** — `armbian-install` moves the system off the SD card.
+6. **[Keeping Armbian up to date](updating.md)** — APT for the OS, `armbian-install` for the boot loader.
+7. **[If something goes wrong](troubleshooting.md)** — When a step fails, and how to report a real bug.
 
-Start with **[Choosing an Armbian image](User-Guide_Getting-Started/choosing-an-image.md)**.
+Start with **[Choosing an Armbian image](choosing-an-image.md)**.

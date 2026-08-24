@@ -139,8 +139,8 @@ After you have downloaded these files, we recommend checking the integrity and t
 
 ---
 
-**Previous:** [Getting Started](../User-Guide_Getting-Started.md)
+**Previous:** [Getting Started](index.md)
 
 **Next:** [Writing the image to media](writing-the-image.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

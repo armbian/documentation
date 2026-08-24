@@ -106,4 +106,4 @@ When a Rockchip device is placed into **Maskrom mode**, you can use `rkdevelopto
 
 **Next:** [First boot and login](first-boot-and-login.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

@@ -74,6 +74,8 @@ plugins:
       redirect_maps:
         'User-Guide_Allwinner_overlays.md': 'User-Guide_Armbian_overlays.md'
         'Release_Changelog.md': 'releases/index.md'
+        # Getting Started moved to short /getting-started/ URLs
+        'User-Guide_Getting-Started.md': 'getting-started/index.md'
         # armbian-config pages live at /config/; keep every earlier URL working
         'User-Guide_Armbian-Config.md': 'config/index.md'
         'User-Guide_Armbian-Config/System.md': 'config/index.md'
@@ -140,14 +142,14 @@ nav:
   - 'ARMBIAN OS':
         - 'Introduction': 'index.md'
         - 'Getting Started' :
-            - 'Overview' : 'User-Guide_Getting-Started.md'
-            - 'Choosing an image' : 'User-Guide_Getting-Started/choosing-an-image.md'
-            - 'Writing the image' : 'User-Guide_Getting-Started/writing-the-image.md'
-            - 'First boot and login' : 'User-Guide_Getting-Started/first-boot-and-login.md'
-            - 'First steps' : 'User-Guide_Getting-Started/first-steps.md'
-            - 'Installing to internal storage' : 'User-Guide_Getting-Started/install-to-internal-storage.md'
-            - 'Keeping it up to date' : 'User-Guide_Getting-Started/updating.md'
-            - 'If something goes wrong' : 'User-Guide_Getting-Started/troubleshooting.md'
+            - 'Overview' : 'getting-started/index.md'
+            - 'Choosing an image' : 'getting-started/choosing-an-image.md'
+            - 'Writing the image' : 'getting-started/writing-the-image.md'
+            - 'First boot and login' : 'getting-started/first-boot-and-login.md'
+            - 'First steps' : 'getting-started/first-steps.md'
+            - 'Installing to internal storage' : 'getting-started/install-to-internal-storage.md'
+            - 'Keeping it up to date' : 'getting-started/updating.md'
+            - 'If something goes wrong' : 'getting-started/troubleshooting.md'
         - 'Advanced Usage' :
             - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
             - 'Networking' : 'User-Guide_Networking.md'
