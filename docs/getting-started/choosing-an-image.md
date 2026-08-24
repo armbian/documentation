@@ -4,7 +4,7 @@ description: "Pick the right Armbian image for your board: Debian or Ubuntu, min
 ---
 # Choosing an image
 
-If your hardware is [supported](../index.md#which-hardware-is-supported), the recommended way to get started is to use **[Armbian Imager](https://github.com/armbian/imager/releases)** to select your board, download the appropriate image, and flash it in one step; alternatively, images can also be downloaded manually from [https://www.armbian.com/download/](https://www.armbian.com/download/) and flashed using Armbian Imager.
+If your hardware is [supported](../index.md#which-hardware-is-supported), the recommended way to get started is to use **[Armbian Imager](https://imager.armbian.com/)** to select your board, download the appropriate image, and flash it in one step; alternatively, images can also be downloaded manually from [https://www.armbian.com/download/](https://www.armbian.com/download/) and flashed using Armbian Imager.
 
 <!-- TODO: add some information about using the user interface on the site -->
 
