@@ -5448,8 +5448,8 @@ U-Boot and kernel sources before and after applying patches, investigate compila
 <p>First, start docker-shell on the host build system:
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>@droid:~/armbian$ ./compile.sh docker-shell RELEASE=trixie BOARD=rockpi-4a BRANCH=edge
 </span></code></pre></div></td></tr></table></div>
-From there, <code>RELEASE=trixie BOARD=rockpi-4a BRANCH=edge</code> are passed into shell and will be set into
-envirounment variables. </p>
+From there, <code>RELEASE=trixie BOARD=rockpi-4a BRANCH=edge</code> are passed to the shell and set as
+environment variables.</p>
 <p>Next, we can simply start building an image:
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>root@75ec76203b65:~/armbian# ./compile.sh
 </span></code></pre></div></td></tr></table></div>
