@@ -36,9 +36,7 @@ Usage:
 ./compile.sh flash CARD_DEVICE=/dev/sdX
 ```
 
-`CARD_DEVICE` is mandatory &mdash; run `lsblk` to find the device name. Docker is
-not an obstacle: the launcher passes the device into the container when it is
-set (`DOCKER_SKIP_CARD_DEVICE=yes` opts out).
+`CARD_DEVICE` is mandatory &mdash; run `lsblk` to find the device name.
 
 !!! danger "Check the device name first"
 
