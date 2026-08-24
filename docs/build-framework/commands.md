@@ -16,12 +16,34 @@ Usage:
 
 ### flash
 
-Writes an already-built image to a block device (SD card, USB, eMMC), with an interactive picker for the image and the target device.
+Writes an already-built image to a block device (SD card, USB, eMMC). There is
+no interactive picker: the target device is required, and the image is chosen
+for you.
 
 Usage:
 ```bash
-./compile.sh flash
+./compile.sh flash CARD_DEVICE=/dev/sdX
 ```
+
+`CARD_DEVICE` is mandatory &mdash; run `lsblk` to find the device name. Docker is
+not an obstacle: the launcher passes the device into the container when it is
+set (`DOCKER_SKIP_CARD_DEVICE=yes` opts out).
+
+!!! danger "Check the device name first"
+
+    Everything on `CARD_DEVICE` is overwritten. Naming the wrong disk destroys
+    it, and the command does not ask for confirmation beyond a short countdown.
+
+By default the newest `.img` in `output/images` is flashed. Pass `BOARD`,
+`RELEASE` or `BRANCH` to narrow that down, or `IMAGE` to name a file outright:
+
+```bash
+./compile.sh flash CARD_DEVICE=/dev/sdX BOARD=rockpi-4a BRANCH=current
+./compile.sh flash CARD_DEVICE=/dev/sdX IMAGE=output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
+```
+
+The image is read back and verified against its checksum after writing. Set
+`SKIP_VERIFY=yes` to skip that.
 
 ### docker / docker-shell / docker-purge
 
