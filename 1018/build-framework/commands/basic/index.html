@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Everyday Armbian build commands: build an image with compile.sh, flash it to an SD card or eMMC, and open or purge the Docker build container.">
+        <meta name="description" content="Everyday Armbian build commands: build a full image or just the kernel with compile.sh, and flash it to an SD card, USB or eMMC.">
       
       
         <meta name="author" content="Armbian team">
@@ -29,7 +29,7 @@
     
     
   
-    <title>Armbian basic build commands: build & flash</title>
+    <title>Armbian basic build commands: build, flash, kernel</title>
   
 
     
@@ -80,10 +80,10 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Armbian basic build commands: build & flash">
-  <meta property="og:description" content="Everyday Armbian build commands: build an image with compile.sh, flash it to an SD card or eMMC, and open or purge the Docker build container.">
-  <meta name="twitter:title" content="Armbian basic build commands: build & flash">
-  <meta name="twitter:description" content="Everyday Armbian build commands: build an image with compile.sh, flash it to an SD card or eMMC, and open or purge the Docker build container.">
+  <meta property="og:title" content="Armbian basic build commands: build, flash, kernel">
+  <meta property="og:description" content="Everyday Armbian build commands: build a full image or just the kernel with compile.sh, and flash it to an SD card, USB or eMMC.">
+  <meta name="twitter:title" content="Armbian basic build commands: build, flash, kernel">
+  <meta name="twitter:description" content="Everyday Armbian build commands: build a full image or just the kernel with compile.sh, and flash it to an SD card, USB or eMMC.">
   
     <meta name="twitter:card" content="summary">
   
@@ -4690,21 +4690,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-shell" class="md-nav__link">
+  <a href="#kernel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        docker-shell
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-purge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-purge
+        kernel
       
     </span>
   </a>
@@ -5854,21 +5843,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-shell" class="md-nav__link">
+  <a href="#kernel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        docker-shell
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-purge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-purge
+        kernel
       
     </span>
   </a>
@@ -5910,7 +5888,7 @@
 
 
 <h1 id="basic-commands">Basic commands<a class="headerlink" href="#basic-commands" title="Permanent link">&para;</a></h1>
-<p>Everyday commands for building an image, writing it to media, and managing the build container.</p>
+<p>Everyday commands for building a full image or just the kernel, and writing it to media.</p>
 <h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
 <p>The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke <code>./compile.sh</code> with no command, or explicitly:</p>
 <p>Usage:
@@ -5945,15 +5923,10 @@ written, so you can check it is the one you meant:</p>
 </span></code></pre></div></td></tr></table></div>
 <p>The image is read back and verified against its checksum after writing. Set
 <code>SKIP_VERIFY=yes</code> to skip that.</p>
-<h2 id="docker-shell">docker-shell<a class="headerlink" href="#docker-shell" title="Permanent link">&para;</a></h2>
-<p>Drops you into an interactive shell inside Armbian&rsquo;s build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.</p>
+<h2 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">&para;</a></h2>
+<p>Builds only the kernel and device tree (where applicable) and places the packages in <code>output/debs</code>.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span>docker-shell<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span>trixie
-</span></code></pre></div></td></tr></table></div></p>
-<h2 id="docker-purge">docker-purge<a class="headerlink" href="#docker-purge" title="Permanent link">&para;</a></h2>
-<p>Removes the build container together with its named volumes and cached build image, reclaiming that disk space.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span>docker-purge
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span>kernel<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
 </span></code></pre></div></td></tr></table></div></p>
 
 
