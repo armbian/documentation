@@ -127,4 +127,4 @@ Function | Armbian | Yocto | Buildroot |
 
 **Next:** [Getting started](getting-started.md)
 
-Reference: [build commands](commands.md), [build switches](switches.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).
+Reference: [build commands](commands.md), [build switches](switches/index.md), [user configurations](user-configurations.md), [extensions](extensions/index.md).

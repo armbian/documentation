@@ -144,7 +144,7 @@ Usage:
 Create patch files for u-boot.
 
 The output patch files are written to
-**output/patch/u-boot-${LINUXFAMILY}-${[BRANCH](https://docs.armbian.com/build-framework/switches/#user-space)}.patch**.
+**output/patch/u-boot-${LINUXFAMILY}-${[BRANCH](https://docs.armbian.com/build-framework/switches/target/#branch)}.patch**.
 To use them in subsequent builds they
 must be copied to the appropriate directories in the patch/u-boot directory.
 See: [user-provided patches](https://docs.armbian.com/build-framework/user-configurations/#user-provided-patches)

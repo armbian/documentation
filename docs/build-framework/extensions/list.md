@@ -57,7 +57,7 @@ Installs OpenMediaVault into the image (adds an `-omv` suffix).
 
 ## arm64-compat-vdso
 
-Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](/build-framework/switches/#prefer_native_armhf).
+Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through `qemu-user-static` (~10× faster). The build framework auto-detects the capability — see [PREFER_NATIVE_ARMHF](/build-framework/switches/performance/#prefer_native_armhf).
 
 Requires a 32-bit ARM cross-compiler for GCC builds (`gcc-arm-linux-gnueabi` or custom `CROSS_COMPILE_COMPAT`). For clang builds uses the built-in LLVM backend.
 
