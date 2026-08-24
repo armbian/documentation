@@ -139,7 +139,15 @@ nav:
 
   - 'ARMBIAN OS':
         - 'Introduction': 'index.md'
-        - 'Getting Started' : 'User-Guide_Getting-Started.md'
+        - 'Getting Started' :
+            - 'Overview' : 'User-Guide_Getting-Started.md'
+            - 'Choosing an image' : 'User-Guide_Getting-Started/choosing-an-image.md'
+            - 'Writing the image' : 'User-Guide_Getting-Started/writing-the-image.md'
+            - 'First boot and login' : 'User-Guide_Getting-Started/first-boot-and-login.md'
+            - 'First steps' : 'User-Guide_Getting-Started/first-steps.md'
+            - 'Installing to internal storage' : 'User-Guide_Getting-Started/install-to-internal-storage.md'
+            - 'Keeping it up to date' : 'User-Guide_Getting-Started/updating.md'
+            - 'If something goes wrong' : 'User-Guide_Getting-Started/troubleshooting.md'
         - 'Advanced Usage' :
             - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
             - 'Networking' : 'User-Guide_Networking.md'
