@@ -5721,11 +5721,7 @@
 <p>The build runs inside a Docker container by default (<code>./compile.sh</code> relaunches itself in one), so the host needs a working Docker install.</p>
 <p>On an <strong>Armbian</strong> host, install it with <code>armbian-config</code> → <strong>Software → Containers → Docker</strong> (see <a href="/software/docker/">Docker</a>).</p>
 <p>On other Debian/Ubuntu hosts (including WSL2):</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker.io
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w">   </span><span class="c1"># log out and back in so the group applies</span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker.io<span class="w"> </span>docker-buildx
 </span></code></pre></div></td></tr></table></div>
 <p>Or follow the <a href="https://docs.docker.com/engine/install/">official Docker install guide</a>.</p>
 <h2 id="clone-repository">Clone repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h2>
