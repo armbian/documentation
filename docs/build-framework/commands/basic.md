@@ -63,3 +63,12 @@ Usage:
 ```bash
 ./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
 ```
+
+## uboot
+
+Builds only the U-Boot bootloader and places the package in `output/debs`.
+
+Usage:
+```bash
+./compile.sh uboot BOARD=nanopi-r5c BRANCH=edge
+```
