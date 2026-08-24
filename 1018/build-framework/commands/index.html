@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Armbian build framework commands for compile.sh: build the kernel, run kernel-config menuconfig, rewrite the kernel config, check device trees and more.">
+        <meta name="description" content="Commands for the Armbian build framework's compile.sh: build an image, flash it, manage the container, and advanced kernel, patch and board-development tooling.">
       
       
         <meta name="author" content="Armbian team">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../switches/">
+        <link rel="next" href="basic/">
       
       
         
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian build commands for compile.sh">
-  <meta property="og:description" content="Armbian build framework commands for compile.sh: build the kernel, run kernel-config menuconfig, rewrite the kernel config, check device trees and more.">
+  <meta property="og:description" content="Commands for the Armbian build framework's compile.sh: build an image, flash it, manage the container, and advanced kernel, patch and board-development tooling.">
   <meta name="twitter:title" content="Armbian build commands for compile.sh">
-  <meta name="twitter:description" content="Armbian build framework commands for compile.sh: build the kernel, run kernel-config menuconfig, rewrite the kernel config, check device trees and more.">
+  <meta name="twitter:description" content="Commands for the Armbian build framework's compile.sh: build an image, flash it, manage the container, and advanced kernel, patch and board-development tooling.">
   
     <meta name="twitter:card" content="summary">
   
@@ -185,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build Commands
+              Overview
             
           </span>
         </div>
@@ -4551,7 +4551,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Build Commands
   
 
     
@@ -4567,7 +4567,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Build Commands
   
 
           </label>
@@ -4589,24 +4589,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Build Commands
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4614,7 +4596,7 @@
   <span class="md-ellipsis">
     
   
-    Build Commands
+    Overview
   
 
     
@@ -4624,223 +4606,69 @@
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    Basic
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic commands
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-    <nav class="md-nav" aria-label="Basic commands">
-      <ul class="md-nav__list">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced/" class="md-nav__link">
         
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        build
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        flash
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-shell
-      
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-purge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-purge
-      
-    </span>
-  </a>
+    Advanced
   
-</li>
-        
-      </ul>
-    </nav>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advanced commands
-      
-    </span>
-  </a>
   
-    <nav class="md-nav" aria-label="Advanced commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kernel-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-kernel-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-kernel-config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dts-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        dts-check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inventory-boards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        inventory-boards
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kernel-dtb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-dtb
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uboot-patch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        uboot-patch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-uboot-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-uboot-patches
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-kernel-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-kernel-patches
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        targets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        show-extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -4865,10 +4693,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   
@@ -4886,8 +4714,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5269,14 +5097,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -5295,10 +5115,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
             
   
   
@@ -5316,8 +5136,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5924,213 +5744,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        flash
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-shell
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-purge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        docker-purge
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advanced commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kernel-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-kernel-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-kernel-config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dts-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        dts-check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inventory-boards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        inventory-boards
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kernel-dtb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-dtb
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uboot-patch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        uboot-patch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-uboot-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-uboot-patches
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rewrite-kernel-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rewrite-kernel-patches
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        targets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        show-extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -6147,7 +5760,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/main/docs/build-framework/commands.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/armbian/documentation/edit/main/docs/build-framework/commands/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -6156,7 +5769,7 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/main/docs/build-framework/commands.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/main/docs/build-framework/commands/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -6172,156 +5785,25 @@
 <li>Parameters (<code>PARAM=value</code>, see <a href="/build-framework/switches/">Build Switches</a>), config files and the command may be given in <strong>any order</strong>.</li>
 <li>There is <strong>no default config file</strong> — if you keep your settings in <code>userpatches/config-&lt;name&gt;.conf</code>, name it explicitly on the command line (<code>./compile.sh BOARD=... &lt;name&gt;</code>). A config file must not share a name with a command.</li>
 </ul>
-<h2 id="basic-commands">Basic commands<a class="headerlink" href="#basic-commands" title="Permanent link">&para;</a></h2>
-<p>Everyday commands for building an image, writing it to media, and managing the build container.</p>
-<h3 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
-<p>The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke <code>./compile.sh</code> with no command, or explicitly:</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh<span class="w"> </span>build<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span>trixie
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="flash">flash<a class="headerlink" href="#flash" title="Permanent link">&para;</a></h3>
-<p>Writes an already-built image to a block device (SD card, USB, eMMC). Name the
-target device; the newest image in <code>output/images</code> is used unless you name one
-too.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX
-</span></code></pre></div></td></tr></table></div></p>
-<p><code>CARD_DEVICE</code> is mandatory &mdash; run <code>lsblk</code> to find the device name. Docker is
-not an obstacle: the launcher passes the device into the container when it is
-set (<code>DOCKER_SKIP_CARD_DEVICE=yes</code> opts out).</p>
-<div class="admonition danger">
-<p class="admonition-title">Check the device name first</p>
-<p>Everything on <code>CARD_DEVICE</code> is overwritten. Naming the wrong disk destroys
-it.</p>
-</div>
-<p>Pass <code>BOARD</code>, <code>RELEASE</code> or <code>BRANCH</code> to narrow which image is picked, or <code>IMAGE</code>
-to name a file outright:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">IMAGE</span><span class="o">=</span>output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
-</span></code></pre></div></td></tr></table></div>
-<p>When the image is picked for you, the choice is reported before anything is
-written, so you can check it is the one you meant:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>[🌱] cli_flash [ Flashing image file: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-</span></code></pre></div></td></tr></table></div>
-<p>The image is read back and verified against its checksum after writing. Set
-<code>SKIP_VERIFY=yes</code> to skip that.</p>
-<h3 id="docker-shell">docker-shell<a class="headerlink" href="#docker-shell" title="Permanent link">&para;</a></h3>
-<p>Drops you into an interactive shell inside Armbian&rsquo;s build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span>docker-shell<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span>trixie
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="docker-purge">docker-purge<a class="headerlink" href="#docker-purge" title="Permanent link">&para;</a></h3>
-<p>Removes the build container together with its named volumes and cached build image, reclaiming that disk space.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>./compile.sh<span class="w"> </span>docker-purge
-</span></code></pre></div></td></tr></table></div></p>
-<h2 id="advanced-commands">Advanced commands<a class="headerlink" href="#advanced-commands" title="Permanent link">&para;</a></h2>
-<p>Kernel, bootloader and board-development commands, plus release and inspection tooling.</p>
-<h3 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">&para;</a></h3>
-<p>Builds kernel and device tree (where applicable) and places it to the <code>output/debs</code></p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>./compile.sh<span class="w"> </span>kernel<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="kernel-config">kernel-config<a class="headerlink" href="#kernel-config" title="Permanent link">&para;</a></h3>
-<p>Automatically call kernel&rsquo;s <code>make menuconfig</code> (add or remove modules or features)</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>./compile.sh<span class="w"> </span>kernel-config<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="rewrite-kernel-config">rewrite-kernel-config<a class="headerlink" href="#rewrite-kernel-config" title="Permanent link">&para;</a></h3>
-<p>Automatically validates kernel config changes and dependency chains. After manually editing the config for a given family and branch this is needed to ensure the config change will persist our CI.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-config<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="dts-check">dts-check<a class="headerlink" href="#dts-check" title="Permanent link">&para;</a></h3>
-<p>Validate dts files and improve board &amp; patch development overall.</p>
-<p>This option validates the dts/dtb file for the selected board against the device tree bindings and outputs the validation logs to the user. It can be used when adding a new board, developing or improving a dts file.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>dts-check<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="inventory-boards">inventory-boards<a class="headerlink" href="#inventory-boards" title="Permanent link">&para;</a></h3>
-<p>Outputs a one-board-per-line CSV inventory of boards.</p>
-<p>Sets <code>TARGETS_FILE</code> to something that doesn&rsquo;t exist, so the <code>targets-default.yaml</code> is used (so same list for everyone, save for userpatched-boards)</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>./compile.sh<span class="w"> </span>inventory-boards
-</span></code></pre></div></td></tr></table></div>
-Outputs output/info/boards-inventory.csv</p>
-<h3 id="kernel-dtb">kernel-dtb<a class="headerlink" href="#kernel-dtb" title="Permanent link">&para;</a></h3>
-<p>Builds only DTB and outputs full preprocessed dts source</p>
-<p>Outputs preprocessed DTS source for the board in question to <code>output/</code>
-also outputs the same preprocessed DTS source, ran through <code>dtc</code> with input and output DTS formats for &ldquo;normalized&rdquo; comparisons</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>./compile.sh<span class="w"> </span>kernel-dtb<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="uboot-patch">uboot-patch<a class="headerlink" href="#uboot-patch" title="Permanent link">&para;</a></h3>
-<p>Create patch files for u-boot.</p>
-<p>The output patch files are written to
-<strong>output/patch/u-boot-${LINUXFAMILY}-${<a href="https://docs.armbian.com/build-framework/switches/target/#branch">BRANCH</a>}.patch</strong>.
-To use them in subsequent builds they
-must be copied to the appropriate directories in the patch/u-boot directory.
-See: <a href="https://docs.armbian.com/build-framework/user-configurations/#user-provided-patches">user-provided patches</a></p>
-<p>Any uncommitted changes in the work tree and index are committed
-to establish a clean work tree.
-It would be best if there are no uncommitted changes when running
-<code>uboot-patch</code>.</p>
-<p>If there is an existing patch file at the output path specified above, it
-may be applied before continuing work.</p>
-<p>When the prompt <code>Press &lt;ENTER\&gt; after you are done editing in ${pwd}</code> appears,
-in a separate window, navigate to the specified directory
-and make any required changes.
-When changes are complete,
-return to the window running the <code>uboot-patch</code> command
-and press <code>&lt;ENTER&gt;</code>. </p>
-<p>A patch to recreate the changes introduced to the u-boot tree is presented
-and the prompt &ldquo;Are you happy with this patch?&rdquo;.
-You can respond
-<code>yes</code> to accept the patch as-is and generate the output patch file,
-<code>stop</code> to abort the command without producing the output patch file,
-or anything else to loop back, to make further changes.</p>
-<p>Instead of creating them while running <code>uboot-patch</code>,
-new device tree files should be created in the relevant <code>dt</code> directory under
-<code>patch/u-boot</code>
-and new _defconfig files should be created in the relevant <code>configs</code> directory
-under <code>patch/u-boot</code>.
-While the <code>uboot-patch</code> command will add these new files to the patch
-if they are created while running <code>uboot-patch</code>,
-this is not the preferred way of adding these files.</p>
-<h3 id="rewrite-uboot-patches">rewrite-uboot-patches<a class="headerlink" href="#rewrite-uboot-patches" title="Permanent link">&para;</a></h3>
-<p>Prepares git, applies patches to git, and rewrites them back from git
-same as kernel, it does git archeology for mbox-less patches, etc.</p>
-<p>Note: MAINTAINER and MAINTAINEREMAIL should be set.</p>
-<ul>
-<li>uboot-patches-to-git alias is also added, but my guess is that the rewrite is more useful.</li>
-<li>refactor a common config function for both kernel and uboot.</li>
-</ul>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>./compile.sh<span class="w"> </span>rewrite-uboot-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="rewrite-kernel-patches">rewrite-kernel-patches<a class="headerlink" href="#rewrite-kernel-patches" title="Permanent link">&para;</a></h3>
-<p>Prepares git, applies patches to git, and rewrites them back from git
-same as kernel, it does git archeology for mbox-less patches, etc.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="targets">targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h3>
-<p>Generates output/info/git_sources.json file containing URL, branch, and commit hash combo.</p>
-<p>The easiest way to generate file for all devices is to run <code>./compile.sh targets</code>. Then, at the time of release, we will copy the output/info/git_sources.json file to config/sources/git_sources.json. Once the file is copied, the hash information from the file will be used to fetch resources for git repositories where branches are specified instead of tags or commits.</p>
-<p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>./compile.sh<span class="w"> </span>targets
-</span></code></pre></div></td></tr></table></div></p>
-<h3 id="show-extensions">show-extensions<a class="headerlink" href="#show-extensions" title="Permanent link">&para;</a></h3>
-<p>Lists the <a href="/build-framework/extensions/hooks/">extension hook points</a> that exist in the build sources, optionally with their inline documentation.</p>
-<p>The list is produced by statically scanning <code>lib/</code>, <code>extensions/</code> and <code>config/</code> for <code>call_extension_method</code> call sites, so it always describes the checked-out tree — including hooks added by userpatches — without running a build.</p>
-<p>No board configuration is needed, the command does not relaunch into Docker and does not install host dependencies.</p>
-<p>Usage:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>./compile.sh<span class="w"> </span>show-extensions
-</span></code></pre></div></td></tr></table></div>
-<p>Outputs one hook name per line, sorted alphabetically.</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>./compile.sh<span class="w"> </span>show-extensions<span class="w"> </span><span class="nv">SHOW_EXTENSIONS</span><span class="o">=</span>docs
-</span></code></pre></div></td></tr></table></div>
-<p>Outputs a Markdown document with the documentation of every hook; this is what <a href="/build-framework/extensions/hooks/">Extension Hooks</a> is generated from.</p>
+<p>Commands are grouped by audience:</p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="basic/">Basic commands</a></td>
+<td><code>build</code>, <code>flash</code>, <code>docker-shell</code>, <code>docker-purge</code></td>
+</tr>
+<tr>
+<td><a href="advanced/">Advanced commands</a></td>
+<td>kernel, U-Boot/patch, board-development and inspection tooling</td>
+</tr>
+</tbody>
+</table>
 
 
 

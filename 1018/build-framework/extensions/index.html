@@ -4549,7 +4549,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Build Commands
   
 
     
@@ -4565,7 +4565,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Build Commands
   
 
           </label>
@@ -4585,7 +4585,7 @@
   <span class="md-ellipsis">
     
   
-    Build Commands
+    Overview
   
 
     
@@ -4594,6 +4594,70 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4617,10 +4681,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   
@@ -4638,8 +4702,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5021,14 +5085,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -5049,10 +5105,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
             
   
   
@@ -5070,8 +5126,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6183,7 +6239,7 @@ in <code>/userpatches/extensions</code>.</p>
 <li><a href="https://github.com/armbian/build/blob/main/extensions/watchdog.sh">watchdog</a>: Add watchdog alert support</li>
 </ul>
 <h4 id="which-hook-points-can-i-implement">Which hook points can I implement?<a class="headerlink" href="#which-hook-points-can-i-implement" title="Permanent link">&para;</a></h4>
-<p>The reference list is <a href="/build-framework/extensions/hooks/">Extension Hooks</a>. To get the list for the exact tree you are building from, userpatches included, run <a href="/build-framework/commands/#show-extensions"><code>./compile.sh show-extensions</code></a>; add <code>SHOW_EXTENSIONS=docs</code> to get each hook&rsquo;s documentation instead of just its name.</p>
+<p>The reference list is <a href="/build-framework/extensions/hooks/">Extension Hooks</a>. To get the list for the exact tree you are building from, userpatches included, run <a href="/build-framework/commands/advanced/#show-extensions"><code>./compile.sh show-extensions</code></a>; add <code>SHOW_EXTENSIONS=docs</code> to get each hook&rsquo;s documentation instead of just its name.</p>
 <h4 id="how-to-opt-out-of-a-specific-hook-function">How to opt out of a specific hook function?<a class="headerlink" href="#how-to-opt-out-of-a-specific-hook-function" title="Permanent link">&para;</a></h4>
 <p>Any function making use of the extension framework [generally of the form <code>hook_name__individual_function</code>] can be skipped in a board or family config, by way of</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>extension_hook_opt_out<span class="w"> </span><span class="s2">&quot;hook_name__individual_function&quot;</span>

@@ -173,10 +173,6 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/build-framework/commands/</loc>
-         <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/build-framework/desktops/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -186,6 +182,18 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/build-framework/user-configurations/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/build-framework/commands/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/build-framework/commands/advanced/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/build-framework/commands/basic/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
