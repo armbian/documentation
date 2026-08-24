@@ -128,14 +128,31 @@ Steps:
 
 !!! question "Linux: `USB access denied`"
 
-    An EDL device appears as USB ID `05c6:9008`. Give your user access to it and
-    stop `qcserial` from claiming it first:
+    An EDL device appears as USB ID `05c6:9008`, and the in-tree `qcserial`
+    driver claims that same ID. Give your user access to the device and stop
+    `qcserial` from taking it:
 
     ``` bash
-    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", ATTR{idProduct}=="9008", MODE="0666"' | sudo tee /etc/udev/rules.d/51-qdl.rules
+    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", ATTR{idProduct}=="9008", MODE="0660", GROUP="plugdev", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/51-qdl.rules
     echo 'blacklist qcserial' | sudo tee /etc/modprobe.d/blacklist-qcserial.conf
     sudo udevadm control --reload-rules
     ```
+
+    `uaccess` covers you when you are logged in at the machine itself; over SSH,
+    add yourself to `plugdev` with `sudo usermod -aG plugdev $USER` and log back
+    in.
+
+    The blacklist only stops `qcserial` loading in future &mdash; it does not
+    release a board it has already taken. If the module is loaded, unplug the
+    board, unload it, then plug the board back in:
+
+    ``` bash
+    sudo modprobe -r qcserial
+    ```
+
+    Reboot instead if it will not unload. Note that the blacklist is permanent
+    and also stops `qcserial` driving other Qualcomm serial devices, such as USB
+    modems; delete `/etc/modprobe.d/blacklist-qcserial.conf` to undo it.
 
 !!! tip "`No EDL device found`"
 
