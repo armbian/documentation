@@ -513,15 +513,15 @@ Creates a VMware-compatible image (VMDK + OVF) with VMware tools installed. Depe
 
 ---
 
-## wayland-sessions-mask
-
-Masks Wayland desktop session entries for boards with limited or unstable Wayland support.
-
----
-
 ## watchdog
 
 Installs the `watchdog` daemon and enables `CONFIG_WATCHDOG` / hardware watchdog device support in the kernel.
+
+---
+
+## wayland-sessions-mask
+
+Masks Wayland desktop session entries for boards with limited or unstable Wayland support.
 
 ---
 
