@@ -5497,12 +5497,6 @@ distribution.</p>
 <td><a href="https://github.com/torvalds/linux/blob/master/MAINTAINERS">per subsystem</a>, not per board</td>
 </tr>
 <tr>
-<td>Upstream contribution</td>
-<td>sent to mainline, listed per release in the <a href="releases/">release notes</a></td>
-<td>varies by vendor</td>
-<td>is the upstream tree</td>
-</tr>
-<tr>
 <td>Build framework</td>
 <td><a href="https://github.com/armbian/build">builds the whole OS</a> from source</td>
 <td>the vendor&rsquo;s own, for its own hardware</td>
@@ -5510,19 +5504,19 @@ distribution.</p>
 </tr>
 <tr>
 <td>Maintenance</td>
-<td>modular, reviewed, and <a href="https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml">unit tested on every change</a></td>
+<td>modular and reviewed; <code>armbian-config</code> is <a href="https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml">unit tested per pull request</a></td>
 <td>varies by vendor</td>
 <td>public mailing-list review</td>
 </tr>
 <tr>
 <td>User-space</td>
-<td>stock Debian or Ubuntu, no vendor overlay</td>
+<td>Debian or Ubuntu based, with Armbian packages and configuration</td>
 <td>the vendor&rsquo;s own image</td>
 <td>stock distribution user space</td>
 </tr>
 <tr>
 <td>Declaring support</td>
-<td>only where a maintainer is named, per the <a href="User-Guide_Board-Support-Rules/">Board Support Rules</a></td>
+<td>Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the <a href="User-Guide_Board-Support-Rules/">Board Support Rules</a></td>
 <td>varies by vendor</td>
 <td>per <a href="https://github.com/torvalds/linux/blob/master/MAINTAINERS"><code>MAINTAINERS</code></a> entry, not per board</td>
 </tr>
