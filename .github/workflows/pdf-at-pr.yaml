@@ -2,7 +2,7 @@ name: Create docs preview on PR
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize, labeled]
+    types: [opened, reopened, synchronize, labeled, closed]
   workflow_dispatch:
 
 permissions:
@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   docs-preview:
+    # Build/publish a preview only while the PR is active; on close we clean up instead.
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
 
     steps:
@@ -78,3 +80,41 @@ jobs:
 
             <a href="https://armbian.github.io/documentation/${{ github.event.number }}"><kbd><br> Open WWW preview <br></kbd></a>
           body-update-action: suffix
+
+  # When a PR is closed (merged or not), delete its preview build from the `www`
+  # branch so previews stop accumulating there. Without this, every PR left a
+  # full site copy under www/<PR#>/ forever, which grew the GitHub Pages source
+  # past its 1 GB limit and broke deployment.
+  cleanup-preview:
+    if: github.event.action == 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout `www` branch
+        uses: actions/checkout@v7
+        with:
+          ref: www
+
+      - name: Remove preview for closed PR
+        env:
+          PR: ${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          if [ ! -d "${PR}" ]; then
+            echo "No preview directory for PR #${PR}; nothing to do."
+            exit 0
+          fi
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git rm -r --quiet "${PR}"
+          git commit -m "www: remove docs preview for closed PR #${PR}"
+          # Retry against concurrent preview pushes from other PRs.
+          for attempt in 1 2 3; do
+            if git push origin www; then
+              echo "Removed preview for PR #${PR}."
+              exit 0
+            fi
+            echo "Push failed (attempt ${attempt}); rebasing on latest www..." >&2
+            git pull --rebase origin www
+          done
+          echo "Failed to push preview removal for PR #${PR} after 3 attempts." >&2
+          exit 1
