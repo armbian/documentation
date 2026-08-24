@@ -22,7 +22,7 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 <!--- header STOP from tools/include/markdown/TRA001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Transmission**
+Install from **[armbian-config](/config/) → Software → Downloaders → Transmission**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd TRA001

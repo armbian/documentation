@@ -22,7 +22,7 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 <!--- header STOP from tools/include/markdown/BAZ001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Bazarr**
+Install from **[armbian-config](/config/) → Software → Downloaders → Bazarr**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd BAZ001

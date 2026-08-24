@@ -40,7 +40,7 @@ For more information and installation guides, visit the official [NetAlertX docu
 <!--- header STOP from tools/include/markdown/NAX001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Monitoring → NetAlertX**
+Install from **[armbian-config](/config/) → Software → Monitoring → NetAlertX**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd NAX001

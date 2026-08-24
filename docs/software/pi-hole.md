@@ -47,7 +47,7 @@ Pi-hole offers an effective and centralized way to enhance privacy and reduce un
 <!--- header STOP from tools/include/markdown/PIH001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → DNS → Pi-hole**
+Install from **[armbian-config](/config/) → Software → DNS → Pi-hole**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd PIH001

@@ -29,7 +29,7 @@ comments: true
 <!--- header STOP from tools/include/markdown/APT001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Management → apt-cacher-ng**
+Install from **[armbian-config](/config/) → Software → Management → apt-cacher-ng**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd APT001

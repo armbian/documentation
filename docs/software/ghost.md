@@ -22,7 +22,7 @@ Ghost is a powerful open-source publishing platform designed for professional pu
 <!--- header STOP from tools/include/markdown/GHOST1-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Web Hosting → Ghost**
+Install from **[armbian-config](/config/) → Software → Web Hosting → Ghost**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd GHOST1

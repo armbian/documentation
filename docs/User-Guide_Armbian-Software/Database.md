@@ -6,7 +6,7 @@ comments: true
 # SQL database servers and web interface managers
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [MySQL](/software/mysql/) — MySQL SQL database server
 - [Mariadb](/software/mariadb/) — Mariadb SQL database server

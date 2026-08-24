@@ -22,7 +22,7 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 <!--- header STOP from tools/include/markdown/STC001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Media → Syncthing**
+Install from **[armbian-config](/config/) → Software → Media → Syncthing**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd STC001

@@ -22,7 +22,7 @@ Deluge⁠ is a lightweight, Free Software, cross-platform BitTorrent client.
 <!--- header STOP from tools/include/markdown/DEL001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → Deluge**
+Install from **[armbian-config](/config/) → Software → Downloaders → Deluge**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd DEL001

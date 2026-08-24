@@ -16,7 +16,7 @@ comments: true
 :material-cpu-64-bit:{ title="Architecture" } <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span> · :material-book-open-variant:{ title="Documentation" } [Documentation](https://forum.armbian.com/)
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Armbian → Rsyncd server**
+Install from **[armbian-config](/config/) → Software → Armbian → Rsyncd server**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd RSD001

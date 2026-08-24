@@ -40,7 +40,7 @@ After entering required information, your server will have auto updating SSL sec
 <!--- header STOP from tools/include/markdown/SWAG01-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Web Hosting → SWAG**
+Install from **[armbian-config](/config/) → Software → Web Hosting → SWAG**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd SWAG01

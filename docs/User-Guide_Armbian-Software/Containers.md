@@ -6,7 +6,7 @@ comments: true
 # Docker containerization and KVM virtual machines
 
 
-Install and configure these applications through [`armbian-config`](/armbian-config/) or from the pages below:
+Install and configure these applications through [`armbian-config`](/config/) or from the pages below:
 
 - [Docker](/software/docker/) — Docker
 - [Portainer](/software/portainer/) — Portainer container management platform

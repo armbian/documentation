@@ -92,7 +92,7 @@ This Docker-based application runs as a lightweight web service, providing an in
 <!--- header STOP from tools/include/markdown/WAL001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Finance → Wallos**
+Install from **[armbian-config](/config/) → Software → Finance → Wallos**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd WAL001

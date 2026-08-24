@@ -31,7 +31,7 @@ Thanks to Duplicati’s smart design — working through standard protocols and 
 <!--- header STOP from tools/include/markdown/DPL001-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Backup → Duplicati**
+Install from **[armbian-config](/config/) → Software → Backup → Duplicati**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd DPL001

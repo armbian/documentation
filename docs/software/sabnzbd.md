@@ -22,7 +22,7 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 <!--- header STOP from tools/include/markdown/SABN01-header.md --->
 
 
-Install from **[armbian-config](/armbian-config/) → Software → Downloaders → SABnzbd**
+Install from **[armbian-config](/config/) → Software → Downloaders → SABnzbd**
 
 ~~~ custombash title="CLI install"
 armbian-config --cmd SABN01
