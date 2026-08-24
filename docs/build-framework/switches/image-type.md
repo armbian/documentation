@@ -29,7 +29,7 @@ Adds a full graphical desktop on top of the base system. When set, choose the de
 
 `string`
 
-Which desktop environment to install when `BUILD_DESKTOP=yes` — for example `xfce`, `gnome`, `kde-plasma`, `mate` or `cinnamon`. Setting it on the command line skips the interactive prompt. The list of available environments is defined per release by armbian-config, so not every desktop is offered on every board and release combination.
+Which desktop environment to install when `BUILD_DESKTOP=yes` — for example `xfce`, `gnome`, `kde-plasma`, `mate` or `cinnamon`. Setting it on the command line skips the interactive prompt. The list of available environments is defined per release by [armbian-config](/config/desktops/), so not every desktop is offered on every board and release combination.
 
 #### DESKTOP_TIER
 
