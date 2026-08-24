@@ -9,7 +9,7 @@ Before you start, please make sure you have:
 - a proper power supply according to the board manufacturer's requirements <!-- TODO: link to power issues -->
 - a reliable SD card (at least 'Class 10' and 'A1'-rated is **highly** recommended)
 
-You will also need an existing operating system and an SD card writer tool. We recommend using **[Armbian Imager](https://github.com/armbian/imager/releases)** — the official Armbian flashing tool.
+You will also need an existing operating system and an SD card writer tool. We recommend using **[Armbian Imager](https://imager.armbian.com/)** — the official Armbian flashing tool.
 
 ![Armbian Imager workflow](../images/armbian-imager-ani.gif)
 

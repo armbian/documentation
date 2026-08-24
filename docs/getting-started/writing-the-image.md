@@ -8,7 +8,7 @@ There are multiple ways to deploy the image to your board. The easiest and most 
 
 ## Flash to SD Card
 
-Use **[Armbian Imager](https://github.com/armbian/imager/releases)** to flash the image.
+Use **[Armbian Imager](https://imager.armbian.com/)** to flash the image.
 
 Armbian Imager can:
 
