@@ -4718,10 +4718,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-config" class="md-nav__link">
+  <a href="#flash" class="md-nav__link">
     <span class="md-ellipsis">
       
-        kernel-config
+        flash
       
     </span>
   </a>
@@ -5942,10 +5942,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-config" class="md-nav__link">
+  <a href="#flash" class="md-nav__link">
     <span class="md-ellipsis">
       
-        kernel-config
+        flash
       
     </span>
   </a>
@@ -6097,27 +6097,51 @@
 <p>Usage:
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh<span class="w"> </span>docker-purge
 </span></code></pre></div></td></tr></table></div></p>
-<h2 id="kernel-config">kernel-config<a class="headerlink" href="#kernel-config" title="Permanent link">&para;</a></h2>
-<p>Automatically call kernel&rsquo;s <code>make menuconfig</code> (add or remove modules or features)</p>
+<h2 id="flash">flash<a class="headerlink" href="#flash" title="Permanent link">&para;</a></h2>
+<p>Writes an already-built image to a block device (SD card, USB, eMMC). Name the
+target device; the newest image in <code>output/images</code> is used unless you name one
+too.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>kernel-config<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX
 </span></code></pre></div></td></tr></table></div></p>
+<p><code>CARD_DEVICE</code> is mandatory &mdash; run <code>lsblk</code> to find the device name. Docker is
+not an obstacle: the launcher passes the device into the container when it is
+set (<code>DOCKER_SKIP_CARD_DEVICE=yes</code> opts out).</p>
+<div class="admonition danger">
+<p class="admonition-title">Check the device name first</p>
+<p>Everything on <code>CARD_DEVICE</code> is overwritten. Naming the wrong disk destroys
+it.</p>
+</div>
+<p>Pass <code>BOARD</code>, <code>RELEASE</code> or <code>BRANCH</code> to narrow which image is picked, or <code>IMAGE</code>
+to name a file outright:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>rockpi-4a<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX<span class="w"> </span><span class="nv">IMAGE</span><span class="o">=</span>output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
+</span></code></pre></div></td></tr></table></div>
+<p>When the image is picked for you, the choice is reported before anything is
+written, so you can check it is the one you meant:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>[🌱] cli_flash [ Flashing image file: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
+</span></code></pre></div></td></tr></table></div>
+<p>The image is read back and verified against its checksum after writing. Set
+<code>SKIP_VERIFY=yes</code> to skip that.</p>
 <h2 id="rewrite-kernel-config">rewrite-kernel-config<a class="headerlink" href="#rewrite-kernel-config" title="Permanent link">&para;</a></h2>
 <p>Automatically validates kernel config changes and dependency chains. After manually editing the config for a given family and branch this is needed to ensure the config change will persist our CI.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-config<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-config<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="dts-check">dts-check<a class="headerlink" href="#dts-check" title="Permanent link">&para;</a></h2>
 <p>Validate dts files and improve board &amp; patch development overall.</p>
 <p>This option validates the dts/dtb file for the selected board against the device tree bindings and outputs the validation logs to the user. It can be used when adding a new board, developing or improving a dts file.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./compile.sh<span class="w"> </span>dts-check<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>./compile.sh<span class="w"> </span>dts-check<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="inventory-boards">inventory-boards<a class="headerlink" href="#inventory-boards" title="Permanent link">&para;</a></h2>
 <p>Outputs a one-board-per-line CSV inventory of boards.</p>
 <p>Sets <code>TARGETS_FILE</code> to something that doesn&rsquo;t exist, so the <code>targets-default.yaml</code> is used (so same list for everyone, save for userpatched-boards)</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>./compile.sh<span class="w"> </span>inventory-boards
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>./compile.sh<span class="w"> </span>inventory-boards
 </span></code></pre></div></td></tr></table></div>
 Outputs output/info/boards-inventory.csv</p>
 <h2 id="kernel-dtb">kernel-dtb<a class="headerlink" href="#kernel-dtb" title="Permanent link">&para;</a></h2>
@@ -6125,7 +6149,7 @@ Outputs output/info/boards-inventory.csv</p>
 <p>Outputs preprocessed DTS source for the board in question to <code>output/</code>
 also outputs the same preprocessed DTS source, ran through <code>dtc</code> with input and output DTS formats for &ldquo;normalized&rdquo; comparisons</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>./compile.sh<span class="w"> </span>kernel-dtb<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>./compile.sh<span class="w"> </span>kernel-dtb<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="uboot-patch">uboot-patch<a class="headerlink" href="#uboot-patch" title="Permanent link">&para;</a></h2>
 <p>Create patch files for u-boot.</p>
@@ -6169,29 +6193,29 @@ same as kernel, it does git archeology for mbox-less patches, etc.</p>
 <li>refactor a common config function for both kernel and uboot.</li>
 </ul>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>./compile.sh<span class="w"> </span>rewrite-uboot-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>./compile.sh<span class="w"> </span>rewrite-uboot-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="rewrite-kernel-patches">rewrite-kernel-patches<a class="headerlink" href="#rewrite-kernel-patches" title="Permanent link">&para;</a></h2>
 <p>Prepares git, applies patches to git, and rewrites them back from git
 same as kernel, it does git archeology for mbox-less patches, etc.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>rewrite-kernel-patches<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>xxxx<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge<span class="w"> </span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="targets">targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h2>
 <p>Generates output/info/git_sources.json file containing URL, branch, and commit hash combo.</p>
 <p>The easiest way to generate file for all devices is to run <code>./compile.sh targets</code>. Then, at the time of release, we will copy the output/info/git_sources.json file to config/sources/git_sources.json. Once the file is copied, the hash information from the file will be used to fetch resources for git repositories where branches are specified instead of tags or commits.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>./compile.sh<span class="w"> </span>targets
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>./compile.sh<span class="w"> </span>targets
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="show-extensions">show-extensions<a class="headerlink" href="#show-extensions" title="Permanent link">&para;</a></h2>
 <p>Lists the <a href="/build-framework/extensions/hooks/">extension hook points</a> that exist in the build sources, optionally with their inline documentation.</p>
 <p>The list is produced by statically scanning <code>lib/</code>, <code>extensions/</code> and <code>config/</code> for <code>call_extension_method</code> call sites, so it always describes the checked-out tree — including hooks added by userpatches — without running a build.</p>
 <p>No board configuration is needed, the command does not relaunch into Docker and does not install host dependencies.</p>
 <p>Usage:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>show-extensions
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>./compile.sh<span class="w"> </span>show-extensions
 </span></code></pre></div></td></tr></table></div>
 <p>Outputs one hook name per line, sorted alphabetically.</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>./compile.sh<span class="w"> </span>show-extensions<span class="w"> </span><span class="nv">SHOW_EXTENSIONS</span><span class="o">=</span>docs
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>./compile.sh<span class="w"> </span>show-extensions<span class="w"> </span><span class="nv">SHOW_EXTENSIONS</span><span class="o">=</span>docs
 </span></code></pre></div></td></tr></table></div>
 <p>Outputs a Markdown document with the documentation of every hook; this is what <a href="/build-framework/extensions/hooks/">Extension Hooks</a> is generated from.</p>
 
