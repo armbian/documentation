@@ -86,14 +86,24 @@ In any case, you will get these key advantages:
 
 <!-- TODO: where to??? -->
 
-| Distributions | Armbian | Downstream | Upstream |
+Two categories are compared alongside Armbian:
+
+- **Downstream** &mdash; a board or SoC vendor's own OS release for its own hardware.
+- **Upstream** &mdash; the mainline Linux and U-Boot trees, and distributions that ship only mainline.
+
+Each Armbian claim links to the evidence for it. The other two columns state what
+those categories are by construction, and say *varies by vendor* wherever nothing
+general can be checked. They are not findings about any particular vendor or
+distribution.
+
+| | Armbian | Downstream | Upstream |
 | -------- | -------- | -------- | -------- |
-| Hardware maintainers | 50+, teams per SoC, per vendor, [named per board](https://github.com/armbian/build/tree/main/config/boards) in `BOARD_MAINTAINER` | not published per board | per subsystem, not per board |
-| Upstream contribution | 1000+, listed in the [release notes](releases/index.md) | not published | is the upstream tree |
-| Build framework | [builds the whole OS](https://github.com/armbian/build), publicly and reproducibly | per-SoC vendor scripts | kernel and bootloader only |
-| Maintenance | modular, reviewed, and [unit tested on every change](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | not published | upstream review process |
-| User-space | stock Debian or Ubuntu, no vendor overlay | vendor packages added on top | stock Debian or Ubuntu |
-| Declaring support | only where a maintainer is named, per the [Board Support Rules](User-Guide_Board-Support-Rules.md) | not published | not declared per board |
+| Hardware maintainers | [named per board](https://github.com/armbian/build/tree/main/config/boards) in `BOARD_MAINTAINER` | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
+| Upstream contribution | sent to mainline, listed per release in the [release notes](releases/index.md) | varies by vendor | is the upstream tree |
+| Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
+| Maintenance | modular, reviewed, and [unit tested on every change](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
+| User-space | stock Debian or Ubuntu, no vendor overlay | the vendor's own image | stock distribution user space |
+| Declaring support | only where a maintainer is named, per the [Board Support Rules](User-Guide_Board-Support-Rules.md) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
 
 
 ## Which hardware is supported?
