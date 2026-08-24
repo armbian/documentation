@@ -1,95 +1,13 @@
 ---
-seo_title: "Armbian build commands for compile.sh"
-description: "Armbian build framework commands for compile.sh: build the kernel, run kernel-config menuconfig, rewrite the kernel config, check device trees and more."
+seo_title: "Armbian advanced build commands"
+description: "Advanced Armbian build commands: build the kernel, run kernel-config menuconfig, rewrite kernel/U-Boot patches, check device trees, and inspect boards and hooks."
 ---
 
-# Build commands
-
-The build framework is driven by a single script, `compile.sh`:
-
-```bash
-./compile.sh PARAM=value OTHER_PARAM=value [<configfile> ...] [<command>]
-```
-
-- `<command>` defaults to `build` when omitted; the other commands are listed below.
-- Parameters (`PARAM=value`, see [Build Switches](/build-framework/switches/)), config files and the command may be given in **any order**.
-- There is **no default config file** — if you keep your settings in `userpatches/config-<name>.conf`, name it explicitly on the command line (`./compile.sh BOARD=... <name>`). A config file must not share a name with a command.
-
-## Basic commands
-
-Everyday commands for building an image, writing it to media, and managing the build container.
-
-### build
-
-The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke `./compile.sh` with no command, or explicitly:
-
-Usage:
-```bash
-./compile.sh build BOARD=uefi-x86 BRANCH=current RELEASE=trixie
-```
-
-### flash
-
-Writes an already-built image to a block device (SD card, USB, eMMC). Name the
-target device; the newest image in `output/images` is used unless you name one
-too.
-
-Usage:
-```bash
-./compile.sh flash CARD_DEVICE=/dev/sdX
-```
-
-`CARD_DEVICE` is mandatory &mdash; run `lsblk` to find the device name. Docker is
-not an obstacle: the launcher passes the device into the container when it is
-set (`DOCKER_SKIP_CARD_DEVICE=yes` opts out).
-
-!!! danger "Check the device name first"
-
-    Everything on `CARD_DEVICE` is overwritten. Naming the wrong disk destroys
-    it.
-
-Pass `BOARD`, `RELEASE` or `BRANCH` to narrow which image is picked, or `IMAGE`
-to name a file outright:
-
-```bash
-./compile.sh flash CARD_DEVICE=/dev/sdX BOARD=rockpi-4a BRANCH=current
-./compile.sh flash CARD_DEVICE=/dev/sdX IMAGE=output/images/Armbian_26.8.3_Rockpi-4a_trixie_current_6.12.13.img
-```
-
-When the image is picked for you, the choice is reported before anything is
-written, so you can check it is the one you meant:
-
-```text
-[🌱] cli_flash [ No image file specified. Using latest built image file found: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-[🌱] cli_flash [ Flashing image file: Armbian-unofficial_26.08.0-trunk_Bananapim2_resolute_current_6.18.46_minimal.img ]
-```
-
-The image is read back and verified against its checksum after writing. Set
-`SKIP_VERIFY=yes` to skip that.
-
-### docker-shell
-
-Drops you into an interactive shell inside Armbian's build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.
-
-Usage:
-```bash
-./compile.sh docker-shell BOARD=rockpi-4a BRANCH=edge RELEASE=trixie
-```
-
-### docker-purge
-
-Removes the build container together with its named volumes and cached build image, reclaiming that disk space.
-
-Usage:
-```bash
-./compile.sh docker-purge
-```
-
-## Advanced commands
+# Advanced commands
 
 Kernel, bootloader and board-development commands, plus release and inspection tooling.
 
-### kernel
+## kernel
 
 Builds kernel and device tree (where applicable) and places it to the `output/debs`
 
@@ -98,7 +16,7 @@ Usage:
 ./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
 ```
 
-### kernel-config
+## kernel-config
 
 Automatically call kernel's `make menuconfig` (add or remove modules or features)
 
@@ -107,7 +25,7 @@ Usage:
 ./compile.sh kernel-config BOARD=nanopi-r5c BRANCH=edge
 ```
 
-### rewrite-kernel-config
+## rewrite-kernel-config
 
 Automatically validates kernel config changes and dependency chains. After manually editing the config for a given family and branch this is needed to ensure the config change will persist our CI.
 
@@ -116,7 +34,7 @@ Usage:
 ./compile.sh rewrite-kernel-config BOARD=xxxxx BRANCH=current
 ```
 
-### dts-check
+## dts-check
 
 Validate dts files and improve board & patch development overall.
 
@@ -126,7 +44,8 @@ Usage:
 ```bash
 ./compile.sh dts-check BOARD=nanopi-r5c BRANCH=edge 
 ```
-### inventory-boards
+
+## inventory-boards
 
 Outputs a one-board-per-line CSV inventory of boards.
 
@@ -138,7 +57,7 @@ Usage:
 ```
 Outputs output/info/boards-inventory.csv
 
-### kernel-dtb
+## kernel-dtb
 
 Builds only DTB and outputs full preprocessed dts source
 
@@ -150,7 +69,7 @@ Usage:
 ./compile.sh kernel-dtb BOARD=xxxxx BRANCH=edge
 ```
 
-### uboot-patch
+## uboot-patch
 
 Create patch files for u-boot.
 
@@ -191,7 +110,7 @@ While the `uboot-patch` command will add these new files to the patch
 if they are created while running `uboot-patch`,
 this is not the preferred way of adding these files.
 
-### rewrite-uboot-patches
+## rewrite-uboot-patches
 
 Prepares git, applies patches to git, and rewrites them back from git
 same as kernel, it does git archeology for mbox-less patches, etc.
@@ -206,7 +125,7 @@ Usage:
 ./compile.sh rewrite-uboot-patches BOARD=xxxx BRANCH=edge 
 ```
 
-### rewrite-kernel-patches
+## rewrite-kernel-patches
 
 Prepares git, applies patches to git, and rewrites them back from git
 same as kernel, it does git archeology for mbox-less patches, etc.
@@ -216,7 +135,7 @@ Usage:
 ./compile.sh rewrite-kernel-patches BOARD=xxxx BRANCH=edge 
 ```
 
-### targets
+## targets
 
 Generates output/info/git_sources.json file containing URL, branch, and commit hash combo.
 
@@ -227,7 +146,7 @@ Usage:
 ./compile.sh targets
 ```
 
-### show-extensions
+## show-extensions
 
 Lists the [extension hook points](/build-framework/extensions/hooks/) that exist in the build sources, optionally with their inline documentation.
 

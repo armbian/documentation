@@ -113,7 +113,7 @@ They're the same, except:
 
 #### Which hook points can I implement?
 
-The reference list is [Extension Hooks](/build-framework/extensions/hooks/). To get the list for the exact tree you are building from, userpatches included, run [`./compile.sh show-extensions`](/build-framework/commands/#show-extensions); add `SHOW_EXTENSIONS=docs` to get each hook's documentation instead of just its name.
+The reference list is [Extension Hooks](/build-framework/extensions/hooks/). To get the list for the exact tree you are building from, userpatches included, run [`./compile.sh show-extensions`](/build-framework/commands/advanced/#show-extensions); add `SHOW_EXTENSIONS=docs` to get each hook's documentation instead of just its name.
 
 #### How to opt out of a specific hook function?
 
