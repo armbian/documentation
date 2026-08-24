@@ -71,10 +71,10 @@ Usage:
 Create patch files for u-boot.
 
 The output patch files are written to
-**output/patch/u-boot-${LINUXFAMILY}-${[BRANCH](https://docs.armbian.com/Developer-Guide_Build-Switches/#user-space)}.patch**.
+**output/patch/u-boot-${LINUXFAMILY}-${[BRANCH](https://docs.armbian.com/build-framework/switches/#user-space)}.patch**.
 To use them in subsequent builds they
 must be copied to the appropriate directories in the patch/u-boot directory.
-See: [user-provided patches](https://docs.armbian.com/Developer-Guide_User-Configurations/#user-provided-patches)
+See: [user-provided patches](https://docs.armbian.com/build-framework/user-configurations/#user-provided-patches)
 
 Any uncommitted changes in the work tree and index are committed
 to establish a clean work tree.
@@ -145,7 +145,7 @@ Usage:
 
 ### show-extensions
 
-Lists the [extension hook points](Developer-Guide_Extensions-Hooks.md) that exist in the build sources, optionally with their inline documentation.
+Lists the [extension hook points](/build-framework/extensions/hooks/) that exist in the build sources, optionally with their inline documentation.
 
 The list is produced by statically scanning `lib/`, `extensions/` and `config/` for `call_extension_method` call sites, so it always describes the checked-out tree — including hooks added by userpatches — without running a build.
 
@@ -163,4 +163,4 @@ Outputs one hook name per line, sorted alphabetically.
 ./compile.sh show-extensions SHOW_EXTENSIONS=docs
 ```
 
-Outputs a Markdown document with the documentation of every hook; this is what [Extension Hooks](Developer-Guide_Extensions-Hooks.md) is generated from.
+Outputs a Markdown document with the documentation of every hook; this is what [Extension Hooks](/build-framework/extensions/hooks/) is generated from.
