@@ -6202,9 +6202,6 @@
 <li><code>none</code> (to not-add any networking extensions)</li>
 </ul>
 <p>Installs desired networking stack. If the parameter is undefined, it sets <code>systemd-networkd</code> for minimal images (BUILD_MINIMAL=yes) and <code>network-manager</code> for the rest. Time synchronization is also changed; chrony is installed with network-manager, while systemd-timesyncd is used with systemd-networkd. In both cases, we control network settings using <strong>Netplan</strong>.</p>
-<div class="admonition example">
-<p class="admonition-title">Build switch example</p>
-</div>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span><span class="nv">NETWORKING_STACK</span><span class="o">=</span><span class="s2">&quot;network-manager&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="ntp_server">NTP_SERVER<a class="headerlink" href="#ntp_server" title="Permanent link">&para;</a></h4>
@@ -6231,9 +6228,6 @@
 <h4 id="enable_extensions">ENABLE_EXTENSIONS<a class="headerlink" href="#enable_extensions" title="Permanent link">&para;</a></h4>
 <p><code>comma-separated list</code></p>
 <p><a href="/build-framework/extensions/">Extensions</a> allows to extend the Armbian build system without overloading the core with specific functionality. Extensions, stored in folder <code>extensions</code> are called</p>
-<div class="admonition example">
-<p class="admonition-title">Build switch example</p>
-</div>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>

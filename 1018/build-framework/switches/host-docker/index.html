@@ -6970,9 +6970,6 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 <li>undefined (default): no automatic pulling, manual pull when needed</li>
 </ul>
 <p>Enables automatic background updates of Docker build images via a system cronjob that runs every 12 hours. This prevents waiting for image pulls during builds and keeps images fresh. The feature also includes automatic cleanup of old images (keeps only the 2 most recent per tag).</p>
-<div class="admonition example">
-<p class="admonition-title">Build switch example</p>
-</div>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -6997,9 +6994,6 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 <li><code>no</code> (default): reuse the local image if it is present and was pulled within the last ~24 hours</li>
 </ul>
 <p>By default the build only pulls the base image when the local copy is missing or its pull marker is older than ~24 hours; otherwise it reuses the local image. Set <code>DOCKER_FORCE_PULL=yes</code> to pull the latest published image immediately — useful right after a new framework image is published, so builds pick it up without waiting for the cache to expire or removing the local image by hand.</p>
-<div class="admonition example">
-<p class="admonition-title">Build switch example</p>
-</div>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Force a fresh pull of the base image for this build</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>./compile.sh<span class="w"> </span><span class="nv">DOCKER_FORCE_PULL</span><span class="o">=</span>yes<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>uefi-x86<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>current
