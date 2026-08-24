@@ -6,7 +6,11 @@
      `image:` in front-matter). Falls back to the site defaults elsewhere. -->
 {% block extrahead %}
   {{ super() }}
-  {% set _title = (page.title ~ " - " ~ config.site_name) if page and page.title else config.site_name %}
+  {# page.title is the nav label, which the theme's <title> overrides with
+     page.meta.title when a page sets one. Follow the same order here so the
+     social cards do not disagree with the browser title. #}
+  {% set _page_title = (page.meta.title if page and page.meta and page.meta.title else (page.title if page else None)) %}
+  {% set _title = (_page_title ~ " - " ~ config.site_name) if _page_title else config.site_name %}
   {% set _desc = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ _title }}">
