@@ -6192,9 +6192,7 @@ too.</p>
 <p>Usage:
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span>flash<span class="w"> </span><span class="nv">CARD_DEVICE</span><span class="o">=</span>/dev/sdX
 </span></code></pre></div></td></tr></table></div></p>
-<p><code>CARD_DEVICE</code> is mandatory &mdash; run <code>lsblk</code> to find the device name. Docker is
-not an obstacle: the launcher passes the device into the container when it is
-set (<code>DOCKER_SKIP_CARD_DEVICE=yes</code> opts out).</p>
+<p><code>CARD_DEVICE</code> is mandatory &mdash; run <code>lsblk</code> to find the device name.</p>
 <div class="admonition danger">
 <p class="admonition-title">Check the device name first</p>
 <p>Everything on <code>CARD_DEVICE</code> is overwritten. Naming the wrong disk destroys
