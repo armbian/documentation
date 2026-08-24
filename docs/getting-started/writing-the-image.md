@@ -102,7 +102,7 @@ When a Rockchip device is placed into **Maskrom mode**, you can use `rkdevelopto
 
 ### Qualcomm
 
-Qualcomm boards are flashed with **[Armbian Imager](https://github.com/armbian/imager/releases)** over
+Qualcomm boards are flashed with **[Armbian Imager](https://imager.armbian.com/)** over
 **EDL** (Emergency Download Mode), so no extra tooling is needed. Imager writes
 straight to the board's built-in **eMMC** or **UFS**, depending on the board.
 
