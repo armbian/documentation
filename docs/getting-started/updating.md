@@ -1,6 +1,6 @@
 ---
 title: Keeping Armbian up to date
-description: "Update an Armbian system: APT for the base operating system, armbian-install for the boot loader, and how the firmware package freeze protects you."
+description: "Update an Armbian system: armbian-upgrade for the base operating system, armbian-install for the boot loader, and how the firmware package freeze protects you."
 ---
 # Keeping the system up to date
 
@@ -9,10 +9,11 @@ The operating system consists of two parts that must be updated separately.
 
 ## Update the Armbian OS
 
-For the base operating system, use the APT package manager to keep the packages up to date.
+For the base operating system, run:
 
-    apt update
-    apt upgrade
+    armbian-upgrade
+
+`armbian-upgrade` is Armbian's wrapper around APT: it refreshes the package lists, upgrades all installed packages, then cleans the package cache and removes anything no longer needed (`apt-get update && apt-get upgrade`, followed by `apt-get clean` and `apt-get autoremove`). It elevates itself with `sudo` automatically, so you can run it as a normal user.
 
 **The Update process can take quite some time in case you are using an old or a cheap SD card and/or experience heavy load.**
 
