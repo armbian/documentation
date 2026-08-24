@@ -34,7 +34,7 @@
     white-space: nowrap;
 }
 
-/* Style for only specially tagged bash blocks */
+/* The primary "CLI install" block — large, to stand out as the main action. */
 pre.custom-bash-block, code.custom-bash-block {
   font-size: 24pt;
 }
@@ -49,4 +49,14 @@ pre.custom-bash-block, code.custom-bash-block {
   pre.custom-bash-block, code.custom-bash-block {
     font-size: 12pt; /* even smaller for small phones */
   }
+}
+
+/* App-page logos: source images vary wildly (square icons to wide banners), so
+ * render them all within one consistent box for a uniform visual size. */
+.md-typeset img.app-logo {
+  height: auto;
+  width: auto;
+  max-height: 88px;
+  max-width: 260px;
+  object-fit: contain;
 }
