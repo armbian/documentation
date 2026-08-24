@@ -190,6 +190,10 @@ The action will build the image, create a GitHub Release in your repository and 
 | `armbian_release_title` | no | `Armbian image` | GitHub Release title |
 | `armbian_release_body` | no | *(link to build tools)* | GitHub Release body text |
 | `armbian_release_tag` | no | *auto* | GitHub Release tag; defaults to the computed version |
+| `armbian_release_prerelease` | no | `false` | Publish the release as a pre-release (useful for matrix builds; promote later) |
+| `armbian_download_base_url` | no | `https://dl.armbian.com` | Base URL where published images live (used to build the assets manifest URLs) |
+| `armbian_download_repository` | no | `archive` | Repository segment under `<base>/<board>/<repo>/`; empty string gives a flat URL shape |
+| `armbian_index_url` | no | `https://github.armbian.com/armbian-images.json` | Canonical `armbian-images.json` used to enrich entries; empty string skips enrichment |
 | `armbian_artifacts` | no | `build/output/images/` | Path to artifacts for upload |
 | `armbian_runner_clean` | no | — | Set to any non-empty value to free disk space on GitHub-hosted runners |
 
