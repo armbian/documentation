@@ -20,4 +20,4 @@ If you are certain you have found a bug, fill out our [bug reporting form](https
 
 **Previous:** [Keeping Armbian up to date](updating.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

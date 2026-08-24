@@ -55,4 +55,4 @@ and select:
 
 **Next:** [If something goes wrong](troubleshooting.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

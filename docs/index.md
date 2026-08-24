@@ -17,7 +17,7 @@ Welcome to the official documentation of Armbian Linux, a highly optimized base 
 
 The table of contents in the sidebar and the links at the top of the page should let you easily access the documentation for your topic of interest.
 
-If you are **new to Armbian**, this _Introduction_ and the [_Getting Started_](User-Guide_Getting-Started.md) sections provide everything you need to know about the project, where to find the resources for your board, and a tutorial for everything you need to get Armbian running and configured.
+If you are **new to Armbian**, this _Introduction_ and the [_Getting Started_](getting-started/index.md) sections provide everything you need to know about the project, where to find the resources for your board, and a tutorial for everything you need to get Armbian running and configured.
 
 It then continues on to [_Advanced Configuration_](User-Guide_Advanced-Configuration.md) tasks and tools for **advanced users**. The topics in this section cover a wide range of tasks: configuring the system or the network without using [`armbian-config`](config/index.md), configuring your device automatically at first boot, and creating a custom image using the [`Armbian Build Framework`](Developer-Guide_Overview.md).
 

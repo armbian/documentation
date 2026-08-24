@@ -77,4 +77,4 @@ After logging in, you will be prompted to change the default password. You will 
 
 **Next:** [First steps after login](first-steps.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.

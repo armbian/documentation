@@ -45,4 +45,4 @@ You can quickly and easily install popular software too! It is ready to run and 
 
 **Next:** [Installing to internal storage](install-to-internal-storage.md)
 
-Back to the [Getting Started](../User-Guide_Getting-Started.md) overview.
+Back to the [Getting Started](index.md) overview.
