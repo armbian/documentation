@@ -98,7 +98,7 @@ distribution.
 
 | | Armbian | Downstream | Upstream |
 | -------- | -------- | -------- | -------- |
-| Hardware maintainers | [named per board](https://github.com/armbian/build/tree/main/config/boards) in `BOARD_MAINTAINER` | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
+| Hardware maintainers | [named per board](https://armbian.com/authors) | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
 | Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
 | Maintenance | modular and reviewed; `armbian-config` is [unit tested per pull request](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
 | User-space | Debian or Ubuntu based, with Armbian packages and configuration | the vendor's own image | stock distribution user space |
