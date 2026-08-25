@@ -12,22 +12,27 @@ description: "Reference of every Armbian build framework extension hook point, s
 ### `add_host_dependencies`
 > *run before installing host dependencies*
 
+```text
 append packages to install to the `EXTRA_BUILD_DEPS` array here, e.g. `EXTRA_BUILD_DEPS+=("pkg")`.
 optionally prefix a package with a Docker-layer group, e.g. `EXTRA_BUILD_DEPS+=("fs-tools::pkg")`; unprefixed goes to "core".
+```
 
 ### `armbian_kernel_config`
 > *Armbian-core default hook point for pre-olddefconfig Kernel config modifications*
 
+```text
 NOT for user consumption. Do NOT use this hook, this is internal to Armbian.
 Instead, use `custom_kernel_config` which runs later and can undo anything done by this step.
 IMPORTANT: this hook might be run multiple times, and one of them might not have a .config in place!
 Therefore, please check with "if [[ -f .config ]]; then" if you want to modify the kernel config.
 Either way, the hook _must_ add representative changes to the `kernel_config_modifying_hashes` array, for kernel config hashing.
 Please note: Manually changing options doesn't check the validity of the .config file. Check for warnings in your build log.
+```
 
 ### `artifact_kernel_version_parts`
 > *customize kernel artifact version string parts*
 
+```text
 Called after all built-in version parts are collected.
 Extensions can modify:
 - artifact_version_parts: associative array of key=value pairs
@@ -38,10 +43,12 @@ Extensions can modify:
   - Add: artifact_version_part_order+=("0085-_T")
   - Remove: remove entry from array or unset the key in artifact_version_parts
   Keys starting with "_" are not included in output (only value is used).
+```
 
 ### `btrfs_root_add_subvolumes`
 > # *custom post btrfs rootfs creation hook*
 
+```text
 # Called if rootfs btrfs after creating the subvolume "@" for rootfs
 # Used to create other separate btrfs subvolume if needed.
 # Mountpoints and fstab records should be created too.
@@ -50,10 +57,12 @@ run_host_command_logged btrfs subvolume create $MOUNT/@var
 run_host_command_logged btrfs subvolume create $MOUNT/@var_log
 run_host_command_logged btrfs subvolume create $MOUNT/@var_cache
 run_host_command_logged btrfs subvolume create $MOUNT/@srv
+```
 
 ### `btrfs_root_add_subvolumes_fstab`
 > run_host_command_logged mkdir -p $MOUNT/home
 
+```text
 run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=@home $rootdevice $MOUNT/home
 echo "$rootfs /home btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=@home 0 2" >> $SDCARD/etc/fstab
 run_host_command_logged mkdir -p $MOUNT/var
@@ -68,39 +77,51 @@ echo "$rootfs /var/cache btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=@var_ca
 run_host_command_logged mkdir -p  $MOUNT/srv
 run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=@srv $rootdevice $MOUNT/srv
 echo "$rootfs /srv btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=@srv 0 2" >> $SDCARD/etc/fstab
+```
 
 ### `build_custom_uboot`
 > *allow extensions to build their own uboot*
 
+```text
 For downstream uboot et al.
 Set \`EXTENSION_BUILT_UBOOT=yes\` to then skip the normal compilation.
+```
 
 ### `build_host_tools`
 > *build needed tools for the build, host-side*
 
+```text
 After sources are fetched, build host-side tools needed for the build.
+```
 
 ### `ccache_post_compilation`
 > *called after ccache-wrapped compilation completes (success or failure)*
 
+```text
 Useful for displaying remote cache statistics or other post-build info.
+```
 
 ### `check_uboot_produced_binary_file`
 > *check one produced u-boot binary*
 
+```text
 This is called once for *each* produced u-boot binary file, before packaging them into the .deb package.
 You can use this to analyze the produced binary for correctness, or to extract some information from it.
 You can use the variable binfile to access the full path to the binary file, and base_binfile to access just the filename.
+```
 
 ### `create_partition_table`
 > *only called when USE_HOOK_FOR_PARTITION=yes to create the complete partition table*
 
+```text
 Finally, we can get our own partition table. You have to partition ${SDCARD}.raw
 yourself. Good luck.
+```
 
 ### `custom_apt_repo`
 > *customize apt sources.list.d and/or deploy repo keys*
 
+```text
 Called after core Armbian has finished setting up SDCARD's debian.sources/ubuntu.sources and armbian.sources in /etc/apt/sources.list.d/.
 If SKIP_ARMBIAN_REPO=yes, armbian.sources.disabled is present instead.
 The global Armbian GPG key has been deployed to SDCARD's ${APT_SIGNING_KEY_FILE}, de-armored.
@@ -108,10 +129,12 @@ You can implement this hook to add, remove, or modify sources.list.d entries, an
 Important: honor $CUSTOM_REPO_WHEN; if it's ==rootfs, don't add repos/components that carry the .debs produced by armbian/build.
 Ideally, also don't add any possibly-conflicting repo if `$CUSTOM_REPO_WHEN==image-early`.
 `$CUSTOM_APT_REPO==image-late` is passed during the very final stages of image building, after all packages were installed/upgraded.
+```
 
 ### `custom_kernel_config`
 > *Kernel .config is in place, still clean from git version*
 
+```text
 Called after ${LINUXCONFIG}.config is put in place (.config).
 A good place to customize the .config directly.
 Armbian default Kconfig modifications have already been applied and can be overriden.
@@ -119,25 +142,31 @@ IMPORTANT: this hook might be run multiple times, and one of them might not have
 Therefore, please check with "if [[ -f .config ]]; then" if you want to modify the kernel config.
 Either way, the hook _must_ add representative changes to the `kernel_config_modifying_hashes` array, for kernel config hashing.
 Please note: Manually changing options doesn't check the validity of the .config file. Check for warnings in your build log.
+```
 
 ### `custom_kernel_make_params`
 > *Customize kernel make parameters before compilation*
 
+```text
 Called after all standard make parameters are set but before invoking make.
 Extensions can modify the following arrays:
 - `common_make_params_quoted` - parameters passed to make (e.g., CROSS_COMPILE_COMPAT)
 - `common_make_envs` - environment variables for make
+```
 
 ### `extension_finish_config`
 > *allow extensions a last chance at configuration just before it is done*
 
+```text
 After kernel versions are set, package names determined, etc.
 This runs *late*, and is the final step before finishing configuration.
 Don't change anything not coming from other variables or meant to be configured by the user.
+```
 
 ### `extension_metadata_ready`
 > *meta-Meta time!*
 
+```text
 Implement this hook to work with/on the meta-data made available by the extension manager.
 Interesting stuff to process:
 - `"${EXTENSION_MANAGER_TMP_DIR}/hook_point_calls.txt"` contains a list of all hook points called, in order.
@@ -150,63 +179,83 @@ Interesting stuff to process:
 - `${hook_point_function_trace_sources}` is a map of all the hook point functions _that were really called during the build_ and their BASH_SOURCE information.
 - `${hook_point_function_trace_lines}` is the same, but BASH_LINENO info.
 After this hook is done, the `${EXTENSION_MANAGER_TMP_DIR}` will be removed.
+```
 
 ### `extension_prepare_config`
 > *allow extensions to prepare their own config, after user config is done*
 
+```text
 Implementors should preserve variable values pre-set, but can default values an/or validate them.
 This runs *after* user_config. Don't change anything not coming from other variables or meant to be configured by the user.
+```
 
 ### `fetch_custom_uboot`
 > *allow extensions to fetch extra uboot sources*
 
+```text
 For downstream uboot et al.
 This is done after `fetch_from_repo`, but before actually compiling u-boot.
+```
 
 ### `fetch_sources_tools`
 > *fetch host-side sources needed for tools and build*
 
+```text
 Run early to fetch_from_repo or otherwise obtain sources for needed tools.
+```
 
 ### `format_partitions`
 > *if you created your own partitions, this would be a good time to format them*
 
+```text
 The loop device is mounted, so ${LOOP}p1 is it's first partition etc.
+```
 
 ### `grub_early_config`
 > Allow for early GRUB configuration.
 
+```text
 This is called after `configure_grub`, and zapping /boot/dtb*.
 chroot ($MOUNT) is *not* mounted yet.
+```
 
 ### `grub_late_config`
 > Allow for late GRUB configuration.
 
+```text
 This is called after grub-install and update-grub.
 chroot ($MOUNT) is mounted. sanity checks are going to be performed.
+```
 
 ### `grub_pre_install`
 > Last-minute hook for GRUB tweaks before actually installing GRUB and running update-grub.
 
+```text
 The chroot ($MOUNT) is mounted.
+```
 
 ### `host_dependencies_known`
 > *run after all host dependencies are known (but not installed)*
 
+```text
 At this point we can read `${FINAL_HOST_DEPS}`, but changing won't have any effect.
 All the dependencies, including the default/core deps and the ones added via the `EXTRA_BUILD_DEPS` array
 are determined at this point, but not yet installed.
+```
 
 ### `host_dependencies_ready`
 > *run after all host dependencies are installed*
 
+```text
 At this point we can read `${FINAL_HOST_DEPS}`, but changing won't have any effect.
 All the dependencies, including the default/core deps and the ones added via the `EXTRA_BUILD_DEPS` array
 are installed at this point. The system clock has not yet been synced.
+```
 
 ### `host_pre_docker_launch`
 > *run on host just before Docker container is launched*
 
+```text
 Extensions can add Docker arguments by appending to DOCKER_EXTRA_ARGS array.
 Each array element should be a complete argument (e.g., "--env", "MY_VAR=value" as separate elements).
 Example: DOCKER_EXTRA_ARGS+=("--env" "MY_VAR=value" "--mount" "type=bind,src=/a,dst=/b")
@@ -214,41 +263,47 @@ Available variables:
   - DOCKER_ARGS[@]: current Docker arguments (do not modify directly)
   - DOCKER_EXTRA_ARGS[@]: array to append extra arguments for docker run
   - DOCKER_ARMBIAN_TARGET_PATH: path inside container (/armbian)
+```
 
 ### `image_specific_armbian_env_ready`
 > *during image build, armbianEnv.txt is ready for image-specific customization (not in BSP)*
 
+```text
 You can write to `"${SDCARD}/boot/armbianEnv.txt"` here, it is guaranteed to exist.
+```
 
 ### `kernel_copy_extra_sources`
 > *Hook to copy extra kernel sources to the kernel under compilation*
 
-
 ### `kernel_extra_create_patches`
 > *stage more patches for kernel, after kernel_drivers*
 
+```text
 This is called after kernel_drivers_create_patches (wifi-drivers) and can be used to stage more patches
 to be applied. This is done immediately before actually patching, and thus, after any hashing is done.
 This allows implementors to stage custom patches (eg, from an out-of-tree driver into userpatches) without
 impacting the kernel version/hash.
+```
 
 ### `kernel_make_config`
 > *Hook to customize kernel make environment and parameters*
 
+```text
 Called right before invoking make for kernel compilation.
 Available arrays to modify:
   - common_make_envs[@]: environment variables passed via "env -i" (e.g., CCACHE_REMOTE_STORAGE)
   - common_make_params_quoted[@]: make command parameters (e.g., custom flags)
 Available read-only variables:
   - KERNEL_COMPILER, ARCHITECTURE, BRANCH, LINUXFAMILY
+```
 
 ### `late_family_config`
 > *late defaults/overrides, main hook point for KERNELSOURCE/BRANCH and BOOTSOURCE/BRANCH etc*
 
-
 ### `mainline_kernel_decide_version`
 > *determine KERNELBRANCH, based on family / KERNEL_MAJOR_MINOR / etc*
 
+```text
 This hook is run when when we know the family uses mainline (does NOT set KERNELSOURCE),
 but the family/board/hooks haven't determined a KERNELBRANCH (tag/branch/commit reference) yet.
 All hooks are called in the usual order, the last one setting it "wins".
@@ -256,12 +311,15 @@ It is expected that hooks here are able to:
 - if kernel in RC period, convert say 6.7 to tag:v6.7-rc7
 - "lock" certain families (or all families) to a certain tag in a branch; say convert 6.6 to tag:v6.6.6
 - change KERNELSOURCE to adapt to too-new -rc releases that haven't shown up in stable kernel git tree yet
+```
 
 ### `post_aggregate_packages`
 > *After all aggregations are done*
 
+```text
 Called after aggregating all package lists.
 Packages will still be installed after this is called. It is not possible to change anything, though.
+```
 
 Also known as (for backwards compatibility only):
 - `user_config_post_aggregate_packages`
@@ -269,39 +327,48 @@ Also known as (for backwards compatibility only):
 ### `post_armbian_repo_customize_image`
 > *run after post_customize_image, after and only if Armbian standard repos have been enabled*
 
+```text
 All repos have been enabled, including the Armbian repo and custom ones.
 You can install packages from the Armbian repo here.
+```
 
 ### `post_build_image`
 > *custom post build hook*
 
+```text
 Called after the final .img file is built, before it is (possibly) written to an SD writer.
 - *NOTE*: this hook used to take an argument ($1) for the final image produced.
   - Now it is passed as an environment variable `${FINAL_IMAGE_FILE}`
 It is the last possible chance to modify `$CARD_DEVICE`.
+```
 
 ### `post_build_image_write`
 > *custom post build hook*
 
+```text
 Called after the final .img file is ready, and possibly written to an SD card.
 The full path to the image is available in `${built_image_file}`.
+```
 
 ### `post_config_uboot_target`
 > *allow extensions prepare after configuring but before compiling an u-boot target*
 
+```text
 Some u-boot targets require extra configuration or pre-processing before compiling.
 Last chance to change .config for u-boot before compiling.
 Also the only chance to change the (local) array `uboot_cflags_array`.
+```
 
 ### `post_create_partitions`
 > *called after all partitions are created, but not yet formatted*
 
-
 ### `post_customize_image`
 > *post customize-image.sh hook*
 
+```text
 Run after the customize-image.sh script is run, and the overlay is unmounted.
 Attention: only the Distro default repos are enabled at this point; no Armbian or custom repos can be used.
+```
 
 Also known as (for backwards compatibility only):
 - `image_tweaks_post_customize`
@@ -309,7 +376,9 @@ Also known as (for backwards compatibility only):
 ### `post_determine_cthreads`
 > *give config a chance modify CTHREADS programatically. A build server may work better with hyperthreads-1 for example.*
 
+```text
 Called early, before any compilation work starts.
+```
 
 Also known as (for backwards compatibility only):
 - `config_post_determine_cthreads`
@@ -317,9 +386,11 @@ Also known as (for backwards compatibility only):
 ### `post_family_config`
 > *give the config a chance to override the family/arch defaults*
 
+```text
 This hook is called after the family configuration (`sources/families/xxx.conf`) is sourced.
 Since the family can override values from the user configuration and the board configuration,
 it is often used to in turn override those.
+```
 
 Also known as (for backwards compatibility only):
 - `config_tweaks_post_family_config`
@@ -327,34 +398,44 @@ Also known as (for backwards compatibility only):
 ### `post_family_config_branch_<branch>`
 > *give the config a chance to override the family/arch defaults, per branch*
 
+```text
 This hook is called after the family configuration (`sources/families/xxx.conf`) is sourced,
 and after `post_family_config()` hook is already run.
 The sole purpose of this is to avoid "case ... esac for $BRANCH" in the board configuration,
 allowing separate functions for different branches. You're welcome.
+```
 
 ### `post_family_tweaks`
 > *customize the tweaks made by $LINUXFAMILY-specific family_tweaks*
 
+```text
 It is run after packages are installed in the rootfs, but before enabling additional services.
 It allows implementors access to the rootfs (`${SDCARD}`) in its pristine state after packages are installed.
+```
 
 ### `post_family_tweaks_bsp`
 > *family_tweaks_bsp overrrides what is in the config, so give it a chance to override the family tweaks*
 
+```text
 This should be implemented by the config to tweak the BSP, after the board or family has had the chance to.
 You can write to `$destination` here and it will be packaged.
 You can also append to the `preinst_functions`, `postinst_functions` and `postrm` array, and the _content_
 of those functions will be added to the preinst, postinst and postrm scripts respectively.
+```
 
 ### `post_install_kernel_debs`
 > *allow config to do more with the installed kernel/headers*
 
+```text
 Called after packages, u-boot, kernel and headers installed in the chroot, but before the BSP is installed.
+```
 
 ### `post_post_debootstrap_tweaks`
 > *run after removing diversions and qemu with chroot unmounted*
 
+```text
 Last chance to touch the `${SDCARD}` filesystem before it is copied to the final media.
+```
 
 Also known as (for backwards compatibility only):
 - `config_post_debootstrap_tweaks`
@@ -362,19 +443,25 @@ Also known as (for backwards compatibility only):
 ### `post_repo_customize_image`
 > *run after post_customize_image, after repos have been enabled*
 
+```text
 All repos have been enabled, including custom ones; Armbian repo is not guaranteed to be enabled.
 You can install packages from the default Debian/Ubuntu repos, or custom repos, here.
 To install packages from the Armbian repo, use the post_armbian_repo_customize_image hook.
+```
 
 ### `post_uboot_custom_postprocess`
 > *allow extensions to do extra u-boot postprocessing, after uboot_custom_postprocess*
 
+```text
 For hacking at the produced binaries after u-boot is compiled and post-processed.
+```
 
 ### `post_umount_final_image`
 > *allow config to hack into the image after the unmount*
 
+```text
 Called after unmounting both `/root` and `/boot`.
+```
 
 Also known as (for backwards compatibility only):
 - `config_post_umount_final_image`
@@ -382,30 +469,38 @@ Also known as (for backwards compatibility only):
 ### `post_write_sdcard`
 > *run after writing img to sdcard*
 
+```text
 After the image is written to `${device}`, but before verifying it.
 You can still set SKIP_VERIFY=yes to skip verification.
+```
 
 ### `post_write_uboot_platform`
 > *allow custom writing of uboot -- only during image build*
 
+```text
 Called after `write_uboot_platform()`.
 It receives `UBOOT_CHROOT_DIR` with the full path to the u-boot dir in the chroot.
 Important: this is only called inside the build system.
 Consider that `write_uboot_platform()` is also called board-side, when updating uboot, eg: nand-sata-install.
+```
 
 ### `pre_config_uboot_target`
 > *allow extensions prepare before configuring and compiling an u-boot target*
 
+```text
 Some u-boot targets require extra configuration or pre-processing before compiling.
 For example, changing Python version can be done by replacing the `${BIN_WORK_DIR}/python` symlink.
+```
 
 ### `pre_customize_image`
 > *run before customize-image.sh*
 
+```text
 This hook is called after `customize-image-host.sh` is called, but before the overlay is mounted.
 It thus can be used for the same purposes as `customize-image-host.sh`.
 Attention: only the Distro default repos are enabled at this point; no packages from Armbian or custom repos can be used.
 If you need repos, please consider `post_armbian_repo_customize_image` or `post_repo_customize_image`.
+```
 
 Also known as (for backwards compatibility only):
 - `image_tweaks_pre_customize`
@@ -413,7 +508,9 @@ Also known as (for backwards compatibility only):
 ### `pre_install_distribution_specific`
 > *give config a chance to act before install_distribution_specific*
 
+```text
 Called after `create_rootfs_cache` (_prepare basic rootfs: unpack cache or create from scratch_) but before `install_distribution_specific` (_install distribution and board specific applications_).
+```
 
 Also known as (for backwards compatibility only):
 - `config_pre_install_distribution_specific`
@@ -421,33 +518,43 @@ Also known as (for backwards compatibility only):
 ### `pre_install_kernel_debs`
 > *called before installing the Armbian-built kernel deb packages*
 
+```text
 It is not too late to `KERNELSOURCE='none'` here and avoid kernel install.
+```
 
 ### `pre_package_kernel_headers`
 > *fix kernel headers before packaging*
 
+```text
 Some (legacy/vendor) kernels need preprocessing of the produced kernel headers before packaging.
 Use this hook to do that, by modifying the file in place, in `${headers_target_dir}` directory.
 The kernel sources can be found in `${kernel_work_dir}`.
+```
 
 ### `pre_package_kernel_image`
 > *fix Image/uImage/zImage before packaging kernel*
 
+```text
 Some (legacy/vendor) kernels need preprocessing of the produced Image/uImage/zImage before packaging.
 Use this hook to do that, by modifying the file in place, in `${kernel_pre_package_path}` directory.
 The final file that will be used is stored in `${kernel_image_pre_package_path}` -- which you shouldn't change.
+```
 
 ### `pre_package_uboot_image`
 > *allow making some last minute changes before u-boot is packaged*
 
+```text
 This should be implemented by the config to tweak the uboot package, after the board or family has had the chance to.
 You can write to `$destination` here and it will be packaged.
 You can also append to the `postinst_functions` array, and the _content_ of those functions will be added to the postinst script.
+```
 
 ### `pre_prepare_partitions`
 > *allow custom options for mkfs*
 
+```text
 Good time to change stuff like mkfs opts, types etc.
+```
 
 Also known as (for backwards compatibility only):
 - `prepare_partitions_custom`
@@ -455,7 +562,9 @@ Also known as (for backwards compatibility only):
 ### `pre_umount_final_image`
 > *allow config to hack into the image before the unmount*
 
+```text
 Called before unmounting both `/root` and `/boot`.
+```
 
 Also known as (for backwards compatibility only):
 - `config_pre_umount_final_image`
@@ -463,7 +572,9 @@ Also known as (for backwards compatibility only):
 ### `pre_update_initramfs`
 > *allow config to hack into the initramfs create process*
 
+```text
 Called after rsync has synced both `/root` and `/root` on the target, but before calling `update_initramfs`.
+```
 
 Also known as (for backwards compatibility only):
 - `config_pre_update_initramfs`
@@ -471,10 +582,12 @@ Also known as (for backwards compatibility only):
 ### `prepare_image_size`
 > *allow dynamically determining the size based on the $rootfs_size*
 
+```text
 Called after `${rootfs_size}` is known, but before `${FIXED_IMAGE_SIZE}` is taken into account.
 A good spot to determine `FIXED_IMAGE_SIZE` based on `rootfs_size`.
 UEFISIZE can be set to 0 for no UEFI partition, or to a size in MiB to include one.
 Last chance to set `USE_HOOK_FOR_PARTITION`=yes and then implement create_partition_table hook_point.
+```
 
 Also known as (for backwards compatibility only):
 - `config_prepare_image_size`
@@ -482,24 +595,32 @@ Also known as (for backwards compatibility only):
 ### `prepare_root_device`
 > *Specialized storage extensions typically transform the root device into a mapped device and should hook in here *
 
+```text
 At this stage ${rootdevice} has been defined pointing to a loop device partition. Extensions that map the root device must update rootdevice accordingly.
+```
 
 ### `run_after_build`
 > *hook for function to run after build, i.e. to change owner of `$SRC`*
 
+```text
 Really one of the last hooks ever called. The build has ended. Congratulations.
 - *NOTE:* this will run only if there were no errors during build process.
+```
 
 ### `uboot_make_config`
 > *Hook to customize u-boot make environment*
 
+```text
 Called right before invoking make for u-boot compilation.
 Available array to modify:
   - uboot_make_envs[@]: environment variables passed via "env -i" (e.g., CCACHE_REMOTE_STORAGE)
+```
 
 ### `user_config`
 > *Invoke function with user override*
 
+```text
 Allows for overriding configuration values set anywhere else.
 It is called after sourcing the `lib.config` file if it exists,
 but before assembling any package lists.
+```
