@@ -6,33 +6,37 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
+        <meta name="description" content="Route the Armbian build through proxies and faster mirrors: HTTP/HTTPS proxies, kernel, U-Boot and GitHub download mirrors, a git proxy and regional presets.">
       
       
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/Release_Board-Maintainers/">
+        <link rel="canonical" href="https://docs.armbian.com/build-framework/switches/proxies-mirrors/">
       
       
+        <link rel="prev" href="../host-docker/">
+      
+      
+        <link rel="next" href="../apt-cache/">
       
       
         
       
       
-      <link rel="icon" href="../images/logo.png">
+      <link rel="icon" href="../../../images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   
-    <title>Become an Armbian board maintainer</title>
+    <title>Armbian build proxy & mirror switches</title>
   
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/armbian-extra.css">
+      <link rel="stylesheet" href="../../../css/armbian-extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -76,10 +80,10 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Become an Armbian board maintainer">
-  <meta property="og:description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
-  <meta name="twitter:title" content="Become an Armbian board maintainer">
-  <meta name="twitter:description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
+  <meta property="og:title" content="Armbian build proxy & mirror switches">
+  <meta property="og:description" content="Route the Armbian build through proxies and faster mirrors: HTTP/HTTPS proxies, kernel, U-Boot and GitHub download mirrors, a git proxy and regional presets.">
+  <meta name="twitter:title" content="Armbian build proxy & mirror switches">
+  <meta name="twitter:description" content="Route the Armbian build through proxies and faster mirrors: HTTP/HTTPS proxies, kernel, U-Boot and GitHub download mirrors, a git proxy and regional presets.">
   
     <meta name="twitter:card" content="summary">
   
@@ -103,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#board-maintainers" class="md-skip">
+        <a href="#proxies-mirrors" class="md-skip">
           Skip to content
         </a>
       
@@ -162,9 +166,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+    <a href="../../.." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
       
-  <img src="../images/armbian-logo.png" alt="logo">
+  <img src="../../../images/armbian-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -181,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Board Maintainers
+              Proxies & mirrors
             
           </span>
         </div>
@@ -294,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -314,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../releases/" class="md-tabs__link">
+        <a href="../../../releases/" class="md-tabs__link">
           
   
   
@@ -334,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../config/" class="md-tabs__link">
+        <a href="../../../config/" class="md-tabs__link">
           
   
   
@@ -354,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../software/" class="md-tabs__link">
+        <a href="../../../software/" class="md-tabs__link">
           
   
   
@@ -370,11 +374,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../build-framework/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -394,7 +400,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Community_Forums/" class="md-tabs__link">
+        <a href="../../../Community_Forums/" class="md-tabs__link">
           
   
   
@@ -414,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Process_Contribute/" class="md-tabs__link">
+        <a href="../../../Process_Contribute/" class="md-tabs__link">
           
   
   
@@ -448,9 +454,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+    <a href="../../.." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
       
-  <img src="../images/armbian-logo.png" alt="logo">
+  <img src="../../../images/armbian-logo.png" alt="logo">
 
     </a>
     Armbian Documentation
@@ -527,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -605,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../../../getting-started/" class="md-nav__link">
         
   
   
@@ -633,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/choosing-an-image/" class="md-nav__link">
+      <a href="../../../getting-started/choosing-an-image/" class="md-nav__link">
         
   
   
@@ -661,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/writing-the-image/" class="md-nav__link">
+      <a href="../../../getting-started/writing-the-image/" class="md-nav__link">
         
   
   
@@ -689,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-boot-and-login/" class="md-nav__link">
+      <a href="../../../getting-started/first-boot-and-login/" class="md-nav__link">
         
   
   
@@ -717,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-steps/" class="md-nav__link">
+      <a href="../../../getting-started/first-steps/" class="md-nav__link">
         
   
   
@@ -745,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/install-to-internal-storage/" class="md-nav__link">
+      <a href="../../../getting-started/install-to-internal-storage/" class="md-nav__link">
         
   
   
@@ -773,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/updating/" class="md-nav__link">
+      <a href="../../../getting-started/updating/" class="md-nav__link">
         
   
   
@@ -801,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/troubleshooting/" class="md-nav__link">
+      <a href="../../../getting-started/troubleshooting/" class="md-nav__link">
         
   
   
@@ -887,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Advanced-Configuration/" class="md-nav__link">
+      <a href="../../../User-Guide_Advanced-Configuration/" class="md-nav__link">
         
   
   
@@ -915,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Networking/" class="md-nav__link">
+      <a href="../../../User-Guide_Networking/" class="md-nav__link">
         
   
   
@@ -943,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Autoconfig/" class="md-nav__link">
+      <a href="../../../User-Guide_Autoconfig/" class="md-nav__link">
         
   
   
@@ -979,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Troubleshooting/" class="md-nav__link">
+      <a href="../../../User-Guide_Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1007,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_FAQ/" class="md-nav__link">
+      <a href="../../../User-Guide_FAQ/" class="md-nav__link">
         
   
   
@@ -1092,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releases/" class="md-nav__link">
+      <a href="../../../releases/" class="md-nav__link">
         
   
   
@@ -1120,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releases/release-model/" class="md-nav__link">
+      <a href="../../../releases/release-model/" class="md-nav__link">
         
   
   
@@ -1205,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../../../config/" class="md-nav__link">
         
   
   
@@ -1283,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/kernel/" class="md-nav__link">
+      <a href="../../../config/kernel/" class="md-nav__link">
         
   
   
@@ -1311,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/desktops/" class="md-nav__link">
+      <a href="../../../config/desktops/" class="md-nav__link">
         
   
   
@@ -1339,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/storage/" class="md-nav__link">
+      <a href="../../../config/storage/" class="md-nav__link">
         
   
   
@@ -1367,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/access/" class="md-nav__link">
+      <a href="../../../config/access/" class="md-nav__link">
         
   
   
@@ -1395,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/user/" class="md-nav__link">
+      <a href="../../../config/user/" class="md-nav__link">
         
   
   
@@ -1423,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/updates/" class="md-nav__link">
+      <a href="../../../config/updates/" class="md-nav__link">
         
   
   
@@ -1459,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/network/" class="md-nav__link">
+      <a href="../../../config/network/" class="md-nav__link">
         
   
   
@@ -1487,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/localisation/" class="md-nav__link">
+      <a href="../../../config/localisation/" class="md-nav__link">
         
   
   
@@ -1572,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/" class="md-nav__link">
+      <a href="../../../software/" class="md-nav__link">
         
   
   
@@ -1650,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/cdn-router/" class="md-nav__link">
+      <a href="../../../software/cdn-router/" class="md-nav__link">
         
   
   
@@ -1678,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/gh-runners/" class="md-nav__link">
+      <a href="../../../software/gh-runners/" class="md-nav__link">
         
   
   
@@ -1706,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/rsyncd-server/" class="md-nav__link">
+      <a href="../../../software/rsyncd-server/" class="md-nav__link">
         
   
   
@@ -1792,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/duplicati/" class="md-nav__link">
+      <a href="../../../software/duplicati/" class="md-nav__link">
         
   
   
@@ -1878,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/docker/" class="md-nav__link">
+      <a href="../../../software/docker/" class="md-nav__link">
         
   
   
@@ -1906,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/portainer/" class="md-nav__link">
+      <a href="../../../software/portainer/" class="md-nav__link">
         
   
   
@@ -1992,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/mariadb/" class="md-nav__link">
+      <a href="../../../software/mariadb/" class="md-nav__link">
         
   
   
@@ -2020,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/mysql/" class="md-nav__link">
+      <a href="../../../software/mysql/" class="md-nav__link">
         
   
   
@@ -2048,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/phpmyadmin/" class="md-nav__link">
+      <a href="../../../software/phpmyadmin/" class="md-nav__link">
         
   
   
@@ -2076,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/postgresql/" class="md-nav__link">
+      <a href="../../../software/postgresql/" class="md-nav__link">
         
   
   
@@ -2104,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/redis/" class="md-nav__link">
+      <a href="../../../software/redis/" class="md-nav__link">
         
   
   
@@ -2190,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/code-server/" class="md-nav__link">
+      <a href="../../../software/code-server/" class="md-nav__link">
         
   
   
@@ -2218,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/git-cli/" class="md-nav__link">
+      <a href="../../../software/git-cli/" class="md-nav__link">
         
   
   
@@ -2304,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/adguardhome/" class="md-nav__link">
+      <a href="../../../software/adguardhome/" class="md-nav__link">
         
   
   
@@ -2332,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/pi-hole/" class="md-nav__link">
+      <a href="../../../software/pi-hole/" class="md-nav__link">
         
   
   
@@ -2360,7 +2366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/unbound/" class="md-nav__link">
+      <a href="../../../software/unbound/" class="md-nav__link">
         
   
   
@@ -2446,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/bazarr/" class="md-nav__link">
+      <a href="../../../software/bazarr/" class="md-nav__link">
         
   
   
@@ -2474,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/deluge/" class="md-nav__link">
+      <a href="../../../software/deluge/" class="md-nav__link">
         
   
   
@@ -2502,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/jellyseerr/" class="md-nav__link">
+      <a href="../../../software/jellyseerr/" class="md-nav__link">
         
   
   
@@ -2530,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/lidarr/" class="md-nav__link">
+      <a href="../../../software/lidarr/" class="md-nav__link">
         
   
   
@@ -2558,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/medusa/" class="md-nav__link">
+      <a href="../../../software/medusa/" class="md-nav__link">
         
   
   
@@ -2586,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/prowlarr/" class="md-nav__link">
+      <a href="../../../software/prowlarr/" class="md-nav__link">
         
   
   
@@ -2614,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/qbittorrent/" class="md-nav__link">
+      <a href="../../../software/qbittorrent/" class="md-nav__link">
         
   
   
@@ -2642,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/radarr/" class="md-nav__link">
+      <a href="../../../software/radarr/" class="md-nav__link">
         
   
   
@@ -2670,7 +2676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/sabnzbd/" class="md-nav__link">
+      <a href="../../../software/sabnzbd/" class="md-nav__link">
         
   
   
@@ -2698,7 +2704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/sonarr/" class="md-nav__link">
+      <a href="../../../software/sonarr/" class="md-nav__link">
         
   
   
@@ -2726,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/transmission/" class="md-nav__link">
+      <a href="../../../software/transmission/" class="md-nav__link">
         
   
   
@@ -2812,7 +2818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/actual-budget/" class="md-nav__link">
+      <a href="../../../software/actual-budget/" class="md-nav__link">
         
   
   
@@ -2840,7 +2846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/wallos/" class="md-nav__link">
+      <a href="../../../software/wallos/" class="md-nav__link">
         
   
   
@@ -2926,7 +2932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/domoticz/" class="md-nav__link">
+      <a href="../../../software/domoticz/" class="md-nav__link">
         
   
   
@@ -2954,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/evcc/" class="md-nav__link">
+      <a href="../../../software/evcc/" class="md-nav__link">
         
   
   
@@ -2982,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/home-assistant/" class="md-nav__link">
+      <a href="../../../software/home-assistant/" class="md-nav__link">
         
   
   
@@ -3010,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/openhab/" class="md-nav__link">
+      <a href="../../../software/openhab/" class="md-nav__link">
         
   
   
@@ -3096,7 +3102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/apt-cacher-ng/" class="md-nav__link">
+      <a href="../../../software/apt-cacher-ng/" class="md-nav__link">
         
   
   
@@ -3124,7 +3130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/cockpit/" class="md-nav__link">
+      <a href="../../../software/cockpit/" class="md-nav__link">
         
   
   
@@ -3152,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/git-cdn/" class="md-nav__link">
+      <a href="../../../software/git-cdn/" class="md-nav__link">
         
   
   
@@ -3180,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/homepage/" class="md-nav__link">
+      <a href="../../../software/homepage/" class="md-nav__link">
         
   
   
@@ -3208,7 +3214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netbox/" class="md-nav__link">
+      <a href="../../../software/netbox/" class="md-nav__link">
         
   
   
@@ -3236,7 +3242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/proxmox-ve/" class="md-nav__link">
+      <a href="../../../software/proxmox-ve/" class="md-nav__link">
         
   
   
@@ -3264,7 +3270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/samba/" class="md-nav__link">
+      <a href="../../../software/samba/" class="md-nav__link">
         
   
   
@@ -3292,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/webmin/" class="md-nav__link">
+      <a href="../../../software/webmin/" class="md-nav__link">
         
   
   
@@ -3378,7 +3384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/emby/" class="md-nav__link">
+      <a href="../../../software/emby/" class="md-nav__link">
         
   
   
@@ -3406,7 +3412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/filebrowser/" class="md-nav__link">
+      <a href="../../../software/filebrowser/" class="md-nav__link">
         
   
   
@@ -3434,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/hastebin/" class="md-nav__link">
+      <a href="../../../software/hastebin/" class="md-nav__link">
         
   
   
@@ -3462,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/immich/" class="md-nav__link">
+      <a href="../../../software/immich/" class="md-nav__link">
         
   
   
@@ -3490,7 +3496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/jellyfin/" class="md-nav__link">
+      <a href="../../../software/jellyfin/" class="md-nav__link">
         
   
   
@@ -3518,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/navidrome/" class="md-nav__link">
+      <a href="../../../software/navidrome/" class="md-nav__link">
         
   
   
@@ -3546,7 +3552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/nextcloud/" class="md-nav__link">
+      <a href="../../../software/nextcloud/" class="md-nav__link">
         
   
   
@@ -3574,7 +3580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/omv/" class="md-nav__link">
+      <a href="../../../software/omv/" class="md-nav__link">
         
   
   
@@ -3602,7 +3608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/owncloud/" class="md-nav__link">
+      <a href="../../../software/owncloud/" class="md-nav__link">
         
   
   
@@ -3630,7 +3636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/stirling/" class="md-nav__link">
+      <a href="../../../software/stirling/" class="md-nav__link">
         
   
   
@@ -3658,7 +3664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/syncthing/" class="md-nav__link">
+      <a href="../../../software/syncthing/" class="md-nav__link">
         
   
   
@@ -3744,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/dozzle/" class="md-nav__link">
+      <a href="../../../software/dozzle/" class="md-nav__link">
         
   
   
@@ -3772,7 +3778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/grafana/" class="md-nav__link">
+      <a href="../../../software/grafana/" class="md-nav__link">
         
   
   
@@ -3800,7 +3806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netalertx/" class="md-nav__link">
+      <a href="../../../software/netalertx/" class="md-nav__link">
         
   
   
@@ -3828,7 +3834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netdata/" class="md-nav__link">
+      <a href="../../../software/netdata/" class="md-nav__link">
         
   
   
@@ -3856,7 +3862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/prometheus/" class="md-nav__link">
+      <a href="../../../software/prometheus/" class="md-nav__link">
         
   
   
@@ -3884,7 +3890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/uptime-kuma/" class="md-nav__link">
+      <a href="../../../software/uptime-kuma/" class="md-nav__link">
         
   
   
@@ -3970,7 +3976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/avahi-daemon/" class="md-nav__link">
+      <a href="../../../software/avahi-daemon/" class="md-nav__link">
         
   
   
@@ -3998,7 +4004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/iperf3/" class="md-nav__link">
+      <a href="../../../software/iperf3/" class="md-nav__link">
         
   
   
@@ -4026,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/iptraf-ng/" class="md-nav__link">
+      <a href="../../../software/iptraf-ng/" class="md-nav__link">
         
   
   
@@ -4054,7 +4060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/nload/" class="md-nav__link">
+      <a href="../../../software/nload/" class="md-nav__link">
         
   
   
@@ -4140,7 +4146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/octoprint/" class="md-nav__link">
+      <a href="../../../software/octoprint/" class="md-nav__link">
         
   
   
@@ -4226,7 +4232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/wireguard/" class="md-nav__link">
+      <a href="../../../software/wireguard/" class="md-nav__link">
         
   
   
@@ -4254,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/zerotier/" class="md-nav__link">
+      <a href="../../../software/zerotier/" class="md-nav__link">
         
   
   
@@ -4340,7 +4346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/ghost/" class="md-nav__link">
+      <a href="../../../software/ghost/" class="md-nav__link">
         
   
   
@@ -4368,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/swag/" class="md-nav__link">
+      <a href="../../../software/swag/" class="md-nav__link">
         
   
   
@@ -4408,24 +4414,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -4443,7 +4454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4461,7 +4472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -4489,7 +4500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/getting-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   
@@ -4567,7 +4578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/" class="md-nav__link">
+      <a href="../../commands/" class="md-nav__link">
         
   
   
@@ -4595,7 +4606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/basic/" class="md-nav__link">
+      <a href="../../commands/basic/" class="md-nav__link">
         
   
   
@@ -4623,7 +4634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/advanced/" class="md-nav__link">
+      <a href="../../commands/advanced/" class="md-nav__link">
         
   
   
@@ -4656,6 +4667,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4666,11 +4679,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -4691,7 +4704,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4709,7 +4722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -4737,7 +4750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/target/" class="md-nav__link">
+      <a href="../target/" class="md-nav__link">
         
   
   
@@ -4765,7 +4778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/image-type/" class="md-nav__link">
+      <a href="../image-type/" class="md-nav__link">
         
   
   
@@ -4793,7 +4806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/image-contents/" class="md-nav__link">
+      <a href="../image-contents/" class="md-nav__link">
         
   
   
@@ -4821,7 +4834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/kernel-uboot/" class="md-nav__link">
+      <a href="../kernel-uboot/" class="md-nav__link">
         
   
   
@@ -4849,7 +4862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/filesystem/" class="md-nav__link">
+      <a href="../filesystem/" class="md-nav__link">
         
   
   
@@ -4877,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/host-docker/" class="md-nav__link">
+      <a href="../host-docker/" class="md-nav__link">
         
   
   
@@ -4902,10 +4915,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../build-framework/switches/proxies-mirrors/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxies & mirrors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4921,6 +4961,202 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use_mainline_google_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_MAINLINE_GOOGLE_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_github_uboot_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_GITHUB_UBOOT_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DOWNLOAD_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOCAL_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mainline_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAINLINE_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uboot_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBOOT_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITHUB_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitproxy_address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITPROXY_ADDRESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regional_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REGIONAL_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FTP_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NO_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITHUB_SOURCE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armbian_firmware_git_source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARMBIAN_FIRMWARE_GIT_SOURCE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armbian_firmware_git_branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARMBIAN_FIRMWARE_GIT_BRANCH
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4933,7 +5169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/apt-cache/" class="md-nav__link">
+      <a href="../apt-cache/" class="md-nav__link">
         
   
   
@@ -4961,7 +5197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/performance/" class="md-nav__link">
+      <a href="../performance/" class="md-nav__link">
         
   
   
@@ -4989,7 +5225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/patching/" class="md-nav__link">
+      <a href="../patching/" class="md-nav__link">
         
   
   
@@ -5017,7 +5253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/diagnostics/" class="md-nav__link">
+      <a href="../diagnostics/" class="md-nav__link">
         
   
   
@@ -5053,7 +5289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/user-configurations/" class="md-nav__link">
+      <a href="../../user-configurations/" class="md-nav__link">
         
   
   
@@ -5081,7 +5317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/board-configuration/" class="md-nav__link">
+      <a href="../../board-configuration/" class="md-nav__link">
         
   
   
@@ -5109,7 +5345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/adding-a-board/" class="md-nav__link">
+      <a href="../../adding-a-board/" class="md-nav__link">
         
   
   
@@ -5187,7 +5423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/" class="md-nav__link">
+      <a href="../../extensions/" class="md-nav__link">
         
   
   
@@ -5215,7 +5451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/hooks/" class="md-nav__link">
+      <a href="../../extensions/hooks/" class="md-nav__link">
         
   
   
@@ -5243,7 +5479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/list/" class="md-nav__link">
+      <a href="../../extensions/list/" class="md-nav__link">
         
   
   
@@ -5271,7 +5507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/kernel-rust/" class="md-nav__link">
+      <a href="../../extensions/kernel-rust/" class="md-nav__link">
         
   
   
@@ -5299,7 +5535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/ccache-remote/" class="md-nav__link">
+      <a href="../../extensions/ccache-remote/" class="md-nav__link">
         
   
   
@@ -5335,7 +5571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/desktops/" class="md-nav__link">
+      <a href="../../desktops/" class="md-nav__link">
         
   
   
@@ -5420,7 +5656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_Forums/" class="md-nav__link">
+      <a href="../../../Community_Forums/" class="md-nav__link">
         
   
   
@@ -5448,7 +5684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_Github/" class="md-nav__link">
+      <a href="../../../Community_Github/" class="md-nav__link">
         
   
   
@@ -5476,7 +5712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_IRC/" class="md-nav__link">
+      <a href="../../../Community_IRC/" class="md-nav__link">
         
   
   
@@ -5561,7 +5797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Process_Contribute/" class="md-nav__link">
+      <a href="../../../Process_Contribute/" class="md-nav__link">
         
   
   
@@ -5589,7 +5825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute/Datacenter/" class="md-nav__link">
+      <a href="../../../Contribute/Datacenter/" class="md-nav__link">
         
   
   
@@ -5617,7 +5853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute/Armbian-config/" class="md-nav__link">
+      <a href="../../../Contribute/Armbian-config/" class="md-nav__link">
         
   
   
@@ -5645,7 +5881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WifiPerformance/" class="md-nav__link">
+      <a href="../../../WifiPerformance/" class="md-nav__link">
         
   
   
@@ -5673,7 +5909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mirrors/" class="md-nav__link">
+      <a href="../../../Mirrors/" class="md-nav__link">
         
   
   
@@ -5701,7 +5937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Process_CI/" class="md-nav__link">
+      <a href="../../../Process_CI/" class="md-nav__link">
         
   
   
@@ -5729,7 +5965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Board-Support-Rules/" class="md-nav__link">
+      <a href="../../../User-Guide_Board-Support-Rules/" class="md-nav__link">
         
   
   
@@ -5784,10 +6020,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-become-a-maintainer" class="md-nav__link">
+  <a href="#use_mainline_google_mirror" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to become a maintainer?
+        USE_MAINLINE_GOOGLE_MIRROR
       
     </span>
   </a>
@@ -5795,10 +6031,164 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#expectations" class="md-nav__link">
+  <a href="#use_github_uboot_mirror" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Expectations
+        USE_GITHUB_UBOOT_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DOWNLOAD_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOCAL_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mainline_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAINLINE_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uboot_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBOOT_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITHUB_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitproxy_address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITPROXY_ADDRESS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regional_mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REGIONAL_MIRROR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FTP_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NO_PROXY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GITHUB_SOURCE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armbian_firmware_git_source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARMBIAN_FIRMWARE_GIT_SOURCE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armbian_firmware_git_branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARMBIAN_FIRMWARE_GIT_BRANCH
       
     </span>
   </a>
@@ -5823,7 +6213,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/main/docs/Release_Board-Maintainers.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/armbian/documentation/edit/main/docs/build-framework/switches/proxies-mirrors.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -5832,53 +6222,90 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/main/docs/Release_Board-Maintainers.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/main/docs/build-framework/switches/proxies-mirrors.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="board-maintainers">Board Maintainers<a class="headerlink" href="#board-maintainers" title="Permanent link">&para;</a></h1>
-<h2 id="how-to-become-a-maintainer">How to become a maintainer?<a class="headerlink" href="#how-to-become-a-maintainer" title="Permanent link">&para;</a></h2>
-<p>If you are interested in being a maintainer please review <a href="/User-Guide_Board-Support-Rules/">Board Support Rules</a>. Then <a href="https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/">apply here</a> and wait for acceptance. Once accepted you will be added to our infrastruture. For this reason we need <a href="https://www.armbian.com/maintainer-registry/">additional information</a> to complete your registration process.</p>
-<div class="admonition question">
-<p class="admonition-title">Requirements?</p>
+<h1 id="proxies-mirrors">Proxies &amp; mirrors<a class="headerlink" href="#proxies-mirrors" title="Permanent link">&para;</a></h1>
+<p>Route source downloads and package fetches through HTTP proxies, faster regional mirrors, or a git proxy — useful behind a corporate proxy or in regions where the default upstreams are slow.</p>
+<h4 id="use_mainline_google_mirror">USE_MAINLINE_GOOGLE_MIRROR<a class="headerlink" href="#use_mainline_google_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>no</code></p>
+<p>Fetches mainline kernel sources from the <code>googlesource.com</code> mirror instead of the official <code>git.kernel.org</code>. Off by default; enable it when <code>git.kernel.org</code> is slow or unreliable from your location, as the Google mirror is often faster. This is a shorthand for <code>MAINLINE_MIRROR=google</code>.</p>
+<h4 id="use_github_uboot_mirror">USE_GITHUB_UBOOT_MIRROR<a class="headerlink" href="#use_github_uboot_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>no</code></p>
+<p>Fetches mainline U-Boot sources from an unofficial GitHub mirror instead of the official <code>git.denx.de</code>. Off by default; enable it when the DENX server is slow or unreachable from your location, since GitHub is often faster and more reliable. This is a shorthand for <code>UBOOT_MIRROR=github</code>.</p>
+<h4 id="download_mirror">DOWNLOAD_MIRROR<a class="headerlink" href="#download_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Selects the download mirror used for the cross-toolchain and the Debian/Ubuntu package repositories. Leave it empty to use the official sources; choose one of the regional mirrors below when the defaults are slow, which is typically the case for users in mainland China.</p>
 <ul>
-<li>You must have access to the hardware you applied to maintain</li>
-<li>You must have a Github ID which should be listed in the documentation</li>
-<li>You must have a forums account</li>
-<li>You must have an Jira account and keep track of issues filed for your board</li>
-<li>You must make sure <a href="https://www.armbian.com/maintainer-registry/">Armbian management</a> has been informed of all of the above IDs for our documentation</li>
-<li>You should know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console</li>
-<li>Knowledge in development, writing code and so on is optional but welcome</li>
+<li><code>china</code>: use <code>mirrors.tuna.tsinghua.edu.cn</code>; it will be very fast thanks to Tsinghua University</li>
+<li><code>bfsu</code>: use <code>mirrors.bfsu.edu.cn</code>, the mirror of Beijing Foreign Studies University</li>
+<li>leave empty to use official source</li>
 </ul>
-</div>
-<h2 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h2>
-<p>Maintainers must not necessarily be persons with development experience. They act as a intersection between end-users and the development team and serve the developers in best-effort manner. They are encouraged to answer basic/simple user questions (if possible, also best effort) without having to bother the development team. They are allowed to record bugs but are not allowed to escalate bugs. Team leaders do.</p>
-<p>Take note that it is still up to development team&rsquo;s discretion what gets attention since Armbian has to plan carefully how to spend its very limited resources.</p>
+<h4 id="local_mirror">LOCAL_MIRROR<a class="headerlink" href="#local_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: auto</p>
+<p>Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Give it the mirror&rsquo;s <strong>host and path only, without a scheme</strong> — the build prepends <code>http://</code> when it writes the apt source, so <code>LOCAL_MIRROR="apt.example.com/armbian"</code> becomes <code>http://apt.example.com/armbian</code> (a value like <code>https://…</code> would produce an invalid <code>http://https://…</code>). Left on auto by default; set it to build against an internal or geographically closer mirror — handy on isolated networks or to reduce load on the public infrastructure.</p>
+<h4 id="mainline_mirror">MAINLINE_MIRROR<a class="headerlink" href="#mainline_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Selects which mirror of <code>linux-stable.git</code> the mainline kernel sources are cloned from. Leave it empty to use the official <code>git.kernel.org</code>; pick one of the mirrors below when that server is slow for you, as it commonly is for users in mainland China.</p>
 <ul>
-<li>You must participate in release process. Ideally you attend meetings related to releases. On that occasion you are given the chance to point out critical issues with your board.</li>
-<li>You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release <a href="https://rsync.armbian.com/incoming/">https://rsync.armbian.com/incoming/</a></li>
+<li><code>google</code>: use the mirror provided by Google, the same as <code>USE_MAINLINE_GOOGLE_MIRROR=yes</code></li>
+<li><code>tuna</code>: use the mirror provided by Tsinghua University</li>
+<li><code>bfsu</code>: use the mirror provided by Beijing Foreign Studies University, which is similar to <code>tuna</code></li>
+<li>leave empty to use the official <code>git.kernel.org</code>, which may be very slow for mainland China users</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">What are we looking for?</p>
+<h4 id="uboot_mirror">UBOOT_MIRROR<a class="headerlink" href="#uboot_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Selects which mirror of <code>u-boot.git</code> the mainline U-Boot sources are cloned from. Leave it empty to use the official <code>source.denx.de</code>; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.</p>
 <ul>
-<li>does the board boot to both CLI and Desktop?</li>
-<li>is the desktop usable?</li>
-<li>does USB work? (at all or partially)</li>
-<li>other things such as wireless, audio</li>
+<li><code>github</code>: use the mirror provided by github, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code></li>
+<li><code>gitee</code>: use the mirror provided by Gitee, a Chinese git services</li>
+<li>leave empty to use the official <code>source.denx.de</code>, which may be very slow for mainland China users</li>
 </ul>
-</div>
-<p>If something does not work, this is fine and normal. The important part is that it is documented and we get notified about the issues. Known problems should be placed into the Jira ticket and link placed to the board download page. While not required, you should have a build environment setup so you can build images with the most recent images and test them right away. Your feedback, either positive or negative, is very welcome. You are free to add comments to every commit and pull request.</p>
-<p>Ideally you have multiple microSD cards laying around to test regular updates on current releases and nightly without having to re-flash the same card every time to switch between branches.</p>
-<p>Alternatively you can use auto-built images - they are placed at the ever end of each board download pages under &ldquo;Rolling releases&rdquo;.</p>
+<h4 id="github_mirror">GITHUB_MIRROR<a class="headerlink" href="#github_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Selects a mirror or proxy for the many GitHub-hosted repositories the build clones. Leave it empty to connect to GitHub directly; choose one of the options below when GitHub is slow or unreachable — again, most relevant for users in mainland China or behind a corporate git proxy.</p>
 <ul>
-<li>You must provide &ldquo;best effort&rdquo; support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request &ldquo;armbianmonitor -u&rdquo; output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <a href="https://www.armbian.com/download/">https://www.armbian.com/download/</a></li>
+<li><code>fastgit</code>: use the mirror provided by fastgit.org</li>
+<li><code>gitclone</code>: use the mirror provided by gitclone.com</li>
+<li><code>cnpmjs</code>: use the mirror provided by cnpmjs.org</li>
+<li><code>gitproxy</code>: use a pass-through git proxy whose full base URL is given in <code>GITPROXY_ADDRESS</code> (e.g. <code>https://gitproxy.example.com/github.com</code>, no trailing slash). Selected automatically when a CI runner exports <code>GITPROXY_ADDRESS</code>.</li>
+<li>leave empty to connect directly to GitHub, which may be very slow for mainland China users</li>
 </ul>
+<h4 id="gitproxy_address">GITPROXY_ADDRESS<a class="headerlink" href="#gitproxy_address" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Full base URL of the pass-through git proxy used by <code>GITHUB_MIRROR=gitproxy</code>; it replaces <code>https://github.com</code> for all source clones (for example <code>https://gitproxy.example.com/github.com</code>, no trailing slash). When a CI runner exports this variable, <code>GITHUB_MIRROR</code> is switched to <code>gitproxy</code> automatically, so self-hosted runners route their clones through the proxy without extra configuration. Set it by hand only if you run such a proxy yourself.</p>
+<h4 id="regional_mirror">REGIONAL_MIRROR<a class="headerlink" href="#regional_mirror" title="Permanent link">&para;</a></h4>
+<p><code>string</code></p>
+<p>Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.</p>
 <ul>
-<li>You must provide &ldquo;best effort&rdquo; support in Jira. Review submitted issues for you board made by Armbian&rsquo;s contributors</li>
+<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>fastgit</code>, DOWNLOAD_MIRROR=<code>china</code></li>
+<li>leave empty to use default settings</li>
 </ul>
+<h4 id="http_proxy">HTTP_PROXY<a class="headerlink" href="#http_proxy" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: empty</p>
+<p>Proxy URL for HTTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTP proxy.</p>
+<h4 id="https_proxy">HTTPS_PROXY<a class="headerlink" href="#https_proxy" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: empty</p>
+<p>Proxy URL for HTTPS traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTPS proxy.</p>
+<h4 id="ftp_proxy">FTP_PROXY<a class="headerlink" href="#ftp_proxy" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: empty</p>
+<p>Proxy URL for FTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches FTP resources only through a proxy.</p>
+<h4 id="no_proxy">NO_PROXY<a class="headerlink" href="#no_proxy" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: empty</p>
+<p>Comma-separated list of hosts and domains that should bypass the proxies above, propagated into the build container and the tools it runs. Empty by default; set it to keep local mirrors, registries or internal hosts off the proxy.</p>
+<h4 id="github_source">GITHUB_SOURCE<a class="headerlink" href="#github_source" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>https://github.com</code></p>
+<p>Base GitHub URL used when the build downloads helper tools and some sources (for example <code>bat</code>, <code>oras</code> and oh-my-zsh). Defaults to <code>https://github.com</code>; override it to route those fetches through a GitHub mirror or a caching proxy. Unlike <code>GITHUB_MIRROR</code>, this substitutes the URL directly rather than selecting a named mirror preset.</p>
+<h4 id="armbian_firmware_git_source">ARMBIAN_FIRMWARE_GIT_SOURCE<a class="headerlink" href="#armbian_firmware_git_source" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>https://github.com/armbian/firmware</code></p>
+<p>Git repository the build clones the Armbian firmware blobs from when building the firmware packages. Defaults to <code>https://github.com/armbian/firmware</code>; point it at a fork or a local mirror to build against custom firmware or when working behind a firewall. Pair it with <code>ARMBIAN_FIRMWARE_GIT_BRANCH</code> to select the branch.</p>
+<h4 id="armbian_firmware_git_branch">ARMBIAN_FIRMWARE_GIT_BRANCH<a class="headerlink" href="#armbian_firmware_git_branch" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>master</code></p>
+<p>Branch of the Armbian firmware repository (<code>ARMBIAN_FIRMWARE_GIT_SOURCE</code>) to check out when building the firmware packages. Defaults to <code>master</code>; change it to build from a development branch or to pin firmware from a specific branch of your own fork.</p>
 
 
 
@@ -5984,10 +6411,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

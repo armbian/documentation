@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Configure the Armbian build host and Docker container: base image, auto-pull, pruning, OCI cache, HTTP proxies, download mirrors and the apt cache.">
+        <meta name="description" content="Configure the Armbian build host and the Docker build container: base image, auto-pull, pruning, OCI cache, expert mode and clean levels.">
       
       
         <meta name="author" content="Armbian team">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../filesystem/">
       
       
-        <link rel="next" href="../performance/">
+        <link rel="next" href="../proxies-mirrors/">
       
       
         
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian build host & Docker switches">
-  <meta property="og:description" content="Configure the Armbian build host and Docker container: base image, auto-pull, pruning, OCI cache, HTTP proxies, download mirrors and the apt cache.">
+  <meta property="og:description" content="Configure the Armbian build host and the Docker build container: base image, auto-pull, pruning, OCI cache, expert mode and clean levels.">
   <meta name="twitter:title" content="Armbian build host & Docker switches">
-  <meta name="twitter:description" content="Configure the Armbian build host and Docker container: base image, auto-pull, pruning, OCI cache, HTTP proxies, download mirrors and the apt cache.">
+  <meta name="twitter:description" content="Configure the Armbian build host and the Docker build container: base image, auto-pull, pruning, OCI cache, expert mode and clean levels.">
   
     <meta name="twitter:card" content="summary">
   
@@ -5213,275 +5213,66 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#proxies-mirrors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proxies &amp; mirrors
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proxies &amp; mirrors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use_mainline_google_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_MAINLINE_GOOGLE_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use_github_uboot_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_GITHUB_UBOOT_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#download_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DOWNLOAD_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LOCAL_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mainline_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MAINLINE_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uboot_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UBOOT_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITHUB_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gitproxy_address" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITPROXY_ADDRESS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regional_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        REGIONAL_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HTTP_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#https_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HTTPS_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ftp_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FTP_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NO_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITHUB_SOURCE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#armbian_firmware_git_source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARMBIAN_FIRMWARE_GIT_SOURCE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#armbian_firmware_git_branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARMBIAN_FIRMWARE_GIT_BRANCH
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apt-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT cache
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="APT cache">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manage_acng" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MANAGE_ACNG
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apt_proxy_addr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT_PROXY_ADDR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apt_cacher_ng_cache_dir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT_CACHER_NG_CACHE_DIR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use_local_apt_deb_cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_LOCAL_APT_DEB_CACHE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oras_repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORAS_REPO
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxies-mirrors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxies & mirrors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apt-cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APT cache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6580,271 +6371,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#proxies-mirrors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proxies &amp; mirrors
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proxies &amp; mirrors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use_mainline_google_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_MAINLINE_GOOGLE_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use_github_uboot_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_GITHUB_UBOOT_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#download_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DOWNLOAD_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LOCAL_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mainline_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MAINLINE_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uboot_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UBOOT_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITHUB_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gitproxy_address" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITPROXY_ADDRESS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regional_mirror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        REGIONAL_MIRROR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HTTP_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#https_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HTTPS_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ftp_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FTP_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no_proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NO_PROXY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GITHUB_SOURCE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#armbian_firmware_git_source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARMBIAN_FIRMWARE_GIT_SOURCE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#armbian_firmware_git_branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARMBIAN_FIRMWARE_GIT_BRANCH
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apt-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT cache
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="APT cache">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manage_acng" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MANAGE_ACNG
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apt_proxy_addr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT_PROXY_ADDR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apt_cacher_ng_cache_dir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APT_CACHER_NG_CACHE_DIR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use_local_apt_deb_cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USE_LOCAL_APT_DEB_CACHE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oras_repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORAS_REPO
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6880,7 +6406,7 @@
 
 
 <h1 id="build-host-docker">Build host &amp; Docker<a class="headerlink" href="#build-host-docker" title="Permanent link">&para;</a></h1>
-<p>Control the build host, the Docker build container, network proxies and mirrors, and the apt package cache.</p>
+<p>Control the build host and the Docker build container.</p>
 <h4 id="expert">EXPERT<a class="headerlink" href="#expert" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -7034,102 +6560,6 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 <h4 id="needs_binfmt">NEEDS_BINFMT<a class="headerlink" href="#needs_binfmt" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
 <p>Requires that <code>binfmt_misc</code> and <code>qemu-user-static</code> are set up so the build can run foreign-architecture binaries inside the rootfs (for example running arm64 tools on an x86 host). Set to <code>no</code> by default, but the framework forces it to <code>yes</code> for any build that assembles a rootfs or image, since those must execute target-architecture code in a chroot. You rarely set it yourself; it exists so lighter operations that never enter a foreign chroot can skip the binfmt setup.</p>
-<h2 id="proxies-mirrors">Proxies &amp; mirrors<a class="headerlink" href="#proxies-mirrors" title="Permanent link">&para;</a></h2>
-<h4 id="use_mainline_google_mirror">USE_MAINLINE_GOOGLE_MIRROR<a class="headerlink" href="#use_mainline_google_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>no</code></p>
-<p>Fetches mainline kernel sources from the <code>googlesource.com</code> mirror instead of the official <code>git.kernel.org</code>. Off by default; enable it when <code>git.kernel.org</code> is slow or unreliable from your location, as the Google mirror is often faster. This is a shorthand for <code>MAINLINE_MIRROR=google</code>.</p>
-<h4 id="use_github_uboot_mirror">USE_GITHUB_UBOOT_MIRROR<a class="headerlink" href="#use_github_uboot_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>no</code></p>
-<p>Fetches mainline U-Boot sources from an unofficial GitHub mirror instead of the official <code>git.denx.de</code>. Off by default; enable it when the DENX server is slow or unreachable from your location, since GitHub is often faster and more reliable. This is a shorthand for <code>UBOOT_MIRROR=github</code>.</p>
-<h4 id="download_mirror">DOWNLOAD_MIRROR<a class="headerlink" href="#download_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Selects the download mirror used for the cross-toolchain and the Debian/Ubuntu package repositories. Leave it empty to use the official sources; choose one of the regional mirrors below when the defaults are slow, which is typically the case for users in mainland China.</p>
-<ul>
-<li><code>china</code>: use <code>mirrors.tuna.tsinghua.edu.cn</code>; it will be very fast thanks to Tsinghua University</li>
-<li><code>bfsu</code>: use <code>mirrors.bfsu.edu.cn</code>, the mirror of Beijing Foreign Studies University</li>
-<li>leave empty to use official source</li>
-</ul>
-<h4 id="local_mirror">LOCAL_MIRROR<a class="headerlink" href="#local_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: auto</p>
-<p>Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Give it the mirror&rsquo;s <strong>host and path only, without a scheme</strong> — the build prepends <code>http://</code> when it writes the apt source, so <code>LOCAL_MIRROR="apt.example.com/armbian"</code> becomes <code>http://apt.example.com/armbian</code> (a value like <code>https://…</code> would produce an invalid <code>http://https://…</code>). Left on auto by default; set it to build against an internal or geographically closer mirror — handy on isolated networks or to reduce load on the public infrastructure.</p>
-<h4 id="mainline_mirror">MAINLINE_MIRROR<a class="headerlink" href="#mainline_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Selects which mirror of <code>linux-stable.git</code> the mainline kernel sources are cloned from. Leave it empty to use the official <code>git.kernel.org</code>; pick one of the mirrors below when that server is slow for you, as it commonly is for users in mainland China.</p>
-<ul>
-<li><code>google</code>: use the mirror provided by Google, the same as <code>USE_MAINLINE_GOOGLE_MIRROR=yes</code></li>
-<li><code>tuna</code>: use the mirror provided by Tsinghua University</li>
-<li><code>bfsu</code>: use the mirror provided by Beijing Foreign Studies University, which is similar to <code>tuna</code></li>
-<li>leave empty to use the official <code>git.kernel.org</code>, which may be very slow for mainland China users</li>
-</ul>
-<h4 id="uboot_mirror">UBOOT_MIRROR<a class="headerlink" href="#uboot_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Selects which mirror of <code>u-boot.git</code> the mainline U-Boot sources are cloned from. Leave it empty to use the official <code>source.denx.de</code>; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.</p>
-<ul>
-<li><code>github</code>: use the mirror provided by github, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code></li>
-<li><code>gitee</code>: use the mirror provided by Gitee, a Chinese git services</li>
-<li>leave empty to use the official <code>source.denx.de</code>, which may be very slow for mainland China users</li>
-</ul>
-<h4 id="github_mirror">GITHUB_MIRROR<a class="headerlink" href="#github_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Selects a mirror or proxy for the many GitHub-hosted repositories the build clones. Leave it empty to connect to GitHub directly; choose one of the options below when GitHub is slow or unreachable — again, most relevant for users in mainland China or behind a corporate git proxy.</p>
-<ul>
-<li><code>fastgit</code>: use the mirror provided by fastgit.org</li>
-<li><code>gitclone</code>: use the mirror provided by gitclone.com</li>
-<li><code>cnpmjs</code>: use the mirror provided by cnpmjs.org</li>
-<li><code>gitproxy</code>: use a pass-through git proxy whose full base URL is given in <code>GITPROXY_ADDRESS</code> (e.g. <code>https://gitproxy.example.com/github.com</code>, no trailing slash). Selected automatically when a CI runner exports <code>GITPROXY_ADDRESS</code>.</li>
-<li>leave empty to connect directly to GitHub, which may be very slow for mainland China users</li>
-</ul>
-<h4 id="gitproxy_address">GITPROXY_ADDRESS<a class="headerlink" href="#gitproxy_address" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Full base URL of the pass-through git proxy used by <code>GITHUB_MIRROR=gitproxy</code>; it replaces <code>https://github.com</code> for all source clones (for example <code>https://gitproxy.example.com/github.com</code>, no trailing slash). When a CI runner exports this variable, <code>GITHUB_MIRROR</code> is switched to <code>gitproxy</code> automatically, so self-hosted runners route their clones through the proxy without extra configuration. Set it by hand only if you run such a proxy yourself.</p>
-<h4 id="regional_mirror">REGIONAL_MIRROR<a class="headerlink" href="#regional_mirror" title="Permanent link">&para;</a></h4>
-<p><code>string</code></p>
-<p>Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.</p>
-<ul>
-<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>fastgit</code>, DOWNLOAD_MIRROR=<code>china</code></li>
-<li>leave empty to use default settings</li>
-</ul>
-<h4 id="http_proxy">HTTP_PROXY<a class="headerlink" href="#http_proxy" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: empty</p>
-<p>Proxy URL for HTTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTP proxy.</p>
-<h4 id="https_proxy">HTTPS_PROXY<a class="headerlink" href="#https_proxy" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: empty</p>
-<p>Proxy URL for HTTPS traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches the internet only through an HTTPS proxy.</p>
-<h4 id="ftp_proxy">FTP_PROXY<a class="headerlink" href="#ftp_proxy" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: empty</p>
-<p>Proxy URL for FTP traffic, propagated into the build container and the tools it runs. Empty by default; set it when the build host reaches FTP resources only through a proxy.</p>
-<h4 id="no_proxy">NO_PROXY<a class="headerlink" href="#no_proxy" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: empty</p>
-<p>Comma-separated list of hosts and domains that should bypass the proxies above, propagated into the build container and the tools it runs. Empty by default; set it to keep local mirrors, registries or internal hosts off the proxy.</p>
-<h4 id="github_source">GITHUB_SOURCE<a class="headerlink" href="#github_source" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>https://github.com</code></p>
-<p>Base GitHub URL used when the build downloads helper tools and some sources (for example <code>bat</code>, <code>oras</code> and oh-my-zsh). Defaults to <code>https://github.com</code>; override it to route those fetches through a GitHub mirror or a caching proxy. Unlike <code>GITHUB_MIRROR</code>, this substitutes the URL directly rather than selecting a named mirror preset.</p>
-<h4 id="armbian_firmware_git_source">ARMBIAN_FIRMWARE_GIT_SOURCE<a class="headerlink" href="#armbian_firmware_git_source" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>https://github.com/armbian/firmware</code></p>
-<p>Git repository the build clones the Armbian firmware blobs from when building the firmware packages. Defaults to <code>https://github.com/armbian/firmware</code>; point it at a fork or a local mirror to build against custom firmware or when working behind a firewall. Pair it with <code>ARMBIAN_FIRMWARE_GIT_BRANCH</code> to select the branch.</p>
-<h4 id="armbian_firmware_git_branch">ARMBIAN_FIRMWARE_GIT_BRANCH<a class="headerlink" href="#armbian_firmware_git_branch" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>master</code></p>
-<p>Branch of the Armbian firmware repository (<code>ARMBIAN_FIRMWARE_GIT_SOURCE</code>) to check out when building the firmware packages. Defaults to <code>master</code>; change it to build from a development branch or to pin firmware from a specific branch of your own fork.</p>
-<h2 id="apt-cache">APT cache<a class="headerlink" href="#apt-cache" title="Permanent link">&para;</a></h2>
-<h4 id="manage_acng">MANAGE_ACNG<a class="headerlink" href="#manage_acng" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>no</code></p>
-<p>Controls use of <code>apt-cacher-ng</code>, a caching proxy for Debian/Ubuntu apt repositories that speeds up repeated builds by serving already-downloaded packages from disk. Off by default. It accepts either a plain <code>yes</code>/<code>no</code> or a full URL, as described below; anything that is not <code>yes</code>, <code>no</code> or empty must be a valid <code>http</code>/<code>https</code> URL, or the build aborts.</p>
-<ul>
-<li><code>yes</code> sets up an automatically managed <code>apt-cacher-ng</code> instance on the build host. This mode is incompatible with container builds.</li>
-<li>but you can provide a URL for a self-managed <code>apt-cacher-ng</code> instance, e.g. <code>"http://apt-cacher.example.com:3142"</code></li>
-</ul>
-<h4 id="apt_proxy_addr">APT_PROXY_ADDR<a class="headerlink" href="#apt_proxy_addr" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>localhost:3142</code></p>
-<p>Address of the apt caching proxy that package downloads are routed through during the rootfs bootstrap. Defaults to <code>localhost:3142</code>, the standard <code>apt-cacher-ng</code> port; when it is set and <code>MANAGE_ACNG</code> is not managing its own instance, the debootstrap and chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared cache; leave it as-is if you have no external proxy.</p>
-<h4 id="apt_cacher_ng_cache_dir">APT_CACHER_NG_CACHE_DIR<a class="headerlink" href="#apt_cacher_ng_cache_dir" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>/var/cache/apt-cacher-ng</code></p>
-<p>Filesystem directory where the managed <code>apt-cacher-ng</code> instance (<code>MANAGE_ACNG=yes</code>) stores its cached packages. Defaults to <code>/var/cache/apt-cacher-ng</code>; point it at a larger or faster volume when the default location lacks space, or to keep the cache on persistent storage across builds.</p>
-<h4 id="use_local_apt_deb_cache">USE_LOCAL_APT_DEB_CACHE<a class="headerlink" href="#use_local_apt_deb_cache" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>yes</code></p>
-<p>Keeps a local cache of downloaded <code>.deb</code> packages under <code>$SRC/cache/aptcache</code> and reuses it across builds, so unchanged packages are not fetched again. On by default because it noticeably speeds up repeated builds; set <code>no</code> to always download fresh packages, at the cost of build time and bandwidth — the build warns that this is generally not a good idea.</p>
-<h4 id="oras_repo">ORAS_REPO<a class="headerlink" href="#oras_repo" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>oras-project</code></p>
-<p>GitHub organisation the build downloads the ORAS OCI client binary from, ORAS being the tool used to push and pull OCI-cached artifacts. Defaults to <code>oras-project</code>, the upstream releases; override it to pull the binary from a fork or mirror. The build already switches this automatically for architectures without an official upstream binary (such as loong64), so you rarely set it by hand.</p>
 
 
 

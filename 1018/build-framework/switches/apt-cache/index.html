@@ -6,33 +6,37 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
+        <meta name="description" content="Speed up repeated Armbian builds with a package cache: apt-cacher-ng, a local .deb cache, the apt proxy address and the ORAS client source.">
       
       
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/Release_Board-Maintainers/">
+        <link rel="canonical" href="https://docs.armbian.com/build-framework/switches/apt-cache/">
       
       
+        <link rel="prev" href="../proxies-mirrors/">
+      
+      
+        <link rel="next" href="../performance/">
       
       
         
       
       
-      <link rel="icon" href="../images/logo.png">
+      <link rel="icon" href="../../../images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   
-    <title>Become an Armbian board maintainer</title>
+    <title>Armbian build apt cache switches</title>
   
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/armbian-extra.css">
+      <link rel="stylesheet" href="../../../css/armbian-extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -76,10 +80,10 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Become an Armbian board maintainer">
-  <meta property="og:description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
-  <meta name="twitter:title" content="Become an Armbian board maintainer">
-  <meta name="twitter:description" content="Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images.">
+  <meta property="og:title" content="Armbian build apt cache switches">
+  <meta property="og:description" content="Speed up repeated Armbian builds with a package cache: apt-cacher-ng, a local .deb cache, the apt proxy address and the ORAS client source.">
+  <meta name="twitter:title" content="Armbian build apt cache switches">
+  <meta name="twitter:description" content="Speed up repeated Armbian builds with a package cache: apt-cacher-ng, a local .deb cache, the apt proxy address and the ORAS client source.">
   
     <meta name="twitter:card" content="summary">
   
@@ -103,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#board-maintainers" class="md-skip">
+        <a href="#apt-cache" class="md-skip">
           Skip to content
         </a>
       
@@ -162,9 +166,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+    <a href="../../.." title="Armbian Documentation" class="md-header__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
       
-  <img src="../images/armbian-logo.png" alt="logo">
+  <img src="../../../images/armbian-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -181,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Board Maintainers
+              APT cache
             
           </span>
         </div>
@@ -294,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -314,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../releases/" class="md-tabs__link">
+        <a href="../../../releases/" class="md-tabs__link">
           
   
   
@@ -334,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../config/" class="md-tabs__link">
+        <a href="../../../config/" class="md-tabs__link">
           
   
   
@@ -354,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../software/" class="md-tabs__link">
+        <a href="../../../software/" class="md-tabs__link">
           
   
   
@@ -370,11 +374,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../build-framework/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -394,7 +400,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Community_Forums/" class="md-tabs__link">
+        <a href="../../../Community_Forums/" class="md-tabs__link">
           
   
   
@@ -414,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Process_Contribute/" class="md-tabs__link">
+        <a href="../../../Process_Contribute/" class="md-tabs__link">
           
   
   
@@ -448,9 +454,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
+    <a href="../../.." title="Armbian Documentation" class="md-nav__button md-logo" aria-label="Armbian Documentation" data-md-component="logo">
       
-  <img src="../images/armbian-logo.png" alt="logo">
+  <img src="../../../images/armbian-logo.png" alt="logo">
 
     </a>
     Armbian Documentation
@@ -527,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -605,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../../../getting-started/" class="md-nav__link">
         
   
   
@@ -633,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/choosing-an-image/" class="md-nav__link">
+      <a href="../../../getting-started/choosing-an-image/" class="md-nav__link">
         
   
   
@@ -661,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/writing-the-image/" class="md-nav__link">
+      <a href="../../../getting-started/writing-the-image/" class="md-nav__link">
         
   
   
@@ -689,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-boot-and-login/" class="md-nav__link">
+      <a href="../../../getting-started/first-boot-and-login/" class="md-nav__link">
         
   
   
@@ -717,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-steps/" class="md-nav__link">
+      <a href="../../../getting-started/first-steps/" class="md-nav__link">
         
   
   
@@ -745,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/install-to-internal-storage/" class="md-nav__link">
+      <a href="../../../getting-started/install-to-internal-storage/" class="md-nav__link">
         
   
   
@@ -773,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/updating/" class="md-nav__link">
+      <a href="../../../getting-started/updating/" class="md-nav__link">
         
   
   
@@ -801,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/troubleshooting/" class="md-nav__link">
+      <a href="../../../getting-started/troubleshooting/" class="md-nav__link">
         
   
   
@@ -887,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Advanced-Configuration/" class="md-nav__link">
+      <a href="../../../User-Guide_Advanced-Configuration/" class="md-nav__link">
         
   
   
@@ -915,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Networking/" class="md-nav__link">
+      <a href="../../../User-Guide_Networking/" class="md-nav__link">
         
   
   
@@ -943,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Autoconfig/" class="md-nav__link">
+      <a href="../../../User-Guide_Autoconfig/" class="md-nav__link">
         
   
   
@@ -979,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Troubleshooting/" class="md-nav__link">
+      <a href="../../../User-Guide_Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1007,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_FAQ/" class="md-nav__link">
+      <a href="../../../User-Guide_FAQ/" class="md-nav__link">
         
   
   
@@ -1092,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releases/" class="md-nav__link">
+      <a href="../../../releases/" class="md-nav__link">
         
   
   
@@ -1120,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releases/release-model/" class="md-nav__link">
+      <a href="../../../releases/release-model/" class="md-nav__link">
         
   
   
@@ -1205,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../../../config/" class="md-nav__link">
         
   
   
@@ -1283,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/kernel/" class="md-nav__link">
+      <a href="../../../config/kernel/" class="md-nav__link">
         
   
   
@@ -1311,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/desktops/" class="md-nav__link">
+      <a href="../../../config/desktops/" class="md-nav__link">
         
   
   
@@ -1339,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/storage/" class="md-nav__link">
+      <a href="../../../config/storage/" class="md-nav__link">
         
   
   
@@ -1367,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/access/" class="md-nav__link">
+      <a href="../../../config/access/" class="md-nav__link">
         
   
   
@@ -1395,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/user/" class="md-nav__link">
+      <a href="../../../config/user/" class="md-nav__link">
         
   
   
@@ -1423,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/updates/" class="md-nav__link">
+      <a href="../../../config/updates/" class="md-nav__link">
         
   
   
@@ -1459,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/network/" class="md-nav__link">
+      <a href="../../../config/network/" class="md-nav__link">
         
   
   
@@ -1487,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/localisation/" class="md-nav__link">
+      <a href="../../../config/localisation/" class="md-nav__link">
         
   
   
@@ -1572,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/" class="md-nav__link">
+      <a href="../../../software/" class="md-nav__link">
         
   
   
@@ -1650,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/cdn-router/" class="md-nav__link">
+      <a href="../../../software/cdn-router/" class="md-nav__link">
         
   
   
@@ -1678,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/gh-runners/" class="md-nav__link">
+      <a href="../../../software/gh-runners/" class="md-nav__link">
         
   
   
@@ -1706,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/rsyncd-server/" class="md-nav__link">
+      <a href="../../../software/rsyncd-server/" class="md-nav__link">
         
   
   
@@ -1792,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/duplicati/" class="md-nav__link">
+      <a href="../../../software/duplicati/" class="md-nav__link">
         
   
   
@@ -1878,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/docker/" class="md-nav__link">
+      <a href="../../../software/docker/" class="md-nav__link">
         
   
   
@@ -1906,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/portainer/" class="md-nav__link">
+      <a href="../../../software/portainer/" class="md-nav__link">
         
   
   
@@ -1992,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/mariadb/" class="md-nav__link">
+      <a href="../../../software/mariadb/" class="md-nav__link">
         
   
   
@@ -2020,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/mysql/" class="md-nav__link">
+      <a href="../../../software/mysql/" class="md-nav__link">
         
   
   
@@ -2048,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/phpmyadmin/" class="md-nav__link">
+      <a href="../../../software/phpmyadmin/" class="md-nav__link">
         
   
   
@@ -2076,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/postgresql/" class="md-nav__link">
+      <a href="../../../software/postgresql/" class="md-nav__link">
         
   
   
@@ -2104,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/redis/" class="md-nav__link">
+      <a href="../../../software/redis/" class="md-nav__link">
         
   
   
@@ -2190,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/code-server/" class="md-nav__link">
+      <a href="../../../software/code-server/" class="md-nav__link">
         
   
   
@@ -2218,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/git-cli/" class="md-nav__link">
+      <a href="../../../software/git-cli/" class="md-nav__link">
         
   
   
@@ -2304,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/adguardhome/" class="md-nav__link">
+      <a href="../../../software/adguardhome/" class="md-nav__link">
         
   
   
@@ -2332,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/pi-hole/" class="md-nav__link">
+      <a href="../../../software/pi-hole/" class="md-nav__link">
         
   
   
@@ -2360,7 +2366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/unbound/" class="md-nav__link">
+      <a href="../../../software/unbound/" class="md-nav__link">
         
   
   
@@ -2446,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/bazarr/" class="md-nav__link">
+      <a href="../../../software/bazarr/" class="md-nav__link">
         
   
   
@@ -2474,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/deluge/" class="md-nav__link">
+      <a href="../../../software/deluge/" class="md-nav__link">
         
   
   
@@ -2502,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/jellyseerr/" class="md-nav__link">
+      <a href="../../../software/jellyseerr/" class="md-nav__link">
         
   
   
@@ -2530,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/lidarr/" class="md-nav__link">
+      <a href="../../../software/lidarr/" class="md-nav__link">
         
   
   
@@ -2558,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/medusa/" class="md-nav__link">
+      <a href="../../../software/medusa/" class="md-nav__link">
         
   
   
@@ -2586,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/prowlarr/" class="md-nav__link">
+      <a href="../../../software/prowlarr/" class="md-nav__link">
         
   
   
@@ -2614,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/qbittorrent/" class="md-nav__link">
+      <a href="../../../software/qbittorrent/" class="md-nav__link">
         
   
   
@@ -2642,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/radarr/" class="md-nav__link">
+      <a href="../../../software/radarr/" class="md-nav__link">
         
   
   
@@ -2670,7 +2676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/sabnzbd/" class="md-nav__link">
+      <a href="../../../software/sabnzbd/" class="md-nav__link">
         
   
   
@@ -2698,7 +2704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/sonarr/" class="md-nav__link">
+      <a href="../../../software/sonarr/" class="md-nav__link">
         
   
   
@@ -2726,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/transmission/" class="md-nav__link">
+      <a href="../../../software/transmission/" class="md-nav__link">
         
   
   
@@ -2812,7 +2818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/actual-budget/" class="md-nav__link">
+      <a href="../../../software/actual-budget/" class="md-nav__link">
         
   
   
@@ -2840,7 +2846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/wallos/" class="md-nav__link">
+      <a href="../../../software/wallos/" class="md-nav__link">
         
   
   
@@ -2926,7 +2932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/domoticz/" class="md-nav__link">
+      <a href="../../../software/domoticz/" class="md-nav__link">
         
   
   
@@ -2954,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/evcc/" class="md-nav__link">
+      <a href="../../../software/evcc/" class="md-nav__link">
         
   
   
@@ -2982,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/home-assistant/" class="md-nav__link">
+      <a href="../../../software/home-assistant/" class="md-nav__link">
         
   
   
@@ -3010,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/openhab/" class="md-nav__link">
+      <a href="../../../software/openhab/" class="md-nav__link">
         
   
   
@@ -3096,7 +3102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/apt-cacher-ng/" class="md-nav__link">
+      <a href="../../../software/apt-cacher-ng/" class="md-nav__link">
         
   
   
@@ -3124,7 +3130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/cockpit/" class="md-nav__link">
+      <a href="../../../software/cockpit/" class="md-nav__link">
         
   
   
@@ -3152,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/git-cdn/" class="md-nav__link">
+      <a href="../../../software/git-cdn/" class="md-nav__link">
         
   
   
@@ -3180,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/homepage/" class="md-nav__link">
+      <a href="../../../software/homepage/" class="md-nav__link">
         
   
   
@@ -3208,7 +3214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netbox/" class="md-nav__link">
+      <a href="../../../software/netbox/" class="md-nav__link">
         
   
   
@@ -3236,7 +3242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/proxmox-ve/" class="md-nav__link">
+      <a href="../../../software/proxmox-ve/" class="md-nav__link">
         
   
   
@@ -3264,7 +3270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/samba/" class="md-nav__link">
+      <a href="../../../software/samba/" class="md-nav__link">
         
   
   
@@ -3292,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/webmin/" class="md-nav__link">
+      <a href="../../../software/webmin/" class="md-nav__link">
         
   
   
@@ -3378,7 +3384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/emby/" class="md-nav__link">
+      <a href="../../../software/emby/" class="md-nav__link">
         
   
   
@@ -3406,7 +3412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/filebrowser/" class="md-nav__link">
+      <a href="../../../software/filebrowser/" class="md-nav__link">
         
   
   
@@ -3434,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/hastebin/" class="md-nav__link">
+      <a href="../../../software/hastebin/" class="md-nav__link">
         
   
   
@@ -3462,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/immich/" class="md-nav__link">
+      <a href="../../../software/immich/" class="md-nav__link">
         
   
   
@@ -3490,7 +3496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/jellyfin/" class="md-nav__link">
+      <a href="../../../software/jellyfin/" class="md-nav__link">
         
   
   
@@ -3518,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/navidrome/" class="md-nav__link">
+      <a href="../../../software/navidrome/" class="md-nav__link">
         
   
   
@@ -3546,7 +3552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/nextcloud/" class="md-nav__link">
+      <a href="../../../software/nextcloud/" class="md-nav__link">
         
   
   
@@ -3574,7 +3580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/omv/" class="md-nav__link">
+      <a href="../../../software/omv/" class="md-nav__link">
         
   
   
@@ -3602,7 +3608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/owncloud/" class="md-nav__link">
+      <a href="../../../software/owncloud/" class="md-nav__link">
         
   
   
@@ -3630,7 +3636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/stirling/" class="md-nav__link">
+      <a href="../../../software/stirling/" class="md-nav__link">
         
   
   
@@ -3658,7 +3664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/syncthing/" class="md-nav__link">
+      <a href="../../../software/syncthing/" class="md-nav__link">
         
   
   
@@ -3744,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/dozzle/" class="md-nav__link">
+      <a href="../../../software/dozzle/" class="md-nav__link">
         
   
   
@@ -3772,7 +3778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/grafana/" class="md-nav__link">
+      <a href="../../../software/grafana/" class="md-nav__link">
         
   
   
@@ -3800,7 +3806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netalertx/" class="md-nav__link">
+      <a href="../../../software/netalertx/" class="md-nav__link">
         
   
   
@@ -3828,7 +3834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/netdata/" class="md-nav__link">
+      <a href="../../../software/netdata/" class="md-nav__link">
         
   
   
@@ -3856,7 +3862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/prometheus/" class="md-nav__link">
+      <a href="../../../software/prometheus/" class="md-nav__link">
         
   
   
@@ -3884,7 +3890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/uptime-kuma/" class="md-nav__link">
+      <a href="../../../software/uptime-kuma/" class="md-nav__link">
         
   
   
@@ -3970,7 +3976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/avahi-daemon/" class="md-nav__link">
+      <a href="../../../software/avahi-daemon/" class="md-nav__link">
         
   
   
@@ -3998,7 +4004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/iperf3/" class="md-nav__link">
+      <a href="../../../software/iperf3/" class="md-nav__link">
         
   
   
@@ -4026,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/iptraf-ng/" class="md-nav__link">
+      <a href="../../../software/iptraf-ng/" class="md-nav__link">
         
   
   
@@ -4054,7 +4060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/nload/" class="md-nav__link">
+      <a href="../../../software/nload/" class="md-nav__link">
         
   
   
@@ -4140,7 +4146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/octoprint/" class="md-nav__link">
+      <a href="../../../software/octoprint/" class="md-nav__link">
         
   
   
@@ -4226,7 +4232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/wireguard/" class="md-nav__link">
+      <a href="../../../software/wireguard/" class="md-nav__link">
         
   
   
@@ -4254,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/zerotier/" class="md-nav__link">
+      <a href="../../../software/zerotier/" class="md-nav__link">
         
   
   
@@ -4340,7 +4346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/ghost/" class="md-nav__link">
+      <a href="../../../software/ghost/" class="md-nav__link">
         
   
   
@@ -4368,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../software/swag/" class="md-nav__link">
+      <a href="../../../software/swag/" class="md-nav__link">
         
   
   
@@ -4408,24 +4414,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -4443,7 +4454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4461,7 +4472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -4489,7 +4500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/getting-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   
@@ -4567,7 +4578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/" class="md-nav__link">
+      <a href="../../commands/" class="md-nav__link">
         
   
   
@@ -4595,7 +4606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/basic/" class="md-nav__link">
+      <a href="../../commands/basic/" class="md-nav__link">
         
   
   
@@ -4623,7 +4634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/commands/advanced/" class="md-nav__link">
+      <a href="../../commands/advanced/" class="md-nav__link">
         
   
   
@@ -4656,6 +4667,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4666,11 +4679,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -4691,7 +4704,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4709,7 +4722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -4737,7 +4750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/target/" class="md-nav__link">
+      <a href="../target/" class="md-nav__link">
         
   
   
@@ -4765,7 +4778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/image-type/" class="md-nav__link">
+      <a href="../image-type/" class="md-nav__link">
         
   
   
@@ -4793,7 +4806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/image-contents/" class="md-nav__link">
+      <a href="../image-contents/" class="md-nav__link">
         
   
   
@@ -4821,7 +4834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/kernel-uboot/" class="md-nav__link">
+      <a href="../kernel-uboot/" class="md-nav__link">
         
   
   
@@ -4849,7 +4862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/filesystem/" class="md-nav__link">
+      <a href="../filesystem/" class="md-nav__link">
         
   
   
@@ -4877,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/host-docker/" class="md-nav__link">
+      <a href="../host-docker/" class="md-nav__link">
         
   
   
@@ -4905,7 +4918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/proxies-mirrors/" class="md-nav__link">
+      <a href="../proxies-mirrors/" class="md-nav__link">
         
   
   
@@ -4930,10 +4943,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../build-framework/switches/apt-cache/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APT cache
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4949,6 +4989,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manage_acng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MANAGE_ACNG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt_proxy_addr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APT_PROXY_ADDR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt_cacher_ng_cache_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APT_CACHER_NG_CACHE_DIR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_local_apt_deb_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_LOCAL_APT_DEB_CACHE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oras_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORAS_REPO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4961,7 +5076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/performance/" class="md-nav__link">
+      <a href="../performance/" class="md-nav__link">
         
   
   
@@ -4989,7 +5104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/patching/" class="md-nav__link">
+      <a href="../patching/" class="md-nav__link">
         
   
   
@@ -5017,7 +5132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/switches/diagnostics/" class="md-nav__link">
+      <a href="../diagnostics/" class="md-nav__link">
         
   
   
@@ -5053,7 +5168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/user-configurations/" class="md-nav__link">
+      <a href="../../user-configurations/" class="md-nav__link">
         
   
   
@@ -5081,7 +5196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/board-configuration/" class="md-nav__link">
+      <a href="../../board-configuration/" class="md-nav__link">
         
   
   
@@ -5109,7 +5224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/adding-a-board/" class="md-nav__link">
+      <a href="../../adding-a-board/" class="md-nav__link">
         
   
   
@@ -5187,7 +5302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/" class="md-nav__link">
+      <a href="../../extensions/" class="md-nav__link">
         
   
   
@@ -5215,7 +5330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/hooks/" class="md-nav__link">
+      <a href="../../extensions/hooks/" class="md-nav__link">
         
   
   
@@ -5243,7 +5358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/list/" class="md-nav__link">
+      <a href="../../extensions/list/" class="md-nav__link">
         
   
   
@@ -5271,7 +5386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/kernel-rust/" class="md-nav__link">
+      <a href="../../extensions/kernel-rust/" class="md-nav__link">
         
   
   
@@ -5299,7 +5414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/extensions/ccache-remote/" class="md-nav__link">
+      <a href="../../extensions/ccache-remote/" class="md-nav__link">
         
   
   
@@ -5335,7 +5450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-framework/desktops/" class="md-nav__link">
+      <a href="../../desktops/" class="md-nav__link">
         
   
   
@@ -5420,7 +5535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_Forums/" class="md-nav__link">
+      <a href="../../../Community_Forums/" class="md-nav__link">
         
   
   
@@ -5448,7 +5563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_Github/" class="md-nav__link">
+      <a href="../../../Community_Github/" class="md-nav__link">
         
   
   
@@ -5476,7 +5591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Community_IRC/" class="md-nav__link">
+      <a href="../../../Community_IRC/" class="md-nav__link">
         
   
   
@@ -5561,7 +5676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Process_Contribute/" class="md-nav__link">
+      <a href="../../../Process_Contribute/" class="md-nav__link">
         
   
   
@@ -5589,7 +5704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute/Datacenter/" class="md-nav__link">
+      <a href="../../../Contribute/Datacenter/" class="md-nav__link">
         
   
   
@@ -5617,7 +5732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute/Armbian-config/" class="md-nav__link">
+      <a href="../../../Contribute/Armbian-config/" class="md-nav__link">
         
   
   
@@ -5645,7 +5760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WifiPerformance/" class="md-nav__link">
+      <a href="../../../WifiPerformance/" class="md-nav__link">
         
   
   
@@ -5673,7 +5788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mirrors/" class="md-nav__link">
+      <a href="../../../Mirrors/" class="md-nav__link">
         
   
   
@@ -5701,7 +5816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Process_CI/" class="md-nav__link">
+      <a href="../../../Process_CI/" class="md-nav__link">
         
   
   
@@ -5729,7 +5844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-Guide_Board-Support-Rules/" class="md-nav__link">
+      <a href="../../../User-Guide_Board-Support-Rules/" class="md-nav__link">
         
   
   
@@ -5784,10 +5899,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-become-a-maintainer" class="md-nav__link">
+  <a href="#manage_acng" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to become a maintainer?
+        MANAGE_ACNG
       
     </span>
   </a>
@@ -5795,10 +5910,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#expectations" class="md-nav__link">
+  <a href="#apt_proxy_addr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Expectations
+        APT_PROXY_ADDR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt_cacher_ng_cache_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APT_CACHER_NG_CACHE_DIR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_local_apt_deb_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_LOCAL_APT_DEB_CACHE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oras_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORAS_REPO
       
     </span>
   </a>
@@ -5823,7 +5971,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/main/docs/Release_Board-Maintainers.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/armbian/documentation/edit/main/docs/build-framework/switches/apt-cache.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -5832,53 +5980,34 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/main/docs/Release_Board-Maintainers.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/main/docs/build-framework/switches/apt-cache.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="board-maintainers">Board Maintainers<a class="headerlink" href="#board-maintainers" title="Permanent link">&para;</a></h1>
-<h2 id="how-to-become-a-maintainer">How to become a maintainer?<a class="headerlink" href="#how-to-become-a-maintainer" title="Permanent link">&para;</a></h2>
-<p>If you are interested in being a maintainer please review <a href="/User-Guide_Board-Support-Rules/">Board Support Rules</a>. Then <a href="https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/">apply here</a> and wait for acceptance. Once accepted you will be added to our infrastruture. For this reason we need <a href="https://www.armbian.com/maintainer-registry/">additional information</a> to complete your registration process.</p>
-<div class="admonition question">
-<p class="admonition-title">Requirements?</p>
+<h1 id="apt-cache">APT cache<a class="headerlink" href="#apt-cache" title="Permanent link">&para;</a></h1>
+<p>Cache Debian and Ubuntu packages between builds so they are not re-downloaded every time.</p>
+<h4 id="manage_acng">MANAGE_ACNG<a class="headerlink" href="#manage_acng" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>no</code></p>
+<p>Controls use of <code>apt-cacher-ng</code>, a caching proxy for Debian/Ubuntu apt repositories that speeds up repeated builds by serving already-downloaded packages from disk. Off by default. It accepts either a plain <code>yes</code>/<code>no</code> or a full URL, as described below; anything that is not <code>yes</code>, <code>no</code> or empty must be a valid <code>http</code>/<code>https</code> URL, or the build aborts.</p>
 <ul>
-<li>You must have access to the hardware you applied to maintain</li>
-<li>You must have a Github ID which should be listed in the documentation</li>
-<li>You must have a forums account</li>
-<li>You must have an Jira account and keep track of issues filed for your board</li>
-<li>You must make sure <a href="https://www.armbian.com/maintainer-registry/">Armbian management</a> has been informed of all of the above IDs for our documentation</li>
-<li>You should know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console</li>
-<li>Knowledge in development, writing code and so on is optional but welcome</li>
+<li><code>yes</code> sets up an automatically managed <code>apt-cacher-ng</code> instance on the build host. This mode is incompatible with container builds.</li>
+<li>but you can provide a URL for a self-managed <code>apt-cacher-ng</code> instance, e.g. <code>"http://apt-cacher.example.com:3142"</code></li>
 </ul>
-</div>
-<h2 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h2>
-<p>Maintainers must not necessarily be persons with development experience. They act as a intersection between end-users and the development team and serve the developers in best-effort manner. They are encouraged to answer basic/simple user questions (if possible, also best effort) without having to bother the development team. They are allowed to record bugs but are not allowed to escalate bugs. Team leaders do.</p>
-<p>Take note that it is still up to development team&rsquo;s discretion what gets attention since Armbian has to plan carefully how to spend its very limited resources.</p>
-<ul>
-<li>You must participate in release process. Ideally you attend meetings related to releases. On that occasion you are given the chance to point out critical issues with your board.</li>
-<li>You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release <a href="https://rsync.armbian.com/incoming/">https://rsync.armbian.com/incoming/</a></li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">What are we looking for?</p>
-<ul>
-<li>does the board boot to both CLI and Desktop?</li>
-<li>is the desktop usable?</li>
-<li>does USB work? (at all or partially)</li>
-<li>other things such as wireless, audio</li>
-</ul>
-</div>
-<p>If something does not work, this is fine and normal. The important part is that it is documented and we get notified about the issues. Known problems should be placed into the Jira ticket and link placed to the board download page. While not required, you should have a build environment setup so you can build images with the most recent images and test them right away. Your feedback, either positive or negative, is very welcome. You are free to add comments to every commit and pull request.</p>
-<p>Ideally you have multiple microSD cards laying around to test regular updates on current releases and nightly without having to re-flash the same card every time to switch between branches.</p>
-<p>Alternatively you can use auto-built images - they are placed at the ever end of each board download pages under &ldquo;Rolling releases&rdquo;.</p>
-<ul>
-<li>You must provide &ldquo;best effort&rdquo; support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request &ldquo;armbianmonitor -u&rdquo; output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <a href="https://www.armbian.com/download/">https://www.armbian.com/download/</a></li>
-</ul>
-<ul>
-<li>You must provide &ldquo;best effort&rdquo; support in Jira. Review submitted issues for you board made by Armbian&rsquo;s contributors</li>
-</ul>
+<h4 id="apt_proxy_addr">APT_PROXY_ADDR<a class="headerlink" href="#apt_proxy_addr" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>localhost:3142</code></p>
+<p>Address of the apt caching proxy that package downloads are routed through during the rootfs bootstrap. Defaults to <code>localhost:3142</code>, the standard <code>apt-cacher-ng</code> port; when it is set and <code>MANAGE_ACNG</code> is not managing its own instance, the debootstrap and chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared cache; leave it as-is if you have no external proxy.</p>
+<h4 id="apt_cacher_ng_cache_dir">APT_CACHER_NG_CACHE_DIR<a class="headerlink" href="#apt_cacher_ng_cache_dir" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>/var/cache/apt-cacher-ng</code></p>
+<p>Filesystem directory where the managed <code>apt-cacher-ng</code> instance (<code>MANAGE_ACNG=yes</code>) stores its cached packages. Defaults to <code>/var/cache/apt-cacher-ng</code>; point it at a larger or faster volume when the default location lacks space, or to keep the cache on persistent storage across builds.</p>
+<h4 id="use_local_apt_deb_cache">USE_LOCAL_APT_DEB_CACHE<a class="headerlink" href="#use_local_apt_deb_cache" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>yes</code></p>
+<p>Keeps a local cache of downloaded <code>.deb</code> packages under <code>$SRC/cache/aptcache</code> and reuses it across builds, so unchanged packages are not fetched again. On by default because it noticeably speeds up repeated builds; set <code>no</code> to always download fresh packages, at the cost of build time and bandwidth — the build warns that this is generally not a good idea.</p>
+<h4 id="oras_repo">ORAS_REPO<a class="headerlink" href="#oras_repo" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>oras-project</code></p>
+<p>GitHub organisation the build downloads the ORAS OCI client binary from, ORAS being the tool used to push and pull OCI-cached artifacts. Defaults to <code>oras-project</code>, the upstream releases; override it to pull the binary from a fork or mirror. The build already switches this automatically for architectures without an official upstream binary (such as loong64), so you rarely set it by hand.</p>
 
 
 
@@ -5984,10 +6113,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

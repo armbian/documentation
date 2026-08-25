@@ -221,6 +221,10 @@
          <lastmod>2026-08-25</lastmod>
     </url>
     <url>
+         <loc>https://docs.armbian.com/build-framework/switches/apt-cache/</loc>
+         <lastmod>2026-08-25</lastmod>
+    </url>
+    <url>
          <loc>https://docs.armbian.com/build-framework/switches/diagnostics/</loc>
          <lastmod>2026-08-25</lastmod>
     </url>
@@ -250,6 +254,10 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/build-framework/switches/performance/</loc>
+         <lastmod>2026-08-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/build-framework/switches/proxies-mirrors/</loc>
          <lastmod>2026-08-25</lastmod>
     </url>
     <url>
