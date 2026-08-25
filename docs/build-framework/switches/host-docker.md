@@ -253,7 +253,7 @@ Selects the download mirror used for the cross-toolchain and the Debian/Ubuntu p
 
 `string` · default: auto
 
-Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Left on auto by default so it picks a suitable mirror for you; set it to your own mirror's URL — for example `LOCAL_MIRROR="https://yourlocalmirror.com"` — to build against an internal or geographically closer mirror. Handy on isolated networks or to reduce load on the public infrastructure.
+Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Give it the mirror's **host and path only, without a scheme** — the build prepends `http://` when it writes the apt source, so `LOCAL_MIRROR="apt.example.com/armbian"` becomes `http://apt.example.com/armbian` (a value like `https://…` would produce an invalid `http://https://…`). Left on auto by default; set it to build against an internal or geographically closer mirror — handy on isolated networks or to reduce load on the public infrastructure.
 
 #### MAINLINE_MIRROR
 

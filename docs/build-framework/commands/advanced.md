@@ -1,6 +1,6 @@
 ---
 seo_title: "Armbian advanced build commands"
-description: "Advanced Armbian build commands: build the kernel, run kernel-config menuconfig, rewrite kernel/U-Boot patches, check device trees, and inspect boards and hooks."
+description: "Advanced Armbian build commands: create and rewrite kernel, U-Boot, ATF and crust patches, validate device trees, build the rootfs, flash images, and inspect boards and extension hooks."
 ---
 
 # Advanced commands
@@ -166,7 +166,7 @@ Create patch files for the crust management-processor firmware (Allwinner boards
 
 Usage:
 ```bash
-./compile.sh crust-patch BOARD=nanopi-r5c BRANCH=edge
+./compile.sh crust-patch BOARD=orangepizero BRANCH=edge
 ```
 
 ## rewrite-uboot-patches
