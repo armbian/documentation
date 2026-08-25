@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Advanced Armbian build commands: build the kernel, run kernel-config menuconfig, rewrite kernel/U-Boot patches, check device trees, and inspect boards and hooks.">
+        <meta name="description" content="Advanced Armbian build commands: create and rewrite kernel, U-Boot, ATF and crust patches, validate device trees, build the rootfs, flash images, and inspect boards and extension hooks.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian advanced build commands">
-  <meta property="og:description" content="Advanced Armbian build commands: build the kernel, run kernel-config menuconfig, rewrite kernel/U-Boot patches, check device trees, and inspect boards and hooks.">
+  <meta property="og:description" content="Advanced Armbian build commands: create and rewrite kernel, U-Boot, ATF and crust patches, validate device trees, build the rootfs, flash images, and inspect boards and extension hooks.">
   <meta name="twitter:title" content="Armbian advanced build commands">
-  <meta name="twitter:description" content="Advanced Armbian build commands: build the kernel, run kernel-config menuconfig, rewrite kernel/U-Boot patches, check device trees, and inspect boards and hooks.">
+  <meta name="twitter:description" content="Advanced Armbian build commands: create and rewrite kernel, U-Boot, ATF and crust patches, validate device trees, build the rootfs, flash images, and inspect boards and extension hooks.">
   
     <meta name="twitter:card" content="summary">
   
@@ -6277,7 +6277,7 @@ this is not the preferred way of adding these files.</p>
 <h2 id="crust-patch">crust-patch<a class="headerlink" href="#crust-patch" title="Permanent link">&para;</a></h2>
 <p>Create patch files for the crust management-processor firmware (Allwinner boards with an AR100 coprocessor), using the same interactive workflow as <code>uboot-patch</code>.</p>
 <p>Usage:
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>crust-patch<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>nanopi-r5c<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>./compile.sh<span class="w"> </span>crust-patch<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>orangepizero<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>edge
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="rewrite-uboot-patches">rewrite-uboot-patches<a class="headerlink" href="#rewrite-uboot-patches" title="Permanent link">&para;</a></h2>
 <p>Prepares git, applies patches to git, and rewrites them back from git

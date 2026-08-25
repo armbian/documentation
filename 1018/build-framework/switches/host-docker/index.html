@@ -7051,7 +7051,7 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 </ul>
 <h4 id="local_mirror">LOCAL_MIRROR<a class="headerlink" href="#local_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: auto</p>
-<p>Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Left on auto by default so it picks a suitable mirror for you; set it to your own mirror&rsquo;s URL — for example <code>LOCAL_MIRROR="https://yourlocalmirror.com"</code> — to build against an internal or geographically closer mirror. Handy on isolated networks or to reduce load on the public infrastructure.</p>
+<p>Forces a specific Armbian apt mirror, overriding the automatic mirror selection the build would otherwise make. Give it the mirror&rsquo;s <strong>host and path only, without a scheme</strong> — the build prepends <code>http://</code> when it writes the apt source, so <code>LOCAL_MIRROR="apt.example.com/armbian"</code> becomes <code>http://apt.example.com/armbian</code> (a value like <code>https://…</code> would produce an invalid <code>http://https://…</code>). Left on auto by default; set it to build against an internal or geographically closer mirror — handy on isolated networks or to reduce load on the public infrastructure.</p>
 <h4 id="mainline_mirror">MAINLINE_MIRROR<a class="headerlink" href="#mainline_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <p>Selects which mirror of <code>linux-stable.git</code> the mainline kernel sources are cloned from. Leave it empty to use the official <code>git.kernel.org</code>; pick one of the mirrors below when that server is slow for you, as it commonly is for users in mainland China.</p>
