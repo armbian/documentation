@@ -108,6 +108,12 @@ Proxy URL for FTP traffic, propagated into the build container and the tools it 
 
 Comma-separated list of hosts and domains that should bypass the proxies above, propagated into the build container and the tools it runs. Empty by default; set it to keep local mirrors, registries or internal hosts off the proxy.
 
+#### NAMESERVER
+
+`IPv4 address` · default: autodetected, else `1.0.0.1`
+
+DNS resolver used **inside the build chroot** while packages are downloaded; it does not affect the finished image (DNS there is left to DHCP/systemd). When you leave it unset the framework autodetects a usable resolver from the host's `/etc/resolv.conf`, falling back to `1.0.0.1` (Cloudflare); set it explicitly to force a specific resolver — for example on an isolated network where the host's resolver is unreachable from the chroot.
+
 #### GITHUB_SOURCE
 
 `string` · default: `https://github.com`
