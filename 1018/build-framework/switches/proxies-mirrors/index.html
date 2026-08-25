@@ -6261,17 +6261,17 @@
 <p><code>string</code></p>
 <p>Selects which mirror of <code>u-boot.git</code> the mainline U-Boot sources are cloned from. Leave it empty to use the official <code>source.denx.de</code>; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.</p>
 <ul>
-<li><code>github</code>: use the mirror provided by github, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code></li>
-<li><code>gitee</code>: use the mirror provided by Gitee, a Chinese git services</li>
+<li><code>github</code>: use the mirror provided by GitHub, the same as <code>USE_GITHUB_UBOOT_MIRROR=yes</code></li>
+<li><code>gitee</code>: use the mirror provided by Gitee, a Chinese Git service</li>
 <li>leave empty to use the official <code>source.denx.de</code>, which may be very slow for mainland China users</li>
 </ul>
 <h4 id="github_mirror">GITHUB_MIRROR<a class="headerlink" href="#github_mirror" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <p>Selects a mirror or proxy for the many GitHub-hosted repositories the build clones. Leave it empty to connect to GitHub directly; choose one of the options below when GitHub is slow or unreachable — again, most relevant for users in mainland China or behind a corporate git proxy.</p>
 <ul>
-<li><code>fastgit</code>: use the mirror provided by fastgit.org</li>
-<li><code>gitclone</code>: use the mirror provided by gitclone.com</li>
-<li><code>cnpmjs</code>: use the mirror provided by cnpmjs.org</li>
+<li><code>fastgit</code>: use the fastgit.org mirror (<code>hub.fastgit.xyz</code>)</li>
+<li><code>ghproxy</code>: use a GitHub proxy — defaults to <code>ghfast.top</code>; override the host with <code>GHPROXY_ADDRESS</code></li>
+<li><code>gitclone</code>: use the gitclone.com mirror</li>
 <li><code>gitproxy</code>: use a pass-through git proxy whose full base URL is given in <code>GITPROXY_ADDRESS</code> (e.g. <code>https://gitproxy.example.com/github.com</code>, no trailing slash). Selected automatically when a CI runner exports <code>GITPROXY_ADDRESS</code>.</li>
 <li>leave empty to connect directly to GitHub, which may be very slow for mainland China users</li>
 </ul>
@@ -6282,7 +6282,7 @@
 <p><code>string</code></p>
 <p>Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.</p>
 <ul>
-<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>fastgit</code>, DOWNLOAD_MIRROR=<code>china</code></li>
+<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>ghproxy</code>, DOWNLOAD_MIRROR=<code>china</code></li>
 <li>leave empty to use default settings</li>
 </ul>
 <h4 id="http_proxy">HTTP_PROXY<a class="headerlink" href="#http_proxy" title="Permanent link">&para;</a></h4>

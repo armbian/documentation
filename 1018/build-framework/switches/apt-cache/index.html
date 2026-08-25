@@ -5997,8 +5997,8 @@
 <li>but you can provide a URL for a self-managed <code>apt-cacher-ng</code> instance, e.g. <code>"http://apt-cacher.example.com:3142"</code></li>
 </ul>
 <h4 id="apt_proxy_addr">APT_PROXY_ADDR<a class="headerlink" href="#apt_proxy_addr" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>localhost:3142</code></p>
-<p>Address of the apt caching proxy that package downloads are routed through during the rootfs bootstrap. Defaults to <code>localhost:3142</code>, the standard <code>apt-cacher-ng</code> port; when it is set and <code>MANAGE_ACNG</code> is not managing its own instance, the debootstrap and chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared cache; leave it as-is if you have no external proxy.</p>
+<p><code>string</code> · default: empty</p>
+<p>Address of an external apt caching proxy to route package downloads through during the rootfs bootstrap and chroot apt operations. <strong>Empty by default</strong> — no proxy is used unless you set it. When set (and <code>MANAGE_ACNG</code> is not managing its own instance), debootstrap and the chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared package cache. The managed <code>apt-cacher-ng</code> path (<code>MANAGE_ACNG=yes</code>) assumes the standard <code>localhost:3142</code> when this is unset.</p>
 <h4 id="apt_cacher_ng_cache_dir">APT_CACHER_NG_CACHE_DIR<a class="headerlink" href="#apt_cacher_ng_cache_dir" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>/var/cache/apt-cacher-ng</code></p>
 <p>Filesystem directory where the managed <code>apt-cacher-ng</code> instance (<code>MANAGE_ACNG=yes</code>) stores its cached packages. Defaults to <code>/var/cache/apt-cacher-ng</code>; point it at a larger or faster volume when the default location lacks space, or to keep the cache on persistent storage across builds.</p>
