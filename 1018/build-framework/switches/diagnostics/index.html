@@ -5090,6 +5090,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#share_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5116,6 +5127,17 @@
     <span class="md-ellipsis">
       
         SHOW_DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RAW_LOG
       
     </span>
   </a>
@@ -5877,6 +5899,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#share_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5903,6 +5936,17 @@
     <span class="md-ellipsis">
       
         SHOW_DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RAW_LOG
       
     </span>
   </a>
@@ -5945,6 +5989,11 @@
 
 <h1 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">&para;</a></h1>
 <p>Logs and diagnostic output for a build.</p>
+<h4 id="debug">DEBUG<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>no</code></p>
+<p>The umbrella verbosity switch. <code>DEBUG=yes</code> forces on both <code>SHOW_LOG</code> (stream every command live) and <code>SHOW_DEBUG</code> (debug-level messages and extra state dumps) — the quickest way to get maximum visibility when diagnosing a build. See those two switches for what each turns on.</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span>build<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>...<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>...<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span>yes
+</span></code></pre></div></td></tr></table></div>
 <h4 id="share_log">SHARE_LOG<a class="headerlink" href="#share_log" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -5952,7 +6001,7 @@
 <li><code>no</code> (default)</li>
 </ul>
 <p>At the end of the build the framework assembles the whole run into a single ANSI log file; with <code>SHARE_LOG=yes</code> it uploads that file to Armbian&rsquo;s paste servers — trying <code>paste.armbian.com</code> and its mirrors in turn until one succeeds — and prints the resulting share URL (also exposed as a <code>logs_url</code> output under GitHub Actions). It defaults to <code>no</code> because uploading is a network action and the log embeds local paths and environment details, so when left off the build instead prints the ready-made <code>curl</code> commands to upload it yourself. Turn it on when reporting a build issue, so maintainers can open the complete log from the link.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span><span class="nv">SHARE_LOG</span><span class="o">=</span>yes
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh<span class="w"> </span><span class="nv">SHARE_LOG</span><span class="o">=</span>yes
 </span></code></pre></div></td></tr></table></div>
 <h4 id="show_log">SHOW_LOG<a class="headerlink" href="#show_log" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>yes</code> when attached to a terminal</p>
@@ -5960,6 +6009,9 @@
 <h4 id="show_debug">SHOW_DEBUG<a class="headerlink" href="#show_debug" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
 <p>Raises the verbosity of the build to debug level: it lets the many <code>debug</code>-severity <code>display_alert</code> messages through, triggers extra state and variable dumps throughout the pipeline, un-quiets <code>apt</code> inside the chroot (dropping its <code>-qq</code> flag so package <code>Conf</code>/<code>Inst</code> lines appear), and bumps the log level of the Python configuration-aggregation helpers. It defaults to <code>no</code> to keep the log readable and focused on the high-level flow, and is automatically turned on when <code>DEBUG=yes</code>. Enable it when you are diagnosing the build framework itself and need to see exactly what each step is doing.</p>
+<h4 id="raw_log">RAW_LOG<a class="headerlink" href="#raw_log" title="Permanent link">&para;</a></h4>
+<p><code>string</code> · default: <code>no</code></p>
+<p>With <code>RAW_LOG=yes</code> the framework also keeps the uncompressed raw logs and bundles them into a <code>*.raw.tar</code> under <code>output/logs</code>, alongside the usual ANSI / ASCII / Markdown logs. Useful when you need the unprocessed output for deeper analysis.</p>
 
 
 

@@ -6095,8 +6095,8 @@
 </ul>
 <p>Points ccache at a private cache directory inside the build tree rather than the shared one, which avoids the file-ownership problems that arise when the build is run under <code>sudo</code>. Because a private cache only makes sense with caching active, setting <code>yes</code> implicitly enables <code>USE_CCACHE</code> too, so you do not have to set both. Reach for it when you want ccache but are building as root and do not want to share the cache with other users on the host.</p>
 <h4 id="ccache_dir">CCACHE_DIR<a class="headerlink" href="#ccache_dir" title="Permanent link">&para;</a></h4>
-<p><code>string</code> · default: <code>$SRC/cache/ccache</code></p>
-<p>Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from <code>CCACHE_TEMPDIR</code>, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away.</p>
+<p><code>string</code> · default: <code>$SRC/cache/ccache</code> for Docker and <code>PRIVATE_CCACHE=yes</code> builds</p>
+<p>Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from <code>CCACHE_TEMPDIR</code>, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away. The framework only sets this path for Docker builds and when <code>PRIVATE_CCACHE=yes</code>; a native <code>USE_CCACHE=yes</code> build without <code>PRIVATE_CCACHE</code> uses ccache&rsquo;s own default (<code>~/.cache/ccache</code>) unless you set <code>CCACHE_DIR</code> yourself.</p>
 <h4 id="use_tmpfs">USE_TMPFS<a class="headerlink" href="#use_tmpfs" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>
@@ -6134,9 +6134,9 @@
 <h4 id="parallel_workers">PARALLEL_WORKERS<a class="headerlink" href="#parallel_workers" title="Permanent link">&para;</a></h4>
 <p><code>integer</code></p>
 <ul>
-<li><code>1</code> to <code>32</code>: manually set the number of workers when <code>PARALLEL_PATCHES=yes</code>. Default is auto-calculated from <code>nproc</code>.</li>
+<li>a positive integer: manually set the number of workers when <code>PARALLEL_PATCHES=yes</code>. Default is auto-calculated (which caps itself at 32 for I/O-bound git operations); a manual value is used as given, not capped.</li>
 </ul>
-<p>Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and only takes effect when <code>PARALLEL_PATCHES=yes</code>. Leave it unset to let the framework size the pool automatically from the available cores, which is the right choice on most machines. Set an explicit count to throttle back the parallelism — for instance to reduce peak memory or disk pressure from the overlay mounts; a value that is out of range or otherwise invalid is ignored and the auto-calculation is used instead.</p>
+<p>Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and only takes effect when <code>PARALLEL_PATCHES=yes</code>. Leave it unset to let the framework size the pool automatically from the available cores, which is the right choice on most machines. Set an explicit count to throttle back the parallelism — for instance to reduce peak memory or disk pressure from the overlay mounts; a value that is negative or otherwise invalid is ignored and the auto-calculation is used instead.</p>
 <h4 id="artifact_ignore_cache">ARTIFACT_IGNORE_CACHE<a class="headerlink" href="#artifact_ignore_cache" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>

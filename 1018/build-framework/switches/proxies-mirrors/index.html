@@ -6255,6 +6255,7 @@
 <li><code>google</code>: use the mirror provided by Google, the same as <code>USE_MAINLINE_GOOGLE_MIRROR=yes</code></li>
 <li><code>tuna</code>: use the mirror provided by Tsinghua University</li>
 <li><code>bfsu</code>: use the mirror provided by Beijing Foreign Studies University, which is similar to <code>tuna</code></li>
+<li><code>gitverse</code>: use the GitVerse (<code>gitverse.ru</code>) mirror</li>
 <li>leave empty to use the official <code>git.kernel.org</code>, which may be very slow for mainland China users</li>
 </ul>
 <h4 id="uboot_mirror">UBOOT_MIRROR<a class="headerlink" href="#uboot_mirror" title="Permanent link">&para;</a></h4>
@@ -6282,7 +6283,7 @@
 <p><code>string</code></p>
 <p>Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.</p>
 <ul>
-<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>ghproxy</code>, DOWNLOAD_MIRROR=<code>china</code></li>
+<li><code>china</code>: MAINLINE_MIRROR=<code>tuna</code>, UBOOT_MIRROR=<code>gitee</code>, GITHUB_MIRROR=<code>ghproxy</code>, GHCR_MIRROR=<code>nju</code>, DOWNLOAD_MIRROR=<code>china</code></li>
 <li>leave empty to use default settings</li>
 </ul>
 <h4 id="http_proxy">HTTP_PROXY<a class="headerlink" href="#http_proxy" title="Permanent link">&para;</a></h4>

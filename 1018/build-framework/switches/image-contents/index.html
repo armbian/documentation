@@ -6224,7 +6224,7 @@
 <p>Pre-installs the matching kernel headers into the image so that DKMS and other out-of-tree kernel modules can be compiled directly on the running board. Off by default because the headers add noticeable size; enable it when the board&rsquo;s users will build kernel modules themselves.</p>
 <h4 id="extrawifi">EXTRAWIFI<a class="headerlink" href="#extrawifi" title="Permanent link">&para;</a></h4>
 <p><code>yes</code> (default) | <code>no</code></p>
-<p>Builds and includes a set of out-of-tree Wi-Fi and Bluetooth adapter drivers that are not in the mainline kernel, covering many popular USB and SDIO chipsets. On by default; set <code>no</code> to build with in-kernel drivers only — for a leaner image, or when a mainline driver already covers your adapter. See the <a href="https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507">driver list</a>.</p>
+<p>Builds and includes a set of out-of-tree Wi-Fi and Bluetooth adapter drivers that are not in the mainline kernel, covering many popular USB and SDIO chipsets. On by default; set <code>no</code> to build with in-kernel drivers only — for a leaner image, or when a mainline driver already covers your adapter. See the <a href="https://github.com/armbian/build/blob/main/lib/functions/compilation/patch/drivers_network.sh">driver list</a>.</p>
 <h4 id="bspfreeze">BSPFREEZE<a class="headerlink" href="#bspfreeze" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <ul>

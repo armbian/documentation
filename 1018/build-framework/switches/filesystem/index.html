@@ -6604,11 +6604,11 @@ root filesystem subvolume:</p>
 <li>sha: generate SHA256 hash for image</li>
 <li>gpg: sign image using gpg</li>
 <li>xz: compress image only using xz format<ul>
-<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( 0 - <strong>1</strong> - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher</li>
+<li><strong>IMAGE_XZ_COMPRESSION_RATIO</strong> ( 0 - 9 ) xz image compression level. Left unset it is auto-selected per host (and forced to <code>0</code> on stable <code>BETA=no</code> builds). Beware of memory consumption when going higher</li>
 </ul>
 </li>
 <li>zstd: compress image only using zstd format<ul>
-<li><strong>ZSTD_COMPRESSION_LEVEL</strong> ( 1 - <strong>9</strong> - 19 ) images compression levels when using zstd compressor. Beware of memory consumption when going higher</li>
+<li><strong>ZSTD_COMPRESSION_LEVEL</strong> ( 1 - 22 ) zstd image compression level. Left unset it is auto-selected per host (from <code>9</code>, up to <code>22</code> with more threads and memory). Beware of memory consumption when going higher</li>
 </ul>
 </li>
 </ul>
