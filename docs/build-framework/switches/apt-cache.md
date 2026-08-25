@@ -3,7 +3,7 @@ seo_title: "Armbian build apt cache switches"
 description: "Speed up repeated Armbian builds with a package cache: apt-cacher-ng, a local .deb cache, the apt proxy address and the ORAS client source."
 ---
 
-# APT cache
+# Apt
 
 Cache Debian and Ubuntu packages between builds so they are not re-downloaded every time.
 

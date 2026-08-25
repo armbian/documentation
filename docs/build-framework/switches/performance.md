@@ -3,7 +3,7 @@ seo_title: "Armbian build caching & performance switches"
 description: "Speed up Armbian builds: ccache, tmpfs working dirs, parallel patch rewriting, CPU thread count and native-armhf execution on arm64 hosts."
 ---
 
-# Caching & performance
+# Performance
 
 Switches that trade disk, RAM or cache for faster builds.
 

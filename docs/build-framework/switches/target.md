@@ -3,7 +3,7 @@ seo_title: "Armbian build target switches: BOARD, BRANCH, RELEASE"
 description: "Select what the Armbian build framework builds: BOARD, kernel BRANCH (vendor, legacy, current, edge) and the Debian or Ubuntu RELEASE."
 ---
 
-# Target selection
+# Target
 
 Which board, kernel branch and userspace release to build. Set these to skip the interactive dialog.
 

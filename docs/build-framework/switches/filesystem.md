@@ -3,7 +3,7 @@ seo_title: "Armbian filesystem & image build switches"
 description: "Root filesystem type, Btrfs options, LUKS encryption, partition sizes and labels, sector size and image compression for the Armbian build."
 ---
 
-# Filesystem & image
+# Filesystem
 
 Root filesystem type, encryption, partition sizes and labels, and how the finished image is compressed.
 

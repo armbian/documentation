@@ -3,7 +3,7 @@ seo_title: "Armbian image type switches: minimal & desktop"
 description: "Choose the Armbian image type: BUILD_MINIMAL for a bare CLI image, or BUILD_DESKTOP with DESKTOP_ENVIRONMENT and DESKTOP_TIER for a desktop build."
 ---
 
-# Image type
+# Image
 
 Armbian builds three image flavours, chosen with the two switches below: a **minimal** bare-CLI image, the **standard** CLI/server image (the default when neither switch is set), and a **desktop** image. For desktop builds you then pick which environment to install and how many applications come with it.
 

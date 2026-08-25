@@ -3,7 +3,7 @@ seo_title: "Armbian build proxy & mirror switches"
 description: "Route the Armbian build through proxies and faster mirrors: HTTP/HTTPS proxies, kernel, U-Boot and GitHub download mirrors, a git proxy and regional presets."
 ---
 
-# Proxies & mirrors
+# Mirrors
 
 Route source downloads and package fetches through HTTP proxies, faster regional mirrors, or a git proxy — useful behind a corporate proxy or in regions where the default upstreams are slow.
 

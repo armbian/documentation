@@ -19,13 +19,13 @@ The reference is split by what each switch controls:
 | Page | Covers |
 |---|---|
 | [Target](target.md) | Which board, kernel branch and release to build |
-| [Image type](image-type.md) | Minimal / desktop image and desktop selection |
-| [Image contents](image-contents.md) | Packages, firmware, networking and first-run behaviour inside the image |
-| [Kernel & U-Boot](kernel-uboot.md) | Kernel source, config, compiler and bootloader options |
-| [Filesystem & image](filesystem.md) | Root filesystem, partitions, labels, sizes and compression |
-| [Build host & Docker](host-docker.md) | The build host and the Docker build container |
-| [Proxies & mirrors](proxies-mirrors.md) | HTTP proxies, download mirrors and a git proxy |
-| [APT cache](apt-cache.md) | apt-cacher-ng and local `.deb` package caching |
-| [Caching & performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
-| [Patch & debug](patching.md) | Round-tripping patches and build-debug switches |
+| [Image](image-type.md) | Minimal / desktop image and desktop selection |
+| [Contents](image-contents.md) | Packages, firmware, networking and first-run behaviour inside the image |
+| [Kernel](kernel-uboot.md) | Kernel source, config, compiler and bootloader options |
+| [Filesystem](filesystem.md) | Root filesystem, partitions, labels, sizes and compression |
+| [Host](host-docker.md) | The build host and the Docker build container |
+| [Mirrors](proxies-mirrors.md) | HTTP proxies, download mirrors and a git proxy |
+| [Apt](apt-cache.md) | apt-cacher-ng and local `.deb` package caching |
+| [Performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
+| [Patching](patching.md) | Round-tripping patches and build-debug switches |
 | [Diagnostics](diagnostics.md) | Build logs and debug output |

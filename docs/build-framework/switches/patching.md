@@ -3,7 +3,7 @@ seo_title: "Armbian patch & debug build switches"
 description: "Developer switches for the Armbian build: round-trip kernel/U-Boot patches to git, rewrite patch files, pause to create ATF/crust patches and debug patching."
 ---
 
-# Patch & debug
+# Patching
 
 Developer-oriented switches for round-tripping patches and debugging the build. Most are only relevant when working on the framework's patch sets — see also [User configurations](/build-framework/user-configurations/#user-provided-patches).
 

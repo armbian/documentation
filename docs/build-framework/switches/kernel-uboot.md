@@ -3,7 +3,7 @@ seo_title: "Armbian kernel & U-Boot build switches"
 description: "Kernel and bootloader switches for the Armbian build: kernel source fetch, config, compiler, BTF, stubble UKI, ATF/TF-A and U-Boot options."
 ---
 
-# Kernel & U-Boot
+# Kernel
 
 Switches that control how the kernel and bootloader are fetched, configured and built: kernel source and config, compiler, kernel features (BTF, stubble UKI), ATF/TF-A and U-Boot.
 

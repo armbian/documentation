@@ -3,7 +3,7 @@ seo_title: "Armbian image contents build switches"
 description: "Control what goes inside an Armbian image: networking stack, kernel headers, firmware, WiFi drivers, extensions and first-run behaviour."
 ---
 
-# Image contents
+# Contents
 
 Control what lands inside the rootfs — firmware and kernel packages, the networking stack, extra drivers, extensions and first-run behaviour.
 

@@ -3,7 +3,7 @@ seo_title: "Armbian build host & Docker switches"
 description: "Configure the Armbian build host and the Docker build container: base image, auto-pull, pruning, OCI cache, expert mode and clean levels."
 ---
 
-# Build host & Docker
+# Host
 
 Control the build host and the Docker build container.
 
