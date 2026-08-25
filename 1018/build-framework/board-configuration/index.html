@@ -7052,7 +7052,7 @@ branch (the suffix names the branch). A branch-specific blacklist replaces the g
 <li><code>fat</code>: <a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT32</a></li>
 </ul>
 <h4 id="bootsize">BOOTSIZE<a class="headerlink" href="#bootsize" title="Permanent link">&para;</a></h4>
-<p><code>integer</code> (MiB) · default: <code>256</code></p>
+<p><code>integer</code> (MiB) · default: <code>256</code> (when a separate <code>/boot</code> is required)</p>
 <p>Size of a separate <code>/boot</code> partition, in MiB, created when one is required. Override
 it where a board&rsquo;s bootloader needs more room; the partitioning step falls back to
 256 MiB when a boot partition is required but the value is left empty or unusably
@@ -7082,7 +7082,7 @@ for headless devices.</p>
 <li><code>no</code>: no video output; desktop builds are refused (<code>BUILD_DESKTOP</code> is forced off)</li>
 </ul>
 <p>Declares whether the board can drive a display (for splash, desktop and other
-eyecandy). Setting <code>no</code> on a headless board disables the video stack and prevents a
+eye candy). Setting <code>no</code> on a headless board disables the video stack and prevents a
 desktop image from being built for it.</p>
 <h4 id="power_management_features">POWER_MANAGEMENT_FEATURES<a class="headerlink" href="#power_management_features" title="Permanent link">&para;</a></h4>
 <p><code>boolean</code></p>
