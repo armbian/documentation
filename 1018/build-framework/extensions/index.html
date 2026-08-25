@@ -6216,7 +6216,7 @@
 <p>&ldquo;I&rsquo;m gonna create a <code>prepare_bootloader</code> hook [in core] so we can refactor <code>u-boot</code> [into an extension]&rdquo;</p>
 </blockquote>
 <p>The extensions framework allows the board/family developers, extension authors, and users to extend the Armbian build system without overloading the core with specific functionality.</p>
-<p>It&rsquo;s a simple framework, written in Bash, that <strong>works based on function naming conventions</strong>. It provides the core and the extensions with tracing and debugging, (error control,?) inline documentation and very simple dependency resolution.</p>
+<p>It&rsquo;s a simple framework, written in Bash, that <strong>works based on function naming conventions</strong>. It provides the core and the extensions with tracing and debugging, error control, inline documentation and very simple dependency resolution.</p>
 <h3 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The &ldquo;core&rdquo; is everything that&rsquo;s in <code>lib/</code> directory plus <code>compile.sh</code> and some others. It&rsquo;s the spine of the build system.</li>
@@ -6228,9 +6228,9 @@
 </ul>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <h5 id="core-calls-extensions">Core calls extensions<a class="headerlink" href="#core-calls-extensions" title="Permanent link">&para;</a></h5>
-<p>The Armbian core build system has an extension method called <code>run_after_build</code>, also known as the &ldquo;<code>run_after_build</code> hook&rdquo;. You can find it in <code>lib/main.sh</code> around line 546.</p>
+<p>The Armbian core build system has an extension method called <code>run_after_build</code>, also known as the &ldquo;<code>run_after_build</code> hook&rdquo;. You can find it in <code>lib/functions/main/start-end.sh</code>.</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># in lib/main.sh:546</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># in lib/functions/main/start-end.sh</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>call_extension_method<span class="w"> </span><span class="s2">&quot;run_after_build&quot;</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span>
 </span></code></pre></div></td></tr></table></div>
 <h5 id="extension-method-implementation">Extension method implementation<a class="headerlink" href="#extension-method-implementation" title="Permanent link">&para;</a></h5>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Reference of Armbian build framework extension hooks in call order, such as post_family_config and user_config, for customizing the ARM image build.">
+        <meta name="description" content="Reference of every Armbian build framework extension hook point, such as custom_kernel_config, post_family_config and run_after_build, for customizing the ARM image build.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian build extension hooks reference">
-  <meta property="og:description" content="Reference of Armbian build framework extension hooks in call order, such as post_family_config and user_config, for customizing the ARM image build.">
+  <meta property="og:description" content="Reference of every Armbian build framework extension hook point, such as custom_kernel_config, post_family_config and run_after_build, for customizing the ARM image build.">
   <meta name="twitter:title" content="Armbian build extension hooks reference">
-  <meta name="twitter:description" content="Reference of Armbian build framework extension hooks in call order, such as post_family_config and user_config, for customizing the ARM image build.">
+  <meta name="twitter:description" content="Reference of every Armbian build framework extension hook point, such as custom_kernel_config, post_family_config and run_after_build, for customizing the ARM image build.">
   
     <meta name="twitter:card" content="summary">
   
@@ -5232,73 +5232,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hooks
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hooks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post_family_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_family_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        user_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension_prepare_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extension_prepare_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_aggregate_packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_aggregate_packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_determine_cthreads" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_determine_cthreads
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#add_host_dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5308,218 +5241,37 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#fetch_sources_tools" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#armbian_kernel_config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        fetch_sources_tools
+        armbian_kernel_config
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#build_host_tools" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#artifact_kernel_version_parts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        build_host_tools
+        artifact_kernel_version_parts
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_install_distribution_specific" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#btrfs_root_add_subvolumes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        pre_install_distribution_specific
+        btrfs_root_add_subvolumes
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_install_kernel_debs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_install_kernel_debs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_install_kernel_debs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_install_kernel_debs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_family_tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_family_tweaks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_customize_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_customize_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_customize_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_customize_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_post_debootstrap_tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_post_debootstrap_tweaks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_prepare_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_prepare_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prepare_image_size" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        prepare_image_size
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_create_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_create_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#format_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        format_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_update_initramfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_update_initramfs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_umount_final_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_umount_final_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_umount_final_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_umount_final_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_build_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_build_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run_after_build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        run_after_build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension_metadata_ready" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extension_metadata_ready
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6136,73 +5888,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hooks
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hooks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post_family_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_family_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        user_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension_prepare_config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extension_prepare_config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_aggregate_packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_aggregate_packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_determine_cthreads" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_determine_cthreads
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#add_host_dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6212,218 +5897,37 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#fetch_sources_tools" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#armbian_kernel_config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        fetch_sources_tools
+        armbian_kernel_config
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#build_host_tools" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#artifact_kernel_version_parts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        build_host_tools
+        artifact_kernel_version_parts
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_install_distribution_specific" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#btrfs_root_add_subvolumes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        pre_install_distribution_specific
+        btrfs_root_add_subvolumes
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_install_kernel_debs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_install_kernel_debs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_install_kernel_debs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_install_kernel_debs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_family_tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_family_tweaks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_customize_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_customize_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_customize_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_customize_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_post_debootstrap_tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_post_debootstrap_tweaks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_prepare_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_prepare_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prepare_image_size" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        prepare_image_size
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_create_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_create_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#format_partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        format_partitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_update_initramfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_update_initramfs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre_umount_final_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pre_umount_final_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_umount_final_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_umount_final_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post_build_image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        post_build_image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run_after_build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        run_after_build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension_metadata_ready" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extension_metadata_ready
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6463,219 +5967,493 @@
 
 <h1 id="extension-hooks">Extension Hooks<a class="headerlink" href="#extension-hooks" title="Permanent link">&para;</a></h1>
 <ul>
-<li>This file is autogenerated by the armbian/build repository.</li>
-<li>To regenerate it from a build tree, run <a href="/build-framework/commands/advanced/#show-extensions"><code>./compile.sh show-extensions SHOW_EXTENSIONS=docs</code></a>. That also lists hooks added by your own userpatches, which this page does not cover.</li>
-</ul>
-<h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Hooks are listed in the order they are called.</li>
-<li>Individual/specific hook functions can be <a href="/build-framework/extensions/#how-to-opt-out-of-a-specific-hook-function">skipped/ignored/opted-out</a>.</li>
-</ul>
-<h3 id="post_family_config"><code>post_family_config</code><a class="headerlink" href="#post_family_config" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><em>give the config a chance to override the family/arch defaults</em></p>
-</blockquote>
-<p>This hook is called after the family configuration (<code>sources/families/xxx.conf</code>) is sourced. Since the family can
-override values from the user configuration and the board configuration, it is often used to in turn override those.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_tweaks_post_family_config</code></li>
-</ul>
-<h3 id="user_config"><code>user_config</code><a class="headerlink" href="#user_config" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><em>Invoke function with user override</em></p>
-</blockquote>
-<p>Allows for overriding configuration values set anywhere else. It is called after sourcing the <code>lib.config</code> file if it
-exists, but before assembling any package lists.</p>
-<h3 id="extension_prepare_config"><code>extension_prepare_config</code><a class="headerlink" href="#extension_prepare_config" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><em>allow extensions to prepare their own config, after user config is done</em></p>
-</blockquote>
-<p>Implementors should preserve variable values pre-set, but can default values an/or validate them. This runs <em>after</em>
-user_config. Don&rsquo;t change anything not coming from other variables or meant to be configured by the user.</p>
-<h3 id="post_aggregate_packages"><code>post_aggregate_packages</code><a class="headerlink" href="#post_aggregate_packages" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><em>For final user override, using a function, after all aggregations are done</em></p>
-</blockquote>
-<p>Called after aggregating all package lists, before the end of <code>compilation.sh</code>. Packages will still be installed after
-this is called, so it is the last chance to confirm or change any packages.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>user_config_post_aggregate_packages</code></li>
-</ul>
-<h3 id="post_determine_cthreads"><code>post_determine_cthreads</code><a class="headerlink" href="#post_determine_cthreads" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><em>give config a chance modify CTHREADS programatically. A build server may work better with hyperthreads-1 for example.</em></p>
-</blockquote>
-<p>Called early, before any compilation work starts.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_post_determine_cthreads</code></li>
+<li>This page is autogenerated from the armbian/build sources. To regenerate it from a build tree, run <a href="/build-framework/commands/advanced/#show-extensions"><code>./compile.sh show-extensions SHOW_EXTENSIONS=docs</code></a> — that also lists hooks added by your own userpatches, which this page does not cover.</li>
+<li>Hooks are listed alphabetically; the build invokes them in code order, not this order.</li>
+<li>Individual hook functions can be <a href="/build-framework/extensions/#how-to-opt-out-of-a-specific-hook-function">skipped / opted out</a>.</li>
 </ul>
 <h3 id="add_host_dependencies"><code>add_host_dependencies</code><a class="headerlink" href="#add_host_dependencies" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><em>run before installing host dependencies</em></p>
 </blockquote>
-<p>you can add packages to install, space separated, to ${EXTRA_BUILD_DEPS} here.</p>
-<h3 id="fetch_sources_tools"><code>fetch_sources_tools</code><a class="headerlink" href="#fetch_sources_tools" title="Permanent link">&para;</a></h3>
+<p>append packages to install to the <code>EXTRA_BUILD_DEPS</code> array here, e.g. <code>EXTRA_BUILD_DEPS+=("pkg")</code>.
+optionally prefix a package with a Docker-layer group, e.g. <code>EXTRA_BUILD_DEPS+=("fs-tools::pkg")</code>; unprefixed goes to &ldquo;core&rdquo;.</p>
+<h3 id="armbian_kernel_config"><code>armbian_kernel_config</code><a class="headerlink" href="#armbian_kernel_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>fetch host-side sources needed for tools and build</em></p>
+<p><em>Armbian-core default hook point for pre-olddefconfig Kernel config modifications</em></p>
 </blockquote>
-<p>Run early to fetch_from_repo or otherwise obtain sources for needed tools.</p>
+<p>NOT for user consumption. Do NOT use this hook, this is internal to Armbian.
+Instead, use <code>custom_kernel_config</code> which runs later and can undo anything done by this step.
+IMPORTANT: this hook might be run multiple times, and one of them might not have a .config in place!
+Therefore, please check with &ldquo;if [[ -f .config ]]; then&rdquo; if you want to modify the kernel config.
+Either way, the hook <em>must</em> add representative changes to the <code>kernel_config_modifying_hashes</code> array, for kernel config hashing.
+Please note: Manually changing options doesn&rsquo;t check the validity of the .config file. Check for warnings in your build log.</p>
+<h3 id="artifact_kernel_version_parts"><code>artifact_kernel_version_parts</code><a class="headerlink" href="#artifact_kernel_version_parts" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>customize kernel artifact version string parts</em></p>
+</blockquote>
+<p>Called after all built-in version parts are collected.
+Extensions can modify:
+- artifact_version_parts: associative array of key=value pairs
+  - Add: artifact_version_parts[&ldquo;T&rdquo;]=&rdquo;gcc13.3&rdquo;
+  - Remove: unset artifact_version_parts[&ldquo;B&rdquo;]
+  - Modify: artifact_version_parts[&ldquo;S&rdquo;]=&rdquo;custom&rdquo;
+- artifact_version_part_order: indexed array with &ldquo;NNNN-KEY&rdquo; entries for sortable insertion
+  - Add: artifact_version_part_order+=(&ldquo;0085-<em>T&rdquo;)
+  - Remove: remove entry from array or unset the key in artifact_version_parts
+  Keys starting with &ldquo;</em>&rdquo; are not included in output (only value is used).</p>
+<h3 id="btrfs_root_add_subvolumes"><code>btrfs_root_add_subvolumes</code><a class="headerlink" href="#btrfs_root_add_subvolumes" title="Permanent link">&para;</a></h3>
+<blockquote>
+<h1 id="custom-post-btrfs-rootfs-creation-hook"><em>custom post btrfs rootfs creation hook</em><a class="headerlink" href="#custom-post-btrfs-rootfs-creation-hook" title="Permanent link">&para;</a></h1>
+</blockquote>
+<h1 id="called-if-rootfs-btrfs-after-creating-the-subvolume-for-rootfs">Called if rootfs btrfs after creating the subvolume &ldquo;@&rdquo; for rootfs<a class="headerlink" href="#called-if-rootfs-btrfs-after-creating-the-subvolume-for-rootfs" title="Permanent link">&para;</a></h1>
+<h1 id="used-to-create-other-separate-btrfs-subvolume-if-needed">Used to create other separate btrfs subvolume if needed.<a class="headerlink" href="#used-to-create-other-separate-btrfs-subvolume-if-needed" title="Permanent link">&para;</a></h1>
+<h1 id="mountpoints-and-fstab-records-should-be-created-too">Mountpoints and fstab records should be created too.<a class="headerlink" href="#mountpoints-and-fstab-records-should-be-created-too" title="Permanent link">&para;</a></h1>
+<p>run_host_command_logged btrfs subvolume create $MOUNT/<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/home" title="GitHub User: home">@home</a>
+run_host_command_logged btrfs subvolume create $MOUNT/<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var" title="GitHub User: var">@var</a>
+run_host_command_logged btrfs subvolume create $MOUNT/<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_log" title="GitHub User: var_log">@var_log</a>
+run_host_command_logged btrfs subvolume create $MOUNT/<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_cache" title="GitHub User: var_cache">@var_cache</a>
+run_host_command_logged btrfs subvolume create $MOUNT/<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/srv" title="GitHub User: srv">@srv</a></p>
+<h3 id="btrfs_root_add_subvolumes_fstab"><code>btrfs_root_add_subvolumes_fstab</code><a class="headerlink" href="#btrfs_root_add_subvolumes_fstab" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>run_host_command_logged mkdir -p $MOUNT/home</p>
+</blockquote>
+<p>run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/home" title="GitHub User: home">@home</a> $rootdevice $MOUNT/home
+echo &ldquo;$rootfs /home btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/home" title="GitHub User: home">@home</a> 0 2&rdquo; &gt;&gt; $SDCARD/etc/fstab
+run_host_command_logged mkdir -p $MOUNT/var
+run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var" title="GitHub User: var">@var</a> $rootdevice $MOUNT/var
+echo &ldquo;$rootfs /var btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var" title="GitHub User: var">@var</a> 0 2&rdquo; &gt;&gt; $SDCARD/etc/fstab
+run_host_command_logged mkdir -p $MOUNT/var/log
+run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_log" title="GitHub User: var_log">@var_log</a> $rootdevice $MOUNT/var/log
+echo &ldquo;$rootfs /var/log btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_log" title="GitHub User: var_log">@var_log</a> 0 2&rdquo; &gt;&gt; $SDCARD/etc/fstab
+run_host_command_logged mkdir -p $MOUNT/var/cache
+run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_cache" title="GitHub User: var_cache">@var_cache</a> $rootdevice $MOUNT/var/cache
+echo &ldquo;$rootfs /var/cache btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/var_cache" title="GitHub User: var_cache">@var_cache</a> 0 2&rdquo; &gt;&gt; $SDCARD/etc/fstab
+run_host_command_logged mkdir -p  $MOUNT/srv
+run_host_command_logged mount -odefaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/srv" title="GitHub User: srv">@srv</a> $rootdevice $MOUNT/srv
+echo &ldquo;$rootfs /srv btrfs defaults${mountopts[$ROOTFS_TYPE]},subvol=<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/srv" title="GitHub User: srv">@srv</a> 0 2&rdquo; &gt;&gt; $SDCARD/etc/fstab</p>
+<h3 id="build_custom_uboot"><code>build_custom_uboot</code><a class="headerlink" href="#build_custom_uboot" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow extensions to build their own uboot</em></p>
+</blockquote>
+<p>For downstream uboot et al.
+Set `EXTENSION_BUILT_UBOOT=yes` to then skip the normal compilation.</p>
 <h3 id="build_host_tools"><code>build_host_tools</code><a class="headerlink" href="#build_host_tools" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><em>build needed tools for the build, host-side</em></p>
 </blockquote>
 <p>After sources are fetched, build host-side tools needed for the build.</p>
-<h3 id="pre_install_distribution_specific"><code>pre_install_distribution_specific</code><a class="headerlink" href="#pre_install_distribution_specific" title="Permanent link">&para;</a></h3>
+<h3 id="ccache_post_compilation"><code>ccache_post_compilation</code><a class="headerlink" href="#ccache_post_compilation" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>give config a chance to act before install_distribution_specific</em></p>
+<p><em>called after ccache-wrapped compilation completes (success or failure)</em></p>
 </blockquote>
-<p>Called after <code>create_rootfs_cache</code> (<em>prepare basic rootfs: unpack cache or create from scratch</em>) but
-before <code>install_distribution_specific</code> (<em>install distribution and board specific applications</em>).</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_pre_install_distribution_specific</code></li>
-</ul>
-<h3 id="pre_install_kernel_debs"><code>pre_install_kernel_debs</code><a class="headerlink" href="#pre_install_kernel_debs" title="Permanent link">&para;</a></h3>
+<p>Useful for displaying remote cache statistics or other post-build info.</p>
+<h3 id="check_uboot_produced_binary_file"><code>check_uboot_produced_binary_file</code><a class="headerlink" href="#check_uboot_produced_binary_file" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>called before installing the Armbian-built kernel deb packages</em></p>
+<p><em>check one produced u-boot binary</em></p>
 </blockquote>
-<p>It is not too late to <code>unset KERNELSOURCE</code> here and avoid kernel install.</p>
-<h3 id="post_install_kernel_debs"><code>post_install_kernel_debs</code><a class="headerlink" href="#post_install_kernel_debs" title="Permanent link">&para;</a></h3>
+<p>This is called once for <em>each</em> produced u-boot binary file, before packaging them into the .deb package.
+You can use this to analyze the produced binary for correctness, or to extract some information from it.
+You can use the variable binfile to access the full path to the binary file, and base_binfile to access just the filename.</p>
+<h3 id="create_partition_table"><code>create_partition_table</code><a class="headerlink" href="#create_partition_table" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>allow config to do more with the installed kernel/headers</em></p>
+<p><em>only called when USE_HOOK_FOR_PARTITION=yes to create the complete partition table</em></p>
 </blockquote>
-<p>Called after packages, u-boot, kernel and headers installed in the chroot, but before the BSP is installed.
-If <code>KERNELSOURCE</code> is (still?) unset after this, Armbian-built firmware will not be installed.</p>
-<h3 id="post_family_tweaks"><code>post_family_tweaks</code><a class="headerlink" href="#post_family_tweaks" title="Permanent link">&para;</a></h3>
+<p>Finally, we can get our own partition table. You have to partition ${SDCARD}.raw
+yourself. Good luck.</p>
+<h3 id="custom_apt_repo"><code>custom_apt_repo</code><a class="headerlink" href="#custom_apt_repo" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>customize the tweaks made by $LINUXFAMILY-specific family_tweaks</em></p>
+<p><em>customize apt sources.list.d and/or deploy repo keys</em></p>
 </blockquote>
-<p>It is run after packages are installed in the rootfs, but before enabling additional services. It allows implementors
-access to the rootfs (<code>${SDCARD}</code>) in its pristine state after packages are installed.</p>
-<h3 id="pre_customize_image"><code>pre_customize_image</code><a class="headerlink" href="#pre_customize_image" title="Permanent link">&para;</a></h3>
+<p>Called after core Armbian has finished setting up SDCARD&rsquo;s debian.sources/ubuntu.sources and armbian.sources in /etc/apt/sources.list.d/.
+If SKIP_ARMBIAN_REPO=yes, armbian.sources.disabled is present instead.
+The global Armbian GPG key has been deployed to SDCARD&rsquo;s ${APT_SIGNING_KEY_FILE}, de-armored.
+You can implement this hook to add, remove, or modify sources.list.d entries, and/or deploy additional GPG keys.
+Important: honor $CUSTOM_REPO_WHEN; if it&rsquo;s ==rootfs, don&rsquo;t add repos/components that carry the .debs produced by armbian/build.
+Ideally, also don&rsquo;t add any possibly-conflicting repo if <code>$CUSTOM_REPO_WHEN==image-early</code>.
+<code>$CUSTOM_APT_REPO==image-late</code> is passed during the very final stages of image building, after all packages were installed/upgraded.</p>
+<h3 id="custom_kernel_config"><code>custom_kernel_config</code><a class="headerlink" href="#custom_kernel_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>run before customize-image.sh</em></p>
+<p><em>Kernel .config is in place, still clean from git version</em></p>
 </blockquote>
-<p>This hook is called before <code>customize-image.sh</code> is executed and before the overlay is mounted. It thus can be used
-for the same purposes as <code>customize-image.sh</code> without the overlay.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>image_tweaks_pre_customize</code></li>
-</ul>
-<h3 id="post_customize_image"><code>post_customize_image</code><a class="headerlink" href="#post_customize_image" title="Permanent link">&para;</a></h3>
+<p>Called after ${LINUXCONFIG}.config is put in place (.config).
+A good place to customize the .config directly.
+Armbian default Kconfig modifications have already been applied and can be overriden.
+IMPORTANT: this hook might be run multiple times, and one of them might not have a .config in place!
+Therefore, please check with &ldquo;if [[ -f .config ]]; then&rdquo; if you want to modify the kernel config.
+Either way, the hook <em>must</em> add representative changes to the <code>kernel_config_modifying_hashes</code> array, for kernel config hashing.
+Please note: Manually changing options doesn&rsquo;t check the validity of the .config file. Check for warnings in your build log.</p>
+<h3 id="custom_kernel_make_params"><code>custom_kernel_make_params</code><a class="headerlink" href="#custom_kernel_make_params" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>post customize-image.sh hook</em></p>
+<p><em>Customize kernel make parameters before compilation</em></p>
 </blockquote>
-<p>Run after the customize-image.sh script is run, and the overlay is unmounted.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>image_tweaks_post_customize</code></li>
-</ul>
-<h3 id="post_post_debootstrap_tweaks"><code>post_post_debootstrap_tweaks</code><a class="headerlink" href="#post_post_debootstrap_tweaks" title="Permanent link">&para;</a></h3>
+<p>Called after all standard make parameters are set but before invoking make.
+Extensions can modify the following arrays:
+- <code>common_make_params_quoted</code> - parameters passed to make (e.g., CROSS_COMPILE_COMPAT)
+- <code>common_make_envs</code> - environment variables for make</p>
+<h3 id="extension_finish_config"><code>extension_finish_config</code><a class="headerlink" href="#extension_finish_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>run after removing diversions and qemu with chroot unmounted</em></p>
+<p><em>allow extensions a last chance at configuration just before it is done</em></p>
 </blockquote>
-<p>Last chance to touch the <code>${SDCARD}</code> filesystem before it is copied to the final media. It is too late to run any
-chrooted commands, since the supporting filesystems are already unmounted.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_post_debootstrap_tweaks</code></li>
-</ul>
-<h3 id="pre_prepare_partitions"><code>pre_prepare_partitions</code><a class="headerlink" href="#pre_prepare_partitions" title="Permanent link">&para;</a></h3>
+<p>After kernel versions are set, package names determined, etc.
+This runs <em>late</em>, and is the final step before finishing configuration.
+Don&rsquo;t change anything not coming from other variables or meant to be configured by the user.</p>
+<h3 id="extension_metadata_ready"><code>extension_metadata_ready</code><a class="headerlink" href="#extension_metadata_ready" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>allow custom options for mkfs</em></p>
+<p><em>meta-Meta time!</em></p>
 </blockquote>
-<p>Good time to change stuff like mkfs opts, types etc.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>prepare_partitions_custom</code></li>
-</ul>
-<h3 id="prepare_image_size"><code>prepare_image_size</code><a class="headerlink" href="#prepare_image_size" title="Permanent link">&para;</a></h3>
+<p>Implement this hook to work with/on the meta-data made available by the extension manager.
+Interesting stuff to process:
+- <code>"${EXTENSION_MANAGER_TMP_DIR}/hook_point_calls.txt"</code> contains a list of all hook points called, in order.
+- For each hook_point in the list, more files will have metadata about that hook point.
+  - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.orig.md</code> contains the hook documentation at the call site (inline docs), hopefully in Markdown format.
+  - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.compat</code> contains the compatibility names for the hooks.
+  - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.exports</code> contains <em>exported</em> environment variables.
+  - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.vars</code> contains <em>all</em> environment variables.
+- <code>${defined_hook_point_functions}</code> is a map of <em>all</em> the defined hook point functions and their extension information.
+- <code>${hook_point_function_trace_sources}</code> is a map of all the hook point functions <em>that were really called during the build</em> and their BASH_SOURCE information.
+- <code>${hook_point_function_trace_lines}</code> is the same, but BASH_LINENO info.
+After this hook is done, the <code>${EXTENSION_MANAGER_TMP_DIR}</code> will be removed.</p>
+<h3 id="extension_prepare_config"><code>extension_prepare_config</code><a class="headerlink" href="#extension_prepare_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>allow dynamically determining the size based on the $rootfs_size</em></p>
+<p><em>allow extensions to prepare their own config, after user config is done</em></p>
 </blockquote>
-<p>Called after <code>${rootfs_size}</code> is known, but before <code>${FIXED_IMAGE_SIZE}</code> is taken into account. A good spot to
-determine <code>FIXED_IMAGE_SIZE</code> based on <code>rootfs_size</code>. UEFISIZE can be set to 0 for no UEFI partition, or to a size in MiB
-to include one. Last chance to set <code>USE_HOOK_FOR_PARTITION</code>=yes and then implement create_partition_table hook_point.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_prepare_image_size</code></li>
-</ul>
-<h3 id="post_create_partitions"><code>post_create_partitions</code><a class="headerlink" href="#post_create_partitions" title="Permanent link">&para;</a></h3>
+<p>Implementors should preserve variable values pre-set, but can default values an/or validate them.
+This runs <em>after</em> user_config. Don&rsquo;t change anything not coming from other variables or meant to be configured by the user.</p>
+<h3 id="fetch_custom_uboot"><code>fetch_custom_uboot</code><a class="headerlink" href="#fetch_custom_uboot" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>called after all partitions are created, but not yet formatted</em></p>
+<p><em>allow extensions to fetch extra uboot sources</em></p>
 </blockquote>
+<p>For downstream uboot et al.
+This is done after <code>fetch_from_repo</code>, but before actually compiling u-boot.</p>
+<h3 id="fetch_sources_tools"><code>fetch_sources_tools</code><a class="headerlink" href="#fetch_sources_tools" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>fetch host-side sources needed for tools and build</em></p>
+</blockquote>
+<p>Run early to fetch_from_repo or otherwise obtain sources for needed tools.</p>
 <h3 id="format_partitions"><code>format_partitions</code><a class="headerlink" href="#format_partitions" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><em>if you created your own partitions, this would be a good time to format them</em></p>
 </blockquote>
 <p>The loop device is mounted, so ${LOOP}p1 is it&rsquo;s first partition etc.</p>
-<h3 id="pre_update_initramfs"><code>pre_update_initramfs</code><a class="headerlink" href="#pre_update_initramfs" title="Permanent link">&para;</a></h3>
+<h3 id="grub_early_config"><code>grub_early_config</code><a class="headerlink" href="#grub_early_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>allow config to hack into the initramfs create process</em></p>
+<p>Allow for early GRUB configuration.</p>
 </blockquote>
-<p>Called after rsync has synced both <code>/root</code> and <code>/root</code> on the target, but before calling <code>update_initramfs</code>.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_pre_update_initramfs</code></li>
-</ul>
-<h3 id="pre_umount_final_image"><code>pre_umount_final_image</code><a class="headerlink" href="#pre_umount_final_image" title="Permanent link">&para;</a></h3>
+<p>This is called after <code>configure_grub</code>, and zapping /boot/dtb*.
+chroot ($MOUNT) is <em>not</em> mounted yet.</p>
+<h3 id="grub_late_config"><code>grub_late_config</code><a class="headerlink" href="#grub_late_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>allow config to hack into the image before the unmount</em></p>
+<p>Allow for late GRUB configuration.</p>
 </blockquote>
-<p>Called before unmounting both <code>/root</code> and <code>/boot</code>.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_pre_umount_final_image</code></li>
-</ul>
+<p>This is called after grub-install and update-grub.
+chroot ($MOUNT) is mounted. sanity checks are going to be performed.</p>
+<h3 id="grub_pre_install"><code>grub_pre_install</code><a class="headerlink" href="#grub_pre_install" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Last-minute hook for GRUB tweaks before actually installing GRUB and running update-grub.</p>
+</blockquote>
+<p>The chroot ($MOUNT) is mounted.</p>
+<h3 id="host_dependencies_known"><code>host_dependencies_known</code><a class="headerlink" href="#host_dependencies_known" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run after all host dependencies are known (but not installed)</em></p>
+</blockquote>
+<p>At this point we can read <code>${FINAL_HOST_DEPS}</code>, but changing won&rsquo;t have any effect.
+All the dependencies, including the default/core deps and the ones added via the <code>EXTRA_BUILD_DEPS</code> array
+are determined at this point, but not yet installed.</p>
+<h3 id="host_dependencies_ready"><code>host_dependencies_ready</code><a class="headerlink" href="#host_dependencies_ready" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run after all host dependencies are installed</em></p>
+</blockquote>
+<p>At this point we can read <code>${FINAL_HOST_DEPS}</code>, but changing won&rsquo;t have any effect.
+All the dependencies, including the default/core deps and the ones added via the <code>EXTRA_BUILD_DEPS</code> array
+are installed at this point. The system clock has not yet been synced.</p>
+<h3 id="host_pre_docker_launch"><code>host_pre_docker_launch</code><a class="headerlink" href="#host_pre_docker_launch" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run on host just before Docker container is launched</em></p>
+</blockquote>
+<p>Extensions can add Docker arguments by appending to DOCKER_EXTRA_ARGS array.
+Each array element should be a complete argument (e.g., &ldquo;&ndash;env&rdquo;, &ldquo;MY_VAR=value&rdquo; as separate elements).
+Example: DOCKER_EXTRA_ARGS+=(&ldquo;&ndash;env&rdquo; &ldquo;MY_VAR=value&rdquo; &ldquo;&ndash;mount&rdquo; &ldquo;type=bind,src=/a,dst=/b&rdquo;)
+Available variables:
+  - DOCKER_ARGS[@]: current Docker arguments (do not modify directly)
+  - DOCKER_EXTRA_ARGS[@]: array to append extra arguments for docker run
+  - DOCKER_ARMBIAN_TARGET_PATH: path inside container (/armbian)</p>
+<h3 id="image_specific_armbian_env_ready"><code>image_specific_armbian_env_ready</code><a class="headerlink" href="#image_specific_armbian_env_ready" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>during image build, armbianEnv.txt is ready for image-specific customization (not in BSP)</em></p>
+</blockquote>
+<p>You can write to <code>"${SDCARD}/boot/armbianEnv.txt"</code> here, it is guaranteed to exist.</p>
+<h3 id="kernel_copy_extra_sources"><code>kernel_copy_extra_sources</code><a class="headerlink" href="#kernel_copy_extra_sources" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>Hook to copy extra kernel sources to the kernel under compilation</em></p>
+</blockquote>
+<h3 id="kernel_extra_create_patches"><code>kernel_extra_create_patches</code><a class="headerlink" href="#kernel_extra_create_patches" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>stage more patches for kernel, after kernel_drivers</em></p>
+</blockquote>
+<p>This is called after kernel_drivers_create_patches (wifi-drivers) and can be used to stage more patches
+to be applied. This is done immediately before actually patching, and thus, after any hashing is done.
+This allows implementors to stage custom patches (eg, from an out-of-tree driver into userpatches) without
+impacting the kernel version/hash.</p>
+<h3 id="kernel_make_config"><code>kernel_make_config</code><a class="headerlink" href="#kernel_make_config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>Hook to customize kernel make environment and parameters</em></p>
+</blockquote>
+<p>Called right before invoking make for kernel compilation.
+Available arrays to modify:
+  - common_make_envs[@]: environment variables passed via &ldquo;env -i&rdquo; (e.g., CCACHE_REMOTE_STORAGE)
+  - common_make_params_quoted[@]: make command parameters (e.g., custom flags)
+Available read-only variables:
+  - KERNEL_COMPILER, ARCHITECTURE, BRANCH, LINUXFAMILY</p>
+<h3 id="late_family_config"><code>late_family_config</code><a class="headerlink" href="#late_family_config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>late defaults/overrides, main hook point for KERNELSOURCE/BRANCH and BOOTSOURCE/BRANCH etc</em></p>
+</blockquote>
+<h3 id="mainline_kernel_decide_version"><code>mainline_kernel_decide_version</code><a class="headerlink" href="#mainline_kernel_decide_version" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>determine KERNELBRANCH, based on family / KERNEL_MAJOR_MINOR / etc</em></p>
+</blockquote>
+<p>This hook is run when when we know the family uses mainline (does NOT set KERNELSOURCE),
+but the family/board/hooks haven&rsquo;t determined a KERNELBRANCH (tag/branch/commit reference) yet.
+All hooks are called in the usual order, the last one setting it &ldquo;wins&rdquo;.
+It is expected that hooks here are able to:
+- if kernel in RC period, convert say 6.7 to tag:v6.7-rc7
+- &ldquo;lock&rdquo; certain families (or all families) to a certain tag in a branch; say convert 6.6 to tag:v6.6.6
+- change KERNELSOURCE to adapt to too-new -rc releases that haven&rsquo;t shown up in stable kernel git tree yet</p>
+<h3 id="post_aggregate_packages"><code>post_aggregate_packages</code><a class="headerlink" href="#post_aggregate_packages" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>After all aggregations are done</em></p>
+</blockquote>
+<p>Called after aggregating all package lists.
+Packages will still be installed after this is called. It is not possible to change anything, though.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>user_config_post_aggregate_packages</code></p>
+<h3 id="post_armbian_repo_customize_image"><code>post_armbian_repo_customize_image</code><a class="headerlink" href="#post_armbian_repo_customize_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run after post_customize_image, after and only if Armbian standard repos have been enabled</em></p>
+</blockquote>
+<p>All repos have been enabled, including the Armbian repo and custom ones.
+You can install packages from the Armbian repo here.</p>
+<h3 id="post_build_image"><code>post_build_image</code><a class="headerlink" href="#post_build_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>custom post build hook</em></p>
+</blockquote>
+<p>Called after the final .img file is built, before it is (possibly) written to an SD writer.
+- <em>NOTE</em>: this hook used to take an argument ($1) for the final image produced.
+  - Now it is passed as an environment variable <code>${FINAL_IMAGE_FILE}</code>
+It is the last possible chance to modify <code>$CARD_DEVICE</code>.</p>
+<h3 id="post_build_image_write"><code>post_build_image_write</code><a class="headerlink" href="#post_build_image_write" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>custom post build hook</em></p>
+</blockquote>
+<p>Called after the final .img file is ready, and possibly written to an SD card.
+The full path to the image is available in <code>${built_image_file}</code>.</p>
+<h3 id="post_config_uboot_target"><code>post_config_uboot_target</code><a class="headerlink" href="#post_config_uboot_target" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow extensions prepare after configuring but before compiling an u-boot target</em></p>
+</blockquote>
+<p>Some u-boot targets require extra configuration or pre-processing before compiling.
+Last chance to change .config for u-boot before compiling.
+Also the only chance to change the (local) array <code>uboot_cflags_array</code>.</p>
+<h3 id="post_create_partitions"><code>post_create_partitions</code><a class="headerlink" href="#post_create_partitions" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>called after all partitions are created, but not yet formatted</em></p>
+</blockquote>
+<h3 id="post_customize_image"><code>post_customize_image</code><a class="headerlink" href="#post_customize_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>post customize-image.sh hook</em></p>
+</blockquote>
+<p>Run after the customize-image.sh script is run, and the overlay is unmounted.
+Attention: only the Distro default repos are enabled at this point; no Armbian or custom repos can be used.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>image_tweaks_post_customize</code></p>
+<h3 id="post_determine_cthreads"><code>post_determine_cthreads</code><a class="headerlink" href="#post_determine_cthreads" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>give config a chance modify CTHREADS programatically. A build server may work better with hyperthreads-1 for example.</em></p>
+</blockquote>
+<p>Called early, before any compilation work starts.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_post_determine_cthreads</code></p>
+<h3 id="post_family_config"><code>post_family_config</code><a class="headerlink" href="#post_family_config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>give the config a chance to override the family/arch defaults</em></p>
+</blockquote>
+<p>This hook is called after the family configuration (<code>sources/families/xxx.conf</code>) is sourced.
+Since the family can override values from the user configuration and the board configuration,
+it is often used to in turn override those.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_tweaks_post_family_config</code></p>
+<h3 id="post_family_config_branch_branch"><code>post_family_config_branch_&lt;branch&gt;</code><a class="headerlink" href="#post_family_config_branch_branch" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>give the config a chance to override the family/arch defaults, per branch</em></p>
+</blockquote>
+<p>This hook is called after the family configuration (<code>sources/families/xxx.conf</code>) is sourced,
+and after <code>post_family_config()</code> hook is already run.
+The sole purpose of this is to avoid &ldquo;case &hellip; esac for $BRANCH&rdquo; in the board configuration,
+allowing separate functions for different branches. You&rsquo;re welcome.</p>
+<h3 id="post_family_tweaks"><code>post_family_tweaks</code><a class="headerlink" href="#post_family_tweaks" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>customize the tweaks made by $LINUXFAMILY-specific family_tweaks</em></p>
+</blockquote>
+<p>It is run after packages are installed in the rootfs, but before enabling additional services.
+It allows implementors access to the rootfs (<code>${SDCARD}</code>) in its pristine state after packages are installed.</p>
+<h3 id="post_family_tweaks_bsp"><code>post_family_tweaks_bsp</code><a class="headerlink" href="#post_family_tweaks_bsp" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>family_tweaks_bsp overrrides what is in the config, so give it a chance to override the family tweaks</em></p>
+</blockquote>
+<p>This should be implemented by the config to tweak the BSP, after the board or family has had the chance to.
+You can write to <code>$destination</code> here and it will be packaged.
+You can also append to the <code>preinst_functions</code>, <code>postinst_functions</code> and <code>postrm</code> array, and the <em>content</em>
+of those functions will be added to the preinst, postinst and postrm scripts respectively.</p>
+<h3 id="post_install_kernel_debs"><code>post_install_kernel_debs</code><a class="headerlink" href="#post_install_kernel_debs" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow config to do more with the installed kernel/headers</em></p>
+</blockquote>
+<p>Called after packages, u-boot, kernel and headers installed in the chroot, but before the BSP is installed.</p>
+<h3 id="post_post_debootstrap_tweaks"><code>post_post_debootstrap_tweaks</code><a class="headerlink" href="#post_post_debootstrap_tweaks" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run after removing diversions and qemu with chroot unmounted</em></p>
+</blockquote>
+<p>Last chance to touch the <code>${SDCARD}</code> filesystem before it is copied to the final media.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_post_debootstrap_tweaks</code></p>
+<h3 id="post_repo_customize_image"><code>post_repo_customize_image</code><a class="headerlink" href="#post_repo_customize_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run after post_customize_image, after repos have been enabled</em></p>
+</blockquote>
+<p>All repos have been enabled, including custom ones; Armbian repo is not guaranteed to be enabled.
+You can install packages from the default Debian/Ubuntu repos, or custom repos, here.
+To install packages from the Armbian repo, use the post_armbian_repo_customize_image hook.</p>
+<h3 id="post_uboot_custom_postprocess"><code>post_uboot_custom_postprocess</code><a class="headerlink" href="#post_uboot_custom_postprocess" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow extensions to do extra u-boot postprocessing, after uboot_custom_postprocess</em></p>
+</blockquote>
+<p>For hacking at the produced binaries after u-boot is compiled and post-processed.</p>
 <h3 id="post_umount_final_image"><code>post_umount_final_image</code><a class="headerlink" href="#post_umount_final_image" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><em>allow config to hack into the image after the unmount</em></p>
 </blockquote>
 <p>Called after unmounting both <code>/root</code> and <code>/boot</code>.</p>
-<p>Also known as (for backwards compatibility only):</p>
-<ul>
-<li><code>config_post_umount_final_image</code></li>
-</ul>
-<h3 id="post_build_image"><code>post_build_image</code><a class="headerlink" href="#post_build_image" title="Permanent link">&para;</a></h3>
+<p>Also known as (for backwards compatibility only):
+- <code>config_post_umount_final_image</code></p>
+<h3 id="post_write_sdcard"><code>post_write_sdcard</code><a class="headerlink" href="#post_write_sdcard" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>custom post build hook</em></p>
+<p><em>run after writing img to sdcard</em></p>
 </blockquote>
-<p>Called after the final .img file is built, before it is (possibly) written to an SD writer.</p>
-<ul>
-<li><em>NOTE</em>: this hook used to take an argument ($1) for the final image produced.
-    - Now it is passed as an environment variable <code>${FINAL_IMAGE_FILE}</code>
-      It is the last possible chance to modify <code>$CARD_DEVICE</code>.</li>
-</ul>
+<p>After the image is written to <code>${device}</code>, but before verifying it.
+You can still set SKIP_VERIFY=yes to skip verification.</p>
+<h3 id="post_write_uboot_platform"><code>post_write_uboot_platform</code><a class="headerlink" href="#post_write_uboot_platform" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow custom writing of uboot &ndash; only during image build</em></p>
+</blockquote>
+<p>Called after <code>write_uboot_platform()</code>.
+It receives <code>UBOOT_CHROOT_DIR</code> with the full path to the u-boot dir in the chroot.
+Important: this is only called inside the build system.
+Consider that <code>write_uboot_platform()</code> is also called board-side, when updating uboot, eg: nand-sata-install.</p>
+<h3 id="pre_config_uboot_target"><code>pre_config_uboot_target</code><a class="headerlink" href="#pre_config_uboot_target" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow extensions prepare before configuring and compiling an u-boot target</em></p>
+</blockquote>
+<p>Some u-boot targets require extra configuration or pre-processing before compiling.
+For example, changing Python version can be done by replacing the <code>${BIN_WORK_DIR}/python</code> symlink.</p>
+<h3 id="pre_customize_image"><code>pre_customize_image</code><a class="headerlink" href="#pre_customize_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>run before customize-image.sh</em></p>
+</blockquote>
+<p>This hook is called after <code>customize-image-host.sh</code> is called, but before the overlay is mounted.
+It thus can be used for the same purposes as <code>customize-image-host.sh</code>.
+Attention: only the Distro default repos are enabled at this point; no packages from Armbian or custom repos can be used.
+If you need repos, please consider <code>post_armbian_repo_customize_image</code> or <code>post_repo_customize_image</code>.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>image_tweaks_pre_customize</code></p>
+<h3 id="pre_install_distribution_specific"><code>pre_install_distribution_specific</code><a class="headerlink" href="#pre_install_distribution_specific" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>give config a chance to act before install_distribution_specific</em></p>
+</blockquote>
+<p>Called after <code>create_rootfs_cache</code> (<em>prepare basic rootfs: unpack cache or create from scratch</em>) but before <code>install_distribution_specific</code> (<em>install distribution and board specific applications</em>).</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_pre_install_distribution_specific</code></p>
+<h3 id="pre_install_kernel_debs"><code>pre_install_kernel_debs</code><a class="headerlink" href="#pre_install_kernel_debs" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>called before installing the Armbian-built kernel deb packages</em></p>
+</blockquote>
+<p>It is not too late to <code>KERNELSOURCE='none'</code> here and avoid kernel install.</p>
+<h3 id="pre_package_kernel_headers"><code>pre_package_kernel_headers</code><a class="headerlink" href="#pre_package_kernel_headers" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>fix kernel headers before packaging</em></p>
+</blockquote>
+<p>Some (legacy/vendor) kernels need preprocessing of the produced kernel headers before packaging.
+Use this hook to do that, by modifying the file in place, in <code>${headers_target_dir}</code> directory.
+The kernel sources can be found in <code>${kernel_work_dir}</code>.</p>
+<h3 id="pre_package_kernel_image"><code>pre_package_kernel_image</code><a class="headerlink" href="#pre_package_kernel_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>fix Image/uImage/zImage before packaging kernel</em></p>
+</blockquote>
+<p>Some (legacy/vendor) kernels need preprocessing of the produced Image/uImage/zImage before packaging.
+Use this hook to do that, by modifying the file in place, in <code>${kernel_pre_package_path}</code> directory.
+The final file that will be used is stored in <code>${kernel_image_pre_package_path}</code> &ndash; which you shouldn&rsquo;t change.</p>
+<h3 id="pre_package_uboot_image"><code>pre_package_uboot_image</code><a class="headerlink" href="#pre_package_uboot_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow making some last minute changes before u-boot is packaged</em></p>
+</blockquote>
+<p>This should be implemented by the config to tweak the uboot package, after the board or family has had the chance to.
+You can write to <code>$destination</code> here and it will be packaged.
+You can also append to the <code>postinst_functions</code> array, and the <em>content</em> of those functions will be added to the postinst script.</p>
+<h3 id="pre_prepare_partitions"><code>pre_prepare_partitions</code><a class="headerlink" href="#pre_prepare_partitions" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow custom options for mkfs</em></p>
+</blockquote>
+<p>Good time to change stuff like mkfs opts, types etc.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>prepare_partitions_custom</code></p>
+<h3 id="pre_umount_final_image"><code>pre_umount_final_image</code><a class="headerlink" href="#pre_umount_final_image" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow config to hack into the image before the unmount</em></p>
+</blockquote>
+<p>Called before unmounting both <code>/root</code> and <code>/boot</code>.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_pre_umount_final_image</code></p>
+<h3 id="pre_update_initramfs"><code>pre_update_initramfs</code><a class="headerlink" href="#pre_update_initramfs" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow config to hack into the initramfs create process</em></p>
+</blockquote>
+<p>Called after rsync has synced both <code>/root</code> and <code>/root</code> on the target, but before calling <code>update_initramfs</code>.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_pre_update_initramfs</code></p>
+<h3 id="prepare_image_size"><code>prepare_image_size</code><a class="headerlink" href="#prepare_image_size" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>allow dynamically determining the size based on the $rootfs_size</em></p>
+</blockquote>
+<p>Called after <code>${rootfs_size}</code> is known, but before <code>${FIXED_IMAGE_SIZE}</code> is taken into account.
+A good spot to determine <code>FIXED_IMAGE_SIZE</code> based on <code>rootfs_size</code>.
+UEFISIZE can be set to 0 for no UEFI partition, or to a size in MiB to include one.
+Last chance to set <code>USE_HOOK_FOR_PARTITION</code>=yes and then implement create_partition_table hook_point.</p>
+<p>Also known as (for backwards compatibility only):
+- <code>config_prepare_image_size</code></p>
+<h3 id="prepare_root_device"><code>prepare_root_device</code><a class="headerlink" href="#prepare_root_device" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>*Specialized storage extensions typically transform the root device into a mapped device and should hook in here *</p>
+</blockquote>
+<p>At this stage ${rootdevice} has been defined pointing to a loop device partition. Extensions that map the root device must update rootdevice accordingly.</p>
 <h3 id="run_after_build"><code>run_after_build</code><a class="headerlink" href="#run_after_build" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><em>hook for function to run after build, i.e. to change owner of <code>$SRC</code></em></p>
 </blockquote>
-<p>Really one of the last hooks ever called. The build has ended. Congratulations.</p>
-<ul>
-<li><em>NOTE:</em> this will run only if there were no errors during build process.</li>
-</ul>
-<h3 id="extension_metadata_ready"><code>extension_metadata_ready</code><a class="headerlink" href="#extension_metadata_ready" title="Permanent link">&para;</a></h3>
+<p>Really one of the last hooks ever called. The build has ended. Congratulations.
+- <em>NOTE:</em> this will run only if there were no errors during build process.</p>
+<h3 id="uboot_make_config"><code>uboot_make_config</code><a class="headerlink" href="#uboot_make_config" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><em>meta-Meta time!</em></p>
+<p><em>Hook to customize u-boot make environment</em></p>
 </blockquote>
-<p>Implement this hook to work with/on the meta-data made available by the extension manager. Interesting stuff to process:</p>
-<ul>
-<li><code>"${EXTENSION_MANAGER_TMP_DIR}/hook_point_calls.txt"</code> contains a list of all hook points called, in order.</li>
-<li>For each hook_point in the list, more files will have metadata about that hook point.
-    - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.orig.md</code> contains the hook documentation at the call site (inline docs),
-      hopefully in Markdown format.
-    - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.compat</code> contains the compatibility names for the hooks.
-    - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.exports</code> contains <em>exported</em> environment variables.
-    - <code>${EXTENSION_MANAGER_TMP_DIR}/hook_point.vars</code> contains <em>all</em> environment variables.</li>
-<li><code>${defined_hook_point_functions}</code> is a map of <em>all</em> the defined hook point functions and their extension information.</li>
-<li><code>${hook_point_function_trace_sources}</code> is a map of all the hook point functions <em>that were really called during the
-  build</em> and their BASH_SOURCE information.</li>
-<li><code>${hook_point_function_trace_lines}</code> is the same, but BASH_LINENO info. After this hook is done,
-  the <code>${EXTENSION_MANAGER_TMP_DIR}</code> will be removed.</li>
-</ul>
+<p>Called right before invoking make for u-boot compilation.
+Available array to modify:
+  - uboot_make_envs[@]: environment variables passed via &ldquo;env -i&rdquo; (e.g., CCACHE_REMOTE_STORAGE)</p>
+<h3 id="user_config"><code>user_config</code><a class="headerlink" href="#user_config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>Invoke function with user override</em></p>
+</blockquote>
+<p>Allows for overriding configuration values set anywhere else.
+It is called after sourcing the <code>lib.config</code> file if it exists,
+but before assembling any package lists.</p>
 
 
 
