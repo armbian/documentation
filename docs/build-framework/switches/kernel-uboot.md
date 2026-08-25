@@ -128,7 +128,7 @@ Controls how the `--no-warn-rwx-segment` LD flag is handed to the TF-A build. By
 - `0` to `9`: set U-Boot log verbosity level
 - `6`: (default)
 
-Sets how verbose the U-Boot bootloader is on the console, baked into the build via `CONFIG_LOGLEVEL` and `CONFIG_LOG_MAX_LEVEL`. The scale runs from `0` (silent) to `9` (most verbose); the default `6` corresponds to info-level messages. Lower it (some boards set `1`) for a quiet, fast-looking boot, or raise it when you need to see what U-Boot is doing while debugging a boot failure.
+Sets how verbose the U-Boot bootloader is on the console, baked into the build via `CONFIG_LOG_MAX_LEVEL` and `CONFIG_LOG_DEFAULT_LEVEL`. The scale runs from `0` (silent) to `9` (most verbose); the default `6` corresponds to info-level messages. Lower it (some boards set `1`) for a quiet, fast-looking boot, or raise it when you need to see what U-Boot is doing while debugging a boot failure.
 
 #### FORCE_UBOOT_UPDATE
 

@@ -33,9 +33,9 @@ Points ccache at a private cache directory inside the build tree rather than the
 
 #### CCACHE_DIR
 
-`string` · default: `$SRC/cache/ccache`
+`string` · default: `$SRC/cache/ccache` for Docker and `PRIVATE_CCACHE=yes` builds
 
-Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from `CCACHE_TEMPDIR`, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away.
+Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from `CCACHE_TEMPDIR`, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away. The framework only sets this path for Docker builds and when `PRIVATE_CCACHE=yes`; a native `USE_CCACHE=yes` build without `PRIVATE_CCACHE` uses ccache's own default (`~/.cache/ccache`) unless you set `CCACHE_DIR` yourself.
 
 #### USE_TMPFS
 
@@ -84,9 +84,9 @@ Speeds up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` lev
 
 `integer`
 
-- `1` to `32`: manually set the number of workers when `PARALLEL_PATCHES=yes`. Default is auto-calculated from `nproc`.
+- a positive integer: manually set the number of workers when `PARALLEL_PATCHES=yes`. Default is auto-calculated (which caps itself at 32 for I/O-bound git operations); a manual value is used as given, not capped.
 
-Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and only takes effect when `PARALLEL_PATCHES=yes`. Leave it unset to let the framework size the pool automatically from the available cores, which is the right choice on most machines. Set an explicit count to throttle back the parallelism — for instance to reduce peak memory or disk pressure from the overlay mounts; a value that is out of range or otherwise invalid is ignored and the auto-calculation is used instead.
+Caps how many overlayfs worktrees the parallel patch rewriter runs at once, and only takes effect when `PARALLEL_PATCHES=yes`. Leave it unset to let the framework size the pool automatically from the available cores, which is the right choice on most machines. Set an explicit count to throttle back the parallelism — for instance to reduce peak memory or disk pressure from the overlay mounts; a value that is negative or otherwise invalid is ignored and the auto-calculation is used instead.
 
 #### ARTIFACT_IGNORE_CACHE
 

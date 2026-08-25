@@ -44,6 +44,7 @@ Selects which mirror of `linux-stable.git` the mainline kernel sources are clone
 - `google`: use the mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`
 - `tuna`: use the mirror provided by Tsinghua University
 - `bfsu`: use the mirror provided by Beijing Foreign Studies University, which is similar to `tuna`
+- `gitverse`: use the GitVerse (`gitverse.ru`) mirror
 - leave empty to use the official `git.kernel.org`, which may be very slow for mainland China users
 
 #### UBOOT_MIRROR
@@ -80,7 +81,7 @@ Full base URL of the pass-through git proxy used by `GITHUB_MIRROR=gitproxy`; it
 
 Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.
 
-- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`ghproxy`, DOWNLOAD_MIRROR=`china`
+- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`ghproxy`, GHCR_MIRROR=`nju`, DOWNLOAD_MIRROR=`china`
 - leave empty to use default settings
 
 #### HTTP_PROXY

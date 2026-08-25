@@ -7,6 +7,16 @@ description: "Diagnostics for Armbian builds: SHARE_LOG to upload full build log
 
 Logs and diagnostic output for a build.
 
+#### DEBUG
+
+`string` · default: `no`
+
+The umbrella verbosity switch. `DEBUG=yes` forces on both `SHOW_LOG` (stream every command live) and `SHOW_DEBUG` (debug-level messages and extra state dumps) — the quickest way to get maximum visibility when diagnosing a build. See those two switches for what each turns on.
+
+```sh
+./compile.sh build BOARD=... BRANCH=... DEBUG=yes
+```
+
 #### SHARE_LOG
 
 `string`
@@ -31,3 +41,9 @@ Streams the output of every command to the terminal as the build runs, prefixed 
 `string` · default: `no`
 
 Raises the verbosity of the build to debug level: it lets the many `debug`-severity `display_alert` messages through, triggers extra state and variable dumps throughout the pipeline, un-quiets `apt` inside the chroot (dropping its `-qq` flag so package `Conf`/`Inst` lines appear), and bumps the log level of the Python configuration-aggregation helpers. It defaults to `no` to keep the log readable and focused on the high-level flow, and is automatically turned on when `DEBUG=yes`. Enable it when you are diagnosing the build framework itself and need to see exactly what each step is doing.
+
+#### RAW_LOG
+
+`string` · default: `no`
+
+With `RAW_LOG=yes` the framework also keeps the uncompressed raw logs and bundles them into a `*.raw.tar` under `output/logs`, alongside the usual ANSI / ASCII / Markdown logs. Useful when you need the unprocessed output for deeper analysis.

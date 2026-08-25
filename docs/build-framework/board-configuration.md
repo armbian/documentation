@@ -64,8 +64,7 @@ boards.
 
 `year` · recommended
 
-The year the board first came to market. Used for inventory and ordering; CI warns
-when it is missing.
+The year the board first came to market. Used for inventory and ordering.
 
 - Example: `2022`
 
@@ -163,8 +162,7 @@ variants such as `vendor-edge`). Any valid branch name may be listed. A board wi
 `comma-separated list of kernel branches` · recommended
 
 Kernel branches to test when they differ from the build targets; it also drives
-build-list generation and is recorded in `/etc/armbian-release`. CI warns when it is
-empty. (Internal switch.)
+build-list generation and is recorded in `/etc/armbian-release`. (Internal switch.)
 
 - Example: `current,edge`
 

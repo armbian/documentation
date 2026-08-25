@@ -195,9 +195,9 @@ Selects the post-processing applied to the finished image for redistribution —
 - sha: generate SHA256 hash for image
 - gpg: sign image using gpg
 - xz: compress image only using xz format
-  - **IMAGE_XZ_COMPRESSION_RATIO** ( 0 - **1** - 9 ) images compression levels when using xz compressor. Beware of memory consumption when going higher
+  - **IMAGE_XZ_COMPRESSION_RATIO** ( 0 - 9 ) xz image compression level. Left unset it is auto-selected per host (and forced to `0` on stable `BETA=no` builds). Beware of memory consumption when going higher
 - zstd: compress image only using zstd format
-  - **ZSTD_COMPRESSION_LEVEL** ( 1 - **9** - 19 ) images compression levels when using zstd compressor. Beware of memory consumption when going higher
+  - **ZSTD_COMPRESSION_LEVEL** ( 1 - 22 ) zstd image compression level. Left unset it is auto-selected per host (from `9`, up to `22` with more threads and memory). Beware of memory consumption when going higher
 
 #### IMAGE_XZ_MEMLIMIT
 

@@ -7,6 +7,15 @@ description: "Advanced Armbian build commands: create and rewrite kernel, U-Boot
 
 Build-container management, kernel and bootloader development, board bring-up, and release and inspection tooling.
 
+## docker
+
+Runs a normal build inside Armbian's build container — the same as the default `./compile.sh` relaunch, but invoked explicitly. Pass the usual build switches after it.
+
+Usage:
+```bash
+./compile.sh docker BOARD=rockpi-4a BRANCH=current RELEASE=trixie
+```
+
 ## docker-shell
 
 Drops you into an interactive shell inside Armbian's build container — useful for editing sources, inspecting build errors, or running individual build steps by hand.

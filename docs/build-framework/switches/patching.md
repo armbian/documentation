@@ -17,7 +17,7 @@ Raises the log level of the Python patching tool so it prints the details of eve
 
 `string` · default: `no`
 
-Commits the patched kernel or U-Boot tree into a working git branch, turning each applied `.patch` file into a real git commit. This is the first half of the patch round-trip: once the patch set lives in git you can reorder, edit or drop commits with normal git tooling before regenerating the files with `REWRITE_PATCHES`. You seldom set it by hand — the `kernel-patch` / `uboot-patch` CLI commands force it on — but it is the switch the whole round-trip is built around.
+Commits the patched kernel or U-Boot tree into a working git branch, turning each applied `.patch` file into a real git commit. This is the first half of the patch round-trip: once the patch set lives in git you can reorder, edit or drop commits with normal git tooling before regenerating the files with `REWRITE_PATCHES`. You seldom set it by hand — the `kernel-patches-to-git` / `uboot-patches-to-git` CLI commands force it on — but it is the switch the whole round-trip is built around.
 
 #### REWRITE_PATCHES
 

@@ -32,7 +32,7 @@ Pre-installs the matching kernel headers into the image so that DKMS and other o
 
 `yes` (default) | `no`
 
-Builds and includes a set of out-of-tree Wi-Fi and Bluetooth adapter drivers that are not in the mainline kernel, covering many popular USB and SDIO chipsets. On by default; set `no` to build with in-kernel drivers only — for a leaner image, or when a mainline driver already covers your adapter. See the [driver list](https://github.com/armbian/build/blob/1914066729b7d0f4ae4463bba2491e3ec37fac84/lib/compilation-prepare.sh#L179-L507).
+Builds and includes a set of out-of-tree Wi-Fi and Bluetooth adapter drivers that are not in the mainline kernel, covering many popular USB and SDIO chipsets. On by default; set `no` to build with in-kernel drivers only — for a leaner image, or when a mainline driver already covers your adapter. See the [driver list](https://github.com/armbian/build/blob/main/lib/functions/compilation/patch/drivers_network.sh).
 
 #### BSPFREEZE
 
