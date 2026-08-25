@@ -224,7 +224,7 @@ Filesystem for the boot partition.
 
 #### BOOTSIZE
 
-`integer` (MiB) · default: `256`
+`integer` (MiB) · default: `256` (when a separate `/boot` is required)
 
 Size of a separate `/boot` partition, in MiB, created when one is required. Override
 it where a board's bootloader needs more room; the partitioning step falls back to
@@ -262,7 +262,7 @@ for headless devices.
 - `no`: no video output; desktop builds are refused (`BUILD_DESKTOP` is forced off)
 
 Declares whether the board can drive a display (for splash, desktop and other
-eyecandy). Setting `no` on a headless board disables the video stack and prevents a
+eye candy). Setting `no` on a headless board disables the video stack and prevents a
 desktop image from being built for it.
 
 #### POWER_MANAGEMENT_FEATURES
