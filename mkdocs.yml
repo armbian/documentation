@@ -309,8 +309,6 @@ nav:
             - 'Patching' : 'build-framework/switches/patching.md'
             - 'Diagnostics' : 'build-framework/switches/diagnostics.md'
         - 'User Configurations' : 'build-framework/user-configurations.md'
-        - 'Board Configuration' : 'build-framework/board-configuration.md'
-        - 'Adding a Board' : 'build-framework/adding-a-board.md'
         - 'Extensions' :
             - 'Overview' : 'build-framework/extensions/index.md'
             - 'Hooks' : 'build-framework/extensions/hooks.md'
@@ -318,6 +316,8 @@ nav:
             - 'kernel-rust' : 'build-framework/extensions/kernel-rust.md'
             - 'ccache-remote' : 'build-framework/extensions/ccache-remote.md'
         - 'Desktops' : 'build-framework/desktops.md'
+        - 'Board Configuration' : 'build-framework/board-configuration.md'
+        - 'Adding a Board' : 'build-framework/adding-a-board.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'
