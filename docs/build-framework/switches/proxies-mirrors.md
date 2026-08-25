@@ -52,8 +52,8 @@ Selects which mirror of `linux-stable.git` the mainline kernel sources are clone
 
 Selects which mirror of `u-boot.git` the mainline U-Boot sources are cloned from. Leave it empty to use the official `source.denx.de`; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.
 
-- `github`: use the mirror provided by github, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
-- `gitee`: use the mirror provided by Gitee, a Chinese git services
+- `github`: use the mirror provided by GitHub, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
+- `gitee`: use the mirror provided by Gitee, a Chinese Git service
 - leave empty to use the official `source.denx.de`, which may be very slow for mainland China users
 
 #### GITHUB_MIRROR
@@ -62,9 +62,9 @@ Selects which mirror of `u-boot.git` the mainline U-Boot sources are cloned from
 
 Selects a mirror or proxy for the many GitHub-hosted repositories the build clones. Leave it empty to connect to GitHub directly; choose one of the options below when GitHub is slow or unreachable — again, most relevant for users in mainland China or behind a corporate git proxy.
 
-- `fastgit`: use the mirror provided by fastgit.org
-- `gitclone`: use the mirror provided by gitclone.com
-- `cnpmjs`: use the mirror provided by cnpmjs.org
+- `fastgit`: use the fastgit.org mirror (`hub.fastgit.xyz`)
+- `ghproxy`: use a GitHub proxy — defaults to `ghfast.top`; override the host with `GHPROXY_ADDRESS`
+- `gitclone`: use the gitclone.com mirror
 - `gitproxy`: use a pass-through git proxy whose full base URL is given in `GITPROXY_ADDRESS` (e.g. `https://gitproxy.example.com/github.com`, no trailing slash). Selected automatically when a CI runner exports `GITPROXY_ADDRESS`.
 - leave empty to connect directly to GitHub, which may be very slow for mainland China users
 
@@ -80,7 +80,7 @@ Full base URL of the pass-through git proxy used by `GITHUB_MIRROR=gitproxy`; it
 
 Sets a whole group of mirrors at once from a single regional preset, so you do not have to configure each source individually. It never overrides a mirror you have already set explicitly, so you can adopt the regional defaults and still override any single one. Leave it empty for the standard upstream sources.
 
-- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`fastgit`, DOWNLOAD_MIRROR=`china`
+- `china`: MAINLINE_MIRROR=`tuna`, UBOOT_MIRROR=`gitee`, GITHUB_MIRROR=`ghproxy`, DOWNLOAD_MIRROR=`china`
 - leave empty to use default settings
 
 #### HTTP_PROXY

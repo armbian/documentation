@@ -18,9 +18,9 @@ Controls use of `apt-cacher-ng`, a caching proxy for Debian/Ubuntu apt repositor
 
 #### APT_PROXY_ADDR
 
-`string` · default: `localhost:3142`
+`string` · default: empty
 
-Address of the apt caching proxy that package downloads are routed through during the rootfs bootstrap. Defaults to `localhost:3142`, the standard `apt-cacher-ng` port; when it is set and `MANAGE_ACNG` is not managing its own instance, the debootstrap and chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared cache; leave it as-is if you have no external proxy.
+Address of an external apt caching proxy to route package downloads through during the rootfs bootstrap and chroot apt operations. **Empty by default** — no proxy is used unless you set it. When set (and `MANAGE_ACNG` is not managing its own instance), debootstrap and the chroot apt operations are pointed at this proxy. CI runners commonly export it to reuse a shared package cache. The managed `apt-cacher-ng` path (`MANAGE_ACNG=yes`) assumes the standard `localhost:3142` when this is unset.
 
 #### APT_CACHER_NG_CACHE_DIR
 
