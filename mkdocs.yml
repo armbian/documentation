@@ -307,7 +307,7 @@ nav:
             - 'APT cache' : 'build-framework/switches/apt-cache.md'
             - 'Caching & performance' : 'build-framework/switches/performance.md'
             - 'Patch & debug' : 'build-framework/switches/patching.md'
-            - 'Output & diagnostics' : 'build-framework/switches/diagnostics.md'
+            - 'Diagnostics' : 'build-framework/switches/diagnostics.md'
         - 'User Configurations' : 'build-framework/user-configurations.md'
         - 'Board Configuration' : 'build-framework/board-configuration.md'
         - 'Adding a Board' : 'build-framework/adding-a-board.md'

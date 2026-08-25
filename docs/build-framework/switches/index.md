@@ -28,4 +28,4 @@ The reference is split by what each switch controls:
 | [APT cache](apt-cache.md) | apt-cacher-ng and local `.deb` package caching |
 | [Caching & performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
 | [Patch & debug workflow](patching.md) | Round-tripping patches and build-debug switches |
-| [Output & diagnostics](diagnostics.md) | Logs and diagnostics |
+| [Diagnostics](diagnostics.md) | Build logs and debug output |

@@ -3,7 +3,7 @@ seo_title: "Armbian build output & diagnostics switches"
 description: "Diagnostics for Armbian builds: SHARE_LOG to upload full build logs, SHOW_LOG to stream command output live, and SHOW_DEBUG for verbose messages."
 ---
 
-# Output & diagnostics
+# Diagnostics
 
 Logs and diagnostic output for a build.
 
