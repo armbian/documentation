@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script.">
+        <meta name="description" content="Customize Armbian builds with userpatches: add kernel, U-Boot and ATF patches, config files, a custom kernel config, extensions, first-boot presets and image scripts without editing the core.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian userpatches: custom patches & config files">
-  <meta property="og:description" content="Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script.">
+  <meta property="og:description" content="Customize Armbian builds with userpatches: add kernel, U-Boot and ATF patches, config files, a custom kernel config, extensions, first-boot presets and image scripts without editing the core.">
   <meta name="twitter:title" content="Armbian userpatches: custom patches & config files">
-  <meta name="twitter:description" content="Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script.">
+  <meta name="twitter:description" content="Customize Armbian builds with userpatches: add kernel, U-Boot and ATF patches, config files, a custom kernel config, extensions, first-boot presets and image scripts without editing the core.">
   
     <meta name="twitter:card" content="summary">
   
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-configuration" class="md-skip">
+        <a href="#user-configurations" class="md-skip">
           Skip to content
         </a>
       
@@ -5124,10 +5124,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-provided-patches" class="md-nav__link">
+  <a href="#configuration-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided patches
+        Configuration files
       
     </span>
   </a>
@@ -5135,10 +5135,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-configuration" class="md-nav__link">
+  <a href="#patches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided configuration
+        Patches
       
     </span>
   </a>
@@ -5146,10 +5146,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-first-config" class="md-nav__link">
+  <a href="#custom-kernel-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided first config
+        Custom kernel configuration
       
     </span>
   </a>
@@ -5157,10 +5157,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#legacy-user-provided-configuration-deprecated-support-for-this-will-be-removed-at-some-point" class="md-nav__link">
+  <a href="#family-source-overrides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Legacy user provided configuration (deprecated, support for this will be removed at some point)
+        Family (source) overrides
       
     </span>
   </a>
@@ -5168,10 +5168,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-kernel-config" class="md-nav__link">
+  <a href="#extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided kernel config
+        Extensions
       
     </span>
   </a>
@@ -5179,10 +5179,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-sources-config-overrides" class="md-nav__link">
+  <a href="#first-boot-presets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided sources config overrides
+        First-boot presets
       
     </span>
   </a>
@@ -5190,10 +5190,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-image-customization-script" class="md-nav__link">
+  <a href="#image-customization-script" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided image customization script
+        Image customization script
       
     </span>
   </a>
@@ -5201,10 +5201,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partitioning-of-the-sd-card" class="md-nav__link">
+  <a href="#partitioning-and-rootfs-resize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partitioning of the SD card
+        Partitioning and rootfs resize
       
     </span>
   </a>
@@ -5930,10 +5930,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-provided-patches" class="md-nav__link">
+  <a href="#configuration-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided patches
+        Configuration files
       
     </span>
   </a>
@@ -5941,10 +5941,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-configuration" class="md-nav__link">
+  <a href="#patches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided configuration
+        Patches
       
     </span>
   </a>
@@ -5952,10 +5952,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-first-config" class="md-nav__link">
+  <a href="#custom-kernel-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided first config
+        Custom kernel configuration
       
     </span>
   </a>
@@ -5963,10 +5963,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#legacy-user-provided-configuration-deprecated-support-for-this-will-be-removed-at-some-point" class="md-nav__link">
+  <a href="#family-source-overrides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Legacy user provided configuration (deprecated, support for this will be removed at some point)
+        Family (source) overrides
       
     </span>
   </a>
@@ -5974,10 +5974,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-kernel-config" class="md-nav__link">
+  <a href="#extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided kernel config
+        Extensions
       
     </span>
   </a>
@@ -5985,10 +5985,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-sources-config-overrides" class="md-nav__link">
+  <a href="#first-boot-presets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided sources config overrides
+        First-boot presets
       
     </span>
   </a>
@@ -5996,10 +5996,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-provided-image-customization-script" class="md-nav__link">
+  <a href="#image-customization-script" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User provided image customization script
+        Image customization script
       
     </span>
   </a>
@@ -6007,10 +6007,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partitioning-of-the-sd-card" class="md-nav__link">
+  <a href="#partitioning-and-rootfs-resize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partitioning of the SD card
+        Partitioning and rootfs resize
       
     </span>
   </a>
@@ -6051,47 +6051,86 @@
   
 
 
-<h1 id="user-configuration">User Configuration<a class="headerlink" href="#user-configuration" title="Permanent link">&para;</a></h1>
-<h2 id="user-provided-patches">User provided patches<a class="headerlink" href="#user-provided-patches" title="Permanent link">&para;</a></h2>
-<p>You can add your own patches outside the build script. Place your patches inside the appropriate directory, for kernel or u-boot. There are no limitations except that all patches must have the file name extension <code>.patch</code>. <code>userpatches</code> directory structure mirrors directory structure of <code>patch</code>. Look for the hint at the beginning of patching process to select the proper directory for patches. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[ o.k. ] Started patching process for [ kernel sunxi-edge 4.4.0-rc6 ]
-[ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-edge ]
-</code></pre></div></td></tr></table></div>
-<p>Patches with the same file name and path in the <code>userpatches</code> directory tree override those in the <code>patch</code> directory. To <em>replace</em> a patch provided by Armbian maintainers, copy it from <code>patch</code> to the corresponding directory in <code>userpatches</code> and edit it to your needs. To <em>disable</em> a patch, create an empty file in the corresponding directory in <code>userpatches</code>.</p>
-<h2 id="user-provided-configuration">User provided configuration<a class="headerlink" href="#user-provided-configuration" title="Permanent link">&para;</a></h2>
-<p>A configuration file named <code>userpatches/config-&lt;something&gt;.conf.sh</code> (<code>.conf</code> also allowed) is a bash script that is sourced during the build if <code>./compile.sh something</code> is issued. All parameters which normally are passed via command line can be used (<code>PARAM1=value1</code> <code>PARAM2=value</code>) by using the same syntax, one separate line per <code>PARAM</code>. Command-line parameters still can override what is in the config file. More advanced use cases can use conditionals, define functions to implement hooks, source other/common config files, etc. A few, quite complex, examples can be found <a href="https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova">here</a>.</p>
-<h2 id="user-provided-first-config">User provided first config<a class="headerlink" href="#user-provided-first-config" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>userpatches/firstboot.conf
-</code></pre></div></td></tr></table></div>
-<p>When detected, the system displays an informational alert and applies the <a href="https://docs.armbian.com/User-Guide_Autoconfig/">first config configuration</a>.</p>
-<h2 id="legacy-user-provided-configuration-deprecated-support-for-this-will-be-removed-at-some-point">Legacy user provided configuration (deprecated, support for this will be removed at some point)<a class="headerlink" href="#legacy-user-provided-configuration-deprecated-support-for-this-will-be-removed-at-some-point" title="Permanent link">&para;</a></h2>
-<p>If the file <code>userpatches/lib.config</code> exists, it will be called and can override the particular kernel and u-boot versions. For a comprehensive list of available variables, look through  <code>lib/functions/configuration/main-config.sh</code>. Some examples of what you can change:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[[ $LINUXFAMILY == sunxi64 &amp;&amp; $BRANCH == edge ]] &amp;&amp; BOOTBRANCH=&#39;tag:v2017.09&#39; # conditionally change u-boot git branch/tag
-KERNELBRANCH=&quot;tag:v5.4.28&quot; #always change to this kernel tag
-</code></pre></div></td></tr></table></div>
-<h2 id="user-provided-kernel-config">User provided kernel config<a class="headerlink" href="#user-provided-kernel-config" title="Permanent link">&para;</a></h2>
-<p>If the file <code>userpatches/linux-$LINUXFAMILY-$BRANCH.config</code> exists, it will be used instead of the default one from <code>config</code>. Look for the hint at the beginning of the kernel compilation process to select the proper config file name. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[ o.k. ] Compiling current kernel [ 5.10.47 ]
-[ o.k. ] Using kernel config provided by user [ userpatches/linux-rockchip64-current.config ]
-</code></pre></div></td></tr></table></div>
-<h2 id="user-provided-sources-config-overrides">User provided sources config overrides<a class="headerlink" href="#user-provided-sources-config-overrides" title="Permanent link">&para;</a></h2>
-<p>If file <code>userpatches/config/sources/families/$LINUXFAMILY.conf</code> exists, it is sourced in addition to the default one from <code>config/sources/families</code>. Look for the hint at the beginning of the compilation process to confirm the file name being used.</p>
-<p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[ o.k. ] Sourcing family configuration userpatches/config/sources/families/sunxi64.conf
-</code></pre></div></td></tr></table></div>
-<h2 id="user-provided-image-customization-script">User provided image customization script<a class="headerlink" href="#user-provided-image-customization-script" title="Permanent link">&para;</a></h2>
-<p>You can run additional commands to customize the created image. Edit this file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>userpatches/customize-image.sh
-</code></pre></div></td></tr></table></div>
-<p>and place your code here. You may test the values of variables noted in the file to use different commands for different configurations. Those commands will be executed in a chroot environment just before finalizing the image.</p>
-<p>To add files to the image easily, put them in <code>userpatches/overlay</code> and access them in <code>/tmp/overlay</code> from <code>customize-image.sh</code></p>
-<p>Be advised that even though you are compiling an image on an amd64 machine, any additional apt packages you configure or commands you run in customize-image.sh will be automatically installed/executed/virtualized for the architecture of the build target SBC.</p>
-<h2 id="partitioning-of-the-sd-card">Partitioning of the SD card<a class="headerlink" href="#partitioning-of-the-sd-card" title="Permanent link">&para;</a></h2>
-<p>In case you define <code>$FIXED_IMAGE_SIZE</code> at build time the partition containing the rootfs will be made of this size. Default behaviour when this is not defined is to shrink the partition to minimum size at build time and expand it to the card&rsquo;s maximum capacity at boot time (leaving an unpartitioned spare area of ~5% when the size is 4GB or less to help the SD card&rsquo;s controller with wear leveling and garbage collection on old/slow cards).</p>
-<p>You can prevent the partition expansion from within <code>customize-image.sh</code> by a <code>touch /root/.no_rootfs_resize</code> or configure the resize operation by either a percentage or a sector count using <code>/root/.rootfs_resize</code> (<code>50%</code> will use only half of the card&rsquo;s size if the image size doesn&rsquo;t exceed this or <code>3887103s</code> for example will use sector 3887103 as partition end. Values without either <code>%</code> or <code>s</code> will be ignored).</p>
+<h1 id="user-configurations">User configurations<a class="headerlink" href="#user-configurations" title="Permanent link">&para;</a></h1>
+<p>Everything that customises a build lives in the <code>userpatches/</code> directory, so you never have to edit the build framework itself and your changes survive a <code>git pull</code>. The directory is created on first run; its location can be moved with the <a href="/build-framework/switches/host-docker/#userpatches_path"><code>USERPATCHES_PATH</code></a> switch.</p>
+<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
+<p>A configuration file named <code>userpatches/config-&lt;name&gt;.conf</code> (<code>.conf.sh</code> also works) is a bash script sourced during the build when you run <code>./compile.sh &lt;name&gt;</code>. It is the tidy alternative to a long command line: put one <code>PARAM=value</code> per line — any <a href="/build-framework/switches/">build switch</a> works — and reuse it with a short command.</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># userpatches/config-myboard.conf</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">BOARD</span><span class="o">=</span><span class="s2">&quot;bananapim5&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nv">BRANCH</span><span class="o">=</span><span class="s2">&quot;current&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nv">RELEASE</span><span class="o">=</span><span class="s2">&quot;trixie&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nv">BUILD_MINIMAL</span><span class="o">=</span><span class="s2">&quot;no&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nv">BUILD_DESKTOP</span><span class="o">=</span><span class="s2">&quot;no&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>./compile.sh<span class="w"> </span>myboard<span class="w">        </span><span class="c1"># sources userpatches/config-myboard.conf</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Command-line parameters still override what the config sets. More advanced files can use conditionals, define <a href="/build-framework/extensions/hooks/">hook functions</a>, and source other config files.</p>
+<h2 id="patches">Patches<a class="headerlink" href="#patches" title="Permanent link">&para;</a></h2>
+<p>The build applies patches from the framework&rsquo;s <code>patch/</code> tree and, on top of it, from the matching <code>userpatches/</code> directory — so you can add, override or disable patches without touching the shipped ones:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Framework</th>
+<th>Your patches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel</td>
+<td><code>patch/kernel/&lt;KERNELPATCHDIR&gt;/</code></td>
+<td><code>userpatches/kernel/&lt;KERNELPATCHDIR&gt;/</code></td>
+</tr>
+<tr>
+<td>U-Boot</td>
+<td><code>patch/u-boot/&lt;BOOTPATCHDIR&gt;/</code></td>
+<td><code>userpatches/u-boot/&lt;BOOTPATCHDIR&gt;/</code></td>
+</tr>
+<tr>
+<td>ATF (TF-A)</td>
+<td><code>patch/atf/&lt;ATFPATCHDIR&gt;/</code></td>
+<td><code>userpatches/atf/&lt;ATFPATCHDIR&gt;/</code></td>
+</tr>
+</tbody>
+</table>
+<p>The build prints the exact directory it is reading, so you always know where a patch belongs:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>[🌱] Started patching process for [ kernel rockchip64 current ]
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>[🌱] Looking for user patches in [ userpatches/kernel/archive/rockchip64-6.12 ]
+</span></code></pre></div></td></tr></table></div>
+<p>All patch files must end in <code>.patch</code>. A file with the <strong>same name</strong> in <code>userpatches/</code> overrides the framework&rsquo;s copy — to <em>replace</em> an Armbian patch, copy it into the matching <code>userpatches/</code> directory and edit it; to <em>disable</em> one, create an empty file with the same name there.</p>
+<div class="admonition tip">
+<p class="admonition-title">Creating and refreshing patches</p>
+<p>Rather than hand-editing <code>.patch</code> files, use the interactive <a href="/build-framework/commands/advanced/">patch commands</a> — <code>kernel-patch</code>, <code>uboot-patch</code>, <code>atf-patch</code>, <code>crust-patch</code> — which pause the build so you can edit the source and then write the diff out for you, and <code>rewrite-kernel-patches</code> / <code>rewrite-uboot-patches</code> to refresh an existing set against newer sources.</p>
+</div>
+<h2 id="custom-kernel-configuration">Custom kernel configuration<a class="headerlink" href="#custom-kernel-configuration" title="Permanent link">&para;</a></h2>
+<p>To build with your own kernel <code>.config</code>, drop it in <code>userpatches/</code> (or <code>userpatches/config/kernel/</code>) named after the config the board uses — the build reports the name it expects:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[🌱] Using kernel config provided by user [ userpatches/linux-rockchip64-current.config ]
+</span></code></pre></div></td></tr></table></div>
+<p>So for the example above you would provide <code>userpatches/linux-rockchip64-current.config</code>. Edit it interactively instead with the <a href="/build-framework/commands/basic/"><code>kernel-config</code></a> command.</p>
+<h2 id="family-source-overrides">Family (source) overrides<a class="headerlink" href="#family-source-overrides" title="Permanent link">&para;</a></h2>
+<p>If <code>userpatches/config/sources/families/&lt;LINUXFAMILY&gt;.conf</code> exists, it is sourced <strong>in addition to</strong> the framework&rsquo;s family file, letting you override kernel/U-Boot sources, branches and family tweaks for a whole SoC family. The build confirms the file it picked up:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[🌱] Sourcing family configuration userpatches/config/sources/families/sunxi64.conf
+</span></code></pre></div></td></tr></table></div>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h2>
+<p>Custom <a href="/build-framework/extensions/">build extensions</a> go in <code>userpatches/extensions/</code>; the framework searches there before its own <code>extensions/</code> directory, so a user extension with the same name takes precedence. Enable them per build with the <a href="/build-framework/switches/image-contents/#enable_extensions"><code>ENABLE_EXTENSIONS</code></a> switch.</p>
+<h2 id="first-boot-presets">First-boot presets<a class="headerlink" href="#first-boot-presets" title="Permanent link">&para;</a></h2>
+<p>Every fresh image ships a <code>/root/.not_logged_in_yet</code> marker that triggers the interactive first-run setup (root password, user account, locale, network). Provide <code>userpatches/firstboot.conf</code> to preseed those answers for an unattended first boot — see <a href="/User-Guide_Autoconfig/">First-boot configuration</a> for the available keys.</p>
+<h2 id="image-customization-script">Image customization script<a class="headerlink" href="#image-customization-script" title="Permanent link">&para;</a></h2>
+<p><code>userpatches/customize-image.sh</code> (created from a template on first run) runs <strong>inside the target rootfs in a chroot</strong>, right before the image is finalised — the place to install extra packages, drop in files or tweak configuration. To add files, put them under <code>userpatches/overlay/</code>; they are reachable as <code>/tmp/overlay</code> from the script.</p>
+<p>The chroot executes target-architecture code even when the build host is a different architecture (via <code>qemu-user-static</code>, or natively where the host matches — see <a href="/build-framework/switches/performance/#prefer_native_armhf"><code>PREFER_NATIVE_ARMHF</code></a>), so packages you install and commands you run apply to the SBC&rsquo;s architecture, not the host&rsquo;s.</p>
+<h2 id="partitioning-and-rootfs-resize">Partitioning and rootfs resize<a class="headerlink" href="#partitioning-and-rootfs-resize" title="Permanent link">&para;</a></h2>
+<p>By default the rootfs partition is shrunk to the minimum at build time and expanded to fill the media on first boot (leaving ~5% unpartitioned on cards of 4 GB or less to help the flash controller with wear levelling). Set <a href="/build-framework/switches/filesystem/#fixed_image_size"><code>FIXED_IMAGE_SIZE</code></a> (in MiB) to force a specific size instead.</p>
+<p>The first-boot expansion is controlled by two markers you can create from <code>customize-image.sh</code>:</p>
+<ul>
+<li><code>touch /root/.no_rootfs_resize</code> — skip the automatic expansion entirely.</li>
+<li>write a value to <code>/root/.rootfs_resize</code> — <code>50%</code> uses only half the media (unless the image already exceeds that), or an absolute sector count like <code>3887103s</code> sets the partition end. Values without <code>%</code> or <code>s</code> are ignored.</li>
+</ul>
 
 
 
