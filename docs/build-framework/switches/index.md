@@ -27,5 +27,5 @@ The reference is split by what each switch controls:
 | [Proxies & mirrors](proxies-mirrors.md) | HTTP proxies, download mirrors and a git proxy |
 | [APT cache](apt-cache.md) | apt-cacher-ng and local `.deb` package caching |
 | [Caching & performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
-| [Patch & debug workflow](patching.md) | Round-tripping patches and build-debug switches |
+| [Patch & debug](patching.md) | Round-tripping patches and build-debug switches |
 | [Diagnostics](diagnostics.md) | Build logs and debug output |
