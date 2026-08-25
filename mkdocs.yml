@@ -303,6 +303,8 @@ nav:
             - 'Kernel & U-Boot' : 'build-framework/switches/kernel-uboot.md'
             - 'Filesystem & image' : 'build-framework/switches/filesystem.md'
             - 'Build host & Docker' : 'build-framework/switches/host-docker.md'
+            - 'Proxies & mirrors' : 'build-framework/switches/proxies-mirrors.md'
+            - 'APT cache' : 'build-framework/switches/apt-cache.md'
             - 'Caching & performance' : 'build-framework/switches/performance.md'
             - 'Patch & debug' : 'build-framework/switches/patching.md'
             - 'Output & diagnostics' : 'build-framework/switches/diagnostics.md'

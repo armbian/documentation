@@ -23,7 +23,9 @@ The reference is split by what each switch controls:
 | [Image contents](image-contents.md) | Packages, firmware, networking and first-run behaviour inside the image |
 | [Kernel & U-Boot](kernel-uboot.md) | Kernel source, config, compiler and bootloader options |
 | [Filesystem & image](filesystem.md) | Root filesystem, partitions, labels, sizes and compression |
-| [Build host & Docker](host-docker.md) | The build host, Docker container, proxies, mirrors and apt cache |
+| [Build host & Docker](host-docker.md) | The build host and the Docker build container |
+| [Proxies & mirrors](proxies-mirrors.md) | HTTP proxies, download mirrors and a git proxy |
+| [APT cache](apt-cache.md) | apt-cacher-ng and local `.deb` package caching |
 | [Caching & performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
 | [Patch & debug workflow](patching.md) | Round-tripping patches and build-debug switches |
 | [Output & diagnostics](diagnostics.md) | Logs and diagnostics |
