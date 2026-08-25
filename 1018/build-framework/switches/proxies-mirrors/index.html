@@ -5121,6 +5121,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nameserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NAMESERVER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github_source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6163,6 +6174,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nameserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NAMESERVER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github_source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6298,6 +6320,9 @@
 <h4 id="no_proxy">NO_PROXY<a class="headerlink" href="#no_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: empty</p>
 <p>Comma-separated list of hosts and domains that should bypass the proxies above, propagated into the build container and the tools it runs. Empty by default; set it to keep local mirrors, registries or internal hosts off the proxy.</p>
+<h4 id="nameserver">NAMESERVER<a class="headerlink" href="#nameserver" title="Permanent link">&para;</a></h4>
+<p><code>IPv4 address</code> · default: autodetected, else <code>1.0.0.1</code></p>
+<p>DNS resolver used <strong>inside the build chroot</strong> while packages are downloaded; it does not affect the finished image (DNS there is left to DHCP/systemd). When you leave it unset the framework autodetects a usable resolver from the host&rsquo;s <code>/etc/resolv.conf</code>, falling back to <code>1.0.0.1</code> (Cloudflare); set it explicitly to force a specific resolver — for example on an isolated network where the host&rsquo;s resolver is unreachable from the chroot.</p>
 <h4 id="github_source">GITHUB_SOURCE<a class="headerlink" href="#github_source" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>https://github.com</code></p>
 <p>Base GitHub URL used when the build downloads helper tools and some sources (for example <code>bat</code>, <code>oras</code> and oh-my-zsh). Defaults to <code>https://github.com</code>; override it to route those fetches through a GitHub mirror or a caching proxy. Unlike <code>GITHUB_MIRROR</code>, this substitutes the URL directly rather than selecting a named mirror preset.</p>
