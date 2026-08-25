@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and their key parameters and descriptions.">
+        <meta name="description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and what each one does.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian build extensions list & ENABLE_EXTENSIONS">
-  <meta property="og:description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and their key parameters and descriptions.">
+  <meta property="og:description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and what each one does.">
   <meta name="twitter:title" content="Armbian build extensions list & ENABLE_EXTENSIONS">
-  <meta name="twitter:description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and their key parameters and descriptions.">
+  <meta name="twitter:description" content="Alphabetical reference of official Armbian build framework extensions, how to enable them with ENABLE_EXTENSIONS, and what each one does.">
   
     <meta name="twitter:card" content="summary">
   
@@ -7749,274 +7749,189 @@
 
 <h1 id="extensions-reference">Extensions Reference<a class="headerlink" href="#extensions-reference" title="Permanent link">&para;</a></h1>
 <p>Alphabetical reference of all official Armbian build framework extensions.
-Extensions live in the <code>extensions/</code> directory of the build repository.</p>
+Extensions live in the <a href="https://github.com/armbian/build/tree/main/extensions"><code>extensions/</code></a>
+directory of the build repository.</p>
 <p>To enable one or more extensions:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./compile.sh<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>...<span class="w"> </span><span class="nv">BRANCH</span><span class="o">=</span>...<span class="w"> </span><span class="nv">ENABLE_EXTENSIONS</span><span class="o">=</span><span class="s2">&quot;ext-name,another-ext&quot;</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Extensions with dedicated documentation pages are linked below.
-All others are documented by a short description and key parameters.</p>
-<hr />
+<div class="admonition info">
+<p class="admonition-title">This page is generated</p>
+<p>Each entry comes from the <code># @description</code> header of the extension&rsquo;s source
+file in <code>armbian/build</code>. To change a description, edit that header — not this
+page. Extensions with a dedicated page are linked from their entry.</p>
+</div>
 <h2 id="allwinner-kernel-bump">allwinner-kernel-bump<a class="headerlink" href="#allwinner-kernel-bump" title="Permanent link">&para;</a></h2>
-<p>Bumps the kernel version for Allwinner-based boards.</p>
-<hr />
+<p>Automates bumping the <code>edge</code> kernel for Allwinner (<code>sunxi*</code>) boards to the latest mainline version. On relaunch it reads the new <code>KERNEL_MAJOR_MINOR</code> from <code>master</code>, points <code>KERNELPATCHDIR</code> at <code>archive/sunxi-&lt;ver&gt;</code>, fetches Megous&rsquo;s git bundle from <code>xff.cz</code>, and regenerates the <code>patches.megous</code> set plus <code>series.conf</code>. Only usable with sunxi edge builds.</p>
 <h2 id="amlogic-fip-blobs">amlogic-fip-blobs<a class="headerlink" href="#amlogic-fip-blobs" title="Permanent link">&para;</a></h2>
-<p>Fetches Amlogic FIP (Firmware Image Package) blobs needed for bootloader assembly on Amlogic SoCs.</p>
-<hr />
+<p>Fetches the Amlogic FIP (Firmware Image Package) blobs required for bootloader assembly on Amlogic SoCs. Clones <code>retro98boy/amlogic-fip-blobs</code> at a pinned commit into the sources tools cache via <code>fetch_from_repo</code>. Enabled for Amlogic boards whose u-boot build needs these proprietary firmware blobs to produce a bootable image.</p>
 <h2 id="apa">apa<a class="headerlink" href="#apa" title="Permanent link">&para;</a></h2>
-<p>Enables Armbian Package Archive (APA) in the target image by default.</p>
-<hr />
+<p>Enables the Armbian Package Archive (APA) in the target image by setting <code>APA_IS_ACTIVE</code> and adding the <code>github.armbian.com/apa</code> apt repository. Installs <code>armbian-common</code> and <code>armbian-bsp</code> from it, plus the matching <code>armbian-desktop-*</code> metapackage when a <code>DESKTOP_ENVIRONMENT</code> (XFCE/KDE/GNOME) is selected. Enable it to source Armbian&rsquo;s core packages from APA by default.</p>
 <h2 id="applications-ha">applications-ha<a class="headerlink" href="#applications-ha" title="Permanent link">&para;</a></h2>
-<p>Builds a Home Assistant image (adds a <code>-homeassistant</code> suffix to the image name).</p>
-<hr />
+<p>Builds a Home Assistant Supervised image: enables <code>docker-ce</code>, installs <code>os-agent</code> and the Armbian-patched <code>homeassistant-supervised</code> deb, adds AppArmor to the kernel cmdline, and pulls in NetworkManager, AppArmor and CIFS/NFS support. Requires a full (non-<code>MINIMAL</code>) Debian image and appends a <code>-homeassistant</code> suffix to the output.</p>
 <h2 id="applications-kali">applications-kali<a class="headerlink" href="#applications-kali" title="Permanent link">&para;</a></h2>
-<p>Installs Kali Linux packages into the image (adds a <code>-kali</code> suffix).</p>
-<hr />
+<p>Preinstalls the Kali <code>kali-rolling</code> APT repository into the image and tags it <code>-kali</code>. Adds Kali&rsquo;s signing key, writes the sources list, and pins all Kali packages to priority 50 so nothing is pulled unless explicitly requested. Adds a login MOTD listing installable <code>kali-tools-*</code> packages; Debian only.</p>
 <h2 id="applications-omv">applications-omv<a class="headerlink" href="#applications-omv" title="Permanent link">&para;</a></h2>
-<p>Installs OpenMediaVault into the image (adds an <code>-omv</code> suffix).</p>
-<hr />
+<p>Preinstalls OpenMediaVault (OMV), the NAS web management platform, into the image. Runs <code>armbian-config --api module_omv install</code> in the chroot after repo customization and appends an <code>-omv</code> image suffix. Only supported on Debian <code>bookworm</code> and <code>trixie</code>; the build errors out on any other release.</p>
 <h2 id="arm64-compat-vdso">arm64-compat-vdso<a class="headerlink" href="#arm64-compat-vdso" title="Permanent link">&para;</a></h2>
-<p>Builds the arm64 kernel with <code>CONFIG_COMPAT</code>, <code>CONFIG_COMPAT_VDSO</code> and <code>CONFIG_ARM64_32BIT_EL0</code>, letting a host running this kernel execute armhf (32-bit ARM) userspace natively at full speed. One concrete benefit is faster Armbian builds: on such a host, armhf rootfs / chroot / package post-install steps run native instead of through <code>qemu-user-static</code> (~10× faster). The build framework auto-detects the capability — see <a href="/build-framework/switches/performance/#prefer_native_armhf">PREFER_NATIVE_ARMHF</a>.</p>
-<p>Requires a 32-bit ARM cross-compiler for GCC builds (<code>gcc-arm-linux-gnueabi</code> or custom <code>CROSS_COMPILE_COMPAT</code>). For clang builds uses the built-in LLVM backend.</p>
-<p>Limitation: aarch64 silicon without 32-bit ARM userspace support at EL0 (notably Apple M-series) cannot run armhf even with this kernel option enabled.</p>
-<hr />
+<p>Builds the arm64 kernel with <code>CONFIG_COMPAT</code>, <code>CONFIG_COMPAT_VDSO</code> and <code>CONFIG_ARM64_32BIT_EL0</code>, letting a host on this kernel run armhf userspace natively at full speed. This lets armhf rootfs/chroot steps build native instead of through <code>qemu-user-static</code> (~10× faster); the framework auto-detects it via <code>PREFER_NATIVE_ARMHF</code>. Needs a 32-bit ARM cross-compiler for GCC builds.</p>
 <h2 id="armbian-config">armbian-config<a class="headerlink" href="#armbian-config" title="Permanent link">&para;</a></h2>
-<p>Installs <code>armbian-config</code> from the Armbian GitHub repository into the image.</p>
-<hr />
+<p>Installs the <code>armbian-config</code> management tool into the image from Armbian&rsquo;s own APT repository. Adds <code>http://github.armbian.com/configng</code> (stable/main, signed by <code>APT_SIGNING_KEY_FILE</code>) as an APT source, then installs the package in the chroot. Packages are built from <code>armbian/configng</code> and merged into the main repo periodically.</p>
 <h2 id="armbian-live-patch">armbian-live-patch<a class="headerlink" href="#armbian-live-patch" title="Permanent link">&para;</a></h2>
-<p>Installs the Armbian Live Patch systemd service into the BSP package.</p>
-<hr />
+<p>Installs the Armbian Live Patch systemd service and its <code>/usr/lib/armbian/armbian-live-patch</code> helper into the BSP package. On boot and before apt upgrades it downloads a patch script from <code>dl.armbian.com/_patch</code>, verifies its GPG signature against the Armbian keyring, then runs it — letting Armbian push small live fixes to deployed systems.</p>
 <h2 id="bcmdhd">bcmdhd<a class="headerlink" href="#bcmdhd" title="Permanent link">&para;</a></h2>
-<p>Builds the Broadcom BCM WiFi (<code>bcmdhd</code>) driver as a DKMS kernel module. Requires working kernel headers.</p>
-<hr />
+<p>Installs the Broadcom <code>bcmdhd</code> WiFi driver as a DKMS module. Downloads the latest <code>pcie</code>, <code>sdio</code>, or <code>usb</code> variant <code>.deb</code> (selected by <code>BCMDHD_TYPE</code>) from the <code>armbian/bcmdhd-dkms</code> GitHub releases and builds it in the chroot. Forces <code>INSTALL_HEADERS=yes</code>; skips when <code>BCMDHD_TYPE</code> is unset or the kernel lacks working headers.</p>
 <h2 id="bcmdhd-spacemit">bcmdhd-spacemit<a class="headerlink" href="#bcmdhd-spacemit" title="Permanent link">&para;</a></h2>
-<p>Builds the Broadcom BCM WiFi driver for SpacemiT platforms as a DKMS kernel module.</p>
-<hr />
+<p>Installs the Broadcom <code>bcmdhd</code> WiFi driver for SpacemiT boards as a prebuilt DKMS <code>.deb</code>, downloaded from the <code>sven-ola/bcmdhd-spacemit-dkms</code> Codeberg releases and built in the chroot. Fetches the <code>pcie</code>, <code>sdio</code> or <code>usb</code> variant per <code>BCMDHD_SPACEMIT_TYPE</code>/<code>BCMDHD_SPACEMIT_TAG</code>. Forces <code>INSTALL_HEADERS=yes</code>, requiring a kernel with working headers.</p>
 <h2 id="bluetooth-hciattach">bluetooth-hciattach<a class="headerlink" href="#bluetooth-hciattach" title="Permanent link">&para;</a></h2>
-<p>Sets up Bluetooth via <code>hciattach</code> for boards that require serial attachment.</p>
-<hr />
+<p>Configures Bluetooth on boards that need manual <code>hciattach</code> serial attachment. Adds the <code>bluetooth</code>/<code>bluez</code> packages and installs a systemd service running <code>rfkill unblock</code> plus <code>hciattach</code> with <code>BLUETOOTH_HCIATTACH_PARAMS</code>/<code>BLUETOOTH_HCIATTACH_RKFILL_NUM</code>. Only deployed on <code>vendor*</code>/<code>legacy*</code> BSP branches, since mainline kernels bind Bluetooth via serdev.</p>
 <h2 id="brostrend-aic8800-dkms">brostrend-aic8800-dkms<a class="headerlink" href="#brostrend-aic8800-dkms" title="Permanent link">&para;</a></h2>
 <p>Installs the AIC8800 WiFi/BT DKMS driver for BroStrend USB adapters. Fetches the latest <code>aic8800-dkms</code> release from <code>Shadowrom2020/aic8800-dkms</code> GitHub and builds the kernel module in the chroot. Forces <code>INSTALL_HEADERS=yes</code> — requires a kernel with working headers package.</p>
-<hr />
 <h2 id="c-plus-plus-compiler">c-plus-plus-compiler<a class="headerlink" href="#c-plus-plus-compiler" title="Permanent link">&para;</a></h2>
-<p>Adds a C++ compiler to host build dependencies. The C++ compiler is no longer included by default; enable this extension when the build requires it.</p>
-<hr />
+<p>Adds a C++ compiler to the host build dependencies, no longer included by default in <code>prepare-host.sh</code>. Appends the native <code>g++</code> plus the <code>g++-aarch64-linux-gnu</code> arm64 cross-compiler (skipped on non-standard hosts like riscv64) to <code>EXTRA_BUILD_DEPS</code>. Enable it when the build requires a C++ compiler.</p>
 <h2 id="ccache-remote">ccache-remote<a class="headerlink" href="#ccache-remote" title="Permanent link">&para;</a></h2>
-<p>Enables ccache with a remote storage backend (Redis or HTTP/WebDAV) for sharing the compilation cache across multiple build hosts. Requires ccache 4.4+.</p>
+<p>Enables ccache with a remote Redis or HTTP/WebDAV backend so the compilation cache is shared across build hosts, and forces <code>USE_CCACHE=yes</code>. Set <code>CCACHE_REMOTE_STORAGE</code> explicitly, or let it auto-discover a server via DNS-SD/Avahi, DNS SRV (<code>CCACHE_REMOTE_DOMAIN</code>) or legacy <code>ccache.local</code>. Requires ccache 4.4+ and identical project paths on every host.</p>
 <p>See: <a href="/build-framework/extensions/ccache-remote/">ccache-remote extension</a></p>
-<hr />
 <h2 id="cleanup-space-final-image">cleanup-space-final-image<a class="headerlink" href="#cleanup-space-final-image" title="Permanent link">&para;</a></h2>
-<p>Runs <code>zerofree</code> and cleans APT caches in the final image to reduce disk footprint.</p>
-<hr />
+<p>Shrinks the final image&rsquo;s compressed footprint. Removes bulky rarely-needed firmware trees (<code>netronome</code>, <code>mrv</code>, <code>mellanox</code>), runs <code>zerofree</code> on every ext4 partition after unmount so unused blocks compress away, and logs the largest directories via <code>du</code>. Pulls in <code>fs-tools::zerofree</code>; enable it to produce smaller downloadable images.</p>
 <h2 id="cloud-init">cloud-init<a class="headerlink" href="#cloud-init" title="Permanent link">&para;</a></h2>
-<p>Installs and configures cloud-init in the target image.</p>
-<hr />
+<p>Installs and configures <code>cloud-init</code> in the image using the NoCloud data source, which reads its configuration from the FAT <code>armbi_boot</code> partition. Adds the <code>cloud-init</code> and <code>cloud-initramfs-dyn-netconf</code> packages, forces <code>BOOTFS_TYPE=fat</code>, ships empty default configs (hostname + DHCP), and disables <code>armbian-first-run</code>. Tags the image <code>-ci</code>.</p>
 <h2 id="detect-unused-extensions">detect-unused-extensions<a class="headerlink" href="#detect-unused-extensions" title="Permanent link">&para;</a></h2>
-<p>Developer/testing extension: a hook honeypot used to verify the extension framework works correctly.</p>
-<hr />
+<p>Developer/testing extension that detects &ldquo;wishful hooking&rdquo; — extension functions whose hook-point names are never actually called by the build. Runs late via <code>extension_metadata_ready</code> to scan <code>defined_hook_point_functions</code>, warning about any uncalled hook. Includes a deliberate honeypot function to verify the detector itself still works.</p>
 <h2 id="docker-ce">docker-ce<a class="headerlink" href="#docker-ce" title="Permanent link">&para;</a></h2>
-<p>Installs Docker CE (packages and apt repository) into the target image.</p>
-<hr />
+<p>Preinstalls Docker CE from Docker&rsquo;s official apt repository into the target image. Fetches the Docker GPG key, wires up a <code>download.docker.com</code> sources list for the matching Debian/Ubuntu release, then installs <code>docker-ce</code>, <code>docker-ce-cli</code>, <code>containerd.io</code> and <code>docker-compose-plugin</code> in the chroot. Enable it to ship container support out of the box.</p>
 <h2 id="fake-vcgencmd">fake-vcgencmd<a class="headerlink" href="#fake-vcgencmd" title="Permanent link">&para;</a></h2>
-<p>Installs a fake <code>vcgencmd</code> stub for Raspberry Pi software compatibility on non-Pi boards.</p>
-<hr />
+<p>Installs a stub <code>vcgencmd</code> so Raspberry Pi software that probes it runs on non-Pi boards. Downloads the script (plus LICENSE/README) from <code>clach04/fake_vcgencmd</code> v0.0.2 into <code>/usr/bin/vcgencmd</code> and makes it executable. Skipped on <code>rpi4b</code>, which ships the genuine <code>vcgencmd</code>.</p>
 <h2 id="fs-btrfs-support">fs-btrfs-support<a class="headerlink" href="#fs-btrfs-support" title="Permanent link">&para;</a></h2>
-<p>Adds Btrfs filesystem support: host build tools and image packages. Auto-enabled when <code>ROOTFS_TYPE=btrfs</code>.</p>
-<hr />
+<p>Adds Btrfs filesystem support, no longer bundled by default in <code>prepare-host.sh</code>. Appends <code>btrfs-progs</code> to both host build deps and the image packages, and injects the matching checksum module (<code>xxhash_generic</code> or <code>blake2b_generic</code>) into initramfs based on <code>BTRFS_CHECKSUM</code>. Auto-enabled when <code>ROOTFS_TYPE=btrfs</code> in <code>main-config.sh</code>.</p>
 <h2 id="fs-cryptroot-support">fs-cryptroot-support<a class="headerlink" href="#fs-cryptroot-support" title="Permanent link">&para;</a></h2>
-<p>Adds LUKS/cryptroot support. Auto-enabled when <code>CRYPTROOT_ENABLE=yes</code>.</p>
-<hr />
+<p>Encrypts the root partition with LUKS via <code>cryptsetup luksFormat</code>, adds <code>cryptsetup-initramfs</code> to the image and requires a separate boot partition. Supports a passphrase, an auto-generated autounlock keyfile, or <code>dropbear-initramfs</code> remote SSH unlock (<code>CRYPTROOT_SSH_UNLOCK</code>). Auto-enabled when <code>CRYPTROOT_ENABLE=yes</code>.</p>
 <h2 id="fs-f2fs-support">fs-f2fs-support<a class="headerlink" href="#fs-f2fs-support" title="Permanent link">&para;</a></h2>
-<p>Adds F2FS filesystem support. Auto-enabled when <code>ROOTFS_TYPE=f2fs</code>.</p>
-<hr />
+<p>Adds F2FS filesystem support to the build host. Appends <code>f2fs-tools</code> to <code>EXTRA_BUILD_DEPS</code> so the required tooling is present when building an f2fs root, which is no longer bundled by <code>prepare-host.sh</code>. Auto-enabled when <code>ROOTFS_TYPE=f2fs</code> in <code>main-config.sh</code>.</p>
 <h2 id="fs-nilfs2-support">fs-nilfs2-support<a class="headerlink" href="#fs-nilfs2-support" title="Permanent link">&para;</a></h2>
-<p>Adds NILFS2 filesystem support. Auto-enabled when <code>ROOTFS_TYPE=nilfs2</code>.</p>
-<hr />
+<p>Adds NILFS2 root-filesystem support. Installs <code>nilfs-tools</code> into both the image and the host build dependencies, and appends the <code>nilfs2</code> module to <code>/etc/initramfs-tools/modules</code> so the log-structured filesystem can be mounted at boot. Auto-enabled when <code>ROOTFS_TYPE=nilfs2</code> in <code>main-config.sh</code>.</p>
 <h2 id="fs-xfs-support">fs-xfs-support<a class="headerlink" href="#fs-xfs-support" title="Permanent link">&para;</a></h2>
-<p>Adds XFS filesystem support. Auto-enabled when <code>ROOTFS_TYPE=xfs</code>.</p>
-<hr />
+<p>Adds XFS root filesystem support, no longer bundled by default in <code>prepare-host.sh</code>. Installs <code>xfsprogs</code> into the image and adds it to the host build dependencies (<code>fs-tools::xfsprogs</code>) so the rootfs can be created. Auto-enabled when <code>ROOTFS_TYPE=xfs</code> is set in <code>main-config.sh</code>.</p>
 <h2 id="gateway-dk-ask">gateway-dk-ask<a class="headerlink" href="#gateway-dk-ask" title="Permanent link">&para;</a></h2>
-<p>NXP ASK (Application Solutions Kit) integration for the Mono Gateway Development Kit (LS1046A). Builds ASK kernel modules (CDX, FCI, auto-bridge, sfp-led, lp5812) in-tree with the kernel and packages userspace tools (<code>fmlib</code>, <code>fmc</code>, <code>libfci</code>, <code>libcli</code>, <code>dpa-app</code>, <code>cmm</code>) plus patched system libraries and configs into a single <code>.deb</code>. Requires iptables at runtime.</p>
-<hr />
+<p>Integrates NXP&rsquo;s ASK data-plane acceleration for the Mono Gateway DK (LS1046A). Builds the ASK kernel modules (CDX, FCI, auto-bridge, sfp-led, lp5812) in-tree, then compiles userspace tools (<code>fmlib</code>, <code>fmc</code>, <code>libfci</code>, <code>libcli</code>, <code>dpa-app</code>, <code>cmm</code>) and patched libraries in the chroot. Everything ships as one <code>gateway-dk-ask</code> <code>.deb</code>.</p>
 <h2 id="gen-sample-extension-docs">gen-sample-extension-docs<a class="headerlink" href="#gen-sample-extension-docs" title="Permanent link">&para;</a></h2>
-<p>Generates extension hook documentation and a sample extension file. Useful for extension developers.</p>
-<hr />
+<p>Generates reference documentation for the build framework&rsquo;s extension system. Writes auto-generated Markdown of every hook point to <code>userpatches/extensions/hooks.auto.docs.md</code> and a fully commented <code>sample-extension.sh</code> stub, both derived from the live hook registry. Enable it as an extension developer to discover all available hooks.</p>
 <h2 id="grub">grub<a class="headerlink" href="#grub" title="Permanent link">&para;</a></h2>
-<p>Standard GRUB bootloader setup for UEFI-capable boards. Supports <code>DISTRO_GENERIC_KERNEL</code> mode (uses distro kernel instead of Armbian&rsquo;s). Sets <code>GRUB_GFXPAYLOAD_LINUX=text</code> to keep the framebuffer console bound to <code>fbcon</code> (prevents a black local console after Plymouth quits on CLI installs), passes <code>splash plymouth.ignore-serial-consoles</code> so kernel boot messages remain visible while Plymouth draws the splash on the framebuffer. Deliberately omits <code>quiet</code> and <code>loglevel=3</code>, and disables Ubuntu&rsquo;s <code>vt.handoff=7</code> injection.</p>
-<hr />
+<p>Standard GRUB bootloader setup for UEFI-capable boards (amd64, arm64, loong64), with optional amd64 BIOS support and a <code>DISTRO_GENERIC_KERNEL</code> mode that boots the distro kernel instead of Armbian&rsquo;s. Installs <code>grub-efi</code>, generates <code>grub.cfg</code>, and sets <code>GRUB_GFXPAYLOAD_LINUX=text</code> with <code>splash plymouth.ignore-serial-consoles</code> to keep the framebuffer console on <code>fbcon</code> and kernel boot messages visible.</p>
 <h2 id="grub-riscv64">grub-riscv64<a class="headerlink" href="#grub-riscv64" title="Permanent link">&para;</a></h2>
-<p>GRUB bootloader setup for RISC-V 64-bit boards. Mirrors the console/splash cmdline conventions of the <code>grub</code> extension.</p>
-<hr />
+<p>Sets up the GRUB bootloader for UEFI-capable RISC-V 64-bit boards, using target <code>riscv64-efi</code> and a GPT/ESP layout instead of u-boot. Adds <code>grub-efi</code> and <code>efibootmgr</code> packages and copies the DTBs into the ESP. Mirrors the console/splash cmdline conventions of the standard <code>grub</code> extension.</p>
 <h2 id="grub-with-dtb">grub-with-dtb<a class="headerlink" href="#grub-with-dtb" title="Permanent link">&para;</a></h2>
-<p>GRUB with device tree blob (DTB) embedding support.</p>
-<hr />
+<p>A superset of the <code>grub</code> extension that boots via DeviceTree instead of ACPI, for EFI-only ARM64 machines like the ThinkPad X13s or Phytium D2000. Requires <code>BOOT_FDT_FILE</code>/<code>GRUB_FDT_FILE</code>, and installs a kernel hook plus a custom <code>09_linux_with_dtb.sh</code> GRUB script that deploys the DTB to the boot partition.</p>
 <h2 id="gxlimg">gxlimg<a class="headerlink" href="#gxlimg" title="Permanent link">&para;</a></h2>
-<p>Builds the <code>gxlimg</code> tool used for creating Amlogic bootable images.</p>
-<hr />
+<p>Builds the <code>gxlimg</code> host tool for packaging Amlogic bootable images. Fetches <code>repk/gxlimg</code> at a pinned commit, compiles it and installs to <code>/usr/local/bin/gxlimg</code> (only when the commit changed). Provides <code>gxlimg_repack_fip_with_new_uboot</code>, which extracts BL2/BL3x from an existing FIP and repacks them with a fresh <code>u-boot.bin</code> for <code>gxl</code>/<code>g12a</code>/<code>g12b</code> SoCs.</p>
 <h2 id="image-output-abl">image-output-abl<a class="headerlink" href="#image-output-abl" title="Permanent link">&para;</a></h2>
-<p>Converts the output image to ABL (Android Boot Loader) format using <code>mkbootimg</code>.</p>
-<hr />
+<p>Repackages the finished image into Android Boot Loader (ABL) format for Qualcomm/Snapdragon boards. Adds <code>mkbootimg</code> as a host dep, splits the rootfs into a separate <code>.rootfs.img</code>, then builds gzipped-kernel boot and recovery images for each DTB in <code>ABL_DTB_LIST</code>. Skips when <code>UEFI_GRUB_TARGET</code> or <code>BOOTFS_TYPE</code> is set.</p>
 <h2 id="image-output-arduino">image-output-arduino<a class="headerlink" href="#image-output-arduino" title="Permanent link">&para;</a></h2>
-<p>Converts the Armbian image into a QDL-flashable archive for Arduino UNO Q (Qualcomm QRB2210). Fetches Qualcomm flash binaries during image creation.</p>
-<hr />
+<p>Converts the Armbian image into a QDL-flashable <code>.tar</code> archive for the Arduino UNO Q (Qualcomm QRB2210). Splits the boot and root partitions with <code>dd</code> and extracts the U-Boot <code>boot.img</code> from the rootfs. Bundles Qualcomm firehose flash binaries fetched from the <code>armbian/qcombin</code> repo during image creation.</p>
 <h2 id="image-output-iso">image-output-iso<a class="headerlink" href="#image-output-iso" title="Permanent link">&para;</a></h2>
-<p>Builds a bootable <strong>live <code>.iso</code></strong> from a UEFI image so it can be booted from a BMC/IPMI <strong>virtual CD-ROM</strong> (cloud, IPMI, KVM). The ISO carries the kernel, initrd and a squashfs of the rootfs inside ISO9660, with <code>live-boot</code> and a self-contained GRUB. Boot the live system, then install to disk with <code>armbian-install</code>. Works on <code>amd64</code> and <code>arm64</code> UEFI targets (uefi-x86 / uefi-arm64); <code>riscv64</code> is experimental/untested. Requires the <code>grub</code> extension. By default the <code>.img</code> is dropped (the ISO carries the rootfs).</p>
-<p>The ISO is <strong>UEFI-only</strong> (no legacy BIOS boot) and <strong>Secure Boot must be disabled</strong> (GRUB and the kernel are unsigned).</p>
-<p>Parameters: <code>SKIP_ISO</code> (skip), <code>ISO_VOLID</code> (volume id, max 32 chars, default <code>ARMBIAN</code>), <code>ISO_COMP</code> (squashfs compressor: <code>zstd</code>/<code>xz</code>/<code>gzip</code>, default <code>zstd</code>), <code>ISO_TIMEOUT</code> (GRUB menu seconds, default <code>1</code>, <code>0</code> = boot immediately), <code>ISO_KEEP_IMG</code> (<code>yes</code> keeps the <code>.img</code> alongside the <code>.iso</code>).</p>
-<hr />
+<p>Builds a bootable live <code>.iso</code> from a UEFI image so it boots from a BMC/IPMI virtual CD-ROM. Packs the kernel, <code>live-boot</code> initrd and a squashfs rootfs into a hybrid ISO9660 with self-contained GRUB (<code>xorriso</code>/<code>mksquashfs</code>/<code>grub-mkstandalone</code>), dropping the <code>.img</code> by default. UEFI-only with Secure Boot off, restricted to <code>uefi-*</code> boards using the <code>grub</code> extension.</p>
 <h2 id="image-output-oowow">image-output-oowow<a class="headerlink" href="#image-output-oowow" title="Permanent link">&para;</a></h2>
-<p>Creates an image compatible with the OOWOW recovery system for Khadas boards.</p>
-<hr />
+<p>Converts the output image to Khadas OOWOW recovery format using Khadas&rsquo; <code>xze</code> tool, downloaded and cached from the krescue repo, and embeds board metadata matched by <code>KHADAS_OOWOW_BOARD_ID</code>. Forces <code>COMPRESS_OUTPUTIMAGE</code> to none/sha because xze already applies its own xz compression. Requires <code>KHADAS_OOWOW_BOARD_ID</code> to be set.</p>
 <h2 id="image-output-ovf">image-output-ovf<a class="headerlink" href="#image-output-ovf" title="Permanent link">&para;</a></h2>
-<p>Produces an OVF (Open Virtualization Format) archive for use in VMware and other hypervisors. Depends on <code>image-output-qcow2</code>.</p>
-<hr />
+<p>Converts the qcow2 from <code>image-output-qcow2</code> into a VMware VMDK using <code>qemu-img</code> (resized +47G), generates a matching <code>.vmx</code> and bundles them into a <code>.vmware.zip</code> for import into VMware and other hypervisors. Tune the guest with <code>OVF_VM_CPUS</code> and <code>OVF_VM_RAM_GB</code>; <code>OVF_KEEP_QCOW2</code>/<code>OVF_KEEP_IMG</code> retain intermediates.</p>
 <h2 id="image-output-qcow2">image-output-qcow2<a class="headerlink" href="#image-output-qcow2" title="Permanent link">&para;</a></h2>
-<p>Produces a qcow2 image suitable for QEMU/KVM virtualization.</p>
-<hr />
+<p>Converts the finished raw image to qcow2 for QEMU/KVM using <code>qemu-img convert</code>, adding <code>qemu-utils</code> to the host build dependencies. Optionally grows the disk by <code>QCOW2_RESIZE_AMOUNT</code> and deletes the original <code>.img</code> unless <code>QCOW2_KEEP_IMG=yes</code>. Skipped entirely when <code>SKIP_QCOW2=yes</code> (set by the Azure VHD extension).</p>
 <h2 id="image-output-sophgo-emmc-installer">image-output-sophgo-emmc-installer<a class="headerlink" href="#image-output-sophgo-emmc-installer" title="Permanent link">&para;</a></h2>
-<p>Directory-based image-output extension that produces a Sophgo eMMC installer image.</p>
-<hr />
+<p>Rewrites the finished <code>.img</code> into an eMMC installer card for Sophgo SG200x (Milk-V Duo S): extracts <code>fip-emmc.bin</code>, wraps the whole image as an <code>armbian.emmc</code> CIMG payload, and builds a bootable FAT card whose U-Boot <code>cvi_update</code> flashes the eMMC. Opt-in; use it when no running system is available to install from.</p>
 <h2 id="image-output-utm">image-output-utm<a class="headerlink" href="#image-output-utm" title="Permanent link">&para;</a></h2>
-<p>Produces a UTM-compatible image for macOS virtualization. Depends on <code>image-output-qcow2</code>.</p>
-<hr />
+<p>Produces a UTM-compatible virtual machine bundle for macOS from the qcow2 output; depends on <code>image-output-qcow2</code>. Wraps a resized qcow2 disk and a generated <code>config.plist</code> into a <code>.utm.zip</code>, setting CPUs and RAM via <code>UTM_VM_CPUS</code>/<code>UTM_VM_RAM_GB</code>. Enable it to run Armbian images under UTM on Apple Silicon or Intel Macs.</p>
 <h2 id="image-output-vhd-azure">image-output-vhd-azure<a class="headerlink" href="#image-output-vhd-azure" title="Permanent link">&para;</a></h2>
-<p>Produces a VHD image for use with Microsoft Azure.</p>
-<hr />
+<p>Produces a fixed-format VHD for Microsoft Azure via <code>qemu-img convert -O vpc</code>, first rounding the raw disk up to a whole megabyte plus 512 bytes as Azure requires. Forces <code>SKIP_QCOW2=yes</code>, making it incompatible with <code>image-output-qcow2</code>. Deletes the original <code>.img</code> unless <code>VHD_KEEP_IMG=yes</code>.</p>
 <h2 id="image-output-vhdx">image-output-vhdx<a class="headerlink" href="#image-output-vhdx" title="Permanent link">&para;</a></h2>
-<p>Produces a VHDX image. Depends on <code>image-output-qcow2</code>.</p>
-<hr />
+<p>Converts the qcow2 from <code>image-output-qcow2</code> into a dynamic Microsoft Hyper-V VHDX using <code>qemu-img</code> (resized +47G), then bundles it with a PowerShell VM-creation script into a <code>.hyperv.zip</code>. Enable it to get a Hyper-V-importable image; set <code>VHDX_KEEP_QCOW2</code> or <code>VHDX_KEEP_IMG</code> to retain the intermediates.</p>
 <h2 id="initramfs-usb-gadget-ums">initramfs-usb-gadget-ums<a class="headerlink" href="#initramfs-usb-gadget-ums" title="Permanent link">&para;</a></h2>
-<p>Adds USB Mass Storage (UMS) gadget support to the initramfs, allowing the board to expose its storage over USB.</p>
-<hr />
+<p>An early initramfs <code>init-premount</code> script turns the board into a USB Mass Storage gadget. When <code>ums=yes</code> is on the kernel command line it exposes all block devices over USB and loops forever instead of booting. A host can then flash the eMMC/SD/NVMe with BalenaEtcher or similar.</p>
 <h2 id="jethub-burn">jethub-burn<a class="headerlink" href="#jethub-burn" title="Permanent link">&para;</a></h2>
-<p>Automatically converts the Armbian <code>.img</code> into a JetHub burn image after the main build.</p>
-<hr />
+<p>Converts the finished <code>.img</code> into an Amlogic USB burn image for JetHub J80/J100/J200 boards. Fetches <code>jethome-iot/jethome-tools</code>, compiles the board DTB partition, extracts the rootfs and packs everything with <code>aml_image_v2_packer_new</code> using <code>u-boot.nosd.bin</code> from the U-Boot deb. Outputs <code>${version}.burn.img</code> alongside the normal image.</p>
 <h2 id="kernel-debug-tiers">kernel-debug-tiers<a class="headerlink" href="#kernel-debug-tiers" title="Permanent link">&para;</a></h2>
-<p>Enables cumulative kernel debug-information tiers for headless / serial-console debugging.</p>
-<hr />
+<p>Bakes cumulative kernel debug information into headless boards so serial-console facilities (Magic SysRq, KGDB, pstore) print meaningful symbols instead of raw hex. <code>KERNEL_DEBUG_TIER</code> (0-3, default 1) layers printk/lockup detection, then pstore/ramoops and full kallsyms, then KGDB/KDB over serial. Requires <code>DEBUG_INFO_BTF</code>, so <code>KERNEL_BTF=no</code> is a hard error.</p>
 <h2 id="kernel-rust">kernel-rust<a class="headerlink" href="#kernel-rust" title="Permanent link">&para;</a></h2>
-<p>Enables Rust language support in the Linux kernel (<code>CONFIG_RUST</code>). Installs a rustup-managed toolchain into <code>${SRC}/cache/tools/rustup/</code> and configures all required make parameters.</p>
+<p>Enables Rust language support in the Linux kernel (<code>CONFIG_RUST</code>). Installs a rustup-managed toolchain (<code>RUST_VERSION</code>, <code>bindgen-cli</code>, <code>rust-src</code>) into <code>${SRC}/cache/tools/rustup/</code>, keyed by a content hash, and passes <code>RUSTC</code>/<code>RUSTFMT</code>/<code>BINDGEN</code> make params. Ships prebuilt Rust crate artifacts in <code>linux-headers</code> so out-of-tree DKMS Rust modules can build.</p>
 <p>See: <a href="/build-framework/extensions/kernel-rust/">kernel-rust extension</a></p>
-<hr />
 <h2 id="kernel-version-toolchain">kernel-version-toolchain<a class="headerlink" href="#kernel-version-toolchain" title="Permanent link">&para;</a></h2>
-<p>Adds the compiler name and version (e.g. <code>gcc13.3</code>, <code>clang20.1</code>) to the kernel artifact version string, ensuring cache invalidation when the toolchain changes.</p>
-<p><strong>Variables:</strong> none (auto-detects from <code>KERNEL_COMPILER</code>).</p>
-<hr />
+<p>Appends the kernel compiler name and major.minor version (e.g. <code>gcc13.3</code>, <code>clang20.1</code>) to the kernel artifact version string. Auto-detects the binary from <code>KERNEL_COMPILER</code> and reads it via <code>-dumpfullversion</code>, adding a <code>_T</code> part to the artifact hash. Enable it so cached kernels rebuild when the host toolchain changes.</p>
 <h2 id="lowmem">lowmem<a class="headerlink" href="#lowmem" title="Permanent link">&para;</a></h2>
-<p>Applies Armbian optimizations for low-memory boards (reduced parallelism, swap configuration, etc.).</p>
-<hr />
+<p>Applies userland tweaks for boards with under 256MB RAM: writes an initramfs config (<code>MODULES=dep</code>, fixed <code>RUNSIZE</code>), installs the <code>lowmem-mkswap</code> swapfile service and <code>armbian-lowmem</code> defaults, and disables <code>armbian-ramlog</code> and zram swap. Enable it on very-low-memory boards so apt, locale-gen and boot run smoothly.</p>
 <h2 id="lsmod">lsmod<a class="headerlink" href="#lsmod" title="Permanent link">&para;</a></h2>
-<p>Applies <code>localmodconfig</code> based on an lsmod output file to build a minimal kernel. Place the lsmod file in <code>userpatches/lsmod/&lt;board&gt;.lsmod</code>. <strong>Variable:</strong> <code>LSMOD</code> (defaults to <code>$BOARD</code>).</p>
-<hr />
+<p>Runs <code>make localmodconfig</code> against a captured <code>lsmod</code> file to strip the kernel down to only the modules your hardware actually loads, compiling several times faster. Reads the file from <code>userpatches/lsmod/${LSMOD}.lsmod</code>, where the <code>LSMOD</code> variable defaults to <code>$BOARD</code>. Errors out if that file is missing.</p>
 <h2 id="lvm">lvm<a class="headerlink" href="#lvm" title="Permanent link">&para;</a></h2>
-<p>Adds LVM (Logical Volume Manager) support to the image.</p>
-<hr />
+<p>Places the root filesystem on an LVM logical volume. Creates a PV/VG/LV on the root partition (<code>lvm2</code>), sizing the volume to ~130% of the rootfs, and forces a separate boot partition (<code>BOOTPART_REQUIRED=yes</code>) since many bootloaders cannot read LVM. Customise the group name via <code>${LVM_VG_NAME:-armbivg}</code>; a <code>-lvm</code> suffixed image is produced.</p>
 <h2 id="marvell-tools">marvell-tools<a class="headerlink" href="#marvell-tools" title="Permanent link">&para;</a></h2>
-<p>Fetches Marvell Armada A3700 build tools, DDR library, and binary blobs needed for bootloader assembly.</p>
-<hr />
+<p>Fetches the host sources needed to assemble Marvell Armada A3720/A8040 bootloaders. Clones pinned <code>A3700-utils</code> (bschnei&rsquo;s fork, fixes modern-toolchain build errors), <code>mv-ddr-marvell</code>, <code>binaries-marvell</code>, <code>cryptopp</code>, and CZ.NIC <code>mox-boot-builder</code> for the WTMI secure firmware. Used by EspressoBin/MacchiatoBin bootloader builds; pins guarantee reproducible firmware.</p>
 <h2 id="mtkflash">mtkflash<a class="headerlink" href="#mtkflash" title="Permanent link">&para;</a></h2>
-<p>Adds MediaTek device flashing tool support to the build.</p>
-<hr />
+<p>Clones and builds the Rust <code>mtk-flash</code> tool from <code>grinn-global/mtk-flash</code>, then flashes a MediaTek board over <code>/dev/ttyACMx</code> with the produced <code>lk.bin</code>, <code>fip.img</code> and disk image after the build. Needs the Rust toolchain and direct host USB access (no Docker); set <code>MTKFLASH_TTYACM_DEVICE</code> to pick the port.</p>
 <h2 id="net-chrony">net-chrony<a class="headerlink" href="#net-chrony" title="Permanent link">&para;</a></h2>
-<p>Installs the <code>chrony</code> NTP daemon for network time synchronization.</p>
-<hr />
+<p>Adds the <code>chrony</code> package to the image for network time synchronization. Chrony is a full-featured NTP client/server that syncs faster and copes with intermittent connections and jitter better than <code>systemd-timesyncd</code>. Enable it as the alternative time-sync extension when accurate or robust NTP is required.</p>
 <h2 id="net-network-manager">net-network-manager<a class="headerlink" href="#net-network-manager" title="Permanent link">&para;</a></h2>
-<p>Installs NetworkManager and Netplan for network interface management.</p>
-<hr />
+<p>Manages network interfaces with NetworkManager backed by Netplan. Installs <code>network-manager</code>, <code>network-manager-openvpn</code> and <code>netplan.io</code> (plus desktop, Ubuntu and VPN extras), enables <code>systemd-resolved</code>, disables <code>NetworkManager-wait-online</code>, and deploys the extension&rsquo;s Netplan/NM config files. Requires <code>NETWORKING_STACK=network-manager</code>, which selects this stack.</p>
 <h2 id="net-systemd-networkd">net-systemd-networkd<a class="headerlink" href="#net-systemd-networkd" title="Permanent link">&para;</a></h2>
-<p>Installs systemd-networkd and Netplan for network interface management.</p>
-<hr />
+<p>Manages network interfaces with <code>systemd-networkd</code> plus Netplan: adds <code>netplan.io</code>, enables <code>systemd-networkd</code> and <code>systemd-resolved</code>, and installs Netplan/networkd config plus drop-in overrides for <code>systemd-networkd-wait-online</code> and <code>apt-daily-upgrade</code>. Requires <code>NETWORKING_STACK=systemd-networkd</code>, and chmods the Netplan configs to <code>600</code>.</p>
 <h2 id="net-systemd-timesyncd">net-systemd-timesyncd<a class="headerlink" href="#net-systemd-timesyncd" title="Permanent link">&para;</a></h2>
-<p>Installs <code>systemd-timesyncd</code> for network time synchronization.</p>
-<hr />
+<p>Adds the <code>systemd-timesyncd</code> package to the image and enables <code>systemd-timesyncd.service</code> in the chroot for network time synchronization. This is systemd&rsquo;s lightweight built-in SNTP client, sufficient when full NTP features aren&rsquo;t needed. Enable it as a minimal alternative to the <code>chrony</code> extension.</p>
 <h2 id="nicod-armbian-gaming">nicod-armbian-gaming<a class="headerlink" href="#nicod-armbian-gaming" title="Permanent link">&para;</a></h2>
-<p>Gaming-oriented Armbian image configuration.</p>
-<hr />
+<p>Adds a launcher for NicoD&rsquo;s <code>armbian-gaming</code> project to the image. Drops <code>/usr/local/bin/nicod-armbian-gaming</code>, a script that clones (or <code>git pull</code>s) <code>NicoD-SBC/armbian-gaming</code> on first run and executes its <code>armbian-gaming.sh</code>. Appends a <code>-gaming</code> suffix to the image name; enable it to ship a gaming-oriented image.</p>
 <h2 id="nomod">nomod<a class="headerlink" href="#nomod" title="Permanent link">&para;</a></h2>
-<p>Builds the kernel with all modules disabled (<code>localmodconfig</code> with empty lsmod). Produces a non-working kernel — intended for rapid kernel build/packaging tests only.</p>
-<hr />
+<p>Builds the kernel with almost all modules disabled by running <code>make mod2noconfig</code>, stripping the config down to built-ins only. The result is a deliberately non-working kernel. Use it only to speed up testing of the kernel image build and packaging pipeline, never for a usable image.</p>
 <h2 id="nvidia">nvidia<a class="headerlink" href="#nvidia" title="Permanent link">&para;</a></h2>
-<p>Builds the Nvidia proprietary kernel module via DKMS. Not available in minimal images.</p>
-<hr />
+<p>Installs the NVIDIA proprietary driver and builds its kernel module via DKMS, blacklisting <code>nouveau</code>. Auto-detects the highest <code>nvidia-dkms-&lt;N&gt;</code> in the chroot&rsquo;s apt index (or uses <code>NVIDIA_DRIVER_VERSION</code>/the Debian <code>nvidia-dkms</code> metapackage), forces <code>INSTALL_HEADERS=yes</code>, and ships an <code>armbian-nvidia-autodetect</code> service that disables the driver on GPU-less hosts. Skipped on minimal images.</p>
 <h2 id="odin2-preset-firstrun">odin2-preset-firstrun<a class="headerlink" href="#odin2-preset-firstrun" title="Permanent link">&para;</a></h2>
-<p>Applies preset first-run configuration specific to the Odin2 gaming device.</p>
-<hr />
+<p>Bakes first-boot presets for the Odin2 handheld gaming device into <code>/root/.not_logged_in_yet</code>, setting the <code>odin2</code> user, default locale/timezone, shell, and Ethernet/WiFi network toggles. Also clones <code>Squishy123/odin2-scripts</code> into the rootfs and installs an <code>install-odin2-scripts</code> launcher. Enable it when building images specifically for the Odin2.</p>
 <h2 id="photonicat-pm">photonicat-pm<a class="headerlink" href="#photonicat-pm" title="Permanent link">&para;</a></h2>
-<p>Installs the <code>photonicat-pm</code> DKMS power-management driver for the Ariaboard Photonicat router. Fetches the latest release from <code>HackingGate/photonicat-pm</code> GitHub and builds the kernel module in chroot. Skipped on kernels ≥ 6.20. Requires working kernel headers.</p>
-<hr />
+<p>Installs the <code>photonicat-pm</code> DKMS power-management driver for the Ariaboard Photonicat router. Fetches the latest <code>HackingGate/photonicat-pm</code> release deb and builds the kernel module in the chroot, forcing <code>INSTALL_HEADERS=yes</code>. Requires a kernel with a working headers package and is skipped on kernels ≥ 6.20.</p>
 <h2 id="preset-firstrun">preset-firstrun<a class="headerlink" href="#preset-firstrun" title="Permanent link">&para;</a></h2>
-<p>Applies preset network and first-run configuration to the image (writes <code>.not_logged_in_yet</code>).</p>
-<hr />
+<p>Writes a <code>/root/.not_logged_in_yet</code> file that preseeds the first-boot wizard so the image configures itself unattended. Sets network mode (Ethernet/WiFi with SSID, key, country and optional static IP), locale, timezone, shell, and default root/user names and passwords. Edit its placeholder values before enabling for hands-off deployments.</p>
 <h2 id="r8125-dkms">r8125-dkms<a class="headerlink" href="#r8125-dkms" title="Permanent link">&para;</a></h2>
-<p>Adds the Realtek RTL8125B 2.5GbE DKMS driver (e.g. EasePi-A2, rk35xx vendor kernel).</p>
-<hr />
+<p>Installs Realtek&rsquo;s official <code>r8125</code> (v9.016.01) 2.5GbE DKMS driver and blacklists the buggy in-kernel <code>r8169</code>. Host-side downloads <code>awesometic/realtek-r8125-dkms</code>, then adds/builds/installs the module in the chroot against the target kernel. Forces <code>INSTALL_HEADERS=yes</code>; needed on the EasePi-A2 rk35xx vendor kernel where <code>r8169</code> breaks RTL8125B TX.</p>
 <h2 id="radxa-aic8800">radxa-aic8800<a class="headerlink" href="#radxa-aic8800" title="Permanent link">&para;</a></h2>
-<p>Builds the Radxa AIC8800 WiFi driver as a DKMS kernel module. Requires working kernel headers.</p>
-<hr />
+<p>Installs the AIC8800 WiFi DKMS driver and firmware for Radxa boards. Downloads the <code>aic8800-&lt;type&gt;-dkms</code> and firmware debs (<code>pcie</code>/<code>sdio</code>/<code>usb</code> per <code>AIC8800_TYPE</code>) from the latest <code>radxa-pkg/aic8800</code> release and builds the module in the chroot. Forces <code>INSTALL_HEADERS=yes</code>, needs working kernel headers, and skips kernels ≥ 7.3.</p>
 <h2 id="rkbin-tools">rkbin-tools<a class="headerlink" href="#rkbin-tools" title="Permanent link">&para;</a></h2>
-<p>Fetches Rockchip binary tools (<code>rkbin</code>) from the configured git repository. <strong>Variables:</strong> <code>RKBIN_GIT_URL</code>, <code>RKBIN_GIT_BRANCH</code>.</p>
-<hr />
+<p>Fetches the Rockchip <code>rkbin</code> repository (default <code>armbian/rkbin</code>) and installs the <code>loaderimage</code> and <code>trust_merger</code> host tools into <code>/usr/local/bin</code>, reinstalling only when the git commit changes. Needed to package Rockchip U-Boot/TPL/SPL images. Override the source with <code>RKBIN_GIT_URL</code> and <code>RKBIN_GIT_BRANCH</code>.</p>
 <h2 id="rkdevflash">rkdevflash<a class="headerlink" href="#rkdevflash" title="Permanent link">&para;</a></h2>
-<p>Adds Rockchip device flashing tool support to the build.</p>
-<hr />
+<p>Builds Radxa&rsquo;s <code>rkdeveloptool</code> and flashes the freshly built image to a connected Rockchip device over USB. Enables <code>rkbin-tools</code> for the <code>ROCKUSB_BLOB</code> SPL loader, waits for the board, switches Maskrom to Loader mode, writes the image (<code>wl</code>), then resets it. Cannot run under Docker.</p>
 <h2 id="rkusbboot">rkusbboot<a class="headerlink" href="#rkusbboot" title="Permanent link">&para;</a></h2>
-<p>Installs host dependencies, then clones and builds Rockchip <code>rkusbboot</code>.</p>
-<hr />
+<p>Clones and builds Rockchip <code>rkusbboot</code> from <code>RadxaNaoki/rkusbboot</code>, adding host deps like <code>libusb</code>/<code>libudev</code> and enabling <code>rkbin-tools</code> for the loader blobs. After the build it RAMBoots the fresh image over USB into a Maskrom-mode device, enabling <code>CONFIG_ROCKCHIP_MASKROM_IMAGE</code> in mainline u-boot. Cannot run under Docker.</p>
 <h2 id="sophgo-sg200x-aic8800">sophgo-sg200x-aic8800<a class="headerlink" href="#sophgo-sg200x-aic8800" title="Permanent link">&para;</a></h2>
-<p>Adds the AIC8800D80 Wi-Fi 6 + Bluetooth 5 (SDIO) driver for Sophgo SG200x / Milk-V Duo S.</p>
-<hr />
+<p>Adds AIC8800D80 Wi-Fi 6 + Bluetooth 5 (SDIO) support for Sophgo SG200x / Milk-V Duo S boards, which lack a mainline driver. Copies the pinned <code>queenkjuul/aic8800-milkv-duos</code> vendor driver into the kernel tree and builds it as in-tree modules with a compiled-in firmware path. Also configures modprobe ordering and a Bluetooth attach service.</p>
 <h2 id="sunxi-tools">sunxi-tools<a class="headerlink" href="#sunxi-tools" title="Permanent link">&para;</a></h2>
-<p>Adds a 32-bit ARM cross-compiler to host dependencies for Allwinner (sunxi) builds. Only required outside Docker.</p>
-<hr />
+<p>Builds and installs <code>sunxi-tools</code> (e.g. <code>sunxi-fexc</code>) on the host from the <code>linux-sunxi/sunxi-tools</code> Git repo, recompiling only when the commit hash changes. Also adds 32-bit armhf (<code>gcc-arm-linux-gnueabi</code>) and OpenRISC (<code>gcc-or1k-elf</code>) cross-compilers for Allwinner bootloader and crust builds; those compilers are only needed outside Docker.</p>
 <h2 id="sysrq-serial-trigger">sysrq-serial-trigger<a class="headerlink" href="#sysrq-serial-trigger" title="Permanent link">&para;</a></h2>
-<p>Enables Magic SysRq over the serial console for headless boards.</p>
-<hr />
+<p>Enables Magic SysRq over the serial console so an operator can sync, remount read-only and reboot a hung headless board. Sets the <code>MAGIC_SYSRQ</code>/<code>MAGIC_SYSRQ_SERIAL</code> kernel options with a non-empty <code>SYSRQ_SERIAL_SEQUENCE</code> (default <code>sysrq</code>), raises U-Boot <code>BOOTDELAY</code> to 5, and writes <code>kernel.sysrq=1</code> for the full command set.</p>
 <h2 id="syterkit-allwinner">syterkit-allwinner<a class="headerlink" href="#syterkit-allwinner" title="Permanent link">&para;</a></h2>
-<p>Writes the SyterKit bootloader image to the appropriate offset in the Allwinner output image.</p>
-<hr />
+<p>Writes the SyterKit bootloader to the correct offset of a finished Allwinner image. Downloads the latest <code>YuzukiHD/SyterKit</code> release for <code>SYTERKIT_BOARD_ID</code>, extracts it, and <code>dd</code>s <code>extlinux_boot_bin_card.bin</code> to the loop device at an 8KB seek. Auto-used by Allwinner boards that boot via SyterKit instead of U-Boot.</p>
 <h2 id="ti-debpkgs">ti-debpkgs<a class="headerlink" href="#ti-debpkgs" title="Permanent link">&para;</a></h2>
-<p>Installs Texas Instruments packages from the official TI Debian package repository.</p>
-<hr />
+<p>Adds the official Texas Instruments Debian package repository (<code>TexasInstruments/ti-debpkgs</code>) and installs the packages listed in <code>TI_PACKAGES</code>. Validates the APT suite against the repo&rsquo;s <code>dists</code> (via GitHub API), using <code>RELEASE</code> or the <code>TI_DEBPKGS_SUITE</code>/<code>TI_DEBPKGS_FALLBACK_SUITES</code> overrides, and installs an apt-preferences pin. Skips gracefully when no matching suite exists.</p>
 <h2 id="u-boot-menu">u-boot-menu<a class="headerlink" href="#u-boot-menu" title="Permanent link">&para;</a></h2>
-<p>Configures the U-Boot boot menu for boards that support it.</p>
-<hr />
+<p>Sets up a U-Boot extlinux boot menu on boards that support it. Installs the Debian/Ubuntu <code>u-boot-menu</code> package, writes <code>/etc/default/u-boot</code> (label, 10s timeout, FDT dir, cmdline from <code>${SRC_CMDLINE}</code>), then runs <code>u-boot-update</code> in the chroot to generate <code>extlinux.conf</code>. Honours <code>EXTLINUX_SPECIFIC_FDT</code> and <code>EXTLINUX_UINITRD</code>.</p>
 <h2 id="uboot-binman-fix-pkg-resources">uboot-binman-fix-pkg-resources<a class="headerlink" href="#uboot-binman-fix-pkg-resources" title="Permanent link">&para;</a></h2>
-<p>Patches U-Boot&rsquo;s <code>binman</code> tool to use <code>importlib.resources</code> instead of <code>pkg_resources</code>, restoring build compatibility on hosts with <code>setuptools &gt;= 82</code> (which removed <code>pkg_resources</code>). Covers U-Boot v2024.x–v2025.04.</p>
-<hr />
+<p>Patches U-Boot&rsquo;s <code>binman</code> tool (<code>tools/binman/control.py</code>) to use <code>importlib.resources</code> instead of <code>pkg_resources</code>, restoring build compatibility on hosts with <code>setuptools &gt;= 82</code>, which removed <code>pkg_resources</code>. Runs only when <code>control.py</code> still imports <code>pkg_resources</code>, so it is a safe no-op on newer U-Boot. Covers v2024.x–v2025.04.</p>
 <h2 id="uboot-btrfs">uboot-btrfs<a class="headerlink" href="#uboot-btrfs" title="Permanent link">&para;</a></h2>
-<p>Enables Btrfs filesystem support in U-Boot (<code>CONFIG_CMD_BTRFS</code>).</p>
-<hr />
+<p>Enables Btrfs filesystem support in U-Boot by running <code>scripts/config --enable CONFIG_CMD_BTRFS</code> on the bootloader config during the <code>post_config_uboot_target</code> hook. This lets U-Boot read kernels and boot scripts from a Btrfs <code>/boot</code>. Enable it for boards using a Btrfs boot filesystem.</p>
 <h2 id="uboot-fix-pylibfdt-swig">uboot-fix-pylibfdt-swig<a class="headerlink" href="#uboot-fix-pylibfdt-swig" title="Permanent link">&para;</a></h2>
-<p>Fixes old U-Boot&rsquo;s pylibfdt build against SWIG &gt;= 4.3 (Debian trixie); companion to <code>uboot-binman-fix-pkg-resources</code>.</p>
-<hr />
+<p>Fixes old U-Boot&rsquo;s <code>pylibfdt</code> failing to build against SWIG &gt;= 4.3 (Debian trixie), which gave <code>SWIG_Python_AppendOutput()</code> a third argument. Rewrites the 2-arg calls to the version-agnostic <code>SWIG_AppendOutput()</code> macro in <code>libfdt.i</code>/<code>libfdt_wrap.c</code> under both pylibfdt paths. A safe no-op when the old call is absent; companion to <code>uboot-binman-fix-pkg-resources</code>.</p>
 <h2 id="uefi-edk2-rk3588">uefi-edk2-rk3588<a class="headerlink" href="#uefi-edk2-rk3588" title="Permanent link">&para;</a></h2>
-<p>Integrates UEFI EDK2 firmware for Rockchip RK3588 boards.</p>
-<hr />
+<p>Integrates edk2-porting UEFI/EDK2 firmware for Rockchip RK3588 boards, enabling <code>grub-with-dtb</code> and <code>initramfs-usb-gadget-ums</code>, forcing a GPT layout and <code>acpi=off</code>. Downloads the latest <code>edk2-porting/edk2-rk3588</code> release image and <code>dd</code>s it onto the loop device, then creates a <code>uboot</code> partition for SPL. Requires <code>UEFI_EDK2_BOARD_ID</code> to be set.</p>
 <h2 id="ufs">ufs<a class="headerlink" href="#ufs" title="Permanent link">&para;</a></h2>
-<p>Creates a UFS-sector-aligned image. Requires Debian Trixie (13) or newer as the build host. Set <code>DOCKER_ARMBIAN_BASE_IMAGE=debian:trixie</code> when building in Docker.</p>
-<hr />
+<p>Produces a UFS-sector-aligned image by setting <code>SECTOR_SIZE=4096</code> and appending a <code>-ufs</code> image suffix. Requires <code>sfdisk</code> &gt;= 2.41 (util-linux), so the build host must be Debian Trixie (13) or newer; set <code>DOCKER_ARMBIAN_BASE_IMAGE=debian:trixie</code> when building in Docker. The version check is skipped unless actually building an image.</p>
 <h2 id="uwe5622-allwinner">uwe5622-allwinner<a class="headerlink" href="#uwe5622-allwinner" title="Permanent link">&para;</a></h2>
-<p>Builds the UWE5622 WiFi driver for Allwinner-based boards.</p>
-<hr />
+<p>Enables the Spreadtrum UWE5622 (AW859A) WiFi/Bluetooth combo on Allwinner boards. Adds the <code>sprdbt_tty</code> module and <code>bluez</code>/<code>rfkill</code> packages, installs the <code>aw859a-wifi</code> and <code>aw859a-bluetooth</code> systemd services, and deploys the <code>hciattach_opi</code> blob for BT attach. Enable on sunxi boards carrying this chip.</p>
 <h2 id="v4l2loopback-dkms">v4l2loopback-dkms<a class="headerlink" href="#v4l2loopback-dkms" title="Permanent link">&para;</a></h2>
-<p>Builds the <code>v4l2loopback</code> virtual camera kernel module via DKMS. Not available in minimal images.</p>
-<hr />
+<p>Builds the <code>v4l2loopback</code> virtual-camera kernel module via DKMS in the chroot, installing <code>v4l2loopback-dkms</code>, <code>v4l2loopback-utils</code>, and <code>v4l-utils</code>. Forces <code>INSTALL_HEADERS=yes</code> and requires a kernel with a working headers package. Skipped on minimal CLI images and on kernels 7.2 or newer, where the module no longer builds.</p>
 <h2 id="vmware-vm">vmware-vm<a class="headerlink" href="#vmware-vm" title="Permanent link">&para;</a></h2>
-<p>Creates a VMware-compatible image (VMDK + OVF) with VMware tools installed. Depends on <code>image-output-ovf</code>.</p>
-<hr />
+<p>Builds a VMware-ready image by enabling the <code>image-output-ovf</code> extension (VMDK + OVF output) and installing <code>open-vm-tools</code> in the guest. On desktop builds it also adds <code>open-vm-tools-desktop</code> and the <code>xserver-xorg-video-vmware</code> driver for display integration. Enable it to run Armbian under VMware.</p>
 <h2 id="watchdog">watchdog<a class="headerlink" href="#watchdog" title="Permanent link">&para;</a></h2>
-<p>Installs the <code>watchdog</code> daemon and enables <code>CONFIG_WATCHDOG</code> / hardware watchdog device support in the kernel.</p>
-<hr />
+<p>Installs the <code>watchdog</code> daemon package and configures it for hardware watchdog support. Uncomments <code>watchdog-device</code> in <code>/etc/watchdog.conf</code> so the daemon uses <code>/dev/watchdog</code> to reset a hung system. Enable it for boards with a hardware watchdog that should trigger automatic recovery on lockups.</p>
 <h2 id="wayland-sessions-mask">wayland-sessions-mask<a class="headerlink" href="#wayland-sessions-mask" title="Permanent link">&para;</a></h2>
-<p>Masks Wayland desktop session entries for boards with limited or unstable Wayland support.</p>
-<hr />
+<p>Masks Wayland desktop session entries on boards with limited or unstable Wayland support due to GPU or driver constraints. Places empty marker files in <code>/usr/local/share/wayland-sessions/</code>, which overrides <code>/usr/share/wayland-sessions/</code>, in a desktop-agnostic, upgrade-safe way. Enable it via <code>enable_extension</code> in a board config; sessions stay enabled otherwise.</p>
 <h2 id="xorg-lima-serverflags">xorg-lima-serverflags<a class="headerlink" href="#xorg-lima-serverflags" title="Permanent link">&para;</a></h2>
-<p>Configures X.Org server flags for the Lima open-source GPU driver.</p>
-<hr />
+<p>Installs <code>40-serverflags.conf</code> into <code>/etc/X11/xorg.conf.d</code> to work around faulty GPU autodetection with the open-source Lima driver. Disables <code>AutoAddGPU</code>, enables the <code>dmabuf_capable</code> debug flag, and adds an <code>OutputClass</code> binding Rockchip to the <code>modesetting</code> driver with <code>glamor</code> acceleration as the primary GPU.</p>
 <h2 id="yt6801">yt6801<a class="headerlink" href="#yt6801" title="Permanent link">&para;</a></h2>
-<p>Builds the Motorcomm YT6801 Ethernet controller driver as a DKMS kernel module. Requires working kernel headers.</p>
-<hr />
+<p>Installs the Motorcomm YT6801 Ethernet controller driver as a DKMS kernel module. Queries the GitHub API for the latest <code>amazingfate/yt6801-dkms</code> release, downloads its <code>.deb</code> into the chroot (via <code>ghproxy</code> when <code>GITHUB_MIRROR=ghproxy</code>) and installs it to build against the target kernel. Forces <code>INSTALL_HEADERS=yes</code>; needs a working headers package.</p>
 <h2 id="zfs">zfs<a class="headerlink" href="#zfs" title="Permanent link">&para;</a></h2>
-<p>Builds ZFS kernel module and userspace tools via DKMS. Requires working kernel headers.</p>
+<p>Installs OpenZFS on the image by building the <code>zfs</code> kernel module through DKMS. Installs the <code>zfs-dkms</code> and <code>zfsutils-linux</code> packages in the chroot, forcing <code>INSTALL_HEADERS=yes</code> so the module can compile against the kernel headers. Skips itself when <code>KERNEL_HAS_WORKING_HEADERS</code> is not <code>yes</code>.</p>
 
 
 
