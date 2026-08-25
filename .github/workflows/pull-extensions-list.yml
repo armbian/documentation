@@ -1,0 +1,57 @@
+name: "Pull extensions list"
+
+# Regenerates docs/build-framework/extensions/list.md from the `# @description`
+# headers in armbian/build's extensions/ directory, and opens a PR. The list is
+# no longer hand-maintained: edit an extension's `# @description` in armbian/build
+# and this workflow brings the change over.
+
+on:
+  workflow_dispatch:
+  # Trigger from armbian/build via repository_dispatch after an extensions change:
+  #   curl -X POST -H "Authorization: token <PAT>" \
+  #     https://api.github.com/repos/armbian/documentation/dispatches \
+  #     -d '{"event_type":"extensions-changed"}'
+  repository_dispatch:
+    types: [extensions-changed]
+
+jobs:
+
+  Build:
+    name: "Pull"
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+
+      - name: Checkout documentation
+        uses: actions/checkout@v7
+        with:
+          repository: 'armbian/documentation'
+          path: 'documentation'
+
+      - name: Checkout build repository
+        uses: actions/checkout@v7
+        with:
+          repository: 'armbian/build'
+          path: 'build'
+
+      - name: Generate extensions list
+        run: |
+          python3 build/lib/tools/gen-extensions-list.py \
+            > documentation/docs/build-framework/extensions/list.md
+
+      - name: Create Pull Request to documentation
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: documentation
+          commit-message: '`Automatic` extensions list update'
+          signoff: false
+          branch: auto-update-extensions-list
+          delete-branch: true
+          title: '`Automatic` extensions list update'
+          body: |
+            Regenerated `docs/build-framework/extensions/list.md` from the
+            `# @description` headers in `armbian/build` (`extensions/`).
+          labels: |
+            Needs review
+          draft: false
