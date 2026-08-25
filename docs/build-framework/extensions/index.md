@@ -9,7 +9,7 @@ description: "Armbian build framework extensions: extend the build with Bash hoo
 
 The extensions framework allows the board/family developers, extension authors, and users to extend the Armbian build system without overloading the core with specific functionality.
 
-It's a simple framework, written in Bash, that **works based on function naming conventions**. It provides the core and the extensions with tracing and debugging, (error control,?) inline documentation and very simple dependency resolution.
+It's a simple framework, written in Bash, that **works based on function naming conventions**. It provides the core and the extensions with tracing and debugging, error control, inline documentation and very simple dependency resolution.
 
 ### Terminology
 - The "core" is everything that's in `lib/` directory plus `compile.sh` and some others. It's the spine of the build system.
@@ -23,10 +23,10 @@ It's a simple framework, written in Bash, that **works based on function naming 
 
 ##### Core calls extensions
 
-The Armbian core build system has an extension method called `run_after_build`, also known as the "`run_after_build` hook". You can find it in `lib/main.sh` around line 546.
+The Armbian core build system has an extension method called `run_after_build`, also known as the "`run_after_build` hook". You can find it in `lib/functions/main/start-end.sh`.
 
 ```bash
-# in lib/main.sh:546
+# in lib/functions/main/start-end.sh
 call_extension_method "run_after_build" [...]
 ```
 
