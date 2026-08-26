@@ -8,7 +8,7 @@ description: "Step-by-step guide to running Armbian on a single-board computer: 
 Before you start, please make sure you have:
 
 - a proper power supply according to the board manufacturer's requirements <!-- TODO: link to power issues -->
-- a reliable SD card — at least Class 10 and A1-rated ([how to choose one](sd-cards.md))
+- a reliable SD card — at least Class 10, A1-rated or better ([how to choose one](sd-cards.md))
 
 You will also need an existing operating system and an SD card writer tool. We recommend using **[Armbian Imager](https://imager.armbian.com/)** — the official Armbian flashing tool.
 

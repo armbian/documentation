@@ -29,23 +29,23 @@ For **24/7, logging-heavy, or write-heavy** use, a **high-endurance** card (the 
 
 Avoid:
 
-- **SD Express** cards — SBC card readers do not support the PCIe interface these use, so the card may run slowly or fail to boot.
+- **SD Express** cards — an SD Express card also carries a legacy SD/UHS-I interface, so it still works in an ordinary reader, but most SBC readers can't use its PCIe/NVMe path, so you gain nothing over a good UHS-I card. Buy one only if your board documents SD Express support.
 - **No-name or suspiciously cheap** cards and unfamiliar listings — counterfeits are common (see below).
 
 !!! tip "Further reading"
-    The community-maintained [SwitchRoot SD card guide](https://wiki.switchroot.org/wiki/sd-card-guide) keeps current, brand-by-brand benchmarks and a list of cards to avoid. It is written for the Nintendo Switch, so ignore the Switch-specific parts (DDR200, hekate), but its card recommendations and counterfeit advice apply to any single-board computer.
+    The community-maintained [SwitchRoot SD card guide](https://wiki.switchroot.org/wiki/sd-card-guide) has current, brand-by-brand benchmarks and a list of cards to avoid. Its rankings, benchmarks and compatibility notes are measured on the Nintendo Switch (DDR200, hekate) and do not necessarily carry over to Armbian boards or readers — treat them as a starting point, not verdicts for your hardware. Its counterfeit-card advice, however, applies anywhere.
 
 ## Check the card before you trust it
 
-Counterfeit and failing cards are the single most common cause of boot and corruption problems. **Verify every new card** — and any card you suspect — by writing and reading it back in full with:
+Counterfeit and failing cards are the single most common cause of boot and corruption problems. **Verify every new card** — and any card you suspect — with:
 
 - [F3](https://fight-flash-fraud.readthedocs.io/en/stable/) (Linux/macOS), or
 - [H2testw](https://www.heise.de/download/product/h2testw-50539) (Windows).
 
-This proves the card's real capacity and that it is not a [fake](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/). Doing it **right after purchase** lets you refund a bad card before you come to rely on it.
+Both fill the card and read it back, so **test an empty card and back up anything on it first** (H2testw's full test needs the card formatted). This detects a [fake](https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/) that reports false capacity and surfaces read/write errors — do it **right after purchase** so you can refund a bad card before you rely on it. It cannot guarantee a genuine card won't fail later.
 
 ## Reusing an old card
 
-A card that has been used before may have degraded write performance. Reset it to factory-default performance with the SD Association's [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/) before writing Armbian ([background](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811)).
+A card that has been used before may have degraded write performance. Before writing Armbian, run the SD Association's [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/) — it rewrites the card with the SD-optimized filesystem and alignment it expects, which can help ([background](https://forum.armbian.com/topic/954-sd-card-performance/page/3/&tab=comments#comment-49811)). If the card is still slow or reports errors afterwards, replace it.
 
 Once you have a good card, continue with [writing the image](writing-the-image.md).
