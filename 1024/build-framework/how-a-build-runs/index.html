@@ -4599,6 +4599,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-the-output-lands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the output lands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5931,6 +5942,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-the-output-lands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the output lands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6001,16 +6023,23 @@
 <p><strong>Image assembly.</strong> A raw image file is created on a <strong>loop device</strong>, partitioned and formatted, and the finished rootfs is copied in. Board- and family-specific <strong>post-processing</strong> then runs — for example writing u-boot to the right offset and assembling secondary program loaders.</p>
 </li>
 <li>
-<p><strong>Finalization.</strong> The image is watermarked in <strong><code>/etc/armbian-release</code></strong>, checksums are generated, and the image is compressed.</p>
+<p><strong>Finalization.</strong> The image is watermarked in <strong><code>/etc/armbian-release</code></strong>, checksums and a fingerprint are written, and the image is compressed.</p>
 </li>
 </ol>
+<h2 id="where-the-output-lands">Where the output lands<a class="headerlink" href="#where-the-output-lands" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><code>output/images/</code></strong> — the finished (compressed) image plus its checksum and fingerprint files, and any extra formats.</li>
+<li><strong><code>output/debs/</code></strong> — the <code>.deb</code> packages that were built (kernel, u-boot, <code>armbian-*</code>).</li>
+<li><strong><code>output/logs/</code></strong> — the per-run build logs. Add <code>SHARE_LOG=yes</code> to upload them to <code>paste.armbian.com</code> when you ask for help.</li>
+</ul>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Kernel branches</strong> are <code>legacy</code>, <code>current</code>, <code>edge</code>, and (for some boards) <code>vendor</code> — set with <code>BRANCH=</code>.</li>
 <li><strong>Releases</strong> are current Debian/Ubuntu codenames (for example <code>trixie</code>, <code>noble</code>), set with <code>RELEASE=</code>.</li>
 <li>Individual stages can be run on their own — <code>kernel-config</code>, <code>kernel-patch</code>, <code>rewrite-kernel-config</code>, <code>artifact</code>, and others — which is how maintainers iterate without a full image build. See the <a href="../commands/">command reference</a>.</li>
+<li>Extra image formats (ISO, qcow2, VHDX, OVF, …) are produced by <code>image-output-*</code> <a href="../extensions/">extensions</a>, enabled with <code>ENABLE_EXTENSIONS=</code>.</li>
+<li>Customization happens through <strong>hooks</strong>: <a href="../extensions/">extensions</a> and your <code>userpatches/</code> attach to named points in the flow (patching, rootfs tweaks, image post-processing) without editing the framework.</li>
 </ul>
-<p><em>This page grew out of <a href="https://github.com/armbian/documentation/issues/190">documentation issue #190</a>, updated for the current (post-&ldquo;armbian-next&rdquo;) framework.</em></p>
 
 
 
