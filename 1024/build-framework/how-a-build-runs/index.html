@@ -5995,7 +5995,7 @@
     - otherwise the artifact is <strong>built</strong> (checkout source, apply the framework&rsquo;s patches then your <code>userpatches/</code> patches, compile to <code>.deb</code> / tarball) and <strong>pushed</strong> to the cache so the next build reuses it.</p>
 </li>
 <li>
-<p><strong>Root filesystem.</strong> The rootfs is itself an artifact: pulled from cache when available, otherwise created with <strong><code>debootstrap</code></strong> for the target release (Debian or Ubuntu), then customized — Armbian packages, board support (<code>armbian-bsp-cli</code>), and the kernel/u-boot <code>.deb</code>s installed inside the chroot.</p>
+<p><strong>Root filesystem.</strong> The rootfs is itself an artifact: pulled from cache when available, otherwise bootstrapped with <strong><code>mmdebstrap</code></strong> for the target release (Debian or Ubuntu), then customized — Armbian packages, board support (<code>armbian-bsp-cli</code>), and the kernel/u-boot <code>.deb</code>s installed inside the chroot.</p>
 </li>
 <li>
 <p><strong>Image assembly.</strong> A raw image file is created on a <strong>loop device</strong>, partitioned and formatted, and the finished rootfs is copied in. Board- and family-specific <strong>post-processing</strong> then runs — for example writing u-boot to the right offset and assembling secondary program loaders.</p>
