@@ -291,6 +291,7 @@ nav:
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'build-framework/index.md'
+        - 'How a build runs' : 'build-framework/how-a-build-runs.md'
         - 'Getting Started' : 'build-framework/getting-started.md'
         - 'Build Commands' :
             - 'Overview' : 'build-framework/commands/index.md'

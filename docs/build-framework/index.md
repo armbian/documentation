@@ -13,6 +13,8 @@ description: "Overview of the Armbian build framework: build custom kernels, boo
 
 ![Armbian build framework](../images/armbianbuildframework.png)
 
+For a step-by-step tour of what happens on a build — configuration, the artifact cache, rootfs and image assembly — see [**How a build runs**](how-a-build-runs.md).
+
 ## Key Advantages
 
 - Simplicity with interactive graphical interface.
