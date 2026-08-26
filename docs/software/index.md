@@ -47,10 +47,10 @@ Installations may include hardware specific tuning for optimal performance.
 
 ## Why Use It
 
-- 🚀 **One-click deployments** of popular, containerized apps  
-- 🔒 **Curated, tested, and secure** software maintained by the Armbian community  
-- 🔁 **Clean installs and easy removal** — no system clutter or dependency hell  
-- 📦 **Optimized for Armbian-supported hardware**, with fine-tuned configurations  
-- ⚙️ **Minimal overhead**, ideal for embedded, headless, or remote systems  
-- 🛠️ **Easy maintenance** with integrated update and monitoring tools  
-- 🌐 **Internet-ready services**, including reverse proxies and network bridges
+- **One-click deployments** of popular, containerized apps  
+- **Curated, tested, and secure** software maintained by the Armbian community  
+- **Clean installs and easy removal** — no system clutter or dependency hell  
+- **Optimized for Armbian-supported hardware**, with fine-tuned configurations  
+- **Minimal overhead**, ideal for embedded, headless, or remote systems  
+- **Easy maintenance** with integrated update and monitoring tools  
+- **Internet-ready services**, including reverse proxies and network bridges
