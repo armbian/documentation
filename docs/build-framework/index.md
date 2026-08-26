@@ -11,22 +11,7 @@ description: "Overview of the Armbian build framework: build custom kernels, boo
 - Include filesystem generation, low-level control software, kernel image and **bootloader** compilation,
 - Provides a **consistent user experience** by keeping system standards across different platforms.
 
-``` mermaid
-graph LR
-  A[./compile.sh] --> B{Change<br>kernel<br>config};
-  B ---> |yes| C["HW"];
-  B ---> |no| C["HW"];
-  C ---> |branch| D["legacy<br>vendor<br>current<br>edge"];
-  D --> |base| E["Debian<br>Ubuntu"];
-  E ---> |type| F["CLI"];
-  F ---> |type| G["Server"];
-  F ---> |type| H["Minimal"];
-  E ---> I["Desktop"];
-  I ---> K["XFCE"];
-  I ---> L["Gnome"];
-  I ---> M["Cinammon"];
-  I ---> N["KDE Neon"];
-```
+![Armbian build framework](../images/armbianbuildframework.png)
 
 ## Key Advantages
 
