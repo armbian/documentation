@@ -24,10 +24,18 @@ This is a high-level tour of what `./compile.sh` does on a vanilla image build. 
 
 6. **Image assembly.** A raw image file is created on a **loop device**, partitioned and formatted, and the finished rootfs is copied in. Board- and family-specific **post-processing** then runs — for example writing u-boot to the right offset and assembling secondary program loaders.
 
-7. **Finalization.** The image is watermarked in **`/etc/armbian-release`**, checksums are generated, and the image is compressed.
+7. **Finalization.** The image is watermarked in **`/etc/armbian-release`**, checksums and a fingerprint are written, and the image is compressed.
+
+## Where the output lands
+
+- **`output/images/`** — the finished (compressed) image plus its checksum and fingerprint files, and any extra formats.
+- **`output/debs/`** — the `.deb` packages that were built (kernel, u-boot, `armbian-*`).
+- **`output/logs/`** — the per-run build logs. Add `SHARE_LOG=yes` to upload them to `paste.armbian.com` when you ask for help.
 
 ## Notes
 
 - **Kernel branches** are `legacy`, `current`, `edge`, and (for some boards) `vendor` — set with `BRANCH=`.
 - **Releases** are current Debian/Ubuntu codenames (for example `trixie`, `noble`), set with `RELEASE=`.
 - Individual stages can be run on their own — `kernel-config`, `kernel-patch`, `rewrite-kernel-config`, `artifact`, and others — which is how maintainers iterate without a full image build. See the [command reference](commands/index.md).
+- Extra image formats (ISO, qcow2, VHDX, OVF, …) are produced by `image-output-*` [extensions](extensions/index.md), enabled with `ENABLE_EXTENSIONS=`.
+- Customization happens through **hooks**: [extensions](extensions/index.md) and your `userpatches/` attach to named points in the flow (patching, rootfs tweaks, image post-processing) without editing the framework.
