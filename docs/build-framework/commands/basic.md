@@ -1,0 +1,62 @@
+---
+seo_title: "Armbian basic build commands: build, kernel, uboot"
+description: "Everyday Armbian build commands: build a full image, or just the kernel or U-Boot bootloader, with compile.sh."
+---
+
+# Basic commands
+
+Everyday commands for building a full image, or just the kernel or U-Boot bootloader.
+
+## requirements
+
+Installs the packages and tools the build host needs. Run it once before your first native build. When building in Docker (the default) the container already has everything, so this is only needed for bare-metal/WSL2 hosts.
+
+Usage:
+```bash
+./compile.sh requirements
+```
+
+## build
+
+The default command. Builds a full OS image (or only the requested artifacts, depending on the switches) for the selected board and release. This is what runs when you invoke `./compile.sh` with no command, or explicitly:
+
+Usage:
+```bash
+./compile.sh build BOARD=uefi-x86 BRANCH=current RELEASE=trixie
+```
+
+## kernel
+
+Builds only the kernel and device tree (where applicable) and places the packages in `output/debs`.
+
+Usage:
+```bash
+./compile.sh kernel BOARD=nanopi-r5c BRANCH=edge
+```
+
+## kernel-config
+
+Automatically call kernel's `make menuconfig` (add or remove modules or features)
+
+Usage:
+```bash
+./compile.sh kernel-config BOARD=nanopi-r5c BRANCH=edge
+```
+
+## uboot
+
+Builds only the U-Boot bootloader and places the package in `output/debs`.
+
+Usage:
+```bash
+./compile.sh uboot BOARD=nanopi-r5c BRANCH=edge
+```
+
+## uboot-config
+
+Calls U-Boot's `make menuconfig` so you can change the bootloader configuration interactively — the U-Boot counterpart to `kernel-config`.
+
+Usage:
+```bash
+./compile.sh uboot-config BOARD=nanopi-r5c BRANCH=edge
+```

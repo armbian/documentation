@@ -97,9 +97,9 @@ plugins:
         # The build framework section moved to /build-framework/; keep every
         # Developer-Guide_* URL working.
         'Developer-Guide_Adding-Board-Family.md': 'build-framework/adding-a-board.md'
-        'Developer-Guide_Build-Commands.md': 'build-framework/commands.md'
+        'Developer-Guide_Build-Commands.md': 'build-framework/commands/index.md'
         'Developer-Guide_Build-Preparation.md': 'build-framework/getting-started.md'
-        'Developer-Guide_Build-Switches.md': 'build-framework/switches.md'
+        'Developer-Guide_Build-Switches.md': 'build-framework/switches/index.md'
         'Developer-Guide_Building-with-Docker.md': 'build-framework/getting-started.md'
         'Developer-Guide_Desktops.md': 'build-framework/desktops.md'
         'Developer-Guide_Extension-ccache-remote.md': 'build-framework/extensions/ccache-remote.md'
@@ -111,7 +111,7 @@ plugins:
         'Developer-Guide_User-Configurations.md': 'build-framework/user-configurations.md'
         'Developer-Guide_Welcome.md': 'build-framework/getting-started.md'
         # The transition-era CLI page was folded into Commands/Switches
-        'build-framework/cli.md': 'build-framework/commands.md'
+        'build-framework/cli.md': 'build-framework/commands/index.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
@@ -291,12 +291,24 @@ nav:
   - 'ARMBIAN BUILD FRAMEWORK' :
         - 'Overview' : 'build-framework/index.md'
         - 'Getting Started' : 'build-framework/getting-started.md'
-        - 'Reference' :
-            - 'Build Commands' : 'build-framework/commands.md'
-            - 'Build Switches' : 'build-framework/switches.md'
-            - 'User Configurations' : 'build-framework/user-configurations.md'
-            - 'Board Configuration' : 'build-framework/board-configuration.md'
-            - 'Adding a Board' : 'build-framework/adding-a-board.md'
+        - 'Build Commands' :
+            - 'Overview' : 'build-framework/commands/index.md'
+            - 'Basic' : 'build-framework/commands/basic.md'
+            - 'Advanced' : 'build-framework/commands/advanced.md'
+        - 'Build Switches' :
+            - 'Overview' : 'build-framework/switches/index.md'
+            - 'Target' : 'build-framework/switches/target.md'
+            - 'Image' : 'build-framework/switches/image-type.md'
+            - 'Contents' : 'build-framework/switches/image-contents.md'
+            - 'Kernel' : 'build-framework/switches/kernel-uboot.md'
+            - 'Filesystem' : 'build-framework/switches/filesystem.md'
+            - 'Host' : 'build-framework/switches/host-docker.md'
+            - 'Mirrors' : 'build-framework/switches/proxies-mirrors.md'
+            - 'Apt' : 'build-framework/switches/apt-cache.md'
+            - 'Performance' : 'build-framework/switches/performance.md'
+            - 'Patching' : 'build-framework/switches/patching.md'
+            - 'Diagnostics' : 'build-framework/switches/diagnostics.md'
+        - 'User Configurations' : 'build-framework/user-configurations.md'
         - 'Extensions' :
             - 'Overview' : 'build-framework/extensions/index.md'
             - 'Hooks' : 'build-framework/extensions/hooks.md'
@@ -304,6 +316,8 @@ nav:
             - 'kernel-rust' : 'build-framework/extensions/kernel-rust.md'
             - 'ccache-remote' : 'build-framework/extensions/ccache-remote.md'
         - 'Desktops' : 'build-framework/desktops.md'
+        - 'Board Configuration' : 'build-framework/board-configuration.md'
+        - 'Adding a Board' : 'build-framework/adding-a-board.md'
 
   - 'ARMBIAN COMMUNITY' :
         - 'Forums' : 'Community_Forums.md'

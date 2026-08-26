@@ -1,65 +1,90 @@
 ---
 seo_title: "Armbian userpatches: custom patches & config files"
-description: "Customize Armbian builds with userpatches: add kernel and U-Boot patches, config files, first-boot presets and hooks without editing the core build script."
+description: "Customize Armbian builds with userpatches: add kernel, U-Boot and ATF patches, config files, a custom kernel config, extensions, first-boot presets and image scripts without editing the core."
 ---
 
-# User Configuration
+# User configurations
 
-## User provided patches
+Everything that customises a build lives in the `userpatches/` directory, so you never have to edit the build framework itself and your changes survive a `git pull`. The directory is created on first run; its location can be moved with the [`USERPATCHES_PATH`](/build-framework/switches/host-docker/#userpatches_path) switch.
 
-You can add your own patches outside the build script. Place your patches inside the appropriate directory, for kernel or u-boot. There are no limitations except that all patches must have the file name extension `.patch`. `userpatches` directory structure mirrors directory structure of `patch`. Look for the hint at the beginning of patching process to select the proper directory for patches. Example:
+## Configuration files
 
-    [ o.k. ] Started patching process for [ kernel sunxi-edge 4.4.0-rc6 ]
-    [ o.k. ] Looking for user patches in [ userpatches/kernel/sunxi-edge ]
+A configuration file named `userpatches/config-<name>.conf` (`.conf.sh` also works) is a bash script sourced during the build when you run `./compile.sh <name>`. It is the tidy alternative to a long command line: put one `PARAM=value` per line — any [build switch](/build-framework/switches/) works — and reuse it with a short command.
 
-Patches with the same file name and path in the `userpatches` directory tree override those in the `patch` directory. To _replace_ a patch provided by Armbian maintainers, copy it from `patch` to the corresponding directory in `userpatches` and edit it to your needs. To _disable_ a patch, create an empty file in the corresponding directory in `userpatches`.
+```bash
+# userpatches/config-myboard.conf
+BOARD="bananapim5"
+BRANCH="current"
+RELEASE="trixie"
+BUILD_MINIMAL="no"
+BUILD_DESKTOP="no"
+```
 
-## User provided configuration
+```bash
+./compile.sh myboard        # sources userpatches/config-myboard.conf
+```
 
-A configuration file named `userpatches/config-<something>.conf.sh` (`.conf` also allowed) is a bash script that is sourced during the build if `./compile.sh something` is issued. All parameters which normally are passed via command line can be used (`PARAM1=value1` `PARAM2=value`) by using the same syntax, one separate line per `PARAM`. Command-line parameters still can override what is in the config file. More advanced use cases can use conditionals, define functions to implement hooks, source other/common config files, etc. A few, quite complex, examples can be found [here](https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova).
+Command-line parameters still override what the config sets. More advanced files can use conditionals, define [hook functions](/build-framework/extensions/hooks/), and source other config files.
 
-## User provided first config
+## Patches
 
-    userpatches/firstboot.conf
+The build applies patches from the framework's `patch/` tree and, on top of it, from the matching `userpatches/` directory — so you can add, override or disable patches without touching the shipped ones:
 
-When detected, the system displays an informational alert and applies the [first config configuration](https://docs.armbian.com/User-Guide_Autoconfig/).
+| Component | Framework | Your patches |
+|---|---|---|
+| Kernel | `patch/kernel/<KERNELPATCHDIR>/` | `userpatches/kernel/<KERNELPATCHDIR>/` |
+| U-Boot | `patch/u-boot/<BOOTPATCHDIR>/` | `userpatches/u-boot/<BOOTPATCHDIR>/` |
+| ATF (TF-A) | `patch/atf/<ATFPATCHDIR>/` | `userpatches/atf/<ATFPATCHDIR>/` |
 
-## Legacy user provided configuration (deprecated, support for this will be removed at some point)
+The build prints the exact directory it is reading, so you always know where a patch belongs:
 
-If the file `userpatches/lib.config` exists, it will be called and can override the particular kernel and u-boot versions. For a comprehensive list of available variables, look through  `lib/functions/configuration/main-config.sh`. Some examples of what you can change:
+```text
+[🌱] Started patching process for [ kernel rockchip64 current ]
+[🌱] Looking for user patches in [ userpatches/kernel/archive/rockchip64-6.12 ]
+```
 
-    [[ $LINUXFAMILY == sunxi64 && $BRANCH == edge ]] && BOOTBRANCH='tag:v2017.09' # conditionally change u-boot git branch/tag
-    KERNELBRANCH="tag:v5.4.28" #always change to this kernel tag
+All patch files must end in `.patch`. A file with the **same name** in `userpatches/` overrides the framework's copy — to *replace* an Armbian patch, copy it into the matching `userpatches/` directory and edit it; to *disable* one, create an empty file with the same name there.
 
-## User provided kernel config
+!!! tip "Creating and refreshing patches"
+    Rather than hand-editing `.patch` files, use the interactive [patch commands](/build-framework/commands/advanced/) — `kernel-patch`, `uboot-patch`, `atf-patch`, `crust-patch` — which pause the build so you can edit the source and then write the diff out for you, and `rewrite-kernel-patches` / `rewrite-uboot-patches` to refresh an existing set against newer sources.
 
-If the file `userpatches/linux-$LINUXFAMILY-$BRANCH.config` exists, it will be used instead of the default one from `config`. Look for the hint at the beginning of the kernel compilation process to select the proper config file name. Example:
+## Custom kernel configuration
 
-    [ o.k. ] Compiling current kernel [ 5.10.47 ]
-    [ o.k. ] Using kernel config provided by user [ userpatches/linux-rockchip64-current.config ]
+To build with your own kernel `.config`, drop it in `userpatches/` (or `userpatches/config/kernel/`) named after the config the board uses — the build reports the name it expects:
 
-## User provided sources config overrides
+```text
+[🌱] Using kernel config provided by user [ userpatches/linux-rockchip64-current.config ]
+```
 
-If file `userpatches/config/sources/families/$LINUXFAMILY.conf` exists, it is sourced in addition to the default one from `config/sources/families`. Look for the hint at the beginning of the compilation process to confirm the file name being used.
+So for the example above you would provide `userpatches/linux-rockchip64-current.config`. Edit it interactively instead with the [`kernel-config`](/build-framework/commands/basic/) command.
 
-Example:
-	
-	[ o.k. ] Sourcing family configuration userpatches/config/sources/families/sunxi64.conf
-	
-## User provided image customization script
+## Family (source) overrides
 
-You can run additional commands to customize the created image. Edit this file:
+If `userpatches/config/sources/families/<LINUXFAMILY>.conf` exists, it is sourced **in addition to** the framework's family file, letting you override kernel/U-Boot sources, branches and family tweaks for a whole SoC family. The build confirms the file it picked up:
 
-    userpatches/customize-image.sh
+```text
+[🌱] Sourcing family configuration userpatches/config/sources/families/sunxi64.conf
+```
 
-and place your code here. You may test the values of variables noted in the file to use different commands for different configurations. Those commands will be executed in a chroot environment just before finalizing the image.
+## Extensions
 
-To add files to the image easily, put them in `userpatches/overlay` and access them in `/tmp/overlay` from `customize-image.sh`
+Custom [build extensions](/build-framework/extensions/) go in `userpatches/extensions/`; the framework searches there before its own `extensions/` directory, so a user extension with the same name takes precedence. Enable them per build with the [`ENABLE_EXTENSIONS`](/build-framework/switches/image-contents/#enable_extensions) switch.
 
-Be advised that even though you are compiling an image on an amd64 machine, any additional apt packages you configure or commands you run in customize-image.sh will be automatically installed/executed/virtualized for the architecture of the build target SBC.
+## First-boot presets
 
-## Partitioning of the SD card
+Every fresh image ships a `/root/.not_logged_in_yet` marker that triggers the interactive first-run setup (root password, user account, locale, network). Provide `userpatches/firstboot.conf` to preseed those answers for an unattended first boot — see [First-boot configuration](/User-Guide_Autoconfig/) for the available keys.
 
-In case you define `$FIXED_IMAGE_SIZE` at build time the partition containing the rootfs will be made of this size. Default behaviour when this is not defined is to shrink the partition to minimum size at build time and expand it to the card's maximum capacity at boot time (leaving an unpartitioned spare area of ~5% when the size is 4GB or less to help the SD card's controller with wear leveling and garbage collection on old/slow cards).
+## Image customization script
 
-You can prevent the partition expansion from within `customize-image.sh` by a `touch /root/.no_rootfs_resize` or configure the resize operation by either a percentage or a sector count using `/root/.rootfs_resize` (`50%` will use only half of the card's size if the image size doesn't exceed this or `3887103s` for example will use sector 3887103 as partition end. Values without either `%` or `s` will be ignored).
+`userpatches/customize-image.sh` (created from a template on first run) runs **inside the target rootfs in a chroot**, right before the image is finalised — the place to install extra packages, drop in files or tweak configuration. To add files, put them under `userpatches/overlay/`; they are reachable as `/tmp/overlay` from the script.
+
+The chroot executes target-architecture code even when the build host is a different architecture (via `qemu-user-static`, or natively where the host matches — see [`PREFER_NATIVE_ARMHF`](/build-framework/switches/performance/#prefer_native_armhf)), so packages you install and commands you run apply to the SBC's architecture, not the host's.
+
+## Partitioning and rootfs resize
+
+By default the rootfs partition is shrunk to the minimum at build time and expanded to fill the media on first boot (leaving ~5% unpartitioned on cards of 4 GB or less to help the flash controller with wear levelling). Set [`FIXED_IMAGE_SIZE`](/build-framework/switches/filesystem/#fixed_image_size) (in MiB) to force a specific size instead.
+
+The first-boot expansion is controlled by two markers you can create from `customize-image.sh`:
+
+- `touch /root/.no_rootfs_resize` — skip the automatic expansion entirely.
+- write a value to `/root/.rootfs_resize` — `50%` uses only half the media (unless the image already exceeds that), or an absolute sector count like `3887103s` sets the partition end. Values without `%` or `s` are ignored.
