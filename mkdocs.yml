@@ -172,6 +172,7 @@ nav:
         - 'Getting Started' :
             - 'Overview' : 'getting-started/index.md'
             - 'Choosing an image' : 'getting-started/choosing-an-image.md'
+            - 'Choosing an SD card' : 'getting-started/sd-cards.md'
             - 'Writing the image' : 'getting-started/writing-the-image.md'
             - 'First boot and login' : 'getting-started/first-boot-and-login.md'
             - 'First steps' : 'getting-started/first-steps.md'
