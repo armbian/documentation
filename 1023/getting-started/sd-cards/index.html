@@ -6035,22 +6035,22 @@
 <p>For <strong>24/7, logging-heavy, or write-heavy</strong> use, a <strong>high-endurance</strong> card (the kind marketed for dashcams and CCTV) lasts far longer than a standard consumer card.</p>
 <p>Avoid:</p>
 <ul>
-<li><strong>SD Express</strong> cards — SBC card readers do not support the PCIe interface these use, so the card may run slowly or fail to boot.</li>
+<li><strong>SD Express</strong> cards — an SD Express card also carries a legacy SD/UHS-I interface, so it still works in an ordinary reader, but most SBC readers can&rsquo;t use its PCIe/NVMe path, so you gain nothing over a good UHS-I card. Buy one only if your board documents SD Express support.</li>
 <li><strong>No-name or suspiciously cheap</strong> cards and unfamiliar listings — counterfeits are common (see below).</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Further reading</p>
-<p>The community-maintained <a href="https://wiki.switchroot.org/wiki/sd-card-guide">SwitchRoot SD card guide</a> keeps current, brand-by-brand benchmarks and a list of cards to avoid. It is written for the Nintendo Switch, so ignore the Switch-specific parts (DDR200, hekate), but its card recommendations and counterfeit advice apply to any single-board computer.</p>
+<p>The community-maintained <a href="https://wiki.switchroot.org/wiki/sd-card-guide">SwitchRoot SD card guide</a> has current, brand-by-brand benchmarks and a list of cards to avoid. Its rankings, benchmarks and compatibility notes are measured on the Nintendo Switch (DDR200, hekate) and do not necessarily carry over to Armbian boards or readers — treat them as a starting point, not verdicts for your hardware. Its counterfeit-card advice, however, applies anywhere.</p>
 </div>
 <h2 id="check-the-card-before-you-trust-it">Check the card before you trust it<a class="headerlink" href="#check-the-card-before-you-trust-it" title="Permanent link">&para;</a></h2>
-<p>Counterfeit and failing cards are the single most common cause of boot and corruption problems. <strong>Verify every new card</strong> — and any card you suspect — by writing and reading it back in full with:</p>
+<p>Counterfeit and failing cards are the single most common cause of boot and corruption problems. <strong>Verify every new card</strong> — and any card you suspect — with:</p>
 <ul>
 <li><a href="https://fight-flash-fraud.readthedocs.io/en/stable/">F3</a> (Linux/macOS), or</li>
 <li><a href="https://www.heise.de/download/product/h2testw-50539">H2testw</a> (Windows).</li>
 </ul>
-<p>This proves the card&rsquo;s real capacity and that it is not a <a href="https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/">fake</a>. Doing it <strong>right after purchase</strong> lets you refund a bad card before you come to rely on it.</p>
+<p>Both fill the card and read it back, so <strong>test an empty card and back up anything on it first</strong> (H2testw&rsquo;s full test needs the card formatted). This detects a <a href="https://www.happybison.com/reviews/how-to-check-and-spot-fake-micro-sd-card-8/">fake</a> that reports false capacity and surfaces read/write errors — do it <strong>right after purchase</strong> so you can refund a bad card before you rely on it. It cannot guarantee a genuine card won&rsquo;t fail later.</p>
 <h2 id="reusing-an-old-card">Reusing an old card<a class="headerlink" href="#reusing-an-old-card" title="Permanent link">&para;</a></h2>
-<p>A card that has been used before may have degraded write performance. Reset it to factory-default performance with the SD Association&rsquo;s <a href="https://www.sdcard.org/downloads/formatter/">SD Memory Card Formatter</a> before writing Armbian (<a href="https://forum.armbian.com/topic/954-sd-card-performance/page/3/&amp;tab=comments#comment-49811">background</a>).</p>
+<p>A card that has been used before may have degraded write performance. Before writing Armbian, run the SD Association&rsquo;s <a href="https://www.sdcard.org/downloads/formatter/">SD Memory Card Formatter</a> — it rewrites the card with the SD-optimized filesystem and alignment it expects, which can help (<a href="https://forum.armbian.com/topic/954-sd-card-performance/page/3/&amp;tab=comments#comment-49811">background</a>). If the card is still slow or reports errors afterwards, replace it.</p>
 <p>Once you have a good card, continue with <a href="../writing-the-image/">writing the image</a>.</p>
 
 
