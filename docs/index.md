@@ -128,11 +128,3 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 ## How can you contribute?
 
 If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
-
-
-???+ success "Unit testing"
-
-
-    All software targets and functions are automatically tested to catch as many problems as possible.
-
-    <a href=https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/configng/maintenance-unit-tests.yml?logo=githubactions&label=Unit%20tests&style=for-the-badge&branch=main"></a>
