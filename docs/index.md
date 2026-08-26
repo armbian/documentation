@@ -40,19 +40,7 @@ Armbian's goal is to provide a **highly optimized base operating system speciali
 
 Armbian is **not** a Linux distribution itself. Instead, we use Debian GNU/Linux and Ubuntu Linux as base for the images, that our users can download and deploy. We build our own set of optimized kernels for each board, and then provide an extensive and customizable framework to build, adjust, and configure these images. This framework is the heart of the project.
 
-``` mermaid
-graph LR
-  A[Hardware] --> B{50 x Armbian kernel};
-  B --> X["point release"];
-  X ---->|minimal| E[Debian or Ubuntu];
-  X ---->|server| F[Debian or Ubuntu];
-  X -->|desktop| H[Debian or Ubuntu];
-  H -->Q[XFCE];
-  H -->W[Gnome];
-  H -->R[KDE];
-  H -->T[Cinnamon];
-  
-```
+![What is Armbian](images/whatisarmbian.png)
 
 ### Key features
 
@@ -140,11 +128,3 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 ## How can you contribute?
 
 If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
-
-
-???+ success "Unit testing"
-
-
-    All software targets and functions are automatically tested to catch as many problems as possible.
-
-    <a href=https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/armbian/configng/maintenance-unit-tests.yml?logo=githubactions&label=Unit%20tests&style=for-the-badge&branch=main"></a>
