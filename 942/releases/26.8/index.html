@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Armbian 26.8.3, released 23 August 2026: broad SoC enablement, CI migration to a dedicated repo on Debian Trixie, and a rewritten installer with UEFI ISOs.">
+        <meta name="description" content="Armbian 26.8.3, released 23 August 2026: broad platform modernization, restructured build and CI pipeline, and major installer and imager upgrades.">
       
       
         <meta name="author" content="Armbian team">
@@ -24,10 +24,14 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
+  
+    
       
         <title>Armbian 26.8.3 - Armbian Documentation</title>
       
     
+  
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
@@ -72,11 +76,14 @@
   
   
   
+  
+  
+  
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian 26.8.3 - Armbian Documentation">
-  <meta property="og:description" content="Armbian 26.8.3, released 23 August 2026: broad SoC enablement, CI migration to a dedicated repo on Debian Trixie, and a rewritten installer with UEFI ISOs.">
+  <meta property="og:description" content="Armbian 26.8.3, released 23 August 2026: broad platform modernization, restructured build and CI pipeline, and major installer and imager upgrades.">
   <meta name="twitter:title" content="Armbian 26.8.3 - Armbian Documentation">
-  <meta name="twitter:description" content="Armbian 26.8.3, released 23 August 2026: broad SoC enablement, CI migration to a dedicated repo on Debian Trixie, and a rewritten installer with UEFI ISOs.">
+  <meta name="twitter:description" content="Armbian 26.8.3, released 23 August 2026: broad platform modernization, restructured build and CI pipeline, and major installer and imager upgrades.">
   
     <meta name="twitter:card" content="summary">
   
@@ -351,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../User-Guide_Armbian-Software/" class="md-tabs__link">
+        <a href="../../software/" class="md-tabs__link">
           
   
   
@@ -371,7 +378,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Developer-Guide_Overview/" class="md-tabs__link">
+        <a href="../../build-framework/" class="md-tabs__link">
           
   
   
@@ -551,9 +558,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../User-Guide_Getting-Started/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -567,7 +588,247 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/choosing-an-image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing an image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/writing-the-image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing the image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-boot-and-login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First boot and login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/install-to-internal-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing to internal storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/updating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping it up to date
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If something goes wrong
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -771,120 +1032,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Appendix
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Appendix
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Process_Release-Model/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Release Model
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Unit Test Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -957,6 +1104,34 @@
     
   
     Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release model
   
 
     
@@ -1401,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User-Guide_Armbian-Software/" class="md-nav__link">
+      <a href="../../software/" class="md-nav__link">
         
   
   
@@ -4290,7 +4465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Overview/" class="md-nav__link">
+      <a href="../../build-framework/" class="md-nav__link">
         
   
   
@@ -4318,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Build-Preparation/" class="md-nav__link">
+      <a href="../../build-framework/getting-started/" class="md-nav__link">
         
   
   
@@ -4345,9 +4520,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Developer-Guide_Build-Commands/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -4361,11 +4550,19 @@
   
   
 
-      </a>
-    </li>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build Commands
   
 
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -4374,14 +4571,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Build-Switches/" class="md-nav__link">
+      <a href="../../build-framework/commands/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Build Switches
+    Overview
   
 
     
@@ -4402,7 +4599,465 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_User-Configurations/" class="md-nav__link">
+      <a href="../../build-framework/commands/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/commands/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build Switches
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build Switches
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/target/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Target
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/image-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/image-contents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/kernel-uboot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/filesystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filesystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/host-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/proxies-mirrors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirrors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/apt-cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/patching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/switches/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/user-configurations/" class="md-nav__link">
         
   
   
@@ -4429,15 +5084,65 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Extensions-Hooks/" class="md-nav__link">
+      <a href="../../build-framework/extensions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensions Hooks
+    Overview
   
 
     
@@ -4458,14 +5163,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Building-with-Multipass/" class="md-nav__link">
+      <a href="../../build-framework/extensions/hooks/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Building with Multipass
+    Hooks
   
 
     
@@ -4486,14 +5191,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Building-with-Docker/" class="md-nav__link">
+      <a href="../../build-framework/extensions/list/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Building with Docker
+    Reference
   
 
     
@@ -4514,14 +5219,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Extensions/" class="md-nav__link">
+      <a href="../../build-framework/extensions/kernel-rust/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensions Framework
+    kernel-rust
   
 
     
@@ -4542,14 +5247,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Extensions-List/" class="md-nav__link">
+      <a href="../../build-framework/extensions/ccache-remote/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensions List
+    ccache-remote
   
 
     
@@ -4563,29 +5268,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Developer-Guide_Extension-kernel-rust/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Extension: kernel-rust
-  
-
-    
-  </span>
-  
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4598,35 +5283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Developer-Guide_Extension-ccache-remote/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Extension: ccache-remote
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Developer-Guide_Desktops/" class="md-nav__link">
+      <a href="../../build-framework/desktops/" class="md-nav__link">
         
   
   
@@ -4634,6 +5291,62 @@
     
   
     Desktops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/board-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Board Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/adding-a-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Board
   
 
     
@@ -5204,10 +5917,10 @@
 
 <h1 id="armbian-2683">Armbian 26.8.3<a class="headerlink" href="#armbian-2683" title="Permanent link">&para;</a></h1>
 <p><em>Released 23 August 2026</em></p>
-<p>This quarter&rsquo;s work centers on three dominant themes: <strong>broad board and platform enablement</strong> across Rockchip, Allwinner, TI, and Qualcomm SoCs; <strong>a large-scale build and CI infrastructure migration</strong> to a dedicated automation repository and a Debian Trixie host; and <strong>a rewritten installer, a new Imager release, and UEFI ISO delivery</strong> for cloud and virtual-media deployment.</p>
-<p>Kernel and firmware stacks advanced across every major family. Mainline tracked through <strong>7.1 stable and 7.2-rc series</strong>, with Rockchip, Meson64, Sunxi, BCM2711, mvebu64, and i.MX6 families rebased onto current branches; U-Boot was bumped to <strong>v2026.07 across dozens of boards</strong>, and Rockchip vendor blobs (rkbin) were refreshed for RK3506, RK3528, RK3568, RK3576, and RV1106. New board additions include the <strong>Anbernic RG DS and RG Vita Pro, Luckfox Nova, LubanCat 5IO, Milk-V DuoS, Avnet MaaXBoard 8ULP, SpacemiT K3 Pico-ITX, Radxa Dragon Q6A/Q8B, Xiaomi Pad 6S Pro, EASY EAI Nano, NanoPi NEO3 Plus, Walnut Pi, and Seeed reComputer RK3576/RK3588</strong>, several of which were subsequently promoted to Supported. Out-of-tree wireless drivers (rtl8852bs, rtl8189es/fs, rtl8192eu, uwe5622) received substantial warning cleanups and kernel-7.2 compatibility work.</p>
-<p>Build automation was consolidated into the new <strong>armbian/ci repository</strong>, taking over cronjobs, nightly, community, and stable release tracks from armbian/os, with introduction of a <strong>watchdog for stalled runs, weekly Monday stable builds, and per-runner proxy, cache, and CPU-thread mapping</strong> derived from NetBox. The official build host and default Docker image were migrated to <strong>Debian Trixie</strong>, with GCC 14/15 fallout addressed across U-Boot, i.MX8ULP libbpf, Realtek RTD1619B, and multiple Odroid targets; native riscv64 Docker images and a base-files-only workflow were added. Rockchip vendor U-Boot rebuilds, docker image tagging, and artifact hashing were hardened for parallel and cache-consistent execution.</p>
-<p>User-facing tooling saw <strong>armbian-install redesigned as a tested armbian-config module</strong> with SPI/MTD boot targets, standalone bootloader flashing, UEFI dual-boot diagnostics, and eMMC/NVMe split installs. <strong>Armbian Imager 2.0</strong> shipped with UFS flashing over EDL for Qualcomm boards, QDL board-registry integration, and hardened device enumeration on Windows and Linux. A new <strong>image-output-iso extension</strong> produces bootable live ISOs from UEFI images for cloud and IPMI virtual-CD workflows, with UEFI current, edge, and Debian Trixie cloud targets now published as ISO artifacts alongside standard image formats.</p>
+<p>This cycle is defined by <strong>broad platform modernization</strong>, a <strong>restructured build and CI pipeline</strong>, and <strong>substantial user-facing tooling improvements</strong> across the installer, imager, and image output formats.</p>
+<p>Kernel and firmware baselines advanced across the tree, with mainline moving to <strong>7.1 stable and 7.2-rc</strong>, and edge branches bumped on rockchip64, meson64, mvebu64, sunxi, and bcm2711. U-Boot was refreshed to <strong>v2026.04/07</strong> on dozens of boards, including Rockchip RK35xx, Amlogic, i.MX6, mvebu Espressobin, and various SBCs. New board support spans Rockchip (Anbernic RG DS and RG Vita Pro, Luckfox Nova, LubanCat 5IO, KICKPI K3B, reComputer RK3576/RK3588, EASY EAI Nano, Graperain G3568 v2, Xiaomi Pad 6S Pro), Allwinner (Sovol Zero/SV08, Walnut Pi, Cubie A7Z, Orange Pi 4 Pro and Zero 3W, Tanix TX6S), SpacemiT (K3 Pico-ITX, Milk-V DuoS), NXP (Avnet MaaXBoard 8ULP), Qualcomm (Radxa Dragon Q6A/Q8B with UFS provisioning), and TI (BeagleBadge, TMDS64EVM). Wireless drivers received extensive cleanup, with <strong>rtl8852bs, rtl8189es, rtl8192eu, and uwe5622</strong> rebased into dedicated Armbian forks with 7.1/7.2 compatibility and thousands of compiler warnings eliminated.</p>
+<p>The build and CI infrastructure underwent a <strong>structural migration from armbian/os to armbian/ci</strong>, introducing self-hosted runner registration via NetBox, per-runner proxy and cache export, watchdog-based auto-retry for stalled jobs, and a weekly stable build cadence. The default build host and Docker base image moved to <strong>Debian Trixie</strong>, with native riscv64 image generation and GCC 13 cross toolchains for K3 R5 SPL. Kernel patch handling gained <strong>parallel rewriting</strong>, stricter From-header hygiene, and pinned source SHAs via <code>git_sources.json</code>.</p>
+<p>User-facing changes center on a <strong>redesigned armbian-install</strong> delivered as a tested armbian-config module, with SPI/MTD boot targeting, split eMMC/NVMe flows, standalone bootloader flash, and clearer diagnostics for UEFI and dual-boot scenarios. <strong>Armbian Imager 2.0</strong> ships with QDL and UFS flashing for Qualcomm targets, board registry from the API, and hardened device enumeration on Windows and Linux. A new <strong>image-output-iso extension</strong> produces bootable live ISOs from UEFI images for cloud and IPMI virtual-CD deployment, and the download and redirector infrastructure was extended to carry ISO assets alongside compressed raw images.</p>
 <h2 id="board-status-changes">Board status changes<a class="headerlink" href="#board-status-changes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>aml-a311d-cc: Standard support &rarr; CSC (<a href="https://github.com/armbian/build/pull/10377">armbian/build#10377</a>)</li>
@@ -5236,7 +5949,7 @@
 </ul>
 <h2 id="all-changes">All changes<a class="headerlink" href="#all-changes" title="Permanent link">&para;</a></h2>
 <details class="abstract">
-<summary>782 merged pull requests in this release</summary>
+<summary>787 merged pull requests in this release</summary>
 <h3 id="boards">Boards<a class="headerlink" href="#boards" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Add Avnet MaaXBoard 8ULP (i.MX8ULP) support. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/govindsi" title="GitHub User: govindsi">@govindsi</a> in <a href="https://github.com/armbian/build/pull/9991">armbian/build#9991</a></li>
@@ -5367,6 +6080,7 @@
 <h3 id="kernel-and-u-boot">Kernel and U-Boot<a class="headerlink" href="#kernel-and-u-boot" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Actions: Disable debugsym builds. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/vidplace7" title="GitHub User: vidplace7">@vidplace7</a> in <a href="https://github.com/armbian/MorseMicro-DKMS/pull/7">armbian/MorseMicro-DKMS#7</a></li>
+<li>add 7.2 compatibility. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/10">armbian/uwe5622#10</a></li>
 <li>Add AX210 firmware a0-72. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ginkage" title="GitHub User: ginkage">@ginkage</a> in <a href="https://github.com/armbian/firmware/pull/130">armbian/firmware#130</a></li>
 <li>Add AYN Odin3 firmware. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/kasimling" title="GitHub User: kasimling">@kasimling</a> in <a href="https://github.com/armbian/firmware/pull/136">armbian/firmware#136</a></li>
 <li>add compat for 7.2. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/rtl8723ds/pull/9">armbian/rtl8723ds#9</a></li>
@@ -5405,9 +6119,11 @@
 <li>bootscript: rk35xx: simplify armbianEnv.txt corruption detection. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mingzhangqun" title="GitHub User: mingzhangqun">@mingzhangqun</a> in <a href="https://github.com/armbian/build/pull/9953">armbian/build#9953</a></li>
 <li>brcm: add brcmfmac firmware aliases for easy-eai nano (rv1126). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/firmware/pull/133">armbian/firmware#133</a></li>
 <li>bsp: use kernel version argument in ABL postinst scripts (fixes #10108). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rorystandley" title="GitHub User: rorystandley">@rorystandley</a> in <a href="https://github.com/armbian/build/pull/10109">armbian/build#10109</a></li>
+<li>Build firmware paths with a single bounded snprintf. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/6">armbian/uwe5622#6</a></li>
 <li>bump mainline to 7.1-rc7. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/9950">armbian/build#9950</a></li>
 <li>Bump/rk uboot swig fleet mkspi 2. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/redrathnure" title="GitHub User: redrathnure">@redrathnure</a> in <a href="https://github.com/armbian/build/pull/10122">armbian/build#10122</a></li>
 <li>can: rockchip: add RK3588 CAN support (for kernel v6.18 / v7.1 / v7.2). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/lch08" title="GitHub User: lch08">@lch08</a> in <a href="https://github.com/armbian/build/pull/10184">armbian/build#10184</a></li>
+<li>ci: keep the mirror schedule alive. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/phytium-linux-kernel/pull/1">armbian/phytium-linux-kernel#1</a></li>
 <li>cix-acpi: bump <code>edge</code> to 7.1.y. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10167">armbian/build#10167</a></li>
 <li>cix-p1: edge: update patches for 7.1.5, remove version pin. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10297">armbian/build#10297</a></li>
 <li>cix-p1: pin edge kernel to v7.1.4 (Panthor patchset breaks on 7.1.5). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10282">armbian/build#10282</a></li>
@@ -5423,6 +6139,7 @@
 <li>drm/rockchip: dw-dp: ratelimit AUX timeout logging. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/SuperKali" title="GitHub User: SuperKali">@SuperKali</a> in <a href="https://github.com/armbian/linux-rockchip/pull/514">armbian/linux-rockchip#514</a></li>
 <li>drm: rockchip: DSI fixes for RK3576 dual-display. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mingzhangqun" title="GitHub User: mingzhangqun">@mingzhangqun</a> in <a href="https://github.com/armbian/linux-rockchip/pull/495">armbian/linux-rockchip#495</a></li>
 <li>drm: rockchip: dw-dp: add AUX recovery for USB-C DP Alt Mode. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mingzhangqun" title="GitHub User: mingzhangqun">@mingzhangqun</a> in <a href="https://github.com/armbian/linux-rockchip/pull/494">armbian/linux-rockchip#494</a></li>
+<li>Drop unused locals in sdiohal and cfg80211. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/14">armbian/uwe5622#14</a></li>
 <li>easepi-r2/a2: fix device tree. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jjm2473" title="GitHub User: jjm2473">@jjm2473</a> in <a href="https://github.com/armbian/linux-rockchip/pull/491">armbian/linux-rockchip#491</a></li>
 <li>Enable 1 GHz frequency for Panthor on mainline. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ginkage" title="GitHub User: ginkage">@ginkage</a> in <a href="https://github.com/armbian/build/pull/10035">armbian/build#10035</a></li>
 <li>Enable mainline kernel &amp; u-boot on Avaota A1. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/juanesf" title="GitHub User: juanesf">@juanesf</a> in <a href="https://github.com/armbian/build/pull/10434">armbian/build#10434</a></li>
@@ -5431,6 +6148,7 @@
 <li>Feature/sunxi mainline stmmac ac300. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/deece" title="GitHub User: deece">@deece</a> in <a href="https://github.com/armbian/build/pull/9952">armbian/build#9952</a></li>
 <li>firmware: novatek: add nt36532_n81a_fw_csot.bin for Xiaomi Pad 6S Pro. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/code002-2" title="GitHub User: code002-2">@code002-2</a> in <a href="https://github.com/armbian/firmware/pull/139">armbian/firmware#139</a></li>
 <li>Fix -Warray-bounds, -Wformat-truncation and -Wframe-larger-than (73/8/2 -&gt; 0). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/19">armbian/wifi-rtl8852bs#19</a></li>
+<li>Fix -Wmissing-prototypes warnings (157 → 0). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/5">armbian/uwe5622#5</a></li>
 <li>Fix -Wmissing-prototypes warnings across the driver (2179 → 42). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/7">armbian/wifi-rtl8852bs#7</a></li>
 <li>Fix -Wunused-variable: 1545 -&gt; 48 (DEBUG=n) / -&gt; 4 (DEBUG=y). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/17">armbian/wifi-rtl8852bs#17</a></li>
 <li>Fix build for Linux 7.1. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/bcmdhd-dkms/pull/7">armbian/bcmdhd-dkms#7</a></li>
@@ -5442,6 +6160,7 @@
 <li>fix Radxa U-Boot ITB dependency. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/yisding" title="GitHub User: yisding">@yisding</a> in <a href="https://github.com/armbian/build/pull/10196">armbian/build#10196</a></li>
 <li>fix the hdmirx HPD patch against kernel6.18 &amp; kernel 7.1. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/pdapandapda" title="GitHub User: pdapandapda">@pdapandapda</a> in <a href="https://github.com/armbian/build/pull/10180">armbian/build#10180</a></li>
 <li>Fix two clang findings: sscanf %7s overflow in mp ioctl, uninitialised max_bw in rtw_vht. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/21">armbian/wifi-rtl8852bs#21</a></li>
+<li>Fix use-after-free in mtty_probe() error path. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/enromytase" title="GitHub User: enromytase">@enromytase</a> in <a href="https://github.com/armbian/uwe5622/pull/4">armbian/uwe5622#4</a></li>
 <li>fix(mvebu-6.18): drop SysRq-via-BREAK patch, fixed upstream in 6.18.35. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9958">armbian/build#9958</a></li>
 <li>fix(patching): render patch summary tables at the reader&rsquo;s real terminal width. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/10262">armbian/build#10262</a></li>
 <li>fix(rockchip64-6.18): drop 8250 DMA reopen patch, fixed upstream in 6.18.y. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10482">armbian/build#10482</a></li>
@@ -5453,6 +6172,7 @@
 <li>Fix: EasePi-A2 Boot &amp; Ethernet on Vendor Kernel. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ifroncy01" title="GitHub User: ifroncy01">@ifroncy01</a> in <a href="https://github.com/armbian/build/pull/9946">armbian/build#9946</a></li>
 <li>genio, nio-12l: bump to pure mainline v7.1.y + loadaddr fixes. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10034">armbian/build#10034</a></li>
 <li>genio: u-boot: mt8195 (nio-12l): update addr&rsquo;s map patch for large kernels/initrds. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10039">armbian/build#10039</a></li>
+<li>gha: add test workflow based on armbian. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/7">armbian/uwe5622#7</a></li>
 <li>Guard config-disabled static helpers to silence -Wunused-function. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/9">armbian/wifi-rtl8852bs#9</a></li>
 <li>H50 and T9 led , display and other overlays update. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/gpaesano" title="GitHub User: gpaesano">@gpaesano</a> in <a href="https://github.com/armbian/build/pull/10359">armbian/build#10359</a></li>
 <li>hal_ld_file: compose the external parameter file path after the folder is known. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/25">armbian/wifi-rtl8852bs#25</a></li>
@@ -5501,6 +6221,7 @@
 <li>Meson64: Update Waveshare CM4-IO-BASE-B DTS and add emc2305 fixups for driver to BLEEDINGEDGE branch. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/pyavitz" title="GitHub User: pyavitz">@pyavitz</a> in <a href="https://github.com/armbian/build/pull/10169">armbian/build#10169</a></li>
 <li>mixtile-blade3: edge: u-boot: fancy it up (lwIP, mbedTLS, efi, btrfs, etc). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10234">armbian/build#10234</a></li>
 <li>mixtile-edge2: u-boot: main: bump (generic) u-boot to v2026.07-rc5. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10071">armbian/build#10071</a></li>
+<li>mtty: tty_alloc_driver returns ERR_PTR, not NULL. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/8">armbian/uwe5622#8</a></li>
 <li>mvebu64: bump kernels — legacy 6.12, current 6.18, edge 7.1. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10338">armbian/build#10338</a></li>
 <li>mvebu64: modernize EspressoBin/MacchiatoBin firmware (u-boot 2026.07 + TF-A 2.14.0 + A3720 fixes). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10213">armbian/build#10213</a></li>
 <li>nanopi-r5s: u-boot: main: bump u-boot to v2026.07-rc5 + make it patch-less. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10072">armbian/build#10072</a></li>
@@ -5531,6 +6252,7 @@
 <li>recore: fix ATF v2.8.0 build - drop -Wl, prefix from LD flag. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10100">armbian/build#10100</a></li>
 <li>Refactor DVFS patch and clean up uwe5622 driver kernel configuration. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10316">armbian/build#10316</a></li>
 <li>remove <em>bleedingedge</em> from all boards. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10016">armbian/build#10016</a></li>
+<li>Remove interaction with CPUFreq limits. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/9">armbian/uwe5622#9</a></li>
 <li>Remove unused static functions (-Wunused-function 140 -&gt; 6). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/15">armbian/wifi-rtl8852bs#15</a></li>
 <li>replace patch <code>From:</code> headers across the framework with something meaningful. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10472">armbian/build#10472</a></li>
 <li>Revert &ldquo;<code>odroidc2</code>: u-boot: use minimal patchset for v22.01 u-boot&rdquo;. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ssilnicki-dev" title="GitHub User: ssilnicki-dev">@ssilnicki-dev</a> in <a href="https://github.com/armbian/build/pull/10265">armbian/build#10265</a></li>
@@ -5617,12 +6339,19 @@
 <li>uefidt-edge: add qcom x1e patches back. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/amazingfate" title="GitHub User: amazingfate">@amazingfate</a> in <a href="https://github.com/armbian/build/pull/10394">armbian/build#10394</a></li>
 <li>uefidt: add cix mainline support. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/amazingfate" title="GitHub User: amazingfate">@amazingfate</a> in <a href="https://github.com/armbian/build/pull/10411">armbian/build#10411</a></li>
 <li>uefidt: bump edge kernel to 7.1. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10373">armbian/build#10373</a></li>
+<li>unisocwifi: forward-declare struct sprdwl_intf in intf_ops.h. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/11">armbian/uwe5622#11</a></li>
+<li>unisocwifi: make pcie_addr_buffer::pcie_addr a flexible array member. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/16">armbian/uwe5622#16</a></li>
+<li>unisocwifi: map sm_state onto wifi_connection_state in llstat. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/12">armbian/uwe5622#12</a></li>
+<li>unisocwifi: mark the two intentional switch fall-throughs. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/15">armbian/uwe5622#15</a></li>
 <li>Up rtw8822b to v30.20.0. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/farwayer" title="GitHub User: farwayer">@farwayer</a> in <a href="https://github.com/armbian/firmware/pull/135">armbian/firmware#135</a></li>
 <li>Update MorseMicro suite to 1.17.9. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/vidplace7" title="GitHub User: vidplace7">@vidplace7</a> in <a href="https://github.com/armbian/MorseMicro-DKMS/pull/8">armbian/MorseMicro-DKMS#8</a></li>
 <li>Update odroidxu4-current to 6.6.143. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/belegdol" title="GitHub User: belegdol">@belegdol</a> in <a href="https://github.com/armbian/build/pull/10018">armbian/build#10018</a></li>
 <li>Update odroidxu4-current to 6.6.151. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/belegdol" title="GitHub User: belegdol">@belegdol</a> in <a href="https://github.com/armbian/build/pull/10413">armbian/build#10413</a></li>
+<li>update readme. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/2">armbian/uwe5622#2</a></li>
 <li>uwe5622: bump commit hash, include Linux 7.2 support. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10348">armbian/build#10348</a></li>
 <li>v4l2loopback-dkms: raise kernel skip cutoff from 6.12 to 7.2. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10490">armbian/build#10490</a></li>
+<li>wcn_boot: fix sdio_pub_int_init for the &gt;=7.1 gpiod int_ap (GCC14 -Wint-conversion). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/uwe5622/pull/1">armbian/uwe5622#1</a></li>
+<li>wcn_boot: stop ordering-comparing the int_ap gpio_desc pointer. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/13">armbian/uwe5622#13</a></li>
 <li>wireless drivers: bump rtl8189es pin, re-point rtl8723ds pin. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/10502">armbian/build#10502</a></li>
 <li>wireless: eliminate -Wempty-body (239 -&gt; 0), fix CONFIG_RTW_DEBUG=n build. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/11">armbian/wifi-rtl8852bs#11</a></li>
 <li>wireless: fix h2cb_alloc PHL prototype enum type (-Wenum-conversion 143 -&gt; 27). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/wifi-rtl8852bs/pull/12">armbian/wifi-rtl8852bs#12</a></li>
@@ -5724,7 +6453,6 @@
 <li>ci: expose Framework build branch input on build-all. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/20">armbian/ci#20</a></li>
 <li>ci: force a fresh Docker image pull on manual builds (default yes). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/30">armbian/ci#30</a></li>
 <li>ci: ghcr login with builtin GITHUB_TOKEN, mirroring armbian/os. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/9">armbian/ci#9</a></li>
-<li>ci: keep the mirror schedule alive. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/phytium-linux-kernel/pull/1">armbian/phytium-linux-kernel#1</a></li>
 <li>ci: label chunk jobs with hash-free matrix.name. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/17">armbian/ci#17</a></li>
 <li>ci: make git-trees workflow resilient to network failures. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/shallow/pull/7">armbian/shallow#7</a></li>
 <li>ci: probe apt proxy before exporting it (drop stale entries). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/16">armbian/ci#16</a></li>
@@ -5761,6 +6489,7 @@
 <li>docker: split host deps into per-group apt layers in generated Dockerfile. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/9999">armbian/build#9999</a></li>
 <li>docker: warn when buildx is missing, and reap leftover per-build images. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/10239">armbian/build#10239</a></li>
 <li>docs: refresh README (AI-assisted). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/ci/pull/29">armbian/ci#29</a></li>
+<li>docs: refresh README (AI-assisted). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/distribution/pull/14">armbian/distribution#14</a></li>
 <li>Drop testing-wireless-performance-test.yml. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/armbian.github.io/pull/350">armbian/armbian.github.io#350</a></li>
 <li>extensions/nvidia: per-distro version detection + runtime auto-disable on no-GPU hosts. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/9845">armbian/build#9845</a></li>
 <li>extensions/radxa-aic8800: use local dir as download cache. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10156">armbian/build#10156</a></li>
@@ -5789,7 +6518,6 @@
 <li>gha/chunks: export per-runner caches in images job. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/os/pull/472">armbian/os#472</a></li>
 <li>gha: add retry and empty-result guard to NetBox server list step. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/os/pull/469">armbian/os#469</a></li>
 <li>gha: add ssh/rsync timeouts to image upload so dead servers fail fast. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/os/pull/473">armbian/os#473</a></li>
-<li>gha: add test workflow based on armbian. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/7">armbian/uwe5622#7</a></li>
 <li>gha: disable build cronjobs (moved to armbian/ci). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/os/pull/482">armbian/os#482</a></li>
 <li>gha: DOCKER_SKIP_UPDATE=no. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/os/pull/476">armbian/os#476</a></li>
 <li>git-ref2info: support gitproxy (git_cdn) source for Makefile version fetch. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10066">armbian/build#10066</a></li>
@@ -5896,15 +6624,18 @@
 <li>css: uniform app-page logo size (.app-logo). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/981">armbian/documentation#981</a></li>
 <li>deprecated various channels and helper service. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/documentation/pull/970">armbian/documentation#970</a></li>
 <li>docs(git_cdn): add GCDN001 help header/footer markdown. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/939">armbian/configng#939</a></li>
+<li>docs(markdown): clean up the armbian-config section pages. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/995">armbian/configng#995</a></li>
 <li>docs(markdown): emit per-app SEO pages + category link hubs. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/991">armbian/configng#991</a></li>
+<li>docs(markdown): point in-page armbian-config links at /config/. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/996">armbian/configng#996</a></li>
 <li>docs(markdown): tag app-page logos with .app-logo for uniform sizing. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/993">armbian/configng#993</a></li>
 <li>docs: add Datacenter access section (Netbird VPN + board access). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/936">armbian/documentation#936</a></li>
 <li>docs: document gitproxy GITHUB_MIRROR and GITPROXY_ADDRESS. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/925">armbian/documentation#925</a></li>
 <li>docs: document PREFER_NATIVE_ARMHF and enrich arm64-compat-vdso entry. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/documentation/pull/921">armbian/documentation#921</a></li>
 <li>docs: document the <code>show-extensions</code> build command. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/documentation/pull/944">armbian/documentation#944</a></li>
 <li>docs: exclude docs/README.md from mkdocs build. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/documentation/pull/933">armbian/documentation#933</a></li>
+<li>docs: move armbian-config pages to /config/ (keep old URLs). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/992">armbian/documentation#992</a></li>
 <li>docs: official build host is Debian Trixie. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/974">armbian/documentation#974</a></li>
-<li>docs: refresh README (AI-assisted). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/distribution/pull/14">armbian/distribution#14</a></li>
+<li>docs: split armbian-config System into per-subcategory pages. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/989">armbian/documentation#989</a></li>
 <li>docs: use unpinned python3-dev in setup instructions. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/935">armbian/documentation#935</a></li>
 <li>downloads: support the ISO image type. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/website/pull/40">armbian/website#40</a></li>
 <li>Extensions-List: document the image-output-iso extension. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/949">armbian/documentation#949</a></li>
@@ -5943,6 +6674,8 @@
 <li>module_cockpit: install UEFI firmware and default new x86 VMs to UEFI. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/969">armbian/configng#969</a></li>
 <li>module_docker: install docker-buildx on distro-maintained installs. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/967">armbian/configng#967</a></li>
 <li>module_proxmox: add Proxmox VE (Debian trixie), keep the Armbian kernel. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/965">armbian/configng#965</a></li>
+<li>nav: point Unit Test Status at the unit tests. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/987">armbian/documentation#987</a></li>
+<li>pack-debian: publish loong64 in the apt repo architecture list. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/scripts/pull/93">armbian/scripts#93</a></li>
 <li>Process_CI: fix broken release-target links (wrong branch + workflow name). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/952">armbian/documentation#952</a></li>
 <li>Process_CI: point automation docs at armbian/ci (armbian/os deprecated). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/950">armbian/documentation#950</a></li>
 <li>pull-mirrors: fix null mirror flags (rate-limited geoip) + show table in run summary. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/956">armbian/documentation#956</a></li>
@@ -5959,7 +6692,6 @@
 <li>software: add git_cdn module (GitHub caching git+http proxy). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/configng/pull/938">armbian/configng#938</a></li>
 <li>Surface armbian-sdk images with Code server logo. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/imager/pull/138">armbian/imager#138</a></li>
 <li>Surface flash write failures instead of a blank error screen. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/SuperKali" title="GitHub User: SuperKali">@SuperKali</a> in <a href="https://github.com/armbian/imager/pull/150">armbian/imager#150</a></li>
-<li>update readme. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/2">armbian/uwe5622#2</a></li>
 <li>WifiPerformance: update infrastructure section to autotests framework. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/documentation/pull/931">armbian/documentation#931</a></li>
 <li>📣 Call for testers: new armbian-install. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10176">armbian/build#10176</a></li>
 </ul>
@@ -5967,7 +6699,6 @@
 <ul>
 <li>(#9400 P2a) Replace echo|tr/sed subshells with parameter expansion. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9809">armbian/build#9809</a></li>
 <li>(#9400 P2b) Replace echo|pipe subshells with here-strings/parameter expansion. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9947">armbian/build#9947</a></li>
-<li>add 7.2 compatibility. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/10">armbian/uwe5622#10</a></li>
 <li>Add a BTRFS_CHECKSUM build switch for choosing the checksum algorithm. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dlitz" title="GitHub User: dlitz">@dlitz</a> in <a href="https://github.com/armbian/build/pull/10288">armbian/build#10288</a></li>
 <li>Add support for Xiaomi Pad 6S Pro (sheng). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/code002-2" title="GitHub User: code002-2">@code002-2</a> in <a href="https://github.com/armbian/build/pull/9988">armbian/build#9988</a></li>
 <li>arduino: fetch qcombin at image-build time, not config time. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10226">armbian/build#10226</a></li>
@@ -5976,23 +6707,19 @@
 <li>armbian-firstrun: use atomic write for armbianEnv.txt MAC randomization. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mingzhangqun" title="GitHub User: mingzhangqun">@mingzhangqun</a> in <a href="https://github.com/armbian/build/pull/9937">armbian/build#9937</a></li>
 <li>BeagleY - Fix small broken GRS Arcade Button Mapping. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Grippy98" title="GitHub User: Grippy98">@Grippy98</a> in <a href="https://github.com/armbian/build/pull/10360">armbian/build#10360</a></li>
 <li>bluetooth-hciattach: only deploy the service on BSP (vendor/legacy) branches. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/defcom5-rockchip" title="GitHub User: defcom5-rockchip">@defcom5-rockchip</a> in <a href="https://github.com/armbian/build/pull/10410">armbian/build#10410</a></li>
-<li>Build firmware paths with a single bounded snprintf. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/6">armbian/uwe5622#6</a></li>
 <li>compress-checksum: SKIP_COMPRESSING to leave chosen formats uncompressed. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10323">armbian/build#10323</a></li>
 <li>drivers_network.sh remove version guards, rtl8723ds update hash &amp; bind to family. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10353">armbian/build#10353</a></li>
-<li>Drop unused locals in sdiohal and cfg80211. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/14">armbian/uwe5622#14</a></li>
 <li>easepi: normalize BOARD_VENDOR to lowercase &lsquo;linkease&rsquo;. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10397">armbian/build#10397</a></li>
 <li>Enable 1 GHz frequency for Panthor. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ginkage" title="GitHub User: ginkage">@ginkage</a> in <a href="https://github.com/armbian/build/pull/10067">armbian/build#10067</a></li>
 <li>Enable pwm gpio. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/frank-f" title="GitHub User: frank-f">@frank-f</a> in <a href="https://github.com/armbian/build/pull/10238">armbian/build#10238</a></li>
 <li>fake-ubuntu-advantage-tools: provide ubuntu-pro-client. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Grippy98" title="GitHub User: Grippy98">@Grippy98</a> in <a href="https://github.com/armbian/build/pull/10116">armbian/build#10116</a></li>
 <li>firstlogin: use useradd/groupadd instead of the adduser suite. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10127">armbian/build#10127</a></li>
-<li>Fix -Wmissing-prototypes warnings (157 → 0). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/5">armbian/uwe5622#5</a></li>
 <li>Fix build with podman - no .Server.Arch. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/cfraz89" title="GitHub User: cfraz89">@cfraz89</a> in <a href="https://github.com/armbian/build/pull/10438">armbian/build#10438</a></li>
 <li>Fix Darwin Docker Host Arch. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Grippy98" title="GitHub User: Grippy98">@Grippy98</a> in <a href="https://github.com/armbian/build/pull/10279">armbian/build#10279</a></li>
 <li>Fix ethernet on tx6s-axp-313. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/alnahian2011" title="GitHub User: alnahian2011">@alnahian2011</a> in <a href="https://github.com/armbian/build/pull/10443">armbian/build#10443</a></li>
 <li>Fix led trigger for nanopi 5s led-lan2. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/ruabmbua" title="GitHub User: ruabmbua">@ruabmbua</a> in <a href="https://github.com/armbian/build/pull/10028">armbian/build#10028</a></li>
 <li>Fix swapfile creation. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/pierg75" title="GitHub User: pierg75">@pierg75</a> in <a href="https://github.com/armbian/build/pull/10065">armbian/build#10065</a></li>
 <li>Fix TI K3 Suite Matching for Ubuntu Hosts and Enable GPU Acceleration for BeagleBoards. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Grippy98" title="GitHub User: Grippy98">@Grippy98</a> in <a href="https://github.com/armbian/build/pull/10112">armbian/build#10112</a></li>
-<li>Fix use-after-free in mtty_probe() error path. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/enromytase" title="GitHub User: enromytase">@enromytase</a> in <a href="https://github.com/armbian/uwe5622/pull/4">armbian/uwe5622#4</a></li>
 <li>fix(firstlogin): remove .not_logged_in_yet marker via EXIT trap. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Mkiring" title="GitHub User: Mkiring">@Mkiring</a> in <a href="https://github.com/armbian/build/pull/10450">armbian/build#10450</a></li>
 <li>fix(interactive): parse case alternatives in get_kernel_info_for_branch. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9798">armbian/build#9798</a></li>
 <li>fix(offline): honor OFFLINE_WORK in git-ref2info and memoize TTL. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9797">armbian/build#9797</a></li>
@@ -6007,11 +6734,8 @@
 <li>k3: restore required edge platform drivers. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Grippy98" title="GitHub User: Grippy98">@Grippy98</a> in <a href="https://github.com/armbian/build/pull/10273">armbian/build#10273</a></li>
 <li>loong64: migrate from debian-ports to the main Debian archive. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10404">armbian/build#10404</a></li>
 <li>Milk-V Jupiter disable EEPROM node. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/pyavitz" title="GitHub User: pyavitz">@pyavitz</a> in <a href="https://github.com/armbian/build/pull/9944">armbian/build#9944</a></li>
-<li>mtty: tty_alloc_driver returns ERR_PTR, not NULL. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/8">armbian/uwe5622#8</a></li>
 <li>Odin3 bringup. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/kasimling" title="GitHub User: kasimling">@kasimling</a> in <a href="https://github.com/armbian/build/pull/10229">armbian/build#10229</a></li>
-<li>pack-debian: publish loong64 in the apt repo architecture list. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/scripts/pull/93">armbian/scripts#93</a></li>
 <li>recomputer: drop &lsquo;Devkit&rsquo; from BOARD_NAME. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10256">armbian/build#10256</a></li>
-<li>Remove interaction with CPUFreq limits. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/uwe5622/pull/9">armbian/uwe5622#9</a></li>
 <li>rootfs-image: move <code>pre_install_distribution_specific</code> inside <code>install_distribution_specific()</code>. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10157">armbian/build#10157</a></li>
 <li>rtl8192eu: fix -Wmissing-prototypes for 121 functions. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9963">armbian/build#9963</a></li>
 <li>rtl8192eu: fix build against 7.1 and re-enable. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10009">armbian/build#10009</a></li>
@@ -6022,18 +6746,12 @@
 <li>shellfmt: run lib/tools/shellfmt.sh, no changes. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/rpardini" title="GitHub User: rpardini">@rpardini</a> in <a href="https://github.com/armbian/build/pull/10087">armbian/build#10087</a></li>
 <li>stubble: add host dependencies. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/amazingfate" title="GitHub User: amazingfate">@amazingfate</a> in <a href="https://github.com/armbian/build/pull/10020">armbian/build#10020</a></li>
 <li>stubble: only add host deps when KERNEL_DO_STUBBLE=yes. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10022">armbian/build#10022</a></li>
-<li>unisocwifi: forward-declare struct sprdwl_intf in intf_ops.h. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/11">armbian/uwe5622#11</a></li>
-<li>unisocwifi: make pcie_addr_buffer::pcie_addr a flexible array member. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/16">armbian/uwe5622#16</a></li>
-<li>unisocwifi: map sm_state onto wifi_connection_state in llstat. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/12">armbian/uwe5622#12</a></li>
-<li>unisocwifi: mark the two intentional switch fall-throughs. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/15">armbian/uwe5622#15</a></li>
 <li>Update VERSION. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/9938">armbian/build#9938</a></li>
 <li>Use relative symbolic links for some BSP files. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/retro98boy" title="GitHub User: retro98boy">@retro98boy</a> in <a href="https://github.com/armbian/build/pull/10145">armbian/build#10145</a></li>
 <li>uwe5622: bump driver commit. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10317">armbian/build#10317</a></li>
 <li>uwe5622: fix -Wmissing-prototypes warnings (155 -&gt; 2). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/build/pull/9970">armbian/build#9970</a></li>
 <li>uwe5622: source the driver from armbian/uwe5622 (incl. the &gt;=7.1 gpiod fix). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/build/pull/10300">armbian/build#10300</a></li>
 <li>uwe5622: switch to unified driver in dedicated repo. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/EvilOlaf" title="GitHub User: EvilOlaf">@EvilOlaf</a> in <a href="https://github.com/armbian/build/pull/10113">armbian/build#10113</a></li>
-<li>wcn_boot: fix sdio_pub_int_init for the &gt;=7.1 gpiod int_ap (GCC14 -Wint-conversion). by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/igorpecovnik" title="GitHub User: igorpecovnik">@igorpecovnik</a> in <a href="https://github.com/armbian/uwe5622/pull/1">armbian/uwe5622#1</a></li>
-<li>wcn_boot: stop ordering-comparing the int_ap gpio_desc pointer. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iav" title="GitHub User: iav">@iav</a> in <a href="https://github.com/armbian/uwe5622/pull/13">armbian/uwe5622#13</a></li>
 <li>wifi: rtw88: sdio: Fix unhandled RX request interrupt storm. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/deece" title="GitHub User: deece">@deece</a> in <a href="https://github.com/armbian/build/pull/10121">armbian/build#10121</a></li>
 <li>youyeetoo-r1: fix M.2 PCIe reset gpio. by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/SuperKali" title="GitHub User: SuperKali">@SuperKali</a> in <a href="https://github.com/armbian/build/pull/10469">armbian/build#10469</a></li>
 </ul>
