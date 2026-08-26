@@ -5993,7 +5993,6 @@
     - looks the hash up in the local cache and in the <strong>remote OCI registry</strong> (<code>ghcr.io/armbian/os</code>);
     - if a matching build already exists, it is <strong>downloaded</strong> — no compilation;
     - otherwise the artifact is <strong>built</strong> (checkout source, apply the framework&rsquo;s patches then your <code>userpatches/</code> patches, compile to <code>.deb</code> / tarball) and <strong>pushed</strong> to the cache so the next build reuses it.</p>
-<p>This is the biggest difference from older Armbian: kernel and u-boot are not always compiled — they are fetched from cache whenever the inputs are unchanged.</p>
 </li>
 <li>
 <p><strong>Root filesystem.</strong> The rootfs is itself an artifact: pulled from cache when available, otherwise created with <strong><code>debootstrap</code></strong> for the target release (Debian or Ubuntu), then customized — Armbian packages, board support (<code>armbian-bsp-cli</code>), and the kernel/u-boot <code>.deb</code>s installed inside the chroot.</p>
