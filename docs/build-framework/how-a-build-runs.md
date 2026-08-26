@@ -31,5 +31,3 @@ This is a high-level tour of what `./compile.sh` does on a vanilla image build. 
 - **Kernel branches** are `legacy`, `current`, `edge`, and (for some boards) `vendor` — set with `BRANCH=`.
 - **Releases** are current Debian/Ubuntu codenames (for example `trixie`, `noble`), set with `RELEASE=`.
 - Individual stages can be run on their own — `kernel-config`, `kernel-patch`, `rewrite-kernel-config`, `artifact`, and others — which is how maintainers iterate without a full image build. See the [command reference](commands/index.md).
-
-*This page grew out of [documentation issue #190](https://github.com/armbian/documentation/issues/190), updated for the current (post-"armbian-next") framework.*
