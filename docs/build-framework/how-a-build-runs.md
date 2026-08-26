@@ -20,7 +20,7 @@ This is a high-level tour of what `./compile.sh` does on a vanilla image build. 
     - if a matching build already exists, it is **downloaded** — no compilation;
     - otherwise the artifact is **built** (checkout source, apply the framework's patches then your `userpatches/` patches, compile to `.deb` / tarball) and **pushed** to the cache so the next build reuses it.
 
-5. **Root filesystem.** The rootfs is itself an artifact: pulled from cache when available, otherwise created with **`debootstrap`** for the target release (Debian or Ubuntu), then customized — Armbian packages, board support (`armbian-bsp-cli`), and the kernel/u-boot `.deb`s installed inside the chroot.
+5. **Root filesystem.** The rootfs is itself an artifact: pulled from cache when available, otherwise bootstrapped with **`mmdebstrap`** for the target release (Debian or Ubuntu), then customized — Armbian packages, board support (`armbian-bsp-cli`), and the kernel/u-boot `.deb`s installed inside the chroot.
 
 6. **Image assembly.** A raw image file is created on a **loop device**, partitioned and formatted, and the finished rootfs is copied in. Board- and family-specific **post-processing** then runs — for example writing u-boot to the right offset and assembling secondary program loaders.
 
