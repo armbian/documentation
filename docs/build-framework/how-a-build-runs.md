@@ -13,7 +13,7 @@ This is a high-level tour of what `./compile.sh` does on a vanilla image build. 
 
 2. **Host preparation.** The framework runs inside a **Docker container by default** (`PREFER_DOCKER=yes`); it builds or pulls the build image, then installs host dependencies into it — including the **cross-toolchains, which are ordinary distribution packages** (gcc/binutils for the target architecture), not a collection Armbian ships itself. You can also build natively on a supported host.
 
-3. **Configuration aggregation.** Configuration is layered and inherited: **board → family → architecture → release**, merged with your `userpatches/` overrides and any enabled [extensions](extensions/index.md). The result is the complete set of variables — kernel source and branch, u-boot source, patch directories, package lists, and so on — that drives the rest of the build.
+3. **Configuration aggregation.** Configuration is layered and inherited: the **board** selects its **family**, then the family, common, and **architecture** defaults are sourced over it (each able to override the previous), merged with your `userpatches/` overrides and any enabled [extensions](extensions/index.md). The result is the complete set of variables — kernel source and branch, u-boot source, patch directories, package lists, and so on — that drives the rest of the build.
 
 4. **Artifacts (build-or-pull).** Each major component — **u-boot, kernel, firmware, `armbian-bsp-cli`, and the rootfs** — is an *artifact*. The framework computes a **content hash** from that artifact's inputs (git revision, patches, `.config`, framework code, variables), then:
     - looks the hash up in the local cache and in the **remote OCI registry** (`ghcr.io/armbian/os`);

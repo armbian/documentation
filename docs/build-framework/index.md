@@ -82,7 +82,7 @@ Function | Armbian | Yocto | Buildroot |
 ├── output                               Build artifact
 │   └── debs                             Deb packages
 │   └── images                           Bootable images - RAW or compressed
-│   └── debug                            Patch and build logs
+│   └── logs                             Build logs
 │   └── config                           Kernel configuration export location
 │   └── patch                            Created patches location
 ├── packages                             Support scripts, binary blobs, packages
