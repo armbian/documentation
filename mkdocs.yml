@@ -354,6 +354,7 @@ nav:
         - 'Get involved' : 'contribute/index.md'
         - 'Ways to contribute' :
             - 'armbian-config apps' : 'contribute/armbian-config.md'
+            - 'Run a mirror' : 'contribute/run-a-mirror.md'
             - 'Datacenter access' : 'contribute/datacenter.md'
         - 'Maintainers & board rules' :
             - 'Board Support Rules' : 'contribute/board-support-rules.md'
