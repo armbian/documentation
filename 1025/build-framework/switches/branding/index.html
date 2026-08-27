@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and the .deb package signatures.">
+        <meta name="description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and .deb package metadata.">
       
       
         <meta name="author" content="Armbian team">
@@ -81,9 +81,9 @@
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Armbian image branding / vendor build switches">
-  <meta property="og:description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and the .deb package signatures.">
+  <meta property="og:description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and .deb package metadata.">
   <meta name="twitter:title" content="Armbian image branding / vendor build switches">
-  <meta name="twitter:description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and the .deb package signatures.">
+  <meta name="twitter:description" content="Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and .deb package metadata.">
   
     <meta name="twitter:card" content="summary">
   
@@ -6249,7 +6249,7 @@
 
 <h1 id="branding">Branding<a class="headerlink" href="#branding" title="Permanent link">&para;</a></h1>
 <p>Rebrand the built image&rsquo;s identity — the OS name, URLs, logo, MOTD colour and package maintainer. Set these to ship your own white-labelled images instead of stock Armbian. They are normally set together in a <a href="/build-framework/getting-started/#cli">build configuration file</a>.</p>
-<p>These switches populate the image&rsquo;s identity files: <code>/etc/os-release</code>, <code>/etc/issue</code> and <code>/etc/issue.net</code>, <code>/etc/armbian-release</code>, <code>/etc/armbian-image-release</code>, the login MOTD, and the signature on the generated <code>.deb</code> packages.</p>
+<p>These switches populate the image&rsquo;s identity files: <code>/etc/os-release</code>, <code>/etc/issue</code> and <code>/etc/issue.net</code>, <code>/etc/armbian-release</code>, <code>/etc/armbian-image-release</code>, the login MOTD, and the <code>Maintainer</code> field of the generated <code>.deb</code> packages.</p>
 <div class="admonition info">
 <p class="admonition-title">Defaults are deliberate placeholders</p>
 <p>Left unset, the framework fills these with placeholder fallbacks (shown as the defaults below), so an un-branded build identifies itself as <code>Armbian-unofficial</code> rather than masquerading as an official release. A branded build overrides the whole group — see the <a href="#a-full-rebrand">example</a> at the end.</p>
@@ -6259,7 +6259,7 @@
 <p>The vendor / OS name. Written to <code>/etc/os-release</code> <code>PRETTY_NAME</code> (as <code>&lt;VENDOR&gt; &lt;version&gt; &lt;release&gt;</code>), <code>/etc/issue</code>, <code>/etc/issue.net</code> and <code>/etc/armbian-release</code>. When unset it becomes <code>Armbian-unofficial</code>, marking the image as not an official build.</p>
 <h4 id="vendorprettyname">VENDORPRETTYNAME<a class="headerlink" href="#vendorprettyname" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · optional</p>
-<p>A friendly vendor name recorded in <code>/etc/armbian-image-release</code> (<code>VENDORPRETTYNAME=</code>). Unset by default.</p>
+<p>A friendly vendor name recorded in <code>/etc/armbian-image-release</code> (<code>VENDORPRETTYNAME=</code>). Defaults to <code>VENDOR</code> in the image when left unset.</p>
 <h4 id="vendorcolor">VENDORCOLOR<a class="headerlink" href="#vendorcolor" title="Permanent link">&para;</a></h4>
 <p><code>string</code> (ANSI 256 / <code>R;G;B</code>) · default: <code>247;16;0</code></p>
 <p>Colour used for the vendor logo in the login MOTD. Written to <code>/etc/armbian-release</code>.</p>
@@ -6280,13 +6280,13 @@
 <p>Bug-report URL — os-release <code>BUG_REPORT_URL</code>.</p>
 <h4 id="vendorlogo">VENDORLOGO<a class="headerlink" href="#vendorlogo" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>armbian-logo</code></p>
-<p>Freedesktop icon name written to os-release <code>LOGO=</code> — the icon that tools like the desktop <strong>About</strong> dialog or <code>fastfetch</code> resolve from the icon theme (the asset ships as <code>/usr/share/pixmaps/&lt;name&gt;.svg</code>). It is <strong>not</strong> the boot splash; to change the Plymouth boot logo see <a href="#boot-splash-plymouth">Boot splash (Plymouth)</a> below.</p>
+<p>Freedesktop icon name written to os-release <code>LOGO=</code> — the icon that tools like the desktop <strong>About</strong> dialog or <code>fastfetch</code> resolve from the icon theme. The framework only ships the <code>armbian-logo</code> assets (e.g. <code>/usr/share/pixmaps/armbian-logo.svg</code>), so a custom value (say <code>acme-logo</code>) resolves to nothing unless you also install a matching icon of that name. It is <strong>not</strong> the boot splash; to change the Plymouth boot logo see <a href="#boot-splash-plymouth">Boot splash (Plymouth)</a> below.</p>
 <h4 id="maintainer">MAINTAINER<a class="headerlink" href="#maintainer" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>John Doe</code></p>
-<p>Maintainer name used to sign the generated <code>.deb</code> packages and recorded in <code>/etc/armbian-release</code>.</p>
+<p>Maintainer name written to the <code>Maintainer:</code> field of the generated <code>.deb</code> packages (<code>DEBIAN/control</code> and the changelog trailer) and recorded in <code>/etc/armbian-release</code>. It does not cryptographically sign the packages.</p>
 <h4 id="maintainermail">MAINTAINERMAIL<a class="headerlink" href="#maintainermail" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>john.doe@somewhere.on.planet</code></p>
-<p>Maintainer e-mail used for the <code>.deb</code> package signatures.</p>
+<p>Maintainer e-mail written alongside <code>MAINTAINER</code> into the <code>.deb</code> <code>Maintainer:</code> field.</p>
 <h2 id="a-full-rebrand">A full rebrand<a class="headerlink" href="#a-full-rebrand" title="Permanent link">&para;</a></h2>
 <p>Branded builds set the whole group together in a build config. For example, the values official Armbian images use:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
