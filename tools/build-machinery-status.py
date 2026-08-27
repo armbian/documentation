@@ -105,8 +105,12 @@ def build_report(api, token, gh_org=None, gh_token=None):
     rows = []
     for v in vms:
         loc = (v.get("site") or {}).get("name") or (v.get("cluster") or {}).get("name") or "—"
+        cf = v.get("custom_fields") or {}
         rows.append({
             "name": v["name"],
+            # the GitHub runners label lives in a NetBox custom field; it is the
+            # server's display name here and the key to count runners on GitHub
+            "label": cf.get("github_label"),
             "status": v["status"]["value"],
             "threads": int(v.get("vcpus") or 0),
             "ram": gb(v.get("memory")),
@@ -123,10 +127,10 @@ def build_report(api, token, gh_org=None, gh_token=None):
     # Runners-per-machine from GitHub (needs the runners token); None -> "—".
     gh = github_runner_counts(gh_org or DEFAULT_ORG, gh_token) if gh_token else None
 
-    def runners_cell(name):
-        if gh is None:
+    def runners_cell(label):
+        if gh is None or not label:
             return "—"
-        return str(gh["labels"].get(name.lower(), 0))
+        return str(gh["labels"].get(label.lower(), 0))
 
     out = []
     out.append("## Build servers")
@@ -147,8 +151,9 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out.append("|:-------|:---------|--------:|----:|--------:|:------:|")
     for r in rows:
         status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
-        out.append(f"| `{r['name']}` | {r['loc']} | {r['threads']} | {r['ram']} GB "
-                   f"| {runners_cell(r['name'])} | {status} |")
+        name = r["label"] or r["name"]
+        out.append(f"| `{name}` | {r['loc']} | {r['threads']} | {r['ram']} GB "
+                   f"| {runners_cell(r['label'])} | {status} |")
     out.append("")
 
     return "\n".join(out)

@@ -19,20 +19,20 @@ _Build servers from [NetBox](https://netbox.armbian.com/), role `userlevel-runne
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
-| `insanisfiction.armbian.de` | Hetzner Germany | 176 | 375 GB | — | active |
+| `insa-trixie` | Hetzner Germany | 176 | 375 GB | — | active |
 | `ampere-1` | GitHub | 128 | 500 GB | — | active |
 | `kspace` | Imola | 128 | 264 GB | — | active |
-| `github.com` | GitHub | 40 | 137 GB | — | active |
+| `github` | GitHub | 40 | 137 GB | — | active |
 | `3950x` | Armbian Datacenter | 32 | 125 GB | — | active |
-| `game.imola.armbian.com` | Imola | 32 | 132 GB | — | active |
+| `game` | Imola | 32 | 132 GB | — | active |
 | `rack-ryzen` | Armbian Datacenter | 32 | 125 GB | — | active |
-| `stpete-runner.armbian.com` | JetHome | 24 | 64 GB | — | active |
+| `stpete` | JetHome | 24 | 64 GB | — | active |
 | `geekom` | Mirrors | 20 | 62 GB | — | active |
 | `cats` | Auroradev Las Vegas | 16 | 32 GB | — | active |
 | `mind` | GitHub | 16 | 16 GB | — | ⚠️ offline |
-| `oregon-uni-1.armbian.com` | Oregon UNI | 16 | 31 GB | — | active |
-| `oregon-uni-2.armbian.com` | Oregon UNI | 16 | 31 GB | — | active |
-| `repo.armbian.com` | Netcup Germany | 10 | 16 GB | — | active |
+| `oregonalfa` | Oregon UNI | 16 | 31 GB | — | active |
+| `oregonbeta` | Oregon UNI | 16 | 31 GB | — | active |
+| `repoassembly` | Netcup Germany | 10 | 16 GB | — | active |
 | `mt7925e` | Kspace Estonia | 8 | 16 GB | — | active |
 | `nanopim6` | GitHub | 8 | 32 GB | — | ⚠️ offline |
 | `rock5-16g-aarch64-01-04` | Rock 5 #1 | 8 | 16 GB | — | ⚠️ offline |
