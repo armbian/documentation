@@ -68,7 +68,7 @@ After logging in, you will be prompted to change the default password. You will 
     root@bananapim2pro:~#
 
 ???+ tip "Automated config"
-    These settings can be pre-loaded, see [Autoconfig](../User-Guide_Autoconfig.md)
+    These settings can be pre-loaded, see [Autoconfig](../user-guide/autoconfig.md)
 
 <!-- TODO: it must be made clear that this just preps the SD card -->
 

@@ -7,7 +7,7 @@ description: "Configure a fresh Armbian system with armbian-config: language, ke
 
 You can customize your Armbian Linux before or after installing it onto your device's hard-drive. In many cases, you probably want to apply some basic customizations like adjusting the keyboard layout, the timezone, etc., so you can use the same SD card again if necessary. Or you want to adjust your [system or hardware configuration](../config/index.md) or [install preconfigured applications and advanced services](../software/index.md).
 
-Please note that the typical tool for all tasks is [_armbian-config_](../config/index.md). The section [_Advanced Configuration_](../User-Guide_Advanced-Configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
+Please note that the typical tool for all tasks is [_armbian-config_](../config/index.md). The section [_Advanced Configuration_](../user-guide/advanced-configuration.md) contains a selection of tasks that require a deeper understanding of the operating system.
 
 
 ## Configuration

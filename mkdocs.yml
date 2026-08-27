@@ -96,7 +96,12 @@ plugins:
         'User-Guide_Armbian-Config/Localisation.md': 'config/localisation.md'
         # Recovery was folded into Troubleshooting in March 2025; the nav
         # section is still titled 'Troubleshooting and Recovery'.
-        'User-Guide_Recovery.md': 'User-Guide_Troubleshooting.md'
+        'User-Guide_Recovery.md': 'user-guide/troubleshooting.md'
+        'User-Guide_Advanced-Configuration.md': 'user-guide/advanced-configuration.md'
+        'User-Guide_Networking.md': 'user-guide/networking.md'
+        'User-Guide_Autoconfig.md': 'user-guide/autoconfig.md'
+        'User-Guide_Troubleshooting.md': 'user-guide/troubleshooting.md'
+        'User-Guide_FAQ.md': 'user-guide/faq.md'
         # The build framework section moved to /build-framework/; keep every
         # Developer-Guide_* URL working.
         'Developer-Guide_Adding-Board-Family.md': 'build-framework/adding-a-board.md'
@@ -200,12 +205,12 @@ nav:
             - 'Keeping it up to date' : 'getting-started/updating.md'
             - 'If something goes wrong' : 'getting-started/troubleshooting.md'
         - 'Advanced Usage' :
-            - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
-            - 'Networking' : 'User-Guide_Networking.md'
-            - 'Firstboot config': 'User-Guide_Autoconfig.md'
-        - 'Troubleshooting and Recovery' : 'User-Guide_Troubleshooting.md'
+            - 'Advanced Configuration': 'user-guide/advanced-configuration.md'
+            - 'Networking' : 'user-guide/networking.md'
+            - 'Firstboot config': 'user-guide/autoconfig.md'
+        - 'Troubleshooting and Recovery' : 'user-guide/troubleshooting.md'
         #- 'Recovery' : 'User-Guide_Recovery.md'
-        - 'FAQ' : 'User-Guide_FAQ.md'
+        - 'FAQ' : 'user-guide/faq.md'
   - 'RELEASES':
         - 'Release notes': 'releases/index.md'
         - 'Release model': 'releases/release-model.md'
