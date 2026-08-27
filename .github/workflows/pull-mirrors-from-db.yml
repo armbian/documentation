@@ -22,45 +22,14 @@ jobs:
           repository: 'armbian/documentation'
           path: 'documentation'
 
-      - name: Update rsync section
-        run: |
-          FILE="documentation/docs/contribute/mirrors.md"
-          sed '/^### 2\. Set up synchronization via rsync/,$d' "$FILE" > tmp.md
-          cat <<EOF >> tmp.md
-          ### 2. Set up synchronization via rsync
-
-            - Sync files from one of the official repositories using the following commands:
-
-            | Content         | Command                                     | Required Space |
-            |-----------------|---------------------------------------------|---------------:|
-          EOF
-          for storage in dl apt archive oldarchive; do
-            size=$(curl -s https://fi.mirror.armbian.de/$storage/size.txt)
-            case "$storage" in
-              "dl")
-                TEXT="Current images"
-                ;;
-              "apt")
-                TEXT="Packages"
-                ;;
-              "archive")
-                TEXT="Archived images"
-                ;;
-              *)
-                TEXT="Very old images"
-                ;;
-            esac
-            echo "   | $TEXT | \`rsync -av rsync://fi.mirror.armbian.de/$storage\` | $size |" >> tmp.md
-          done
-          sed -n '/^## Current Mirrors/,$p' "$FILE" >> tmp.md
-          sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' tmp.md
-          mv tmp.md "$FILE"
-  
       - name: Update Current Mirrors section
         run: |
           FILE="documentation/docs/contribute/mirrors.md"
-          sed '/^## Current Mirrors/,$d' "$FILE" > tmp.md
-          cat <<EOF >> tmp.md
+          # Build the replacement block (markers included). It is spliced back
+          # into the page between the mirrors:start / mirrors:end markers, so
+          # the table can live anywhere in the file, not just at the end.
+          cat <<EOF > block.md
+          <!-- mirrors:start -->
           ## Current Mirrors
 
           | Site | Flag | Packages | Images | Archive | Rsync |
@@ -134,13 +103,21 @@ jobs:
             else
               FLAG_CELL="[$SITE_REGION](https://www.openstreetmap.org/search?lat=$SITE_LATITUDE&lon=$SITE_LONGITUDE)"
             fi
-            echo "| [$SITE_NAME](https://$NAME) | $FLAG_CELL | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> tmp.md
+            echo "| [$SITE_NAME](https://$NAME) | $FLAG_CELL | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> block.md
           done
-          sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' tmp.md
-          mv tmp.md "$FILE"
+          echo '<!-- mirrors:end -->' >> block.md
+
+          # Splice the freshly built block back in, replacing the current
+          # marker-delimited region wherever it sits in the page.
+          awk -v bf=block.md '
+            BEGIN { while ((getline l < bf) > 0) B = B l ORS }
+            /<!-- mirrors:start -->/ { printf "%s", B; skip=1; next }
+            /<!-- mirrors:end -->/   { skip=0; next }
+            !skip { print }
+          ' "$FILE" > tmp.md && mv tmp.md "$FILE"
 
           # Surface the rendered mirror table in the workflow run summary.
-          sed -n '/^## Current Mirrors/,$p' "$FILE" >> "$GITHUB_STEP_SUMMARY"
+          cat block.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Create Pull Request to documentation
         uses: peter-evans/create-pull-request@v8

@@ -5,45 +5,9 @@ comments: true
 ---
 # How the Armbian mirror system works
 
-The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. This page explains how it works, what a mirror needs to provide, and how to contribute one.
+The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. Pick a nearby mirror from the list below, or read on for how the system works and how to contribute one.
 
-![armbian-mirror-explication](../images/armbian-mirror-explication.png)
-
-## How it works
-
-1. **Request** — a user starts a download (image, package, ...) from a standard URL such as `https://dl.armbian.com`.
-2. **Routing** — the redirector picks the best mirror based on the user's location, each mirror's status and load, and whether it holds the requested file.
-3. **Redirect** — the user is sent straight to the chosen mirror.
-4. **Download** — the file is served directly from that mirror, keeping downloads fast and taking load off the core infrastructure.
-
-The result is **load balancing** across many servers, **faster downloads** from a nearby mirror, and **redundancy** — if a mirror is unavailable, the redirector automatically routes around it.
-
-## Contribute a mirror
-
-If you can host a mirror for the project, here is how.
-
-### 1. Set up an HTTP(S) host
-
-The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.
-
-### 2. Sync with `rsync`
-
-Pull the content you want to serve from one of the official modules, and run it from cron every **2-4 hours**:
-
-| Content | Command | Required space |
-|---------|---------|---------------:|
-| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
-| Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
-| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
-
-### 3. Tell us about it
-
-Once the server is running, reach out through the [contact form](https://www.armbian.com/contact/) so we can add it to the official redirector.
-
-Thanks for helping keep Armbian's downloads fast and reliable worldwide.
-
-
+<!-- mirrors:start -->
 ## Current Mirrors
 
 | Site | Flag | Packages | Images | Archive | Rsync |
@@ -93,3 +57,40 @@ Thanks for helping keep Armbian's downloads fast and reliable worldwide.
 | [SBC mirror Singapore](https://sg.sbcmirror.org) | [![Singapore](https://flagsapi.com/SG/shiny/32.png)](https://www.openstreetmap.org/search?lat=1.3673&lon=103.8014) | :white_check_mark: | :white_check_mark: |  |  |
 | [JetHome](https://stpete-mirror.armbian.com) | [![Russia](https://flagsapi.com/RU/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.9417&lon=30.3096) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Xogium](https://xogium.performanceservers.nl) | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.5144&lon=-2.768) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
+<!-- mirrors:end -->
+
+## How it works
+
+![armbian-mirror-explication](../images/armbian-mirror-explication.png)
+
+1. **Request** — a user starts a download (image, package, ...) from a standard URL such as `https://dl.armbian.com`.
+2. **Routing** — the redirector picks the best mirror based on the user's location, each mirror's status and load, and whether it holds the requested file.
+3. **Redirect** — the user is sent straight to the chosen mirror.
+4. **Download** — the file is served directly from that mirror, keeping downloads fast and taking load off the core infrastructure.
+
+The result is **load balancing** across many servers, **faster downloads** from a nearby mirror, and **redundancy** — if a mirror is unavailable, the redirector automatically routes around it.
+
+## Contribute a mirror
+
+If you can host a mirror for the project, here is how.
+
+### 1. Set up an HTTP(S) host
+
+The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.
+
+### 2. Sync with `rsync`
+
+Pull the content you want to serve from one of the official modules, and run it from cron every **2-4 hours**:
+
+| Content | Command | Required space |
+|---------|---------|---------------:|
+| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
+| Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
+| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
+
+### 3. Tell us about it
+
+Once the server is running, reach out through the [contact form](https://www.armbian.com/contact/) so we can add it to the official redirector.
+
+Thanks for helping keep Armbian's downloads fast and reliable worldwide.
