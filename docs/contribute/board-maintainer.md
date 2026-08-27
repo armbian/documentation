@@ -44,3 +44,31 @@ Alternatively you can use auto-built images - they are placed at the ever end of
 - You must provide "best effort" support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request "armbianmonitor -u" output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <https://www.armbian.com/download/>
 
 - You must provide "best effort" support on GitHub — review the issues submitted for your board by Armbian's contributors.
+
+## During a release
+
+Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November) — see the [release model](/releases/release-model/). Attending is optional, but you **must** sign off that your board has been tested and is ready, by filling in the [Release Testing Form](https://www.armbian.com/rc-testing/) for each release candidate.
+
+## Issue priority
+
+A rough guide when triaging issues filed for your board:
+
+**Low priority** — usually picked up by the community over time:
+
+- Wi-Fi (missing modules, AP mode, …)
+- Bluetooth
+- GPIO, I²C
+- hardware accelerators (crypto, VPU / video)
+- device-tree overlays
+
+**High priority** — worth flagging to the team promptly:
+
+- the image does not boot
+- the image or its packages are corrupt
+- SD card or eMMC is not working as expected
+
+Collect as much detail as you can (logs, `armbianmonitor -u`, the exact image) before filing, and ask the reporter for anything still missing.
+
+## Losing support status
+
+As noted in the [Board Support Rules](board-support-rules.md), a board's support status is revoked for at least the current **and** upcoming release cycle(s) if a **"must"** from the responsibilities above is not fulfilled.
