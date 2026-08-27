@@ -118,8 +118,10 @@ plugins:
         'Community_Github.md': 'community/github.md'
         'Process_Contribute.md': 'contribute/index.md'
         'Contribute/Armbian-config.md': 'contribute/armbian-config.md'
-        'WifiPerformance.md': 'contribute/wifi-performance.md'
-        'Mirrors.md': 'contribute/mirrors.md'
+        'WifiPerformance.md': 'status/wifi-performance.md'
+        'Mirrors.md': 'status/mirrors.md'
+        'contribute/wifi-performance.md': 'status/wifi-performance.md'
+        'contribute/mirrors.md': 'status/mirrors.md'
         'Contribute/Datacenter.md': 'contribute/datacenter.md'
         'User-Guide_Board-Support-Rules.md': 'contribute/board-support-rules.md'
         'Release_Board-Maintainers.md': 'contribute/board-maintainer.md'
@@ -337,6 +339,11 @@ nav:
         - 'Board Configuration' : 'build-framework/board-configuration.md'
         - 'Adding a Board' : 'build-framework/adding-a-board.md'
 
+  - 'STATUS' :
+        - 'Overview' : 'status/index.md'
+        - 'Wi-Fi performance' : 'status/wifi-performance.md'
+        - 'Mirrors' : 'status/mirrors.md'
+
   - 'COMMUNITY' :
         - 'Forums' : 'community/forums.md'
         - 'Chat & social' : 'community/chat.md'
@@ -346,8 +353,6 @@ nav:
         - 'Get involved' : 'contribute/index.md'
         - 'Ways to contribute' :
             - 'armbian-config apps' : 'contribute/armbian-config.md'
-            - 'Wi-Fi testing' : 'contribute/wifi-performance.md'
-            - 'Mirrors' : 'contribute/mirrors.md'
             - 'Datacenter access' : 'contribute/datacenter.md'
         - 'Maintainers & board rules' :
             - 'Board Support Rules' : 'contribute/board-support-rules.md'
