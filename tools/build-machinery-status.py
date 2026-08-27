@@ -90,14 +90,18 @@ def github_runner_counts(org, token):
     except Exception as e:
         print(f"::warning::GitHub runners unavailable: {e}", file=sys.stderr)
         return None
-    per_label = collections.Counter()
+    per_label, online_label = collections.Counter(), collections.Counter()
     for r in runners:
+        is_online = r.get("status") == "online"
         for lbl in r.get("labels", []):
             name = lbl["name"].lower()
             if name not in GH_DEFAULT_LABELS:
                 per_label[name] += 1
+                if is_online:
+                    online_label[name] += 1
     online = sum(1 for r in runners if r.get("status") == "online")
-    return {"labels": per_label, "total": len(runners), "online": online}
+    return {"labels": per_label, "online_labels": online_label,
+            "total": len(runners), "online": online}
 
 
 def build_report(api, token, gh_org=None, gh_token=None):
@@ -126,16 +130,20 @@ def build_report(api, token, gh_org=None, gh_token=None):
     active_threads = sum(r["threads"] for r in active)
     total_ram = sum(r["ram"] for r in rows)
 
-    # Runners-per-machine from GitHub (needs the runners token); None -> "—".
+    # Resolve a runner count (and online count) per server: live from GitHub
+    # matched by the label when we can query it, otherwise the NetBox value.
     gh = github_runner_counts(gh_org or DEFAULT_ORG, gh_token) if gh_token else None
+    for r in rows:
+        key = (r["label"] or "").lower()
+        if gh is not None and key:
+            r["rcount"] = gh["labels"].get(key, 0)
+            r["ronline"] = gh["online_labels"].get(key, 0)
+        else:
+            r["rcount"] = r.get("nb_runners")   # may be None
+            r["ronline"] = None
 
-    def runners_cell(row):
-        # live GitHub answer (0 if the label carries none) when we can query it,
-        # otherwise NetBox's stored count as a fallback
-        if gh is not None and row["label"]:
-            return str(gh["labels"].get(row["label"].lower(), 0))
-        nb = row.get("nb_runners")
-        return str(nb) if nb is not None else "—"
+    total_runners = sum(r["rcount"] for r in rows if r["rcount"] is not None)
+    online_runners = sum(r["ronline"] for r in rows if r["ronline"] is not None)
 
     out = []
     out.append("## Build servers")
@@ -148,18 +156,22 @@ def build_report(api, token, gh_org=None, gh_token=None):
     summary = (f"**{len(rows)}** servers — **{len(active)}** active, "
                f"**{len(rows) - len(active)}** offline · "
                f"**{total_threads}** CPU threads (**{active_threads}** active) · "
-               f"**{total_ram}** GB RAM")
+               f"**{total_ram}** GB RAM · **{total_runners}** runners")
     if gh is not None:
-        summary += f" · **{gh['total']}** GitHub runners (**{gh['online']}** online)"
+        summary += f" (**{online_runners}** online)"
     out.append(summary + ".")
     out.append("")
     out.append("| Server | Location | Threads | RAM | Runners | Status |")
     out.append("|:-------|:---------|--------:|----:|--------:|:------:|")
     for r in rows:
-        status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
+        if gh is not None and r["label"]:
+            status = "online" if r["ronline"] else "⚠️ offline"
+        else:
+            status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
         name = r["label"] or r["name"]
+        runners = str(r["rcount"]) if r["rcount"] is not None else "—"
         out.append(f"| `{name}` | {r['loc']} | {r['threads']} | {r['ram']} GB "
-                   f"| {runners_cell(r)} | {status} |")
+                   f"| {runners} | {status} |")
     out.append("")
 
     return "\n".join(out)

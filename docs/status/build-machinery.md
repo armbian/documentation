@@ -15,7 +15,7 @@ runner processes each server hosts (from the
 
 _Build servers from [NetBox](https://netbox.armbian.com/), role `userlevel-runner`. The **Runners** column is the number of GitHub runner processes registered on that server (matched by its label), falling back to the value recorded in NetBox when GitHub can't be queried._
 
-**20** servers — **16** active, **4** offline · **730** CPU threads (**690** active) · **2045** GB RAM.
+**20** servers — **16** active, **4** offline · **730** CPU threads (**690** active) · **2045** GB RAM · **235** runners.
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
