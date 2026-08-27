@@ -49,6 +49,66 @@ def fetch(url):
 
 
 # --- Debian version comparison -------------------------------------------------
+# Prefer apt_pkg when present (authoritative); otherwise fall back to a
+# pure-Python implementation of the dpkg algorithm so that tildes, epochs and
+# revisions order correctly (e.g. 1.0~rc1 < 1.0, 6.16.0 < 7.2.0-rc7).
+def _order(c):
+    if c == "~":
+        return -1
+    if c == "":
+        return 0
+    if c.isalpha():
+        return ord(c)
+    return ord(c) + 256          # non-alphanumeric sorts after letters
+
+
+def _compare_frag(a, b):
+    i = j = 0
+    while i < len(a) or j < len(b):
+        # non-digit lexical run (a digit terminates it, compared as end-of-string)
+        while (i < len(a) and not a[i].isdigit()) or (j < len(b) and not b[j].isdigit()):
+            ac = _order(a[i]) if i < len(a) and not a[i].isdigit() else 0
+            bc = _order(b[j]) if j < len(b) and not b[j].isdigit() else 0
+            if ac != bc:
+                return -1 if ac < bc else 1
+            if i < len(a) and not a[i].isdigit():
+                i += 1
+            if j < len(b) and not b[j].isdigit():
+                j += 1
+        # numeric run (compare by value: strip zeros, then length, then digits)
+        while i < len(a) and a[i] == "0":
+            i += 1
+        while j < len(b) and b[j] == "0":
+            j += 1
+        si, sj = i, j
+        while i < len(a) and a[i].isdigit():
+            i += 1
+        while j < len(b) and b[j].isdigit():
+            j += 1
+        da, db = a[si:i], b[sj:j]
+        if len(da) != len(db):
+            return -1 if len(da) < len(db) else 1
+        if da != db:
+            return -1 if da < db else 1
+    return 0
+
+
+def _deb_compare(a, b):
+    def split(v):
+        epoch = 0
+        if ":" in v:
+            e, _, v = v.partition(":")
+            if e.isdigit():
+                epoch = int(e)
+        up, _, rev = v.rpartition("-") if "-" in v else (v, "", "")
+        return epoch, up, rev
+    ea, ua, ra = split(a)
+    eb, ub, rb = split(b)
+    if ea != eb:
+        return -1 if ea < eb else 1
+    return _compare_frag(ua, ub) or _compare_frag(ra, rb)
+
+
 try:
     import apt_pkg
     apt_pkg.init_system()
@@ -56,17 +116,8 @@ try:
     def version_gt(a, b):
         return apt_pkg.version_compare(a, b) > 0
 except Exception:
-    def _split(v):
-        # crude but serviceable fallback: split into numeric / non-numeric runs
-        import re
-        parts = re.findall(r"\d+|\D+", v)
-        key = []
-        for p in parts:
-            key.append((0, int(p)) if p.isdigit() else (1, p))
-        return key
-
     def version_gt(a, b):
-        return _split(a) > _split(b)
+        return _deb_compare(a, b) > 0
 
 
 def version_max(versions):
@@ -161,10 +212,14 @@ def build_report(base, suites, component, arch, kernels=False):
         return m.group(1) if m else "?"
 
     suite_data = {}
+    failed = []
     for suite in suites:
         rel = get_release(base, suite)
         pkgs = get_packages(base, suite, component, arch)
         if pkgs is None:
+            # fetch error / missing index — record it; the caller fails closed
+            # rather than publishing a report with the suite silently dropped.
+            failed.append(suite)
             continue
         latest = latest_map(pkgs)
         # 3rd-party / utility tools live in the suite-prefixed "-utils" component.
@@ -322,7 +377,7 @@ def build_report(base, suites, component, arch, kernels=False):
         out.append("".join(row) + "|")
     out.append("")
 
-    return "\n".join(out)
+    return "\n".join(out), failed
 
 
 def main():
@@ -349,8 +404,14 @@ def main():
     if not suites:
         sys.exit("no suites found (network issue?)")
 
-    report = build_report(args.base_url, suites, args.component, args.arch,
-                          kernels=args.kernels)
+    report, failed = build_report(args.base_url, suites, args.component, args.arch,
+                                  kernels=args.kernels)
+    # Fail closed: if any requested suite could not be fetched, do not publish a
+    # partial report — a transient repository outage must not silently drop a
+    # suite (or blank the whole page) from an auto-updated status doc.
+    if failed:
+        sys.exit(f"error: could not fetch {args.component} for: {', '.join(failed)}")
+
     if args.output:
         with open(args.output, "w", encoding="utf-8") as fh:
             fh.write(report + "\n")
