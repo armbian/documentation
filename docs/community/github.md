@@ -34,7 +34,7 @@ Armbian OS assembly line:
 
 Armbian OS community assembly line:
 
-- [weekly rolling releases](https://github.com/armbian/community/releases) for build targets without a dedicated mainteiner.
+- [weekly rolling releases](https://github.com/armbian/community/releases) for build targets without a dedicated maintainer.
 
 ## Armbian Distribution
 <https://github.com/armbian/distribution>

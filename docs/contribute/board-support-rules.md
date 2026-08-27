@@ -12,7 +12,7 @@ Support definitions, criteria and relationships for:
 - [Platinum Support](#platinum-support)
 - [Standard support](#standard-support)
 - [Community maintained](#community-maintained)
-- [Staging](#)
+- [Staging](#staging)
 
 ## Platinum Support
 
@@ -83,7 +83,7 @@ Work in progress (WIP) status is for when a maintainer has committed to a SBC, b
 
 ### Benefits
 
-All benefits of Community Supported SBCs apply to Staging as well.
+All benefits of Community maintained SBCs apply to Staging as well.
 
 * periodic / nightly CLI images are published by Armbian
 * best-effort support to SBC maintainer to assure compatibility within the [Armbian Build Framework](https://github.com/armbian/build)

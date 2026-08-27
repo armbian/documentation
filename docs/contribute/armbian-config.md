@@ -45,7 +45,7 @@ This one we will place under `Software -> Management`.
 | `module` |  `link json entry with module` | Used for documentation generation - read info from `module_options` |
 | `prompt` |  `confirmation text` | Some features needs confirmation before proceeding |
 | `command` |  `executes function` | What should be run after we select and agree (optional) |
-| `status` |  `Stable|Disabled` | Control if function is shown to users in the menu |
+| `status` |  `Stable\|Disabled` | Control if function is shown to users in the menu |
 | `author` |  `GitHub handle` | Developer or maintainer of this functionality |
 | `condition` |  `controlling display` | Under what conditions we show this menu item |
 
@@ -120,14 +120,14 @@ function module_template() {
 
 #### Manual testing
 
-Whenever you are making changes to the JSON or modules structure, make sure to join JSON segments into main JSON file and fun. This you do with a command:
+Whenever you are making changes to the JSON or modules structure, make sure to join JSON segments into main JSON file and run. This you do with a command:
 ``` python
 tools/config-assemble.sh -p
 ```
 Python is required to run this tool.
 
 ``` bash
-sudo sudo bin/armbian-config --cmd
+sudo bin/armbian-config --cmd
 ```
 
 #### Unit tests
