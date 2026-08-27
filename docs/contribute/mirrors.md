@@ -3,59 +3,45 @@ seo_title: "Armbian mirror system & how to add a mirror"
 description: "How the Armbian mirror system works: a redirector routes downloads to the fastest nearby mirror, plus mirror specs and steps to contribute a new server."
 comments: true
 ---
-# How the Armbian Mirror System Works  
+# How the Armbian mirror system works
 
-## Introduction  
-The [Armbian mirror system](https://github.com/armbian/armbian-router) is designed to efficiently distribute files, ensuring users get the best available server based on geographic proximity and server availability. This document outlines the mirroring system's operational flow, technical specifications for mirrors, and how to contribute a new server.
+The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. This page explains how it works, what a mirror needs to provide, and how to contribute one.
 
 ![armbian-mirror-explication](../images/armbian-mirror-explication.png)
 
-## Operational Flow  
+## How it works
 
-1. **User Request**  
-   - A user initiates a file download (system image, package, etc.) from Armbian using a standard URL (e.g., `https://dl.armbian.com`).  
+1. **Request** — a user starts a download (image, package, ...) from a standard URL such as `https://dl.armbian.com`.
+2. **Routing** — the redirector picks the best mirror based on the user's location, each mirror's status and load, and whether it holds the requested file.
+3. **Redirect** — the user is sent straight to the chosen mirror.
+4. **Download** — the file is served directly from that mirror, keeping downloads fast and taking load off the core infrastructure.
 
-2. **Redirector Server Processing**  
-   - The redirector server processes the request and determines the best available mirror based on:  
-     - User's geographic location  
-     - Mirror server status and load  
-     - Availability of the requested files  
+The result is **load balancing** across many servers, **faster downloads** from a nearby mirror, and **redundancy** — if a mirror is unavailable, the redirector automatically routes around it.
 
-3. **Mirror Assignment**  
-   - The redirector server provides a direct URL to the most suitable mirror.  
-   - The user is automatically redirected to the designated server.  
+## Contribute a mirror
 
-4. **Download from Assigned Mirror**  
-   - The user downloads the file directly from the assigned mirror, optimizing speed and reducing load on the main infrastructure.  
+If you can host a mirror for the project, here is how.
 
-## Benefits of the Mirroring System  
-- **Load balancing**: Requests are distributed across multiple servers to prevent congestion.  
-- **Faster downloads**: Users are served by the closest available mirror.  
-- **Redundancy and reliability**: If a mirror is unavailable, the redirector automatically assigns an alternative.  
+### 1. Set up an HTTP(S) host
 
-## How to Contribute a Mirror  
-If you would like to contribute to the Armbian project by providing a mirror, follow these steps:  
+The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.
 
-### 1. Choose the target and set up an HTTP/HTTPS hostname  
-   - The mirror must be accessible via HTTP, and HTTPS is preferred.  
+### 2. Sync with `rsync`
 
-### 2. Set up synchronization via `rsync`  
-   - Sync files from one of the official repositories using the following commands:  
+Pull the content you want to serve from one of the official modules, and run it from cron every **2-4 hours**:
 
-   | Content | Command | Required Space |  
-   |---------|---------|---------------:|  
-   | Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |  
-   | Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |  
-   | Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |  
-   | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |  
+| Content | Command | Required space |
+|---------|---------|---------------:|
+| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
+| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
+| Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
+| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
-   - Set up a cron job to sync every **2-4 hours**.  
+### 3. Tell us about it
 
-### 3. Inform us about your mirror  
-   - Once your server is configured, contact us via the [contact form](https://www.armbian.com/contact/) to integrate it into the official redirector system.  
+Once the server is running, reach out through the [contact form](https://www.armbian.com/contact/) so we can add it to the official redirector.
 
-Contributing a mirror helps improve Armbian’s file distribution, ensuring faster and more reliable downloads for the global community.  
-
+Thanks for helping keep Armbian's downloads fast and reliable worldwide.
 
 
 ## Current Mirrors
@@ -107,3 +93,4 @@ Contributing a mirror helps improve Armbian’s file distribution, ensuring fast
 | [SBC&nbsp;mirror&nbsp;Singapore](https://sg.sbcmirror.org) | Asia/Singapore | [![Singapore](https://flagsapi.com/SG/shiny/32.png)](https://www.openstreetmap.org/search?lat=1.3673&lon=103.8014) | 1000&nbsp;Mbps | :white_check_mark: | :white_check_mark: |  |  |
 | [JetHome](https://stpete-mirror.armbian.com) | Europe/Moscow | [![Russia](https://flagsapi.com/RU/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.9417&lon=30.3096) | 2000&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Xogium](https://xogium.performanceservers.nl) | Europe/Paris | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.5144&lon=-2.768) | 500&nbsp;Mbps | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
+
