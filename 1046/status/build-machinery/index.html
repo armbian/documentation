@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The Armbian build machinery — self-hosted GitHub Actions runners, their CPU-thread capacity, memory and location — from NetBox and the GitHub organisation.">
+        <meta name="description" content="The Armbian build machinery — the build servers that compile Armbian: CPU-thread capacity, memory and location from NetBox, and the GitHub runner processes each hosts.">
       
       
         <meta name="author" content="Armbian team">
@@ -29,7 +29,7 @@
     
     
   
-    <title>Armbian build machinery: self-hosted runner fleet</title>
+    <title>Armbian build machinery: build server fleet</title>
   
 
     
@@ -80,10 +80,10 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Armbian build machinery: self-hosted runner fleet">
-  <meta property="og:description" content="The Armbian build machinery — self-hosted GitHub Actions runners, their CPU-thread capacity, memory and location — from NetBox and the GitHub organisation.">
-  <meta name="twitter:title" content="Armbian build machinery: self-hosted runner fleet">
-  <meta name="twitter:description" content="The Armbian build machinery — self-hosted GitHub Actions runners, their CPU-thread capacity, memory and location — from NetBox and the GitHub organisation.">
+  <meta property="og:title" content="Armbian build machinery: build server fleet">
+  <meta property="og:description" content="The Armbian build machinery — the build servers that compile Armbian: CPU-thread capacity, memory and location from NetBox, and the GitHub runner processes each hosts.">
+  <meta name="twitter:title" content="Armbian build machinery: build server fleet">
+  <meta name="twitter:description" content="The Armbian build machinery — the build servers that compile Armbian: CPU-thread capacity, memory and location from NetBox, and the GitHub runner processes each hosts.">
   
     <meta name="twitter:card" content="summary">
   
@@ -5763,10 +5763,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#runner-fleet" class="md-nav__link">
+  <a href="#build-servers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runner fleet
+        Build servers
       
     </span>
   </a>
@@ -6384,10 +6384,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#runner-fleet" class="md-nav__link">
+  <a href="#build-servers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runner fleet
+        Build servers
       
     </span>
   </a>
@@ -6429,20 +6429,22 @@
 
 
 <h1 id="build-machinery">Build machinery<a class="headerlink" href="#build-machinery" title="Permanent link">&para;</a></h1>
-<p>The self-hosted runners that build Armbian — their CPU-thread capacity, memory
-and location (from <a href="https://netbox.armbian.com/">NetBox</a>), and how they are
-registered by label on the <a href="https://github.com/armbian">GitHub organisation</a>.</p>
+<p>The build servers that compile Armbian — their CPU-thread capacity, memory and
+location (from <a href="https://netbox.armbian.com/">NetBox</a>), and how many GitHub
+runner processes each server hosts (from the
+<a href="https://github.com/armbian">GitHub organisation</a>).</p>
 <!-- build-machinery:start -->
-<h2 id="runner-fleet">Runner fleet<a class="headerlink" href="#runner-fleet" title="Permanent link">&para;</a></h2>
-<p><em>Self-hosted runners from <a href="https://netbox.armbian.com/">NetBox</a>, role <code>userlevel-runner</code>.</em></p>
-<p><strong>20</strong> runners — <strong>16</strong> active, <strong>4</strong> offline · <strong>730</strong> CPU threads (<strong>690</strong> active) · <strong>2045</strong> GB RAM.</p>
+<h2 id="build-servers">Build servers<a class="headerlink" href="#build-servers" title="Permanent link">&para;</a></h2>
+<p><em>Build servers from <a href="https://netbox.armbian.com/">NetBox</a>, role <code>userlevel-runner</code>. The <strong>Runners</strong> column is the number of GitHub runner processes registered on that server (matched by its label).</em></p>
+<p><strong>20</strong> servers — <strong>16</strong> active, <strong>4</strong> offline · <strong>730</strong> CPU threads (<strong>690</strong> active) · <strong>2045</strong> GB RAM.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Runner</th>
+<th style="text-align: left;">Server</th>
 <th style="text-align: left;">Location</th>
 <th style="text-align: right;">Threads</th>
 <th style="text-align: right;">RAM</th>
+<th style="text-align: right;">Runners</th>
 <th style="text-align: center;">Status</th>
 </tr>
 </thead>
@@ -6452,6 +6454,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Hetzner Germany</td>
 <td style="text-align: right;">176</td>
 <td style="text-align: right;">375 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6459,6 +6462,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">GitHub</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">500 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6466,6 +6470,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Imola</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">264 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6473,6 +6478,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">GitHub</td>
 <td style="text-align: right;">40</td>
 <td style="text-align: right;">137 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6480,6 +6486,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Armbian Datacenter</td>
 <td style="text-align: right;">32</td>
 <td style="text-align: right;">125 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6487,6 +6494,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Imola</td>
 <td style="text-align: right;">32</td>
 <td style="text-align: right;">132 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6494,6 +6502,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Armbian Datacenter</td>
 <td style="text-align: right;">32</td>
 <td style="text-align: right;">125 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6501,6 +6510,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">JetHome</td>
 <td style="text-align: right;">24</td>
 <td style="text-align: right;">64 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6508,6 +6518,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Mirrors</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">62 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6515,6 +6526,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Auroradev Las Vegas</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">32 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6522,6 +6534,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">GitHub</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">16 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
@@ -6529,6 +6542,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Oregon UNI</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">31 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6536,6 +6550,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Oregon UNI</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">31 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6543,6 +6558,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Netcup Germany</td>
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">16 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6550,6 +6566,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Kspace Estonia</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">16 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6557,6 +6574,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">GitHub</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">32 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
@@ -6564,6 +6582,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Rock 5 #1</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">16 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
@@ -6571,6 +6590,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Rock 5 #2</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">16 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
@@ -6578,6 +6598,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">Hetzner Germany</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">31 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 <tr>
@@ -6585,6 +6606,7 @@ registered by label on the <a href="https://github.com/armbian">GitHub organisat
 <td style="text-align: left;">LaneCloud</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">24 GB</td>
+<td style="text-align: right;">—</td>
 <td style="text-align: center;">active</td>
 </tr>
 </tbody>
