@@ -342,6 +342,7 @@ nav:
   - 'STATUS' :
         - 'Overview' : 'status/index.md'
         - 'Wi-Fi performance' : 'status/wifi-performance.md'
+        - 'Datacenter boards' : 'status/boards.md'
         - 'Mirrors' : 'status/mirrors.md'
         - 'Package repository' : 'status/package-repository.md'
 

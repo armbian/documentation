@@ -29,9 +29,9 @@ refreshed by scheduled jobs, not written by hand.
 
     Functional test matrix — what boots, what passes, per board.
 
-- :material-database: **Board inventory** *(planned)*
+- :material-database: **[Datacenter boards](boards.md)**
 
-    Reconciled board list from NetBox.
+    The test-datacenter fleet — which boards are operational or broken.
 
 </div>
 
