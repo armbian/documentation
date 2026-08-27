@@ -120,15 +120,17 @@ function module_template() {
 
 #### Manual testing
 
-Whenever you are making changes to the JSON or modules structure, make sure to join JSON segments into main JSON file and run. This you do with a command:
-``` python
+Whenever you are making changes to the JSON or modules structure, make sure to join the JSON segments into the main JSON file. Run the following command:
+
+~~~ python
 tools/config-assemble.sh -p
-```
+~~~
+
 Python is required to run this tool.
 
-``` bash
+~~~ bash
 sudo bin/armbian-config --cmd
-```
+~~~
 
 #### Unit tests
 

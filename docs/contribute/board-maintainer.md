@@ -39,7 +39,7 @@ If something does not work, this is fine and normal. The important part is that 
 
 Ideally you have multiple microSD cards laying around to test regular updates on current releases and nightly without having to re-flash the same card every time to switch between branches.
 
-Alternatively you can use auto-built images - they are placed at the very end of each board download pages under "Rolling releases".
+Alternatively you can use auto-built images - they are placed at the very end of each board download page under "Rolling releases".
 
 - You must provide "best effort" support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request "armbianmonitor -u" output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <https://www.armbian.com/download/>
 
