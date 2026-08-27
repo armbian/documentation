@@ -15,7 +15,7 @@ runner processes each server hosts (from the
 
 _Build servers from [NetBox](https://netbox.armbian.com/), tagged `github-runner`. The **Runners** column is the number of GitHub runner processes registered on that server (its runners are named `<server>-NN`), falling back to the value recorded in NetBox when GitHub can't be queried._
 
-**20** servers (**2** offline) · **734** threads (**702** active) · **1987** GB RAM · **288** runners (**167** online).
+**17** servers · **686** threads · **1932** GB RAM · **284** runners (**167** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -29,11 +29,8 @@ _Build servers from [NetBox](https://netbox.armbian.com/), tagged `github-runner
 | `vps8000-1` | Netcup Germany | 18 | 62 GB | 9 | active |
 | `vps8000-2` | Netcup Germany | 18 | 62 GB | 14 | active |
 | `cats` | Auroradev Las Vegas | 16 | 32 GB | 6 | active |
-| `lca-armbian-runner-big-1` | LaneCloud | 16 | 16 GB | 0 | ⚠️ offline |
-| `lca-armbian-runner-big-2` | LaneCloud | 16 | 16 GB | 0 | ⚠️ offline |
 | `oregon-1` | Oregon UNI | 16 | 32 GB | 8 | active |
 | `oregon-2` | Oregon UNI | 16 | 32 GB | 8 | active |
-| `hristov` | Aleksandr Hristov | 16 | 23 GB | 4 | active |
 | `stmir` | JetHome | 16 | 94 GB | 12 | active |
 | `vps3000-1` | Netcup Germany | 12 | 23 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
