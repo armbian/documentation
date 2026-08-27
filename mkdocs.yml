@@ -345,8 +345,8 @@ nav:
   - 'CONTRIBUTE' :
         - 'Get involved' : 'contribute/index.md'
         - 'Ways to contribute' :
-            - 'Add software to armbian-config' : 'contribute/armbian-config.md'
-            - 'Wi-Fi performance testing' : 'contribute/wifi-performance.md'
+            - 'armbian-config apps' : 'contribute/armbian-config.md'
+            - 'Wi-Fi testing' : 'contribute/wifi-performance.md'
             - 'Mirrors' : 'contribute/mirrors.md'
             - 'Datacenter access' : 'contribute/datacenter.md'
         - 'Maintainers & board rules' :
