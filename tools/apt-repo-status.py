@@ -277,14 +277,16 @@ def build_report(base, suites, component, arch, kernels=False):
                 out.append("_None._")
                 out.append("")
                 return
-            out.append("| Family and branch | Kernel | Armbian version | Headers |")
-            out.append("|:------------------|:-------|----------------:|:--------|")
+            out.append("| Kernel package | Kernel | Armbian version | Headers |")
+            out.append("|:---------------|:-------|----------------:|:--------|")
+            # sort keeps a family's branches together (media-current, -edge, ...)
             for behind, branch, family, kver, ver in sorted(group, key=lambda r: f"{r[2]}-{r[1]}"):
-                kind, hver = headers_status(f"linux-image-{branch}-{family}", ver)
+                pkg = f"linux-image-{branch}-{family}"
+                kind, hver = headers_status(pkg, ver)
                 headers = {"ok": "✅",
                            "mismatch": f"⚠️ `{hver}`",
                            "missing": "❌ missing"}[kind]
-                out.append(f"| `{family}-{branch}` | `{kver}` | `{ver}` | {headers} |")
+                out.append(f"| `{pkg}` | `{kver}` | `{ver}` | {headers} |")
             out.append("")
 
         # Current families first, then the ones that have drifted behind.
