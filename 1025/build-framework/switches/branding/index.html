@@ -5081,6 +5081,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boot-splash-plymouth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot splash (Plymouth)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6191,6 +6202,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boot-splash-plymouth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot splash (Plymouth)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6258,7 +6280,7 @@
 <p>Bug-report URL — os-release <code>BUG_REPORT_URL</code>.</p>
 <h4 id="vendorlogo">VENDORLOGO<a class="headerlink" href="#vendorlogo" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>armbian-logo</code></p>
-<p>Name of the logo asset used for the login MOTD — os-release <code>LOGO</code>.</p>
+<p>Freedesktop icon name written to os-release <code>LOGO=</code> — the icon that tools like the desktop <strong>About</strong> dialog or <code>fastfetch</code> resolve from the icon theme (the asset ships as <code>/usr/share/pixmaps/&lt;name&gt;.svg</code>). It is <strong>not</strong> the boot splash; to change the Plymouth boot logo see <a href="#boot-splash-plymouth">Boot splash (Plymouth)</a> below.</p>
 <h4 id="maintainer">MAINTAINER<a class="headerlink" href="#maintainer" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · default: <code>John Doe</code></p>
 <p>Maintainer name used to sign the generated <code>.deb</code> packages and recorded in <code>/etc/armbian-release</code>.</p>
@@ -6290,6 +6312,19 @@
 <div class="admonition note">
 <p class="admonition-title">Official builds</p>
 <p>When <code>VENDOR=Armbian</code>, the framework also refuses vendor branding on community / unsupported combinations (it resets several of these fields), so only genuinely official images carry the full Armbian identity.</p>
+</div>
+<h2 id="boot-splash-plymouth">Boot splash (Plymouth)<a class="headerlink" href="#boot-splash-plymouth" title="Permanent link">&para;</a></h2>
+<p>The graphical boot splash is a separate asset from the branding switches above — it is <strong>not</strong> controlled by <code>VENDORLOGO</code>. It ships in the <code>armbian-plymouth-theme</code> package.</p>
+<p>To use your own boot logo, replace the source image in the build framework:</p>
+<ul>
+<li><strong>File:</strong> <code>packages/plymouth-theme-armbian/armbian-logo.png</code></li>
+<li><strong>Size:</strong> a <strong>square PNG</strong>, resized to <strong>256×256</strong> at build time — supply 256×256 (or a larger square; it is downscaled), on a transparent background (the splash background is black).</li>
+</ul>
+<p>The build installs it as <code>/usr/share/plymouth/themes/armbian/bgrt-fallback.png</code>. The <code>bgrt-fallback</code> name means it is the logo used when the firmware provides no BGRT boot logo — the case on virtually all SBCs, so this is the logo you actually see.</p>
+<p>Companion assets in the same folder: <code>watermark.png</code> (333×50, a wordmark shown centred) and <code>spinner.gif</code> (resized to a 52×52 throbber).</p>
+<div class="admonition tip">
+<p class="admonition-title">Without editing the framework tree</p>
+<p>From <code>userpatches/customize-image.sh</code> you can overwrite <code>/usr/share/plymouth/themes/armbian/bgrt-fallback.png</code> (256×256) in the rootfs. Plymouth&rsquo;s early-boot copy lives in the initramfs, which the build regenerates after <code>customize-image.sh</code>, so dropping the file there is enough.</p>
 </div>
 
 
