@@ -78,6 +78,12 @@ Maintainer name written to the `Maintainer:` field of the generated `.deb` packa
 
 Maintainer e-mail written alongside `MAINTAINER` into the `.deb` `Maintainer:` field.
 
+#### PLYMOUTH
+
+`string` · default: `yes`
+
+Builds and installs the Plymouth graphical boot splash (the `armbian-plymouth-theme` package). Set `no` to skip it for a text-only boot or a smaller image. It is forced `no` when the board has no video output (`HAS_VIDEO_OUTPUT=no`). See [Boot splash (Plymouth)](#boot-splash-plymouth) for customising the logo.
+
 ## A full rebrand
 
 Branded builds set the whole group together in a build config. For example, the values official Armbian images use:

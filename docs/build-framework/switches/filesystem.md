@@ -129,6 +129,12 @@ Size in MB of a separate `/boot` partition, created when the root filesystem can
 
 Forces the output image to a fixed size in megabytes instead of the default behaviour, where the build makes the image just large enough to hold the root filesystem. Set it when you need a predictable image size — for example to fit a specific card, to leave free space for later growth, or because a filesystem such as f2fs requires a pre-sized image and the build will refuse to continue without it.
 
+#### EXTRA_ROOTFS_MIB_SIZE
+
+`integer` · default: `0`
+
+Adds this many MiB of free space to the root filesystem partition, on top of the size the build calculates from the rootfs contents. Use it when the default headroom is too tight — for packages added at first boot, logs or data — without pinning the whole image to a fixed size the way `FIXED_IMAGE_SIZE` does.
+
 #### BOOT_FS_LABEL
 
 `string` · default: `armbi_boot`
