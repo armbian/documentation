@@ -6433,6 +6433,14 @@
 location (from <a href="https://netbox.armbian.com/">NetBox</a>), and how many GitHub
 runner processes each server hosts (from the
 <a href="https://github.com/armbian">GitHub organisation</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Powered on demand</p>
+<p>Not all of this capacity runs around the clock. A good part of the fleet
+sits on <strong>standby and only powers up when there is build demand</strong>, then
+spins back down once the queue is clear — keeping idle energy use and cost
+low as part of a greener build infrastructure. A server showing few or no
+online runners may simply be asleep, not broken.</p>
+</div>
 <!-- build-machinery:start -->
 <h2 id="build-servers">Build servers<a class="headerlink" href="#build-servers" title="Permanent link">&para;</a></h2>
 <p><strong>17</strong> servers · <strong>686</strong> threads · <strong>1932</strong> GB RAM · <strong>284</strong> runners (<strong>167</strong> online).</p>
