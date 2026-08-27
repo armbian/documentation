@@ -81,6 +81,20 @@ def version_max(versions):
     return best
 
 
+import functools
+
+
+def _vcmp(a, b):
+    if version_gt(a, b):
+        return 1
+    if version_gt(b, a):
+        return -1
+    return 0
+
+
+version_key = functools.cmp_to_key(_vcmp)
+
+
 # --- Repository access ---------------------------------------------------------
 def discover_suites(base):
     try:
@@ -144,14 +158,25 @@ def build_report(base, suites, component, arch, kernels=False):
     out.append("")
 
     def latest_map(stanzas):
+        """name -> the whole stanza with the newest Version."""
         latest = {}
         for st in stanzas or []:
             name, ver = st.get("Package"), st.get("Version")
             if not name or not ver:
                 continue
-            if name not in latest or version_gt(ver, latest[name]):
-                latest[name] = ver
+            cur = latest.get(name)
+            if cur is None or version_gt(ver, cur["Version"]):
+                latest[name] = st
         return latest
+
+    def kernel_version(st):
+        """Linux kernel version for a linux-image stanza."""
+        kv = st.get("Armbian-Kernel-Version")
+        if kv:
+            return kv
+        src = st.get("Source", "")
+        m = re.match(r"linux-(\S+)", src)
+        return m.group(1) if m else "?"
 
     suite_data = {}
     for suite in suites:
@@ -176,7 +201,7 @@ def build_report(base, suites, component, arch, kernels=False):
             continue
         rel = d["release"]
         updated = rel.get("Date", "—")[:16]
-        newest = version_max(d["latest"].values()) or "—"
+        newest = version_max([st["Version"] for st in d["latest"].values()]) or "—"
         out.append(f"| `{suite}` | {rel.get('Codename', suite)} | {updated} "
                    f"| {d['count']} | `{newest}` |")
     out.append("")
@@ -184,12 +209,13 @@ def build_report(base, suites, component, arch, kernels=False):
     active = [s for s in suites if s in suite_data]
 
     # Armbian's `main` content is identical across suites, so merge it into a
-    # single view (newest version seen for each package across all suites).
+    # single view (stanza with the newest Version for each package).
     merged = {}
     for suite in active:
-        for name, ver in suite_data[suite]["latest"].items():
-            if name not in merged or version_gt(ver, merged[name]):
-                merged[name] = ver
+        for name, st in suite_data[suite]["latest"].items():
+            cur = merged.get(name)
+            if cur is None or version_gt(st["Version"], cur["Version"]):
+                merged[name] = st
 
     # --- Core packages (single column — same across every suite)
     out.append("### Core package versions")
@@ -199,7 +225,8 @@ def build_report(base, suites, component, arch, kernels=False):
     out.append("| Package | Version |")
     out.append("|:--------|:--------|")
     for pkg in CORE_PACKAGES:
-        v = merged.get(pkg)
+        st = merged.get(pkg)
+        v = st["Version"] if st else None
         out.append(f"| `{pkg}` | {('`'+v+'`') if v else '—'} |")
     out.append("")
 
@@ -209,45 +236,50 @@ def build_report(base, suites, component, arch, kernels=False):
     out.append("Distinct kernel families and the newest Armbian version published "
                "per branch (from `linux-image-<branch>-*`).")
     out.append("")
-    out.append("| Branch | Families | Latest version |")
-    out.append("|:-------|--------:|:--------------|")
+    out.append("| Branch | Families | Latest kernel | Armbian version |")
+    out.append("|:-------|--------:|:-------------|:---------------|")
     for branch in KERNEL_BRANCHES:
-        fams, vers = set(), []
-        for name, ver in merged.items():
+        fams, stanzas = set(), []
+        for name, st in merged.items():
             if name.startswith(f"linux-image-{branch}-"):
                 fams.add(name)
-                vers.append(ver)
+                stanzas.append(st)
         if fams:
-            out.append(f"| {branch} | {len(fams)} | `{version_max(vers)}` |")
+            newest = max(stanzas, key=lambda s: version_key(s["Version"]))
+            kvers = sorted({kernel_version(s) for s in stanzas}, key=version_key)
+            krange = kvers[-1] if len(kvers) == 1 else f"{kvers[0]} – {kvers[-1]}"
+            out.append(f"| {branch} | {len(fams)} | `{krange}` | `{newest['Version']}` |")
         else:
-            out.append(f"| {branch} | 0 | — |")
+            out.append(f"| {branch} | 0 | — | — |")
     out.append("")
 
     # --- Per-family kernel drift (opt-in): every family, newest version, and
     #     whether it lags the current release. Answers "which kernels drift".
     if kernels:
-        fam_latest = {n: v for n, v in merged.items() if n.startswith("linux-image-")}
-        ref = version_max(fam_latest.values())
+        fam_st = {n: st for n, st in merged.items() if n.startswith("linux-image-")}
+        ref = version_max([st["Version"] for st in fam_st.values()])
         rows = []
-        for name, ver in fam_latest.items():
+        for name, st in fam_st.items():
             parts = name.split("-")           # linux-image-<branch>-<family...>
             branch = parts[2] if len(parts) > 2 else "?"
             family = "-".join(parts[3:]) if len(parts) > 3 else "?"
-            rows.append((version_gt(ref, ver), branch, family, ver))
+            ver = st["Version"]
+            rows.append((version_gt(ref, ver), branch, family, kernel_version(st), ver))
         n_behind = sum(1 for r in rows if r[0])
         out.append("### Kernel families")
         out.append("")
-        out.append(f"Newest version published per kernel family. The current release "
-                   f"line is `{ref}`; families below it were not rebuilt for it.")
+        out.append(f"Newest kernel published per family, with its Linux kernel version. "
+                   f"The current release line is `{ref}`; families below it were not "
+                   f"rebuilt for it.")
         out.append("")
         out.append(f"**{n_behind} of {len(rows)} families behind `{ref}`.**")
         out.append("")
-        out.append("| Branch | Family | Version | Status |")
-        out.append("|:-------|:-------|:--------|:-------|")
+        out.append("| Branch | Family | Kernel | Armbian version | Status |")
+        out.append("|:-------|:-------|:-------|:----------------|:-------|")
         # behind families first (most useful), then by branch and family name
-        for behind, branch, family, ver in sorted(rows, key=lambda r: (not r[0], r[1], r[2])):
+        for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], r[1], r[2])):
             status = f"⚠️ behind `{ref}`" if behind else "✅ current"
-            out.append(f"| {branch} | `{family}` | `{ver}` | {status} |")
+            out.append(f"| {branch} | `{family}` | `{kver}` | `{ver}` | {status} |")
         out.append("")
 
     # --- Third-party / utility packages (the "-utils" component), per suite,
@@ -261,9 +293,10 @@ def build_report(base, suites, component, arch, kernels=False):
     # family -> {suite -> newest version among that family's members}
     fam_versions = {}
     for suite in active:
-        for name, ver in suite_data[suite]["utils"].items():
+        for name, st in suite_data[suite]["utils"].items():
             if name.endswith("-dbgsym"):
                 continue
+            ver = st["Version"]
             fam = util_family(name)
             cur = fam_versions.setdefault(fam, {}).get(suite)
             if cur is None or version_gt(ver, cur):
