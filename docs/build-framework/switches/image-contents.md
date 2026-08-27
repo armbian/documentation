@@ -102,6 +102,12 @@ NTP server used to synchronise the clock on the **build host** during preparatio
 
 Automatically logs in as root on the local serial/HDMI console at first boot, so a freshly flashed board is immediately usable without a keyboard-and-password step. Set `no` if your security threat model requires a login prompt on the physical console.
 
+#### ROOTPWD
+
+`string` · default: `1234`
+
+Presets the root account password baked into the image. The default `1234` is a placeholder that the first-run flow flags for change at first login; set your own for automated or kiosk deployments. Treat it as a secret — it is written into the image, so prefer a build config file or a CI secret over passing it on the command line.
+
 #### OPENSSHD_REGENERATE_HOST_KEYS
 
 `boolean`

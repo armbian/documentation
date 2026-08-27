@@ -48,3 +48,9 @@ Set the userspace release base manually to skip the dialog prompt. Each release 
 
 !!! tip "Note"
     Only stable and/or LTS upstream Debian or Ubuntu releases are officially supported. Others might work or not.
+
+#### IMAGE_VERSION
+
+`string` · default: the computed `REVISION`
+
+Overrides the version string embedded in the output: the image filename (`<VENDOR>_<IMAGE_VERSION>_<board>_<release>_...`) and the on-image identity (`/etc/issue`, `/etc/os-release`). Leave it unset to use the framework's computed revision; set it to stamp your own version scheme onto custom builds.
