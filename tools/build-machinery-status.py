@@ -111,6 +111,8 @@ def build_report(api, token, gh_org=None, gh_token=None):
             # the GitHub runners label lives in a NetBox custom field; it is the
             # server's display name here and the key to count runners on GitHub
             "label": cf.get("github_label"),
+            # NetBox's stored runner count, used when GitHub can't be queried
+            "nb_runners": cf.get("runners"),
             "status": v["status"]["value"],
             "threads": int(v.get("vcpus") or 0),
             "ram": gb(v.get("memory")),
@@ -127,17 +129,21 @@ def build_report(api, token, gh_org=None, gh_token=None):
     # Runners-per-machine from GitHub (needs the runners token); None -> "—".
     gh = github_runner_counts(gh_org or DEFAULT_ORG, gh_token) if gh_token else None
 
-    def runners_cell(label):
-        if gh is None or not label:
-            return "—"
-        return str(gh["labels"].get(label.lower(), 0))
+    def runners_cell(row):
+        # live GitHub answer (0 if the label carries none) when we can query it,
+        # otherwise NetBox's stored count as a fallback
+        if gh is not None and row["label"]:
+            return str(gh["labels"].get(row["label"].lower(), 0))
+        nb = row.get("nb_runners")
+        return str(nb) if nb is not None else "—"
 
     out = []
     out.append("## Build servers")
     out.append("")
     out.append(f"_Build servers from [NetBox](https://netbox.armbian.com/), "
                f"role `{ROLE}`. The **Runners** column is the number of GitHub "
-               f"runner processes registered on that server (matched by its label)._")
+               f"runner processes registered on that server (matched by its label), "
+               f"falling back to the value recorded in NetBox when GitHub can't be queried._")
     out.append("")
     summary = (f"**{len(rows)}** servers — **{len(active)}** active, "
                f"**{len(rows) - len(active)}** offline · "
@@ -153,7 +159,7 @@ def build_report(api, token, gh_org=None, gh_token=None):
         status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
         name = r["label"] or r["name"]
         out.append(f"| `{name}` | {r['loc']} | {r['threads']} | {r['ram']} GB "
-                   f"| {runners_cell(r['label'])} | {status} |")
+                   f"| {runners_cell(r)} | {status} |")
     out.append("")
 
     return "\n".join(out)
