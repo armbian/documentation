@@ -48,7 +48,7 @@ refreshed by scheduled jobs, not written by hand.
     Which images we publish per board, and anomalies (outdated, missing,
     non-standard).
 
-- :material-package-variant: **Package repository** *(planned)*
+- :material-package-variant: **[Package repository](package-repository.md)**
 
     `apt.armbian.com` status — package and kernel versions, kernel-family
     drift and header gaps.
