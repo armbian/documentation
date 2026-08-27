@@ -2,7 +2,7 @@
 """Generate a Markdown status report for the Armbian build machinery — the
 build servers — from NetBox, with the live runner count from GitHub.
 
-Reads the build servers (NetBox VMs with role=userlevel-runner) and reports
+Reads the build servers (NetBox VMs tagged github-runner) and reports
 each server's location, CPU thread count and memory, plus the fleet totals
 (the CPU-thread capacity). The number of GitHub runner processes on each
 server is read from GitHub by matching the server name to a runner label.
@@ -30,7 +30,9 @@ import sys
 import urllib.request
 
 DEFAULT_API = "https://netbox.armbian.com/api"
-ROLE = "userlevel-runner"
+# Build runners are identified by a tag (a VM may have the mirror/other role
+# yet also host runners), not by role.
+TAG = "github-runner"
 DEFAULT_ORG = "armbian"
 # Runners are named "<server>-01", "<server>-02", ...; strip the trailing index
 # to group a server's runners (e.g. insa-trixie-01 -> insa-trixie).
@@ -105,7 +107,7 @@ def github_runner_counts(org, token):
 
 
 def build_report(api, token, gh_org=None, gh_token=None):
-    vms = netbox_get(api, token, f"/virtualization/virtual-machines/?role={ROLE}&limit=500")
+    vms = netbox_get(api, token, f"/virtualization/virtual-machines/?tag={TAG}&limit=500")
     rows = []
     for v in vms:
         loc = (v.get("site") or {}).get("name") or (v.get("cluster") or {}).get("name") or "—"
@@ -149,7 +151,7 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out.append("## Build servers")
     out.append("")
     out.append(f"_Build servers from [NetBox](https://netbox.armbian.com/), "
-               f"role `{ROLE}`. The **Runners** column is the number of GitHub "
+               f"tagged `{TAG}`. The **Runners** column is the number of GitHub "
                f"runner processes registered on that server (its runners are named "
                f"`<server>-NN`), falling back to the value recorded in NetBox when "
                f"GitHub can't be queried._")
