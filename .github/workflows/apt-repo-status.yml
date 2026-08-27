@@ -1,0 +1,41 @@
+name: "apt.armbian.com status"
+
+# Surfaces a status summary of the apt.armbian.com repository — package
+# versions and, notably, which kernel families lag the current release — in
+# the run's job summary, so it is visible directly at PR stage.
+
+on:
+  pull_request:
+    paths:
+      - 'tools/apt-repo-status.py'
+      - '.github/workflows/apt-repo-status.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    name: "Repository status"
+    runs-on: ubuntu-24.04
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install python3-apt (accurate Debian version comparison)
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends python3-apt
+
+      - name: Generate apt repository status
+        run: |
+          python3 tools/apt-repo-status.py --kernels --output apt-status.md
+          cat apt-status.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Markdown report
+        uses: actions/upload-artifact@v4
+        with:
+          name: apt-repo-status
+          path: apt-status.md
+          if-no-files-found: error
