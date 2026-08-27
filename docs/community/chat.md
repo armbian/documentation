@@ -26,10 +26,10 @@ Besides that communication is also possible via *Discord*.
 Libera network:
 
 - Server: `irc.libera.chat`  
-- Ports: `6697` / non-encrypted: `6667`  
+- Ports: `6697` (TLS, recommended) / non-encrypted: `6667`
 - Channels: as listed below
 
-In order to enter main `#armbian` channels registration with Nickserv is mandatory on Libera. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
+Use the encrypted port `6697` — NickServ authentication sends your credentials, so avoid the plaintext `6667`. In order to enter main `#armbian` channels registration with Nickserv is mandatory on Libera. Check [Libera Chat documentation](https://libera.chat/guides/registration) for further information.
 
 ### Discord
 
@@ -70,7 +70,7 @@ Besides the services offered by IRC (like Nickserv or Chanserv) Armbian has set 
 ## ❔ FAQ
 
 - Why are there so many people in the channel and nobody is talking?  
-  - It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called IRC bouncers <https://en.wikipedia.org/wiki/BNC_(software>) that keeps their connection to the channel alive to act like an answering machine.
+  - It is pretty common for community IRC channels for people to simply *idle* there. Many also using so called [IRC bouncers](https://en.wikipedia.org/wiki/BNC_(software)) that keeps their connection to the channel alive to act like an answering machine.
 
 - I wrote 'Hi' but nobody answered. How do I get support there?
   - Probably there is nobody around at the time. Keep in mind that all users are spread around the globe and therefore living in many different time zones.  
@@ -92,4 +92,4 @@ Besides the services offered by IRC (like Nickserv or Chanserv) Armbian has set 
 
 ## 👉 Bottom line
 
-If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation for think you can enhance it get in touch with *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/), IRC or Discord.
+If you have any questions, comments regarding the IRC channels and/or services or found an issue in this documentation or think you can enhance it, get in touch with *Werner* either via [forums](https://forum.armbian.com/profile/9032-werner/), IRC or Discord.

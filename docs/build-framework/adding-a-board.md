@@ -28,7 +28,7 @@ The extension records the board's support status (shown at the login prompt and 
 | `.wip` | Work in progress — a maintainer has committed but images are not yet stable |
 | `.eos` | End of service — no longer maintained |
 
-New boards without a committed maintainer typically start as `.csc` (or `.wip` while bring-up is ongoing). See the [Board Support Rules](../User-Guide_Board-Support-Rules.md) for what each tier requires.
+New boards without a committed maintainer typically start as `.csc` (or `.wip` while bring-up is ongoing). See the [Board Support Rules](/contribute/board-support-rules/) for what each tier requires.
 
 ### Key fields
 
@@ -84,7 +84,7 @@ Write the image to media, confirm it boots to a login prompt over serial and/or 
 
 ## Submit
 
-Open a pull request against [armbian/build](https://github.com/armbian/build) with the new config (and any patches). Set `BOARD_MAINTAINER` to your GitHub login if you intend to maintain it, and pick the [status suffix](#status-suffix) that matches your commitment. The [Board Support Rules](../User-Guide_Board-Support-Rules.md) describe the obligations of each tier.
+Open a pull request against [armbian/build](https://github.com/armbian/build) with the new config (and any patches). Set `BOARD_MAINTAINER` to your GitHub login if you intend to maintain it, and pick the [status suffix](#status-suffix) that matches your commitment. The [Board Support Rules](/contribute/board-support-rules/) describe the obligations of each tier.
 
 ## Further reading
 
