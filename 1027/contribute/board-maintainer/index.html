@@ -18,7 +18,7 @@
         <link rel="prev" href="../board-support-rules/">
       
       
-        <link rel="next" href="../maintainer-guidelines/">
+        <link rel="next" href="../automation/">
       
       
         
@@ -302,7 +302,7 @@
           
   
   
-  ARMBIAN OS
+  OS
 
         </a>
       </li>
@@ -342,7 +342,7 @@
           
   
   
-  ARMBIAN CONFIG
+  CONFIG
 
         </a>
       </li>
@@ -362,7 +362,7 @@
           
   
   
-  ARMBIAN SOFTWARE
+  SOFTWARE
 
         </a>
       </li>
@@ -382,7 +382,7 @@
           
   
   
-  ARMBIAN BUILD FRAMEWORK
+  BUILD FRAMEWORK
 
         </a>
       </li>
@@ -402,7 +402,7 @@
           
   
   
-  ARMBIAN COMMUNITY
+  COMMUNITY
 
         </a>
       </li>
@@ -504,7 +504,7 @@
   <span class="md-ellipsis">
     
   
-    ARMBIAN OS
+    OS
   
 
     
@@ -520,7 +520,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ARMBIAN OS
+    OS
   
 
           </label>
@@ -1210,7 +1210,7 @@
   <span class="md-ellipsis">
     
   
-    ARMBIAN CONFIG
+    CONFIG
   
 
     
@@ -1226,7 +1226,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ARMBIAN CONFIG
+    CONFIG
   
 
           </label>
@@ -1577,7 +1577,7 @@
   <span class="md-ellipsis">
     
   
-    ARMBIAN SOFTWARE
+    SOFTWARE
   
 
     
@@ -1593,7 +1593,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ARMBIAN SOFTWARE
+    SOFTWARE
   
 
           </label>
@@ -4466,7 +4466,7 @@
   <span class="md-ellipsis">
     
   
-    ARMBIAN BUILD FRAMEWORK
+    BUILD FRAMEWORK
   
 
     
@@ -4482,7 +4482,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ARMBIAN BUILD FRAMEWORK
+    BUILD FRAMEWORK
   
 
           </label>
@@ -5481,7 +5481,7 @@
   <span class="md-ellipsis">
     
   
-    ARMBIAN COMMUNITY
+    COMMUNITY
   
 
     
@@ -5497,7 +5497,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ARMBIAN COMMUNITY
+    COMMUNITY
   
 
           </label>
@@ -6015,38 +6015,43 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#during-a-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During a release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losing-support-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Losing support status
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../maintainer-guidelines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Maintainer procedures & guidelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -6201,6 +6206,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#during-a-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During a release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losing-support-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Losing support status
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6275,6 +6313,27 @@
 <ul>
 <li>You must provide &ldquo;best effort&rdquo; support on GitHub — review the issues submitted for your board by Armbian&rsquo;s contributors.</li>
 </ul>
+<h2 id="during-a-release">During a release<a class="headerlink" href="#during-a-release" title="Permanent link">&para;</a></h2>
+<p>Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November) — see the <a href="/releases/release-model/">release model</a>. Attending is optional, but you <strong>must</strong> sign off that your board has been tested and is ready, by filling in the <a href="https://www.armbian.com/rc-testing/">Release Testing Form</a> for each release candidate.</p>
+<h2 id="issue-priority">Issue priority<a class="headerlink" href="#issue-priority" title="Permanent link">&para;</a></h2>
+<p>A rough guide when triaging issues filed for your board:</p>
+<p><strong>Low priority</strong> — usually picked up by the community over time:</p>
+<ul>
+<li>Wi-Fi (missing modules, AP mode, …)</li>
+<li>Bluetooth</li>
+<li>GPIO, I²C</li>
+<li>hardware accelerators (crypto, VPU / video)</li>
+<li>device-tree overlays</li>
+</ul>
+<p><strong>High priority</strong> — worth flagging to the team promptly:</p>
+<ul>
+<li>the image does not boot</li>
+<li>the image or its packages are corrupt</li>
+<li>SD card or eMMC is not working as expected</li>
+</ul>
+<p>Collect as much detail as you can (logs, <code>armbianmonitor -u</code>, the exact image) before filing, and ask the reporter for anything still missing.</p>
+<h2 id="losing-support-status">Losing support status<a class="headerlink" href="#losing-support-status" title="Permanent link">&para;</a></h2>
+<p>As noted in the <a href="../board-support-rules/">Board Support Rules</a>, a board&rsquo;s support status is revoked for at least the current <strong>and</strong> upcoming release cycle(s) if a <strong>&ldquo;must&rdquo;</strong> from the responsibilities above is not fulfilled.</p>
 
 
 
