@@ -1,9 +1,10 @@
 ---
+title: Mirrors
 seo_title: "Armbian mirrors: the mirror network & redirector"
 description: "The Armbian mirror network: a redirector routes each download to the fastest nearby mirror. See every active mirror and how the system works."
 comments: true
 ---
-# How the Armbian mirror system works
+# Mirrors
 
 The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. Pick a nearby mirror from the list below, or read on for how the system works. Want to host a mirror? See [**Run a mirror**](/contribute/run-a-mirror/).
 

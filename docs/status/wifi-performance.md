@@ -1,4 +1,5 @@
 ---
+title: Wi-Fi performance
 seo_title: "Armbian Wi-Fi adapter performance benchmarks"
 description: "Armbian WiFi performance benchmarks: throughput of USB, SDIO and PCI wireless adapters on single-board computers, tested in the Armbian autotests lab."
 comments: true

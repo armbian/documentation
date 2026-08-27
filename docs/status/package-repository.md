@@ -3,19 +3,12 @@ title: Package repository
 seo_title: "Armbian apt repository status: package & kernel versions"
 description: "Live status of apt.armbian.com — package and kernel versions per suite, which kernel families lag the current release, and where linux-headers are missing or mismatched."
 ---
-# Package repository status
+# Package repository
 
 This page tracks what [`apt.armbian.com`](https://apt.armbian.com) is serving:
 the current Armbian version per suite, the kernel version each family ships,
 which families have **drifted** behind the release, and where a
 `linux-image` is missing its matching `linux-headers`.
-
-!!! info "Auto-generated"
-
-    The table below is regenerated daily by
-    [`apt-repo-status.py`](https://github.com/armbian/documentation/blob/main/tools/apt-repo-status.py)
-    from the repository indices. Run it locally with
-    `tools/apt-repo-status.py --kernels` to reproduce.
 
 <!-- apt-status:start -->
 ## Armbian apt repository status
