@@ -109,7 +109,7 @@ cannot resolve (missing access, a wedged board), reach out on the
 The list below is refreshed by the reconcile action (`Inventory: scan &
 reconcile` in the autotests repo): it scans the Datacenter and opens a pull
 request to update this table — the same mechanism used for the
-[wireless performance results](/contribute/wifi-performance/).
+[wireless performance results](/status/wifi-performance/).
 
 <!-- BOARDS-START -->
 

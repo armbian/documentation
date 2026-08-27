@@ -27,7 +27,7 @@ jobs:
 
       - name: Update Current Mirrors section
         run: |
-          FILE="documentation/docs/contribute/mirrors.md"
+          FILE="documentation/docs/status/mirrors.md"
           # Build the replacement block (markers included). It is spliced back
           # into the page between the mirrors:start / mirrors:end markers, so
           # the table can live anywhere in the file, not just at the end.
@@ -147,7 +147,7 @@ jobs:
           title: '`Automatic` mirror list update'
           body: |
             Regenerated the **Current Mirrors** table in
-            `docs/contribute/mirrors.md` from the mirror inventory in NetBox.
+            `docs/status/mirrors.md` from the mirror inventory in NetBox.
           labels: |
             Needs review
           draft: false
