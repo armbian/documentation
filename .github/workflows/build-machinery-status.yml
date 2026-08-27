@@ -65,6 +65,7 @@ jobs:
           ' "$PAGE" > tmp.md && mv tmp.md "$PAGE"
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,3 +82,16 @@ jobs:
           labels: |
             Needs review
           draft: false
+
+      - name: Approve and enable auto-merge
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPROVE_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          # the Actions bot cannot approve its own PR, so approve with a
+          # maintainer PAT, then queue squash auto-merge (delete branch on merge)
+          GH_TOKEN="$APPROVE_TOKEN" gh pr review "$PR" --approve
+          gh pr merge "$PR" --squash --auto
