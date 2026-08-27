@@ -27,7 +27,7 @@ description: "Armbian board maintainer procedures and guidelines: requirements, 
 	<li>
 		You <strong>must </strong>have a forums account (you already have obviously) which should be listed in the <a href="https://docs.armbian.com/Release_Board-Maintainers/" rel="external nofollow">documentation</a>. If not let me know.
 	</li>
-    <li>You <strong>must </strong> have an Jira account and keep track of issues filed for your board</li>
+    <li>You <strong>must </strong> have an GitHub account and keep track of issues filed for your board</li>
         <li> You <strong>must </strong> make sure Armbian Management has been informed of all of the above IDs for our documentation</li>
     <li>
 		You <strong>should </strong>know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console
@@ -109,7 +109,7 @@ During each release you will be expected to fill out  the following form: <a hre
 </ul>
 <ul>
 	<li>
-		You <strong>must </strong>provide <em>&quot;best effort&quot;</em> support in Jira:<br>
+		You <strong>must </strong>provide <em>&quot;best effort&quot;</em> support on GitHub:<br>
 		<ul>
 			<li>
 				Review submitted issues for you board made by Armbian's contributors
@@ -123,10 +123,10 @@ During each release you will be expected to fill out  the following form: <a hre
 </ul>
 
 <p>
-<h2><strong>Jira and Forum expectations:</strong></h2>
+<h2><strong>GitHub and Forum expectations:</strong></h2>
 </p>
 
-<strong>Low priority</strong> issues are usually attended to and patched by the community. If the issue has existed for more than a release, you can create a Jira ticket for it. However the expectation is the issue will be low priority and may not be processed for some time. Issues such as, but not limited to, should be considered low priority:
+<strong>Low priority</strong> issues are usually attended to and patched by the community. If the issue has existed for more than a release, you can open a GitHub issue for it. However the expectation is the issue will be low priority and may not be processed for some time. Issues such as, but not limited to, should be considered low priority:
 <ul>
     <li>Wifi (this includes missing modules, AP mode, etc)<br></li>
     <li>Bluetooth<br></li>
@@ -138,7 +138,7 @@ During each release you will be expected to fill out  the following form: <a hre
 
 
 
-For <strong>high priority</strong> items you can create a Jira ticket so that when developers are able, they can process it. If you are going to create a Jira ticket, please be sure to collect as much information about the issue as possible first. If more information will be needed to process the issue, you should reply to the user asking for that additional information and make sure it is included in the ticket. Issues like these should be considered a higher priority:
+For <strong>high priority</strong> items you can open a GitHub issue so that when developers are able, they can process it. If you are going to open a GitHub issue, please be sure to collect as much information about the issue as possible first. If more information will be needed to process the issue, you should reply to the user asking for that additional information and make sure it is included in the issue. Issues like these should be considered a higher priority:
 <ul>
     <li>Image does not boot<br></li>
     <li>Image is corrupt<br></li>
@@ -149,14 +149,14 @@ For <strong>high priority</strong> items you can create a Jira ticket so that wh
 
 <strong> What should you do if you run into an issue on the forum?</strong>
 <ul>
-    <li> If the issues is affecting a lot of people, you can create a Jira ticket for the issue to make sure it is reported and seen by developers.</li>
-    <li> If you report an issue and you feel it is important, after 8 weeks you can tag (@Tenkawa) in an reply to the ticket and ask for him to review. </li>
+    <li> If the issue is affecting a lot of people, you can open a GitHub issue to make sure it is reported and seen by developers.</li>
+    <li> If you report an issue and you feel it is important, after 8 weeks you can tag (@Tenkawa) in an reply to the issue and ask for him to review. </li>
     <li> If the issue is important it will be directed to management. If it is deemed not important, you will get a reply stating that we do not have a timeline for the fix and that it will be handled by volunteers when/if possible.</li>
 </ul>
 
-<strong>What should you do if there is a long standing Jira ticket?</strong>
+<strong>What should you do if there is a long-standing GitHub issue?</strong>
 <ul>
-     <li>If you see an issue and you feel it is important, after 8 weeks you can tag (@Tenkawa) in an reply to the ticket and ask for him to review. </li>
+     <li>If you see an issue and you feel it is important, after 8 weeks you can tag (@Tenkawa) in an reply to the issue and ask for him to review. </li>
     <li> If the issue is important it will be directed to management, if it is deemed not important, you will get a reply stating that we don't have a timeline for the fix and that it will be handled by volunteers when possible.</li>
 </ul>
 <p>
