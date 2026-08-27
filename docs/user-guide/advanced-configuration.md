@@ -303,7 +303,7 @@ Then look into your kernel logs. Armbian also provides a tool that grabs some in
 sudo armbianmonitor -u
 ```
 
-Then copy and past the URL of your log to the [forum, mail, etc](../index.md#where-to-find-additional-help).
+Then copy and paste the URL of your log to the [forum, mail, etc](../index.md#where-to-find-additional-help).
 
 
 ## APT mirror selection
