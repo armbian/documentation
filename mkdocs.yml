@@ -323,16 +323,20 @@ nav:
         - 'Adding a Board' : 'build-framework/adding-a-board.md'
 
   - 'ARMBIAN COMMUNITY' :
-        - 'Forums' : 'Community_Forums.md'
-        - 'Github' : 'Community_Github.md'
-        - 'Chat'   : 'Community_IRC.md'
-
-  - 'CONTRIBUTE' :
-        - 'Contribute' : 'Process_Contribute.md'
-        - 'Datacenter access': 'Contribute/Datacenter.md'
-        - 'Armbian config': 'Contribute/Armbian-config.md'
-        - 'Wifi performance tests': 'WifiPerformance.md'
-        - 'Mirrors' : 'Mirrors.md'
-        - 'Automation' : 'Process_CI.md'
-        - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
+        - 'Get involved' : 'Process_Contribute.md'
+        - 'Connect' :
+            - 'Forums' : 'Community_Forums.md'
+            - 'Chat & social' : 'Community_IRC.md'
+            - 'GitHub' : 'Community_Github.md'
+        - 'Ways to contribute' :
+            - 'Add software to armbian-config' : 'Contribute/Armbian-config.md'
+            - 'Wi-Fi performance testing' : 'WifiPerformance.md'
+            - 'Mirrors' : 'Mirrors.md'
+            - 'Datacenter access' : 'Contribute/Datacenter.md'
+        - 'Maintainers & board rules' :
+            - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
+            - 'Become a board maintainer' : 'Release_Board-Maintainers.md'
+            - 'Maintainer procedures & guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
+        - 'Project processes' :
+            - 'Automation (CI)' : 'Process_CI.md'
 
