@@ -278,7 +278,7 @@ def build_report(base, suites, component, arch, kernels=False):
                 out.append("")
                 return
             out.append("| Kernel package | Kernel | Armbian version | Headers |")
-            out.append("|:---------------|:-------|----------------:|:--------|")
+            out.append("|:---------------|:-------|----------------:|:-------:|")
             # sort keeps a family's branches together (media-current, -edge, ...)
             for behind, branch, family, kver, ver in sorted(group, key=lambda r: f"{r[2]}-{r[1]}"):
                 pkg = f"linux-image-{branch}-{family}"

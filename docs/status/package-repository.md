@@ -20,7 +20,7 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-08-27 19:38 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-08-27 19:39 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
@@ -54,7 +54,7 @@ Newest kernel published per family, with its Linux kernel version. The current r
 #### Current
 
 | Kernel package | Kernel | Armbian version | Headers |
-|:---------------|:-------|----------------:|:--------|
+|:---------------|:-------|----------------:|:-------:|
 | `linux-image-cloud-arm64` | `6.18.44` | `26.8.3` | ✅ |
 | `linux-image-current-arm64` | `6.18.44` | `26.8.3` | ✅ |
 | `linux-image-edge-arm64` | `7.1.8` | `26.8.3` | ✅ |
@@ -116,7 +116,7 @@ Newest kernel published per family, with its Linux kernel version. The current r
 #### Behind `26.8.3`
 
 | Kernel package | Kernel | Armbian version | Headers |
-|:---------------|:-------|----------------:|:--------|
+|:---------------|:-------|----------------:|:-------:|
 | `linux-image-sc8280xp-arm64` | `7.0.10` | `26.5.1` | ✅ |
 | `linux-image-sm8250-arm64` | `6.7.4` | `24.2.1` | ✅ |
 | `linux-image-sm8550-arm64` | `6.9.3` | `25.2.3` | ✅ |
