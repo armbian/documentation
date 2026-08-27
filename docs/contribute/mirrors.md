@@ -61,7 +61,7 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 
 ## How it works
 
-![armbian-mirror-explication](../images/armbian-mirror-explication.png)
+![Armbian mirror system](../images/armbian-mirror-system.png)
 
 1. **Request** — a user starts a download (image, package, ...) from a standard URL such as `https://dl.armbian.com`.
 2. **Routing** — the redirector picks the best mirror based on the user's location, each mirror's status and load, and whether it holds the requested file.
