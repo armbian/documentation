@@ -217,6 +217,28 @@ def build_report(base, suites, component, arch, kernels=False):
             if cur is None or version_gt(st["Version"], cur["Version"]):
                 merged[name] = st
 
+    def headers_status(image_name, image_ver):
+        """Every linux-image must ship a matching linux-headers at the same
+        version. Returns (kind, headers_version): ok / mismatch / missing."""
+        hname = image_name.replace("linux-image-", "linux-headers-", 1)
+        hst = merged.get(hname)
+        if hst is None:
+            return ("missing", None)
+        if hst["Version"] == image_ver:
+            return ("ok", hst["Version"])
+        return ("mismatch", hst["Version"])
+
+    header_issues = []  # (branch, family, image_ver, kind, headers_ver)
+    for name, st in merged.items():
+        if not name.startswith("linux-image-"):
+            continue
+        kind, hver = headers_status(name, st["Version"])
+        if kind != "ok":
+            parts = name.split("-")
+            branch = parts[2] if len(parts) > 2 else "?"
+            family = "-".join(parts[3:]) if len(parts) > 3 else "?"
+            header_issues.append((branch, family, st["Version"], kind, hver))
+
     # --- Core packages (single column — same across every suite)
     out.append("### Core package versions")
     out.append("")
@@ -253,6 +275,19 @@ def build_report(base, suites, component, arch, kernels=False):
             out.append(f"| {branch} | 0 | — | — |")
     out.append("")
 
+    # Integrity note: image and headers must share a version for every family.
+    if header_issues:
+        out.append(f"> ⚠️ **Header mismatch:** {len(header_issues)} kernel "
+                   f"{'family' if len(header_issues) == 1 else 'families'} have "
+                   f"`linux-headers` missing or at a different version than "
+                   f"`linux-image`"
+                   + (" — see the Kernel families table below." if kernels
+                      else " (run with `--kernels` for the list)."))
+        out.append("")
+    else:
+        out.append("> ✅ Every kernel family ships matching `linux-headers`.")
+        out.append("")
+
     # --- Per-family kernel drift (opt-in): every family, newest version, and
     #     whether it lags the current release. Answers "which kernels drift".
     if kernels:
@@ -272,14 +307,19 @@ def build_report(base, suites, component, arch, kernels=False):
                    f"The current release line is `{ref}`; families below it were not "
                    f"rebuilt for it.")
         out.append("")
-        out.append(f"**{n_behind} of {len(rows)} families behind `{ref}`.**")
+        out.append(f"**{n_behind} of {len(rows)} families behind `{ref}`.** "
+                   f"**{len(header_issues)} with header mismatches.**")
         out.append("")
-        out.append("| Branch | Family | Kernel | Armbian version | Status |")
-        out.append("|:-------|:-------|:-------|:----------------|:-------|")
+        out.append("| Branch | Family | Kernel | Armbian version | Headers | Status |")
+        out.append("|:-------|:-------|:-------|:----------------|:--------|:-------|")
         # behind families first (most useful), then by branch and family name
         for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], r[1], r[2])):
             status = f"⚠️ behind `{ref}`" if behind else "✅ current"
-            out.append(f"| {branch} | `{family}` | `{kver}` | `{ver}` | {status} |")
+            kind, hver = headers_status(f"linux-image-{branch}-{family}", ver)
+            headers = {"ok": "✅",
+                       "mismatch": f"⚠️ `{hver}`",
+                       "missing": "❌ missing"}[kind]
+            out.append(f"| {branch} | `{family}` | `{kver}` | `{ver}` | {headers} | {status} |")
         out.append("")
 
     # --- Third-party / utility packages (the "-utils" component), per suite,
