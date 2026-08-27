@@ -5,39 +5,11 @@
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/Board_Maintainers_Procedures_and_Guidelines/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Community_Forums/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Community_Github/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Community_IRC/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/Development-Code_Review_Procedures_and_Guidelines/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/Mirrors/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/Process_Armbian-Task-Tracking/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Process_CI/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Process_Contribute/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
@@ -46,10 +18,6 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/Quick_facts/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Release_Board-Maintainers/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
@@ -65,10 +33,6 @@
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/User-Guide_Board-Support-Rules/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/User-Guide_FAQ/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
@@ -78,18 +42,6 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/User-Guide_Troubleshooting/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/WifiPerformance/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Contribute/Armbian-config/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/Contribute/Datacenter/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
@@ -273,6 +225,18 @@
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
+         <loc>https://docs.armbian.com/community/chat/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/community/forums/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/community/github/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
          <loc>https://docs.armbian.com/config/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
@@ -306,6 +270,42 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/config/user/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/armbian-config/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/automation/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/board-maintainer/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/board-support-rules/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/datacenter/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/maintainer-guidelines/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/mirrors/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/contribute/wifi-performance/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
