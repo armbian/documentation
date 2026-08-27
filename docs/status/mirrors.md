@@ -1,11 +1,11 @@
 ---
-seo_title: "Armbian mirror system & how to add a mirror"
-description: "How the Armbian mirror system works: a redirector routes downloads to the fastest nearby mirror, plus mirror specs and steps to contribute a new server."
+seo_title: "Armbian mirrors: the mirror network & redirector"
+description: "The Armbian mirror network: a redirector routes each download to the fastest nearby mirror. See every active mirror and how the system works."
 comments: true
 ---
 # How the Armbian mirror system works
 
-The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. Pick a nearby mirror from the list below, or read on for how the system works and how to contribute one.
+The [Armbian mirror system](https://github.com/armbian/armbian-router) distributes files efficiently, routing each user to the best available server by geographic proximity and server health. Pick a nearby mirror from the list below, or read on for how the system works. Want to host a mirror? See [**Run a mirror**](/contribute/run-a-mirror/).
 
 <!-- mirrors:start -->
 ## Current Mirrors
@@ -70,27 +70,6 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 
 The result is **load balancing** across many servers, **faster downloads** from a nearby mirror, and **redundancy** — if a mirror is unavailable, the redirector automatically routes around it.
 
-## Contribute a mirror
+## Host a mirror
 
-If you can host a mirror for the project, here is how.
-
-### 1. Set up an HTTP(S) host
-
-The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.
-
-### 2. Sync with `rsync`
-
-Pull the content you want to serve from one of the official modules, and run it from cron every **2-4 hours**:
-
-| Content | Command | Required space |
-|---------|---------|---------------:|
-| Current images | `rsync -av rsync://rsync.armbian.com/dl` | 556G |
-| Packages | `rsync -av rsync://rsync.armbian.com/apt` | 84G |
-| Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
-| Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
-
-### 3. Tell us about it
-
-Once the server is running, reach out through the [contact form](https://www.armbian.com/contact/) so we can add it to the official redirector.
-
-Thanks for helping keep Armbian's downloads fast and reliable worldwide.
+Want to help serve Armbian's downloads? See [**Run a mirror**](/contribute/run-a-mirror/) for the requirements, the `rsync` sync commands and how to register your server.
