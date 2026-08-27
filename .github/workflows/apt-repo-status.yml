@@ -1,8 +1,10 @@
 name: "apt.armbian.com status"
 
-# Surfaces a status summary of the apt.armbian.com repository — package
-# versions and, notably, which kernel families lag the current release — in
-# the run's job summary, so it is visible directly at PR stage.
+# Reports the state of the apt.armbian.com repository — package and kernel
+# versions and, notably, which kernel families lag the current release and
+# where linux-headers are missing. The report is written to the run's job
+# summary (visible at PR stage) and, on a schedule / manual dispatch, spliced
+# into docs/status/package-repository.md and proposed as a PR.
 
 on:
   pull_request:
@@ -14,7 +16,8 @@ on:
     - cron: '0 6 * * *'
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   status:
@@ -39,3 +42,47 @@ jobs:
           name: apt-repo-status
           path: apt-status.md
           if-no-files-found: error
+
+      - name: Splice report into the docs page
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          PAGE="docs/status/package-repository.md"
+          # Wrap the generated report in the page's markers.
+          {
+            echo '<!-- apt-status:start -->'
+            cat apt-status.md
+            echo '<!-- apt-status:end -->'
+          } > block.md
+          # Fail closed: require exactly one ordered marker pair before writing.
+          starts=$(grep -c '<!-- apt-status:start -->' "$PAGE" || true)
+          ends=$(grep -c '<!-- apt-status:end -->' "$PAGE" || true)
+          sline=$(grep -n '<!-- apt-status:start -->' "$PAGE" | head -1 | cut -d: -f1)
+          eline=$(grep -n '<!-- apt-status:end -->' "$PAGE" | head -1 | cut -d: -f1)
+          if [ "$starts" -ne 1 ] || [ "$ends" -ne 1 ] || [ "${sline:-0}" -ge "${eline:-0}" ]; then
+            echo "::error::apt-status markers invalid in $PAGE (start=$starts end=$ends order=$sline/$eline)"
+            exit 1
+          fi
+          awk -v bf=block.md '
+            BEGIN { while ((getline l < bf) > 0) B = B l ORS }
+            /<!-- apt-status:start -->/ { printf "%s", B; skip=1; next }
+            /<!-- apt-status:end -->/   { skip=0; next }
+            !skip { print }
+          ' "$PAGE" > tmp.md && mv tmp.md "$PAGE"
+
+      - name: Create Pull Request
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '`Automatic` package repository status update'
+          signoff: false
+          branch: auto-update-apt-status
+          delete-branch: true
+          title: '`Automatic` package repository status update'
+          body: |
+            Regenerated the status table in `docs/status/package-repository.md`
+            from the apt.armbian.com indices (kernel drift and header checks
+            included).
+          labels: |
+            Needs review
+          draft: false

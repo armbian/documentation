@@ -343,6 +343,7 @@ nav:
         - 'Overview' : 'status/index.md'
         - 'Wi-Fi performance' : 'status/wifi-performance.md'
         - 'Mirrors' : 'status/mirrors.md'
+        - 'Package repository' : 'status/package-repository.md'
 
   - 'COMMUNITY' :
         - 'Forums' : 'community/forums.md'
