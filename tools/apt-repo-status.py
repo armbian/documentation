@@ -310,16 +310,16 @@ def build_report(base, suites, component, arch, kernels=False):
         out.append(f"**{n_behind} of {len(rows)} families behind `{ref}`.** "
                    f"**{len(header_issues)} with header mismatches.**")
         out.append("")
-        out.append("| Branch | Family | Kernel | Armbian version | Headers | Status |")
-        out.append("|:-------|:-------|:-------|:----------------|:--------|:-------|")
-        # behind families first (most useful), then by branch and family name
-        for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], r[1], r[2])):
+        out.append("| Family and branch | Kernel | Armbian version | Headers | Status |")
+        out.append("|:------------------|:-------|:----------------|:--------|:-------|")
+        # behind families first (most useful), then by the merged family-branch name
+        for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], f"{r[2]}-{r[1]}")):
             status = f"⚠️ behind `{ref}`" if behind else "✅ current"
             kind, hver = headers_status(f"linux-image-{branch}-{family}", ver)
             headers = {"ok": "✅",
                        "mismatch": f"⚠️ `{hver}`",
                        "missing": "❌ missing"}[kind]
-            out.append(f"| {branch} | `{family}` | `{kver}` | `{ver}` | {headers} | {status} |")
+            out.append(f"| `{family}-{branch}` | `{kver}` | `{ver}` | {headers} | {status} |")
         out.append("")
 
     # --- Third-party / utility packages (the "-utils" component), per suite,
