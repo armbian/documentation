@@ -158,7 +158,7 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APPROVE_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+          APPROVE_TOKEN: ${{ secrets.ACCESS_TOKEN_ARMBIANWORKER }}
           PR: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
           # the Actions bot cannot approve its own PR, so approve with a
