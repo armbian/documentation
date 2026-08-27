@@ -190,9 +190,10 @@ def main():
             outdated.append((current_line[0]*100 + current_line[1] - (k[0]*100 + k[1]),  # minors behind
                              b, board_support.get(b, "?"), v, d.strftime("%Y-%m-%d") if d else "?", age))
     outdated.sort(key=lambda t: (-t[0], t[3]))
-    out.append(f"## ⏳ Outdated boards on the download — behind the current {current_str} line ({len(outdated)})")
+    out.append("## Outdated boards")
     out.append("")
-    out.append("_Newest per-board image on `dl.armbian.com` is older than the current release line._")
+    out.append(f"_**{len(outdated)}** boards whose newest `dl.armbian.com` image is behind "
+               f"the current {current_str} line._")
     if outdated:
         rows = [[b, f"`{s}`", v, d, f"{age} d" if age is not None else "?"]
                 for _, b, s, v, d, age in outdated[:args.top]]
@@ -208,9 +209,10 @@ def main():
     for a in assets:
         if a.get("download_repository") == DOWNLOAD_REPO and a.get("board_support") != "conf":
             nonconf[a["board_slug"]].add(a.get("board_support", "?"))
-    out.append(f"## ⚠️ Non-standard boards on the download ({len(nonconf)})")
+    out.append("## Non-standard boards")
     out.append("")
-    out.append("_`csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download)._")
+    out.append(f"_**{len(nonconf)}** `csc`/`wip`/`tvb` boards with images on "
+               f"`dl.armbian.com` (the main per-board download)._")
     if nonconf:
         rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
                 for b, s in sorted(nonconf.items())]
@@ -223,9 +225,10 @@ def main():
     conf_boards = {b for b, s in board_support.items() if s == "conf"}
     on_download = set(dl_newest)
     missing = sorted(conf_boards - on_download)
-    out.append(f"## ❓ Supported boards with no download image ({len(missing)})")
+    out.append("## Missing download images")
     out.append("")
-    out.append("_`conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._")
+    out.append(f"_**{len(missing)}** `conf` (standard-support) boards absent from "
+               f"`dl.armbian.com` — only nightly/appliance, or nowhere._")
     if missing:
         rows = []
         for b in missing:
@@ -244,13 +247,15 @@ def main():
         b = a["board_slug"]
         if a.get("variant") not in NON_DESKTOP_VARIANTS and video.get(b) is False:
             novideo[b].add(f"{a.get('variant')}·{a.get('branch')}·{a.get('download_repository') or '?'}")
-    out.append(f"## 🖥️ Desktop images for boards without video output ({len(novideo)})")
+    out.append("## Desktop images without video")
     out.append("")
     if not video:
         out.append("_Skipped: image-info.json (BOARD_HAS_VIDEO) not available._")
     elif novideo:
-        rows = [[b, board_name.get(b, b), ", ".join(sorted(s))] for b, s in sorted(novideo.items())]
-        out.append(md_table(["board", "name", "desktop images (variant·branch·channel)"], rows))
+        out.append(f"_**{len(novideo)}** boards whose inventory reports no video output "
+                   f"yet have a desktop-variant image._")
+        out.append(md_table(["board", "name", "desktop images (variant·branch·channel)"],
+                            [[b, board_name.get(b, b), ", ".join(sorted(s))] for b, s in sorted(novideo.items())]))
     else:
         out.append("_None._")
     out.append("")

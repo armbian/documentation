@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:11 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:26 UTC._
 
 ## Overview
 
@@ -30,9 +30,9 @@ _Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets 
 
 Current download release line: **26.8.3/26.8.2/26.8.1**.
 
-## ⏳ Outdated boards on the download — behind the current 26.8.3/26.8.2/26.8.1 line (22)
+## Outdated boards
 
-_Newest per-board image on `dl.armbian.com` is older than the current release line._
+_**22** boards whose newest `dl.armbian.com` image is behind the current 26.8.3/26.8.2/26.8.1 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
@@ -59,9 +59,9 @@ _Newest per-board image on `dl.armbian.com` is older than the current release li
 | mekotronics-r58hd | `conf` | 26.5.2 | 2026-07-08 | 50 d |
 | mekotronics-r58s2 | `conf` | 26.5.2 | 2026-07-06 | 52 d |
 
-## ⚠️ Non-standard boards on the download (3)
+## Non-standard boards
 
-_`csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download)._
+_**3** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download)._
 
 | board | support | newest version | name |
 | --- | --- | --- | --- |
@@ -69,9 +69,9 @@ _`csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board do
 | qidi-x4 | `csc` | 26.8.1 | Qidi X4 |
 | qidi-x7 | `csc` | 26.8.1 | Qidi X7 |
 
-## ❓ Supported boards with no download image (3)
+## Missing download images
 
-_`conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
+_**3** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
 
 | board | name | present in |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ _`conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/
 | mba93xxla-mini | MBa93xxLA-MINI | CI, Appliance |
 | tq-smarc2-tqma8mpxs | TQ-SMARC2-TQMa8MPxS | CI, Appliance |
 
-## 🖥️ Desktop images for boards without video output (0)
+## Desktop images without video
 
 _None._
 

@@ -2,7 +2,6 @@
 title: Mirrors
 seo_title: "Armbian mirrors: the mirror network & redirector"
 description: "The Armbian mirror network: a redirector routes each download to the fastest nearby mirror. See every active mirror and how the system works."
-comments: true
 ---
 # Mirrors
 
