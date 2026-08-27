@@ -13,26 +13,6 @@
          <lastmod>2026-08-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.armbian.com/User-Guide_Advanced-Configuration/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Autoconfig/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_FAQ/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Networking/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.armbian.com/User-Guide_Troubleshooting/</loc>
-         <lastmod>2026-08-27</lastmod>
-    </url>
-    <url>
          <loc>https://docs.armbian.com/User-Guide_Armbian-Software/Armbian/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
@@ -662,6 +642,26 @@
     </url>
     <url>
          <loc>https://docs.armbian.com/status/wifi-performance/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/user-guide/advanced-configuration/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/user-guide/autoconfig/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/user-guide/faq/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/user-guide/networking/</loc>
+         <lastmod>2026-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.armbian.com/user-guide/troubleshooting/</loc>
          <lastmod>2026-08-27</lastmod>
     </url>
 </urlset>
