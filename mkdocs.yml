@@ -302,6 +302,7 @@ nav:
             - 'Target' : 'build-framework/switches/target.md'
             - 'Image' : 'build-framework/switches/image-type.md'
             - 'Contents' : 'build-framework/switches/image-contents.md'
+            - 'Branding' : 'build-framework/switches/branding.md'
             - 'Kernel' : 'build-framework/switches/kernel-uboot.md'
             - 'Filesystem' : 'build-framework/switches/filesystem.md'
             - 'Host' : 'build-framework/switches/host-docker.md'

@@ -21,6 +21,7 @@ The reference is split by what each switch controls:
 | [Target](target.md) | Which board, kernel branch and release to build |
 | [Image](image-type.md) | Minimal / desktop image and desktop selection |
 | [Contents](image-contents.md) | Packages, firmware, networking and first-run behaviour inside the image |
+| [Branding](branding.md) | Vendor / OS identity: name, URLs, logo, MOTD colour, maintainer |
 | [Kernel](kernel-uboot.md) | Kernel source, config, compiler and bootloader options |
 | [Filesystem](filesystem.md) | Root filesystem, partitions, labels, sizes and compression |
 | [Host](host-docker.md) | The build host and the Docker build container |
