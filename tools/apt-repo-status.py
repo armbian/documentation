@@ -269,17 +269,27 @@ def build_report(base, suites, component, arch, kernels=False):
         out.append(f"**{n_behind} of {len(rows)} families behind `{ref}`.** "
                    f"**{len(header_issues)} with header mismatches.**")
         out.append("")
-        out.append("| Family and branch | Kernel | Armbian version | Headers | Status |")
-        out.append("|:------------------|:-------|----------------:|:--------|:-------|")
-        # behind families first (most useful), then by the merged family-branch name
-        for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], f"{r[2]}-{r[1]}")):
-            status = f"⚠️ behind `{ref}`" if behind else "✅ current"
-            kind, hver = headers_status(f"linux-image-{branch}-{family}", ver)
-            headers = {"ok": "✅",
-                       "mismatch": f"⚠️ `{hver}`",
-                       "missing": "❌ missing"}[kind]
-            out.append(f"| `{family}-{branch}` | `{kver}` | `{ver}` | {headers} | {status} |")
-        out.append("")
+
+        def emit_group(title, group):
+            out.append(f"#### {title}")
+            out.append("")
+            if not group:
+                out.append("_None._")
+                out.append("")
+                return
+            out.append("| Family and branch | Kernel | Armbian version | Headers |")
+            out.append("|:------------------|:-------|----------------:|:--------|")
+            for behind, branch, family, kver, ver in sorted(group, key=lambda r: f"{r[2]}-{r[1]}"):
+                kind, hver = headers_status(f"linux-image-{branch}-{family}", ver)
+                headers = {"ok": "✅",
+                           "mismatch": f"⚠️ `{hver}`",
+                           "missing": "❌ missing"}[kind]
+                out.append(f"| `{family}-{branch}` | `{kver}` | `{ver}` | {headers} |")
+            out.append("")
+
+        # Current families first, then the ones that have drifted behind.
+        emit_group("Current", [r for r in rows if not r[0]])
+        emit_group(f"Behind `{ref}`", [r for r in rows if r[0]])
 
     # --- Third-party / utility packages (the "-utils" component), per suite,
     #     with split/variant packages folded into one family row.
