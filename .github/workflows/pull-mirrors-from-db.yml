@@ -13,6 +13,9 @@ jobs:
   Build:
     name: "Pull"
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
     if: ${{ github.repository_owner == 'armbian' }}
     steps:
 
@@ -106,6 +109,19 @@ jobs:
             echo "| [$SITE_NAME](https://$NAME) | $FLAG_CELL | $FIELD1 | $FIELD2 | $FIELD3 | $FIELD4 |" >> block.md
           done
           echo '<!-- mirrors:end -->' >> block.md
+
+          # Fail closed: require exactly one start marker, exactly one end
+          # marker, and start before end. Otherwise the splice below could
+          # wipe everything after the start marker (missing end) or silently
+          # do nothing (missing start), so refuse to touch the file.
+          starts=$(grep -c '<!-- mirrors:start -->' "$FILE" || true)
+          ends=$(grep -c '<!-- mirrors:end -->' "$FILE" || true)
+          sline=$(grep -n '<!-- mirrors:start -->' "$FILE" | head -1 | cut -d: -f1)
+          eline=$(grep -n '<!-- mirrors:end -->' "$FILE" | head -1 | cut -d: -f1)
+          if [ "$starts" -ne 1 ] || [ "$ends" -ne 1 ] || [ "${sline:-0}" -ge "${eline:-0}" ]; then
+            echo "::error::mirrors markers invalid in $FILE (start=$starts end=$ends order=$sline/$eline); aborting without changes"
+            exit 1
+          fi
 
           # Splice the freshly built block back in, replacing the current
           # marker-delimited region wherever it sits in the page.
