@@ -19,10 +19,13 @@ video.
     Run it locally with `tools/download-images-report.py` to reproduce.
 
 <!-- download-images:start -->
+
 ## Download images report
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:01 UTC._
+
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:11 UTC._
 
 ## Overview
+
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
 | Download (dl.armbian.com, per-board releases) | 737 | 155 | 10 versions (…26.8.3) |
@@ -34,7 +37,9 @@ _Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets 
 Current download release line: **26.8.3/26.8.2/26.8.1**.
 
 ## ⏳ Outdated boards on the download — behind the current 26.8.3/26.8.2/26.8.1 line (22)
+
 _Newest per-board image on `dl.armbian.com` is older than the current release line._
+
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
 | pocketbeagle2 | `conf` | 26.2.1 | 2026-02-20 | 188 d |
@@ -61,7 +66,9 @@ _Newest per-board image on `dl.armbian.com` is older than the current release li
 | mekotronics-r58s2 | `conf` | 26.5.2 | 2026-07-06 | 52 d |
 
 ## ⚠️ Non-standard boards on the download (3)
+
 _`csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download)._
+
 | board | support | newest version | name |
 | --- | --- | --- | --- |
 | orangepi6-plus | `csc` | 26.8.3 | Orangepi 6 Plus |
@@ -69,7 +76,9 @@ _`csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board do
 | qidi-x7 | `csc` | 26.8.1 | Qidi X7 |
 
 ## ❓ Supported boards with no download image (3)
+
 _`conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
+
 | board | name | present in |
 | --- | --- | --- |
 | beagley-ai | BeagleY-AI | Appliance |
@@ -77,6 +86,7 @@ _`conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/
 | tq-smarc2-tqma8mpxs | TQ-SMARC2-TQMa8MPxS | CI, Appliance |
 
 ## 🖥️ Desktop images for boards without video output (0)
+
 _None._
 
 <!-- download-images:end -->
