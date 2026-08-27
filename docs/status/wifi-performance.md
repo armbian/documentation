@@ -1,9 +1,9 @@
 ---
+title: Wi-Fi performance
 seo_title: "Armbian Wi-Fi adapter performance benchmarks"
 description: "Armbian WiFi performance benchmarks: throughput of USB, SDIO and PCI wireless adapters on single-board computers, tested in the Armbian autotests lab."
-comments: true
 ---
-# Testing the speed of wireless adapters
+# Wi-Fi performance
 
 All wireless adapters were tested under consistent conditions - each positioned in close proximity (1-2m) and connected to the same wireless access point (AP). The adapters utilized various interface types, including USB, SDIO, and PCI, to evaluate performance across different hardware configurations.
 
@@ -61,7 +61,7 @@ All wireless adapters were tested under consistent conditions - each positioned 
 
 <!-- DUT-START -->
 
-## WiFi performance
+## Results
 
 _Measured 2026-07-01 11:47 UTC_
 
