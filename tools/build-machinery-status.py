@@ -154,13 +154,13 @@ def build_report(api, token, gh_org=None, gh_token=None):
                f"`<server>-NN`), falling back to the value recorded in NetBox when "
                f"GitHub can't be queried._")
     out.append("")
-    summary = (f"**{len(rows)}** servers — **{len(active)}** active, "
-               f"**{len(rows) - len(active)}** offline · "
-               f"**{total_threads}** CPU threads (**{active_threads}** active) · "
-               f"**{total_ram}** GB RAM · **{total_runners}** runners")
-    if gh is not None:
-        summary += f" (**{online_runners}** online)"
-    out.append(summary + ".")
+    n_off = len(rows) - len(active)
+    servers = f"**{len(rows)}** servers" + (f" (**{n_off}** offline)" if n_off else "")
+    threads = f"**{total_threads}** threads" + (
+        f" (**{active_threads}** active)" if active_threads != total_threads else "")
+    runners = f"**{total_runners}** runners" + (
+        f" (**{online_runners}** online)" if gh is not None else "")
+    out.append(" · ".join([servers, threads, f"**{total_ram}** GB RAM", runners]) + ".")
     out.append("")
     out.append("| Server | Location | Threads | RAM | Runners | Status |")
     out.append("|:-------|:---------|--------:|----:|--------:|:------:|")

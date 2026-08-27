@@ -15,7 +15,7 @@ runner processes each server hosts (from the
 
 _Build servers from [NetBox](https://netbox.armbian.com/), role `userlevel-runner`. The **Runners** column is the number of GitHub runner processes registered on that server (its runners are named `<server>-NN`), falling back to the value recorded in NetBox when GitHub can't be queried._
 
-**12** servers — **12** active, **0** offline · **614** CPU threads (**614** active) · **1683** GB RAM · **233** runners (**104** online).
+**12** servers · **614** threads · **1683** GB RAM · **233** runners (**108** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -30,6 +30,6 @@ _Build servers from [NetBox](https://netbox.armbian.com/), role `userlevel-runne
 | `oregonalfa` | Oregon UNI | 16 | 32 GB | 6 | active |
 | `oregonbeta` | Oregon UNI | 16 | 32 GB | 6 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
-| `werner` | Hetzner Germany | 8 | 31 GB | 4 | active |
+| `werner-trixie` | Hetzner Germany | 8 | 31 GB | 4 | active |
 
 <!-- build-machinery:end -->
