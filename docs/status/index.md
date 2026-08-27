@@ -43,7 +43,7 @@ refreshed by scheduled jobs, not written by hand.
 
     The download redirector and every active mirror, with what each serves.
 
-- :material-download: **Download images** *(planned)*
+- :material-download: **[Download images](download-images.md)**
 
     Which images we publish per board, and anomalies (outdated, missing,
     non-standard).
