@@ -53,6 +53,10 @@ refreshed by scheduled jobs, not written by hand.
     `apt.armbian.com` status — package and kernel versions, kernel-family
     drift and header gaps.
 
+- :material-server: **[Build machinery](build-machinery.md)**
+
+    The build servers — CPU-thread capacity, memory, location and runner count.
+
 </div>
 
 !!! note "Prototype"

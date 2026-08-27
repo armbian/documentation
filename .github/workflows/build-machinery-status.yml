@@ -1,0 +1,82 @@
+name: "Build machinery status"
+
+# Reports the Armbian build machinery — the self-hosted runner fleet: each
+# runner's CPU-thread capacity, memory and location (from NetBox), plus the
+# org's GitHub runners grouped by label. Because it needs secrets it runs on a
+# schedule / manual dispatch (not on PRs); it splices the report into
+# docs/status/build-machinery.md and opens a PR.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  status:
+    name: "Build machinery"
+    runs-on: ubuntu-24.04
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate build machinery report
+        env:
+          NETBOX_TOKEN: ${{ secrets.NETBOX_TOKEN }}
+          NETBOX_API: ${{ secrets.NETBOX_API }}
+          GH_RUNNERS_TOKEN: ${{ secrets.RUNNERS }}
+        run: |
+          python3 tools/build-machinery-status.py > report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Markdown report
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-machinery-status
+          path: report.md
+          if-no-files-found: error
+
+      - name: Splice report into the docs page
+        run: |
+          PAGE="docs/status/build-machinery.md"
+          {
+            echo '<!-- build-machinery:start -->'
+            cat report.md
+            echo '<!-- build-machinery:end -->'
+          } > block.md
+          # Fail closed: require exactly one ordered marker pair before writing.
+          starts=$(grep -c '<!-- build-machinery:start -->' "$PAGE" || true)
+          ends=$(grep -c '<!-- build-machinery:end -->' "$PAGE" || true)
+          sline=$(grep -n '<!-- build-machinery:start -->' "$PAGE" | head -1 | cut -d: -f1)
+          eline=$(grep -n '<!-- build-machinery:end -->' "$PAGE" | head -1 | cut -d: -f1)
+          if [ "$starts" -ne 1 ] || [ "$ends" -ne 1 ] || [ "${sline:-0}" -ge "${eline:-0}" ]; then
+            echo "::error::build-machinery markers invalid in $PAGE (start=$starts end=$ends order=$sline/$eline)"
+            exit 1
+          fi
+          awk -v bf=block.md '
+            BEGIN { while ((getline l < bf) > 0) B = B l ORS }
+            /<!-- build-machinery:start -->/ { printf "%s", B; skip=1; next }
+            /<!-- build-machinery:end -->/   { skip=0; next }
+            !skip { print }
+          ' "$PAGE" > tmp.md && mv tmp.md "$PAGE"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '`Automatic` build machinery status update'
+          signoff: false
+          branch: auto-update-build-machinery
+          delete-branch: true
+          title: '`Automatic` build machinery status update'
+          body: |
+            Regenerated `docs/status/build-machinery.md` — the runner fleet
+            (CPU threads, memory, location) from NetBox and the org runners by
+            label from GitHub.
+          labels: |
+            Needs review
+          draft: false
