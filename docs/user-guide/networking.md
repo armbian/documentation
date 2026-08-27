@@ -183,7 +183,7 @@ Alternatively, you can also use Network-Manager directly via the command line or
 nmtui-edit eth0
 ```
 ??? note "Display screenshot"
-    ![](images/edit-connection.png)
+    ![Editing a network connection in the terminal UI](../images/edit-connection.png)
 
 Replace `eth0` with the name of your Ethernet Interface.
 
@@ -198,6 +198,6 @@ nmtui-connect SSID
 ```
 
 ??? note "Display screenshot"
-    ![](images/wifi-connect.png)
+    ![Selecting a Wi-Fi network to connect to](../images/wifi-connect.png)
 
 Replace `SSID` with the name of your wireless network.

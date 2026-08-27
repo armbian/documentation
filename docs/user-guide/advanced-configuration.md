@@ -5,14 +5,14 @@ description: "Armbian advanced configuration for single-board computers: change 
 
 # Advanced features and tasks
 
-While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](software/index.md).
+While the underlying operating system offers tools and processes to make customizations, the **preferred method** to change most settings is using the interactive [_armbian-config_](../config/index.md) tool which is shipped with all Armbian images. It also provides means to install [preconfigured applications and advanced services](../software/index.md).
 
 Usually, all of the following commands require elevated permissions, and must be run as root or prefixed by the _sudo_ command.
 
 
 ## Keyboard layout
 
-This is typically handled by [_armbian-config_](config/localisation.md#change-keyboard-layout). For some corner cases, changing the keyboard layout can also be done with:
+This is typically handled by [_armbian-config_](../config/localisation.md#change-keyboard-layout). For some corner cases, changing the keyboard layout can also be done with:
 
 ```sh
 dpkg-reconfigure keyboard-configuration
@@ -31,7 +31,7 @@ localectl set-keymap br-abnt2
 
 ## System language
 
-This is typically handled by [_armbian-config_](config/localisation.md#change-locales-reconfigure-the-language-and-character-set). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
+This is typically handled by [_armbian-config_](../config/localisation.md#change-locales-reconfigure-the-language-and-character-set). If necessary, to handle it with system tools, for [Debian](https://wiki.debian.org/ChangeLanguage) run:
 
 ```sh
 dpkg-reconfigure locales
@@ -53,7 +53,7 @@ dpkg-reconfigure console-setup
 
 ## Time zone
 
-This is typically handled by [_armbian-config_](config/localisation.md#change-global-timezone). If necessary, one can also run:
+This is typically handled by [_armbian-config_](../config/localisation.md#change-global-timezone). If necessary, one can also run:
 
 ```sh
 dpkg-reconfigure tzdata
@@ -181,7 +181,7 @@ Zswap performs a lot better than the combination of ZRAM and 'swap on disk' in p
 
 ## Switch or downgrade kernels
 
-This is typically handled by [_armbian-config_](config/kernel.md#alternative-kernels).
+This is typically handled by [_armbian-config_](../config/kernel.md#alternative-kernels).
 
 ```bash
 armbian-config --cmd KER001
@@ -253,7 +253,7 @@ insmod 8821au.ko
 usbcore: registered new interface driver rtl8821au
 ```
 
-If everything was successful, plug the USB wireless adaptor in and proceed with the [network configuration](User-Guide_Networking.md).
+If everything was successful, plug the USB wireless adaptor in and proceed with the [network configuration](networking.md).
 
 
 ## Toggle boot output
@@ -291,7 +291,7 @@ To change the boot verbosity, alter the `verbosity=` line in `/boot/armbianEnv.t
 
 ## Enable boot logs for inspection
 
-If your SBC behaves strange, the first step is to check the power supply and the integrity of the boot media as detailed in the [_Troubleshooting_](User-Guide_Troubleshooting.md) section. Also, run
+If your SBC behaves strange, the first step is to check the power supply and the integrity of the boot media as detailed in the [_Troubleshooting_](troubleshooting.md) section. Also, run
 
 ```sh
 armbianmonitor -c "$HOME"
@@ -303,7 +303,7 @@ Then look into your kernel logs. Armbian also provides a tool that grabs some in
 sudo armbianmonitor -u
 ```
 
-Then copy and past the URL of your log to the [forum, mail, etc](index.md#where-to-find-additional-help).
+Then copy and paste the URL of your log to the [forum, mail, etc](../index.md#where-to-find-additional-help).
 
 
 ## APT mirror selection

@@ -5,7 +5,7 @@ description: "What to do when a step in the Armbian Getting Started guide fails,
 ---
 # If something goes wrong
 
-If you experience an issue during any of the steps mentioned in this section, please first check out our [_Troubleshooting and Recovery_](../User-Guide_Troubleshooting.md) guide.
+If you experience an issue during any of the steps mentioned in this section, please first check out our [_Troubleshooting and Recovery_](../user-guide/troubleshooting.md) guide.
 
 <!--
       * armbianmonitor

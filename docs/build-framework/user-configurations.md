@@ -72,7 +72,7 @@ Custom [build extensions](/build-framework/extensions/) go in `userpatches/exten
 
 ## First-boot presets
 
-Every fresh image ships a `/root/.not_logged_in_yet` marker that triggers the interactive first-run setup (root password, user account, locale, network). Provide `userpatches/firstboot.conf` to preseed those answers for an unattended first boot — see [First-boot configuration](/User-Guide_Autoconfig/) for the available keys.
+Every fresh image ships a `/root/.not_logged_in_yet` marker that triggers the interactive first-run setup (root password, user account, locale, network). Provide `userpatches/firstboot.conf` to preseed those answers for an unattended first boot — see [First-boot configuration](/user-guide/autoconfig/) for the available keys.
 
 ## Image customization script
 
