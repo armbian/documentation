@@ -55,7 +55,7 @@ refreshed by scheduled jobs, not written by hand.
 
 - :material-server: **[Build machinery](build-machinery.md)**
 
-    The self-hosted runner fleet — CPU-thread capacity, memory and location.
+    The build servers — CPU-thread capacity, memory, location and runner count.
 
 </div>
 
