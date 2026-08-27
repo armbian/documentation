@@ -20,7 +20,7 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-08-27 19:32 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-08-27 19:34 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
@@ -51,90 +51,97 @@ Newest kernel published per family, with its Linux kernel version. The current r
 
 **25 of 82 families behind `26.8.3`.** **2 with header mismatches.**
 
-| Family and branch | Kernel | Armbian version | Headers | Status |
-|:------------------|:-------|----------------:|:--------|:-------|
-| `arm64-sc8280xp` | `7.0.10` | `26.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `arm64-sm8250` | `6.7.4` | `24.2.1` | ✅ | ⚠️ behind `26.8.3` |
-| `arm64-sm8550` | `6.9.3` | `25.2.3` | ✅ | ⚠️ behind `26.8.3` |
-| `arm64-wdk2023` | `6.7.0-rc6` | `25.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `bcm2712-current` | `6.6.63` | `24.11.1` | ✅ | ⚠️ behind `26.8.3` |
-| `bcm2712-edge` | `6.10.14` | `24.11.1` | ✅ | ⚠️ behind `26.8.3` |
-| `genio-collabora` | `6.19.0-rc5` | `26.2.1` | ✅ | ⚠️ behind `26.8.3` |
-| `genio-vendor` | `5.15.168` | `25.2.3` | ✅ | ⚠️ behind `26.8.3` |
-| `k3-beagle-current` | `6.12.49` | `25.8.2` | ✅ | ⚠️ behind `26.8.3` |
-| `k3-current` | `6.12.17` | `25.8.2` | ✅ | ⚠️ behind `26.8.3` |
-| `media-current` | `6.1.92` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `media-edge` | `6.2.16` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `media-legacy` | `5.10.110` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `rk35xx-legacy` | `5.10.160` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `rockchip-rk3588-collabora` | `6.9.0` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `rockchip-rk3588-current` | `6.12.0` | `24.11.2` | ✅ | ⚠️ behind `26.8.3` |
-| `rockchip-rk3588-edge` | `6.12.1` | `24.11.1` | ✅ | ⚠️ behind `26.8.3` |
-| `rockpis-legacy` | `4.4.247` | `24.2.1` | ❌ missing | ⚠️ behind `26.8.3` |
-| `rt-k3-beagle-current` | `6.12.49` | `25.8.2` | ✅ | ⚠️ behind `26.8.3` |
-| `sun50iw9-btt-legacy` | `6.1.79` | `24.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `sun50iw9-legacy` | `4.9.318` | `24.5.1` | ❌ missing | ⚠️ behind `26.8.3` |
-| `sun55iw3-dev` | `6.14.0-rc1` | `25.5.1` | ✅ | ⚠️ behind `26.8.3` |
-| `sun55iw3-edge` | `6.16.0` | `25.11.2` | ✅ | ⚠️ behind `26.8.3` |
-| `wsl2-arm64-current` | `6.1.158` | `25.11.2` | ✅ | ⚠️ behind `26.8.3` |
-| `wsl2-arm64-edge` | `6.6.116` | `25.11.2` | ✅ | ⚠️ behind `26.8.3` |
-| `arm64-cloud` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `arm64-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `arm64-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `arm64-legacy` | `6.12.103` | `26.8.3` | ✅ | ✅ current |
-| `bcm2711-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `bcm2711-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `bcm2711-legacy` | `6.12.103` | `26.8.3` | ✅ | ✅ current |
-| `cix-p1-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `cix-p1-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `edge-k3-vendor` | `6.18.38` | `26.8.3` | ✅ | ✅ current |
-| `filogic-current` | `6.12.100` | `26.8.3` | ✅ | ✅ current |
-| `genio-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `imx8m-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `imx8m-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `imx8ulp-vendor` | `6.1.22` | `26.8.3` | ✅ | ✅ current |
-| `imx93-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `imx93-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `k3-beagle-edge` | `7.2.0-rc7` | `26.8.3` | ✅ | ✅ current |
-| `k3-beagle-vendor` | `6.12.49` | `26.8.3` | ✅ | ✅ current |
-| `k3-edge` | `7.2.0-rc7` | `26.8.3` | ✅ | ✅ current |
-| `k3-vendor` | `6.18.13` | `26.8.3` | ✅ | ✅ current |
-| `ls1046a-ask-current` | `6.12.49` | `26.8.3` | ✅ | ✅ current |
-| `meson-s4t7-legacy` | `5.15.137` | `26.8.3` | ✅ | ✅ current |
-| `meson64-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `meson64-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `mvebu64-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `mvebu64-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `nuvoton-ma35d1-vendor` | `5.10.140` | `26.8.3` | ✅ | ✅ current |
-| `phytium-embedded-current` | `6.6.12` | `26.8.3` | ✅ | ✅ current |
-| `phytium-embedded-legacy` | `5.10.209` | `26.8.3` | ✅ | ✅ current |
-| `qcs6490-current` | `6.18.2` | `26.8.3` | ✅ | ✅ current |
-| `qcs6490-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `qrb2210-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `realtek-rtd1619b-vendor` | `6.6.54` | `26.8.3` | ✅ | ✅ current |
-| `rk35xx-vendor` | `6.1.115` | `26.8.3` | ✅ | ✅ current |
-| `rockchip64-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `rockchip64-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `rt-k3-beagle-vendor` | `6.12.49` | `26.8.3` | ✅ | ✅ current |
-| `rt-k3-vendor` | `6.18.13` | `26.8.3` | ✅ | ✅ current |
-| `sc8280xp-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `sc8280xp-sc8280xp` | `7.0.14` | `26.8.3` | ✅ | ✅ current |
-| `sc8280xp-vendor` | `7.0.11` | `26.8.3` | ✅ | ✅ current |
-| `seeed-rk3576-vendor` | `6.1.115` | `26.8.3` | ✅ | ✅ current |
-| `seeed-rk3588-vendor` | `6.1.115` | `26.8.3` | ✅ | ✅ current |
-| `sm8250-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `sm8250-edge` | `6.19.14` | `26.8.3` | ✅ | ✅ current |
-| `sm8550-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `sm8550-edge` | `7.0.14` | `26.8.3` | ✅ | ✅ current |
-| `sm8550-sheng-bleedingedge` | `7.2.0` | `26.8.3` | ✅ | ✅ current |
-| `sm8550-sheng-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `sm8750-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `sun55iw3-syterkit-legacy` | `5.15.154` | `26.8.3` | ✅ | ✅ current |
-| `sun60iw2-vendor` | `6.6.98` | `26.8.3` | ✅ | ✅ current |
-| `sunxi64-current` | `6.18.44` | `26.8.3` | ✅ | ✅ current |
-| `sunxi64-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
-| `sunxi64-legacy` | `6.12.103` | `26.8.3` | ✅ | ✅ current |
-| `uefidt-edge` | `7.1.8` | `26.8.3` | ✅ | ✅ current |
+#### Current
+
+| Family and branch | Kernel | Armbian version | Headers |
+|:------------------|:-------|----------------:|:--------|
+| `arm64-cloud` | `6.18.44` | `26.8.3` | ✅ |
+| `arm64-current` | `6.18.44` | `26.8.3` | ✅ |
+| `arm64-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `arm64-legacy` | `6.12.103` | `26.8.3` | ✅ |
+| `bcm2711-current` | `6.18.44` | `26.8.3` | ✅ |
+| `bcm2711-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `bcm2711-legacy` | `6.12.103` | `26.8.3` | ✅ |
+| `cix-p1-current` | `6.18.44` | `26.8.3` | ✅ |
+| `cix-p1-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `edge-k3-vendor` | `6.18.38` | `26.8.3` | ✅ |
+| `filogic-current` | `6.12.100` | `26.8.3` | ✅ |
+| `genio-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `imx8m-current` | `6.18.44` | `26.8.3` | ✅ |
+| `imx8m-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `imx8ulp-vendor` | `6.1.22` | `26.8.3` | ✅ |
+| `imx93-current` | `6.18.44` | `26.8.3` | ✅ |
+| `imx93-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `k3-beagle-edge` | `7.2.0-rc7` | `26.8.3` | ✅ |
+| `k3-beagle-vendor` | `6.12.49` | `26.8.3` | ✅ |
+| `k3-edge` | `7.2.0-rc7` | `26.8.3` | ✅ |
+| `k3-vendor` | `6.18.13` | `26.8.3` | ✅ |
+| `ls1046a-ask-current` | `6.12.49` | `26.8.3` | ✅ |
+| `meson-s4t7-legacy` | `5.15.137` | `26.8.3` | ✅ |
+| `meson64-current` | `6.18.44` | `26.8.3` | ✅ |
+| `meson64-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `mvebu64-current` | `6.18.44` | `26.8.3` | ✅ |
+| `mvebu64-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `nuvoton-ma35d1-vendor` | `5.10.140` | `26.8.3` | ✅ |
+| `phytium-embedded-current` | `6.6.12` | `26.8.3` | ✅ |
+| `phytium-embedded-legacy` | `5.10.209` | `26.8.3` | ✅ |
+| `qcs6490-current` | `6.18.2` | `26.8.3` | ✅ |
+| `qcs6490-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `qrb2210-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `realtek-rtd1619b-vendor` | `6.6.54` | `26.8.3` | ✅ |
+| `rk35xx-vendor` | `6.1.115` | `26.8.3` | ✅ |
+| `rockchip64-current` | `6.18.44` | `26.8.3` | ✅ |
+| `rockchip64-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `rt-k3-beagle-vendor` | `6.12.49` | `26.8.3` | ✅ |
+| `rt-k3-vendor` | `6.18.13` | `26.8.3` | ✅ |
+| `sc8280xp-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `sc8280xp-sc8280xp` | `7.0.14` | `26.8.3` | ✅ |
+| `sc8280xp-vendor` | `7.0.11` | `26.8.3` | ✅ |
+| `seeed-rk3576-vendor` | `6.1.115` | `26.8.3` | ✅ |
+| `seeed-rk3588-vendor` | `6.1.115` | `26.8.3` | ✅ |
+| `sm8250-current` | `6.18.44` | `26.8.3` | ✅ |
+| `sm8250-edge` | `6.19.14` | `26.8.3` | ✅ |
+| `sm8550-current` | `6.18.44` | `26.8.3` | ✅ |
+| `sm8550-edge` | `7.0.14` | `26.8.3` | ✅ |
+| `sm8550-sheng-bleedingedge` | `7.2.0` | `26.8.3` | ✅ |
+| `sm8550-sheng-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `sm8750-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `sun55iw3-syterkit-legacy` | `5.15.154` | `26.8.3` | ✅ |
+| `sun60iw2-vendor` | `6.6.98` | `26.8.3` | ✅ |
+| `sunxi64-current` | `6.18.44` | `26.8.3` | ✅ |
+| `sunxi64-edge` | `7.1.8` | `26.8.3` | ✅ |
+| `sunxi64-legacy` | `6.12.103` | `26.8.3` | ✅ |
+| `uefidt-edge` | `7.1.8` | `26.8.3` | ✅ |
+
+#### Behind `26.8.3`
+
+| Family and branch | Kernel | Armbian version | Headers |
+|:------------------|:-------|----------------:|:--------|
+| `arm64-sc8280xp` | `7.0.10` | `26.5.1` | ✅ |
+| `arm64-sm8250` | `6.7.4` | `24.2.1` | ✅ |
+| `arm64-sm8550` | `6.9.3` | `25.2.3` | ✅ |
+| `arm64-wdk2023` | `6.7.0-rc6` | `25.5.1` | ✅ |
+| `bcm2712-current` | `6.6.63` | `24.11.1` | ✅ |
+| `bcm2712-edge` | `6.10.14` | `24.11.1` | ✅ |
+| `genio-collabora` | `6.19.0-rc5` | `26.2.1` | ✅ |
+| `genio-vendor` | `5.15.168` | `25.2.3` | ✅ |
+| `k3-beagle-current` | `6.12.49` | `25.8.2` | ✅ |
+| `k3-current` | `6.12.17` | `25.8.2` | ✅ |
+| `media-current` | `6.1.92` | `24.5.1` | ✅ |
+| `media-edge` | `6.2.16` | `24.5.1` | ✅ |
+| `media-legacy` | `5.10.110` | `24.5.1` | ✅ |
+| `rk35xx-legacy` | `5.10.160` | `24.5.1` | ✅ |
+| `rockchip-rk3588-collabora` | `6.9.0` | `24.5.1` | ✅ |
+| `rockchip-rk3588-current` | `6.12.0` | `24.11.2` | ✅ |
+| `rockchip-rk3588-edge` | `6.12.1` | `24.11.1` | ✅ |
+| `rockpis-legacy` | `4.4.247` | `24.2.1` | ❌ missing |
+| `rt-k3-beagle-current` | `6.12.49` | `25.8.2` | ✅ |
+| `sun50iw9-btt-legacy` | `6.1.79` | `24.5.1` | ✅ |
+| `sun50iw9-legacy` | `4.9.318` | `24.5.1` | ❌ missing |
+| `sun55iw3-dev` | `6.14.0-rc1` | `25.5.1` | ✅ |
+| `sun55iw3-edge` | `6.16.0` | `25.11.2` | ✅ |
+| `wsl2-arm64-current` | `6.1.158` | `25.11.2` | ✅ |
+| `wsl2-arm64-edge` | `6.6.116` | `25.11.2` | ✅ |
 
 ### Third-party & utility packages
 
