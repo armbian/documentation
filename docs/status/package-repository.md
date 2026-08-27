@@ -20,12 +20,12 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-08-27 19:28 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-08-27 19:32 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
-|:------|:---------|:--------|--------:|:----------------------|
+|:------|:---------|:--------|--------:|----------------------:|
 | `bookworm` | bookworm | Thu, 27 Aug 2026 | 2267 | `26.8.3` |
 | `trixie` | trixie | Thu, 27 Aug 2026 | 2267 | `26.8.3` |
 | `sid` | sid | Thu, 27 Aug 2026 | 2267 | `26.8.3` |
@@ -37,22 +37,11 @@ _Generated 2026-08-27 19:28 UTC from [`https://apt.armbian.com`](https://apt.arm
 Armbian's own base packages (component `main`) — identical across all suites.
 
 | Package | Version |
-|:--------|:--------|
+|:--------|--------:|
 | `armbian-firmware` | `26.8.3` |
 | `armbian-firmware-full` | `26.8.3` |
 | `armbian-zsh` | `26.8.1` |
 | `armbian-plymouth-theme` | `26.8.3` |
-
-### Kernel branches
-
-Distinct kernel families and the newest Armbian version published per branch (from `linux-image-<branch>-*`).
-
-| Branch | Families | Latest kernel | Armbian version |
-|:-------|--------:|:-------------|:---------------|
-| current | 22 | `6.1.92 – 6.18.44` | `26.8.3` |
-| edge | 25 | `6.2.16 – 7.2.0-rc7` | `26.8.3` |
-| legacy | 11 | `4.4.247 – 6.12.103` | `26.8.3` |
-| vendor | 14 | `5.10.140 – 7.0.11` | `26.8.3` |
 
 > ⚠️ **Header mismatch:** 2 kernel families have `linux-headers` missing or at a different version than `linux-image` — see the Kernel families table below.
 
@@ -63,7 +52,7 @@ Newest kernel published per family, with its Linux kernel version. The current r
 **25 of 82 families behind `26.8.3`.** **2 with header mismatches.**
 
 | Family and branch | Kernel | Armbian version | Headers | Status |
-|:------------------|:-------|:----------------|:--------|:-------|
+|:------------------|:-------|----------------:|:--------|:-------|
 | `arm64-sc8280xp` | `7.0.10` | `26.5.1` | ✅ | ⚠️ behind `26.8.3` |
 | `arm64-sm8250` | `6.7.4` | `24.2.1` | ✅ | ⚠️ behind `26.8.3` |
 | `arm64-sm8550` | `6.9.3` | `25.2.3` | ✅ | ⚠️ behind `26.8.3` |

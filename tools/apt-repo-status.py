@@ -29,10 +29,6 @@ CORE_PACKAGES = [
     "armbian-zsh",
     "armbian-plymouth-theme",
 ]
-# Kernel branches to summarise (in display order); anything else is "other".
-KERNEL_BRANCHES = ["current", "edge", "legacy", "vendor"]
-
-
 def util_family(name):
     """Fold split/variant util packages into one representative family row."""
     if name.startswith("zulu"):
@@ -79,20 +75,6 @@ def version_max(versions):
         if best is None or version_gt(v, best):
             best = v
     return best
-
-
-import functools
-
-
-def _vcmp(a, b):
-    if version_gt(a, b):
-        return 1
-    if version_gt(b, a):
-        return -1
-    return 0
-
-
-version_key = functools.cmp_to_key(_vcmp)
 
 
 # --- Repository access ---------------------------------------------------------
@@ -194,7 +176,7 @@ def build_report(base, suites, component, arch, kernels=False):
     out.append("### Suites")
     out.append("")
     out.append("| Suite | Codename | Updated | Packages | Latest Armbian version |")
-    out.append("|:------|:---------|:--------|--------:|:----------------------|")
+    out.append("|:------|:---------|:--------|--------:|----------------------:|")
     for suite in suites:
         d = suite_data.get(suite)
         if not d:
@@ -245,34 +227,11 @@ def build_report(base, suites, component, arch, kernels=False):
     out.append("Armbian's own base packages (component `main`) — identical across all suites.")
     out.append("")
     out.append("| Package | Version |")
-    out.append("|:--------|:--------|")
+    out.append("|:--------|--------:|")
     for pkg in CORE_PACKAGES:
         st = merged.get(pkg)
         v = st["Version"] if st else None
         out.append(f"| `{pkg}` | {('`'+v+'`') if v else '—'} |")
-    out.append("")
-
-    # --- Kernel branches (distinct families + newest version per branch)
-    out.append("### Kernel branches")
-    out.append("")
-    out.append("Distinct kernel families and the newest Armbian version published "
-               "per branch (from `linux-image-<branch>-*`).")
-    out.append("")
-    out.append("| Branch | Families | Latest kernel | Armbian version |")
-    out.append("|:-------|--------:|:-------------|:---------------|")
-    for branch in KERNEL_BRANCHES:
-        fams, stanzas = set(), []
-        for name, st in merged.items():
-            if name.startswith(f"linux-image-{branch}-"):
-                fams.add(name)
-                stanzas.append(st)
-        if fams:
-            newest = max(stanzas, key=lambda s: version_key(s["Version"]))
-            kvers = sorted({kernel_version(s) for s in stanzas}, key=version_key)
-            krange = kvers[-1] if len(kvers) == 1 else f"{kvers[0]} – {kvers[-1]}"
-            out.append(f"| {branch} | {len(fams)} | `{krange}` | `{newest['Version']}` |")
-        else:
-            out.append(f"| {branch} | 0 | — | — |")
     out.append("")
 
     # Integrity note: image and headers must share a version for every family.
@@ -311,7 +270,7 @@ def build_report(base, suites, component, arch, kernels=False):
                    f"**{len(header_issues)} with header mismatches.**")
         out.append("")
         out.append("| Family and branch | Kernel | Armbian version | Headers | Status |")
-        out.append("|:------------------|:-------|:----------------|:--------|:-------|")
+        out.append("|:------------------|:-------|----------------:|:--------|:-------|")
         # behind families first (most useful), then by the merged family-branch name
         for behind, branch, family, kver, ver in sorted(rows, key=lambda r: (not r[0], f"{r[2]}-{r[1]}")):
             status = f"⚠️ behind `{ref}`" if behind else "✅ current"
