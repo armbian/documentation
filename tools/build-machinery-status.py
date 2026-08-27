@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+"""Generate a Markdown status report for the Armbian build machinery — the
+self-hosted runner fleet — from NetBox.
+
+Reads the "Userlevel runner" virtual machines (role=userlevel-runner) and
+reports each runner's location, CPU thread count and memory, plus the fleet
+totals (the CPU-thread capacity).
+
+It can also list the org's GitHub Actions self-hosted runners grouped by
+label (keyword), when a token with the runners permission is available.
+
+Environment:
+    NETBOX_TOKEN       required — a read-only NetBox API token
+    NETBOX_API         NetBox API base (default https://netbox.armbian.com/api)
+    GH_RUNNERS_TOKEN   optional — GitHub token with admin:org (or the
+                       fine-grained "self-hosted runners" org permission);
+                       falls back to GITHUB_TOKEN. When absent, the GitHub
+                       section is skipped.
+    GH_ORG             GitHub org for the runner listing (default: armbian)
+
+Prints Markdown to stdout (or --output FILE).
+"""
+import argparse
+import collections
+import json
+import os
+import sys
+import urllib.request
+
+DEFAULT_API = "https://netbox.armbian.com/api"
+ROLE = "userlevel-runner"
+DEFAULT_ORG = "armbian"
+
+
+def netbox_get(api, token, path):
+    """GET an API path, following pagination, returning all results."""
+    results = []
+    url = f"{api}{path}"
+    while url:
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Token {token}",
+            "Accept": "application/json",
+        })
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.load(resp)
+        results.extend(data.get("results", []))
+        url = data.get("next")
+    return results
+
+
+def gb(mb):
+    return round((mb or 0) / 1024)
+
+
+def github_runners(org, token):
+    """All self-hosted runners registered to the org (needs admin:org / the
+    runners permission). Returns [] and re-raises nothing on failure."""
+    runners, page = [], 1
+    while True:
+        url = f"https://api.github.com/orgs/{org}/actions/runners?per_page=100&page={page}"
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        })
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.load(resp)
+        batch = data.get("runners", [])
+        runners.extend(batch)
+        if not batch or len(runners) >= data.get("total_count", 0):
+            break
+        page += 1
+    return runners
+
+
+def github_section(org, token):
+    """Markdown for the org runners grouped by label; '' if unavailable."""
+    try:
+        runners = github_runners(org, token)
+    except Exception as e:
+        print(f"::warning::GitHub runners unavailable: {e}", file=sys.stderr)
+        return ""
+    if not runners:
+        return ""
+    online = [r for r in runners if r.get("status") == "online"]
+    busy = [r for r in runners if r.get("busy")]
+    per_label, online_per_label = collections.Counter(), collections.Counter()
+    for r in runners:
+        for lbl in r.get("labels", []):
+            per_label[lbl["name"]] += 1
+            if r.get("status") == "online":
+                online_per_label[lbl["name"]] += 1
+
+    out = ["## Runners by label", ""]
+    out.append(f"_Self-hosted runners registered to the [`{org}`]"
+               f"(https://github.com/{org}) GitHub organisation, grouped by label._")
+    out.append("")
+    out.append(f"**{len(runners)}** runners — **{len(online)}** online, "
+               f"**{len(runners) - len(online)}** offline, **{len(busy)}** busy.")
+    out.append("")
+    out.append("| Label | Runners | Online |")
+    out.append("|:------|--------:|-------:|")
+    for label, n in sorted(per_label.items(), key=lambda kv: (-kv[1], kv[0])):
+        out.append(f"| `{label}` | {n} | {online_per_label[label]} |")
+    out.append("")
+    return "\n".join(out)
+
+
+def build_report(api, token, gh_org=None, gh_token=None):
+    vms = netbox_get(api, token, f"/virtualization/virtual-machines/?role={ROLE}&limit=500")
+    rows = []
+    for v in vms:
+        loc = (v.get("site") or {}).get("name") or (v.get("cluster") or {}).get("name") or "—"
+        rows.append({
+            "name": v["name"],
+            "status": v["status"]["value"],
+            "threads": int(v.get("vcpus") or 0),
+            "ram": gb(v.get("memory")),
+            "loc": loc,
+        })
+    # biggest machines first; the capacity view
+    rows.sort(key=lambda r: (-r["threads"], r["name"]))
+
+    active = [r for r in rows if r["status"] == "active"]
+    total_threads = sum(r["threads"] for r in rows)
+    active_threads = sum(r["threads"] for r in active)
+    total_ram = sum(r["ram"] for r in rows)
+
+    out = []
+    out.append("## Runner fleet")
+    out.append("")
+    out.append(f"_Self-hosted runners from [NetBox](https://netbox.armbian.com/), "
+               f"role `{ROLE}`._")
+    out.append("")
+    out.append(f"**{len(rows)}** runners — **{len(active)}** active, "
+               f"**{len(rows) - len(active)}** offline · "
+               f"**{total_threads}** CPU threads (**{active_threads}** active) · "
+               f"**{total_ram}** GB RAM.")
+    out.append("")
+    out.append("| Runner | Location | Threads | RAM | Status |")
+    out.append("|:-------|:---------|--------:|----:|:------:|")
+    for r in rows:
+        status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
+        out.append(f"| `{r['name']}` | {r['loc']} | {r['threads']} | {r['ram']} GB | {status} |")
+    out.append("")
+
+    if gh_token:
+        gh = github_section(gh_org or DEFAULT_ORG, gh_token)
+        if gh:
+            out.append(gh)
+
+    return "\n".join(out)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--api", default=os.environ.get("NETBOX_API") or DEFAULT_API)
+    ap.add_argument("--org", default=os.environ.get("GH_ORG") or DEFAULT_ORG)
+    ap.add_argument("--output", help="write Markdown here (default: stdout)")
+    args = ap.parse_args()
+
+    token = os.environ.get("NETBOX_TOKEN")
+    if not token:
+        sys.exit("error: NETBOX_TOKEN is required (read-only NetBox API token)")
+    gh_token = os.environ.get("GH_RUNNERS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+
+    report = build_report(args.api.rstrip("/"), token, gh_org=args.org, gh_token=gh_token)
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as fh:
+            fh.write(report + "\n")
+        print(f"wrote {args.output}", file=sys.stderr)
+    else:
+        print(report)
+
+
+if __name__ == "__main__":
+    main()

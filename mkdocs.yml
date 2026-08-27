@@ -346,6 +346,7 @@ nav:
         - 'Mirrors' : 'status/mirrors.md'
         - 'Download images' : 'status/download-images.md'
         - 'Package repository' : 'status/package-repository.md'
+        - 'Build machinery' : 'status/build-machinery.md'
 
   - 'COMMUNITY' :
         - 'Forums' : 'community/forums.md'
