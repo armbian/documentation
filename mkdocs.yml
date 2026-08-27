@@ -344,6 +344,7 @@ nav:
         - 'Wi-Fi performance' : 'status/wifi-performance.md'
         - 'Datacenter boards' : 'status/boards.md'
         - 'Mirrors' : 'status/mirrors.md'
+        - 'Download images' : 'status/download-images.md'
         - 'Package repository' : 'status/package-repository.md'
 
   - 'COMMUNITY' :

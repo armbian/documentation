@@ -1,0 +1,83 @@
+name: "Download images status"
+
+# Reports which images we publish per board (from armbian-images.json) and
+# surfaces anomalies — outdated boards, non-standard boards on the download,
+# supported boards missing an image, desktop images for no-video boards. The
+# report goes to the run's job summary (visible at PR stage) and, on a
+# schedule / manual dispatch, is spliced into docs/status/download-images.md
+# and proposed as a PR.
+
+on:
+  pull_request:
+    paths:
+      - 'tools/download-images-report.py'
+      - '.github/workflows/download-images-status.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '15 7 * * MON'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  status:
+    name: "Download images report"
+    runs-on: ubuntu-24.04
+    if: ${{ github.repository_owner == 'armbian' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate download images report
+        run: |
+          python3 tools/download-images-report.py > report.md
+
+      - name: Upload Markdown report
+        uses: actions/upload-artifact@v4
+        with:
+          name: download-images-report
+          path: report.md
+          if-no-files-found: error
+
+      - name: Splice report into the docs page
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          PAGE="docs/status/download-images.md"
+          {
+            echo '<!-- download-images:start -->'
+            cat report.md
+            echo '<!-- download-images:end -->'
+          } > block.md
+          # Fail closed: require exactly one ordered marker pair before writing.
+          starts=$(grep -c '<!-- download-images:start -->' "$PAGE" || true)
+          ends=$(grep -c '<!-- download-images:end -->' "$PAGE" || true)
+          sline=$(grep -n '<!-- download-images:start -->' "$PAGE" | head -1 | cut -d: -f1)
+          eline=$(grep -n '<!-- download-images:end -->' "$PAGE" | head -1 | cut -d: -f1)
+          if [ "$starts" -ne 1 ] || [ "$ends" -ne 1 ] || [ "${sline:-0}" -ge "${eline:-0}" ]; then
+            echo "::error::download-images markers invalid in $PAGE (start=$starts end=$ends order=$sline/$eline)"
+            exit 1
+          fi
+          awk -v bf=block.md '
+            BEGIN { while ((getline l < bf) > 0) B = B l ORS }
+            /<!-- download-images:start -->/ { printf "%s", B; skip=1; next }
+            /<!-- download-images:end -->/   { skip=0; next }
+            !skip { print }
+          ' "$PAGE" > tmp.md && mv tmp.md "$PAGE"
+
+      - name: Create Pull Request
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '`Automatic` download images status update'
+          signoff: false
+          branch: auto-update-download-images
+          delete-branch: true
+          title: '`Automatic` download images status update'
+          body: |
+            Regenerated the report in `docs/status/download-images.md` from
+            `armbian-images.json` (coverage and anomalies).
+          labels: |
+            Needs review
+          draft: false
