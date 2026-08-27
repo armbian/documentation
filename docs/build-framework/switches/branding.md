@@ -1,13 +1,13 @@
 ---
 seo_title: "Armbian image branding / vendor build switches"
-description: "Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and the .deb package signatures."
+description: "Rebrand Armbian images: VENDOR, VENDORURL, VENDORLOGO, MAINTAINER and related switches that write /etc/os-release, /etc/issue, the login MOTD and .deb package metadata."
 ---
 
 # Branding
 
 Rebrand the built image's identity — the OS name, URLs, logo, MOTD colour and package maintainer. Set these to ship your own white-labelled images instead of stock Armbian. They are normally set together in a [build configuration file](/build-framework/getting-started/#cli).
 
-These switches populate the image's identity files: `/etc/os-release`, `/etc/issue` and `/etc/issue.net`, `/etc/armbian-release`, `/etc/armbian-image-release`, the login MOTD, and the signature on the generated `.deb` packages.
+These switches populate the image's identity files: `/etc/os-release`, `/etc/issue` and `/etc/issue.net`, `/etc/armbian-release`, `/etc/armbian-image-release`, the login MOTD, and the `Maintainer` field of the generated `.deb` packages.
 
 !!! info "Defaults are deliberate placeholders"
     Left unset, the framework fills these with placeholder fallbacks (shown as the defaults below), so an un-branded build identifies itself as `Armbian-unofficial` rather than masquerading as an official release. A branded build overrides the whole group — see the [example](#a-full-rebrand) at the end.
@@ -22,7 +22,7 @@ The vendor / OS name. Written to `/etc/os-release` `PRETTY_NAME` (as `<VENDOR> <
 
 `string` · optional
 
-A friendly vendor name recorded in `/etc/armbian-image-release` (`VENDORPRETTYNAME=`). Unset by default.
+A friendly vendor name recorded in `/etc/armbian-image-release` (`VENDORPRETTYNAME=`). Defaults to `VENDOR` in the image when left unset.
 
 #### VENDORCOLOR
 
@@ -64,19 +64,19 @@ Bug-report URL — os-release `BUG_REPORT_URL`.
 
 `string` · default: `armbian-logo`
 
-Freedesktop icon name written to os-release `LOGO=` — the icon that tools like the desktop **About** dialog or `fastfetch` resolve from the icon theme (the asset ships as `/usr/share/pixmaps/<name>.svg`). It is **not** the boot splash; to change the Plymouth boot logo see [Boot splash (Plymouth)](#boot-splash-plymouth) below.
+Freedesktop icon name written to os-release `LOGO=` — the icon that tools like the desktop **About** dialog or `fastfetch` resolve from the icon theme. The framework only ships the `armbian-logo` assets (e.g. `/usr/share/pixmaps/armbian-logo.svg`), so a custom value (say `acme-logo`) resolves to nothing unless you also install a matching icon of that name. It is **not** the boot splash; to change the Plymouth boot logo see [Boot splash (Plymouth)](#boot-splash-plymouth) below.
 
 #### MAINTAINER
 
 `string` · default: `John Doe`
 
-Maintainer name used to sign the generated `.deb` packages and recorded in `/etc/armbian-release`.
+Maintainer name written to the `Maintainer:` field of the generated `.deb` packages (`DEBIAN/control` and the changelog trailer) and recorded in `/etc/armbian-release`. It does not cryptographically sign the packages.
 
 #### MAINTAINERMAIL
 
 `string` · default: `john.doe@somewhere.on.planet`
 
-Maintainer e-mail used for the `.deb` package signatures.
+Maintainer e-mail written alongside `MAINTAINER` into the `.deb` `Maintainer:` field.
 
 ## A full rebrand
 
