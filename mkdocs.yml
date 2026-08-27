@@ -124,6 +124,8 @@ plugins:
         'User-Guide_Board-Support-Rules.md': 'contribute/board-support-rules.md'
         'Release_Board-Maintainers.md': 'contribute/board-maintainer.md'
         'Board_Maintainers_Procedures_and_Guidelines.md': 'contribute/board-maintainer.md'
+        'Process_Managing_Workflow.md': 'contribute/index.md'
+        'Process_Armbian-Task-Tracking.md': 'contribute/index.md'
         'Process_CI.md': 'contribute/automation.md'
 #   - with-pdf:
 #       author: Armbian documentation team
