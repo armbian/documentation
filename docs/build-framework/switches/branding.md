@@ -64,7 +64,7 @@ Bug-report URL — os-release `BUG_REPORT_URL`.
 
 `string` · default: `armbian-logo`
 
-Name of the logo asset used for the login MOTD — os-release `LOGO`.
+Freedesktop icon name written to os-release `LOGO=` — the icon that tools like the desktop **About** dialog or `fastfetch` resolve from the icon theme (the asset ships as `/usr/share/pixmaps/<name>.svg`). It is **not** the boot splash; to change the Plymouth boot logo see [Boot splash (Plymouth)](#boot-splash-plymouth) below.
 
 #### MAINTAINER
 
@@ -97,3 +97,19 @@ declare -g MAINTAINERMAIL="info@armbian.com"
 
 !!! note "Official builds"
     When `VENDOR=Armbian`, the framework also refuses vendor branding on community / unsupported combinations (it resets several of these fields), so only genuinely official images carry the full Armbian identity.
+
+## Boot splash (Plymouth)
+
+The graphical boot splash is a separate asset from the branding switches above — it is **not** controlled by `VENDORLOGO`. It ships in the `armbian-plymouth-theme` package.
+
+To use your own boot logo, replace the source image in the build framework:
+
+- **File:** `packages/plymouth-theme-armbian/armbian-logo.png`
+- **Size:** a **square PNG**, resized to **256×256** at build time — supply 256×256 (or a larger square; it is downscaled), on a transparent background (the splash background is black).
+
+The build installs it as `/usr/share/plymouth/themes/armbian/bgrt-fallback.png`. The `bgrt-fallback` name means it is the logo used when the firmware provides no BGRT boot logo — the case on virtually all SBCs, so this is the logo you actually see.
+
+Companion assets in the same folder: `watermark.png` (333×50, a wordmark shown centred) and `spinner.gif` (resized to a 52×52 throbber).
+
+!!! tip "Without editing the framework tree"
+    From `userpatches/customize-image.sh` you can overwrite `/usr/share/plymouth/themes/armbian/bgrt-fallback.png` (256×256) in the rootfs. Plymouth's early-boot copy lives in the initramfs, which the build regenerates after `customize-image.sh`, so dropping the file there is enough.
