@@ -54,9 +54,8 @@ def netbox_get(api, token, path):
 
 
 def gb(mb):
-    # NetBox stores memory in MB as a decimal GB value (512 GB -> 512000 MB),
-    # so divide by 1000 to show the number that was entered.
-    return round((mb or 0) / 1000)
+    # NetBox stores memory in MB (binary: 512 GB -> 524288 MB).
+    return round((mb or 0) / 1024)
 
 
 def github_runners(org, token):
