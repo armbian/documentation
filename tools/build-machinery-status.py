@@ -150,12 +150,6 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out = []
     out.append("## Build servers")
     out.append("")
-    out.append(f"_Build servers from [NetBox](https://netbox.armbian.com/), "
-               f"tagged `{TAG}`. The **Runners** column is the number of GitHub "
-               f"runner processes registered on that server (its runners are named "
-               f"`<server>-NN`), falling back to the value recorded in NetBox when "
-               f"GitHub can't be queried._")
-    out.append("")
     n_off = len(rows) - len(active)
     servers = f"**{len(rows)}** servers" + (f" (**{n_off}** offline)" if n_off else "")
     threads = f"**{total_threads}** threads" + (

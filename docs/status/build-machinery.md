@@ -13,8 +13,6 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-_Build servers from [NetBox](https://netbox.armbian.com/), tagged `github-runner`. The **Runners** column is the number of GitHub runner processes registered on that server (its runners are named `<server>-NN`), falling back to the value recorded in NetBox when GitHub can't be queried._
-
 **17** servers · **686** threads · **1932** GB RAM · **284** runners (**167** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
