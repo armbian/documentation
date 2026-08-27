@@ -190,46 +190,42 @@ def main():
             outdated.append((current_line[0]*100 + current_line[1] - (k[0]*100 + k[1]),  # minors behind
                              b, board_support.get(b, "?"), v, d.strftime("%Y-%m-%d") if d else "?", age))
     outdated.sort(key=lambda t: (-t[0], t[3]))
-    out.append("## Outdated boards")
-    out.append("")
-    out.append(f"_**{len(outdated)}** boards whose newest `dl.armbian.com` image is behind "
-               f"the current {current_str} line._")
     if outdated:
+        out.append("## Outdated boards")
+        out.append("")
+        out.append(f"_**{len(outdated)}** boards whose newest `dl.armbian.com` image is behind "
+                   f"the current {current_str} line._")
         rows = [[b, f"`{s}`", v, d, f"{age} d" if age is not None else "?"]
                 for _, b, s, v, d, age in outdated[:args.top]]
         out.append(md_table(["board", "support", "newest download version", "date", "age"], rows))
         if len(outdated) > args.top:
             out.append(f"\n_…and {len(outdated) - args.top} more._")
-    else:
-        out.append("_None._")
-    out.append("")
+        out.append("")
 
     # ---- CHECK 2: non-standard boards on the download ----
     nonconf = collections.defaultdict(set)
     for a in assets:
         if a.get("download_repository") == DOWNLOAD_REPO and a.get("board_support") != "conf":
             nonconf[a["board_slug"]].add(a.get("board_support", "?"))
-    out.append("## Non-standard boards")
-    out.append("")
-    out.append(f"_**{len(nonconf)}** `csc`/`wip`/`tvb` boards with images on "
-               f"`dl.armbian.com` (the main per-board download)._")
     if nonconf:
+        out.append("## Non-standard boards")
+        out.append("")
+        out.append(f"_**{len(nonconf)}** `csc`/`wip`/`tvb` boards with images on "
+                   f"`dl.armbian.com` (the main per-board download)._")
         rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
                 for b, s in sorted(nonconf.items())]
         out.append(md_table(["board", "support", "newest version", "name"], rows))
-    else:
-        out.append("_None._")
-    out.append("")
+        out.append("")
 
     # ---- CHECK 3: supported boards with no download image ----
     conf_boards = {b for b, s in board_support.items() if s == "conf"}
     on_download = set(dl_newest)
     missing = sorted(conf_boards - on_download)
-    out.append("## Missing download images")
-    out.append("")
-    out.append(f"_**{len(missing)}** `conf` (standard-support) boards absent from "
-               f"`dl.armbian.com` — only nightly/appliance, or nowhere._")
     if missing:
+        out.append("## Missing download images")
+        out.append("")
+        out.append(f"_**{len(missing)}** `conf` (standard-support) boards absent from "
+                   f"`dl.armbian.com` — only nightly/appliance, or nowhere._")
         rows = []
         for b in missing:
             where = sorted({a.get("download_repository", "") for a in assets
@@ -237,9 +233,7 @@ def main():
             rows.append([b, board_name.get(b, b),
                          ", ".join(("orphaned" if r == "" else REPO_LABELS.get(r, r).split(" ")[0]) for r in where) or "—"])
         out.append(md_table(["board", "name", "present in"], rows))
-    else:
-        out.append("_None._")
-    out.append("")
+        out.append("")
 
     # ---- CHECK 4: desktop images for no-video boards ----
     novideo = collections.defaultdict(set)
@@ -247,18 +241,14 @@ def main():
         b = a["board_slug"]
         if a.get("variant") not in NON_DESKTOP_VARIANTS and video.get(b) is False:
             novideo[b].add(f"{a.get('variant')}·{a.get('branch')}·{a.get('download_repository') or '?'}")
-    out.append("## Desktop images without video")
-    out.append("")
-    if not video:
-        out.append("_Skipped: image-info.json (BOARD_HAS_VIDEO) not available._")
-    elif novideo:
+    if novideo:
+        out.append("## Desktop images without video")
+        out.append("")
         out.append(f"_**{len(novideo)}** boards whose inventory reports no video output "
                    f"yet have a desktop-variant image._")
         out.append(md_table(["board", "name", "desktop images (variant·branch·channel)"],
                             [[b, board_name.get(b, b), ", ".join(sorted(s))] for b, s in sorted(novideo.items())]))
-    else:
-        out.append("_None._")
-    out.append("")
+        out.append("")
 
     report = "\n".join(out)
     print(report)

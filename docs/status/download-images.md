@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:26 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:28 UTC._
 
 ## Overview
 
@@ -78,9 +78,5 @@ _**3** `conf` (standard-support) boards absent from `dl.armbian.com` — only ni
 | beagley-ai | BeagleY-AI | Appliance |
 | mba93xxla-mini | MBa93xxLA-MINI | CI, Appliance |
 | tq-smarc2-tqma8mpxs | TQ-SMARC2-TQMa8MPxS | CI, Appliance |
-
-## Desktop images without video
-
-_None._
 
 <!-- download-images:end -->
