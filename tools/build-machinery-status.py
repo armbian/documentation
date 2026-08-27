@@ -164,10 +164,9 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out.append("| Server | Location | Threads | RAM | Runners | Status |")
     out.append("|:-------|:---------|--------:|----:|--------:|:------:|")
     for r in rows:
-        if r["ronline"] is not None:               # matched on GitHub
-            status = "online" if r["ronline"] else "⚠️ offline"
-        else:                                      # NetBox fallback
-            status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
+        # status always from NetBox: some servers are powered on demand, so
+        # their runners can read offline on GitHub while the server is fine
+        status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
         name = r["label"] or r["name"]
         runners = str(r["rcount"]) if r["rcount"] is not None else "—"
         out.append(f"| `{name}` | {r['loc']} | {r['threads']} | {r['ram']} GB "
