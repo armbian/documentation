@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**17** servers · **686** threads · **1932** GB RAM · **284** runners (**167** online).
+**17** servers · **686** threads · **1933** GB RAM · **284** runners (**167** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -38,7 +38,7 @@ runner processes each server hosts (from the
 | `oregon-1` | Oregon UNI | 16 | 32 GB | 8 | active |
 | `oregon-2` | Oregon UNI | 16 | 32 GB | 8 | active |
 | `stmir` | JetHome | 16 | 94 GB | 12 | active |
-| `vps3000-1` | Netcup Germany | 12 | 23 GB | 8 | active |
+| `vps3000-1` | Netcup Germany | 12 | 24 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
 | `werner-trixie` | Hetzner Germany | 8 | 31 GB | 4 | active |
 | `xogium-ryzen` | Xogium | 8 | 8 GB | 4 | active |
