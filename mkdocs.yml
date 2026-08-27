@@ -73,7 +73,10 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        'User-Guide_Allwinner_overlays.md': 'User-Guide_Armbian_overlays.md'
+        # Device-tree overlays are managed through armbian-config now; the old
+        # manual overlay pages redirect to the config docs.
+        'User-Guide_Allwinner_overlays.md': 'config/index.md'
+        'User-Guide_Armbian_overlays.md': 'config/index.md'
         'Release_Changelog.md': 'releases/index.md'
         # Multipass is no longer referenced anywhere in armbian/build; Docker is
         # the supported containerised host.
@@ -200,7 +203,6 @@ nav:
             - 'Advanced Configuration': 'User-Guide_Advanced-Configuration.md'
             - 'Networking' : 'User-Guide_Networking.md'
             - 'Firstboot config': 'User-Guide_Autoconfig.md'
-            #- 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
         - 'Troubleshooting and Recovery' : 'User-Guide_Troubleshooting.md'
         #- 'Recovery' : 'User-Guide_Recovery.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
