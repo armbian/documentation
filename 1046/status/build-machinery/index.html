@@ -6435,8 +6435,8 @@ runner processes each server hosts (from the
 <a href="https://github.com/armbian">GitHub organisation</a>).</p>
 <!-- build-machinery:start -->
 <h2 id="build-servers">Build servers<a class="headerlink" href="#build-servers" title="Permanent link">&para;</a></h2>
-<p><em>Build servers from <a href="https://netbox.armbian.com/">NetBox</a>, role <code>userlevel-runner</code>. The <strong>Runners</strong> column is the number of GitHub runner processes registered on that server (matched by its label), falling back to the value recorded in NetBox when GitHub can&rsquo;t be queried.</em></p>
-<p><strong>20</strong> servers — <strong>16</strong> active, <strong>4</strong> offline · <strong>730</strong> CPU threads (<strong>690</strong> active) · <strong>2045</strong> GB RAM · <strong>235</strong> runners.</p>
+<p><em>Build servers from <a href="https://netbox.armbian.com/">NetBox</a>, role <code>userlevel-runner</code>. The <strong>Runners</strong> column is the number of GitHub runner processes registered on that server (its runners are named <code>&lt;server&gt;-NN</code>), falling back to the value recorded in NetBox when GitHub can&rsquo;t be queried.</em></p>
+<p><strong>20</strong> servers — <strong>16</strong> active, <strong>4</strong> offline · <strong>730</strong> CPU threads (<strong>690</strong> active) · <strong>2045</strong> GB RAM · <strong>268</strong> runners (<strong>104</strong> online).</p>
 <table>
 <thead>
 <tr>
@@ -6454,24 +6454,24 @@ runner processes each server hosts (from the
 <td style="text-align: left;">Hetzner Germany</td>
 <td style="text-align: right;">176</td>
 <td style="text-align: right;">375 GB</td>
-<td style="text-align: right;">50</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: center;">online</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>ampere-1</code></td>
 <td style="text-align: left;">GitHub</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">500 GB</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>kspace</code></td>
 <td style="text-align: left;">Imola</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">264 GB</td>
-<td style="text-align: right;">24</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: center;">online</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>github</code></td>
@@ -6487,7 +6487,7 @@ runner processes each server hosts (from the
 <td style="text-align: right;">32</td>
 <td style="text-align: right;">125 GB</td>
 <td style="text-align: right;">8</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>game</code></td>
@@ -6503,23 +6503,23 @@ runner processes each server hosts (from the
 <td style="text-align: right;">32</td>
 <td style="text-align: right;">125 GB</td>
 <td style="text-align: right;">15</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>stpete</code></td>
 <td style="text-align: left;">JetHome</td>
 <td style="text-align: right;">24</td>
 <td style="text-align: right;">64 GB</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>geekom</code></td>
 <td style="text-align: left;">Mirrors</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">62 GB</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>cats</code></td>
@@ -6527,7 +6527,7 @@ runner processes each server hosts (from the
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">32 GB</td>
 <td style="text-align: right;">6</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: center;">online</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mind</code></td>
@@ -6558,8 +6558,8 @@ runner processes each server hosts (from the
 <td style="text-align: left;">Netcup Germany</td>
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">16 GB</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: center;">online</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mt7925e</code></td>
@@ -6607,7 +6607,7 @@ runner processes each server hosts (from the
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">24 GB</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: center;">active</td>
+<td style="text-align: center;">⚠️ offline</td>
 </tr>
 </tbody>
 </table>
