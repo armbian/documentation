@@ -30,7 +30,7 @@ bananapim7/archive/Armbian_[0-9].*Bananapim7_bookworm_vendor_[0-9]*.[0-9]*.[0-9]
 
 Maximum 2 images per board: **bookworm minimal** for all boards, plus a second image based on hardware classification (see table below). LoongArch boards only get one image (bookworm minimal only).
 
-![Standard support images](images/standard-support-images.png)
+![Standard support images](../images/standard-support-images.png)
 
 ### Target generation
 
@@ -122,7 +122,7 @@ Unfortunatelly this part does not have testing at PR stage.
 ## Prepare Standard Support images for release
 
 ???+ Info
-    Manual executing permissions are tied to [release manager role](/Process_Contribute/#release-manager).
+    Manual executing permissions are tied to [release manager role](/contribute/#release-manager).
 
 [![Build Standard Support Images](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml/badge.svg)](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml)
 
@@ -140,11 +140,11 @@ This build workflow is executed manually when making:
 
 ### 1. Open [workflow](https://github.com/armbian/ci/actions/workflows/build-standard-support.yml) and click
 
-![Run Workflow](images/run-workflow.png)
+![Run Workflow](../images/run-workflow.png)
 
 ### 2. Select board
 
-![Workflow](images/complete-artifact-matrix-standard-support.png)
+![Workflow](../images/complete-artifact-matrix-standard-support.png)
 
 **Bump version**: Select if you want to trigger system wide version bump.
 **Version override**: Set version under which you want to release images.
@@ -153,7 +153,7 @@ Versioning is driven by the GitHub releases on the target repository — there i
 
 ### 3. Run workflow
 
-![Build](images/run-worflow-button.png)
+![Build](../images/run-worflow-button.png)
 
 **(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)**
 
@@ -197,23 +197,23 @@ This build workflow is executed manually when making:
 
 ### 1. Open [workflow](https://github.com/armbian/ci/actions/workflows/build-apps.yml) and click
 
-![Run Workflow](images/run-workflow.png)
+![Run Workflow](../images/run-workflow.png)
 
 ### 2. Select board
 
-![Workflow](images/complete-artifact-matrix-standard-support.png)
+![Workflow](../images/complete-artifact-matrix-standard-support.png)
 
 **Version override**: Use this feature if you want to keep them under the same version, but not lower then [last released](https://docs.armbian.com/releases/).
 
 ### 3. Run workflow
 
-![Build](images/run-worflow-button.png)
+![Build](../images/run-worflow-button.png)
 
 **(Workflow takes around 15 minutes to complete. In case of network issues it can also take hours)**
 
 Generated images are hosted at GitHub [https://github.com/armbian/distribution/releases](https://github.com/armbian/distribution/releases) and released at once. Automation refreshes download pages within 15-30 minutes after/if workflow finished succesfully.
 
-![Dedicated Application Images](images/dedicated-applications.png)
+![Dedicated Application Images](../images/dedicated-applications.png)
 
 ### Aditional options
 
@@ -238,7 +238,7 @@ This pulls packages from build framework OCI cache located at GitHub and from [v
 
 ### 1. Open [workflow](https://github.com/armbian/armbian.github.io/actions/workflows/infrastructure-repository-update.yml) and click
 
-![Run Workflow](images/run-workflow.png)
+![Run Workflow](../images/run-workflow.png)
 
 Action is executed automatically when artifact generations completes. Or manually.
 
@@ -251,7 +251,7 @@ is selected.
 
 ### 3. Run workflow
 
-![Build](images/run-worflow-button.png)
+![Build](../images/run-worflow-button.png)
 
 **(Workflow takes around 60 minutes to complete)**
 
@@ -271,7 +271,7 @@ Generates all nightly (Rolling Release) images defined in [targets-release-night
 
 This build job runs every night and can also be run manually when needed. Download pages are refreshed [automatically](https://github.com/armbian/armbian.github.io/actions/workflows/data-update-download-index.yml) after successful build.
 
-![Build](images/rolling-releases.png)
+![Build](../images/rolling-releases.png)
 
 ## Build all artifacts (admin/PR)
 

@@ -112,6 +112,19 @@ plugins:
         'Developer-Guide_Welcome.md': 'build-framework/getting-started.md'
         # The transition-era CLI page was folded into Commands/Switches
         'build-framework/cli.md': 'build-framework/commands/index.md'
+        # Community / Contribute pages moved to SEO-friendly /community/ and /contribute/ URLs
+        'Community_Forums.md': 'community/forums.md'
+        'Community_IRC.md': 'community/chat.md'
+        'Community_Github.md': 'community/github.md'
+        'Process_Contribute.md': 'contribute/index.md'
+        'Contribute/Armbian-config.md': 'contribute/armbian-config.md'
+        'WifiPerformance.md': 'contribute/wifi-performance.md'
+        'Mirrors.md': 'contribute/mirrors.md'
+        'Contribute/Datacenter.md': 'contribute/datacenter.md'
+        'User-Guide_Board-Support-Rules.md': 'contribute/board-support-rules.md'
+        'Release_Board-Maintainers.md': 'contribute/board-maintainer.md'
+        'Board_Maintainers_Procedures_and_Guidelines.md': 'contribute/maintainer-guidelines.md'
+        'Process_CI.md': 'contribute/automation.md'
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
@@ -323,20 +336,21 @@ nav:
         - 'Adding a Board' : 'build-framework/adding-a-board.md'
 
   - 'ARMBIAN COMMUNITY' :
-        - 'Get involved' : 'Process_Contribute.md'
-        - 'Connect' :
-            - 'Forums' : 'Community_Forums.md'
-            - 'Chat & social' : 'Community_IRC.md'
-            - 'GitHub' : 'Community_Github.md'
+        - 'Forums' : 'community/forums.md'
+        - 'Chat & social' : 'community/chat.md'
+        - 'GitHub' : 'community/github.md'
+
+  - 'CONTRIBUTE' :
+        - 'Get involved' : 'contribute/index.md'
         - 'Ways to contribute' :
-            - 'Add software to armbian-config' : 'Contribute/Armbian-config.md'
-            - 'Wi-Fi performance testing' : 'WifiPerformance.md'
-            - 'Mirrors' : 'Mirrors.md'
-            - 'Datacenter access' : 'Contribute/Datacenter.md'
+            - 'Add software to armbian-config' : 'contribute/armbian-config.md'
+            - 'Wi-Fi performance testing' : 'contribute/wifi-performance.md'
+            - 'Mirrors' : 'contribute/mirrors.md'
+            - 'Datacenter access' : 'contribute/datacenter.md'
         - 'Maintainers & board rules' :
-            - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
-            - 'Become a board maintainer' : 'Release_Board-Maintainers.md'
-            - 'Maintainer procedures & guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
+            - 'Board Support Rules' : 'contribute/board-support-rules.md'
+            - 'Become a board maintainer' : 'contribute/board-maintainer.md'
+            - 'Maintainer procedures & guidelines' : 'contribute/maintainer-guidelines.md'
         - 'Project processes' :
-            - 'Automation (CI)' : 'Process_CI.md'
+            - 'Automation (CI)' : 'contribute/automation.md'
 

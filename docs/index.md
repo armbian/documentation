@@ -94,7 +94,7 @@ distribution.
 | Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
 | Maintenance | modular and reviewed; `armbian-config` is [unit tested per pull request](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
 | User-space | Debian or Ubuntu based, with Armbian packages and configuration | the vendor's own image | stock distribution user space |
-| Declaring support | Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the [Board Support Rules](User-Guide_Board-Support-Rules.md) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
+| Declaring support | Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the [Board Support Rules](/contribute/board-support-rules/) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
 
 
 ## Which hardware is supported?
@@ -115,7 +115,7 @@ Most of the images for boards in this category will also work, but no warranty c
 
 *Supported / maintained* is not a guarantee, though. It merely implies that a particular SBC is at a **high level of software maturity** and has a named maintainer. Due to the complexity and lack of cooperation in the ecosystem, it is unlikely that all specialized functionalities (like 3D, VE, I²C...) are always available.
 
-For more information see the [Board Support Guide](User-Guide_Board-Support-Rules.md)
+For more information see the [Board Support Guide](/contribute/board-support-rules/)
 
 
 ## Where to find images and sources?
@@ -127,4 +127,4 @@ The project sources are hosted on [GitHub](https://github.com/armbian) and are o
 
 ## How can you contribute?
 
-If you want to contribute to our project, please read the [collaboration notes](Process_Contribute.md).
+If you want to contribute to our project, please read the [collaboration notes](/contribute/).

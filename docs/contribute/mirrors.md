@@ -8,7 +8,7 @@ comments: true
 ## Introduction  
 The [Armbian mirror system](https://github.com/armbian/armbian-router) is designed to efficiently distribute files, ensuring users get the best available server based on geographic proximity and server availability. This document outlines the mirroring system's operational flow, technical specifications for mirrors, and how to contribute a new server.
 
-![armbian-mirror-explication](images/armbian-mirror-explication.png)
+![armbian-mirror-explication](../images/armbian-mirror-explication.png)
 
 ## Operational Flow  
 

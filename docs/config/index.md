@@ -55,7 +55,7 @@ sudo apt -y install armbian-config
 
 ## Contribute
 
-Want to expand Armbian Config with a new feature, software title, or configuration module? Contributions are welcome — see the [contribution guide](/Contribute/Armbian-config/). Keep changes modular and easy to maintain, so they are quick to review and merge.
+Want to expand Armbian Config with a new feature, software title, or configuration module? Contributions are welcome — see the [contribution guide](/contribute/armbian-config/). Keep changes modular and easy to maintain, so they are quick to review and merge.
 
 ## Sources
 

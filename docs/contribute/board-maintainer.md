@@ -7,7 +7,7 @@ description: "Become an Armbian board maintainer: application steps, requirement
 
 ## How to become a maintainer?
 
-If you are interested in being a maintainer please review [Board Support Rules](/User-Guide_Board-Support-Rules/). Then [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance. Once accepted you will be added to our infrastruture. For this reason we need [additional information](https://www.armbian.com/maintainer-registry/) to complete your registration process.
+If you are interested in being a maintainer please review [Board Support Rules](/contribute/board-support-rules/). Then [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance. Once accepted you will be added to our infrastruture. For this reason we need [additional information](https://www.armbian.com/maintainer-registry/) to complete your registration process.
 
 !!! question "Requirements?"
 

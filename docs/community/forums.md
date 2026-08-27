@@ -5,4 +5,4 @@ description: "Armbian community forums at forum.armbian.com for single-board com
 
 <https://forum.armbian.com/>
 
-![](images/forums.png)
+![](../images/forums.png)
