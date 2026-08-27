@@ -70,6 +70,7 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: docs/status/download-images.md
           commit-message: '`Automatic` download images status update'
           signoff: false
           branch: auto-update-download-images
