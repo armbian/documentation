@@ -68,6 +68,7 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: docs/status/build-machinery.md
           commit-message: '`Automatic` build machinery status update'
           signoff: false
           branch: auto-update-build-machinery
