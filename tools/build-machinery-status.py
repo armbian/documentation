@@ -25,15 +25,16 @@ import argparse
 import collections
 import json
 import os
+import re
 import sys
 import urllib.request
 
 DEFAULT_API = "https://netbox.armbian.com/api"
 ROLE = "userlevel-runner"
 DEFAULT_ORG = "armbian"
-# GitHub-assigned default labels; the runner's own name comes from what's left.
-GH_DEFAULT_LABELS = {"self-hosted", "linux", "macos", "windows",
-                     "x64", "x86", "arm", "arm64"}
+# Runners are named "<server>-01", "<server>-02", ...; strip the trailing index
+# to group a server's runners (e.g. insa-trixie-01 -> insa-trixie).
+RUNNER_INDEX = re.compile(r"-\d+$")
 
 
 def netbox_get(api, token, path):
@@ -90,17 +91,15 @@ def github_runner_counts(org, token):
     except Exception as e:
         print(f"::warning::GitHub runners unavailable: {e}", file=sys.stderr)
         return None
-    per_label, online_label = collections.Counter(), collections.Counter()
+    per_server, online_server = collections.Counter(), collections.Counter()
     for r in runners:
-        is_online = r.get("status") == "online"
-        for lbl in r.get("labels", []):
-            name = lbl["name"].lower()
-            if name not in GH_DEFAULT_LABELS:
-                per_label[name] += 1
-                if is_online:
-                    online_label[name] += 1
+        # a server's runners are named "<server>-NN"; group by the prefix
+        key = RUNNER_INDEX.sub("", r.get("name", "")).lower()
+        per_server[key] += 1
+        if r.get("status") == "online":
+            online_server[key] += 1
     online = sum(1 for r in runners if r.get("status") == "online")
-    return {"labels": per_label, "online_labels": online_label,
+    return {"servers": per_server, "online_servers": online_server,
             "total": len(runners), "online": online}
 
 
@@ -134,12 +133,12 @@ def build_report(api, token, gh_org=None, gh_token=None):
     # matched by the label when we can query it, otherwise the NetBox value.
     gh = github_runner_counts(gh_org or DEFAULT_ORG, gh_token) if gh_token else None
     for r in rows:
-        key = (r["label"] or "").lower()
-        if gh is not None and key:
-            r["rcount"] = gh["labels"].get(key, 0)
-            r["ronline"] = gh["online_labels"].get(key, 0)
+        key = (r["label"] or r["name"] or "").lower()
+        if gh is not None and key in gh["servers"]:
+            r["rcount"] = gh["servers"][key]
+            r["ronline"] = gh["online_servers"].get(key, 0)
         else:
-            r["rcount"] = r.get("nb_runners")   # may be None
+            r["rcount"] = r.get("nb_runners")   # NetBox fallback (may be None)
             r["ronline"] = None
 
     total_runners = sum(r["rcount"] for r in rows if r["rcount"] is not None)
@@ -150,8 +149,9 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out.append("")
     out.append(f"_Build servers from [NetBox](https://netbox.armbian.com/), "
                f"role `{ROLE}`. The **Runners** column is the number of GitHub "
-               f"runner processes registered on that server (matched by its label), "
-               f"falling back to the value recorded in NetBox when GitHub can't be queried._")
+               f"runner processes registered on that server (its runners are named "
+               f"`<server>-NN`), falling back to the value recorded in NetBox when "
+               f"GitHub can't be queried._")
     out.append("")
     summary = (f"**{len(rows)}** servers — **{len(active)}** active, "
                f"**{len(rows) - len(active)}** offline · "
@@ -164,9 +164,9 @@ def build_report(api, token, gh_org=None, gh_token=None):
     out.append("| Server | Location | Threads | RAM | Runners | Status |")
     out.append("|:-------|:---------|--------:|----:|--------:|:------:|")
     for r in rows:
-        if gh is not None and r["label"]:
+        if r["ronline"] is not None:               # matched on GitHub
             status = "online" if r["ronline"] else "⚠️ offline"
-        else:
+        else:                                      # NetBox fallback
             status = "active" if r["status"] == "active" else f"⚠️ {r['status']}"
         name = r["label"] or r["name"]
         runners = str(r["rcount"]) if r["rcount"] is not None else "—"
