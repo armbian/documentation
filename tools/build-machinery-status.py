@@ -44,6 +44,10 @@ def netbox_get(api, token, path):
     results = []
     url = f"{api}{path}"
     while url:
+        # never send the token over cleartext (api may be misconfigured, and the
+        # `next` URL is server-provided)
+        if not url.lower().startswith("https://"):
+            sys.exit(f"error: refusing to send the NetBox token over non-HTTPS URL: {url}")
         req = urllib.request.Request(url, headers={
             "Authorization": f"Token {token}",
             "Accept": "application/json",
