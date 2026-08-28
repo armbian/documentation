@@ -13,24 +13,25 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**77** boards — **25** operational, **52** broken.
+**75** boards — **26** operational, **49** broken.
 
-Reconcile made: 2026-08-28 15:27 UTC
+Reconcile made: 2026-08-28 15:51 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
+| Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
 | Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | TP-Link SG3428X (14) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Netgear GS348 (32) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
-| Helios4 02 | 10.0.50.152 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Helios4 01 | 10.0.50.52 | local | 1 GbE | Netgear GS348 (11) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Le potato 01 | 10.0.50.75 | local | 100 MbE | Netgear GS348 (12) |
-| NanoPi 6 series (R6S/R6C/M6) 01 | 10.0.50.79 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | NanoPi R1 01 | 10.0.50.59 | local | 1 GbE | Netgear GS348 (14) |
 | NanoPi R76S 01 | 10.0.50.77 | local | 2.5 GbE | Netgear XS508M (7) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear GS348 (28) |
@@ -52,23 +53,20 @@ Reconcile made: 2026-08-28 15:27 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M5 01 | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) |
-| Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
 | BananaPi BPI-F3 01 | 10.0.50.78 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link SG3428X (12) |
-| Helios4 01 | 10.0.50.58 | local | 1 GbE | Netgear GS348 (11) |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) |
 | Mekotronics R58S2 01 | 10.0.50.19 | local | 1 GbE | Netgear GS348 (48) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
+| NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 48P Poe (4) |
 | NanoPi Duo 01 | 10.0.50.48 | local | 100 MbE | Netgear GS348 (31) |
 | NanoPi K2 01 | 10.0.50.76 | local | 1 GbE | Netgear GS348 (20) |
-| NanoPi M4V2 01 | 10.0.50.97 | local | 1 GbE | Netgear S3300 (7) |
-| NanoPi M4V2 02 | 10.0.50.10 | local | 1 GbE | — |
+| NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 48P Poe (5) |
 | NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300 (5) |
 | NanoPi M6 01 | 10.0.50.18 | local | 1 GbE | Netgear S3300 (39) |
 | NanoPi M6 03 | 10.0.50.67 | local | Wi-Fi 5 | Zyxel NWA130BE |
@@ -89,7 +87,7 @@ Reconcile made: 2026-08-28 15:27 UTC
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
-| Raspberry Pi 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (1) |
+| Raspberry Pi 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi 02 | 10.0.50.22 | local | 100 MbE | Netgear GS348 (21) |
 | Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rock 5B 02 | 10.0.50.17 | local | 2.5 GbE | Netgear XS508M (5) |
