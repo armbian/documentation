@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**74** boards — **58** operational, **16** broken.
+**74** boards — **56** operational, **18** broken.
 
-Reconcile made: 2026-08-28 11:01 UTC
+Reconcile made: 2026-08-28 12:52 UTC
 
 **Operational**
 
@@ -27,7 +27,6 @@ Reconcile made: 2026-08-28 11:01 UTC
 | Banana Pi M2Pro 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300-52X-PoE+ (47) |
 | Banana Pi M5 01 | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) |
-| BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) |
 | Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) |
 | Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) |
 | Cubietruck 01 | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) |
@@ -66,7 +65,6 @@ Reconcile made: 2026-08-28 11:01 UTC
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ (45) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | TP-Link TL-SG3428X (19) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300-52X-PoE+ (9) |
-| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300-52X-PoE+ (1) |
 | Raspberry Pi 02 | 10.0.50.22 | local | 100 MbE | Netgear GS348 (21) |
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE |
@@ -85,6 +83,7 @@ Reconcile made: 2026-08-28 11:01 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
+| BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
@@ -95,6 +94,7 @@ Reconcile made: 2026-08-28 11:01 UTC
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X (9) |
+| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link TL-SG3428X (15) |
 | Udoo 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300-52X-PoE+ (37) |
