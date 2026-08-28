@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **74** boards — **58** operational, **16** broken.
 
-Reconcile made: 2026-08-28 07:01 UTC
+Reconcile made: 2026-08-28 10:18 UTC
 
 **Operational**
 
@@ -29,7 +29,7 @@ Reconcile made: 2026-08-28 07:01 UTC
 | Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) |
 | BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) |
 | Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) |
-| Cubie A5E 01 | 10.0.60.185 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) |
+| Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) |
 | Cubietruck 01 | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) |
 | Cubox i2eX/i4 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (32) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link TL-SG3428X (11) |
