@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**74** boards — **60** operational, **14** broken.
+**74** boards — **58** operational, **16** broken.
 
-Reconcile made: 2026-08-27 18:11 UTC
+Reconcile made: 2026-08-28 07:01 UTC
 
 **Operational**
 
@@ -29,7 +29,7 @@ Reconcile made: 2026-08-27 18:11 UTC
 | Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) |
 | BananaPi BPI-F3 01 | 10.0.50.70 | local | 1 GbE | Netgear S3300-52X-PoE+ (46) |
 | Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link TL-SG3428X (12) |
-| Cubie A5E 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) |
+| Cubie A5E 01 | 10.0.60.185 | local | 1 GbE | Netgear S3300-52X-PoE+ (4) |
 | Cubietruck 01 | 10.0.50.49 | local | 1 GbE | TP-Link TL-SG3428X (14) |
 | Cubox i2eX/i4 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (32) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link TL-SG3428X (11) |
@@ -63,7 +63,6 @@ Reconcile made: 2026-08-27 18:11 UTC
 | Orange Pi R1 01 | 10.0.50.25 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300-52X-PoE+ (13) |
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X (20) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300-52X-PoE+ (45) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | TP-Link TL-SG3428X (19) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300-52X-PoE+ (9) |
@@ -79,7 +78,6 @@ Reconcile made: 2026-08-27 18:11 UTC
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 1 GbE | Netgear S3300-52X-PoE+ (52) |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300-52X-PoE+ (15) |
-| Udoo 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300-52X-PoE+ (37) |
 | UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300-52X-PoE+ (2) |
 
 **Broken**
@@ -95,9 +93,11 @@ Reconcile made: 2026-08-27 18:11 UTC
 | NanoPi M6 03 | 10.0.50.67 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | NanoPi M6 04 | 10.0.50.164 | local | 1 GbE | — |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link TL-SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link TL-SG3428X (9) |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link TL-SG3428X (15) |
+| Udoo 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300-52X-PoE+ (37) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | Z28 PRO 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300-52X-PoE+ (17) |
 
