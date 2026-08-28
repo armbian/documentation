@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **39** operational, **37** broken.
+**75** boards — **39** operational, **36** broken.
 
-Reconcile made: 2026-08-28 18:35 UTC
+Reconcile made: 2026-08-28 18:45 UTC
 
 **Operational**
 
@@ -88,7 +88,6 @@ Reconcile made: 2026-08-28 18:35 UTC
 | Odroid C2 01 | 10.0.50.87 | local | 1 GbE | Netgear GS348 (7) |
 | Odroid N2 01 | 10.0.60.10 | local | 1 GbE | Netgear S3300 (14) |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
-| Orange Pi 5 Plus 02 | 10.0.50.33 | local | 2.5 GbE | — |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (13) |
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
