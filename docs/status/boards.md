@@ -13,18 +13,21 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **22** operational, **54** broken.
+**77** boards — **25** operational, **52** broken.
 
-Reconcile made: 2026-08-28 15:13 UTC
+Reconcile made: 2026-08-28 15:27 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (43) |
+| Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (4) |
+| Cubietruck 01 | 10.0.50.82 | local | 1 GbE | TP-Link SG3428X (14) |
+| Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Netgear GS348 (32) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
+| Helios4 02 | 10.0.50.152 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Le potato 01 | 10.0.50.75 | local | 100 MbE | Netgear GS348 (12) |
 | NanoPi 6 series (R6S/R6C/M6) 01 | 10.0.50.79 | local | Wi-Fi 5 | Zyxel NWA130BE |
@@ -49,15 +52,13 @@ Reconcile made: 2026-08-28 15:13 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi M2 Ultra 01 | 10.0.50.47 | local | 1 GbE | TP-Link SG3428X (13) |
-| Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.55 | local | 1 GbE | Netgear GS348 (19) |
-| Banana Pi Pro 01 | 10.0.50.52 | local | 100 MbE | Netgear GS348 (8) |
+| Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
 | BananaPi BPI-F3 01 | 10.0.50.78 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.42 | local | 1 GbE | TP-Link SG3428X (12) |
-| Cubietruck 01 | 10.0.50.82 | local | 1 GbE | TP-Link SG3428X (14) |
-| Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Netgear GS348 (32) |
 | Helios4 01 | 10.0.50.58 | local | 1 GbE | Netgear GS348 (11) |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
