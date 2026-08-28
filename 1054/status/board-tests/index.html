@@ -6391,7 +6391,7 @@
 
 <h1 id="tested-boards">Tested boards<a class="headerlink" href="#tested-boards" title="Permanent link">&para;</a></h1>
 <p>Every board in the Armbian test datacenter runs an automated pipeline — a nightly <strong>upgrade</strong>, a <strong>reboot</strong>, hardware <strong>performance</strong> and <strong>DVFS</strong> checks and a <strong>network</strong> throughput test — before being restored to the stable release. The table below is the <strong>current status</strong>: the most recent test of each board.</p>
-<p>The list is refreshed by the fleet test workflow in the <a href="https://github.com/armbian/autotests">autotests repo</a>: it reads the rolling <a href="https://github.com/armbian/autotests/releases/tag/test-results"><code>test-results</code></a> release and opens a pull request to update this table — the same mechanism used for the <a href="/status/boards/">datacenter boards</a> and <a href="/status/wifi-performance/">Wi-Fi performance</a> pages.</p>
+<p>The list is refreshed automatically by the Armbian autotests fleet: a scheduled job reads the fleet&rsquo;s rolling test results and opens a pull request to update this table — the same mechanism used for the <a href="/status/boards/">datacenter boards</a> and <a href="/status/wifi-performance/">Wi-Fi performance</a> pages.</p>
 <p>Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.</p>
 <!-- FLEET-START -->
 
