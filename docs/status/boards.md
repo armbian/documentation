@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **38** operational, **38** broken.
+**76** boards — **39** operational, **37** broken.
 
-Reconcile made: 2026-08-28 18:15 UTC
+Reconcile made: 2026-08-28 18:35 UTC
 
 **Operational**
 
@@ -51,6 +51,7 @@ Reconcile made: 2026-08-28 18:15 UTC
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
+| Raspberry Pi 02 | 10.0.50.17 | local | 100 MbE | Netgear GS348 (21) |
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | Netgear XS508M (5) |
 | Rock 5B Plus 01 | 10.0.50.47 | local | 2.5 GbE | Netgear XS508M (4) |
@@ -93,7 +94,6 @@ Reconcile made: 2026-08-28 18:15 UTC
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
-| Raspberry Pi 02 | 10.0.50.17 | local | 100 MbE | Netgear GS348 (21) |
 | Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rock 5B 03 | 10.0.50.186 | local | 2.5 GbE | — |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
