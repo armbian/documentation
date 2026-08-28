@@ -349,6 +349,7 @@ nav:
   - 'STATUS' :
         - 'Overview' : 'status/index.md'
         - 'Wi-Fi performance' : 'status/wifi-performance.md'
+        - 'Tested boards' : 'status/board-tests.md'
         - 'Datacenter boards' : 'status/boards.md'
         - 'Mirrors' : 'status/mirrors.md'
         - 'Download images' : 'status/download-images.md'

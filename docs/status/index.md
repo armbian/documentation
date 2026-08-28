@@ -25,9 +25,9 @@ refreshed by scheduled jobs, not written by hand.
 
     Measured throughput per board and wireless chip, from the autotest fleet.
 
-- :material-developer-board: **Tested boards** *(planned)*
+- :material-developer-board: **[Tested boards](board-tests.md)**
 
-    Functional test matrix — what boots, what passes, per board.
+    Per-board test results — upgrade, reboot, performance, DVFS and network — from the autotest fleet.
 
 - :material-database: **[Datacenter boards](boards.md)**
 
@@ -58,10 +58,3 @@ refreshed by scheduled jobs, not written by hand.
     The build servers — CPU-thread capacity, memory, location and runner count.
 
 </div>
-
-!!! note "Prototype"
-
-    This is the first cut of the section. The **planned** entries above already
-    have generators (autotests, `armbian.github.io`, the apt report) that
-    currently write to CI job summaries; wiring them into pages here is the next
-    step.
