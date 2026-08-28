@@ -107,12 +107,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "BananaPi BPI-F3 01 — fail"
 
-    `bananapif3` · **inplace** · image `26.8.0-trunk.15` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `bananapif3` · **inplace** · image `26.11.0-trunk.6` · 0 ✅ · 1 ❌ · 7 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 231.3 s | nightly · 26.8.0-trunk.15 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 211.1 s | power-cycle |
+    | upgrade | ⏭️ | 10.5 s | — |
+    | reboot | ❌ | 218.3 s | power-cycle |
     | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | dvfs | ⏭️ | 0.0 s | — |
     | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -139,18 +139,11 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Clearfog Pro 01 — fail"
 
-    `clearfogpro` · **inplace** · image `26.8.0-trunk.314` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `clearfogpro` · **inplace** · image `26.11.0-trunk.6` · 0 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 378.6 s | nightly · 26.8.0-trunk.314 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 210.7 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | reachable | ❌ | 0.0 s | ip=10.0.50.42 · reachable=False · port=22 |
 
 ??? success "Cubie A5E 01 — pass"
 
@@ -1141,18 +1134,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "SpacemiT K3 Pico-ITX 01 — pass"
 
-    `k3picoitx` · **inplace** · image `26.08.0-trunk` · 4 ✅ · 0 ❌ · 4 ⏭️
+    `k3picoitx` · **inplace** · image `26.8.3` · 4 ✅ · 0 ❌ · 4 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 22.7 s | AES 869 · mem 8600 · disk W 24 / R 41 MB/s · 63 °C · 2400 MHz |
-    | dvfs | ✅ | 16.1 s | performance · 614–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 77.4 s | eth0 ↑941/↓941 (1GE) · eth1 ↑8906/↓5362 (10GE) · wlan0 ↑97/↓186 (Wi-Fi 6) Mbps |
+    | hw-performance | ✅ | 22.9 s | AES 796 · mem 12000 · disk W 23 / R 40 MB/s · 61 °C · 2200 MHz |
+    | dvfs | ✅ | 15.6 s | performance · 614–2200 MHz (peak 2200) |
+    | network-iperf | ✅ | 53.2 s | eth0 ↑941/↓942 (1GE) · wlan0 ↑111/↓190 (Wi-Fi 6) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 3.9 s | 26.08.0-trunk · 6.18.3-legacy-spacemit-k3 |
+    | store-versions | ✅ | 3.6 s | 26.8.3 · 6.18.3-legacy-spacemit-k3 |
+
+    **Power** — idle 13.60 W · avg 15.10 W · peak 22.70 W · 81 samples
 
 ??? failure "Tanix TX6 01 — fail"
 
