@@ -7,7 +7,7 @@ description: "Automated per-board test results from the Armbian autotests fleet 
 
 Every board in the Armbian test datacenter runs an automated pipeline — a nightly **upgrade**, a **reboot**, hardware **performance** and **DVFS** checks and a **network** throughput test — before being restored to the stable release. The table below is the **current status**: the most recent test of each board.
 
-The list is refreshed by the fleet test workflow in the [autotests repo](https://github.com/armbian/autotests): it reads the rolling [`test-results`](https://github.com/armbian/autotests/releases/tag/test-results) release and opens a pull request to update this table — the same mechanism used for the [datacenter boards](/status/boards/) and [Wi-Fi performance](/status/wifi-performance/) pages.
+The list is refreshed automatically by the Armbian autotests fleet: a scheduled job reads the fleet's rolling test results and opens a pull request to update this table — the same mechanism used for the [datacenter boards](/status/boards/) and [Wi-Fi performance](/status/wifi-performance/) pages.
 
 Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
