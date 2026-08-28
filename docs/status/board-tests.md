@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**82** boards — **45** passed, **37** failed. Each card is the board's most recent test.
+**82** boards — **46** passed, **36** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -152,20 +152,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
-??? failure "Cubie A5E 01 — fail"
+??? success "Cubie A5E 01 — pass"
 
-    `radxa-cubie-a5e` · **inplace** · image `26.8.0-trunk.170` · 1 ✅ · 4 ❌ · 3 ⏭️
+    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.19` · 6 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 17.5 s | — |
-    | reboot | ❌ | 199.9 s | warm |
-    | hw-performance | ✅ | 94.9 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-    | dvfs | ➖ | 11.2 s | — |
-    | network-iperf | ⏭️ | 43.4 s | no iperf3 on board |
-    | restore-stable | ❌ | 25.6 s | stable |
-    | reboot | ❌ | 205.4 s | warm |
-    | store-versions | ❌ | 25.9 s | — |
+    | upgrade | ⏭️ | 30.8 s | — |
+    | reboot | ✅ | 139.8 s | power-cycle · up 112 s |
+    | hw-performance | ✅ | 46.3 s | AES 358 · mem 2000 · disk W 11 / R 23 MB/s · 66 °C · None MHz |
+    | dvfs | ➖ | 2.7 s | — |
+    | network-iperf | ✅ | 58.5 s | end0 ↑909/↓941 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
+    | restore-stable | ✅ | 43.7 s | stable |
+    | reboot | ✅ | 142.1 s | power-cycle · up 110 s |
+    | store-versions | ✅ | 12.9 s | 26.11.0-trunk.19 · 6.18.44-current-sunxi64 |
+
+    **Power** — idle 2.30 W · avg 4.07 W · peak 4.70 W · 380 samples
 
 ??? success "Cubietruck 01 — pass"
 
