@@ -10,6 +10,84 @@ All wireless adapters were tested under consistent conditions - each positioned 
 <br>
 [![Support Autotests](/images/support-autotest.png)](#contribute)
 
+<!-- DUT-START -->
+
+## Results
+
+_Measured 2026-07-01 11:47 UTC_
+
+**48** wireless link(s) · ✅ **48** pass · 📶 peak ↑ **681** / ↓ **868** Mbps
+
+#### Wi-Fi 7 · 802.11be
+
+| Chip | Attach | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
+|:--|:--|:--|--:|--:|
+| <abbr title="Carrier: Rock 5B Plus">MediaTek MT7925</abbr> | PCIe | 6215 MHz @ 160 | 681 | 868 |
+| <abbr title="Carrier: Orange Pi 5 Plus">Qualcomm WCN7851</abbr> | PCIe | 5240 MHz @ 160 | 232 | 784 |
+
+#### Wi-Fi 6 · 802.11ax
+
+| Chip | Attach | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
+|:--|:--|:--|--:|--:|
+| <abbr title="Carrier: Orange Pi 5 Plus">MediaTek MT7921</abbr> | USB | 5240 MHz @ 80 | 646 | 350 |
+| <abbr title="Carrier: Rock 5B">Realtek RTL8852BE</abbr> | PCIe | 5240 MHz @ 80 | 199 | 609 |
+| <abbr title="Carrier: Rock 5T">Realtek RTL8852BE</abbr> | PCIe | 5240 MHz @ 80 | 348 | 450 |
+| <abbr title="Carrier: Tinker Board 2">Realtek RTL8852AE</abbr> | PCIe | 5240 MHz @ 80 | 332 | 416 |
+| <abbr title="Carrier: BananaPi BPI-F3">Realtek RTL8852BS</abbr> | SDIO | 5240 MHz @ 80 | 352 | 394 |
+
+#### Wi-Fi 5 · 802.11ac
+
+| Chip | Attach | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
+|:--|:--|:--|--:|--:|
+| <abbr title="Carrier: Pine H64">Realtek RTL8812AU</abbr> | USB | 5240 MHz @ 80 | 200 | 271 |
+| <abbr title="Carrier: BananaPi BPI-F3">Realtek RTL8822BU</abbr> | USB | 5240 MHz @ 80 | 265 | 132 |
+| <abbr title="Carrier: Helios4">Realtek RTL8821CU</abbr> | USB | 5240 MHz @ 80 | 259 | 241 |
+| <abbr title="Carrier: Raspberry Pi">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 80 | 247 | 182 |
+| <abbr title="Carrier: NanoPi M4V2">MediaTek MT7610</abbr> | USB | 5240 MHz @ 80 | 131 | 245 |
+| <abbr title="Carrier: NanoPi M4V2">Broadcom BCM4356</abbr> | SDIO | 5240 MHz @ 40 | 122 | 209 |
+| <abbr title="Carrier: Orange Pi Zero2">Unisoc UWE5622</abbr> | — | — | 132 | 93 |
+| <abbr title="Carrier: Tanix TX6">Realtek RTL8822CS</abbr> | SDIO | 5240 MHz @ 80 | 119 | 103 |
+| <abbr title="Carrier: Orange Pi 3">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 80 | 19 | 108 |
+| <abbr title="Carrier: Khadas VIM2">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 40 | 105 | 97 |
+| <abbr title="Carrier: NanoPi M5">Realtek RTL8822CS</abbr> | SDIO | 5240 MHz @ 80 | 44 | 88 |
+| <abbr title="Carrier: Banana Pi CM4IO">Realtek RTL8821CU</abbr> | USB | 2437 MHz @ 20 | 45 | 36 |
+| <abbr title="Carrier: OrangePi 3 LTS">Unisoc (unisoc_wifi)</abbr> | — | — | 44 | 22 |
+| <abbr title="Carrier: Banana Pi M2Pro">Realtek RTL8821CU</abbr> | USB | 2437 MHz @ 20 | 28 | 43 |
+| <abbr title="Carrier: Khadas VIM3">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 80 | 39 | 42 |
+| <abbr title="Carrier: Orange Pi Lite 2">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 29 | 37 |
+| <abbr title="Carrier: Banana Pi CM4IO">Realtek RTL8822CS</abbr> | SDIO | 2437 MHz @ 20 | 15 | 28 |
+| <abbr title="Carrier: UEFI x86">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 40 | 25 | 22 |
+| <abbr title="Carrier: Khadas VIM1">Broadcom (brcmfmac)</abbr> | SDIO | 5240 MHz @ 40 | 6 | 22 |
+
+#### Wi-Fi 4 · 802.11n
+
+| Chip | Attach | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
+|:--|:--|:--|--:|--:|
+| <abbr title="Carrier: Odroid C4">Ralink RT5572</abbr> | USB | 5240 MHz @ 40 | 56 | 93 |
+| <abbr title="Carrier: Rock 5T">Ralink RT5572</abbr> | USB | 5240 MHz @ 40 | 53 | 73 |
+| <abbr title="Carrier: Banana Pi M2 Ultra">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 33 | 44 |
+| <abbr title="Carrier: NanoPi R4S">Ralink RT5370</abbr> | USB | 2437 MHz @ 20 | 40 | 25 |
+| <abbr title="Carrier: Banana Pi M5">Realtek RTL8192CU</abbr> | USB | 2437 MHz @ 20 | 37 | 27 |
+| <abbr title="Carrier: Orange Pi Zero Plus">Realtek RTL8189FS</abbr> | SDIO | — | 35 | 26 |
+| <abbr title="Carrier: Udoo">Ralink RT5370</abbr> | USB | 2437 MHz @ 20 | 34 | 18 |
+| <abbr title="Carrier: Orange Pi Zero Plus">Realtek RTL8189FS</abbr> | SDIO | — | 33 | 27 |
+| <abbr title="Carrier: Orange Pi R1">Realtek RTL8189ES</abbr> | SDIO | — | 29 | 29 |
+| <abbr title="Carrier: Tanix TX6">Ralink RT2870/RT3070</abbr> | USB | 2437 MHz @ 20 | 28 | 10 |
+| <abbr title="Carrier: Orange Pi R1">Realtek RTL8189ES</abbr> | SDIO | — | 26 | 25 |
+| <abbr title="Carrier: Raspberry Pi">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 17 | 24 |
+| <abbr title="Carrier: Inovato Quadra">XRadio XR819</abbr> | SDIO | 2437 MHz @ 20 | 12 | 23 |
+| <abbr title="Carrier: Cubox i2eX/i4">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 21 | 22 |
+| <abbr title="Carrier: NanoPi K2">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 15 | 22 |
+| <abbr title="Carrier: Cubietruck">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 14 | 21 |
+| <abbr title="Carrier: Banana Pi Pro">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 16 | 19 |
+| <abbr title="Carrier: Orange Pi Zero">XRadio XR819</abbr> | SDIO | 2437 MHz @ 20 | 5 | 17 |
+| <abbr title="Carrier: Rock 5B Plus">Realtek RTL8723BU 802.11b/g/n</abbr> | USB | 2437 MHz @ 20 | 13 | 17 |
+| <abbr title="Carrier: NanoPi R1">Broadcom (brcmfmac)</abbr> | SDIO | 2437 MHz @ 20 | 13 | 15 |
+| <abbr title="Carrier: NanoPi Duo">XRadio XR819</abbr> | SDIO | 2437 MHz @ 20 | 1 | 14 |
+| <abbr title="Carrier: Orange Pi Zero">MediaTek MT7601</abbr> | USB | 2437 MHz @ 20 | 12 | 13 |
+
+<!-- DUT-STOP -->
+
 ## Test Equipment
 
 - **Access Point**: [Zyxel NWA130BE (Wi-Fi 7)](https://amzn.to/428dvnH)
@@ -58,84 +136,6 @@ All wireless adapters were tested under consistent conditions - each positioned 
 
 8. **Power Off Devices**  
    └─ All test devices are safely powered down after testing completes.
-
-<!-- DUT-START -->
-
-## Results
-
-_Measured 2026-07-01 11:47 UTC_
-
-**48** wireless link(s) · ✅ **48** pass · 📶 peak ↑ **681** / ↓ **868** Mbps
-
-#### IEEE 802.11ac
-
-| Board | Status | Attach | Chip | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
-|:--|:--:|:--|:--|:--|--:|--:|
-| Banana Pi CM4IO | ✅ | SDIO | Realtek RTL8822CS | 2437 MHz @ 20 | 15 | 28 |
-| Banana Pi CM4IO | ✅ | USB | Realtek RTL8821CU | 2437 MHz @ 20 | 45 | 36 |
-| Banana Pi M2Pro | ✅ | USB | Realtek RTL8821CU | 2437 MHz @ 20 | 28 | 43 |
-| BananaPi BPI-F3 | ✅ | USB | Realtek RTL8822BU | 5240 MHz @ 80 | 265 | 132 |
-| Helios4 | ✅ | USB | Realtek RTL8821CU | 5240 MHz @ 80 | 259 | 241 |
-| Khadas VIM1 | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 40 | 6 | 22 |
-| Khadas VIM2 | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 40 | 105 | 97 |
-| Khadas VIM3 | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 80 | 39 | 42 |
-| NanoPi M4V2 | ✅ | SDIO | Broadcom BCM4356 | 5240 MHz @ 40 | 122 | 209 |
-| NanoPi M4V2 | ✅ | USB | MediaTek MT7610 | 5240 MHz @ 80 | 131 | 245 |
-| NanoPi M5 | ✅ | SDIO | Realtek RTL8822CS | 5240 MHz @ 80 | 44 | 88 |
-| Orange Pi 3 | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 80 | 19 | 108 |
-| Orange Pi Lite 2 | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 29 | 37 |
-| Orange Pi Zero2 | ✅ | — | Unisoc UWE5622 | — | 132 | 93 |
-| OrangePi 3 LTS | ✅ | — | Unisoc (unisoc_wifi) | — | 44 | 22 |
-| Pine H64 | ✅ | USB | Realtek RTL8812AU | 5240 MHz @ 80 | 200 | 271 |
-| Raspberry Pi | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 80 | 247 | 182 |
-| Tanix TX6 | ✅ | SDIO | Realtek RTL8822CS | 5240 MHz @ 80 | 119 | 103 |
-| UEFI x86 | ✅ | SDIO | Broadcom (brcmfmac) | 5240 MHz @ 40 | 25 | 22 |
-
-#### IEEE 802.11ax
-
-| Board | Status | Attach | Chip | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
-|:--|:--:|:--|:--|:--|--:|--:|
-| BananaPi BPI-F3 | ✅ | SDIO | Realtek RTL8852BS | 5240 MHz @ 80 | 352 | 394 |
-| Orange Pi 5 Plus | ✅ | USB | MediaTek MT7921 | 5240 MHz @ 80 | 646 | 350 |
-| Rock 5B | ✅ | PCIe | Realtek RTL8852BE | 5240 MHz @ 80 | 199 | 609 |
-| Rock 5T | ✅ | PCIe | Realtek RTL8852BE | 5240 MHz @ 80 | 348 | 450 |
-| Tinker Board 2 | ✅ | PCIe | Realtek RTL8852AE | 5240 MHz @ 80 | 332 | 416 |
-
-#### IEEE 802.11be
-
-| Board | Status | Attach | Chip | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
-|:--|:--:|:--|:--|:--|--:|--:|
-| Orange Pi 5 Plus | ✅ | PCIe | Qualcomm WCN7851 | 5240 MHz @ 160 | 232 | 784 |
-| Rock 5B Plus | ✅ | PCIe | MediaTek MT7925 | 6215 MHz @ 160 | 681 | 868 |
-
-#### IEEE 802.11n
-
-| Board | Status | Attach | Chip | Channel | ↑ Up (Mbps) | ↓ Down (Mbps) |
-|:--|:--:|:--|:--|:--|--:|--:|
-| Banana Pi M2 Ultra | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 33 | 44 |
-| Banana Pi M5 | ✅ | USB | Realtek RTL8192CU | 2437 MHz @ 20 | 37 | 27 |
-| Banana Pi Pro | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 16 | 19 |
-| Cubietruck | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 14 | 21 |
-| Cubox i2eX/i4 | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 21 | 22 |
-| Inovato Quadra | ✅ | SDIO | XRadio XR819 | 2437 MHz @ 20 | 12 | 23 |
-| NanoPi Duo | ✅ | SDIO | XRadio XR819 | 2437 MHz @ 20 | 1 | 14 |
-| NanoPi K2 | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 15 | 22 |
-| NanoPi R1 | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 13 | 15 |
-| NanoPi R4S | ✅ | USB | Ralink RT5370 | 2437 MHz @ 20 | 40 | 25 |
-| Odroid C4 | ✅ | USB | Ralink RT5572 | 5240 MHz @ 40 | 56 | 93 |
-| Orange Pi R1 | ✅ | SDIO | Realtek RTL8189ES | — | 26 | 25 |
-| Orange Pi R1 | ✅ | SDIO | Realtek RTL8189ES | — | 29 | 29 |
-| Orange Pi Zero | ✅ | SDIO | XRadio XR819 | 2437 MHz @ 20 | 5 | 17 |
-| Orange Pi Zero | ✅ | USB | MediaTek MT7601 | 2437 MHz @ 20 | 12 | 13 |
-| Orange Pi Zero Plus | ✅ | SDIO | Realtek RTL8189FS | — | 33 | 27 |
-| Orange Pi Zero Plus | ✅ | SDIO | Realtek RTL8189FS | — | 35 | 26 |
-| Raspberry Pi | ✅ | SDIO | Broadcom (brcmfmac) | 2437 MHz @ 20 | 17 | 24 |
-| Rock 5B Plus | ✅ | USB | Realtek RTL8723BU 802.11b/g/n | 2437 MHz @ 20 | 13 | 17 |
-| Rock 5T | ✅ | USB | Ralink RT5572 | 5240 MHz @ 40 | 53 | 73 |
-| Tanix TX6 | ✅ | USB | Ralink RT2870/RT3070 | 2437 MHz @ 20 | 28 | 10 |
-| Udoo | ✅ | USB | Ralink RT5370 | 2437 MHz @ 20 | 34 | 18 |
-
-<!-- DUT-STOP -->
 
 ## Contribute
 
