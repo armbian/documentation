@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **39** operational, **37** broken.
+**72** boards — **39** operational, **33** broken.
 
-Reconcile made: 2026-08-29 07:06 UTC
+Reconcile made: 2026-08-29 08:06 UTC
 
 **Operational**
 
@@ -66,7 +66,6 @@ Reconcile made: 2026-08-29 07:06 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
-| Banana Pi CM4IO 02 | 10.0.50.51 | local | 1 GbE | — |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
@@ -78,8 +77,6 @@ Reconcile made: 2026-08-29 07:06 UTC
 | NanoPi K2 01 | 10.0.50.76 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300 (5) |
 | NanoPi M6 01 | 10.0.50.18 | local | 1 GbE | Netgear S3300 (39) |
-| NanoPi M6 03 | 10.0.50.67 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| NanoPi M6 04 | 10.0.50.164 | local | 1 GbE | — |
 | NanoPi Neo 2 Black 01 | 10.0.50.14 | local | 1 GbE | — |
 | NanoPi Neo 3 01 | 10.0.50.20 | local | 1 GbE | TP-Link SG3428X (17) |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (12) |
@@ -94,7 +91,6 @@ Reconcile made: 2026-08-29 07:06 UTC
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
 | Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | Netgear XS508M (5) |
-| Rock 5B 03 | 10.0.50.186 | local | 2.5 GbE | — |
 | Rock 5B Plus 01 | 10.0.50.47 | local | 2.5 GbE | Netgear XS508M (4) |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
