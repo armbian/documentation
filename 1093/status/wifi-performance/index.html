@@ -5623,39 +5623,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#test-equipment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Test Equipment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#software-and-infrastructure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Software and Infrastructure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5713,6 +5680,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Equipment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6517,39 +6517,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#test-equipment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Test Equipment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#software-and-infrastructure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Software and Infrastructure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6607,6 +6574,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Equipment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6670,67 +6670,6 @@
 <p>All wireless adapters were tested under consistent conditions - each positioned in close proximity (1-2m) and connected to the same wireless access point (AP). The adapters utilized various interface types, including USB, SDIO, and PCI, to evaluate performance across different hardware configurations.</p>
 <p><br>
 <a href="#contribute"><img alt="Support Autotests" src="/images/support-autotest.png" /></a></p>
-<h2 id="test-equipment">Test Equipment<a class="headerlink" href="#test-equipment" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Access Point</strong>: <a href="https://amzn.to/428dvnH">Zyxel NWA130BE (Wi-Fi 7)</a></li>
-<li><strong>Network Switches</strong>: <ul>
-<li>Netgear XS712T (10Gb)</li>
-<li>Netgear XS508M (10Gb)</li>
-<li>TP Link SG3218XP-M2 (2.5Gb PoE)</li>
-</ul>
-</li>
-<li><strong>Power Switches</strong>: APC AP7920  </li>
-<li><strong>Client Devices</strong>:<ul>
-<li>Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards</li>
-</ul>
-</li>
-</ul>
-<h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Inventory &amp; source of truth</strong>: <a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.</li>
-<li><strong>Orchestration</strong>: the <a href="https://github.com/armbian/autotests">Armbian autotests framework</a> reads each board&rsquo;s capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.</li>
-<li><strong>Power control</strong>: dispatched to the <a href="https://github.com/armbian/infra"><code>armbian/infra</code></a> backends (APC PDU, TP-Link PoE, DUT relay); no power port is ever switched by hand during a run.</li>
-<li><strong>Automation</strong>: <a href="https://github.com/armbian/autotests/blob/master/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a> orchestrate the fleet runs and test execution.</li>
-<li><strong>Results</strong>: published as a <strong>time series</strong> to <a href="https://github.com/armbian/armbian.github.io">armbian.github.io</a> so regressions stay visible over time.</li>
-</ul>
-<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<p><strong>Overview of the WiFi performance test process:</strong></p>
-<ol>
-<li>
-<p><strong>Power On Devices</strong><br />
-   └─ Embedded WiFi-capable devices and USB wireless adapters are powered on.</p>
-</li>
-<li>
-<p><strong>Configure Wireless Connection</strong><br />
-   └─ Devices are configured to connect to a predefined access point (SSID).</p>
-</li>
-<li>
-<p><strong>Connect to WiFi Network</strong><br />
-   └─ Network connectivity is validated to ensure the device is routable.</p>
-</li>
-<li>
-<p><strong>Measure Performance (iperf3)</strong><br />
-   ├─ Perform reverse (<code>-R</code>) and forward iperf3 tests<br />
-   └─ Measure throughput and link quality.</p>
-</li>
-<li>
-<p><strong>Collect System &amp; Network Info</strong><br />
-   ├─ Extract link details (e.g. bitrate, signal strength)<br />
-   └─ Record system version, kernel, architecture.</p>
-</li>
-<li>
-<p><strong>Restore Wired Network</strong><br />
-   └─ Reapply original routes and configuration.</p>
-</li>
-<li>
-<p><strong>Upload Test Results</strong><br />
-   └─ Summary, logs, and system info are uploaded as artifacts.</p>
-</li>
-<li>
-<p><strong>Power Off Devices</strong><br />
-   └─ All test devices are safely powered down after testing completes.</p>
-</li>
-</ol>
 <!-- DUT-START -->
 
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
@@ -7130,6 +7069,67 @@
 </table>
 <!-- DUT-STOP -->
 
+<h2 id="test-equipment">Test Equipment<a class="headerlink" href="#test-equipment" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Access Point</strong>: <a href="https://amzn.to/428dvnH">Zyxel NWA130BE (Wi-Fi 7)</a></li>
+<li><strong>Network Switches</strong>: <ul>
+<li>Netgear XS712T (10Gb)</li>
+<li>Netgear XS508M (10Gb)</li>
+<li>TP Link SG3218XP-M2 (2.5Gb PoE)</li>
+</ul>
+</li>
+<li><strong>Power Switches</strong>: APC AP7920  </li>
+<li><strong>Client Devices</strong>:<ul>
+<li>Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards</li>
+</ul>
+</li>
+</ul>
+<h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Inventory &amp; source of truth</strong>: <a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.</li>
+<li><strong>Orchestration</strong>: the <a href="https://github.com/armbian/autotests">Armbian autotests framework</a> reads each board&rsquo;s capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.</li>
+<li><strong>Power control</strong>: dispatched to the <a href="https://github.com/armbian/infra"><code>armbian/infra</code></a> backends (APC PDU, TP-Link PoE, DUT relay); no power port is ever switched by hand during a run.</li>
+<li><strong>Automation</strong>: <a href="https://github.com/armbian/autotests/blob/master/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a> orchestrate the fleet runs and test execution.</li>
+<li><strong>Results</strong>: published as a <strong>time series</strong> to <a href="https://github.com/armbian/armbian.github.io">armbian.github.io</a> so regressions stay visible over time.</li>
+</ul>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p><strong>Overview of the WiFi performance test process:</strong></p>
+<ol>
+<li>
+<p><strong>Power On Devices</strong><br />
+   └─ Embedded WiFi-capable devices and USB wireless adapters are powered on.</p>
+</li>
+<li>
+<p><strong>Configure Wireless Connection</strong><br />
+   └─ Devices are configured to connect to a predefined access point (SSID).</p>
+</li>
+<li>
+<p><strong>Connect to WiFi Network</strong><br />
+   └─ Network connectivity is validated to ensure the device is routable.</p>
+</li>
+<li>
+<p><strong>Measure Performance (iperf3)</strong><br />
+   ├─ Perform reverse (<code>-R</code>) and forward iperf3 tests<br />
+   └─ Measure throughput and link quality.</p>
+</li>
+<li>
+<p><strong>Collect System &amp; Network Info</strong><br />
+   ├─ Extract link details (e.g. bitrate, signal strength)<br />
+   └─ Record system version, kernel, architecture.</p>
+</li>
+<li>
+<p><strong>Restore Wired Network</strong><br />
+   └─ Reapply original routes and configuration.</p>
+</li>
+<li>
+<p><strong>Upload Test Results</strong><br />
+   └─ Summary, logs, and system info are uploaded as artifacts.</p>
+</li>
+<li>
+<p><strong>Power Off Devices</strong><br />
+   └─ All test devices are safely powered down after testing completes.</p>
+</li>
+</ol>
 <h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize <a href="https://github.com/armbian/autotests">our test infrastructure</a>. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.</li>
