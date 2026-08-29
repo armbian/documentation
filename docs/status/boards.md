@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **78** boards — **48** operational, **30** broken.
 
-Reconcile made: 2026-08-29 18:05 UTC
+Reconcile made: 2026-08-29 18:37 UTC
 
 **Operational**
 
@@ -97,7 +97,7 @@ Reconcile made: 2026-08-29 18:05 UTC
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
-| Rock 5B 01 | 10.0.50.69 | local | 2.5 GbE | Netgear XS508M (6) |
+| Rock 5B 01 | 10.0.50.13 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
