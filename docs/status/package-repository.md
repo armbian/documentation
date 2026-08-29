@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-08-28 17:53 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-08-29 11:57 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Fri, 28 Aug 2026 | 2267 | `26.8.3` |
-| `trixie` | trixie | Fri, 28 Aug 2026 | 2267 | `26.8.3` |
-| `sid` | sid | Fri, 28 Aug 2026 | 2267 | `26.8.3` |
-| `jammy` | jammy | Fri, 28 Aug 2026 | 2267 | `26.8.3` |
-| `noble` | noble | Fri, 28 Aug 2026 | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
@@ -172,7 +172,7 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `spice-vdagent` | — | `0.22.1-3+b2` | — | — | — |
 | `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
 | `unudhcpd` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` |
-| zfs (OpenZFS) | `2.4.1-1` | `2.4.3-3` | — | `2.4.4-1arter97~ubuntu22.04.1` | `2.4.4-1arter97~ubuntu24.04.1` |
+| zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-1arter97~ubuntu22.04.1` | `2.4.4-1arter97~ubuntu24.04.1` |
 | zulu21 (JDK) | `21.0.12.1-1` | — | — | — | — |
 
 <!-- apt-status:end -->
