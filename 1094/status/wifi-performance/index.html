@@ -7072,9 +7072,9 @@
 <h2 id="test-equipment">Test Equipment<a class="headerlink" href="#test-equipment" title="Permanent link">&para;</a></h2>
 <p>All adapters connect to a single common <strong>access point</strong> — a <a href="https://amzn.to/428dvnH">Zyxel NWA130BE (Wi-Fi 7)</a> — so throughput is comparable across every board. The boards under test and their radios are listed in the <a href="#results">results</a> above.</p>
 <h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
-<p><a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> is the lab&rsquo;s source of truth — every board, its capabilities and its wiring. The <a href="https://github.com/armbian/autotests">autotests</a> framework reads that inventory and drives each board over self-hosted <a href="https://github.com/armbian/autotests/blob/main/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a>, power included (<a href="https://github.com/armbian/infra"><code>armbian/infra</code></a>). Results land as a <a href="https://github.com/armbian/armbian.github.io">time series</a> so regressions surface the moment throughput drops.</p>
+<p><a href="https://docs.armbian.com/software/netbox/">NetBox</a> is the lab&rsquo;s source of truth — every board, its capabilities and its wiring. The Armbian autotests framework reads that inventory and drives each board over self-hosted GitHub Actions, power included via <code>armbian/infra</code>. Results land as a <a href="https://github.com/armbian/armbian.github.io">time series</a> so regressions surface the moment throughput drops.</p>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<p>Wireless throughput is one step of the per-board <a href="https://github.com/armbian/autotests">autotests</a> pipeline. For each board:</p>
+<p>Wireless throughput is one step of the per-board Armbian autotests pipeline. For each board:</p>
 <ol>
 <li><strong>Power on &amp; flash</strong> — the board is powered up and, where the hardware allows, flashed with a clean Armbian image; boards that can&rsquo;t take a clean flash are tested in place.</li>
 <li><strong>Provision &amp; connect</strong> — first login, a stable lab IP, and the Wi-Fi association to the common access point (SSID) are configured, then connectivity is verified.</li>
@@ -7085,7 +7085,7 @@
 <p>Results are published as a time series, so a regression shows up the moment throughput drops on a given board.</p>
 <h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize <a href="https://github.com/armbian/autotests">our test infrastructure</a>. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.</li>
+<li>Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize our test infrastructure. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.</li>
 </ul>
 <ul>
 <li>Donate hardware: Your contribution of new hardware, whether it’s a wireless adapter or any other equipment, helps us expand our testing capabilities. We’re specifically looking for <a href="https://www.amazon.de/hz/wishlist/ls/1GA17IGQ2MF0V?ref_=wl_share">new wireless adapters</a> that haven’t yet been added to our system. Your donation can directly impact the scope and depth of our tests.</li>
