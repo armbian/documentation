@@ -13,25 +13,26 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**78** boards — **46** operational, **32** broken.
+**78** boards — **48** operational, **30** broken.
 
-Reconcile made: 2026-08-29 17:41 UTC
+Reconcile made: 2026-08-29 18:05 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
 | BananaPi BPI-F3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300 (46) |
+| Clearfog Pro 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (12) |
 | Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | TP-Link SG3428X (14) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Netgear GS348 (32) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
-| Helios4 01 | 10.0.50.52 | local | 1 GbE | Netgear GS348 (11) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Le potato 01 | 10.0.50.75 | local | 100 MbE | Netgear GS348 (12) |
 | NanoPi Duo 02 | 10.0.50.84 | local | 100 MbE | — |
@@ -67,15 +68,15 @@ Reconcile made: 2026-08-29 17:41 UTC
 | Rockpi E 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (16) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 1 GbE | Netgear S3300 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
+| Udoo 01 | 10.0.50.67 | local | 1 GbE | Netgear S3300 (37) |
 
 **Broken**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| Clearfog Pro 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (12) |
+| Helios4 01 | 10.0.50.52 | local | 1 GbE | Netgear GS348 (11) |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) |
@@ -100,7 +101,6 @@ Reconcile made: 2026-08-29 17:41 UTC
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
-| Udoo 01 | 10.0.50.67 | local | 1 GbE | Netgear S3300 (37) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (2) |
 | Z28 PRO 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300 (17) |
