@@ -7070,7 +7070,7 @@
 <h2 id="test-equipment">Test Equipment<a class="headerlink" href="#test-equipment" title="Permanent link">&para;</a></h2>
 <p>All adapters connect to a single common <strong>access point</strong> — a <a href="https://amzn.to/428dvnH">Zyxel NWA130BE (Wi-Fi 7)</a> — so throughput is comparable across every board. The boards under test and their radios are listed in the <a href="#results">results</a> above.</p>
 <h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
-<p><a href="https://docs.armbian.com/software/netbox/">NetBox</a> is the lab&rsquo;s source of truth — every board, its capabilities and its wiring. The Armbian autotests framework reads that inventory and drives each board over self-hosted GitHub Actions, power included via <code>armbian/infra</code>. Results land as a <a href="https://github.com/armbian/armbian.github.io">time series</a> so regressions surface the moment throughput drops.</p>
+<p><a href="https://docs.armbian.com/software/netbox/">NetBox</a> is the lab&rsquo;s source of truth — every board, its capabilities and its wiring. The Armbian autotests framework reads that inventory and drives each board over self-hosted GitHub Actions, power included via <code>armbian/infra</code>.</p>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
 <p>Wireless throughput is one step of the per-board Armbian autotests pipeline. For each board:</p>
 <ol>
