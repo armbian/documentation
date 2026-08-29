@@ -7072,13 +7072,7 @@
 <h2 id="test-equipment">Test Equipment<a class="headerlink" href="#test-equipment" title="Permanent link">&para;</a></h2>
 <p>All adapters connect to a single common <strong>access point</strong> — a <a href="https://amzn.to/428dvnH">Zyxel NWA130BE (Wi-Fi 7)</a> — so throughput is comparable across every board. The boards under test and their radios are listed in the <a href="#results">results</a> above.</p>
 <h2 id="software-and-infrastructure">Software and Infrastructure<a class="headerlink" href="#software-and-infrastructure" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Inventory &amp; source of truth</strong>: <a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.</li>
-<li><strong>Orchestration</strong>: the <a href="https://github.com/armbian/autotests">Armbian autotests framework</a> reads each board&rsquo;s capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.</li>
-<li><strong>Power control</strong>: dispatched to the <a href="https://github.com/armbian/infra"><code>armbian/infra</code></a> backends (PoE+ switches, a DC PDU and a relay array); no power port is ever switched by hand during a run.</li>
-<li><strong>Automation</strong>: <a href="https://github.com/armbian/autotests/blob/main/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a> orchestrate the fleet runs and test execution.</li>
-<li><strong>Results</strong>: published as a <strong>time series</strong> to <a href="https://github.com/armbian/armbian.github.io">armbian.github.io</a> so regressions stay visible over time.</li>
-</ul>
+<p><a href="https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox">NetBox</a> is the lab&rsquo;s source of truth — every board, its capabilities and its wiring. The <a href="https://github.com/armbian/autotests">autotests</a> framework reads that inventory and drives each board over self-hosted <a href="https://github.com/armbian/autotests/blob/main/.github/workflows/test-fleet-iperf.yml">GitHub Actions</a>, power included (<a href="https://github.com/armbian/infra"><code>armbian/infra</code></a>). Results land as a <a href="https://github.com/armbian/armbian.github.io">time series</a> so regressions surface the moment throughput drops.</p>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
 <p>Wireless throughput is one step of the per-board <a href="https://github.com/armbian/autotests">autotests</a> pipeline. For each board:</p>
 <ol>
