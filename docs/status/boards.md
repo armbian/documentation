@@ -15,13 +15,13 @@ update the table — the same mechanism behind the
 
 **76** boards — **36** operational, **40** broken.
 
-Reconcile made: 2026-08-29 06:22 UTC
+Reconcile made: 2026-08-29 06:39 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
@@ -63,7 +63,7 @@ Reconcile made: 2026-08-29 06:22 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
-| Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 02 | 10.0.50.51 | local | 1 GbE | — |
 | BananaPi BPI-F3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
@@ -88,7 +88,7 @@ Reconcile made: 2026-08-29 06:22 UTC
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Orange Pi Win 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (13) |
+| Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
