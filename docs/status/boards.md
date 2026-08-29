@@ -13,19 +13,21 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **36** operational, **40** broken.
+**76** boards — **39** operational, **37** broken.
 
-Reconcile made: 2026-08-29 06:39 UTC
+Reconcile made: 2026-08-29 07:06 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
+| BananaPi BPI-F3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300 (46) |
 | Cubie A5E 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | TP-Link SG3428X (14) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Netgear GS348 (32) |
@@ -45,6 +47,7 @@ Reconcile made: 2026-08-29 06:39 UTC
 | Orange Pi PC2 01 | 10.0.50.58 | local | 1 GbE | TP-Link SG3428X (22) |
 | Orange Pi Prime 01 | 10.0.50.16 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi R1 01 | 10.0.50.25 | local | Wi-Fi 4 | Zyxel NWA130BE |
+| Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | TP-Link SG3428X (19) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
@@ -63,9 +66,7 @@ Reconcile made: 2026-08-29 06:39 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 02 | 10.0.50.51 | local | 1 GbE | — |
-| BananaPi BPI-F3 01 | 10.0.50.57 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
@@ -88,7 +89,6 @@ Reconcile made: 2026-08-29 06:39 UTC
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
