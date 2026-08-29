@@ -15,13 +15,12 @@ update the table — the same mechanism behind the
 
 **78** boards — **48** operational, **30** broken.
 
-Reconcile made: 2026-08-29 18:37 UTC
+Reconcile made: 2026-08-29 19:07 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
@@ -62,6 +61,7 @@ Reconcile made: 2026-08-29 18:37 UTC
 | Raspberry Pi 01 | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi 02 | 10.0.50.17 | local | 100 MbE | Netgear GS348 (21) |
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE |
+| Rock 5B 01 | 10.0.50.13 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | Netgear XS508M (5) |
 | Rock 5B Plus 01 | 10.0.50.47 | local | 2.5 GbE | Netgear XS508M (4) |
 | Rock 5T 01 | 10.0.50.15 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) |
@@ -75,8 +75,9 @@ Reconcile made: 2026-08-29 18:37 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| Helios4 01 | 10.0.50.52 | local | 1 GbE | Netgear GS348 (11) |
+| Helios4 01 | 10.0.50.42 | local | 1 GbE | Netgear GS348 (11) |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) |
@@ -97,7 +98,6 @@ Reconcile made: 2026-08-29 18:37 UTC
 | Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero Plus 01 | 10.0.50.54 | local | 1 GbE | TP-Link SG3428X (20) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
-| Rock 5B 01 | 10.0.50.13 | local | 2.5 GbE | Netgear XS508M (6) |
 | Rockpi 4B+ 01 | 10.0.50.64 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
