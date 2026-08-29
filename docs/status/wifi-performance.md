@@ -7,9 +7,6 @@ description: "Armbian WiFi performance benchmarks: throughput of USB, SDIO and P
 
 All wireless adapters were tested under consistent conditions - each positioned in close proximity (1-2m) and connected to the same wireless access point (AP). The adapters utilized various interface types, including USB, SDIO, and PCI, to evaluate performance across different hardware configurations.
 
-<br>
-[![Support Autotests](/images/support-autotest.png)](#contribute)
-
 <!-- DUT-START -->
 
 ## Results
@@ -90,56 +87,27 @@ _Measured 2026-07-01 11:47 UTC_
 
 ## Test Equipment
 
-- **Access Point**: [Zyxel NWA130BE (Wi-Fi 7)](https://amzn.to/428dvnH)
-- **Network Switches**: 
-  - Netgear XS712T (10Gb)
-  - Netgear XS508M (10Gb)
-  - TP Link SG3218XP-M2 (2.5Gb PoE)
-- **Power Switches**: APC AP7920  
-- **Client Devices**:
-  - Multiple single-board computers equipped with onboard wireless modules or PCI Wi-Fi cards
+All adapters connect to a single common **access point** — a [Zyxel NWA130BE (Wi-Fi 7)](https://amzn.to/428dvnH) — so throughput is comparable across every board. The boards under test and their radios are listed in the [results](#results) above.
 
 ## Software and Infrastructure
 
-- **Inventory & source of truth**: [NetBox](https://docs.armbian.com/User-Guide_Armbian-Software/Management/#netbox) holds every board in the lab, its status, and its capabilities. A scan-daemon continuously discovers boards on the lab subnets (nmap / arp / ssh) and reconciles NetBox.
-- **Orchestration**: the [Armbian autotests framework](https://github.com/armbian/autotests) reads each board's capabilities from NetBox and runs a per-board pipeline — flashing a clean image where the hardware allows, otherwise testing upgrade / reboot / performance — including the WiFi throughput measurement.
-- **Power control**: dispatched to the [`armbian/infra`](https://github.com/armbian/infra) backends (APC PDU, TP-Link PoE, DUT relay); no power port is ever switched by hand during a run.
-- **Automation**: [GitHub Actions](https://github.com/armbian/autotests/blob/master/.github/workflows/test-fleet-iperf.yml) orchestrate the fleet runs and test execution.
-- **Results**: published as a **time series** to [armbian.github.io](https://github.com/armbian/armbian.github.io) so regressions stay visible over time.
+[NetBox](https://docs.armbian.com/software/netbox/) is the lab's source of truth — every board, its capabilities and its wiring. The Armbian autotests framework reads that inventory and drives each board over self-hosted GitHub Actions, power included via `armbian/infra`.
 
 ## Methodology
 
-**Overview of the WiFi performance test process:**
+Wireless throughput is one step of the per-board Armbian autotests pipeline. For each board:
 
-1. **Power On Devices**  
-   └─ Embedded WiFi-capable devices and USB wireless adapters are powered on.
+1. **Power on & flash** — the board is powered up and, where the hardware allows, flashed with a clean Armbian image; boards that can't take a clean flash are tested in place.
+2. **Provision & connect** — first login, a stable lab IP, and the Wi-Fi association to the common access point (SSID) are configured, then connectivity is verified.
+3. **Measure with iperf3** — the board runs `iperf3` as the client, source-bound to each interface, against the lab's central server in both directions: upload (board → server) and download (`-R`, server → board). Goodput is recorded in Mbit/s.
+4. **Enrich from NetBox** — each result is annotated with the interface type, Wi-Fi chip, and channel frequency/width, so every number carries the hardware that produced it.
+5. **Restore & power down** — the original wired configuration is restored, results are uploaded, and the board is powered off.
 
-2. **Configure Wireless Connection**  
-   └─ Devices are configured to connect to a predefined access point (SSID).
-
-3. **Connect to WiFi Network**  
-   └─ Network connectivity is validated to ensure the device is routable.
-
-4. **Measure Performance (iperf3)**  
-   ├─ Perform reverse (`-R`) and forward iperf3 tests  
-   └─ Measure throughput and link quality.
-
-5. **Collect System & Network Info**  
-   ├─ Extract link details (e.g. bitrate, signal strength)  
-   └─ Record system version, kernel, architecture.
-
-6. **Restore Wired Network**  
-   └─ Reapply original routes and configuration.
-
-7. **Upload Test Results**  
-   └─ Summary, logs, and system info are uploaded as artifacts.
-
-8. **Power Off Devices**  
-   └─ All test devices are safely powered down after testing completes.
+Results are published as a time series, so a regression shows up the moment throughput drops on a given board.
 
 ## Contribute
 
-- Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize [our test infrastructure](https://github.com/armbian/autotests). By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.
+- Assist us in developing and maintaining our testing system: Your expertise can help us enhance and optimize our test infrastructure. By contributing your skills, you can play a key role in ensuring the accuracy and reliability of our test results.
 
 - Donate hardware: Your contribution of new hardware, whether it’s a wireless adapter or any other equipment, helps us expand our testing capabilities. We’re specifically looking for [new wireless adapters](https://www.amazon.de/hz/wishlist/ls/1GA17IGQ2MF0V?ref_=wl_share) that haven’t yet been added to our system. Your donation can directly impact the scope and depth of our tests.
 
