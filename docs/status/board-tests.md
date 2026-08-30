@@ -1230,18 +1230,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Rock 5T 01 — pass"
 
-    `rock-5t` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rock-5t` · **inplace** · image `26.11.0-trunk.30` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 120.9 s | nightly · 26.8.3 → 26.11.0-trunk.30 |
-    | reboot | ✅ | 43.6 s | warm · up 15 s |
-    | hw-performance | ✅ | 18.3 s | AES 1249 · mem 6900 · disk W 51 / R 82 MB/s · 60.1 °C · 1800 MHz |
-    | dvfs | ✅ | 15.5 s | ondemand · 408–1800 MHz (peak 2400) |
-    | network-iperf | ✅ | 104.4 s | enP3p49s0 ↑2353/↓2354 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑263/↓268 (Wi-Fi 6) · wlx7cdd90ebf00a ↑95/↓125 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 64.9 s | stable |
-    | reboot | ✅ | 35.1 s | warm · up 17 s |
-    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.30 · 6.18.44-current-rockchip64 |
+    | upgrade | ✅ | 78.2 s | nightly · 26.11.0-trunk.30 → 26.11.0-trunk.30 |
+    | reboot | ✅ | 54.6 s | power-cycle · up 22 s |
+    | hw-performance | ✅ | 18.0 s | AES 1251 · mem 10000 · disk W 50 / R 82 MB/s · 58.2 °C · 1800 MHz |
+    | dvfs | ✅ | 16.3 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 104.4 s | enP3p49s0 ↑2353/↓2352 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑337/↓216 (Wi-Fi 6) · wlx7cdd90ebf00a ↑96/↓121 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 67.1 s | stable |
+    | reboot | ✅ | 54.5 s | power-cycle · up 22 s |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.30 · 6.18.44-current-rockchip64 |
+
+    **Power** — idle 0.90 W · avg 9.24 W · peak 16.70 W · 273 samples
 
 ??? success "Rock 5T 02 — pass"
 
