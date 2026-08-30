@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**87** boards — **48** passed, **39** failed. Each card is the board's most recent test.
+**92** boards — **53** passed, **39** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -32,12 +32,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Banana Pi CM4IO 01 — fail"
 
-    `bananapicm4io` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `bananapicm4io` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 111.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ❌ | 205.2 s | power-cycle |
+    | upgrade | ✅ | 235.4 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 204.0 s | power-cycle |
     | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | dvfs | ⏭️ | 0.0 s | — |
     | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -47,11 +47,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Banana Pi M2 Ultra 01 — fail"
 
-    `bananapim2ultra` · **inplace** · image `26.11.0-trunk.19` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `bananapim2ultra` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.83 · reachable=False · port=22 |
+    | upgrade | ✅ | 106.1 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 200.8 s | warm |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | restore-stable | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | store-versions | ⏭️ | 0.0 s | — |
 
 ??? success "Banana Pi M2Pro 01 — pass"
 
@@ -59,14 +66,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 118.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 46.1 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 20.0 s | AES 980 · mem 5300 · disk W 42 / R 152 MB/s · 53.1 °C · 2100 MHz |
-    | dvfs | ✅ | 20.0 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 257.3 s | end0 ↑940/↓941 (1GE) · wlx60fb00480eb0 ↑192/↓211 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 80.5 s | stable |
-    | reboot | ✅ | 43.0 s | power-cycle · up 18 s |
-    | store-versions | ✅ | 4.5 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+    | upgrade | ✅ | 119.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 48.2 s | power-cycle · up 19 s |
+    | hw-performance | ✅ | 20.0 s | AES 979 · mem 5300 · disk W 42 / R 158 MB/s · 53.4 °C · 2100 MHz |
+    | dvfs | ✅ | 20.1 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 103.3 s | end0 ↑940/↓941 (1GE) · wlx60fb00480eb0 ↑194/↓217 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 88.9 s | stable |
+    | reboot | ✅ | 46.7 s | power-cycle · up 21 s |
+    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? success "Banana Pi M5 01 — pass"
 
@@ -74,13 +81,13 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 185.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 171.8 s | warm · up 155 s |
-    | hw-performance | ✅ | 37.6 s | AES 979 · mem 5300 · disk W 10 / R 15 MB/s · 54.7 °C · 2100 MHz |
-    | dvfs | ✅ | 20.2 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 108.2 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑1/↓11 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 144.8 s | stable |
-    | reboot | ✅ | 167.1 s | warm · up 150 s |
+    | upgrade | ✅ | 186.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 171.7 s | warm · up 154 s |
+    | hw-performance | ✅ | 38.5 s | AES 980 · mem 5200 · disk W 10 / R 15 MB/s · 53.5 °C · 2100 MHz |
+    | dvfs | ✅ | 20.8 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 92.7 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑1/↓10 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 145.7 s | stable |
+    | reboot | ✅ | 168.0 s | warm · up 150 s |
     | store-versions | ✅ | 4.8 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? success "Banana Pi Pro 01 — pass"
@@ -89,23 +96,23 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 278.8 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 65.1 s | warm · up 44 s |
-    | hw-performance | ✅ | 49.6 s | AES 19 · mem 1700 · disk W 19 / R 22 MB/s · 50.7 °C · 960 MHz |
-    | dvfs | ✅ | 46.3 s | ondemand · 528–960 MHz (peak 960) |
-    | network-iperf | ✅ | 206.4 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑8/↓17 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 191.7 s | stable |
-    | reboot | ✅ | 64.2 s | warm · up 43 s |
-    | store-versions | ✅ | 11.0 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
+    | upgrade | ✅ | 283.7 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 67.6 s | warm · up 47 s |
+    | hw-performance | ✅ | 50.1 s | AES 19 · mem 1700 · disk W 19 / R 20 MB/s · 50 °C · 960 MHz |
+    | dvfs | ✅ | 47.9 s | ondemand · 528–960 MHz (peak 960) |
+    | network-iperf | ✅ | 249.0 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑19/↓12 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 191.0 s | stable |
+    | reboot | ✅ | 64.5 s | warm · up 44 s |
+    | store-versions | ✅ | 11.6 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
 
 ??? failure "BananaPi BPI-F3 01 — fail"
 
-    `bananapif3` · **inplace** · image `26.11.0-trunk.6` · 0 ✅ · 1 ❌ · 7 ⏭️
+    `bananapif3` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 10.5 s | — |
-    | reboot | ❌ | 218.3 s | power-cycle |
+    | upgrade | ✅ | 196.6 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 206.2 s | power-cycle |
     | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | dvfs | ⏭️ | 0.0 s | — |
     | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -130,13 +137,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 0.80 W · avg 1.92 W · peak 3.60 W · 548 samples
 
-??? failure "Clearfog Pro 01 — fail"
+??? success "Clearfog Pro 01 — pass"
 
-    `clearfogpro` · **inplace** · image `26.11.0-trunk.6` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `clearfogpro` · **inplace** · image `26.8.3` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.42 · reachable=False · port=22 |
+    | upgrade | ✅ | 198.8 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 36.6 s | warm · up 20 s |
+    | hw-performance | ✅ | 42.8 s | AES 44 · mem 3700 · disk W 21 / R 23 MB/s · 67 °C · None MHz |
+    | dvfs | ➖ | 3.0 s | — |
+    | network-iperf | ✅ | 55.6 s | lan2 ↑936/↓936 Mbps |
+    | restore-stable | ✅ | 110.7 s | stable |
+    | reboot | ✅ | 38.6 s | warm · up 22 s |
+    | store-versions | ✅ | 6.4 s | 26.11.0-trunk.27 · 6.6.151-current-mvebu |
 
 ??? success "Cubie A5E 01 — pass"
 
@@ -144,16 +158,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 189.9 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 141.2 s | power-cycle · up 112 s |
-    | hw-performance | ✅ | 46.8 s | AES 358 · mem 2000 · disk W 10 / R 23 MB/s · 67.1 °C · None MHz |
-    | dvfs | ➖ | 2.6 s | — |
-    | network-iperf | ✅ | 172.9 s | end0 ↑916/↓938 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
-    | restore-stable | ✅ | 130.6 s | stable |
-    | reboot | ✅ | 139.9 s | power-cycle · up 112 s |
+    | upgrade | ✅ | 193.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 140.0 s | power-cycle · up 113 s |
+    | hw-performance | ✅ | 45.9 s | AES 358 · mem 2000 · disk W 11 / R 23 MB/s · 64.5 °C · None MHz |
+    | dvfs | ➖ | 2.7 s | — |
+    | network-iperf | ✅ | 76.9 s | end0 ↑915/↓941 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
+    | restore-stable | ✅ | 137.7 s | stable |
+    | reboot | ✅ | 140.0 s | power-cycle · up 110 s |
     | store-versions | ✅ | 5.5 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
 
-    **Power** — idle 1.00 W · avg 4.17 W · peak 5.20 W · 688 samples
+    **Power** — idle 2.30 W · avg 4.13 W · peak 5.20 W · 610 samples
 
 ??? success "Cubietruck 01 — pass"
 
@@ -161,14 +175,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 285.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 65.4 s | warm · up 44 s |
-    | hw-performance | ✅ | 59.5 s | AES 19 · mem 1600 · disk W 15 / R 22 MB/s · 46.4 °C · 960 MHz |
-    | dvfs | ✅ | 55.7 s | ondemand · 528–960 MHz (peak 960) |
-    | network-iperf | ✅ | 264.9 s | end0 ↑722/↓732 (1GE) · wlan0 ↑12/↓26 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 190.8 s | stable |
-    | reboot | ✅ | 65.7 s | warm · up 45 s |
-    | store-versions | ✅ | 12.2 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
+    | upgrade | ✅ | 285.7 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 66.4 s | warm · up 45 s |
+    | hw-performance | ✅ | 61.2 s | AES 18 · mem 1600 · disk W 14 / R 21 MB/s · 46.4 °C · 960 MHz |
+    | dvfs | ✅ | 55.9 s | ondemand · 528–960 MHz (peak 960) |
+    | network-iperf | ✅ | 308.7 s | end0 ↑726/↓844 (1GE) · wlan0 ↑18/↓15 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 190.2 s | stable |
+    | reboot | ✅ | 65.4 s | warm · up 43 s |
+    | store-versions | ✅ | 12.7 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
 
 ??? success "Cubox i2eX/i4 01 — pass"
 
@@ -176,14 +190,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 308.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 49.8 s | warm · up 30 s |
-    | hw-performance | ✅ | 46.7 s | AES 26 · mem 709 · disk W 19 / R 20 MB/s · 54.3 °C · 996 MHz |
-    | dvfs | ✅ | 39.6 s | ondemand · 396–996 MHz (peak 996) |
-    | network-iperf | ✅ | 231.7 s | end0 ↑392/↓586 (1GE) · wlan0 ↑19/↓20 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 233.4 s | stable |
-    | reboot | ✅ | 50.7 s | warm · up 30 s |
-    | store-versions | ✅ | 8.6 s | 26.11.0-trunk.27 · 6.18.44-current-imx6 |
+    | upgrade | ✅ | 309.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 51.3 s | warm · up 32 s |
+    | hw-performance | ✅ | 46.8 s | AES 26 · mem 756 · disk W 19 / R 20 MB/s · 52.6 °C · 996 MHz |
+    | dvfs | ✅ | 40.4 s | ondemand · 396–996 MHz (peak 996) |
+    | network-iperf | ✅ | 142.9 s | end0 ↑393/↓479 (1GE) · wlan0 ↑19/↓11 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 263.8 s | stable |
+    | reboot | ✅ | 49.5 s | warm · up 30 s |
+    | store-versions | ✅ | 8.7 s | 26.11.0-trunk.27 · 6.18.44-current-imx6 |
 
 ??? success "Espressobin 01 — pass"
 
@@ -193,12 +207,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 46.7 s | AES 371 · mem 2000 · disk W 22 / R 83 MB/s · None °C · 800 MHz |
-    | dvfs | ✅ | 33.8 s | ondemand · 200–800 MHz (peak 800) |
-    | network-iperf | ✅ | 44.1 s | lan0 ↑932/↓746 (1GE) Mbps |
+    | hw-performance | ✅ | 38.5 s | AES 370 · mem 2000 · disk W 13 / R 134 MB/s · None °C · 800 MHz |
+    | dvfs | ✅ | 33.6 s | ondemand · 200–800 MHz (peak 800) |
+    | network-iperf | ✅ | 38.7 s | lan0 ↑936/↓749 (1GE) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 7.9 s | 26.8.3 · 6.18.42-current-mvebu64 |
+    | store-versions | ✅ | 8.0 s | 26.8.3 · 6.18.44-current-mvebu64 |
 
 ??? success "Helios4 01 — pass"
 
@@ -251,14 +265,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 189.8 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 36.5 s | warm · up 17 s |
-    | hw-performance | ✅ | 23.7 s | AES 655 · mem 3500 · disk W 42 / R 145 MB/s · 56 °C · 1512 MHz |
-    | dvfs | ✅ | 25.2 s | ondemand · 500–1512 MHz (peak 1512) |
-    | network-iperf | ✅ | 98.8 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑73/↓92 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 127.9 s | stable |
+    | upgrade | ✅ | 263.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
     | reboot | ✅ | 35.3 s | warm · up 17 s |
-    | store-versions | ✅ | 5.4 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+    | hw-performance | ✅ | 24.2 s | AES 652 · mem 3600 · disk W 42 / R 149 MB/s · 56 °C · 1512 MHz |
+    | dvfs | ✅ | 26.0 s | ondemand · 500–1512 MHz (peak 1512) |
+    | network-iperf | ✅ | 72.2 s | eth0 ↑904/↓847 (1GE) · wlan0 ↑106/↓102 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 136.8 s | stable |
+    | reboot | ✅ | 35.4 s | warm · up 17 s |
+    | store-versions | ✅ | 5.7 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? failure "Khadas VIM3 01 — fail"
 
@@ -281,14 +295,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 205.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 43.4 s | warm · up 27 s |
-    | hw-performance | ✅ | 32.0 s | AES 656 · mem 3500 · disk W 16 / R 2 MB/s · 50 °C · 1512 MHz |
-    | dvfs | ✅ | 22.9 s | ondemand · 500–1512 MHz (peak 1512) |
-    | network-iperf | ✅ | 111.5 s | end0 ↑94/↓94 (10/100ME) Mbps |
-    | restore-stable | ✅ | 150.2 s | stable |
-    | reboot | ✅ | 41.0 s | warm · up 24 s |
-    | store-versions | ✅ | 5.6 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+    | upgrade | ✅ | 210.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 41.6 s | warm · up 24 s |
+    | hw-performance | ✅ | 32.5 s | AES 656 · mem 3600 · disk W 17 / R 2 MB/s · 50 °C · 1512 MHz |
+    | dvfs | ✅ | 23.2 s | ondemand · 500–1512 MHz (peak 1512) |
+    | network-iperf | ✅ | 50.4 s | end0 ↑94/↓94 (10/100ME) Mbps |
+    | restore-stable | ✅ | 157.4 s | stable |
+    | reboot | ✅ | 40.3 s | warm · up 24 s |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? failure "Mekotronics R58S2 01 — fail"
 
@@ -350,6 +364,21 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
+??? success "NanoPi Duo 02 — pass"
+
+    `nanopiduo` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 1 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 115.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 124.2 s | warm · up 107 s |
+    | hw-performance | ✅ | 42.7 s | AES 25 · mem 1500 · disk W 21 / R 23 MB/s · 67.2 °C · 1296 MHz |
+    | dvfs | ✅ | 38.9 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ❌ | 369.4 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑0/↓0 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 143.7 s | stable |
+    | reboot | ✅ | 124.4 s | warm · up 108 s |
+    | store-versions | ✅ | 8.5 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
+
 ??? failure "NanoPi K2 01 — fail"
 
     `nanopik2-s905` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
@@ -371,16 +400,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 105.9 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 53.1 s | power-cycle · up 25 s |
-    | hw-performance | ✅ | 20.9 s | AES 1019 · mem 6600 · disk W 54 / R 60 MB/s · 46.2 °C · 1416 MHz |
-    | dvfs | ✅ | 19.8 s | ondemand · 408–1416 MHz (peak 1800) |
-    | network-iperf | ✅ | 163.6 s | end0 ↑939/↓939 (1GE) · wlan0 ↑131/↓138 (Wi-Fi 5) · wlx803f5d16af63 ↑128/↓153 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 79.1 s | stable |
-    | reboot | ✅ | 55.5 s | power-cycle · up 27 s |
+    | upgrade | ✅ | 150.0 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 54.7 s | power-cycle · up 28 s |
+    | hw-performance | ✅ | 21.5 s | AES 1024 · mem 6600 · disk W 52 / R 62 MB/s · 45.6 °C · 1416 MHz |
+    | dvfs | ✅ | 19.7 s | ondemand · 408–1416 MHz (peak 1800) |
+    | network-iperf | ✅ | 122.0 s | end0 ↑939/↓939 (1GE) · wlan0 ↑169/↓202 (Wi-Fi 5) · wlx803f5d16af63 ↑123/↓185 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 93.4 s | stable |
+    | reboot | ✅ | 53.4 s | power-cycle · up 27 s |
     | store-versions | ✅ | 4.7 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 3.00 W · avg 7.06 W · peak 12.50 W · 411 samples
+    **Power** — idle 3.00 W · avg 7.11 W · peak 12.30 W · 425 samples
 
 ??? failure "NanoPi M5 01 — fail"
 
@@ -412,6 +441,21 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
+??? failure "NanoPi Neo 2 Black 02 — fail"
+
+    `nanopineo2black` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 1 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 77.9 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 33.6 s | warm · up 18 s |
+    | hw-performance | ✅ | 31.1 s | AES 638 · mem 3500 · disk W 18 / R 23 MB/s · 56.5 °C · 1368 MHz |
+    | dvfs | ✅ | 22.8 s | ondemand · 480–1368 MHz (peak 1368) |
+    | network-iperf | ✅ | 31.9 s | end0 ↑891/↓895 (1GE) Mbps |
+    | restore-stable | ❌ | 125.1 s | stable |
+    | reboot | ✅ | 40.1 s | warm · up 25 s |
+    | store-versions | ✅ | 3.6 s | 25.2.0-trunk.409 · 6.18.48-current-meson64 |
+
 ??? failure "NanoPi Neo 3 01 — fail"
 
     `nanopineo3` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
@@ -427,6 +471,21 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
+??? success "NanoPi Neo 3 02 — pass"
+
+    `nanopineo3` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 95.1 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 41.4 s | warm · up 25 s |
+    | hw-performance | ✅ | 28.0 s | AES 582 · mem 2400 · disk W 52 / R 3 MB/s · 81.5 °C · 1296 MHz |
+    | dvfs | ✅ | 30.2 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 114.0 s | end0 ↑903/↓941 (1GE) · wlx7cdd905518f9 ↑24/↓30 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 157.9 s | stable |
+    | reboot | ✅ | 41.7 s | warm · up 25 s |
+    | store-versions | ✅ | 7.6 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
+
 ??? success "NanoPi R1 01 — pass"
 
     `nanopi-r1` · **inplace** · image `26.8.3` · 4 ✅ · 0 ❌ · 4 ⏭️
@@ -435,12 +494,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 39.8 s | AES 25 · mem 2200 · disk W 19 / R 22 MB/s · 44.9 °C · 1296 MHz |
-    | dvfs | ✅ | 32.9 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 70.8 s | end0 ↑707/↓941 (1GE) · wlan0 ↑20/↓23 (Wi-Fi 4) Mbps |
+    | hw-performance | ✅ | 41.8 s | AES 25 · mem 2200 · disk W 16 / R 22 MB/s · 43 °C · 1296 MHz |
+    | dvfs | ✅ | 33.2 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 74.6 s | end0 ↑709/↓941 (1GE) · wlan0 ↑6/↓9 (Wi-Fi 4) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 7.2 s | 26.8.3 · 6.18.38-current-sunxi |
+    | store-versions | ✅ | 7.3 s | 26.8.3 · 6.18.44-current-sunxi |
 
 ??? success "NanoPi R1 02 — pass"
 
@@ -566,20 +625,13 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 3.30 W · avg 4.23 W · peak 5.90 W · 190 samples
 
-??? success "NanoPi R76S 01 — pass"
+??? failure "NanoPi R76S 01 — fail"
 
-    `nanopi-r76s` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopi-r76s` · **inplace** · image `26.11.0-trunk.27` · 0 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 91.1 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 40.2 s | warm · up 23 s |
-    | hw-performance | ✅ | 17.6 s | AES 1310 · mem 8800 · disk W 62 / R 70 MB/s · 46.2 °C · 2016 MHz |
-    | dvfs | ✅ | 17.1 s | ondemand · 408–2016 MHz (peak 2208) |
-    | network-iperf | ✅ | 120.8 s | end0 ↑2353/↓2354 (2.5GE) · end1 ↑2353/↓2254 (2.5GE) · wlan0 ↑98/↓180 (Wi-Fi 5) · wlxe0e1a933de37 ↑69/↓142 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 64.3 s | stable |
-    | reboot | ✅ | 36.6 s | warm · up 18 s |
-    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.27 · 7.1.8-edge-rockchip64 |
+    | reachable | ❌ | 0.0 s | ip=10.0.50.77 · reachable=False · port=22 |
 
 ??? success "NanoPi R76S 02 — pass"
 
@@ -596,35 +648,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 31.2 s | warm · up 17 s |
     | store-versions | ✅ | 4.8 s | 26.8.0-trunk.192 · 6.1.115-vendor-rk35xx |
 
-??? success "Odroid C1 01 — pass"
+??? failure "Odroid C1 01 — fail"
 
-    `odroidc1` · **inplace** · image `26.8.0-trunk.314` · 3 ✅ · 0 ❌ · 5 ⏭️
+    `odroidc1` · **inplace** · image `26.8.0-trunk.314` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 80.8 s | AES 29 · mem 1900 · disk W 3 / R 10 MB/s · 55.6 °C · 1536 MHz |
-    | dvfs | ➖ | 6.0 s | ondemand · 504–1536 MHz |
-    | network-iperf | ✅ | 121.9 s | eth0 ↑934/↓941 (1GE) Mbps |
+    | hw-performance | ✅ | 208.0 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
+    | dvfs | ➖ | 11.1 s | — |
+    | network-iperf | ⏭️ | 31.4 s | no iperf3 on board |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 7.2 s | 26.8.0-trunk.314 · 6.12.28-current-meson |
+    | store-versions | ❌ | 21.3 s | — |
 
-??? failure "Odroid C2 01 — fail"
+??? success "Odroid C2 01 — pass"
 
-    `odroidc2` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `odroidc2` · **inplace** · image `26.8.3` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 86.4 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 200.1 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 208.2 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 28.6 s | warm · up 12 s |
+    | hw-performance | ✅ | 22.7 s | AES 51 · mem 3500 · disk W 32 / R 143 MB/s · 45 °C · 1536 MHz |
+    | dvfs | ✅ | 22.0 s | ondemand · 500–1536 MHz (peak 1536) |
+    | network-iperf | ✅ | 68.2 s | end0 ↑939/↓600 (1GE) Mbps |
+    | restore-stable | ✅ | 115.9 s | stable |
+    | reboot | ✅ | 28.5 s | warm · up 12 s |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? success "Odroid C4 01 — pass"
 
@@ -632,31 +684,31 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 131.8 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 41.0 s | power-cycle · up 16 s |
-    | hw-performance | ✅ | 21.7 s | AES 980 · mem 5200 · disk W 30 / R 78 MB/s · 44.1 °C · 2100 MHz |
-    | dvfs | ✅ | 19.3 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 132.6 s | end0 ↑941/↓941 (1GE) · wlx24050fdd332b ↑77/↓128 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 96.6 s | stable |
-    | reboot | ✅ | 41.9 s | power-cycle · up 16 s |
+    | upgrade | ✅ | 126.7 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 41.1 s | power-cycle · up 17 s |
+    | hw-performance | ✅ | 21.4 s | AES 981 · mem 5300 · disk W 30 / R 76 MB/s · 44 °C · 2100 MHz |
+    | dvfs | ✅ | 19.4 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 110.8 s | end0 ↑941/↓942 (1GE) · wlx24050fdd332b ↑21/↓31 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 102.8 s | stable |
+    | reboot | ✅ | 41.0 s | power-cycle · up 17 s |
     | store-versions | ✅ | 4.4 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? success "Odroid M1 01 — pass"
 
-    `odroidm1` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidm1` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 108.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 52.5 s | power-cycle · up 21 s |
-    | hw-performance | ✅ | 16.8 s | AES 914 · mem 5000 · disk W 1038 / R 1020 MB/s · 37.2 °C · 1992 MHz |
-    | dvfs | ✅ | 21.5 s | ondemand · 408–1992 MHz (peak 1992) |
-    | network-iperf | ✅ | 86.8 s | eth0 ↑551/↓941 (1GE) · wlx40a5eff39254 ↑153/↓136 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 73.9 s | stable |
-    | reboot | ✅ | 53.3 s | power-cycle · up 20 s |
-    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
+    | upgrade | ⏭️ | 18.7 s | — |
+    | reboot | ✅ | 53.7 s | power-cycle · up 21 s |
+    | hw-performance | ✅ | 17.8 s | AES 915 · mem 5000 · disk W 1078 / R 1066 MB/s · 37.2 °C · 1992 MHz |
+    | dvfs | ✅ | 22.4 s | ondemand · 408–1992 MHz (peak 1992) |
+    | network-iperf | ✅ | 259.4 s | eth0 ↑533/↓941 (1GE) · wlx40a5eff39254 ↑209/↓223 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 21.4 s | stable |
+    | reboot | ✅ | 53.0 s | power-cycle · up 21 s |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 1.60 W · avg 5.22 W · peak 10.90 W · 341 samples
+    **Power** — idle 1.60 W · avg 4.94 W · peak 8.90 W · 359 samples
 
 ??? success "Odroid N2 01 — pass"
 
@@ -707,26 +759,33 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Odroid XU4 01 — pass"
 
-    `odroidxu4` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidxu4` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 173.0 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 61.2 s | power-cycle · up 31 s |
-    | hw-performance | ✅ | 37.9 s | AES 71 · mem 5500 · disk W 1 / R 54 MB/s · 57 °C · 1400 MHz |
-    | dvfs | ✅ | 29.1 s | ondemand · 600–1400 MHz (peak 2000) |
-    | network-iperf | ✅ | 278.2 s | enx001e0636e380 ↑924/↓941 (1GE) Mbps |
-    | restore-stable | ✅ | 118.2 s | stable |
-    | reboot | ✅ | 57.2 s | power-cycle · up 31 s |
-    | store-versions | ✅ | 7.0 s | 26.11.0-trunk.27 · 6.6.151-current-odroidxu4 |
+    | upgrade | ⏭️ | 27.7 s | — |
+    | reboot | ✅ | 59.3 s | power-cycle · up 33 s |
+    | hw-performance | ✅ | 38.1 s | AES 71 · mem 4200 · disk W 1 / R 54 MB/s · 55 °C · 1400 MHz |
+    | dvfs | ✅ | 30.1 s | ondemand · 600–1400 MHz (peak 2000) |
+    | network-iperf | ✅ | 61.9 s | enx001e0636e380 ↑924/↓941 (1GE) Mbps |
+    | restore-stable | ✅ | 24.1 s | stable |
+    | reboot | ✅ | 58.8 s | power-cycle · up 33 s |
+    | store-versions | ✅ | 6.7 s | 26.11.0-trunk.27 · 6.6.151-current-odroidxu4 |
 
 ??? failure "Orange Pi 3 01 — fail"
 
-    `orangepi3` · **inplace** · image `26.11.0-trunk.19` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `orangepi3` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.41 · reachable=False · port=22 |
+    | upgrade | ✅ | 79.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 207.2 s | power-cycle |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | restore-stable | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | store-versions | ⏭️ | 0.0 s | — |
 
 ??? failure "Orange Pi 5 01 — fail"
 
@@ -743,22 +802,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
-??? success "Orange Pi 5 Plus 01 — pass"
+??? failure "Orange Pi 5 Plus 01 — fail"
 
-    `orangepi5-plus` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `orangepi5-plus` · **inplace** · image `26.11.0-trunk.27` · 5 ✅ · 2 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 107.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 52.2 s | power-cycle · up 27 s |
-    | hw-performance | ✅ | 17.5 s | AES 1263 · mem 14000 · disk W 55 / R 63 MB/s · 45.3 °C · 1800 MHz |
-    | dvfs | ✅ | 16.2 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 232.1 s | enP3p49s0 ↑2351/↓2223 (2.5GE) · enP4p65s0 ↑941/↓941 (1GE) · wlxe0e1a9380c53 ↑636/↓427 (Wi-Fi 6) Mbps |
-    | restore-stable | ✅ | 89.1 s | stable |
-    | reboot | ✅ | 51.0 s | power-cycle · up 26 s |
-    | store-versions | ✅ | 3.4 s | 26.11.0-trunk.27 · 6.1.115-vendor-rk35xx |
+    | upgrade | ⏭️ | 17.4 s | — |
+    | reboot | ✅ | 60.5 s | power-cycle · up 35 s |
+    | hw-performance | ✅ | 25.1 s | AES 1273 · mem 13800 · disk W 20 / R 22 MB/s · 46.2 °C · 1800 MHz |
+    | dvfs | ✅ | 16.4 s | ondemand · 1800–1800 MHz (peak 2256) |
+    | network-iperf | ❌ | 176.6 s | enP3p49s0 ↑2351/↓2326 (2.5GE) · enP4p65s0 ↑939/↓0 (1GE) · wlxe0e1a9380c53 ↑706/↓356 (Wi-Fi 6) Mbps |
+    | restore-stable | ❌ | 3.9 s | stable |
+    | reboot | ✅ | 54.2 s | power-cycle · up 28 s |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.27 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 2.70 W · avg 6.07 W · peak 13.50 W · 458 samples
+    **Power** — idle 2.20 W · avg 5.75 W · peak 12.20 W · 288 samples
 
 ??? failure "Orange Pi 5 Plus 02 — fail"
 
@@ -777,18 +836,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Orange Pi One+ 01 — pass"
 
-    `orangepioneplus` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `orangepioneplus` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 146.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 33.5 s | warm · up 17 s |
-    | hw-performance | ✅ | 30.0 s | AES 835 · mem 4600 · disk W 21 / R 23 MB/s · 61.6 °C · 1800 MHz |
-    | dvfs | ✅ | 22.6 s | ondemand · 480–1800 MHz (peak 1800) |
-    | network-iperf | ✅ | 227.7 s | end0 ↑916/↓942 (1GE) · wlx00e04c881724 ↑121/↓101 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 97.8 s | stable |
-    | reboot | ✅ | 35.5 s | warm · up 19 s |
-    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.27 · 7.1.8-edge-sunxi64 |
+    | upgrade | ⏭️ | 19.2 s | — |
+    | reboot | ✅ | 34.3 s | warm · up 17 s |
+    | hw-performance | ✅ | 30.9 s | AES 833 · mem 4500 · disk W 21 / R 23 MB/s · 58.8 °C · 1800 MHz |
+    | dvfs | ✅ | 23.7 s | ondemand · 480–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 158.1 s | end0 ↑913/↓941 (1GE) · wlx00e04c881724 ↑138/↓140 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 28.3 s | stable |
+    | reboot | ✅ | 33.9 s | warm · up 18 s |
+    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.27 · 7.1.8-edge-sunxi64 |
 
 ??? failure "Orange Pi PC + 01 — fail"
 
@@ -805,20 +864,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ❌ | 202.9 s | warm |
     | store-versions | ❌ | 16.4 s | — |
 
-??? success "Orange Pi PC2 01 — pass"
+??? failure "Orange Pi PC2 01 — fail"
 
-    `orangepipc2` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `orangepipc2` · **inplace** · image `26.11.0-trunk.27` · 6 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 244.0 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 60.0 s | power-cycle · up 34 s |
-    | hw-performance | ✅ | 38.2 s | AES 638 · mem 3500 · disk W 9 / R 22 MB/s · 62.7 °C · 1368 MHz |
-    | dvfs | ✅ | 24.1 s | ondemand · 480–1368 MHz (peak 1368) |
-    | network-iperf | ✅ | 39.4 s | end0 ↑847/↓872 (1GE) Mbps |
-    | restore-stable | ✅ | 182.9 s | stable |
-    | reboot | ✅ | 59.0 s | power-cycle · up 34 s |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
+    | upgrade | ⏭️ | 43.3 s | — |
+    | reboot | ✅ | 59.8 s | power-cycle · up 34 s |
+    | hw-performance | ✅ | 37.5 s | AES 638 · mem 3500 · disk W 9 / R 23 MB/s · 55.5 °C · 1368 MHz |
+    | dvfs | ✅ | 23.2 s | ondemand · 480–1368 MHz (peak 1368) |
+    | network-iperf | ✅ | 34.4 s | end0 ↑893/↓897 (1GE) Mbps |
+    | restore-stable | ❌ | 8.1 s | stable |
+    | reboot | ✅ | 55.5 s | power-cycle · up 31 s |
+    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
 
 ??? success "Orange Pi Prime 01 — pass"
 
@@ -828,36 +887,36 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 45.0 s | AES 379 · mem 2100 · disk W 21 / R 23 MB/s · 38.2 °C · None MHz |
-    | dvfs | ➖ | 3.1 s | — |
-    | network-iperf | ✅ | 166.3 s | end0 ↑883/↓787 (1GE) · wlan0 ↑25/↓34 (Wi-Fi 4) Mbps |
+    | hw-performance | ✅ | 45.2 s | AES 380 · mem 2100 · disk W 21 / R 23 MB/s · 39.6 °C · None MHz |
+    | dvfs | ➖ | 3.0 s | — |
+    | network-iperf | ✅ | 76.9 s | end0 ↑884/↓899 (1GE) · wlan0 ↑23/↓29 (Wi-Fi 4) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 6.5 s | 26.8.3 · 6.18.38-current-sunxi64 |
+    | store-versions | ✅ | 6.5 s | 26.8.3 · 6.18.44-current-sunxi64 |
 
 ??? success "Orange Pi R1 01 — pass"
 
-    `orangepi-r1` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `orangepi-r1` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 245.8 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 52.9 s | warm · up 35 s |
-    | hw-performance | ✅ | 39.7 s | AES 25 · mem 1400 · disk W 21 / R 23 MB/s · 63.2 °C · 1296 MHz |
-    | dvfs | ✅ | 34.0 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 124.6 s | enxc0742bfffce9 ↑94/↓94 (10/100ME) · wlan0 ↑21/↓28 (Wi-Fi 4) · wlan1 ↑12/↓31 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 158.3 s | stable |
-    | reboot | ✅ | 53.6 s | warm · up 34 s |
-    | store-versions | ✅ | 9.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
+    | upgrade | ⏭️ | 46.7 s | — |
+    | reboot | ✅ | 54.0 s | warm · up 34 s |
+    | hw-performance | ✅ | 41.1 s | AES 25 · mem 1400 · disk W 21 / R 23 MB/s · 60.5 °C · 1296 MHz |
+    | dvfs | ✅ | 37.1 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 189.5 s | enxc0742bfffce9 ↑94/↓94 (10/100ME) · wlan0 ↑20/↓22 (Wi-Fi 4) · wlan1 ↑14/↓28 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 47.5 s | stable |
+    | reboot | ✅ | 53.2 s | warm · up 35 s |
+    | store-versions | ✅ | 9.5 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
 
 ??? failure "Orange Pi Win 01 — fail"
 
-    `orangepiwin` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `orangepiwin` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 125.1 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 215.8 s | power-cycle |
+    | upgrade | ✅ | 84.0 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 219.3 s | power-cycle |
     | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | dvfs | ⏭️ | 0.0 s | — |
     | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -880,6 +939,21 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
+??? success "Orange Pi Zero 03 — pass"
+
+    `orangepizero` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 1 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 127.1 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 52.1 s | warm · up 36 s |
+    | hw-performance | ✅ | 39.7 s | AES 25 · mem 1400 · disk W 20 / R 22 MB/s · 56.8 °C · 1296 MHz |
+    | dvfs | ✅ | 34.1 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ❌ | 450.9 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑0/↓0 (Wi-Fi 4) · wlx0087422045f0 ↑0/↓0 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 154.5 s | stable |
+    | reboot | ✅ | 50.5 s | warm · up 33 s |
+    | store-versions | ✅ | 8.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
+
 ??? failure "Orange Pi Zero Plus 01 — fail"
 
     `orangepizeroplus` · **inplace** · image `26.08.0-trunk` · 1 ✅ · 1 ❌ · 6 ⏭️
@@ -895,20 +969,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
+??? success "Orange Pi Zero Plus 02 — pass"
+
+    `orangepizeroplus` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 88.9 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 41.5 s | warm · up 25 s |
+    | hw-performance | ✅ | 35.0 s | AES 469 · mem 2600 · disk W 22 / R 3 MB/s · 58 °C · 1008 MHz |
+    | dvfs | ✅ | 26.4 s | ondemand · 480–1008 MHz (peak 1008) |
+    | network-iperf | ✅ | 165.7 s | end0 ↑890/↓938 (1GE) · wlan0 ↑1/↓1 (Wi-Fi 4) · wlan1 ↑2/↓3 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 125.5 s | stable |
+    | reboot | ✅ | 42.8 s | warm · up 26 s |
+    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
+
 ??? success "Orange Pi Zero2 01 — pass"
 
     `orangepizero2` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 160.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 44.2 s | power-cycle · up 19 s |
-    | hw-performance | ✅ | 32.8 s | AES 705 · mem 3000 · disk W 21 / R 23 MB/s · 60.9 °C · 1512 MHz |
-    | dvfs | ✅ | 26.3 s | ondemand · 480–1512 MHz (peak 1512) |
-    | network-iperf | ✅ | 123.7 s | end0 ↑877/↓941 (1GE) · wlx7c023a625db1 ↑35/↓34 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 136.2 s | stable |
-    | reboot | ✅ | 44.2 s | power-cycle · up 19 s |
-    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.27 · 7.1.8-edge-sunxi64 |
+    | upgrade | ✅ | 87.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ✅ | 45.5 s | power-cycle · up 19 s |
+    | hw-performance | ✅ | 32.6 s | AES 700 · mem 3000 · disk W 21 / R 23 MB/s · 59.8 °C · 1512 MHz |
+    | dvfs | ✅ | 26.4 s | ondemand · 480–1512 MHz (peak 1512) |
+    | network-iperf | ✅ | 250.5 s | end0 ↑876/↓941 (1GE) · wlx7c023a625db1 ↑37/↓20 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 63.8 s | stable |
+    | reboot | ✅ | 44.3 s | power-cycle · up 19 s |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.27 · 7.1.8-edge-sunxi64 |
 
 ??? success "OrangePi 3 LTS 01 — pass"
 
@@ -918,12 +1007,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 20.8 s | AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 63.9 °C · 1608 MHz |
-    | dvfs | ✅ | 21.4 s | ondemand · 480–1608 MHz (peak 1608) |
-    | network-iperf | ✅ | 155.0 s | end0 ↑921/↓941 (1GE) · wlan0 ↑42/↓9 (Wi-Fi 5) Mbps |
+    | hw-performance | ✅ | 20.9 s | AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 62.8 °C · 1608 MHz |
+    | dvfs | ✅ | 21.8 s | ondemand · 480–1608 MHz (peak 1608) |
+    | network-iperf | ✅ | 70.4 s | end0 ↑915/↓941 (1GE) · wlan0 ↑140/↓132 (Wi-Fi 5) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 4.8 s | 26.8.3 · 7.0.14-edge-sunxi64 |
+    | store-versions | ✅ | 5.4 s | 26.8.3 · 7.1.8-edge-sunxi64 |
 
 ??? failure "Pine H64 01 — fail"
 
@@ -942,20 +1031,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Radxa Dragon Q6A 01 — pass"
 
-    `radxa-dragon-q6a` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `radxa-dragon-q6a` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 77.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 136.2 s | power-cycle · up 106 s |
-    | hw-performance | ✅ | 13.2 s | AES 1511 · mem 18600 · disk W 252 / R 1164 MB/s · 48.4 °C · 1958 MHz |
-    | dvfs | ✅ | 14.0 s | ondemand · 300–1958 MHz (peak 2707) |
-    | network-iperf | ✅ | 28.2 s | enp1s0 ↑941/↓940 (1GE) Mbps |
-    | restore-stable | ✅ | 64.8 s | stable |
-    | reboot | ✅ | 135.8 s | power-cycle · up 106 s |
-    | store-versions | ✅ | 3.6 s | 26.11.0-trunk.27 · 6.18.2-current-qcs6490 |
+    | upgrade | ⏭️ | 10.7 s | — |
+    | reboot | ✅ | 135.9 s | power-cycle · up 106 s |
+    | hw-performance | ✅ | 13.8 s | AES 1507 · mem 15400 · disk W 225 / R 1090 MB/s · 45.7 °C · 1958 MHz |
+    | dvfs | ✅ | 14.7 s | ondemand · 300–1958 MHz (peak 2707) |
+    | network-iperf | ✅ | 51.4 s | enp1s0 ↑940/↓116 (1GE) Mbps |
+    | restore-stable | ✅ | 11.1 s | stable |
+    | reboot | ✅ | 142.4 s | power-cycle · up 112 s |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.27 · 6.18.2-current-qcs6490 |
 
-    **Power** — idle 1.00 W · avg 2.59 W · peak 8.30 W · 385 samples
+    **Power** — idle 1.00 W · avg 2.05 W · peak 6.50 W · 307 samples
 
 ??? success "Radxa ZERO 3 01 — pass"
 
@@ -965,44 +1054,44 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 32.7 s | AES 720 · mem 3900 · disk W 21 / R 22 MB/s · 50.6 °C · 1416 MHz |
-    | dvfs | ✅ | 25.4 s | ondemand · 408–1416 MHz (peak 1416) |
-    | network-iperf | ✅ | 50.5 s | wlan0 ↑11/↓10 (Wi-Fi 6) Mbps |
+    | hw-performance | ✅ | 28.0 s | AES 720 · mem 4000 · disk W None / R None MB/s · 50 °C · 1416 MHz |
+    | dvfs | ✅ | 28.7 s | ondemand · 408–1416 MHz (peak 1416) |
+    | network-iperf | ✅ | 50.0 s | wlan0 ↑1/↓5 (Wi-Fi 6) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 9.5 s | 26.5.1 · 6.18.24-current-rockchip64 |
+    | store-versions | ✅ | 8.2 s | 26.5.1 · 6.18.44-current-rockchip64 |
 
 ??? success "Raspberry Pi 01 — pass"
 
-    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 50.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 42.7 s | power-cycle · up 19 s |
-    | hw-performance | ✅ | 14.3 s | AES 1368 · mem 12100 · disk W 56 / R 90 MB/s · 70.5 °C · 2400 MHz |
-    | dvfs | ✅ | 13.3 s | ondemand · 1500–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 50.9 s | end0 ↑936/↓941 (1GE) · wlan0 ↑28/↓38 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 37.6 s | stable |
-    | reboot | ✅ | 44.2 s | power-cycle · up 21 s |
-    | store-versions | ✅ | 3.0 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
+    | upgrade | ⏭️ | 6.7 s | — |
+    | reboot | ✅ | 41.0 s | power-cycle · up 17 s |
+    | hw-performance | ✅ | 14.6 s | AES 1368 · mem 12100 · disk W 54 / R 89 MB/s · 66.1 °C · 2400 MHz |
+    | dvfs | ✅ | 13.4 s | ondemand · 1500–2400 MHz (peak 2400) |
+    | network-iperf | ✅ | 66.7 s | end0 ↑936/↓941 (1GE) · wlan0 ↑46/↓31 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 7.8 s | stable |
+    | reboot | ✅ | 40.1 s | power-cycle · up 18 s |
+    | store-versions | ✅ | 3.2 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
 
-    **Power** — idle 2.20 W · avg 5.30 W · peak 8.30 W · 205 samples
+    **Power** — idle 2.20 W · avg 5.14 W · peak 8.90 W · 155 samples
 
 ??? success "Raspberry Pi 02 — pass"
 
-    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 170.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 37.5 s | warm · up 19 s |
-    | hw-performance | ✅ | 33.6 s | AES 40 · mem 2500 · disk W 20 / R 22 MB/s · 61.8 °C · 1200 MHz |
-    | dvfs | ✅ | 26.5 s | ondemand · 600–1200 MHz (peak 1200) |
-    | network-iperf | ✅ | 88.5 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑22/↓36 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 122.5 s | stable |
-    | reboot | ✅ | 38.1 s | warm · up 19 s |
-    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
+    | upgrade | ⏭️ | 33.8 s | — |
+    | reboot | ✅ | 48.9 s | warm · up 30 s |
+    | hw-performance | ✅ | 40.8 s | AES 20 · mem 1400 · disk W 20 / R 22 MB/s · 54.2 °C · 1200 MHz |
+    | dvfs | ✅ | 36.3 s | ondemand · 600–1200 MHz (peak 1200) |
+    | network-iperf | ✅ | 203.1 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑24/↓20 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 41.5 s | stable |
+    | reboot | ✅ | 50.9 s | warm · up 32 s |
+    | store-versions | ✅ | 9.3 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
 
 ??? success "ROCK 2F 01 — pass"
 
@@ -1012,35 +1101,42 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 27.5 s | AES 822 · mem 5900 · disk W 32 / R 65 MB/s · 49 °C · 2016 MHz |
-    | dvfs | ✅ | 25.1 s | ondemand · 408–2016 MHz (peak 2016) |
-    | network-iperf | ✅ | 100.7 s | wlan0 ↑78/↓56 (Wi-Fi 6) Mbps |
+    | hw-performance | ✅ | 30.1 s | AES 822 · mem 5900 · disk W 16 / R 65 MB/s · 48.4 °C · 2016 MHz |
+    | dvfs | ✅ | 25.7 s | ondemand · 408–2016 MHz (peak 2016) |
+    | network-iperf | ✅ | 51.8 s | wlan0 ↑69/↓54 (Wi-Fi 6) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 5.4 s | 26.5.1 · 6.1.115-vendor-rk35xx |
+    | store-versions | ✅ | 5.8 s | 26.5.1 · 6.1.115-vendor-rk35xx |
 
-??? failure "Rock 5B 01 — fail"
+??? success "Rock 5B 01 — pass"
 
-    `rock-5b` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `rock-5b` · **inplace** · image `26.8.3` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 31.8 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 210.8 s | power-cycle |
+    | upgrade | ⏭️ | 10.5 s | — |
+    | reboot | ✅ | 47.5 s | power-cycle · up 16 s |
+    | hw-performance | ✅ | 20.8 s | AES 1292 · mem 11000 · disk W 23 / R 83 MB/s · 54.5 °C · 1800 MHz |
+    | dvfs | ✅ | 15.4 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 55.2 s | enP4p65s0 ↑2352/↓2299 (2.5GE) Mbps |
+    | restore-stable | ✅ | 12.8 s | stable |
+    | reboot | ✅ | 44.8 s | power-cycle · up 16 s |
+    | store-versions | ✅ | 4.1 s | 26.8.3 · 6.18.44-current-rockchip64 |
+
+??? failure "Rock 5B 02 — fail"
+
+    `rock-5b` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 22.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 208.9 s | power-cycle |
     | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | dvfs | ⏭️ | 0.0 s | — |
     | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
-
-??? failure "Rock 5B 02 — fail"
-
-    `rock-5b` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.32 · reachable=False · port=22 |
 
 ??? failure "Rock 5B 03 — fail"
 
@@ -1119,11 +1215,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Rock 5B Plus 01 — fail"
 
-    `rock-5b-plus` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.47 · reachable=False · port=22 |
+    | upgrade | ✅ | 19.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | reboot | ❌ | 201.5 s | power-cycle |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | restore-stable | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | store-versions | ⏭️ | 0.0 s | — |
 
 ??? success "Rock 5T 01 — pass"
 
@@ -1131,14 +1234,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 84.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 44.2 s | power-cycle · up 16 s |
-    | hw-performance | ✅ | 18.1 s | AES 1250 · mem 10000 · disk W 51 / R 83 MB/s · 59.2 °C · 1800 MHz |
-    | dvfs | ✅ | 16.4 s | ondemand · 408–1800 MHz (peak 2400) |
-    | network-iperf | ✅ | 117.5 s | enP3p49s0 ↑2353/↓2354 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑323/↓258 (Wi-Fi 6) · wlx7cdd90ebf00a ↑94/↓119 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 66.5 s | stable |
-    | reboot | ✅ | 45.2 s | power-cycle · up 17 s |
-    | store-versions | ✅ | 3.9 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
+    | upgrade | ✅ | 120.9 s | nightly · 26.8.3 → 26.11.0-trunk.30 |
+    | reboot | ✅ | 43.6 s | warm · up 15 s |
+    | hw-performance | ✅ | 18.3 s | AES 1249 · mem 6900 · disk W 51 / R 82 MB/s · 60.1 °C · 1800 MHz |
+    | dvfs | ✅ | 15.5 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 104.4 s | enP3p49s0 ↑2353/↓2354 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑263/↓268 (Wi-Fi 6) · wlx7cdd90ebf00a ↑95/↓125 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 64.9 s | stable |
+    | reboot | ✅ | 35.1 s | warm · up 17 s |
+    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.30 · 6.18.44-current-rockchip64 |
 
 ??? success "Rock 5T 02 — pass"
 
@@ -1172,18 +1275,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Rockpi E 01 — pass"
 
-    `rockpi-e` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rockpi-e` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 200.2 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
+    | upgrade | ⏭️ | 23.3 s | — |
+    | reboot | ✅ | 53.4 s | power-cycle · up 24 s |
+    | hw-performance | ✅ | 32.6 s | AES 595 · mem 3200 · disk W 21 / R 23 MB/s · 62.5 °C · 1296 MHz |
+    | dvfs | ✅ | 25.6 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 96.5 s | end0 ↑941/↓941 (1GE) · wlx7ca7b020e87c ↑179/↓138 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 30.8 s | stable |
     | reboot | ✅ | 53.3 s | power-cycle · up 24 s |
-    | hw-performance | ✅ | 31.7 s | AES 598 · mem 3300 · disk W 21 / R 23 MB/s · 62.9 °C · 1296 MHz |
-    | dvfs | ✅ | 25.2 s | ondemand · 408–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 61.7 s | end0 ↑941/↓941 (1GE) · wlx7ca7b020e87c ↑160/↓205 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 147.9 s | stable |
-    | reboot | ✅ | 49.6 s | power-cycle · up 25 s |
-    | store-versions | ✅ | 13.0 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.27 · 6.18.44-current-rockchip64 |
 
 ??? success "SpacemiT K3 Pico-ITX 01 — pass"
 
@@ -1193,14 +1296,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 22.2 s | AES 797 · mem 12000 · disk W 25 / R 40 MB/s · 62 °C · 2200 MHz |
+    | hw-performance | ✅ | 22.3 s | AES 796 · mem 12000 · disk W 24 / R 40 MB/s · 61 °C · 2200 MHz |
     | dvfs | ✅ | 15.5 s | performance · 614–2200 MHz (peak 2200) |
-    | network-iperf | ✅ | 60.2 s | eth0 ↑941/↓941 (1GE) · wlan0 ↑56/↓170 (Wi-Fi 6) Mbps |
+    | network-iperf | ✅ | 132.7 s | eth0 ↑941/↓941 (1GE) · wlan0 ↑78/↓154 (Wi-Fi 6) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 3.7 s | 26.8.3 · 6.18.3-legacy-spacemit-k3 |
 
-    **Power** — idle 13.50 W · avg 14.87 W · peak 22.70 W · 88 samples
+    **Power** — idle 13.40 W · avg 14.40 W · peak 22.40 W · 148 samples
 
 ??? failure "Tanix TX6 01 — fail"
 
@@ -1210,22 +1313,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | reachable | ❌ | 0.0 s | ip=10.0.50.21 · reachable=False · port=22 |
 
-??? failure "Tinker Board 01 — fail"
+??? success "Tinker Board 01 — pass"
 
-    `tinkerboard` · **inplace** · image `26.11.0-trunk.5` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `tinkerboard` · **inplace** · image `26.8.1` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 58.7 s | nightly · 26.11.0-trunk.5 → 26.11.0-trunk.5 |
-    | reboot | ❌ | 212.5 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 14.9 s | — |
+    | reboot | ✅ | 67.1 s | power-cycle · up 35 s |
+    | hw-performance | ✅ | 29.6 s | AES 67 · mem 3300 · disk W 14 / R 63 MB/s · 56.8 °C · 1800 MHz |
+    | dvfs | ✅ | 21.2 s | ondemand · 600–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 101.1 s | end0 ↑941/↓941 (1GE) · wlan0 ↑25/↓28 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 18.1 s | stable |
+    | reboot | ✅ | 55.2 s | power-cycle · up 30 s |
+    | store-versions | ✅ | 4.9 s | 26.8.1 · 6.18.44-current-rockchip |
 
-    **Power** — idle 1.20 W · avg 3.18 W · peak 5.60 W · 223 samples
+    **Power** — idle 2.10 W · avg 3.84 W · peak 8.70 W · 243 samples
 
 ??? failure "Tinker Board 2 01 — fail"
 
@@ -1242,20 +1345,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 3.3 s | power-cycle |
     | store-versions | ❌ | 37.2 s | — |
 
-??? failure "Udoo 01 — fail"
+??? success "Udoo 01 — pass"
 
-    `udoo` · **inplace** · image `26.8.0-trunk.314` · 2 ✅ · 4 ❌ · 2 ⏭️
+    `udoo` · **inplace** · image `26.8.1` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 1338.3 s | nightly · 26.8.0-trunk.314 → 26.11.0-trunk.3 |
-    | reboot | ❌ | 215.8 s | power-cycle |
-    | hw-performance | ✅ | 138.1 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-    | dvfs | ➖ | 7.2 s | — |
-    | network-iperf | ⏭️ | 20.3 s | no iperf3 on board |
-    | restore-stable | ❌ | 294.3 s | stable |
-    | reboot | ❌ | 222.1 s | power-cycle |
-    | store-versions | ❌ | 12.3 s | — |
+    | upgrade | ⏭️ | 42.7 s | — |
+    | reboot | ✅ | 61.5 s | power-cycle · up 31 s |
+    | hw-performance | ✅ | 50.7 s | AES 26 · mem 711 · disk W 13 / R 20 MB/s · 45.8 °C · 996 MHz |
+    | dvfs | ✅ | 43.1 s | ondemand · 396–996 MHz (peak 996) |
+    | network-iperf | ✅ | 80.7 s | end0 ↑398/↓222 (1GE) · wlx7cdd903aa418 ↑38/↓30 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 50.5 s | stable |
+    | reboot | ✅ | 64.3 s | power-cycle · up 33 s |
+    | store-versions | ✅ | 9.1 s | 26.8.1 · 6.18.44-current-imx6 |
+
+    **Power** — idle 1.20 W · avg 5.89 W · peak 8.00 W · 329 samples
 
 ??? success "UEFI arm64 01 — pass"
 
