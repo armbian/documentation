@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-08-29 11:57 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-08-30 10:54 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
-| `trixie` | trixie | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
-| `sid` | sid | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
-| `jammy` | jammy | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
-| `noble` | noble | Sat, 29 Aug 2026 | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Sun, 30 Aug 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Sun, 30 Aug 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Sun, 30 Aug 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Sun, 30 Aug 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Sun, 30 Aug 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
