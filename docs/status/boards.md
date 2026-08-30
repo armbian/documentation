@@ -13,14 +13,15 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**70** boards — **52** operational, **18** broken.
+**70** boards — **54** operational, **16** broken.
 
-Reconcile made: 2026-08-30 10:57 UTC
+Reconcile made: 2026-08-30 11:19 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
@@ -34,6 +35,7 @@ Reconcile made: 2026-08-30 10:57 UTC
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.42 | local | 1 GbE | Netgear GS348 (11) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
+| Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear GS348 (12) |
 | NanoPi Duo 01 | 10.0.50.84 | local | 100 MbE | Netgear GS348 (31) |
 | NanoPi K2 01 | 10.0.50.29 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
@@ -78,12 +80,10 @@ Reconcile made: 2026-08-30 10:57 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
-| Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) |
-| Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear GS348 (12) |
+| Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
 | Mekotronics R58S2 01 | 10.0.50.19 | local | 1 GbE | Netgear GS348 (48) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
