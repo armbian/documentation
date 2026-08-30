@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**71** boards — **57** operational, **14** broken.
+**71** boards — **56** operational, **15** broken.
 
-Reconcile made: 2026-08-30 17:53 UTC
+Reconcile made: 2026-08-30 18:09 UTC
 
 **Operational**
 
@@ -27,7 +27,6 @@ Reconcile made: 2026-08-30 17:53 UTC
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
-| Banana Pi R2 01 | 10.0.50.48 | local | 100 MbE | — |
 | BananaPi BPI-F3 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -83,9 +82,10 @@ Reconcile made: 2026-08-30 17:53 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Banana Pi R2 01 | 10.0.50.48 | local | 100 MbE | — |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
-| Mekotronics R58S2 01 | 10.0.50.19 | local | 1 GbE | Netgear GS348 (48) |
+| Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (48) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
 | NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300 (5) |
