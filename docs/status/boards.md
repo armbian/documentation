@@ -13,15 +13,14 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **53** operational, **20** broken.
+**70** boards — **52** operational, **18** broken.
 
-Reconcile made: 2026-08-30 10:48 UTC
+Reconcile made: 2026-08-30 10:57 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
@@ -79,12 +78,12 @@ Reconcile made: 2026-08-30 10:48 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
+| Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | Khadas VIM3 01 | 10.0.50.38 | local | 1 GbE | Netgear GS348 (36) |
-| Le potato 01 | 10.0.50.75 | local | 100 MbE | Netgear GS348 (12) |
+| Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear GS348 (12) |
 | Mekotronics R58S2 01 | 10.0.50.19 | local | 1 GbE | Netgear GS348 (48) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
@@ -96,8 +95,6 @@ Reconcile made: 2026-08-30 10:48 UTC
 | Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
-| Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
-| UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (2) |
 | Z28 PRO 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300 (17) |
 
 <!-- BOARDS-STOP -->
