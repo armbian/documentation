@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **52** operational, **21** broken.
+**73** boards — **53** operational, **20** broken.
 
-Reconcile made: 2026-08-30 10:36 UTC
+Reconcile made: 2026-08-30 10:48 UTC
 
 **Operational**
 
@@ -36,6 +36,7 @@ Reconcile made: 2026-08-30 10:36 UTC
 | Helios4 01 | 10.0.50.42 | local | 1 GbE | Netgear GS348 (11) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | NanoPi Duo 01 | 10.0.50.84 | local | 100 MbE | Netgear GS348 (31) |
+| NanoPi K2 01 | 10.0.50.29 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M6 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (39) |
 | NanoPi Neo 3 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (17) |
@@ -67,7 +68,7 @@ Reconcile made: 2026-08-30 10:36 UTC
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | Netgear XS508M (5) |
 | Rock 5B Plus 01 | 10.0.50.47 | local | 2.5 GbE | Netgear XS508M (4) |
 | Rock 5T 01 | 10.0.50.52 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) |
-| Rockpi 4B 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (35) |
+| Rockpi 4B 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (27) |
 | Rockpi E 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (16) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 1 GbE | Netgear S3300 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
@@ -87,7 +88,6 @@ Reconcile made: 2026-08-30 10:36 UTC
 | Mekotronics R58S2 01 | 10.0.50.19 | local | 1 GbE | Netgear GS348 (48) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
-| NanoPi K2 01 | 10.0.50.29 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300 (5) |
 | NanoPi Neo 2 Black 01 | 10.0.50.14 | local | 1 GbE | — |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
