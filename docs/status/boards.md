@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**72** boards — **58** operational, **14** broken.
+**71** boards — **58** operational, **13** broken.
 
-Reconcile made: 2026-08-30 18:19 UTC
+Reconcile made: 2026-08-30 20:17 UTC
 
 **Operational**
 
@@ -43,7 +43,7 @@ Reconcile made: 2026-08-30 18:19 UTC
 | NanoPi K2 01 | 10.0.50.29 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M6 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (39) |
-| NanoPi Neo 2 Black 02 | 10.0.50.19 | local | 1 GbE | — |
+| NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | — |
 | NanoPi Neo 3 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R1 01 | 10.0.50.59 | local | 1 GbE | Netgear GS348 (14) |
 | NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
@@ -90,7 +90,6 @@ Reconcile made: 2026-08-30 18:19 UTC
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
 | NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Netgear S3300 (5) |
-| NanoPi Neo 2 Black 01 | 10.0.50.14 | local | 1 GbE | — |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (44) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
