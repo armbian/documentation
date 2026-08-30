@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **51** operational, **22** broken.
+**73** boards — **50** operational, **23** broken.
 
-Reconcile made: 2026-08-30 10:22 UTC
+Reconcile made: 2026-08-30 10:29 UTC
 
 **Operational**
 
@@ -70,7 +70,6 @@ Reconcile made: 2026-08-30 10:22 UTC
 | Rockpi E 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (16) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 1 GbE | Netgear S3300 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
-| Udoo 01 | 10.0.50.67 | local | 1 GbE | Netgear S3300 (37) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 
 **Broken**
@@ -91,12 +90,13 @@ Reconcile made: 2026-08-30 10:22 UTC
 | NanoPi Neo 2 Black 01 | 10.0.50.14 | local | 1 GbE | — |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (44) |
-| NanoPi R76S 01 | 10.0.50.77 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
+| NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
+| Udoo 01 | 10.0.50.67 | local | 1 GbE | Netgear S3300 (37) |
 | UEFI x86 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (2) |
 | Z28 PRO 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300 (17) |
 
