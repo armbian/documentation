@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**79** boards — **49** operational, **30** broken.
+**78** boards — **49** operational, **29** broken.
 
-Reconcile made: 2026-08-30 09:28 UTC
+Reconcile made: 2026-08-30 09:39 UTC
 
 **Operational**
 
@@ -44,7 +44,7 @@ Reconcile made: 2026-08-30 09:28 UTC
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear GS348 (7) |
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | TP-Link SG3428X (10) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (38) |
-| Odroid N2 03 | 10.0.50.15 | local | 1 GbE | — |
+| Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (29) |
 | Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (19) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (8) |
@@ -93,7 +93,6 @@ Reconcile made: 2026-08-30 09:28 UTC
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (12) |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (44) |
 | NanoPi R76S 01 | 10.0.50.77 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
-| Odroid N2 01 | 10.0.60.10 | local | 1 GbE | Netgear S3300 (29) |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
