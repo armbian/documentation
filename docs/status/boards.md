@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**74** boards — **50** operational, **24** broken.
+**73** boards — **51** operational, **22** broken.
 
-Reconcile made: 2026-08-30 10:14 UTC
+Reconcile made: 2026-08-30 10:22 UTC
 
 **Operational**
 
@@ -47,12 +47,13 @@ Reconcile made: 2026-08-30 10:14 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (29) |
 | Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (19) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Netgear S3300 (31) |
-| Orange Pi 5 02 | 10.0.50.108 | local | 1 GbE | — |
+| Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (8) |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
 | Orange Pi PC2 01 | 10.0.50.58 | local | 1 GbE | TP-Link SG3428X (22) |
 | Orange Pi Prime 01 | 10.0.50.16 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi R1 01 | 10.0.50.25 | local | Wi-Fi 4 | Zyxel NWA130BE |
+| Orange Pi Zero 01 | 10.0.50.85 | local | 100 MbE | Netgear GS348 (6) |
 | Orange Pi Zero Plus 01 | 10.0.50.78 | local | 1 GbE | TP-Link SG3428X (20) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | TP-Link SG3428X (19) |
@@ -91,10 +92,8 @@ Reconcile made: 2026-08-30 10:14 UTC
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (44) |
 | NanoPi R76S 01 | 10.0.50.77 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
-| Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Win 01 | 10.0.50.12 | local | 1 GbE | Netgear S3300 (13) |
-| Orange Pi Zero 02 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
 | Tinker Board 2 01 | 10.0.50.23 | local | 1 GbE | TP-Link SG3428X (15) |
