@@ -13,15 +13,14 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**78** boards — **49** operational, **29** broken.
+**78** boards — **48** operational, **30** broken.
 
-Reconcile made: 2026-08-30 09:39 UTC
+Reconcile made: 2026-08-30 09:48 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 02 | 10.0.50.51 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
@@ -76,6 +75,7 @@ Reconcile made: 2026-08-30 09:39 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.20.150 | local | 1 GbE | — |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (43) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.36 | local | 100 MbE | Netgear GS348 (17) |
@@ -90,7 +90,7 @@ Reconcile made: 2026-08-30 09:39 UTC
 | NanoPi M6 01 | 10.0.50.18 | local | 1 GbE | Netgear S3300 (39) |
 | NanoPi Neo 2 Black 01 | 10.0.50.14 | local | 1 GbE | — |
 | NanoPi Neo 3 01 | 10.0.50.20 | local | 1 GbE | TP-Link SG3428X (17) |
-| Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (12) |
+| Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (44) |
 | NanoPi R76S 01 | 10.0.50.77 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Orange Pi 5 01 | 10.0.50.39 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
