@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**72** boards — **58** operational, **14** broken.
+**73** boards — **59** operational, **14** broken.
 
-Reconcile made: 2026-08-31 08:56 UTC
+Reconcile made: 2026-08-31 11:09 UTC
 
 **Operational**
 
@@ -79,6 +79,7 @@ Reconcile made: 2026-08-31 08:56 UTC
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.67 | local | 1 GbE | Netgear S3300 (37) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
+| UEFI x86 01 | 10.0.50.40 | local | Wi-Fi 5 | Zyxel NWA130BE |
 
 **Broken**
 
