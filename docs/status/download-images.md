@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-31 05:49 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-31 06:31 UTC._
 
 ## Overview
 
@@ -32,7 +32,7 @@ Current download release line: **26.8.4/26.8.3/26.8.2**.
 
 ## Outdated boards
 
-_**22** boards whose newest `dl.armbian.com` image is behind the current 26.8.4/26.8.3/26.8.2 line._
+_**21** boards whose newest `dl.armbian.com` image is behind the current 26.8.4/26.8.3/26.8.2 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
@@ -57,7 +57,6 @@ _**22** boards whose newest `dl.armbian.com` image is behind the current 26.8.4/
 | tmds62levm | `conf` | 26.5.1 | 2026-06-18 | 73 d |
 | tmds64evm | `conf` | 26.5.1 | 2026-06-18 | 73 d |
 | mekotronics-r58hd | `conf` | 26.5.2 | 2026-07-08 | 54 d |
-| mekotronics-r58s2 | `conf` | 26.5.2 | 2026-07-06 | 55 d |
 
 ## Non-standard boards
 
