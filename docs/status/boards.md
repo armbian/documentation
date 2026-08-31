@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **58** operational, **15** broken.
+**73** boards — **59** operational, **14** broken.
 
-Reconcile made: 2026-08-31 07:31 UTC
+Reconcile made: 2026-08-31 07:42 UTC
 
 **Operational**
 
@@ -43,11 +43,12 @@ Reconcile made: 2026-08-31 07:31 UTC
 | NanoPi Duo 01 | 10.0.50.84 | local | 100 MbE | Netgear GS348 (31) |
 | NanoPi K2 01 | 10.0.50.29 | local | 1 GbE | Netgear GS348 (20) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
-| NanoPi M5 02 | 10.0.50.54 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (44) |
 | NanoPi M6 01 | 10.0.50.64 | local | 1 GbE | Aruba 2540 (45) |
 | NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | — |
 | NanoPi Neo 3 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R1 01 | 10.0.50.59 | local | 1 GbE | Netgear GS348 (14) |
+| NanoPi R6S 03 | 10.0.50.35 | local | 1 GbE | — |
 | NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear GS348 (28) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear GS348 (7) |
@@ -89,7 +90,6 @@ Reconcile made: 2026-08-31 07:31 UTC
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
-| NanoPi M5 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (44) |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
 | NanoPi R6S 01 | 10.0.50.40 | local | 1 GbE | Aruba 2540 (41) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
