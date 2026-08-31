@@ -15,18 +15,18 @@ update the table — the same mechanism behind the
 
 **72** boards — **58** operational, **14** broken.
 
-Reconcile made: 2026-08-31 07:57 UTC
+Reconcile made: 2026-08-31 08:56 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
-| Banana Pi R2 02 | 10.0.50.14 | local | 100 MbE | — |
 | BananaPi BPI-F3 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -84,8 +84,8 @@ Reconcile made: 2026-08-31 07:57 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi R2 01 | 10.0.50.48 | local | 100 MbE | — |
+| Banana Pi R2 02 | 10.0.50.14 | local | 100 MbE | — |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
