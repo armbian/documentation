@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-31 06:31 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-31 15:06 UTC._
 
 ## Overview
 
@@ -48,8 +48,8 @@ _**21** boards whose newest `dl.armbian.com` image is behind the current 26.8.4/
 | sk-am69 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
 | sk-tda4vm | `conf` | 26.2.5 | 2026-04-25 | 127 d |
 | mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 98 d |
-| rock-5-itx | `conf` | 26.5.1 | 2026-06-09 | 82 d |
-| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| rock-5-itx | `conf` | 26.5.1 | 2026-06-09 | 83 d |
+| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 74 d |
 | sk-am62-sip | `conf` | 26.5.1 | 2026-06-18 | 73 d |
 | sk-am62b | `conf` | 26.5.1 | 2026-06-18 | 73 d |
 | sk-am62p | `conf` | 26.5.1 | 2026-06-18 | 73 d |
