@@ -16,48 +16,48 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-27 20:28 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1762 image assets across 381 boards, generated 2026-08-31 05:47 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
-| Download (dl.armbian.com, per-board releases) | 737 | 155 | 10 versions (…26.8.3) |
+| Download (dl.armbian.com, per-board releases) | 737 | 155 | 11 versions (…26.8.4) |
 | Community nightly | 522 | 222 | 26.11.0-trunk.19 |
 | Appliance images (kali/omv/homeassistant) | 417 | 133 | 26.8.1 |
-| CI nightly | 78 | 35 | 26.11.0-trunk.25 |
+| CI nightly | 78 | 35 | 26.11.0-trunk.29 |
 | (orphaned — no repo) | 8 | 2 | 26.8.5 |
 
-Current download release line: **26.8.3/26.8.2/26.8.1**.
+Current download release line: **26.8.4/26.8.3/26.8.2**.
 
 ## Outdated boards
 
-_**22** boards whose newest `dl.armbian.com` image is behind the current 26.8.3/26.8.2/26.8.1 line._
+_**22** boards whose newest `dl.armbian.com` image is behind the current 26.8.4/26.8.3/26.8.2 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| pocketbeagle2 | `conf` | 26.2.1 | 2026-02-20 | 188 d |
-| beaglebone-ai64 | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| mba8mpxl-ras314 | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| mba8mpxl | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| radxa-nio-12l | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| radxa-rock-4d | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| sk-am68 | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| sk-am69 | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| sk-tda4vm | `conf` | 26.2.5 | 2026-04-25 | 124 d |
-| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 94 d |
-| rock-5-itx | `conf` | 26.5.1 | 2026-06-09 | 79 d |
-| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| sk-am62-sip | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| sk-am62b | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| sk-am62p | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| sk-am64b | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| tmds62levm | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| tmds64evm | `conf` | 26.5.1 | 2026-06-18 | 70 d |
-| mekotronics-r58hd | `conf` | 26.5.2 | 2026-07-08 | 50 d |
-| mekotronics-r58s2 | `conf` | 26.5.2 | 2026-07-06 | 52 d |
+| pocketbeagle2 | `conf` | 26.2.1 | 2026-02-20 | 192 d |
+| beaglebone-ai64 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| mba8mpxl-ras314 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| mba8mpxl | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| radxa-nio-12l | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| radxa-rock-4d | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| sk-am68 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| sk-am69 | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| sk-tda4vm | `conf` | 26.2.5 | 2026-04-25 | 127 d |
+| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 98 d |
+| rock-5-itx | `conf` | 26.5.1 | 2026-06-09 | 82 d |
+| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| sk-am62-sip | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| sk-am62b | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| sk-am62p | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| sk-am64b | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| tmds62levm | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| tmds64evm | `conf` | 26.5.1 | 2026-06-18 | 73 d |
+| mekotronics-r58hd | `conf` | 26.5.2 | 2026-07-08 | 54 d |
+| mekotronics-r58s2 | `conf` | 26.5.2 | 2026-07-06 | 55 d |
 
 ## Non-standard boards
 
