@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**76** boards — **59** operational, **17** broken.
+**77** boards — **60** operational, **17** broken.
 
-Reconcile made: 2026-08-31 15:49 UTC
+Reconcile made: 2026-08-31 16:02 UTC
 
 **Operational**
 
@@ -27,6 +27,7 @@ Reconcile made: 2026-08-31 15:49 UTC
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
+| Banana Pi R2 05 | 10.0.50.76 | local | 100 MbE | — |
 | BananaPi BPI-F3 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -85,7 +86,7 @@ Reconcile made: 2026-08-31 15:49 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Banana Pi R2 01 | 10.0.50.48 | local | 100 MbE | — |
+| Banana Pi R2 01 | 10.0.50.48 | local | 1 GbE | Netgear S3300 (24) |
 | Banana Pi R2 02 | 10.0.50.14 | local | 100 MbE | — |
 | Banana Pi R2 03 | 10.0.50.57 | local | 100 MbE | — |
 | Banana Pi R2 04 | 10.0.50.75 | local | 1 GbE | — |
