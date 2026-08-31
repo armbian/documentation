@@ -26,7 +26,7 @@ jobs:
     if: ${{ github.repository_owner == 'armbian' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install python3-apt (accurate Debian version comparison)
         run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends python3-apt
