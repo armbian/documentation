@@ -13,14 +13,15 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **60** operational, **13** broken.
+**74** boards — **62** operational, **12** broken.
 
-Reconcile made: 2026-09-01 08:02 UTC
+Reconcile made: 2026-09-01 08:14 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
@@ -38,6 +39,7 @@ Reconcile made: 2026-09-01 08:02 UTC
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
+| Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | — |
 | Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear GS348 (12) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (46) |
 | NanoPi Duo 01 | 10.0.50.84 | local | 100 MbE | Netgear GS348 (31) |
@@ -86,7 +88,6 @@ Reconcile made: 2026-09-01 08:02 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
