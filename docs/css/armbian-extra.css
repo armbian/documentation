@@ -60,3 +60,20 @@ pre.custom-bash-block, code.custom-bash-block {
   max-width: 260px;
   object-fit: contain;
 }
+
+/* Repository header: hide the version chip, keep stars and forks.
+ *
+ * mkdocs-material fills the repo card from the GitHub API and shows
+ * releases/latest as a "version". Ours is a leftover of the retired PDF
+ * pipeline, which tagged releases with a short commit SHA — the newest is
+ * e76674a from 2024-10-12 — so the chip advertises a stale hash as a version
+ * on a site that is redeployed on every push to main. Stars and forks stay:
+ * those are accurate.
+ *
+ * Done in CSS rather than by overriding the source.html partial because the
+ * facts are injected client-side (the JS builds `md-source__fact--<type>`);
+ * removing them in the template would take stars and forks with it.
+ */
+.md-source__fact--version {
+  display: none;
+}
