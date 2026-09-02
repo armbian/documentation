@@ -171,20 +171,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Cubie A5E 01 — pass"
 
-    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
+    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.27` · 6 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 193.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 140.0 s | power-cycle · up 113 s |
-    | hw-performance | ✅ | 45.9 s | AES 358 · mem 2000 · disk W 11 / R 23 MB/s · 64.5 °C · None MHz |
-    | dvfs | ➖ | 2.7 s | — |
-    | network-iperf | ✅ | 76.9 s | end0 ↑915/↓941 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
-    | restore-stable | ✅ | 137.7 s | stable |
-    | reboot | ✅ | 140.0 s | power-cycle · up 110 s |
-    | store-versions | ✅ | 5.5 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
+    | upgrade | ⏭️ | 36.3 s | — |
+    | reboot | ✅ | 144.3 s | power-cycle · up 110 s |
+    | hw-performance | ✅ | 46.1 s | AES 358 · mem 2000 · disk W 10 / R 23 MB/s · 66.1 °C · None MHz |
+    | dvfs | ➖ | 10.1 s | — |
+    | network-iperf | ✅ | 58.8 s | end0 ↑910/↓941 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
+    | restore-stable | ✅ | 34.2 s | stable |
+    | reboot | ✅ | 143.6 s | power-cycle · up 112 s |
+    | store-versions | ✅ | 13.3 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
 
-    **Power** — idle 2.30 W · avg 4.13 W · peak 5.20 W · 610 samples
+    **Power** — idle 2.70 W · avg 4.10 W · peak 4.70 W · 394 samples
 
 ??? success "Cubietruck 01 — pass"
 
