@@ -1067,16 +1067,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 6.7 s | — |
-    | reboot | ✅ | 41.0 s | power-cycle · up 17 s |
-    | hw-performance | ✅ | 14.6 s | AES 1368 · mem 12100 · disk W 54 / R 89 MB/s · 66.1 °C · 2400 MHz |
-    | dvfs | ✅ | 13.4 s | ondemand · 1500–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 66.7 s | end0 ↑936/↓941 (1GE) · wlan0 ↑46/↓31 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 7.8 s | stable |
-    | reboot | ✅ | 40.1 s | power-cycle · up 18 s |
-    | store-versions | ✅ | 3.2 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
+    | upgrade | ⏭️ | 15.5 s | — |
+    | reboot | ✅ | 45.7 s | power-cycle · up 22 s |
+    | hw-performance | ✅ | 14.9 s | AES 1368 · mem 12100 · disk W 51 / R 88 MB/s · 54 °C · 2400 MHz |
+    | dvfs | ✅ | 12.9 s | ondemand · 1500–2400 MHz (peak 2400) |
+    | network-iperf | ✅ | 50.5 s | end0 ↑936/↓941 (1GE) · wlan0 ↑45/↓41 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 7.9 s | stable |
+    | reboot | ✅ | 40.5 s | power-cycle · up 17 s |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
 
-    **Power** — idle 2.20 W · avg 5.14 W · peak 8.90 W · 155 samples
+    **Power** — idle 2.40 W · avg 4.70 W · peak 8.20 W · 157 samples
 
 ??? success "Raspberry Pi 02 — pass"
 
