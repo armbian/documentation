@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**92** boards — **53** passed, **39** failed. Each card is the board's most recent test.
+**93** boards — **53** passed, **40** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -62,18 +62,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Banana Pi M2Pro 01 — pass"
 
-    `bananapim2pro` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `bananapim2pro` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 119.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 48.2 s | power-cycle · up 19 s |
-    | hw-performance | ✅ | 20.0 s | AES 979 · mem 5300 · disk W 42 / R 158 MB/s · 53.4 °C · 2100 MHz |
-    | dvfs | ✅ | 20.1 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 103.3 s | end0 ↑940/↓941 (1GE) · wlx60fb00480eb0 ↑194/↓217 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 88.9 s | stable |
-    | reboot | ✅ | 46.7 s | power-cycle · up 21 s |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+    | upgrade | ✅ | 103.5 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 48.2 s | power-cycle · up 18 s |
+    | hw-performance | ✅ | 20.1 s | AES 980 · mem 5200 · disk W 42 / R 153 MB/s · 53.4 °C · 2100 MHz |
+    | dvfs | ✅ | 19.9 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 57.5 s | end0 ↑941/↓941 (1GE) · wlx60fb00480eb0 ↑190/↓209 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 80.5 s | stable |
+    | reboot | ✅ | 43.3 s | power-cycle · up 18 s |
+    | store-versions | ✅ | 4.5 s | 26.11.0-trunk.35 · 6.18.44-current-meson64 |
 
 ??? success "Banana Pi M5 01 — pass"
 
@@ -89,6 +89,23 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | restore-stable | ✅ | 145.7 s | stable |
     | reboot | ✅ | 168.0 s | warm · up 150 s |
     | store-versions | ✅ | 4.8 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+
+??? failure "Banana Pi M7 01 — fail"
+
+    `bananapim7` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 6 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 134.7 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
+    | reboot | ❌ | 209.6 s | power-cycle |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | restore-stable | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | store-versions | ⏭️ | 0.0 s | — |
+
+    **Power** — idle 3.50 W · avg 4.53 W · peak 9.60 W · 107 samples
 
 ??? success "Banana Pi Pro 01 — pass"
 
