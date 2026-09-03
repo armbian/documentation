@@ -974,16 +974,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 225.3 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
-    | reboot | ✅ | 100.7 s | power-cycle · up 58 s |
-    | hw-performance | ✅ | 25.2 s | AES 237 · mem 6200 · disk W 26 / R 107 MB/s · 62 °C · 1920 MHz |
-    | dvfs | ❌ | 23.3 s | schedutil · 480–1920 MHz (peak 1680) |
-    | network-iperf | ✅ | 61.5 s | enp1s0 ↑910/↓941 (1GE) · wlan0 ↑33/↓33 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 163.0 s | stable |
-    | reboot | ✅ | 96.3 s | power-cycle · up 55 s |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.35 · 6.18.44-current-x86 |
+    | upgrade | ✅ | 181.3 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 92.2 s | power-cycle · up 58 s |
+    | hw-performance | ✅ | 26.0 s | AES 237 · mem 4900 · disk W 26 / R 112 MB/s · 63 °C · 1920 MHz |
+    | dvfs | ❌ | 23.5 s | schedutil · 480–1920 MHz (peak 1680) |
+    | network-iperf | ✅ | 61.3 s | enp1s0 ↑917/↓941 (1GE) · wlan0 ↑34/↓39 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 198.3 s | stable |
+    | reboot | ✅ | 98.5 s | power-cycle · up 56 s |
+    | store-versions | ✅ | 5.7 s | 26.11.0-trunk.35 · 6.18.44-current-x86 |
 
-    **Power** — idle 0.70 W · avg 4.22 W · peak 8.20 W · 580 samples
+    **Power** — idle 0.70 W · avg 4.19 W · peak 6.90 W · 568 samples
 
 
 <!-- FLEET-STOP -->
