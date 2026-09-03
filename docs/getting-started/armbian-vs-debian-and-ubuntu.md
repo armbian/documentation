@@ -25,7 +25,7 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | Build your own custom image | `debootstrap` / DIY | DIY | **[Full build framework](https://github.com/armbian/build)**, hybrid assembly, runs under Docker |
 | Exotic / OS-neglected hardware | Unsupported | Unsupported | **Supported where nobody else is** |
 | Download delivery | Community mirrors | Community mirrors | **[Global mirror network](../status/mirrors.md)** with coverage in mainland China, plus multi-mirror torrents |
-| Cost | Free | Free (commercial Ubuntu Pro available) | **Free** &mdash; commercial partnerships available |
+| Cost | Free | Free (commercial Ubuntu Pro available) | **Free** &mdash; always, for everyone |
 
 ## Why Armbian on an SBC
 
