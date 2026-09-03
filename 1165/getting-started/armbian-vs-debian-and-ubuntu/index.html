@@ -6748,7 +6748,7 @@
 <p><strong>Short version:</strong> Armbian is not a rival to Debian or Ubuntu &mdash; it is <em>built on both</em>. On a laptop, server or cloud VM you would simply run Debian or Ubuntu. On an <strong>ARM or RISC-V single-board computer (SBC)</strong>, Armbian gives you that same familiar Debian or Ubuntu user space <strong>plus</strong> the board-specific engineering &mdash; optimized kernels, bootloaders, device trees, ready-to-flash images and tuning &mdash; that generic distributions do not provide for most boards. It is a <strong>kernel-first distribution</strong>: the board&rsquo;s kernel is the heart of the project, continuously validated on real hardware.</p>
 <div class="admonition tip">
 <p class="admonition-title">The best of both worlds</p>
-<p>You keep Debian or Ubuntu and <code>apt</code>. You add first-class hardware support, out-of-the-box optimization, and tooling made for SBCs. <strong>You even get to choose</strong> whether each image is Debian or Ubuntu based.</p>
+<p>You keep Debian or Ubuntu and <code>apt</code>. You add first-class hardware support, out-of-the-box optimization, and tooling made for SBCs. <strong>You even get to choose</strong> whether each image is Debian- or Ubuntu-based.</p>
 </div>
 <h2 id="at-a-glance">At a glance<a class="headerlink" href="#at-a-glance" title="Permanent link">&para;</a></h2>
 <table>
@@ -6771,19 +6771,19 @@
 <td>Primary target</td>
 <td>Servers, desktops, x86 &amp; official ARM ports</td>
 <td>Cloud, desktop, x86 &amp; certified ARM</td>
-<td><strong>SBCs first</strong> &mdash; <a href="https://www.armbian.com/download/">~400 ARM/RISC-V boards</a>, server &amp; desktop &mdash; plus cloud UEFI x86-64/arm64</td>
+<td><strong>SBCs first</strong> &mdash; <a href="https://www.armbian.com/download/">around 400 ARM/RISC-V boards</a>, server &amp; desktop &mdash; plus cloud UEFI x86-64/arm64</td>
 </tr>
 <tr>
 <td>Kernel for your board</td>
 <td>Generic; often unavailable or unaccelerated on SBCs</td>
 <td>Generic; official images only for a few boards</td>
-<td><strong><a href="../../status/package-repository/#kernel-families">Optimized kernel per board family</a></strong>, mainline-LTS based, with vendor/legacy/edge options</td>
+<td><strong><a href="../../status/package-repository/#kernel-families">Optimized kernel per board family</a></strong>, mainline based (<code>current</code> tracks the Linux LTS), with <code>vendor</code>, <code>legacy</code> and <code>edge</code> options</td>
 </tr>
 <tr>
 <td>Bootloader, device tree, board bring-up</td>
 <td>Do it yourself</td>
 <td>Do it yourself</td>
-<td><strong>Provided and maintained</strong> for every supported board</td>
+<td><strong>Provided and maintained</strong> for supported boards (per <a href="/contribute/board-support-rules/">support level</a>)</td>
 </tr>
 <tr>
 <td>Image for your specific SBC</td>
