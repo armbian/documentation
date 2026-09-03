@@ -54,7 +54,7 @@ The same [build framework](https://github.com/armbian/build) that produces offic
 A [global network of mirrors](../status/mirrors.md) provides **perfect coverage, including mainland China**, so images and updates reach your fleet wherever it runs. Every image is also offered as a **torrent that pulls from all mirrors at once** &mdash; so instead of being throttled by a single server, downloads **saturate your own connection** and finish as fast as your line allows.
 
 ### Not just SBCs: cloud-optimized UEFI images
-Armbian also builds **generic UEFI images for x86-64 and arm64** &mdash; lean, cloud-ready builds of the same Debian or Ubuntu user space. We **run our own cloud and build infrastructure on them** &mdash; including the project's x86-64 and arm64 cloud servers on **Netcup** &mdash; and they go through the [same nightly hardware test fleet](../status/board-tests.md) as the boards, so the images you would deploy are the images the project depends on itself.
+Armbian also builds **generic UEFI images for x86-64 and arm64** &mdash; lean, cloud-ready builds of the same Debian or Ubuntu user space. We **run our own cloud and build infrastructure on them** &mdash; including the project's x86-64 and arm64 cloud servers on **[netcup](https://www.netcup.de/)** &mdash; and they go through the [same nightly hardware test fleet](../status/board-tests.md) as the boards, so the images you would deploy are the images the project depends on itself.
 
 ## When each one is the right choice
 
