@@ -21,7 +21,7 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | Image for your specific SBC | Rarely ready-made | Only for select boards | **Ready-to-flash**, compressed, [auto-expands on first boot](../index.md#key-features) |
 | SBC tuning out of the box | None | None | **[zram-compressed logs, tuned I/O scheduler, DVFS, swap tuning, near read-only root](../index.md#key-features)** |
 | Guided hardware & software setup | Standard tools | Standard tools | **[`armbian-config`](../config/index.md)** menu-driven utility |
-| Tested on real board hardware | n/a for most SBCs | n/a for most SBCs | **Daily automated stress & upgrade testing** on key targets |
+| Continuous hardware validation | No per-board hardware testing | No per-board hardware testing | **[Nightly automated fleet](../status/board-tests.md)** — upgrade, reboot, performance, DVFS & network, on real boards |
 | Build your own custom image | `debootstrap` / DIY | DIY | **[Full build framework](https://github.com/armbian/build)**, hybrid assembly, runs under Docker |
 | Exotic / OS-neglected hardware | Unsupported | Unsupported | **Supported where nobody else is** |
 | Download delivery | Community mirrors | Community mirrors | **Global CDN with coverage in mainland China** |
@@ -41,8 +41,11 @@ Armbian ships an OS that is **tuned for SBCs and flash media**: images are compa
 ### Configuration made for embedded, in one tool
 [`armbian-config`](../config/index.md) is a menu-driven utility for the tasks SBC users actually do &mdash; kernels, storage, network, access, localisation and one-click [software installs](../software/index.md) &mdash; and it is **unit-tested on every pull request** ([CI](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml)).
 
-### Trust that it actually works
-Every official stable build is **thoroughly tested**, with **daily automated stress and upgrade testing on real hardware**, named **[per-board maintainers](https://www.armbian.com/authors)**, and clear [Board Support Rules](/contribute/board-support-rules/) that distinguish Standard Support from Community maintained. Armbian images are also a **direct base for many third-party builders**.
+### Continuously validated on real hardware
+This is where SBCs are usually left behind, and it is one of Armbian's biggest differentiators: mainstream distributions do **no per-board hardware validation** for the long tail of single-board computers. Armbian runs a **[dedicated autotest fleet](../status/board-tests.md)** where every board is put through a **nightly pipeline** — a distribution **upgrade**, a **reboot**, hardware **performance** and **DVFS** checks and a **network** throughput test — with the **[current pass/fail results published live](../status/board-tests.md)**, alongside real-hardware **[Wi-Fi performance](../status/wifi-performance.md)** measurements. It is not a promise in a wiki; it is measured on actual boards, every day.
+
+### Backed by people and rules
+Every official stable build is **thoroughly tested**, maintained by named **[per-board maintainers](https://www.armbian.com/authors)**, under clear [Board Support Rules](/contribute/board-support-rules/) that distinguish Standard Support from Community maintained. Armbian images are also a **direct base for many third-party builders**.
 
 ### Grow from user to builder
 The same [build framework](https://github.com/armbian/build) that produces official images is yours to use: assemble **fully configured custom images** for your board or product, in parallel, under Docker &mdash; ideal for manufacturers, integrators and CI automation.
