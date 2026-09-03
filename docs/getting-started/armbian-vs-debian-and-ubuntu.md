@@ -15,7 +15,7 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | | **Debian** | **Ubuntu** | **Armbian** |
 | --- | --- | --- | --- |
 | User space & package manager | Debian, `apt` | Ubuntu, `apt` | **Debian *or* Ubuntu, `apt`** &mdash; you pick |
-| Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [around 400 ARM/RISC-V boards](https://www.armbian.com/download/), server & desktop &mdash; plus cloud UEFI x86-64/arm64 |
+| Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [around 400 ARM/RISC-V boards](https://www.armbian.com/download/), server & desktop &mdash; plus cloud UEFI [x86-64](https://www.armbian.com/uefi-x86/)/[arm64](https://www.armbian.com/uefi-arm64/) |
 | Kernel for your board | Generic; often unavailable or unaccelerated on SBCs | Generic; official images only for a few boards | **[Optimized kernel per board family](../status/package-repository.md#kernel-families)**, mainline based (`current` tracks the Linux LTS), with `vendor`, `legacy` and `edge` options |
 | Bootloader, device tree, board bring-up | Do it yourself | Do it yourself | **Provided and maintained** for supported boards (per [support level](/contribute/board-support-rules/)) |
 | Image for your specific SBC | Rarely ready-made | Only for select boards | **Ready-to-flash**, compressed, [auto-expands on first boot](../index.md#key-features) |
