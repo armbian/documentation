@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **44** passed, **19** failed. Each card is the board's most recent test.
+**63** boards — **45** passed, **18** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -323,18 +323,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Mekotronics R58S2 01 — fail"
 
-    `mekotronics-r58s2` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `mekotronics-r58s2` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 130.0 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 205.0 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 190.3 s | — |
+    | reboot | ✅ | 50.3 s | power-cycle · up 14 s |
+    | hw-performance | ✅ | 14.8 s | AES 1276 · mem 14000 · disk W 219 / R 269 MB/s · 49 °C · 1800 MHz |
+    | dvfs | ✅ | 17.3 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 56.0 s | end1 ↑939/↓939 (1GE) · wlan0 ↑31/↓155 (Wi-Fi 5) Mbps |
+    | restore-stable | ❌ | 147.3 s | stable |
+    | reboot | ✅ | 44.4 s | power-cycle · up 15 s |
+    | store-versions | ✅ | 4.0 s | 26.8.3 · 6.1.115-vendor-rk35xx |
 
 ??? failure "NanoPC T6 LTS 01 — fail"
 
@@ -366,20 +366,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
-??? failure "NanoPi K2 01 — fail"
+??? success "NanoPi K2 01 — pass"
 
-    `nanopik2-s905` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `nanopik2-s905` · **inplace** · image `26.8.3` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 80.4 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 197.8 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 221.7 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 44.7 s | warm · up 17 s |
+    | hw-performance | ✅ | 26.8 s | AES 51 · mem 3800 · disk W 23 / R 42 MB/s · 63 °C · 2016 MHz |
+    | dvfs | ✅ | 22.3 s | ondemand · 500–1536 MHz (peak 1536) |
+    | network-iperf | ✅ | 62.8 s | end0 ↑934/↓941 (1GE) · wlan0 ↑14/↓32 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 119.1 s | stable |
+    | reboot | ✅ | 36.9 s | warm · up 17 s |
+    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.35 · 6.18.44-current-meson64 |
 
 ??? success "NanoPi M4V2 01 — pass"
 
