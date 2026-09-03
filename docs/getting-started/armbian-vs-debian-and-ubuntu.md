@@ -51,7 +51,7 @@ Every official stable build is **thoroughly tested**, maintained by named **[per
 The same [build framework](https://github.com/armbian/build) that produces official images is yours to use: assemble **fully configured custom images** for your board or product, in parallel, under Docker &mdash; ideal for manufacturers, integrators and CI automation.
 
 ### Delivered everywhere
-A global download infrastructure provides **perfect coverage, including mainland China**, so images and updates reach your fleet wherever it runs.
+A [global network of mirrors](../status/mirrors.md) provides **perfect coverage, including mainland China**, so images and updates reach your fleet wherever it runs. Every image is also offered as a **torrent that pulls from all mirrors at once** &mdash; so instead of being throttled by a single server, downloads **saturate your own connection** and finish as fast as your line allows.
 
 ## When each one is the right choice
 
