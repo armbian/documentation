@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **41** passed, **22** failed. Each card is the board's most recent test.
+**63** boards — **42** passed, **21** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -968,22 +968,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 4.4 s | 26.8.0-trunk.314 · 7.1.2-edge-arm64 |
 
-??? failure "UEFI x86 01 — fail"
+??? success "UEFI x86 01 — pass"
 
-    `uefi-x86` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `uefi-x86` · **inplace** · image `26.11.0-trunk.35` · 7 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 72.5 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 213.4 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 225.3 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 100.7 s | power-cycle · up 58 s |
+    | hw-performance | ✅ | 25.2 s | AES 237 · mem 6200 · disk W 26 / R 107 MB/s · 62 °C · 1920 MHz |
+    | dvfs | ❌ | 23.3 s | schedutil · 480–1920 MHz (peak 1680) |
+    | network-iperf | ✅ | 61.5 s | enp1s0 ↑910/↓941 (1GE) · wlan0 ↑33/↓33 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 163.0 s | stable |
+    | reboot | ✅ | 96.3 s | power-cycle · up 55 s |
+    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.35 · 6.18.44-current-x86 |
 
-    **Power** — idle 0.90 W · avg 4.47 W · peak 5.60 W · 233 samples
+    **Power** — idle 0.70 W · avg 4.22 W · peak 8.20 W · 580 samples
 
 
 <!-- FLEET-STOP -->
