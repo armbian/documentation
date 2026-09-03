@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **41** passed, **23** failed. Each card is the board's most recent test.
+**63** boards — **41** passed, **22** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -918,14 +918,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | store-versions | ✅ | 3.7 s | 26.8.3 · 6.18.3-legacy-spacemit-k3 |
 
     **Power** — idle 13.40 W · avg 14.40 W · peak 22.40 W · 148 samples
-
-??? failure "Tanix TX6 01 — fail"
-
-    `tanix-tx6` · **inplace** · image `26.11.0-trunk.6` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.21 · reachable=False · port=22 |
 
 ??? success "Tinker Board 01 — pass"
 
