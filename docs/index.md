@@ -36,6 +36,8 @@ If you come across an issue in these pages, you can either report it [here](http
 
 ## What is Armbian?
 
+> **Armbian brings the embedded-hardware world to Debian and Ubuntu** &mdash; the boards, kernels, bootloaders and tuning they do not ship, on top of the user space you already know. See how it compares in [Armbian vs Debian & Ubuntu](getting-started/armbian-vs-debian-and-ubuntu.md).
+
 Armbian's goal is to provide a **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with a **well-known** and supported Debian-based user-space experience, an **extensive build framework**, and it is suitable for **industrial or home use**.
 
 Armbian is **not** a Linux distribution itself. Instead, we use Debian GNU/Linux and Ubuntu Linux as base for the images, that our users can download and deploy. We build our own set of optimized kernels for each board, and then provide an extensive and customizable framework to build, adjust, and configure these images. This framework is the heart of the project.
