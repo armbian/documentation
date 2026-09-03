@@ -1,6 +1,6 @@
 ---
 title: Armbian vs Debian & Ubuntu
-description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the Debian/Ubuntu user space you know, and gain per-board optimized kernels, ready-to-flash images, armbian-config, and hardware tested daily on real boards."
+description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the Debian/Ubuntu user space you know, and gain optimized per-family kernels, ready-to-flash images, armbian-config, and hardware tested daily on real boards."
 ---
 
 # Armbian vs Debian & Ubuntu
@@ -16,7 +16,7 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | --- | --- | --- | --- |
 | User space & package manager | Debian, `apt` | Ubuntu, `apt` | **Debian *or* Ubuntu, `apt`** &mdash; you pick |
 | Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [~400 ARM/RISC-V boards](https://www.armbian.com/download/), server & desktop &mdash; plus cloud UEFI x86-64/arm64 |
-| Kernel for your board | Generic; often unavailable or unaccelerated on SBCs | Generic; official images only for a few boards | **[Per-board optimized kernel](../status/package-repository.md#kernel-families)**, mainline-LTS based, with vendor/legacy/edge options |
+| Kernel for your board | Generic; often unavailable or unaccelerated on SBCs | Generic; official images only for a few boards | **[Optimized kernel per board family](../status/package-repository.md#kernel-families)**, mainline-LTS based, with vendor/legacy/edge options |
 | Bootloader, device tree, board bring-up | Do it yourself | Do it yourself | **Provided and maintained** for every supported board |
 | Image for your specific SBC | Rarely ready-made | Only for select boards | **Ready-to-flash**, compressed, [auto-expands on first boot](../index.md#key-features) |
 | SBC tuning out of the box | None | None | **[zram-compressed logs, tuned I/O scheduler, DVFS, swap tuning, near read-only root](../index.md#key-features)** |
