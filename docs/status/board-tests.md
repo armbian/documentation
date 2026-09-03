@@ -477,18 +477,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi R6S 01 — pass"
 
-    `nanopi-r6s` · **inplace** · image `26.8.3` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopi-r6s` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 76.7 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
-    | reboot | ✅ | 156.5 s | power-cycle · up 126 s |
-    | hw-performance | ✅ | 14.6 s | AES 1266 · mem 13400 · disk W 207 / R 257 MB/s · 45.3 °C · 1800 MHz |
-    | dvfs | ✅ | 17.2 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 51.3 s | lan1 ↑2353/↓2353 (2.5GE) · lan2 ↑939/↓939 (1GE) Mbps |
-    | restore-stable | ✅ | 59.4 s | stable |
-    | reboot | ✅ | 44.9 s | power-cycle · up 14 s |
-    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.35 · 6.1.115-vendor-rk35xx |
+    | upgrade | ✅ | 24.7 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 40.5 s | power-cycle · up 14 s |
+    | hw-performance | ✅ | 15.2 s | AES 1265 · mem 13600 · disk W 210 / R 262 MB/s · 47.2 °C · 1800 MHz |
+    | dvfs | ✅ | 17.4 s | ondemand · 1800–1800 MHz (peak 2256) |
+    | network-iperf | ✅ | 51.3 s | lan1 ↑2353/↓2354 (2.5GE) · lan2 ↑939/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 38.7 s | stable |
+    | reboot | ✅ | 42.3 s | power-cycle · up 15 s |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.35 · 6.1.115-vendor-rk35xx |
+
+    **Power** — idle 2.60 W · avg 5.17 W · peak 11.10 W · 187 samples
 
 ??? failure "NanoPi R76S 01 — fail"
 
