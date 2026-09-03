@@ -15,7 +15,7 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | | **Debian** | **Ubuntu** | **Armbian** |
 | --- | --- | --- | --- |
 | User space & package manager | Debian, `apt` | Ubuntu, `apt` | **Debian *or* Ubuntu, `apt`** &mdash; you pick |
-| Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [100+ ARM/RISC-V boards](https://www.armbian.com/download/) |
+| Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [100+ ARM/RISC-V boards](https://www.armbian.com/download/) &mdash; plus cloud UEFI x86-64/arm64 |
 | Kernel for your board | Generic; often unavailable or unaccelerated on SBCs | Generic; official images only for a few boards | **[Per-board optimized kernel](../status/package-repository.md#kernel-families)**, mainline-LTS based, with vendor/legacy/edge options |
 | Bootloader, device tree, board bring-up | Do it yourself | Do it yourself | **Provided and maintained** for every supported board |
 | Image for your specific SBC | Rarely ready-made | Only for select boards | **Ready-to-flash**, compressed, [auto-expands on first boot](../index.md#key-features) |
@@ -53,11 +53,14 @@ The same [build framework](https://github.com/armbian/build) that produces offic
 ### Delivered everywhere
 A [global network of mirrors](../status/mirrors.md) provides **perfect coverage, including mainland China**, so images and updates reach your fleet wherever it runs. Every image is also offered as a **torrent that pulls from all mirrors at once** &mdash; so instead of being throttled by a single server, downloads **saturate your own connection** and finish as fast as your line allows.
 
+### Not just SBCs: cloud-optimized UEFI images
+Armbian also builds **generic UEFI images for x86-64 and arm64** &mdash; lean, cloud-ready builds of the same Debian or Ubuntu user space. We **run our own cloud and build infrastructure on them**, and they go through the [same nightly hardware test fleet](../status/board-tests.md) as the boards, so the images you would deploy are the images the project depends on itself.
+
 ## When each one is the right choice
 
 Armbian's advantages are specific to single-board computers &mdash; we are happy to point you the other way when that fits better:
 
-- **Use Debian or Ubuntu directly** on x86/AMD64 laptops, servers and cloud VMs, or on the handful of ARM machines those projects ship official, well-supported images for.
+- **Use Debian or Ubuntu directly** on x86/AMD64 laptops, servers and cloud VMs, or on the handful of ARM machines those projects ship official, well-supported images for &mdash; unless you want Armbian's optimizations, tooling and testing on a UEFI/cloud machine, in which case Armbian's **UEFI x86-64 and arm64 images** are there too.
 - **Use Armbian** on ARM or RISC-V single-board computers &mdash; especially anything beyond the most common few boards &mdash; when you want a working, optimized, maintained image *and* the Debian or Ubuntu user space you already know.
 
 New here? Continue with [Getting Started](index.md) and [Choosing an image](choosing-an-image.md), or head straight to the [downloads](https://www.armbian.com/download/).
