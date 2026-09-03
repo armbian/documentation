@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **40** passed, **24** failed. Each card is the board's most recent test.
+**64** boards — **41** passed, **23** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -855,20 +855,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 29.4 s | warm · up 12 s |
     | store-versions | ✅ | 4.1 s | 26.11.0-trunk.31 · 6.18.44-current-rockchip64 |
 
-??? failure "Rock 5B Plus 01 — fail"
+??? success "Rock 5B Plus 01 — pass"
 
-    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.27` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.31` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 19.5 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ❌ | 201.5 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 5.8 s | — |
+    | reboot | ✅ | 36.7 s | warm · up 15 s |
+    | hw-performance | ✅ | 18.4 s | AES 1300 · mem 14200 · disk W 43 / R 82 MB/s · 48.1 °C · 1800 MHz |
+    | dvfs | ✅ | 16.1 s | ondemand · 1800–1800 MHz (peak 2304) |
+    | network-iperf | ✅ | 27.9 s | enP4p65s0 ↑2352/↓2352 (2.5GE) Mbps |
+    | restore-stable | ✅ | 105.9 s | stable |
+    | reboot | ✅ | 34.8 s | warm · up 15 s |
+    | store-versions | ✅ | 3.5 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
 
 ??? success "Rock 5T 01 — pass"
 
