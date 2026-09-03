@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **45** passed, **18** failed. Each card is the board's most recent test.
+**63** boards — **46** passed, **17** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -122,20 +122,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 64.5 s | warm · up 44 s |
     | store-versions | ✅ | 11.6 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
 
-??? failure "BananaPi BPI-F3 01 — fail"
+??? success "BananaPi BPI-F3 01 — pass"
 
-    `bananapif3` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `bananapif3` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 196.6 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
-    | reboot | ❌ | 206.2 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 138.4 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 46.9 s | power-cycle · up 17 s |
+    | hw-performance | ✅ | 22.3 s | AES 30 · mem 3400 · disk W 60 / R 83 MB/s · 64 °C · 1800 MHz |
+    | dvfs | ✅ | 23.3 s | performance · 614–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 113.4 s | eth0 ↑941/↓941 (1GE) · eth1 ↑941/↓941 (1GE) · wlan0 ↑301/↓313 (Wi-Fi 6) · wlan1 ↑274/↓247 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 92.5 s | stable |
+    | reboot | ✅ | 46.6 s | power-cycle · up 18 s |
+    | store-versions | ✅ | 5.3 s | 26.11.0-trunk.35 · 6.18.44-current-spacemit |
 
 ??? failure "BigTreeTech CB1 01 — fail"
 
