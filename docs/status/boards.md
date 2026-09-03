@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **73** boards — **63** operational, **10** broken.
 
-Reconcile made: 2026-09-02 16:37 UTC
+Reconcile made: 2026-09-03 07:44 UTC
 
 **Operational**
 
@@ -26,7 +26,6 @@ Reconcile made: 2026-09-02 16:37 UTC
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.80 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear GS348 (19) |
-| Banana Pi M7 01 | 10.0.50.12 | local | 2.5 GbE | TP-Link SG3218XP-M2 (10) |
 | Banana Pi Pro 01 | 10.0.50.43 | local | 100 MbE | Netgear GS348 (8) |
 | Banana Pi R2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (24) |
 | BananaPi BPI-F3 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (46) |
@@ -60,6 +59,7 @@ Reconcile made: 2026-09-02 16:37 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (29) |
 | Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (19) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Netgear S3300 (31) |
+| Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (8) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
@@ -89,13 +89,13 @@ Reconcile made: 2026-09-02 16:37 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Banana Pi M7 01 | 10.0.50.12 | local | 2.5 GbE | TP-Link SG3218XP-M2 (10) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | NanoPC T6 LTS 01 | 10.0.50.30 | local | 2.5 GbE | TP-Link SG3218XP-M2 (8) |
 | NanoPi 6 series 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (4) |
 | Nanopi R2S 01 | 10.0.50.65 | local | 1 GbE | — |
-| Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
 | Pine H64 01 | 10.0.50.34 | local | 1 GbE | TP-Link SG3428X (9) |
 | Rockpi 4B 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (27) |
 | Tanix TX6 01 | 10.0.50.21 | local | 100 MbE | Netgear GS348 (46) |
