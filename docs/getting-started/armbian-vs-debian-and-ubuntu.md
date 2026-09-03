@@ -19,6 +19,8 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 | User space & package manager | Debian, `apt` | Ubuntu, `apt` | **Debian *or* Ubuntu, `apt`** &mdash; you pick |
 | Primary target | Servers, desktops, x86 & official ARM ports | Cloud, desktop, x86 & certified ARM | **SBCs first** &mdash; [around 400 ARM/RISC-V boards](https://www.armbian.com/download/), server & desktop &mdash; plus cloud UEFI [x86-64](https://www.armbian.com/uefi-x86/)/[arm64](https://www.armbian.com/uefi-arm64/) |
 | Kernel for your board | Generic; often unavailable or unaccelerated on SBCs | Generic; official images only for a few boards | **[Optimized kernel per board family](../status/package-repository.md#kernel-families)**, mainline based (`current` tracks the Linux LTS), with `vendor`, `legacy` and `edge` options |
+| Wireless (Wi-Fi/Bluetooth) drivers | Only what the mainline kernel ships | Mainline kernel, plus a few | **Large set of extra out-of-tree drivers built into the kernel** &mdash; [work out of the box](../status/wifi-performance.md), no DKMS |
+| Advanced networking in the kernel | Generic kernel defaults | Generic kernel defaults | **Enabled by default** &mdash; tunnels, VLANs, bridging, routing & firewalling that stripped-down SBC kernels often omit |
 | Bootloader, device tree, board bring-up | Do it yourself | Do it yourself | **Provided and maintained** for supported boards (per [support level](/contribute/board-support-rules/)) |
 | Image for your specific SBC | Rarely ready-made | Only for select boards | **Ready-to-flash**, compressed, [auto-expands on first boot](../index.md#key-features) |
 | SBC tuning out of the box | None | None | **[zram-compressed logs, tuned I/O scheduler, DVFS, swap tuning, near read-only root](../index.md#key-features)** |
@@ -38,6 +40,10 @@ Armbian images are a **lean, standard Debian or Ubuntu user space** with the wel
 ### Kernel-first by design
 
 Armbian is a **kernel-first distribution**. Where general-purpose distributions treat the kernel as one interchangeable package and ship a single generic build, Armbian puts the **board's kernel at the centre of the project**: for most SBCs there is no ready mainline image, and where a generic kernel exists it often leaves accelerators, network, video or peripherals inactive. Armbian does **independent kernel development and maintenance with long-term support** across [many kernel families](../status/package-repository.md#kernel-families), owning the bootloader, device tree and board patches, and lets you switch between **vendor, current, edge and legacy** branches per board &mdash; see [Choosing an image](choosing-an-image.md#vendor-current-edge-or-legacy). The user space is deliberately kept as **stock Debian or Ubuntu** so the part that changes for your hardware &mdash; the kernel &mdash; is exactly the part Armbian engineers.
+
+### Wireless and networking that just work
+
+Many SBC and USB **Wi-Fi and Bluetooth** chips are not supported by the stock Debian or Ubuntu kernel &mdash; elsewhere you would track down an out-of-tree driver and rebuild it as a DKMS module on every kernel update. Armbian **builds a large set of these wireless drivers straight into its kernels**, keeps them **ported and aligned with each new kernel release**, and **tests them on real hardware** ([Wi-Fi performance](../status/wifi-performance.md)) &mdash; so an adapter that needs manual driver-building elsewhere simply works. Armbian also **turns on advanced networking features** &mdash; IP tunnels, VLANs, bridging, policy routing and firewalling &mdash; that generic or vendor SBC kernels frequently leave out, so a board can act as a router, gateway or VPN endpoint out of the box.
 
 ### Optimized before you even log in
 
