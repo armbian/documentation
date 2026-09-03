@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**93** boards — **54** passed, **39** failed. Each card is the board's most recent test.
+**93** boards — **55** passed, **38** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -473,20 +473,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 40.1 s | warm · up 25 s |
     | store-versions | ✅ | 3.6 s | 25.2.0-trunk.409 · 6.18.48-current-meson64 |
 
-??? failure "NanoPi Neo 3 01 — fail"
+??? success "NanoPi Neo 3 01 — pass"
 
-    `nanopineo3` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `nanopineo3` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 121.0 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 209.7 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 283.1 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 61.3 s | power-cycle · up 25 s |
+    | hw-performance | ✅ | 28.1 s | AES 570 · mem 2400 · disk W 54 / R 63 MB/s · 80.8 °C · 1296 MHz |
+    | dvfs | ✅ | 30.2 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 69.0 s | end0 ↑919/↓941 (1GE) · wlx7cdd905518f9 ↑30/↓23 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 172.7 s | stable |
+    | reboot | ✅ | 59.7 s | power-cycle · up 25 s |
+    | store-versions | ✅ | 7.0 s | 26.11.0-trunk.35 · 6.18.44-current-rockchip64 |
 
 ??? success "NanoPi Neo 3 02 — pass"
 
