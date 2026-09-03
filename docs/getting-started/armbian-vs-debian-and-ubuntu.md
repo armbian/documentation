@@ -5,7 +5,9 @@ description: "Armbian vs Debian vs Ubuntu on single-board computers: keep the De
 
 # Armbian vs Debian & Ubuntu
 
-**Short version:** Armbian is not a rival to Debian or Ubuntu &mdash; it is *built on both*. On a laptop, server or cloud VM you would simply run Debian or Ubuntu. On an **ARM or RISC-V single-board computer (SBC)**, Armbian gives you that same familiar Debian or Ubuntu user space **plus** the board-specific engineering &mdash; optimized kernels, bootloaders, device trees, ready-to-flash images and tuning &mdash; that generic distributions do not provide for most boards. It is a **kernel-first distribution**: the board's kernel is the heart of the project, continuously validated on real hardware.
+> **Armbian brings the embedded-hardware world to Debian and Ubuntu** &mdash; the boards, kernels, bootloaders and tuning they do not ship, on top of the user space you already know.
+
+**Short version:** Armbian is not a rival to Debian or Ubuntu &mdash; it is *built on both*, and its job is to bring the embedded-hardware world to them. On a laptop, server or cloud VM you would simply run Debian or Ubuntu. On an **ARM or RISC-V single-board computer (SBC)**, Armbian gives you that same familiar Debian or Ubuntu user space **plus** the board-specific engineering &mdash; optimized kernels, bootloaders, device trees, ready-to-flash images and tuning &mdash; that generic distributions do not provide for most boards. It is a **kernel-first distribution**: the board's kernel is the heart of the project, continuously validated on real hardware.
 
 !!! tip "The best of both worlds"
     You keep Debian or Ubuntu and `apt`. You add first-class hardware support, out-of-the-box optimization, and tooling made for SBCs. **You even get to choose** whether each image is Debian- or Ubuntu-based.
