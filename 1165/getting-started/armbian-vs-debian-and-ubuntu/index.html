@@ -797,10 +797,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#trust-that-it-actually-works" class="md-nav__link">
+  <a href="#continuously-validated-on-real-hardware" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trust that it actually works
+        Continuously validated on real hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backed-by-people-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backed by people and rules
       
     </span>
   </a>
@@ -6618,10 +6629,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#trust-that-it-actually-works" class="md-nav__link">
+  <a href="#continuously-validated-on-real-hardware" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trust that it actually works
+        Continuously validated on real hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backed-by-people-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backed by people and rules
       
     </span>
   </a>
@@ -6760,10 +6782,10 @@
 <td><strong><a href="../../config/"><code>armbian-config</code></a></strong> menu-driven utility</td>
 </tr>
 <tr>
-<td>Tested on real board hardware</td>
-<td>n/a for most SBCs</td>
-<td>n/a for most SBCs</td>
-<td><strong>Daily automated stress &amp; upgrade testing</strong> on key targets</td>
+<td>Continuous hardware validation</td>
+<td>No per-board hardware testing</td>
+<td>No per-board hardware testing</td>
+<td><strong><a href="../../status/board-tests/">Nightly automated fleet</a></strong> — upgrade, reboot, performance, DVFS &amp; network, on real boards</td>
 </tr>
 <tr>
 <td>Build your own custom image</td>
@@ -6800,8 +6822,10 @@
 <p>Armbian ships an OS that is <strong>tuned for SBCs and flash media</strong>: images are compacted to real size and <strong>expand across the boot media at first boot</strong>, <code>/var/log</code> runs on compressed zram with periodic write-back, half of RAM is available as compressed zswap, the I/O scheduler and journal are tuned, and the system runs almost read-only &mdash; <strong>one of the fastest Linux options on many boards</strong>. Full list in <a href="../../#key-features">key features</a>.</p>
 <h3 id="configuration-made-for-embedded-in-one-tool">Configuration made for embedded, in one tool<a class="headerlink" href="#configuration-made-for-embedded-in-one-tool" title="Permanent link">&para;</a></h3>
 <p><a href="../../config/"><code>armbian-config</code></a> is a menu-driven utility for the tasks SBC users actually do &mdash; kernels, storage, network, access, localisation and one-click <a href="../../software/">software installs</a> &mdash; and it is <strong>unit-tested on every pull request</strong> (<a href="https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml">CI</a>).</p>
-<h3 id="trust-that-it-actually-works">Trust that it actually works<a class="headerlink" href="#trust-that-it-actually-works" title="Permanent link">&para;</a></h3>
-<p>Every official stable build is <strong>thoroughly tested</strong>, with <strong>daily automated stress and upgrade testing on real hardware</strong>, named <strong><a href="https://www.armbian.com/authors">per-board maintainers</a></strong>, and clear <a href="/contribute/board-support-rules/">Board Support Rules</a> that distinguish Standard Support from Community maintained. Armbian images are also a <strong>direct base for many third-party builders</strong>.</p>
+<h3 id="continuously-validated-on-real-hardware">Continuously validated on real hardware<a class="headerlink" href="#continuously-validated-on-real-hardware" title="Permanent link">&para;</a></h3>
+<p>This is where SBCs are usually left behind, and it is one of Armbian&rsquo;s biggest differentiators: mainstream distributions do <strong>no per-board hardware validation</strong> for the long tail of single-board computers. Armbian runs a <strong><a href="../../status/board-tests/">dedicated autotest fleet</a></strong> where every board is put through a <strong>nightly pipeline</strong> — a distribution <strong>upgrade</strong>, a <strong>reboot</strong>, hardware <strong>performance</strong> and <strong>DVFS</strong> checks and a <strong>network</strong> throughput test — with the <strong><a href="../../status/board-tests/">current pass/fail results published live</a></strong>, alongside real-hardware <strong><a href="../../status/wifi-performance/">Wi-Fi performance</a></strong> measurements. It is not a promise in a wiki; it is measured on actual boards, every day.</p>
+<h3 id="backed-by-people-and-rules">Backed by people and rules<a class="headerlink" href="#backed-by-people-and-rules" title="Permanent link">&para;</a></h3>
+<p>Every official stable build is <strong>thoroughly tested</strong>, maintained by named <strong><a href="https://www.armbian.com/authors">per-board maintainers</a></strong>, under clear <a href="/contribute/board-support-rules/">Board Support Rules</a> that distinguish Standard Support from Community maintained. Armbian images are also a <strong>direct base for many third-party builders</strong>.</p>
 <h3 id="grow-from-user-to-builder">Grow from user to builder<a class="headerlink" href="#grow-from-user-to-builder" title="Permanent link">&para;</a></h3>
 <p>The same <a href="https://github.com/armbian/build">build framework</a> that produces official images is yours to use: assemble <strong>fully configured custom images</strong> for your board or product, in parallel, under Docker &mdash; ideal for manufacturers, integrators and CI automation.</p>
 <h3 id="delivered-everywhere">Delivered everywhere<a class="headerlink" href="#delivered-everywhere" title="Permanent link">&para;</a></h3>
