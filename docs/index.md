@@ -36,6 +36,8 @@ If you come across an issue in these pages, you can either report it [here](http
 
 ## What is Armbian?
 
+> **Armbian brings the embedded-hardware world to Debian and Ubuntu** &mdash; the boards, kernels, bootloaders and tuning they do not ship, on top of the user space you already know. See how it compares in [Armbian vs Debian & Ubuntu](getting-started/armbian-vs-debian-and-ubuntu.md).
+
 Armbian's goal is to provide a **highly optimized base operating system specialized for single board computers**. It embodies extremely **lightweight** hardware features with a **well-known** and supported Debian-based user-space experience, an **extensive build framework**, and it is suitable for **industrial or home use**.
 
 Armbian is **not** a Linux distribution itself. Instead, we use Debian GNU/Linux and Ubuntu Linux as base for the images, that our users can download and deploy. We build our own set of optimized kernels for each board, and then provide an extensive and customizable framework to build, adjust, and configure these images. This framework is the heart of the project.
@@ -92,7 +94,7 @@ distribution.
 | -------- | -------- | -------- | -------- |
 | Hardware maintainers | [named per board](https://armbian.com/authors) | the vendor, for its own hardware | [per subsystem](https://github.com/torvalds/linux/blob/master/MAINTAINERS), not per board |
 | Build framework | [builds the whole OS](https://github.com/armbian/build) from source | the vendor's own, for its own hardware | kernel and bootloader, not an OS image |
-| Maintenance | modular and reviewed; `armbian-config` is [unit tested per pull request](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
+| Maintenance | modular and reviewed; `armbian-config` is [unit tested daily](https://github.com/armbian/configng/actions/workflows/maintenance-unit-tests.yml) | varies by vendor | public mailing-list review |
 | User-space | Debian or Ubuntu based, with Armbian packages and configuration | the vendor's own image | stock distribution user space |
 | Declaring support | Standard Support requires a named maintainer; Community maintained is declared as not under active supervision &mdash; see the [Board Support Rules](/contribute/board-support-rules/) | varies by vendor | per [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) entry, not per board |
 

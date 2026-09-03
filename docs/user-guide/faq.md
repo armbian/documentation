@@ -7,7 +7,7 @@ description: "Armbian FAQ: what Armbian is, why there is no universal image, boa
 
 ## What is Armbian?
 
-Armbian is a lightweight Linux distribution optimized for single board computers (SBCs). It provides a reliable, standardized Debian or Ubuntu-based environment tailored to work across many different ARM devices. 
+Armbian is a lightweight Linux distribution optimized for single board computers (SBCs). It provides a reliable, standardized Debian or Ubuntu-based environment tailored to work across many different ARM devices. In short, it **brings the embedded-hardware world to Debian and Ubuntu** &mdash; see [Armbian vs Debian & Ubuntu](../getting-started/armbian-vs-debian-and-ubuntu.md) for how it compares.
 
 In addition to prebuilt images, Armbian includes a powerful [build framework](https://github.com/armbian/build) that lets you customize kernel versions, desktop environments, and other system components to fit your needs.
 

@@ -196,6 +196,7 @@ nav:
         - 'Introduction': 'index.md'
         - 'Getting Started' :
             - 'Overview' : 'getting-started/index.md'
+            - 'Armbian vs Debian & Ubuntu' : 'getting-started/armbian-vs-debian-and-ubuntu.md'
             - 'Choosing an image' : 'getting-started/choosing-an-image.md'
             - 'Choosing an SD card' : 'getting-started/sd-cards.md'
             - 'Writing the image' : 'getting-started/writing-the-image.md'
