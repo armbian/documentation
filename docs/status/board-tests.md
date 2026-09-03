@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**93** boards — **53** passed, **40** failed. Each card is the board's most recent test.
+**93** boards — **54** passed, **39** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -30,20 +30,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 49.8 s | warm · up 33 s |
     | store-versions | ✅ | 6.9 s | 26.11.0-trunk.27 · 7.1.8-edge-qrb2210 |
 
-??? failure "Banana Pi CM4IO 01 — fail"
+??? success "Banana Pi CM4IO 01 — pass"
 
-    `bananapicm4io` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `bananapicm4io` · **inplace** · image `26.8.3` · 7 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 235.4 s | nightly · 26.8.3 → 26.11.0-trunk.27 |
-    | reboot | ❌ | 204.0 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ✅ | 369.5 s | nightly · 26.8.3 → 26.8.3 |
+    | reboot | ✅ | 60.4 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 18.3 s | AES 851 · mem 3900 · disk W 35 / R 152 MB/s · 57.2 °C · 2016 MHz |
+    | dvfs | ✅ | 18.0 s | ondemand · 1000–1512 MHz (peak 1512) |
+    | network-iperf | ❌ | 408.3 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) · wlx00e032c00694 ↑0/↓0 (Wi-Fi 5) Mbps |
+    | restore-stable | ✅ | 166.9 s | stable |
+    | reboot | ✅ | 48.4 s | power-cycle · up 23 s |
+    | store-versions | ✅ | 3.9 s | 26.8.3 · 6.18.44-current-meson64 |
 
 ??? failure "Banana Pi M2 Ultra 01 — fail"
 
