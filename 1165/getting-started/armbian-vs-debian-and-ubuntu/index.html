@@ -764,10 +764,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#kernels-built-for-your-board-maintained-long-term" class="md-nav__link">
+  <a href="#kernel-first-by-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernels built for your board, maintained long-term
+        Kernel-first by design
       
     </span>
   </a>
@@ -6596,10 +6596,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#kernels-built-for-your-board-maintained-long-term" class="md-nav__link">
+  <a href="#kernel-first-by-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernels built for your board, maintained long-term
+        Kernel-first by design
       
     </span>
   </a>
@@ -6723,7 +6723,7 @@
 
 
 <h1 id="armbian-vs-debian-ubuntu">Armbian vs Debian &amp; Ubuntu<a class="headerlink" href="#armbian-vs-debian-ubuntu" title="Permanent link">&para;</a></h1>
-<p><strong>Short version:</strong> Armbian is not a rival to Debian or Ubuntu &mdash; it is <em>built on both</em>. On a laptop, server or cloud VM you would simply run Debian or Ubuntu. On an <strong>ARM or RISC-V single-board computer (SBC)</strong>, Armbian gives you that same familiar Debian or Ubuntu user space <strong>plus</strong> the board-specific engineering &mdash; optimized kernels, bootloaders, device trees, ready-to-flash images and tuning &mdash; that generic distributions do not provide for most boards.</p>
+<p><strong>Short version:</strong> Armbian is not a rival to Debian or Ubuntu &mdash; it is <em>built on both</em>. On a laptop, server or cloud VM you would simply run Debian or Ubuntu. On an <strong>ARM or RISC-V single-board computer (SBC)</strong>, Armbian gives you that same familiar Debian or Ubuntu user space <strong>plus</strong> the board-specific engineering &mdash; optimized kernels, bootloaders, device trees, ready-to-flash images and tuning &mdash; that generic distributions do not provide for most boards. It is a <strong>kernel-first distribution</strong>: the board&rsquo;s kernel is the heart of the project, continuously validated on real hardware.</p>
 <div class="admonition tip">
 <p class="admonition-title">The best of both worlds</p>
 <p>You keep Debian or Ubuntu and <code>apt</code>. You add first-class hardware support, out-of-the-box optimization, and tooling made for SBCs. <strong>You even get to choose</strong> whether each image is Debian or Ubuntu based.</p>
@@ -6816,8 +6816,8 @@
 <h2 id="why-armbian-on-an-sbc">Why Armbian on an SBC<a class="headerlink" href="#why-armbian-on-an-sbc" title="Permanent link">&para;</a></h2>
 <h3 id="keep-the-distribution-you-already-know">Keep the distribution you already know<a class="headerlink" href="#keep-the-distribution-you-already-know" title="Permanent link">&para;</a></h3>
 <p>Armbian images are a <strong>lean, standard Debian or Ubuntu user space</strong> with the well-known <code>apt</code> package manager &mdash; no proprietary base, no vendor lock-in, no relearning. Your scripts, packages and habits carry straight over. See <a href="../../#key-features">key features</a>.</p>
-<h3 id="kernels-built-for-your-board-maintained-long-term">Kernels built for <em>your</em> board, maintained long-term<a class="headerlink" href="#kernels-built-for-your-board-maintained-long-term" title="Permanent link">&para;</a></h3>
-<p>For most SBCs there is no ready mainline image, and where a generic kernel exists it often leaves accelerators, network, video or peripherals inactive. Armbian does <strong>independent kernel development and maintenance with long-term support</strong> across <a href="../../status/package-repository/#kernel-families">many kernel families</a>, and lets you switch between <strong>vendor, current, edge and legacy</strong> branches per board &mdash; see <a href="../choosing-an-image/#vendor-current-edge-or-legacy">Choosing an image</a>.</p>
+<h3 id="kernel-first-by-design">Kernel-first by design<a class="headerlink" href="#kernel-first-by-design" title="Permanent link">&para;</a></h3>
+<p>Armbian is a <strong>kernel-first distribution</strong>. Where general-purpose distributions treat the kernel as one interchangeable package and ship a single generic build, Armbian puts the <strong>board&rsquo;s kernel at the centre of the project</strong>: for most SBCs there is no ready mainline image, and where a generic kernel exists it often leaves accelerators, network, video or peripherals inactive. Armbian does <strong>independent kernel development and maintenance with long-term support</strong> across <a href="../../status/package-repository/#kernel-families">many kernel families</a>, owning the bootloader, device tree and board patches, and lets you switch between <strong>vendor, current, edge and legacy</strong> branches per board &mdash; see <a href="../choosing-an-image/#vendor-current-edge-or-legacy">Choosing an image</a>. The user space is deliberately kept as <strong>stock Debian or Ubuntu</strong> so the part that changes for your hardware &mdash; the kernel &mdash; is exactly the part Armbian engineers.</p>
 <h3 id="optimized-before-you-even-log-in">Optimized before you even log in<a class="headerlink" href="#optimized-before-you-even-log-in" title="Permanent link">&para;</a></h3>
 <p>Armbian ships an OS that is <strong>tuned for SBCs and flash media</strong>: images are compacted to real size and <strong>expand across the boot media at first boot</strong>, <code>/var/log</code> runs on compressed zram with periodic write-back, half of RAM is available as compressed zswap, the I/O scheduler and journal are tuned, and the system runs almost read-only &mdash; <strong>one of the fastest Linux options on many boards</strong>. Full list in <a href="../../#key-features">key features</a>.</p>
 <h3 id="configuration-made-for-embedded-in-one-tool">Configuration made for embedded, in one tool<a class="headerlink" href="#configuration-made-for-embedded-in-one-tool" title="Permanent link">&para;</a></h3>
