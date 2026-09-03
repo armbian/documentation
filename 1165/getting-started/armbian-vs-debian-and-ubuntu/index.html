@@ -6733,7 +6733,7 @@
 <td>Kernel for your board</td>
 <td>Generic; often unavailable or unaccelerated on SBCs</td>
 <td>Generic; official images only for a few boards</td>
-<td><strong><a href="https://www.armbian.com/kernel/">Per-board optimized kernel</a></strong>, mainline-LTS based, with vendor/legacy/edge options</td>
+<td><strong><a href="../../status/package-repository/#kernel-families">Per-board optimized kernel</a></strong>, mainline-LTS based, with vendor/legacy/edge options</td>
 </tr>
 <tr>
 <td>Bootloader, device tree, board bring-up</td>
@@ -6795,7 +6795,7 @@
 <h3 id="keep-the-distribution-you-already-know">Keep the distribution you already know<a class="headerlink" href="#keep-the-distribution-you-already-know" title="Permanent link">&para;</a></h3>
 <p>Armbian images are a <strong>lean, standard Debian or Ubuntu user space</strong> with the well-known <code>apt</code> package manager &mdash; no proprietary base, no vendor lock-in, no relearning. Your scripts, packages and habits carry straight over. See <a href="../../#key-features">key features</a>.</p>
 <h3 id="kernels-built-for-your-board-maintained-long-term">Kernels built for <em>your</em> board, maintained long-term<a class="headerlink" href="#kernels-built-for-your-board-maintained-long-term" title="Permanent link">&para;</a></h3>
-<p>For most SBCs there is no ready mainline image, and where a generic kernel exists it often leaves accelerators, network, video or peripherals inactive. Armbian does <strong>independent kernel development and maintenance with long-term support</strong> across <a href="https://www.armbian.com/kernel/">30+ ARM and ARM64 kernels</a>, and lets you switch between <strong>vendor, current, edge and legacy</strong> branches per board &mdash; see <a href="../choosing-an-image/#vendor-current-edge-or-legacy">Choosing an image</a>.</p>
+<p>For most SBCs there is no ready mainline image, and where a generic kernel exists it often leaves accelerators, network, video or peripherals inactive. Armbian does <strong>independent kernel development and maintenance with long-term support</strong> across <a href="../../status/package-repository/#kernel-families">many kernel families</a>, and lets you switch between <strong>vendor, current, edge and legacy</strong> branches per board &mdash; see <a href="../choosing-an-image/#vendor-current-edge-or-legacy">Choosing an image</a>.</p>
 <h3 id="optimized-before-you-even-log-in">Optimized before you even log in<a class="headerlink" href="#optimized-before-you-even-log-in" title="Permanent link">&para;</a></h3>
 <p>Armbian ships an OS that is <strong>tuned for SBCs and flash media</strong>: images are compacted to real size and <strong>expand across the boot media at first boot</strong>, <code>/var/log</code> runs on compressed zram with periodic write-back, half of RAM is available as compressed zswap, the I/O scheduler and journal are tuned, and the system runs almost read-only &mdash; <strong>one of the fastest Linux options on many boards</strong>. Full list in <a href="../../#key-features">key features</a>.</p>
 <h3 id="configuration-made-for-embedded-in-one-tool">Configuration made for embedded, in one tool<a class="headerlink" href="#configuration-made-for-embedded-in-one-tool" title="Permanent link">&para;</a></h3>
