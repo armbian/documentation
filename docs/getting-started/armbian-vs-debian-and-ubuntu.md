@@ -54,13 +54,13 @@ The same [build framework](https://github.com/armbian/build) that produces offic
 A [global network of mirrors](../status/mirrors.md) provides **perfect coverage, including mainland China**, so images and updates reach your fleet wherever it runs. Every image is also offered as a **torrent that pulls from all mirrors at once** &mdash; so instead of being throttled by a single server, downloads **saturate your own connection** and finish as fast as your line allows.
 
 ### Not just SBCs: cloud-optimized UEFI images
-Armbian also builds **generic UEFI images for x86-64 and arm64** &mdash; lean, cloud-ready builds of the same Debian or Ubuntu user space. We **run our own cloud and build infrastructure on them**, and they go through the [same nightly hardware test fleet](../status/board-tests.md) as the boards, so the images you would deploy are the images the project depends on itself.
+Armbian also builds **generic UEFI images for x86-64 and arm64** &mdash; lean, cloud-ready builds of the same Debian or Ubuntu user space. We **run our own cloud and build infrastructure on them** &mdash; including the project's x86-64 and arm64 cloud servers on **Netcup** &mdash; and they go through the [same nightly hardware test fleet](../status/board-tests.md) as the boards, so the images you would deploy are the images the project depends on itself.
 
 ## When each one is the right choice
 
-Armbian's advantages are specific to single-board computers &mdash; we are happy to point you the other way when that fits better:
-
-- **Use Debian or Ubuntu directly** on x86/AMD64 laptops, servers and cloud VMs, or on the handful of ARM machines those projects ship official, well-supported images for &mdash; unless you want Armbian's optimizations, tooling and testing on a UEFI/cloud machine, in which case Armbian's **UEFI x86-64 and arm64 images** are there too.
-- **Use Armbian** on ARM or RISC-V single-board computers &mdash; especially anything beyond the most common few boards &mdash; when you want a working, optimized, maintained image *and* the Debian or Ubuntu user space you already know.
+- **Use Armbian** wherever you want its optimized kernels, tuning, [`armbian-config`](../config/index.md) and daily testing on top of a familiar Debian or Ubuntu user space:
+    - **ARM or RISC-V single-board computers** &mdash; especially anything beyond the most common few boards.
+    - **x86-64 and arm64 machines** &mdash; laptops, desktops, servers and cloud VMs, via Armbian's UEFI images. It is the same optimized-kernel and tuning treatment, so a fresh install often runs **leaner and faster than a stock Debian or Ubuntu** on the very same hardware &mdash; your next laptop included.
+- **Use Debian or Ubuntu directly** only when you specifically want the vanilla distribution with no Armbian layer, or a distribution feature Armbian does not carry.
 
 New here? Continue with [Getting Started](index.md) and [Choosing an image](choosing-an-image.md), or head straight to the [downloads](https://www.armbian.com/download/).
