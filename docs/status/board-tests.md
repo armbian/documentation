@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **43** passed, **20** failed. Each card is the board's most recent test.
+**63** boards — **44** passed, **19** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -624,22 +624,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ⏭️ | 0.0 s | — |
 
-??? failure "Orange Pi 5 Plus 01 — fail"
+??? success "Orange Pi 5 Plus 01 — pass"
 
-    `orangepi5-plus` · **inplace** · image `26.11.0-trunk.27` · 5 ✅ · 2 ❌ · 1 ⏭️
+    `orangepi5-plus` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 17.4 s | — |
-    | reboot | ✅ | 60.5 s | power-cycle · up 35 s |
-    | hw-performance | ✅ | 25.1 s | AES 1273 · mem 13800 · disk W 20 / R 22 MB/s · 46.2 °C · 1800 MHz |
-    | dvfs | ✅ | 16.4 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ❌ | 176.6 s | enP3p49s0 ↑2351/↓2326 (2.5GE) · enP4p65s0 ↑939/↓0 (1GE) · wlxe0e1a9380c53 ↑706/↓356 (Wi-Fi 6) Mbps |
-    | restore-stable | ❌ | 3.9 s | stable |
-    | reboot | ✅ | 54.2 s | power-cycle · up 28 s |
-    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.27 · 6.1.115-vendor-rk35xx |
+    | upgrade | ✅ | 92.1 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 52.8 s | power-cycle · up 25 s |
+    | hw-performance | ✅ | 17.4 s | AES 1259 · mem 14200 · disk W 55 / R 63 MB/s · 49.9 °C · 1800 MHz |
+    | dvfs | ✅ | 16.0 s | ondemand · 1800–1800 MHz (peak 2256) |
+    | network-iperf | ✅ | 76.6 s | enP3p49s0 ↑2353/↓2329 (2.5GE) · enP4p65s0 ↑941/↓941 (1GE) · wlxe0e1a9380c53 ↑572/↓440 (Wi-Fi 6) Mbps |
+    | restore-stable | ✅ | 83.4 s | stable |
+    | reboot | ✅ | 53.9 s | power-cycle · up 26 s |
+    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.35 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 2.20 W · avg 5.75 W · peak 12.20 W · 288 samples
+    **Power** — idle 2.70 W · avg 6.27 W · peak 12.50 W · 317 samples
 
 ??? success "Orange Pi One+ 01 — pass"
 
