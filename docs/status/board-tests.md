@@ -327,14 +327,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 190.3 s | — |
-    | reboot | ✅ | 50.3 s | power-cycle · up 14 s |
-    | hw-performance | ✅ | 14.8 s | AES 1276 · mem 14000 · disk W 219 / R 269 MB/s · 49 °C · 1800 MHz |
-    | dvfs | ✅ | 17.3 s | ondemand · 1800–1800 MHz (peak 2352) |
-    | network-iperf | ✅ | 56.0 s | end1 ↑939/↓939 (1GE) · wlan0 ↑31/↓155 (Wi-Fi 5) Mbps |
-    | restore-stable | ❌ | 147.3 s | stable |
-    | reboot | ✅ | 44.4 s | power-cycle · up 15 s |
-    | store-versions | ✅ | 4.0 s | 26.8.3 · 6.1.115-vendor-rk35xx |
+    | upgrade | ⏭️ | 147.8 s | — |
+    | reboot | ✅ | 44.9 s | power-cycle · up 15 s |
+    | hw-performance | ✅ | 14.5 s | AES 1267 · mem 15000 · disk W 223 / R 274 MB/s · 50.8 °C · 1800 MHz |
+    | dvfs | ✅ | 17.4 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 55.6 s | end1 ↑923/↓939 (1GE) · wlan0 ↑31/↓148 (Wi-Fi 5) Mbps |
+    | restore-stable | ❌ | 137.8 s | stable |
+    | reboot | ✅ | 44.2 s | power-cycle · up 16 s |
+    | store-versions | ✅ | 3.9 s | 26.8.3 · 6.1.115-vendor-rk35xx |
 
 ??? failure "NanoPC T6 LTS 01 — fail"
 
@@ -368,18 +368,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi K2 01 — pass"
 
-    `nanopik2-s905` · **inplace** · image `26.8.3` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopik2-s905` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 221.7 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
-    | reboot | ✅ | 44.7 s | warm · up 17 s |
-    | hw-performance | ✅ | 26.8 s | AES 51 · mem 3800 · disk W 23 / R 42 MB/s · 63 °C · 2016 MHz |
+    | upgrade | ✅ | 140.3 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 37.7 s | warm · up 18 s |
+    | hw-performance | ✅ | 26.4 s | AES 51 · mem 3800 · disk W 24 / R 41 MB/s · 63 °C · 2016 MHz |
     | dvfs | ✅ | 22.3 s | ondemand · 500–1536 MHz (peak 1536) |
-    | network-iperf | ✅ | 62.8 s | end0 ↑934/↓941 (1GE) · wlan0 ↑14/↓32 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 119.1 s | stable |
-    | reboot | ✅ | 36.9 s | warm · up 17 s |
-    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.35 · 6.18.44-current-meson64 |
+    | network-iperf | ✅ | 59.4 s | end0 ↑934/↓825 (1GE) · wlan0 ↑13/↓30 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 115.0 s | stable |
+    | reboot | ✅ | 45.4 s | warm · up 17 s |
+    | store-versions | ✅ | 5.8 s | 26.11.0-trunk.35 · 6.18.44-current-meson64 |
 
 ??? success "NanoPi M4V2 01 — pass"
 
@@ -611,18 +611,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Orange Pi 5 01 — fail"
 
-    `orangepi5` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `orangepi5` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 33.9 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 196.0 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
+    | upgrade | ✅ | 119.6 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 77.4 s | power-cycle · up 51 s |
+    | hw-performance | ✅ | 17.3 s | AES 1316 · mem 14200 · disk W 54 / R 66 MB/s · 42.5 °C · 1800 MHz |
+    | dvfs | ✅ | 16.7 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 28.5 s | end1 ↑941/↓941 (1GE) Mbps |
+    | restore-stable | ✅ | 68.0 s | stable |
+    | reboot | ❌ | 205.8 s | power-cycle |
     | store-versions | ⏭️ | 0.0 s | — |
+
+    **Power** — idle 1.70 W · avg 2.91 W · peak 8.90 W · 213 samples
 
 ??? success "Orange Pi 5 Plus 01 — pass"
 
