@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **42** passed, **21** failed. Each card is the board's most recent test.
+**63** boards — **43** passed, **20** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -686,20 +686,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 6.5 s | 26.8.3 · 6.18.44-current-sunxi64 |
 
-??? failure "Orange Pi Zero Plus 01 — fail"
+??? success "Orange Pi Zero Plus 01 — pass"
 
-    `orangepizeroplus` · **inplace** · image `26.08.0-trunk` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `orangepizeroplus` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 562.1 s | nightly · 26.08.0-trunk → 26.11.0-trunk.6 |
-    | reboot | ❌ | 200.7 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 33.4 s | — |
+    | reboot | ✅ | 46.3 s | warm · up 26 s |
+    | hw-performance | ✅ | 34.6 s | AES 469 · mem 2600 · disk W 22 / R 23 MB/s · 60.2 °C · 1008 MHz |
+    | dvfs | ✅ | 26.9 s | ondemand · 480–1008 MHz (peak 1008) |
+    | network-iperf | ✅ | 104.0 s | end0 ↑892/↓936 (1GE) · wlan0 ↑33/↓31 (Wi-Fi 4) · wlan1 ↑32/↓32 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 36.9 s | stable |
+    | reboot | ✅ | 45.9 s | warm · up 25 s |
+    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
 
 ??? success "Orange Pi Zero2 01 — pass"
 
