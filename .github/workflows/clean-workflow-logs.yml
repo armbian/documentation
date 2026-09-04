@@ -26,3 +26,62 @@ jobs:
         with:
           runs_older_than: ${{ github.event.inputs.runs_older_than || env.SCHEDULED_RUNS_OLDER_THAN }}
           runs_to_keep: ${{ github.event.inputs.runs_to_keep || env.SCHEDULED_RUNS_TO_KEEP }}
+
+  # Prune docs-preview builds on the `www` branch. The per-PR cleanup in
+  # pr-docs-preview.yml only fires on the "closed" event, so previews from PRs
+  # closed before it existed (and any it missed) accumulate under www/<PR#>/ and
+  # grow the GitHub Pages source. This scheduled sweep keeps only the previews of
+  # currently OPEN pull requests and removes every other numeric PR directory.
+  clean-www-previews:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Checkout `www` branch
+        uses: actions/checkout@v7
+        with:
+          ref: www
+
+      - name: Remove previews for merged/closed PRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          # PR numbers to KEEP — only currently open pull requests.
+          open="$(gh pr list --state open --limit 1000 --json number --jq '.[].number' | sort -u)"
+          echo "Open PRs to keep: $(echo "$open" | tr '\n' ' ')"
+
+          removed=0
+          for d in */; do
+            d="${d%/}"
+            [[ "$d" =~ ^[0-9]+$ ]] || continue           # only numeric PR dirs
+            if grep -qx -- "$d" <<<"$open"; then
+              continue                                    # open PR -> keep
+            fi
+            git rm -r --quiet -- "$d"
+            echo "removed preview for #$d (not an open PR)"
+            removed=$((removed + 1))
+          done
+
+          if [ "$removed" -eq 0 ]; then
+            echo "Nothing to prune; every preview dir belongs to an open PR."
+            exit 0
+          fi
+
+          git commit -m "www: prune ${removed} docs preview(s) for merged/closed PRs"
+          # Retry against concurrent preview pushes from open PRs.
+          for attempt in 1 2 3; do
+            if git push origin www; then
+              echo "Pruned ${removed} preview(s)."
+              exit 0
+            fi
+            echo "Push failed (attempt ${attempt}); rebasing on latest www..." >&2
+            git pull --rebase origin www
+          done
+          echo "Failed to push www prune after 3 attempts." >&2
+          exit 1
