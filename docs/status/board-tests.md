@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **47** passed, **16** failed. Each card is the board's most recent test.
+**64** boards — **48** passed, **16** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -320,6 +320,23 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | restore-stable | ✅ | 157.4 s | stable |
     | reboot | ✅ | 40.3 s | warm · up 24 s |
     | store-versions | ✅ | 5.9 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+
+??? success "Mekotronics R58HD 01 — pass"
+
+    `mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 20.7 s | nightly · 26.11.0-trunk.35 → 26.11.0-trunk.35 |
+    | reboot | ✅ | 52.2 s | power-cycle · up 13 s |
+    | hw-performance | ✅ | 13.9 s | AES 1303 · mem 9400 · disk W 238 / R 280 MB/s · 48.1 °C · 1800 MHz |
+    | dvfs | ✅ | 16.5 s | ondemand · 1200–1800 MHz (peak 2304) |
+    | network-iperf | ✅ | 50.3 s | end0 ↑939/↓939 (1GE) · enP3p49s0 ↑939/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 39.8 s | stable |
+    | reboot | ✅ | 45.5 s | power-cycle · up 15 s |
+    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.35 · 6.1.115-vendor-rk35xx |
+
+    **Power** — idle 3.20 W · avg 5.68 W · peak 11.70 W · 192 samples
 
 ??? failure "Mekotronics R58S2 01 — fail"
 
