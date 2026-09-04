@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **48** passed, **16** failed. Each card is the board's most recent test.
+**64** boards — **49** passed, **15** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -338,20 +338,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 3.20 W · avg 5.68 W · peak 11.70 W · 192 samples
 
-??? failure "Mekotronics R58S2 01 — fail"
+??? success "Mekotronics R58S2 01 — pass"
 
-    `mekotronics-r58s2` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
+    `mekotronics-r58s2` · **inplace** · image `26.8.3` · 6 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 147.8 s | — |
-    | reboot | ✅ | 44.9 s | power-cycle · up 15 s |
-    | hw-performance | ✅ | 14.5 s | AES 1267 · mem 15000 · disk W 223 / R 274 MB/s · 50.8 °C · 1800 MHz |
-    | dvfs | ✅ | 17.4 s | ondemand · 1800–1800 MHz (peak 2352) |
-    | network-iperf | ✅ | 55.6 s | end1 ↑923/↓939 (1GE) · wlan0 ↑31/↓148 (Wi-Fi 5) Mbps |
-    | restore-stable | ❌ | 137.8 s | stable |
-    | reboot | ✅ | 44.2 s | power-cycle · up 16 s |
-    | store-versions | ✅ | 3.9 s | 26.8.3 · 6.1.115-vendor-rk35xx |
+    | upgrade | ⏭️ | 141.0 s | — |
+    | reboot | ✅ | 44.1 s | power-cycle · up 16 s |
+    | hw-performance | ✅ | 15.0 s | AES 1278 · mem 14000 · disk W 221 / R 273 MB/s · 47.2 °C · 1800 MHz |
+    | dvfs | ✅ | 17.5 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 28.6 s | end1 ↑939/↓939 (1GE) Mbps |
+    | restore-stable | ⏭️ | 139.8 s | — |
+    | reboot | ✅ | 50.0 s | power-cycle · up 13 s |
+    | store-versions | ✅ | 4.0 s | 26.8.3 · 6.1.115-vendor-rk35xx |
 
 ??? failure "NanoPC T6 LTS 01 — fail"
 
