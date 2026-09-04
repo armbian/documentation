@@ -5,6 +5,11 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Only reads this repository: the build is published over rsync with a deploy
+# key, so GITHUB_TOKEN needs no write access at all.
+permissions:
+  contents: read
+
 jobs:
   build-docs:
     name: "Generate HTML"

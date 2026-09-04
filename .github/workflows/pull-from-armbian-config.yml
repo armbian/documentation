@@ -6,6 +6,11 @@ on:
       - master
   workflow_dispatch:
 
+# create-pull-request commits a branch and opens a PR with GITHUB_TOKEN.
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
 
   Build:
