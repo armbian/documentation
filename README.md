@@ -11,10 +11,7 @@ This repository holds the source for the Armbian documentation site published at
 
 ## Rendered output
 
-The content in this repo is meant for storage and quick glances; the official rendered output is:
-
-- Website: [https://docs.armbian.com](https://docs.armbian.com)
-- Offline PDF: [Latest release](https://github.com/armbian/documentation/releases/latest)
+The content in this repo is meant for storage and quick glances; the official rendered output is the website: [https://docs.armbian.com](https://docs.armbian.com).
 
 ## How it is built
 
