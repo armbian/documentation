@@ -1,9 +1,11 @@
 name: "Pull from Armbian config"
 
 on:
-  push:
-    branches:
-      - master
+  # Regenerated from armbian/configng, so nothing in this repository
+  # should trigger it. Daily at 04:30 UTC, clear of the 05:00 mirrors
+  # and 06:00/06:30 status jobs.
+  schedule:
+    - cron: '30 4 * * *'
   workflow_dispatch:
 
 jobs:
