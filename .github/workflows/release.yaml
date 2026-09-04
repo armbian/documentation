@@ -32,7 +32,7 @@ jobs:
         run: mkdocs build --clean
 
       - name: "Install SSH key"
-        uses: shimataro/ssh-key-action@v2
+        uses: shimataro/ssh-key-action@87a8f067114a8ce263df83e9ed5c849953548bc3 # v2.8.1
         with:
           key: ${{ secrets.KEY_UPLOAD }}
           known_hosts: ${{ secrets.HOST_APPLICATIONS_KNOWN_HOSTS }}
