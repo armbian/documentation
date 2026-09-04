@@ -14,11 +14,6 @@ Documentation is written in [markdown](https://www.markdownguide.org/basic-synta
 
 This repo is meant for storing and quick glances.  Official output is [https://docs.armbian.com](https://docs.armbian.com).
 
-Armbian Documentation is available in the following formats:
-
-* [Official document website](https://docs.armbian.com),
-* [PDF document](https://github.com/armbian/documentation/releases/latest)
-
 ## Contributing
 
 This site is built with [mkdocs](https://github.com/mkdocs/mkdocs/) and depends on [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
