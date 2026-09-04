@@ -353,18 +353,11 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "NanoPi Duo 01 — fail"
 
-    `nanopiduo` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `nanopiduo` · **inplace** · image `26.11.0-trunk.27` · 0 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 156.0 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 204.0 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | reachable | ❌ | 0.0 s | ip=10.0.50.84 · reachable=False · port=22 |
 
 ??? success "NanoPi K2 01 — pass"
 
