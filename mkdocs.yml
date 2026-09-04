@@ -137,11 +137,6 @@ plugins:
         'Process_Managing_Workflow.md': 'contribute/index.md'
         'Process_Armbian-Task-Tracking.md': 'contribute/index.md'
         'Process_CI.md': 'contribute/automation.md'
-#   - with-pdf:
-#       author: Armbian documentation team
-#       copyright: © 2024 by Armbian
-#       cover_title: Armbian documentation
-#       cover_subtitle: Linux for ARM development boards
 
 markdown_extensions:
   - smarty
