@@ -74,7 +74,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           body-template: |
-            [![Create docs preview on PR](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pdf-at-pr.yaml)
+            [![Create docs preview on PR](https://github.com/armbian/documentation/actions/workflows/pr-docs-preview.yml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pr-docs-preview.yml)
 
             Documentation website preview will be available shortly:
 
