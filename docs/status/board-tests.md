@@ -512,18 +512,11 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Odroid C1 01 — fail"
 
-    `odroidc1` · **inplace** · image `26.8.0-trunk.314` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `odroidc1` · **inplace** · image `26.8.0-trunk.314` · 0 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 208.0 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-    | dvfs | ➖ | 11.1 s | — |
-    | network-iperf | ⏭️ | 31.4 s | no iperf3 on board |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ❌ | 21.3 s | — |
+    | reachable | ❌ | 0.0 s | ip=10.0.50.27 · reachable=False · port=22 |
 
 ??? success "Odroid C2 01 — pass"
 
