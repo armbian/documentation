@@ -12,7 +12,7 @@ Install to internal media, ZFS, NFS, read-only rootfs
 ## Install
 
 
-Install the running system to internal media (eMMC/NVMe/SATA/USB/UFS, or Windows dual-boot)
+Install the running system to internal media
 
 
 <!--- header START from tools/include/markdown/STO001-header.md --->
