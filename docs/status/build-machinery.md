@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**17** servers · **686** threads · **1933** GB RAM · **284** runners (**167** online).
+**17** servers · **686** threads · **1933** GB RAM · **286** runners (**167** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -30,7 +30,7 @@ runner processes each server hosts (from the
 | `kspace` | Kspace Estonia | 128 | 256 GB | 32 | active |
 | `github` | GitHub | 40 | 137 GB | 20 | active |
 | `rack-ryzen` | Armbian Datacenter | 32 | 125 GB | 15 | active |
-| `stpete` | JetHome | 24 | 64 GB | 6 | active |
+| `stpete` | JetHome | 24 | 64 GB | 8 | active |
 | `geekom` | Armbian Datacenter | 20 | 62 GB | 8 | active |
 | `vps8000-1` | Netcup Germany | 18 | 62 GB | 9 | active |
 | `vps8000-2` | Netcup Germany | 18 | 62 GB | 14 | active |
