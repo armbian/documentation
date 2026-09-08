@@ -2,6 +2,7 @@
 title: "Finance"
 seo_title: "Finance apps for Armbian"
 description: "Manage your finances for Armbian on ARM64 and x86 single-board computers: Actual Budget, Wallos."
+hub: true
 comments: true
 ---
 # Manage your finances

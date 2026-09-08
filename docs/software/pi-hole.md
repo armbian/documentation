@@ -76,4 +76,4 @@ armbian-config --cmd PIH001
 
 ---
 
-_Part of Armbian's [Network-wide ad blockers servers](/User-Guide_Armbian-Software/DNS/) software._
+_Part of Armbian's [Network-wide ad blockers servers](/software/dns/) software._

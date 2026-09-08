@@ -62,4 +62,4 @@ armbian-config --cmd HAB001
 
 ---
 
-_Part of Armbian's [Home Automation for control home appliances](/User-Guide_Armbian-Software/HomeAutomation/) software._
+_Part of Armbian's [Home Automation for control home appliances](/software/home-automation/) software._

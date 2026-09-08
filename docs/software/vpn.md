@@ -2,6 +2,7 @@
 title: "VPN"
 seo_title: "VPN apps for Armbian"
 description: "Virtual Private Network tools for Armbian on ARM64 and x86 single-board computers: WireGuard, ZeroTier."
+hub: true
 comments: true
 ---
 # Virtual Private Network tools

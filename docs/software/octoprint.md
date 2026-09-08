@@ -55,4 +55,4 @@ armbian-config --cmd OCT001
 
 ---
 
-_Part of Armbian's [Tools for printing and 3D printing](/User-Guide_Armbian-Software/Printing/) software._
+_Part of Armbian's [Tools for printing and 3D printing](/software/printing/) software._

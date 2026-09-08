@@ -2,6 +2,7 @@
 title: "Media"
 seo_title: "Media apps for Armbian"
 description: "Media servers, organizers and editors for Armbian on ARM64 and x86 single-board computers: Emby, Filebrowser, Hastebin, Immich, Jellyfin, Navidrome, Nextcloud, OMV, Owncloud, Synct"
+hub: true
 comments: true
 ---
 # Media servers, organizers and editors

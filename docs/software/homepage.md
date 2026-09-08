@@ -79,4 +79,4 @@ armbian-config --cmd HPG001
 
 ---
 
-_Part of Armbian's [Remote File & Management tools](/User-Guide_Armbian-Software/Management/) software._
+_Part of Armbian's [Remote File & Management tools](/software/management/) software._
