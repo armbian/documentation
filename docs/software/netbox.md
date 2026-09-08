@@ -22,8 +22,8 @@ comments: true
 
 Requirements (installed automatically)
 
-- [Redis](/software/database/#redis)
-- [Postgres SQL](/software/database/#postgresql)
+- [Redis](/software/redis/)
+- [Postgres SQL](/software/postgresql/)
 
 Key Features
 
