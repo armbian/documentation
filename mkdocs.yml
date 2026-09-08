@@ -342,6 +342,7 @@ nav:
             - 'ZeroTier': 'software/zerotier.md'
         - 'Web hosting':
             - 'Ghost': 'software/ghost.md'
+            - 'HedgeDoc': 'software/hedgedoc.md'
             - 'SWAG': 'software/swag.md'
         # END software-nav
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
