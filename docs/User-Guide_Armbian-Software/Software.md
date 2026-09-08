@@ -3623,3 +3623,57 @@ armbian-config --cmd GHOST3
 
 
 
+
+#### HedgeDoc
+
+
+HedgeDoc collaborative markdown editor install
+
+
+<!--- section image START from tools/include/images/HDOC01.png --->
+![HedgeDoc](/images/HDOC01.png)
+<!--- section image STOP from tools/include/images/HDOC01.png --->
+
+
+<!--- header START from tools/include/markdown/HDOC01-header.md --->
+HedgeDoc is a powerful, locally hosted web-based collaborative Markdown editor. It allows you to create, edit, and share documents in real time, supporting teamwork with live collaboration, version history, and easy publishing. This self-hosted application provides a flexible and secure environment for writing notes, documentation, and knowledge bases, offering a complete solution for collaborative text editing and documentation management.
+
+<!--- header STOP from tools/include/markdown/HDOC01-header.md --->
+
+
+~~~ bash title="HedgeDoc"
+armbian-config --cmd HDOC01
+~~~
+
+
+<!--- footer START from tools/include/markdown/HDOC01-footer.md --->
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3100**:
+
+    - URL: `http://<your.IP>:3100`
+
+=== "Directories"
+
+    - Install directory: `/armbian/hedgedoc`
+
+=== "View logs"
+
+    ```sh
+    docker logs -f hedgedoc
+    ```
+
+<!--- footer STOP from tools/include/markdown/HDOC01-footer.md --->
+
+
+~~~ bash title="HedgeDoc remove"
+armbian-config --cmd HDOC02
+~~~
+
+
+~~~ bash title="HedgeDoc purge with data folder"
+armbian-config --cmd HDOC03
+~~~
+
+
+
