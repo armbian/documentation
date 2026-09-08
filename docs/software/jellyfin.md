@@ -63,4 +63,4 @@ armbian-config --cmd JMS001
 
 ---
 
-_Part of Armbian's [Media servers, organizers and editors](/User-Guide_Armbian-Software/Media/) software._
+_Part of Armbian's [Media servers, organizers and editors](/software/media/) software._

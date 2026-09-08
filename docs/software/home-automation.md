@@ -2,6 +2,7 @@
 title: "Home Automation"
 seo_title: "Home Automation apps for Armbian"
 description: "Home Automation for control home appliances for Armbian on ARM64 and x86 single-board computers: Domoticz, EVCC, openHAB, Home Assistant."
+hub: true
 comments: true
 ---
 # Home Automation for control home appliances

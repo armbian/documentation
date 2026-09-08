@@ -2,6 +2,7 @@
 title: "Management"
 seo_title: "Management apps for Armbian"
 description: "Remote File & Management tools for Armbian on ARM64 and x86 single-board computers: Cockpit, Proxmox VE, Homepage, NetBox, apt-cacher-ng, git_cdn, Samba, Webmin."
+hub: true
 comments: true
 ---
 # Remote File & Management tools

@@ -22,8 +22,8 @@ comments: true
 
 Requirements (installed automatically)
 
-- [Redis](/User-Guide_Armbian-Software/Database/#redis)
-- [Postgres SQL](/User-Guide_Armbian-Software/Database/#postgresql)
+- [Redis](/software/database/#redis)
+- [Postgres SQL](/software/database/#postgresql)
 
 Key Features
 
@@ -87,4 +87,4 @@ armbian-config --cmd NBOX01
 
 ---
 
-_Part of Armbian's [Remote File & Management tools](/User-Guide_Armbian-Software/Management/) software._
+_Part of Armbian's [Remote File & Management tools](/software/management/) software._

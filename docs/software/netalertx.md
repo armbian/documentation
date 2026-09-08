@@ -74,4 +74,4 @@ armbian-config --cmd NAX001
 
 ---
 
-_Part of Armbian's [Real-time monitoring, collecting metrics, up-time status](/User-Guide_Armbian-Software/Monitoring/) software._
+_Part of Armbian's [Real-time monitoring, collecting metrics, up-time status](/software/monitoring/) software._

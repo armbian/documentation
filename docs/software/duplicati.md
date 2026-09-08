@@ -67,4 +67,4 @@ armbian-config --cmd DPL001
 
 ---
 
-_Part of Armbian's [Backup solutions for your data](/User-Guide_Armbian-Software/Backup/) software._
+_Part of Armbian's [Backup solutions for your data](/software/backup/) software._

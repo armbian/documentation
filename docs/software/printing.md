@@ -2,6 +2,7 @@
 title: "Printing"
 seo_title: "Printing apps for Armbian"
 description: "Tools for printing and 3D printing for Armbian on ARM64 and x86 single-board computers: OctoPrint."
+hub: true
 comments: true
 ---
 # Tools for printing and 3D printing

@@ -61,4 +61,4 @@ armbian-config --cmd PRW001
 
 ---
 
-_Part of Armbian's [Download apps for movies, TV shows, music and subtitles](/User-Guide_Armbian-Software/Downloaders/) software._
+_Part of Armbian's [Download apps for movies, TV shows, music and subtitles](/software/downloaders/) software._

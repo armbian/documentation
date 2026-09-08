@@ -2,6 +2,7 @@
 title: "Armbian"
 seo_title: "Armbian apps for Armbian"
 description: "Armbian infrastructure services for Armbian on ARM64 and x86 single-board computers: CDN router, GH runners, Rsyncd server."
+hub: true
 comments: true
 ---
 # Armbian infrastructure services

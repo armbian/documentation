@@ -39,4 +39,4 @@ armbian-config --cmd NLD001
 
 ---
 
-_Part of Armbian's [Console network tools for measuring load and bandwidth](/User-Guide_Armbian-Software/Netconfig/) software._
+_Part of Armbian's [Console network tools for measuring load and bandwidth](/software/netconfig/) software._

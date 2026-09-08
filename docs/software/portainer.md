@@ -48,4 +48,4 @@ armbian-config --cmd POR001
 
 ---
 
-_Part of Armbian's [Docker containerization and KVM virtual machines](/User-Guide_Armbian-Software/Containers/) software._
+_Part of Armbian's [Docker containerization and KVM virtual machines](/software/containers/) software._

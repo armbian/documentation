@@ -26,4 +26,4 @@ armbian-config --cmd ZTR001
 
 ---
 
-_Part of Armbian's [Virtual Private Network tools](/User-Guide_Armbian-Software/VPN/) software._
+_Part of Armbian's [Virtual Private Network tools](/software/vpn/) software._

@@ -65,4 +65,4 @@ armbian-config --cmd ABU001
 
 ---
 
-_Part of Armbian's [Manage your finances](/User-Guide_Armbian-Software/Finance/) software._
+_Part of Armbian's [Manage your finances](/software/finance/) software._

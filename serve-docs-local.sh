@@ -16,11 +16,11 @@ CONFIGNG="${CONFIGNG:-$(cd "$DOCS/../configng" && pwd)}"
 VENV="${VENV:-$DOCS/.venv-docs}"
 cmd="${1:-serve}"
 
-# Revert exactly what the staging block below writes: the generated hub/config
-# pages and images (restore tracked ones, drop untracked ones), and the wholly
-# generated docs/software tree. Only touches those paths.
+# Revert exactly what the staging block below writes: the generated config pages
+# and images (restore tracked ones, drop untracked ones), the regenerated nav in
+# mkdocs.yml, and the wholly generated docs/software tree. Only those paths.
 stage_clean() {
-	for d in docs/User-Guide_Armbian-Software docs/User-Guide_Armbian-Config docs/images; do
+	for d in docs/config docs/images mkdocs.yml; do
 		git -C "$DOCS" checkout -- "$d" 2>/dev/null || true   # restore tracked files
 		git -C "$DOCS" clean -fdq "$d" 2>/dev/null || true    # drop untracked generated files
 	done
@@ -53,14 +53,15 @@ echo ">> generating software pages in $CONFIGNG"
 
 # 3) stage into the docs tree exactly like pull-from-armbian-config.yml.
 echo ">> staging generated pages into $DOCS/docs"
-mkdir -p "$DOCS/docs/images" "$DOCS/docs/User-Guide_Armbian-Config" \
-         "$DOCS/docs/User-Guide_Armbian-Software" "$DOCS/docs/software"
+mkdir -p "$DOCS/docs/images" "$DOCS/docs/config" "$DOCS/docs/software"
 rsync -a "$CONFIGNG/tools/include/images/." "$DOCS/docs/images/"
-for p in Localisation Network System; do
-	rsync -a "$CONFIGNG/docs/$p/$p.md" "$DOCS/docs/User-Guide_Armbian-Config/"
+rsync -a "$CONFIGNG/docs/Localisation/Localisation.md" "$DOCS/docs/config/localisation.md"
+rsync -a "$CONFIGNG/docs/Network/Network.md" "$DOCS/docs/config/network.md"
+for p in Kernel Desktops Storage Access User Updates; do
+	rsync -a "$CONFIGNG/docs/System/$p.md" "$DOCS/docs/config/$(echo "$p" | tr 'A-Z' 'a-z').md"
 done
-rsync -a --exclude="Software.user.md" "$CONFIGNG/docs/Software/"* "$DOCS/docs/User-Guide_Armbian-Software/"
-rsync -a --delete "$CONFIGNG/docs/software/." "$DOCS/docs/software/"
+# app pages + their category hubs; index.md here is hand-maintained, not synced
+rsync -a --delete --exclude=index.md "$CONFIGNG/docs/software/." "$DOCS/docs/software/"
 
 # 3b) rebuild the ARMBIAN SOFTWARE nav from the staged app pages, exactly as the
 #     pull-from-armbian-config workflow does, so the local preview matches CI.

@@ -2,6 +2,7 @@
 title: "Dev Tools"
 seo_title: "Dev Tools apps for Armbian"
 description: "Applications and tools for development for Armbian on ARM64 and x86 single-board computers: Git CLI, Code-server."
+hub: true
 comments: true
 ---
 # Applications and tools for development

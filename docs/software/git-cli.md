@@ -38,4 +38,4 @@ armbian-config --cmd GIT001
 
 ---
 
-_Part of Armbian's [Applications and tools for development](/User-Guide_Armbian-Software/DevTools/) software._
+_Part of Armbian's [Applications and tools for development](/software/dev-tools/) software._

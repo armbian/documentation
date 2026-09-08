@@ -68,4 +68,4 @@ armbian-config --cmd MYSQL1
 
 ---
 
-_Part of Armbian's [SQL database servers and web interface managers](/User-Guide_Armbian-Software/Database/) software._
+_Part of Armbian's [SQL database servers and web interface managers](/software/database/) software._

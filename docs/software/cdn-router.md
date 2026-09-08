@@ -39,4 +39,4 @@ armbian-config --cmd ART001
 
 ---
 
-_Part of Armbian's [Armbian infrastructure services](/User-Guide_Armbian-Software/Armbian/) software._
+_Part of Armbian's [Armbian infrastructure services](/software/armbian/) software._

@@ -54,11 +54,8 @@ jobs:
             rsync -avr "docs/System/$f.md" "../documentation/docs/config/$(echo "$f" | tr 'A-Z' 'a-z').md"
           done
 
-          # the rest goes under armbian-software (category hubs + section pages)
-          mkdir -p ../documentation/docs/User-Guide_Armbian-Software/
-          rsync -avr --exclude="Software.user.md" docs/Software/* ../documentation/docs/User-Guide_Armbian-Software/
-
-          # per-app SEO pages get their own top-level /software/<slug>/ URLs
+          # per-app SEO pages and their category hubs get their own top-level
+          # /software/<slug>/ URLs; index.md here is hand-maintained, not synced.
           mkdir -p ../documentation/docs/software/
           rsync -avr --delete --exclude=index.md docs/software/. ../documentation/docs/software/
 

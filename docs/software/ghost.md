@@ -66,4 +66,4 @@ armbian-config --cmd GHOST1
 
 ---
 
-_Part of Armbian's [Web server, LEMP, reverse proxy, Let's Encrypt SSL](/User-Guide_Armbian-Software/WebHosting/) software._
+_Part of Armbian's [Web server, LEMP, reverse proxy, Let's Encrypt SSL](/software/web-hosting/) software._

@@ -2,6 +2,7 @@
 title: "DNS"
 seo_title: "DNS apps for Armbian"
 description: "Network-wide ad blockers servers for Armbian on ARM64 and x86 single-board computers: AdGuardHome, Pi-hole, Unbound."
+hub: true
 comments: true
 ---
 # Network-wide ad blockers servers
