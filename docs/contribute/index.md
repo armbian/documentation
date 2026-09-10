@@ -26,8 +26,9 @@ If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributin
 
 There are no detailed instructions on how to add a new board or even a whole new board family to the build script yet. However there are a few commits / pull requests that give clues how to achieve that like
 
-- [https://github.com/armbian/build/pull/3176/files](https://github.com/armbian/build/pull/3176/files)
-- [https://github.com/armbian/build/pull/3138/files](https://github.com/armbian/build/pull/3138/files)
+- [A whole new SoC family — Nexell S5P6818 (NanoPC-T3+, NanoPi M3, NanoPi Fire3)](https://github.com/armbian/build/pull/10674): a recent, end-to-end example — three board configs, a new family definition, boot environment and boot script, a kernel config, u-boot support, and the full mainline bring-up patch series.
+- [https://github.com/armbian/build/pull/3176](https://github.com/armbian/build/pull/3176)
+- [https://github.com/armbian/build/pull/3138](https://github.com/armbian/build/pull/3138)
 
 ## Board maintainer
 
