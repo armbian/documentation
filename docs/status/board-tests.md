@@ -729,12 +729,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 20.9 s | AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 62.8 °C · 1608 MHz |
-    | dvfs | ✅ | 21.8 s | ondemand · 480–1608 MHz (peak 1608) |
-    | network-iperf | ✅ | 70.4 s | end0 ↑915/↓941 (1GE) · wlan0 ↑140/↓132 (Wi-Fi 5) Mbps |
+    | hw-performance | ✅ | 20.8 s | AES 750 · mem 4100 · disk W 54 / R 127 MB/s · 60.9 °C · 1608 MHz |
+    | dvfs | ✅ | 21.7 s | ondemand · 480–1608 MHz (peak 1608) |
+    | network-iperf | ✅ | 30.5 s | end0 ↑920/↓939 (1GE) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 5.4 s | 26.8.3 · 7.1.8-edge-sunxi64 |
+    | store-versions | ✅ | 4.7 s | 26.8.3 · 7.1.8-edge-sunxi64 |
+
+    **Power** — idle 3.10 W · avg 3.71 W · peak 5.00 W · 67 samples
 
 ??? failure "Pine H64 01 — fail"
 
