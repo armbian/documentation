@@ -7,17 +7,17 @@
 
 ## Purpose of This Repository
 
-This repository holds the source for the Armbian documentation site published at [docs.armbian.com](https://docs.armbian.com). It is the central knowledge base for the Armbian OS, the `armbian-config` utility, per-application software pages, and the Armbian build framework.
+This repository holds the Markdown sources of the Armbian documentation site published at [docs.armbian.com](https://docs.armbian.com). It is the central knowledge base for the Armbian OS, the `armbian-config` utility, per-application software pages, the Armbian build framework, and the status of Armbian infrastructure.
 
 ## Rendered output
 
-The content in this repo is meant for storage and quick glances; the official rendered output is the website: [https://docs.armbian.com](https://docs.armbian.com).
+The content in this repo is meant for storage and quick glances; the official rendered output is the website: <https://docs.armbian.com>.
 
 ## How it is built
 
-The site is built with [MkDocs](https://github.com/mkdocs/mkdocs/) using the [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) theme. Pages are written in Markdown and stored under `docs/`; images live under `docs/images/`. Site configuration is in `mkdocs.yml` and theme overrides in `overrides/`.
+The site is built with [MkDocs](https://github.com/mkdocs/mkdocs/) using the [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) theme. Pages are written in Markdown under `docs/`; images live under `docs/images/`. Site configuration is in `mkdocs.yml`, theme overrides in `overrides/main.html`, and Python dependencies for building the site are pinned in `requirements.txt`.
 
-Automation is written in Python (`tools/`) and orchestrated with GitHub Actions workflows under `.github/workflows/`. A local convenience wrapper `serve-docs-local.sh` (Bash) reproduces the CI staging steps for offline preview.
+Automation is written in Python (`tools/`) and orchestrated with GitHub Actions workflows under `.github/workflows/`. A Bash convenience wrapper `serve-docs-local.sh` reproduces the CI staging steps for offline preview.
 
 ## Repository layout
 
@@ -29,9 +29,14 @@ docs/                  Markdown sources (organised by topic)
   software/            Per-application SEO pages
   status/              Auto-generated status pages (mirrors, apt repo, etc.)
   releases/            Release notes and release model
+  getting-started/     User onboarding
+  user-guide/          User guide (FAQ, networking, troubleshooting…)
+  contribute/          Contributor guide
+  community/           Chat / forums / GitHub pointers
+  User-Guide_Armbian-Software/   Category hubs synced from armbian/configng
 overrides/             MkDocs Material theme overrides (main.html)
 tools/                 Python helpers (see tools/README.md)
-.github/workflows/     CI/automation
+.github/workflows/     CI/automation (YAML)
 mkdocs.yml             Site configuration
 requirements.txt       Python dependencies for building the site
 serve-docs-local.sh    Local preview wrapper (Bash)
@@ -41,7 +46,7 @@ See [`.github/DOCUMENT_TEMPLATE.md`](.github/DOCUMENT_TEMPLATE.md) before writin
 
 ## Contribute
 
-You can contribute to Armbian Documentation directly on GitHub by editing files under [`docs/`](docs/) and opening a pull request. To enjoy a fully rendered local preview with proper styling and live reload, set up MkDocs locally as shown below.
+You can contribute directly on GitHub by editing files under [`docs/`](docs/) and opening a pull request. For a fully rendered local preview with proper styling and live reload, set up MkDocs locally as shown below.
 
 ### Prerequisites
 
@@ -88,13 +93,15 @@ Then open <http://localhost:8000>. The site reloads automatically when you edit 
 
 ### One-shot offline preview
 
-The `serve-docs-local.sh` helper reproduces the CI "Pull from Armbian config" staging steps locally, generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, and serves the site:
+The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" CI staging steps locally: it generates software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, rebuilds the software navigation, and serves the site.
 
 ```bash
 ./serve-docs-local.sh           # generate + stage + serve at http://127.0.0.1:8000
 ./serve-docs-local.sh build     # generate + stage + one-shot build into ./site
-./serve-docs-local.sh clean     # revert staged generated pages
+./serve-docs-local.sh clean     # revert the staged generated pages
 ```
+
+Repo locations can be overridden with `CONFIGNG=/path DOCS=/path` if they are not the defaults.
 
 ## Generator tools
 
@@ -108,15 +115,21 @@ This regenerates `mkdocs.yml` from the current contents of `docs/` and publishes
 
 Additional helpers in `tools/` (see [`tools/README.md`](tools/README.md)):
 
-- `build-software-nav.py` — regenerates the software section of the `mkdocs.yml` nav.
+- `build-software-nav.py` — regenerates the "ARMBIAN SOFTWARE" section of the `mkdocs.yml` nav from the app pages under `docs/software/`.
 - `generate-release-index.py` — regenerates `docs/releases/index.md` from the release pages beside it.
-- `apt-repo-status.py`, `build-machinery-status.py`, `download-images-report.py` — generate the auto-updated status pages under `docs/status/`.
+- `apt-repo-status.py` — reports the state of the apt.armbian.com repository (package/kernel drift, missing headers) into `docs/status/package-repository.md`.
+- `build-machinery-status.py` — reports the self-hosted runner fleet (from NetBox and GitHub) into `docs/status/build-machinery.md`.
+- `download-images-report.py` — reports image coverage and anomalies into `docs/status/download-images.md`.
+
+Several status pages under `docs/status/` are auto-updated between marker comments (e.g. `<!-- mirrors:start -->` … `<!-- mirrors:end -->`); do not remove those markers.
 
 ## Continuous integration
 
-Automation (PR previews, site release, status-page refreshes, label sync, mirror list pulls, extensions list pulls, etc.) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
+Automation (PR previews, site release, status-page refreshes, label sync, mirror-list pulls, extensions-list pulls, pulls from `armbian/configng`, log cleanup, etc.) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
 
 - <https://actions.armbian.com/?repo=documentation>
+
+Pull request previews are published to the `www` branch and made available at `https://armbian.github.io/documentation/<PR#>`.
 
 ## Community
 
