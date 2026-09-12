@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **49** passed, **15** failed. Each card is the board's most recent test.
+**63** boards — **50** passed, **13** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -408,20 +408,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 3.00 W · avg 7.11 W · peak 12.30 W · 425 samples
 
-??? failure "NanoPi M5 01 — fail"
+??? success "NanoPi M5 01 — pass"
 
-    `nanopi-m5` · **inplace** · image `26.11.0-trunk.5` · 1 ✅ · 1 ❌ · 6 ⏭️
+    `nanopi-m5` · **inplace** · image `26.8.3` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 55.9 s | nightly · 26.11.0-trunk.5 → 26.11.0-trunk.5 |
-    | reboot | ❌ | 209.0 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 18.3 s | — |
+    | reboot | ✅ | 54.2 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 21.2 s | AES 1268 · mem 7100 · disk W 56 / R 70 MB/s · 32.4 °C · 2016 MHz |
+    | dvfs | ✅ | 22.3 s | ondemand · 2016–2016 MHz (peak 2208) |
+    | network-iperf | ✅ | 56.1 s | end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 22.1 s | stable |
+    | reboot | ✅ | 54.9 s | power-cycle · up 22 s |
+    | store-versions | ✅ | 4.9 s | 26.8.3 · 6.1.115-vendor-rk35xx |
+
+    **Power** — idle 0.60 W · avg 4.11 W · peak 7.50 W · 196 samples
 
 ??? failure "NanoPi Neo 2 Black 01 — fail"
 
@@ -737,21 +739,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | store-versions | ✅ | 4.7 s | 26.8.3 · 7.1.8-edge-sunxi64 |
 
     **Power** — idle 3.10 W · avg 3.71 W · peak 5.00 W · 67 samples
-
-??? failure "Pine H64 01 — fail"
-
-    `pineh64` · **inplace** · image `26.8.0-trunk.170` · 1 ✅ · 1 ❌ · 6 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ✅ | 289.9 s | nightly · 26.8.0-trunk.170 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 201.7 s | warm |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
 
 ??? success "Radxa Dragon Q6A 01 — pass"
 
