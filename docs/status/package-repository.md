@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-09-11 10:13 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-09-12 09:47 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Wed, 9 Sep 2026  | 2267 | `26.8.3` |
-| `trixie` | trixie | Wed, 9 Sep 2026  | 2267 | `26.8.3` |
-| `sid` | sid | Wed, 9 Sep 2026  | 2267 | `26.8.3` |
-| `jammy` | jammy | Wed, 9 Sep 2026  | 2267 | `26.8.3` |
-| `noble` | noble | Wed, 9 Sep 2026  | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Fri, 11 Sep 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Fri, 11 Sep 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Fri, 11 Sep 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Fri, 11 Sep 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Fri, 11 Sep 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
@@ -151,7 +151,7 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `edl-ng` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` |
 | `fastfetch` | `2.67.1` | `2.67.1` | — | `2.67.1` | `2.67.1` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | — | — |
-| `gh` | `2.100.0` | `2.100.0` | `2.83.2` | `2.100.0` | `2.100.0` |
+| `gh` | `2.100.0` | `2.99.0` | `2.83.2` | `2.100.0` | `2.100.0` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
 | `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.5.2+rpt20250903-1~bpo12+1` | — | `0.2.0-3fakesync1build6` | — |
@@ -172,7 +172,7 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `spice-vdagent` | — | `0.22.1-3+b2` | — | — | — |
 | `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
 | `unudhcpd` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` |
-| zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-1arter97~ubuntu22.04.1` | `2.4.4-1arter97~ubuntu24.04.1` |
+| zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-2arter97~ubuntu22.04.1` | `2.4.4-2arter97~ubuntu24.04.1` |
 | zulu21 (JDK) | `21.0.12.1-1` | — | — | — | — |
 
 <!-- apt-status:end -->
