@@ -18,7 +18,8 @@
 # check 4 scans all channels, since a desktop image for a no-video board is an
 # anomaly wherever it is published):
 #   1. Outdated boards        - newest download release behind the current line.
-#   2. Non-standard on download- csc/wip/tvb boards on the per-board download.
+#   2. Non-standard on download- csc/wip/tvb boards on the per-board download,
+#                               excluding virtual boards (see reusable.yml below).
 #   3. Supported not on download- conf boards with NO per-board download image.
 #   4. Desktop w/o video      - desktop-variant images (any channel) for boards
 #                               whose inventory BOARD_HAS_VIDEO is false.
@@ -34,6 +35,10 @@ import urllib.request
 
 IMAGES_URL = "https://github.armbian.com/armbian-images.json"
 INFO_URL = "https://github.armbian.com/image-info.json"
+# Virtual board definitions. Not served from github.armbian.com, so read from
+# the repository directly.
+REUSABLE_URL = ("https://raw.githubusercontent.com/armbian/armbian.github.io/"
+                "main/release-targets/reusable.yml")
 
 # The real per-board download (dl.armbian.com). Named "archive" in the JSON.
 DOWNLOAD_REPO = "archive"
@@ -59,6 +64,52 @@ def load(src, what):
     except Exception as e:
         print(f"::warning::could not load {what} from {src}: {e}", file=sys.stderr)
         return None
+
+
+def load_virtual_boards(src):
+    """
+    Board slugs defined in armbian.github.io release-targets/reusable.yml.
+
+    These are "virtual boards": they have no build configuration of their own
+    and republish another board's artifacts under their own name, vendor and
+    support level. Being on the download at csc/wip/tvb is the whole point of
+    them, so they are not the anomaly check 2 looks for.
+
+    Returns a set of slugs, or None when the file could not be read — the
+    caller distinguishes "no virtual boards" from "could not tell".
+    """
+    try:
+        if re.match(r"^https?://", src):
+            with urllib.request.urlopen(src, timeout=60) as r:
+                text = r.read().decode("utf-8")
+        else:
+            with open(src) as f:
+                text = f.read()
+    except Exception as e:
+        print(f"::warning::could not load reusable.yml from {src}: {e}", file=sys.stderr)
+        return None
+
+    try:
+        import yaml
+    except ImportError:
+        # No PyYAML on the runner. Only the slugs are needed, so read them
+        # directly. Comments go first: the file documents its own format with
+        # commented-out example entries that would otherwise look real.
+        slugs = set()
+        for line in text.splitlines():
+            m = re.match(r'\s*-?\s*board_slug\s*:\s*["\']?([A-Za-z0-9._-]+)',
+                         line.split("#", 1)[0])
+            if m:
+                slugs.add(m.group(1))
+        return slugs
+
+    try:
+        doc = yaml.safe_load(text) or {}
+    except Exception as e:
+        print(f"::warning::could not parse reusable.yml: {e}", file=sys.stderr)
+        return None
+    return {b["board_slug"] for b in (doc.get("boards") or [])
+            if isinstance(b, dict) and b.get("board_slug")}
 
 
 def rel_key(v):
@@ -120,6 +171,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--images", default=IMAGES_URL, help="armbian-images.json URL or local path")
     ap.add_argument("--image-info", default=INFO_URL, help="image-info.json URL or local path (BOARD_HAS_VIDEO map)")
+    ap.add_argument("--reusable", default=REUSABLE_URL, help="reusable.yml URL or local path (virtual board definitions)")
     ap.add_argument("--top", type=int, default=80, help="max rows in the outdated table")
     args = ap.parse_args()
 
@@ -129,6 +181,7 @@ def main():
         return 1
     assets = data["assets"] if isinstance(data, dict) and "assets" in data else data
     video = build_video_map(load(args.image_info, "image-info.json"))
+    virtual = load_virtual_boards(args.reusable)
 
     now = dt.datetime.now(dt.timezone.utc)
     all_boards = {a["board_slug"] for a in assets}
@@ -203,19 +256,44 @@ def main():
         out.append("")
 
     # ---- CHECK 2: non-standard boards on the download ----
+    # Virtual boards are held out: they carry their own support level in
+    # reusable.yml and are published on purpose, so a csc one is a decision
+    # rather than something to chase.
     nonconf = collections.defaultdict(set)
+    virtual_nonconf = collections.defaultdict(set)
     for a in assets:
         if a.get("download_repository") == DOWNLOAD_REPO and a.get("board_support") != "conf":
-            nonconf[a["board_slug"]].add(a.get("board_support", "?"))
-    if nonconf:
+            slug = a["board_slug"]
+            bucket = virtual_nonconf if (virtual and slug in virtual) else nonconf
+            bucket[slug].add(a.get("board_support", "?"))
+    if nonconf or virtual_nonconf or virtual is None:
         out.append("## Non-standard boards")
         out.append("")
+        if virtual is None:
+            out.append("_`reusable.yml` could not be read, so virtual boards are not "
+                       "recognised here and some rows below may be deliberate._")
+            out.append("")
+        note = ""
+        if virtual_nonconf:
+            note = (f" {len(virtual_nonconf)} virtual board(s) from `reusable.yml` "
+                    f"are excluded — listed below.")
         out.append(f"_**{len(nonconf)}** `csc`/`wip`/`tvb` boards with images on "
-                   f"`dl.armbian.com` (the main per-board download)._")
-        rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
-                for b, s in sorted(nonconf.items())]
-        out.append(md_table(["board", "support", "newest version", "name"], rows))
+                   f"`dl.armbian.com` (the main per-board download).{note}_")
+        if nonconf:
+            rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
+                    for b, s in sorted(nonconf.items())]
+            out.append(md_table(["board", "support", "newest version", "name"], rows))
         out.append("")
+        if virtual_nonconf:
+            out.append("### Virtual boards (not an anomaly)")
+            out.append("")
+            out.append("_Defined in `release-targets/reusable.yml`: no build config of "
+                       "their own, republishing another board's images under their own "
+                       "identity. Listed for visibility only._")
+            rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
+                    for b, s in sorted(virtual_nonconf.items())]
+            out.append(md_table(["board", "support", "newest version", "name"], rows))
+            out.append("")
 
     # ---- CHECK 3: supported boards with no download image ----
     conf_boards = {b for b, s in board_support.items() if s == "conf"}
