@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1807 image assets across 391 boards, generated 2026-09-14 09:33 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1807 image assets across 391 boards, generated 2026-09-14 09:54 UTC._
 
 ## Overview
 
@@ -46,7 +46,11 @@ _**7** boards whose newest `dl.armbian.com` image is behind the current 26.8.6/2
 
 ## Non-standard boards
 
-_**3** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download)._
+_**0** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-board download). 3 virtual board(s) from `reusable.yml` are excluded — listed below._
+
+### Virtual boards (not an anomaly)
+
+_Defined in `release-targets/reusable.yml`: no build config of their own, republishing another board's images under their own identity. Listed for visibility only._
 
 | board | support | newest version | name |
 | --- | --- | --- | --- |
