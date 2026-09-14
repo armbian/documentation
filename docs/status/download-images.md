@@ -16,13 +16,13 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1807 image assets across 391 boards, generated 2026-09-14 10:00 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1799 image assets across 391 boards, generated 2026-09-14 14:03 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
-| Download (dl.armbian.com, per-board releases) | 775 | 163 | 11 versions (…26.8.6) |
+| Download (dl.armbian.com, per-board releases) | 767 | 164 | 10 versions (…26.8.6) |
 | Community nightly | 513 | 226 | 26.11.0-trunk.44 |
 | Appliance images (kali/omv/homeassistant) | 417 | 133 | 26.8.1 |
 | CI nightly | 94 | 44 | 26.11.0-trunk.47 |
@@ -32,24 +32,13 @@ Current download release line: **26.8.6/26.8.5/26.8.4**.
 
 ## Outdated boards
 
-_**7** boards whose newest `dl.armbian.com` image is behind the current 26.8.6/26.8.5/26.8.4 line._
+_**4** boards whose newest `dl.armbian.com` image is behind the current 26.8.6/26.8.5/26.8.4 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| beaglebone-ai64 | `conf` | 26.2.5 | 2026-04-25 | 141 d |
 | khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 141 d |
 | khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 141 d |
-| radxa-nio-12l | `conf` | 26.2.5 | 2026-04-25 | 141 d |
-| radxa-rock-4d | `conf` | 26.2.5 | 2026-04-25 | 141 d |
 | mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 112 d |
-| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 87 d |
-
-## Missing download images
-
-_**1** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
-
-| board | name | present in |
-| --- | --- | --- |
-| beagley-ai | BeagleY-AI | Appliance |
+| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 88 d |
 
 <!-- download-images:end -->
