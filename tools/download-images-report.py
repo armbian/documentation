@@ -284,41 +284,29 @@ def main():
     # Virtual boards are held out: they carry their own support level in
     # reusable.yml and are published on purpose, so a csc one is a decision
     # rather than something to chase.
+    # A virtual board's support level is declared in reusable.yml and its images
+    # come from the board it reuses, so one on the download is normal and simply
+    # does not belong on a page about anomalies.
     nonconf = collections.defaultdict(set)
-    virtual_nonconf = collections.defaultdict(set)
     for a in assets:
         if a.get("download_repository") == DOWNLOAD_REPO and a.get("board_support") != "conf":
             slug = a["board_slug"]
-            bucket = virtual_nonconf if (virtual and slug in virtual) else nonconf
-            bucket[slug].add(a.get("board_support", "?"))
-    if nonconf or virtual_nonconf or virtual is None:
+            if virtual and slug in virtual:
+                continue
+            nonconf[slug].add(a.get("board_support", "?"))
+    if nonconf:
         out.append("## Non-standard boards")
         out.append("")
         if virtual is None:
             out.append("_`reusable.yml` could not be read, so virtual boards are not "
                        "recognised here and some rows below may be deliberate._")
             out.append("")
-        note = ""
-        if virtual_nonconf:
-            note = (f" {len(virtual_nonconf)} virtual board(s) from `reusable.yml` "
-                    f"are excluded — listed below.")
         out.append(f"_**{len(nonconf)}** `csc`/`wip`/`tvb` boards with images on "
-                   f"`dl.armbian.com` (the main per-board download).{note}_")
-        if nonconf:
-            rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
-                    for b, s in sorted(nonconf.items())]
-            out.append(md_table(["board", "support", "newest version", "name"], rows))
+                   f"`dl.armbian.com` (the main per-board download)._")
+        rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
+                for b, s in sorted(nonconf.items())]
+        out.append(md_table(["board", "support", "newest version", "name"], rows))
         out.append("")
-        if virtual_nonconf:
-            out.append("### Virtual boards (not an anomaly)")
-            out.append("")
-            out.append("_Defined in `release-targets/reusable.yml`: no build config of "
-                       "their own, republishing another board's images under their own "
-                       "identity. Listed for visibility only._")
-            rows = [[b, f"`{'/'.join(sorted(s))}`", dl_newest.get(b, (0, '?', 0))[1], board_name.get(b, b)]
-                    for b, s in sorted(virtual_nonconf.items())]
-            out.append(md_table(["board", "support", "newest version", "name"], rows))
-            out.append("")
 
     # ---- CHECK 3: supported boards with no download image ----
     conf_boards = {b for b, s in board_support.items() if s == "conf"}
