@@ -4450,6 +4450,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../software/hedgedoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HedgeDoc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../software/swag/" class="md-nav__link">
         
   
@@ -6423,7 +6451,7 @@
 <p>Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.</p>
 <!-- FLEET-START -->
 
-<p><strong>64</strong> boards — <strong>49</strong> passed, <strong>15</strong> failed. Each card is the board&rsquo;s most recent test.</p>
+<p><strong>63</strong> boards — <strong>50</strong> passed, <strong>13</strong> failed. Each card is the board&rsquo;s most recent test.</p>
 <details class="success">
 <summary>Arduino UNO Q 01 — pass</summary>
 <p><code>arduino-uno-q</code> · <strong>inplace</strong> · image <code>26.11.0-trunk.27</code> · 7 ✅ · 1 ❌ · 0 ⏭️</p>
@@ -8051,9 +8079,9 @@
 </table>
 <p><strong>Power</strong> — idle 3.00 W · avg 7.11 W · peak 12.30 W · 425 samples</p>
 </details>
-<details class="failure">
-<summary>NanoPi M5 01 — fail</summary>
-<p><code>nanopi-m5</code> · <strong>inplace</strong> · image <code>26.11.0-trunk.5</code> · 1 ✅ · 1 ❌ · 6 ⏭️</p>
+<details class="success">
+<summary>NanoPi M5 01 — pass</summary>
+<p><code>nanopi-m5</code> · <strong>inplace</strong> · image <code>26.8.3</code> · 7 ✅ · 0 ❌ · 1 ⏭️</p>
 <table>
 <thead>
 <tr>
@@ -8066,54 +8094,55 @@
 <tbody>
 <tr>
 <td style="text-align: left;">upgrade</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: right;">55.9 s</td>
-<td style="text-align: left;">nightly · 26.11.0-trunk.5 → 26.11.0-trunk.5</td>
+<td style="text-align: center;">⏭️</td>
+<td style="text-align: right;">18.3 s</td>
+<td style="text-align: left;">—</td>
 </tr>
 <tr>
 <td style="text-align: left;">reboot</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: right;">209.0 s</td>
-<td style="text-align: left;">power-cycle</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">54.2 s</td>
+<td style="text-align: left;">power-cycle · up 23 s</td>
 </tr>
 <tr>
-<td style="text-align: left;">hw-perf</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">board down after reboot/power-cycle</td>
+<td style="text-align: left;">hw-performance</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">21.2 s</td>
+<td style="text-align: left;">AES 1268 · mem 7100 · disk W 56 / R 70 MB/s · 32.4 °C · 2016 MHz</td>
 </tr>
 <tr>
 <td style="text-align: left;">dvfs</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">22.3 s</td>
+<td style="text-align: left;">ondemand · 2016–2016 MHz (peak 2208)</td>
 </tr>
 <tr>
-<td style="text-align: left;">net-iperf</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">board down after reboot/power-cycle</td>
+<td style="text-align: left;">network-iperf</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">56.1 s</td>
+<td style="text-align: left;">end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) Mbps</td>
 </tr>
 <tr>
 <td style="text-align: left;">restore-stable</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">22.1 s</td>
+<td style="text-align: left;">stable</td>
 </tr>
 <tr>
 <td style="text-align: left;">reboot</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">reboot</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">54.9 s</td>
+<td style="text-align: left;">power-cycle · up 22 s</td>
 </tr>
 <tr>
 <td style="text-align: left;">store-versions</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">4.9 s</td>
+<td style="text-align: left;">26.8.3 · 6.1.115-vendor-rk35xx</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Power</strong> — idle 0.60 W · avg 4.11 W · peak 7.50 W · 196 samples</p>
 </details>
 <details class="failure">
 <summary>NanoPi Neo 2 Black 01 — fail</summary>
@@ -9345,20 +9374,20 @@
 <tr>
 <td style="text-align: left;">hw-performance</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: right;">20.9 s</td>
-<td style="text-align: left;">AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 62.8 °C · 1608 MHz</td>
+<td style="text-align: right;">20.8 s</td>
+<td style="text-align: left;">AES 750 · mem 4100 · disk W 54 / R 127 MB/s · 60.9 °C · 1608 MHz</td>
 </tr>
 <tr>
 <td style="text-align: left;">dvfs</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: right;">21.8 s</td>
+<td style="text-align: right;">21.7 s</td>
 <td style="text-align: left;">ondemand · 480–1608 MHz (peak 1608)</td>
 </tr>
 <tr>
 <td style="text-align: left;">network-iperf</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: right;">70.4 s</td>
-<td style="text-align: left;">end0 ↑915/↓941 (1GE) · wlan0 ↑140/↓132 (Wi-Fi 5) Mbps</td>
+<td style="text-align: right;">30.5 s</td>
+<td style="text-align: left;">end0 ↑920/↓939 (1GE) Mbps</td>
 </tr>
 <tr>
 <td style="text-align: left;">restore-stable</td>
@@ -9375,75 +9404,12 @@
 <tr>
 <td style="text-align: left;">store-versions</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: right;">5.4 s</td>
+<td style="text-align: right;">4.7 s</td>
 <td style="text-align: left;">26.8.3 · 7.1.8-edge-sunxi64</td>
 </tr>
 </tbody>
 </table>
-</details>
-<details class="failure">
-<summary>Pine H64 01 — fail</summary>
-<p><code>pineh64</code> · <strong>inplace</strong> · image <code>26.8.0-trunk.170</code> · 1 ✅ · 1 ❌ · 6 ⏭️</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: center;">Status</th>
-<th style="text-align: right;">Time</th>
-<th style="text-align: left;">Detail</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">upgrade</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: right;">289.9 s</td>
-<td style="text-align: left;">nightly · 26.8.0-trunk.170 → 26.11.0-trunk.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">reboot</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: right;">201.7 s</td>
-<td style="text-align: left;">warm</td>
-</tr>
-<tr>
-<td style="text-align: left;">hw-perf</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">board down after reboot/power-cycle</td>
-</tr>
-<tr>
-<td style="text-align: left;">dvfs</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr>
-<td style="text-align: left;">net-iperf</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">board down after reboot/power-cycle</td>
-</tr>
-<tr>
-<td style="text-align: left;">restore-stable</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr>
-<td style="text-align: left;">reboot</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">reboot</td>
-</tr>
-<tr>
-<td style="text-align: left;">store-versions</td>
-<td style="text-align: center;">⏭️</td>
-<td style="text-align: right;">0.0 s</td>
-<td style="text-align: left;">—</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Power</strong> — idle 3.10 W · avg 3.71 W · peak 5.00 W · 67 samples</p>
 </details>
 <details class="success">
 <summary>Radxa Dragon Q6A 01 — pass</summary>
