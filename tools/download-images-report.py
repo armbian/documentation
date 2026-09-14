@@ -103,13 +103,38 @@ def load_virtual_boards(src):
                 slugs.add(m.group(1))
         return slugs
 
+    # Everything that touches the parsed document stays inside the handler and
+    # its shape is checked: a malformed reusable.yml must degrade to "could not
+    # tell", never take the report down. A root that is a list would otherwise
+    # fail on .get, and a board_slug that is a list or mapping on set insertion.
     try:
-        doc = yaml.safe_load(text) or {}
+        doc = yaml.safe_load(text)
+        if doc is None:
+            return set()
+        if not isinstance(doc, dict):
+            raise ValueError(f"root is {type(doc).__name__}, expected a mapping")
+        boards = doc.get("boards")
+        if boards is None:
+            return set()
+        if not isinstance(boards, list):
+            raise ValueError(f"'boards' is {type(boards).__name__}, expected a list")
+
+        slugs, skipped = set(), 0
+        for b in boards:
+            slug = b.get("board_slug") if isinstance(b, dict) else None
+            if isinstance(slug, str) and slug:
+                slugs.add(slug)
+            else:
+                skipped += 1
+        if skipped:
+            # The rest of the file is still usable, so report what was dropped
+            # rather than discarding every definition over one bad entry.
+            print(f"::warning::reusable.yml: skipped {skipped} entr(ies) with no "
+                  f"usable board_slug", file=sys.stderr)
+        return slugs
     except Exception as e:
         print(f"::warning::could not parse reusable.yml: {e}", file=sys.stderr)
         return None
-    return {b["board_slug"] for b in (doc.get("boards") or [])
-            if isinstance(b, dict) and b.get("board_slug")}
 
 
 def rel_key(v):
