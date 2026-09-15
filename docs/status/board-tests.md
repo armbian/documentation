@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **51** passed, **13** failed. Each card is the board's most recent test.
+**59** boards — **48** passed, **11** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -106,21 +106,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | store-versions | ⏭️ | 0.0 s | — |
 
     **Power** — idle 3.50 W · avg 4.53 W · peak 9.60 W · 107 samples
-
-??? success "Banana Pi Pro 01 — pass"
-
-    `bananapipro` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ✅ | 283.7 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 67.6 s | warm · up 47 s |
-    | hw-performance | ✅ | 50.1 s | AES 19 · mem 1700 · disk W 19 / R 20 MB/s · 50 °C · 960 MHz |
-    | dvfs | ✅ | 47.9 s | ondemand · 528–960 MHz (peak 960) |
-    | network-iperf | ✅ | 249.0 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑19/↓12 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 191.0 s | stable |
-    | reboot | ✅ | 64.5 s | warm · up 44 s |
-    | store-versions | ✅ | 11.6 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi |
 
 ??? success "BananaPi BPI-F3 01 — pass"
 
@@ -368,14 +353,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ❌ | 219.3 s | warm |
     | store-versions | ❌ | 25.3 s | — |
 
-??? failure "NanoPi Duo 01 — fail"
-
-    `nanopiduo` · **inplace** · image `26.11.0-trunk.27` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.84 · reachable=False · port=22 |
-
 ??? success "NanoPi K2 01 — pass"
 
     `nanopik2-s905` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
@@ -455,38 +432,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 59.7 s | power-cycle · up 25 s |
     | store-versions | ✅ | 7.0 s | 26.11.0-trunk.35 · 6.18.44-current-rockchip64 |
 
-??? success "NanoPi R1 01 — pass"
-
-    `nanopi-r1` · **inplace** · image `26.8.3` · 4 ✅ · 0 ❌ · 4 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 41.8 s | AES 25 · mem 2200 · disk W 16 / R 22 MB/s · 43 °C · 1296 MHz |
-    | dvfs | ✅ | 33.2 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 74.6 s | end0 ↑709/↓941 (1GE) · wlan0 ↑6/↓9 (Wi-Fi 4) Mbps |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 7.3 s | 26.8.3 · 6.18.44-current-sunxi |
-
-??? failure "Nanopi R2S 01 — fail"
-
-    `nanopi-r2s` · **inplace** · image `26.11.0-trunk.6` · 1 ✅ · 1 ❌ · 6 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ✅ | 119.6 s | nightly · 26.11.0-trunk.6 → 26.11.0-trunk.6 |
-    | reboot | ❌ | 209.1 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
-
-    **Power** — idle 2.40 W · avg 3.46 W · peak 4.10 W · 268 samples
-
 ??? success "NanoPi R6S 01 — pass"
 
     `nanopi-r6s` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
@@ -537,20 +482,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Odroid C4 01 — pass"
 
-    `odroidc4` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidc4` · **inplace** · image `26.11.0-trunk.49` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 259.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.49 |
-    | reboot | ✅ | 48.8 s | power-cycle · up 21 s |
-    | hw-performance | ✅ | 21.4 s | AES 981 · mem 5300 · disk W 32 / R 76 MB/s · 42.6 °C · 2100 MHz |
-    | dvfs | ✅ | 20.4 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 30.1 s | end0 ↑938/↓939 (1GE) Mbps |
-    | restore-stable | ✅ | 100.7 s | stable |
-    | reboot | ✅ | 44.9 s | power-cycle · up 16 s |
-    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.49 · 6.18.44-current-meson64 |
+    | upgrade | ⏭️ | 15.2 s | — |
+    | reboot | ✅ | 45.2 s | power-cycle · up 16 s |
+    | hw-performance | ✅ | 21.4 s | AES 980 · mem 5200 · disk W 31 / R 80 MB/s · 40.2 °C · 2100 MHz |
+    | dvfs | ✅ | 18.8 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 56.1 s | end0 ↑938/↓939 (1GE) · wlx24050fdd332b ↑118/↓120 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 23.2 s | stable |
+    | reboot | ✅ | 57.7 s | power-cycle · up 21 s |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.49 · 6.18.44-current-meson64 |
 
-    **Power** — idle 1.00 W · avg 3.39 W · peak 4.50 W · 430 samples
+    **Power** — idle 0.90 W · avg 3.35 W · peak 5.00 W · 194 samples
 
 ??? success "Odroid M1 01 — pass"
 
@@ -694,21 +639,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 6.5 s | 26.8.3 · 6.18.44-current-sunxi64 |
-
-??? success "Orange Pi Zero Plus 01 — pass"
-
-    `orangepizeroplus` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 33.4 s | — |
-    | reboot | ✅ | 46.3 s | warm · up 26 s |
-    | hw-performance | ✅ | 34.6 s | AES 469 · mem 2600 · disk W 22 / R 23 MB/s · 60.2 °C · 1008 MHz |
-    | dvfs | ✅ | 26.9 s | ondemand · 480–1008 MHz (peak 1008) |
-    | network-iperf | ✅ | 104.0 s | end0 ↑892/↓936 (1GE) · wlan0 ↑33/↓31 (Wi-Fi 4) · wlan1 ↑32/↓32 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 36.9 s | stable |
-    | reboot | ✅ | 45.9 s | warm · up 25 s |
-    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.27 · 6.18.44-current-sunxi64 |
 
 ??? success "Orange Pi Zero2 01 — pass"
 
