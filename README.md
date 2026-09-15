@@ -29,6 +29,10 @@ docs/                  Markdown sources (organised by topic)
   software/            Per-application SEO pages
   status/              Auto-generated status pages (mirrors, apt repo, etc.)
   releases/            Release notes and release model
+  getting-started/     First-time user guide
+  user-guide/          Advanced configuration, FAQ, troubleshooting
+  contribute/          Contributor documentation
+  community/           Chat, forums, GitHub pointers
 overrides/             MkDocs Material theme overrides (main.html)
 tools/                 Python helpers (see tools/README.md)
 .github/workflows/     CI/automation
