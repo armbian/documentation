@@ -224,12 +224,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 38.5 s | AES 370 · mem 2000 · disk W 13 / R 134 MB/s · None °C · 800 MHz |
-    | dvfs | ✅ | 33.6 s | ondemand · 200–800 MHz (peak 800) |
-    | network-iperf | ✅ | 38.7 s | lan0 ↑936/↓749 (1GE) Mbps |
+    | hw-performance | ✅ | 37.5 s | AES 371 · mem 2000 · disk W 22 / R 141 MB/s · None °C · 800 MHz |
+    | dvfs | ✅ | 33.5 s | ondemand · 200–800 MHz (peak 800) |
+    | network-iperf | ✅ | 38.3 s | lan0 ↑936/↓737 (1GE) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 8.0 s | 26.8.3 · 6.18.44-current-mvebu64 |
+    | store-versions | ✅ | 7.8 s | 26.8.3 · 6.18.44-current-mvebu64 |
 
 ??? success "Helios4 01 — pass"
 
