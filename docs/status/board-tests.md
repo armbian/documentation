@@ -904,14 +904,12 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 22.3 s | AES 796 · mem 12000 · disk W 24 / R 40 MB/s · 61 °C · 2200 MHz |
-    | dvfs | ✅ | 15.5 s | performance · 614–2200 MHz (peak 2200) |
-    | network-iperf | ✅ | 132.7 s | eth0 ↑941/↓941 (1GE) · wlan0 ↑78/↓154 (Wi-Fi 6) Mbps |
+    | hw-performance | ✅ | 12.2 s | AES 778 · mem 12400 · disk W 1326 / R 1472 MB/s · 53 °C · 2150 MHz |
+    | dvfs | ✅ | 14.2 s | performance · 614–2150 MHz (peak 2150) |
+    | network-iperf | ✅ | 26.8 s | eth0 ↑939/↓939 (1GE) Mbps |
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 3.7 s | 26.8.3 · 6.18.3-legacy-spacemit-k3 |
-
-    **Power** — idle 13.40 W · avg 14.40 W · peak 22.40 W · 148 samples
+    | store-versions | ✅ | 3.5 s | 26.11.0-trunk.49 · 6.18.3-legacy-spacemit-k3 |
 
 ??? success "Tinker Board 01 — pass"
 
