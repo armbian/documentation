@@ -541,14 +541,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 126.7 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 41.1 s | power-cycle · up 17 s |
-    | hw-performance | ✅ | 21.4 s | AES 981 · mem 5300 · disk W 30 / R 76 MB/s · 44 °C · 2100 MHz |
-    | dvfs | ✅ | 19.4 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 110.8 s | end0 ↑941/↓942 (1GE) · wlx24050fdd332b ↑21/↓31 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 102.8 s | stable |
-    | reboot | ✅ | 41.0 s | power-cycle · up 17 s |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+    | upgrade | ✅ | 259.6 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.49 |
+    | reboot | ✅ | 48.8 s | power-cycle · up 21 s |
+    | hw-performance | ✅ | 21.4 s | AES 981 · mem 5300 · disk W 32 / R 76 MB/s · 42.6 °C · 2100 MHz |
+    | dvfs | ✅ | 20.4 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 30.1 s | end0 ↑938/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 100.7 s | stable |
+    | reboot | ✅ | 44.9 s | power-cycle · up 16 s |
+    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.49 · 6.18.44-current-meson64 |
+
+    **Power** — idle 1.00 W · avg 3.39 W · peak 4.50 W · 430 samples
 
 ??? success "Odroid M1 01 — pass"
 
