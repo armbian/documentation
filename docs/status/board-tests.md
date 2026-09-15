@@ -898,18 +898,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "SpacemiT K3 Pico-ITX 01 — pass"
 
-    `k3picoitx` · **inplace** · image `26.8.3` · 4 ✅ · 0 ❌ · 4 ⏭️
+    `k3picoitx` · **inplace** · image `26.11.0-trunk.49` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 12.2 s | AES 778 · mem 12400 · disk W 1326 / R 1472 MB/s · 53 °C · 2150 MHz |
+    | upgrade | ✅ | 29.9 s | nightly · 26.11.0-trunk.49 → 26.11.0-trunk.49 |
+    | reboot | ✅ | 54.2 s | power-cycle · up 33 s |
+    | hw-performance | ✅ | 12.2 s | AES 778 · mem 12500 · disk W 1337 / R 1550 MB/s · 53 °C · 2150 MHz |
     | dvfs | ✅ | 14.2 s | performance · 614–2150 MHz (peak 2150) |
-    | network-iperf | ✅ | 26.8 s | eth0 ↑939/↓939 (1GE) Mbps |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ✅ | 3.5 s | 26.11.0-trunk.49 · 6.18.3-legacy-spacemit-k3 |
+    | network-iperf | ✅ | 27.0 s | eth0 ↑939/↓942 (1GE) Mbps |
+    | restore-stable | ✅ | 96.9 s | stable |
+    | reboot | ✅ | 66.0 s | power-cycle · up 30 s |
+    | store-versions | ✅ | 3.4 s | 26.11.0-trunk.49 · 6.18.3-legacy-spacemit-k3 |
 
 ??? success "Tinker Board 01 — pass"
 
