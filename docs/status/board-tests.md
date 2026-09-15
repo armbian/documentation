@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **50** passed, **13** failed. Each card is the board's most recent test.
+**64** boards — **51** passed, **13** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -976,6 +976,23 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | store-versions | ✅ | 5.7 s | 26.11.0-trunk.35 · 6.18.44-current-x86 |
 
     **Power** — idle 0.70 W · avg 4.19 W · peak 6.90 W · 568 samples
+
+??? success "ZeroPi 01 — pass"
+
+    `zeropi` · **inplace** · image `26.11.0-trunk.36` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ✅ | 456.5 s | nightly · 26.11.0-trunk.36 → 26.11.0-trunk.49 |
+    | reboot | ✅ | 55.7 s | power-cycle · up 25 s |
+    | hw-performance | ✅ | 39.9 s | AES 25 · mem 1500 · disk W 2 / R 23 MB/s · 48.8 °C · 1296 MHz |
+    | dvfs | ✅ | 34.2 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 38.5 s | end0 ↑626/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 143.9 s | stable |
+    | reboot | ✅ | 64.1 s | power-cycle · up 25 s |
+    | store-versions | ✅ | 7.9 s | 26.11.0-trunk.49 · 6.18.44-current-sunxi |
+
+    **Power** — idle 1.20 W · avg 2.16 W · peak 3.20 W · 693 samples
 
 
 <!-- FLEET-STOP -->
