@@ -12,6 +12,41 @@ issues and validate images on actual hardware.
 
 ![The Armbian Datacenter rack](../images/dc-rack.png)
 
+## What the lab can do
+
+Boards are not simply plugged in and pinged. Each bench is wired for as much
+remote control as the hardware allows, and the automated runs use all of it.
+
+- **Clean flashing.** Boards fitted with an SD-card switcher, or reachable in
+  Rockchip maskrom mode, are re-imaged from scratch on every run — so a result
+  describes a fresh installation rather than an accumulated one. Boards without
+  such a path are exercised along the upgrade route instead.
+- **Switched power.** Per-board power control through relay PDUs, APC PDUs and
+  PoE switches. A power cycle is graceful by default: the OS is asked to shut
+  down and confirmed down before the outlet is cut. That is what makes
+  unattended re-imaging safe on hardware nobody is standing next to.
+- **Power measurement.** On boards powered over PoE, consumption is sampled
+  throughout the run, so the result carries idle and peak wattage alongside
+  everything else.
+- **Serial console.** Cabled boards have their UART reachable over the network.
+  Runs record the entire boot — U-Boot, kernel, and any panic — which is the
+  only view left when a board never reaches the network at all. Maintainers can
+  attach to the same console interactively.
+- **Network throughput.** iperf3 against a lab-local server, in both
+  directions, on *every* interface a board has rather than just the one it is
+  managed through.
+- **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
+  controller checks, on boards carrying the radios.
+- **Benchmarks and thermals.** CPU, memory and storage throughput, verification
+  that CPU frequency scaling actually reaches the advertised maximum, and
+  thermal-zone readings under load.
+
+What a given board supports depends on how its bench is wired, so the coverage
+differs from board to board. Results are published automatically:
+[Datacenter boards](/status/boards/) for the inventory,
+[Tested boards](/status/board-tests/) for per-board outcomes, and
+[Wi-Fi performance](/status/wifi-performance/) for wireless throughput.
+
 Access is over a VPN and is available to members of the
 [**board-maintainers**](https://github.com/orgs/armbian/teams/board-maintainers)
 GitHub team. Everything below (VPN login and board access) only works once you
