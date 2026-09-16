@@ -338,21 +338,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 50.0 s | power-cycle · up 13 s |
     | store-versions | ✅ | 4.0 s | 26.8.3 · 6.1.115-vendor-rk35xx |
 
-??? failure "NanoPC T6 LTS 01 — fail"
-
-    `nanopct6-lts` · **inplace** · image `26.8.0-trunk.236` · 1 ✅ · 4 ❌ · 3 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 14.4 s | — |
-    | reboot | ❌ | 226.6 s | warm |
-    | hw-performance | ✅ | 120.5 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-    | dvfs | ➖ | 31.0 s | — |
-    | network-iperf | ⏭️ | 68.8 s | no iperf3 on board |
-    | restore-stable | ❌ | 31.0 s | stable |
-    | reboot | ❌ | 219.3 s | warm |
-    | store-versions | ❌ | 25.3 s | — |
-
 ??? success "NanoPi K2 01 — pass"
 
     `nanopik2-s905` · **inplace** · image `26.11.0-trunk.35` · 8 ✅ · 0 ❌ · 0 ⏭️
@@ -385,22 +370,37 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 3.00 W · avg 7.11 W · peak 12.30 W · 425 samples
 
-??? success "NanoPi M5 01 — pass"
+??? failure "NanoPi M5 01 — fail"
 
-    `nanopi-m5` · **inplace** · image `26.8.3` · 7 ✅ · 0 ❌ · 1 ⏭️
+    `nanopi-m5` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 7 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 18.3 s | — |
-    | reboot | ✅ | 54.2 s | power-cycle · up 23 s |
-    | hw-performance | ✅ | 21.2 s | AES 1268 · mem 7100 · disk W 56 / R 70 MB/s · 32.4 °C · 2016 MHz |
-    | dvfs | ✅ | 22.3 s | ondemand · 2016–2016 MHz (peak 2208) |
-    | network-iperf | ✅ | 56.1 s | end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) Mbps |
-    | restore-stable | ✅ | 22.1 s | stable |
-    | reboot | ✅ | 54.9 s | power-cycle · up 22 s |
-    | store-versions | ✅ | 4.9 s | 26.8.3 · 6.1.115-vendor-rk35xx |
+    | upgrade | ⏭️ | 16.1 s | — |
+    | reboot | ❌ | 211.9 s | power-cycle |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | restore-stable | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | store-versions | ⏭️ | 0.0 s | — |
 
-    **Power** — idle 0.60 W · avg 4.11 W · peak 7.50 W · 196 samples
+??? success "NanoPi M6 01 — pass"
+
+    `nanopi-m6` · **inplace** · image `26.8.3` · 6 ✅ · 0 ❌ · 2 ⏭️
+
+    | Module | Status | Time | Detail |
+    |:--|:--:|--:|:--|
+    | upgrade | ⏭️ | 13.8 s | — |
+    | reboot | ✅ | 62.1 s | power-cycle · up 33 s |
+    | hw-performance | ✅ | 29.0 s | AES 1212 · mem 9900 · disk W 13 / R 29 MB/s · 50.8 °C · 1800 MHz |
+    | dvfs | ✅ | 16.1 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 55.3 s | lan ↑935/↓938 (1GE) · wlP3p49s0 ↑198/↓271 (Wi-Fi 5) Mbps |
+    | restore-stable | ⏭️ | 9.2 s | — |
+    | reboot | ✅ | 50.8 s | power-cycle · up 19 s |
+    | store-versions | ✅ | 4.0 s | 26.8.3 · 6.18.44-current-rockchip64 |
+
+    **Power** — idle 1.20 W · avg 4.35 W · peak 11.40 W · 183 samples
 
 ??? failure "NanoPi Neo 2 Black 01 — fail"
 
