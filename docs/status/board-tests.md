@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**59** boards — **48** passed, **11** failed. Each card is the board's most recent test.
+**57** boards — **46** passed, **11** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -703,38 +703,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | restore-stable | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 8.2 s | 26.5.1 · 6.18.44-current-rockchip64 |
-
-??? success "Raspberry Pi 01 — pass"
-
-    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 15.5 s | — |
-    | reboot | ✅ | 45.7 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 14.9 s | AES 1368 · mem 12100 · disk W 51 / R 88 MB/s · 54 °C · 2400 MHz |
-    | dvfs | ✅ | 12.9 s | ondemand · 1500–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 50.5 s | end0 ↑936/↓941 (1GE) · wlan0 ↑45/↓41 (Wi-Fi 5) Mbps |
-    | restore-stable | ✅ | 7.9 s | stable |
-    | reboot | ✅ | 40.5 s | power-cycle · up 17 s |
-    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
-
-    **Power** — idle 2.40 W · avg 4.70 W · peak 8.20 W · 157 samples
-
-??? success "Raspberry Pi 02 — pass"
-
-    `rpi4b` · **inplace** · image `26.11.0-trunk.27` · 7 ✅ · 0 ❌ · 1 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 33.8 s | — |
-    | reboot | ✅ | 48.9 s | warm · up 30 s |
-    | hw-performance | ✅ | 40.8 s | AES 20 · mem 1400 · disk W 20 / R 22 MB/s · 54.2 °C · 1200 MHz |
-    | dvfs | ✅ | 36.3 s | ondemand · 600–1200 MHz (peak 1200) |
-    | network-iperf | ✅ | 203.1 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑24/↓20 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 41.5 s | stable |
-    | reboot | ✅ | 50.9 s | warm · up 32 s |
-    | store-versions | ✅ | 9.3 s | 26.11.0-trunk.27 · 6.18.44-current-bcm2711 |
 
 ??? success "ROCK 2F 01 — pass"
 
