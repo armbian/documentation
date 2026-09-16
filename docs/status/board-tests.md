@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**57** boards — **46** passed, **11** failed. Each card is the board's most recent test.
+**57** boards — **47** passed, **10** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -370,20 +370,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — idle 3.00 W · avg 7.11 W · peak 12.30 W · 425 samples
 
-??? failure "NanoPi M5 01 — fail"
+??? success "NanoPi M5 01 — pass"
 
-    `nanopi-m5` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 7 ⏭️
+    `nanopi-m5` · **inplace** · image `26.8.3` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 16.1 s | — |
-    | reboot | ❌ | 211.9 s | power-cycle |
-    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | dvfs | ⏭️ | 0.0 s | — |
-    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-    | restore-stable | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | store-versions | ⏭️ | 0.0 s | — |
+    | upgrade | ⏭️ | 15.2 s | — |
+    | reboot | ✅ | 54.8 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 20.3 s | AES 1273 · mem 7800 · disk W 65 / R 70 MB/s · 42.5 °C · 2016 MHz |
+    | dvfs | ✅ | 21.5 s | ondemand · 2016–2016 MHz (peak 2208) |
+    | network-iperf | ✅ | 111.4 s | end0 ↑939/↓939 (1GE) · end1 ↑922/↓939 (1GE) · wlan0 ↑34/↓85 (Wi-Fi 5) · wlx44334c47dec3 ↑35/↓17 (Wi-Fi 4) Mbps |
+    | restore-stable | ✅ | 21.9 s | stable |
+    | reboot | ✅ | 52.7 s | power-cycle · up 21 s |
+    | store-versions | ✅ | 5.5 s | 26.8.3 · 6.1.115-vendor-rk35xx |
+
+    **Power** — idle 0.60 W · avg 4.58 W · peak 7.80 W · 250 samples
 
 ??? success "NanoPi M6 01 — pass"
 
