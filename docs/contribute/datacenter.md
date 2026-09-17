@@ -17,10 +17,15 @@ issues and validate images on actual hardware.
 Boards are not simply plugged in and pinged. Each bench is wired for as much
 remote control as the hardware allows, and the automated runs use all of it.
 
-- **Clean flashing.** Boards fitted with an SD-card switcher, or reachable in
-  Rockchip maskrom mode, are re-imaged from scratch on every run — so a result
-  describes a fresh installation rather than an accumulated one. Boards without
-  such a path are exercised along the upgrade route instead.
+- **Remote flashing.** Boards fitted with an SD-card switcher, or reachable in
+  Rockchip maskrom mode, can be re-imaged over the network with nobody touching
+  the rack. This is still being brought into routine use — see the note at the
+  end of this page — so most runs currently test the upgrade path on whatever
+  the board already has installed.
+- **NFS boot.** A board can be switched to mount its root filesystem over NFS
+  from the lab's server, running a centrally prepared filesystem instead of the
+  contents of its own SD card. Its kernel and initrd still come from the local
+  boot medium.
 - **Switched power.** Per-board power control through relay PDUs, APC PDUs and
   PoE switches. A power cycle is graceful by default: the OS is asked to shut
   down and confirmed down before the outlet is cut. That is what makes
@@ -28,10 +33,10 @@ remote control as the hardware allows, and the automated runs use all of it.
 - **Power measurement.** On boards powered over PoE, consumption is sampled
   throughout the run, so the result carries idle and peak wattage alongside
   everything else.
-- **Serial console.** Cabled boards have their UART reachable over the network.
-  Runs record the entire boot — U-Boot, kernel, and any panic — which is the
-  only view left when a board never reaches the network at all. Maintainers can
-  attach to the same console interactively.
+- **Serial console server.** Cabled boards have their UART reachable over the
+  network through a console server. Runs record the entire boot — U-Boot,
+  kernel, and any panic — which is the only view left when a board never reaches
+  the network at all. Maintainers can attach to the same console interactively.
 - **Network throughput.** iperf3 against a lab-local server, in both
   directions, on *every* interface a board has rather than just the one it is
   managed through.
