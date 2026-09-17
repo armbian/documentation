@@ -46,9 +46,10 @@ remote control as the hardware allows, and the automated runs use all of it.
   so a measurement is not just describing whatever port the board happened to
   land on. Throughput itself is measured with iperf3 against a lab-local
   server, in both directions, on *every* interface rather than just the one the
-  board is managed through. The server runs a bank of iperf3 daemons — one test
-  each — so several boards can be measured in parallel instead of queueing
-  behind a single slot.
+  board is managed through. The server runs four iperf3 daemons — one test each
+  — so four boards can be measured at once instead of queueing for a single
+  slot. Four is what the server's 10 GbE uplink carries: 4 × 2.5 GbE fills it
+  exactly, so the measurements stay honest rather than competing for bandwidth.
 - **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
   controller checks, on boards carrying the radios.
 - **Benchmarks and thermals.** CPU, memory and storage throughput, verification
