@@ -44,10 +44,9 @@ remote control as the hardware allows, and the automated runs use all of it.
   NIC — a 2.5 GbE port goes to a 2.5 GbE switch rather than to a spare gigabit
   one — and boards with several interfaces normally have all of them connected,
   so a measurement is not just describing whatever port the board happened to
-  land on. Switches do go out of service, so a board can temporarily run below
-  what its bench is wired for. Throughput itself is measured with iperf3
-  against a lab-local server, in both directions, on *every* interface rather
-  than just the one the board is managed through.
+  land on. Throughput itself is measured with iperf3 against a lab-local
+  server, in both directions, on *every* interface rather than just the one the
+  board is managed through.
 - **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
   controller checks, on boards carrying the radios.
 - **Benchmarks and thermals.** CPU, memory and storage throughput, verification
