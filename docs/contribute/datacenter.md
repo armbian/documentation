@@ -25,7 +25,8 @@ remote control as the hardware allows, and the automated runs use all of it.
 - **NFS boot.** A board can be switched to mount its root filesystem over NFS
   from the lab's server, running a centrally prepared filesystem instead of the
   contents of its own SD card. Its kernel and initrd still come from the local
-  boot medium.
+  boot medium. Boards boot locally unless deliberately switched over; the
+  [Datacenter boards](/status/boards/) table records which is which.
 - **Switched power.** Per-board power control through relay PDUs, APC PDUs and
   PoE switches. A power cycle is graceful by default: the OS is asked to shut
   down and confirmed down before the outlet is cut. That is what makes
