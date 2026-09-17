@@ -40,12 +40,14 @@ remote control as the hardware allows, and the automated runs use all of it.
   network through a console server. Runs record the entire boot — U-Boot,
   kernel, and any panic — which is the only view left when a board never reaches
   the network at all. Maintainers can attach to the same console interactively.
-- **Network throughput.** Every board is cabled at the fastest link its NIC
-  supports — a 2.5 GbE port goes to a 2.5 GbE switch, not to a spare gigabit
-  one — and boards with several interfaces normally have all of them connected.
-  Throughput is then measured with iperf3 against a lab-local server, in both
-  directions, on *every* interface rather than just the one the board is
-  managed through.
+- **Network throughput.** Benches are cabled to a switch matching the board's
+  NIC — a 2.5 GbE port goes to a 2.5 GbE switch rather than to a spare gigabit
+  one — and boards with several interfaces normally have all of them connected,
+  so a measurement is not just describing whatever port the board happened to
+  land on. Switches do go out of service, so a board can temporarily run below
+  what its bench is wired for. Throughput itself is measured with iperf3
+  against a lab-local server, in both directions, on *every* interface rather
+  than just the one the board is managed through.
 - **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
   controller checks, on boards carrying the radios.
 - **Benchmarks and thermals.** CPU, memory and storage throughput, verification
