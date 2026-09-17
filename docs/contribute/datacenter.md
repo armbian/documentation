@@ -17,11 +17,11 @@ issues and validate images on actual hardware.
 Boards are not simply plugged in and pinged. Each bench is wired for as much
 remote control as the hardware allows, and the automated runs use all of it.
 
-- **Remote flashing.** Boards fitted with an SD-card switcher, or reachable in
-  Rockchip maskrom mode, can be re-imaged over the network with nobody touching
-  the rack. This is still being brought into routine use — see the note at the
-  end of this page — so most runs currently test the upgrade path on whatever
-  the board already has installed.
+- **Remote flashing.** Partially automated today. Boards whose SoC can be put
+  into its vendor USB recovery mode — Rockchip, MediaTek and Qualcomm — can be
+  re-imaged over the network with nobody touching the rack; the rest still need
+  hands on the hardware. See the note at the end of this page. Most runs
+  therefore test the upgrade path on whatever the board already has installed.
 - **NFS boot.** A board can be switched to mount its root filesystem over NFS
   from the lab's server, running a centrally prepared filesystem instead of the
   contents of its own SD card. Its kernel and initrd still come from the local
