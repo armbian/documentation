@@ -10,7 +10,56 @@ networks that our CI flashes, powers, boots, tests and measures automatically.
 Board maintainers can reach these boards remotely to debug problems, reproduce
 issues and validate images on actual hardware.
 
-![The Armbian Datacenter rack](../images/dc-rack.png)
+## What the lab can do
+
+Boards are not simply plugged in and pinged. Each bench is wired for as much
+remote control as the hardware allows, and the automated runs use all of it.
+
+- **Remote flashing.** Partially automated today. Boards whose SoC can be put
+  into its vendor USB recovery mode — Rockchip, MediaTek and Qualcomm — can be
+  re-imaged over the network with nobody touching the rack, and a few benches
+  do the same with an SD-card switcher, of which we have only a handful. Both
+  paths are experimental and cover a minority of the fleet; see the note at the
+  end of this page. Most runs therefore test the upgrade path on whatever the
+  board already has installed.
+- **NFS boot.** A board can be switched to mount its root filesystem over NFS
+  from the lab's server, running a centrally prepared filesystem instead of the
+  contents of its own SD card. Its kernel and initrd still come from the local
+  boot medium. Boards boot locally unless deliberately switched over; the
+  [Datacenter boards](/status/boards/) table records which is which.
+- **Switched power.** Per-board power control through relay PDUs, APC PDUs and
+  PoE switches. A power cycle is graceful by default: the OS is asked to shut
+  down and confirmed down before the outlet is cut. That is what makes
+  unattended re-imaging safe on hardware nobody is standing next to.
+- **Power measurement.** On boards powered over PoE, consumption is sampled
+  throughout the run, so the result carries idle and peak wattage alongside
+  everything else.
+- **Serial console server.** Many boards have their UART wired to a console
+  server and reachable over the network; the lab has 32 console ports, so
+  coverage is broad but not complete. Runs record the entire boot — U-Boot,
+  kernel, and any panic — which is the only view left when a board never reaches
+  the network at all. Maintainers can attach to the same console interactively.
+- **Network throughput.** Benches are cabled to a switch matching the board's
+  NIC — a 2.5 GbE port goes to a 2.5 GbE switch rather than to a spare gigabit
+  one — and boards with several interfaces normally have all of them connected,
+  so a measurement is not just describing whatever port the board happened to
+  land on. Throughput itself is measured with iperf3 against a lab-local
+  server, in both directions, on *every* interface rather than just the one the
+  board is managed through. The server runs four iperf3 daemons — one test each
+  — so four boards can be measured at once instead of queueing for a single
+  slot. Four is what the server's 10 GbE uplink carries: 4 × 2.5 GbE fills it
+  exactly, so the measurements stay honest rather than competing for bandwidth.
+- **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
+  controller checks, on boards carrying the radios.
+- **Benchmarks and thermals.** CPU, memory and storage throughput, verification
+  that CPU frequency scaling actually reaches the advertised maximum, and
+  thermal-zone readings under load.
+
+What a given board supports depends on how its bench is wired, so the coverage
+differs from board to board. Results are published automatically:
+[Datacenter boards](/status/boards/) for the inventory,
+[Tested boards](/status/board-tests/) for per-board outcomes, and
+[Wi-Fi performance](/status/wifi-performance/) for wireless throughput.
 
 Access is over a VPN and is available to members of the
 [**board-maintainers**](https://github.com/orgs/armbian/teams/board-maintainers)
