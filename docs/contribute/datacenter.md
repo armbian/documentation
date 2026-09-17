@@ -10,8 +10,6 @@ networks that our CI flashes, powers, boots, tests and measures automatically.
 Board maintainers can reach these boards remotely to debug problems, reproduce
 issues and validate images on actual hardware.
 
-![The Armbian Datacenter rack](../images/dc-rack.png)
-
 ## What the lab can do
 
 Boards are not simply plugged in and pinged. Each bench is wired for as much
