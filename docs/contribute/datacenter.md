@@ -46,7 +46,9 @@ remote control as the hardware allows, and the automated runs use all of it.
   so a measurement is not just describing whatever port the board happened to
   land on. Throughput itself is measured with iperf3 against a lab-local
   server, in both directions, on *every* interface rather than just the one the
-  board is managed through.
+  board is managed through. The server runs a bank of iperf3 daemons — one test
+  each — so several boards can be measured in parallel instead of queueing
+  behind a single slot.
 - **Wireless and Bluetooth.** Wi-Fi association and throughput, and Bluetooth
   controller checks, on boards carrying the radios.
 - **Benchmarks and thermals.** CPU, memory and storage throughput, verification
