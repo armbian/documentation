@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **49** operational, **20** broken.
+**69** boards — **50** operational, **19** broken.
 
-Reconcile made: 2026-09-17 21:28 UTC
+Reconcile made: 2026-09-18 06:43 UTC
 
 **Operational**
 
@@ -34,6 +34,7 @@ Reconcile made: 2026-09-17 21:28 UTC
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
+| Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 1 GbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
@@ -84,7 +85,6 @@ Reconcile made: 2026-09-17 21:28 UTC
 | Khadas VIM1S 01 | 10.0.50.48 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
-| Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | — |
 | Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear S3300 (12) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
 | NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
