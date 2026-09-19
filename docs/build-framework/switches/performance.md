@@ -77,9 +77,6 @@ A host with native armhf support will print at least `CONFIG_COMPAT=y`. If the c
 
 Speeds up `rewrite-kernel-patches` and `rewrite-uboot-patches` up to `nproc` level by spinning up overlayfs-based worktrees and processing patches in parallel. Cross-patch dependencies (e.g. a single file touched by two or more patches) are detected beforehand and grouped for sequential processing to preserve context.
 
-!!! tip "Note"
-    This feature is experimental. Check the output against a classic sequential rewrite to make sure the diff is 0.
-
 #### PARALLEL_WORKERS
 
 `integer`
