@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **51** operational, **18** broken.
+**69** boards — **52** operational, **17** broken.
 
-Reconcile made: 2026-09-19 15:01 UTC
+Reconcile made: 2026-09-19 15:18 UTC
 
 **Operational**
 
@@ -31,6 +31,7 @@ Reconcile made: 2026-09-19 15:01 UTC
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
+| Cubie A5E 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
@@ -78,7 +79,6 @@ Reconcile made: 2026-09-19 15:01 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | Banana Pi M2Pro 01 | 10.0.50.44 | local | 1 GbE | Aruba 2540 (23) |
-| Cubie A5E 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (4) |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
