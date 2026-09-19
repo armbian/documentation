@@ -17,18 +17,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Arduino UNO Q 01 — pass"
 
-    `arduino-uno-q` · **inplace** · image `26.11.0-trunk.51` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `arduino-uno-q` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 142.2 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.51 |
-    | reboot | ✅ | 52.7 s | warm · up 35 s |
-    | hw-performance | ✅ | 24.7 s | AES 940 · mem 5100 · disk W 171 / R 222 MB/s · 42.5 °C · 2016 MHz |
-    | dvfs | ✅ | 32.6 s | schedutil · 300–2016 MHz (peak 2016) |
-    | network-iperf | ❌ | 183.2 s | usb0 ↑0/↓0 (1GE) · wlan0 ↑26/↓21 (Wi-Fi 5) Mbps |
+    | upgrade | ✅ | 135.4 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.51 |
+    | reboot | ✅ | 52.8 s | warm · up 35 s |
+    | hw-performance | ✅ | 25.1 s | AES 940 · mem 5100 · disk W 188 / R 258 MB/s · 40.6 °C · 2016 MHz |
+    | dvfs | ✅ | 31.8 s | schedutil · 300–2016 MHz (peak 2016) |
+    | network-iperf | ✅ | 44.8 s | wlan0 ↑27/↓20 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
     | restore-stable | ✅ | 100.5 s | stable |
-    | reboot | ✅ | 51.2 s | warm · up 34 s |
-    | store-versions | ✅ | 6.6 s | 26.11.0-trunk.51 · 7.1.8-edge-qrb2210 |
+    | reboot | ✅ | 52.3 s | warm · up 35 s |
+    | store-versions | ✅ | 7.5 s | 26.11.0-trunk.51 · 7.1.8-edge-qrb2210 |
 
 ??? success "Banana Pi CM4IO 01 — pass"
 
