@@ -218,14 +218,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 108.7 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.51 |
-    | reboot | ✅ | 117.5 s | warm · up 103 s |
-    | hw-performance | ✅ | 36.7 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 57 °C · None MHz |
+    | upgrade | ✅ | 108.2 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.51 |
+    | reboot | ✅ | 117.7 s | warm · up 103 s |
+    | hw-performance | ✅ | 36.5 s | AES 43 · mem 3800 · disk W 20 / R 23 MB/s · 52.7 °C · None MHz |
     | dvfs | ➖ | 2.3 s | — |
-    | network-iperf | ✅ | 47.9 s | end1 ↑921/↓607 (1GE) Mbps |
-    | restore-stable | ✅ | 80.7 s | stable |
-    | reboot | ✅ | 34.3 s | warm · up 18 s |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.51 · 6.6.151-current-mvebu |
+    | network-iperf | ✅ | 31.2 s | end1 ↑939/↓939 (1GE) Mbps |
+    | restore-stable | ✅ | 80.6 s | stable |
+    | reboot | ✅ | 33.0 s | warm · up 18 s |
+    | store-versions | ✅ | 5.4 s | 26.11.0-trunk.51 · 6.6.151-current-mvebu |
 
 ??? failure "Inovato Quadra 01 — fail"
 
