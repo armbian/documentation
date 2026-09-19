@@ -30,3 +30,15 @@ The reference is split by what each switch controls:
 | [Performance](performance.md) | ccache, tmpfs, parallelism and native-armhf acceleration |
 | [Patching](patching.md) | Round-tripping patches and build-debug switches |
 | [Diagnostics](diagnostics.md) | Build logs and debug output |
+
+## Deprecated and renamed switches
+
+Switches are occasionally renamed. When that happens the old name keeps working, so existing build configuration files and command lines do not break:
+
+- Set the **old name** only, and the build forwards its value to the new name and prints a deprecation warning — move to the new name when convenient.
+- Set **both** names, and the **new name wins**; the old one is ignored, again with a warning.
+
+Prefer the current name for new configurations. This backward-compatible aliasing covers scalar switches (a single `PARAM=value`), not list/array parameters.
+
+!!! tip "Saw a 'Deprecated switch' warning?"
+    It means a switch you passed has been renamed. The build still honours it for now, but update your config or command line to the name the warning points to.
