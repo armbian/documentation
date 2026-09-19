@@ -13,22 +13,22 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **50** operational, **19** broken.
+**69** boards — **49** operational, **20** broken.
 
-Reconcile made: 2026-09-18 06:43 UTC
+Reconcile made: 2026-09-19 14:39 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Aruba 2540 (43) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
-| Banana Pi M2Pro 01 | 10.0.50.44 | local | 1 GbE | Aruba 2540 (23) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
+| Banana Pi R2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (16) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
+| BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
@@ -40,7 +40,6 @@ Reconcile made: 2026-09-18 06:43 UTC
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (14) |
-| NanoPi M6 01 | 10.0.50.64 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (41) |
@@ -49,10 +48,10 @@ Reconcile made: 2026-09-18 06:43 UTC
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (40) |
+| Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
-| Orange Pi PC2 01 | 10.0.50.58 | local | 1 GbE | Netgear S3300 (26) |
 | Orange Pi Prime 01 | 10.0.50.73 | local | 1 GbE | Aruba 2540 (35) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
@@ -76,8 +75,8 @@ Reconcile made: 2026-09-18 06:43 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Banana Pi R2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (16) |
-| BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Banana Pi M2Pro 01 | 10.0.50.44 | local | 1 GbE | Aruba 2540 (23) |
 | Cubie A5E 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (4) |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
@@ -87,10 +86,11 @@ Reconcile made: 2026-09-18 06:43 UTC
 | Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
 | Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear S3300 (12) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
+| NanoPi M6 01 | 10.0.50.64 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (11) |
-| Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
+| Orange Pi PC2 01 | 10.0.50.58 | local | 1 GbE | Netgear S3300 (26) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | Rock 5T 01 | 10.0.50.52 | local | 2.5 GbE | TP-Link SG3218XP-M2 (12) |
 | Rockpi 4B 01 | 10.0.50.69 | local | Wi-Fi 5 | Zyxel NWA130BE |
