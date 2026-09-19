@@ -6592,6 +6592,10 @@
 <p class="admonition-title">Saw a &lsquo;Deprecated switch&rsquo; warning?</p>
 <p>It means a switch you passed has been renamed. The build still honours it for now, but update your config or command line to the name the warning points to.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">For maintainers: registering a rename</p>
+<p>Rename a switch by adding one line to the <code>DEPRECATED_SWITCH_ALIASES</code> map in <a href="https://github.com/armbian/build/blob/main/lib/functions/general/deprecations.sh"><code>lib/functions/general/deprecations.sh</code></a>, mapping the old name to the new one (<code>[OLD_NAME]="NEW_NAME"</code>). Nothing else has to change — consumers can move to the new name later.</p>
+</div>
 
 
 
