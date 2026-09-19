@@ -90,6 +90,7 @@ Open a pull request against [armbian/build](https://github.com/armbian/build) wi
 
 Real pull requests that add boards/families are a good template for the exact set of files to touch:
 
+- [A whole new SoC family — Nexell S5P6818 (NanoPC-T3+, NanoPi M3, NanoPi Fire3)](https://github.com/armbian/build/pull/10674): a recent, end-to-end example — three board configs, a new family definition, boot environment and boot script, a kernel config, u-boot support, and the full mainline bring-up patch series.
 - [https://github.com/armbian/build/pull/3176/files](https://github.com/armbian/build/pull/3176/files)
 - [https://github.com/armbian/build/pull/3138/files](https://github.com/armbian/build/pull/3138/files)
 - [https://github.com/armbian/build/pull/7902/files](https://github.com/armbian/build/pull/7902/files)

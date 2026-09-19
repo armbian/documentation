@@ -8,11 +8,11 @@ Armbian's downloads are served by a network of community mirrors behind a
 redirector. If you can host one, here is how. You can see the
 [current mirrors and how the system works](/status/mirrors/) on the status page.
 
-### 1. Set up an HTTP(S) host
+## 1. Set up an HTTP(S) host
 
 The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.
 
-### 2. Sync with `rsync`
+## 2. Sync with `rsync`
 
 Pull the content you want to serve from one of the official modules, and run it from cron every **2-4 hours**:
 
@@ -23,7 +23,7 @@ Pull the content you want to serve from one of the official modules, and run it 
 | Archived images | `rsync -av rsync://rsync.armbian.com/archive` | 1.9T |
 | Very old images | `rsync -av rsync://rsync.armbian.com/oldarchive` | 5.4T |
 
-### 3. Tell us about it
+## 3. Tell us about it
 
 Once the server is running, reach out through the [contact form](https://www.armbian.com/contact/) so we can add it to the official redirector.
 

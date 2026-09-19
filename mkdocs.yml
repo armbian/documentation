@@ -397,12 +397,13 @@ nav:
   - 'CONTRIBUTE' :
         - 'Get involved' : 'contribute/index.md'
         - 'Ways to contribute' :
-            - 'armbian-config apps' : 'contribute/armbian-config.md'
+            - 'Add armbian-config apps' : 'contribute/armbian-config.md'
             - 'Run a mirror' : 'contribute/run-a-mirror.md'
-            - 'Datacenter access' : 'contribute/datacenter.md'
-        - 'Maintainers & board rules' :
+        - 'Board maintainers' :
             - 'Board Support Rules' : 'contribute/board-support-rules.md'
             - 'Become a board maintainer' : 'contribute/board-maintainer.md'
-        - 'Project processes' :
-            - 'Automation (CI)' : 'contribute/automation.md'
+        - 'Member access' :
+            - 'Member storage' : 'contribute/storage.md'
+            - 'Datacenter access' : 'contribute/datacenter.md'
+        - 'Release automation (CI)' : 'contribute/automation.md'
 
