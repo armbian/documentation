@@ -42,3 +42,6 @@ Prefer the current name for new configurations. This backward-compatible aliasin
 
 !!! tip "Saw a 'Deprecated switch' warning?"
     It means a switch you passed has been renamed. The build still honours it for now, but update your config or command line to the name the warning points to.
+
+!!! note "For maintainers: registering a rename"
+    Rename a switch by adding one line to the `DEPRECATED_SWITCH_ALIASES` map in [`lib/functions/general/deprecations.sh`](https://github.com/armbian/build/blob/main/lib/functions/general/deprecations.sh), mapping the old name to the new one (`[OLD_NAME]="NEW_NAME"`). Nothing else has to change — consumers can move to the new name later.
