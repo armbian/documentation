@@ -3,11 +3,11 @@ seo_title: "Become an Armbian board maintainer"
 description: "Become an Armbian board maintainer: application steps, requirements and release responsibilities for testing and signing off single-board computer images."
 ---
 
-# Board Maintainers
+# Become a board maintainer
 
 ## How to become a maintainer?
 
-If you are interested in being a maintainer please review [Board Support Rules](/contribute/board-support-rules/). Then [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance. Once accepted you will be added to our infrastruture. For this reason we need [additional information](https://www.armbian.com/maintainer-registry/) to complete your registration process.
+If you are interested in being a maintainer please review [Board Support Rules](/contribute/board-support-rules/). Then [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance. Once accepted you will be added to our infrastructure. For this reason we need [additional information](https://www.armbian.com/maintainer-registry/) to complete your registration process.
 
 !!! question "Requirements?"
 
@@ -18,6 +18,11 @@ If you are interested in being a maintainer please review [Board Support Rules](
     - You must make sure [Armbian management](https://www.armbian.com/maintainer-registry/) has been informed of all of the above IDs for our documentation
     - You should know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console
     - Knowledge in development, writing code and so on is optional but welcome
+
+## What you get
+
+- [**Datacenter access**](datacenter.md) — reach real boards in the Armbian hardware lab over VPN to debug problems, reproduce issues and validate images.
+- [**Member storage**](storage.md) — public SFTP space for sharing test images, packages and customized builds. It comes with Armbian GitHub organization membership.
 
 ## Expectations
 

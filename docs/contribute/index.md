@@ -3,17 +3,32 @@ seo_title: "Armbian contributing: fork & pull requests"
 description: "Contribute to Armbian on GitHub: fork the build, configng or documentation repositories, open issues and submit pull requests to the ARM Linux project."
 ---
 
-# Collaborate on the project
+# Get involved
 
-## Overview
+## Ways to contribute
+
+- **Fix or improve the code and documentation** — see
+  [Submitting changes](#submitting-changes) below.
+- [**Add software to armbian-config**](armbian-config.md) — write an install
+  module and its menu entry.
+- [**Add a new board or board family**](../build-framework/adding-a-board.md) to
+  the build framework.
+- [**Become a board maintainer**](board-maintainer.md) — keep a board supported,
+  test release candidates and help its users. The
+  [Board Support Rules](board-support-rules.md) define what each support tier
+  requires.
+- [**Run a mirror**](run-a-mirror.md) — host images and packages for the
+  download network.
+
+## Submitting changes
 
 1. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) the project.
-1. Make one or more well commented and clean commits to the repository. 
+1. Make one or more well commented and clean commits to the repository.
 1. Perform a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) in Github's web interface.
 
-If it is a new feature request, do not start the coding first. Remember to [open an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) to discuss the new feature. If you want to [add code to someone else pull request](https://tighten.co/blog/adding-commits-to-a-pull-request/). Also check collection of [git tips](https://github.com/git-tips/tips) which will make your life easier.
+If it is a new feature request, do not start the coding first. Remember to [open an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) to discuss the new feature. You can also [add code to someone else's pull request](https://tighten.co/blog/adding-commits-to-a-pull-request/). Also check the collection of [git tips](https://github.com/git-tips/tips) which will make your life easier.
 
-If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributing-concrete5-github) or [CLI](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) step-by-step guide on contributing.
+If you are struggling, check the [WEB](https://www.exchangecore.com/blog/contributing-concrete5-github) or [CLI](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) step-by-step guide on contributing.
 
 ## Source code
 
@@ -21,20 +36,33 @@ If you are struggling, check [WEB](https://www.exchangecore.com/blog/contributin
 - Armbian configuration utility: <https://github.com/armbian/configng>
 - Armbian documentation: <https://github.com/armbian/documentation>
 
+The [GitHub](../community/github.md) page lists the other project repositories.
 
-## Adding a new board?
+## Roles and what they unlock
 
-There are no detailed instructions on how to add a new board or even a whole new board family to the build script yet. However there are a few commits / pull requests that give clues how to achieve that like
+Contributing needs nothing but a GitHub account. Some project resources are
+tied to a role:
 
-- [A whole new SoC family — Nexell S5P6818 (NanoPC-T3+, NanoPi M3, NanoPi Fire3)](https://github.com/armbian/build/pull/10674): a recent, end-to-end example — three board configs, a new family definition, boot environment and boot script, a kernel config, u-boot support, and the full mainline bring-up patch series.
-- [https://github.com/armbian/build/pull/3176](https://github.com/armbian/build/pull/3176)
-- [https://github.com/armbian/build/pull/3138](https://github.com/armbian/build/pull/3138)
+| Role | What it unlocks |
+| :--- | :-------------- |
+| [Organization member](#organization-member) | [Member storage](storage.md) — public SFTP space for sharing images and packages |
+| [Board maintainer](#board-maintainer) | [Datacenter access](datacenter.md) — remote access to real boards in the hardware lab |
+| [Release manager](#release-manager) | Running the [release workflows](automation.md) that prepare images for release |
 
-## Board maintainer
+### Organization member
 
-Interested in keeping a board supported? See [**Become a board maintainer**](board-maintainer.md) for how to apply, the requirements, and what is expected of you — and the [Board Support Rules](board-support-rules.md).
+Every contributor is automatically invited to become a member of the
+[Armbian organization](https://github.com/armbian) on GitHub. Contribute — for
+example with a merged pull request — and accept the invitation that follows.
 
-## Release manager
+### Board maintainer
+
+Board maintainers are members of the
+[board-maintainers](https://github.com/orgs/armbian/teams/board-maintainers)
+GitHub team. See [Become a board maintainer](board-maintainer.md) for how to
+apply, the requirements, and what is expected of you.
+
+### Release manager
 
 This role has additional permission that allows preparation of images for release.
 

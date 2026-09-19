@@ -5,19 +5,19 @@ description: "Add a new software title to armbian-config: test the install manua
 
 # Adding software title to Armbian config
 
-### Tinkering
+## Tinkering
 
-#### Manual install
+### Manual install
 
 First try to install application manually. If it works on Debian or Ubuntu, proceed. In this example we will be using `test`.
 
-#### Clone repository
+### Clone repository
 
 ~~~
 git clone https://github.com/armbian/configng
 ~~~
 
-#### Design menu
+### Design menu
 
 Predict which commands you expect to have in the menu. For installing an application, we usually need two, `install` and `uninstall`. Armbian-config stores menu in JSON files, so you need to select appropriate file.
 This one we will place under `Software -> Management`.
@@ -54,7 +54,7 @@ This one we will place under `Software -> Management`.
 
     Pay attention to JSON structure. JSON validator at pull request will break in case spaces or commas will be placed wrong.
 
-#### Module code
+### Module code
 
 Place module functions, each into its file, following by file naming convention, into one of the folders:
 
@@ -118,7 +118,7 @@ function module_template() {
 
     Pay attention to [coding style structure](https://github.com/armbian/configng/blob/main/.editorconfig). If you use modern IDE, this will be done automatically. 
 
-#### Manual testing
+### Manual testing
 
 Whenever you are making changes to the JSON or modules structure, make sure to join the JSON segments into the main JSON file. Run the following command:
 
@@ -132,7 +132,7 @@ Python is required to run this tool.
 sudo bin/armbian-config --cmd
 ~~~
 
-#### Unit tests
+### Unit tests
 
 This part is optional but highly recommended for at least install functionality. Our CI infrastructure will test this feature at pull request, on general code changes (push to main branch) and daily. It will test feature on latest Debian and Ubuntu images.
 Unit tests have simple design:
@@ -153,7 +153,7 @@ Make sure to add a test condition that makes sense. It has to return 0 when test
 | CONDITION | main test verification | must return 0 for test success |
 | RELEASE  | bookworm:jammy:noble" | run on specific or leave empty to run on all |
 
-#### Pull request
+### Pull request
 
 When your solution works locally and you prepare unit tests its time to submit a pull request. Fix your code and unit tests until all pull request checks becomes green.
 
@@ -163,21 +163,21 @@ Examples:
 - <https://github.com/armbian/configng/pull/230>
 - <https://github.com/armbian/configng/pull/240>
 
-### Documentation
+## Documentation
 
 Documentation is generated automatically after your pull request is merged. But as automated documentation might not be satisfactory, you can add cover image, header and footer. You can use markdown elements with enhancements from https://squidfunk.github.io/mkdocs-material/
 
-#### Cover image
+### Cover image
 
 Once code works perfectly, look for cover image. It can be .png or .webp. Place image to the `tools/include/images/CON004.webp`
 
-#### Header
+### Header
 
 ``` text title="Header: tools/include/markdown/CON004-header.md"
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 ```
 
-#### Footer
+### Footer
 
 ``` text title="Footer: tools/include/markdown/CON004-footer.md"
 
