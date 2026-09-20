@@ -165,7 +165,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | reachable | ❌ | 0.0 s | ip=10.0.50.59 · reachable=False · port=22 |
 
-    **Power** — idle 3.20 W · avg 3.20 W · peak 3.20 W · 42 samples
+    **Power** — idle 3.40 W · avg 3.40 W · peak 3.40 W · 42 samples
 
 ??? success "Cubietruck 01 — pass"
 
