@@ -848,35 +848,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Rock 5B Plus 01 — fail"
 
-    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.31` · 14 ✅ · 1 ❌ · 1 ⏭️
+    `rock-5b-plus` · **inplace** · image `26.8.3` · 15 ✅ · 1 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 9.9 s | — |
-    | reboot | ✅ | 52.5 s | power-cycle · up 26 s |
-    | kernel-switch | ✅ | 9.5 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
-    | reboot | ✅ | 50.2 s | power-cycle · up 24 s |
-    | hw-performance | ✅ | 18.4 s | AES 1285 · mem 15600 · disk W 71 / R 68 MB/s · 49.9 °C · 1800 MHz |
-    | dvfs | ✅ | 16.5 s | ondemand · 1800–1800 MHz (peak 2352) |
-    | network-iperf | ✅ | 28.5 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 4.2 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
-    | kernel-switch | ❌ | 8.5 s | branch=current · family=rk35xx · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 54.3 s | power-cycle · up 28 s |
-    | hw-performance | ✅ | 18.3 s | AES 1284 · mem 14000 · disk W 70 / R 82 MB/s · 50.8 °C · 1800 MHz |
-    | dvfs | ✅ | 16.2 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | upgrade | ✅ | 144.1 s | nightly · 26.8.3 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 59.0 s | power-cycle · up 26 s |
+    | kernel-switch | ✅ | 20.9 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 46.7 s | power-cycle · up 22 s |
+    | hw-performance | ✅ | 16.3 s | AES 1296 · mem 13900 · disk W 69 / R 81 MB/s · 52.7 °C · 1800 MHz |
+    | dvfs | ✅ | 16.6 s | ondemand · 1800–1800 MHz (peak 2304) |
+    | network-iperf | ✅ | 28.3 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ❌ | 12.7 s | branch=current · family=rk35xx · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 48.8 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 16.7 s | AES 1295 · mem 13700 · disk W 67 / R 81 MB/s · 54.5 °C · 1800 MHz |
+    | dvfs | ✅ | 16.0 s | ondemand · 1800–1800 MHz (peak 2304) |
     | network-iperf | ✅ | 27.8 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
-    | kernel-switch | ✅ | 10.2 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
-    | reboot | ✅ | 52.3 s | power-cycle · up 26 s |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 17.8 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 47.7 s | power-cycle · up 23 s |
 
-    **Power** — min 2.50 W · avg 3.66 W · peak 9.00 W · 302 samples
+    **Power** — min 0.90 W · avg 3.90 W · peak 10.00 W · 411 samples
 
     ```mermaid
     xychart-beta
         title "Power — Rock 5B Plus 01"
-        x-axis "sample" 1 --> 302
-        y-axis "W" 2.0 --> 9.5
-        line [3.00, 3.00, 3.40, 3.34, 3.11, 2.76, 3.01, 3.41, 3.94, 3.34, 3.47, 2.84, 3.31, 3.30, 4.08, 3.77, 5.88, 6.96, 3.79, 3.70, 3.66, 3.17, 3.36, 3.10, 2.77, 3.65, 3.27, 3.80, 3.67, 4.68, 6.92, 3.20, 3.54, 4.00, 3.49, 3.34, 3.03, 2.83, 3.54, 3.66]
+        x-axis "sample" 1 --> 411
+        y-axis "W" 0.5 --> 10.5
+        line [3.27, 3.88, 6.16, 3.64, 3.40, 3.38, 4.31, 4.30, 4.36, 3.57, 3.40, 3.89, 3.49, 2.64, 3.28, 4.70, 3.67, 4.79, 3.49, 3.28, 4.13, 4.08, 4.81, 5.07, 3.75, 3.77, 3.45, 3.66, 3.12, 3.15, 4.18, 3.79, 6.51, 3.56, 3.81, 3.79, 4.00, 3.24, 2.88, 4.16]
     ```
 
 ??? success "Rock 5T 01 — pass"
