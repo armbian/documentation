@@ -1067,31 +1067,31 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 22.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 61.6 s | power-cycle · up 29 s |
-    | kernel-switch | ✅ | 21.1 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 48.3 s | power-cycle · up 21 s |
-    | hw-performance | ✅ | 16.2 s | AES 1283 · mem 15700 · disk W 65 / R 81 MB/s · 52.7 °C · 1800 MHz |
-    | dvfs | ✅ | 15.7 s | ondemand · 1800–1800 MHz (peak 2352) |
-    | network-iperf | ✅ | 38.5 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ✅ | 90.9 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 47.9 s | power-cycle · up 23 s |
-    | hw-performance | ✅ | 16.9 s | AES 1281 · mem 10400 · disk W 66 / R 72 MB/s · 54.5 °C · 1800 MHz |
-    | dvfs | ✅ | 15.4 s | ondemand · 408–1800 MHz (peak 2400) |
-    | network-iperf | ✅ | 29.2 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.9 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
-    | kernel-switch | ✅ | 60.4 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 46.7 s | power-cycle · up 21 s |
+    | upgrade | ✅ | 27.3 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 62.5 s | power-cycle · up 29 s |
+    | kernel-switch | ✅ | 23.1 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 52.4 s | power-cycle · up 26 s |
+    | hw-performance | ✅ | 16.4 s | AES 1284 · mem 15700 · disk W 69 / R 81 MB/s · 51.8 °C · 1800 MHz |
+    | dvfs | ✅ | 16.6 s | ondemand · 1800–1800 MHz (peak 2304) |
+    | network-iperf | ✅ | 32.0 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.5 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 649.6 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 55.5 s | power-cycle · up 30 s |
+    | hw-performance | ✅ | 27.9 s | AES 1289 · mem 7100 · disk W 20 / R 2 MB/s · 60.1 °C · 1800 MHz |
+    | dvfs | ✅ | 16.2 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 31.5 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.1 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
+    | kernel-switch | ✅ | 509.8 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.52-current-rockchip64 |
+    | reboot | ✅ | 47.8 s | power-cycle · up 22 s |
 
-    **Power** — min 0.90 W · avg 4.42 W · peak 11.70 W · 419 samples
+    **Power** — min 0.90 W · avg 6.99 W · peak 14.30 W · 1272 samples
 
     ```mermaid
     xychart-beta
         title "Power — Rock 5B Plus 01"
-        x-axis "sample" 1 --> 419
-        y-axis "W" 0.5 --> 12.0
-        line [3.50, 4.07, 3.55, 2.38, 4.35, 3.35, 3.76, 3.40, 2.85, 2.28, 4.03, 3.90, 4.95, 5.54, 3.47, 3.36, 3.91, 4.03, 3.59, 3.62, 4.26, 3.82, 3.38, 4.30, 3.55, 2.15, 3.30, 6.47, 5.68, 9.14, 5.68, 5.97, 5.97, 6.84, 6.13, 6.06, 6.66, 5.71, 3.91, 3.61]
+        x-axis "sample" 1 --> 1272
+        y-axis "W" 0.5 --> 14.5
+        line [3.65, 3.19, 3.86, 3.78, 4.37, 3.55, 3.76, 5.60, 9.56, 7.96, 11.25, 10.73, 5.08, 4.96, 9.51, 8.80, 9.34, 9.33, 6.59, 4.18, 3.49, 3.51, 3.59, 5.19, 7.01, 5.76, 6.12, 7.19, 6.61, 10.69, 11.74, 12.13, 8.48, 6.12, 9.78, 8.90, 11.61, 11.15, 6.78, 4.91]
     ```
 
 ??? success "Rock 5T 01 — pass"
