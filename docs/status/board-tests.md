@@ -21,14 +21,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 62.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 56.2 s | warm · up 39 s |
-    | kernel-switch | ❌ | 46.1 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=7.2.3-edge-qrb2210 |
-    | reboot | ✅ | 53.2 s | warm · up 36 s |
-    | hw-performance | ✅ | 24.7 s | AES 940 · mem 5100 · disk W 184 / R 262 MB/s · 42.1 °C · 2016 MHz |
-    | dvfs | ✅ | 31.9 s | schedutil · 300–2016 MHz (peak 2016) |
-    | network-iperf | ✅ | 47.4 s | wlan0 ↑26/↓19 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
-    | store-versions | ✅ | 7.0 s | 26.11.0-trunk.54 · 7.2.3-edge-qrb2210 |
+    | upgrade | ✅ | 63.2 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 51.1 s | warm · up 34 s |
+    | kernel-switch | ❌ | 46.7 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=7.2.3-edge-qrb2210 |
+    | reboot | ✅ | 53.7 s | warm · up 35 s |
+    | hw-performance | ✅ | 24.9 s | AES 939 · mem 5100 · disk W 173 / R 229 MB/s · 41.5 °C · 2016 MHz |
+    | dvfs | ✅ | 30.8 s | schedutil · 300–2016 MHz (peak 2016) |
+    | network-iperf | ✅ | 54.2 s | wlan0 ↑10/↓19 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
+    | store-versions | ✅ | 6.8 s | 26.11.0-trunk.54 · 7.2.3-edge-qrb2210 |
 
 ??? success "Banana Pi CM4IO 01 — pass"
 
@@ -267,14 +267,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 52.4 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 117.6 s | warm · up 102 s |
-    | kernel-switch | ❌ | 34.4 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
-    | reboot | ✅ | 118.5 s | warm · up 102 s |
-    | hw-performance | ✅ | 36.6 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 56.5 °C · None MHz |
-    | dvfs | ➖ | 2.5 s | — |
-    | network-iperf | ✅ | 41.5 s | end1 ↑494/↓473 (1GE) Mbps |
-    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
+    | upgrade | ✅ | 52.9 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 116.7 s | warm · up 101 s |
+    | kernel-switch | ❌ | 34.2 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
+    | reboot | ✅ | 117.4 s | warm · up 102 s |
+    | hw-performance | ✅ | 36.2 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 56.5 °C · None MHz |
+    | dvfs | ➖ | 2.3 s | — |
+    | network-iperf | ✅ | 35.7 s | end1 ↑393/↓364 (1GE) Mbps |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
 
 ??? failure "Inovato Quadra 01 — fail"
 
@@ -1158,23 +1158,23 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 113.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 66.2 s | power-cycle · up 32 s |
-    | kernel-switch | ❌ | 75.6 s | branch=current · family=imx6 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-imx6 |
-    | reboot | ✅ | 66.3 s | power-cycle · up 33 s |
-    | hw-performance | ✅ | 51.0 s | AES 26 · mem 753 · disk W 19 / R 20 MB/s · 49.2 °C · 996 MHz |
-    | dvfs | ✅ | 43.8 s | ondemand · 396–996 MHz (peak 996) |
-    | network-iperf | ✅ | 90.3 s | end0 ↑400/↓230 (1GE) · wlx7cdd903aa418 ↑29/↓16 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 9.5 s | 26.11.0-trunk.54 · 6.18.52-current-imx6 |
+    | upgrade | ✅ | 119.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 64.0 s | power-cycle · up 31 s |
+    | kernel-switch | ❌ | 77.2 s | branch=current · family=imx6 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-imx6 |
+    | reboot | ✅ | 64.6 s | power-cycle · up 31 s |
+    | hw-performance | ✅ | 51.7 s | AES 26 · mem 721 · disk W 19 / R 20 MB/s · 48.6 °C · 996 MHz |
+    | dvfs | ✅ | 43.5 s | ondemand · 396–996 MHz (peak 996) |
+    | network-iperf | ✅ | 94.1 s | end0 ↑400/↓235 (1GE) · wlx7cdd903aa418 ↑32/↓23 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 9.4 s | 26.11.0-trunk.54 · 6.18.52-current-imx6 |
 
-    **Power** — min 3.60 W · avg 6.01 W · peak 7.90 W · 419 samples
+    **Power** — min 3.60 W · avg 6.00 W · peak 8.10 W · 422 samples
 
     ```mermaid
     xychart-beta
         title "Power — Udoo 01"
-        x-axis "sample" 1 --> 419
-        y-axis "W" 3.5 --> 8.0
-        line [5.08, 6.19, 6.07, 6.33, 6.06, 6.20, 6.36, 6.20, 6.30, 6.42, 5.59, 4.70, 5.15, 7.36, 6.58, 6.55, 5.79, 6.24, 6.04, 6.05, 5.38, 5.88, 4.17, 6.31, 7.06, 6.33, 6.19, 5.25, 5.70, 6.26, 6.65, 5.29, 5.84, 5.39, 6.84, 6.47, 5.89, 6.50, 6.05, 5.60]
+        x-axis "sample" 1 --> 422
+        y-axis "W" 3.5 --> 8.5
+        line [5.26, 6.48, 6.58, 5.90, 5.93, 6.16, 6.57, 6.05, 6.13, 5.06, 4.91, 5.33, 5.55, 6.74, 6.53, 6.06, 5.92, 6.18, 6.00, 5.71, 5.34, 6.27, 4.47, 6.47, 7.58, 6.40, 5.84, 5.37, 6.32, 6.64, 6.16, 5.26, 5.42, 5.93, 6.21, 6.49, 6.41, 6.16, 5.85, 6.19]
     ```
 
 ??? failure "UEFI arm64 01 — fail"
