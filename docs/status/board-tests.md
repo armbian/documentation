@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **50** passed, **15** failed. Each card is the board's most recent test.
+**65** boards — **51** passed, **14** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -854,37 +854,37 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — min 4.00 W · avg 6.04 W · peak 13.70 W · 254 samples
 
-??? failure "Rock 5B Plus 01 — fail"
+??? success "Rock 5B Plus 01 — pass"
 
-    `rock-5b-plus` · **inplace** · image `26.8.3` · 15 ✅ · 1 ❌ · 0 ⏭️
+    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 144.1 s | nightly · 26.8.3 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 59.0 s | power-cycle · up 26 s |
-    | kernel-switch | ✅ | 20.9 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 46.7 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 16.3 s | AES 1296 · mem 13900 · disk W 69 / R 81 MB/s · 52.7 °C · 1800 MHz |
-    | dvfs | ✅ | 16.6 s | ondemand · 1800–1800 MHz (peak 2304) |
-    | network-iperf | ✅ | 28.3 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ❌ | 12.7 s | branch=current · family=rk35xx · phase=install · dpkg_state=absent |
+    | upgrade | ✅ | 22.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 53.5 s | power-cycle · up 27 s |
+    | kernel-switch | ✅ | 16.3 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 47.9 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 16.0 s | AES 1295 · mem 14200 · disk W 66 / R 81 MB/s · 54.5 °C · 1800 MHz |
+    | dvfs | ✅ | 16.3 s | ondemand · 1800–1800 MHz (peak 2304) |
+    | network-iperf | ✅ | 28.0 s | enP4p65s0 ↑941/↓940 (1GE) Mbps |
+    | store-versions | ✅ | 3.6 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 88.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
     | reboot | ✅ | 48.8 s | power-cycle · up 23 s |
-    | hw-performance | ✅ | 16.7 s | AES 1295 · mem 13700 · disk W 67 / R 81 MB/s · 54.5 °C · 1800 MHz |
-    | dvfs | ✅ | 16.0 s | ondemand · 1800–1800 MHz (peak 2304) |
-    | network-iperf | ✅ | 27.8 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ✅ | 17.8 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 47.7 s | power-cycle · up 23 s |
+    | hw-performance | ✅ | 18.2 s | AES 1280 · mem 7700 · disk W 66 / R 72 MB/s · 55.5 °C · 1800 MHz |
+    | dvfs | ✅ | 15.1 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 28.3 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.1 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
+    | kernel-switch | ✅ | 57.0 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.52-current-rockchip64 |
+    | reboot | ✅ | 47.9 s | power-cycle · up 23 s |
 
-    **Power** — min 0.90 W · avg 3.90 W · peak 10.00 W · 411 samples
+    **Power** — min 0.90 W · avg 4.45 W · peak 11.20 W · 410 samples
 
     ```mermaid
     xychart-beta
         title "Power — Rock 5B Plus 01"
-        x-axis "sample" 1 --> 411
-        y-axis "W" 0.5 --> 10.5
-        line [3.27, 3.88, 6.16, 3.64, 3.40, 3.38, 4.31, 4.30, 4.36, 3.57, 3.40, 3.89, 3.49, 2.64, 3.28, 4.70, 3.67, 4.79, 3.49, 3.28, 4.13, 4.08, 4.81, 5.07, 3.75, 3.77, 3.45, 3.66, 3.12, 3.15, 4.18, 3.79, 6.51, 3.56, 3.81, 3.79, 4.00, 3.24, 2.88, 4.16]
+        x-axis "sample" 1 --> 410
+        y-axis "W" 0.5 --> 11.5
+        line [3.00, 3.00, 4.25, 3.98, 3.15, 3.47, 4.24, 4.16, 3.33, 3.01, 3.51, 4.00, 3.48, 6.56, 3.43, 3.87, 3.98, 3.51, 3.78, 4.01, 3.67, 3.45, 3.40, 3.75, 2.61, 2.64, 5.01, 5.91, 6.76, 8.28, 6.08, 5.84, 5.83, 6.47, 6.06, 6.49, 6.17, 5.60, 3.46, 4.65]
     ```
 
 ??? success "Rock 5T 01 — pass"
