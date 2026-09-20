@@ -91,7 +91,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 48.8 s | power-cycle · up 15 s |
     | store-versions | ✅ | 3.9 s | 26.11.0-trunk.51 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 4.10 W · avg 5.84 W · peak 10.30 W · 174 samples
+    **Power** — min 4.10 W · avg 5.84 W · peak 10.30 W · 174 samples
 
 ??? success "Banana Pi R3 Mini 01 — pass"
 
@@ -108,7 +108,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 61.1 s | power-cycle · up 31 s |
     | store-versions | ✅ | 4.4 s | 26.11.0-trunk · 6.18.52-current-filogic-mt7986 |
 
-    **Power** — idle 3.10 W · avg 5.96 W · peak 10.10 W · 238 samples
+    **Power** — min 3.10 W · avg 5.96 W · peak 10.10 W · 238 samples
 
 ??? success "BananaPi BPI-F3 01 — pass"
 
@@ -140,7 +140,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ❌ | 217.2 s | power-cycle |
     | store-versions | ⏭️ | 0.0 s | — |
 
-    **Power** — idle 0.80 W · avg 1.92 W · peak 3.60 W · 548 samples
+    **Power** — min 0.80 W · avg 1.92 W · peak 3.60 W · 548 samples
 
 ??? success "Clearfog Pro 01 — pass"
 
@@ -180,7 +180,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ✅ | 60.6 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
     | reboot | ✅ | 61.4 s | power-cycle · up 30 s |
 
-    **Power** — idle 1.20 W · avg 3.38 W · peak 3.90 W · 616 samples
+    **Power** — min 1.20 W · avg 3.38 W · peak 3.90 W · 616 samples
 
 ??? success "Cubietruck 01 — pass"
 
@@ -317,7 +317,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 55.0 s | power-cycle · up 22 s |
     | store-versions | ✅ | 4.8 s | 26.11.0-trunk.51 · 5.15.137-legacy-meson-s4t7 |
 
-    **Power** — idle 1.70 W · avg 3.87 W · peak 8.30 W · 381 samples
+    **Power** — min 1.70 W · avg 3.87 W · peak 8.30 W · 381 samples
 
 ??? success "Le potato 01 — pass"
 
@@ -349,7 +349,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 45.7 s | power-cycle · up 14 s |
     | store-versions | ✅ | 3.8 s | 26.11.0-trunk.51 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 3.50 W · avg 6.00 W · peak 12.20 W · 223 samples
+    **Power** — min 3.50 W · avg 6.00 W · peak 12.20 W · 223 samples
 
 ??? failure "Mekotronics R58S2 01 — fail"
 
@@ -411,7 +411,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 54.2 s | power-cycle · up 26 s |
     | store-versions | ✅ | 4.6 s | 26.11.0-trunk.51 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 3.00 W · avg 7.10 W · peak 12.30 W · 376 samples
+    **Power** — min 3.00 W · avg 7.10 W · peak 12.30 W · 376 samples
 
 ??? success "NanoPi M5 01 — pass"
 
@@ -428,7 +428,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 45.6 s | power-cycle · up 22 s |
     | store-versions | ✅ | 4.6 s | 26.11.0-trunk.51 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 0.60 W · avg 4.71 W · peak 8.20 W · 369 samples
+    **Power** — min 0.60 W · avg 4.71 W · peak 8.20 W · 369 samples
 
 ??? failure "NanoPi M6 01 — fail"
 
@@ -438,7 +438,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | reachable | ❌ | 0.0 s | ip=10.0.50.64 · reachable=False · port=22 |
 
-    **Power** — idle 1.50 W · avg 2.16 W · peak 2.50 W · 42 samples
+    **Power** — min 1.50 W · avg 2.16 W · peak 2.50 W · 42 samples
 
 ??? success "NanoPi Neo 2 Black 01 — pass"
 
@@ -485,7 +485,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 41.2 s | power-cycle · up 11 s |
     | store-versions | ✅ | 4.3 s | 26.11.0-trunk.51 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 0.70 W · avg 4.01 W · peak 9.30 W · 178 samples
+    **Power** — min 0.70 W · avg 4.01 W · peak 9.30 W · 178 samples
 
 ??? failure "NanoPi R76S 01 — fail"
 
@@ -533,7 +533,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 46.1 s | power-cycle · up 17 s |
     | store-versions | ✅ | 4.3 s | 26.11.0-trunk.51 · 6.18.44-current-meson64 |
 
-    **Power** — idle 1.00 W · avg 3.40 W · peak 5.00 W · 330 samples
+    **Power** — min 1.00 W · avg 3.40 W · peak 5.00 W · 330 samples
 
 ??? success "Odroid M1 01 — pass"
 
@@ -550,7 +550,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 54.7 s | power-cycle · up 22 s |
     | store-versions | ✅ | 4.8 s | 26.11.0-trunk.51 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 1.90 W · avg 6.26 W · peak 10.70 W · 300 samples
+    **Power** — min 1.90 W · avg 6.26 W · peak 10.70 W · 300 samples
 
 ??? success "Odroid N2 01 — pass"
 
@@ -567,7 +567,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 56.4 s | power-cycle · up 28 s |
     | store-versions | ✅ | 3.6 s | 26.11.0-trunk.51 · 6.18.44-current-meson64 |
 
-    **Power** — idle 1.00 W · avg 3.61 W · peak 9.60 W · 299 samples
+    **Power** — min 1.00 W · avg 3.61 W · peak 9.60 W · 299 samples
 
 ??? success "Odroid XU4 01 — pass"
 
@@ -614,7 +614,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ❌ | 205.8 s | power-cycle |
     | store-versions | ⏭️ | 0.0 s | — |
 
-    **Power** — idle 1.70 W · avg 2.91 W · peak 8.90 W · 213 samples
+    **Power** — min 1.70 W · avg 2.91 W · peak 8.90 W · 213 samples
 
 ??? success "Orange Pi 5 Plus 01 — pass"
 
@@ -631,7 +631,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 51.8 s | power-cycle · up 27 s |
     | store-versions | ✅ | 4.3 s | 26.11.0-trunk.51 · 6.1.172-vendor-rk35xx |
 
-    **Power** — idle 0.60 W · avg 5.52 W · peak 10.80 W · 182 samples
+    **Power** — min 0.60 W · avg 5.52 W · peak 10.80 W · 182 samples
 
 ??? success "Orange Pi Lite 2 01 — pass"
 
@@ -716,7 +716,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ⏭️ | 0.0 s | reboot |
     | store-versions | ✅ | 4.8 s | 26.8.3 · 7.1.8-edge-sunxi64 |
 
-    **Power** — idle 2.50 W · avg 3.41 W · peak 4.50 W · 96 samples
+    **Power** — min 2.50 W · avg 3.41 W · peak 4.50 W · 96 samples
 
 ??? success "Radxa Dragon Q6A 01 — pass"
 
@@ -733,7 +733,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 138.9 s | power-cycle · up 106 s |
     | store-versions | ✅ | 4.2 s | 26.11.0-trunk.51 · 6.18.2-current-qcs6490 |
 
-    **Power** — idle 1.10 W · avg 2.40 W · peak 7.60 W · 487 samples
+    **Power** — min 1.10 W · avg 2.40 W · peak 7.60 W · 487 samples
 
 ??? success "Radxa ZERO 3 01 — pass"
 
@@ -780,7 +780,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 45.8 s | power-cycle · up 22 s |
     | store-versions | ✅ | 3.3 s | 26.11.0-trunk.51 · 6.18.44-current-bcm2711 |
 
-    **Power** — idle 2.60 W · avg 5.94 W · peak 10.20 W · 217 samples
+    **Power** — min 2.60 W · avg 5.94 W · peak 10.20 W · 217 samples
 
 ??? success "Raspberry Pi Zero 2W — pass"
 
@@ -827,7 +827,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 52.0 s | power-cycle · up 20 s |
     | store-versions | ✅ | 3.8 s | 26.11.0-trunk.51 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 0.70 W · avg 5.78 W · peak 13.50 W · 255 samples
+    **Power** — min 0.70 W · avg 5.78 W · peak 13.50 W · 255 samples
 
 ??? success "Rock 5B 02 — pass"
 
@@ -844,7 +844,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 52.3 s | power-cycle · up 20 s |
     | store-versions | ✅ | 3.9 s | 26.11.0-trunk.51 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 4.00 W · avg 6.04 W · peak 13.70 W · 254 samples
+    **Power** — min 4.00 W · avg 6.04 W · peak 13.70 W · 254 samples
 
 ??? success "Rock 5B Plus 01 — pass"
 
@@ -861,7 +861,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 58.3 s | power-cycle · up 27 s |
     | store-versions | ✅ | 3.8 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
 
-    **Power** — idle 0.90 W · avg 3.64 W · peak 8.90 W · 139 samples
+    **Power** — min 0.90 W · avg 3.64 W · peak 8.90 W · 139 samples
 
 ??? success "Rock 5T 01 — pass"
 
@@ -878,7 +878,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 54.5 s | power-cycle · up 22 s |
     | store-versions | ✅ | 4.0 s | 26.11.0-trunk.30 · 6.18.44-current-rockchip64 |
 
-    **Power** — idle 0.90 W · avg 9.24 W · peak 16.70 W · 273 samples
+    **Power** — min 0.90 W · avg 9.24 W · peak 16.70 W · 273 samples
 
 ??? success "Rockpi E 01 — pass"
 
@@ -933,7 +933,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 62.2 s | power-cycle · up 29 s |
     | store-versions | ✅ | 4.5 s | 26.11.0-trunk.51 · 6.18.44-current-rockchip |
 
-    **Power** — idle 1.30 W · avg 3.91 W · peak 8.40 W · 310 samples
+    **Power** — min 1.30 W · avg 3.91 W · peak 8.40 W · 310 samples
 
 ??? success "Udoo 01 — pass"
 
@@ -950,7 +950,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 73.3 s | power-cycle · up 33 s |
     | store-versions | ✅ | 9.5 s | 26.11.0-trunk.51 · 6.18.44-current-imx6 |
 
-    **Power** — idle 1.30 W · avg 5.74 W · peak 8.40 W · 1004 samples
+    **Power** — min 1.30 W · avg 5.74 W · peak 8.40 W · 1004 samples
 
 ??? failure "UEFI arm64 01 — fail"
 
@@ -975,7 +975,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 87.0 s | power-cycle · up 56 s |
     | store-versions | ✅ | 5.2 s | 26.11.0-trunk.51 · 6.18.44-current-x86 |
 
-    **Power** — idle 2.00 W · avg 4.10 W · peak 6.90 W · 520 samples
+    **Power** — min 2.00 W · avg 4.10 W · peak 6.90 W · 520 samples
 
 ??? success "ZeroPi 01 — pass"
 
@@ -992,7 +992,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | reboot | ✅ | 54.9 s | power-cycle · up 25 s |
     | store-versions | ✅ | 7.9 s | 26.11.0-trunk.51 · 6.18.44-current-sunxi |
 
-    **Power** — idle 1.20 W · avg 2.12 W · peak 3.40 W · 460 samples
+    **Power** — min 1.20 W · avg 2.12 W · peak 3.40 W · 460 samples
 
 
 <!-- FLEET-STOP -->
