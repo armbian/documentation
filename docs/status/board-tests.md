@@ -159,28 +159,36 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Cubie A5E 01 — fail"
 
-    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.51` · 13 ✅ · 1 ❌ · 2 ⏭️
+    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.54` · 8 ✅ · 1 ❌ · 7 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 82.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 62.5 s | power-cycle · up 32 s |
-    | kernel-switch | ✅ | 60.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
-    | reboot | ✅ | 61.5 s | power-cycle · up 29 s |
-    | hw-performance | ✅ | 44.1 s | AES 358 · mem 2000 · disk W 14 / R 22 MB/s · 61.7 °C · None MHz |
-    | dvfs | ➖ | 2.7 s | — |
-    | network-iperf | ✅ | 89.1 s | end0 ↑831/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 5.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ❌ | 39.5 s | branch=edge · family=sunxi64 · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 62.4 s | power-cycle · up 31 s |
-    | hw-performance | ✅ | 41.5 s | AES 358 · mem 2000 · disk W 21 / R 2 MB/s · 60.9 °C · None MHz |
+    | upgrade | ✅ | 83.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 71.3 s | power-cycle · up 32 s |
+    | kernel-switch | ✅ | 60.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
+    | reboot | ✅ | 63.5 s | power-cycle · up 32 s |
+    | hw-performance | ✅ | 41.4 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 64.8 °C · None MHz |
     | dvfs | ➖ | 2.8 s | — |
-    | network-iperf | ✅ | 89.0 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 6.5 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ✅ | 60.6 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
-    | reboot | ✅ | 61.4 s | power-cycle · up 30 s |
+    | network-iperf | ✅ | 89.0 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 5.7 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ✅ | 577.5 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
+    | reboot | ❌ | 223.4 s | power-cycle |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | store-versions | ⏭️ | 0.0 s | — |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
 
-    **Power** — min 1.20 W · avg 3.38 W · peak 3.90 W · 616 samples
+    **Power** — min 1.30 W · avg 3.75 W · peak 5.30 W · 996 samples
+
+    ```mermaid
+    xychart-beta
+        title "Power — Cubie A5E 01"
+        x-axis "sample" 1 --> 996
+        y-axis "W" 1.0 --> 5.5
+        line [3.53, 3.55, 3.55, 3.34, 2.66, 3.64, 3.58, 3.32, 3.04, 3.55, 3.53, 3.72, 3.67, 3.56, 3.66, 3.63, 3.60, 3.54, 3.60, 3.90, 4.31, 3.61, 4.60, 5.20, 4.69, 3.77, 4.11, 5.20, 5.19, 3.89, 3.66, 3.67, 3.69, 3.22, 3.16, 3.60, 3.60, 3.60, 3.60, 3.60]
+    ```
 
 ??? success "Cubietruck 01 — pass"
 
