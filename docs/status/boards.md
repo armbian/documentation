@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **69** boards — **52** operational, **17** broken.
 
-Reconcile made: 2026-09-20 14:04 UTC
+Reconcile made: 2026-09-20 14:47 UTC
 
 **Operational**
 
@@ -65,7 +65,7 @@ Reconcile made: 2026-09-20 14:04 UTC
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Rock 5B 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (18) |
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
-| Rock 5B Plus 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (22) |
+| Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (52) |
