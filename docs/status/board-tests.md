@@ -51,14 +51,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 104.0 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 43.5 s | warm · up 21 s |
-    | kernel-switch | ❌ | 69.2 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 39.8 s | warm · up 20 s |
-    | hw-performance | ✅ | 37.7 s | AES 23 · mem 2100 · disk W 2 / R 42 MB/s · 51.6 °C · 1200 MHz |
+    | upgrade | ✅ | 99.6 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 48.8 s | warm · up 20 s |
+    | kernel-switch | ❌ | 69.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
+    | reboot | ✅ | 42.9 s | warm · up 23 s |
+    | hw-performance | ✅ | 37.8 s | AES 23 · mem 2100 · disk W 2 / R 42 MB/s · 49.9 °C · 1200 MHz |
     | dvfs | ✅ | 34.0 s | ondemand · 720–1200 MHz (peak 1200) |
-    | network-iperf | ✅ | 113.0 s | end0 ↑809/↓940 (1GE) · wlan0 ↑22/↓11 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 7.6 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | network-iperf | ✅ | 72.7 s | end0 ↑808/↓936 (1GE) · wlan0 ↑24/↓31 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 7.5 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
 
 ??? failure "Banana Pi M2Pro 01 — fail"
 
