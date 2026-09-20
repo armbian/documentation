@@ -159,13 +159,28 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Cubie A5E 01 — fail"
 
-    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.51` · 13 ✅ · 1 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.59 · reachable=False · port=22 |
+    | upgrade | ✅ | 82.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 62.5 s | power-cycle · up 32 s |
+    | kernel-switch | ✅ | 60.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
+    | reboot | ✅ | 61.5 s | power-cycle · up 29 s |
+    | hw-performance | ✅ | 44.1 s | AES 358 · mem 2000 · disk W 14 / R 22 MB/s · 61.7 °C · None MHz |
+    | dvfs | ➖ | 2.7 s | — |
+    | network-iperf | ✅ | 89.1 s | end0 ↑831/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 5.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ❌ | 39.5 s | branch=edge · family=sunxi64 · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 62.4 s | power-cycle · up 31 s |
+    | hw-performance | ✅ | 41.5 s | AES 358 · mem 2000 · disk W 21 / R 2 MB/s · 60.9 °C · None MHz |
+    | dvfs | ➖ | 2.8 s | — |
+    | network-iperf | ✅ | 89.0 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 6.5 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ✅ | 60.6 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
+    | reboot | ✅ | 61.4 s | power-cycle · up 30 s |
 
-    **Power** — idle 3.40 W · avg 3.40 W · peak 3.40 W · 42 samples
+    **Power** — idle 1.20 W · avg 3.38 W · peak 3.90 W · 616 samples
 
 ??? success "Cubietruck 01 — pass"
 
