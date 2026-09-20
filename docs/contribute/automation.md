@@ -3,7 +3,7 @@ seo_title: "Armbian release automation & CI pipeline"
 description: "Armbian release automation and CI: which repository owns what, how build lists and recommended images are generated, how to run release builds, and how packages reach apt.armbian.com."
 ---
 
-# Automation for developers and maintainers
+# Release automation
 
 Armbian's release automation is split across four repositories. Knowing which one owns a given piece is most of the battle — nearly every change described on this page is a pull request against one of them.
 
