@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **51** passed, **14** failed. Each card is the board's most recent test.
+**65** boards — **50** passed, **15** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -846,22 +846,38 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     **Power** — min 4.00 W · avg 6.04 W · peak 13.70 W · 254 samples
 
-??? success "Rock 5B Plus 01 — pass"
+??? failure "Rock 5B Plus 01 — fail"
 
-    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.31` · 6 ✅ · 0 ❌ · 2 ⏭️
+    `rock-5b-plus` · **inplace** · image `26.11.0-trunk.31` · 14 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 5.9 s | — |
-    | reboot | ✅ | 51.4 s | power-cycle · up 25 s |
-    | hw-performance | ✅ | 20.6 s | AES 1286 · mem 14100 · disk W 12 / R 80 MB/s · 49 °C · 1800 MHz |
-    | dvfs | ✅ | 16.0 s | ondemand · 1800–1800 MHz (peak 2352) |
-    | network-iperf | ✅ | 28.4 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-    | restore-stable | ⏭️ | 4.3 s | — |
-    | reboot | ✅ | 58.3 s | power-cycle · up 27 s |
-    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
+    | upgrade | ⏭️ | 9.9 s | — |
+    | reboot | ✅ | 52.5 s | power-cycle · up 26 s |
+    | kernel-switch | ✅ | 9.5 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
+    | reboot | ✅ | 50.2 s | power-cycle · up 24 s |
+    | hw-performance | ✅ | 18.4 s | AES 1285 · mem 15600 · disk W 71 / R 68 MB/s · 49.9 °C · 1800 MHz |
+    | dvfs | ✅ | 16.5 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 28.5 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.2 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
+    | kernel-switch | ❌ | 8.5 s | branch=current · family=rk35xx · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 54.3 s | power-cycle · up 28 s |
+    | hw-performance | ✅ | 18.3 s | AES 1284 · mem 14000 · disk W 70 / R 82 MB/s · 50.8 °C · 1800 MHz |
+    | dvfs | ✅ | 16.2 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 27.8 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.31 · 6.1.115-vendor-rk35xx |
+    | kernel-switch | ✅ | 10.2 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
+    | reboot | ✅ | 52.3 s | power-cycle · up 26 s |
 
-    **Power** — min 0.90 W · avg 3.64 W · peak 8.90 W · 139 samples
+    **Power** — min 2.50 W · avg 3.66 W · peak 9.00 W · 302 samples
+
+    ```mermaid
+    xychart-beta
+        title "Power — Rock 5B Plus 01"
+        x-axis "sample" 1 --> 302
+        y-axis "W" 2.0 --> 9.5
+        line [3.00, 3.00, 3.40, 3.34, 3.11, 2.76, 3.01, 3.41, 3.94, 3.34, 3.47, 2.84, 3.31, 3.30, 4.08, 3.77, 5.88, 6.96, 3.79, 3.70, 3.66, 3.17, 3.36, 3.10, 2.77, 3.65, 3.27, 3.80, 3.67, 4.68, 6.92, 3.20, 3.54, 4.00, 3.49, 3.34, 3.03, 2.83, 3.54, 3.66]
+    ```
 
 ??? success "Rock 5T 01 — pass"
 
