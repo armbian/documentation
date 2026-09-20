@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-09-19 09:56 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-09-20 10:17 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Thu, 17 Sep 2026 | 2267 | `26.8.3` |
-| `trixie` | trixie | Thu, 17 Sep 2026 | 2267 | `26.8.3` |
-| `sid` | sid | Thu, 17 Sep 2026 | 2267 | `26.8.3` |
-| `jammy` | jammy | Thu, 17 Sep 2026 | 2267 | `26.8.3` |
-| `noble` | noble | Thu, 17 Sep 2026 | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Sun, 20 Sep 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Sun, 20 Sep 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Sun, 20 Sep 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Sun, 20 Sep 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Sun, 20 Sep 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
@@ -149,7 +149,7 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `bluez` | `5.66-1+rpt1+deb12u2` | `5.66-1+rpt1+deb12u2` | `5.66-1+rpt1+deb12u2` | — | — |
 | `bluez-firmware` | `1.2-9+rpt4` | `1.2-9+rpt4` | `1.2-9+rpt4` | — | — |
 | `edl-ng` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` |
-| `fastfetch` | `2.67.1` | `2.67.1` | — | `2.67.1` | `2.67.1` |
+| `fastfetch` | `2.68.1` | `2.68.1` | — | `2.68.1` | `2.68.1` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | — | — |
 | `gh` | `2.101.0` | `2.101.0` | `2.83.2` | `2.101.0` | `2.101.0` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
