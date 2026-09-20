@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**70** boards — **52** operational, **18** broken.
+**69** boards — **52** operational, **17** broken.
 
-Reconcile made: 2026-09-20 07:14 UTC
+Reconcile made: 2026-09-20 07:30 UTC
 
 **Operational**
 
@@ -31,7 +31,6 @@ Reconcile made: 2026-09-20 07:14 UTC
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
-| Cubie A5E 02 | 10.0.50.65 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
@@ -42,6 +41,7 @@ Reconcile made: 2026-09-20 07:14 UTC
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (14) |
+| NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (41) |
@@ -88,7 +88,6 @@ Reconcile made: 2026-09-20 07:14 UTC
 | Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
 | Le potato 01 | 10.0.50.23 | local | 100 MbE | Netgear S3300 (12) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
-| NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (11) |
 | Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
