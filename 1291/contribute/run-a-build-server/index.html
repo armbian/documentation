@@ -6647,12 +6647,18 @@ project does not have to buy or rent, and queue time nobody has to wait through.
 <td style="text-align: left;">64 GB</td>
 <td style="text-align: left;"><strong>128 GB</strong></td>
 </tr>
+<tr>
+<td style="text-align: left;">Storage</td>
+<td style="text-align: left;">512 GB</td>
+<td style="text-align: left;"><strong>1 TB</strong></td>
+</tr>
 </tbody>
 </table>
-<p>Both <code>x86-64</code> and <code>arm64</code> are useful — a good part of the fleet is already ARM.
-Fast local storage matters more than capacity: kernel builds are I/O heavy, and
-the framework wants roughly 50 GB per concurrent build, so size the disk by how
-many runners the machine will host.</p>
+<p>Both <code>x86-64</code> and <code>arm64</code> are useful — a good part of the fleet is already ARM.</p>
+<p>A server of this size hosts <strong>several runners at once</strong>, and that is what the
+storage is for: each runner keeps its own sources, build cache and output. Speed
+matters as much as capacity — kernel builds are I/O heavy, so NVMe rather than
+spinning disk.</p>
 <h2 id="what-it-will-be-used-for">What it will be used for<a class="headerlink" href="#what-it-will-be-used-for" title="Permanent link">&para;</a></h2>
 <p>The server joins the fleet as one or more <strong>self-hosted GitHub runners</strong> and
 picks up jobs from the build pipeline — compiling kernels, u-boot and rootfs, and
