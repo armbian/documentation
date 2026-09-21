@@ -4863,6 +4863,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4879,6 +4897,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-and-renamed-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecated and renamed switches
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6110,7 +6158,7 @@
   <span class="md-ellipsis">
     
   
-    armbian-config apps
+    Add armbian-config apps
   
 
     
@@ -6139,34 +6187,6 @@
     
   
     Run a mirror
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contribute/datacenter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Datacenter access
   
 
     
@@ -6216,7 +6236,7 @@
   <span class="md-ellipsis">
     
   
-    Maintainers & board rules
+    Board maintainers
   
 
     
@@ -6232,7 +6252,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintainers & board rules
+    Board maintainers
   
 
           </label>
@@ -6330,7 +6350,7 @@
   <span class="md-ellipsis">
     
   
-    Project processes
+    Member access
   
 
     
@@ -6346,7 +6366,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project processes
+    Member access
   
 
           </label>
@@ -6359,14 +6379,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/automation/" class="md-nav__link">
+      <a href="../../contribute/storage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Automation (CI)
+    Member storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/datacenter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datacenter access
   
 
     
@@ -6383,6 +6431,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release automation (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6414,6 +6490,25 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-and-renamed-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecated and renamed switches
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -6514,6 +6609,21 @@
 </tr>
 </tbody>
 </table>
+<h2 id="deprecated-and-renamed-switches">Deprecated and renamed switches<a class="headerlink" href="#deprecated-and-renamed-switches" title="Permanent link">&para;</a></h2>
+<p>Switches are occasionally renamed. When that happens the old name keeps working, so existing build configuration files and command lines do not break:</p>
+<ul>
+<li>Set the <strong>old name</strong> only, and the build forwards its value to the new name and prints a deprecation warning — move to the new name when convenient.</li>
+<li>Set <strong>both</strong> names, and the <strong>new name wins</strong>; the old one is ignored, again with a warning.</li>
+</ul>
+<p>Prefer the current name for new configurations. This backward-compatible aliasing covers scalar switches (a single <code>PARAM=value</code>), not list/array parameters.</p>
+<div class="admonition tip">
+<p class="admonition-title">Saw a &lsquo;Deprecated switch&rsquo; warning?</p>
+<p>It means a switch you passed has been renamed. The build still honours it for now, but update your config or command line to the name the warning points to.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">For maintainers: registering a rename</p>
+<p>Rename a switch by adding one line to the <code>DEPRECATED_SWITCH_ALIASES</code> map in <a href="https://github.com/armbian/build/blob/main/lib/functions/general/deprecations.sh"><code>lib/functions/general/deprecations.sh</code></a>, mapping the old name to the new one (<code>[OLD_NAME]="NEW_NAME"</code>). Nothing else has to change — consumers can move to the new name later.</p>
+</div>
 
 
 

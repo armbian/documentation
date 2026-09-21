@@ -185,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              armbian-config apps
+              Add armbian-config apps
             
           </span>
         </div>
@@ -6109,7 +6109,7 @@
   <span class="md-ellipsis">
     
   
-    armbian-config apps
+    Add armbian-config apps
   
 
     
@@ -6127,7 +6127,7 @@
   <span class="md-ellipsis">
     
   
-    armbian-config apps
+    Add armbian-config apps
   
 
     
@@ -6333,34 +6333,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../datacenter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Datacenter access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -6397,7 +6369,7 @@
   <span class="md-ellipsis">
     
   
-    Maintainers & board rules
+    Board maintainers
   
 
     
@@ -6413,7 +6385,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintainers & board rules
+    Board maintainers
   
 
           </label>
@@ -6511,7 +6483,7 @@
   <span class="md-ellipsis">
     
   
-    Project processes
+    Member access
   
 
     
@@ -6527,7 +6499,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project processes
+    Member access
   
 
           </label>
@@ -6540,14 +6512,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Automation (CI)
+    Member storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datacenter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datacenter access
   
 
     
@@ -6564,6 +6564,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release automation (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6781,13 +6809,13 @@
 
 
 <h1 id="adding-software-title-to-armbian-config">Adding software title to Armbian config<a class="headerlink" href="#adding-software-title-to-armbian-config" title="Permanent link">&para;</a></h1>
-<h3 id="tinkering">Tinkering<a class="headerlink" href="#tinkering" title="Permanent link">&para;</a></h3>
-<h4 id="manual-install">Manual install<a class="headerlink" href="#manual-install" title="Permanent link">&para;</a></h4>
+<h2 id="tinkering">Tinkering<a class="headerlink" href="#tinkering" title="Permanent link">&para;</a></h2>
+<h3 id="manual-install">Manual install<a class="headerlink" href="#manual-install" title="Permanent link">&para;</a></h3>
 <p>First try to install application manually. If it works on Debian or Ubuntu, proceed. In this example we will be using <code>test</code>.</p>
-<h4 id="clone-repository">Clone repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h4>
+<h3 id="clone-repository">Clone repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git clone https://github.com/armbian/configng
 </span></code></pre></div></td></tr></table></div>
-<h4 id="design-menu">Design menu<a class="headerlink" href="#design-menu" title="Permanent link">&para;</a></h4>
+<h3 id="design-menu">Design menu<a class="headerlink" href="#design-menu" title="Permanent link">&para;</a></h3>
 <p>Predict which commands you expect to have in the menu. For installing an application, we usually need two, <code>install</code> and <code>uninstall</code>. Armbian-config stores menu in JSON files, so you need to select appropriate file.
 This one we will place under <code>Software -&gt; Management</code>.</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">File location: tools/json/config.software.json</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -6874,7 +6902,7 @@ This one we will place under <code>Software -&gt; Management</code>.</p>
 <p class="admonition-title">Note</p>
 <p>Pay attention to JSON structure. JSON validator at pull request will break in case spaces or commas will be placed wrong.</p>
 </div>
-<h4 id="module-code">Module code<a class="headerlink" href="#module-code" title="Permanent link">&para;</a></h4>
+<h3 id="module-code">Module code<a class="headerlink" href="#module-code" title="Permanent link">&para;</a></h3>
 <p>Place module functions, each into its file, following by file naming convention, into one of the folders:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Folder location: tools/modules</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -6976,14 +7004,14 @@ This one we will place under <code>Software -&gt; Management</code>.</p>
 <p class="admonition-title">Note</p>
 <p>Pay attention to <a href="https://github.com/armbian/configng/blob/main/.editorconfig">coding style structure</a>. If you use modern IDE, this will be done automatically. </p>
 </div>
-<h4 id="manual-testing">Manual testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h4>
+<h3 id="manual-testing">Manual testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h3>
 <p>Whenever you are making changes to the JSON or modules structure, make sure to join the JSON segments into the main JSON file. Run the following command:</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">tools</span><span class="o">/</span><span class="n">config</span><span class="o">-</span><span class="n">assemble</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">p</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Python is required to run this tool.</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span class="w"> </span>bin/armbian-config<span class="w"> </span>--cmd
 </span></code></pre></div></td></tr></table></div>
-<h4 id="unit-tests">Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h4>
+<h3 id="unit-tests">Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
 <p>This part is optional but highly recommended for at least install functionality. Our CI infrastructure will test this feature at pull request, on general code changes (push to main branch) and daily. It will test feature on latest Debian and Ubuntu images.
 Unit tests have simple design:</p>
 <p>Name of the config file is function id (unique identifier) <code>CON004.conf</code></p>
@@ -7025,7 +7053,7 @@ Make sure to add a test condition that makes sense. It has to return 0 when test
 </tr>
 </tbody>
 </table>
-<h4 id="pull-request">Pull request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h4>
+<h3 id="pull-request">Pull request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h3>
 <p>When your solution works locally and you prepare unit tests its time to submit a pull request. Fix your code and unit tests until all pull request checks becomes green.</p>
 <p>Examples:</p>
 <ul>
@@ -7033,14 +7061,14 @@ Make sure to add a test condition that makes sense. It has to return 0 when test
 <li><a class="magiclink magiclink-github magiclink-pull" href="https://github.com/armbian/configng/pull/230" title="GitHub Pull Request: armbian/configng #230">armbian/configng!230</a></li>
 <li><a class="magiclink magiclink-github magiclink-pull" href="https://github.com/armbian/configng/pull/240" title="GitHub Pull Request: armbian/configng #240">armbian/configng!240</a></li>
 </ul>
-<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <p>Documentation is generated automatically after your pull request is merged. But as automated documentation might not be satisfactory, you can add cover image, header and footer. You can use markdown elements with enhancements from <a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a></p>
-<h4 id="cover-image">Cover image<a class="headerlink" href="#cover-image" title="Permanent link">&para;</a></h4>
+<h3 id="cover-image">Cover image<a class="headerlink" href="#cover-image" title="Permanent link">&para;</a></h3>
 <p>Once code works perfectly, look for cover image. It can be .png or .webp. Place image to the <code>tools/include/images/CON004.webp</code></p>
-<h4 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h4>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Header: tools/include/markdown/CON004-header.md</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 </span></code></pre></div></td></tr></table></div>
-<h4 id="footer">Footer<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h4>
+<h3 id="footer">Footer<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Footer: tools/include/markdown/CON004-footer.md</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>

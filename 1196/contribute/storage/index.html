@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Install and run Rsyncd server on Armbian — Rsyncd server. Runs on ARM64 and x86 single-board computers.">
+        <meta name="description" content="Public file storage for Armbian GitHub organization members: upload test images, packages and custom builds over SFTP and share them with a plain download link.">
       
       
         <meta name="author" content="Armbian team">
       
       
-        <link rel="canonical" href="https://docs.armbian.com/software/rsyncd-server/">
+        <link rel="canonical" href="https://docs.armbian.com/contribute/storage/">
       
       
-        <link rel="prev" href="../gh-runners/">
+        <link rel="prev" href="../board-maintainer/">
       
       
-        <link rel="next" href="../duplicati/">
+        <link rel="next" href="../datacenter/">
       
       
         
@@ -29,7 +29,7 @@
     
     
   
-    <title>Install Rsyncd server on Armbian</title>
+    <title>Armbian member storage: share images over SFTP</title>
   
 
     
@@ -80,16 +80,12 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Install Rsyncd server on Armbian">
-  <meta property="og:description" content="Install and run Rsyncd server on Armbian — Rsyncd server. Runs on ARM64 and x86 single-board computers.">
-  <meta name="twitter:title" content="Install Rsyncd server on Armbian">
-  <meta name="twitter:description" content="Install and run Rsyncd server on Armbian — Rsyncd server. Runs on ARM64 and x86 single-board computers.">
+  <meta property="og:title" content="Armbian member storage: share images over SFTP">
+  <meta property="og:description" content="Public file storage for Armbian GitHub organization members: upload test images, packages and custom builds over SFTP and share them with a plain download link.">
+  <meta name="twitter:title" content="Armbian member storage: share images over SFTP">
+  <meta name="twitter:description" content="Public file storage for Armbian GitHub organization members: upload test images, packages and custom builds over SFTP and share them with a plain download link.">
   
-    
-    
-    <meta property="og:image" content="https://docs.armbian.com/images/RSD001.png">
-    <meta name="twitter:image" content="https://docs.armbian.com/images/RSD001.png">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
   
 
   </head>
@@ -111,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rsyncd-server" class="md-skip">
+        <a href="#member-storage" class="md-skip">
           Skip to content
         </a>
       
@@ -189,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rsyncd server
+              Member storage
             
           </span>
         </div>
@@ -358,13 +354,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../software/" class="md-tabs__link">
           
   
   
@@ -440,11 +434,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../contribute/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -1605,29 +1601,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1645,7 +1636,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1663,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../software/" class="md-nav__link">
         
   
   
@@ -1688,8 +1679,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1700,11 +1689,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1725,7 +1714,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1743,7 +1732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cdn-router/" class="md-nav__link">
+      <a href="../../software/cdn-router/" class="md-nav__link">
         
   
   
@@ -1771,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gh-runners/" class="md-nav__link">
+      <a href="../../software/gh-runners/" class="md-nav__link">
         
   
   
@@ -1796,19 +1785,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../software/rsyncd-server/" class="md-nav__link">
         
   
   
@@ -1824,7 +1804,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1895,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../duplicati/" class="md-nav__link">
+      <a href="../../software/duplicati/" class="md-nav__link">
         
   
   
@@ -1981,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../software/docker/" class="md-nav__link">
         
   
   
@@ -2009,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../portainer/" class="md-nav__link">
+      <a href="../../software/portainer/" class="md-nav__link">
         
   
   
@@ -2095,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mariadb/" class="md-nav__link">
+      <a href="../../software/mariadb/" class="md-nav__link">
         
   
   
@@ -2123,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mysql/" class="md-nav__link">
+      <a href="../../software/mysql/" class="md-nav__link">
         
   
   
@@ -2151,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../phpmyadmin/" class="md-nav__link">
+      <a href="../../software/phpmyadmin/" class="md-nav__link">
         
   
   
@@ -2179,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgresql/" class="md-nav__link">
+      <a href="../../software/postgresql/" class="md-nav__link">
         
   
   
@@ -2207,7 +2186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis/" class="md-nav__link">
+      <a href="../../software/redis/" class="md-nav__link">
         
   
   
@@ -2293,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-server/" class="md-nav__link">
+      <a href="../../software/code-server/" class="md-nav__link">
         
   
   
@@ -2321,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git-cli/" class="md-nav__link">
+      <a href="../../software/git-cli/" class="md-nav__link">
         
   
   
@@ -2407,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adguardhome/" class="md-nav__link">
+      <a href="../../software/adguardhome/" class="md-nav__link">
         
   
   
@@ -2435,7 +2414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pi-hole/" class="md-nav__link">
+      <a href="../../software/pi-hole/" class="md-nav__link">
         
   
   
@@ -2463,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unbound/" class="md-nav__link">
+      <a href="../../software/unbound/" class="md-nav__link">
         
   
   
@@ -2549,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bazarr/" class="md-nav__link">
+      <a href="../../software/bazarr/" class="md-nav__link">
         
   
   
@@ -2577,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deluge/" class="md-nav__link">
+      <a href="../../software/deluge/" class="md-nav__link">
         
   
   
@@ -2605,7 +2584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jellyseerr/" class="md-nav__link">
+      <a href="../../software/jellyseerr/" class="md-nav__link">
         
   
   
@@ -2633,7 +2612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lidarr/" class="md-nav__link">
+      <a href="../../software/lidarr/" class="md-nav__link">
         
   
   
@@ -2661,7 +2640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../medusa/" class="md-nav__link">
+      <a href="../../software/medusa/" class="md-nav__link">
         
   
   
@@ -2689,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prowlarr/" class="md-nav__link">
+      <a href="../../software/prowlarr/" class="md-nav__link">
         
   
   
@@ -2717,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qbittorrent/" class="md-nav__link">
+      <a href="../../software/qbittorrent/" class="md-nav__link">
         
   
   
@@ -2745,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../radarr/" class="md-nav__link">
+      <a href="../../software/radarr/" class="md-nav__link">
         
   
   
@@ -2773,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sabnzbd/" class="md-nav__link">
+      <a href="../../software/sabnzbd/" class="md-nav__link">
         
   
   
@@ -2801,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sonarr/" class="md-nav__link">
+      <a href="../../software/sonarr/" class="md-nav__link">
         
   
   
@@ -2829,7 +2808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transmission/" class="md-nav__link">
+      <a href="../../software/transmission/" class="md-nav__link">
         
   
   
@@ -2915,7 +2894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../actual-budget/" class="md-nav__link">
+      <a href="../../software/actual-budget/" class="md-nav__link">
         
   
   
@@ -2943,7 +2922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wallos/" class="md-nav__link">
+      <a href="../../software/wallos/" class="md-nav__link">
         
   
   
@@ -3029,7 +3008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../domoticz/" class="md-nav__link">
+      <a href="../../software/domoticz/" class="md-nav__link">
         
   
   
@@ -3057,7 +3036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evcc/" class="md-nav__link">
+      <a href="../../software/evcc/" class="md-nav__link">
         
   
   
@@ -3085,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../home-assistant/" class="md-nav__link">
+      <a href="../../software/home-assistant/" class="md-nav__link">
         
   
   
@@ -3113,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openhab/" class="md-nav__link">
+      <a href="../../software/openhab/" class="md-nav__link">
         
   
   
@@ -3199,7 +3178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apt-cacher-ng/" class="md-nav__link">
+      <a href="../../software/apt-cacher-ng/" class="md-nav__link">
         
   
   
@@ -3227,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cockpit/" class="md-nav__link">
+      <a href="../../software/cockpit/" class="md-nav__link">
         
   
   
@@ -3255,7 +3234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git-cdn/" class="md-nav__link">
+      <a href="../../software/git-cdn/" class="md-nav__link">
         
   
   
@@ -3283,7 +3262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../homepage/" class="md-nav__link">
+      <a href="../../software/homepage/" class="md-nav__link">
         
   
   
@@ -3311,7 +3290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../netbox/" class="md-nav__link">
+      <a href="../../software/netbox/" class="md-nav__link">
         
   
   
@@ -3339,7 +3318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxmox-ve/" class="md-nav__link">
+      <a href="../../software/proxmox-ve/" class="md-nav__link">
         
   
   
@@ -3367,7 +3346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samba/" class="md-nav__link">
+      <a href="../../software/samba/" class="md-nav__link">
         
   
   
@@ -3395,7 +3374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../webmin/" class="md-nav__link">
+      <a href="../../software/webmin/" class="md-nav__link">
         
   
   
@@ -3481,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../emby/" class="md-nav__link">
+      <a href="../../software/emby/" class="md-nav__link">
         
   
   
@@ -3509,7 +3488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filebrowser/" class="md-nav__link">
+      <a href="../../software/filebrowser/" class="md-nav__link">
         
   
   
@@ -3537,7 +3516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hastebin/" class="md-nav__link">
+      <a href="../../software/hastebin/" class="md-nav__link">
         
   
   
@@ -3565,7 +3544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../immich/" class="md-nav__link">
+      <a href="../../software/immich/" class="md-nav__link">
         
   
   
@@ -3593,7 +3572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jellyfin/" class="md-nav__link">
+      <a href="../../software/jellyfin/" class="md-nav__link">
         
   
   
@@ -3621,7 +3600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../navidrome/" class="md-nav__link">
+      <a href="../../software/navidrome/" class="md-nav__link">
         
   
   
@@ -3649,7 +3628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nextcloud/" class="md-nav__link">
+      <a href="../../software/nextcloud/" class="md-nav__link">
         
   
   
@@ -3677,7 +3656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omv/" class="md-nav__link">
+      <a href="../../software/omv/" class="md-nav__link">
         
   
   
@@ -3705,7 +3684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../owncloud/" class="md-nav__link">
+      <a href="../../software/owncloud/" class="md-nav__link">
         
   
   
@@ -3733,7 +3712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stirling/" class="md-nav__link">
+      <a href="../../software/stirling/" class="md-nav__link">
         
   
   
@@ -3761,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../syncthing/" class="md-nav__link">
+      <a href="../../software/syncthing/" class="md-nav__link">
         
   
   
@@ -3847,7 +3826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dozzle/" class="md-nav__link">
+      <a href="../../software/dozzle/" class="md-nav__link">
         
   
   
@@ -3875,7 +3854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grafana/" class="md-nav__link">
+      <a href="../../software/grafana/" class="md-nav__link">
         
   
   
@@ -3903,7 +3882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../netalertx/" class="md-nav__link">
+      <a href="../../software/netalertx/" class="md-nav__link">
         
   
   
@@ -3931,7 +3910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../netdata/" class="md-nav__link">
+      <a href="../../software/netdata/" class="md-nav__link">
         
   
   
@@ -3959,7 +3938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prometheus/" class="md-nav__link">
+      <a href="../../software/prometheus/" class="md-nav__link">
         
   
   
@@ -3987,7 +3966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uptime-kuma/" class="md-nav__link">
+      <a href="../../software/uptime-kuma/" class="md-nav__link">
         
   
   
@@ -4073,7 +4052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../avahi-daemon/" class="md-nav__link">
+      <a href="../../software/avahi-daemon/" class="md-nav__link">
         
   
   
@@ -4101,7 +4080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iperf3/" class="md-nav__link">
+      <a href="../../software/iperf3/" class="md-nav__link">
         
   
   
@@ -4129,7 +4108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iptraf-ng/" class="md-nav__link">
+      <a href="../../software/iptraf-ng/" class="md-nav__link">
         
   
   
@@ -4157,7 +4136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nload/" class="md-nav__link">
+      <a href="../../software/nload/" class="md-nav__link">
         
   
   
@@ -4243,7 +4222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../octoprint/" class="md-nav__link">
+      <a href="../../software/octoprint/" class="md-nav__link">
         
   
   
@@ -4329,7 +4308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wireguard/" class="md-nav__link">
+      <a href="../../software/wireguard/" class="md-nav__link">
         
   
   
@@ -4357,7 +4336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zerotier/" class="md-nav__link">
+      <a href="../../software/zerotier/" class="md-nav__link">
         
   
   
@@ -4443,7 +4422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ghost/" class="md-nav__link">
+      <a href="../../software/ghost/" class="md-nav__link">
         
   
   
@@ -4471,7 +4450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hedgedoc/" class="md-nav__link">
+      <a href="../../software/hedgedoc/" class="md-nav__link">
         
   
   
@@ -4499,7 +4478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swag/" class="md-nav__link">
+      <a href="../../software/swag/" class="md-nav__link">
         
   
   
@@ -5976,24 +5955,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -6011,7 +5995,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6029,7 +6013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -6107,7 +6091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/armbian-config/" class="md-nav__link">
+      <a href="../armbian-config/" class="md-nav__link">
         
   
   
@@ -6135,7 +6119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/run-a-mirror/" class="md-nav__link">
+      <a href="../run-a-mirror/" class="md-nav__link">
         
   
   
@@ -6221,7 +6205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/board-support-rules/" class="md-nav__link">
+      <a href="../board-support-rules/" class="md-nav__link">
         
   
   
@@ -6249,7 +6233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/board-maintainer/" class="md-nav__link">
+      <a href="../board-maintainer/" class="md-nav__link">
         
   
   
@@ -6282,6 +6266,8 @@
                 
   
   
+    
+  
   
   
     
@@ -6292,11 +6278,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" checked>
         
           
           <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
@@ -6317,7 +6303,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6332,10 +6318,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../contribute/storage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member storage
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -6351,6 +6364,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to connect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good to know
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6363,7 +6440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/datacenter/" class="md-nav__link">
+      <a href="../datacenter/" class="md-nav__link">
         
   
   
@@ -6399,7 +6476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/automation/" class="md-nav__link">
+      <a href="../automation/" class="md-nav__link">
         
   
   
@@ -6447,6 +6524,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to connect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good to know
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6463,7 +6592,7 @@
 
 
   
-    <a href="https://github.com/armbian/documentation/edit/main/docs/software/rsyncd-server.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/armbian/documentation/edit/main/docs/contribute/storage.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -6472,43 +6601,113 @@
     
       
     
-    <a href="https://github.com/armbian/documentation/raw/main/docs/software/rsyncd-server.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/armbian/documentation/raw/main/docs/contribute/storage.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="rsyncd-server">Rsyncd server<a class="headerlink" href="#rsyncd-server" title="Permanent link">&para;</a></h1>
-<!--- section image START from tools/include/images/RSD001.png --->
-<p><img alt="Rsyncd server" class="app-logo" src="/images/RSD001.png" /></p>
-<!--- section image STOP from tools/include/images/RSD001.png --->
-
-<p><span class="twemoji" title="Architecture"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v2H7a2 2 0 0 0-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3M8 9h3.5v1.5h-3v.75h2a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m4.5 0H14v2h1.5V9H17v6h-1.5v-2.5h-3m-4 .25v.75H10v-.75"/></svg></span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">x86-64</span> <span style="background-color:#e0e0e0; color:#333333; padding:3px 6px; border-radius:4px; font-size:90%;">aarch64</span> <span style="background-color:#fff3bf; color:#7c4d00; padding:3px 6px; border-radius:4px; font-size:90%;">armhf</span> <span style="background-color:#f3d9fa; color:#6a1b9a; padding:3px 6px; border-radius:4px; font-size:90%;">riscv64</span> · <span class="twemoji" title="Documentation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> <a href="https://forum.armbian.com/">Documentation</a></p>
-<p>Install from <strong><a href="/config/">armbian-config</a> → Software → Armbian → Rsyncd server</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CLI install</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>armbian-config --cmd RSD001
-</span></code></pre></div></td></tr></table></div>
-<p><strong>All <code>armbian-config</code> commands</strong></p>
+<h1 id="member-storage">Member storage<a class="headerlink" href="#member-storage" title="Permanent link">&para;</a></h1>
+<p>Members of the <a href="https://github.com/armbian">Armbian organization</a> on GitHub get
+public storage space at <a href="https://storage.armbian.com/">storage.armbian.com</a>. It
+is made for easy sharing — test images, packages, customized builds — without
+resorting to sketchy cloud or download services. SFTP is all it needs.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You are a member of the <a href="https://github.com/armbian">Armbian organization</a> on
+  GitHub. Not a member yet? See
+  <a href="../#roles-and-what-they-unlock">Roles and what they unlock</a>.</li>
+<li>You have an <a href="https://github.com/settings/keys">SSH key added to your GitHub account</a>.
+  DSA keys are not accepted.</li>
+<li>You have a tool that speaks
+  <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">SFTP</a>, such as
+  <code>sftp</code>, <code>scp</code> or a graphical client.</li>
+</ul>
+<h2 id="how-to-connect">How to connect<a class="headerlink" href="#how-to-connect" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Action</th>
-<th>Command</th>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Install</td>
-<td><code>armbian-config --api module_armbian_rsyncd install</code></td>
+<td style="text-align: left;">Host</td>
+<td style="text-align: left;"><code>storage.armbian.com</code></td>
 </tr>
 <tr>
-<td>Remove Armbian rsyncd server</td>
-<td><code>armbian-config --api module_armbian_rsyncd remove</code></td>
+<td style="text-align: left;">Port</td>
+<td style="text-align: left;"><code>23</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Protocol</td>
+<td style="text-align: left;">SFTP</td>
+</tr>
+<tr>
+<td style="text-align: left;">User</td>
+<td style="text-align: left;">your GitHub username (<strong>case sensitive</strong>)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p><em>Part of Armbian&rsquo;s <a href="/software/armbian/">Armbian infrastructure services</a> software.</em></p>
+<p>Authentication uses the SSH keys from your GitHub account, so connect with the
+matching private key:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sftp<span class="w"> </span>-i<span class="w"> </span>&lt;path-to-private-key&gt;<span class="w"> </span>-P<span class="w"> </span><span class="m">23</span><span class="w"> </span>&lt;GitHubUser&gt;@storage.armbian.com
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Use port 23, not 22</p>
+<p>Repeatedly failing to connect to port 22 will likely trigger fail2ban and
+lock you out.</p>
+</div>
+<p>A real session looks like this:</p>
+<div class="language-console highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash Session</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="gp">$ </span>sftp<span class="w"> </span>-i<span class="w"> </span>keys/evilolaf_github.key<span class="w"> </span>-P<span class="w"> </span><span class="m">23</span><span class="w"> </span>EvilOlaf@storage.armbian.com
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="go">Enter passphrase for key &#39;keys/evilolaf_github.key&#39;:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="go">Connected to storage.armbian.com.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="go">sftp&gt; cd EvilOlaf/</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="go">sftp&gt; dir</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="go">10M   asdf</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="go">sftp&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>To avoid typing the options every time, add a host entry to <code>~/.ssh/config</code>:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Host armbian-storage
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    HostName storage.armbian.com
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    Port 23
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    User &lt;GitHubUser&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    IdentityFile &lt;path-to-private-key&gt;
+</span></code></pre></div></td></tr></table></div>
+<p>After that, <code>sftp armbian-storage</code> is enough.</p>
+<h2 id="sharing-files">Sharing files<a class="headerlink" href="#sharing-files" title="Permanent link">&para;</a></h2>
+<p>Uploads go into the directory named after your GitHub username. Everything in
+it is publicly browsable and downloadable at:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>https://storage.armbian.com/&lt;GitHubUser&gt;/
+</span></code></pre></div></td></tr></table></div>
+<p>For example, the session above serves its files from
+<a href="https://storage.armbian.com/EvilOlaf/">https://storage.armbian.com/EvilOlaf/</a>. Hand out that link, or the link to a
+single file, and you are done.</p>
+<div class="admonition warning">
+<p class="admonition-title">Everything you upload is public</p>
+<p>There is no private space. Do not upload secrets, keys, credentials or
+anything else you would not post in the open.</p>
+</div>
+<h2 id="good-to-know">Good to know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The total quota across all users is currently 5T.</li>
+<li>Account creation can take up to 24 hours after you acquire organization
+  membership.</li>
+<li>If your organization membership is revoked, your account is locked
+  automatically.</li>
+</ul>
 
 
 
@@ -6528,58 +6727,6 @@
 
                 
 
-  
-  <div class="giscus-comments" style="margin-top: 2rem;">
-  <script src="https://giscus.app/client.js"
-        data-repo="armbian/documentation"
-        data-repo-id="MDEwOlJlcG9zaXRvcnk2MjM4NzMyMA=="
-        data-category="General"
-        data-category-id="DIC_kwDOA7f0eM4Co78a"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="0"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="noborder_light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-  </script>
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-    </div>
   
 
               </article>

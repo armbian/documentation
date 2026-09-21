@@ -18,7 +18,7 @@
         <link rel="prev" href="../armbian-config/">
       
       
-        <link rel="next" href="../datacenter/">
+        <link rel="next" href="../board-support-rules/">
       
       
         
@@ -6100,7 +6100,7 @@
   <span class="md-ellipsis">
     
   
-    armbian-config apps
+    Add armbian-config apps
   
 
     
@@ -6222,34 +6222,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../datacenter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Datacenter access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -6286,7 +6258,7 @@
   <span class="md-ellipsis">
     
   
-    Maintainers & board rules
+    Board maintainers
   
 
     
@@ -6302,7 +6274,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintainers & board rules
+    Board maintainers
   
 
           </label>
@@ -6400,7 +6372,7 @@
   <span class="md-ellipsis">
     
   
-    Project processes
+    Member access
   
 
     
@@ -6416,7 +6388,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project processes
+    Member access
   
 
           </label>
@@ -6429,14 +6401,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Automation (CI)
+    Member storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datacenter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datacenter access
   
 
     
@@ -6453,6 +6453,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release automation (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6562,9 +6590,9 @@
 <p>Armbian&rsquo;s downloads are served by a network of community mirrors behind a
 redirector. If you can host one, here is how. You can see the
 <a href="/status/mirrors/">current mirrors and how the system works</a> on the status page.</p>
-<h3 id="1-set-up-an-https-host">1. Set up an HTTP(S) host<a class="headerlink" href="#1-set-up-an-https-host" title="Permanent link">&para;</a></h3>
+<h2 id="1-set-up-an-https-host">1. Set up an HTTP(S) host<a class="headerlink" href="#1-set-up-an-https-host" title="Permanent link">&para;</a></h2>
 <p>The mirror must be reachable over HTTPS (plain HTTP is also accepted). Point a hostname at it before you start syncing.</p>
-<h3 id="2-sync-with-rsync">2. Sync with <code>rsync</code><a class="headerlink" href="#2-sync-with-rsync" title="Permanent link">&para;</a></h3>
+<h2 id="2-sync-with-rsync">2. Sync with <code>rsync</code><a class="headerlink" href="#2-sync-with-rsync" title="Permanent link">&para;</a></h2>
 <p>Pull the content you want to serve from one of the official modules, and run it from cron every <strong>2-4 hours</strong>:</p>
 <table>
 <thead>
@@ -6597,7 +6625,7 @@ redirector. If you can host one, here is how. You can see the
 </tr>
 </tbody>
 </table>
-<h3 id="3-tell-us-about-it">3. Tell us about it<a class="headerlink" href="#3-tell-us-about-it" title="Permanent link">&para;</a></h3>
+<h2 id="3-tell-us-about-it">3. Tell us about it<a class="headerlink" href="#3-tell-us-about-it" title="Permanent link">&para;</a></h2>
 <p>Once the server is running, reach out through the <a href="https://www.armbian.com/contact/">contact form</a> so we can add it to the official redirector.</p>
 <p>Thanks for helping keep Armbian&rsquo;s downloads fast and reliable worldwide.</p>
 
