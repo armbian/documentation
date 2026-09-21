@@ -191,31 +191,31 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 105.4 s | — |
-    | reboot | ✅ | 60.9 s | power-cycle · up 30 s |
-    | kernel-switch | ❌ | 123.3 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 61.8 s | power-cycle · up 30 s |
-    | hw-performance | ✅ | 43.2 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 62.1 °C · None MHz |
-    | dvfs | ➖ | 3.0 s | — |
-    | network-iperf | ✅ | 110.8 s | end0 ↑839/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 6.2 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ❌ | 125.1 s | branch=edge · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 62.6 s | power-cycle · up 31 s |
-    | hw-performance | ✅ | 42.7 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 62.7 °C · None MHz |
-    | dvfs | ➖ | 3.0 s | — |
-    | network-iperf | ✅ | 91.3 s | end0 ↑827/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ❌ | 125.2 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 77.7 s | power-cycle · up 30 s |
+    | upgrade | ⏭️ | 108.9 s | — |
+    | reboot | ✅ | 60.9 s | power-cycle · up 29 s |
+    | kernel-switch | ❌ | 125.5 s | branch=current · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 62.0 s | power-cycle · up 30 s |
+    | hw-performance | ✅ | 43.7 s | AES 358 · mem 2000 · disk W 20 / R 2 MB/s · 63.2 °C · None MHz |
+    | dvfs | ➖ | 2.9 s | — |
+    | network-iperf | ✅ | 105.3 s | end0 ↑838/↓939 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ❌ | 123.5 s | branch=edge · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 63.6 s | power-cycle · up 33 s |
+    | hw-performance | ✅ | 42.8 s | AES 357 · mem 2000 · disk W 21 / R 23 MB/s · 62.5 °C · None MHz |
+    | dvfs | ➖ | 2.9 s | — |
+    | network-iperf | ✅ | 91.7 s | end0 ↑817/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ❌ | 124.0 s | branch=current · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 63.5 s | power-cycle · up 32 s |
 
-    **Power** — min 1.70 W · avg 3.45 W · peak 4.50 W · 848 samples
+    **Power** — min 1.70 W · avg 3.45 W · peak 4.20 W · 833 samples
 
     ```mermaid
     xychart-beta
         title "Power — Cubie A5E 01"
-        x-axis "sample" 1 --> 848
-        y-axis "W" 1.5 --> 5.0
-        line [3.47, 3.47, 3.49, 3.45, 3.40, 2.61, 3.39, 3.60, 3.45, 3.50, 3.54, 3.43, 2.56, 3.63, 3.50, 3.53, 3.67, 3.60, 3.66, 3.47, 3.59, 3.53, 3.57, 3.56, 3.45, 2.82, 3.58, 3.60, 3.46, 3.62, 3.60, 3.63, 3.58, 3.60, 3.53, 3.58, 3.57, 3.42, 3.22, 2.99]
+        x-axis "sample" 1 --> 833
+        y-axis "W" 1.5 --> 4.5
+        line [3.45, 3.65, 3.62, 3.45, 3.41, 2.78, 3.40, 3.68, 3.50, 3.51, 3.45, 3.47, 2.80, 3.38, 3.64, 3.40, 3.61, 3.57, 3.55, 3.54, 3.54, 3.59, 3.52, 3.52, 3.52, 3.29, 2.80, 3.57, 3.43, 3.54, 3.65, 3.63, 3.60, 3.62, 3.55, 3.53, 3.54, 3.50, 3.03, 3.17]
     ```
 
 ??? failure "Cubietruck 01 — fail"
@@ -224,14 +224,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 133.4 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 61.4 s | warm · up 43 s |
-    | kernel-switch | ❌ | 92.1 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 60.7 s | warm · up 42 s |
-    | hw-performance | ✅ | 60.2 s | AES 19 · mem 1700 · disk W 13 / R 22 MB/s · 48.3 °C · 960 MHz |
-    | dvfs | ✅ | 56.0 s | ondemand · 528–960 MHz (peak 960) |
-    | network-iperf | ✅ | 100.5 s | end0 ↑719/↓813 (1GE) · wlan0 ↑21/↓24 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 11.7 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | upgrade | ✅ | 135.4 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 60.4 s | warm · up 42 s |
+    | kernel-switch | ❌ | 90.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
+    | reboot | ✅ | 60.8 s | warm · up 41 s |
+    | hw-performance | ✅ | 60.3 s | AES 18 · mem 1700 · disk W 13 / R 22 MB/s · 48.3 °C · 960 MHz |
+    | dvfs | ✅ | 56.4 s | ondemand · 528–960 MHz (peak 960) |
+    | network-iperf | ✅ | 95.7 s | end0 ↑706/↓860 (1GE) · wlan0 ↑21/↓24 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 11.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
 
 ??? failure "Cubox i2eX/i4 01 — fail"
 
@@ -267,14 +267,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 53.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 117.4 s | warm · up 103 s |
+    | upgrade | ✅ | 52.9 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 117.2 s | warm · up 102 s |
     | kernel-switch | ❌ | 34.2 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
-    | reboot | ✅ | 117.4 s | warm · up 102 s |
-    | hw-performance | ✅ | 36.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 55.6 °C · None MHz |
-    | dvfs | ➖ | 2.2 s | — |
-    | network-iperf | ✅ | 37.5 s | end1 ↑344/↓416 (1GE) Mbps |
-    | store-versions | ✅ | 5.5 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
+    | reboot | ✅ | 117.6 s | warm · up 102 s |
+    | hw-performance | ✅ | 36.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 56.1 °C · None MHz |
+    | dvfs | ➖ | 2.3 s | — |
+    | network-iperf | ✅ | 34.2 s | end1 ↑568/↓477 (1GE) Mbps |
+    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
 
 ??? failure "Inovato Quadra 01 — fail"
 
@@ -475,31 +475,31 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 33.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 134.6 s | power-cycle · up 110 s |
-    | kernel-switch | ✅ | 22.5 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 139.0 s | power-cycle · up 108 s |
-    | hw-performance | ✅ | 17.7 s | AES 1280 · mem 8000 · disk W 68 / R 77 MB/s · 42.5 °C · 2016 MHz |
-    | dvfs | ✅ | 18.5 s | ondemand · 2016–2016 MHz (peak 2208) |
-    | network-iperf | ✅ | 79.9 s | end0 ↑562/↓512 (1GE) · end1 ↑932/↓939 (1GE) · wlx44334c47dec3 ↑39/↓12 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 4.1 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | upgrade | ✅ | 31.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 132.3 s | power-cycle · up 109 s |
+    | kernel-switch | ✅ | 22.7 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 139.6 s | power-cycle · up 110 s |
+    | hw-performance | ✅ | 17.9 s | AES 1279 · mem 8100 · disk W 68 / R 77 MB/s · 42.5 °C · 2016 MHz |
+    | dvfs | ✅ | 18.8 s | ondemand · 2016–2016 MHz (peak 2208) |
+    | network-iperf | ✅ | 88.5 s | end0 ↑449/↓619 (1GE) · end1 ↑919/↓912 (1GE) · wlx44334c47dec3 ↑39/↓10 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
     | kernel-switch | ❌ | 14.1 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 131.1 s | power-cycle · up 108 s |
-    | hw-performance | ✅ | 18.2 s | AES 1271 · mem 7900 · disk W 68 / R 77 MB/s · 42.5 °C · 2016 MHz |
-    | dvfs | ✅ | 19.1 s | ondemand · 2016–2016 MHz (peak 2208) |
-    | network-iperf | ✅ | 79.4 s | end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) · wlx44334c47dec3 ↑35/↓12 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 3.9 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ✅ | 22.9 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 52.2 s | power-cycle · up 22 s |
+    | reboot | ✅ | 132.7 s | power-cycle · up 109 s |
+    | hw-performance | ✅ | 17.7 s | AES 1279 · mem 8000 · disk W 68 / R 77 MB/s · 42.5 °C · 2016 MHz |
+    | dvfs | ✅ | 19.6 s | ondemand · 2016–2016 MHz (peak 2208) |
+    | network-iperf | ✅ | 79.8 s | end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) · wlx44334c47dec3 ↑38/↓16 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.2 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 22.6 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 130.9 s | power-cycle · up 107 s |
 
-    **Power** — min 0.60 W · avg 4.24 W · peak 7.50 W · 642 samples
+    **Power** — min 0.60 W · avg 4.19 W · peak 7.30 W · 712 samples
 
     ```mermaid
     xychart-beta
         title "Power — NanoPi M5 01"
-        x-axis "sample" 1 --> 642
-        y-axis "W" 0.5 --> 8.0
-        line [4.72, 5.76, 5.24, 2.97, 4.68, 3.90, 3.90, 3.90, 3.99, 4.84, 4.24, 2.47, 4.16, 3.90, 3.96, 3.94, 3.90, 4.70, 5.67, 4.29, 4.26, 4.37, 4.18, 4.72, 3.17, 4.37, 4.08, 3.96, 3.93, 3.90, 4.52, 5.63, 4.51, 4.43, 4.54, 4.35, 4.47, 4.89, 2.37, 3.81]
+        x-axis "sample" 1 --> 712
+        y-axis "W" 0.5 --> 7.5
+        line [4.98, 5.84, 3.91, 4.23, 3.92, 3.90, 3.90, 3.92, 4.74, 2.52, 3.64, 4.17, 3.84, 3.90, 3.83, 4.58, 5.84, 4.20, 4.32, 4.24, 4.07, 4.52, 2.97, 4.34, 3.97, 3.94, 3.90, 4.24, 5.29, 4.65, 4.39, 4.39, 4.23, 4.76, 4.02, 3.49, 4.30, 3.90, 3.90, 3.93]
     ```
 
 ??? success "NanoPi M6 01 — pass"
@@ -710,14 +710,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 61.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 57.5 s | power-cycle · up 32 s |
-    | kernel-switch | ❌ | 41.9 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.6.155-current-odroidxu4 |
-    | reboot | ✅ | 58.6 s | power-cycle · up 33 s |
-    | hw-performance | ✅ | 39.2 s | AES 64 · mem 5600 · disk W 1 / R 54 MB/s · 60 °C · 1400 MHz |
-    | dvfs | ✅ | 30.1 s | ondemand · 600–1400 MHz (peak 2000) |
-    | network-iperf | ✅ | 36.9 s | enx001e0636e380 ↑923/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 6.5 s | 26.11.0-trunk.54 · 6.6.155-current-odroidxu4 |
+    | upgrade | ✅ | 64.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 56.6 s | power-cycle · up 31 s |
+    | kernel-switch | ❌ | 43.2 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.6.155-current-odroidxu4 |
+    | reboot | ✅ | 59.0 s | power-cycle · up 33 s |
+    | hw-performance | ✅ | 38.7 s | AES 71 · mem 4900 · disk W 2 / R 55 MB/s · 61 °C · 1400 MHz |
+    | dvfs | ✅ | 29.9 s | ondemand · 600–1400 MHz (peak 2000) |
+    | network-iperf | ✅ | 38.7 s | enx001e0636e380 ↑923/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 6.2 s | 26.11.0-trunk.54 · 6.6.155-current-odroidxu4 |
 
 ??? failure "Orange Pi 3 01 — fail"
 
@@ -1217,22 +1217,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
     | upgrade | ✅ | 95.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 55.9 s | power-cycle · up 25 s |
-    | kernel-switch | ❌ | 62.9 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 56.6 s | power-cycle · up 26 s |
-    | hw-performance | ✅ | 39.4 s | AES 25 · mem 1500 · disk W 2 / R 23 MB/s · 47.8 °C · 1296 MHz |
-    | dvfs | ✅ | 34.3 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 53.9 s | end0 ↑514/↓572 (1GE) Mbps |
-    | store-versions | ✅ | 7.3 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | reboot | ✅ | 56.2 s | power-cycle · up 24 s |
+    | kernel-switch | ❌ | 62.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
+    | reboot | ✅ | 55.3 s | power-cycle · up 24 s |
+    | hw-performance | ✅ | 39.6 s | AES 25 · mem 1500 · disk W 2 / R 23 MB/s · 48.4 °C · 1296 MHz |
+    | dvfs | ✅ | 34.4 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 41.3 s | end0 ↑628/↓523 (1GE) Mbps |
+    | store-versions | ✅ | 7.5 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
 
-    **Power** — min 1.00 W · avg 2.10 W · peak 3.10 W · 330 samples
+    **Power** — min 1.20 W · avg 2.11 W · peak 3.00 W · 319 samples
 
     ```mermaid
     xychart-beta
         title "Power — ZeroPi 01"
-        x-axis "sample" 1 --> 330
-        y-axis "W" 0.5 --> 3.5
-        line [1.56, 2.10, 2.20, 2.37, 2.16, 2.09, 2.05, 2.18, 2.12, 2.16, 2.02, 1.83, 1.62, 2.02, 2.75, 2.50, 2.34, 2.20, 2.11, 2.10, 2.10, 2.04, 1.55, 1.92, 1.89, 1.89, 2.16, 2.20, 2.24, 1.86, 2.02, 2.60, 2.63, 1.85, 1.99, 1.94, 2.24, 1.95, 2.06, 2.16]
+        x-axis "sample" 1 --> 319
+        y-axis "W" 1.0 --> 3.5
+        line [1.50, 2.05, 2.20, 2.12, 2.26, 2.10, 2.10, 2.05, 2.06, 2.25, 1.91, 1.61, 1.85, 1.82, 2.51, 2.29, 2.46, 2.26, 2.19, 2.10, 2.15, 2.20, 1.95, 1.69, 1.73, 1.98, 2.46, 2.56, 2.25, 2.02, 1.93, 2.05, 2.31, 2.44, 2.07, 2.19, 2.18, 2.34, 2.10, 2.04]
     ```
 
 
