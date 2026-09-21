@@ -26,11 +26,14 @@ project does not have to buy or rent, and queue time nobody has to wait through.
 |:--|:--|:--|
 | CPU | 16 cores | **32 cores** |
 | Memory | 64 GB | **128 GB** |
+| Storage | 512 GB | **1 TB** |
 
 Both `x86-64` and `arm64` are useful — a good part of the fleet is already ARM.
-Fast local storage matters more than capacity: kernel builds are I/O heavy, and
-the framework wants roughly 50 GB per concurrent build, so size the disk by how
-many runners the machine will host.
+
+A server of this size hosts **several runners at once**, and that is what the
+storage is for: each runner keeps its own sources, build cache and output. Speed
+matters as much as capacity — kernel builds are I/O heavy, so NVMe rather than
+spinning disk.
 
 ## What it will be used for
 
