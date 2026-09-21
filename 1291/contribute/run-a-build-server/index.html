@@ -6665,9 +6665,16 @@ picks up jobs from the build pipeline — compiling kernels, u-boot and rootfs, 
 assembling images. Nothing else runs on it.</p>
 <h2 id="how-to-offer-one">How to offer one<a class="headerlink" href="#how-to-offer-one" title="Permanent link">&para;</a></h2>
 <p>Reach out through the <a href="https://www.armbian.com/contact/">contact form</a> with the
-specs, the location and how you would prefer to give access. We will take it from
-there and help with the setup — <a href="../../software/gh-runners/">armbian-config installs the runner</a>
-in a few steps on an Armbian host.</p>
+specs and the location, and we will take it from there.</p>
+<p>If you would rather just hand over a ready machine, install a clean Debian or
+Ubuntu on it and authorise our key for <code>root</code>:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/root/.ssh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/igorpecovnik.keys<span class="w"> </span>&gt;&gt;<span class="w"> </span>/root/.ssh/authorized_keys
+</span></code></pre></div></td></tr></table></div>
+<p>That is the public half of the maintainer key, served by GitHub — compare it
+against <a href="https://github.com/igorpecovnik.keys">https://github.com/igorpecovnik.keys</a> in a browser if you want to check
+what you are adding. Tell us the address once it is in place and we will do the
+rest; on an Armbian host, <a href="../../software/gh-runners/">armbian-config installs the runner</a>
+in a few steps.</p>
 <p>Hosting is credited on the <a href="../../status/build-machinery/">build machinery page</a>
 alongside the rest of the fleet.</p>
 <p>Thanks for helping keep Armbian building.</p>
