@@ -41,10 +41,6 @@ The server joins the fleet as one or more **self-hosted GitHub runners** and
 picks up jobs from the build pipeline — compiling kernels, u-boot and rootfs, and
 assembling images. Nothing else runs on it.
 
-Capacity is used **on demand**, not around the clock. Much of the fleet sits on
-standby and powers up only when there is a queue, then spins back down — so a
-donated machine is not a machine burning power idle.
-
 ## How to offer one
 
 Reach out through the [contact form](https://www.armbian.com/contact/) with the
