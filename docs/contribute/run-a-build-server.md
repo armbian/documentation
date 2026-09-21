@@ -25,11 +25,15 @@ Every server someone hosts for us is capacity the project does not have to buy o
 | CPU | 16 cores | **32 cores** |
 | Memory | 64 GB | **128 GB** |
 | Storage | 512 GB | **1 TB** |
+| Upload | 100 Mbit/s | **1 Gbit/s** |
 
 Both `x86-64` and `arm64` are useful — a good part of the fleet is already ARM.
 
 A server of this size hosts **several runners at once**, and that is what the storage is for: each runner keeps its own sources, build cache and output.
 Speed matters as much as capacity — kernel builds are I/O heavy, so NVMe rather than spinning disk.
+
+Upload is the bandwidth that counts, not download.
+Every finished kernel, package and image is pushed off the machine to the artifact cache, and a slow uplink keeps a runner busy long after the build itself is done.
 
 ## What it will be used for
 
