@@ -25,7 +25,7 @@ Every server someone hosts for us is capacity the project does not have to buy o
 | CPU | 16 cores | **32 cores** |
 | Memory | 64 GB | **128 GB** |
 | Storage | 512 GB | **1 TB** |
-| Upload | 100 Mbit/s | **1 Gbit/s** |
+| Upload | 50 Mbit/s | **1 Gbit/s** |
 
 Both `x86-64` and `arm64` are useful — a good part of the fleet is already ARM.
 
