@@ -29,6 +29,10 @@ docs/                  Markdown sources (organised by topic)
   software/            Per-application SEO pages
   status/              Auto-generated status pages (mirrors, apt repo, etc.)
   releases/            Release notes and release model
+  getting-started/     Getting-started guides
+  user-guide/          End-user guides
+  community/           Community entry points (forums, chat, GitHub)
+  contribute/          Contributor guides
 overrides/             MkDocs Material theme overrides (main.html)
 tools/                 Python helpers (see tools/README.md)
 .github/workflows/     CI/automation
@@ -88,7 +92,7 @@ Then open <http://localhost:8000>. The site reloads automatically when you edit 
 
 ### One-shot offline preview
 
-The `serve-docs-local.sh` helper reproduces the CI "Pull from Armbian config" staging steps locally, generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, and serves the site:
+The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" staging steps locally, generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, and serves the site:
 
 ```bash
 ./serve-docs-local.sh           # generate + stage + serve at http://127.0.0.1:8000
