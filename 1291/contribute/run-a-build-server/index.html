@@ -6666,8 +6666,9 @@ assembling images. Nothing else runs on it.</p>
 <h2 id="how-to-offer-one">How to offer one<a class="headerlink" href="#how-to-offer-one" title="Permanent link">&para;</a></h2>
 <p>Reach out through the <a href="https://www.armbian.com/contact/">contact form</a> with the
 specs and the location, and we will take it from there.</p>
-<p>If you would rather just hand over a ready machine, install a clean Debian or
-Ubuntu on it and authorise our key for <code>root</code>:</p>
+<p>If you would rather just hand over a ready machine, install the <strong>latest Ubuntu
+LTS</strong> on it — that is what the rest of the fleet runs — and authorise our key for
+<code>root</code>:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/root/.ssh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/igorpecovnik.keys<span class="w"> </span>&gt;&gt;<span class="w"> </span>/root/.ssh/authorized_keys
 </span></code></pre></div></td></tr></table></div>
 <p>That is the public half of the maintainer key, served by GitHub — compare it
