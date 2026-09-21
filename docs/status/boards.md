@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **69** boards — **48** operational, **21** broken.
 
-Reconcile made: 2026-09-20 17:25 UTC
+Reconcile made: 2026-09-21 04:14 UTC
 
 **Operational**
 
@@ -28,8 +28,8 @@ Reconcile made: 2026-09-20 17:25 UTC
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
-| BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
+| Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
@@ -76,7 +76,7 @@ Reconcile made: 2026-09-20 17:25 UTC
 |:--|:--|:--|--:|:--|
 | Banana Pi M2Pro 01 | 10.0.50.44 | local | 1 GbE | Aruba 2540 (23) |
 | Banana Pi R2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (16) |
-| Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
+| BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
