@@ -6615,18 +6615,15 @@
 
 
 <h1 id="run-a-build-server">Run a build server<a class="headerlink" href="#run-a-build-server" title="Permanent link">&para;</a></h1>
-<p>Every Armbian image, kernel and u-boot package is compiled on the project&rsquo;s build
-fleet. You can see <a href="../../status/build-machinery/">what it looks like today</a> —
-servers, threads, memory and how many runners each one hosts.</p>
-<p>Most of that fleet is <strong>Armbian&rsquo;s own hardware and rented capacity, paid for out
-of project funds</strong>, with a part contributed by companies and individuals who host
-a machine for us.</p>
-<p><strong>It is not enough.</strong> Demand grows with every board Armbian supports, and the
-project does not have the resources to match what the community needs — the build
-queue is what decides how quickly a fix reaches users, and it is longer than it
-should be.</p>
-<p>So we are asking for help. Every server someone hosts for us is capacity the
-project does not have to buy or rent, and queue time nobody has to wait through.</p>
+<p><img alt="An Armbian build server" src="../../images/build-server.png" /></p>
+<p>Every Armbian image, kernel and u-boot package is compiled on the project&rsquo;s build fleet.
+You can see <a href="../../status/build-machinery/">what it looks like today</a> — servers, threads, memory and how many runners each one hosts.</p>
+<p>Most of that fleet is <strong>Armbian&rsquo;s own hardware and rented capacity, paid for out of project funds</strong>, with a part contributed by companies and individuals who host a machine for us.</p>
+<p><strong>It is not enough.</strong>
+Demand grows with every board Armbian supports, and the project does not have the resources to match what the community needs.
+The build queue is what decides how quickly a fix reaches users, and it is longer than it should be.</p>
+<p>So we are asking for help.
+Every server someone hosts for us is capacity the project does not have to buy or rent, and queue time nobody has to wait through.</p>
 <h2 id="what-we-are-looking-for">What we are looking for<a class="headerlink" href="#what-we-are-looking-for" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -6655,29 +6652,19 @@ project does not have to buy or rent, and queue time nobody has to wait through.
 </tbody>
 </table>
 <p>Both <code>x86-64</code> and <code>arm64</code> are useful — a good part of the fleet is already ARM.</p>
-<p>A server of this size hosts <strong>several runners at once</strong>, and that is what the
-storage is for: each runner keeps its own sources, build cache and output. Speed
-matters as much as capacity — kernel builds are I/O heavy, so NVMe rather than
-spinning disk.</p>
+<p>A server of this size hosts <strong>several runners at once</strong>, and that is what the storage is for: each runner keeps its own sources, build cache and output.
+Speed matters as much as capacity — kernel builds are I/O heavy, so NVMe rather than spinning disk.</p>
 <h2 id="what-it-will-be-used-for">What it will be used for<a class="headerlink" href="#what-it-will-be-used-for" title="Permanent link">&para;</a></h2>
-<p>The server joins the fleet as one or more <strong>self-hosted GitHub runners</strong> and
-picks up jobs from the build pipeline — compiling kernels, u-boot and rootfs, and
-assembling images. Nothing else runs on it.</p>
+<p>The server joins the fleet as one or more <strong>self-hosted GitHub runners</strong> and picks up jobs from the build pipeline — compiling kernels, u-boot and rootfs, and assembling images.
+Nothing else runs on it.</p>
 <h2 id="how-to-offer-one">How to offer one<a class="headerlink" href="#how-to-offer-one" title="Permanent link">&para;</a></h2>
-<p>Reach out through the <a href="https://www.armbian.com/contact/">contact form</a> with the
-specs and the location, and we will take it from there.</p>
-<p>If you would rather just hand over a ready machine, install the <strong>latest Ubuntu
-LTS</strong> on it — that is what the rest of the fleet runs — and authorise our key for
-<code>root</code>:</p>
+<p>Reach out through the <a href="https://www.armbian.com/contact/">contact form</a> with the specs and the location, and we will take it from there.</p>
+<p>If you would rather just hand over a ready machine, install the <strong>latest Ubuntu LTS</strong> on it — that is what the rest of the fleet runs — and authorise our key for <code>root</code>:</p>
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/root/.ssh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/igorpecovnik.keys<span class="w"> </span>&gt;&gt;<span class="w"> </span>/root/.ssh/authorized_keys
 </span></code></pre></div></td></tr></table></div>
-<p>That is the public half of the maintainer key, served by GitHub — compare it
-against <a href="https://github.com/igorpecovnik.keys">https://github.com/igorpecovnik.keys</a> in a browser if you want to check
-what you are adding. Tell us the address once it is in place and we will do the
-rest; on an Armbian host, <a href="../../software/gh-runners/">armbian-config installs the runner</a>
-in a few steps.</p>
-<p>Hosting is credited on the <a href="../../status/build-machinery/">build machinery page</a>
-alongside the rest of the fleet.</p>
+<p>That is the public half of the maintainer key, served by GitHub — compare it against <a href="https://github.com/igorpecovnik.keys">https://github.com/igorpecovnik.keys</a> in a browser if you want to check what you are adding.
+Tell us the address once it is in place and we will do the rest; on an Armbian host, <a href="../../software/gh-runners/">armbian-config installs the runner</a> in a few steps.</p>
+<p>Hosting is credited on the <a href="../../status/build-machinery/">build machinery page</a> alongside the rest of the fleet.</p>
 <p>Thanks for helping keep Armbian building.</p>
 
 
