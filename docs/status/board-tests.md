@@ -1195,27 +1195,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "UEFI x86 01 — pass"
 
-    `uefi-x86` · **inplace** · image `26.11.0-trunk.51` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `uefi-x86` · **inplace** · image `26.11.0-trunk.54` · 14 ✅ · 2 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 443.0 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 90.4 s | power-cycle · up 61 s |
+    | upgrade | ✅ | 50.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
+    | reboot | ✅ | 94.0 s | power-cycle · up 60 s |
     | kernel-switch | ✅ | 34.4 s | branch=current · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-x86 · kernel_before=6.18.52-current-x86 |
-    | reboot | ✅ | 92.1 s | power-cycle · up 59 s |
-    | hw-performance | ✅ | 25.8 s | AES 237 · mem 6000 · disk W 22 / R 107 MB/s · 61 °C · 1920 MHz |
-    | dvfs | ❌ | 23.1 s | schedutil · 480–1920 MHz (peak 1680) |
-    | network-iperf | ✅ | 63.3 s | enp1s0 ↑922/↓941 (1GE) · wlan0 ↑27/↓23 (Wi-Fi 5) Mbps |
+    | reboot | ✅ | 100.4 s | power-cycle · up 58 s |
+    | hw-performance | ✅ | 24.9 s | AES 237 · mem 6400 · disk W 25 / R 108 MB/s · 57 °C · 1920 MHz |
+    | dvfs | ❌ | 23.3 s | schedutil · 480–1920 MHz (peak 1690) |
+    | network-iperf | ✅ | 62.9 s | enp1s0 ↑919/↓941 (1GE) · wlan0 ↑25/↓22 (Wi-Fi 5) Mbps |
     | store-versions | ✅ | 5.2 s | 26.11.0-trunk.54 · 6.18.52-current-x86 |
+    | kernel-switch | ✅ | 176.9 s | branch=edge · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-x86 · kernel_before=6.18.52-current-x86 |
+    | reboot | ✅ | 93.6 s | power-cycle · up 60 s |
+    | hw-performance | ✅ | 25.0 s | AES 237 · mem 4900 · disk W 26 / R 112 MB/s · 57 °C · 1920 MHz |
+    | dvfs | ❌ | 23.9 s | schedutil · 480–1920 MHz (peak 1680) |
+    | network-iperf | ✅ | 61.7 s | enp1s0 ↑920/↓941 (1GE) · wlan0 ↑26/↓30 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.3 s | 26.11.0-trunk.54 · 7.2.6-edge-x86 |
+    | kernel-switch | ✅ | 185.4 s | branch=current · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-x86 · kernel_before=7.2.6-edge-x86 |
+    | reboot | ✅ | 98.6 s | power-cycle · up 57 s |
 
-    **Power** — min 2.60 W · avg 4.02 W · peak 8.00 W · 625 samples
+    **Power** — min 1.90 W · avg 3.99 W · peak 7.60 W · 839 samples
 
     ```mermaid
     xychart-beta
         title "Power — UEFI x86 01"
-        x-axis "sample" 1 --> 625
-        y-axis "W" 2.5 --> 8.5
-        line [3.93, 3.79, 3.93, 4.18, 4.01, 4.19, 4.31, 4.10, 4.22, 4.34, 4.43, 3.19, 4.29, 4.03, 4.13, 3.09, 3.81, 3.71, 3.69, 3.94, 4.30, 4.23, 4.11, 3.26, 4.34, 3.98, 4.84, 4.22, 4.08, 3.01, 4.13, 3.93, 4.85, 5.06, 3.78, 4.49, 3.72, 4.39, 3.68, 3.12]
+        x-axis "sample" 1 --> 839
+        y-axis "W" 1.5 --> 8.0
+        line [4.53, 4.00, 2.97, 4.03, 4.93, 3.80, 3.55, 3.41, 3.85, 5.21, 3.40, 4.09, 4.15, 3.80, 3.54, 4.00, 4.10, 3.80, 4.24, 4.19, 4.27, 3.88, 3.88, 4.09, 4.44, 3.06, 4.33, 4.20, 3.38, 3.85, 3.93, 4.31, 3.68, 4.15, 4.15, 3.78, 4.04, 3.56, 4.03, 5.11]
     ```
 
 ??? failure "ZeroPi 01 — fail"
