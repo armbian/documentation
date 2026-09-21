@@ -399,6 +399,7 @@ nav:
         - 'Ways to contribute' :
             - 'Add armbian-config apps' : 'contribute/armbian-config.md'
             - 'Run a mirror' : 'contribute/run-a-mirror.md'
+            - 'Run a build server' : 'contribute/run-a-build-server.md'
         - 'Board maintainers' :
             - 'Board Support Rules' : 'contribute/board-support-rules.md'
             - 'Become a board maintainer' : 'contribute/board-maintainer.md'
