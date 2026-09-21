@@ -4,12 +4,21 @@ description: "Armbian is looking for build servers to host CI runners — 16 cor
 ---
 # Run a build server
 
-Every Armbian image, kernel and u-boot package is compiled on hardware donated by
-the community. You can see [what that fleet looks like today](../status/build-machinery.md) —
+Every Armbian image, kernel and u-boot package is compiled on the project's build
+fleet. You can see [what it looks like today](../status/build-machinery.md) —
 servers, threads, memory and how many runners each one hosts.
 
-**We are looking for more of it.** Build demand grows with every board Armbian
-supports, and the queue is the limit on how quickly a fix reaches users.
+Most of that fleet is **Armbian's own hardware and rented capacity, paid for out
+of project funds**, with a part contributed by companies and individuals who host
+a machine for us.
+
+**It is not enough.** Demand grows with every board Armbian supports, and the
+project does not have the resources to match what the community needs — the build
+queue is what decides how quickly a fix reaches users, and it is longer than it
+should be.
+
+So we are asking for help. Every server someone hosts for us is capacity the
+project does not have to buy or rent, and queue time nobody has to wait through.
 
 ## What we are looking for
 
