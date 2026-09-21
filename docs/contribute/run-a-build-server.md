@@ -38,9 +38,7 @@ Nothing else runs on it.
 
 ## How to offer one
 
-Reach out through the [contact form](https://www.armbian.com/contact/) with the specs and the location, and we will take it from there.
-
-If you would rather just hand over a ready machine, install the **latest Ubuntu LTS** on it — that is what the rest of the fleet runs — and authorise our key for `root`:
+Install the **latest Ubuntu LTS** on the machine — that is what the rest of the fleet runs — and authorise our key for `root`:
 
 ```bash
 mkdir -p /root/.ssh
@@ -49,7 +47,8 @@ chmod 700 /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 ```
 
-Tell us the address once it is in place and we will do the rest; on an Armbian host, [armbian-config installs the runner](../software/gh-runners.md) in a few steps.
+Then reach out through the [contact form](https://www.armbian.com/contact/) with the address, the specs and the location.
+We will take it from there.
 
 Hosting is credited on the [build machinery page](../status/build-machinery.md) alongside the rest of the fleet.
 
