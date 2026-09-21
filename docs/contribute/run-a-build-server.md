@@ -43,7 +43,10 @@ Reach out through the [contact form](https://www.armbian.com/contact/) with the 
 If you would rather just hand over a ready machine, install the **latest Ubuntu LTS** on it — that is what the rest of the fleet runs — and authorise our key for `root`:
 
 ```bash
-mkdir -p /root/.ssh && curl -fsSL https://github.com/igorpecovnik.keys >> /root/.ssh/authorized_keys
+mkdir -p /root/.ssh
+curl -fsSL https://github.com/igorpecovnik.keys >> /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
 ```
 
 That is the public half of the maintainer key, served by GitHub — compare it against <https://github.com/igorpecovnik.keys> in a browser if you want to check what you are adding.
