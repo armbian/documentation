@@ -44,9 +44,20 @@ assembling images. Nothing else runs on it.
 ## How to offer one
 
 Reach out through the [contact form](https://www.armbian.com/contact/) with the
-specs, the location and how you would prefer to give access. We will take it from
-there and help with the setup — [armbian-config installs the runner](../software/gh-runners.md)
-in a few steps on an Armbian host.
+specs and the location, and we will take it from there.
+
+If you would rather just hand over a ready machine, install a clean Debian or
+Ubuntu on it and authorise our key for `root`:
+
+```bash
+mkdir -p /root/.ssh && curl -fsSL https://github.com/igorpecovnik.keys >> /root/.ssh/authorized_keys
+```
+
+That is the public half of the maintainer key, served by GitHub — compare it
+against <https://github.com/igorpecovnik.keys> in a browser if you want to check
+what you are adding. Tell us the address once it is in place and we will do the
+rest; on an Armbian host, [armbian-config installs the runner](../software/gh-runners.md)
+in a few steps.
 
 Hosting is credited on the [build machinery page](../status/build-machinery.md)
 alongside the rest of the fleet.
