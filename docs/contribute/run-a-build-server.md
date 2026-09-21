@@ -49,7 +49,6 @@ chmod 700 /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 ```
 
-That is the public half of the maintainer key, served by GitHub — compare it against <https://github.com/igorpecovnik.keys> in a browser if you want to check what you are adding.
 Tell us the address once it is in place and we will do the rest; on an Armbian host, [armbian-config installs the runner](../software/gh-runners.md) in a few steps.
 
 Hosting is credited on the [build machinery page](../status/build-machinery.md) alongside the rest of the fleet.
