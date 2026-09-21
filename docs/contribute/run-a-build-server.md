@@ -46,8 +46,9 @@ assembling images. Nothing else runs on it.
 Reach out through the [contact form](https://www.armbian.com/contact/) with the
 specs and the location, and we will take it from there.
 
-If you would rather just hand over a ready machine, install a clean Debian or
-Ubuntu on it and authorise our key for `root`:
+If you would rather just hand over a ready machine, install the **latest Ubuntu
+LTS** on it — that is what the rest of the fleet runs — and authorise our key for
+`root`:
 
 ```bash
 mkdir -p /root/.ssh && curl -fsSL https://github.com/igorpecovnik.keys >> /root/.ssh/authorized_keys
