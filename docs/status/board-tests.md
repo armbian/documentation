@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **41** passed, **24** failed. Each card is the board's most recent test.
+**64** boards — **40** passed, **24** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -360,21 +360,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
         y-axis "W" 0.5 --> 8.5
         line [3.20, 3.85, 4.13, 4.23, 4.00, 4.31, 4.14, 4.14, 4.20, 4.04, 3.90, 3.86, 4.10, 4.08, 3.38, 2.85, 2.74, 3.68, 4.25, 4.27, 4.16, 3.50, 3.47, 3.75, 4.59, 4.41, 4.10, 4.94, 5.27, 3.80, 3.73, 3.88, 3.91, 3.47, 3.60, 3.65, 3.51, 4.26, 4.00, 3.63]
     ```
-
-??? success "Le potato 01 — pass"
-
-    `lepotato` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | upgrade | ✅ | 210.3 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-    | reboot | ✅ | 41.6 s | warm · up 24 s |
-    | hw-performance | ✅ | 32.5 s | AES 656 · mem 3600 · disk W 17 / R 2 MB/s · 50 °C · 1512 MHz |
-    | dvfs | ✅ | 23.2 s | ondemand · 500–1512 MHz (peak 1512) |
-    | network-iperf | ✅ | 50.4 s | end0 ↑94/↓94 (10/100ME) Mbps |
-    | restore-stable | ✅ | 157.4 s | stable |
-    | reboot | ✅ | 40.3 s | warm · up 24 s |
-    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
 
 ??? success "Mekotronics R58HD 01 — pass"
 
