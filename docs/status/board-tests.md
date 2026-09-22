@@ -575,18 +575,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi Neo 2 Black 01 — pass"
 
-    `nanopineo2black` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopineo2black` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 214.1 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 47.2 s | power-cycle · up 21 s |
-    | kernel-switch | ✅ | 45.5 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.18.52-current-sunxi64 |
-    | reboot | ✅ | 48.9 s | power-cycle · up 19 s |
-    | hw-performance | ✅ | 32.3 s | AES 575 · mem 3300 · disk W 18 / R 23 MB/s · 68.9 °C · 1368 MHz |
-    | dvfs | ✅ | 23.6 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 34.9 s | end0 ↑796/↓923 (1GE) Mbps |
-    | store-versions | ✅ | 5.4 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | upgrade | ✅ | 80.5 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 46.2 s | power-cycle · up 20 s |
+    | kernel-switch | ✅ | 45.5 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+    | reboot | ✅ | 364.1 s | power-cycle · 3/4 boots · up 22 s |
+    | hw-performance | ✅ | 30.6 s | AES 638 · mem 3500 · disk W 19 / R 0 MB/s · 63.5 °C · 1368 MHz |
+    | dvfs | ✅ | 23.4 s | ondemand · 480–1368 MHz (peak 1368) |
+    | network-iperf | ✅ | 34.7 s | end0 ↑847/↓879 (1GE) Mbps |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi64 |
+    | kernel-switch | ✅ | 122.3 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+    | reboot | ✅ | 354.4 s | power-cycle · 3/4 boots · up 21 s |
+    | hw-performance | ✅ | 31.0 s | AES 637 · mem 3500 · disk W 18 / R 0 MB/s · 64.2 °C · 1368 MHz |
+    | dvfs | ✅ | 24.0 s | ondemand · 480–1368 MHz (peak 1368) |
+    | network-iperf | ✅ | 34.9 s | end0 ↑874/↓903 (1GE) Mbps |
+    | store-versions | ✅ | 5.3 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
+    | kernel-switch | ✅ | 124.2 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
+    | reboot | ✅ | 49.1 s | power-cycle · up 21 s |
 
 ??? success "NanoPi Neo 3 01 — pass"
 
