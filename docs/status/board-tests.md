@@ -146,7 +146,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | upgrade | ⏭️ | 17.4 s | — |
     | reboot | ✅ | 60.7 s | power-cycle · up 31 s |
     | hw-performance | ✅ | 26.7 s | AES 935 · mem 3100 · disk W 78 / R 91 MB/s · 61.5 °C · None MHz |
-    | dvfs | ➖ | 2.9 s | — |
+    | dvfs | ➖ | 2.9 s | no cpufreq |
     | network-iperf | ✅ | 113.2 s | eth0 ↑938/↓919 (1GE) · eth1 ↑938/↓908 (1GE) · wlan0 ↑27/↓31 (Wi-Fi 6) · wlan1 ↑453/↓381 (Wi-Fi 6) Mbps |
     | store-versions | ✅ | 4.7 s | 26.11.0-trunk · 6.18.52-current-filogic-mt7986 |
 
@@ -202,7 +202,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ❌ | 39.7 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
     | reboot | ✅ | 37.5 s | warm · up 20 s |
     | hw-performance | ✅ | 41.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 63.2 °C · None MHz |
-    | dvfs | ➖ | 2.9 s | — |
+    | dvfs | ➖ | 2.9 s | no cpufreq |
     | network-iperf | ✅ | 38.5 s | lan2 ↑936/↓936 Mbps |
     | store-versions | ✅ | 6.0 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
 
@@ -217,13 +217,13 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ❌ | 119.2 s | branch=current · phase=install · dpkg_state=absent |
     | reboot | ✅ | 180.2 s | power-cycle · 4/4 boots · up 32 s |
     | hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 1 / R 23 MB/s · 65.5 °C · None MHz |
-    | dvfs | ➖ | 2.9 s | — |
+    | dvfs | ➖ | 2.9 s | no cpufreq |
     | network-iperf | ✅ | 96.9 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
     | store-versions | ✅ | 6.1 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
     | kernel-switch | ❌ | 119.3 s | branch=edge · phase=install · dpkg_state=absent |
     | reboot | ✅ | 179.3 s | power-cycle · 4/4 boots · up 32 s |
     | hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 65.2 °C · None MHz |
-    | dvfs | ➖ | 3.3 s | — |
+    | dvfs | ➖ | 3.3 s | no cpufreq |
     | network-iperf | ✅ | 93.5 s | end0 ↑820/↓941 (1GE) · end1 ↑939/↓938 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
     | store-versions | ✅ | 6.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
     | kernel-switch | ❌ | 118.8 s | branch=current · phase=install · dpkg_state=absent |
@@ -293,7 +293,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ❌ | 34.2 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
     | reboot | ✅ | 117.6 s | warm · up 102 s |
     | hw-performance | ✅ | 36.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 56.1 °C · None MHz |
-    | dvfs | ➖ | 2.3 s | — |
+    | dvfs | ➖ | 2.3 s | no cpufreq |
     | network-iperf | ✅ | 34.2 s | end1 ↑568/↓477 (1GE) Mbps |
     | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
 
@@ -306,7 +306,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | upgrade | ✅ | 241.7 s | nightly · 26.8.0-trunk.314 → 26.8.0-trunk.314 |
     | reboot | ❌ | 213.8 s | power-cycle |
     | hw-performance | ✅ | 154.8 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-    | dvfs | ➖ | 7.2 s | — |
+    | dvfs | ➖ | 7.2 s | no cpufreq |
     | network-iperf | ⏭️ | 19.6 s | no iperf3 on board |
     | restore-stable | ❌ | 7.1 s | stable |
     | reboot | ❌ | 233.6 s | power-cycle |
@@ -431,7 +431,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ✅ | 69.4 s | branch=edge · family=s5p6818 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-s5p6818 · kernel_before=7.2.6-edge-s5p6818 |
     | reboot | ✅ | 52.6 s | power-cycle · up 17 s |
     | hw-performance | ✅ | 43.1 s | AES 373 · mem 2000 · disk W 20 / R 22 MB/s · 68 °C · None MHz |
-    | dvfs | ➖ | 2.9 s | — |
+    | dvfs | ➖ | 2.9 s | no cpufreq |
     | network-iperf | ✅ | 43.1 s | eth0 ↑821/↓833 (1GE) Mbps |
     | store-versions | ✅ | 6.1 s | 26.11.0-trunk.54 · 7.2.6-edge-s5p6818 |
 
@@ -838,7 +838,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
     | hw-performance | ✅ | 45.2 s | AES 377 · mem 2100 · disk W 21 / R 23 MB/s · 40.5 °C · None MHz |
-    | dvfs | ➖ | 3.7 s | — |
+    | dvfs | ➖ | 3.7 s | no cpufreq |
     | network-iperf | ✅ | 167.5 s | end0 ↑879/↓886 (1GE) · wlan0 ↑22/↓21 (Wi-Fi 4) Mbps |
     | store-versions | ✅ | 6.1 s | 26.11.0-trunk.51 · 6.18.52-current-sunxi64 |
 
