@@ -573,35 +573,41 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi R6S 01 — pass"
 
-    `nanopi-r6s` · **inplace** · image `26.11.0-trunk.51` · 16 ✅ · 0 ❌ · 0 ⏭️
+    `nanopi-r6s` · **inplace** · image `26.11.0-trunk.56` · 21 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 72.7 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 38.2 s | power-cycle · up 14 s |
-    | kernel-switch | ✅ | 18.8 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 35.1 s | power-cycle · up 11 s |
-    | hw-performance | ✅ | 14.3 s | AES 1280 · mem 15300 · disk W 213 / R 274 MB/s · 37.9 °C · 1800 MHz |
-    | dvfs | ✅ | 17.0 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 29.1 s | lan2 ↑939/↓939 (1GE) Mbps |
-    | store-versions | ✅ | 4.2 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ✅ | 52.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 33.8 s | power-cycle · up 10 s |
-    | hw-performance | ✅ | 15.5 s | AES 1278 · mem 10300 · disk W 139 / R 155 MB/s · 38.8 °C · 1800 MHz |
-    | dvfs | ✅ | 15.3 s | ondemand · 408–1800 MHz (peak 2400) |
-    | network-iperf | ✅ | 28.6 s | lan2 ↑938/↓926 (1GE) Mbps |
-    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
-    | kernel-switch | ✅ | 46.7 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 33.7 s | power-cycle · up 10 s |
+    | upgrade | ⏭️ | 7.6 s | — |
+    | reboot | ✅ | 39.1 s | power-cycle · up 16 s |
+    | kernel-switch | ✅ | 39.0 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 103.8 s | power-cycle · 4/4 boots · up 12 s |
+    | hw-performance | ✅ | 14.5 s | AES 1273 · mem 14000 · disk W 209 / R 274 MB/s · 37 °C · 1800 MHz |
+    | dvfs | ✅ | 16.5 s | ondemand · 1800–1800 MHz (peak 2256) |
+    | network-iperf | ✅ | 28.5 s | lan2 ↑939/↓938 (1GE) Mbps |
+    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.56 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 48.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 94.8 s | power-cycle · 4/4 boots · up 12 s |
+    | hw-performance | ✅ | 15.1 s | AES 1278 · mem 10100 · disk W 143 / R 140 MB/s · 38.8 °C · 1800 MHz |
+    | dvfs | ✅ | 15.8 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 28.0 s | lan2 ↑939/↓939 (1GE) Mbps |
+    | store-versions | ✅ | 3.9 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 42.0 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 98.7 s | power-cycle · 4/4 boots · up 18 s |
+    | hw-performance | ✅ | 15.1 s | AES 1277 · mem 8200 · disk W 150 / R 148 MB/s · 39.8 °C · 1800 MHz |
+    | dvfs | ✅ | 15.0 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 30.1 s | lan2 ↑938/↓937 (1GE) Mbps |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 36.9 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 46.6 s | power-cycle · up 15 s |
 
-    **Power** — min 2.20 W · avg 4.34 W · peak 9.30 W · 357 samples
+    **Power** — min 0.70 W · avg 4.45 W · peak 10.00 W · 602 samples
 
     ```mermaid
     xychart-beta
         title "Power — NanoPi R6S 01"
-        x-axis "sample" 1 --> 357
-        y-axis "W" 2.0 --> 9.5
-        line [3.02, 4.39, 4.72, 4.70, 4.36, 4.42, 4.66, 3.59, 3.77, 4.50, 4.70, 4.27, 2.86, 3.15, 4.66, 3.88, 6.66, 3.51, 3.51, 3.63, 3.27, 3.82, 4.32, 4.56, 4.53, 3.11, 3.49, 5.48, 4.63, 6.63, 4.86, 4.17, 4.31, 4.03, 4.94, 5.09, 5.29, 4.89, 3.93, 4.81]
+        x-axis "sample" 1 --> 602
+        y-axis "W" 0.5 --> 10.5
+        line [4.16, 3.67, 5.03, 5.18, 5.65, 3.99, 3.47, 3.70, 4.09, 3.69, 4.01, 5.66, 3.85, 3.62, 4.29, 4.49, 4.10, 4.57, 3.85, 4.76, 4.02, 5.12, 5.81, 4.23, 4.33, 5.02, 5.29, 4.11, 3.85, 4.93, 5.15, 4.26, 4.83, 6.09, 4.39, 4.44, 4.99, 5.64, 2.51, 3.06]
     ```
 
 ??? failure "NanoPi R76S 01 — fail"
