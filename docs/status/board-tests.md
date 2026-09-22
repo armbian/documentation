@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **46** passed, **18** failed. Each card is the board's most recent test.
+**64** boards — **47** passed, **17** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -247,20 +247,28 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
         line [3.39, 3.56, 3.61, 3.58, 3.57, 3.54, 3.76, 4.10, 3.64, 3.24, 3.31, 3.63, 3.55, 3.52, 3.27, 3.44, 3.61, 3.52, 2.90, 3.63, 3.55, 3.73, 3.78, 3.61, 3.62, 3.58, 3.59, 3.21, 3.34, 3.21, 3.08, 3.66, 3.58, 3.65, 3.63, 3.64, 3.58, 3.59, 3.54, 2.81]
     ```
 
-??? failure "Cubietruck 01 — fail"
+??? success "Cubietruck 01 — pass"
 
-    `cubietruck` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `cubietruck` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 135.4 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 60.4 s | warm · up 42 s |
-    | kernel-switch | ❌ | 90.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 60.8 s | warm · up 41 s |
-    | hw-performance | ✅ | 60.3 s | AES 18 · mem 1700 · disk W 13 / R 22 MB/s · 48.3 °C · 960 MHz |
+    | upgrade | ✅ | 134.5 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 66.7 s | warm · up 41 s |
+    | kernel-switch | ✅ | 92.9 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=6.18.53-current-sunxi |
+    | reboot | ✅ | 244.6 s | warm · 4/4 boots · up 43 s |
+    | hw-performance | ✅ | 59.9 s | AES 19 · mem 1700 · disk W 14 / R 21 MB/s · 49.4 °C · 960 MHz |
     | dvfs | ✅ | 56.4 s | ondemand · 528–960 MHz (peak 960) |
-    | network-iperf | ✅ | 95.7 s | end0 ↑706/↓860 (1GE) · wlan0 ↑21/↓24 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 11.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | network-iperf | ✅ | 119.1 s | end0 ↑731/↓778 (1GE) · wlan0 ↑17/↓21 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 12.0 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi |
+    | kernel-switch | ✅ | 254.5 s | branch=edge · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi · kernel_before=6.18.53-current-sunxi |
+    | reboot | ✅ | 248.6 s | warm · 4/4 boots · up 43 s |
+    | hw-performance | ✅ | 61.1 s | AES 19 · mem 1700 · disk W 13 / R 22 MB/s · 49.7 °C · 960 MHz |
+    | dvfs | ✅ | 62.7 s | ondemand · 528–960 MHz (peak 960) |
+    | network-iperf | ✅ | 102.6 s | end0 ↑772/↓837 (1GE) · wlan0 ↑20/↓19 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 12.1 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi |
+    | kernel-switch | ✅ | 246.2 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=7.2.7-edge-sunxi |
+    | reboot | ✅ | 69.1 s | warm · up 44 s |
 
 ??? failure "Cubox i2eX/i4 01 — fail"
 
