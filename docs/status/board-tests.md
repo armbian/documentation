@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **41** passed, **23** failed. Each card is the board's most recent test.
+**64** boards — **42** passed, **22** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -98,43 +98,43 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | network-iperf | ✅ | 103.1 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑30/↓24 (Wi-Fi 4) Mbps |
     | store-versions | ✅ | 5.3 s | 26.11.0-trunk.54 · 6.18.52-current-meson64 |
 
-??? failure "Banana Pi M7 01 — fail"
+??? success "Banana Pi M7 01 — pass"
 
-    `bananapim7` · **inplace** · image `26.11.0-trunk.54` · 19 ✅ · 2 ❌ · 1 ⏭️
+    `bananapim7` · **inplace** · image `26.11.0-trunk.54` · 22 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 7.5 s | — |
-    | reboot | ✅ | 42.2 s | power-cycle · up 15 s |
-    | kernel-switch | ✅ | 18.4 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.54 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 99.6 s | power-cycle · 4/4 boots · up 16 s |
-    | hw-performance | ✅ | 13.9 s | AES 1258 · mem 13700 · disk W 921 / R 1545 MB/s · 60.1 °C · 1800 MHz |
-    | dvfs | ✅ | 17.3 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 28.0 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ❌ | 9.6 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 100.2 s | power-cycle · 4/4 boots · up 16 s |
-    | hw-performance | ✅ | 13.3 s | AES 1256 · mem 13600 · disk W 898 / R 1481 MB/s · 61 °C · 1800 MHz |
-    | dvfs | ✅ | 17.0 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 28.9 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ❌ | 11.6 s | branch=edge · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 101.9 s | power-cycle · 4/4 boots · up 15 s |
-    | hw-performance | ✅ | 13.6 s | AES 1257 · mem 13600 · disk W 1002 / R 1481 MB/s · 61.9 °C · 1800 MHz |
-    | dvfs | ✅ | 17.4 s | ondemand · 1800–1800 MHz (peak 2256) |
-    | network-iperf | ✅ | 28.5 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.9 s | 26.11.0-trunk.54 · 6.1.172-vendor-rk35xx |
-    | kernel-switch | ✅ | 43.7 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-    | reboot | ✅ | 50.5 s | power-cycle · up 15 s |
+    | upgrade | ✅ | 50.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 50.2 s | power-cycle · up 15 s |
+    | kernel-switch | ✅ | 19.1 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 103.2 s | power-cycle · 4/4 boots · up 15 s |
+    | hw-performance | ✅ | 13.4 s | AES 1255 · mem 13700 · disk W 927 / R 1559 MB/s · 61.9 °C · 1800 MHz |
+    | dvfs | ✅ | 17.1 s | ondemand · 1800–1800 MHz (peak 2256) |
+    | network-iperf | ✅ | 28.3 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.1 s | 26.11.0-trunk.56 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 51.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 845.0 s | power-cycle · 3/4 boots · up 98 s |
+    | hw-performance | ✅ | 14.1 s | AES 1253 · mem 9900 · disk W 1062 / R 1558 MB/s · 63.8 °C · 1800 MHz |
+    | dvfs | ✅ | 14.7 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 30.8 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 41.9 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 437.0 s | power-cycle · 4/4 boots · up 97 s |
+    | hw-performance | ✅ | 13.7 s | AES 1255 · mem 8000 · disk W 880 / R 1607 MB/s · 64.7 °C · 1800 MHz |
+    | dvfs | ✅ | 15.0 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 29.0 s | enP2p33s0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 36.1 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 42.5 s | power-cycle · up 15 s |
 
-    **Power** — min 1.00 W · avg 5.89 W · peak 12.50 W · 515 samples
+    **Power** — min 1.00 W · avg 5.85 W · peak 12.20 W · 1480 samples
 
     ```mermaid
     xychart-beta
         title "Power — Banana Pi M7 01"
-        x-axis "sample" 1 --> 515
-        y-axis "W" 0.5 --> 13.0
-        line [5.72, 5.74, 7.39, 5.44, 6.91, 5.34, 6.37, 6.82, 5.72, 4.90, 7.75, 5.17, 5.64, 5.08, 5.56, 5.78, 6.29, 5.87, 5.41, 5.38, 5.77, 7.81, 4.93, 5.76, 5.47, 4.73, 5.47, 6.45, 6.34, 6.45, 6.32, 5.90, 7.73, 5.09, 5.93, 5.45, 7.25, 5.05, 3.80, 5.68]
+        x-axis "sample" 1 --> 1480
+        y-axis "W" 0.5 --> 12.5
+        line [5.65, 5.23, 5.68, 6.70, 5.74, 6.19, 6.34, 5.86, 5.65, 5.54, 6.23, 5.50, 5.50, 5.50, 5.50, 5.50, 5.50, 5.51, 5.51, 5.77, 5.49, 5.61, 5.48, 6.29, 5.50, 5.49, 6.79, 6.74, 6.04, 5.50, 6.25, 5.50, 5.88, 5.50, 5.62, 5.89, 5.45, 7.05, 6.55, 6.72]
     ```
 
 ??? success "Banana Pi R3 Mini 01 — pass"
