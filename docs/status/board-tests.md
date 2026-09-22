@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **39** passed, **25** failed. Each card is the board's most recent test.
+**64** boards — **40** passed, **24** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -60,28 +60,28 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | network-iperf | ✅ | 71.8 s | end0 ↑805/↓942 (1GE) · wlan0 ↑30/↓31 (Wi-Fi 4) Mbps |
     | store-versions | ✅ | 8.4 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
 
-??? failure "Banana Pi M2Pro 01 — fail"
+??? success "Banana Pi M2Pro 01 — pass"
 
-    `bananapim2pro` · **inplace** · image `26.11.0-trunk.52` · 14 ✅ · 1 ❌ · 1 ⏭️
+    `bananapim2pro` · **inplace** · image `26.11.0-trunk.52` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 11.7 s | — |
-    | reboot | ✅ | 48.5 s | power-cycle · up 21 s |
-    | kernel-switch | ✅ | 36.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.52 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 147.5 s | power-cycle · 4/4 boots · up 22 s |
-    | hw-performance | ✅ | 34.7 s | AES 980 · mem 5200 · disk W 13 / R 15 MB/s · 49.3 °C · 2100 MHz |
-    | dvfs | ✅ | 19.6 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 56.6 s | end0 ↑939/↓939 (1GE) · wlx60fb00480eb0 ↑179/↓199 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.52 · 6.18.52-current-meson64 |
-    | kernel-switch | ❌ | 24.2 s | branch=edge · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 147.0 s | power-cycle · 4/4 boots · up 25 s |
-    | hw-performance | ✅ | 34.0 s | AES 980 · mem 5300 · disk W 14 / R 15 MB/s · 49.8 °C · 2100 MHz |
-    | dvfs | ✅ | 27.2 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 56.7 s | end0 ↑939/↓939 (1GE) · wlx60fb00480eb0 ↑161/↓192 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.52 · 6.18.52-current-meson64 |
-    | kernel-switch | ✅ | 36.3 s | branch=current · family=meson64 · installed=26.11.0-trunk.52 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 52.9 s | power-cycle · up 22 s |
+    | upgrade | ✅ | 236.4 s | nightly · 26.11.0-trunk.52 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 50.6 s | power-cycle · up 23 s |
+    | kernel-switch | ✅ | 37.9 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 144.3 s | power-cycle · 4/4 boots · up 23 s |
+    | hw-performance | ✅ | 34.2 s | AES 976 · mem 5300 · disk W 12 / R 15 MB/s · 50.4 °C · 2100 MHz |
+    | dvfs | ✅ | 19.7 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 56.5 s | end0 ↑938/↓939 (1GE) · wlx60fb00480eb0 ↑171/↓202 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.56 · 6.18.53-current-meson64 |
+    | kernel-switch | ✅ | 134.7 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 162.6 s | power-cycle · 4/4 boots · up 23 s |
+    | hw-performance | ✅ | 42.5 s | AES 980 · mem 5300 · disk W 13 / R 15 MB/s · 50.6 °C · 2100 MHz |
+    | dvfs | ✅ | 19.9 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 56.8 s | end0 ↑939/↓939 (1GE) · wlx60fb00480eb0 ↑189/↓222 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.56 · 7.2.7-edge-meson64 |
+    | kernel-switch | ✅ | 132.6 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+    | reboot | ✅ | 49.3 s | power-cycle · up 22 s |
 
 ??? success "Banana Pi M5 01 — pass"
 
