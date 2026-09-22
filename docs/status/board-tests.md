@@ -13,22 +13,22 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **45** passed, **19** failed. Each card is the board's most recent test.
+**64** boards — **46** passed, **18** failed. Each card is the board's most recent test.
 
-??? failure "Arduino UNO Q 01 — fail"
+??? success "Arduino UNO Q 01 — pass"
 
-    `arduino-uno-q` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `arduino-uno-q` · **inplace** · image `26.11.0-trunk.54` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 61.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 51.3 s | warm · up 34 s |
-    | kernel-switch | ❌ | 46.5 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=7.2.3-edge-qrb2210 |
-    | reboot | ✅ | 52.8 s | warm · up 35 s |
-    | hw-performance | ✅ | 25.9 s | AES 940 · mem 5100 · disk W 162 / R 223 MB/s · 42.1 °C · 2016 MHz |
-    | dvfs | ✅ | 31.6 s | schedutil · 300–2016 MHz (peak 2016) |
-    | network-iperf | ✅ | 50.7 s | wlan0 ↑25/↓20 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
-    | store-versions | ✅ | 7.0 s | 26.11.0-trunk.54 · 7.2.3-edge-qrb2210 |
+    | upgrade | ✅ | 238.3 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 56.3 s | warm · up 37 s |
+    | kernel-switch | ✅ | 46.8 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.56 · boot_image=? · kernel_before=7.2.3-edge-qrb2210 |
+    | reboot | ✅ | 196.5 s | warm · 4/4 boots · up 35 s |
+    | hw-performance | ✅ | 24.5 s | AES 940 · mem 5100 · disk W 168 / R 223 MB/s · 41.8 °C · 2016 MHz |
+    | dvfs | ✅ | 31.8 s | schedutil · 300–2016 MHz (peak 2016) |
+    | network-iperf | ✅ | 45.9 s | wlan0 ↑28/↓19 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
+    | store-versions | ✅ | 6.9 s | 26.11.0-trunk.56 · 7.2.3-edge-qrb2210 |
 
 ??? success "Banana Pi CM4IO 01 — pass"
 
