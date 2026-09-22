@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **48** passed, **16** failed. Each card is the board's most recent test.
+**63** boards — **48** passed, **15** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -914,14 +914,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
     | kernel-switch | ✅ | 126.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
     | reboot | ✅ | 37.6 s | warm · up 18 s |
-
-??? failure "Orange Pi PC2 01 — fail"
-
-    `orangepipc2` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-    | Module | Status | Time | Detail |
-    |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.58 · reachable=False · port=22 |
 
 ??? success "Orange Pi Prime 01 — pass"
 
