@@ -1006,18 +1006,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Raspberry Pi 3B — pass"
 
-    `rpi4b` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rpi4b` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 348.7 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 50.5 s | warm · up 33 s |
-    | kernel-switch | ✅ | 75.5 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
-    | reboot | ✅ | 48.2 s | warm · up 31 s |
-    | hw-performance | ✅ | 44.7 s | AES 20 · mem 1400 · disk W 20 / R 22 MB/s · 54.8 °C · 1200 MHz |
-    | dvfs | ✅ | 40.2 s | ondemand · 600–1200 MHz (peak 1200) |
-    | network-iperf | ✅ | 90.6 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑23/↓31 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 8.2 s | 26.11.0-trunk.54 · 6.18.52-current-bcm2711 |
+    | upgrade | ✅ | 134.5 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 51.7 s | warm · up 31 s |
+    | kernel-switch | ✅ | 76.4 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 187.2 s | warm · 4/4 boots · up 32 s |
+    | hw-performance | ✅ | 45.1 s | AES 20 · mem 1400 · disk W 20 / R 22 MB/s · 54.8 °C · 1200 MHz |
+    | dvfs | ✅ | 40.9 s | ondemand · 600–1200 MHz (peak 1200) |
+    | network-iperf | ✅ | 82.8 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑21/↓34 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 9.5 s | 26.11.0-trunk.56 · 6.18.52-current-bcm2711 |
+    | kernel-switch | ✅ | 243.2 s | branch=edge · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.6-edge-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 189.0 s | warm · 4/4 boots · up 30 s |
+    | hw-performance | ✅ | 45.3 s | AES 20 · mem 1400 · disk W 20 / R 22 MB/s · 54.8 °C · 1200 MHz |
+    | dvfs | ✅ | 41.7 s | ondemand · 600–1200 MHz (peak 1200) |
+    | network-iperf | ✅ | 79.7 s | enxb827eb253a53 ↑94/↓94 (10/100ME) · wlan0 ↑30/↓35 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 8.9 s | 26.11.0-trunk.56 · 7.2.6-edge-bcm2711 |
+    | kernel-switch | ✅ | 241.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
+    | reboot | ✅ | 51.8 s | warm · up 31 s |
 
 ??? success "Raspberry Pi 5B — pass"
 
