@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **48** passed, **15** failed. Each card is the board's most recent test.
+**63** boards — **49** passed, **14** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -1282,13 +1282,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
     | reboot | ⏭️ | 0.0 s | reboot |
 
-??? failure "SpacemiT K3 Pico-ITX 01 — fail"
+??? success "SpacemiT K3 Pico-ITX 01 — pass"
 
-    `k3picoitx` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `k3picoitx` · **inplace** · image `26.11.0-trunk.56` · 8 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.29 · reachable=False · port=22 |
+    | upgrade | ✅ | 29.5 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 50.7 s | power-cycle · up 24 s |
+    | kernel-switch | ✅ | 19.0 s | branch=legacy · family=spacemit-k3 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.3-legacy-spacemit-k3 · kernel_before=6.18.3-legacy-spacemit-k3 |
+    | reboot | ✅ | 141.1 s | power-cycle · 4/4 boots · up 23 s |
+    | hw-performance | ✅ | 13.6 s | AES 778 · mem 4500 · disk W 1368 / R 1515 MB/s · 44 °C · 2150 MHz |
+    | dvfs | ✅ | 15.5 s | performance · 614–2150 MHz (peak 2150) |
+    | network-iperf | ✅ | 75.6 s | eth0 ↑939/↓896 (1GE) · eth1 ↑641/↓663 (10GE) · wlan0 ↑88/↓206 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 3.7 s | 26.11.0-trunk.56 · 6.18.3-legacy-spacemit-k3 |
 
 ??? success "Tinker Board 01 — pass"
 
