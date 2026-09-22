@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **42** passed, **22** failed. Each card is the board's most recent test.
+**64** boards — **43** passed, **21** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -1149,29 +1149,37 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | reachable | ❌ | 0.0 s | ip=10.0.50.29 · reachable=False · port=22 |
 
-??? failure "Tinker Board 01 — fail"
+??? success "Tinker Board 01 — pass"
 
-    `tinkerboard` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `tinkerboard` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 39.2 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 55.0 s | power-cycle · up 29 s |
-    | kernel-switch | ❌ | 30.4 s | branch=current · family=rockchip · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-rockchip |
-    | reboot | ✅ | 65.0 s | power-cycle · up 32 s |
-    | hw-performance | ✅ | 28.6 s | AES 67 · mem 3300 · disk W 14 / R 63 MB/s · 57.7 °C · 1800 MHz |
-    | dvfs | ✅ | 19.8 s | ondemand · 600–1800 MHz (peak 1800) |
-    | network-iperf | ✅ | 57.8 s | end0 ↑940/↓941 (1GE) · wlan0 ↑32/↓33 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip |
+    | upgrade | ✅ | 48.9 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 65.1 s | power-cycle · up 30 s |
+    | kernel-switch | ✅ | 30.0 s | branch=current · family=rockchip · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip · kernel_before=6.18.53-current-rockchip |
+    | reboot | ✅ | 165.4 s | power-cycle · 4/4 boots · up 30 s |
+    | hw-performance | ✅ | 28.2 s | AES 67 · mem 3300 · disk W 13 / R 63 MB/s · 59.5 °C · 1800 MHz |
+    | dvfs | ✅ | 20.0 s | ondemand · 600–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 57.8 s | end0 ↑941/↓941 (1GE) · wlan0 ↑27/↓26 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.6 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip |
+    | kernel-switch | ✅ | 79.2 s | branch=edge · family=rockchip · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip · kernel_before=6.18.53-current-rockchip |
+    | reboot | ✅ | 173.6 s | power-cycle · 4/4 boots · up 30 s |
+    | hw-performance | ✅ | 28.5 s | AES 67 · mem 3300 · disk W 13 / R 1 MB/s · 61.2 °C · 1800 MHz |
+    | dvfs | ✅ | 21.5 s | ondemand · 600–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 57.6 s | end0 ↑941/↓941 (1GE) · wlan0 ↑26/↓28 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.6 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip |
+    | kernel-switch | ✅ | 80.8 s | branch=current · family=rockchip · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip · kernel_before=7.2.7-edge-rockchip |
+    | reboot | ✅ | 57.6 s | power-cycle · up 29 s |
 
-    **Power** — min 2.30 W · avg 3.86 W · peak 8.40 W · 241 samples
+    **Power** — min 2.30 W · avg 3.91 W · peak 9.20 W · 735 samples
 
     ```mermaid
     xychart-beta
         title "Power — Tinker Board 01"
-        x-axis "sample" 1 --> 241
-        y-axis "W" 2.0 --> 8.5
-        line [2.60, 3.60, 4.37, 4.30, 4.55, 4.35, 4.20, 2.75, 3.10, 2.50, 2.87, 3.35, 4.10, 4.40, 4.75, 4.53, 3.95, 3.00, 3.00, 3.78, 2.83, 2.57, 2.75, 4.02, 3.40, 4.00, 3.27, 3.47, 4.53, 6.45, 6.70, 3.33, 3.25, 4.00, 4.53, 3.83, 3.95, 5.80, 3.80, 3.80]
+        x-axis "sample" 1 --> 735
+        y-axis "W" 2.0 --> 9.5
+        line [3.96, 4.19, 3.27, 2.89, 4.14, 4.08, 3.26, 3.85, 2.94, 4.62, 3.47, 2.98, 4.07, 4.31, 5.47, 4.00, 4.22, 3.90, 4.16, 3.84, 4.43, 3.99, 3.48, 3.72, 3.28, 3.63, 3.76, 3.93, 3.24, 4.01, 5.31, 3.93, 4.20, 4.22, 3.91, 5.08, 4.27, 4.33, 2.71, 3.49]
     ```
 
 ??? failure "Udoo 01 — fail"
