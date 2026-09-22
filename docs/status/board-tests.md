@@ -1247,35 +1247,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "UEFI x86 01 — pass"
 
-    `uefi-x86` · **inplace** · image `26.11.0-trunk.54` · 14 ✅ · 2 ❌ · 0 ⏭️
+    `uefi-x86` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 50.7 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 94.0 s | power-cycle · up 60 s |
-    | kernel-switch | ✅ | 34.4 s | branch=current · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-x86 · kernel_before=6.18.52-current-x86 |
-    | reboot | ✅ | 100.4 s | power-cycle · up 58 s |
-    | hw-performance | ✅ | 24.9 s | AES 237 · mem 6400 · disk W 25 / R 108 MB/s · 57 °C · 1920 MHz |
-    | dvfs | ❌ | 23.3 s | schedutil · 480–1920 MHz (peak 1690) |
-    | network-iperf | ✅ | 62.9 s | enp1s0 ↑919/↓941 (1GE) · wlan0 ↑25/↓22 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.54 · 6.18.52-current-x86 |
-    | kernel-switch | ✅ | 176.9 s | branch=edge · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-x86 · kernel_before=6.18.52-current-x86 |
-    | reboot | ✅ | 93.6 s | power-cycle · up 60 s |
-    | hw-performance | ✅ | 25.0 s | AES 237 · mem 4900 · disk W 26 / R 112 MB/s · 57 °C · 1920 MHz |
-    | dvfs | ❌ | 23.9 s | schedutil · 480–1920 MHz (peak 1680) |
-    | network-iperf | ✅ | 61.7 s | enp1s0 ↑920/↓941 (1GE) · wlan0 ↑26/↓30 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 5.3 s | 26.11.0-trunk.54 · 7.2.6-edge-x86 |
-    | kernel-switch | ✅ | 185.4 s | branch=current · family=x86 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-x86 · kernel_before=7.2.6-edge-x86 |
-    | reboot | ✅ | 98.6 s | power-cycle · up 57 s |
+    | upgrade | ✅ | 49.7 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 91.0 s | power-cycle · up 60 s |
+    | kernel-switch | ✅ | 34.2 s | branch=current · family=x86 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-x86 · kernel_before=6.18.53-current-x86 |
+    | reboot | ✅ | 260.8 s | power-cycle · 4/4 boots · up 55 s |
+    | hw-performance | ✅ | 25.6 s | AES 237 · mem 5700 · disk W 25 / R 101 MB/s · 61 °C · 1920 MHz |
+    | dvfs | ➖ | 23.4 s | schedutil · 480–1920 MHz (peak 1680) · max_khz is single-core turbo, not an all-core target |
+    | network-iperf | ✅ | 61.5 s | enp1s0 ↑901/↓941 (1GE) · wlan0 ↑37/↓27 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.56 · 6.18.53-current-x86 |
+    | kernel-switch | ✅ | 179.1 s | branch=edge · family=x86 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-x86 · kernel_before=6.18.53-current-x86 |
+    | reboot | ✅ | 244.6 s | power-cycle · 4/4 boots · up 57 s |
+    | hw-performance | ✅ | 32.8 s | AES 237 · mem 6200 · disk W 28 / R 106 MB/s · 63 °C · 1920 MHz |
+    | dvfs | ➖ | 31.6 s | schedutil · 480–1920 MHz (peak 1896) · max_khz is single-core turbo, not an all-core target |
+    | network-iperf | ✅ | 61.8 s | enp1s0 ↑898/↓941 (1GE) · wlan0 ↑35/↓26 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.3 s | 26.11.0-trunk.56 · 7.2.7-edge-x86 |
+    | kernel-switch | ✅ | 185.7 s | branch=current · family=x86 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-x86 · kernel_before=7.2.7-edge-x86 |
+    | reboot | ✅ | 89.4 s | power-cycle · up 57 s |
 
-    **Power** — min 1.90 W · avg 3.99 W · peak 7.60 W · 839 samples
+    **Power** — min 0.80 W · avg 4.02 W · peak 8.40 W · 1129 samples
 
     ```mermaid
     xychart-beta
         title "Power — UEFI x86 01"
-        x-axis "sample" 1 --> 839
-        y-axis "W" 1.5 --> 8.0
-        line [4.53, 4.00, 2.97, 4.03, 4.93, 3.80, 3.55, 3.41, 3.85, 5.21, 3.40, 4.09, 4.15, 3.80, 3.54, 4.00, 4.10, 3.80, 4.24, 4.19, 4.27, 3.88, 3.88, 4.09, 4.44, 3.06, 4.33, 4.20, 3.38, 3.85, 3.93, 4.31, 3.68, 4.15, 4.15, 3.78, 4.04, 3.56, 4.03, 5.11]
+        x-axis "sample" 1 --> 1129
+        y-axis "W" 0.5 --> 8.5
+        line [3.64, 3.77, 3.49, 4.12, 4.94, 3.32, 4.72, 3.66, 4.86, 3.78, 4.39, 3.76, 5.21, 3.79, 3.66, 3.65, 3.40, 3.70, 3.77, 4.22, 3.73, 3.49, 4.81, 4.08, 4.61, 4.56, 3.97, 4.84, 3.84, 3.36, 3.99, 3.49, 3.80, 4.02, 3.86, 4.09, 4.05, 3.19, 3.94, 5.24]
     ```
 
 ??? success "ZeroPi 01 — pass"
