@@ -622,18 +622,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Odroid C2 01 — pass"
 
-    `odroidc2` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidc2` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 205.5 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 32.5 s | warm · up 16 s |
-    | kernel-switch | ✅ | 37.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 30.0 s | warm · up 15 s |
-    | hw-performance | ✅ | 22.9 s | AES 51 · mem 3500 · disk W 33 / R 152 MB/s · 46 °C · 1536 MHz |
+    | upgrade | ✅ | 205.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 33.7 s | warm · up 17 s |
+    | kernel-switch | ✅ | 37.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 114.9 s | warm · 4/4 boots · up 15 s |
+    | hw-performance | ✅ | 22.4 s | AES 51 · mem 3500 · disk W 32 / R 152 MB/s · 45 °C · 1536 MHz |
     | dvfs | ✅ | 22.1 s | ondemand · 500–1536 MHz (peak 1536) |
-    | network-iperf | ✅ | 91.0 s | end0 ↑940/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-meson64 |
+    | network-iperf | ✅ | 34.0 s | end0 ↑940/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.56 · 6.18.53-current-meson64 |
+    | kernel-switch | ✅ | 114.9 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 117.7 s | warm · 4/4 boots · up 17 s |
+    | hw-performance | ✅ | 22.5 s | AES 51 · mem 3500 · disk W 33 / R 152 MB/s · 47 °C · 1536 MHz |
+    | dvfs | ✅ | 22.3 s | ondemand · 500–1536 MHz (peak 1536) |
+    | network-iperf | ✅ | 31.2 s | end0 ↑941/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 5.1 s | 26.11.0-trunk.56 · 7.2.7-edge-meson64 |
+    | kernel-switch | ✅ | 113.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+    | reboot | ✅ | 33.2 s | warm · up 16 s |
 
 ??? success "Odroid C4 01 — pass"
 
