@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **54** operational, **15** broken.
+**67** boards — **53** operational, **14** broken.
 
-Reconcile made: 2026-09-22 18:02 UTC
+Reconcile made: 2026-09-22 18:15 UTC
 
 **Operational**
 
@@ -46,6 +46,7 @@ Reconcile made: 2026-09-22 18:02 UTC
 | NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (41) |
+| NanoPi R76S 01 | 10.0.50.20 | local | 1 GbE | Aruba 2540 (31) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | Aruba 2540 (39) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
@@ -53,7 +54,6 @@ Reconcile made: 2026-09-22 18:02 UTC
 | Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
 | Orange Pi Prime 01 | 10.0.50.73 | local | 1 GbE | Aruba 2540 (35) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Aruba 2540 (17) |
@@ -69,7 +69,6 @@ Reconcile made: 2026-09-22 18:02 UTC
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rock 5T 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (48) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
-| SpacemiT K3 Pico-ITX 02 | 10.0.50.44 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
@@ -88,12 +87,11 @@ Reconcile made: 2026-09-22 18:02 UTC
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
 | Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
-| NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3218XP-M2 (9) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (11) |
 | Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
-| Orange Pi PC2 01 | 10.0.50.58 | local | 1 GbE | Netgear S3300 (26) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Rockpi 4B 01 | 10.0.50.69 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
-| SpacemiT K3 Pico-ITX 01 | 10.0.50.64 | local | 10 GbE | Aruba 2540 (52) |
+| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
 
 <!-- BOARDS-STOP -->
