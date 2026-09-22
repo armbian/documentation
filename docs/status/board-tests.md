@@ -422,18 +422,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi Fire3 01 — pass"
 
-    `nanopifire3` · **inplace** · image `26.11.0-trunk.51` · 7 ✅ · 0 ❌ · 1 ⏭️
+    `nanopifire3` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 0 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 418.0 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 53.7 s | power-cycle · up 23 s |
-    | kernel-switch | ✅ | 69.4 s | branch=edge · family=s5p6818 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-s5p6818 · kernel_before=7.2.6-edge-s5p6818 |
-    | reboot | ✅ | 52.6 s | power-cycle · up 17 s |
-    | hw-performance | ✅ | 43.1 s | AES 373 · mem 2000 · disk W 20 / R 22 MB/s · 68 °C · None MHz |
+    | upgrade | ✅ | 474.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 70.1 s | power-cycle · up 38 s |
+    | kernel-switch | ✅ | 69.0 s | branch=edge · family=s5p6818 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-s5p6818 · kernel_before=7.2.7-edge-s5p6818 |
+    | reboot | ✅ | 164.7 s | power-cycle · 4/4 boots · up 15 s |
+    | hw-performance | ✅ | 42.8 s | AES 369 · mem 2000 · disk W 20 / R 22 MB/s · 68 °C · None MHz |
     | dvfs | ➖ | 2.9 s | no cpufreq |
-    | network-iperf | ✅ | 43.1 s | eth0 ↑821/↓833 (1GE) Mbps |
-    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.54 · 7.2.6-edge-s5p6818 |
+    | network-iperf | ✅ | 34.7 s | eth0 ↑938/↓933 (1GE) Mbps |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.56 · 7.2.7-edge-s5p6818 |
 
 ??? success "NanoPi K2 01 — pass"
 
