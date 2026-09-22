@@ -1103,20 +1103,36 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Rock 5T 01 — pass"
 
-    `rock-5t` · **inplace** · image `26.11.0-trunk.30` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rock-5t` · **inplace** · image `26.11.0-trunk.30` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 78.2 s | nightly · 26.11.0-trunk.30 → 26.11.0-trunk.30 |
-    | reboot | ✅ | 54.6 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 18.0 s | AES 1251 · mem 10000 · disk W 50 / R 82 MB/s · 58.2 °C · 1800 MHz |
-    | dvfs | ✅ | 16.3 s | ondemand · 408–1800 MHz (peak 2400) |
-    | network-iperf | ✅ | 104.4 s | enP3p49s0 ↑2353/↓2352 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑337/↓216 (Wi-Fi 6) · wlx7cdd90ebf00a ↑96/↓121 (Wi-Fi 4) Mbps |
-    | restore-stable | ✅ | 67.1 s | stable |
-    | reboot | ✅ | 54.5 s | power-cycle · up 22 s |
-    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.30 · 6.18.44-current-rockchip64 |
+    | upgrade | ✅ | 127.1 s | nightly · 26.11.0-trunk.30 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 51.2 s | power-cycle · up 20 s |
+    | kernel-switch | ✅ | 78.3 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 134.3 s | power-cycle · 4/4 boots · up 22 s |
+    | hw-performance | ✅ | 18.8 s | AES 1262 · mem 15000 · disk W 52 / R 80 MB/s · 53.6 °C · 1800 MHz |
+    | dvfs | ✅ | 17.5 s | ondemand · 1800–1800 MHz (peak 2352) |
+    | network-iperf | ✅ | 104.4 s | enP3p49s0 ↑939/↓939 (1GE) · enP4p65s0 ↑939/↓939 (1GE) · wlP2p33s0 ↑391/↓248 (Wi-Fi 6) · wlx7cdd90ebf00a ↑114/↓120 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.2 s | 26.11.0-trunk.56 · 6.1.172-vendor-rk35xx |
+    | kernel-switch | ✅ | 111.8 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+    | reboot | ✅ | 129.7 s | power-cycle · 4/4 boots · up 17 s |
+    | hw-performance | ✅ | 18.1 s | AES 1261 · mem 10000 · disk W 52 / R 81 MB/s · 51.8 °C · 1800 MHz |
+    | dvfs | ✅ | 15.3 s | ondemand · 408–1800 MHz (peak 2400) |
+    | network-iperf | ✅ | 113.5 s | enP3p49s0 ↑939/↓939 (1GE) · enP4p65s0 ↑932/↓927 (1GE) · wlP2p33s0 ↑172/↓206 (Wi-Fi 6) · wlx7cdd90ebf00a ↑81/↓122 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.6 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 76.2 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 56.4 s | power-cycle · up 22 s |
 
-    **Power** — min 0.90 W · avg 9.24 W · peak 16.70 W · 273 samples
+    **Power** — min 1.40 W · avg 8.75 W · peak 15.80 W · 862 samples
+
+    ```mermaid
+    xychart-beta
+        title "Power — Rock 5T 01"
+        x-axis "sample" 1 --> 862
+        y-axis "W" 1.0 --> 16.0
+        line [9.59, 9.98, 9.72, 10.39, 9.67, 8.82, 6.56, 9.80, 9.51, 9.75, 6.70, 6.22, 7.86, 6.75, 7.53, 10.63, 9.43, 9.32, 9.80, 9.62, 9.46, 9.31, 9.50, 8.79, 9.10, 6.89, 7.19, 6.57, 4.47, 8.77, 10.79, 9.24, 9.32, 9.84, 10.22, 9.72, 9.89, 9.96, 7.42, 5.96]
+    ```
 
 ??? success "Rockpi E 01 — pass"
 
