@@ -32,18 +32,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Banana Pi CM4IO 01 — pass"
 
-    `bananapicm4io` · **inplace** · image `26.8.3` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `bananapicm4io` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 280.8 s | nightly · 26.8.3 → 26.8.3 |
-    | reboot | ✅ | 43.3 s | power-cycle · up 19 s |
-    | kernel-switch | ✅ | 41.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 47.2 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 18.3 s | AES 852 · mem 3900 · disk W 43 / R 157 MB/s · 54.7 °C · 2016 MHz |
+    | upgrade | ⏭️ | 17.3 s | — |
+    | reboot | ✅ | 44.8 s | power-cycle · up 18 s |
+    | kernel-switch | ✅ | 52.2 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
+    | reboot | ✅ | 123.8 s | power-cycle · 4/4 boots · up 18 s |
+    | hw-performance | ✅ | 18.4 s | AES 852 · mem 3900 · disk W 35 / R 160 MB/s · 51.9 °C · 2016 MHz |
     | dvfs | ✅ | 18.0 s | ondemand · 1000–1512 MHz (peak 1512) |
-    | network-iperf | ❌ | 552.0 s | eth0 ↑0/↓0 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) · wlx00e032c00694 ↑0/↓0 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 3.8 s | 26.8.3 · 6.18.52-current-meson64 |
+    | network-iperf | ❌ | 548.1 s | eth0 ↑938/↓939 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) · wlx00e032c00694 ↑0/↓0 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 11.5 s | 26.8.3 · 6.18.52-current-meson64 |
 
 ??? failure "Banana Pi M2 Ultra 01 — fail"
 
