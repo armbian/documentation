@@ -1224,16 +1224,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "UEFI arm64 01 — pass"
 
-    `uefi-arm64` · **inplace** · image `26.11.0-trunk.56` · 4 ✅ · 0 ❌ · 2 ⏭️
+    `uefi-arm64` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 0.0 s | — |
-    | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 15.6 s | AES 1458 · mem 13000 · disk W 1571 / R 2276 MB/s · 45 °C · 2600 MHz |
-    | dvfs | ✅ | 18.1 s | ondemand · 800–2600 MHz (peak 2600) |
-    | network-iperf | ✅ | 84.1 s | enp1s0 ↑8816/↓2834 (10GE) · enp49s0 ↑9002/↓8956 (10GE) · wlp97s0 ↑124/↓91 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
+    | upgrade | ✅ | 23.4 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 50.7 s | warm · up 29 s |
+    | kernel-switch | ✅ | 76.8 s | branch=current · family=arm64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-arm64 · kernel_before=7.2.7-edge-arm64 |
+    | reboot | ✅ | 180.2 s | warm · 4/4 boots · up 30 s |
+    | hw-performance | ✅ | 15.0 s | AES 1458 · mem 13000 · disk W 1545 / R 2363 MB/s · 45 °C · 2600 MHz |
+    | dvfs | ✅ | 15.0 s | ondemand · 800–2600 MHz (peak 2600) |
+    | network-iperf | ✅ | 79.3 s | enp1s0 ↑6907/↓2757 (10GE) · enp49s0 ↑7786/↓9371 (10GE) · wlp97s0 ↑121/↓101 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.56 · 6.18.53-current-arm64 |
+    | kernel-switch | ✅ | 70.8 s | branch=edge · family=arm64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-arm64 · kernel_before=6.18.53-current-arm64 |
+    | reboot | ✅ | 182.8 s | warm · 4/4 boots · up 32 s |
+    | hw-performance | ✅ | 15.5 s | AES 1402 · mem 13000 · disk W 1556 / R 2112 MB/s · 45 °C · 2600 MHz |
+    | dvfs | ✅ | 18.4 s | ondemand · 800–2600 MHz (peak 2600) |
+    | network-iperf | ✅ | 80.3 s | enp1s0 ↑8544/↓2770 (10GE) · enp49s0 ↑8845/↓8876 (10GE) · wlp97s0 ↑122/↓87 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.56 · 7.2.7-edge-arm64 |
+    | kernel-switch | ✅ | 73.5 s | branch=current · family=arm64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-arm64 · kernel_before=7.2.7-edge-arm64 |
+    | reboot | ✅ | 50.6 s | warm · up 30 s |
 
 ??? success "UEFI x86 01 — pass"
 
