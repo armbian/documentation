@@ -277,10 +277,10 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 40.3 s | AES 371 · mem 2000 · disk W 9 / R 137 MB/s · None °C · 800 MHz |
-    | dvfs | ✅ | 33.6 s | ondemand · 200–800 MHz (peak 800) |
-    | network-iperf | ✅ | 38.4 s | lan0 ↑936/↓762 (1GE) Mbps |
-    | store-versions | ✅ | 7.8 s | 26.8.3 · 6.18.44-current-mvebu64 |
+    | hw-performance | ✅ | 32.5 s | AES 369 · mem 2000 · disk W 36 / R 131 MB/s · None °C · 800 MHz |
+    | dvfs | ✅ | 33.7 s | ondemand · 200–800 MHz (peak 800) |
+    | network-iperf | ✅ | 38.1 s | lan0 ↑936/↓737 (1GE) Mbps |
+    | store-versions | ✅ | 7.2 s | 26.8.3 · 6.18.44-current-mvebu64 |
 
 ??? failure "Helios4 01 — fail"
 
@@ -984,18 +984,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Raspberry Pi Zero 2W — pass"
 
-    `rpi4b` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rpi4b` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 282.5 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 40.9 s | warm · up 25 s |
-    | kernel-switch | ✅ | 54.7 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
-    | reboot | ✅ | 36.8 s | warm · up 22 s |
-    | hw-performance | ✅ | 34.4 s | AES 33 · mem 2200 · disk W 20 / R 23 MB/s · 56.9 °C · 1000 MHz |
-    | dvfs | ✅ | 27.9 s | ondemand · 600–1000 MHz (peak 1000) |
-    | network-iperf | ✅ | 45.1 s | wlan0 ↑27/↓27 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 6.8 s | 26.11.0-trunk.54 · 6.18.52-current-bcm2711 |
+    | upgrade | ✅ | 88.7 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 40.2 s | warm · up 23 s |
+    | kernel-switch | ✅ | 56.3 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 147.7 s | warm · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 33.4 s | AES 33 · mem 2200 · disk W 20 / R 23 MB/s · 56.4 °C · 1000 MHz |
+    | dvfs | ✅ | 27.2 s | ondemand · 600–1000 MHz (peak 1000) |
+    | network-iperf | ✅ | 40.0 s | wlan0 ↑37/↓34 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.56 · 6.18.52-current-bcm2711 |
+    | kernel-switch | ✅ | 188.3 s | branch=edge · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.6-edge-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 151.1 s | warm · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 33.5 s | AES 33 · mem 2100 · disk W 20 / R 23 MB/s · 55.8 °C · 1000 MHz |
+    | dvfs | ✅ | 27.2 s | ondemand · 600–1000 MHz (peak 1000) |
+    | network-iperf | ✅ | 46.6 s | wlan0 ↑35/↓38 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 5.7 s | 26.11.0-trunk.56 · 7.2.6-edge-bcm2711 |
+    | kernel-switch | ✅ | 189.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
+    | reboot | ✅ | 41.4 s | warm · up 23 s |
 
 ??? success "ROCK 2F 01 — pass"
 
