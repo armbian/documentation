@@ -1201,16 +1201,16 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "UEFI arm64 01 — pass"
 
-    `uefi-arm64` · **inplace** · image `26.11.0-trunk.54` · 4 ✅ · 0 ❌ · 2 ⏭️
+    `uefi-arm64` · **inplace** · image `26.11.0-trunk.56` · 4 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 15.9 s | AES 1402 · mem 13000 · disk W 1588 / R 2108 MB/s · 45 °C · 2600 MHz |
-    | dvfs | ✅ | 18.9 s | ondemand · 800–2600 MHz (peak 2600) |
-    | network-iperf | ✅ | 81.2 s | enp1s0 ↑7108/↓2719 (10GE) · enp49s0 ↑8098/↓8766 (10GE) · wlp97s0 ↑124/↓100 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
+    | hw-performance | ✅ | 15.8 s | AES 1458 · mem 13000 · disk W 1588 / R 2265 MB/s · 45 °C · 2600 MHz |
+    | dvfs | ✅ | 19.2 s | ondemand · 800–2600 MHz (peak 2600) |
+    | network-iperf | ✅ | 81.3 s | enp1s0 ↑8513/↓2732 (10GE) · enp49s0 ↑7060/↓8478 (10GE) · wlp97s0 ↑123/↓85 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 4.5 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
 
 ??? success "UEFI x86 01 — pass"
 
