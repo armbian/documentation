@@ -668,11 +668,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "NanoPi R76S 01 — fail"
 
-    `nanopi-r76s` · **inplace** · image `26.11.0-trunk.27` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `nanopi-r76s` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.77 · reachable=False · port=22 |
+    | upgrade | ✅ | 127.9 s | nightly · 26.8.3 → 26.8.3 |
+    | reboot | ❌ | 228.8 s | power-cycle |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | store-versions | ⏭️ | 0.0 s | — |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | store-versions | ⏭️ | 0.0 s | — |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
 
 ??? failure "Odroid C1 01 — fail"
 
