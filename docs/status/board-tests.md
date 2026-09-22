@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **43** passed, **21** failed. Each card is the board's most recent test.
+**64** boards — **44** passed, **20** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -1135,11 +1135,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "RockPro 64 01 — fail"
 
-    `rockpro64` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `rockpro64` · **inplace** · image `26.11.0-trunk.55` · 1 ✅ · 1 ❌ · 14 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.31 · reachable=False · port=22 |
+    | upgrade | ✅ | 205.9 s | nightly · 26.11.0-trunk.55 → 26.11.0-trunk.56 |
+    | reboot | ❌ | 205.2 s | power-cycle |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | store-versions | ⏭️ | 0.0 s | — |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | dvfs | ⏭️ | 0.0 s | — |
+    | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+    | store-versions | ⏭️ | 0.0 s | — |
+    | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+    | reboot | ⏭️ | 0.0 s | reboot |
 
 ??? failure "SpacemiT K3 Pico-ITX 01 — fail"
 
@@ -1253,29 +1268,37 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
         line [4.53, 4.00, 2.97, 4.03, 4.93, 3.80, 3.55, 3.41, 3.85, 5.21, 3.40, 4.09, 4.15, 3.80, 3.54, 4.00, 4.10, 3.80, 4.24, 4.19, 4.27, 3.88, 3.88, 4.09, 4.44, 3.06, 4.33, 4.20, 3.38, 3.85, 3.93, 4.31, 3.68, 4.15, 4.15, 3.78, 4.04, 3.56, 4.03, 5.11]
     ```
 
-??? failure "ZeroPi 01 — fail"
+??? success "ZeroPi 01 — pass"
 
-    `zeropi` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `zeropi` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 95.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 56.2 s | power-cycle · up 24 s |
-    | kernel-switch | ❌ | 62.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 55.3 s | power-cycle · up 24 s |
-    | hw-performance | ✅ | 39.6 s | AES 25 · mem 1500 · disk W 2 / R 23 MB/s · 48.4 °C · 1296 MHz |
-    | dvfs | ✅ | 34.4 s | ondemand · 480–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 41.3 s | end0 ↑628/↓523 (1GE) Mbps |
-    | store-versions | ✅ | 7.5 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | upgrade | ✅ | 97.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 59.1 s | power-cycle · up 25 s |
+    | kernel-switch | ✅ | 62.7 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=6.18.53-current-sunxi |
+    | reboot | ✅ | 166.7 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 39.4 s | AES 25 · mem 1500 · disk W 21 / R 23 MB/s · 49.2 °C · 1296 MHz |
+    | dvfs | ✅ | 34.1 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 38.6 s | end0 ↑640/↓939 (1GE) Mbps |
+    | store-versions | ✅ | 7.3 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi |
+    | kernel-switch | ✅ | 176.5 s | branch=edge · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi · kernel_before=6.18.53-current-sunxi |
+    | reboot | ✅ | 164.1 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 39.8 s | AES 25 · mem 1600 · disk W 21 / R 23 MB/s · 51.8 °C · 1296 MHz |
+    | dvfs | ✅ | 37.5 s | ondemand · 480–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 38.8 s | end0 ↑628/↓939 (1GE) Mbps |
+    | store-versions | ✅ | 7.3 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi |
+    | kernel-switch | ✅ | 171.6 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=7.2.7-edge-sunxi |
+    | reboot | ✅ | 60.1 s | power-cycle · up 25 s |
 
-    **Power** — min 1.20 W · avg 2.11 W · peak 3.00 W · 319 samples
+    **Power** — min 1.20 W · avg 2.17 W · peak 3.10 W · 976 samples
 
     ```mermaid
     xychart-beta
         title "Power — ZeroPi 01"
-        x-axis "sample" 1 --> 319
+        x-axis "sample" 1 --> 976
         y-axis "W" 1.0 --> 3.5
-        line [1.50, 2.05, 2.20, 2.12, 2.26, 2.10, 2.10, 2.05, 2.06, 2.25, 1.91, 1.61, 1.85, 1.82, 2.51, 2.29, 2.46, 2.26, 2.19, 2.10, 2.15, 2.20, 1.95, 1.69, 1.73, 1.98, 2.46, 2.56, 2.25, 2.02, 1.93, 2.05, 2.31, 2.44, 2.07, 2.19, 2.18, 2.34, 2.10, 2.04]
+        line [1.98, 2.13, 2.08, 1.93, 1.87, 2.35, 2.13, 1.94, 2.43, 2.29, 2.35, 2.13, 2.40, 2.02, 2.18, 2.11, 2.24, 2.18, 2.03, 2.06, 2.12, 2.16, 2.12, 2.16, 2.22, 2.39, 2.16, 2.26, 2.25, 2.17, 2.35, 2.26, 2.18, 2.28, 2.26, 2.16, 2.11, 2.12, 1.87, 2.20]
     ```
 
 
