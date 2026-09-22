@@ -943,35 +943,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Raspberry Pi 5B — pass"
 
-    `rpi4b` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
+    `rpi4b` · **inplace** · image `26.11.0-trunk.55` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 91.8 s | nightly · 26.11.0-trunk.55 → 26.11.0-trunk.55 |
-    | reboot | ✅ | 45.0 s | power-cycle · up 18 s |
-    | kernel-switch | ✅ | 125.4 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.55 · boot_image=vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
-    | reboot | ✅ | 137.3 s | power-cycle · 4/4 boots · up 18 s |
-    | hw-performance | ✅ | 15.2 s | AES 1368 · mem 12100 · disk W 53 / R 86 MB/s · 66.1 °C · 2400 MHz |
-    | dvfs | ✅ | 13.1 s | ondemand · 1500–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 51.7 s | end0 ↑936/↓941 (1GE) · wlan0 ↑47/↓36 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 3.2 s | 26.11.0-trunk.55 · 6.18.52-current-bcm2711 |
-    | kernel-switch | ✅ | 124.4 s | branch=edge · family=bcm2711 · installed=26.11.0-trunk.55 · boot_image=vmlinuz-7.2.6-edge-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
-    | reboot | ✅ | 124.7 s | power-cycle · 4/4 boots · up 22 s |
-    | hw-performance | ✅ | 15.0 s | AES 1368 · mem 9200 · disk W 49 / R 81 MB/s · 67.2 °C · 2400 MHz |
-    | dvfs | ✅ | 14.2 s | ondemand · 1500–2400 MHz (peak 2400) |
-    | network-iperf | ✅ | 51.2 s | end0 ↑936/↓941 (1GE) · wlan0 ↑44/↓38 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 3.2 s | 26.11.0-trunk.55 · 7.2.6-edge-bcm2711 |
-    | kernel-switch | ✅ | 122.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.55 · boot_image=vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
-    | reboot | ✅ | 46.9 s | power-cycle · up 22 s |
+    | upgrade | ✅ | 143.3 s | nightly · 26.11.0-trunk.55 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 46.6 s | power-cycle · up 21 s |
+    | kernel-switch | ✅ | 13.4 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 119.2 s | power-cycle · 4/4 boots · up 18 s |
+    | hw-performance | ✅ | 14.5 s | AES 1368 · mem 12100 · disk W 54 / R 84 MB/s · 66.7 °C · 2400 MHz |
+    | dvfs | ✅ | 13.4 s | ondemand · 1500–2400 MHz (peak 2400) |
+    | network-iperf | ✅ | 50.6 s | end0 ↑936/↓941 (1GE) · wlan0 ↑42/↓33 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 3.1 s | 26.11.0-trunk.56 · 6.18.52-current-bcm2711 |
+    | kernel-switch | ✅ | 126.4 s | branch=edge · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.6-edge-bcm2711 · kernel_before=6.18.52-current-bcm2711 |
+    | reboot | ✅ | 126.5 s | power-cycle · 4/4 boots · up 19 s |
+    | hw-performance | ✅ | 14.8 s | AES 1368 · mem 9200 · disk W 51 / R 84 MB/s · 67.2 °C · 2400 MHz |
+    | dvfs | ✅ | 13.3 s | ondemand · 1500–2400 MHz (peak 2400) |
+    | network-iperf | ✅ | 51.4 s | end0 ↑936/↓941 (1GE) · wlan0 ↑45/↓34 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 3.1 s | 26.11.0-trunk.56 · 7.2.6-edge-bcm2711 |
+    | kernel-switch | ✅ | 119.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
+    | reboot | ✅ | 43.5 s | power-cycle · up 18 s |
 
-    **Power** — min 3.30 W · avg 6.15 W · peak 10.80 W · 790 samples
+    **Power** — min 2.50 W · avg 6.17 W · peak 10.60 W · 726 samples
 
     ```mermaid
     xychart-beta
         title "Power — Raspberry Pi 5B"
-        x-axis "sample" 1 --> 790
-        y-axis "W" 3.0 --> 11.0
-        line [5.56, 5.37, 7.29, 7.69, 5.18, 5.65, 5.85, 6.11, 7.82, 6.18, 6.31, 4.81, 5.53, 5.46, 5.18, 4.90, 6.49, 7.95, 6.27, 5.79, 5.85, 5.91, 8.96, 6.17, 6.96, 5.41, 4.91, 4.97, 5.31, 6.00, 7.69, 5.95, 6.01, 5.68, 5.31, 7.18, 7.78, 6.46, 6.45, 5.84]
+        x-axis "sample" 1 --> 726
+        y-axis "W" 2.0 --> 11.0
+        line [6.13, 5.71, 6.08, 8.63, 6.09, 6.47, 6.31, 5.77, 6.49, 5.12, 5.97, 5.69, 6.06, 5.53, 6.08, 7.49, 6.13, 5.58, 6.07, 5.59, 6.77, 8.47, 6.06, 6.03, 5.78, 4.40, 5.02, 6.57, 4.16, 6.39, 8.22, 6.09, 5.66, 5.91, 5.49, 7.49, 8.08, 6.54, 6.14, 4.66]
     ```
 
 ??? success "Raspberry Pi Zero 2W — pass"
