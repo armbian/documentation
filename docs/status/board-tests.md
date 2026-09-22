@@ -1136,18 +1136,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Rockpi E 01 — pass"
 
-    `rockpi-e` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `rockpi-e` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 306.2 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 54.5 s | power-cycle · up 24 s |
-    | kernel-switch | ✅ | 50.8 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 53.4 s | power-cycle · up 24 s |
-    | hw-performance | ✅ | 32.1 s | AES 596 · mem 3300 · disk W 21 / R 23 MB/s · 64.2 °C · 1296 MHz |
-    | dvfs | ✅ | 24.9 s | ondemand · 408–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 95.6 s | end0 ↑941/↓941 (1GE) · end1 ↑94/↓94 (10/100ME) · wlx7ca7b020e87c ↑159/↓211 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 5.5 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
+    | upgrade | ✅ | 73.8 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 55.3 s | power-cycle · up 24 s |
+    | kernel-switch | ✅ | 50.9 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 156.3 s | power-cycle · 4/4 boots · up 24 s |
+    | hw-performance | ✅ | 31.8 s | AES 600 · mem 3300 · disk W 21 / R 23 MB/s · 60.4 °C · 1296 MHz |
+    | dvfs | ✅ | 25.2 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 92.1 s | end0 ↑940/↓941 (1GE) · end1 ↑94/↓94 (10/100ME) · wlx7ca7b020e87c ↑91/↓211 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.6 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 177.9 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 152.3 s | power-cycle · 4/4 boots · up 24 s |
+    | hw-performance | ✅ | 32.1 s | AES 602 · mem 3300 · disk W 21 / R 23 MB/s · 61.2 °C · 1296 MHz |
+    | dvfs | ✅ | 26.4 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 90.2 s | end0 ↑941/↓941 (1GE) · end1 ↑94/↓94 (10/100ME) · wlx7ca7b020e87c ↑84/↓181 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 175.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 55.6 s | power-cycle · up 24 s |
 
 ??? failure "RockPro 64 01 — fail"
 
