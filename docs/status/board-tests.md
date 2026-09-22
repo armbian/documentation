@@ -695,27 +695,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Odroid N2 01 — pass"
 
-    `odroidn2` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidn2` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 172.6 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 61.6 s | power-cycle · up 24 s |
-    | kernel-switch | ✅ | 24.9 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 59.3 s | power-cycle · up 26 s |
-    | hw-performance | ✅ | 18.8 s | AES 1085 · mem 4900 · disk W 28 / R 138 MB/s · 39.4 °C · 1992 MHz |
-    | dvfs | ✅ | 17.2 s | performance · 1000–1992 MHz (peak 1992) |
-    | network-iperf | ✅ | 38.8 s | end0 ↑940/↓941 (1GE) Mbps |
-    | store-versions | ✅ | 3.6 s | 26.11.0-trunk.54 · 6.18.52-current-meson64 |
+    | upgrade | ✅ | 143.2 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 58.9 s | power-cycle · up 29 s |
+    | kernel-switch | ✅ | 24.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 169.1 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 19.0 s | AES 1085 · mem 4900 · disk W 26 / R 135 MB/s · 38.1 °C · 1992 MHz |
+    | dvfs | ✅ | 17.1 s | performance · 1000–1992 MHz (peak 1992) |
+    | network-iperf | ✅ | 29.1 s | end0 ↑940/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 3.8 s | 26.11.0-trunk.56 · 6.18.53-current-meson64 |
+    | kernel-switch | ✅ | 78.8 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 172.0 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 20.5 s | AES 1085 · mem 4900 · disk W 26 / R 137 MB/s · 38.1 °C · 1992 MHz |
+    | dvfs | ✅ | 18.3 s | performance · 1000–1992 MHz (peak 1992) |
+    | network-iperf | ✅ | 31.5 s | end0 ↑940/↓941 (1GE) Mbps |
+    | store-versions | ✅ | 4.0 s | 26.11.0-trunk.56 · 7.2.7-edge-meson64 |
+    | kernel-switch | ✅ | 79.3 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+    | reboot | ✅ | 63.0 s | power-cycle · up 29 s |
 
-    **Power** — min 1.00 W · avg 3.73 W · peak 9.80 W · 313 samples
+    **Power** — min 1.00 W · avg 3.67 W · peak 9.80 W · 748 samples
 
     ```mermaid
     xychart-beta
         title "Power — Odroid N2 01"
-        x-axis "sample" 1 --> 313
+        x-axis "sample" 1 --> 748
         y-axis "W" 0.5 --> 10.0
-        line [3.07, 4.52, 3.83, 3.65, 3.93, 3.66, 3.90, 4.12, 3.98, 3.56, 3.71, 4.59, 3.29, 3.23, 3.52, 4.06, 4.35, 4.56, 3.95, 3.57, 1.83, 2.12, 3.26, 3.98, 4.75, 4.27, 3.54, 3.80, 1.61, 2.27, 3.56, 4.17, 4.15, 3.50, 7.70, 4.84, 3.25, 3.32, 2.96, 3.55]
+        line [4.02, 4.45, 3.95, 3.78, 4.31, 3.88, 3.47, 3.09, 3.50, 3.71, 2.80, 3.47, 3.31, 3.37, 3.65, 2.98, 2.99, 4.18, 5.73, 3.38, 3.81, 3.81, 4.13, 3.78, 3.00, 3.23, 4.00, 3.07, 3.14, 2.73, 4.16, 4.73, 4.45, 3.41, 3.63, 4.12, 3.95, 3.75, 2.05, 3.75]
     ```
 
 ??? failure "Odroid XU4 01 — fail"
