@@ -62,11 +62,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Banana Pi M2Pro 01 — fail"
 
-    `bananapim2pro` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `bananapim2pro` · **inplace** · image `26.11.0-trunk.52` · 14 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.44 · reachable=False · port=22 |
+    | upgrade | ⏭️ | 11.7 s | — |
+    | reboot | ✅ | 48.5 s | power-cycle · up 21 s |
+    | kernel-switch | ✅ | 36.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.52 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
+    | reboot | ✅ | 147.5 s | power-cycle · 4/4 boots · up 22 s |
+    | hw-performance | ✅ | 34.7 s | AES 980 · mem 5200 · disk W 13 / R 15 MB/s · 49.3 °C · 2100 MHz |
+    | dvfs | ✅ | 19.6 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 56.6 s | end0 ↑939/↓939 (1GE) · wlx60fb00480eb0 ↑179/↓199 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.52 · 6.18.52-current-meson64 |
+    | kernel-switch | ❌ | 24.2 s | branch=edge · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 147.0 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 34.0 s | AES 980 · mem 5300 · disk W 14 / R 15 MB/s · 49.8 °C · 2100 MHz |
+    | dvfs | ✅ | 27.2 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 56.7 s | end0 ↑939/↓939 (1GE) · wlx60fb00480eb0 ↑161/↓192 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.52 · 6.18.52-current-meson64 |
+    | kernel-switch | ✅ | 36.3 s | branch=current · family=meson64 · installed=26.11.0-trunk.52 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
+    | reboot | ✅ | 52.9 s | power-cycle · up 22 s |
 
 ??? success "Banana Pi M5 01 — pass"
 
