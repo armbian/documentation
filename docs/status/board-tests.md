@@ -865,19 +865,19 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 21.3 s | AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 66 °C · 1608 MHz |
-    | dvfs | ✅ | 21.6 s | ondemand · 480–1608 MHz (peak 1608) |
-    | network-iperf | ✅ | 119.1 s | end0 ↑914/↓940 (1GE) · wlan0 ↑98/↓133 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.8 s | 26.8.3 · 7.1.8-edge-sunxi64 |
+    | hw-performance | ✅ | 20.8 s | AES 750 · mem 4100 · disk W 55 / R 127 MB/s · 64.6 °C · 1608 MHz |
+    | dvfs | ✅ | 21.8 s | ondemand · 480–1608 MHz (peak 1608) |
+    | network-iperf | ✅ | 58.5 s | end0 ↑914/↓941 (1GE) · wlan0 ↑142/↓133 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.9 s | 26.8.3 · 7.1.8-edge-sunxi64 |
 
-    **Power** — min 2.60 W · avg 3.42 W · peak 4.40 W · 139 samples
+    **Power** — min 2.50 W · avg 3.45 W · peak 4.30 W · 97 samples
 
     ```mermaid
     xychart-beta
         title "Power — OrangePi 3 LTS 01"
-        x-axis "sample" 1 --> 139
-        y-axis "W" 2.5 --> 4.5
-        line [2.80, 2.80, 3.63, 3.40, 3.02, 3.40, 3.42, 3.50, 4.32, 4.40, 3.65, 3.80, 3.57, 3.07, 3.40, 3.53, 3.70, 3.27, 2.80, 2.93, 3.53, 3.10, 3.47, 3.80, 3.87, 3.75, 3.63, 3.08, 2.60, 3.58, 2.80, 3.50, 3.00, 4.40, 3.50, 3.35, 3.70, 3.40, 3.30, 2.77]
+        x-axis "sample" 1 --> 97
+        y-axis "W" 2.0 --> 4.5
+        line [2.60, 2.55, 2.50, 2.50, 2.60, 2.95, 3.30, 3.40, 3.50, 3.47, 3.40, 3.80, 2.80, 2.80, 4.30, 4.30, 3.37, 2.90, 3.40, 3.20, 3.20, 3.80, 3.40, 3.40, 3.40, 3.40, 3.70, 3.70, 3.80, 3.75, 3.90, 4.30, 4.17, 3.95, 3.80, 3.67, 3.45, 3.30, 3.80, 3.73]
     ```
 
 ??? success "Radxa Dragon Q6A 01 — pass"
