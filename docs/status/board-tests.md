@@ -558,18 +558,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi Neo 3 01 — pass"
 
-    `nanopineo3` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopineo3` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 286.5 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 52.1 s | power-cycle · up 26 s |
-    | kernel-switch | ✅ | 58.8 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 51.4 s | power-cycle · up 25 s |
-    | hw-performance | ✅ | 28.4 s | AES 551 · mem 2300 · disk W 52 / R 63 MB/s · 81.5 °C · 1296 MHz |
-    | dvfs | ✅ | 30.2 s | ondemand · 408–1296 MHz (peak 1296) |
-    | network-iperf | ✅ | 185.2 s | end0 ↑919/↓941 (1GE) · wlx7cdd905518f9 ↑29/↓19 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 6.4 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
+    | upgrade | ✅ | 83.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 55.3 s | power-cycle · up 26 s |
+    | kernel-switch | ✅ | 57.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 167.7 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 28.4 s | AES 597 · mem 2400 · disk W 1 / R 63 MB/s · 79.2 °C · 1296 MHz |
+    | dvfs | ✅ | 29.9 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 68.0 s | end0 ↑920/↓941 (1GE) · wlx7cdd905518f9 ↑36/↓25 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 6.4 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 172.4 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 162.3 s | power-cycle · 4/4 boots · up 25 s |
+    | hw-performance | ✅ | 28.7 s | AES 599 · mem 2400 · disk W 1 / R 63 MB/s · 81.5 °C · 1296 MHz |
+    | dvfs | ✅ | 31.7 s | ondemand · 408–1296 MHz (peak 1296) |
+    | network-iperf | ✅ | 68.8 s | end0 ↑885/↓941 (1GE) · wlx7cdd905518f9 ↑31/↓24 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 16.1 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 169.3 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 57.1 s | power-cycle · up 27 s |
 
 ??? success "NanoPi R6S 01 — pass"
 
