@@ -645,27 +645,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Odroid C4 01 — pass"
 
-    `odroidc4` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `odroidc4` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 199.4 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 46.4 s | power-cycle · up 16 s |
-    | kernel-switch | ✅ | 30.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 46.9 s | power-cycle · up 18 s |
-    | hw-performance | ✅ | 21.6 s | AES 980 · mem 5300 · disk W 30 / R 80 MB/s · 43.7 °C · 2100 MHz |
-    | dvfs | ✅ | 19.6 s | ondemand · 1000–2100 MHz (peak 2100) |
-    | network-iperf | ✅ | 123.3 s | end0 ↑852/↓875 (1GE) · wlx24050fdd332b ↑116/↓87 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.54 · 6.18.52-current-meson64 |
+    | upgrade | ✅ | 187.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 47.5 s | power-cycle · up 17 s |
+    | kernel-switch | ✅ | 30.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 129.0 s | power-cycle · 4/4 boots · up 17 s |
+    | hw-performance | ✅ | 21.7 s | AES 980 · mem 5200 · disk W 31 / R 78 MB/s · 41.5 °C · 2100 MHz |
+    | dvfs | ✅ | 19.1 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 57.2 s | end0 ↑938/↓871 (1GE) · wlx24050fdd332b ↑118/↓127 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.56 · 6.18.53-current-meson64 |
+    | kernel-switch | ✅ | 108.2 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 131.5 s | power-cycle · 4/4 boots · up 17 s |
+    | hw-performance | ✅ | 21.8 s | AES 980 · mem 5200 · disk W 30 / R 77 MB/s · 41.4 °C · 2100 MHz |
+    | dvfs | ✅ | 19.7 s | ondemand · 1000–2100 MHz (peak 2100) |
+    | network-iperf | ✅ | 57.5 s | end0 ↑891/↓917 (1GE) · wlx24050fdd332b ↑102/↓129 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.3 s | 26.11.0-trunk.56 · 7.2.7-edge-meson64 |
+    | kernel-switch | ✅ | 105.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+    | reboot | ✅ | 50.6 s | power-cycle · up 17 s |
 
-    **Power** — min 1.00 W · avg 3.44 W · peak 5.00 W · 394 samples
+    **Power** — min 1.00 W · avg 3.47 W · peak 5.20 W · 805 samples
 
     ```mermaid
     xychart-beta
         title "Power — Odroid C4 01"
-        x-axis "sample" 1 --> 394
+        x-axis "sample" 1 --> 805
         y-axis "W" 0.5 --> 5.5
-        line [2.80, 3.60, 3.55, 3.65, 3.45, 3.60, 3.56, 3.50, 3.59, 3.60, 3.25, 4.02, 4.30, 3.66, 3.56, 3.59, 3.60, 3.10, 2.26, 2.83, 3.77, 3.68, 3.42, 3.24, 1.92, 2.80, 3.89, 3.53, 4.02, 3.70, 3.27, 3.34, 3.25, 2.99, 3.39, 3.28, 3.43, 4.15, 3.37, 3.92]
+        line [3.32, 3.49, 3.52, 3.45, 3.50, 3.62, 3.48, 3.50, 2.54, 3.61, 3.40, 3.28, 3.54, 3.27, 3.12, 2.91, 3.69, 3.82, 3.65, 4.34, 3.76, 3.65, 3.61, 3.66, 3.52, 3.41, 3.50, 3.42, 2.50, 3.34, 3.66, 3.40, 3.66, 4.19, 3.83, 3.75, 3.59, 3.61, 3.39, 2.36]
     ```
 
 ??? success "Odroid M1 01 — pass"
@@ -824,18 +832,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "Orange Pi One+ 01 — pass"
 
-    `orangepioneplus` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `orangepioneplus` · **inplace** · image `26.11.0-trunk.54` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 222.5 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 36.3 s | warm · up 18 s |
-    | kernel-switch | ✅ | 124.3 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=7.2.6-edge-sunxi64 |
-    | reboot | ✅ | 35.2 s | warm · up 18 s |
-    | hw-performance | ✅ | 29.5 s | AES 831 · mem 4600 · disk W 21 / R 23 MB/s · 61.4 °C · 1800 MHz |
-    | dvfs | ✅ | 22.3 s | ondemand · 480–1800 MHz (peak 1800) |
-    | network-iperf | ✅ | 70.3 s | end0 ↑917/↓941 (1GE) · wlx00e04c881724 ↑142/↓174 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | upgrade | ✅ | 227.1 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 39.7 s | warm · up 20 s |
+    | kernel-switch | ✅ | 45.4 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+    | reboot | ✅ | 123.5 s | warm · 4/4 boots · up 18 s |
+    | hw-performance | ✅ | 29.4 s | AES 835 · mem 4600 · disk W 21 / R 23 MB/s · 59.3 °C · 1800 MHz |
+    | dvfs | ✅ | 22.4 s | ondemand · 480–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 59.4 s | end0 ↑917/↓942 (1GE) · wlx00e04c881724 ↑133/↓177 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi64 |
+    | kernel-switch | ✅ | 124.9 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+    | reboot | ✅ | 123.6 s | warm · 4/4 boots · up 17 s |
+    | hw-performance | ✅ | 30.1 s | AES 835 · mem 4600 · disk W 20 / R 23 MB/s · 59.3 °C · 1800 MHz |
+    | dvfs | ✅ | 22.7 s | ondemand · 480–1800 MHz (peak 1800) |
+    | network-iperf | ✅ | 66.1 s | end0 ↑912/↓942 (1GE) · wlx00e04c881724 ↑128/↓116 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
+    | kernel-switch | ✅ | 126.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
+    | reboot | ✅ | 37.6 s | warm · up 18 s |
 
 ??? failure "Orange Pi PC2 01 — fail"
 
