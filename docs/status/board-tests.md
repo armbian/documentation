@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **44** passed, **20** failed. Each card is the board's most recent test.
+**64** boards — **45** passed, **19** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -191,20 +191,28 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
         line [2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10]
     ```
 
-??? failure "Clearfog Pro 01 — fail"
+??? success "Clearfog Pro 01 — pass"
 
-    `clearfogpro` · **inplace** · image `26.11.0-trunk.54` · 6 ✅ · 1 ❌ · 1 ⏭️
+    `clearfogpro` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 62.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 39.2 s | warm · up 22 s |
-    | kernel-switch | ❌ | 39.7 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
-    | reboot | ✅ | 37.5 s | warm · up 20 s |
-    | hw-performance | ✅ | 41.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 63.2 °C · None MHz |
+    | upgrade | ✅ | 59.2 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 40.6 s | warm · up 20 s |
+    | kernel-switch | ✅ | 104.1 s | branch=current · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu · kernel_before=7.2.7-edge-mvebu |
+    | reboot | ✅ | 137.3 s | warm · 4/4 boots · up 19 s |
+    | hw-performance | ✅ | 41.6 s | AES 43 · mem 3800 · disk W 20 / R 23 MB/s · 64.2 °C · None MHz |
     | dvfs | ➖ | 2.9 s | no cpufreq |
-    | network-iperf | ✅ | 38.5 s | lan2 ↑936/↓936 Mbps |
-    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
+    | network-iperf | ✅ | 34.6 s | lan2 ↑936/↓936 Mbps |
+    | store-versions | ✅ | 5.9 s | 26.11.0-trunk.56 · 6.18.53-current-mvebu |
+    | kernel-switch | ✅ | 101.2 s | branch=edge · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-mvebu · kernel_before=6.18.53-current-mvebu |
+    | reboot | ✅ | 138.1 s | warm · 4/4 boots · up 20 s |
+    | hw-performance | ✅ | 41.8 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 66.1 °C · None MHz |
+    | dvfs | ➖ | 2.9 s | no cpufreq |
+    | network-iperf | ✅ | 35.5 s | lan2 ↑936/↓936 Mbps |
+    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.56 · 7.2.7-edge-mvebu |
+    | kernel-switch | ✅ | 102.3 s | branch=current · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu · kernel_before=7.2.7-edge-mvebu |
+    | reboot | ✅ | 40.1 s | warm · up 20 s |
 
 ??? failure "Cubie A5E 01 — fail"
 
