@@ -453,18 +453,26 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi K2 01 — pass"
 
-    `nanopik2-s905` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopik2-s905` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 293.8 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 44.0 s | warm · up 29 s |
-    | kernel-switch | ✅ | 40.1 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-    | reboot | ✅ | 32.9 s | warm · up 18 s |
-    | hw-performance | ✅ | 31.3 s | AES 51 · mem 3700 · disk W 11 / R 41 MB/s · 62 °C · 2016 MHz |
+    | upgrade | ✅ | 65.6 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 40.4 s | warm · up 24 s |
+    | kernel-switch | ✅ | 41.3 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 129.9 s | warm · 4/4 boots · up 19 s |
+    | hw-performance | ✅ | 31.0 s | AES 51 · mem 3700 · disk W 11 / R 41 MB/s · 63 °C · 2016 MHz |
     | dvfs | ✅ | 21.4 s | ondemand · 500–1536 MHz (peak 1536) |
-    | network-iperf | ✅ | 73.6 s | end0 ↑936/↓941 (1GE) · wlan0 ↑12/↓23 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 5.7 s | 26.11.0-trunk.54 · 6.18.52-current-meson64 |
+    | network-iperf | ✅ | 58.7 s | end0 ↑934/↓941 (1GE) · wlan0 ↑15/↓29 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.56 · 6.18.53-current-meson64 |
+    | kernel-switch | ✅ | 159.0 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+    | reboot | ✅ | 130.9 s | warm · 4/4 boots · up 19 s |
+    | hw-performance | ✅ | 32.1 s | AES 51 · mem 3700 · disk W 10 / R 40 MB/s · 64 °C · 2016 MHz |
+    | dvfs | ✅ | 22.4 s | ondemand · 500–1536 MHz (peak 1536) |
+    | network-iperf | ✅ | 64.1 s | end0 ↑935/↓941 (1GE) · wlan0 ↑15/↓19 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 4.8 s | 26.11.0-trunk.56 · 7.2.7-edge-meson64 |
+    | kernel-switch | ✅ | 154.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+    | reboot | ✅ | 38.2 s | warm · up 21 s |
 
 ??? success "NanoPi M4V2 01 — pass"
 
