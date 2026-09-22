@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **47** passed, **17** failed. Each card is the board's most recent test.
+**64** boards — **48** passed, **16** failed. Each card is the board's most recent test.
 
 ??? success "Arduino UNO Q 01 — pass"
 
@@ -298,20 +298,28 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     | network-iperf | ✅ | 38.1 s | lan0 ↑936/↓737 (1GE) Mbps |
     | store-versions | ✅ | 7.2 s | 26.8.3 · 6.18.44-current-mvebu64 |
 
-??? failure "Helios4 01 — fail"
+??? success "Helios4 01 — pass"
 
-    `helios4` · **inplace** · image `26.11.0-trunk.54` · 6 ✅ · 1 ❌ · 1 ⏭️
+    `helios4` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 52.9 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 117.2 s | warm · up 102 s |
-    | kernel-switch | ❌ | 34.2 s | branch=current · family=mvebu · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-mvebu |
-    | reboot | ✅ | 117.6 s | warm · up 102 s |
-    | hw-performance | ✅ | 36.4 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 56.1 °C · None MHz |
+    | upgrade | ✅ | 60.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 118.9 s | warm · up 102 s |
+    | kernel-switch | ✅ | 35.2 s | branch=current · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu · kernel_before=6.18.53-current-mvebu |
+    | reboot | ✅ | 462.2 s | warm · 4/4 boots · up 103 s |
+    | hw-performance | ✅ | 36.3 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 55.6 °C · None MHz |
     | dvfs | ➖ | 2.3 s | no cpufreq |
-    | network-iperf | ✅ | 34.2 s | end1 ↑568/↓477 (1GE) Mbps |
-    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-mvebu |
+    | network-iperf | ✅ | 31.2 s | end1 ↑939/↓926 (1GE) Mbps |
+    | store-versions | ✅ | 5.6 s | 26.11.0-trunk.56 · 6.18.53-current-mvebu |
+    | kernel-switch | ✅ | 95.7 s | branch=edge · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-mvebu · kernel_before=6.18.53-current-mvebu |
+    | reboot | ✅ | 461.9 s | warm · 4/4 boots · up 103 s |
+    | hw-performance | ✅ | 36.8 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 55.6 °C · None MHz |
+    | dvfs | ➖ | 2.4 s | no cpufreq |
+    | network-iperf | ✅ | 32.3 s | end1 ↑922/↓920 (1GE) Mbps |
+    | store-versions | ✅ | 12.5 s | 26.11.0-trunk.56 · 7.2.7-edge-mvebu |
+    | kernel-switch | ✅ | 98.1 s | branch=current · family=mvebu · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu · kernel_before=7.2.7-edge-mvebu |
+    | reboot | ✅ | 119.3 s | warm · up 102 s |
 
 ??? failure "Inovato Quadra 01 — fail"
 
