@@ -1207,10 +1207,10 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
     |:--|:--:|--:|:--|
     | upgrade | ⏭️ | 0.0 s | — |
     | reboot | ⏭️ | 0.0 s | reboot |
-    | hw-performance | ✅ | 15.8 s | AES 1458 · mem 13000 · disk W 1588 / R 2265 MB/s · 45 °C · 2600 MHz |
-    | dvfs | ✅ | 19.2 s | ondemand · 800–2600 MHz (peak 2600) |
-    | network-iperf | ✅ | 81.3 s | enp1s0 ↑8513/↓2732 (10GE) · enp49s0 ↑7060/↓8478 (10GE) · wlp97s0 ↑123/↓85 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 4.5 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
+    | hw-performance | ✅ | 15.6 s | AES 1458 · mem 13000 · disk W 1571 / R 2276 MB/s · 45 °C · 2600 MHz |
+    | dvfs | ✅ | 18.1 s | ondemand · 800–2600 MHz (peak 2600) |
+    | network-iperf | ✅ | 84.1 s | enp1s0 ↑8816/↓2834 (10GE) · enp49s0 ↑9002/↓8956 (10GE) · wlp97s0 ↑124/↓91 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 5.2 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
 
 ??? success "UEFI x86 01 — pass"
 
