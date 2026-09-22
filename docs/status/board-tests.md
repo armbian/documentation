@@ -666,31 +666,31 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 48.0 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 53.6 s | power-cycle · up 20 s |
-    | kernel-switch | ✅ | 31.6 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 56.9 s | power-cycle · up 23 s |
-    | hw-performance | ✅ | 17.1 s | AES 917 · mem 5100 · disk W 1032 / R 1018 MB/s · 33.8 °C · 1992 MHz |
-    | dvfs | ✅ | 21.4 s | ondemand · 408–1992 MHz (peak 1992) |
-    | network-iperf | ✅ | 58.1 s | eth0 ↑639/↓941 (1GE) · wlx40a5eff39254 ↑210/↓227 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.8 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
-    | kernel-switch | ✅ | 86.1 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-7.2.6-edge-rockchip64 · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 56.0 s | power-cycle · up 22 s |
-    | hw-performance | ✅ | 17.8 s | AES 916 · mem 5100 · disk W 1034 / R 1071 MB/s · 34.4 °C · 1992 MHz |
-    | dvfs | ✅ | 22.4 s | ondemand · 408–1992 MHz (peak 1992) |
-    | network-iperf | ✅ | 59.1 s | eth0 ↑941/↓941 (1GE) · wlx40a5eff39254 ↑211/↓228 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 7.2.6-edge-rockchip64 |
-    | kernel-switch | ✅ | 86.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=7.2.6-edge-rockchip64 |
-    | reboot | ✅ | 58.6 s | power-cycle · up 23 s |
+    | upgrade | ✅ | 143.0 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 55.9 s | power-cycle · up 24 s |
+    | kernel-switch | ✅ | 31.5 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 137.8 s | power-cycle · 4/4 boots · up 24 s |
+    | hw-performance | ✅ | 17.0 s | AES 916 · mem 5100 · disk W 1025 / R 1012 MB/s · 35.6 °C · 1992 MHz |
+    | dvfs | ✅ | 20.9 s | ondemand · 408–1992 MHz (peak 1992) |
+    | network-iperf | ✅ | 58.9 s | eth0 ↑556/↓941 (1GE) · wlx40a5eff39254 ↑207/↓227 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.6 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 86.1 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 142.2 s | power-cycle · 4/4 boots · up 24 s |
+    | hw-performance | ✅ | 17.8 s | AES 915 · mem 5100 · disk W 1047 / R 1025 MB/s · 35.6 °C · 1992 MHz |
+    | dvfs | ✅ | 22.8 s | ondemand · 408–1992 MHz (peak 1992) |
+    | network-iperf | ✅ | 59.2 s | eth0 ↑941/↓941 (1GE) · wlx40a5eff39254 ↑207/↓221 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 86.9 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 57.7 s | power-cycle · up 22 s |
 
-    **Power** — min 2.00 W · avg 6.32 W · peak 10.00 W · 514 samples
+    **Power** — min 0.60 W · avg 6.39 W · peak 11.50 W · 752 samples
 
     ```mermaid
     xychart-beta
         title "Power — Odroid M1 01"
-        x-axis "sample" 1 --> 514
-        y-axis "W" 1.5 --> 10.5
-        line [6.48, 5.93, 5.77, 5.95, 7.55, 7.32, 6.81, 5.05, 5.72, 7.67, 6.52, 6.72, 6.18, 5.79, 5.88, 6.15, 5.51, 7.82, 8.52, 6.54, 6.00, 6.65, 5.44, 5.89, 6.64, 5.44, 6.15, 5.72, 5.60, 5.65, 6.00, 5.30, 7.32, 7.63, 7.20, 6.89, 5.97, 5.69, 4.69, 6.95]
+        x-axis "sample" 1 --> 752
+        y-axis "W" 0.5 --> 12.0
+        line [6.06, 7.28, 6.54, 5.93, 7.77, 6.90, 5.38, 6.06, 6.65, 6.51, 5.99, 7.35, 6.07, 7.15, 5.89, 6.42, 6.53, 5.86, 5.73, 5.95, 6.42, 7.82, 6.59, 5.83, 5.54, 7.09, 6.72, 6.21, 6.08, 7.16, 6.88, 5.63, 5.77, 6.23, 6.09, 7.57, 5.96, 6.26, 5.44, 6.43]
     ```
 
 ??? success "Odroid N2 01 — pass"
