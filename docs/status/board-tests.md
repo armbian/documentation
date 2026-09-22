@@ -460,27 +460,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? success "NanoPi M4V2 01 — pass"
 
-    `nanopim4v2` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+    `nanopim4v2` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 281.3 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 60.7 s | power-cycle · up 30 s |
-    | kernel-switch | ✅ | 30.2 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-rockchip64 · kernel_before=6.18.52-current-rockchip64 |
-    | reboot | ✅ | 55.7 s | power-cycle · up 28 s |
-    | hw-performance | ✅ | 22.0 s | AES 1020 · mem 6600 · disk W 54 / R 28 MB/s · 49.4 °C · 1416 MHz |
-    | dvfs | ✅ | 24.4 s | ondemand · 408–1416 MHz (peak 1800) |
-    | network-iperf | ✅ | 105.0 s | end0 ↑937/↓786 (1GE) · wlan0 ↑138/↓155 (Wi-Fi 5) · wlx803f5d16af63 ↑140/↓203 (Wi-Fi 5) Mbps |
-    | store-versions | ✅ | 4.9 s | 26.11.0-trunk.54 · 6.18.52-current-rockchip64 |
+    | upgrade | ✅ | 49.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+    | reboot | ✅ | 54.6 s | power-cycle · up 24 s |
+    | kernel-switch | ✅ | 29.8 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 161.7 s | power-cycle · 4/4 boots · up 26 s |
+    | hw-performance | ✅ | 21.5 s | AES 1021 · mem 6600 · disk W 55 / R 61 MB/s · 46.2 °C · 1416 MHz |
+    | dvfs | ✅ | 21.0 s | ondemand · 408–1416 MHz (peak 1800) |
+    | network-iperf | ✅ | 86.0 s | end0 ↑938/↓924 (1GE) · wlan0 ↑173/↓197 (Wi-Fi 5) · wlx803f5d16af63 ↑162/↓215 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 4.7 s | 26.11.0-trunk.56 · 6.18.53-current-rockchip64 |
+    | kernel-switch | ✅ | 93.5 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+    | reboot | ✅ | 159.3 s | power-cycle · 4/4 boots · up 23 s |
+    | hw-performance | ✅ | 21.9 s | AES 1021 · mem 6600 · disk W 54 / R 60 MB/s · 46.2 °C · 1416 MHz |
+    | dvfs | ✅ | 20.3 s | ondemand · 408–1416 MHz (peak 1800) |
+    | network-iperf | ✅ | 86.5 s | end0 ↑939/↓939 (1GE) · wlan0 ↑77/↓69 (Wi-Fi 5) · wlx803f5d16af63 ↑159/↓218 (Wi-Fi 5) Mbps |
+    | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
+    | kernel-switch | ✅ | 91.9 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+    | reboot | ✅ | 54.7 s | power-cycle · up 24 s |
 
-    **Power** — min 3.20 W · avg 7.60 W · peak 14.10 W · 472 samples
+    **Power** — min 2.50 W · avg 6.97 W · peak 12.20 W · 781 samples
 
     ```mermaid
     xychart-beta
         title "Power — NanoPi M4V2 01"
-        x-axis "sample" 1 --> 472
-        y-axis "W" 3.0 --> 14.5
-        line [5.93, 6.46, 6.13, 5.84, 6.73, 5.87, 7.28, 6.94, 7.26, 7.71, 7.81, 6.36, 6.55, 5.93, 6.05, 6.15, 8.69, 6.83, 7.47, 7.45, 6.60, 5.71, 6.18, 8.71, 7.90, 7.97, 6.42, 5.09, 6.62, 9.16, 7.45, 10.88, 10.22, 9.53, 9.17, 9.24, 10.08, 9.36, 10.88, 11.01]
+        x-axis "sample" 1 --> 781
+        y-axis "W" 2.0 --> 12.5
+        line [6.35, 7.76, 7.18, 5.58, 7.33, 7.72, 4.92, 7.38, 5.05, 6.55, 7.74, 5.29, 8.22, 9.31, 6.38, 7.06, 7.77, 7.79, 7.34, 6.83, 7.80, 7.97, 5.93, 5.44, 4.77, 6.72, 7.18, 6.25, 8.16, 8.20, 7.88, 6.46, 6.82, 7.89, 7.36, 6.92, 7.15, 7.84, 6.00, 6.33]
     ```
 
 ??? failure "NanoPi M5 01 — fail"
