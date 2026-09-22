@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **40** passed, **24** failed. Each card is the board's most recent test.
+**64** boards — **41** passed, **23** failed. Each card is the board's most recent test.
 
 ??? failure "Arduino UNO Q 01 — fail"
 
@@ -1199,13 +1199,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
         line [4.93, 6.02, 6.23, 6.21, 5.91, 5.86, 5.93, 5.79, 5.75, 6.06, 5.53, 5.09, 5.53, 7.69, 6.32, 6.38, 5.85, 6.17, 5.89, 5.85, 5.02, 4.52, 4.45, 7.23, 6.65, 5.71, 5.91, 5.31, 5.68, 6.83, 5.91, 6.06, 5.57, 6.47, 6.45, 6.45, 6.57, 6.01, 6.12, 6.53]
     ```
 
-??? failure "UEFI arm64 01 — fail"
+??? success "UEFI arm64 01 — pass"
 
-    `uefi-arm64` · **inplace** · image `26.11.0-trunk.30` · 0 ✅ · 1 ❌ · 0 ⏭️
+    `uefi-arm64` · **inplace** · image `26.11.0-trunk.54` · 4 ✅ · 0 ❌ · 2 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | reachable | ❌ | 0.0 s | ip=10.0.50.45 · reachable=False · port=22 |
+    | upgrade | ⏭️ | 0.0 s | — |
+    | reboot | ⏭️ | 0.0 s | reboot |
+    | hw-performance | ✅ | 15.9 s | AES 1402 · mem 13000 · disk W 1588 / R 2108 MB/s · 45 °C · 2600 MHz |
+    | dvfs | ✅ | 18.9 s | ondemand · 800–2600 MHz (peak 2600) |
+    | network-iperf | ✅ | 81.2 s | enp1s0 ↑7108/↓2719 (10GE) · enp49s0 ↑8098/↓8766 (10GE) · wlp97s0 ↑124/↓100 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 4.4 s | 26.11.0-trunk.56 · 7.2.6-edge-arm64 |
 
 ??? success "UEFI x86 01 — pass"
 
