@@ -47,18 +47,18 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Banana Pi M2 Ultra 01 — fail"
 
-    `bananapim2ultra` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
+    `bananapim2ultra` · **inplace** · image `26.11.0-trunk.54` · 6 ✅ · 1 ❌ · 1 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ✅ | 101.3 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-    | reboot | ✅ | 41.2 s | warm · up 22 s |
-    | kernel-switch | ❌ | 68.4 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
-    | reboot | ✅ | 43.5 s | warm · up 22 s |
-    | hw-performance | ✅ | 38.0 s | AES 23 · mem 2100 · disk W 3 / R 42 MB/s · 50.6 °C · 1200 MHz |
-    | dvfs | ✅ | 33.9 s | ondemand · 720–1200 MHz (peak 1200) |
-    | network-iperf | ✅ | 79.1 s | end0 ↑809/↓941 (1GE) · wlan0 ↑32/↓31 (Wi-Fi 4) Mbps |
-    | store-versions | ✅ | 7.2 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
+    | upgrade | ⏭️ | 25.6 s | — |
+    | reboot | ✅ | 48.5 s | warm · up 25 s |
+    | kernel-switch | ❌ | 66.9 s | branch=current · family=sunxi · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-sunxi |
+    | reboot | ✅ | 151.3 s | warm · 4/4 boots · up 21 s |
+    | hw-performance | ✅ | 38.5 s | AES 23 · mem 2100 · disk W 1 / R 42 MB/s · 51.1 °C · 1200 MHz |
+    | dvfs | ✅ | 34.0 s | ondemand · 720–1200 MHz (peak 1200) |
+    | network-iperf | ✅ | 71.8 s | end0 ↑805/↓942 (1GE) · wlan0 ↑30/↓31 (Wi-Fi 4) Mbps |
+    | store-versions | ✅ | 8.4 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi |
 
 ??? failure "Banana Pi M2Pro 01 — fail"
 
