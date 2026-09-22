@@ -15,6 +15,30 @@
   --md-accent-fg-color--transparent: #F2652218;
 }
 
+/* Content column +25%.
+ *
+ * Material caps .md-grid at 61rem to keep prose line-length readable. With both
+ * sidebars at 12.1rem that leaves 36.8rem of content, which is tight for the
+ * wider tables in the docs -- the per-module tables on the fleet status pages
+ * are four columns with a detail field running to 100 characters.
+ *
+ * 70.2rem leaves 46.0rem of content, exactly +25%. The sidebars keep their
+ * width, so the whole gain goes to the content column.
+ *
+ * Behind Material's own sidebar breakpoint (76.25em = 1220px): below it the
+ * layout stacks and the sidebars are off-canvas, so there is nothing to
+ * reclaim and narrow screens are left alone.
+ *
+ * Note Material scales the root font size with the viewport (125% base, 137.5%
+ * above 100em, 150% above 125em), so 1rem is 20, 22 or 24px and the content
+ * column lands at 920, 1012 or 1104px respectively.
+ */
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 70.2rem;
+  }
+}
+
 .md-typeset__table {
    min-width: 100%;
 }
