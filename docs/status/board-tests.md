@@ -208,35 +208,35 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ??? failure "Cubie A5E 01 — fail"
 
-    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.52` · 10 ✅ · 3 ❌ · 3 ⏭️
+    `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.54` · 10 ✅ · 3 ❌ · 3 ⏭️
 
     | Module | Status | Time | Detail |
     |:--|:--:|--:|:--|
-    | upgrade | ⏭️ | 108.9 s | — |
-    | reboot | ✅ | 60.9 s | power-cycle · up 29 s |
-    | kernel-switch | ❌ | 125.5 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 62.0 s | power-cycle · up 30 s |
-    | hw-performance | ✅ | 43.7 s | AES 358 · mem 2000 · disk W 20 / R 2 MB/s · 63.2 °C · None MHz |
+    | upgrade | ⏭️ | 303.3 s | — |
+    | reboot | ✅ | 66.9 s | power-cycle · up 32 s |
+    | kernel-switch | ❌ | 119.2 s | branch=current · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 180.2 s | power-cycle · 4/4 boots · up 32 s |
+    | hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 1 / R 23 MB/s · 65.5 °C · None MHz |
     | dvfs | ➖ | 2.9 s | — |
-    | network-iperf | ✅ | 105.3 s | end0 ↑838/↓939 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓130 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ❌ | 123.5 s | branch=edge · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 63.6 s | power-cycle · up 33 s |
-    | hw-performance | ✅ | 42.8 s | AES 357 · mem 2000 · disk W 21 / R 23 MB/s · 62.5 °C · None MHz |
-    | dvfs | ➖ | 2.9 s | — |
-    | network-iperf | ✅ | 91.7 s | end0 ↑817/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
-    | store-versions | ✅ | 6.0 s | 26.11.0-trunk.52 · 6.18.52-current-sunxi64 |
-    | kernel-switch | ❌ | 124.0 s | branch=current · phase=install · dpkg_state=absent |
-    | reboot | ✅ | 63.5 s | power-cycle · up 32 s |
+    | network-iperf | ✅ | 96.9 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 6.1 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ❌ | 119.3 s | branch=edge · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 179.3 s | power-cycle · 4/4 boots · up 32 s |
+    | hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 65.2 °C · None MHz |
+    | dvfs | ➖ | 3.3 s | — |
+    | network-iperf | ✅ | 93.5 s | end0 ↑820/↓941 (1GE) · end1 ↑939/↓938 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
+    | store-versions | ✅ | 6.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+    | kernel-switch | ❌ | 118.8 s | branch=current · phase=install · dpkg_state=absent |
+    | reboot | ✅ | 64.1 s | power-cycle · up 31 s |
 
-    **Power** — min 1.70 W · avg 3.45 W · peak 4.20 W · 833 samples
+    **Power** — min 1.70 W · avg 3.51 W · peak 5.00 W · 1165 samples
 
     ```mermaid
     xychart-beta
         title "Power — Cubie A5E 01"
-        x-axis "sample" 1 --> 833
-        y-axis "W" 1.5 --> 4.5
-        line [3.45, 3.65, 3.62, 3.45, 3.41, 2.78, 3.40, 3.68, 3.50, 3.51, 3.45, 3.47, 2.80, 3.38, 3.64, 3.40, 3.61, 3.57, 3.55, 3.54, 3.54, 3.59, 3.52, 3.52, 3.52, 3.29, 2.80, 3.57, 3.43, 3.54, 3.65, 3.63, 3.60, 3.62, 3.55, 3.53, 3.54, 3.50, 3.03, 3.17]
+        x-axis "sample" 1 --> 1165
+        y-axis "W" 1.5 --> 5.5
+        line [3.39, 3.56, 3.61, 3.58, 3.57, 3.54, 3.76, 4.10, 3.64, 3.24, 3.31, 3.63, 3.55, 3.52, 3.27, 3.44, 3.61, 3.52, 2.90, 3.63, 3.55, 3.73, 3.78, 3.61, 3.62, 3.58, 3.59, 3.21, 3.34, 3.21, 3.08, 3.66, 3.58, 3.65, 3.63, 3.64, 3.58, 3.59, 3.54, 2.81]
     ```
 
 ??? failure "Cubietruck 01 — fail"
