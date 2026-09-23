@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **55** passed, **9** failed. Most recent test of every board; failures first.
+**64** boards — **56** passed, **8** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (9)
+## ❌ Failed (8)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -145,29 +145,6 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.18 · reachable=False · port=22 |
 
-### ❌ Orange Pi Zero2 01
-
-`orangepizero2` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 2 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 84.5 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
-| reboot | ✅ | 47.6 s | power-cycle · up 19 s |
-| kernel-switch | ❌ | 82.2 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
-| reboot | ✅ | 144.8 s | power-cycle · 4/4 boots · up 19 s |
-| hw-performance | ✅ | 32.8 s | AES 705 · mem 3000 · disk W 21 / R 23 MB/s · 58.9 °C · 1512 MHz |
-| dvfs | ✅ | 26.6 s | ondemand · 480–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 65.6 s | end0 ↑876/↓937 (1GE) · wlx7c023a625db1 ↑35/↓32 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.8 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
-| kernel-switch | ✅ | 83.0 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
-| reboot | ✅ | 145.5 s | power-cycle · 4/4 boots · up 19 s |
-| hw-performance | ✅ | 32.8 s | AES 705 · mem 3000 · disk W 21 / R 23 MB/s · 59 °C · 1512 MHz |
-| dvfs | ✅ | 26.7 s | ondemand · 480–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 64.6 s | end0 ↑867/↓939 (1GE) · wlx7c023a625db1 ↑36/↓33 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.9 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
-| kernel-switch | ❌ | 82.0 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
-| reboot | ✅ | 47.2 s | power-cycle · up 19 s |
-
 ### ❌ RockPro 64 01
 
 `rockpro64` · **inplace** · image `26.11.0-trunk.57` · 15 ✅ · 1 ❌ · 0 ⏭️
@@ -201,7 +178,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (55)
+## ✅ Passed (56)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1092,6 +1069,29 @@ xychart-beta
 | dvfs | ➖ | 2.9 s | no cpufreq |
 | network-iperf | ✅ | 70.4 s | end0 ↑881/↓856 (1GE) · wlan0 ↑32/↓34 (Wi-Fi 4) Mbps |
 | store-versions | ✅ | 6.1 s | 26.11.0-trunk.51 · 6.18.52-current-sunxi64 |
+
+### ✅ Orange Pi Zero2 01
+
+`orangepizero2` · **inplace** · image `26.11.0-trunk.57` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 86.9 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
+| reboot | ✅ | 51.3 s | power-cycle · up 21 s |
+| kernel-switch | ✅ | 160.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
+| reboot | ✅ | 152.9 s | power-cycle · 4/4 boots · up 21 s |
+| hw-performance | ✅ | 32.6 s | AES 705 · mem 3000 · disk W 21 / R 22 MB/s · 59.6 °C · 1512 MHz |
+| dvfs | ✅ | 26.1 s | ondemand · 480–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 63.8 s | end0 ↑877/↓939 (1GE) · wlx7c023a625db1 ↑32/↓40 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.8 s | 26.11.0-trunk.57 · 6.18.53-current-sunxi64 |
+| kernel-switch | ✅ | 147.9 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+| reboot | ✅ | 154.7 s | power-cycle · 4/4 boots · up 21 s |
+| hw-performance | ✅ | 32.9 s | AES 705 · mem 3000 · disk W 21 / R 23 MB/s · 60.2 °C · 1512 MHz |
+| dvfs | ✅ | 34.4 s | ondemand · 480–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 64.0 s | end0 ↑874/↓938 (1GE) · wlx7c023a625db1 ↑37/↓39 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.9 s | 26.11.0-trunk.57 · 7.2.7-edge-sunxi64 |
+| kernel-switch | ✅ | 150.0 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
+| reboot | ✅ | 57.0 s | power-cycle · up 21 s |
 
 ### ✅ OrangePi 3 LTS 01
 
