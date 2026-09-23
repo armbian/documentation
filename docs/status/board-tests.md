@@ -1001,18 +1001,26 @@ xychart-beta
 
 ### ✅ Orange Pi Lite 2 01
 
-`orangepilite2` · **inplace** · image `26.11.0-trunk.51` · 8 ✅ · 0 ❌ · 0 ⏭️
+`orangepilite2` · **inplace** · image `26.11.0-trunk.56` · 15 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 441.3 s | nightly · 26.11.0-trunk.51 → 26.11.0-trunk.54 |
-| reboot | ✅ | 49.2 s | warm · up 32 s |
-| kernel-switch | ✅ | 168.8 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-sunxi64 · kernel_before=6.12.110-legacy-sunxi64 |
-| reboot | ✅ | 48.3 s | warm · up 31 s |
-| hw-performance | ✅ | 32.7 s | AES 721 · mem 4400 · disk W 17 / R 23 MB/s · 77.3 °C · 1800 MHz |
-| dvfs | ✅ | 25.3 s | ondemand · 480–1704 MHz (peak 1704) |
-| network-iperf | ✅ | 42.9 s | wlan0 ↑25/↓22 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.7 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
+| upgrade | ✅ | 163.0 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+| reboot | ✅ | 55.6 s | warm · up 37 s |
+| kernel-switch | ✅ | 157.0 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+| reboot | ✅ | 181.7 s | warm · 4/4 boots · up 27 s |
+| hw-performance | ✅ | 29.1 s | AES 772 · mem 4300 · disk W 21 / R 24 MB/s · 74.6 °C · 1800 MHz |
+| dvfs | ✅ | 21.7 s | ondemand · 480–1704 MHz (peak 1704) |
+| network-iperf | ✅ | 36.3 s | wlan0 ↑47/↓35 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.9 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi64 |
+| kernel-switch | ✅ | 168.8 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
+| reboot | ✅ | 180.5 s | warm · 4/4 boots · up 33 s |
+| hw-performance | ✅ | 29.9 s | AES 800 · mem 4400 · disk W 18 / R 23 MB/s · 72.9 °C · 1800 MHz |
+| dvfs | ❌ | 22.0 s | ondemand · 480–1800 MHz (peak 1704) |
+| network-iperf | ✅ | 36.2 s | wlan0 ↑47/↓35 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.8 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
+| kernel-switch | ✅ | 146.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
+| reboot | ✅ | 54.9 s | warm · up 37 s |
 
 ### ✅ Orange Pi One+ 01
 
