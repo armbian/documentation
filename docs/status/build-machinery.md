@@ -21,13 +21,13 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**17** servers · **686** threads · **1933** GB RAM · **286** runners (**138** online).
+**17** servers · **686** threads · **1933** GB RAM · **278** runners (**138** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
 | `insa-trixie` | Hetzner Germany | 176 | 384 GB | 40 | active |
 | `ampere-1` | Armbian Datacenter | 128 | 512 GB | 64 | active |
-| `kspace` | Kspace Estonia | 128 | 256 GB | 32 | active |
+| `kspace` | Kspace Estonia | 128 | 256 GB | 24 | active |
 | `github` | GitHub | 40 | 137 GB | 20 | active |
 | `rack-ryzen` | Armbian Datacenter | 32 | 125 GB | 15 | active |
 | `stpete` | JetHome | 24 | 64 GB | 8 | active |
