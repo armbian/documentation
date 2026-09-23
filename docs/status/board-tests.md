@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **52** passed, **11** failed. Most recent test of every board; failures first.
+**63** boards — **53** passed, **10** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (11)
+## ❌ Failed (10)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -152,14 +152,6 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.27 · reachable=False · port=22 |
 
-### ❌ Odroid XU4 01
-
-`odroidxu4` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.36 · reachable=False · port=22 |
-
 ### ❌ Orange Pi 3 01
 
 `orangepi3` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -231,7 +223,7 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-## ✅ Passed (52)
+## ✅ Passed (53)
 
 ### ✅ Arduino UNO Q 01
 
@@ -974,6 +966,29 @@ xychart-beta
     y-axis "W" 0.5 --> 10.0
     line [4.02, 4.45, 3.95, 3.78, 4.31, 3.88, 3.47, 3.09, 3.50, 3.71, 2.80, 3.47, 3.31, 3.37, 3.65, 2.98, 2.99, 4.18, 5.73, 3.38, 3.81, 3.81, 4.13, 3.78, 3.00, 3.23, 4.00, 3.07, 3.14, 2.73, 4.16, 4.73, 4.45, 3.41, 3.63, 4.12, 3.95, 3.75, 2.05, 3.75]
 ```
+
+### ✅ Odroid XU4 01
+
+`odroidxu4` · **inplace** · image `26.8.3` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 192.6 s | nightly · 26.8.3 → 26.11.0-trunk.57 |
+| reboot | ✅ | 66.6 s | power-cycle · up 29 s |
+| kernel-switch | ✅ | 38.2 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
+| reboot | ✅ | 176.6 s | power-cycle · 4/4 boots · up 28 s |
+| hw-performance | ✅ | 35.2 s | AES 69 · mem 5600 · disk W 1 / R 57 MB/s · 62 °C · 1400 MHz |
+| dvfs | ✅ | 29.9 s | ondemand · 600–1400 MHz (peak 2000) |
+| network-iperf | ✅ | 35.0 s | enx001e0636e380 ↑923/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6.3 s | 26.11.0-trunk.57 · 6.6.155-current-odroidxu4 |
+| kernel-switch | ✅ | 100.0 s | branch=edge · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
+| reboot | ✅ | 173.3 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 33.2 s | AES 65 · mem 5400 · disk W 1 / R 61 MB/s · 62 °C · 1400 MHz |
+| dvfs | ✅ | 31.9 s | ondemand · 600–1300 MHz (peak 1900) |
+| network-iperf | ✅ | 44.6 s | enx001e0636e380 ↑922/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6.0 s | 26.11.0-trunk.57 · 7.2.7-edge-odroidxu4 |
+| kernel-switch | ✅ | 97.5 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=7.2.7-edge-odroidxu4 |
+| reboot | ✅ | 59.6 s | power-cycle · up 31 s |
 
 ### ✅ Orange Pi 5 Plus 01
 
