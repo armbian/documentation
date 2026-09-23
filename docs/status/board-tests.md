@@ -162,20 +162,11 @@ xychart-beta
 
 ### ❌ Orange Pi 5 01
 
-`orangepi5` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
+`orangepi5` · **inplace** · image `26.11.0-trunk.35` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 119.6 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
-| reboot | ✅ | 77.4 s | power-cycle · up 51 s |
-| hw-performance | ✅ | 17.3 s | AES 1316 · mem 14200 · disk W 54 / R 66 MB/s · 42.5 °C · 1800 MHz |
-| dvfs | ✅ | 16.7 s | ondemand · 1800–1800 MHz (peak 2352) |
-| network-iperf | ✅ | 28.5 s | end1 ↑941/↓941 (1GE) Mbps |
-| restore-stable | ✅ | 68.0 s | stable |
-| reboot | ❌ | 205.8 s | power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-
-**Power** — min 1.70 W · avg 2.91 W · peak 8.90 W · 213 samples
+| reachable | ❌ | 0.0 s | ip=10.0.50.18 · reachable=False · port=22 |
 
 ### ❌ Orange Pi Zero2 01
 
