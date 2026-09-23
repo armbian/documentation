@@ -969,26 +969,26 @@ xychart-beta
 
 ### ✅ Odroid XU4 01
 
-`odroidxu4` · **inplace** · image `26.8.3` · 16 ✅ · 0 ❌ · 0 ⏭️
+`odroidxu4` · **inplace** · image `26.11.0-trunk.57` · 16 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 192.6 s | nightly · 26.8.3 → 26.11.0-trunk.57 |
-| reboot | ✅ | 66.6 s | power-cycle · up 29 s |
-| kernel-switch | ✅ | 38.2 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
-| reboot | ✅ | 176.6 s | power-cycle · 4/4 boots · up 28 s |
-| hw-performance | ✅ | 35.2 s | AES 69 · mem 5600 · disk W 1 / R 57 MB/s · 62 °C · 1400 MHz |
-| dvfs | ✅ | 29.9 s | ondemand · 600–1400 MHz (peak 2000) |
-| network-iperf | ✅ | 35.0 s | enx001e0636e380 ↑923/↓941 (1GE) Mbps |
-| store-versions | ✅ | 6.3 s | 26.11.0-trunk.57 · 6.6.155-current-odroidxu4 |
+| upgrade | ✅ | 57.0 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
+| reboot | ✅ | 57.6 s | power-cycle · up 30 s |
+| kernel-switch | ✅ | 39.7 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
+| reboot | ✅ | 175.7 s | power-cycle · 4/4 boots · up 28 s |
+| hw-performance | ✅ | 35.7 s | AES 66 · mem 5500 · disk W 1 / R 60 MB/s · 65 °C · 1400 MHz |
+| dvfs | ✅ | 29.5 s | ondemand · 600–1400 MHz (peak 2000) |
+| network-iperf | ✅ | 35.6 s | enx001e0636e380 ↑924/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6.4 s | 26.11.0-trunk.57 · 6.6.155-current-odroidxu4 |
 | kernel-switch | ✅ | 100.0 s | branch=edge · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
-| reboot | ✅ | 173.3 s | power-cycle · 4/4 boots · up 31 s |
-| hw-performance | ✅ | 33.2 s | AES 65 · mem 5400 · disk W 1 / R 61 MB/s · 62 °C · 1400 MHz |
-| dvfs | ✅ | 31.9 s | ondemand · 600–1300 MHz (peak 1900) |
-| network-iperf | ✅ | 44.6 s | enx001e0636e380 ↑922/↓941 (1GE) Mbps |
-| store-versions | ✅ | 6.0 s | 26.11.0-trunk.57 · 7.2.7-edge-odroidxu4 |
-| kernel-switch | ✅ | 97.5 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=7.2.7-edge-odroidxu4 |
-| reboot | ✅ | 59.6 s | power-cycle · up 31 s |
+| reboot | ✅ | 187.9 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 34.4 s | AES 65 · mem 5300 · disk W 1 / R 61 MB/s · 63 °C · 1400 MHz |
+| dvfs | ✅ | 31.7 s | ondemand · 600–1300 MHz (peak 1900) |
+| network-iperf | ✅ | 34.4 s | enx001e0636e380 ↑919/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6.5 s | 26.11.0-trunk.57 · 7.2.7-edge-odroidxu4 |
+| kernel-switch | ✅ | 99.4 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=7.2.7-edge-odroidxu4 |
+| reboot | ✅ | 55.7 s | power-cycle · up 31 s |
 
 ### ✅ Orange Pi 5 Plus 01
 
