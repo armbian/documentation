@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**67** boards — **53** operational, **14** broken.
+**67** boards — **51** operational, **16** broken.
 
-Reconcile made: 2026-09-22 18:15 UTC
+Reconcile made: 2026-09-23 12:12 UTC
 
 **Operational**
 
@@ -23,11 +23,9 @@ Reconcile made: 2026-09-22 18:15 UTC
 |:--|:--|:--|--:|:--|
 | Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Aruba 2540 (43) |
-| Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.23 | local | 1 GbE | Aruba 2540 (23) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
-| Banana Pi R2 01 | 10.0.50.29 | local | 1 GbE | — |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -51,13 +49,11 @@ Reconcile made: 2026-09-22 18:15 UTC
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | Aruba 2540 (39) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
-| Odroid XU4 01 | 10.0.50.68 | local | 1 GbE | Netgear S3300 (40) |
+| Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
-| Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
-| Orange Pi Prime 01 | 10.0.50.73 | local | 1 GbE | Aruba 2540 (35) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Aruba 2540 (17) |
-| OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
@@ -69,6 +65,8 @@ Reconcile made: 2026-09-22 18:15 UTC
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rock 5T 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (48) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
+| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
+| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
@@ -79,8 +77,10 @@ Reconcile made: 2026-09-22 18:15 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
+| Banana Pi R2 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (16) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
-| Inovato Quadra 01 | 10.0.50.39 | local | 100 MbE | Netgear GS348 (17) |
+| Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear GS348 (17) |
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
 | Khadas VIM1S 01 | 10.0.50.48 | local | Wi-Fi 5 | Zyxel NWA130BE |
@@ -89,9 +89,9 @@ Reconcile made: 2026-09-22 18:15 UTC
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (11) |
 | Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
+| Orange Pi Prime 01 | 10.0.50.73 | local | 1 GbE | Aruba 2540 (35) |
+| OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
 | Rockpi 4B 01 | 10.0.50.69 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
-| SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
 
 <!-- BOARDS-STOP -->
