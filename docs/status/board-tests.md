@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **52** passed, **11** failed. Most recent test of every board; failures first.
+**63** boards — **53** passed, **10** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (11)
+## ❌ Failed (10)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -223,32 +223,7 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-### ❌ Udoo 01
-
-`udoo` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 120.3 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-| reboot | ✅ | 66.3 s | power-cycle · up 34 s |
-| kernel-switch | ❌ | 77.4 s | branch=current · family=imx6 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-imx6 |
-| reboot | ✅ | 65.7 s | power-cycle · up 34 s |
-| hw-performance | ✅ | 51.6 s | AES 26 · mem 827 · disk W 15 / R 20 MB/s · 49.2 °C · 996 MHz |
-| dvfs | ✅ | 43.6 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 102.6 s | end0 ↑398/↓232 (1GE) · wlx7cdd903aa418 ↑36/↓32 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 9.4 s | 26.11.0-trunk.54 · 6.18.52-current-imx6 |
-
-**Power** — min 1.30 W · avg 5.96 W · peak 8.30 W · 437 samples
-
-```mermaid
-xychart-beta
-    title "Power — Udoo 01"
-    x-axis "sample" 1 --> 437
-    y-axis "W" 1.0 --> 8.5
-    line [4.93, 6.02, 6.23, 6.21, 5.91, 5.86, 5.93, 5.79, 5.75, 6.06, 5.53, 5.09, 5.53, 7.69, 6.32, 6.38, 5.85, 6.17, 5.89, 5.85, 5.02, 4.52, 4.45, 7.23, 6.65, 5.71, 5.91, 5.31, 5.68, 6.83, 5.91, 6.06, 5.57, 6.47, 6.45, 6.45, 6.57, 6.01, 6.12, 6.53]
-```
-
-## ✅ Passed (52)
+## ✅ Passed (53)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1451,6 +1426,39 @@ xychart-beta
     x-axis "sample" 1 --> 735
     y-axis "W" 2.0 --> 9.5
     line [3.96, 4.19, 3.27, 2.89, 4.14, 4.08, 3.26, 3.85, 2.94, 4.62, 3.47, 2.98, 4.07, 4.31, 5.47, 4.00, 4.22, 3.90, 4.16, 3.84, 4.43, 3.99, 3.48, 3.72, 3.28, 3.63, 3.76, 3.93, 3.24, 4.01, 5.31, 3.93, 4.20, 4.22, 3.91, 5.08, 4.27, 4.33, 2.71, 3.49]
+```
+
+### ✅ Udoo 01
+
+`udoo` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 117.9 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+| reboot | ✅ | 70.5 s | power-cycle · up 33 s |
+| kernel-switch | ✅ | 73.9 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=6.18.53-current-imx6 |
+| reboot | ✅ | 207.0 s | power-cycle · 4/4 boots · up 35 s |
+| hw-performance | ✅ | 51.0 s | AES 26 · mem 683 · disk W 19 / R 20 MB/s · 54.4 °C · 996 MHz |
+| dvfs | ✅ | 43.5 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 86.6 s | end0 ↑399/↓248 (1GE) · wlx7cdd903aa418 ↑31/↓22 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.3 s | 26.11.0-trunk.56 · 6.18.53-current-imx6 |
+| kernel-switch | ✅ | 442.8 s | branch=edge · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.53-current-imx6 |
+| reboot | ✅ | 206.0 s | power-cycle · 4/4 boots · up 33 s |
+| hw-performance | ✅ | 51.0 s | AES 26 · mem 746 · disk W 13 / R 20 MB/s · 54.4 °C · 996 MHz |
+| dvfs | ✅ | 46.9 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 82.2 s | end0 ↑398/↓225 (1GE) · wlx7cdd903aa418 ↑36/↓23 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.4 s | 26.11.0-trunk.56 · 7.1.13-edge-imx6 |
+| kernel-switch | ✅ | 436.3 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=7.1.13-edge-imx6 |
+| reboot | ✅ | 71.0 s | power-cycle · up 33 s |
+
+**Power** — min 1.30 W · avg 5.93 W · peak 8.40 W · 1631 samples
+
+```mermaid
+xychart-beta
+    title "Power — Udoo 01"
+    x-axis "sample" 1 --> 1631
+    y-axis "W" 1.0 --> 8.5
+    line [6.13, 6.06, 5.65, 6.11, 6.16, 5.60, 6.33, 6.19, 5.99, 6.30, 5.90, 6.17, 6.10, 6.26, 5.12, 5.11, 5.16, 5.37, 6.41, 6.13, 5.95, 6.29, 5.85, 6.27, 6.08, 5.91, 6.10, 6.12, 6.37, 5.87, 5.94, 5.14, 5.06, 5.08, 5.79, 6.33, 6.05, 6.23, 6.11, 6.48]
 ```
 
 ### ✅ UEFI arm64 01
