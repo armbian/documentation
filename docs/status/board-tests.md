@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **53** passed, **10** failed. Most recent test of every board; failures first.
+**63** boards — **54** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -121,29 +121,6 @@ xychart-beta
 | reboot | ⏭️ | 0.0 s | reboot |
 | store-versions | ⏭️ | 0.0 s | — |
 
-### ❌ NanoPi R76S 01
-
-`nanopi-r76s` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 76.2 s | nightly · 26.8.3 → 26.11.0-trunk.56 |
-| reboot | ❌ | 227.0 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-
 ### ❌ Odroid C1 01
 
 `odroidc1` · **inplace** · image `26.8.0-trunk.314` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -214,7 +191,7 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-## ✅ Passed (53)
+## ✅ Passed (54)
 
 ### ✅ Arduino UNO Q 01
 
@@ -834,6 +811,39 @@ xychart-beta
     x-axis "sample" 1 --> 600
     y-axis "W" 0.5 --> 11.0
     line [3.95, 4.03, 3.09, 4.50, 4.03, 3.52, 3.66, 4.07, 3.12, 4.31, 5.78, 3.44, 3.68, 4.08, 4.53, 4.42, 2.97, 4.20, 5.03, 4.23, 3.29, 5.28, 7.12, 4.55, 4.33, 4.75, 5.35, 3.72, 4.61, 4.65, 4.55, 3.78, 4.60, 7.11, 4.65, 4.37, 4.43, 5.53, 4.40, 4.05]
+```
+
+### ✅ NanoPi R76S 01
+
+`nanopi-r76s` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 37.7 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
+| reboot | ✅ | 70.4 s | power-cycle · up 27 s |
+| kernel-switch | ✅ | 85.6 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.2.7-edge-rockchip64 |
+| reboot | ✅ | 188.3 s | power-cycle · 4/4 boots · up 30 s |
+| hw-performance | ✅ | 29.2 s | AES 1281 · mem 7600 · disk W 21 / R 76 MB/s · 37 °C · 2016 MHz |
+| dvfs | ✅ | 20.1 s | ondemand · 2016–2016 MHz (peak 2208) |
+| network-iperf | ✅ | 108.7 s | end0 ↑938/↓939 (1GE) · end1 ↑939/↓939 (1GE) · wlan0 ↑45/↓88 (Wi-Fi 5) · wlxe0e1a933de37 ↑173/↓121 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.7 s | 26.11.0-trunk.57 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 153.9 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 210.0 s | power-cycle · 4/4 boots · up 30 s |
+| hw-performance | ✅ | 23.2 s | AES 1316 · mem 8800 · disk W 13 / R 70 MB/s · 40.7 °C · 2016 MHz |
+| dvfs | ✅ | 18.5 s | ondemand · 408–2016 MHz (peak 2208) |
+| network-iperf | ✅ | 106.4 s | end0 ↑939/↓939 (1GE) · end1 ↑939/↓939 (1GE) · wlan0 ↑98/↓185 (Wi-Fi 5) · wlxe0e1a933de37 ↑198/↓169 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.3 s | 26.11.0-trunk.57 · 7.2.7-edge-rockchip64 |
+| kernel-switch | ✅ | 85.1 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.2.7-edge-rockchip64 |
+| reboot | ✅ | 61.0 s | power-cycle · up 27 s |
+
+**Power** — min 1.10 W · avg 3.81 W · peak 8.50 W · 968 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPi R76S 01"
+    x-axis "sample" 1 --> 968
+    y-axis "W" 1.0 --> 9.0
+    line [4.48, 4.42, 2.14, 4.60, 4.22, 4.51, 3.75, 2.50, 2.58, 3.10, 3.79, 2.40, 4.12, 4.84, 3.72, 4.11, 3.94, 4.80, 4.33, 4.11, 4.18, 3.70, 3.87, 3.88, 2.35, 3.84, 2.52, 2.51, 3.57, 2.64, 4.38, 5.93, 4.10, 4.31, 4.68, 4.50, 4.45, 4.71, 3.17, 2.94]
 ```
 
 ### ✅ Odroid C2 01
