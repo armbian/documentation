@@ -480,16 +480,26 @@ xychart-beta
 
 ### ✅ Espressobin 01
 
-`espressobin` · **inplace** · image `26.8.3` · 4 ✅ · 0 ❌ · 2 ⏭️
+`espressobin` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 0.0 s | — |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-performance | ✅ | 32.5 s | AES 369 · mem 2000 · disk W 36 / R 131 MB/s · None °C · 800 MHz |
-| dvfs | ✅ | 33.7 s | ondemand · 200–800 MHz (peak 800) |
-| network-iperf | ✅ | 38.1 s | lan0 ↑936/↓737 (1GE) Mbps |
-| store-versions | ✅ | 7.2 s | 26.8.3 · 6.18.44-current-mvebu64 |
+| upgrade | ✅ | 112.9 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+| reboot | ✅ | 72.6 s | power-cycle · up 42 s |
+| kernel-switch | ✅ | 79.3 s | branch=current · family=mvebu64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu64 · kernel_before=6.18.53-current-mvebu64 |
+| reboot | ✅ | 237.5 s | power-cycle · 4/4 boots · up 45 s |
+| hw-performance | ✅ | 31.1 s | AES 371 · mem 2000 · disk W 31 / R 131 MB/s · None °C · 800 MHz |
+| dvfs | ✅ | 33.9 s | ondemand · 200–800 MHz (peak 800) |
+| network-iperf | ✅ | 38.5 s | lan0 ↑933/↓770 (1GE) Mbps |
+| store-versions | ✅ | 7.3 s | 26.11.0-trunk.56 · 6.18.53-current-mvebu64 |
+| kernel-switch | ✅ | 348.2 s | branch=edge · family=mvebu64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.1.13-edge-mvebu64 · kernel_before=6.18.53-current-mvebu64 |
+| reboot | ✅ | 245.3 s | power-cycle · 4/4 boots · up 44 s |
+| hw-performance | ✅ | 32.6 s | AES 371 · mem 2000 · disk W 66 / R 140 MB/s · None °C · 800 MHz |
+| dvfs | ✅ | 35.3 s | ondemand · 200–800 MHz (peak 800) |
+| network-iperf | ✅ | 38.8 s | lan0 ↑929/↓753 (1GE) Mbps |
+| store-versions | ✅ | 7.5 s | 26.11.0-trunk.56 · 7.1.13-edge-mvebu64 |
+| kernel-switch | ✅ | 345.7 s | branch=current · family=mvebu64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-mvebu64 · kernel_before=7.1.13-edge-mvebu64 |
+| reboot | ✅ | 72.1 s | power-cycle · up 43 s |
 
 ### ✅ Helios4 01
 
