@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **67** boards — **49** operational, **18** broken.
 
-Reconcile made: 2026-09-23 14:54 UTC
+Reconcile made: 2026-09-23 15:44 UTC
 
 **Operational**
 
@@ -64,7 +64,7 @@ Reconcile made: 2026-09-23 14:54 UTC
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rock 5T 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (48) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
-| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
+| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
