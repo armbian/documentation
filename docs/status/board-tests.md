@@ -267,18 +267,26 @@ xychart-beta
 
 ### ✅ Banana Pi CM4IO 01
 
-`bananapicm4io` · **inplace** · image `26.8.3` · 6 ✅ · 1 ❌ · 1 ⏭️
+`bananapicm4io` · **inplace** · image `26.8.3` · 14 ✅ · 2 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 17.3 s | — |
-| reboot | ✅ | 44.8 s | power-cycle · up 18 s |
-| kernel-switch | ✅ | 52.2 s | branch=current · family=meson64 · installed=26.11.0-trunk.54 · boot_image=vmlinuz-6.18.52-current-meson64 · kernel_before=6.18.52-current-meson64 |
-| reboot | ✅ | 123.8 s | power-cycle · 4/4 boots · up 18 s |
-| hw-performance | ✅ | 18.4 s | AES 852 · mem 3900 · disk W 35 / R 160 MB/s · 51.9 °C · 2016 MHz |
+| upgrade | ✅ | 56.1 s | nightly · 26.8.3 → 26.8.3 |
+| reboot | ✅ | 41.0 s | power-cycle · up 18 s |
+| kernel-switch | ✅ | 41.1 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+| reboot | ✅ | 126.6 s | power-cycle · 4/4 boots · up 23 s |
+| hw-performance | ✅ | 18.4 s | AES 852 · mem 3900 · disk W 37 / R 154 MB/s · 53.1 °C · 2016 MHz |
 | dvfs | ✅ | 18.0 s | ondemand · 1000–1512 MHz (peak 1512) |
-| network-iperf | ❌ | 548.1 s | eth0 ↑938/↓939 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) · wlx00e032c00694 ↑0/↓0 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 11.5 s | 26.8.3 · 6.18.52-current-meson64 |
+| network-iperf | ❌ | 277.1 s | eth0 ↑0/↓0 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.6 s | 26.8.3 · 6.18.53-current-meson64 |
+| kernel-switch | ✅ | 194.6 s | branch=edge · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+| reboot | ✅ | 126.1 s | power-cycle · 4/4 boots · up 19 s |
+| hw-performance | ✅ | 19.0 s | AES 853 · mem 3900 · disk W 27 / R 148 MB/s · 53.9 °C · 2016 MHz |
+| dvfs | ✅ | 18.2 s | ondemand · 1000–1512 MHz (peak 1512) |
+| network-iperf | ❌ | 298.0 s | eth0 ↑939/↓939 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 3.9 s | 26.8.3 · 7.2.7-edge-meson64 |
+| kernel-switch | ✅ | 192.1 s | branch=current · family=meson64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+| reboot | ✅ | 47.9 s | power-cycle · up 18 s |
 
 ### ✅ Banana Pi M2 Ultra 01
 
