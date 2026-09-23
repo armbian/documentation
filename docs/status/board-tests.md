@@ -154,26 +154,11 @@ xychart-beta
 
 ### ❌ Odroid XU4 01
 
-`odroidxu4` · **inplace** · image `26.11.0-trunk.54` · 9 ✅ · 1 ❌ · 6 ⏭️
+`odroidxu4` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 337.8 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.56 |
-| reboot | ✅ | 60.5 s | power-cycle · up 31 s |
-| kernel-switch | ✅ | 48.5 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
-| reboot | ✅ | 199.7 s | power-cycle · 4/4 boots · up 36 s |
-| hw-performance | ✅ | 38.4 s | AES 67 · mem 4300 · disk W 10 / R 54 MB/s · 62 °C · 1400 MHz |
-| dvfs | ✅ | 30.4 s | ondemand · 600–1400 MHz (peak 2000) |
-| network-iperf | ✅ | 36.7 s | enx001e0636e380 ↑924/↓941 (1GE) Mbps |
-| store-versions | ✅ | 8.1 s | 26.11.0-trunk.56 · 6.6.155-current-odroidxu4 |
-| kernel-switch | ✅ | 166.2 s | branch=edge · family=odroidxu4 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.15.11-edge-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
-| reboot | ❌ | 1487.9 s | power-cycle · 0/4 boots |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| reachable | ❌ | 0.0 s | ip=10.0.50.36 · reachable=False · port=22 |
 
 ### ❌ Orange Pi 3 01
 
