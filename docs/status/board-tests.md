@@ -1411,18 +1411,26 @@ xychart-beta
 
 ### ✅ Rockpi S 01
 
-`rockpi-s` · **inplace** · image `26.8.1` · 7 ✅ · 0 ❌ · 1 ⏭️
+`rockpi-s` · **inplace** · image `26.11.0-trunk.57` · 14 ✅ · 0 ❌ · 2 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 427.9 s | nightly · 26.8.1 → 26.11.0-trunk.57 |
-| reboot | ✅ | 49.8 s | warm · up 28 s |
-| kernel-switch | ✅ | 70.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
-| reboot | ✅ | 174.4 s | warm · 4/4 boots · up 28 s |
-| hw-performance | ✅ | 40.8 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 48.2 °C · 1008 MHz |
-| dvfs | ✅ | 35.2 s | ondemand · 408–1008 MHz (peak 1008) |
-| network-iperf | ⏭️ | 13.7 s | no cabled interfaces |
-| store-versions | ✅ | 8.3 s | 26.11.0-trunk.57 · 6.18.53-current-rockchip64 |
+| upgrade | ✅ | 109.5 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
+| reboot | ✅ | 48.9 s | warm · up 26 s |
+| kernel-switch | ✅ | 70.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 172.4 s | warm · 4/4 boots · up 28 s |
+| hw-performance | ✅ | 40.9 s | AES 218 · mem 1300 · disk W 20 / R 22 MB/s · 46.4 °C · 1008 MHz |
+| dvfs | ✅ | 35.3 s | ondemand · 408–1008 MHz (peak 1008) |
+| network-iperf | ⏭️ | 13.6 s | no cabled interfaces |
+| store-versions | ✅ | 7.7 s | 26.11.0-trunk.57 · 6.18.53-current-rockchip64 |
+| kernel-switch | ✅ | 232.7 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 171.5 s | warm · 4/4 boots · up 28 s |
+| hw-performance | ✅ | 41.6 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 47.3 °C · 1008 MHz |
+| dvfs | ✅ | 43.7 s | ondemand · 408–1008 MHz (peak 1008) |
+| network-iperf | ⏭️ | 13.9 s | no cabled interfaces |
+| store-versions | ✅ | 7.8 s | 26.11.0-trunk.57 · 7.2.7-edge-rockchip64 |
+| kernel-switch | ✅ | 236.4 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+| reboot | ✅ | 59.4 s | warm · up 29 s |
 
 ### ✅ SpacemiT K3 Pico-ITX 01
 
