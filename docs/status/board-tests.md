@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **54** passed, **9** failed. Most recent test of every board; failures first.
+**64** boards — **55** passed, **9** failed. Most recent test of every board; failures first.
 
 ## ❌ Failed (9)
 
@@ -201,7 +201,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (54)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1408,6 +1408,21 @@ xychart-beta
 | store-versions | ✅ | 5.9 s | 26.11.0-trunk.56 · 7.2.7-edge-rockchip64 |
 | kernel-switch | ✅ | 175.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
 | reboot | ✅ | 55.6 s | power-cycle · up 24 s |
+
+### ✅ Rockpi S 01
+
+`rockpi-s` · **inplace** · image `26.8.1` · 7 ✅ · 0 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 427.9 s | nightly · 26.8.1 → 26.11.0-trunk.57 |
+| reboot | ✅ | 49.8 s | warm · up 28 s |
+| kernel-switch | ✅ | 70.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 174.4 s | warm · 4/4 boots · up 28 s |
+| hw-performance | ✅ | 40.8 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 48.2 °C · 1008 MHz |
+| dvfs | ✅ | 35.2 s | ondemand · 408–1008 MHz (peak 1008) |
+| network-iperf | ⏭️ | 13.7 s | no cabled interfaces |
+| store-versions | ✅ | 8.3 s | 26.11.0-trunk.57 · 6.18.53-current-rockchip64 |
 
 ### ✅ SpacemiT K3 Pico-ITX 01
 
