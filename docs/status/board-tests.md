@@ -170,26 +170,36 @@ xychart-beta
 
 ### ❌ RockPro 64 01
 
-`rockpro64` · **inplace** · image `26.11.0-trunk.55` · 1 ✅ · 1 ❌ · 14 ⏭️
+`rockpro64` · **inplace** · image `26.11.0-trunk.57` · 15 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 205.9 s | nightly · 26.11.0-trunk.55 → 26.11.0-trunk.56 |
-| reboot | ❌ | 205.2 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| upgrade | ✅ | 39.5 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
+| reboot | ✅ | 77.1 s | power-cycle · up 33 s |
+| kernel-switch | ✅ | 30.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 882.7 s | power-cycle · 1/4 boots · up 30 s |
+| hw-performance | ✅ | 46.8 s | AES 1020 · mem 4800 · disk W 67 / R 118 MB/s · 47.5 °C · 1416 MHz |
+| dvfs | ✅ | 22.0 s | ondemand · 408–1416 MHz (peak 1800) |
+| network-iperf | ✅ | 60.5 s | end0 ↑94/↓94 (1GE) · wlan0 ↑110/↓103 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 6.0 s | 26.11.0-trunk.57 · 6.18.53-current-rockchip64 |
+| kernel-switch | ✅ | 109.6 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 880.5 s | power-cycle · 1/4 boots · up 50 s |
+| hw-performance | ✅ | 21.0 s | AES 1020 · mem 6600 · disk W 67 / R 120 MB/s · 48.1 °C · 1416 MHz |
+| dvfs | ✅ | 21.9 s | ondemand · 408–1416 MHz (peak 1800) |
+| network-iperf | ✅ | 60.4 s | end0 ↑94/↓94 (1GE) · wlan0 ↑99/↓95 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.2 s | 26.11.0-trunk.57 · 7.2.7-edge-rockchip64 |
+| kernel-switch | ✅ | 109.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+| reboot | ❌ | 83.8 s | power-cycle · up 39 s |
+
+**Power** — min 2.90 W · avg 4.63 W · peak 8.90 W · 1927 samples
+
+```mermaid
+xychart-beta
+    title "Power — RockPro 64 01"
+    x-axis "sample" 1 --> 1927
+    y-axis "W" 2.5 --> 9.0
+    line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
+```
 
 ## ✅ Passed (54)
 
