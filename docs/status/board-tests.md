@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **51** passed, **12** failed. Most recent test of every board; failures first.
+**63** boards — **52** passed, **11** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (11)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -82,21 +82,6 @@ xychart-beta
     y-axis "W" 1.5 --> 5.5
     line [3.39, 3.56, 3.61, 3.58, 3.57, 3.54, 3.76, 4.10, 3.64, 3.24, 3.31, 3.63, 3.55, 3.52, 3.27, 3.44, 3.61, 3.52, 2.90, 3.63, 3.55, 3.73, 3.78, 3.61, 3.62, 3.58, 3.59, 3.21, 3.34, 3.21, 3.08, 3.66, 3.58, 3.65, 3.63, 3.64, 3.58, 3.59, 3.54, 2.81]
 ```
-
-### ❌ Cubox i2eX/i4 01
-
-`cubox-i` · **inplace** · image `26.11.0-trunk.54` · 7 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 108.4 s | nightly · 26.11.0-trunk.54 → 26.11.0-trunk.54 |
-| reboot | ✅ | 56.4 s | power-cycle · up 29 s |
-| kernel-switch | ❌ | 72.0 s | branch=current · family=imx6 · installed=26.11.0-trunk.54 · boot_image=Image · kernel_before=6.18.52-current-imx6 |
-| reboot | ✅ | 56.6 s | power-cycle · up 30 s |
-| hw-performance | ✅ | 46.8 s | AES 26 · mem 742 · disk W 19 / R 20 MB/s · 50.3 °C · 996 MHz |
-| dvfs | ✅ | 40.3 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 113.2 s | end0 ↑395/↓226 (1GE) · wlan0 ↑19/↓9 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 8.6 s | 26.11.0-trunk.54 · 6.18.52-current-imx6 |
 
 ### ❌ Inovato Quadra 01
 
@@ -263,7 +248,7 @@ xychart-beta
     line [4.93, 6.02, 6.23, 6.21, 5.91, 5.86, 5.93, 5.79, 5.75, 6.06, 5.53, 5.09, 5.53, 7.69, 6.32, 6.38, 5.85, 6.17, 5.89, 5.85, 5.02, 4.52, 4.45, 7.23, 6.65, 5.71, 5.91, 5.31, 5.68, 6.83, 5.91, 6.06, 5.57, 6.47, 6.45, 6.45, 6.57, 6.01, 6.12, 6.53]
 ```
 
-## ✅ Passed (51)
+## ✅ Passed (52)
 
 ### ✅ Arduino UNO Q 01
 
@@ -486,6 +471,29 @@ xychart-beta
 | store-versions | ✅ | 12.1 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi |
 | kernel-switch | ✅ | 246.2 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=7.2.7-edge-sunxi |
 | reboot | ✅ | 69.1 s | warm · up 44 s |
+
+### ✅ Cubox i2eX/i4 01
+
+`cubox-i` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 107.9 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
+| reboot | ✅ | 60.4 s | power-cycle · up 30 s |
+| kernel-switch | ✅ | 71.9 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=6.18.53-current-imx6 |
+| reboot | ✅ | 194.0 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 46.9 s | AES 26 · mem 750 · disk W 19 / R 20 MB/s · 55.4 °C · 996 MHz |
+| dvfs | ✅ | 40.3 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 78.9 s | end0 ↑393/↓194 (1GE) · wlan0 ↑18/↓13 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 8.8 s | 26.11.0-trunk.56 · 6.18.53-current-imx6 |
+| kernel-switch | ✅ | 461.3 s | branch=edge · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.53-current-imx6 |
+| reboot | ✅ | 195.3 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 48.0 s | AES 26 · mem 743 · disk W 18 / R 20 MB/s · 56 °C · 996 MHz |
+| dvfs | ✅ | 44.3 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 79.1 s | end0 ↑393/↓202 (1GE) · wlan0 ↑19/↓12 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.4 s | 26.11.0-trunk.56 · 7.1.13-edge-imx6 |
+| kernel-switch | ✅ | 449.2 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=7.1.13-edge-imx6 |
+| reboot | ✅ | 70.8 s | power-cycle · up 31 s |
 
 ### ✅ Espressobin 01
 
