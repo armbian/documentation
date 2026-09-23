@@ -100,26 +100,18 @@ xychart-beta
 
 ### ❌ Inovato Quadra 01
 
-`inovato-quadra` · **inplace** · image `26.8.3` · 9 ✅ · 1 ❌ · 6 ⏭️
+`inovato-quadra` · **inplace** · image `26.8.0-trunk.314` · 2 ✅ · 4 ❌ · 2 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 211.1 s | nightly · 26.8.3 → 26.11.0-trunk.56 |
-| reboot | ✅ | 40.5 s | warm · up 21 s |
-| kernel-switch | ✅ | 39.6 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
-| reboot | ✅ | 125.5 s | warm · 4/4 boots · up 17 s |
-| hw-performance | ✅ | 28.8 s | AES 794 · mem 3200 · disk W 22 / R 23 MB/s · 57 °C · 1704 MHz |
-| dvfs | ✅ | 20.5 s | ondemand · 480–1704 MHz (peak 1704) |
-| network-iperf | ✅ | 39.1 s | eth0 ↑94/↓94 (10/100ME) Mbps |
-| store-versions | ✅ | 4.6 s | 26.11.0-trunk.56 · 6.18.53-current-sunxi64 |
-| kernel-switch | ✅ | 110.1 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-sunxi64 · kernel_before=6.18.53-current-sunxi64 |
-| reboot | ❌ | 214.5 s | warm · 0/4 boots |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| upgrade | ✅ | 241.7 s | nightly · 26.8.0-trunk.314 → 26.8.0-trunk.314 |
+| reboot | ❌ | 213.8 s | power-cycle |
+| hw-performance | ✅ | 154.8 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
+| dvfs | ➖ | 7.2 s | no cpufreq |
+| network-iperf | ⏭️ | 19.6 s | no iperf3 on board |
+| restore-stable | ❌ | 7.1 s | stable |
+| reboot | ❌ | 233.6 s | power-cycle |
+| store-versions | ❌ | 13.3 s | — |
 
 ### ❌ Mekotronics R58S2 01
 
@@ -175,8 +167,8 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 76.2 s | nightly · 26.8.3 → 26.11.0-trunk.56 |
-| reboot | ❌ | 227.0 s | power-cycle |
+| upgrade | ✅ | 127.9 s | nightly · 26.8.3 → 26.8.3 |
+| reboot | ❌ | 228.8 s | power-cycle |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
