@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **56** operational, **9** broken.
+**65** boards — **57** operational, **8** broken.
 
-Reconcile made: 2026-09-24 17:00 UTC
+Reconcile made: 2026-09-24 19:14 UTC
 
 **Operational**
 
@@ -27,7 +27,7 @@ Reconcile made: 2026-09-24 17:00 UTC
 | Banana Pi M2Pro 01 | 10.0.50.23 | local | 1 GbE | Aruba 2540 (23) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
-| Banana Pi R2 01 | 10.0.50.64 | local | 1 GbE | — |
+| Banana Pi R2 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (27) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (46) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -37,6 +37,7 @@ Reconcile made: 2026-09-24 17:00 UTC
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (21) |
+| Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
@@ -63,14 +64,14 @@ Reconcile made: 2026-09-24 17:00 UTC
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
-| Raspberry Pi Zero 2W | 10.0.20.187 | local | — | — |
+| Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | ROCK 2F 01 | 10.0.20.164 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rock 5T 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (48) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
-| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
+| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
@@ -83,7 +84,6 @@ Reconcile made: 2026-09-24 17:00 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
-| Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM1S 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (37) |
