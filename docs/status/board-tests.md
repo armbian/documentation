@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **55** passed, **10** failed. Most recent test of every board; failures first.
+**63** boards — **54** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -169,14 +169,6 @@ xychart-beta
 | reboot | ⏭️ | 0.0 s | reboot |
 | store-versions | ⏭️ | 0.0 s | — |
 
-### ❌ Odroid C1 01
-
-`odroidc1` · **inplace** · image `26.8.0-trunk.314` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.27 · reachable=False · port=22 |
-
 ### ❌ Orange Pi 3 01
 
 `orangepi3` · **inplace** · image `26.11.0-trunk.51` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -187,32 +179,11 @@ xychart-beta
 
 ### ❌ Orange Pi 5 01
 
-`orangepi5` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 20 ⏭️
+`orangepi5` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 188.0 s | nightly · 26.8.3 → 26.11.0-trunk.58 |
-| reboot | ❌ | 233.8 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| reachable | ❌ | 0.0 s | ip=10.0.50.46 · reachable=False · port=22 |
 
 ### ❌ RockPro 64 01
 
@@ -247,7 +218,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (55)
+## ✅ Passed (54)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1126,19 +1097,6 @@ xychart-beta
 | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
 | kernel-switch | ✅ | 126.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
 | reboot | ✅ | 37.6 s | warm · up 18 s |
-
-### ✅ Orange Pi Prime 01
-
-`orangepiprime` · **inplace** · image `26.11.0-trunk.51` · 3 ✅ · 0 ❌ · 3 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | 0.0 s | — |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-performance | ✅ | 45.3 s | AES 380 · mem 2100 · disk W 21 / R 23 MB/s · 40.8 °C · None MHz |
-| dvfs | ➖ | 2.9 s | no cpufreq |
-| network-iperf | ✅ | 70.4 s | end0 ↑881/↓856 (1GE) · wlan0 ↑32/↓34 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 6.1 s | 26.11.0-trunk.51 · 6.18.52-current-sunxi64 |
 
 ### ✅ Orange Pi Zero2 01
 
