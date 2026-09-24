@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **55** passed, **9** failed. Most recent test of every board; failures first.
+**65** boards — **55** passed, **10** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (9)
+## ❌ Failed (10)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -105,6 +105,31 @@ xychart-beta
 | store-versions | ⏭️ | 0.0 s | — |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
+
+### ❌ Khadas VIM1S 01
+
+`khadas-vim1s` · **inplace** · image `26.11.0-trunk` · 3 ✅ · 1 ❌ · 4 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 281.1 s | nightly · 26.11.0-trunk → 26.11.0-trunk.58 |
+| reboot | ✅ | 68.9 s | power-cycle · up 31 s |
+| kernel-switch | ✅ | 153.1 s | branch=legacy · family=meson-s4t7 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-5.15.137-legacy-meson-s4t7 · kernel_before=7.1.13-current-meson-s4t7 |
+| reboot | ❌ | 1488.7 s | power-cycle · 0/4 boots |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+
+**Power** — min 1.00 W · avg 1.94 W · peak 2.70 W · 1608 samples
+
+```mermaid
+xychart-beta
+    title "Power — Khadas VIM1S 01"
+    x-axis "sample" 1 --> 1608
+    y-axis "W" 0.5 --> 3.0
+    line [2.06, 2.12, 2.12, 2.25, 2.19, 2.11, 1.84, 2.16, 2.12, 2.13, 1.89, 1.90, 1.90, 1.90, 1.75, 1.86, 1.91, 1.90, 1.90, 1.90, 1.90, 1.90, 1.90, 1.90, 1.90, 1.91, 1.91, 1.90, 1.90, 1.90, 1.91, 1.83, 1.90, 1.90, 1.90, 1.90, 1.79, 1.90, 1.91, 1.90]
+```
 
 ### ❌ Khadas VIM3 01
 
