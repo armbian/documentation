@@ -52,35 +52,35 @@ xychart-beta
 
 ### ❌ Cubie A5E 01
 
-`radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.54` · 10 ✅ · 3 ❌ · 3 ⏭️
+`radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.58` · 10 ✅ · 3 ❌ · 3 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 303.3 s | — |
-| reboot | ✅ | 66.9 s | power-cycle · up 32 s |
+| upgrade | ⏭️ | 21.6 s | — |
+| reboot | ✅ | 64.6 s | power-cycle · up 32 s |
+| kernel-switch | ❌ | 119.0 s | branch=current · phase=install · dpkg_state=absent |
+| reboot | ✅ | 176.9 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 41.3 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 66.7 °C · None MHz |
+| dvfs | ➖ | 2.8 s | no cpufreq |
+| network-iperf | ✅ | 89.5 s | end0 ↑816/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.8 s | 26.11.0-trunk.58 · 6.18.53-current-sunxi64 |
+| kernel-switch | ❌ | 118.9 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 176.4 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 41.9 s | AES 358 · mem 2000 · disk W 21 / R 1 MB/s · 67.5 °C · None MHz |
+| dvfs | ➖ | 2.7 s | no cpufreq |
+| network-iperf | ✅ | 90.9 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.7 s | 26.11.0-trunk.58 · 6.18.53-current-sunxi64 |
 | kernel-switch | ❌ | 119.2 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 180.2 s | power-cycle · 4/4 boots · up 32 s |
-| hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 1 / R 23 MB/s · 65.5 °C · None MHz |
-| dvfs | ➖ | 2.9 s | no cpufreq |
-| network-iperf | ✅ | 96.9 s | end0 ↑820/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 6.1 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
-| kernel-switch | ❌ | 119.3 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 179.3 s | power-cycle · 4/4 boots · up 32 s |
-| hw-performance | ✅ | 42.8 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 65.2 °C · None MHz |
-| dvfs | ➖ | 3.3 s | no cpufreq |
-| network-iperf | ✅ | 93.5 s | end0 ↑820/↓941 (1GE) · end1 ↑939/↓938 (1GE) · wlan0 ↑120/↓129 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 6.8 s | 26.11.0-trunk.54 · 6.18.52-current-sunxi64 |
-| kernel-switch | ❌ | 118.8 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 64.1 s | power-cycle · up 31 s |
+| reboot | ✅ | 65.6 s | power-cycle · up 32 s |
 
-**Power** — min 1.70 W · avg 3.51 W · peak 5.00 W · 1165 samples
+**Power** — min 1.30 W · avg 3.51 W · peak 4.90 W · 924 samples
 
 ```mermaid
 xychart-beta
     title "Power — Cubie A5E 01"
-    x-axis "sample" 1 --> 1165
-    y-axis "W" 1.5 --> 5.5
-    line [3.39, 3.56, 3.61, 3.58, 3.57, 3.54, 3.76, 4.10, 3.64, 3.24, 3.31, 3.63, 3.55, 3.52, 3.27, 3.44, 3.61, 3.52, 2.90, 3.63, 3.55, 3.73, 3.78, 3.61, 3.62, 3.58, 3.59, 3.21, 3.34, 3.21, 3.08, 3.66, 3.58, 3.65, 3.63, 3.64, 3.58, 3.59, 3.54, 2.81]
+    x-axis "sample" 1 --> 924
+    y-axis "W" 1.0 --> 5.0
+    line [3.46, 3.02, 3.05, 3.70, 3.59, 3.60, 3.57, 3.49, 3.39, 3.33, 3.36, 3.56, 2.92, 3.73, 3.57, 3.61, 3.73, 3.69, 3.60, 3.63, 3.58, 3.54, 3.61, 3.20, 3.46, 3.83, 3.28, 2.96, 3.80, 3.61, 3.63, 3.79, 3.70, 3.60, 3.67, 3.58, 3.58, 3.63, 3.12, 3.47]
 ```
 
 ### ❌ Inovato Quadra 01
@@ -162,11 +162,32 @@ xychart-beta
 
 ### ❌ Orange Pi 5 01
 
-`orangepi5` · **inplace** · image `26.11.0-trunk.35` · 0 ✅ · 1 ❌ · 0 ⏭️
+`orangepi5` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 20 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.18 · reachable=False · port=22 |
+| upgrade | ✅ | 188.0 s | nightly · 26.8.3 → 26.11.0-trunk.58 |
+| reboot | ❌ | 233.8 s | power-cycle |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
 
 ### ❌ RockPro 64 01
 
