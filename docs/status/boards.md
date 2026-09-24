@@ -13,16 +13,16 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**68** boards — **51** operational, **17** broken.
+**68** boards — **54** operational, **14** broken.
 
-Reconcile made: 2026-09-24 09:03 UTC
+Reconcile made: 2026-09-24 14:05 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Aruba 2540 (43) |
+| Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi M2Pro 01 | 10.0.50.23 | local | 1 GbE | Aruba 2540 (23) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
@@ -35,6 +35,9 @@ Reconcile made: 2026-09-24 09:03 UTC
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear GS348 (17) |
+| Khadas VIM1S 01 | 10.0.50.48 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear GS348 (13) |
+| Khadas VIM3 01 | 10.0.50.39 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 1 GbE | Aruba 2540 (33) |
@@ -53,7 +56,7 @@ Reconcile made: 2026-09-24 09:03 UTC
 | Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Aruba 2540 (17) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
@@ -77,18 +80,15 @@ Reconcile made: 2026-09-24 09:03 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi R2 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (16) |
 | BigTreeTech CB1 01 | 10.0.50.62 | local | 100 MbE | Netgear S3300 (10) |
 | Khadas Edge2 01 | 10.0.20.134 | local | — | — |
 | Khadas VIM1 01 | 10.0.50.71 | local | 100 MbE | Netgear GS348 (3) |
-| Khadas VIM1S 01 | 10.0.50.48 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Khadas VIM2 01 | 10.0.50.28 | local | 100 MbE | Netgear GS348 (13) |
-| Khadas VIM3 01 | 10.0.50.46 | local | 1 GbE | Netgear GS348 (36) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
 | Odroid C1 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (11) |
 | Orange Pi 5 01 | 10.0.50.18 | local | 1 GbE | TP-Link SG3218XP-M2 (5) |
-| Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | TP-Link SG3428X (18) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi Prime 01 | 10.0.50.73 | local | 1 GbE | Aruba 2540 (35) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
 | Rock 5B 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (18) |
