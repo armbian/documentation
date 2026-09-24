@@ -548,18 +548,26 @@ xychart-beta
 
 ### ✅ Khadas VIM2 01
 
-`khadas-vim2` · **inplace** · image `26.11.0-trunk.27` · 8 ✅ · 0 ❌ · 0 ⏭️
+`khadas-vim2` · **inplace** · image `26.11.0-trunk.27` · 16 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 263.4 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.27 |
-| reboot | ✅ | 35.3 s | warm · up 17 s |
-| hw-performance | ✅ | 24.2 s | AES 652 · mem 3600 · disk W 42 / R 149 MB/s · 56 °C · 1512 MHz |
-| dvfs | ✅ | 26.0 s | ondemand · 500–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 72.2 s | eth0 ↑904/↓847 (1GE) · wlan0 ↑106/↓102 (Wi-Fi 5) Mbps |
-| restore-stable | ✅ | 136.8 s | stable |
-| reboot | ✅ | 35.4 s | warm · up 17 s |
-| store-versions | ✅ | 5.7 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
+| upgrade | ✅ | 270.8 s | nightly · 26.11.0-trunk.27 → 26.11.0-trunk.58 |
+| reboot | ✅ | 40.6 s | warm · up 24 s |
+| kernel-switch | ✅ | 53.7 s | branch=current · family=meson64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=6.18.53-current-meson64 |
+| reboot | ✅ | 152.3 s | warm · 4/4 boots · up 25 s |
+| hw-performance | ✅ | 24.1 s | AES 659 · mem 3600 · disk W 42 / R 151 MB/s · 59 °C · 1512 MHz |
+| dvfs | ✅ | 25.5 s | ondemand · 500–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 64.0 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑103/↓98 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.5 s | 26.11.0-trunk.58 · 6.18.53-current-meson64 |
+| kernel-switch | ✅ | 162.0 s | branch=edge · family=meson64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-7.2.7-edge-meson64 · kernel_before=6.18.53-current-meson64 |
+| reboot | ✅ | 153.7 s | warm · 4/4 boots · up 26 s |
+| hw-performance | ✅ | 24.5 s | AES 658 · mem 3600 · disk W 41 / R 139 MB/s · 59 °C · 1512 MHz |
+| dvfs | ✅ | 25.9 s | ondemand · 500–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 66.5 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑96/↓79 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.6 s | 26.11.0-trunk.58 · 7.2.7-edge-meson64 |
+| kernel-switch | ✅ | 159.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.18.53-current-meson64 · kernel_before=7.2.7-edge-meson64 |
+| reboot | ✅ | 37.6 s | warm · up 20 s |
 
 ### ✅ Khadas VIM4 01
 
