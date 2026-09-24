@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**64** boards — **56** passed, **8** failed. Most recent test of every board; failures first.
+**64** boards — **55** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (8)
+## ❌ Failed (9)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -106,6 +106,29 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
+### ❌ Khadas VIM3 01
+
+`khadas-vim3` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 208.8 s | nightly · 26.8.3 → 26.11.0-trunk.58 |
+| reboot | ❌ | 221.2 s | power-cycle |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+
 ### ❌ Mekotronics R58S2 01
 
 `mekotronics-r58s2` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 7 ⏭️
@@ -178,7 +201,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (56)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -516,21 +539,6 @@ xychart-beta
 | restore-stable | ✅ | 136.8 s | stable |
 | reboot | ✅ | 35.4 s | warm · up 17 s |
 | store-versions | ✅ | 5.7 s | 26.11.0-trunk.27 · 6.18.44-current-meson64 |
-
-### ✅ Khadas VIM3 01
-
-`khadas-vim3` · **inplace** · image `26.8.3` · 8 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 337.0 s | nightly · 26.8.3 → 26.11.0-trunk.35 |
-| reboot | ✅ | 38.9 s | warm · up 20 s |
-| hw-performance | ✅ | 31.1 s | AES 852 · mem 3900 · disk W 12 / R 22 MB/s · 45.2 °C · 2016 MHz |
-| dvfs | ✅ | 17.7 s | ondemand · 1000–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 54.1 s | end0 ↑940/↓941 (1GE) · wlan0 ↑40/↓39 (Wi-Fi 5) Mbps |
-| restore-stable | ✅ | 103.1 s | stable |
-| reboot | ✅ | 38.1 s | warm · up 20 s |
-| store-versions | ✅ | 3.9 s | 26.11.0-trunk.35 · 6.18.44-current-meson64 |
 
 ### ✅ Khadas VIM4 01
 
