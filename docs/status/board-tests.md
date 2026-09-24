@@ -1456,26 +1456,36 @@ xychart-beta
 
 ### ✅ Rockpi S 01
 
-`rockpi-s` · **inplace** · image `26.11.0-trunk.57` · 14 ✅ · 0 ❌ · 2 ⏭️
+`rockpi-s` · **inplace** · image `26.11.0-trunk.57` · 14 ✅ · 2 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 109.5 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.57 |
-| reboot | ✅ | 48.9 s | warm · up 26 s |
-| kernel-switch | ✅ | 70.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
-| reboot | ✅ | 172.4 s | warm · 4/4 boots · up 28 s |
-| hw-performance | ✅ | 40.9 s | AES 218 · mem 1300 · disk W 20 / R 22 MB/s · 46.4 °C · 1008 MHz |
-| dvfs | ✅ | 35.3 s | ondemand · 408–1008 MHz (peak 1008) |
-| network-iperf | ⏭️ | 13.6 s | no cabled interfaces |
-| store-versions | ✅ | 7.7 s | 26.11.0-trunk.57 · 6.18.53-current-rockchip64 |
-| kernel-switch | ✅ | 232.7 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
-| reboot | ✅ | 171.5 s | warm · 4/4 boots · up 28 s |
-| hw-performance | ✅ | 41.6 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 47.3 °C · 1008 MHz |
-| dvfs | ✅ | 43.7 s | ondemand · 408–1008 MHz (peak 1008) |
-| network-iperf | ⏭️ | 13.9 s | no cabled interfaces |
-| store-versions | ✅ | 7.8 s | 26.11.0-trunk.57 · 7.2.7-edge-rockchip64 |
-| kernel-switch | ✅ | 236.4 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.57 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
-| reboot | ✅ | 59.4 s | warm · up 29 s |
+| upgrade | ✅ | 412.7 s | nightly · 26.11.0-trunk.57 → 26.11.0-trunk.58 |
+| reboot | ✅ | 73.7 s | power-cycle · up 31 s |
+| kernel-switch | ✅ | 71.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 195.4 s | power-cycle · 4/4 boots · up 31 s |
+| hw-performance | ✅ | 41.1 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 55.5 °C · 1008 MHz |
+| dvfs | ✅ | 36.0 s | ondemand · 408–1008 MHz (peak 1008) |
+| network-iperf | ❌ | 81.3 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑0/↓1 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 7.8 s | 26.11.0-trunk.58 · 6.18.53-current-rockchip64 |
+| kernel-switch | ✅ | 242.2 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-7.2.7-edge-rockchip64 · kernel_before=6.18.53-current-rockchip64 |
+| reboot | ✅ | 185.1 s | power-cycle · 4/4 boots · up 30 s |
+| hw-performance | ✅ | 42.0 s | AES 219 · mem 1300 · disk W 21 / R 22 MB/s · 55.5 °C · 1008 MHz |
+| dvfs | ✅ | 36.5 s | ondemand · 408–1008 MHz (peak 1008) |
+| network-iperf | ❌ | 92.2 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑0/↓1 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 7.8 s | 26.11.0-trunk.58 · 7.2.7-edge-rockchip64 |
+| kernel-switch | ✅ | 236.4 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.18.53-current-rockchip64 · kernel_before=7.2.7-edge-rockchip64 |
+| reboot | ✅ | 70.8 s | power-cycle · up 34 s |
+
+**Power** — min 1.00 W · avg 1.50 W · peak 3.30 W · 1492 samples
+
+```mermaid
+xychart-beta
+    title "Power — Rockpi S 01"
+    x-axis "sample" 1 --> 1492
+    y-axis "W" 0.5 --> 3.5
+    line [1.37, 1.51, 1.53, 1.41, 1.43, 1.51, 1.73, 1.45, 1.40, 1.27, 1.57, 1.52, 1.39, 1.55, 1.56, 1.37, 1.54, 1.46, 1.36, 1.49, 1.41, 1.58, 1.54, 1.45, 1.41, 1.45, 1.71, 1.65, 1.62, 1.73, 1.41, 1.35, 1.74, 1.45, 1.54, 1.54, 1.45, 1.45, 1.39, 1.62]
+```
 
 ### ✅ SpacemiT K3 Pico-ITX 01
 
