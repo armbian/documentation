@@ -1271,18 +1271,18 @@ xychart-beta
 
 ### ✅ ROCK 2F 01
 
-`rock-2f` · **inplace** · image `26.5.1` · 8 ✅ · 0 ❌ · 0 ⏭️
+`rock-2f` · **inplace** · image `26.11.0-trunk.58` · 8 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 81.6 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.58 |
-| reboot | ✅ | 8.3 s | power-cycle |
-| kernel-switch | ✅ | 54.3 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 105.1 s | power-cycle · 3/4 boots · up 24 s |
-| hw-performance | ✅ | 28.1 s | AES 820 · mem 5900 · disk W 22 / R 65 MB/s · 48.3 °C · 2016 MHz |
-| dvfs | ✅ | 23.7 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 37.5 s | wlan0 ↑215/↓270 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.3 s | 26.11.0-trunk.58 · 6.1.172-vendor-rk35xx |
+| upgrade | ✅ | 74.4 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.58 |
+| reboot | ✅ | 8.9 s | power-cycle |
+| kernel-switch | ✅ | 54.5 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 101.1 s | power-cycle · 3/4 boots · up 19 s |
+| hw-performance | ✅ | 28.2 s | AES 834 · mem 6000 · disk W 17 / R 65 MB/s · 48.9 °C · 2016 MHz |
+| dvfs | ✅ | 23.8 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 37.6 s | wlan0 ↑214/↓267 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.2 s | 26.11.0-trunk.58 · 6.1.172-vendor-rk35xx |
 
 ### ✅ Rock 5B 01
 
