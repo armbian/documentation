@@ -1277,10 +1277,10 @@ xychart-beta
 |:--|:--:|--:|:--|
 | upgrade | ⏭️ | 0.0 s | — |
 | reboot | ⏭️ | 0.0 s | reboot |
-| hw-performance | ✅ | 33.0 s | AES 824 · mem 5900 · disk W 15 / R 65 MB/s · 47.8 °C · 2016 MHz |
-| dvfs | ✅ | 25.8 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 41.8 s | wlan0 ↑54/↓61 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.6 s | 26.5.1 · 6.1.115-vendor-rk35xx |
+| hw-performance | ✅ | 29.6 s | AES 835 · mem 6000 · disk W 14 / R 65 MB/s · 43.3 °C · 2016 MHz |
+| dvfs | ✅ | 23.9 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 45.2 s | wlan0 ↑214/↓267 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.3 s | 26.5.1 · 6.1.115-vendor-rk35xx |
 
 ### ✅ Rock 5B 01
 
