@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **53** passed, **10** failed. Most recent test of every board; failures first.
+**63** boards — **54** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ BigTreeTech CB1 01
 
@@ -185,21 +185,6 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.46 · reachable=False · port=22 |
 
-### ❌ ROCK 2F 01
-
-`rock-2f` · **inplace** · image `26.5.1` · 1 ✅ · 1 ❌ · 6 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 74.2 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.58 |
-| reboot | ❌ | 218.1 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-
 ### ❌ RockPro 64 01
 
 `rockpro64` · **inplace** · image `26.11.0-trunk.57` · 15 ✅ · 1 ❌ · 0 ⏭️
@@ -233,7 +218,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (53)
+## ✅ Passed (54)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1283,6 +1268,21 @@ xychart-beta
 | store-versions | ✅ | 5.7 s | 26.11.0-trunk.56 · 7.2.6-edge-bcm2711 |
 | kernel-switch | ✅ | 189.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
 | reboot | ✅ | 41.4 s | warm · up 23 s |
+
+### ✅ ROCK 2F 01
+
+`rock-2f` · **inplace** · image `26.5.1` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 81.6 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.58 |
+| reboot | ✅ | 8.3 s | power-cycle |
+| kernel-switch | ✅ | 54.3 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 105.1 s | power-cycle · 3/4 boots · up 24 s |
+| hw-performance | ✅ | 28.1 s | AES 820 · mem 5900 · disk W 22 / R 65 MB/s · 48.3 °C · 2016 MHz |
+| dvfs | ✅ | 23.7 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 37.5 s | wlan0 ↑215/↓270 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.3 s | 26.11.0-trunk.58 · 6.1.172-vendor-rk35xx |
 
 ### ✅ Rock 5B 01
 
