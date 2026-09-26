@@ -389,29 +389,6 @@ xychart-beta
     line [5.80, 5.80, 5.96, 6.24, 6.25, 6.10, 5.80, 6.00, 4.95, 3.50, 3.60, 4.00, 5.60, 8.24, 8.74, 8.70, 8.78, 8.50, 8.18, 8.04, 8.30, 8.22, 8.20, 8.36, 8.40, 8.40, 8.30, 8.20, 8.40, 8.40, 8.48, 9.62, 9.00, 8.52, 8.46, 10.84, 12.90, 11.68, 9.14, 9.00]
 ```
 
-### ✅ BananaPi BPI-F3 01
-
-`bananapif3` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 65.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
-| reboot | ✅ | 48.4 s | power-cycle · up 16 s |
-| kernel-switch | ✅ | 43.7 s | branch=current · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-spacemit · kernel_before=6.18.53-current-spacemit |
-| reboot | ✅ | 133.4 s | power-cycle · 4/4 boots · up 17 s |
-| hw-performance | ✅ | 22.3 s | AES 30 · mem 3400 · disk W 62 / R 83 MB/s · 58 °C · 1800 MHz |
-| dvfs | ✅ | 23.2 s | performance · 614–1800 MHz (peak 1800) |
-| network-iperf | ✅ | 88.7 s | eth0 ↑939/↓938 (1GE) · wlan0 ↑308/↓323 (Wi-Fi 6) · wlan1 ↑274/↓253 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.1 s | 26.11.0-trunk.56 · 6.18.53-current-spacemit |
-| kernel-switch | ✅ | 103.9 s | branch=edge · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-spacemit · kernel_before=6.18.53-current-spacemit |
-| reboot | ✅ | 461.8 s | power-cycle · 4/4 boots · up 105 s |
-| hw-performance | ✅ | 22.7 s | AES 27 · mem 5800 · disk W 60 / R 82 MB/s · 49 °C · 1600 MHz |
-| dvfs | ✅ | 24.0 s | performance · 614–1600 MHz (peak 1600) |
-| network-iperf | ✅ | 61.3 s | eth0 ↑939/↓939 (1GE) · wlan0 ↑239/↓238 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.4 s | 26.11.0-trunk.56 · 7.2.7-edge-spacemit |
-| kernel-switch | ✅ | 103.7 s | branch=current · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-spacemit · kernel_before=7.2.7-edge-spacemit |
-| reboot | ✅ | 48.0 s | power-cycle · up 17 s |
-
 ### ✅ Clearfog Pro 01
 
 `clearfogpro` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 0 ❌ · 2 ⏭️
@@ -1097,6 +1074,19 @@ xychart-beta
 | store-versions | ✅ | 5.0 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi64 |
 | kernel-switch | ✅ | 126.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi64 · kernel_before=7.2.7-edge-sunxi64 |
 | reboot | ✅ | 37.6 s | warm · up 18 s |
+
+### ✅ Orange Pi Prime 01
+
+`orangepiprime` · **inplace** · image `26.11.0-trunk.51` · 3 ✅ · 0 ❌ · 3 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 0.0 s | — |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-performance | ✅ | 45.3 s | AES 380 · mem 2100 · disk W 21 / R 23 MB/s · 40.8 °C · None MHz |
+| dvfs | ➖ | 2.9 s | no cpufreq |
+| network-iperf | ✅ | 70.4 s | end0 ↑881/↓856 (1GE) · wlan0 ↑32/↓34 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 6.1 s | 26.11.0-trunk.51 · 6.18.52-current-sunxi64 |
 
 ### ✅ Orange Pi Zero2 01
 
