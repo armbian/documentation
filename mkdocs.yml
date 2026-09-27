@@ -378,6 +378,7 @@ nav:
         - 'Desktops' : 'build-framework/desktops.md'
         - 'Board Configuration' : 'build-framework/board-configuration.md'
         - 'Adding a Board' : 'build-framework/adding-a-board.md'
+        - 'Bootscript Templating' : 'build-framework/bootscript-templating.md'
 
   - 'STATUS' :
         - 'Overview' : 'status/index.md'
