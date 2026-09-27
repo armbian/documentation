@@ -19,14 +19,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 ### ❌ BigTreeTech CB1 01
 
-`bigtreetech-cb1` · **inplace** · image `26.11.0-trunk.54` · 1 ✅ · 2 ❌ · 13 ⏭️
+`bigtreetech-cb1` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 132.2 s | — |
-| reboot | ✅ | 242.4 s | power-cycle · up 25 s |
-| kernel-switch | ❌ | 149.7 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ❌ | 1485.7 s | power-cycle · 0/4 boots |
+| upgrade | ✅ | 207.6 s | nightly · 26.8.3 → 26.11.0-trunk.60 |
+| reboot | ❌ | 214.7 s | power-cycle |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -40,14 +40,14 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 1.00 W · avg 1.67 W · peak 3.30 W · 1633 samples
+**Power** — min 1.70 W · avg 2.59 W · peak 3.20 W · 343 samples
 
 ```mermaid
 xychart-beta
     title "Power — BigTreeTech CB1 01"
-    x-axis "sample" 1 --> 1633
-    y-axis "W" 0.5 --> 3.5
-    line [1.90, 1.90, 1.90, 1.90, 1.90, 1.90, 1.84, 2.31, 2.38, 2.88, 2.98, 3.00, 3.02, 3.00, 3.03, 1.63, 1.16, 1.16, 1.18, 1.15, 1.23, 1.11, 1.24, 1.19, 1.25, 1.23, 1.30, 1.20, 1.18, 1.10, 1.27, 1.30, 1.19, 1.36, 1.28, 1.32, 1.19, 1.14, 1.36, 1.34]
+    x-axis "sample" 1 --> 343
+    y-axis "W" 1.5 --> 3.5
+    line [2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.49, 2.33, 2.68, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60]
 ```
 
 ### ❌ Cubie A5E 01
@@ -1259,21 +1259,6 @@ xychart-beta
 | kernel-switch | ✅ | 189.0 s | branch=current · family=bcm2711 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.52-current-bcm2711 · kernel_before=7.2.6-edge-bcm2711 |
 | reboot | ✅ | 41.4 s | warm · up 23 s |
 
-### ✅ ROCK 2F 01
-
-`rock-2f` · **inplace** · image `26.11.0-trunk.58` · 8 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 82.7 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.58 |
-| reboot | ✅ | 69.9 s | power-cycle · up 24 s |
-| kernel-switch | ✅ | 56.0 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.58 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 168.6 s | power-cycle · 4/4 boots · up 22 s |
-| hw-performance | ✅ | 37.4 s | AES 819 · mem 5900 · disk W 13 / R 65 MB/s · 47.7 °C · 2016 MHz |
-| dvfs | ✅ | 24.3 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 38.0 s | wlan0 ↑216/↓272 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.2 s | 26.11.0-trunk.58 · 6.1.172-vendor-rk35xx |
-
 ### ✅ Rock 5B 01
 
 `rock-5b` · **inplace** · image `26.11.0-trunk.51` · 16 ✅ · 0 ❌ · 0 ⏭️
@@ -1405,6 +1390,21 @@ xychart-beta
     y-axis "W" 1.0 --> 16.0
     line [9.59, 9.98, 9.72, 10.39, 9.67, 8.82, 6.56, 9.80, 9.51, 9.75, 6.70, 6.22, 7.86, 6.75, 7.53, 10.63, 9.43, 9.32, 9.80, 9.62, 9.46, 9.31, 9.50, 8.79, 9.10, 6.89, 7.19, 6.57, 4.47, 8.77, 10.79, 9.24, 9.32, 9.84, 10.22, 9.72, 9.89, 9.96, 7.42, 5.96]
 ```
+
+### ✅ Rock 5T 02
+
+`rock-5t` · **inplace** · image `26.8.0-trunk.192` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 101.6 s | nightly · 26.8.0-trunk.192 → 26.8.0-trunk.192 |
+| reboot | ✅ | 37.3 s | warm · up 23 s |
+| hw-performance | ✅ | 19.8 s | AES 1258 · mem 8000 · disk W 21 / R 82 MB/s · 56.4 °C · 1800 MHz |
+| dvfs | ✅ | 17.0 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 527.1 s | enP3p49s0 ↑2353/↓2354 · enP4p65s0 ↑2353/↓2353 · wlP2p33s0 ↑320/↓468 Mbps |
+| restore-stable | ✅ | 98.7 s | stable |
+| reboot | ✅ | 30.9 s | warm · up 17 s |
+| store-versions | ✅ | 4.5 s | 26.8.0-trunk.192 · 6.18.35-current-rockchip64 |
 
 ### ✅ Rockpi E 01
 
