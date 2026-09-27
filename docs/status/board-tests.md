@@ -1169,16 +1169,16 @@ xychart-beta
 
 ### ✅ Radxa ZERO 3 01
 
-`radxa-zero3` · **inplace** · image `26.5.1` · 4 ✅ · 0 ❌ · 2 ⏭️
+`radxa-zero3` · **inplace** · image `26.5.1` · 3 ✅ · 1 ❌ · 2 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | upgrade | ⏭️ | 0.0 s | — |
 | reboot | ⏭️ | 0.0 s | reboot |
-| hw-performance | ✅ | 38.1 s | AES 720 · mem 3900 · disk W 20 / R 22 MB/s · 49.4 °C · 1416 MHz |
-| dvfs | ✅ | 38.0 s | ondemand · 408–1416 MHz (peak 1416) |
-| network-iperf | ✅ | 55.1 s | wlan0 ↑1/↓6 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 6.8 s | 26.5.1 · 6.18.44-current-rockchip64 |
+| hw-performance | ✅ | 67.7 s | AES 720 · mem 3900 · disk W 20 / R 22 MB/s · 48.9 °C · 1416 MHz |
+| dvfs | ✅ | 67.3 s | ondemand · 408–1416 MHz (peak 1416) |
+| network-iperf | ❌ | 99.7 s | wlan0 ↑6/↓0 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 8.1 s | 26.5.1 · 6.18.44-current-rockchip64 |
 
 ### ✅ Raspberry Pi 3B
 
