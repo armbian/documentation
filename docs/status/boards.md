@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**64** boards — **58** operational, **6** broken.
+**63** boards — **59** operational, **4** broken.
 
-Reconcile made: 2026-09-27 10:25 UTC
+Reconcile made: 2026-09-27 15:45 UTC
 
 **Operational**
 
@@ -55,8 +55,8 @@ Reconcile made: 2026-09-27 10:25 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
-| Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi Prime 01 | 10.0.50.46 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
@@ -70,6 +70,7 @@ Reconcile made: 2026-09-27 10:25 UTC
 | Rock 5B 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (18) |
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
+| Rock 5T 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (48) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
@@ -84,11 +85,9 @@ Reconcile made: 2026-09-27 10:25 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| BigTreeTech CB1 01 | 10.0.50.23 | local | 100 MbE | Netgear S3300 (10) |
 | Khadas VIM1S 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (37) |
 | Mekotronics R58S2 01 | 10.0.50.38 | local | 1 GbE | Aruba 2540 (34) |
-| Rock 5T 01 | 10.0.50.52 | local | 1 GbE | Netgear S3300 (48) |
-| Rock 5T 02 | 10.0.50.29 | local | Wi-Fi 6 | Zyxel NWA130BE |
+| Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
 
 <!-- BOARDS-STOP -->
