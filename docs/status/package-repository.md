@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-09-26 10:30 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-09-27 11:01 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Fri, 25 Sep 2026 | 2267 | `26.8.3` |
-| `trixie` | trixie | Fri, 25 Sep 2026 | 2267 | `26.8.3` |
-| `sid` | sid | Fri, 25 Sep 2026 | 2267 | `26.8.3` |
-| `jammy` | jammy | Fri, 25 Sep 2026 | 2267 | `26.8.3` |
-| `noble` | noble | Fri, 25 Sep 2026 | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Sun, 27 Sep 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Sun, 27 Sep 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Sun, 27 Sep 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Sun, 27 Sep 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Sun, 27 Sep 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
@@ -146,15 +146,15 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `aptly` | — | — | — | `1.6.2-2` | — |
 | `armbian-imager` | — | `1.2.1` | — | — | — |
 | `base-files` | `26.8.3-12.4+deb12u15-bookworm` | `26.8.3-13.8+deb13u6-trixie` | `26.8.3-14.2-sid` | `26.8.3-12ubuntu4.7-jammy` | `26.8.3-13ubuntu10-noble` |
-| `bluez` | `5.66-1+rpt1+deb12u2` | `5.66-1+rpt1+deb12u2` | `5.66-1+rpt1+deb12u2` | — | — |
-| `bluez-firmware` | `1.2-9+rpt4` | `1.2-9+rpt4` | `1.2-9+rpt4` | — | — |
+| `bluez` | `5.66-1+rpt2+deb12u2` | `5.82-1.1+rpt2` | `5.82-1.1+rpt2` | — | — |
+| `bluez-firmware` | `1.2-9+rpt4` | `1.2-13+rpt2` | `1.2-13+rpt2` | — | — |
 | `edl-ng` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` |
 | `fastfetch` | `2.68.1` | `2.68.1` | — | `2.68.1` | `2.68.1` |
-| `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | `1:20240709-2~bpo12+1+rpt3` | — | — |
+| `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
 | `gh` | `2.101.0` | `2.101.0` | `2.83.2` | `2.101.0` | `2.101.0` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
-| `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.5.2+rpt20250903-1~bpo12+1` | — | `0.2.0-3fakesync1build6` | — |
+| `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20260817-1` | — | `0.2.0-3fakesync1build6` | — |
 | `libcec6` | — | — | — | `6.0.2-2` | — |
 | `libraspberrypi` | `1:2+git20231018~131943+3c97f76-1` | `1:2+git20231018~131943+3c97f76-1` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` |
 | `linux-firmware-raspi` | — | — | — | — | `12-0ubuntu1` |
@@ -163,11 +163,16 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `os-agent` | `1.7.2` | `1.7.2` | — | `1.7.2` | `1.7.2` |
 | `pacstall` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | — | `5.2.1-pacstall1` |
 | `pi-bluetooth` | `0.1.20` | `0.1.20` | `0.1.20` | — | `0.2ubuntu1` |
-| `raspberrypi-sys-mods` | `20250930~bookworm` | `20250930~bookworm` | `20250930~bookworm` | — | — |
+| `raspberrypi-sys-mods` | `20250930~bookworm` | `1:20260914` | `1:20260914` | — | — |
 | `raspi-config` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` |
-| `raspi-firmware` | `1:1.20250915-1~bookworm` | `1:1.20250915-1~bookworm` | `1:1.20250915-1~bookworm` | — | — |
+| `raspi-firmware` | `1:1.20260915-1~bookworm` | `1:1.20260915-1` | `1:1.20260915-1` | — | — |
 | `raspi-gpio` | `0.20231127` | `0.20231127` | `0.20231127` | — | — |
-| `raspi-utils` | `20250826-1~bookworm` | `20250826-1~bookworm` | `20250826-1~bookworm` | — | — |
+| `raspi-utils` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
+| `raspi-utils-core` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
+| `raspi-utils-dt` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
+| `raspi-utils-eeprom` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
+| `raspi-utils-otp` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
+| `raspinfo` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
 | `rpi-eeprom` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` |
 | `spice-vdagent` | — | `0.22.1-3+b2` | — | — | — |
 | `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
