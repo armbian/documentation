@@ -133,12 +133,12 @@ xychart-beta
 
 ### ❌ Khadas VIM3 01
 
-`khadas-vim3` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
+`khadas-vim3` · **inplace** · image `26.11.0-trunk.58` · 1 ✅ · 1 ❌ · 14 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 208.8 s | nightly · 26.8.3 → 26.11.0-trunk.58 |
-| reboot | ❌ | 221.2 s | power-cycle |
+| upgrade | ✅ | 119.8 s | nightly · 26.11.0-trunk.58 → 26.11.0-trunk.60 |
+| reboot | ❌ | 220.0 s | power-cycle |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
