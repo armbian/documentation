@@ -13,9 +13,42 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**63** boards — **57** passed, **6** failed. Most recent test of every board; failures first.
+**62** boards — **55** passed, **7** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (6)
+## ❌ Failed (7)
+
+### ❌ Cubox i2eX/i4 01
+
+`cubox-i` · **inplace** · image `26.11.0-trunk.60` · 13 ✅ · 3 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 291.7 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ✅ | 98.9 s | power-cycle · up 47 s |
+| kernel-switch | ✅ | 106.1 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 347.2 s | power-cycle · 4/4 boots · up 74 s |
+| hw-performance | ✅ | 88.1 s | AES 26 · mem 728 · disk W 19 / R 20 MB/s · 46.9 °C · 996 MHz |
+| dvfs | ✅ | 66.3 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ❌ | 136.6 s | end0 ↑94/↓0 (1GE) · wlan0 ↑16/↓0 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 20.9 s | 26.11.0-trunk.62 · 6.18.54-current-imx6 |
+| kernel-switch | ❌ | 152.3 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 284.3 s | power-cycle · 4/4 boots · up 46 s |
+| hw-performance | ✅ | 73.7 s | AES 26 · mem 737 · disk W 19 / R 20 MB/s · 48 °C · 996 MHz |
+| dvfs | ✅ | 75.6 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ❌ | 171.8 s | end0 ↑94/↓0 (1GE) · wlan0 ↑16/↓0 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 12.6 s | 26.11.0-trunk.62 · 6.18.54-current-imx6 |
+| kernel-switch | ✅ | 167.7 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 90.4 s | power-cycle · up 43 s |
+
+**Power** — min 1.80 W · avg 2.75 W · peak 5.60 W · 1375 samples
+
+```mermaid
+xychart-beta
+    title "Power — Cubox i2eX/i4 01"
+    x-axis "sample" 1 --> 1375
+    y-axis "W" 1.5 --> 6.0
+    line [2.49, 1.90, 1.90, 2.89, 3.18, 2.44, 3.40, 3.11, 3.29, 2.69, 3.80, 3.37, 3.30, 2.49, 2.94, 2.45, 2.27, 2.69, 2.14, 2.48, 2.60, 2.47, 1.94, 2.19, 3.43, 2.87, 3.32, 3.28, 3.56, 2.82, 2.90, 2.66, 2.42, 2.51, 2.44, 2.76, 2.55, 2.12, 2.64, 3.33]
+```
 
 ### ❌ Khadas VIM1S 01
 
@@ -129,7 +162,7 @@ xychart-beta
     line [4.75, 4.22, 4.85, 4.90, 4.90, 4.90, 4.74, 4.90, 4.91, 4.94, 4.45, 4.70, 4.73, 4.77, 4.54, 4.63, 4.67, 4.42, 4.30, 4.54, 5.01, 4.70, 4.71, 4.75, 4.31, 4.82, 4.91, 4.78, 4.63, 4.39, 4.78, 4.80, 4.79, 4.14, 3.97, 4.54, 4.22, 4.66, 4.53, 3.99]
 ```
 
-## ✅ Passed (57)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -300,29 +333,6 @@ xychart-beta
     line [5.80, 5.80, 5.96, 6.24, 6.25, 6.10, 5.80, 6.00, 4.95, 3.50, 3.60, 4.00, 5.60, 8.24, 8.74, 8.70, 8.78, 8.50, 8.18, 8.04, 8.30, 8.22, 8.20, 8.36, 8.40, 8.40, 8.30, 8.20, 8.40, 8.40, 8.48, 9.62, 9.00, 8.52, 8.46, 10.84, 12.90, 11.68, 9.14, 9.00]
 ```
 
-### ✅ BananaPi BPI-F3 01
-
-`bananapif3` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 65.3 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
-| reboot | ✅ | 48.4 s | power-cycle · up 16 s |
-| kernel-switch | ✅ | 43.7 s | branch=current · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-spacemit · kernel_before=6.18.53-current-spacemit |
-| reboot | ✅ | 133.4 s | power-cycle · 4/4 boots · up 17 s |
-| hw-performance | ✅ | 22.3 s | AES 30 · mem 3400 · disk W 62 / R 83 MB/s · 58 °C · 1800 MHz |
-| dvfs | ✅ | 23.2 s | performance · 614–1800 MHz (peak 1800) |
-| network-iperf | ✅ | 88.7 s | eth0 ↑939/↓938 (1GE) · wlan0 ↑308/↓323 (Wi-Fi 6) · wlan1 ↑274/↓253 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.1 s | 26.11.0-trunk.56 · 6.18.53-current-spacemit |
-| kernel-switch | ✅ | 103.9 s | branch=edge · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.2.7-edge-spacemit · kernel_before=6.18.53-current-spacemit |
-| reboot | ✅ | 461.8 s | power-cycle · 4/4 boots · up 105 s |
-| hw-performance | ✅ | 22.7 s | AES 27 · mem 5800 · disk W 60 / R 82 MB/s · 49 °C · 1600 MHz |
-| dvfs | ✅ | 24.0 s | performance · 614–1600 MHz (peak 1600) |
-| network-iperf | ✅ | 61.3 s | eth0 ↑939/↓939 (1GE) · wlan0 ↑239/↓238 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.4 s | 26.11.0-trunk.56 · 7.2.7-edge-spacemit |
-| kernel-switch | ✅ | 103.7 s | branch=current · family=spacemit · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-spacemit · kernel_before=7.2.7-edge-spacemit |
-| reboot | ✅ | 48.0 s | power-cycle · up 17 s |
-
 ### ✅ Clearfog Pro 01
 
 `clearfogpro` · **inplace** · image `26.11.0-trunk.56` · 14 ✅ · 0 ❌ · 2 ⏭️
@@ -401,29 +411,6 @@ xychart-beta
 | store-versions | ✅ | 12.1 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi |
 | kernel-switch | ✅ | 246.2 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=7.2.7-edge-sunxi |
 | reboot | ✅ | 69.1 s | warm · up 44 s |
-
-### ✅ Cubox i2eX/i4 01
-
-`cubox-i` · **inplace** · image `26.11.0-trunk.56` · 16 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 107.9 s | nightly · 26.11.0-trunk.56 → 26.11.0-trunk.56 |
-| reboot | ✅ | 60.4 s | power-cycle · up 30 s |
-| kernel-switch | ✅ | 71.9 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=6.18.53-current-imx6 |
-| reboot | ✅ | 194.0 s | power-cycle · 4/4 boots · up 31 s |
-| hw-performance | ✅ | 46.9 s | AES 26 · mem 750 · disk W 19 / R 20 MB/s · 55.4 °C · 996 MHz |
-| dvfs | ✅ | 40.3 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 78.9 s | end0 ↑393/↓194 (1GE) · wlan0 ↑18/↓13 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 8.8 s | 26.11.0-trunk.56 · 6.18.53-current-imx6 |
-| kernel-switch | ✅ | 461.3 s | branch=edge · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.53-current-imx6 |
-| reboot | ✅ | 195.3 s | power-cycle · 4/4 boots · up 31 s |
-| hw-performance | ✅ | 48.0 s | AES 26 · mem 743 · disk W 18 / R 20 MB/s · 56 °C · 996 MHz |
-| dvfs | ✅ | 44.3 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 79.1 s | end0 ↑393/↓202 (1GE) · wlan0 ↑19/↓12 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 9.4 s | 26.11.0-trunk.56 · 7.1.13-edge-imx6 |
-| kernel-switch | ✅ | 449.2 s | branch=current · family=imx6 · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-imx6 · kernel_before=7.1.13-edge-imx6 |
-| reboot | ✅ | 70.8 s | power-cycle · up 31 s |
 
 ### ✅ Espressobin 01
 
