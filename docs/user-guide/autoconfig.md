@@ -50,7 +50,7 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 | `PRESET_NET_STATIC_IP` | `xxx.xxx.xxx.xxx` | Static IPv4 address, dotted decimal notation<br>Must be a host address in the gateway's subnet, not the network or broadcast address (e.g. not `.0` or `.255` in a `/24`) |
 | `PRESET_NET_STATIC_MASK` | `xxx.xxx.xxx.xxx` | Subnet mask, typically `255.255.255.0` |
 | `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway address |
-| `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure:<br>CloudFlare is `1.1.1.1 1.0.0.1`<br>Google is `8.8.8.8 8.8.4.4` |
+| `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by spaces or commas. If unsure:<br>CloudFlare is `1.1.1.1 1.0.0.1`<br>Google is `8.8.8.8 8.8.4.4` |
 | `SET_LANG_BASED_ON_LOCATION` | `Y` \| `n` | "Set user language based on your location?"; unattended runs default to `Y` |
 | `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8`<br>Unattended runs without it take the first locale for the detected location |
 | `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`<br>Unattended runs without it use the detected timezone, or keep the image's if none was detected |
