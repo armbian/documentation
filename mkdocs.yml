@@ -378,6 +378,7 @@ nav:
         - 'Desktops' : 'build-framework/desktops.md'
         - 'Board Configuration' : 'build-framework/board-configuration.md'
         - 'Adding a Board' : 'build-framework/adding-a-board.md'
+        - 'Testing with QEMU' : 'build-framework/testing-with-qemu.md'
 
   - 'STATUS' :
         - 'Overview' : 'status/index.md'
