@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**17** servers · **686** threads · **1933** GB RAM · **278** runners (**126** online).
+**18** servers (**1** offline) · **718** threads (**702** active) · **2058** GB RAM · **290** runners (**138** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -30,6 +30,7 @@ runner processes each server hosts (from the
 | `kspace` | Kspace Estonia | 128 | 256 GB | 24 | active |
 | `github` | GitHub | 40 | 137 GB | 20 | active |
 | `rack-ryzen` | Armbian Datacenter | 32 | 125 GB | 15 | active |
+| `xogium` | Armbian Datacenter | 32 | 125 GB | 12 | active |
 | `stpete` | JetHome | 24 | 64 GB | 8 | active |
 | `geekom` | Armbian Datacenter | 20 | 62 GB | 8 | active |
 | `vps8000-1` | Netcup Germany | 18 | 62 GB | 9 | active |
@@ -37,7 +38,7 @@ runner processes each server hosts (from the
 | `cats` | Auroradev Las Vegas | 16 | 32 GB | 6 | active |
 | `oregon-1` | Oregon UNI | 16 | 32 GB | 8 | active |
 | `oregon-2` | Oregon UNI | 16 | 32 GB | 8 | active |
-| `stmir` | JetHome | 16 | 94 GB | 12 | active |
+| `stmir` | JetHome | 16 | 94 GB | 12 | ⚠️ offline |
 | `vps3000-1` | Netcup Germany | 12 | 24 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
 | `werner-trixie` | Hetzner Germany | 8 | 31 GB | 4 | active |
