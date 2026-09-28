@@ -25,8 +25,10 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 ## Configuration directives
 
 - The directives in this file are specified using `key="value"` format.  
-- To ask for a value interactively, leave it unset or comment out the directive.  
-- For fully-unattended setup, specify all values.  
+- The presets are applied at first boot by the root autologin on the console, so a headless board configures itself without anyone logging in.  
+- Once the file sets `PRESET_ROOT_PASSWORD` or `PRESET_USER_NAME`, first login runs **unattended**: a question whose directive is unset takes its default instead of waiting for an answer (see the table). Only the account details themselves (user name, passwords) are still asked for if missing, so for a fully-unattended setup specify at least `PRESET_ROOT_PASSWORD`, `PRESET_USER_NAME`, `PRESET_USER_PASSWORD` and `PRESET_DEFAULT_REALNAME`.  
+- Without either of those two, first login is interactive: leave a directive unset or comment it out to be asked for it.  
+- [Armbian Imager](https://github.com/armbian/imager) writes this file for you from its first-boot settings.  
 
 !!! caution
     No validation of this network config is performed, wrong settings will lead to broken network.  
@@ -43,22 +45,22 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 | `PRESET_NET_WIFI_SSID` | `MySSID` | WiFi SSID |
 | `PRESET_NET_WIFI_KEY` | `MyWPA-PSK` | WiFi Pre-Shared Key (Password), **stored in plaintext** |
 | `PRESET_NET_WIFI_COUNTRYCODE` | `CC` | Country code, **required** for WiFi<br>e.g. `GB`, `US`, `DE`; see [Wikipedia/ISO_3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) |
-| `PRESET_CONNECT_WIRELESS` | `Y` \| `n` | Set to `Y` for interactive mode, `n` uses values from file |
-| `PRESET_NET_USE_STATIC` | `[0]` \| `1` | Use the static IP provided, DHCP is the default<br>Leaving **any** value unset will result in a broken config |
-| `PRESET_NET_STATIC_IP` | `xxx.xxx.xxx.xxx` | Static IPv4 address, dotted decimal notation |
+| `PRESET_CONNECT_WIRELESS` | `Y` \| `n` | Answers "Connect via wireless?", asked when first login finds no internet connection and the board has a WiFi adapter. `n` skips it; unattended runs default to `n` |
+| `PRESET_NET_USE_STATIC` | `[0]` \| `1` | Use the static IP provided, DHCP is the default<br>Applies to **WiFi when `PRESET_NET_WIFI_ENABLED=1`** (Ethernet then stays on DHCP), otherwise to Ethernet. One static address only; it can't be set on both<br>Leaving **any** value unset will result in a broken config |
+| `PRESET_NET_STATIC_IP` | `xxx.xxx.xxx.xxx` | Static IPv4 address, dotted decimal notation<br>Must be a host address in the gateway's subnet, not the network or broadcast address (e.g. not `.0` or `.255` in a `/24`) |
 | `PRESET_NET_STATIC_MASK` | `xxx.xxx.xxx.xxx` | Subnet mask, typically `255.255.255.0` |
 | `PRESET_NET_STATIC_GATEWAY` | `xxx.xxx.xxx.xxx` | Default gateway address |
 | `PRESET_NET_STATIC_DNS` | `x.x.x.x x.x.x.x` | DNS Servers to use, separated by a space. If unsure:<br>CloudFlare is `1.1.1.1 1.0.0.1`<br>Google is `8.8.8.8 8.8.4.4` |
-| `SET_LANG_BASED_ON_LOCATION` | `Y` \| `n` | "Set user language based on your location?" |
-| `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8` |
-| `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`, |
+| `SET_LANG_BASED_ON_LOCATION` | `Y` \| `n` | "Set user language based on your location?"; unattended runs default to `Y` |
+| `PRESET_LOCALE` | `locale` | Locale e.g. `en_GB.UTF-8`, `de_DE.UTF-8`, `zh_TW.UTF-8`<br>Unattended runs without it take the first locale for the detected location |
+| `PRESET_TIMEZONE` | `timezone` | Timezone e.g. `Etc/UTC`<br>Unattended runs without it use the detected timezone, or keep the image's if none was detected |
 | `PRESET_ROOT_PASSWORD` | `[1234]` \| `password` | Preset `root` password<br>**Stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_ROOT_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for `root` user |
 | `PRESET_USER_NAME` | `username` | Username to create |
 | `PRESET_USER_PASSWORD` | `password` | Preset created user password<br>**Stored in plaintext**, *SSH keys are safer!* |
 | `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user |
 | `PRESET_DEFAULT_REALNAME` | `Real Name` | RealName to use for created user |
-| `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported |
+| `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported; unattended runs default to `bash` |
 
 ## Sample config file
 
