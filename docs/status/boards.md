@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **64** boards — **60** operational, **4** broken.
 
-Reconcile made: 2026-09-28 09:36 UTC
+Reconcile made: 2026-09-28 10:10 UTC
 
 **Operational**
 
@@ -24,14 +24,14 @@ Reconcile made: 2026-09-28 09:36 UTC
 | Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | TP-Link SG3428X (13) |
-| Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Aruba 2540 (23) |
+| Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
-| Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | TP-Link SG3428X (9) |
+| Cubox i2eX/i4 01 | 10.0.50.81 | local | 1 GbE | Aruba 2540 (43) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (21) |
