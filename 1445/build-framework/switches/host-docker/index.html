@@ -7278,7 +7278,7 @@ skipping releases marked <code>eos</code> plus <code>sid</code> and <code>forky<
 <p>Path of the premade kernel and U-Boot git trees on <code>OCI_SERVER</code>.</p>
 <h4 id="oci_proxy">OCI_PROXY<a class="headerlink" href="#oci_proxy" title="Permanent link">&para;</a></h4>
 <p><code>string</code> · <code>host[:port]</code></p>
-<p>Read-only cache of <code>OCI_SERVER</code>, for example a local registry-cache. The build reads artifacts and git trees through it. Uploads never use it. If the proxy fails or does not have the content, the build reads from <code>OCI_SERVER</code>.</p>
+<p>Read-only cache of <code>OCI_SERVER</code>, for example a local registry-cache. The build reads artifacts and git trees through it. Uploads never use it. If the proxy fails or does not have the content, the build reads from <code>OCI_SERVER</code>. The build does not compare proxy content with <code>OCI_SERVER</code>. Use only a proxy that you trust.</p>
 <p>Example:</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./compile.sh<span class="w"> </span><span class="nv">OCI_PROXY</span><span class="o">=</span><span class="m">172</span>.17.0.1:5000<span class="w"> </span>...
 </span></code></pre></div></td></tr></table></div>

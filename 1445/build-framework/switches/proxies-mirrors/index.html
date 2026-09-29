@@ -6997,7 +6997,7 @@
 <li><code>nju</code>: <code>ghcr.nju.edu.cn</code></li>
 <li><code>dockerproxy</code>: <code>ghcr.dockerproxy.net</code>, or <code>GHCR_MIRROR_ADDRESS</code></li>
 </ul>
-<p>Selects a public ghcr.io mirror as <code>OCI_PROXY</code>. The build reads artifacts and git trees through the mirror. Uploads still go to <code>OCI_SERVER</code>.</p>
+<p>Selects a public ghcr.io mirror as <code>OCI_PROXY</code>. The build reads artifacts and git trees through the mirror and trusts its content. Uploads still go to <code>OCI_SERVER</code>.</p>
 <h4 id="gitproxy_address">GITPROXY_ADDRESS<a class="headerlink" href="#gitproxy_address" title="Permanent link">&para;</a></h4>
 <p><code>string</code></p>
 <p>Full base URL of the pass-through git proxy used by <code>GITHUB_MIRROR=gitproxy</code>; it replaces <code>https://github.com</code> for all source clones (for example <code>https://gitproxy.example.com/github.com</code>, no trailing slash). When a CI runner exports this variable, <code>GITHUB_MIRROR</code> is switched to <code>gitproxy</code> automatically, so self-hosted runners route their clones through the proxy without extra configuration. Set it by hand only if you run such a proxy yourself.</p>
