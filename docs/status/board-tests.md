@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **55** passed, **10** failed. Most recent test of every board; failures first.
+**65** boards — **56** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ Banana Pi M2 Ultra 01
 
@@ -39,39 +39,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 | store-versions | ⏭️ | 0.0 s | — |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
-
-### ❌ Cubox i2eX/i4 01
-
-`cubox-i` · **inplace** · image `26.11.0-trunk.60` · 13 ✅ · 3 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 291.7 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
-| reboot | ✅ | 98.9 s | power-cycle · up 47 s |
-| kernel-switch | ✅ | 106.1 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
-| reboot | ✅ | 347.2 s | power-cycle · 4/4 boots · up 74 s |
-| hw-performance | ✅ | 88.1 s | AES 26 · mem 728 · disk W 19 / R 20 MB/s · 46.9 °C · 996 MHz |
-| dvfs | ✅ | 66.3 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ❌ | 136.6 s | end0 ↑94/↓0 (1GE) · wlan0 ↑16/↓0 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 20.9 s | 26.11.0-trunk.62 · 6.18.54-current-imx6 |
-| kernel-switch | ❌ | 152.3 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 284.3 s | power-cycle · 4/4 boots · up 46 s |
-| hw-performance | ✅ | 73.7 s | AES 26 · mem 737 · disk W 19 / R 20 MB/s · 48 °C · 996 MHz |
-| dvfs | ✅ | 75.6 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ❌ | 171.8 s | end0 ↑94/↓0 (1GE) · wlan0 ↑16/↓0 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 12.6 s | 26.11.0-trunk.62 · 6.18.54-current-imx6 |
-| kernel-switch | ✅ | 167.7 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
-| reboot | ✅ | 90.4 s | power-cycle · up 43 s |
-
-**Power** — min 1.80 W · avg 2.75 W · peak 5.60 W · 1375 samples
-
-```mermaid
-xychart-beta
-    title "Power — Cubox i2eX/i4 01"
-    x-axis "sample" 1 --> 1375
-    y-axis "W" 1.5 --> 6.0
-    line [2.49, 1.90, 1.90, 2.89, 3.18, 2.44, 3.40, 3.11, 3.29, 2.69, 3.80, 3.37, 3.30, 2.49, 2.94, 2.45, 2.27, 2.69, 2.14, 2.48, 2.60, 2.47, 1.94, 2.19, 3.43, 2.87, 3.32, 3.28, 3.56, 2.82, 2.90, 2.66, 2.42, 2.51, 2.44, 2.76, 2.55, 2.12, 2.64, 3.33]
-```
 
 ### ❌ Khadas VIM1S 01
 
@@ -252,7 +219,7 @@ xychart-beta
     line [4.15, 4.56, 4.63, 4.38, 4.36, 4.88, 4.77, 4.47, 4.49, 4.35, 4.80, 4.73, 5.22, 6.04, 4.62, 5.02, 5.04, 4.80, 4.60, 4.72, 4.47, 4.25, 1.71, 2.31, 2.69, 2.70, 2.70, 2.68, 2.69, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (55)
+## ✅ Passed (56)
 
 ### ✅ Arduino UNO Q 01
 
@@ -511,6 +478,39 @@ xychart-beta
 | store-versions | ✅ | 12.1 s | 26.11.0-trunk.56 · 7.2.7-edge-sunxi |
 | kernel-switch | ✅ | 246.2 s | branch=current · family=sunxi · installed=26.11.0-trunk.56 · boot_image=/boot/vmlinuz-6.18.53-current-sunxi · kernel_before=7.2.7-edge-sunxi |
 | reboot | ✅ | 69.1 s | warm · up 44 s |
+
+### ✅ Cubox i2eX/i4 01
+
+`cubox-i` · **inplace** · image `26.11.0-trunk.62` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 108.0 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ✅ | 80.8 s | power-cycle · up 42 s |
+| kernel-switch | ✅ | 72.0 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 243.2 s | power-cycle · 4/4 boots · up 45 s |
+| hw-performance | ✅ | 46.9 s | AES 26 · mem 740 · disk W 19 / R 20 MB/s · 51.4 °C · 996 MHz |
+| dvfs | ✅ | 40.5 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 92.8 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑19/↓15 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.5 s | 26.11.0-trunk.62 · 6.18.54-current-imx6 |
+| kernel-switch | ✅ | 266.1 s | branch=edge · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 252.5 s | power-cycle · 4/4 boots · up 46 s |
+| hw-performance | ✅ | 47.8 s | AES 26 · mem 745 · disk W 19 / R 20 MB/s · 52.6 °C · 996 MHz |
+| dvfs | ✅ | 44.3 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 82.7 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑19/↓14 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 8.8 s | 26.11.0-trunk.62 · 7.1.13-edge-imx6 |
+| kernel-switch | ✅ | 265.2 s | branch=current · family=imx6 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=7.1.13-edge-imx6 |
+| reboot | ✅ | 78.3 s | power-cycle · up 42 s |
+
+**Power** — min 1.90 W · avg 3.39 W · peak 5.80 W · 1385 samples
+
+```mermaid
+xychart-beta
+    title "Power — Cubox i2eX/i4 01"
+    x-axis "sample" 1 --> 1385
+    y-axis "W" 1.5 --> 6.0
+    line [3.35, 3.62, 2.97, 3.57, 3.58, 3.47, 3.40, 3.29, 3.89, 3.95, 3.23, 3.33, 3.33, 3.16, 3.00, 3.09, 3.66, 3.89, 3.48, 3.25, 3.25, 3.46, 3.30, 3.01, 3.97, 3.83, 2.96, 3.29, 3.34, 3.07, 3.37, 3.36, 3.51, 3.58, 3.44, 3.44, 3.11, 3.46, 2.87, 3.56]
+```
 
 ### ✅ Espressobin 01
 
