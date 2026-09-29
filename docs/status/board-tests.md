@@ -177,8 +177,8 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 8.8 s | — |
-| reboot | ❌ | 134.8 s | power-cycle · up 102 s |
+| upgrade | ⏭️ | 9.1 s | — |
+| reboot | ❌ | 135.5 s | power-cycle · up 103 s |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -200,14 +200,14 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 2.90 W · avg 3.51 W · peak 5.80 W · 110 samples
+**Power** — min 2.80 W · avg 3.64 W · peak 5.70 W · 107 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 110
+    x-axis "sample" 1 --> 107
     y-axis "W" 2.5 --> 6.0
-    line [3.50, 3.50, 3.80, 4.40, 5.70, 4.23, 3.50, 3.50, 4.60, 4.07, 3.83, 3.90, 5.80, 5.63, 5.30, 4.90, 3.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 3.47]
+    line [2.90, 2.83, 3.20, 4.00, 3.40, 3.27, 3.60, 3.13, 3.23, 3.90, 3.77, 4.33, 5.60, 5.67, 5.03, 3.70, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.97]
 ```
 
 ### ❌ SpacemiT MusePi Pro 01
@@ -216,21 +216,21 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 62.1 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
-| reboot | ❌ | 214.5 s | power-cycle |
+| upgrade | ✅ | 64.3 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ❌ | 221.9 s | power-cycle |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
 
-**Power** — min 1.90 W · avg 3.30 W · peak 5.00 W · 229 samples
+**Power** — min 2.00 W · avg 3.24 W · peak 5.00 W · 227 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 229
+    x-axis "sample" 1 --> 227
     y-axis "W" 1.5 --> 5.5
-    line [4.00, 4.62, 4.55, 4.70, 4.50, 4.48, 4.75, 4.68, 4.63, 4.83, 4.10, 4.30, 4.30, 3.00, 2.60, 3.10, 2.73, 2.68, 2.80, 2.73, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
+    line [4.00, 4.00, 4.52, 4.70, 4.77, 4.50, 4.50, 4.63, 4.37, 4.72, 4.70, 4.00, 4.36, 2.47, 2.37, 2.76, 2.70, 2.67, 2.66, 2.68, 2.65, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.67, 2.60, 2.70, 2.70, 2.70, 2.70]
 ```
 
 ## ✅ Passed (54)
