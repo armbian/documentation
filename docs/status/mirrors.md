@@ -55,7 +55,6 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 | [SBC mirror Poland](https://pl.sbcmirror.org) | [![Poland](https://flagsapi.com/PL/shiny/32.png)](https://www.openstreetmap.org/search?lat=52.2297&lon=21.0122) | :white_check_mark: | :white_check_mark: |  |  |
 | [SBC mirror Sweden](https://se.sbcmirror.org) | [![Sweden](https://flagsapi.com/SE/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.3293&lon=18.0686) | :white_check_mark: | :white_check_mark: |  |  |
 | [SBC mirror Singapore](https://sg.sbcmirror.org) | [![Singapore](https://flagsapi.com/SG/shiny/32.png)](https://www.openstreetmap.org/search?lat=1.3673&lon=103.8014) | :white_check_mark: | :white_check_mark: |  |  |
-| [JetHome](https://stpete-mirror.armbian.com) | [![Russia](https://flagsapi.com/RU/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.9417&lon=30.3096) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Xogium](https://xogium.performanceservers.nl) | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.5144&lon=-2.768) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 <!-- mirrors:end -->
 
