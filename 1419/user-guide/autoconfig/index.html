@@ -6674,7 +6674,7 @@
 <ul>
 <li>The directives in this file are specified using <code>key="value"</code> format.  </li>
 <li>The presets are applied at first boot by the root autologin on the console, so a headless board configures itself without anyone logging in.  </li>
-<li>Once the file sets <code>PRESET_ROOT_PASSWORD</code> or <code>PRESET_USER_NAME</code>, first login runs <strong>unattended</strong>: a question whose directive is unset takes its default instead of waiting for an answer (see the table). Only the account details themselves (user name, passwords) are still asked for if missing, so for a fully-unattended setup specify at least <code>PRESET_ROOT_PASSWORD</code>, <code>PRESET_USER_NAME</code>, <code>PRESET_USER_PASSWORD</code> and <code>PRESET_DEFAULT_REALNAME</code>.  </li>
+<li>Once the file sets <code>PRESET_ROOT_PASSWORD</code> or <code>PRESET_USER_NAME</code>, first login runs <strong>unattended</strong>: a question whose directive is unset takes its default instead of waiting for an answer (see the table). Only the account details themselves (user name, passwords, real name) are still asked for if missing, so for a fully-unattended setup specify at least <code>PRESET_ROOT_PASSWORD</code>, <code>PRESET_USER_NAME</code>, <code>PRESET_USER_PASSWORD</code> and <code>PRESET_DEFAULT_REALNAME</code>.  </li>
 <li>Without either of those two, first login is interactive: leave a directive unset or comment it out to be asked for it.  </li>
 <li><a href="https://github.com/armbian/imager">Armbian Imager</a> writes this file for you from its first-boot settings.  </li>
 </ul>
