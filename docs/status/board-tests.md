@@ -126,11 +126,26 @@ xychart-beta
 
 ### ❌ Orange Pi One+ 01
 
-`orangepioneplus` · **inplace** · image `26.11.0-trunk.62` · 0 ✅ · 1 ❌ · 0 ⏭️
+`orangepioneplus` · **inplace** · image `26.11.0-trunk.62` · 15 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.37 · reachable=False · port=22 |
+| upgrade | ✅ | 61.4 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ✅ | 40.9 s | warm · up 25 s |
+| kernel-switch | ✅ | 45.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-sunxi64 · kernel_before=6.18.54-current-sunxi64 |
+| reboot | ✅ | 139.3 s | warm · 4/4 boots · up 23 s |
+| hw-performance | ✅ | 29.4 s | AES 839 · mem 4600 · disk W 21 / R 1 MB/s · 62.4 °C · 1800 MHz |
+| dvfs | ✅ | 22.5 s | ondemand · 480–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 59.5 s | end0 ↑912/↓939 (1GE) · wlx00e04c881724 ↑153/↓195 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.0 s | 26.11.0-trunk.62 · 6.18.54-current-sunxi64 |
+| kernel-switch | ✅ | 123.4 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-7.2.8-edge-sunxi64 · kernel_before=6.18.54-current-sunxi64 |
+| reboot | ✅ | 158.6 s | warm · 4/4 boots · up 20 s |
+| hw-performance | ✅ | 29.7 s | AES 839 · mem 4600 · disk W 21 / R 23 MB/s · 65.7 °C · 1800 MHz |
+| dvfs | ✅ | 23.3 s | ondemand · 480–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 64.1 s | end0 ↑917/↓940 (1GE) · wlx00e04c881724 ↑153/↓127 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.3 s | 26.11.0-trunk.62 · 7.2.8-edge-sunxi64 |
+| kernel-switch | ❌ | 25.2 s | branch=current · phase=install · dpkg_state=absent |
+| reboot | ✅ | 38.8 s | warm · up 21 s |
 
 ### ❌ Orange Pi Prime 01
 
