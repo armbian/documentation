@@ -25,23 +25,23 @@ runner processes each server hosts (from the
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
-| `insa-trixie` | Hetzner Germany | 176 | 384 GB | 40 | active |
+| `insa-trixie` | Hetzner Nuremberg | 176 | 384 GB | 40 | active |
 | `ampere-1` | Armbian Datacenter | 128 | 512 GB | 64 | active |
 | `kspace` | Armbian Estonia | 128 | 256 GB | 24 | active |
 | `stpete` | Armbian St. Petersburg | 80 | 377 GB | 40 | active |
 | `github` | GitHub | 40 | 137 GB | 20 | active |
 | `rack-ryzen` | Armbian Datacenter | 32 | 125 GB | 15 | active |
-| `xogium` | Armbian Datacenter | 32 | 125 GB | 12 | active |
+| `xogium` | Armbian France | 32 | 125 GB | 12 | active |
 | `geekom` | Armbian Datacenter | 20 | 62 GB | 8 | active |
 | `vps8000-1` | Netcup Germany | 18 | 62 GB | 9 | active |
 | `vps8000-2` | Netcup Germany | 18 | 62 GB | 14 | active |
 | `cats` | Auroradev Las Vegas | 16 | 32 GB | 6 | active |
-| `oregon-1` | Oregon UNI | 16 | 32 GB | 8 | active |
-| `oregon-2` | Oregon UNI | 16 | 32 GB | 8 | active |
+| `oregon-1` | University of Oregon | 16 | 32 GB | 8 | active |
+| `oregon-2` | University of Oregon | 16 | 32 GB | 8 | active |
 | `stmir` | Armbian St. Petersburg | 16 | 94 GB | 12 | ⚠️ offline |
 | `vps3000-1` | Netcup Germany | 12 | 24 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
-| `werner-trixie` | Hetzner Germany | 8 | 31 GB | 4 | active |
-| `xogium-ryzen` | Xogium | 8 | 8 GB | 4 | active |
+| `werner-trixie` | Hetzner Nuremberg | 8 | 31 GB | 4 | active |
+| `xogium-ryzen` | Armbian France | 8 | 8 GB | 4 | active |
 
 <!-- build-machinery:end -->
