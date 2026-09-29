@@ -26,7 +26,7 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 
 - The directives in this file are specified using `key="value"` format.  
 - The presets are applied at first boot by the root autologin on the console, so a headless board configures itself without anyone logging in.  
-- Once the file sets `PRESET_ROOT_PASSWORD` or `PRESET_USER_NAME`, first login runs **unattended**: a question whose directive is unset takes its default instead of waiting for an answer (see the table). Only the account details themselves (user name, passwords) are still asked for if missing, so for a fully-unattended setup specify at least `PRESET_ROOT_PASSWORD`, `PRESET_USER_NAME`, `PRESET_USER_PASSWORD` and `PRESET_DEFAULT_REALNAME`.  
+- Once the file sets `PRESET_ROOT_PASSWORD` or `PRESET_USER_NAME`, first login runs **unattended**: a question whose directive is unset takes its default instead of waiting for an answer (see the table). Only the account details themselves (user name, passwords, real name) are still asked for if missing, so for a fully-unattended setup specify at least `PRESET_ROOT_PASSWORD`, `PRESET_USER_NAME`, `PRESET_USER_PASSWORD` and `PRESET_DEFAULT_REALNAME`.  
 - Without either of those two, first login is interactive: leave a directive unset or comment it out to be asked for it.  
 - [Armbian Imager](https://github.com/armbian/imager) writes this file for you from its first-boot settings.  
 
