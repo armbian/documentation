@@ -76,7 +76,7 @@ Selects a mirror or proxy for the many GitHub-hosted repositories the build clon
 - `nju`: `ghcr.nju.edu.cn`
 - `dockerproxy`: `ghcr.dockerproxy.net`, or `GHCR_MIRROR_ADDRESS`
 
-Selects a public ghcr.io mirror as `OCI_PROXY`. The build reads artifacts and git trees through the mirror. Uploads still go to `OCI_SERVER`.
+Selects a public ghcr.io mirror as `OCI_PROXY`. The build reads artifacts and git trees through the mirror and trusts its content. Uploads still go to `OCI_SERVER`.
 
 #### GITPROXY_ADDRESS
 
