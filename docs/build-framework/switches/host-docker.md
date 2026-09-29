@@ -148,7 +148,7 @@ Path of the premade kernel and U-Boot git trees on `OCI_SERVER`.
 
 `string` · `host[:port]`
 
-Read-only cache of `OCI_SERVER`, for example a local registry-cache. The build reads artifacts and git trees through it. Uploads never use it. If the proxy fails or does not have the content, the build reads from `OCI_SERVER`.
+Read-only cache of `OCI_SERVER`, for example a local registry-cache. The build reads artifacts and git trees through it. Uploads never use it. If the proxy fails or does not have the content, the build reads from `OCI_SERVER`. The build does not compare proxy content with `OCI_SERVER`. Use only a proxy that you trust.
 
 Example:
 
