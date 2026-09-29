@@ -162,7 +162,7 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 9.3 s | — |
+| upgrade | ⏭️ | 8.8 s | — |
 | reboot | ❌ | 134.8 s | power-cycle · up 102 s |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
@@ -185,14 +185,14 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 2.80 W · avg 3.70 W · peak 5.30 W · 109 samples
+**Power** — min 2.90 W · avg 3.51 W · peak 5.80 W · 110 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 109
-    y-axis "W" 2.5 --> 5.5
-    line [2.90, 2.90, 3.37, 3.60, 4.70, 2.80, 2.80, 3.45, 4.10, 3.90, 3.90, 3.90, 4.60, 5.30, 5.30, 5.30, 3.70, 3.63, 3.60, 3.50, 3.57, 3.60, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 3.50, 4.00]
+    x-axis "sample" 1 --> 110
+    y-axis "W" 2.5 --> 6.0
+    line [3.50, 3.50, 3.80, 4.40, 5.70, 4.23, 3.50, 3.50, 4.60, 4.07, 3.83, 3.90, 5.80, 5.63, 5.30, 4.90, 3.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 3.47]
 ```
 
 ### ❌ SpacemiT MusePi Pro 01
@@ -201,21 +201,21 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 69.2 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
-| reboot | ❌ | 217.8 s | power-cycle |
+| upgrade | ✅ | 62.1 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ❌ | 214.5 s | power-cycle |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
 
-**Power** — min 2.00 W · avg 3.30 W · peak 5.10 W · 229 samples
+**Power** — min 1.90 W · avg 3.30 W · peak 5.00 W · 229 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
     x-axis "sample" 1 --> 229
     y-axis "W" 1.5 --> 5.5
-    line [4.00, 4.07, 4.83, 4.62, 4.93, 4.53, 4.50, 4.34, 4.70, 4.50, 4.10, 4.05, 4.78, 2.77, 3.22, 3.45, 2.80, 2.63, 2.66, 2.70, 2.70, 2.64, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.68, 2.60, 2.68, 2.70, 2.67, 2.62, 2.70]
+    line [4.00, 4.62, 4.55, 4.70, 4.50, 4.48, 4.75, 4.68, 4.63, 4.83, 4.10, 4.30, 4.30, 3.00, 2.60, 3.10, 2.73, 2.68, 2.80, 2.73, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
 ## ✅ Passed (54)
