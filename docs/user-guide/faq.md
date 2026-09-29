@@ -35,6 +35,10 @@ Our development focus is on maintaining the **CURRENT kernel branch**, which is 
 
 Due to limited resources, Armbian prioritizes **basic functionality and integration testing**, not full validation of all features across all supported devices. While we do identify many issues, **some remain unresolved for extended periods — sometimes months or even years — due to a significant shortage of development capacity**.
 
+## How do I collect logs for a support request?
+
+Run **`sudo armbian-debug`** on the affected board. It gathers the kernel log, hardware and package details and current system state, redacts IP addresses, uploads the report to `paste.armbian.com` and prints a URL — post that URL where you were asked for it. See [If something goes wrong](../getting-started/troubleshooting.md#collecting-debug-information) for details. (On images that predate the tool, use `armbianmonitor -u`.)
+
 ## What do WIP, EOS, CSC mean?
 
 These indicate [**support status**](https://docs.armbian.com/User-Guide_Board-Support-Rules):
@@ -89,7 +93,7 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 ## Can I upgrade to a new Armbian release?
 
-Yes! The simple `armbian-upgrade` command, which is an alias for `apt update && apt upgrade`, will upgrade **all Armbian-related core packages** (firmware, kernel, BSP) to the most recent version available — just as it will upgrade the underlying distribution packages.
+Yes! The simple `armbian-upgrade` command wraps APT — it refreshes the package lists, upgrades everything installed, then cleans the package cache and removes what is no longer needed (`apt-get update && apt-get upgrade`, followed by `apt-get clean` and `apt-get autoremove`), elevating itself with `sudo` so you can run it as a normal user. It upgrades **all Armbian-related core packages** (firmware, kernel, BSP) to the most recent version available, just as it upgrades the underlying distribution packages.
 
 ## Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?
 

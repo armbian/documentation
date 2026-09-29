@@ -40,7 +40,7 @@ straight to the one you need.
 3. **[First boot and login](first-boot-and-login.md)** — Power up, set the root password, create your user, get on the network.
 4. **[First steps after login](first-steps.md)** — `armbian-config` for the basics, then preconfigured software titles.
 5. **[Installing to internal storage](install-to-internal-storage.md)** — `armbian-install` moves the system off the SD card.
-6. **[Keeping Armbian up to date](updating.md)** — APT for the OS, `armbian-install` for the boot loader.
+6. **[Keeping Armbian up to date](updating.md)** — `armbian-upgrade` for the OS, `armbian-install` for the boot loader.
 7. **[If something goes wrong](troubleshooting.md)** — When a step fails, and how to report a real bug.
 
 Start with **[Choosing an Armbian image](choosing-an-image.md)**.
