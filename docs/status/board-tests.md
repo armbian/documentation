@@ -13,32 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **54** passed, **11** failed. Most recent test of every board; failures first.
+**65** boards — **55** passed, **10** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (11)
-
-### ❌ Banana Pi CM4IO 01
-
-`bananapicm4io` · **inplace** · image `26.8.3` · 3 ✅ · 1 ❌ · 12 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 149.5 s | nightly · 26.8.3 → 26.8.3 |
-| reboot | ✅ | 66.3 s | power-cycle · up 43 s |
-| kernel-switch | ✅ | 40.6 s | branch=current · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=6.18.54-current-meson64 |
-| reboot | ❌ | 295.5 s | power-cycle · 3/4 boots · up 20 s |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+## ❌ Failed (10)
 
 ### ❌ Banana Pi M2 Ultra 01
 
@@ -275,7 +252,7 @@ xychart-beta
     line [4.15, 4.56, 4.63, 4.38, 4.36, 4.88, 4.77, 4.47, 4.49, 4.35, 4.80, 4.73, 5.22, 6.04, 4.62, 5.02, 5.04, 4.80, 4.60, 4.72, 4.47, 4.25, 1.71, 2.31, 2.69, 2.70, 2.70, 2.68, 2.69, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (54)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -291,6 +268,29 @@ xychart-beta
 | dvfs | ✅ | 32.1 s | schedutil · 300–2016 MHz (peak 2016) |
 | network-iperf | ✅ | 46.1 s | wlan0 ↑24/↓21 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
 | store-versions | ✅ | 7.0 s | 26.11.0-trunk.62 · 7.2.3-edge-qrb2210 |
+
+### ✅ Banana Pi CM4IO 01
+
+`bananapicm4io` · **inplace** · image `26.8.3` · 14 ✅ · 2 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 56.2 s | nightly · 26.8.3 → 26.8.3 |
+| reboot | ✅ | 45.8 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 40.8 s | branch=current · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 134.6 s | power-cycle · 4/4 boots · up 22 s |
+| hw-performance | ✅ | 18.2 s | AES 852 · mem 3900 · disk W 35 / R 159 MB/s · 51.1 °C · 2016 MHz |
+| dvfs | ✅ | 18.1 s | ondemand · 1000–1512 MHz (peak 1512) |
+| network-iperf | ❌ | 302.2 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 3.9 s | 26.8.3 · 6.18.54-current-meson64 |
+| kernel-switch | ✅ | 194.0 s | branch=edge · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 141.3 s | power-cycle · 4/4 boots · up 23 s |
+| hw-performance | ✅ | 17.7 s | AES 852 · mem 3900 · disk W 42 / R 158 MB/s · 51.6 °C · 2016 MHz |
+| dvfs | ✅ | 18.5 s | ondemand · 1000–1512 MHz (peak 1512) |
+| network-iperf | ❌ | 302.5 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.0 s | 26.8.3 · 7.2.8-edge-meson64 |
+| kernel-switch | ✅ | 190.5 s | branch=current · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ✅ | 53.3 s | power-cycle · up 23 s |
 
 ### ✅ Banana Pi M2Pro 01
 
