@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**65** boards — **53** passed, **12** failed. Most recent test of every board; failures first.
+**65** boards — **54** passed, **11** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (11)
 
 ### ❌ Banana Pi CM4IO 01
 
@@ -48,29 +48,6 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 |:--|:--:|--:|:--|
 | upgrade | ✅ | 132.6 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
 | reboot | ❌ | 222.8 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-
-### ❌ Banana Pi M2Pro 01
-
-`bananapim2pro` · **inplace** · image `26.11.0-trunk.62` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 60.3 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
-| reboot | ❌ | 230.6 s | power-cycle |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -298,7 +275,7 @@ xychart-beta
     line [4.15, 4.56, 4.63, 4.38, 4.36, 4.88, 4.77, 4.47, 4.49, 4.35, 4.80, 4.73, 5.22, 6.04, 4.62, 5.02, 5.04, 4.80, 4.60, 4.72, 4.47, 4.25, 1.71, 2.31, 2.69, 2.70, 2.70, 2.68, 2.69, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (53)
+## ✅ Passed (54)
 
 ### ✅ Arduino UNO Q 01
 
@@ -314,6 +291,39 @@ xychart-beta
 | dvfs | ✅ | 32.1 s | schedutil · 300–2016 MHz (peak 2016) |
 | network-iperf | ✅ | 46.1 s | wlan0 ↑24/↓21 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
 | store-versions | ✅ | 7.0 s | 26.11.0-trunk.62 · 7.2.3-edge-qrb2210 |
+
+### ✅ Banana Pi M2Pro 01
+
+`bananapim2pro` · **inplace** · image `26.11.0-trunk.62` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 45.0 s | nightly · 26.11.0-trunk.62 → 26.11.0-trunk.62 |
+| reboot | ✅ | 53.8 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 31.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 139.4 s | power-cycle · 4/4 boots · up 24 s |
+| hw-performance | ✅ | 19.3 s | AES 978 · mem 5300 · disk W 43 / R 159 MB/s · 48.1 °C · 2100 MHz |
+| dvfs | ✅ | 19.5 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ✅ | 29.6 s | end0 ↑940/↓941 (1GE) Mbps |
+| store-versions | ✅ | 4.6 s | 26.11.0-trunk.62 · 6.18.54-current-meson64 |
+| kernel-switch | ✅ | 95.5 s | branch=edge · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 133.3 s | power-cycle · 4/4 boots · up 23 s |
+| hw-performance | ✅ | 19.5 s | AES 979 · mem 5300 · disk W 43 / R 150 MB/s · 49.4 °C · 2100 MHz |
+| dvfs | ✅ | 20.0 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ✅ | 29.6 s | end0 ↑940/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5.3 s | 26.11.0-trunk.62 · 7.2.8-edge-meson64 |
+| kernel-switch | ✅ | 93.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.62 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ✅ | 55.5 s | power-cycle · up 20 s |
+
+**Power** — min 1.50 W · avg 3.14 W · peak 5.40 W · 636 samples
+
+```mermaid
+xychart-beta
+    title "Power — Banana Pi M2Pro 01"
+    x-axis "sample" 1 --> 636
+    y-axis "W" 1.0 --> 5.5
+    line [3.17, 3.29, 3.00, 2.28, 3.39, 3.34, 3.06, 2.62, 3.30, 3.37, 2.78, 2.90, 2.41, 3.15, 3.19, 3.12, 3.04, 3.26, 3.56, 3.39, 3.41, 3.23, 3.38, 3.33, 2.88, 3.32, 3.38, 2.24, 3.37, 2.98, 3.71, 3.35, 3.14, 3.55, 3.87, 3.14, 3.25, 3.01, 2.21, 3.19]
+```
 
 ### ✅ Banana Pi M5 01
 
