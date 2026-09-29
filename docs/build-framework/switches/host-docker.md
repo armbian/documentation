@@ -126,20 +126,50 @@ Set to `yes` on single-host setups where automatic disk reclaim is desirable.
 
 Marks the build as running in a continuous-integration environment. When enabled (`true`), the Docker build container receives the host's Docker credentials (`${HOME}/.docker/config.json`) and the `OCI_TARGET_BASE` environment variable, so it can authenticate to and push cached artifacts to a registry. Left `false` for ordinary local builds; Armbian's own CI runners set it, and you rarely need to set it by hand.
 
+#### OCI_SERVER
+
+`string` · default: `ghcr.io`
+
+Registry that stores the OCI-cached artifacts and git trees. The build uploads artifacts here and reads them from here. Set it to move the storage to another registry.
+
+#### OCI_PATH
+
+`string` · default: `armbian/os`
+
+Path of the artifacts on `OCI_SERVER`, for example compiled kernels, U-Boot and rootfs.
+
+#### OCI_GIT_PATH
+
+`string` · default: `armbian/shallow`
+
+Path of the premade kernel and U-Boot git trees on `OCI_SERVER`.
+
+#### OCI_PROXY
+
+`string` · `host[:port]`
+
+Read-only cache of `OCI_SERVER`, for example a local registry-cache. The build reads artifacts and git trees through it. Uploads never use it. If the proxy fails or does not have the content, the build reads from `OCI_SERVER`.
+
+Example:
+
+```sh
+./compile.sh OCI_PROXY=172.17.0.1:5000 ...
+```
+
+!!! note
+    The build uses plain HTTP only for addresses on port `5000`.
+
 #### OCI_TARGET_BASE
 
-`string`
+`string` · deprecated
 
-- url/to/container_registry/path
-- `${GHCR_SOURCE}/armbian/*` (default; GHCR_SOURCE is defined in `lib/functions/configuration/main-config.sh`)
-
-Base registry path the build uses to pull and push its OCI-cached artifacts — compiled kernels, U-Boot, rootfs and similar — so that work can be shared and reused instead of rebuilt from scratch. Defaults to Armbian's GHCR namespace (`${GHCR_SOURCE}/armbian/*`); point it at your own registry path when you run a private OCI cache. It is only passed into the build container when `CI=true`.
+Full base path for artifacts, for example `registry.example.com/armbian/os/`. It overrides `OCI_SERVER` and `OCI_PATH`. Use `OCI_SERVER` and `OCI_PATH` instead.
 
 #### GHCR_MIRROR_ADDRESS
 
 `string`
 
-When ghcr.io is reached through a mirror — selected with `GHCR_MIRROR=dockerproxy` — this sets the mirror's hostname. The default is `ghcr.dockerproxy.net`; override it with `GHCR_MIRROR_ADDRESS` when that host is unavailable or a different mirror is faster for you. This mainly matters in regions where ghcr.io itself is slow or unreachable.
+Host name of the mirror for `GHCR_MIRROR=dockerproxy`. The default is `ghcr.dockerproxy.net`. The mirror is read-only.
 
 Example:
 

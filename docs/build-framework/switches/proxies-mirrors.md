@@ -69,6 +69,15 @@ Selects a mirror or proxy for the many GitHub-hosted repositories the build clon
 - `gitproxy`: use a pass-through git proxy whose full base URL is given in `GITPROXY_ADDRESS` (e.g. `https://gitproxy.example.com/github.com`, no trailing slash). Selected automatically when a CI runner exports `GITPROXY_ADDRESS`.
 - leave empty to connect directly to GitHub, which may be very slow for mainland China users
 
+#### GHCR_MIRROR
+
+`string`
+
+- `nju`: `ghcr.nju.edu.cn`
+- `dockerproxy`: `ghcr.dockerproxy.net`, or `GHCR_MIRROR_ADDRESS`
+
+Selects a public ghcr.io mirror as `OCI_PROXY`. The build reads artifacts and git trees through the mirror. Uploads still go to `OCI_SERVER`.
+
 #### GITPROXY_ADDRESS
 
 `string`
