@@ -6604,7 +6604,7 @@ that gathers everything a maintainer needs in one go:</p>
 and userspace identity, installed Armbian/kernel packages, loaded modules,
 install logs and current system state, then uploads the result to
 <code>paste.armbian.com</code> and prints a URL. <strong>Post that URL</strong> where you were asked for
-it. IP addresses are redacted from the report before it leaves the board.</p>
+it. IPv4 addresses are masked in the report before it leaves the board.</p>
 <ul>
 <li>Run it as <code>root</code> (it re-invokes itself with <code>sudo</code> if needed).</li>
 <li>On a terminal it gives you a short countdown — <strong>press any key to print the
@@ -6614,9 +6614,10 @@ it. IP addresses are redacted from the report before it leaves the board.</p>
   uploading, so nothing is sent without you seeing it.</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Older images</p>
-<p>On images that predate <code>armbian-debug</code>, the same log is produced by
-<code>armbianmonitor -u</code>.</p>
+<p class="admonition-title"><code>armbian-debug: command not found</code></p>
+<p>Images that predate <code>armbian-debug</code> produce the same log with
+<code>sudo armbianmonitor -u</code>. On newer images that command still works and
+hands over to <code>armbian-debug</code>.</p>
 </div>
 <!--
       * community / search forum || how to get help
