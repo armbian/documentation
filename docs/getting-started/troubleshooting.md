@@ -21,7 +21,7 @@ It collects the kernel ring buffer (`dmesg`), the hardware-monitor log, board
 and userspace identity, installed Armbian/kernel packages, loaded modules,
 install logs and current system state, then uploads the result to
 `paste.armbian.com` and prints a URL. **Post that URL** where you were asked for
-it. IP addresses are redacted from the report before it leaves the board.
+it. IPv4 addresses are masked in the report before it leaves the board.
 
 - Run it as `root` (it re-invokes itself with `sudo` if needed).
 - On a terminal it gives you a short countdown — **press any key to print the
@@ -30,9 +30,10 @@ it. IP addresses are redacted from the report before it leaves the board.
 - Run non-interactively (e.g. over a pipe), it always prints instead of
   uploading, so nothing is sent without you seeing it.
 
-!!! note "Older images"
-    On images that predate `armbian-debug`, the same log is produced by
-    `armbianmonitor -u`.
+!!! note "`armbian-debug: command not found`"
+    Images that predate `armbian-debug` produce the same log with
+    `sudo armbianmonitor -u`. On newer images that command still works and
+    hands over to `armbian-debug`.
 
 <!--
       * community / search forum || how to get help
