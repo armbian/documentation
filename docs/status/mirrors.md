@@ -20,9 +20,9 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 | [SBC mirror Australia](https://au.sbcmirror.org) | [![Australia](https://flagsapi.com/AU/shiny/32.png)](https://www.openstreetmap.org/search?lat=-33.8715&lon=151.2006) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Distrohub](https://distrohub.kyiv.ua) | [![Ukraine](https://flagsapi.com/UA/shiny/32.png)](https://www.openstreetmap.org/search?lat=50.458&lon=30.5303) | :white_check_mark: | :white_check_mark: |  | :white_check_mark: |
 | [SBC mirror Spain](https://es.sbcmirror.org) | [![Spain](https://flagsapi.com/ES/shiny/32.png)](https://www.openstreetmap.org/search?lat=40.4163&lon=-3.6934) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
-| [Hetzner Germany](https://fi.mirror.armbian.de) | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=51.2993&lon=9.491) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Hetzner Nuremberg](https://fi.mirror.armbian.de) | [![Germany](https://flagsapi.com/DE/shiny/32.png)](https://www.openstreetmap.org/search?lat=51.2993&lon=9.491) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Imola](https://imola.armbian.com) | [![Slovenia](https://flagsapi.com/SI/shiny/32.png)](https://www.openstreetmap.org/search?lat=46.081638&lon=14.526054) | :white_check_mark: | :white_check_mark: |  |  |
-| [Kspace Estonia](https://k-space.ee.armbian.com) | [![Estonia](https://flagsapi.com/EE/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.397987&lon=24.661898) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
+| [Armbian Estonia](https://k-space.ee.armbian.com) | [![Estonia](https://flagsapi.com/EE/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.397987&lon=24.661898) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [Albony](https://mirror.albony.in) | ![Cloudflare anycast](https://flagcdn.com/32x24/un.png) | :white_check_mark: |  |  |  |
 | [Macarne LLC](https://mirror.ams.macarne.com/armbian) | [![Netherlands](https://flagsapi.com/NL/shiny/32.png)](https://www.openstreetmap.org/search?lat=52.3785&lon=4.9) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 | [OSS Planet Finland](https://mirror.eu.ossplanet.net) | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=60.1699&lon=24.9384) | :white_check_mark: |  |  |  |
@@ -55,7 +55,7 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 | [SBC mirror Poland](https://pl.sbcmirror.org) | [![Poland](https://flagsapi.com/PL/shiny/32.png)](https://www.openstreetmap.org/search?lat=52.2297&lon=21.0122) | :white_check_mark: | :white_check_mark: |  |  |
 | [SBC mirror Sweden](https://se.sbcmirror.org) | [![Sweden](https://flagsapi.com/SE/shiny/32.png)](https://www.openstreetmap.org/search?lat=59.3293&lon=18.0686) | :white_check_mark: | :white_check_mark: |  |  |
 | [SBC mirror Singapore](https://sg.sbcmirror.org) | [![Singapore](https://flagsapi.com/SG/shiny/32.png)](https://www.openstreetmap.org/search?lat=1.3673&lon=103.8014) | :white_check_mark: | :white_check_mark: |  |  |
-| [Xogium](https://xogium.performanceservers.nl) | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.5144&lon=-2.768) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
+| [Armbian France](https://xogium.performanceservers.nl) | [![France](https://flagsapi.com/FR/shiny/32.png)](https://www.openstreetmap.org/search?lat=48.5144&lon=-2.768) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |
 <!-- mirrors:end -->
 
 ## How it works
