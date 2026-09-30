@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **60** operational, **5** broken.
+**65** boards — **62** operational, **3** broken.
 
-Reconcile made: 2026-09-30 15:15 UTC
+Reconcile made: 2026-09-30 15:39 UTC
 
 **Operational**
 
@@ -58,6 +58,7 @@ Reconcile made: 2026-09-30 15:15 UTC
 | Odroid XU4 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Prime 01 | 10.0.50.48 | local | 1 GbE | Aruba 2540 (35) |
@@ -76,6 +77,7 @@ Reconcile made: 2026-09-30 15:15 UTC
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
+| SpacemiT MusePi Pro 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
@@ -88,8 +90,6 @@ Reconcile made: 2026-09-30 15:15 UTC
 |:--|:--|:--|--:|:--|
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (37) |
 | Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
-| SpacemiT MusePi Pro 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (10) |
 
 <!-- BOARDS-STOP -->
