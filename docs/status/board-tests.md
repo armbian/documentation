@@ -250,12 +250,12 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.36 · reachable=False · port=22 |
 
-**Power** — min 2.60 W · avg 2.60 W · peak 2.60 W · 43 samples
+**Power** — min 2.60 W · avg 2.60 W · peak 2.60 W · 42 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 43
+    x-axis "sample" 1 --> 42
     y-axis "W" 2.5 --> 3.0
     line [2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60]
 ```
