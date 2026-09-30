@@ -212,26 +212,11 @@ xychart-beta
 
 ### ❌ Odroid XU4 01
 
-`odroidxu4` · **inplace** · image `26.11.0-trunk.62` · 0 ✅ · 2 ❌ · 14 ⏭️
+`odroidxu4` · **inplace** · image `26.11.0-trunk.62` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ❌ | 179.3 s | — |
-| reboot | ❌ | 221.9 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| reachable | ❌ | 0.0 s | ip=10.0.50.36 · reachable=False · port=22 |
 
 ### ❌ Orange Pi 5 01
 
