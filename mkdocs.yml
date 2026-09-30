@@ -309,6 +309,7 @@ nav:
             - 'Homepage': 'software/homepage.md'
             - 'NetBox': 'software/netbox.md'
             - 'Proxmox VE': 'software/proxmox-ve.md'
+            - 'registry-cache': 'software/registry-cache.md'
             - 'Samba': 'software/samba.md'
             - 'Webmin': 'software/webmin.md'
         - 'Media':
