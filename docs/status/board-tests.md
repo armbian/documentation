@@ -81,12 +81,12 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.19 · reachable=False · port=22 |
 
-**Power** — min 1.70 W · avg 1.70 W · peak 1.70 W · 46 samples
+**Power** — min 1.70 W · avg 1.70 W · peak 1.70 W · 44 samples
 
 ```mermaid
 xychart-beta
     title "Power — Khadas VIM1S 01"
-    x-axis "sample" 1 --> 46
+    x-axis "sample" 1 --> 44
     y-axis "W" 1.5 --> 2.0
     line [1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70, 1.70]
 ```
@@ -170,8 +170,8 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 9.3 s | — |
-| reboot | ❌ | 133.0 s | power-cycle · up 102 s |
+| upgrade | ⏭️ | 9.0 s | — |
+| reboot | ❌ | 133.6 s | power-cycle · up 102 s |
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -193,14 +193,14 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 2.90 W · avg 3.47 W · peak 10.00 W · 112 samples
+**Power** — min 2.90 W · avg 3.25 W · peak 5.00 W · 111 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 112
-    y-axis "W" 2.5 --> 10.5
-    line [3.50, 3.50, 3.50, 4.63, 5.20, 5.20, 4.07, 3.50, 3.50, 2.90, 3.90, 3.93, 4.00, 10.00, 3.30, 3.30, 3.30, 3.10, 3.00, 3.00, 3.00, 3.00, 2.93, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90]
+    x-axis "sample" 1 --> 111
+    y-axis "W" 2.5 --> 5.5
+    line [2.90, 2.90, 3.37, 3.70, 3.90, 3.30, 2.97, 2.90, 3.50, 3.63, 3.90, 3.90, 4.37, 4.60, 4.50, 4.83, 3.80, 3.20, 2.90, 2.90, 2.97, 2.97, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 2.90, 3.10]
 ```
 
 ### ❌ Rock 5B Plus 01
@@ -209,37 +209,37 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 6.6 s | — |
-| reboot | ✅ | 49.5 s | power-cycle · up 23 s |
-| kernel-switch | ✅ | 8.6 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.65 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 152.3 s | power-cycle · 4/4 boots · up 23 s |
-| hw-performance | ✅ | 16.9 s | AES 1281 · mem 15700 · disk W 66 / R 81 MB/s · 53.6 °C · 1800 MHz |
-| dvfs | ✅ | 17.0 s | ondemand · 1800–1800 MHz (peak 2304) |
-| network-iperf | ✅ | 28.4 s | enP4p65s0 ↑940/↓941 (1GE) Mbps |
-| store-versions | ✅ | 4.3 s | 26.11.0-trunk.65 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ❌ | 7.4 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 151.7 s | power-cycle · 4/4 boots · up 22 s |
-| hw-performance | ✅ | 17.4 s | AES 1294 · mem 15700 · disk W 68 / R 81 MB/s · 55.5 °C · 1800 MHz |
-| dvfs | ✅ | 16.5 s | ondemand · 1800–1800 MHz (peak 2304) |
-| network-iperf | ✅ | 30.0 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
-| store-versions | ✅ | 4.2 s | 26.11.0-trunk.65 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ❌ | 7.1 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 153.4 s | power-cycle · 4/4 boots · up 26 s |
-| hw-performance | ✅ | 17.1 s | AES 1280 · mem 14100 · disk W 69 / R 81 MB/s · 55.5 °C · 1800 MHz |
+| upgrade | ⏭️ | 5.5 s | — |
+| reboot | ✅ | 50.9 s | power-cycle · up 24 s |
+| kernel-switch | ✅ | 9.3 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.65 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 152.1 s | power-cycle · 4/4 boots · up 24 s |
+| hw-performance | ✅ | 17.1 s | AES 1296 · mem 15400 · disk W 69 / R 81 MB/s · 53.6 °C · 1800 MHz |
 | dvfs | ✅ | 16.6 s | ondemand · 1800–1800 MHz (peak 2304) |
-| network-iperf | ✅ | 29.6 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+| network-iperf | ✅ | 29.1 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 4.3 s | 26.11.0-trunk.65 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ❌ | 7.9 s | branch=current · phase=install · dpkg_state=absent |
+| reboot | ✅ | 149.2 s | power-cycle · 4/4 boots · up 23 s |
+| hw-performance | ✅ | 17.3 s | AES 1295 · mem 15700 · disk W 69 / R 81 MB/s · 54.5 °C · 1800 MHz |
+| dvfs | ✅ | 17.0 s | ondemand · 1800–1800 MHz (peak 2304) |
+| network-iperf | ✅ | 28.5 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 4.6 s | 26.11.0-trunk.65 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ❌ | 6.9 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 155.6 s | power-cycle · 4/4 boots · up 22 s |
+| hw-performance | ✅ | 17.1 s | AES 1281 · mem 13700 · disk W 69 / R 81 MB/s · 55.5 °C · 1800 MHz |
+| dvfs | ✅ | 16.7 s | ondemand · 1800–1800 MHz (peak 2352) |
+| network-iperf | ✅ | 28.3 s | enP4p65s0 ↑941/↓941 (1GE) Mbps |
 | store-versions | ✅ | 4.0 s | 26.11.0-trunk.65 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ✅ | 9.7 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.65 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 49.4 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 9.2 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.65 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 48.6 s | power-cycle · up 22 s |
 
-**Power** — min 1.70 W · avg 3.73 W · peak 9.10 W · 623 samples
+**Power** — min 0.90 W · avg 3.65 W · peak 9.40 W · 627 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B Plus 01"
-    x-axis "sample" 1 --> 623
-    y-axis "W" 1.5 --> 9.5
-    line [3.19, 3.27, 3.85, 3.18, 3.10, 3.69, 3.46, 3.35, 3.78, 3.21, 5.01, 4.06, 6.23, 3.71, 3.95, 3.01, 3.98, 3.04, 3.70, 3.32, 3.85, 3.48, 4.23, 5.31, 3.64, 3.75, 3.57, 4.07, 3.36, 3.91, 3.02, 3.38, 2.91, 3.51, 3.63, 5.03, 3.64, 4.20, 3.09, 3.67]
+    x-axis "sample" 1 --> 627
+    y-axis "W" 0.5 --> 9.5
+    line [3.16, 3.00, 3.80, 3.23, 3.73, 3.16, 3.21, 3.09, 4.06, 3.21, 3.73, 4.14, 6.24, 3.46, 3.64, 2.91, 3.55, 3.03, 4.09, 3.02, 3.25, 3.42, 3.41, 5.87, 3.29, 3.58, 3.10, 5.43, 3.11, 3.32, 2.84, 3.78, 1.94, 3.74, 4.16, 5.64, 3.63, 3.82, 3.20, 4.03]
 ```
 
 ### ❌ SpacemiT MusePi Pro 01
@@ -301,12 +301,12 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | 0.0 s | ip=10.0.50.57 · reachable=False · port=22 |
 
-**Power** — min 2.10 W · avg 2.10 W · peak 2.10 W · 41 samples
+**Power** — min 2.10 W · avg 2.10 W · peak 2.10 W · 43 samples
 
 ```mermaid
 xychart-beta
     title "Power — ZeroPi 01"
-    x-axis "sample" 1 --> 41
+    x-axis "sample" 1 --> 43
     y-axis "W" 2.0 --> 2.5
     line [2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10]
 ```
