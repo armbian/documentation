@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **57** operational, **8** broken.
+**65** boards — **60** operational, **5** broken.
 
-Reconcile made: 2026-09-30 08:12 UTC
+Reconcile made: 2026-09-30 08:39 UTC
 
 **Operational**
 
@@ -55,7 +55,9 @@ Reconcile made: 2026-09-30 08:12 UTC
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
+| Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Prime 01 | 10.0.50.46 | local | 1 GbE | Aruba 2540 (35) |
@@ -76,6 +78,7 @@ Reconcile made: 2026-09-30 08:12 UTC
 | SpacemiT MusePi Pro 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
+| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (2) |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
@@ -85,11 +88,8 @@ Reconcile made: 2026-09-30 08:12 UTC
 |:--|:--|:--|--:|:--|
 | Khadas VIM1S 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (33) |
 | NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (6) |
-| Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
-| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 
 <!-- BOARDS-STOP -->
