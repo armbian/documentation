@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-09-29 11:48 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-09-30 11:34 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Tue, 29 Sep 2026 | 2267 | `26.8.3` |
-| `trixie` | trixie | Tue, 29 Sep 2026 | 2267 | `26.8.3` |
-| `sid` | sid | Tue, 29 Sep 2026 | 2267 | `26.8.3` |
-| `jammy` | jammy | Tue, 29 Sep 2026 | 2267 | `26.8.3` |
-| `noble` | noble | Tue, 29 Sep 2026 | 2267 | `26.8.3` |
+| `bookworm` | bookworm | Wed, 30 Sep 2026 | 2267 | `26.8.3` |
+| `trixie` | trixie | Wed, 30 Sep 2026 | 2267 | `26.8.3` |
+| `sid` | sid | Wed, 30 Sep 2026 | 2267 | `26.8.3` |
+| `jammy` | jammy | Wed, 30 Sep 2026 | 2267 | `26.8.3` |
+| `noble` | noble | Wed, 30 Sep 2026 | 2267 | `26.8.3` |
 
 ### Core package versions
 
@@ -151,7 +151,7 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `edl-ng` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` | `1.5.0` |
 | `fastfetch` | `2.68.1` | `2.68.1` | — | `2.68.1` | `2.68.1` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
-| `gh` | `2.101.0` | `2.101.0` | `2.83.2` | `2.101.0` | `2.101.0` |
+| `gh` | `2.102.0` | `2.102.0` | `2.83.2` | `2.102.0` | `2.102.0` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
 | `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20260817-1` | — | `0.2.0-3fakesync1build6` | — |
