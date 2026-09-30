@@ -141,34 +141,15 @@ armbian-config --cmd UNS001
 ~~~
 
 
-## Docker images
+## Remove Watchtower
 
 
-Enable automating Docker container base images updating
+Disable automating Docker image updating (Watchtower, unmaintained)
 
 
-<!--- section image START from tools/include/images/WTC001.png --->
-![Docker images](/images/WTC001.png)
-<!--- section image STOP from tools/include/images/WTC001.png --->
-
-
-<!--- header START from tools/include/markdown/WTC001-header.md --->
-Watchtower is a lightweight tool that automatically monitors and updates running Docker containers whenever a new image version becomes available.
-It checks remote registries for updated images, pulls them, stops the old containers, and restarts them using the updated versions — all without manual intervention.
-Watchtower is fully configurable, allowing you to control update frequency, select specific containers, and manage notification settings.
-
-<!--- header STOP from tools/include/markdown/WTC001-header.md --->
-
-
-~~~ bash title="Docker images"
-armbian-config --cmd WTC001
-~~~
-
-
-~~~ bash title="Disable automating Docker container base images updating"
+~~~ bash title="Remove Watchtower"
 armbian-config --cmd WTC002
 ~~~
-
 
 
 ## Packages

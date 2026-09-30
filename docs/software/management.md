@@ -1,7 +1,7 @@
 ---
 title: "Management"
 seo_title: "Management apps for Armbian"
-description: "Remote File & Management tools for Armbian on ARM64 and x86 single-board computers: Cockpit, Proxmox VE, Homepage, NetBox, apt-cacher-ng, git_cdn, Samba, Webmin."
+description: "Remote File & Management tools for Armbian on ARM64 and x86 single-board computers: Cockpit, Proxmox VE, Homepage, NetBox, apt-cacher-ng, git_cdn, registry-cache, Samba, Webmin."
 hub: true
 comments: true
 ---
@@ -16,5 +16,6 @@ Install and configure these applications through [`armbian-config`](/config/) or
 - [NetBox](/software/netbox/) — NetBox infrastructure resource modeling install
 - [apt-cacher-ng](/software/apt-cacher-ng/) — apt-cacher-ng caching proxy install
 - [git_cdn](/software/git-cdn/) — git_cdn GitHub caching proxy install
+- [registry-cache](/software/registry-cache/) — OCI registry cache (ghcr.io mirror) install
 - [Samba](/software/samba/) — SAMBA Remote File share
 - [Webmin](/software/webmin/) — Webmin web-based management tool
