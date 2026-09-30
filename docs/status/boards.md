@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **60** operational, **5** broken.
+**65** boards — **62** operational, **3** broken.
 
-Reconcile made: 2026-09-30 09:17 UTC
+Reconcile made: 2026-09-30 09:59 UTC
 
 **Operational**
 
@@ -47,6 +47,7 @@ Reconcile made: 2026-09-30 09:17 UTC
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (14) |
 | NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
+| NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | TP-Link SG3428X (17) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (41) |
 | NanoPi R76S 01 | 10.0.50.20 | local | 1 GbE | Aruba 2540 (31) |
@@ -67,6 +68,7 @@ Reconcile made: 2026-09-30 09:17 UTC
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
+| ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (18) |
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
@@ -86,10 +88,8 @@ Reconcile made: 2026-09-30 09:17 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Khadas VIM1S 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (33) |
-| NanoPi Neo 2 Black 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (6) |
+| Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
 | OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
-| ROCK 2F 01 | 10.0.20.164 | local | — | — |
 
 <!-- BOARDS-STOP -->
