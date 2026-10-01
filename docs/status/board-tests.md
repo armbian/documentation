@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**67** boards — **49** passed, **18** failed. Most recent test of every board; failures first.
+**68** boards — **50** passed, **18** failed. Most recent test of every board; failures first.
 
 ## ❌ Failed (18)
 
@@ -443,7 +443,7 @@ xychart-beta
     line [5.77, 6.32, 6.37, 6.40, 6.14, 5.51, 6.41, 6.45, 6.12, 5.97, 5.04, 7.17, 5.60, 6.95, 5.89, 6.05, 6.28, 5.66, 6.35, 5.88, 5.48, 6.13, 6.11, 4.85, 6.63, 5.55, 5.85, 6.47, 5.65, 6.43, 5.45, 6.23, 6.43, 5.33, 6.42, 6.47, 6.11, 5.41, 4.25, 6.79]
 ```
 
-## ✅ Passed (49)
+## ✅ Passed (50)
 
 ### ✅ Arduino UNO Q 01
 
@@ -623,6 +623,19 @@ xychart-beta
     y-axis "W" 2.5 --> 9.0
     line [4.70, 4.85, 5.12, 5.08, 4.88, 5.18, 5.33, 5.04, 4.97, 5.05, 5.11, 4.96, 5.08, 6.03, 5.98, 5.22, 5.20, 5.18, 5.10, 5.15, 4.84, 4.70, 4.95, 3.26, 4.74, 5.25, 5.22, 5.17, 5.95, 5.97, 5.12, 5.10, 5.24, 5.65, 6.19, 5.67, 5.55, 5.74, 5.34, 5.34]
 ```
+
+### ✅ BananaPi BPI-M4-Zero 01
+
+`bananapim4zero` · **inplace** · image `26.8.8` · 4 ✅ · 0 ❌ · 2 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 0.0 s | — |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-performance | ✅ | 32.6 s | AES 660 · mem 3600 · disk W 15 / R 22 MB/s · 50.4 °C · 1416 MHz |
+| dvfs | ✅ | 22.5 s | ondemand · 480–1416 MHz (peak 1416) |
+| network-iperf | ✅ | 36.3 s | wlan0 ↑81/↓100 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.8 s | 26.8.8 · 6.18.54-current-sunxi64 |
 
 ### ✅ Clearfog Pro 01
 
