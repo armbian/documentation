@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**18** servers · **774** threads · **2371** GB RAM · **322** runners (**178** online).
+**18** servers · **774** threads · **2371** GB RAM · **322** runners (**170** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
