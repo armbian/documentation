@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **58** operational, **7** broken.
+**65** boards — **56** operational, **9** broken.
 
-Reconcile made: 2026-10-01 06:57 UTC
+Reconcile made: 2026-10-01 07:15 UTC
 
 **Operational**
 
@@ -37,7 +37,6 @@ Reconcile made: 2026-10-01 06:57 UTC
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (21) |
 | Khadas Edge2 01 | 10.0.50.121 | local | Wi-Fi 6 | Zyxel NWA130BE |
-| Khadas VIM1 01 | 10.0.50.14 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
@@ -70,7 +69,6 @@ Reconcile made: 2026-10-01 06:57 UTC
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
 | Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
 | Rock 5T 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (48) |
-| Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | Aruba 2540 (52) |
@@ -84,12 +82,14 @@ Reconcile made: 2026-10-01 06:57 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Khadas VIM1 01 | 10.0.50.14 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (37) |
-| Odroid XU4 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (40) |
+| Odroid XU4 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi Prime 01 | 10.0.50.48 | local | 1 GbE | Aruba 2540 (35) |
-| OrangePi 3 LTS 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (32) |
-| SpacemiT MusePi Pro 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (10) |
+| OrangePi 3 LTS 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (32) |
+| Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
+| SpacemiT MusePi Pro 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (10) |
 
 <!-- BOARDS-STOP -->
