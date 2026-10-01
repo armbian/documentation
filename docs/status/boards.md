@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**66** boards — **61** operational, **5** broken.
+**66** boards — **63** operational, **3** broken.
 
-Reconcile made: 2026-10-01 08:28 UTC
+Reconcile made: 2026-10-01 08:59 UTC
 
 **Operational**
 
@@ -27,7 +27,7 @@ Reconcile made: 2026-10-01 08:28 UTC
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
-| Banana Pi R2 01 | 10.0.50.175 | local | 1 GbE | — |
+| Banana Pi R2 01 | 10.0.50.14 | local | 1 GbE | — |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -38,6 +38,7 @@ Reconcile made: 2026-10-01 08:28 UTC
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (21) |
 | Khadas Edge2 01 | 10.0.50.121 | local | Wi-Fi 6 | Zyxel NWA130BE |
+| Khadas VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
@@ -57,6 +58,7 @@ Reconcile made: 2026-10-01 08:28 UTC
 | Odroid XU4 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Orange Pi Prime 01 | 10.0.50.36 | local | 1 GbE | Aruba 2540 (35) |
@@ -87,10 +89,8 @@ Reconcile made: 2026-10-01 08:28 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Khadas VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (37) |
 | Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 
 <!-- BOARDS-STOP -->
