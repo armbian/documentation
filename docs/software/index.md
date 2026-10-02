@@ -7,6 +7,22 @@ description: "Install self-hosted apps and services on Armbian single-board comp
 
 Lightweight, Secure, and Optimized Services for Embedded Systems
 
+## How to install an app
+
+Apps do not have their own images. Install Armbian first, then install the app on it.
+
+1. [Choose an Armbian image](../getting-started/choosing-an-image.md) for your board and [write it to an SD card](../getting-started/writing-the-image.md).
+2. [Boot the board and log in](../getting-started/first-boot-and-login.md).
+3. Run `armbian-config`. Select **Software**, then the category, then the app.
+
+Each app page also shows a one-line install command, for example:
+
+```bash
+armbian-config --cmd EVCC01
+```
+
+For help with the app itself, read the app's own documentation. Each app page links to it.
+
 ## Overview
 
 **Armbian Software**, accessible via the `armbian-config` utility, empowers you to quickly deploy a variety of **preconfigured applications and advanced services** — from diagnostic tools and media servers to dashboards and container orchestration platforms. Most services are offered as **Docker containers** optimized specifically for Armbian OS and supported hardware, while a subset is available as **native installations** for lightweight or performance-critical setups.
