@@ -5,6 +5,12 @@ description: "Access the Armbian Datacenter hardware lab: request board-maintain
 
 # Datacenter access
 
+<div class="grid" markdown>
+![Single-board computers powered and networked in the Armbian Datacenter rack](../images/datacenter-rack-1.jpg){ data-gallery="datacenter" loading=lazy }
+![Side view of the lab rack: boards, SD-card switchers and USB serial consoles](../images/datacenter-rack-2.jpg){ data-gallery="datacenter" loading=lazy }
+![Switching and server tier: managed switch, PDUs and build servers](../images/datacenter-rack-3.jpg){ data-gallery="datacenter" loading=lazy }
+</div>
+
 Armbian runs a hardware lab — *the Datacenter* — a rack of real boards on real
 networks that our CI flashes, powers, boots, tests and measures automatically.
 Board maintainers can reach these boards remotely to debug problems, reproduce
