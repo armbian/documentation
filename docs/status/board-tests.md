@@ -37,11 +37,26 @@ xychart-beta
 
 ### ❌ Khadas VIM3 01
 
-`khadas-vim3` · **inplace** · image `26.11.0-trunk.65` · 0 ✅ · 1 ❌ · 0 ⏭️
+`khadas-vim3` · **inplace** · image `26.11.0-trunk.66` · 3 ✅ · 1 ❌ · 12 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.39 · reachable=False · port=22 |
+| upgrade | ✅ | 210.6 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.68 |
+| reboot | ✅ | 32.6 s | warm · up 17 s |
+| kernel-switch | ✅ | 73.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ❌ | 198.6 s | warm · 0/2 boots |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
 
 ### ❌ Khadas VIM4 01
 
