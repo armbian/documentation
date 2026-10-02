@@ -13,32 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **52** passed, **16** failed. Most recent test of every board; failures first.
+**68** boards — **53** passed, **15** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (16)
-
-### ❌ Banana Pi M5 01
-
-`bananapim5` · **inplace** · image `26.11.0-trunk.66` · 13 ✅ · 2 ❌ · 1 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | 17.6 s | — |
-| reboot | ✅ | 203.5 s | warm · up 183 s |
-| kernel-switch | ❌ | 28.2 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 393.2 s | warm · 2/2 boots · up 178 s |
-| hw-performance | ✅ | 39.3 s | AES 980 · mem 5200 · disk W 9 / R 15 MB/s · 53.9 °C · 2100 MHz |
-| dvfs | ✅ | 21.3 s | ondemand · 1000–2100 MHz (peak 2100) |
-| network-iperf | ✅ | 59.0 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑31/↓25 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 13.2 s | 26.11.0-trunk.66 · 7.2.8-edge-meson64 |
-| kernel-switch | ✅ | 38.3 s | branch=edge · family=meson64 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=7.2.8-edge-meson64 |
-| reboot | ✅ | 385.1 s | warm · 2/2 boots · up 179 s |
-| hw-performance | ✅ | 45.7 s | AES 979 · mem 5300 · disk W 10 / R 15 MB/s · 54.5 °C · 2100 MHz |
-| dvfs | ✅ | 29.4 s | ondemand · 1000–2100 MHz (peak 2100) |
-| network-iperf | ✅ | 58.0 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑32/↓22 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 13.1 s | 26.11.0-trunk.66 · 7.2.8-edge-meson64 |
-| kernel-switch | ❌ | 29.0 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 195.9 s | warm · up 179 s |
+## ❌ Failed (15)
 
 ### ❌ Cubie A5E 01
 
@@ -379,7 +356,7 @@ xychart-beta
     line [3.60, 5.76, 8.46, 8.34, 7.10, 8.06, 8.20, 7.34, 7.14, 3.58, 3.76, 3.64, 4.08, 7.16, 7.88, 7.04, 6.90, 3.46, 1.78, 1.77, 1.76, 1.80, 1.80, 1.80, 1.74, 1.76, 1.70, 1.78, 1.76, 1.72, 1.80, 1.74, 1.76, 1.70, 1.76, 1.72, 1.80, 1.76, 1.76, 1.72]
 ```
 
-## ✅ Passed (52)
+## ✅ Passed (53)
 
 ### ✅ Arduino UNO Q 01
 
@@ -474,6 +451,29 @@ xychart-beta
     y-axis "W" 1.0 --> 5.0
     line [3.18, 3.58, 2.56, 3.05, 2.41, 2.48, 3.07, 3.01, 2.74, 2.40, 2.38, 2.63, 2.96, 2.40, 2.40, 2.87, 3.22, 3.09, 2.85, 3.49, 3.12, 3.00, 2.91, 2.40, 2.37, 2.57, 2.90, 2.37, 2.37, 2.81, 3.22, 3.05, 3.03, 3.35, 3.10, 2.96, 2.53, 2.60, 2.35, 2.47]
 ```
+
+### ✅ Banana Pi M5 01
+
+`bananapim5` · **inplace** · image `26.11.0-trunk.66` · 15 ✅ · 1 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 345.5 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.68 |
+| reboot | ✅ | 210.9 s | warm · up 185 s |
+| kernel-switch | ✅ | 174.4 s | branch=current · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ✅ | 325.6 s | warm · 2/2 boots · up 148 s |
+| hw-performance | ✅ | 39.6 s | AES 980 · mem 5300 · disk W 9 / R 15 MB/s · 54.3 °C · 2100 MHz |
+| dvfs | ✅ | 21.0 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ❌ | 70.0 s | end0 ↑940/↓941 (1GE) · wlx000f13960190 ↑0/↓1 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 4.8 s | 26.11.0-trunk.68 · 6.18.54-current-meson64 |
+| kernel-switch | ✅ | 192.6 s | branch=edge · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 396.5 s | warm · 2/2 boots · up 180 s |
+| hw-performance | ✅ | 40.1 s | AES 980 · mem 5100 · disk W 9 / R 15 MB/s · 54.3 °C · 2100 MHz |
+| dvfs | ✅ | 21.7 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ✅ | 117.0 s | end0 ↑941/↓941 (1GE) · wlx000f13960190 ↑7/↓3 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 4.8 s | 26.11.0-trunk.68 · 7.2.8-edge-meson64 |
+| kernel-switch | ✅ | 192.8 s | branch=current · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ✅ | 165.5 s | warm · up 149 s |
 
 ### ✅ Banana Pi M7 01
 
