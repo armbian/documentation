@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **56** passed, **12** failed. Most recent test of every board; failures first.
+**68** boards — **57** passed, **11** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (11)
 
 ### ❌ Khadas VIM1S 01
 
@@ -231,39 +231,6 @@ xychart-beta
     line [2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10, 2.10]
 ```
 
-### ❌ Udoo 01
-
-`udoo` · **inplace** · image `26.11.0-trunk.66` · 15 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 120.2 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.66 |
-| reboot | ✅ | 81.0 s | power-cycle · up 39 s |
-| kernel-switch | ✅ | 74.9 s | branch=current · family=imx6 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
-| reboot | ✅ | 132.0 s | power-cycle · 2/2 boots · up 39 s |
-| hw-performance | ✅ | 52.6 s | AES 26 · mem 669 · disk W 18 / R 20 MB/s · 50.4 °C · 996 MHz |
-| dvfs | ✅ | 43.6 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 85.7 s | end0 ↑400/↓238 (1GE) · wlx7cdd903aa418 ↑25/↓19 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 9.4 s | 26.11.0-trunk.66 · 6.18.54-current-imx6 |
-| kernel-switch | ✅ | 500.5 s | branch=edge · family=imx6 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.54-current-imx6 |
-| reboot | ✅ | 127.5 s | power-cycle · 2/2 boots · up 37 s |
-| hw-performance | ✅ | 51.7 s | AES 26 · mem 713 · disk W 12 / R 20 MB/s · 51.5 °C · 996 MHz |
-| dvfs | ✅ | 47.1 s | ondemand · 396–996 MHz (peak 996) |
-| network-iperf | ✅ | 81.8 s | end0 ↑398/↓227 (1GE) · wlx7cdd903aa418 ↑28/↓16 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 9.5 s | 26.11.0-trunk.66 · 7.1.13-edge-imx6 |
-| kernel-switch | ❌ | 229.0 s | branch=current · phase=install · dpkg_state=absent |
-| reboot | ✅ | 80.4 s | power-cycle · up 38 s |
-
-**Power** — min 3.60 W · avg 5.83 W · peak 8.30 W · 1331 samples
-
-```mermaid
-xychart-beta
-    title "Power — Udoo 01"
-    x-axis "sample" 1 --> 1331
-    y-axis "W" 3.5 --> 8.5
-    line [6.11, 6.17, 6.22, 5.07, 6.86, 6.04, 5.65, 5.96, 5.24, 6.79, 5.76, 6.61, 6.32, 5.68, 5.51, 5.69, 5.05, 5.03, 5.04, 5.08, 5.11, 6.42, 6.20, 6.13, 5.89, 6.17, 5.93, 5.94, 5.43, 6.62, 5.78, 6.25, 6.36, 5.79, 5.97, 5.51, 5.15, 5.05, 5.62, 6.00]
-```
-
 ### ❌ UEFI x86 01
 
 `uefi-x86` · **inplace** · image `26.11.0-trunk.66` · 1 ✅ · 1 ❌ · 14 ⏭️
@@ -297,7 +264,7 @@ xychart-beta
     line [3.60, 5.76, 8.46, 8.34, 7.10, 8.06, 8.20, 7.34, 7.14, 3.58, 3.76, 3.64, 4.08, 7.16, 7.88, 7.04, 6.90, 3.46, 1.78, 1.77, 1.76, 1.80, 1.80, 1.80, 1.74, 1.76, 1.70, 1.78, 1.76, 1.72, 1.80, 1.74, 1.76, 1.70, 1.76, 1.72, 1.80, 1.76, 1.76, 1.72]
 ```
 
-## ✅ Passed (56)
+## ✅ Passed (57)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1773,6 +1740,39 @@ xychart-beta
     x-axis "sample" 1 --> 336
     y-axis "W" 1.0 --> 6.5
     line [3.36, 3.95, 4.03, 3.59, 3.63, 3.90, 3.75, 3.74, 3.70, 3.71, 3.80, 3.77, 3.90, 3.75, 4.34, 4.10, 3.65, 3.66, 3.76, 3.76, 3.74, 3.76, 3.71, 3.43, 3.60, 2.00, 3.38, 4.86, 3.80, 3.97, 3.68, 4.04, 4.48, 3.90, 3.76, 4.08, 3.90, 4.60, 5.20, 3.73]
+```
+
+### ✅ Udoo 01
+
+`udoo` · **inplace** · image `26.11.0-trunk.68` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 123.8 s | nightly · 26.11.0-trunk.68 → 26.11.0-trunk.68 |
+| reboot | ✅ | 79.8 s | power-cycle · up 39 s |
+| kernel-switch | ✅ | 78.3 s | branch=current · family=imx6 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 138.5 s | power-cycle · 2/2 boots · up 38 s |
+| hw-performance | ✅ | 53.6 s | AES 26 · mem 659 · disk W 9 / R 20 MB/s · 51.5 °C · 996 MHz |
+| dvfs | ✅ | 43.6 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 82.7 s | end0 ↑398/↓233 (1GE) · wlx7cdd903aa418 ↑32/↓33 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 10.2 s | 26.11.0-trunk.68 · 6.18.54-current-imx6 |
+| kernel-switch | ✅ | 300.8 s | branch=edge · family=imx6 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-7.1.13-edge-imx6 · kernel_before=6.18.54-current-imx6 |
+| reboot | ✅ | 148.6 s | power-cycle · 2/2 boots · up 38 s |
+| hw-performance | ✅ | 52.3 s | AES 26 · mem 704 · disk W 18 / R 20 MB/s · 52.1 °C · 996 MHz |
+| dvfs | ✅ | 47.0 s | ondemand · 396–996 MHz (peak 996) |
+| network-iperf | ✅ | 91.5 s | end0 ↑398/↓229 (1GE) · wlx7cdd903aa418 ↑31/↓35 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.6 s | 26.11.0-trunk.68 · 7.1.13-edge-imx6 |
+| kernel-switch | ✅ | 278.7 s | branch=current · family=imx6 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-imx6 · kernel_before=7.1.13-edge-imx6 |
+| reboot | ✅ | 81.1 s | power-cycle · up 39 s |
+
+**Power** — min 3.60 W · avg 6.05 W · peak 8.40 W · 1310 samples
+
+```mermaid
+xychart-beta
+    title "Power — Udoo 01"
+    x-axis "sample" 1 --> 1310
+    y-axis "W" 3.5 --> 8.5
+    line [6.07, 5.89, 6.15, 5.60, 6.62, 6.32, 6.19, 5.78, 6.36, 5.75, 6.24, 5.97, 6.32, 6.39, 5.84, 5.86, 5.39, 6.30, 6.18, 6.25, 5.84, 6.19, 5.88, 5.74, 5.89, 6.09, 6.32, 6.34, 5.50, 6.15, 6.02, 6.50, 5.83, 6.32, 6.36, 5.98, 6.03, 6.02, 5.34, 6.36]
 ```
 
 ### ✅ UEFI arm64 01
