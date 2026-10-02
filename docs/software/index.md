@@ -7,15 +7,17 @@ description: "Install self-hosted apps and services on Armbian single-board comp
 
 Lightweight, Secure, and Optimized Services for Embedded Systems
 
-## How to install an app
+<a id="how-to-install-an-app"></a>
 
-Apps do not have their own images. Install Armbian first, then install the app on it.
+!!! info "How to install an app"
 
-1. [Choose an Armbian image](../getting-started/choosing-an-image.md) for your board and [write it to an SD card](../getting-started/writing-the-image.md).
-2. [Boot the board and log in](../getting-started/first-boot-and-login.md).
-3. Run `armbian-config`. Select **Software**, then the category, then the app.
+    Apps do not have their own images. Install Armbian first, then install the app on it.
 
-For help with the app itself, read the app's own documentation. Each app page links to it.
+    1. [Choose an Armbian image](../getting-started/choosing-an-image.md) for your board and [write it to an SD card](../getting-started/writing-the-image.md).
+    2. [Boot the board and log in](../getting-started/first-boot-and-login.md).
+    3. Run `armbian-config`. Select **Software**, then the category, then the app.
+
+    For help with the app itself, read the app's own documentation. Each app page links to it.
 
 ## Overview
 
