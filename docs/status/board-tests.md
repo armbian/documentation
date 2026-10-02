@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **51** passed, **17** failed. Most recent test of every board; failures first.
+**68** boards — **52** passed, **16** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (17)
+## ❌ Failed (16)
 
 ### ❌ Banana Pi M5 01
 
@@ -280,24 +280,6 @@ xychart-beta
     line [6.94, 6.94, 7.39, 7.43, 7.94, 7.42, 6.38, 2.13, 4.09, 4.67, 4.41, 3.72, 3.64, 3.68, 3.60, 3.60, 3.64, 3.63, 3.64, 3.60, 3.60, 3.60, 3.71, 3.71, 3.87, 4.81, 4.32, 3.64, 3.63, 3.64, 3.63, 3.60, 3.66, 3.68, 3.63, 3.67, 3.68, 3.64, 3.69, 3.71]
 ```
 
-### ❌ SpacemiT MusePi Pro 01
-
-`musepipro` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.65 · reachable=False · port=22 |
-
-**Power** — min 2.50 W · avg 2.59 W · peak 2.60 W · 41 samples
-
-```mermaid
-xychart-beta
-    title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 41
-    y-axis "W" 2.0 --> 3.0
-    line [2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.50, 2.50]
-```
-
 ### ❌ Tinker Board 01
 
 `tinkerboard` · **inplace** · image `26.11.0-trunk.66` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -382,7 +364,7 @@ xychart-beta
     line [3.60, 5.76, 8.46, 8.34, 7.10, 8.06, 8.20, 7.34, 7.14, 3.58, 3.76, 3.64, 4.08, 7.16, 7.88, 7.04, 6.90, 3.46, 1.78, 1.77, 1.76, 1.80, 1.80, 1.80, 1.74, 1.76, 1.70, 1.78, 1.76, 1.72, 1.80, 1.74, 1.76, 1.70, 1.76, 1.72, 1.80, 1.76, 1.76, 1.72]
 ```
 
-## ✅ Passed (51)
+## ✅ Passed (52)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1702,6 +1684,29 @@ xychart-beta
 | dvfs | ✅ | 15.6 s | performance · 614–2150 MHz (peak 2150) |
 | network-iperf | ✅ | 82.1 s | eth0 ↑941/↓941 (1GE) · eth1 ↑8296/↓5059 (10GE) · wlan0 ↑35/↓109 (Wi-Fi 6) Mbps |
 | store-versions | ✅ | 3.7 s | 26.11.0-trunk.66 · 6.18.3-legacy-spacemit-k3 |
+
+### ✅ SpacemiT MusePi Pro 01
+
+`musepipro` · **inplace** · image `26.11.0-trunk.66` · 6 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 229.9 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.68 |
+| reboot | ✅ | 57.9 s | power-cycle · up 22 s |
+| hw-performance | ✅ | 31.4 s | AES 36 · mem 3000 · disk W 13 / R 2 MB/s · 54 °C · 1600 MHz |
+| dvfs | ✅ | 24.9 s | performance · 614–1600 MHz (peak 1600) |
+| network-iperf | ✅ | 62.4 s | eth0 ↑941/↓938 (1GE) · wlan0 ↑263/↓320 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.4 s | 26.11.0-trunk.68 · 6.18.54-current-spacemit |
+
+**Power** — min 1.50 W · avg 3.84 W · peak 6.10 W · 336 samples
+
+```mermaid
+xychart-beta
+    title "Power — SpacemiT MusePi Pro 01"
+    x-axis "sample" 1 --> 336
+    y-axis "W" 1.0 --> 6.5
+    line [3.36, 3.95, 4.03, 3.59, 3.63, 3.90, 3.75, 3.74, 3.70, 3.71, 3.80, 3.77, 3.90, 3.75, 4.34, 4.10, 3.65, 3.66, 3.76, 3.76, 3.74, 3.76, 3.71, 3.43, 3.60, 2.00, 3.38, 4.86, 3.80, 3.97, 3.68, 4.04, 4.48, 3.90, 3.76, 4.08, 3.90, 4.60, 5.20, 3.73]
+```
 
 ### ✅ UEFI arm64 01
 
