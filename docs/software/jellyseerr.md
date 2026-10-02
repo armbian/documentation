@@ -25,6 +25,8 @@ Jellyseerr is a free and open source software application for managing requests 
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Jellyseerr**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.jellyseerr.dev/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd JEL001
 ~~~

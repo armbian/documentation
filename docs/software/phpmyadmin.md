@@ -22,6 +22,8 @@ phpMyAdmin web interface manager
 
 Install from **[armbian-config](/config/) → Software → Database → phpMyAdmin**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://www.phpmyadmin.net/docs/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd MYA001
 ~~~

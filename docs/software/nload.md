@@ -22,6 +22,8 @@ realtime console network usage monitor
 
 Install from **[armbian-config](/config/) → Software → Netconfig → nload**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://netbox.readthedocs.io/en/stable/).
+
 ~~~ custombash title="nload - realtime console network usage monitor"
 armbian-config --cmd NLD001
 ~~~

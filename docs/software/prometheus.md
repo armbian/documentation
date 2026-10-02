@@ -25,6 +25,8 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 Install from **[armbian-config](/config/) → Software → Monitoring → Prometheus**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://prometheus.io/docs/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd PRO001
 ~~~

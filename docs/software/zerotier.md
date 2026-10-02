@@ -19,6 +19,8 @@ ZeroTier connect devices over your own private network in the world
 
 Install from **[armbian-config](/config/) → Software → VPN → ZeroTier**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app.
+
 ~~~ custombash title="ZeroTier connect devices over your own private network in the world."
 armbian-config --cmd ZTR001
 ~~~

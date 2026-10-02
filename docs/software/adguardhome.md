@@ -25,6 +25,8 @@ AdGuard Home is a network-wide software that functions as a DNS server and ad bl
 
 Install from **[armbian-config](/config/) → Software → DNS → AdGuardHome**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/AdguardTeam/AdGuardHome/wiki).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd ADG001
 ~~~

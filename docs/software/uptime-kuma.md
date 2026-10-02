@@ -28,6 +28,8 @@ You can receive instant notifications when a service goes down via Telegram, Dis
 
 Install from **[armbian-config](/config/) → Software → Monitoring → Uptime Kuma**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/louislam/uptime-kuma/wiki).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd UPK001
 ~~~

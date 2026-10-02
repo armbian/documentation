@@ -50,6 +50,8 @@ Pi-hole offers an effective and centralized way to enhance privacy and reduce un
 
 Install from **[armbian-config](/config/) → Software → DNS → Pi-hole**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.pi-hole.net/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd PIH001
 ~~~

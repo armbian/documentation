@@ -25,6 +25,8 @@ Bazarr is a companion application to Sonarr and Radarr. It can manage and downlo
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Bazarr**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://wiki.bazarr.media/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd BAZ001
 ~~~

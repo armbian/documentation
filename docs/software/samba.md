@@ -25,6 +25,8 @@ Samba is an open-source software suite that enables seamless file and printer sh
 
 Install from **[armbian-config](/config/) → Software → Management → Samba**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://forum.armbian.com/).
+
 ~~~ custombash title="SAMBA Remote File share"
 armbian-config --cmd SMB001
 ~~~

@@ -25,6 +25,8 @@ Radarr - A fork of Sonarr to work with movies à la Couchpotato.
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Radarr**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://wiki.servarr.com/radarr).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd RAD001
 ~~~

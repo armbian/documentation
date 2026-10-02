@@ -25,6 +25,8 @@ Webmin is a web-based system administration tool for Unix-like servers. It provi
 
 Install from **[armbian-config](/config/) → Software → Management → Webmin**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://forum.armbian.com/).
+
 ~~~ custombash title="Webmin web-based management tool"
 armbian-config --cmd WBM001
 ~~~

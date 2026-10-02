@@ -25,6 +25,8 @@ Hastebin is a fast and simple self-hosted pastebin server. It allows users to qu
 
 Install from **[armbian-config](/config/) → Software → Media → Hastebin**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/rpardini/ansi-hastebin).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd HPS001
 ~~~

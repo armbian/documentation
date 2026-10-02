@@ -25,6 +25,8 @@ Emby organizes video, music, live TV, and photos from personal media libraries a
 
 Install from **[armbian-config](/config/) → Software → Media → Emby**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://emby.media).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd EMB001
 ~~~

@@ -25,6 +25,8 @@ Medusa is an automatic Video Library Manager for TV Shows. It watches for new ep
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Medusa**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/pymedusa/Medusa/wiki).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd MDS001
 ~~~

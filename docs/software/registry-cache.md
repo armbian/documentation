@@ -36,6 +36,8 @@ Armbian stores build artifacts and git trees on `ghcr.io`. Build hosts with many
 
 Install from **[armbian-config](/config/) → Software → Management → registry-cache**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://distribution.github.io/distribution/recipes/mirror/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd REG001
 ~~~

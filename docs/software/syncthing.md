@@ -25,6 +25,8 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 Install from **[armbian-config](/config/) → Software → Media → Syncthing**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.syncthing.net/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd STC001
 ~~~

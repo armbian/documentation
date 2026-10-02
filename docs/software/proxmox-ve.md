@@ -40,6 +40,8 @@ Ideal for turning an Armbian board into a lightweight hypervisor without giving 
 
 Install from **[armbian-config](/config/) → Software → Management → Proxmox VE**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_13_Trixie).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd PVE001
 ~~~

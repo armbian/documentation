@@ -43,6 +43,8 @@ For more information and installation guides, visit the official [NetAlertX docu
 
 Install from **[armbian-config](/config/) → Software → Monitoring → NetAlertX**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://netalertx.com).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd NAX001
 ~~~

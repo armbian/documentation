@@ -42,6 +42,8 @@ Perfect for developers working on **ARM-based SBCs**, **cloud instances**, or **
 
 Install from **[armbian-config](/config/) → Software → Dev Tools → Code-server**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/linuxserver/docker-code-server).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd COD001
 ~~~

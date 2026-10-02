@@ -22,6 +22,8 @@ git_cdn GitHub caching proxy install
 
 Install from **[armbian-config](/config/) → Software → Management → git_cdn**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://gitlab.com/grouperenault/git_cdn).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd GCD001
 ~~~

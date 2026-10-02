@@ -35,6 +35,8 @@ Redis is widely used for real-time applications, caching layers, session stores,
 
 Install from **[armbian-config](/config/) → Software → Database → Redis**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://redis.io/docs/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd REDIS1
 ~~~

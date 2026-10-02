@@ -25,6 +25,8 @@ ownCloud is a free and open-source software project for content collaboration an
 
 Install from **[armbian-config](/config/) → Software → Media → Owncloud**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://doc.owncloud.com/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd OWC001
 ~~~

@@ -43,6 +43,8 @@ After entering required information, your server will have auto updating SSL sec
 
 Install from **[armbian-config](/config/) → Software → Web Hosting → SWAG**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/linuxserver/docker-swag).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd SWAG01
 ~~~

@@ -22,6 +22,8 @@ iptraf-ng IP LAN monitor
 
 Install from **[armbian-config](/config/) → Software → Netconfig → iptraf-ng**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://netbox.readthedocs.io/en/stable/).
+
 ~~~ custombash title="iptraf-ng IP LAN monitor"
 armbian-config --cmd IPT001
 ~~~

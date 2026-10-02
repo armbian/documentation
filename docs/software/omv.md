@@ -32,6 +32,8 @@ Whether used on a dedicated server, a Raspberry Pi, or virtualized hardware, OMV
 
 Install from **[armbian-config](/config/) → Software → Media → OMV**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.openmediavault.org/en/stable/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd OMV001
 ~~~

@@ -25,6 +25,8 @@ Transmission⁠ is designed for easy, powerful use. Transmission has the feature
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Transmission**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://transmissionbt.com/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd TRA001
 ~~~

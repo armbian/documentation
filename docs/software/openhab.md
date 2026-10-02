@@ -22,6 +22,8 @@ openHAB empowering the smart home
 
 Install from **[armbian-config](/config/) → Software → Home Automation → openHAB**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://www.openhab.org/docs/tutorial).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd HAB001
 ~~~

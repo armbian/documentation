@@ -41,6 +41,8 @@ Whether you're running a small homelab or a full server fleet, **gethomepage** o
 
 Install from **[armbian-config](/config/) → Software → Management → Homepage**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://gethomepage.dev/configs/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd HPG001
 ~~~

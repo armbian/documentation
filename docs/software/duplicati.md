@@ -34,6 +34,8 @@ Thanks to Duplicati’s smart design — working through standard protocols and 
 
 Install from **[armbian-config](/config/) → Software → Backup → Duplicati**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://prev-docs.duplicati.com/en/latest/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd DPL001
 ~~~
