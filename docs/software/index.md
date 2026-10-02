@@ -11,9 +11,9 @@ Lightweight, Secure, and Optimized Services for Embedded Systems
 
 !!! info "How to install an app"
 
-    Apps do not have their own images. Install Armbian first, then install the app on it.
+    Apps do not have their own images. Install an Armbian OS image first, then install the app on it.
 
-    1. [Choose an Armbian image](../getting-started/choosing-an-image.md) for your board and [write it to an SD card](../getting-started/writing-the-image.md).
+    1. [Choose an Armbian OS image](../getting-started/choosing-an-image.md) for your board and [write it to an SD card](../getting-started/writing-the-image.md).
     2. [Boot the board and log in](../getting-started/first-boot-and-login.md).
     3. Run `armbian-config`. Select **Software**, then the category, then the app.
 
