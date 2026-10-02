@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **54** passed, **14** failed. Most recent test of every board; failures first.
+**68** boards — **55** passed, **13** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (14)
+## ❌ Failed (13)
 
 ### ❌ Khadas VIM1S 01
 
@@ -57,29 +57,6 @@ xychart-beta
 | dvfs | ✅ | 30.5 s | ondemand · 500–2208 MHz (peak 2208) |
 | network-iperf | ✅ | 42.8 s | lan2 ↑939/↓916 Mbps |
 | store-versions | ✅ | 8.7 s | 26.11.0-trunk.66 · 6.18.54-current-mt7623 |
-
-### ❌ NanoPi Neo 3 01
-
-`nanopineo3` · **inplace** · image `26.11.0-trunk.66` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 281.7 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.68 |
-| reboot | ❌ | 223.5 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
 
 ### ❌ Orange Pi 5 01
 
@@ -323,7 +300,7 @@ xychart-beta
     line [3.60, 5.76, 8.46, 8.34, 7.10, 8.06, 8.20, 7.34, 7.14, 3.58, 3.76, 3.64, 4.08, 7.16, 7.88, 7.04, 6.90, 3.46, 1.78, 1.77, 1.76, 1.80, 1.80, 1.80, 1.74, 1.76, 1.70, 1.78, 1.76, 1.72, 1.80, 1.74, 1.76, 1.70, 1.76, 1.72, 1.80, 1.76, 1.76, 1.72]
 ```
 
-## ✅ Passed (54)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1051,6 +1028,39 @@ xychart-beta
     x-axis "sample" 1 --> 1025
     y-axis "W" 0.5 --> 6.0
     line [2.69, 3.10, 2.74, 2.75, 2.58, 2.23, 3.58, 2.77, 2.60, 1.40, 1.40, 1.40, 1.40, 1.40, 1.79, 2.77, 3.14, 3.25, 2.95, 3.21, 2.84, 3.18, 3.03, 2.98, 1.56, 1.40, 1.40, 1.40, 1.40, 1.40, 2.27, 2.63, 3.39, 3.65, 3.38, 3.51, 3.78, 3.35, 2.85, 2.57]
+```
+
+### ✅ NanoPi Neo 3 01
+
+`nanopineo3` · **inplace** · image `26.11.0-trunk.66` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 84.7 s | nightly · 26.11.0-trunk.68 → 26.11.0-trunk.68 |
+| reboot | ✅ | 66.4 s | power-cycle · up 27 s |
+| kernel-switch | ✅ | 57.7 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-rockchip64 · kernel_before=6.18.54-current-rockchip64 |
+| reboot | ✅ | 103.0 s | power-cycle · 2/2 boots · up 29 s |
+| hw-performance | ✅ | 28.5 s | AES 596 · mem 2400 · disk W 52 / R 63 MB/s · 78.5 °C · 1296 MHz |
+| dvfs | ✅ | 30.4 s | ondemand · 408–1296 MHz (peak 1296) |
+| network-iperf | ✅ | 68.5 s | end0 ↑905/↓940 (1GE) · wlx7cdd905518f9 ↑36/↓16 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 7.3 s | 26.11.0-trunk.68 · 6.18.54-current-rockchip64 |
+| kernel-switch | ✅ | 185.0 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-7.2.8-edge-rockchip64 · kernel_before=6.18.54-current-rockchip64 |
+| reboot | ✅ | 99.3 s | power-cycle · 2/2 boots · up 26 s |
+| hw-performance | ✅ | 28.7 s | AES 599 · mem 2400 · disk W 1 / R 63 MB/s · 81.2 °C · 1296 MHz |
+| dvfs | ✅ | 31.0 s | ondemand · 408–1296 MHz (peak 1296) |
+| network-iperf | ✅ | 68.7 s | end0 ↑884/↓940 (1GE) · wlx7cdd905518f9 ↑34/↓17 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 7.3 s | 26.11.0-trunk.68 · 7.2.8-edge-rockchip64 |
+| kernel-switch | ✅ | 173.4 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-rockchip64 · kernel_before=7.2.8-edge-rockchip64 |
+| reboot | ✅ | 75.2 s | power-cycle · up 30 s |
+
+**Power** — min 3.30 W · avg 4.63 W · peak 5.90 W · 896 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPi Neo 3 01"
+    x-axis "sample" 1 --> 896
+    y-axis "W" 3.0 --> 6.0
+    line [4.70, 4.59, 4.78, 4.25, 4.21, 5.03, 4.60, 4.42, 4.30, 4.53, 4.92, 4.70, 4.53, 4.66, 4.67, 4.34, 4.59, 4.50, 5.03, 4.70, 4.70, 4.72, 4.35, 4.55, 4.72, 4.60, 4.92, 4.73, 4.69, 4.93, 4.76, 4.67, 5.00, 4.84, 4.74, 4.63, 4.55, 4.48, 4.15, 4.44]
 ```
 
 ### ✅ NanoPi R6S 01
