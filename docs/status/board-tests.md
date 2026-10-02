@@ -13,42 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **53** passed, **15** failed. Most recent test of every board; failures first.
+**68** boards — **54** passed, **14** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (15)
-
-### ❌ Cubie A5E 01
-
-`radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.66` · 12 ✅ · 1 ❌ · 3 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | 91.4 s | — |
-| reboot | ✅ | 67.4 s | power-cycle · up 31 s |
-| kernel-switch | ✅ | 165.8 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.66 · boot_image=? · kernel_before=6.18.54-current-sunxi64 |
-| reboot | ✅ | 104.0 s | power-cycle · 2/2 boots · up 31 s |
-| hw-performance | ✅ | 41.2 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 62.9 °C · None MHz |
-| dvfs | ➖ | 2.8 s | no cpufreq |
-| network-iperf | ✅ | 130.4 s | end0 ↑831/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑106/↓112 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 6.4 s | 26.11.0-trunk.66 · 6.18.54-current-sunxi64 |
-| kernel-switch | ❌ | 162.2 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 103.3 s | power-cycle · 2/2 boots · up 31 s |
-| hw-performance | ✅ | 41.2 s | AES 358 · mem 2000 · disk W 21 / R 2 MB/s · 62.5 °C · None MHz |
-| dvfs | ➖ | 2.7 s | no cpufreq |
-| network-iperf | ✅ | 89.4 s | end0 ↑819/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓127 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.7 s | 26.11.0-trunk.66 · 6.18.54-current-sunxi64 |
-| kernel-switch | ✅ | 165.0 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.66 · boot_image=? · kernel_before=6.18.54-current-sunxi64 |
-| reboot | ✅ | 66.0 s | power-cycle · up 30 s |
-
-**Power** — min 1.80 W · avg 3.44 W · peak 4.00 W · 989 samples
-
-```mermaid
-xychart-beta
-    title "Power — Cubie A5E 01"
-    x-axis "sample" 1 --> 989
-    y-axis "W" 1.5 --> 4.5
-    line [3.45, 3.56, 3.51, 3.46, 2.68, 3.64, 3.49, 3.47, 3.51, 3.47, 3.47, 3.18, 2.94, 3.32, 3.53, 3.37, 3.49, 3.60, 3.58, 3.52, 3.61, 3.55, 3.54, 3.54, 3.49, 3.20, 3.49, 2.95, 3.58, 3.53, 3.68, 3.64, 3.55, 3.60, 3.57, 3.52, 3.53, 3.50, 3.47, 2.99]
-```
+## ❌ Failed (14)
 
 ### ❌ Khadas VIM1S 01
 
@@ -356,7 +323,7 @@ xychart-beta
     line [3.60, 5.76, 8.46, 8.34, 7.10, 8.06, 8.20, 7.34, 7.14, 3.58, 3.76, 3.64, 4.08, 7.16, 7.88, 7.04, 6.90, 3.46, 1.78, 1.77, 1.76, 1.80, 1.80, 1.80, 1.74, 1.76, 1.70, 1.78, 1.76, 1.72, 1.80, 1.74, 1.76, 1.70, 1.76, 1.72, 1.80, 1.76, 1.76, 1.72]
 ```
 
-## ✅ Passed (53)
+## ✅ Passed (54)
 
 ### ✅ Arduino UNO Q 01
 
@@ -618,6 +585,39 @@ xychart-beta
 | store-versions | ✅ | 6.9 s | 26.11.0-trunk.66 · 7.2.8-edge-mvebu |
 | kernel-switch | ✅ | 107.6 s | branch=current · family=mvebu · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-6.18.54-current-mvebu · kernel_before=7.2.8-edge-mvebu |
 | reboot | ✅ | 44.1 s | warm · up 24 s |
+
+### ✅ Cubie A5E 01
+
+`radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.66` · 13 ✅ · 0 ❌ · 3 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 304.5 s | — |
+| reboot | ✅ | 77.1 s | power-cycle · up 32 s |
+| kernel-switch | ✅ | 168.9 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.66 · boot_image=? · kernel_before=6.18.54-current-sunxi64 |
+| reboot | ✅ | 105.9 s | power-cycle · 2/2 boots · up 31 s |
+| hw-performance | ✅ | 43.0 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 61.3 °C · None MHz |
+| dvfs | ➖ | 11.0 s | no cpufreq |
+| network-iperf | ✅ | 91.2 s | end0 ↑830/↓941 (1GE) · end1 ↑941/↓940 (1GE) · wlan0 ↑119/↓126 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 14.1 s | 26.11.0-trunk.66 · 6.18.54-current-sunxi64 |
+| kernel-switch | ✅ | 589.7 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.68 · boot_image=? · kernel_before=6.18.54-current-sunxi64 |
+| reboot | ✅ | 106.7 s | power-cycle · 2/2 boots · up 31 s |
+| hw-performance | ✅ | 43.4 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 65.5 °C · None MHz |
+| dvfs | ➖ | 3.0 s | no cpufreq |
+| network-iperf | ✅ | 91.9 s | end0 ↑819/↓941 (1GE) · end1 ↑941/↓941 (1GE) · wlan0 ↑120/↓128 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 6.3 s | 26.11.0-trunk.66 · 7.2.8-edge-sunxi64 |
+| kernel-switch | ✅ | 584.7 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.68 · boot_image=? · kernel_before=7.2.8-edge-sunxi64 |
+| reboot | ✅ | 67.7 s | power-cycle · up 32 s |
+
+**Power** — min 0.60 W · avg 3.81 W · peak 5.70 W · 1894 samples
+
+```mermaid
+xychart-beta
+    title "Power — Cubie A5E 01"
+    x-axis "sample" 1 --> 1894
+    y-axis "W" 0.5 --> 6.0
+    line [3.47, 3.59, 3.49, 3.65, 3.90, 3.45, 3.13, 3.48, 3.50, 3.37, 3.11, 3.48, 3.51, 3.57, 3.52, 3.58, 3.48, 4.04, 4.06, 4.83, 3.64, 4.86, 4.14, 3.54, 3.38, 3.42, 3.86, 3.82, 3.82, 3.82, 3.73, 4.09, 4.04, 5.43, 4.13, 4.83, 5.06, 3.87, 3.88, 3.01]
+```
 
 ### ✅ Cubietruck 01
 
