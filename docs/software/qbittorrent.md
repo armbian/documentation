@@ -25,6 +25,8 @@ The Qbittorrent⁠ project aims to provide an open-source software alternative t
 
 Install from **[armbian-config](/config/) → Software → Downloaders → qBittorrent**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://github.com/qbittorrent/qBittorrent/wiki/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd QBT001
 ~~~

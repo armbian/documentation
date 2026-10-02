@@ -25,6 +25,8 @@ The Armbian Router is an intelligent redirector system that optimizes file downl
 
 Install from **[armbian-config](/config/) → Software → Armbian → CDN router**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://forum.armbian.com/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd ART001
 ~~~

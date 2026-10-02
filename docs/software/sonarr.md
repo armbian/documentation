@@ -25,6 +25,8 @@ Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can moni
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Sonarr**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://wiki.servarr.com/sonarr).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd SON001
 ~~~

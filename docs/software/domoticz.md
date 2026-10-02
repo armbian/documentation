@@ -38,6 +38,8 @@ Domoticz is an open-source home automation platform that allows you to control a
 
 Install from **[armbian-config](/config/) → Software → Home Automation → Domoticz**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://wiki.domoticz.com).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd DOM001
 ~~~

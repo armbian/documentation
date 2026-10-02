@@ -25,6 +25,8 @@ Netdata is a partially open source tool designed to collect real-time metrics, s
 
 Install from **[armbian-config](/config/) → Software → Monitoring → Netdata**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://learn.netdata.cloud/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd NTD001
 ~~~

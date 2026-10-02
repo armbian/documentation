@@ -25,6 +25,8 @@ Sabnzbd⁠ makes Usenet as simple and streamlined as possible by automating ever
 
 Install from **[armbian-config](/config/) → Software → Downloaders → SABnzbd**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://sabnzbd.org/wiki/faq).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd SABN01
 ~~~

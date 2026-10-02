@@ -24,6 +24,8 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 
 Install from **[armbian-config](/config/) → Software → VPN → WireGuard**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.linuxserver.io/images/docker-wireguard/#server-mode).
+
 ~~~ custombash title="WireGuard VPN server"
 armbian-config --cmd WRG001
 ~~~

@@ -22,6 +22,8 @@ Install tools for cloning and managing repositories (git)
 
 Install from **[armbian-config](/config/) → Software → Dev Tools → Git CLI**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://git-scm.com/doc).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd GIT001
 ~~~

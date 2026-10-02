@@ -25,6 +25,8 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. It can mon
 
 Install from **[armbian-config](/config/) → Software → Downloaders → Lidarr**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://wiki.servarr.com/lidarr).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd LID001
 ~~~

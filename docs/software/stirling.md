@@ -25,6 +25,8 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 Install from **[armbian-config](/config/) → Software → Media → Stirling**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.stirlingpdf.com).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd STR001
 ~~~

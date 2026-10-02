@@ -22,6 +22,8 @@ avahi-daemon hostname broadcast via mDNS
 
 Install from **[armbian-config](/config/) → Software → Netconfig → avahi-daemon**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://netbox.readthedocs.io/en/stable/).
+
 ~~~ custombash title="avahi-daemon hostname broadcast via mDNS"
 armbian-config --cmd AVH001
 ~~~

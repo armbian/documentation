@@ -25,6 +25,8 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 Install from **[armbian-config](/config/) → Software → Media → Jellyfin**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://jellyfin.org/docs/general/quick-start/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd JMS001
 ~~~

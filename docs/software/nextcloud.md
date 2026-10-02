@@ -25,6 +25,8 @@ Nextcloud gives you access to all your files wherever you are. Where are your ph
 
 Install from **[armbian-config](/config/) → Software → Media → Nextcloud**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://nextcloud.com/support/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd NCT001
 ~~~

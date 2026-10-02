@@ -25,6 +25,8 @@ HedgeDoc is a powerful, locally hosted web-based collaborative Markdown editor. 
 
 Install from **[armbian-config](/config/) → Software → Web Hosting → HedgeDoc**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.hedgedoc.org/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd HDOC01
 ~~~

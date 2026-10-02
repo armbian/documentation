@@ -36,6 +36,8 @@ Official site: [https://filebrowser.org](https://filebrowser.org)
 
 Install from **[armbian-config](/config/) → Software → Media → Filebrowser**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://filebrowser.org/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd FIL001
 ~~~

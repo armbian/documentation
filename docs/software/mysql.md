@@ -25,6 +25,8 @@ MySQL is one of the world’s most widely used open-source database servers. Tru
 
 Install from **[armbian-config](/config/) → Software → Database → MySQL**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://hub.docker.com/_/mysql).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd MYSQL1
 ~~~

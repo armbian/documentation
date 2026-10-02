@@ -25,6 +25,8 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 Install from **[armbian-config](/config/) → Software → Containers → Portainer**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://docs.portainer.io/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd POR001
 ~~~

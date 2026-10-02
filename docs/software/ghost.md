@@ -25,6 +25,8 @@ Ghost is a powerful open-source publishing platform designed for professional pu
 
 Install from **[armbian-config](/config/) → Software → Web Hosting → Ghost**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://ghost.org/docs/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd GHOST1
 ~~~

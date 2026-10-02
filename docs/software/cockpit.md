@@ -40,6 +40,8 @@ Here’s a subset of tasks you can perform on each host running Cockpit
 
 Install from **[armbian-config](/config/) → Software → Management → Cockpit**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://cockpit-project.org/guide/latest/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd CPT001
 ~~~

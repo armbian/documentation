@@ -95,6 +95,8 @@ This Docker-based application runs as a lightweight web service, providing an in
 
 Install from **[armbian-config](/config/) → Software → Finance → Wallos**
 
+The app has no separate image. [Install an Armbian OS image first](/software/#how-to-install-an-app), then the app. For help with the app, [read its documentation](https://forum.armbian.com/).
+
 ~~~ custombash title="CLI install"
 armbian-config --cmd WAL001
 ~~~
