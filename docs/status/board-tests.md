@@ -755,26 +755,36 @@ xychart-beta
 
 ### ✅ Khadas VIM1 01
 
-`khadas-vim1` · **inplace** · image `26.11.0-trunk.66` · 16 ✅ · 0 ❌ · 0 ⏭️
+`khadas-vim1` · **inplace** · image `26.11.0-trunk.68` · 16 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 92.8 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.66 |
-| reboot | ✅ | 72.5 s | warm · up 56 s |
-| kernel-switch | ✅ | 46.0 s | branch=current · family=meson64 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=6.18.54-current-meson64 |
-| reboot | ✅ | 109.5 s | warm · 2/2 boots · up 35 s |
-| hw-performance | ✅ | 30.5 s | AES 654 · mem 3600 · disk W 19 / R 22 MB/s · 47 °C · 1512 MHz |
-| dvfs | ✅ | 22.6 s | ondemand · 500–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 72.3 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑40/↓15 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.9 s | 26.11.0-trunk.66 · 6.18.54-current-meson64 |
-| kernel-switch | ✅ | 171.3 s | branch=edge · family=meson64 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=6.18.54-current-meson64 |
-| reboot | ✅ | 102.0 s | warm · 2/2 boots · up 34 s |
-| hw-performance | ✅ | 30.4 s | AES 658 · mem 3600 · disk W 19 / R 22 MB/s · 48 °C · 1512 MHz |
-| dvfs | ✅ | 23.0 s | ondemand · 500–1512 MHz (peak 1512) |
-| network-iperf | ✅ | 63.4 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑39/↓37 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.0 s | 26.11.0-trunk.66 · 7.2.8-edge-meson64 |
-| kernel-switch | ✅ | 173.1 s | branch=current · family=meson64 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
-| reboot | ✅ | 51.2 s | warm · up 35 s |
+| upgrade | ✅ | 65.2 s | nightly · 26.11.0-trunk.68 → 26.11.0-trunk.68 |
+| reboot | ✅ | 81.5 s | power-cycle · up 40 s |
+| kernel-switch | ✅ | 45.8 s | branch=current · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 112.0 s | power-cycle · 2/2 boots · up 33 s |
+| hw-performance | ✅ | 30.8 s | AES 659 · mem 3600 · disk W 17 / R 22 MB/s · 52 °C · 1512 MHz |
+| dvfs | ✅ | 22.4 s | ondemand · 500–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 61.3 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑23/↓20 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.9 s | 26.11.0-trunk.68 · 6.18.54-current-meson64 |
+| kernel-switch | ✅ | 171.5 s | branch=edge · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-7.2.8-edge-meson64 · kernel_before=6.18.54-current-meson64 |
+| reboot | ✅ | 114.4 s | power-cycle · 2/2 boots · up 37 s |
+| hw-performance | ✅ | 31.4 s | AES 659 · mem 3600 · disk W 17 / R 22 MB/s · 52 °C · 1512 MHz |
+| dvfs | ✅ | 23.2 s | ondemand · 500–1512 MHz (peak 1512) |
+| network-iperf | ✅ | 64.0 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑24/↓20 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.1 s | 26.11.0-trunk.68 · 7.2.8-edge-meson64 |
+| kernel-switch | ✅ | 160.3 s | branch=current · family=meson64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-meson64 · kernel_before=7.2.8-edge-meson64 |
+| reboot | ✅ | 69.7 s | power-cycle · up 35 s |
+
+**Power** — min 1.10 W · avg 2.23 W · peak 3.50 W · 846 samples
+
+```mermaid
+xychart-beta
+    title "Power — Khadas VIM1 01"
+    x-axis "sample" 1 --> 846
+    y-axis "W" 1.0 --> 4.0
+    line [2.14, 2.28, 2.17, 1.90, 1.92, 3.03, 2.47, 2.37, 2.46, 2.21, 2.31, 2.39, 2.24, 2.01, 1.93, 2.16, 2.55, 2.01, 2.29, 2.39, 2.30, 2.20, 2.10, 1.86, 2.58, 1.76, 2.38, 2.10, 2.43, 1.98, 1.86, 2.13, 2.32, 2.45, 2.31, 2.41, 2.24, 2.13, 1.93, 2.36]
+```
 
 ### ✅ Khadas VIM2 01
 
