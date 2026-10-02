@@ -118,22 +118,22 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 698.8 s | nightly · 26.8.1 → 26.8.1 |
-| reboot | ✅ | 10.8 s | power-cycle |
-| kernel-switch | ✅ | 680.3 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=/boot/vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
-| reboot | ✅ | 43.3 s | power-cycle · 1/2 boots · up 22 s |
-| hw-performance | ✅ | 30.5 s | AES 817 · mem 6000 · disk W 21 / R 22 MB/s · 52.7 °C · 2016 MHz |
-| dvfs | ✅ | 24.3 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 37.4 s | wlan0 ↑67/↓72 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5.4 s | 26.8.1 · 6.1.115-vendor-rk35xx |
-| kernel-switch | ❌ | 29.8 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 40.9 s | power-cycle · 1/2 boots · up 18 s |
-| hw-performance | ✅ | 29.6 s | AES 817 · mem 6000 · disk W 21 / R 22 MB/s · 52 °C · 2016 MHz |
-| dvfs | ✅ | 22.4 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 37.1 s | wlan0 ↑215/↓270 (Wi-Fi 6) Mbps |
+| upgrade | ✅ | 698.0 s | nightly · 26.8.1 → 26.8.1 |
+| reboot | ✅ | 10.2 s | power-cycle |
+| kernel-switch | ✅ | 701.8 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=/boot/vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
+| reboot | ✅ | 53.9 s | power-cycle · 1/2 boots · up 24 s |
+| hw-performance | ✅ | 29.7 s | AES 816 · mem 5900 · disk W 20 / R 22 MB/s · 53.8 °C · 2016 MHz |
+| dvfs | ✅ | 23.4 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 36.6 s | wlan0 ↑215/↓273 (Wi-Fi 6) Mbps |
 | store-versions | ✅ | 5.2 s | 26.8.1 · 6.1.115-vendor-rk35xx |
+| kernel-switch | ❌ | 25.0 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 50.6 s | power-cycle · 1/2 boots · up 21 s |
+| hw-performance | ✅ | 30.1 s | AES 814 · mem 5900 · disk W 3 / R 22 MB/s · 52.7 °C · 2016 MHz |
+| dvfs | ✅ | 22.7 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 36.2 s | wlan0 ↑216/↓274 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.0 s | 26.8.1 · 6.1.115-vendor-rk35xx |
 | kernel-switch | ✅ | 704.2 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=/boot/vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
-| reboot | ✅ | 18.4 s | power-cycle |
+| reboot | ✅ | 10.2 s | power-cycle |
 
 ### ❌ Rock 5B 02
 
