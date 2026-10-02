@@ -15,12 +15,6 @@ Apps do not have their own images. Install Armbian first, then install the app o
 2. [Boot the board and log in](../getting-started/first-boot-and-login.md).
 3. Run `armbian-config`. Select **Software**, then the category, then the app.
 
-Each app page also shows a one-line install command, for example:
-
-```bash
-armbian-config --cmd EVCC01
-```
-
 For help with the app itself, read the app's own documentation. Each app page links to it.
 
 ## Overview
