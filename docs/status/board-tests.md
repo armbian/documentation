@@ -824,18 +824,28 @@ xychart-beta
 
 ### ✅ NanoPi Fire3 01
 
-`nanopifire3` · **inplace** · image `26.11.0-trunk.66` · 7 ✅ · 0 ❌ · 1 ⏭️
+`nanopifire3` · **inplace** · image `26.11.0-trunk.68` · 7 ✅ · 0 ❌ · 1 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 103.3 s | nightly · 26.11.0-trunk.66 → 26.11.0-trunk.66 |
-| reboot | ✅ | 64.8 s | power-cycle · up 24 s |
-| kernel-switch | ✅ | 77.3 s | branch=edge · family=s5p6818 · installed=26.11.0-trunk.66 · boot_image=/boot/vmlinuz-7.2.8-edge-s5p6818 · kernel_before=7.2.8-edge-s5p6818 |
-| reboot | ✅ | 103.0 s | power-cycle · 2/2 boots · up 26 s |
-| hw-performance | ✅ | 42.9 s | AES 374 · mem 2000 · disk W 1 / R 22 MB/s · 63 °C · None MHz |
+| upgrade | ✅ | 104.0 s | nightly · 26.11.0-trunk.68 → 26.11.0-trunk.68 |
+| reboot | ✅ | 72.9 s | power-cycle · up 31 s |
+| kernel-switch | ✅ | 70.3 s | branch=edge · family=s5p6818 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-7.2.8-edge-s5p6818 · kernel_before=7.2.8-edge-s5p6818 |
+| reboot | ✅ | 115.5 s | power-cycle · 2/2 boots · up 33 s |
+| hw-performance | ✅ | 43.6 s | AES 374 · mem 2000 · disk W 20 / R 22 MB/s · 63 °C · None MHz |
 | dvfs | ➖ | 2.9 s | no cpufreq |
-| network-iperf | ✅ | 61.7 s | eth0 ↑941/↓941 (1GE) Mbps |
-| store-versions | ✅ | 6.1 s | 26.11.0-trunk.66 · 7.2.8-edge-s5p6818 |
+| network-iperf | ✅ | 35.0 s | eth0 ↑94/↓94 (1GE) Mbps |
+| store-versions | ✅ | 6.2 s | 26.11.0-trunk.68 · 7.2.8-edge-s5p6818 |
+
+**Power** — min 1.90 W · avg 2.99 W · peak 4.00 W · 359 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPi Fire3 01"
+    x-axis "sample" 1 --> 359
+    y-axis "W" 1.5 --> 4.5
+    line [2.96, 3.04, 3.10, 3.26, 2.92, 2.94, 2.96, 3.04, 3.14, 2.92, 2.60, 2.92, 2.24, 2.83, 3.42, 3.24, 3.16, 3.14, 3.16, 2.80, 2.83, 2.87, 2.69, 2.92, 2.73, 2.94, 3.56, 3.02, 2.77, 3.09, 3.20, 3.59, 3.19, 3.22, 2.97, 2.71, 3.00, 2.87, 2.73, 2.84]
+```
 
 ### ✅ NanoPi K2 01
 
