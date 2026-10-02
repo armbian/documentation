@@ -552,16 +552,18 @@ xychart-beta
 
 ### ✅ BananaPi BPI-M4-Zero 01
 
-`bananapim4zero` · **inplace** · image `26.8.8` · 4 ✅ · 0 ❌ · 2 ⏭️
+`bananapim4zero` · **inplace** · image `26.8.8` · 8 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 0.0 s | — |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-performance | ✅ | 33.4 s | AES 660 · mem 3600 · disk W 15 / R 22 MB/s · 47.3 °C · 1416 MHz |
-| dvfs | ✅ | 21.6 s | ondemand · 480–1416 MHz (peak 1416) |
-| network-iperf | ✅ | 36.5 s | wlan0 ↑88/↓94 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.4 s | 26.8.8 · 6.18.54-current-sunxi64 |
+| upgrade | ✅ | 292.3 s | nightly · 26.8.8 → 26.11.0-trunk.68 |
+| reboot | ✅ | 76.4 s | power-cycle · up 25 s |
+| kernel-switch | ✅ | 50.2 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.68 · boot_image=/boot/vmlinuz-6.18.54-current-sunxi64 · kernel_before=6.18.54-current-sunxi64 |
+| reboot | ✅ | 108.8 s | power-cycle · 2/2 boots · up 25 s |
+| hw-performance | ✅ | 33.5 s | AES 660 · mem 3600 · disk W 12 / R 22 MB/s · 53.2 °C · 1416 MHz |
+| dvfs | ✅ | 29.4 s | ondemand · 480–1416 MHz (peak 1416) |
+| network-iperf | ✅ | 35.9 s | wlan0 ↑90/↓103 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.6 s | 26.11.0-trunk.68 · 6.18.54-current-sunxi64 |
 
 ### ✅ Clearfog Pro 01
 
