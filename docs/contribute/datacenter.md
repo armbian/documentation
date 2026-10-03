@@ -9,6 +9,10 @@ description: "Access the Armbian Datacenter hardware lab: request board-maintain
 ![Single-board computers powered and networked in the Armbian Datacenter rack](../images/datacenter-rack-1.jpg){ data-gallery="datacenter" loading=lazy }
 ![Side view of the lab rack: boards, SD-card switchers and USB serial consoles](../images/datacenter-rack-2.jpg){ data-gallery="datacenter" loading=lazy }
 ![Switching and server tier: managed switch, PDUs and build servers](../images/datacenter-rack-3.jpg){ data-gallery="datacenter" loading=lazy }
+![Full rack front: build server, HDMI KVM switch, boards and switches](../images/datacenter-rack-4.jpg){ data-gallery="datacenter" loading=lazy }
+![Rack side view: boards, SD-card flashers and a USB hub above the switch](../images/datacenter-rack-5.jpg){ data-gallery="datacenter" loading=lazy }
+![Boards shelf with the SD-card flasher bank and USB power hub](../images/datacenter-rack-6.jpg){ data-gallery="datacenter" loading=lazy }
+![Top-down view of the control wiring: relay boards and a Meanwell PSU](../images/datacenter-rack-7.jpg){ data-gallery="datacenter" loading=lazy }
 </div>
 
 Armbian runs a hardware lab — *the Datacenter* — a rack of real boards on real
