@@ -101,3 +101,29 @@ pre.custom-bash-block, code.custom-bash-block {
 .md-source__fact--version {
   display: none;
 }
+
+/* Compact photo gallery: a single horizontal strip of thumbnails that scrolls
+ * sideways when they don't fit, so any number of images stays on one row and
+ * each keeps its own aspect ratio. Used with mkdocs-glightbox, so a thumbnail
+ * opens the full image in a lightbox. A dedicated class (not Material's .grid,
+ * which reflows into multiple rows). */
+.gallery-row {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;        /* breathing room for the scrollbar */
+  margin: 1rem 0 1.5rem;
+  scroll-snap-type: x proximity;
+}
+.gallery-row img {
+  height: 150px;
+  width: auto;                   /* natural aspect ratio */
+  flex: 0 0 auto;                /* never shrink; overflow scrolls instead */
+  object-fit: cover;
+  border-radius: 0.2rem;
+  cursor: zoom-in;
+  scroll-snap-align: start;
+}
+@media screen and (max-width: 30rem) {
+  .gallery-row img { height: 110px; }
+}

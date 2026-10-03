@@ -5,6 +5,20 @@ description: "Access the Armbian Datacenter hardware lab: request board-maintain
 
 # Datacenter access
 
+<div class="gallery-row" markdown>
+![Single-board computers powered and networked in the Armbian Datacenter rack](../images/datacenter-rack-1.jpg){ data-gallery="datacenter" loading=lazy }
+![Side view of the lab rack: boards, SD-card switchers and USB serial consoles](../images/datacenter-rack-2.jpg){ data-gallery="datacenter" loading=lazy }
+![Switching and server tier: managed switch, PDUs and build servers](../images/datacenter-rack-3.jpg){ data-gallery="datacenter" loading=lazy }
+![Full rack front: build server, HDMI KVM switch, boards and switches](../images/datacenter-rack-4.jpg){ data-gallery="datacenter" loading=lazy }
+![Rack side view: boards, SD-card flashers and a USB hub above the switch](../images/datacenter-rack-5.jpg){ data-gallery="datacenter" loading=lazy }
+![Boards shelf with the SD-card flasher bank and USB power hub](../images/datacenter-rack-6.jpg){ data-gallery="datacenter" loading=lazy }
+![Top-down view of the control wiring: relay boards and a Meanwell PSU](../images/datacenter-rack-7.jpg){ data-gallery="datacenter" loading=lazy }
+![Close-up of labelled boards: Khadas VIM, ROCK 5T and BPI M2 Pro](../images/datacenter-rack-8.jpg){ data-gallery="datacenter" loading=lazy }
+![Bank of USB serial-console adapters on a powered hub](../images/datacenter-rack-9.jpg){ data-gallery="datacenter" loading=lazy }
+![NetBox console-server port map: each USB serial adapter to its board and TCP port](../images/datacenter-netbox-consoles.png){ data-gallery="datacenter" loading=lazy }
+![NetBox device interfaces: a board's wired, Wi-Fi and switch-port connections](../images/datacenter-netbox-interfaces.png){ data-gallery="datacenter" loading=lazy }
+</div>
+
 Armbian runs a hardware lab — *the Datacenter* — a rack of real boards on real
 networks that our CI flashes, powers, boots, tests and measures automatically.
 Board maintainers can reach these boards remotely to debug problems, reproduce
