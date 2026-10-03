@@ -72,7 +72,11 @@ theme:
         - navigation.top
 
 extra_css:
-  - css/armbian-extra.css
+  # ?v= cache-buster: MkDocs Material does not fingerprint extra_css, so the
+  # file keeps the same URL across deploys and the browser/CDN serves the cached
+  # copy after a change. Bump this number whenever armbian-extra.css changes to
+  # force every client to fetch the new stylesheet.
+  - css/armbian-extra.css?v=2
 
 extra:
   analytics:
