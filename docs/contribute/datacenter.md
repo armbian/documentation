@@ -50,7 +50,7 @@ remote control as the hardware allows, and the automated runs use all of it.
   throughout the run, so the result carries idle and peak wattage alongside
   everything else.
 - **Serial console server.** Many boards have their UART wired to a console
-  server and reachable over the network; the lab has 32 console ports, so
+  server and reachable over the network; the lab has a 48-port console server, so
   coverage is broad but not complete. Runs record the entire boot — U-Boot,
   kernel, and any panic — which is the only view left when a board never reaches
   the network at all. Maintainers can attach to the same console interactively.
