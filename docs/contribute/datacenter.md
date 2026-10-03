@@ -15,6 +15,7 @@ description: "Access the Armbian Datacenter hardware lab: request board-maintain
 ![Top-down view of the control wiring: relay boards and a Meanwell PSU](../images/datacenter-rack-7.jpg){ data-gallery="datacenter" loading=lazy }
 ![Close-up of labelled boards: Khadas VIM, ROCK 5T and BPI M2 Pro](../images/datacenter-rack-8.jpg){ data-gallery="datacenter" loading=lazy }
 ![Bank of USB serial-console adapters on a powered hub](../images/datacenter-rack-9.jpg){ data-gallery="datacenter" loading=lazy }
+![NetBox console-server port map: each USB serial adapter to its board and TCP port](../images/datacenter-netbox-consoles.png){ data-gallery="datacenter" loading=lazy }
 </div>
 
 Armbian runs a hardware lab — *the Datacenter* — a rack of real boards on real
