@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**18** servers · **774** threads · **2371** GB RAM · **321** runners (**170** online).
+**18** servers (**2** offline) · **774** threads (**750** active) · **2371** GB RAM · **321** runners (**178** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -38,10 +38,10 @@ runner processes each server hosts (from the
 | `cats` | Auroradev Las Vegas | 16 | 32 GB | 6 | active |
 | `oregon-1` | University of Oregon | 16 | 32 GB | 8 | active |
 | `oregon-2` | University of Oregon | 16 | 32 GB | 8 | active |
-| `stmir` | Armbian St. Petersburg | 16 | 94 GB | 12 | active |
+| `stmir` | Armbian St. Petersburg | 16 | 94 GB | 12 | ⚠️ decommissioning |
 | `vps3000-1` | Netcup Germany | 12 | 24 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
 | `werner-trixie` | Hetzner Nuremberg | 8 | 31 GB | 4 | active |
-| `xogium-ryzen` | Armbian France | 8 | 8 GB | 4 | active |
+| `xogium-ryzen` | Armbian France | 8 | 8 GB | 4 | ⚠️ decommissioning |
 
 <!-- build-machinery:end -->
