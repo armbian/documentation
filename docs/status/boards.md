@@ -13,20 +13,20 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**68** boards — **61** operational, **7** broken.
+**67** boards — **62** operational, **5** broken.
 
-Reconcile made: 2026-10-04 17:07 UTC
+Reconcile made: 2026-10-05 09:52 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 1 GbE | TP-Link SG3218XP-M2 (10) |
-| Banana Pi R2 01 | 10.0.50.14 | local | 1 GbE | Netgear S3300 (27) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | — | — |
@@ -36,11 +36,11 @@ Reconcile made: 2026-10-04 17:07 UTC
 | Cubox i2eX/i4 01 | 10.0.50.81 | local | 100 MbE | Aruba 2540 (43) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
-| Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | Khadas Edge2 01 | 10.0.50.121 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Khadas VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
+| Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
@@ -58,6 +58,7 @@ Reconcile made: 2026-10-04 17:07 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
+| Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 1 GbE | Netgear S3300 (20) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
@@ -87,11 +88,9 @@ Reconcile made: 2026-10-04 17:07 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
-| Orange Pi 5 01 | 10.0.50.27 | local | 1 GbE | Netgear S3300 (23) |
 | Orange Pi Prime 01 | 10.0.50.36 | local | 1 GbE | Aruba 2540 (35) |
-| Raspberry Pi 04 | 10.0.50.60 | local | 1 GbE | Aruba 2540 (29) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
