@@ -21,7 +21,7 @@ runner processes each server hosts (from the
 <!-- build-machinery:start -->
 ## Build servers
 
-**18** servers (**2** offline) · **774** threads (**750** active) · **2371** GB RAM · **321** runners (**178** online).
+**18** servers (**1** offline) · **774** threads (**758** active) · **2371** GB RAM · **321** runners (**177** online).
 
 | Server | Location | Threads | RAM | Runners | Status |
 |:-------|:---------|--------:|----:|--------:|:------:|
@@ -42,6 +42,6 @@ runner processes each server hosts (from the
 | `vps3000-1` | Netcup Germany | 12 | 24 GB | 8 | active |
 | `repoassembly` | Netcup Germany | 10 | 16 GB | 26 | active |
 | `werner-trixie` | Hetzner Nuremberg | 8 | 31 GB | 4 | active |
-| `xogium-ryzen` | Armbian France | 8 | 8 GB | 4 | ⚠️ decommissioning |
+| `xogium-ryzen` | Armbian France | 8 | 8 GB | 4 | active |
 
 <!-- build-machinery:end -->
