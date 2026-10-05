@@ -38,8 +38,10 @@ If Avahi is not available or not desirable, the server URL must be provided
 explicitly via `CCACHE_REMOTE_STORAGE`, or for remote servers via
 `CCACHE_REMOTE_DOMAIN` (DNS SRV). See [Parameters](#parameters) below.
 
-The extension automatically enables `USE_CCACHE=yes` and handles all ccache
-configuration including Docker pass-through.
+The extension automatically enables the
+[`ccache`](../switches/performance.md#ccache) extension, sets
+`PRIVATE_CCACHE=yes` and handles all ccache configuration including Docker
+pass-through.
 
 ## Quick start
 

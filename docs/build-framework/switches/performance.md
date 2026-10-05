@@ -13,14 +13,19 @@ Switches that trade disk, RAM or cache for faster builds.
 
 Sets the `make -j` parallelism used for every compilation stage — kernel, U-Boot, ATF, crust and friends. When left undefined the framework auto-picks 150% of the detected CPU count (`nproc + nproc/2`) so that cores stay busy even while some jobs stall on I/O. Set it to a valid positive integer to override that, for example to cap the load on a shared build server or to avoid the peak memory of an oversubscribed link stage. The value is also forwarded into the build container, so it applies to Docker builds as well.
 
-#### USE_CCACHE
+#### ccache
 
-`string`
-
-- `yes`
-- `no` (default)
+`extension` · enable with `ENABLE_EXTENSIONS=ccache` on the command line, or `enable_extension "ccache"` in a userpatches config file (e.g. `userpatches/config-my.conf`)
 
 Wraps the compiler in `ccache` so unchanged translation units are served from a cache instead of recompiled, putting `/usr/lib/ccache` first on `PATH`. Off by default because the framework already caches whole kernel and U-Boot artifacts through git-worktree, which usually saves more than object-level caching would; on a cold cache the extra bookkeeping can actually make a clean build slower. Turn it on only if you repeatedly recompile the same source tree with small local changes and want ccache to short-circuit the unchanged files.
+
+ccache is one of the compile-cache backends, and only one backend can be enabled at a time. The [`ccache-remote`](../extensions/ccache-remote.md) extension enables it automatically. `SHOW_CCACHE=yes` prints the ccache configuration, statistics and cache size change around each compile.
+
+#### USE_CCACHE
+
+`string` · deprecated
+
+No longer has any effect. Enable the [`ccache`](#ccache) extension instead: replace `USE_CCACHE=yes` in a userpatches config file with `enable_extension "ccache"`, and on the command line with `ENABLE_EXTENSIONS=ccache`. A build that sets `USE_CCACHE=yes` without the extension prints a warning and compiles without ccache.
 
 #### PRIVATE_CCACHE
 
@@ -29,13 +34,18 @@ Wraps the compiler in `ccache` so unchanged translation units are served from a 
 - `yes`
 - `no` (default)
 
-Points ccache at a private cache directory inside the build tree rather than the shared one, which avoids the file-ownership problems that arise when the build is run under `sudo`. Because a private cache only makes sense with caching active, setting `yes` implicitly enables `USE_CCACHE` too, so you do not have to set both. Reach for it when you want ccache but are building as root and do not want to share the cache with other users on the host.
+Takes effect only with the [`ccache`](#ccache) extension enabled; on its own the build ignores it and prints a warning. It changes two things:
+
+- **Cache directory.** With `yes`, the cache lives in the build tree, `$SRC/cache/ccache`, unless `CCACHE_DIR` is set. With `no`, a native build uses ccache's own default, `~/.cache/ccache` of the user the build runs as.
+- **Permissions.** With `no`, the extension sets `CCACHE_UMASK=000`, so the cache is writable by every user on the host and they can share it. With `yes`, it leaves the umask to ccache.
+
+Docker builds always keep the cache in `$SRC/cache/ccache`, so there the switch only changes the permissions. Use `yes` when the build runs as root through `sudo`: the cache then stays in the build tree instead of a home directory. The `ccache-remote` extension sets it to `yes`, so native and Docker builds use the same cache directory.
 
 #### CCACHE_DIR
 
 `string` · default: `$SRC/cache/ccache` for Docker and `PRIVATE_CCACHE=yes` builds
 
-Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from `CCACHE_TEMPDIR`, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away. The framework only sets this path for Docker builds and when `PRIVATE_CCACHE=yes`; a native `USE_CCACHE=yes` build without `PRIVATE_CCACHE` uses ccache's own default (`~/.cache/ccache`) unless you set `CCACHE_DIR` yourself.
+Location of the persistent ccache store, honoured by the kernel and U-Boot compile steps when ccache is active. It is distinct from `CCACHE_TEMPDIR`, which holds only transient files and lives under the working directory (often on tmpfs). Point it at a stable, roomy path — a location outside the build tree, or a shared volume in CI — so the cache survives between builds and across worktree resets instead of being thrown away. The framework only sets this path for Docker builds and when `PRIVATE_CCACHE=yes`; a native ccache build without `PRIVATE_CCACHE` uses ccache's own default (`~/.cache/ccache`) unless you set `CCACHE_DIR` yourself.
 
 #### USE_TMPFS
 
