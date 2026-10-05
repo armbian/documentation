@@ -39,6 +39,13 @@ Extensions can modify:
   - Remove: remove entry from array or unset the key in artifact_version_parts
   Keys starting with "_" are not included in output (only value is used).
 
+### `atf_make_config`
+> *Hook to customize the ATF (TF-A) build environment*
+
+Called before the compiler checks and make for ATF. make inherits the
+build environment: export or unset variables to change it, or set
+CCACHE / ATF_COMPILER, from which CC and CROSS_COMPILE are built.
+
 ### `btrfs_root_add_subvolumes`
 > custom post-btrfs-rootfs-creation hook
 
@@ -99,11 +106,47 @@ This is called once for *each* produced u-boot binary file, before packaging the
 You can use this to analyze the produced binary for correctness, or to extract some information from it.
 You can use the variable binfile to access the full path to the binary file, and base_binfile to access just the filename.
 
+### `compile_prepare_vars`
+> *compile-cache env setup hook for ccache / sccache / similar backends*
+
+Called once from main_default_start_build, after all extension
+prepare_config hooks have run and before kernel/u-boot/ATF/Crust
+make invocations begin. Implementations export the env vars their
+backend needs (CCACHE, CCACHE_DIR, CCACHE_UMASK, SCCACHE_DIR, …)
+so later array-building code captures them, and tweak PATH if a
+wrapper prefix directory is needed. A backend appends its name to
+COMPILE_CACHE_BACKENDS; enabling more than one backend is an error.
+
+### `compile_wrapper_post`
+> *post-compilation hook for cache wrappers and similar*
+
+Called once after the wrapped compilation command completes (success
+or failure) or is interrupted. Implementations may display stats,
+flush a remote cache write buffer, shut down a helper server, etc.
+
+### `compile_wrapper_pre`
+> *pre-compilation hook for cache wrappers (ccache, sccache, …) and similar backend-agnostic setup*
+
+Called once right before the wrapped compilation command runs.
+Implementations may zero stats counters, start a long-lived helper
+process, validate that a remote backend is reachable, etc.
+The matching compile_wrapper_post hook is guaranteed to fire even
+if a later pre hook fails or the build is interrupted, so cleanup
+of resources started here is safe to rely on.
+
 ### `create_partition_table`
 > *only called when USE_HOOK_FOR_PARTITION=yes to create the complete partition table*
 
 Finally, we can get our own partition table. You have to partition ${SDCARD}.raw
 yourself. Good luck.
+
+### `crust_make_config`
+> *Hook to customize the Crust build environment*
+
+Called before the compiler checks and make for Crust (defconfig, then
+the target). make inherits the build environment: export or unset
+variables to change it, or set CCACHE / CRUST_COMPILER, from which
+CROSS_COMPILE is built.
 
 ### `custom_apt_repo`
 > *customize apt sources.list.d and/or deploy repo keys*
@@ -505,5 +548,3 @@ Available array to modify:
 > *Invoke function with user override*
 
 Allows for overriding configuration values set anywhere else.
-It is called after sourcing the `lib.config` file if it exists,
-but before assembling any package lists.

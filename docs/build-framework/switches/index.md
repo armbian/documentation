@@ -45,3 +45,11 @@ Prefer the current name for new configurations. This backward-compatible aliasin
 
 !!! note "For maintainers: registering a rename"
     Rename a switch by adding one line to the `DEPRECATED_SWITCH_ALIASES` map in [`lib/functions/general/deprecations.sh`](https://github.com/armbian/build/blob/main/lib/functions/general/deprecations.sh), mapping the old name to the new one (`[OLD_NAME]="NEW_NAME"`). Nothing else has to change — consumers can move to the new name later.
+
+### Retired switches
+
+These switches no longer have any effect. Their value is not forwarded anywhere; the build prints a warning that names the replacement.
+
+| Switch | Use instead |
+|---|---|
+| [`USE_CCACHE`](performance.md#use_ccache) | `ENABLE_EXTENSIONS=ccache` on the command line, or `enable_extension "ccache"` in a userpatches config file — see [ccache](performance.md#ccache) |
