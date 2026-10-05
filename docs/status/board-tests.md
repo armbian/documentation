@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **56** passed, **12** failed. Most recent test of every board; failures first.
+**68** boards — **55** passed, **13** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (13)
 
 ### ❌ BananaPi BPI-F3 01
 
@@ -24,20 +24,20 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | upgrade | ❌ | 75.3 s | nightly · ? → ? |
-| reboot | ✅ | 56.2 s | power-cycle · up 18 s |
-| hw-performance | ✅ | 25.1 s | AES 26 · mem 3000 · disk W 67 / R 82 MB/s · 52 °C · 1600 MHz |
-| dvfs | ✅ | 23.9 s | performance · 614–1600 MHz (peak 1600) |
-| network-iperf | ✅ | 99.8 s | eth0 ↑941/↓941 (1GE) · wlan0 ↑278/↓324 (Wi-Fi 6) · wlan1 ↑273/↓243 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5.5 s | 6.18.55-current-spacemit |
+| reboot | ✅ | 56.5 s | power-cycle · up 18 s |
+| hw-performance | ✅ | 25.2 s | AES 27 · mem 3100 · disk W 66 / R 77 MB/s · 50 °C · 1600 MHz |
+| dvfs | ✅ | 24.0 s | performance · 614–1600 MHz (peak 1600) |
+| network-iperf | ✅ | 90.2 s | eth0 ↑866/↓866 (1GE) · wlan0 ↑261/↓31 (Wi-Fi 6) · wlan1 ↑75/↓79 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.3 s | 6.18.55-current-spacemit |
 
-**Power** — min 3.60 W · avg 5.37 W · peak 7.90 W · 219 samples
+**Power** — min 2.90 W · avg 5.17 W · peak 7.90 W · 227 samples
 
 ```mermaid
 xychart-beta
     title "Power — BananaPi BPI-F3 01"
-    x-axis "sample" 1 --> 219
-    y-axis "W" 3.5 --> 8.0
-    line [4.70, 5.24, 5.25, 5.10, 5.17, 5.10, 5.10, 5.02, 5.17, 5.18, 5.10, 5.10, 4.70, 4.70, 4.33, 3.60, 4.60, 5.96, 5.43, 5.40, 5.02, 5.30, 7.34, 6.97, 5.26, 5.30, 4.86, 5.37, 5.30, 5.63, 5.70, 5.87, 7.04, 6.02, 5.62, 5.03, 6.08, 5.95, 5.66, 5.47]
+    x-axis "sample" 1 --> 227
+    y-axis "W" 2.5 --> 8.0
+    line [4.70, 4.83, 4.97, 5.40, 5.17, 5.10, 5.00, 5.00, 4.80, 5.08, 5.05, 5.05, 5.40, 5.03, 4.80, 4.74, 3.03, 3.78, 4.88, 5.53, 5.15, 5.24, 5.33, 5.93, 7.86, 5.32, 4.93, 4.90, 5.05, 5.40, 5.60, 5.25, 6.62, 6.06, 4.73, 5.20, 5.92, 5.50, 4.90, 5.13]
 ```
 
 ### ❌ Khadas VIM1S 01
@@ -228,6 +228,29 @@ xychart-beta
     line [5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.30, 5.30, 5.30, 5.30, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.30, 5.30, 5.30, 5.30, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40]
 ```
 
+### ❌ Rock 5T 01
+
+`rock-5t` · **inplace** · image `26.11.0-trunk.72` · 1 ✅ · 1 ❌ · 14 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 31.9 s | nightly · 26.11.0-trunk.72 → 26.11.0-trunk.72 |
+| reboot | ❌ | 37.1 s | power-cycle |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+
 ### ❌ SpacemiT MusePi Pro 01
 
 `musepipro` · **inplace** · image `26.11.0-trunk.72` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -246,7 +269,7 @@ xychart-beta
     line [2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.50, 2.50, 2.50, 2.50, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60]
 ```
 
-## ✅ Passed (56)
+## ✅ Passed (55)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1537,29 +1560,6 @@ xychart-beta
     y-axis "W" 0.5 --> 12.0
     line [3.92, 3.81, 3.10, 2.71, 3.34, 3.58, 2.78, 2.70, 2.88, 3.30, 2.71, 3.40, 4.77, 3.94, 3.21, 3.75, 3.53, 5.76, 5.11, 5.18, 5.54, 5.17, 5.52, 7.08, 5.86, 5.85, 5.92, 5.39, 5.20, 4.54, 5.12, 5.20, 5.53, 6.67, 5.70, 5.91, 6.04, 3.71, 2.82, 2.81]
 ```
-
-### ✅ Rock 5T 01
-
-`rock-5t` · **inplace** · image `26.11.0-trunk.72` · 16 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 41.4 s | nightly · 26.11.0-trunk.72 → 26.11.0-trunk.72 |
-| reboot | ✅ | 44.2 s | warm · up 19 s |
-| kernel-switch | ✅ | 23.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ✅ | 70.3 s | warm · 2/2 boots · up 17 s |
-| hw-performance | ✅ | 18.3 s | AES 1248 · mem 10000 · disk W 52 / R 80 MB/s · 62.8 °C · 1800 MHz |
-| dvfs | ✅ | 15.2 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 101.1 s | enP3p49s0 ↑2335/↓2322 (2.5GE) · enP4p65s0 ↑2348/↓2354 (2.5GE) · wlP2p33s0 ↑681/↓264 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 4.1 s | 26.11.0-trunk.72 · 6.18.55-current-rockchip64 |
-| kernel-switch | ✅ | 81.5 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-7.2.9-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ✅ | 73.0 s | warm · 2/2 boots · up 18 s |
-| hw-performance | ✅ | 18.2 s | AES 1206 · mem 7700 · disk W 50 / R 82 MB/s · 64.7 °C · 1800 MHz |
-| dvfs | ✅ | 15.6 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 81.1 s | end0 ↑2351/↓2353 · end1 ↑2348/↓2256 · wlP2p33s0 ↑108/↓99 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 4.1 s | 26.11.0-trunk.72 · 7.2.9-edge-rockchip64 |
-| kernel-switch | ✅ | 81.6 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=7.2.9-edge-rockchip64 |
-| reboot | ✅ | 47.3 s | warm · up 20 s |
 
 ### ✅ Rockpi E 01
 
