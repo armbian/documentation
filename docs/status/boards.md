@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**67** boards — **62** operational, **5** broken.
+**67** boards — **60** operational, **7** broken.
 
-Reconcile made: 2026-10-05 09:52 UTC
+Reconcile made: 2026-10-05 15:55 UTC
 
 **Operational**
 
@@ -46,12 +46,9 @@ Reconcile made: 2026-10-05 09:52 UTC
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
-| NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (14) |
-| NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
-| NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Aruba 2540 (41) |
-| NanoPi R76S 01 | 10.0.50.20 | local | 1 GbE | Aruba 2540 (31) |
+| NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | Aruba 2540 (49) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | Aruba 2540 (39) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
@@ -73,7 +70,7 @@ Reconcile made: 2026-10-05 09:52 UTC
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 01 | 10.0.50.53 | local | 1 GbE | Netgear S3300 (18) |
 | Rock 5B 02 | 10.0.50.32 | local | 1 GbE | Netgear S3300 (19) |
-| Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (22) |
+| Rock 5B Plus 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (37) |
 | Rock 5T 01 | 10.0.50.29 | local | 1 GbE | Netgear S3300 (21) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
@@ -82,7 +79,8 @@ Reconcile made: 2026-10-05 09:52 UTC
 | SpacemiT MusePi Pro 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Udoo 01 | 10.0.50.25 | local | 1 GbE | Netgear S3300 (44) |
-| UEFI x86 01 | 10.0.50.40 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
+| UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
 
 **Broken**
 
@@ -90,8 +88,10 @@ Reconcile made: 2026-10-05 09:52 UTC
 |:--|:--|:--|--:|:--|
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
+| NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Aruba 2540 (14) |
+| NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
+| NanoPi R6S 01 | 10.0.50.35 | local | 1 GbE | Netgear XS508M (1) |
 | Orange Pi Prime 01 | 10.0.50.36 | local | 1 GbE | Aruba 2540 (35) |
-| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
 <!-- BOARDS-STOP -->
