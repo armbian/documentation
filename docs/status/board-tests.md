@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **55** passed, **13** failed. Most recent test of every board; failures first.
+**68** boards — **56** passed, **12** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (13)
+## ❌ Failed (12)
 
 ### ❌ BananaPi BPI-F3 01
 
@@ -228,29 +228,6 @@ xychart-beta
     line [5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.30, 5.30, 5.30, 5.30, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40, 5.30, 5.30, 5.30, 5.30, 5.40, 5.40, 5.40, 5.40, 5.40, 5.40]
 ```
 
-### ❌ Rock 5T 01
-
-`rock-5t` · **inplace** · image `26.11.0-trunk.72` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 31.9 s | nightly · 26.11.0-trunk.72 → 26.11.0-trunk.72 |
-| reboot | ❌ | 37.1 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-
 ### ❌ SpacemiT MusePi Pro 01
 
 `musepipro` · **inplace** · image `26.11.0-trunk.72` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -269,7 +246,7 @@ xychart-beta
     line [2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.50, 2.50, 2.50, 2.50, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60, 2.60]
 ```
 
-## ✅ Passed (55)
+## ✅ Passed (56)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1559,6 +1536,39 @@ xychart-beta
     x-axis "sample" 1 --> 1214
     y-axis "W" 0.5 --> 12.0
     line [3.92, 3.81, 3.10, 2.71, 3.34, 3.58, 2.78, 2.70, 2.88, 3.30, 2.71, 3.40, 4.77, 3.94, 3.21, 3.75, 3.53, 5.76, 5.11, 5.18, 5.54, 5.17, 5.52, 7.08, 5.86, 5.85, 5.92, 5.39, 5.20, 4.54, 5.12, 5.20, 5.53, 6.67, 5.70, 5.91, 6.04, 3.71, 2.82, 2.81]
+```
+
+### ✅ Rock 5T 01
+
+`rock-5t` · **inplace** · image `26.11.0-trunk.72` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 33.3 s | nightly · 26.11.0-trunk.72 → 26.11.0-trunk.72 |
+| reboot | ✅ | 56.9 s | power-cycle · up 21 s |
+| kernel-switch | ✅ | 22.5 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 85.4 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 18.2 s | AES 1257 · mem 10000 · disk W 49 / R 85 MB/s · 57.3 °C · 1800 MHz |
+| dvfs | ✅ | 16.5 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 78.3 s | enP3p49s0 ↑2353/↓2285 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑672/↓256 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.0 s | 26.11.0-trunk.72 · 6.18.55-current-rockchip64 |
+| kernel-switch | ✅ | 86.7 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-7.2.9-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 85.6 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 18.9 s | AES 1255 · mem 8000 · disk W 47 / R 73 MB/s · 60.1 °C · 1800 MHz |
+| dvfs | ✅ | 16.0 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 79.5 s | end0 ↑2353/↓2354 · end1 ↑2353/↓2125 · wlP2p33s0 ↑669/↓233 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 4.3 s | 26.11.0-trunk.72 · 7.2.9-edge-rockchip64 |
+| kernel-switch | ✅ | 83.8 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.72 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=7.2.9-edge-rockchip64 |
+| reboot | ✅ | 57.6 s | power-cycle · up 22 s |
+
+**Power** — min 1.80 W · avg 7.85 W · peak 14.70 W · 517 samples
+
+```mermaid
+xychart-beta
+    title "Power — Rock 5T 01"
+    x-axis "sample" 1 --> 517
+    y-axis "W" 1.5 --> 15.0
+    line [7.95, 8.73, 8.35, 4.19, 6.66, 8.50, 7.45, 6.22, 6.29, 3.65, 8.57, 8.74, 10.22, 8.78, 8.60, 9.11, 8.65, 8.30, 8.64, 8.28, 8.78, 8.78, 5.21, 8.63, 3.93, 6.75, 8.38, 10.72, 8.32, 8.56, 9.01, 9.36, 8.23, 8.42, 8.74, 8.53, 8.93, 8.14, 3.16, 7.75]
 ```
 
 ### ✅ Rockpi E 01
