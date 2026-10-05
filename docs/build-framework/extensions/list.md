@@ -48,7 +48,7 @@ Preinstalls OpenMediaVault (OMV), the NAS web management platform, into the imag
 
 ## arm64-compat-vdso
 
-Builds the arm64 kernel with `CONFIG_COMPAT`, `CONFIG_COMPAT_VDSO` and `CONFIG_ARM64_32BIT_EL0`, letting a host on this kernel run armhf userspace natively at full speed. This lets armhf rootfs/chroot steps build native instead of through `qemu-user-static` (~10× faster); the framework auto-detects it via `PREFER_NATIVE_ARMHF`. Needs a 32-bit ARM cross-compiler for GCC builds.
+Builds the arm64 kernel with `CONFIG_COMPAT` and `CONFIG_COMPAT_VDSO`, letting a host on this kernel run armhf userspace natively at full speed. This lets armhf rootfs/chroot steps build native instead of through `qemu-user-static` (~10× faster); the framework auto-detects it via `PREFER_NATIVE_ARMHF`. Needs a 32-bit ARM cross-compiler for GCC builds.
 
 ## armbian-config
 
@@ -80,7 +80,7 @@ Adds a C++ compiler to the host build dependencies, no longer included by defaul
 
 ## ccache-remote
 
-Enables ccache with a remote Redis or HTTP/WebDAV backend so the compilation cache is shared across build hosts, and forces `USE_CCACHE=yes`. Set `CCACHE_REMOTE_STORAGE` explicitly, or let it auto-discover a server via DNS-SD/Avahi, DNS SRV (`CCACHE_REMOTE_DOMAIN`) or legacy `ccache.local`. Requires ccache 4.4+ and identical project paths on every host.
+Enables ccache with a remote Redis or HTTP/WebDAV backend so the compilation cache is shared across build hosts, and enables the `ccache` extension it builds on. Set `CCACHE_REMOTE_STORAGE` explicitly, or let it auto-discover a server via DNS-SD/Avahi, DNS SRV (`CCACHE_REMOTE_DOMAIN`) or legacy `ccache.local`. Requires ccache 4.4+ and identical project paths on every host.
 
 See: [ccache-remote extension](/build-framework/extensions/ccache-remote/)
 
@@ -146,7 +146,7 @@ A superset of the `grub` extension that boots via DeviceTree instead of ACPI, fo
 
 ## gxlimg
 
-Builds the `gxlimg` host tool for packaging Amlogic bootable images. Fetches `repk/gxlimg` at a pinned commit, compiles it and installs to `/usr/local/bin/gxlimg` (only when the commit changed). Provides `gxlimg_repack_fip_with_new_uboot`, which extracts BL2/BL3x from an existing FIP and repacks them with a fresh `u-boot.bin` for `gxl`/`g12a`/`g12b` SoCs.
+Builds the `gxlimg` host tool for packaging Amlogic bootable images. Fetches `repk/gxlimg` at a pinned commit, compiles it. Provides `gxlimg_repack_fip_with_new_uboot`, which extracts BL2/BL3x from an existing FIP and repacks them with a fresh `u-boot.bin` for `gxl`/`g12a`/`g12b` SoCs.
 
 ## image-output-abl
 
@@ -191,6 +191,10 @@ Converts the qcow2 from `image-output-qcow2` into a dynamic Microsoft Hyper-V VH
 ## initramfs-usb-gadget-ums
 
 An early initramfs `init-premount` script turns the board into a USB Mass Storage gadget. When `ums=yes` is on the kernel command line it exposes all block devices over USB and loops forever instead of booting. A host can then flash the eMMC/SD/NVMe with BalenaEtcher or similar.
+
+## interactive-shell
+
+Opens an interactive root shell inside the image rootfs during the build, after all other customization. The build continues when the shell exits. Cross-architecture builds run the shell through qemu-user. Needs a terminal; the build stops with an error without one.
 
 ## jethub-burn
 
@@ -325,6 +329,10 @@ Enables Btrfs filesystem support in U-Boot by running `scripts/config --enable C
 ## uboot-fix-pylibfdt-swig
 
 Fixes old U-Boot's `pylibfdt` failing to build against SWIG >= 4.3 (Debian trixie), which gave `SWIG_Python_AppendOutput()` a third argument. Rewrites the 2-arg calls to the version-agnostic `SWIG_AppendOutput()` macro in `libfdt.i`/`libfdt_wrap.c` under both pylibfdt paths. A safe no-op when the old call is absent; companion to `uboot-binman-fix-pkg-resources`.
+
+## uboot-mainline-mmc-env-storage
+
+Gives SPI-less boards a persistent mainline U-Boot environment on the eMMC/SD card, plus a working
 
 ## uefi-edk2-rk3588
 
