@@ -13,22 +13,21 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**67** boards — **63** operational, **4** broken.
+**67** boards — **58** operational, **9** broken.
 
-Reconcile made: 2026-10-06 09:19 UTC
+Reconcile made: 2026-10-06 11:02 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Banana Pi CM4IO 01 | 10.0.50.51 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
 | Banana Pi M7 01 | 10.0.50.12 | local | 2.5 GbE | Netgear XS508M (4) |
 | Banana Pi R2 01 | 10.0.50.14 | local | 1 GbE | Netgear S3300 (27) |
-| Banana Pi R3 Mini 01 | 10.0.50.42 | local | 1 GbE | Aruba 2540 (45) |
+| Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | — | — |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
@@ -47,7 +46,7 @@ Reconcile made: 2026-10-06 09:19 UTC
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
-| NanoPi M5 01 | 10.0.50.54 | local | 1 GbE | Netgear S3300 (21) |
+| NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (21) |
 | NanoPi M6 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (9) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
@@ -61,21 +60,17 @@ Reconcile made: 2026-10-06 09:19 UTC
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
-| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
-| OrangePi 3 LTS 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.29 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
-| Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
 | SpacemiT MusePi Pro 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (10) |
@@ -89,9 +84,14 @@ Reconcile made: 2026-10-06 09:19 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Banana Pi CM4IO 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (41) |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Odroid XU4 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (23) |
-| Orange Pi Prime 01 | 10.0.50.36 | local | 1 GbE | Aruba 2540 (35) |
+| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
+| Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
+| OrangePi 3 LTS 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (32) |
+| ROCK 2F 01 | 10.0.20.164 | local | — | — |
+| Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 
 <!-- BOARDS-STOP -->
