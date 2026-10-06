@@ -37,7 +37,7 @@ No longer has any effect. Enable the [`ccache`](#ccache) extension instead: repl
 Takes effect only with the [`ccache`](#ccache) extension enabled; on its own the build ignores it and prints a warning. It changes two things:
 
 - **Cache directory.** With `yes`, the cache lives in the build tree, `$SRC/cache/ccache`, unless `CCACHE_DIR` is set. With `no`, a native build uses ccache's own default, `~/.cache/ccache` of the user the build runs as.
-- **Permissions.** With `no`, the extension sets `CCACHE_UMASK=000`, so cache files are created writable by every user; several users can share one cache by pointing `CCACHE_DIR` at a common directory. With `yes`, it leaves the umask to ccache.
+- **Permissions.** With `no`, the extension sets `CCACHE_UMASK=000`, so cache files are created world-writable; users who share one cache through a common `CCACHE_DIR` must trust each other. With `yes`, it leaves the umask to ccache.
 
 Docker builds always keep the cache in `$SRC/cache/ccache`, so there the switch only changes the permissions. Use `yes` when the build runs as root through `sudo`: the cache then stays in the build tree instead of a home directory. The `ccache-remote` extension sets it to `yes`, so native and Docker builds use the same cache directory.
 
