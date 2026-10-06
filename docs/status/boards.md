@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**65** boards — **56** operational, **9** broken.
+**65** boards — **57** operational, **8** broken.
 
-Reconcile made: 2026-10-06 15:22 UTC
+Reconcile made: 2026-10-06 16:31 UTC
 
 **Operational**
 
@@ -55,9 +55,9 @@ Reconcile made: 2026-10-06 15:22 UTC
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | Aruba 2540 (39) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
+| Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
@@ -70,7 +70,8 @@ Reconcile made: 2026-10-06 15:22 UTC
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
-| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
+| Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
+| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
 | SpacemiT MusePi Pro 01 | 10.0.50.65 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
@@ -84,12 +85,11 @@ Reconcile made: 2026-10-06 15:22 UTC
 |:--|:--|:--|--:|:--|
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
-| Odroid XU4 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (23) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | — | — |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | OrangePi 3 LTS 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (32) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5T 01 | 10.0.50.29 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
-| Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 
 <!-- BOARDS-STOP -->
