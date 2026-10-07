@@ -116,7 +116,7 @@ pre.custom-bash-block, code.custom-bash-block {
   scroll-snap-type: x proximity;
 }
 .gallery-row img {
-  height: 150px;
+  height: 112px;
   width: auto;                   /* natural aspect ratio */
   flex: 0 0 auto;                /* never shrink; overflow scrolls instead */
   object-fit: cover;
@@ -125,5 +125,5 @@ pre.custom-bash-block, code.custom-bash-block {
   scroll-snap-align: start;
 }
 @media screen and (max-width: 30rem) {
-  .gallery-row img { height: 110px; }
+  .gallery-row img { height: 83px; }
 }

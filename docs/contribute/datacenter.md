@@ -6,6 +6,7 @@ description: "Access the Armbian Datacenter hardware lab: request board-maintain
 # Datacenter access
 
 <div class="gallery-row" markdown>
+![How the Armbian Datacenter tests boards: discovery and NetBox inventory, GitHub Actions orchestration, switched power, and published results](../images/datacenter-architecture.png){ data-gallery="datacenter" loading=lazy }
 ![Single-board computers powered and networked in the Armbian Datacenter rack](../images/datacenter-rack-1.jpg){ data-gallery="datacenter" loading=lazy }
 ![Side view of the lab rack: boards, SD-card switchers and USB serial consoles](../images/datacenter-rack-2.jpg){ data-gallery="datacenter" loading=lazy }
 ![Switching and server tier: managed switch, PDUs and build servers](../images/datacenter-rack-3.jpg){ data-gallery="datacenter" loading=lazy }
