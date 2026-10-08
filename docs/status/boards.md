@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**67** boards — **61** operational, **6** broken.
+**68** boards — **62** operational, **6** broken.
 
-Reconcile made: 2026-10-08 10:12 UTC
+Reconcile made: 2026-10-08 10:25 UTC
 
 **Operational**
 
@@ -35,7 +35,6 @@ Reconcile made: 2026-10-08 10:12 UTC
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
-| FriendlyElec RK3588 02 | 10.0.50.130 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | Aruba 2540 (40) |
 | Inovato Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | Khadas Edge2 01 | 10.0.50.121 | local | Wi-Fi 6 | Zyxel NWA130BE |
@@ -44,6 +43,8 @@ Reconcile made: 2026-10-08 10:12 UTC
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | M6 / R6 / T6 01 | 10.0.50.29 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| M6 / R6 / T6 02 | 10.0.50.69 | local | Wi-Fi 6 | Zyxel NWA130BE |
+| M6 / R6 / T6 03 | 10.0.50.65 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
