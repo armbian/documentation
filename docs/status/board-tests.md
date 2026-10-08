@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **58** passed, **10** failed. Most recent test of every board; failures first.
+**67** boards — **57** passed, **10** failed. Most recent test of every board; failures first.
 
 ## ❌ Failed (10)
 
@@ -255,7 +255,7 @@ xychart-beta
     line [3.40, 3.70, 3.90, 3.95, 4.07, 4.00, 3.65, 3.70, 3.72, 3.70, 3.90, 3.60, 3.40, 3.40, 2.87, 2.20, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.70, 2.70, 2.57, 2.70, 2.63, 2.63, 2.70, 2.70, 2.70, 2.63, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.68, 2.67]
 ```
 
-## ✅ Passed (58)
+## ✅ Passed (57)
 
 ### ✅ Arduino UNO Q 01
 
@@ -929,35 +929,6 @@ xychart-beta
     y-axis "W" 1.5 --> 8.5
     line [5.39, 4.28, 4.14, 3.89, 4.56, 4.17, 3.90, 3.65, 4.08, 3.89, 4.41, 5.06, 4.39, 4.93, 4.45, 3.80, 3.97, 3.92, 3.75, 4.07, 3.82, 4.91, 3.91, 4.04, 4.06, 4.26, 4.66, 4.80, 3.55, 3.87, 3.86, 3.96, 3.88, 3.99, 5.50, 4.24, 4.59, 4.42, 4.64, 4.13]
 ```
-
-### ✅ NanoPi M6 01
-
-`nanopi-m6` · **inplace** · image `26.11.0-trunk.74` · 22 ✅ · 0 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 27.8 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ✅ | 44.3 s | power-cycle · up 16 s |
-| kernel-switch | ✅ | 21.2 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 70.2 s | power-cycle · 2/2 boots · up 9 s |
-| hw-performance | ✅ | 17.3 s | AES 1259 · mem 15300 · disk W 53 / R 74 MB/s · 42.5 °C · 1800 MHz |
-| dvfs | ✅ | 16.5 s | ondemand · 1800–1800 MHz (peak 2256) |
-| network-iperf | ✅ | 85.1 s | lan ↑941/↓941 (1GE) · wlP3p49s0 ↑296/↓151 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.0 s | 26.11.0-trunk.74 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ✅ | 101.6 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 70.2 s | power-cycle · 2/2 boots · up 9 s |
-| hw-performance | ✅ | 18.1 s | AES 1218 · mem 6200 · disk W 47 / R 57 MB/s · 44.4 °C · 1800 MHz |
-| dvfs | ✅ | 14.0 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 201.7 s | lan ↑941/↓941 (1GE) · wlP3p49s0 ↑301/↓295 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.0 s | 26.11.0-trunk.74 · 6.18.55-current-rockchip64 |
-| kernel-switch | ✅ | 69.6 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ✅ | 66.7 s | power-cycle · 2/2 boots · up 5 s |
-| hw-performance | ✅ | 20.4 s | AES 1216 · mem 7800 · disk W 31 / R 61 MB/s · 47.2 °C · 1800 MHz |
-| dvfs | ✅ | 17.1 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 61.4 s | lan ↑941/↓939 (1GE) · wlP3p49s0 ↑296/↓191 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.3 s | 26.11.0-trunk.74 · 7.3.0-rc6-edge-rockchip64 |
-| kernel-switch | ✅ | 66.9 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc6-edge-rockchip64 |
-| reboot | ✅ | 44.5 s | power-cycle · up 8 s |
 
 ### ✅ NanoPi Neo 2 Black 01
 
