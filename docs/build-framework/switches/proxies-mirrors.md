@@ -45,6 +45,7 @@ Selects which mirror of `linux-stable.git` the mainline kernel sources are clone
 - `tuna`: use the mirror provided by Tsinghua University
 - `bfsu`: use the mirror provided by Beijing Foreign Studies University, which is similar to `tuna`
 - `gitverse`: use the GitVerse (`gitverse.ru`) mirror
+- `github`: use the stable tree mirror on GitHub (`github.com/gregkh/linux`); firmware stays on `git.kernel.org`
 - leave empty to use the official `git.kernel.org`, which may be very slow for mainland China users
 
 #### UBOOT_MIRROR
