@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**67** boards — **58** passed, **9** failed. Most recent test of every board; failures first.
+**67** boards — **59** passed, **8** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (9)
+## ❌ Failed (8)
 
 ### ❌ Khadas VIM1S 01
 
@@ -168,39 +168,6 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-### ❌ OrangePi 3 LTS 01
-
-`orangepi3-lts` · **inplace** · image `26.8.3` · 15 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 155.1 s | nightly · 26.8.3 → 26.11.0-trunk.74 |
-| reboot | ✅ | 63.7 s | power-cycle · up 24 s |
-| kernel-switch | ✅ | 36.3 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi64 · kernel_before=6.18.55-current-sunxi64 |
-| reboot | ✅ | 96.2 s | power-cycle · 2/2 boots · up 25 s |
-| hw-performance | ✅ | 19.5 s | AES 750 · mem 4100 · disk W 54 / R 128 MB/s · 67.5 °C · 1608 MHz |
-| dvfs | ✅ | 21.4 s | ondemand · 480–1608 MHz (peak 1608) |
-| network-iperf | ✅ | 64.2 s | end0 ↑914/↓941 (1GE) · wlan0 ↑142/↓133 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.5 s | 26.11.0-trunk.74 · 6.18.55-current-sunxi64 |
-| kernel-switch | ✅ | 89.8 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-7.2.9-edge-sunxi64 · kernel_before=6.18.55-current-sunxi64 |
-| reboot | ✅ | 92.0 s | power-cycle · 2/2 boots · up 24 s |
-| hw-performance | ✅ | 21.0 s | AES 750 · mem 4100 · disk W 54 / R 125 MB/s · 70.8 °C · 1608 MHz |
-| dvfs | ✅ | 22.3 s | ondemand · 480–1608 MHz (peak 1608) |
-| network-iperf | ✅ | 153.8 s | end0 ↑911/↓937 (1GE) · wlan0 ↑135/↓108 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 4.9 s | 26.11.0-trunk.74 · 7.2.9-edge-sunxi64 |
-| kernel-switch | ✅ | 90.1 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi64 · kernel_before=7.2.9-edge-sunxi64 |
-| reboot | ❌ | 224.2 s | power-cycle |
-
-**Power** — min 1.00 W · avg 3.06 W · peak 4.90 W · 911 samples
-
-```mermaid
-xychart-beta
-    title "Power — OrangePi 3 LTS 01"
-    x-axis "sample" 1 --> 911
-    y-axis "W" 0.5 --> 5.0
-    line [3.40, 3.64, 3.30, 3.69, 3.57, 3.16, 2.37, 3.33, 3.35, 2.93, 2.78, 2.97, 3.57, 3.58, 3.61, 3.50, 3.52, 3.52, 3.45, 2.75, 3.31, 2.80, 3.35, 3.40, 2.80, 2.90, 2.74, 3.32, 3.63, 3.39, 3.55, 3.51, 3.11, 2.39, 2.54, 1.98, 2.00, 1.94, 2.00, 1.92]
-```
-
 ### ❌ ROCK 2F 01
 
 `rock-2f` · **inplace** · image `26.8.1` · 8 ✅ · 2 ❌ · 6 ⏭️
@@ -230,24 +197,24 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 242.2 s | nightly · 26.8.9 → 26.11.0-trunk.81 |
-| reboot | ❌ | 239.2 s | power-cycle |
+| upgrade | ✅ | 69.2 s | nightly · 26.11.0-trunk.81 → 26.11.0-trunk.81 |
+| reboot | ❌ | 224.2 s | power-cycle |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
 
-**Power** — min 2.00 W · avg 3.97 W · peak 5.60 W · 386 samples
+**Power** — min 0.80 W · avg 3.25 W · peak 5.30 W · 239 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 386
-    y-axis "W" 1.5 --> 6.0
-    line [5.10, 5.04, 4.50, 4.73, 4.83, 4.94, 4.84, 4.83, 4.89, 4.61, 4.50, 4.83, 4.53, 5.09, 5.17, 4.72, 4.65, 4.90, 4.84, 4.92, 4.82, 4.33, 4.30, 4.76, 2.60, 2.80, 2.84, 2.80, 2.84, 2.75, 2.74, 2.78, 2.74, 2.76, 2.80, 2.80, 2.76, 2.80, 2.76, 2.75]
+    x-axis "sample" 1 --> 239
+    y-axis "W" 0.5 --> 5.5
+    line [3.98, 4.40, 5.15, 4.55, 4.45, 4.40, 4.43, 4.65, 4.72, 4.47, 4.83, 4.22, 4.15, 3.38, 1.20, 2.50, 2.83, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.65, 2.70, 2.70, 2.70, 2.70, 2.67, 2.68, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (58)
+## ✅ Passed (59)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1357,6 +1324,39 @@ xychart-beta
     x-axis "sample" 1 --> 917
     y-axis "W" 1.5 --> 4.5
     line [2.49, 2.72, 2.64, 2.63, 3.04, 2.80, 2.90, 2.99, 2.90, 2.53, 2.92, 2.68, 2.68, 2.52, 2.77, 3.09, 2.66, 2.92, 2.97, 2.65, 2.65, 2.57, 2.43, 2.94, 3.03, 2.72, 3.06, 2.47, 2.63, 2.47, 2.84, 2.79, 3.41, 2.80, 3.03, 3.10, 2.76, 2.83, 2.57, 3.11]
+```
+
+### ✅ OrangePi 3 LTS 01
+
+`orangepi3-lts` · **inplace** · image `26.11.0-trunk.75` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 168.6 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.81 |
+| reboot | ✅ | 70.3 s | power-cycle · up 24 s |
+| kernel-switch | ✅ | 36.5 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi64 · kernel_before=6.18.55-current-sunxi64 |
+| reboot | ✅ | 107.8 s | power-cycle · 2/2 boots · up 27 s |
+| hw-performance | ✅ | 19.7 s | AES 750 · mem 4100 · disk W 54 / R 128 MB/s · 72.8 °C · 1608 MHz |
+| dvfs | ✅ | 21.9 s | ondemand · 480–1608 MHz (peak 1608) |
+| network-iperf | ✅ | 58.5 s | end0 ↑914/↓941 (1GE) · wlan0 ↑141/↓135 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 4.8 s | 26.11.0-trunk.81 · 6.18.55-current-sunxi64 |
+| kernel-switch | ✅ | 93.9 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-7.2.9-edge-sunxi64 · kernel_before=6.18.55-current-sunxi64 |
+| reboot | ✅ | 105.4 s | power-cycle · 2/2 boots · up 24 s |
+| hw-performance | ✅ | 21.1 s | AES 750 · mem 4100 · disk W 54 / R 125 MB/s · 72.2 °C · 1608 MHz |
+| dvfs | ✅ | 22.7 s | ondemand · 480–1608 MHz (peak 1608) |
+| network-iperf | ✅ | 59.3 s | end0 ↑916/↓939 (1GE) · wlan0 ↑137/↓129 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5.1 s | 26.11.0-trunk.81 · 7.2.9-edge-sunxi64 |
+| kernel-switch | ✅ | 93.5 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi64 · kernel_before=7.2.9-edge-sunxi64 |
+| reboot | ✅ | 61.9 s | power-cycle · up 23 s |
+
+**Power** — min 1.00 W · avg 3.33 W · peak 5.10 W · 758 samples
+
+```mermaid
+xychart-beta
+    title "Power — OrangePi 3 LTS 01"
+    x-axis "sample" 1 --> 758
+    y-axis "W" 0.5 --> 5.5
+    line [3.31, 3.38, 3.47, 3.43, 3.34, 4.09, 3.61, 3.28, 2.37, 2.87, 3.59, 3.48, 2.75, 3.17, 2.21, 3.38, 3.48, 3.68, 3.55, 3.89, 3.11, 3.51, 3.65, 3.45, 3.47, 2.86, 3.39, 2.58, 3.41, 3.44, 3.45, 3.65, 3.73, 3.34, 3.51, 3.78, 3.42, 3.45, 2.40, 3.21]
 ```
 
 ### ✅ Radxa Dragon Q6A 01
