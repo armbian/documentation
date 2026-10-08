@@ -108,20 +108,20 @@ xychart-beta
 
 ### ❌ Orange Pi 5 01
 
-`orangepi5` · **inplace** · image `26.11.0-trunk.74` · 2 ✅ · 1 ❌ · 19 ⏭️
+`orangepi5` · **inplace** · image `26.11.0-trunk.75` · 9 ✅ · 1 ❌ · 12 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 9.2 s | — |
-| reboot | ✅ | 51.5 s | power-cycle · up 22 s |
-| kernel-switch | ✅ | 84.5 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ❌ | 664.7 s | power-cycle · 0/2 boots |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
+| upgrade | ✅ | 164.0 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.81 |
+| reboot | ✅ | 54.5 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 24.0 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 95.1 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 24.7 s | AES 1314 · mem 15800 · disk W 21 / R 23 MB/s · 46.2 °C · 1800 MHz |
+| dvfs | ✅ | 16.3 s | ondemand · 1800–1800 MHz (peak 2304) |
+| network-iperf | ✅ | 29.1 s | end1 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 3.9 s | 26.11.0-trunk.81 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 110.0 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ❌ | 662.4 s | power-cycle · 0/2 boots |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -135,14 +135,14 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 0.60 W · avg 2.00 W · peak 6.30 W · 518 samples
+**Power** — min 0.70 W · avg 2.49 W · peak 10.00 W · 818 samples
 
 ```mermaid
 xychart-beta
     title "Power — Orange Pi 5 01"
-    x-axis "sample" 1 --> 518
-    y-axis "W" 0.5 --> 6.5
-    line [2.69, 2.49, 3.35, 3.22, 3.15, 2.92, 3.46, 2.83, 2.75, 1.71, 1.70, 1.65, 1.60, 1.60, 1.60, 1.60, 1.60, 1.61, 1.60, 2.18, 2.35, 1.70, 1.70, 1.62, 1.60, 1.61, 1.61, 1.60, 1.60, 1.61, 2.16, 2.71, 1.68, 1.70, 1.62, 1.60, 1.61, 1.61, 1.61, 1.60]
+    x-axis "sample" 1 --> 818
+    y-axis "W" 0.5 --> 10.5
+    line [2.36, 2.51, 2.38, 2.48, 2.69, 2.50, 2.29, 2.76, 1.96, 2.67, 2.56, 2.54, 3.82, 2.25, 2.33, 2.16, 2.41, 2.34, 2.94, 2.40, 2.40, 2.40, 2.40, 2.40, 2.40, 2.50, 2.95, 2.46, 2.41, 2.40, 2.40, 2.40, 2.40, 2.63, 2.71, 2.44, 2.40, 2.40, 2.40, 2.40]
 ```
 
 ### ❌ Orange Pi PC + 01
