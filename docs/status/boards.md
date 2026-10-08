@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **68** boards — **63** operational, **5** broken.
 
-Reconcile made: 2026-10-08 10:40 UTC
+Reconcile made: 2026-10-08 10:56 UTC
 
 **Operational**
 
@@ -42,15 +42,15 @@ Reconcile made: 2026-10-08 10:40 UTC
 | Khadas VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
-| M6 / R6 / T6 01 | 10.0.50.29 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
+| NanoPC T6 Plus 01 | 10.0.50.29 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (20) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (21) |
 | Nanopi M6 01 | 10.0.50.65 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Nanopi M6 V2 01 | 10.0.50.69 | local | Wi-Fi 6 | Zyxel NWA130BE |
+| Nanopi M6 V2 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (20) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
