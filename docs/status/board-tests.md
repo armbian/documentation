@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**67** boards — **59** passed, **8** failed. Most recent test of every board; failures first.
+**67** boards — **60** passed, **7** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (8)
+## ❌ Failed (7)
 
 ### ❌ Khadas VIM1S 01
 
@@ -72,39 +72,6 @@ xychart-beta
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
-
-### ❌ Odroid M1 01
-
-`odroidm1` · **inplace** · image `26.11.0-trunk.74` · 9 ✅ · 1 ❌ · 6 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 145.9 s | nightly · 26.8.3 → 26.11.0-trunk.75 |
-| reboot | ✅ | 57.8 s | power-cycle · up 20 s |
-| kernel-switch | ✅ | 31.3 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.75 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ✅ | 88.3 s | power-cycle · 2/2 boots · up 23 s |
-| hw-performance | ✅ | 17.5 s | AES 914 · mem 5100 · disk W 1033 / R 1055 MB/s · 38.9 °C · 1992 MHz |
-| dvfs | ✅ | 21.3 s | ondemand · 408–1992 MHz (peak 1992) |
-| network-iperf | ✅ | 31.4 s | eth0 ↑485/↓941 (1GE) Mbps |
-| store-versions | ✅ | 5.1 s | 26.11.0-trunk.75 · 6.18.55-current-rockchip64 |
-| kernel-switch | ✅ | 86.5 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.75 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ❌ | 661.0 s | power-cycle · 0/2 boots |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-
-**Power** — min 2.00 W · avg 5.92 W · peak 10.30 W · 911 samples
-
-```mermaid
-xychart-beta
-    title "Power — Odroid M1 01"
-    x-axis "sample" 1 --> 911
-    y-axis "W" 1.5 --> 10.5
-    line [5.13, 6.73, 5.28, 6.49, 5.19, 4.71, 5.78, 5.15, 6.45, 4.81, 6.46, 5.79, 5.01, 4.82, 6.93, 5.40, 5.61, 5.18, 6.29, 6.07, 5.63, 6.11, 6.30, 6.34, 6.39, 5.47, 5.99, 6.03, 5.83, 6.33, 6.42, 6.22, 6.35, 7.10, 6.20, 6.41, 6.48, 5.82, 6.31, 5.87]
-```
 
 ### ❌ Orange Pi 5 01
 
@@ -214,7 +181,7 @@ xychart-beta
     line [3.98, 4.40, 5.15, 4.55, 4.45, 4.40, 4.43, 4.65, 4.72, 4.47, 4.83, 4.22, 4.15, 3.38, 1.20, 2.50, 2.83, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.65, 2.70, 2.70, 2.70, 2.70, 2.67, 2.68, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (59)
+## ✅ Passed (60)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1104,6 +1071,39 @@ xychart-beta
     x-axis "sample" 1 --> 730
     y-axis "W" 0.5 --> 5.5
     line [3.52, 3.76, 3.32, 2.57, 3.83, 3.57, 3.29, 2.99, 3.34, 3.59, 3.72, 3.05, 3.36, 2.90, 3.55, 3.99, 3.02, 3.00, 3.80, 3.74, 3.70, 3.68, 3.67, 3.53, 3.56, 2.75, 2.82, 3.57, 3.73, 3.60, 3.36, 3.03, 4.38, 3.60, 3.63, 3.70, 3.64, 3.62, 2.74, 2.37]
+```
+
+### ✅ Odroid M1 01
+
+`odroidm1` · **inplace** · image `26.11.0-trunk.81` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 48.7 s | nightly · 26.11.0-trunk.81 → 26.11.0-trunk.81 |
+| reboot | ✅ | 56.4 s | power-cycle · up 19 s |
+| kernel-switch | ✅ | 92.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 87.9 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 16.8 s | AES 914 · mem 5100 · disk W 985 / R 1072 MB/s · 37.2 °C · 1992 MHz |
+| dvfs | ✅ | 21.0 s | ondemand · 408–1992 MHz (peak 1992) |
+| network-iperf | ✅ | 33.0 s | eth0 ↑584/↓941 (1GE) Mbps |
+| store-versions | ✅ | 4.8 s | 26.11.0-trunk.81 · 6.18.55-current-rockchip64 |
+| kernel-switch | ✅ | 90.8 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 85.1 s | power-cycle · 2/2 boots · up 24 s |
+| hw-performance | ✅ | 17.6 s | AES 913 · mem 5100 · disk W 1037 / R 1055 MB/s · 37.8 °C · 1992 MHz |
+| dvfs | ✅ | 23.6 s | ondemand · 408–1992 MHz (peak 1992) |
+| network-iperf | ✅ | 31.5 s | eth0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5.0 s | 26.11.0-trunk.81 · 7.3.0-rc6-edge-rockchip64 |
+| kernel-switch | ✅ | 84.2 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 59.6 s | power-cycle · up 21 s |
+
+**Power** — min 1.90 W · avg 5.69 W · peak 9.30 W · 588 samples
+
+```mermaid
+xychart-beta
+    title "Power — Odroid M1 01"
+    x-axis "sample" 1 --> 588
+    y-axis "W" 1.5 --> 9.5
+    line [5.29, 5.29, 5.08, 4.94, 5.37, 5.65, 5.60, 7.53, 5.09, 5.25, 5.07, 7.43, 5.11, 5.06, 5.37, 5.46, 5.00, 5.25, 5.15, 5.49, 8.34, 5.23, 6.22, 6.01, 6.35, 6.66, 4.89, 6.57, 4.83, 6.35, 5.87, 4.95, 5.30, 5.50, 8.26, 5.09, 5.26, 5.01, 4.91, 6.41]
 ```
 
 ### ✅ Odroid N2 01
