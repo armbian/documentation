@@ -147,11 +147,26 @@ xychart-beta
 
 ### ❌ Orange Pi PC + 01
 
-`orangepipcplus` · **inplace** · image `26.11.0-trunk.72` · 0 ✅ · 1 ❌ · 0 ⏭️
+`orangepipcplus` · **inplace** · image `26.11.0-trunk.75` · 1 ✅ · 1 ❌ · 14 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | 0.0 s | ip=10.0.50.38 · reachable=False · port=22 |
+| upgrade | ✅ | 420.8 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.81 |
+| reboot | ❌ | 228.2 s | power-cycle |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
+| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| dvfs | ⏭️ | 0.0 s | — |
+| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
+| store-versions | ⏭️ | 0.0 s | — |
+| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | 0.0 s | reboot |
 
 ### ❌ OrangePi 3 LTS 01
 
@@ -211,25 +226,25 @@ xychart-beta
 
 ### ❌ SpacemiT MusePi Pro 01
 
-`musepipro` · **inplace** · image `26.11.0-trunk.74` · 1 ✅ · 1 ❌ · 4 ⏭️
+`musepipro` · **inplace** · image `26.8.9` · 1 ✅ · 1 ❌ · 4 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 79.4 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ❌ | 222.5 s | power-cycle |
+| upgrade | ✅ | 242.2 s | nightly · 26.8.9 → 26.11.0-trunk.81 |
+| reboot | ❌ | 239.2 s | power-cycle |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
 
-**Power** — min 2.00 W · avg 3.04 W · peak 4.10 W · 238 samples
+**Power** — min 2.00 W · avg 3.97 W · peak 5.60 W · 386 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 238
-    y-axis "W" 1.5 --> 4.5
-    line [3.40, 3.70, 3.90, 3.95, 4.07, 4.00, 3.65, 3.70, 3.72, 3.70, 3.90, 3.60, 3.40, 3.40, 2.87, 2.20, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.70, 2.70, 2.57, 2.70, 2.63, 2.63, 2.70, 2.70, 2.70, 2.63, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.68, 2.67]
+    x-axis "sample" 1 --> 386
+    y-axis "W" 1.5 --> 6.0
+    line [5.10, 5.04, 4.50, 4.73, 4.83, 4.94, 4.84, 4.83, 4.89, 4.61, 4.50, 4.83, 4.53, 5.09, 5.17, 4.72, 4.65, 4.90, 4.84, 4.92, 4.82, 4.33, 4.30, 4.76, 2.60, 2.80, 2.84, 2.80, 2.84, 2.75, 2.74, 2.78, 2.74, 2.76, 2.80, 2.80, 2.76, 2.80, 2.76, 2.75]
 ```
 
 ## ✅ Passed (58)
