@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**67** boards — **60** passed, **7** failed. Most recent test of every board; failures first.
+**67** boards — **61** passed, **6** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (7)
+## ❌ Failed (6)
 
 ### ❌ Khadas VIM1S 01
 
@@ -112,29 +112,6 @@ xychart-beta
     line [2.36, 2.51, 2.38, 2.48, 2.69, 2.50, 2.29, 2.76, 1.96, 2.67, 2.56, 2.54, 3.82, 2.25, 2.33, 2.16, 2.41, 2.34, 2.94, 2.40, 2.40, 2.40, 2.40, 2.40, 2.40, 2.50, 2.95, 2.46, 2.41, 2.40, 2.40, 2.40, 2.40, 2.63, 2.71, 2.44, 2.40, 2.40, 2.40, 2.40]
 ```
 
-### ❌ Orange Pi PC + 01
-
-`orangepipcplus` · **inplace** · image `26.11.0-trunk.75` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 420.8 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.81 |
-| reboot | ❌ | 228.2 s | power-cycle |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-| hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| dvfs | ⏭️ | 0.0 s | — |
-| net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
-| store-versions | ⏭️ | 0.0 s | — |
-| kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | 0.0 s | reboot |
-
 ### ❌ ROCK 2F 01
 
 `rock-2f` · **inplace** · image `26.8.1` · 8 ✅ · 2 ❌ · 6 ⏭️
@@ -181,7 +158,7 @@ xychart-beta
     line [3.98, 4.40, 5.15, 4.55, 4.45, 4.40, 4.43, 4.65, 4.72, 4.47, 4.83, 4.22, 4.15, 3.38, 1.20, 2.50, 2.83, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70, 2.65, 2.70, 2.70, 2.70, 2.70, 2.67, 2.68, 2.67, 2.67, 2.70, 2.70, 2.70, 2.70, 2.70, 2.70]
 ```
 
-## ✅ Passed (60)
+## ✅ Passed (61)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1269,6 +1246,29 @@ xychart-beta
 | store-versions | ✅ | 4.8 s | 26.11.0-trunk.74 · 7.2.9-edge-sunxi64 |
 | kernel-switch | ✅ | 127.3 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi64 · kernel_before=7.2.9-edge-sunxi64 |
 | reboot | ✅ | 36.9 s | warm · up 20 s |
+
+### ✅ Orange Pi PC + 01
+
+`orangepipcplus` · **inplace** · image `26.11.0-trunk.75` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 127.9 s | nightly · 26.11.0-trunk.81 → 26.11.0-trunk.81 |
+| reboot | ✅ | 50.1 s | warm · up 30 s |
+| kernel-switch | ✅ | 74.3 s | branch=current · family=sunxi · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi · kernel_before=6.18.55-current-sunxi |
+| reboot | ✅ | 93.0 s | warm · 2/2 boots · up 28 s |
+| hw-performance | ✅ | 42.0 s | AES 25 · mem 2200 · disk W 8 / R 77 MB/s · 55.6 °C · 1296 MHz |
+| dvfs | ✅ | 39.1 s | ondemand · 480–1296 MHz (peak 1296) |
+| network-iperf | ✅ | 113.8 s | end0 ↑92/↓94 (10/100ME) · wlan0 ↑31/↓25 (Wi-Fi 4) · wlan1 ↑30/↓28 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 9.4 s | 26.11.0-trunk.81 · 6.18.55-current-sunxi |
+| kernel-switch | ✅ | 241.0 s | branch=edge · family=sunxi · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-7.2.9-edge-sunxi · kernel_before=6.18.55-current-sunxi |
+| reboot | ✅ | 88.4 s | warm · 2/2 boots · up 27 s |
+| hw-performance | ✅ | 39.8 s | AES 25 · mem 2200 · disk W 12 / R 78 MB/s · 56.4 °C · 1296 MHz |
+| dvfs | ✅ | 41.7 s | ondemand · 480–1296 MHz (peak 1296) |
+| network-iperf | ✅ | 114.0 s | end0 ↑94/↓94 (10/100ME) · wlan0 ↑27/↓25 (Wi-Fi 4) · wlan1 ↑31/↓25 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 8.8 s | 26.11.0-trunk.81 · 7.2.9-edge-sunxi |
+| kernel-switch | ✅ | 188.8 s | branch=current · family=sunxi · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.18.55-current-sunxi · kernel_before=7.2.9-edge-sunxi |
+| reboot | ✅ | 49.5 s | warm · up 29 s |
 
 ### ✅ Orange Pi Prime 01
 
