@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**67** boards — **57** passed, **10** failed. Most recent test of every board; failures first.
+**67** boards — **58** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ Khadas VIM1S 01
 
@@ -72,29 +72,6 @@ xychart-beta
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | store-versions | ⏭️ | 0.0 s | — |
-
-### ❌ Mekotronics R58HD 01
-
-`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.74` · 4 ✅ · 2 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ❌ | 458.7 s | — |
-| reboot | ✅ | 102.4 s | power-cycle · up 15 s |
-| hw-performance | ✅ | 13.8 s | AES 1304 · mem 14000 · disk W 249 / R 287 MB/s · 46.2 °C · 1800 MHz |
-| dvfs | ✅ | 16.8 s | ondemand · 1200–1800 MHz (peak 2304) |
-| net-iperf | ❌ | 0.0 s | no result line or timed out |
-| store-versions | ✅ | 60.2 s | 26.11.0-trunk.74 |
-
-**Power** — min 3.40 W · avg 5.18 W · peak 12.00 W · 1508 samples
-
-```mermaid
-xychart-beta
-    title "Power — Mekotronics R58HD 01"
-    x-axis "sample" 1 --> 1508
-    y-axis "W" 3.0 --> 12.5
-    line [5.23, 5.11, 5.19, 5.19, 5.28, 5.11, 5.42, 5.10, 5.13, 5.10, 5.10, 4.94, 7.37, 5.11, 5.10, 5.10, 5.10, 5.11, 5.10, 5.10, 5.10, 5.10, 5.12, 5.12, 5.11, 5.13, 5.10, 5.11, 5.10, 5.11, 5.11, 5.12, 5.11, 5.11, 5.10, 5.10, 5.10, 5.10, 5.10, 5.13]
-```
 
 ### ❌ Odroid M1 01
 
@@ -255,7 +232,7 @@ xychart-beta
     line [3.40, 3.70, 3.90, 3.95, 4.07, 4.00, 3.65, 3.70, 3.72, 3.70, 3.90, 3.60, 3.40, 3.40, 2.87, 2.20, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.70, 2.70, 2.57, 2.70, 2.63, 2.63, 2.70, 2.70, 2.70, 2.63, 2.70, 2.70, 2.65, 2.68, 2.70, 2.70, 2.68, 2.67]
 ```
 
-## ✅ Passed (57)
+## ✅ Passed (58)
 
 ### ✅ Arduino UNO Q 01
 
@@ -786,6 +763,29 @@ xychart-beta
 | store-versions | ✅ | 5.7 s | 26.11.0-trunk.74 · 7.3.0-rc6-edge-meson64 |
 | kernel-switch | ✅ | 160.2 s | branch=current · family=meson64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-meson64 · kernel_before=7.3.0-rc6-edge-meson64 |
 | reboot | ✅ | 38.3 s | warm · up 20 s |
+
+### ✅ Mekotronics R58HD 01
+
+`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 6 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 25.6 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.75 |
+| reboot | ✅ | 52.7 s | power-cycle · up 18 s |
+| hw-performance | ✅ | 13.8 s | AES 1290 · mem 16000 · disk W 249 / R 288 MB/s · 53.6 °C · 1800 MHz |
+| dvfs | ✅ | 17.3 s | ondemand · 1800–1800 MHz (peak 2304) |
+| network-iperf | ✅ | 252.2 s | end0 ↑726/↓940 (1GE) · enP3p49s0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 8.5 s | 26.11.0-trunk.75 · 6.1.172-vendor-rk35xx |
+
+**Power** — min 3.90 W · avg 5.55 W · peak 12.30 W · 313 samples
+
+```mermaid
+xychart-beta
+    title "Power — Mekotronics R58HD 01"
+    x-axis "sample" 1 --> 313
+    y-axis "W" 3.5 --> 12.5
+    line [5.20, 5.27, 5.80, 6.74, 6.05, 5.51, 4.85, 4.20, 6.89, 5.65, 5.94, 9.34, 7.15, 5.89, 5.51, 5.20, 5.20, 5.20, 5.20, 5.20, 5.51, 5.58, 5.20, 5.20, 5.20, 5.20, 5.20, 5.32, 5.20, 5.20, 5.20, 5.60, 5.30, 5.20, 5.20, 5.20, 5.20, 5.20, 5.70, 5.74]
+```
 
 ### ✅ Mekotronics R58S2 01
 
