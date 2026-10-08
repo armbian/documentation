@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**68** boards — **63** operational, **5** broken.
+**68** boards — **62** operational, **6** broken.
 
-Reconcile made: 2026-10-08 10:56 UTC
+Reconcile made: 2026-10-08 11:13 UTC
 
 **Operational**
 
@@ -30,7 +30,6 @@ Reconcile made: 2026-10-08 10:56 UTC
 | Banana Pi R2 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (27) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
-| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
@@ -49,7 +48,7 @@ Reconcile made: 2026-10-08 10:56 UTC
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (21) |
-| Nanopi M6 01 | 10.0.50.65 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Nanopi M6 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (8) |
 | Nanopi M6 V2 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (20) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
@@ -89,6 +88,7 @@ Reconcile made: 2026-10-08 10:56 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
