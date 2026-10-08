@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**68** boards — **62** operational, **6** broken.
+**68** boards — **63** operational, **5** broken.
 
-Reconcile made: 2026-10-08 10:25 UTC
+Reconcile made: 2026-10-08 10:40 UTC
 
 **Operational**
 
@@ -43,14 +43,14 @@ Reconcile made: 2026-10-08 10:25 UTC
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | M6 / R6 / T6 01 | 10.0.50.29 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| M6 / R6 / T6 02 | 10.0.50.69 | local | Wi-Fi 6 | Zyxel NWA130BE |
-| M6 / R6 / T6 03 | 10.0.50.65 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (21) |
+| Nanopi M6 01 | 10.0.50.65 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Nanopi M6 V2 01 | 10.0.50.69 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
@@ -67,6 +67,7 @@ Reconcile made: 2026-10-08 10:25 UTC
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
+| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
@@ -92,7 +93,6 @@ Reconcile made: 2026-10-08 10:25 UTC
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | TP-Link SG3428XPP-M2 (24) |
-| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 
 <!-- BOARDS-STOP -->
