@@ -79,16 +79,16 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 48.3 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ✅ | 140.5 s | power-cycle · up 103 s |
-| kernel-switch | ✅ | 31.1 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ✅ | 248.8 s | power-cycle · 2/2 boots · up 102 s |
-| hw-performance | ✅ | 16.7 s | AES 916 · mem 5100 · disk W 1036 / R 1024 MB/s · 36.1 °C · 1992 MHz |
-| dvfs | ✅ | 21.5 s | ondemand · 408–1992 MHz (peak 1992) |
-| network-iperf | ✅ | 30.5 s | eth0 ↑644/↓941 (1GE) Mbps |
-| store-versions | ✅ | 4.6 s | 26.11.0-trunk.74 · 6.18.55-current-rockchip64 |
-| kernel-switch | ✅ | 85.7 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
-| reboot | ❌ | 669.9 s | power-cycle · 0/2 boots |
+| upgrade | ✅ | 145.9 s | nightly · 26.8.3 → 26.11.0-trunk.75 |
+| reboot | ✅ | 57.8 s | power-cycle · up 20 s |
+| kernel-switch | ✅ | 31.3 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.75 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 88.3 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 17.5 s | AES 914 · mem 5100 · disk W 1033 / R 1055 MB/s · 38.9 °C · 1992 MHz |
+| dvfs | ✅ | 21.3 s | ondemand · 408–1992 MHz (peak 1992) |
+| network-iperf | ✅ | 31.4 s | eth0 ↑485/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5.1 s | 26.11.0-trunk.75 · 6.18.55-current-rockchip64 |
+| kernel-switch | ✅ | 86.5 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.75 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ❌ | 661.0 s | power-cycle · 0/2 boots |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
@@ -96,14 +96,14 @@ xychart-beta
 | kernel-switch | ⏭️ | 0.0 s | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | 0.0 s | reboot |
 
-**Power** — min 1.90 W · avg 5.66 W · peak 11.00 W · 1005 samples
+**Power** — min 2.00 W · avg 5.92 W · peak 10.30 W · 911 samples
 
 ```mermaid
 xychart-beta
     title "Power — Odroid M1 01"
-    x-axis "sample" 1 --> 1005
-    y-axis "W" 1.5 --> 11.5
-    line [6.38, 4.95, 6.12, 3.93, 3.94, 4.75, 5.30, 5.85, 4.00, 3.94, 6.16, 4.36, 3.92, 4.16, 5.63, 5.25, 5.54, 6.40, 5.72, 5.86, 6.24, 6.08, 6.30, 6.29, 6.17, 6.09, 6.12, 5.86, 5.99, 6.28, 6.32, 6.25, 6.22, 6.25, 5.89, 6.38, 6.40, 6.42, 6.25, 6.22]
+    x-axis "sample" 1 --> 911
+    y-axis "W" 1.5 --> 10.5
+    line [5.13, 6.73, 5.28, 6.49, 5.19, 4.71, 5.78, 5.15, 6.45, 4.81, 6.46, 5.79, 5.01, 4.82, 6.93, 5.40, 5.61, 5.18, 6.29, 6.07, 5.63, 6.11, 6.30, 6.34, 6.39, 5.47, 5.99, 6.03, 5.83, 6.33, 6.42, 6.22, 6.35, 7.10, 6.20, 6.41, 6.48, 5.82, 6.31, 5.87]
 ```
 
 ### ❌ Orange Pi 5 01
