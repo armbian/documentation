@@ -118,16 +118,16 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 870.4 s | nightly · 26.8.1 → 26.11.0-trunk.74 |
-| reboot | ✅ | 10.9 s | power-cycle |
-| kernel-switch | ✅ | 41.5 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
-| reboot | ✅ | 41.9 s | power-cycle · 1/2 boots · up 19 s |
-| hw-performance | ✅ | 29.7 s | AES 830 · mem 6000 · disk W 20 / R 22 MB/s · 56.6 °C · 2016 MHz |
-| dvfs | ✅ | 22.3 s | ondemand · 408–2016 MHz (peak 2016) |
-| network-iperf | ✅ | 39.9 s | wlan0 ↑211/↓249 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 4.8 s | 26.11.0-trunk.74 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ❌ | 812.2 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ❌ | 208.4 s | power-cycle · 0/2 boots |
+| upgrade | ✅ | 866.7 s | nightly · 26.8.1 → 26.11.0-trunk.81 |
+| reboot | ✅ | 12.8 s | power-cycle |
+| kernel-switch | ✅ | 42.4 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.81 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.115-vendor-rk35xx |
+| reboot | ✅ | 43.5 s | power-cycle · 1/2 boots · up 21 s |
+| hw-performance | ✅ | 22.1 s | AES 814 · mem 5900 · disk W 54 / R 65 MB/s · 57.7 °C · 2016 MHz |
+| dvfs | ✅ | 22.7 s | ondemand · 408–2016 MHz (peak 2016) |
+| network-iperf | ✅ | 44.8 s | wlan0 ↑214/↓274 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 5.2 s | 26.11.0-trunk.81 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ❌ | 814.4 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ❌ | 228.5 s | power-cycle · 0/2 boots |
 | hw-perf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
 | dvfs | ⏭️ | 0.0 s | — |
 | net-iperf | ⏭️ | 0.0 s | board down after reboot/power-cycle |
