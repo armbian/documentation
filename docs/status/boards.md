@@ -13,16 +13,15 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**68** boards — **65** operational, **3** broken.
+**68** boards — **63** operational, **5** broken.
 
-Reconcile made: 2026-10-08 17:07 UTC
+Reconcile made: 2026-10-09 08:12 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Banana Pi CM4IO 01 | 10.0.50.64 | local | 100 MbE | Netgear S3300 (41) |
+| Banana Pi CM4IO 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
 | Banana Pi M5 01 | 10.0.50.63 | local | 1 GbE | Netgear S3300 (6) |
@@ -30,6 +29,7 @@ Reconcile made: 2026-10-08 17:07 UTC
 | Banana Pi R2 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (27) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
+| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Clearfog Pro 01 | 10.0.50.67 | local | 1 GbE | TP-Link SG3428X (12) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
@@ -49,7 +49,6 @@ Reconcile made: 2026-10-08 17:07 UTC
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (5) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | Netgear S3300 (21) |
 | Nanopi M6 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (8) |
-| Nanopi M6 V2 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (20) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
@@ -62,6 +61,7 @@ Reconcile made: 2026-10-08 17:07 UTC
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | TP-Link SG3428XPP-M2 (24) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
@@ -72,18 +72,16 @@ Reconcile made: 2026-10-08 17:07 UTC
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
-| ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi E 01 | 10.0.50.66 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
-| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
+| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
 | SpacemiT MusePi Pro 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
-| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
@@ -91,8 +89,10 @@ Reconcile made: 2026-10-08 17:07 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
+| Nanopi M6 V2 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (20) |
+| ROCK 2F 01 | 10.0.20.164 | local | — | — |
+| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 
 <!-- BOARDS-STOP -->
