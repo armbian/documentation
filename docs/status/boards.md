@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **69** boards — **65** operational, **4** broken.
 
-Reconcile made: 2026-10-09 13:42 UTC
+Reconcile made: 2026-10-09 13:50 UTC
 
 **Operational**
 
@@ -51,9 +51,9 @@ Reconcile made: 2026-10-09 13:42 UTC
 | Nanopi M6 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (8) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
-| NanoPi R3S LTS 01 | 10.0.50.70 | local | 1 GbE | — |
+| NanoPi R3S LTS 01 | 10.0.50.70 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
-| NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (21) |
+| NanoPi R76S 01 | 10.0.50.20 | local | 2.5 GbE | Netgear XS508M (2) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | Aruba 2540 (39) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
