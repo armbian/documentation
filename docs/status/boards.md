@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **64** operational, **5** broken.
+**70** boards — **65** operational, **5** broken.
 
-Reconcile made: 2026-10-10 05:58 UTC
+Reconcile made: 2026-10-10 06:15 UTC
 
 **Operational**
 
@@ -80,6 +80,7 @@ Reconcile made: 2026-10-10 05:58 UTC
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
+| SpacemiT MUSE Book 02 | 10.0.50.71 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | SpacemiT MusePi Pro 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
