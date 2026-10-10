@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **61** passed, **7** failed. Most recent test of every board; failures first.
+**68** boards — **62** passed, **6** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (7)
+## ❌ Failed (6)
 
 ### ❌ Khadas VIM1S 01
 
@@ -72,29 +72,6 @@ xychart-beta
 | dvfs | ⏭️ | — | — |
 | net-iperf | ⏭️ | — | board down after reboot/power-cycle |
 | store-versions | ⏭️ | — | — |
-
-### ❌ NanoPi R3S LTS 01
-
-`nanopi-r3s-lts` · **inplace** · image `26.11.0-trunk.85` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 51 s | nightly · 26.11.0-trunk.85 → 26.11.0-trunk.85 |
-| reboot | ❌ | 218 s | power-cycle |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
 
 ### ❌ Orange Pi 5 01
 
@@ -181,7 +158,7 @@ xychart-beta
     line [4.0, 4.4, 5.2, 4.5, 4.5, 4.4, 4.4, 4.7, 4.7, 4.5, 4.8, 4.2, 4.2, 3.4, 1.2, 2.5, 2.8, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (61)
+## ✅ Passed (62)
 
 ### ✅ Arduino UNO Q 01
 
@@ -943,6 +920,39 @@ xychart-beta
     x-axis "sample" 1 --> 1173
     y-axis "W" 2.5 --> 6.0
     line [4.3, 4.6, 4.4, 4.2, 4.9, 4.7, 4.4, 4.5, 4.9, 4.8, 4.3, 4.0, 4.0, 4.0, 4.1, 3.9, 4.8, 4.2, 3.9, 4.0, 4.6, 4.8, 4.9, 4.7, 4.7, 4.3, 4.7, 4.4, 4.9, 4.9, 4.7, 4.1, 4.3, 4.4, 4.7, 4.9, 4.8, 4.7, 4.4, 4.4]
+```
+
+### ✅ NanoPi R3S LTS 01
+
+`nanopi-r3s-lts` · **inplace** · image `26.11.0-trunk.85` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 59 s | nightly · 26.11.0-trunk.85 → 26.11.0-trunk.85 |
+| reboot | ✅ | 53 s | power-cycle · up 16 s |
+| kernel-switch | ✅ | 34 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.85 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 76 s | power-cycle · 2/2 boots · up 17 s |
+| hw-performance | ✅ | 19 s | AES 915 · mem 5100 · disk W 149 / R 166 MB/s · 38.9 °C · 1800 MHz |
+| dvfs | ✅ | 21 s | ondemand · 408–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 83 s | lan ↑941/↓941 (1GE) · wan ↑941/↓941 (1GE) · wlx0087422045f0 ↑11/↓30 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 12 s | 26.11.0-trunk.85 · 6.18.55-current-rockchip64 |
+| kernel-switch | ✅ | 93 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.85 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.55-current-rockchip64 |
+| reboot | ✅ | 86 s | power-cycle · 2/2 boots · up 17 s |
+| hw-performance | ✅ | 19 s | AES 918 · mem 5100 · disk W 150 / R 164 MB/s · 39.4 °C · 1800 MHz |
+| dvfs | ✅ | 24 s | ondemand · 408–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 84 s | lan ↑941/↓941 (1GE) · wan ↑941/↓941 (1GE) · wlx0087422045f0 ↑9/↓35 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.85 · 7.3.0-rc6-edge-rockchip64 |
+| kernel-switch | ✅ | 92 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.85 · boot_image=/boot/vmlinuz-6.18.55-current-rockchip64 · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 60 s | power-cycle · up 16 s |
+
+**Power** — min 1.3 W · avg 3.9 W · peak 5.3 W · 640 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPi R3S LTS 01"
+    x-axis "sample" 1 --> 640
+    y-axis "W" 1.0 --> 5.5
+    line [3.9, 4.2, 4.2, 3.3, 4.2, 4.3, 4.3, 3.3, 3.7, 4.0, 4.2, 4.5, 3.6, 4.0, 4.0, 3.6, 3.3, 3.9, 4.5, 4.4, 4.2, 4.0, 3.4, 3.8, 3.1, 4.0, 4.1, 4.3, 3.7, 4.0, 3.9, 3.8, 3.9, 4.3, 4.7, 4.5, 4.1, 3.8, 3.2, 3.4]
 ```
 
 ### ✅ NanoPi R6S 01
