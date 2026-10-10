@@ -75,12 +75,12 @@ xychart-beta
 
 ### ❌ NanoPi R3S LTS 01
 
-`nanopi-r3s-lts` · **inplace** · image `26.8.3` · 1 ✅ · 1 ❌ · 14 ⏭️
+`nanopi-r3s-lts` · **inplace** · image `26.11.0-trunk.85` · 1 ✅ · 1 ❌ · 14 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 142 s | nightly · 26.8.3 → 26.11.0-trunk.85 |
-| reboot | ❌ | 233 s | power-cycle |
+| upgrade | ✅ | 51 s | nightly · 26.11.0-trunk.85 → 26.11.0-trunk.85 |
+| reboot | ❌ | 218 s | power-cycle |
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
