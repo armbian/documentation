@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **63** operational, **6** broken.
+**69** boards — **64** operational, **5** broken.
 
-Reconcile made: 2026-10-10 05:32 UTC
+Reconcile made: 2026-10-10 05:58 UTC
 
 **Operational**
 
@@ -61,6 +61,7 @@ Reconcile made: 2026-10-10 05:32 UTC
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | TP-Link SG3428XPP-M2 (24) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
+| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
@@ -93,7 +94,6 @@ Reconcile made: 2026-10-10 05:32 UTC
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Nanopi M6 V2 01 | 10.0.50.69 | local | 1 GbE | Netgear S3300 (20) |
-| Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 
 <!-- BOARDS-STOP -->
