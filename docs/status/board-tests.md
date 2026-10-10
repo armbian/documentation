@@ -137,25 +137,25 @@ xychart-beta
 
 ### ❌ SpacemiT MusePi Pro 01
 
-`musepipro` · **inplace** · image `26.8.9` · 1 ✅ · 1 ❌ · 4 ⏭️
+`musepipro` · **inplace** · image `26.11.0-trunk.81` · 0 ✅ · 1 ❌ · 5 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 69 s | nightly · 26.11.0-trunk.81 → 26.11.0-trunk.81 |
-| reboot | ❌ | 224 s | power-cycle |
+| upgrade | ⏭️ | 25 s | — |
+| reboot | ❌ | 222 s | power-cycle |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
 | dvfs | ⏭️ | — | — |
 | net-iperf | ⏭️ | — | board down after reboot/power-cycle |
 | store-versions | ⏭️ | — | — |
 
-**Power** — min 0.8 W · avg 3.2 W · peak 5.3 W · 239 samples
+**Power** — min 0.8 W · avg 3.1 W · peak 5.3 W · 193 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 239
+    x-axis "sample" 1 --> 193
     y-axis "W" 0.5 --> 5.5
-    line [4.0, 4.4, 5.2, 4.5, 4.5, 4.4, 4.4, 4.7, 4.7, 4.5, 4.8, 4.2, 4.2, 3.4, 1.2, 2.5, 2.8, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
+    line [4.1, 4.2, 4.3, 5.2, 4.6, 4.6, 5.2, 4.1, 1.0, 2.1, 2.5, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.7, 2.8, 2.7, 2.7, 2.8, 2.6, 2.8, 2.8, 2.8, 2.8, 2.7, 2.8, 2.9, 3.3, 2.8, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
 ## ✅ Passed (62)
