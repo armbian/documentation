@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**69** boards — **63** passed, **6** failed. Most recent test of every board; failures first.
+**68** boards — **62** passed, **6** failed. Most recent test of every board; failures first.
 
 ## ❌ Failed (6)
 
@@ -158,7 +158,7 @@ xychart-beta
     line [4.3, 5.0, 4.7, 4.3, 4.5, 4.6, 4.7, 4.5, 4.6, 4.6, 4.8, 5.1, 4.6, 5.0, 4.7, 4.5, 4.5, 4.8, 4.7, 4.8, 4.5, 4.1, 4.4, 4.3, 2.8, 2.7, 2.8, 2.8, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (63)
+## ✅ Passed (62)
 
 ### ✅ Arduino UNO Q 01
 
@@ -419,29 +419,6 @@ xychart-beta
 | dvfs | ✅ | 42 s | ondemand · 480–1416 MHz (peak 1416) |
 | network-iperf | ✅ | 66 s | wlan0 ↑83/↓102 (Wi-Fi 5) Mbps |
 | store-versions | ✅ | 6 s | 26.11.0-trunk.74 · 6.18.55-current-sunxi64 |
-
-### ✅ Clearfog Pro 01
-
-`clearfogpro` · **inplace** · image `26.11.0-trunk.74` · 14 ✅ · 0 ❌ · 2 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 59 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ✅ | 43 s | warm · up 24 s |
-| kernel-switch | ✅ | 42 s | branch=current · family=mvebu · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-mvebu · kernel_before=6.18.55-current-mvebu |
-| reboot | ✅ | 79 s | warm · 2/2 boots · up 26 s |
-| hw-performance | ✅ | 34 s | AES 43 · mem 3800 · disk W 21 / R 23 MB/s · 64.6 °C · None MHz |
-| dvfs | ➖ | 3 s | no cpufreq |
-| network-iperf | ✅ | 42 s | lan2 ↑936/↓936 Mbps |
-| store-versions | ✅ | 7 s | 26.11.0-trunk.74 · 6.18.55-current-mvebu |
-| kernel-switch | ✅ | 103 s | branch=edge · family=mvebu · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-7.2.9-edge-mvebu · kernel_before=6.18.55-current-mvebu |
-| reboot | ✅ | 78 s | warm · 2/2 boots · up 21 s |
-| hw-performance | ✅ | 34 s | AES 43 · mem 3800 · disk W 21 / R 24 MB/s · 67 °C · None MHz |
-| dvfs | ➖ | 4 s | no cpufreq |
-| network-iperf | ✅ | 35 s | lan2 ↑936/↓936 Mbps |
-| store-versions | ✅ | 7 s | 26.11.0-trunk.74 · 7.2.9-edge-mvebu |
-| kernel-switch | ✅ | 104 s | branch=current · family=mvebu · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-mvebu · kernel_before=7.2.9-edge-mvebu |
-| reboot | ✅ | 44 s | warm · up 24 s |
 
 ### ✅ Cubie A5E 01
 
@@ -1052,36 +1029,26 @@ xychart-beta
 
 ### ✅ Odroid C4 01
 
-`odroidc4` · **inplace** · image `26.11.0-trunk.74` · 16 ✅ · 0 ❌ · 0 ⏭️
+`odroidc4` · **inplace** · image `26.11.0-trunk.83` · 16 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 44 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ✅ | 53 s | power-cycle · up 17 s |
-| kernel-switch | ✅ | 30 s | branch=current · family=meson64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-meson64 · kernel_before=6.18.55-current-meson64 |
-| reboot | ✅ | 76 s | power-cycle · 2/2 boots · up 17 s |
-| hw-performance | ✅ | 22 s | AES 981 · mem 5200 · disk W 30 / R 77 MB/s · 41.4 °C · 2100 MHz |
-| dvfs | ✅ | 19 s | ondemand · 1000–2100 MHz (peak 2100) |
-| network-iperf | ✅ | 182 s | end0 ↑941/↓941 (1GE) · wlx24050fdd332b ↑117/↓123 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.74 · 6.18.55-current-meson64 |
-| kernel-switch | ✅ | 107 s | branch=edge · family=meson64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-meson64 · kernel_before=6.18.55-current-meson64 |
-| reboot | ✅ | 82 s | power-cycle · 2/2 boots · up 16 s |
-| hw-performance | ✅ | 22 s | AES 980 · mem 5200 · disk W 30 / R 78 MB/s · 42.3 °C · 2100 MHz |
-| dvfs | ✅ | 22 s | ondemand · 1000–2100 MHz (peak 2100) |
-| network-iperf | ✅ | 91 s | end0 ↑941/↓941 (1GE) · wlx24050fdd332b ↑88/↓129 (Wi-Fi 4) Mbps |
-| store-versions | ✅ | 5 s | 26.11.0-trunk.74 · 7.3.0-rc6-edge-meson64 |
-| kernel-switch | ✅ | 108 s | branch=current · family=meson64 · installed=26.11.0-trunk.74 · boot_image=/boot/vmlinuz-6.18.55-current-meson64 · kernel_before=7.3.0-rc6-edge-meson64 |
-| reboot | ✅ | 55 s | power-cycle · up 18 s |
-
-**Power** — min 1.0 W · avg 3.4 W · peak 5.1 W · 730 samples
-
-```mermaid
-xychart-beta
-    title "Power — Odroid C4 01"
-    x-axis "sample" 1 --> 730
-    y-axis "W" 0.5 --> 5.5
-    line [3.5, 3.8, 3.3, 2.6, 3.8, 3.6, 3.3, 3.0, 3.3, 3.6, 3.7, 3.0, 3.4, 2.9, 3.5, 4.0, 3.0, 3.0, 3.8, 3.7, 3.7, 3.7, 3.7, 3.5, 3.6, 2.8, 2.8, 3.6, 3.7, 3.6, 3.4, 3.0, 4.4, 3.6, 3.6, 3.7, 3.6, 3.6, 2.7, 2.4]
-```
+| upgrade | ✅ | 190 s | nightly · 26.11.0-trunk.83 → 26.11.0-trunk.89 |
+| reboot | ✅ | 136 s | power-cycle · up 101 s |
+| kernel-switch | ✅ | 29 s | branch=current · family=meson64 · installed=26.11.0-trunk.89 · boot_image=/boot/vmlinuz-6.18.55-current-meson64 · kernel_before=6.18.55-current-meson64 |
+| reboot | ✅ | 251 s | power-cycle · 2/2 boots · up 102 s |
+| hw-performance | ✅ | 27 s | AES 981 · mem 5300 · disk W 12 / R 78 MB/s · 40 °C · 2100 MHz |
+| dvfs | ✅ | 20 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ✅ | 31 s | end0 ↑940/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.89 · 6.18.55-current-meson64 |
+| kernel-switch | ✅ | 105 s | branch=edge · family=meson64 · installed=26.11.0-trunk.89 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-meson64 · kernel_before=6.18.55-current-meson64 |
+| reboot | ✅ | 243 s | power-cycle · 2/2 boots · up 101 s |
+| hw-performance | ✅ | 23 s | AES 981 · mem 5200 · disk W 24 / R 78 MB/s · 40.5 °C · 2100 MHz |
+| dvfs | ✅ | 21 s | ondemand · 1000–2100 MHz (peak 2100) |
+| network-iperf | ✅ | 29 s | end0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.89 · 7.3.0-rc6-edge-meson64 |
+| kernel-switch | ✅ | 109 s | branch=current · family=meson64 · installed=26.11.0-trunk.89 · boot_image=/boot/vmlinuz-6.18.55-current-meson64 · kernel_before=7.3.0-rc6-edge-meson64 |
+| reboot | ✅ | 140 s | power-cycle · up 103 s |
 
 ### ✅ Odroid M1 01
 
