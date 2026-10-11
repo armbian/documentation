@@ -13,7 +13,7 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**68** boards — **62** passed, **6** failed. Most recent test of every board; failures first.
+**69** boards — **63** passed, **6** failed. Most recent test of every board; failures first.
 
 ## ❌ Failed (6)
 
@@ -158,7 +158,7 @@ xychart-beta
     line [4.1, 4.2, 4.3, 5.2, 4.6, 4.6, 5.2, 4.1, 1.0, 2.1, 2.5, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.7, 2.8, 2.7, 2.7, 2.8, 2.6, 2.8, 2.8, 2.8, 2.8, 2.7, 2.8, 2.9, 3.3, 2.8, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (62)
+## ✅ Passed (63)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1770,6 +1770,19 @@ xychart-beta
 | dvfs | ✅ | 15 s | performance · 614–2150 MHz (peak 2150) |
 | network-iperf | ✅ | 184 s | eth0 ↑941/↓941 (1GE) · eth1 ↑8399/↓4572 (10GE) · wlan0 ↑4/↓139 (Wi-Fi 6) Mbps |
 | store-versions | ✅ | 4 s | 26.11.0-trunk.74 · 6.18.3-legacy-spacemit-k3 |
+
+### ✅ SpacemiT MUSE Book 01
+
+`musebook` · **inplace** · image `26.11.0-trunk.88` · 6 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 69 s | nightly · 26.11.0-trunk.88 → 26.11.0-trunk.88 |
+| reboot | ✅ | 34 s | warm · up 17 s |
+| hw-performance | ✅ | 27 s | AES 30 · mem 3400 · disk W 48 / R 80 MB/s · 42 °C · 1800 MHz |
+| dvfs | ✅ | 24 s | performance · 614–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 38 s | wlan0 ↑454/↓399 (Wi-Fi 6) · eth0 ↑?/↓? Mbps |
+| store-versions | ✅ | 13 s | 26.11.0-trunk.88 · 6.18.55-current-spacemit |
 
 ### ✅ Tinker Board 01
 
