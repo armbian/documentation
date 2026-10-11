@@ -162,18 +162,18 @@ xychart-beta
 
 ### ✅ Arduino UNO Q 01
 
-`arduino-uno-q` · **inplace** · image `26.11.0-trunk.74` · 7 ✅ · 1 ❌ · 0 ⏭️
+`arduino-uno-q` · **inplace** · image `26.11.0-trunk.85` · 8 ✅ · 0 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 80 s | nightly · 26.11.0-trunk.74 → 26.11.0-trunk.74 |
-| reboot | ✅ | 54 s | warm · up 35 s |
-| kernel-switch | ✅ | 46 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.74 · boot_image=? · kernel_before=7.2.3-edge-qrb2210 |
-| reboot | ✅ | 109 s | warm · 2/2 boots · up 42 s |
-| hw-performance | ✅ | 26 s | AES 936 · mem 5100 · disk W 184 / R 259 MB/s · 43.1 °C · 2016 MHz |
+| upgrade | ✅ | 68 s | nightly · 26.11.0-trunk.89 → 26.11.0-trunk.89 |
+| reboot | ✅ | 73 s | power-cycle · up 38 s |
+| kernel-switch | ✅ | 44 s | branch=edge · family=qrb2210 · installed=26.11.0-trunk.89 · boot_image=? · kernel_before=7.2.3-edge-qrb2210 |
+| reboot | ✅ | 124 s | power-cycle · 2/2 boots · up 38 s |
+| hw-performance | ✅ | 25 s | AES 936 · mem 5100 · disk W 171 / R 220 MB/s · 40.3 °C · 2016 MHz |
 | dvfs | ✅ | 33 s | schedutil · 300–2016 MHz (peak 2016) |
-| network-iperf | ❌ | 306 s | wlan0 ↑0/↓9 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
-| store-versions | ✅ | 7 s | 26.11.0-trunk.74 · 7.2.3-edge-qrb2210 |
+| network-iperf | ✅ | 46 s | wlan0 ↑25/↓23 (Wi-Fi 5) · usb0 ↑?/↓? Mbps |
+| store-versions | ✅ | 7 s | 26.11.0-trunk.89 · 7.2.3-edge-qrb2210 |
 
 ### ✅ Banana Pi CM4IO 01
 
