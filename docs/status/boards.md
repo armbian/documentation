@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**69** boards — **64** operational, **5** broken.
+**70** boards — **65** operational, **5** broken.
 
-Reconcile made: 2026-10-11 17:00 UTC
+Reconcile made: 2026-10-11 17:09 UTC
 
 **Operational**
 
@@ -29,6 +29,7 @@ Reconcile made: 2026-10-11 17:00 UTC
 | Banana Pi M7 01 | 10.0.50.12 | local | 2.5 GbE | Netgear XS508M (4) |
 | Banana Pi R2 01 | 10.0.50.46 | local | 1 GbE | Netgear S3300 (27) |
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
+| Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | — |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
