@@ -45,21 +45,16 @@ xychart-beta
 
 ### ❌ Mekotronics R58HD 01
 
-`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 0 ✅ · 1 ❌ · 0 ⏭️
+`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 1 ✅ · 1 ❌ · 4 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.21 · reachable=False · port=22 |
-
-**Power** — min 5.2 W · avg 5.2 W · peak 5.2 W · 44 samples
-
-```mermaid
-xychart-beta
-    title "Power — Mekotronics R58HD 01"
-    x-axis "sample" 1 --> 44
-    y-axis "W" 5.0 --> 5.5
-    line [5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2]
-```
+| upgrade | ✅ | 25 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
+| reboot | ❌ | 225 s | power-cycle |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
 
 ### ❌ NanoPC T6 Plus 01
 
