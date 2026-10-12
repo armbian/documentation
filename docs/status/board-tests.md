@@ -45,20 +45,35 @@ xychart-beta
 
 ### ❌ NanoPC T6 Plus 01
 
-`friendlyelec-rk3588` · **inplace** · image `26.11.0-trunk` · 0 ✅ · 1 ❌ · 0 ⏭️
+`friendlyelec-rk3588` · **inplace** · image `26.8.10` · 1 ✅ · 1 ❌ · 14 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.29 · reachable=False · port=22 |
+| upgrade | ✅ | 82 s | nightly · 26.8.10 → 26.8.10 |
+| reboot | ❌ | 220 s | power-cycle |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
 
-**Power** — min 5.2 W · avg 5.3 W · peak 5.3 W · 33 samples
+**Power** — min 4.3 W · avg 7.4 W · peak 13.8 W · 104 samples
 
 ```mermaid
 xychart-beta
     title "Power — NanoPC T6 Plus 01"
-    x-axis "sample" 1 --> 33
-    y-axis "W" 5.0 --> 5.5
-    line [5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.2]
+    x-axis "sample" 1 --> 104
+    y-axis "W" 4.0 --> 14.0
+    line [6.6, 6.8, 7.3, 6.9, 7.6, 7.0, 7.0, 8.5, 7.6, 7.2, 7.0, 7.4, 7.3, 7.4, 7.1, 7.5, 6.7, 6.8, 6.9, 9.0, 7.9, 7.3, 7.5, 7.2, 6.6, 6.6, 6.9, 7.0, 4.3, 4.3, 6.8, 8.0, 8.5, 9.6, 7.7, 8.4, 9.2, 11.8, 8.5, 8.0]
 ```
 
 ### ❌ Nanopi M6 01
