@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **58** passed, **13** failed. Most recent test of every board; failures first.
+**71** boards — **59** passed, **12** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (13)
+## ❌ Failed (12)
 
 ### ❌ Khadas VIM1S 01
 
@@ -37,139 +37,82 @@ xychart-beta
 
 ### ❌ Khadas VIM4 01
 
-`khadas-vim4` · **inplace** · image `26.11.0-trunk.83` · 1 ✅ · 1 ❌ · 6 ⏭️
+`khadas-vim4` · **inplace** · image `26.11.0-trunk.83` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 87 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
-| reboot | ❌ | 204 s | warm |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
+| reachable | ❌ | — | ip=10.0.50.14 · reachable=False · port=22 |
 
 ### ❌ Mekotronics R58HD 01
 
-`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 4 ✅ · 2 ❌ · 0 ⏭️
+`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 26 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
-| reboot | ✅ | 48 s | power-cycle · up 16 s |
-| hw-performance | ✅ | 14 s | AES 1294 · mem 14000 · disk W 255 / R 286 MB/s · 48.1 °C · 1800 MHz |
-| dvfs | ✅ | 17 s | ondemand · 1800–1800 MHz (peak 2304) |
-| network-iperf | ❌ | 424 s | end0 ↑0/↓0 (1GE) · enP3p49s0 ↑0/↓0 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 6) Mbps |
-| store-versions | ❌ | 18 s | — |
+| reachable | ❌ | — | ip=10.0.50.21 · reachable=False · port=22 |
 
-**Power** — min 3.6 W · avg 5.4 W · peak 12.2 W · 449 samples
+**Power** — min 5.2 W · avg 5.2 W · peak 5.2 W · 44 samples
 
 ```mermaid
 xychart-beta
     title "Power — Mekotronics R58HD 01"
-    x-axis "sample" 1 --> 449
-    y-axis "W" 3.5 --> 12.5
-    line [5.1, 5.4, 6.7, 5.6, 4.5, 6.0, 6.0, 9.9, 6.1, 5.3, 5.7, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2]
+    x-axis "sample" 1 --> 44
+    y-axis "W" 5.0 --> 5.5
+    line [5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2]
 ```
 
 ### ❌ NanoPC T6 Plus 01
 
-`friendlyelec-rk3588` · **inplace** · image `26.11.0-trunk` · 1 ✅ · 1 ❌ · 14 ⏭️
+`friendlyelec-rk3588` · **inplace** · image `26.11.0-trunk` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 70 s | nightly · 26.11.0-trunk → 26.11.0-trunk |
-| reboot | ❌ | 220 s | power-cycle |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| reachable | ❌ | — | ip=10.0.50.29 · reachable=False · port=22 |
 
-**Power** — min 4.6 W · avg 8.7 W · peak 12.8 W · 76 samples
+**Power** — min 5.2 W · avg 5.3 W · peak 5.3 W · 33 samples
 
 ```mermaid
 xychart-beta
     title "Power — NanoPC T6 Plus 01"
-    x-axis "sample" 1 --> 76
-    y-axis "W" 4.5 --> 13.0
-    line [8.3, 8.3, 8.4, 8.3, 8.4, 8.3, 8.7, 9.0, 8.8, 9.2, 9.4, 8.9, 11.1, 9.7, 9.0, 8.8, 9.1, 9.4, 9.5, 9.3, 8.7, 9.3, 9.3, 9.4, 9.2, 9.2, 11.1, 9.3, 9.6, 9.3, 9.2, 8.7, 8.4, 8.5, 8.3, 8.6, 8.6, 4.7, 4.7, 4.8]
+    x-axis "sample" 1 --> 33
+    y-axis "W" 5.0 --> 5.5
+    line [5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.3, 5.3, 5.2, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.2]
 ```
 
 ### ❌ Nanopi M6 01
 
-`friendlyelec-rk3588` · **inplace** · image `26.11.0-trunk` · 1 ✅ · 1 ❌ · 14 ⏭️
+`friendlyelec-rk3588` · **inplace** · image `26.11.0-trunk` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 113 s | nightly · 26.11.0-trunk → 26.11.0-trunk |
-| reboot | ❌ | 224 s | power-cycle |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| reachable | ❌ | — | ip=10.0.50.65 · reachable=False · port=22 |
 
-**Power** — min 1.2 W · avg 3.0 W · peak 7.0 W · 277 samples
+**Power** — min 1.9 W · avg 1.9 W · peak 1.9 W · 42 samples
 
 ```mermaid
 xychart-beta
     title "Power — Nanopi M6 01"
-    x-axis "sample" 1 --> 277
-    y-axis "W" 1.0 --> 7.5
-    line [3.4, 3.9, 4.4, 4.6, 4.9, 4.0, 4.1, 4.4, 4.8, 5.2, 5.1, 4.9, 4.9, 4.2, 4.5, 3.7, 3.8, 1.9, 2.0, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9]
+    x-axis "sample" 1 --> 42
+    y-axis "W" 1.5 --> 2.0
+    line [1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9]
 ```
 
 ### ❌ NanoPi R76S 01
 
-`nanopi-r76s` · **inplace** · image `26.11.0-trunk.83` · 8 ✅ · 1 ❌ · 7 ⏭️
+`nanopi-r76s` · **inplace** · image `26.11.0-trunk.90` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 11 s | — |
-| reboot | ✅ | 158 s | power-cycle · up 113 s |
-| kernel-switch | ✅ | 28 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 118 s | power-cycle · 2/2 boots · up 32 s |
-| hw-performance | ✅ | 21 s | AES 1277 · mem 7600 · disk W 24 / R 77 MB/s · 42.5 °C · 2016 MHz |
-| dvfs | ✅ | 20 s | ondemand · 2016–2016 MHz (peak 2208) |
-| network-iperf | ✅ | 394 s | lan ↑2348/↓2351 (2.5GE) · wlan0 ↑47/↓69 (Wi-Fi 5) · wlxe0e1a933de37 ↑182/↓168 (Wi-Fi 5) Mbps |
-| store-versions | ✅ | 5 s | 26.11.0-trunk.90 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ✅ | 150 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ❌ | 654 s | power-cycle · 0/2 boots |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| reachable | ❌ | — | ip=10.0.50.20 · reachable=False · port=22 |
 
-**Power** — min 0.7 W · avg 3.7 W · peak 8.3 W · 1021 samples
+**Power** — min 3.0 W · avg 3.0 W · peak 3.0 W · 32 samples
 
 ```mermaid
 xychart-beta
     title "Power — NanoPi R76S 01"
-    x-axis "sample" 1 --> 1021
-    y-axis "W" 0.5 --> 8.5
-    line [4.3, 2.9, 3.4, 3.4, 4.2, 2.8, 3.7, 3.1, 5.6, 5.0, 4.7, 4.2, 4.2, 4.2, 4.3, 4.5, 4.5, 4.2, 4.2, 4.9, 4.8, 4.8, 4.3, 4.4, 2.6, 3.0, 3.0, 2.9, 3.0, 2.6, 3.2, 3.0, 3.0, 3.1, 3.0, 2.6, 3.1, 3.1, 3.0, 3.0]
+    x-axis "sample" 1 --> 32
+    y-axis "W" 2.5 --> 3.5
+    line [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
 ```
 
 ### ❌ Odroid XU4 01
@@ -178,8 +121,8 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 91 s | — |
-| reboot | ❌ | 338 s | power-cycle |
+| upgrade | ⏭️ | 61 s | — |
+| reboot | ❌ | 367 s | power-cycle |
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
@@ -197,26 +140,11 @@ xychart-beta
 
 ### ❌ Orange Pi Prime 01
 
-`orangepiprime` · **inplace** · image `26.11.0-trunk.83` · 8 ✅ · 1 ❌ · 7 ⏭️
+`orangepiprime` · **inplace** · image `26.11.0-trunk.90` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 90 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
-| reboot | ✅ | 55 s | warm · up 37 s |
-| kernel-switch | ✅ | 61 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-sunxi64 · kernel_before=6.18.56-current-sunxi64 |
-| reboot | ✅ | 111 s | warm · 2/2 boots · up 48 s |
-| hw-performance | ✅ | 36 s | AES 376 · mem 2100 · disk W 1 / R 22 MB/s · 43.4 °C · None MHz |
-| dvfs | ➖ | 3 s | no cpufreq |
-| network-iperf | ✅ | 83 s | end0 ↑887/↓941 (1GE) Mbps |
-| store-versions | ✅ | 7 s | 26.11.0-trunk.90 · 6.18.56-current-sunxi64 |
-| kernel-switch | ✅ | 157 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-7.2.10-edge-sunxi64 · kernel_before=6.18.56-current-sunxi64 |
-| reboot | ❌ | 203 s | warm · 0/2 boots |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| reachable | ❌ | — | ip=10.0.50.68 · reachable=False · port=22 |
 
 ### ❌ ROCK 2F 01
 
@@ -243,14 +171,14 @@ xychart-beta
 
 ### ❌ Rock 5B 02
 
-`rock-5b` · **inplace** · image `26.11.0-trunk.83` · 0 ✅ · 1 ❌ · 21 ⏭️
+`rock-5b` · **inplace** · image `26.11.0-trunk.83` · 2 ✅ · 1 ❌ · 19 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 8 s | — |
-| reboot | ❌ | 144 s | power-cycle · up 110 s |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| upgrade | ⏭️ | 11 s | — |
+| reboot | ✅ | 166 s | power-cycle · up 129 s |
+| kernel-switch | ✅ | 19 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ❌ | 306 s | power-cycle · 2/2 boots · up 110 s |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
 | dvfs | ⏭️ | — | — |
 | net-iperf | ⏭️ | — | board down after reboot/power-cycle |
@@ -270,112 +198,43 @@ xychart-beta
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 
-**Power** — min 0.6 W · avg 3.9 W · peak 6.3 W · 93 samples
+**Power** — min 0.6 W · avg 3.8 W · peak 9.4 W · 331 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 93
-    y-axis "W" 0.5 --> 6.5
-    line [3.9, 5.0, 5.0, 4.6, 4.0, 4.0, 4.5, 2.5, 0.6, 0.6, 3.2, 4.1, 4.0, 4.1, 4.0, 5.3, 4.5, 6.0, 4.1, 4.1, 4.2, 4.0, 4.0, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 3.9, 4.1, 4.0, 4.0, 4.4]
-```
-
-### ❌ Rock 5B Plus 01
-
-`rock-5b-plus` · **inplace** · image `26.11.0-trunk.75` · 21 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 192 s | nightly · 26.11.0-trunk.75 → 26.11.0-trunk.90 |
-| reboot | ✅ | 84 s | power-cycle · up 52 s |
-| kernel-switch | ✅ | 16 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 109 s | power-cycle · 2/2 boots · up 23 s |
-| hw-performance | ✅ | 18 s | AES 1294 · mem 14000 · disk W 21 / R 82 MB/s · 54.5 °C · 1800 MHz |
-| dvfs | ✅ | 16 s | ondemand · 1800–1800 MHz (peak 2352) |
-| network-iperf | ✅ | 83 s | enP4p65s0 ↑2352/↓2353 (2.5GE) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ✅ | 124 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 110 s | power-cycle · 2/2 boots · up 52 s |
-| hw-performance | ✅ | 19 s | AES 1279 · mem 10400 · disk W 67 / R 72 MB/s · 56.4 °C · 1800 MHz |
-| dvfs | ✅ | 15 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 28 s | enP4p65s0 ↑2352/↓2354 (2.5GE) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 6.18.56-current-rockchip64 |
-| kernel-switch | ✅ | 65 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.56-current-rockchip64 |
-| reboot | ✅ | 110 s | power-cycle · 2/2 boots · up 51 s |
-| hw-performance | ✅ | 20 s | AES 1276 · mem 8200 · disk W 21 / R 70 MB/s · 59.2 °C · 1800 MHz |
-| dvfs | ✅ | 17 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 30 s | end0 ↑2353/↓2354 Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 7.3.0-rc6-edge-rockchip64 |
-| kernel-switch | ✅ | 63 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc6-edge-rockchip64 |
-| reboot | ❌ | 83 s | power-cycle · up 55 s |
-
-**Power** — min 0.6 W · avg 4.9 W · peak 12.4 W · 789 samples
-
-```mermaid
-xychart-beta
-    title "Power — Rock 5B Plus 01"
-    x-axis "sample" 1 --> 789
-    y-axis "W" 0.5 --> 12.5
-    line [4.1, 3.9, 3.7, 4.3, 4.1, 4.0, 4.0, 3.9, 3.8, 3.6, 4.1, 3.5, 3.9, 5.5, 3.7, 3.5, 4.4, 4.5, 4.3, 3.7, 3.9, 3.4, 5.4, 5.5, 6.3, 7.8, 6.8, 6.6, 6.9, 4.6, 5.2, 5.6, 6.3, 8.0, 6.8, 7.0, 6.7, 6.4, 3.8, 3.6]
+    x-axis "sample" 1 --> 331
+    y-axis "W" 0.5 --> 9.5
+    line [4.5, 4.2, 3.2, 3.1, 4.2, 5.0, 3.4, 3.3, 3.3, 3.3, 3.3, 3.3, 3.6, 3.3, 4.3, 4.8, 4.1, 4.2, 4.5, 3.4, 3.4, 3.3, 3.3, 3.3, 3.3, 3.5, 3.4, 3.3, 3.3, 3.3, 3.5, 4.0, 5.0, 4.1, 4.0, 3.9, 3.9, 3.9, 3.9, 4.1]
 ```
 
 ### ❌ Rock 5T 01
 
-`rock-5t` · **inplace** · image `26.11.0-trunk.75` · 2 ✅ · 1 ❌ · 13 ⏭️
+`rock-5t` · **inplace** · image `26.11.0-trunk.75` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 9 s | — |
-| reboot | ✅ | 45 s | power-cycle · up 18 s |
-| kernel-switch | ✅ | 18 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=6.18.56-current-rockchip64 |
-| reboot | ❌ | 238 s | power-cycle · 1/2 boots · up 15 s |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-
-**Power** — min 5.3 W · avg 10.3 W · peak 11.6 W · 20 samples
-
-```mermaid
-xychart-beta
-    title "Power — Rock 5T 01"
-    x-axis "sample" 1 --> 20
-    y-axis "W" 5.0 --> 12.0
-    line [10.0, 10.2, 10.2, 10.3, 10.6, 11.4, 11.2, 11.4, 11.1, 11.6, 10.5, 10.3, 10.2, 10.2, 10.2, 10.2, 10.6, 10.7, 10.5, 5.3]
-```
+| reachable | ❌ | — | ip=10.0.50.51 · reachable=False · port=22 |
 
 ### ❌ SpacemiT MusePi Pro 01
 
-`musepipro` · **inplace** · image `26.11.0-trunk.89` · 1 ✅ · 1 ❌ · 4 ⏭️
+`musepipro` · **inplace** · image `26.11.0-trunk.89` · 0 ✅ · 1 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ✅ | 67 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
-| reboot | ❌ | 226 s | power-cycle |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
+| reachable | ❌ | — | ip=10.0.50.24 · reachable=False · port=22 |
 
-**Power** — min 0.8 W · avg 3.2 W · peak 5.2 W · 228 samples
+**Power** — min 2.6 W · avg 2.7 W · peak 2.7 W · 43 samples
 
 ```mermaid
 xychart-beta
     title "Power — SpacemiT MusePi Pro 01"
-    x-axis "sample" 1 --> 228
-    y-axis "W" 0.5 --> 5.5
-    line [4.0, 4.3, 4.5, 4.6, 4.6, 4.8, 4.9, 4.8, 4.4, 4.6, 4.3, 4.1, 4.3, 3.4, 1.4, 2.3, 2.7, 2.7, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
+    x-axis "sample" 1 --> 43
+    y-axis "W" 2.5 --> 3.0
+    line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (58)
+## ✅ Passed (59)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1693,6 +1552,45 @@ xychart-beta
     x-axis "sample" 1 --> 976
     y-axis "W" 0.5 --> 13.0
     line [4.1, 4.0, 3.3, 3.2, 4.1, 4.2, 3.2, 3.4, 3.8, 3.2, 3.2, 5.1, 4.0, 4.2, 4.2, 4.7, 5.7, 5.7, 5.4, 5.9, 5.7, 6.1, 7.5, 6.6, 6.6, 6.2, 5.8, 5.7, 5.8, 5.3, 5.7, 5.7, 7.5, 6.9, 6.6, 6.8, 4.4, 4.0, 3.3, 3.4]
+```
+
+### ✅ Rock 5B Plus 01
+
+`rock-5b-plus` · **inplace** · image `26.11.0-trunk.90` · 22 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 25 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
+| reboot | ✅ | 83 s | power-cycle · up 54 s |
+| kernel-switch | ✅ | 22 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 109 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 18 s | AES 1279 · mem 13800 · disk W 21 / R 82 MB/s · 57.3 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 1800–1800 MHz (peak 2304) |
+| network-iperf | ✅ | 28 s | enP4p65s0 ↑2351/↓2354 (2.5GE) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 123 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 82 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 19 s | AES 1277 · mem 6600 · disk W 68 / R 73 MB/s · 58.2 °C · 1800 MHz |
+| dvfs | ✅ | 14 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 28 s | enP4p65s0 ↑2353/↓2354 (2.5GE) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 6.18.56-current-rockchip64 |
+| kernel-switch | ✅ | 65 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.56-current-rockchip64 |
+| reboot | ✅ | 120 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 20 s | AES 1275 · mem 8100 · disk W 26 / R 71 MB/s · 61 °C · 1800 MHz |
+| dvfs | ✅ | 17 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 29 s | end0 ↑2353/↓2354 Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 7.3.0-rc6-edge-rockchip64 |
+| kernel-switch | ✅ | 66 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 84 s | power-cycle · up 53 s |
+
+**Power** — min 0.6 W · avg 5.1 W · peak 12.3 W · 644 samples
+
+```mermaid
+xychart-beta
+    title "Power — Rock 5B Plus 01"
+    x-axis "sample" 1 --> 644
+    y-axis "W" 0.5 --> 12.5
+    line [4.4, 3.4, 3.9, 3.5, 4.3, 3.4, 4.1, 3.5, 3.6, 4.2, 5.8, 4.3, 4.2, 4.5, 3.8, 3.7, 4.0, 3.4, 6.0, 4.7, 6.5, 8.4, 6.7, 6.7, 6.6, 6.9, 3.9, 6.1, 5.9, 4.5, 5.8, 7.5, 7.5, 6.6, 6.6, 6.5, 6.8, 4.5, 4.3, 3.6]
 ```
 
 ### ✅ Rockpi E 01
