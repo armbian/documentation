@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**70** boards — **59** operational, **11** broken.
+**70** boards — **60** operational, **10** broken.
 
-Reconcile made: 2026-10-12 10:55 UTC
+Reconcile made: 2026-10-12 11:13 UTC
 
 **Operational**
 
@@ -43,6 +43,7 @@ Reconcile made: 2026-10-12 10:55 UTC
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
+| NanoPC T6 Plus 01 | 10.0.50.130 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (20) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (10) |
@@ -51,11 +52,11 @@ Reconcile made: 2026-10-12 10:55 UTC
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R3S LTS 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (18) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
+| NanoPi R76S 01 | 10.0.50.54 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (21) |
 | Odroid C2 01 | 10.0.50.22 | local | 1 GbE | Netgear S3300 (5) |
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | TP-Link SG3428X (14) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
-| Odroid XU4 01 | 10.0.50.36 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
@@ -87,10 +88,9 @@ Reconcile made: 2026-10-12 10:55 UTC
 |:--|:--|:--|--:|:--|
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
-| NanoPC T6 Plus 01 | 10.0.50.29 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (20) |
 | Nanopi M6 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (8) |
 | Nanopi M6 V2 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (20) |
-| NanoPi R76S 01 | 10.0.50.54 | local | 2.5 GbE | Netgear XS508M (2) |
+| Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
