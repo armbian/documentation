@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**70** boards — **62** operational, **8** broken.
+**70** boards — **64** operational, **6** broken.
 
-Reconcile made: 2026-10-12 12:32 UTC
+Reconcile made: 2026-10-12 12:47 UTC
 
 **Operational**
 
@@ -48,7 +48,7 @@ Reconcile made: 2026-10-12 12:32 UTC
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (10) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | TP-Link SG3428X (9) |
-| Nanopi M6 01 | 10.0.50.166 | local | 1 GbE | Aruba 2540 (8) |
+| Nanopi M6 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (8) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R3S LTS 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (18) |
@@ -65,14 +65,16 @@ Reconcile made: 2026-10-12 12:32 UTC
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
+| Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
+| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
-| Rock 5B 02 | 10.0.50.32 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
+| Rock 5B 02 | 10.0.50.73 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
@@ -91,8 +93,6 @@ Reconcile made: 2026-10-12 12:32 UTC
 | Khadas VIM1S 01 | 10.0.50.19 | local | 100 MbE | Netgear S3300 (33) |
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Nanopi M6 V2 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (20) |
-| Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
-| Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
 | SpacemiT MusePi Pro 01 | 10.0.50.24 | local | 1 GbE | Netgear S3300 (10) |
