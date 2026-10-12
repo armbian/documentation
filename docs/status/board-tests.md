@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **62** passed, **9** failed. Most recent test of every board; failures first.
+**71** boards — **63** passed, **8** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (9)
+## ❌ Failed (8)
 
 ### ❌ Khadas VIM1S 01
 
@@ -149,14 +149,6 @@ xychart-beta
     line [4.5, 4.2, 3.2, 3.1, 4.2, 5.0, 3.4, 3.3, 3.3, 3.3, 3.3, 3.3, 3.6, 3.3, 4.3, 4.8, 4.1, 4.2, 4.5, 3.4, 3.4, 3.3, 3.3, 3.3, 3.3, 3.5, 3.4, 3.3, 3.3, 3.3, 3.5, 4.0, 5.0, 4.1, 4.0, 3.9, 3.9, 3.9, 3.9, 4.1]
 ```
 
-### ❌ Rock 5T 01
-
-`rock-5t` · **inplace** · image `26.11.0-trunk.75` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.51 · reachable=False · port=22 |
-
 ### ❌ SpacemiT MusePi Pro 01
 
 `musepipro` · **inplace** · image `26.11.0-trunk.89` · 0 ✅ · 1 ❌ · 0 ⏭️
@@ -175,7 +167,7 @@ xychart-beta
     line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (62)
+## ✅ Passed (63)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1611,6 +1603,39 @@ xychart-beta
     x-axis "sample" 1 --> 644
     y-axis "W" 0.5 --> 12.5
     line [4.4, 3.4, 3.9, 3.5, 4.3, 3.4, 4.1, 3.5, 3.6, 4.2, 5.8, 4.3, 4.2, 4.5, 3.8, 3.7, 4.0, 3.4, 6.0, 4.7, 6.5, 8.4, 6.7, 6.7, 6.6, 6.9, 3.9, 6.1, 5.9, 4.5, 5.8, 7.5, 7.5, 6.6, 6.6, 6.5, 6.8, 4.5, 4.3, 3.6]
+```
+
+### ✅ Rock 5T 01
+
+`rock-5t` · **inplace** · image `26.11.0-trunk.90` · 15 ✅ · 0 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 9 s | — |
+| reboot | ✅ | 50 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 19 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=6.18.56-current-rockchip64 |
+| reboot | ✅ | 79 s | power-cycle · 2/2 boots · up 23 s |
+| hw-performance | ✅ | 18 s | AES 1252 · mem 10200 · disk W 65 / R 82 MB/s · 52.7 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 78 s | enP3p49s0 ↑2351/↓2310 (2.5GE) · enP4p65s0 ↑2353/↓2354 (2.5GE) · wlP2p33s0 ↑640/↓240 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.92 · 6.18.56-current-rockchip64 |
+| kernel-switch | ✅ | 74 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.18.56-current-rockchip64 |
+| reboot | ✅ | 85 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 17 s | AES 1261 · mem 8000 · disk W 60 / R 85 MB/s · 53.6 °C · 1800 MHz |
+| dvfs | ✅ | 25 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 78 s | end0 ↑2353/↓2354 · end1 ↑2353/↓2163 · wlP2p33s0 ↑574/↓250 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 11 s | 26.11.0-trunk.92 · 7.3.0-rc6-edge-rockchip64 |
+| kernel-switch | ✅ | 65 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 59 s | power-cycle · up 23 s |
+
+**Power** — min 1.8 W · avg 7.1 W · peak 13.3 W · 468 samples
+
+```mermaid
+xychart-beta
+    title "Power — Rock 5T 01"
+    x-axis "sample" 1 --> 468
+    y-axis "W" 1.5 --> 13.5
+    line [7.3, 5.8, 5.9, 7.4, 7.5, 4.2, 7.4, 4.1, 7.5, 7.4, 9.5, 7.4, 7.8, 7.7, 8.4, 7.1, 7.5, 7.5, 7.5, 7.9, 7.0, 4.7, 7.4, 4.5, 6.9, 7.4, 8.0, 9.0, 7.6, 7.8, 7.9, 8.5, 7.0, 7.8, 7.9, 7.6, 7.8, 6.8, 4.7, 6.9]
 ```
 
 ### ✅ Rockpi E 01
