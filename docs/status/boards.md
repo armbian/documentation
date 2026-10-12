@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**70** boards — **60** operational, **10** broken.
+**70** boards — **61** operational, **9** broken.
 
-Reconcile made: 2026-10-12 11:13 UTC
+Reconcile made: 2026-10-12 11:24 UTC
 
 **Operational**
 
@@ -43,7 +43,7 @@ Reconcile made: 2026-10-12 11:13 UTC
 | Khadas VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | Mekotronics R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
 | Mekotronics R58S2 01 | 10.0.50.52 | local | 1 GbE | Aruba 2540 (34) |
-| NanoPC T6 Plus 01 | 10.0.50.130 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (20) |
+| NanoPC T6 Plus 01 | 10.0.50.36 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (20) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
 | NanoPi K2 01 | 10.0.50.34 | local | 1 GbE | Netgear S3300 (7) |
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (10) |
@@ -57,6 +57,7 @@ Reconcile made: 2026-10-12 11:13 UTC
 | Odroid C4 01 | 10.0.50.26 | local | 1 GbE | TP-Link SG3428X (14) |
 | Odroid M1 01 | 10.0.50.50 | local | 1 GbE | Netgear S3300 (13) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
+| Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
@@ -90,7 +91,6 @@ Reconcile made: 2026-10-12 11:13 UTC
 | Khadas VIM4 01 | 10.0.50.14 | local | 1 GbE | Aruba 2540 (21) |
 | Nanopi M6 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (8) |
 | Nanopi M6 V2 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (20) |
-| Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi Prime 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
