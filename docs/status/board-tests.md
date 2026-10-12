@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **63** passed, **8** failed. Most recent test of every board; failures first.
+**71** boards — **64** passed, **7** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (8)
+## ❌ Failed (7)
 
 ### ❌ Khadas VIM1S 01
 
@@ -59,24 +59,6 @@ xychart-beta
     x-axis "sample" 1 --> 42
     y-axis "W" 1.0 --> 2.0
     line [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.6, 1.8, 1.8, 1.8, 1.8, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]
-```
-
-### ❌ NanoPi R76S 01
-
-`nanopi-r76s` · **inplace** · image `26.11.0-trunk.90` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.20 · reachable=False · port=22 |
-
-**Power** — min 3.0 W · avg 3.0 W · peak 3.0 W · 32 samples
-
-```mermaid
-xychart-beta
-    title "Power — NanoPi R76S 01"
-    x-axis "sample" 1 --> 32
-    y-axis "W" 2.5 --> 3.5
-    line [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
 ```
 
 ### ❌ Orange Pi Prime 01
@@ -167,7 +149,7 @@ xychart-beta
     line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (63)
+## ✅ Passed (64)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1029,6 +1011,39 @@ xychart-beta
     x-axis "sample" 1 --> 715
     y-axis "W" 2.0 --> 9.5
     line [3.1, 4.3, 2.8, 3.7, 3.2, 3.2, 3.4, 4.4, 5.7, 3.7, 2.9, 3.0, 3.4, 3.6, 4.5, 3.7, 3.0, 3.3, 4.1, 5.6, 3.6, 3.8, 3.2, 3.2, 3.5, 4.2, 4.3, 4.5, 3.4, 3.9, 4.0, 5.7, 3.3, 3.2, 3.3, 4.0, 4.1, 4.6, 4.5, 3.5]
+```
+
+### ✅ NanoPi R76S 01
+
+`nanopi-r76s` · **inplace** · image `26.8.3` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 124 s | nightly · 26.8.3 → 26.11.0-trunk.92 |
+| reboot | ✅ | 64 s | power-cycle · up 24 s |
+| kernel-switch | ✅ | 61 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 103 s | power-cycle · 2/2 boots · up 26 s |
+| hw-performance | ✅ | 16 s | AES 1271 · mem 7600 · disk W 197 / R 295 MB/s · 45.3 °C · 2016 MHz |
+| dvfs | ✅ | 20 s | ondemand · 2016–2016 MHz (peak 2208) |
+| network-iperf | ✅ | 107 s | end0 ↑2332/↓2352 (2.5GE) · end1 ↑2350/↓2353 (2.5GE) · wlan0 ↑45/↓94 (Wi-Fi 5) · wlxe0e1a933de37 ↑193/↓214 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 12 s | 26.11.0-trunk.92 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 82 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-7.3.0-rc6-edge-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 92 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 16 s | AES 1311 · mem 8700 · disk W 208 / R 291 MB/s · 45.3 °C · 2016 MHz |
+| dvfs | ✅ | 21 s | ondemand · 408–2016 MHz (peak 2208) |
+| network-iperf | ✅ | 105 s | end0 ↑2353/↓2354 (2.5GE) · end1 ↑2353/↓2258 (2.5GE) · wlan0 ↑94/↓179 (Wi-Fi 5) · wlxe0e1a933de37 ↑188/↓214 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.92 · 7.3.0-rc6-edge-rockchip64 |
+| kernel-switch | ✅ | 56 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc6-edge-rockchip64 |
+| reboot | ✅ | 72 s | power-cycle · up 22 s |
+
+**Power** — min 0.6 W · avg 4.5 W · peak 8.8 W · 642 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPi R76S 01"
+    x-axis "sample" 1 --> 642
+    y-axis "W" 0.5 --> 9.0
+    line [4.5, 5.1, 5.0, 4.2, 5.4, 4.6, 2.8, 3.7, 5.2, 5.0, 4.6, 2.8, 4.0, 2.7, 4.8, 5.9, 4.9, 5.2, 4.8, 4.7, 5.3, 4.7, 5.2, 5.1, 5.0, 3.0, 4.3, 3.0, 4.7, 5.9, 4.5, 4.8, 4.8, 4.8, 4.6, 5.4, 5.1, 4.3, 2.7, 3.7]
 ```
 
 ### ✅ Odroid C2 01
