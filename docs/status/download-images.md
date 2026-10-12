@@ -16,38 +16,36 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1813 image assets across 395 boards, generated 2026-10-05 16:01 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 1848 image assets across 398 boards, generated 2026-10-12 16:44 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
-| Download (dl.armbian.com, per-board releases) | 760 | 164 | 11 versions (…26.8.8) |
-| Community nightly | 522 | 227 | 26.11.0-trunk.62 |
+| Download (dl.armbian.com, per-board releases) | 789 | 168 | 13 versions (…26.8.10) |
+| Community nightly | 517 | 228 | 26.11.0-trunk.83 |
 | Appliance images (kali/omv/homeassistant) | 417 | 133 | 26.8.1 |
-| CI nightly | 110 | 48 | 26.11.0-trunk.72 |
-| (orphaned — no repo) | 4 | 2 | 26.8.9 |
+| CI nightly | 120 | 53 | 26.11.0-trunk.90 |
+| (orphaned — no repo) | 5 | 2 | 26.8.11 |
 
-Current download release line: **26.8.8/26.8.7/26.8.6**.
+Current download release line: **26.8.10/26.8.9/26.8.8**.
 
 ## Outdated boards
 
-_**4** boards whose newest `dl.armbian.com` image is behind the current 26.8.8/26.8.7/26.8.6 line._
+_**3** boards whose newest `dl.armbian.com` image is behind the current 26.8.10/26.8.9/26.8.8 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 162 d |
-| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 162 d |
-| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 133 d |
-| sk-am62-lp | `conf` | 26.5.1 | 2026-06-18 | 109 d |
+| khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 169 d |
+| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 169 d |
+| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 140 d |
 
 ## Missing download images
 
-_**2** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
+_**1** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
 
 | board | name | present in |
 | --- | --- | --- |
-| tanix-tx6s | Tanix TX6s | CI |
-| verdin-imx8mm | Verdin iMX8M Mini | CI |
+| boardcon-sbc3568 | SBC3568 | CI |
 
 <!-- download-images:end -->
