@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **60** passed, **11** failed. Most recent test of every board; failures first.
+**71** boards — **61** passed, **10** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (11)
+## ❌ Failed (10)
 
 ### ❌ Khadas VIM1S 01
 
@@ -111,29 +111,6 @@ xychart-beta
     y-axis "W" 2.5 --> 3.5
     line [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
 ```
-
-### ❌ Odroid XU4 01
-
-`odroidxu4` · **inplace** · image `26.11.0-trunk.74` · 0 ✅ · 1 ❌ · 15 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | 91 s | — |
-| reboot | ❌ | 212 s | power-cycle · up 29 s |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
 
 ### ❌ Orange Pi Prime 01
 
@@ -231,7 +208,7 @@ xychart-beta
     line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (60)
+## ✅ Passed (61)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1173,6 +1150,29 @@ xychart-beta
     y-axis "W" 0.5 --> 10.0
     line [3.9, 3.8, 3.9, 2.2, 2.9, 4.8, 4.2, 3.8, 2.8, 3.9, 2.8, 3.2, 4.0, 4.3, 5.5, 3.8, 3.3, 4.4, 4.1, 4.2, 4.1, 3.5, 2.7, 4.5, 3.0, 2.0, 3.8, 3.9, 3.9, 6.9, 3.4, 3.7, 4.2, 3.8, 4.2, 4.5, 3.7, 2.1, 2.4, 3.4]
 ```
+
+### ✅ Odroid XU4 01
+
+`odroidxu4` · **inplace** · image `26.8.1` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 186 s | nightly · 26.8.3 → 26.11.0-trunk.92 |
+| reboot | ✅ | 65 s | power-cycle · up 32 s |
+| kernel-switch | ✅ | 38 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
+| reboot | ✅ | 110 s | power-cycle · 2/2 boots · up 31 s |
+| hw-performance | ✅ | 30 s | AES 65 · mem 5300 · disk W 47 / R 61 MB/s · 65 °C · 1400 MHz |
+| dvfs | ✅ | 32 s | ondemand · 600–1400 MHz (peak 2000) |
+| network-iperf | ✅ | 37 s | end0 ↑924/↓941 Mbps |
+| store-versions | ✅ | 7 s | 26.11.0-trunk.92 · 6.6.155-current-odroidxu4 |
+| kernel-switch | ✅ | 95 s | branch=edge · family=odroidxu4 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-7.2.10-edge-odroidxu4 · kernel_before=6.6.155-current-odroidxu4 |
+| reboot | ✅ | 106 s | power-cycle · 2/2 boots · up 30 s |
+| hw-performance | ✅ | 29 s | AES 65 · mem 5200 · disk W 42 / R 61 MB/s · 66 °C · 1400 MHz |
+| dvfs | ✅ | 33 s | ondemand · 600–1200 MHz (peak 1800) |
+| network-iperf | ✅ | 36 s | end0 ↑923/↓941 Mbps |
+| store-versions | ✅ | 6 s | 26.11.0-trunk.92 · 7.2.10-edge-odroidxu4 |
+| kernel-switch | ✅ | 90 s | branch=current · family=odroidxu4 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.6.155-current-odroidxu4 · kernel_before=7.2.10-edge-odroidxu4 |
+| reboot | ✅ | 68 s | power-cycle · up 31 s |
 
 ### ✅ Orange Pi 3 01
 
