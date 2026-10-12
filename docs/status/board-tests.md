@@ -103,8 +103,8 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 61 s | — |
-| reboot | ❌ | 367 s | power-cycle |
+| upgrade | ⏭️ | 91 s | — |
+| reboot | ❌ | 212 s | power-cycle · up 29 s |
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
