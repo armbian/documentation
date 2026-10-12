@@ -335,6 +335,7 @@ nav:
             - 'NetAlertX': 'software/netalertx.md'
             - 'Netdata': 'software/netdata.md'
             - 'Prometheus': 'software/prometheus.md'
+            - 'SolidPing': 'software/solidping.md'
             - 'Uptime Kuma': 'software/uptime-kuma.md'
         - 'Netconfig':
             - 'avahi-daemon': 'software/avahi-daemon.md'
