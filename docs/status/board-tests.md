@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **61** passed, **10** failed. Most recent test of every board; failures first.
+**71** boards — **62** passed, **9** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (10)
+## ❌ Failed (9)
 
 ### ❌ Khadas VIM1S 01
 
@@ -42,39 +42,6 @@ xychart-beta
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | reachable | ❌ | — | ip=10.0.50.14 · reachable=False · port=22 |
-
-### ❌ NanoPC T6 Plus 01
-
-`friendlyelec-rk3588` · **inplace** · image `26.8.10` · 1 ✅ · 1 ❌ · 14 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 82 s | nightly · 26.8.10 → 26.8.10 |
-| reboot | ❌ | 220 s | power-cycle |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-
-**Power** — min 4.3 W · avg 7.4 W · peak 13.8 W · 104 samples
-
-```mermaid
-xychart-beta
-    title "Power — NanoPC T6 Plus 01"
-    x-axis "sample" 1 --> 104
-    y-axis "W" 4.0 --> 14.0
-    line [6.6, 6.8, 7.3, 6.9, 7.6, 7.0, 7.0, 8.5, 7.6, 7.2, 7.0, 7.4, 7.3, 7.4, 7.1, 7.5, 6.7, 6.8, 6.9, 9.0, 7.9, 7.3, 7.5, 7.2, 6.6, 6.6, 6.9, 7.0, 4.3, 4.3, 6.8, 8.0, 8.5, 9.6, 7.7, 8.4, 9.2, 11.8, 8.5, 8.0]
-```
 
 ### ❌ Nanopi M6 01
 
@@ -208,7 +175,7 @@ xychart-beta
     line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (61)
+## ✅ Passed (62)
 
 ### ✅ Arduino UNO Q 01
 
@@ -799,6 +766,39 @@ xychart-beta
     x-axis "sample" 1 --> 153
     y-axis "W" 0.5 --> 11.0
     line [2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 3.2, 3.2, 2.7, 2.6, 3.0, 1.9, 1.9, 2.7, 3.0, 3.6, 4.4, 3.0, 3.5, 3.8, 3.7, 10.5, 10.5, 6.8, 3.1, 3.0, 3.2, 3.6, 3.5, 3.2, 2.8, 3.2, 3.4, 3.4, 3.5, 3.3]
+```
+
+### ✅ NanoPC T6 Plus 01
+
+`friendlyelec-rk3588` · **inplace** · image `26.8.10` · 15 ✅ · 0 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 27 s | nightly · 26.8.10 → 26.8.10 |
+| reboot | ✅ | 58 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 19 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 89 s | power-cycle · 2/2 boots · up 21 s |
+| hw-performance | ✅ | 15 s | AES 1330 · mem 14800 · disk W 180 / R 260 MB/s · 39.8 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 1800–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 33 s | wlP3p49s0 ↑476/↓333 (Wi-Fi 5) · lan1 ↑?/↓? · lan2 ↑?/↓? Mbps |
+| store-versions | ✅ | 4 s | 26.8.10 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 52 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.18.56-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 242 s | power-cycle · 2/2 boots · up 105 s |
+| hw-performance | ✅ | 15 s | AES 1344 · mem 7200 · disk W 170 / R 252 MB/s · 42.5 °C · 1800 MHz |
+| dvfs | ✅ | 15 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ⏭️ | 6 s | no cabled interfaces |
+| store-versions | ✅ | 4 s | 26.8.10 · 6.18.56-current-rockchip64 |
+| kernel-switch | ✅ | 39 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.92 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.18.56-current-rockchip64 |
+| reboot | ✅ | 48 s | power-cycle · up 21 s |
+
+**Power** — min 2.3 W · avg 5.2 W · peak 11.0 W · 455 samples
+
+```mermaid
+xychart-beta
+    title "Power — NanoPC T6 Plus 01"
+    x-axis "sample" 1 --> 455
+    y-axis "W" 2.0 --> 11.5
+    line [4.7, 5.5, 4.1, 4.1, 5.0, 5.2, 4.2, 4.5, 4.2, 3.9, 5.5, 5.2, 6.8, 5.5, 5.0, 5.1, 5.3, 5.0, 4.2, 5.0, 5.2, 5.2, 5.2, 5.2, 5.2, 5.4, 4.9, 5.2, 5.2, 5.2, 5.2, 5.2, 5.7, 6.6, 7.3, 5.8, 6.5, 5.9, 4.6, 5.1]
 ```
 
 ### ✅ NanoPi Fire3 01
