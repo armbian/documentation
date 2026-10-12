@@ -1,7 +1,7 @@
 ---
 title: "Monitoring"
 seo_title: "Monitoring apps for Armbian"
-description: "Real-time monitoring, collecting metrics, up-time status for Armbian on ARM64 and x86 single-board computers: Grafana, NetAlertX, Netdata, Prometheus, Uptime Kuma, Dozzle."
+description: "Real-time monitoring, collecting metrics, up-time status for Armbian on ARM64 and x86 single-board computers: Grafana, NetAlertX, Netdata, Prometheus, Uptime Kuma, SolidPing, Dozzl"
 hub: true
 comments: true
 ---
@@ -15,4 +15,5 @@ Install and configure these applications through [`armbian-config`](/config/) or
 - [Netdata](/software/netdata/) — Netdata - monitoring real-time metrics
 - [Prometheus](/software/prometheus/) — Prometheus monitoring and alerting toolkit
 - [Uptime Kuma](/software/uptime-kuma/) — Uptime Kuma self-hosted monitoring tool
+- [SolidPing](/software/solidping/) — SolidPing uptime and synthetic monitoring
 - [Dozzle](/software/dozzle/) — Dozzle real-time Docker log viewer
