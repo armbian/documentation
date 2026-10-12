@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **59** passed, **12** failed. Most recent test of every board; failures first.
+**71** boards — **60** passed, **11** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (11)
 
 ### ❌ Khadas VIM1S 01
 
@@ -42,19 +42,6 @@ xychart-beta
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | reachable | ❌ | — | ip=10.0.50.14 · reachable=False · port=22 |
-
-### ❌ Mekotronics R58HD 01
-
-`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 1 ✅ · 1 ❌ · 4 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ✅ | 25 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
-| reboot | ❌ | 225 s | power-cycle |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
 
 ### ❌ NanoPC T6 Plus 01
 
@@ -229,7 +216,7 @@ xychart-beta
     line [2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.6, 2.6, 2.6, 2.6, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7, 2.7]
 ```
 
-## ✅ Passed (59)
+## ✅ Passed (60)
 
 ### ✅ Arduino UNO Q 01
 
@@ -775,6 +762,29 @@ xychart-beta
 | store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 7.3.0-rc6-edge-meson64 |
 | kernel-switch | ✅ | 67 s | branch=current · family=meson64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-meson64 · kernel_before=7.3.0-rc6-edge-meson64 |
 | reboot | ✅ | 32 s | warm · up 17 s |
+
+### ✅ Mekotronics R58HD 01
+
+`mekotronics-r58hd` · **inplace** · image `26.11.0-trunk.75` · 6 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 24 s | nightly · 26.11.0-trunk.90 → 26.11.0-trunk.90 |
+| reboot | ✅ | 49 s | power-cycle · up 16 s |
+| hw-performance | ✅ | 14 s | AES 1301 · mem 16000 · disk W 255 / R 287 MB/s · 49.9 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 1800–1800 MHz (peak 2304) |
+| network-iperf | ✅ | 224 s | end0 ↑559/↓940 (1GE) · enP3p49s0 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 55 s | 26.11.0-trunk.90 |
+
+**Power** — min 3.5 W · avg 5.5 W · peak 12.2 W · 316 samples
+
+```mermaid
+xychart-beta
+    title "Power — Mekotronics R58HD 01"
+    x-axis "sample" 1 --> 316
+    y-axis "W" 3.0 --> 12.5
+    line [5.2, 6.4, 6.4, 5.8, 5.1, 4.0, 4.5, 6.2, 6.3, 7.3, 8.4, 5.9, 5.7, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.6, 5.3, 5.2, 5.2, 5.2, 5.2, 5.2, 5.4, 5.3, 5.2, 5.2, 5.2, 5.2, 5.2, 5.7, 5.7, 5.2, 5.2, 5.2, 5.2, 5.2]
+```
 
 ### ✅ Mekotronics R58S2 01
 
