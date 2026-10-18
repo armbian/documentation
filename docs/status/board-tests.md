@@ -13,27 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**72** boards — **66** passed, **6** failed. Most recent test of every board; failures first.
+**72** boards — **67** passed, **5** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (6)
-
-### ❌ Khadas VIM1S 01
-
-`khadas-vim1s` · **inplace** · image `26.8.3` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.19 · reachable=False · port=22 |
-
-**Power** — min 1.7 W · avg 1.7 W · peak 1.7 W · 45 samples
-
-```mermaid
-xychart-beta
-    title "Power — Khadas VIM1S 01"
-    x-axis "sample" 1 --> 45
-    y-axis "W" 1.5 --> 2.0
-    line [1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7]
-```
+## ❌ Failed (5)
 
 ### ❌ Nanopi M6 01
 
@@ -146,7 +128,7 @@ xychart-beta
     line [3.8, 4.9, 4.3, 4.2, 4.4, 4.5, 4.4, 3.9, 4.0, 4.2, 4.3, 4.5, 6.3, 4.5, 4.3, 4.4, 4.5, 3.8, 2.1, 1.6, 2.4, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6]
 ```
 
-## ✅ Passed (66)
+## ✅ Passed (67)
 
 ### ✅ Arduino UNO Q 01
 
@@ -678,6 +660,31 @@ xychart-beta
     x-axis "sample" 1 --> 1024
     y-axis "W" 1.0 --> 4.0
     line [2.1, 2.2, 2.4, 1.8, 2.4, 2.4, 1.9, 2.3, 2.1, 2.5, 2.5, 1.9, 1.7, 1.8, 1.7, 1.6, 1.8, 1.8, 1.9, 2.0, 2.3, 2.4, 2.2, 2.3, 2.0, 1.7, 1.9, 1.9, 2.2, 2.2, 1.9, 1.9, 2.1, 2.1, 2.3, 2.2, 2.2, 2.2, 1.9, 2.0]
+```
+
+### ✅ Khadas VIM1S 01
+
+`khadas-vim1s` · **inplace** · image `26.11.0-trunk.97` · 7 ✅ · 0 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 86 s | — |
+| reboot | ✅ | 84 s | power-cycle · up 32 s |
+| kernel-switch | ✅ | 105 s | branch=edge · family=meson-s4t7 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-meson-s4t7 · kernel_before=7.3.0-rc7-edge-meson-s4t7 |
+| reboot | ✅ | 155 s | power-cycle · 2/2 boots · up 45 s |
+| hw-performance | ✅ | 33 s | AES 428 · mem 2300 · disk W 42 / R 148 MB/s · 55.8 °C · 2004 MHz |
+| dvfs | ✅ | 34 s | performance · 100–2004 MHz (peak 2004) |
+| network-iperf | ✅ | 74 s | eth0 ↑94/↓94 (10/100ME) · wlan0 ↑5/↓7 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 7 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-meson-s4t7 |
+
+**Power** — min 0.6 W · avg 2.6 W · peak 3.5 W · 459 samples
+
+```mermaid
+xychart-beta
+    title "Power — Khadas VIM1S 01"
+    x-axis "sample" 1 --> 459
+    y-axis "W" 0.5 --> 4.0
+    line [2.2, 2.3, 2.2, 2.3, 2.3, 2.2, 2.1, 2.4, 2.1, 2.2, 3.0, 3.4, 3.3, 3.3, 2.9, 3.0, 2.7, 2.8, 2.9, 3.0, 1.9, 1.9, 2.8, 3.2, 3.0, 1.5, 2.0, 2.9, 3.2, 3.4, 3.1, 3.1, 3.1, 2.8, 2.7, 2.7, 2.4, 2.5, 2.3, 2.3]
 ```
 
 ### ✅ Khadas VIM2 01
