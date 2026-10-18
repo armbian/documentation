@@ -37,11 +37,26 @@ xychart-beta
 
 ### ❌ Orange Pi Prime 01
 
-`orangepiprime` · **inplace** · image `26.11.0-trunk.90` · 0 ✅ · 1 ❌ · 0 ⏭️
+`orangepiprime` · **inplace** · image `26.11.0-trunk.92` · 7 ✅ · 2 ❌ · 7 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.68 · reachable=False · port=22 |
+| upgrade | ✅ | 174 s | nightly · 26.11.0-trunk.99 → 26.11.0-trunk.99 |
+| reboot | ✅ | 51 s | warm · up 34 s |
+| kernel-switch | ✅ | 58 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-sunxi64 · kernel_before=6.18.57-current-sunxi64 |
+| reboot | ✅ | 92 s | warm · 2/2 boots · up 32 s |
+| hw-performance | ✅ | 35 s | AES 379 · mem 2100 · disk W 13 / R 23 MB/s · 41.4 °C · None MHz |
+| dvfs | ➖ | 3 s | no cpufreq |
+| network-iperf | ❌ | 401 s | end0 ↑892/↓941 (1GE) · wlan0 ↑0/↓0 (Wi-Fi 4) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.99 · 6.18.57-current-sunxi64 |
+| kernel-switch | ✅ | 163 s | branch=edge · family=sunxi64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.2.11-edge-sunxi64 · kernel_before=6.18.57-current-sunxi64 |
+| reboot | ❌ | 203 s | warm · 0/2 boots |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
 
 ### ❌ ROCK 2F 01
 
@@ -68,41 +83,41 @@ xychart-beta
 
 ### ❌ Rock 5B 02
 
-`rock-5b` · **inplace** · image `26.11.0-trunk.90` · 0 ✅ · 1 ❌ · 21 ⏭️
+`rock-5b` · **inplace** · image `26.11.0-trunk.92` · 20 ✅ · 2 ❌ · 0 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 14 s | — |
-| reboot | ❌ | 272 s | power-cycle |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
-| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
-| dvfs | ⏭️ | — | — |
-| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
-| store-versions | ⏭️ | — | — |
-| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
-| reboot | ⏭️ | — | reboot |
+| upgrade | ✅ | 96 s | nightly · 26.11.0-trunk.99 → 26.11.0-trunk.99 |
+| reboot | ✅ | 140 s | power-cycle · up 112 s |
+| kernel-switch | ❌ | 14 s | branch=vendor · phase=install · dpkg_state=absent |
+| reboot | ✅ | 89 s | power-cycle · 2/2 boots · up 29 s |
+| hw-performance | ✅ | 16 s | AES 1288 · mem 10000 · disk W 82 / R 190 MB/s · 59.2 °C · 1800 MHz |
+| dvfs | ✅ | 15 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 58 s | enP4p65s0 ↑2353/↓2354 (2.5GE) · wlx7419f81555cb ↑328/↓139 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.18.57-current-rockchip64 |
+| kernel-switch | ✅ | 67 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-rockchip64 · kernel_before=6.18.57-current-rockchip64 |
+| reboot | ✅ | 177 s | power-cycle · 2/2 boots · up 28 s |
+| hw-performance | ✅ | 16 s | AES 1300 · mem 10000 · disk W 81 / R 194 MB/s · 60.1 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 54 s | enP4p65s0 ↑2352/↓2354 (2.5GE) · wlx7419f81555cb ↑551/↓248 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.18.57-current-rockchip64 |
+| kernel-switch | ✅ | 65 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-rockchip64 · kernel_before=6.18.57-current-rockchip64 |
+| reboot | ✅ | 87 s | power-cycle · 2/2 boots · up 28 s |
+| hw-performance | ✅ | 16 s | AES 1285 · mem 8000 · disk W 82 / R 201 MB/s · 62.8 °C · 1800 MHz |
+| dvfs | ✅ | 17 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 54 s | end0 ↑2353/↓2352 · wlx7419f81555cb ↑639/↓272 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-rockchip64 |
+| kernel-switch | ❌ | 14 s | branch=vendor · phase=install · dpkg_state=absent |
+| reboot | ✅ | 56 s | power-cycle · up 29 s |
 
-**Power** — min 2.4 W · avg 5.2 W · peak 7.8 W · 176 samples
+**Power** — min 0.6 W · avg 5.9 W · peak 13.4 W · 739 samples
 
 ```mermaid
 xychart-beta
     title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 176
-    y-axis "W" 2.0 --> 8.0
-    line [4.8, 5.2, 5.2, 4.5, 5.2, 4.5, 5.3, 5.2, 5.5, 4.2, 4.8, 4.2, 4.0, 4.0, 6.3, 5.7, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 6.0, 6.1, 5.5, 5.5, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4, 5.4]
+    x-axis "sample" 1 --> 739
+    y-axis "W" 0.5 --> 13.5
+    line [6.5, 7.1, 6.6, 7.2, 4.4, 5.1, 5.1, 5.0, 5.0, 5.2, 4.9, 3.9, 5.8, 8.1, 6.5, 6.3, 6.7, 6.5, 6.4, 4.5, 5.3, 5.0, 5.0, 4.8, 4.8, 7.0, 7.6, 7.0, 6.2, 7.3, 6.6, 4.8, 4.9, 4.8, 7.1, 7.7, 7.2, 6.3, 5.0, 5.2]
 ```
 
 ### ❌ SpacemiT MusePi Pro 01
