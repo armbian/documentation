@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**72** boards — **68** passed, **4** failed. Most recent test of every board; failures first.
+**72** boards — **67** passed, **5** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (4)
+## ❌ Failed (5)
 
 ### ❌ Nanopi M6 01
 
@@ -81,6 +81,45 @@ xychart-beta
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 
+### ❌ Rock 5B 02
+
+`rock-5b` · **inplace** · image `26.11.0-trunk.99` · 20 ✅ · 1 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 11 s | — |
+| reboot | ✅ | 62 s | power-cycle · up 28 s |
+| kernel-switch | ✅ | 19 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 85 s | power-cycle · 2/2 boots · up 28 s |
+| hw-performance | ✅ | 15 s | AES 1285 · mem 14000 · disk W 93 / R 235 MB/s · 62.8 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 1800–1800 MHz (peak 2352) |
+| network-iperf | ✅ | 54 s | enP4p65s0 ↑2353/↓2350 (2.5GE) · wlx7419f81555cb ↑645/↓258 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.1.172-vendor-rk35xx |
+| kernel-switch | ✅ | 73 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
+| reboot | ✅ | 87 s | power-cycle · 2/2 boots · up 28 s |
+| hw-performance | ✅ | 16 s | AES 1297 · mem 5000 · disk W 87 / R 198 MB/s · 63.8 °C · 1800 MHz |
+| dvfs | ✅ | 16 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 54 s | enP4p65s0 ↑2353/↓2354 (2.5GE) · wlx7419f81555cb ↑679/↓180 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.18.57-current-rockchip64 |
+| kernel-switch | ✅ | 62 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-rockchip64 · kernel_before=6.18.57-current-rockchip64 |
+| reboot | ✅ | 91 s | power-cycle · 2/2 boots · up 25 s |
+| hw-performance | ✅ | 16 s | AES 1283 · mem 8000 · disk W 82 / R 202 MB/s · 65.6 °C · 1800 MHz |
+| dvfs | ✅ | 18 s | ondemand · 408–1800 MHz (peak 2400) |
+| network-iperf | ✅ | 60 s | end0 ↑2323/↓2347 · wlx7419f81555cb ↑385/↓308 (Wi-Fi 7) Mbps |
+| store-versions | ✅ | 7 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-rockchip64 |
+| kernel-switch | ✅ | 50 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc7-edge-rockchip64 |
+| reboot | ❌ | 224 s | power-cycle |
+
+**Power** — min 0.6 W · avg 5.2 W · peak 13.7 W · 683 samples
+
+```mermaid
+xychart-beta
+    title "Power — Rock 5B 02"
+    x-axis "sample" 1 --> 683
+    y-axis "W" 0.5 --> 14.0
+    line [4.6, 4.0, 5.2, 4.5, 4.5, 3.6, 4.8, 6.8, 5.2, 5.4, 5.0, 5.1, 5.0, 4.4, 5.2, 3.9, 6.2, 8.1, 6.4, 7.1, 7.0, 6.6, 6.9, 4.2, 6.0, 3.7, 6.4, 8.5, 6.6, 7.0, 6.8, 4.8, 3.6, 3.8, 3.3, 3.2, 3.2, 3.2, 3.2, 3.2]
+```
+
 ### ❌ SpacemiT MusePi Pro 01
 
 `musepipro` · **inplace** · image `26.11.0-trunk.90` · 1 ✅ · 1 ❌ · 4 ⏭️
@@ -104,7 +143,7 @@ xychart-beta
     line [3.8, 4.9, 4.3, 4.2, 4.4, 4.5, 4.4, 3.9, 4.0, 4.2, 4.3, 4.5, 6.3, 4.5, 4.3, 4.4, 4.5, 3.8, 2.1, 1.6, 2.4, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6]
 ```
 
-## ✅ Passed (68)
+## ✅ Passed (67)
 
 ### ✅ Arduino UNO Q 01
 
@@ -1619,45 +1658,6 @@ xychart-beta
     x-axis "sample" 1 --> 976
     y-axis "W" 0.5 --> 13.0
     line [4.1, 4.0, 3.3, 3.2, 4.1, 4.2, 3.2, 3.4, 3.8, 3.2, 3.2, 5.1, 4.0, 4.2, 4.2, 4.7, 5.7, 5.7, 5.4, 5.9, 5.7, 6.1, 7.5, 6.6, 6.6, 6.2, 5.8, 5.7, 5.8, 5.3, 5.7, 5.7, 7.5, 6.9, 6.6, 6.8, 4.4, 4.0, 3.3, 3.4]
-```
-
-### ✅ Rock 5B 02
-
-`rock-5b` · **inplace** · image `26.11.0-trunk.99` · 21 ✅ · 0 ❌ · 1 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | 11 s | — |
-| reboot | ✅ | 57 s | power-cycle · up 30 s |
-| kernel-switch | ✅ | 19 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 90 s | power-cycle · 2/2 boots · up 29 s |
-| hw-performance | ✅ | 15 s | AES 1287 · mem 15000 · disk W 94 / R 233 MB/s · 61 °C · 1800 MHz |
-| dvfs | ✅ | 17 s | ondemand · 1800–1800 MHz (peak 2352) |
-| network-iperf | ✅ | 54 s | enP4p65s0 ↑2353/↓2356 (2.5GE) · wlx7419f81555cb ↑648/↓273 (Wi-Fi 7) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.1.172-vendor-rk35xx |
-| kernel-switch | ✅ | 74 s | branch=current · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-rockchip64 · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ✅ | 92 s | power-cycle · 2/2 boots · up 30 s |
-| hw-performance | ✅ | 15 s | AES 1298 · mem 7000 · disk W 86 / R 213 MB/s · 61.9 °C · 1800 MHz |
-| dvfs | ✅ | 16 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 55 s | enP4p65s0 ↑2353/↓2354 (2.5GE) · wlx7419f81555cb ↑521/↓252 (Wi-Fi 7) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.18.57-current-rockchip64 |
-| kernel-switch | ✅ | 63 s | branch=edge · family=rockchip64 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-rockchip64 · kernel_before=6.18.57-current-rockchip64 |
-| reboot | ✅ | 86 s | power-cycle · 2/2 boots · up 26 s |
-| hw-performance | ✅ | 15 s | AES 1296 · mem 5000 · disk W 84 / R 196 MB/s · 64.7 °C · 1800 MHz |
-| dvfs | ✅ | 17 s | ondemand · 408–1800 MHz (peak 2400) |
-| network-iperf | ✅ | 54 s | end0 ↑2353/↓2355 · wlx7419f81555cb ↑484/↓279 (Wi-Fi 7) Mbps |
-| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-rockchip64 |
-| kernel-switch | ✅ | 49 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=7.3.0-rc7-edge-rockchip64 |
-| reboot | ✅ | 55 s | power-cycle · up 27 s |
-
-**Power** — min 0.6 W · avg 5.5 W · peak 13.6 W · 595 samples
-
-```mermaid
-xychart-beta
-    title "Power — Rock 5B 02"
-    x-axis "sample" 1 --> 595
-    y-axis "W" 0.5 --> 14.0
-    line [4.4, 4.0, 4.0, 5.1, 4.4, 4.8, 3.6, 4.3, 4.9, 6.9, 5.0, 5.6, 4.8, 5.4, 4.9, 5.1, 4.1, 5.0, 4.0, 5.1, 6.4, 8.6, 6.6, 7.0, 6.4, 7.0, 6.8, 5.7, 4.6, 4.6, 4.9, 6.3, 8.7, 6.5, 7.1, 6.4, 7.0, 6.7, 4.8, 4.6]
 ```
 
 ### ✅ Rock 5B Plus 01
