@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**71** boards — **64** passed, **7** failed. Most recent test of every board; failures first.
+**72** boards — **66** passed, **6** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (7)
+## ❌ Failed (6)
 
 ### ❌ Khadas VIM1S 01
 
@@ -34,14 +34,6 @@ xychart-beta
     y-axis "W" 1.5 --> 2.0
     line [1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7]
 ```
-
-### ❌ Khadas VIM4 01
-
-`khadas-vim4` · **inplace** · image `26.11.0-trunk.83` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.14 · reachable=False · port=22 |
 
 ### ❌ Nanopi M6 01
 
@@ -154,7 +146,7 @@ xychart-beta
     line [3.8, 4.9, 4.3, 4.2, 4.4, 4.5, 4.4, 3.9, 4.0, 4.2, 4.3, 4.5, 6.3, 4.5, 4.3, 4.4, 4.5, 3.8, 2.1, 1.6, 2.4, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6, 2.6]
 ```
 
-## ✅ Passed (64)
+## ✅ Passed (66)
 
 ### ✅ Arduino UNO Q 01
 
@@ -431,6 +423,39 @@ xychart-beta
 | network-iperf | ✅ | 66 s | wlan0 ↑83/↓102 (Wi-Fi 5) Mbps |
 | store-versions | ✅ | 6 s | 26.11.0-trunk.74 · 6.18.55-current-sunxi64 |
 
+### ✅ BananaPi W2 01
+
+`bananapiw2` · **inplace** · image `26.11.0-trunk` · 16 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 186 s | nightly · 26.11.0-trunk → 26.11.0-trunk.99 |
+| reboot | ✅ | 69 s | power-cycle · up 23 s |
+| kernel-switch | ✅ | 37 s | branch=current · family=realtek-rtd129x · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-realtek-rtd129x · kernel_before=6.18.57-current-realtek-rtd129x |
+| reboot | ✅ | 86 s | power-cycle · 2/2 boots · up 19 s |
+| hw-performance | ✅ | 22 s | AES 652 · mem 3600 · disk W 39 / R 125 MB/s · 58.8 °C · 1400 MHz |
+| dvfs | ✅ | 22 s | schedutil · 300–1400 MHz (peak 1400) |
+| network-iperf | ✅ | 56 s | eth0 ↑941/↓941 (1GE) · eth1 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6 s | 26.11.0-trunk.99 · 6.18.57-current-realtek-rtd129x |
+| kernel-switch | ✅ | 105 s | branch=edge · family=realtek-rtd129x · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-realtek-rtd129x · kernel_before=6.18.57-current-realtek-rtd129x |
+| reboot | ✅ | 83 s | power-cycle · 2/2 boots · up 16 s |
+| hw-performance | ✅ | 23 s | AES 651 · mem 3600 · disk W 37 / R 113 MB/s · 59.8 °C · 1400 MHz |
+| dvfs | ✅ | 24 s | schedutil · 300–1400 MHz (peak 1400) |
+| network-iperf | ✅ | 56 s | eth0 ↑941/↓941 (1GE) · eth1 ↑941/↓941 (1GE) Mbps |
+| store-versions | ✅ | 6 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-realtek-rtd129x |
+| kernel-switch | ✅ | 93 s | branch=current · family=realtek-rtd129x · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-realtek-rtd129x · kernel_before=7.3.0-rc7-edge-realtek-rtd129x |
+| reboot | ✅ | 56 s | power-cycle · up 19 s |
+
+**Power** — min 2.0 W · avg 4.3 W · peak 6.3 W · 755 samples
+
+```mermaid
+xychart-beta
+    title "Power — BananaPi W2 01"
+    x-axis "sample" 1 --> 755
+    y-axis "W" 1.5 --> 6.5
+    line [4.0, 4.5, 4.3, 4.6, 4.5, 4.7, 4.7, 4.6, 4.3, 3.8, 3.4, 4.6, 4.3, 3.5, 4.5, 3.2, 4.7, 4.8, 4.2, 4.1, 4.2, 4.2, 4.4, 4.4, 4.6, 4.2, 3.4, 4.3, 3.9, 4.5, 5.0, 4.0, 4.3, 4.1, 4.5, 4.4, 4.6, 4.6, 3.9, 3.7]
+```
+
 ### ✅ Cubie A5E 01
 
 `radxa-cubie-a5e` · **inplace** · image `26.11.0-trunk.83` · 14 ✅ · 0 ❌ · 2 ⏭️
@@ -700,6 +725,31 @@ xychart-beta
 | store-versions | ✅ | 4 s | 26.11.0-trunk.90 · 7.3.0-rc6-edge-meson64 |
 | kernel-switch | ✅ | 67 s | branch=current · family=meson64 · installed=26.11.0-trunk.90 · boot_image=/boot/vmlinuz-6.18.56-current-meson64 · kernel_before=7.3.0-rc6-edge-meson64 |
 | reboot | ✅ | 32 s | warm · up 17 s |
+
+### ✅ Khadas VIM4 01
+
+`khadas-vim4` · **inplace** · image `26.11.0-trunk.97` · 8 ✅ · 0 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ✅ | 73 s | nightly · 26.11.0-trunk.99 → 26.11.0-trunk.99 |
+| reboot | ✅ | 62 s | power-cycle · up 24 s |
+| kernel-switch | ✅ | 26 s | branch=edge · family=meson-s4t7 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-7.3.0-rc7-edge-meson-s4t7 · kernel_before=7.3.0-rc7-edge-meson-s4t7 |
+| reboot | ✅ | 88 s | power-cycle · 2/2 boots · up 22 s |
+| hw-performance | ✅ | 20 s | AES 1252 · mem 5600 · disk W 65 / R 139 MB/s · 46.8 °C · 2208 MHz |
+| dvfs | ✅ | 22 s | performance · 500–2208 MHz (peak 2208) |
+| network-iperf | ✅ | 58 s | eth0 ↑940/↓941 (1GE) · wlan0 ↑380/↓285 (Wi-Fi 5) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.99 · 7.3.0-rc7-edge-meson-s4t7 |
+
+**Power** — min 1.8 W · avg 4.3 W · peak 8.8 W · 285 samples
+
+```mermaid
+xychart-beta
+    title "Power — Khadas VIM4 01"
+    x-axis "sample" 1 --> 285
+    y-axis "W" 1.5 --> 9.0
+    line [3.6, 4.3, 4.6, 4.3, 4.2, 3.7, 6.6, 4.4, 4.3, 3.6, 4.0, 4.1, 2.2, 3.3, 4.7, 4.3, 4.5, 4.4, 4.3, 3.4, 3.3, 4.8, 4.9, 4.2, 3.3, 2.8, 3.9, 4.5, 3.9, 4.3, 4.7, 8.4, 4.6, 4.0, 4.1, 4.2, 4.0, 5.1, 5.4, 4.4]
+```
 
 ### ✅ Mekotronics R58HD 01
 
