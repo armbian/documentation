@@ -331,25 +331,27 @@ xychart-beta
 
 ### ✅ Banana Pi R3 Mini 01
 
-`bananapir3mini` · **inplace** · image `26.11.0-trunk` · 4 ✅ · 0 ❌ · 2 ⏭️
+`bananapir3mini` · **inplace** · image `26.11.0-trunk` · 7 ✅ · 0 ❌ · 1 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 19 s | — |
-| reboot | ✅ | 74 s | power-cycle · up 37 s |
-| hw-performance | ✅ | 20 s | AES 935 · mem 3200 · disk W 77 / R 91 MB/s · 73.8 °C · None MHz |
+| upgrade | ✅ | 128 s | nightly · 26.11.0-trunk → 26.11.0-trunk.99 |
+| reboot | ✅ | 70 s | power-cycle · up 37 s |
+| kernel-switch | ✅ | 32 s | branch=current · family=filogic-mt7986 · installed=26.11.0-trunk.99 · boot_image=/boot/vmlinuz-6.18.57-current-filogic-mt7986 · kernel_before=6.18.57-current-filogic-mt7986 |
+| reboot | ✅ | 108 s | power-cycle · 2/2 boots · up 35 s |
+| hw-performance | ✅ | 15 s | AES 935 · mem 3200 · disk W 698 / R 691 MB/s · 60.6 °C · None MHz |
 | dvfs | ➖ | 2 s | no cpufreq |
-| network-iperf | ✅ | 306 s | eth0 ↑2353/↓2356 (2.5GE) · eth1 ↑2353/↓2272 (2.5GE) · wlan0 ↑5/↓24 (Wi-Fi 6) · wlan1 ↑401/↓213 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 6 s | 26.11.0-trunk · 6.18.52-current-filogic-mt7986 |
+| network-iperf | ✅ | 107 s | eth0 ↑2354/↓2353 (2.5GE) · eth1 ↑2353/↓2177 (2.5GE) · wlan0 ↑43/↓45 (Wi-Fi 6) · wlan1 ↑360/↓158 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 4 s | 26.11.0-trunk.99 · 6.18.57-current-filogic-mt7986 |
 
-**Power** — min 1.8 W · avg 8.3 W · peak 13.7 W · 291 samples
+**Power** — min 0.9 W · avg 8.7 W · peak 13.2 W · 323 samples
 
 ```mermaid
 xychart-beta
     title "Power — Banana Pi R3 Mini 01"
-    x-axis "sample" 1 --> 291
-    y-axis "W" 1.5 --> 14.0
-    line [8.2, 8.8, 8.6, 8.3, 7.2, 3.5, 4.4, 5.9, 7.7, 8.5, 8.5, 8.4, 8.4, 8.6, 8.7, 8.5, 8.8, 8.7, 8.7, 8.5, 11.1, 9.7, 8.3, 8.3, 8.8, 8.5, 8.5, 8.5, 8.3, 8.3, 8.6, 8.4, 8.7, 8.4, 8.4, 8.5, 8.5, 8.4, 8.8, 8.7]
+    x-axis "sample" 1 --> 323
+    y-axis "W" 0.5 --> 13.5
+    line [9.4, 9.8, 9.2, 10.2, 9.6, 9.2, 9.2, 9.6, 11.6, 9.4, 9.5, 9.2, 9.3, 5.3, 5.1, 6.8, 8.7, 9.6, 9.8, 9.3, 8.9, 4.0, 7.1, 9.0, 9.0, 4.3, 5.1, 8.7, 9.2, 9.2, 9.3, 9.0, 9.3, 9.2, 9.3, 9.9, 9.6, 9.9, 11.3, 9.4]
 ```
 
 ### ✅ Banana Pi R4 01
