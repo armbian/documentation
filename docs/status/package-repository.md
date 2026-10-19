@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-10-18 10:05 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-10-19 11:34 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Thu, 15 Oct 2026 | 2279 | `26.8.8` |
-| `trixie` | trixie | Thu, 15 Oct 2026 | 2279 | `26.8.8` |
-| `sid` | sid | Thu, 15 Oct 2026 | 2279 | `26.8.8` |
-| `jammy` | jammy | Thu, 15 Oct 2026 | 2279 | `26.8.8` |
-| `noble` | noble | Thu, 15 Oct 2026 | 2279 | `26.8.8` |
+| `bookworm` | bookworm | Sun, 18 Oct 2026 | 2279 | `26.8.8` |
+| `trixie` | trixie | Sun, 18 Oct 2026 | 2279 | `26.8.8` |
+| `sid` | sid | Sun, 18 Oct 2026 | 2279 | `26.8.8` |
+| `jammy` | jammy | Sun, 18 Oct 2026 | 2279 | `26.8.8` |
+| `noble` | noble | Sun, 18 Oct 2026 | 2279 | `26.8.8` |
 
 ### Core package versions
 
@@ -152,13 +152,21 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `base-files` | `26.8.3-12.4+deb12u15-bookworm` | `26.8.3-13.8+deb13u6-trixie` | `26.8.3-14.2-sid` | `26.8.3-12ubuntu4.7-jammy` | `26.8.3-13ubuntu10-noble` |
 | `bluez` | `5.66-1+rpt2+deb12u2` | `5.82-1.1+rpt2` | `5.82-1.1+rpt2` | — | — |
 | `bluez-firmware` | `1.2-9+rpt4` | `1.2-13+rpt2` | `1.2-13+rpt2` | — | — |
+| `edk2-qcs6490` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-qcs9075` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-airbox-q900` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-midstream` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-q6a` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-q8b` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-qcs9075` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `edk2-sc8280xp` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
 | `edl-ng` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` |
 | `fastfetch` | `2.69.0` | `2.69.0` | `2.69.0` | `2.69.0` | `2.69.0` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
 | `gh` | `2.102.0` | `2.102.0` | `2.83.2` | `2.102.0` | `2.102.0` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
-| `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20260817-1` | — | `0.2.0-3fakesync1build6` | — |
+| `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | `0.2.0-3fakesync1build6` | — |
 | `libcec6` | — | — | — | `6.0.2-2` | — |
 | `libraspberrypi` | `1:2+git20231018~131943+3c97f76-1` | `1:2+git20231018~131943+3c97f76-1` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` |
 | `linux-firmware-raspi` | — | — | — | — | `12-0ubuntu1` |
