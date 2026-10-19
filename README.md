@@ -33,6 +33,7 @@ docs/                  Markdown sources (organised by topic)
   user-guide/          End-user guides
   community/           Community entry points (forums, chat, GitHub)
   contribute/          Contributor guides
+  css/                 Site CSS assets
 overrides/             MkDocs Material theme overrides (main.html)
 tools/                 Python helpers (see tools/README.md)
 .github/workflows/     CI/automation
