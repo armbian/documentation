@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**72** boards — **65** operational, **7** broken.
+**72** boards — **66** operational, **6** broken.
 
-Reconcile made: 2026-10-19 09:19 UTC
+Reconcile made: 2026-10-19 09:36 UTC
 
 **Operational**
 
@@ -52,6 +52,7 @@ Reconcile made: 2026-10-19 09:19 UTC
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (10) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | TP-Link SG3428X (9) |
 | Nanopi M6 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (8) |
+| Nanopi M6 V2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (20) |
 | NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R3S LTS 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (18) |
@@ -91,7 +92,6 @@ Reconcile made: 2026-10-19 09:19 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| Nanopi M6 V2 01 | 10.0.50.72 | local | 1 GbE | Netgear S3300 (20) |
 | Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 02 | 10.0.50.73 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
