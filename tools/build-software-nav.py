@@ -27,8 +27,9 @@ HUB_BEGIN = "# BEGIN software-hubs"
 HUB_END = "# END software-hubs"
 HUB_IND = " " * 2   # not_in_nav is a block scalar indented 2 spaces
 
-# Curated label + order, mapped to the category id used by the hub file name and
-# the app pages' `category:` field.
+# Curated labels, mapped to the category id used by the hub file name and the
+# app pages' `category:` field. The nav lists categories in alphabetical order
+# of the label, so list order here does not matter.
 CATEGORIES = [
     ("Armbian", "Armbian"),
     ("Backup", "Backup"),
@@ -38,6 +39,7 @@ CATEGORIES = [
     ("DNS blockers", "DNS"),
     ("Downloaders", "Downloaders"),
     ("Finance", "Finance"),
+    ("Gaming", "Gaming"),
     ("Home automation", "HomeAutomation"),
     ("Management", "Management"),
     ("Media", "Media"),
@@ -85,10 +87,17 @@ def yq(s):
 
 
 def build_block(by_cat):
+    labels = dict((cat_id, label) for label, cat_id in CATEGORIES)
+    # Any category with app pages but no curated label still gets rendered (with
+    # a prettified id as the label) so new upstream categories never silently
+    # vanish; warn so a nicer label can be added.
+    for cat in sorted(set(by_cat) - set(labels)):
+        labels[cat] = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', cat)
+        print(f"::warning:: software-nav: category {cat!r} has app pages but no "
+              f"curated label — using {labels[cat]!r}; add one in tools/build-software-nav.py",
+              file=sys.stderr)
     lines = []
-    seen = set()
-    for label, cat_id in CATEGORIES:
-        seen.add(cat_id)
+    for cat_id, label in sorted(labels.items(), key=lambda kv: kv[1].lower()):
         apps = by_cat.get(cat_id, [])
         if not apps:
             # Defunct/phantom category (no app pages generated) — skip it, so a
@@ -100,17 +109,6 @@ def build_block(by_cat):
         # not_in_nav instead.
         lines.append(f"{IND}- {yq(label)}:")
         for title, slug in apps:
-            lines.append(f"{IND}    - {yq(title)}: {yq(f'software/{slug}.md')}")
-    # Any category with app pages but no curated label still gets rendered (with
-    # a prettified id as the label) so new upstream categories never silently
-    # vanish; warn so a nicer label can be added.
-    for cat in sorted(set(by_cat) - seen):
-        label = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', cat)
-        print(f"::warning:: software-nav: category {cat!r} has app pages but no "
-              f"curated label — using {label!r}; add one in tools/build-software-nav.py",
-              file=sys.stderr)
-        lines.append(f"{IND}- {yq(label)}:")
-        for title, slug in by_cat[cat]:
             lines.append(f"{IND}    - {yq(title)}: {yq(f'software/{slug}.md')}")
     return "\n".join(lines)
 

@@ -303,6 +303,9 @@ nav:
         - 'Finance':
             - 'Actual Budget': 'software/actual-budget.md'
             - 'Wallos': 'software/wallos.md'
+        - 'Gaming':
+            - 'Heroic Launcher': 'software/heroic-launcher.md'
+            - 'Steam': 'software/steam.md'
         - 'Home automation':
             - 'Domoticz': 'software/domoticz.md'
             - 'EVCC': 'software/evcc.md'
@@ -352,9 +355,6 @@ nav:
             - 'Ghost': 'software/ghost.md'
             - 'HedgeDoc': 'software/hedgedoc.md'
             - 'SWAG': 'software/swag.md'
-        - 'Gaming':
-            - 'Heroic Launcher': 'software/heroic-launcher.md'
-            - 'Steam': 'software/steam.md'
         # END software-nav
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
   - 'BUILD FRAMEWORK' :
