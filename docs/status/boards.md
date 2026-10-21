@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**75** boards — **66** operational, **9** broken.
+**77** boards — **69** operational, **8** broken.
 
-Reconcile made: 2026-10-21 05:52 UTC
+Reconcile made: 2026-10-21 06:04 UTC
 
 **Operational**
 
@@ -31,6 +31,7 @@ Reconcile made: 2026-10-21 05:52 UTC
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
+| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubieboard 4 01 | 10.0.50.72 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
@@ -64,6 +65,7 @@ Reconcile made: 2026-10-21 05:52 UTC
 | Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 4 02 | 10.0.50.77 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| Orange Pi 4 LTS 01 | 10.0.50.80 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
@@ -79,6 +81,7 @@ Reconcile made: 2026-10-21 05:52 UTC
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
+| Rockpi 4C 01 | 10.0.50.79 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
@@ -93,7 +96,6 @@ Reconcile made: 2026-10-21 05:52 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (32) |
 | Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
