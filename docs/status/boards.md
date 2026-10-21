@@ -13,14 +13,15 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**73** boards — **65** operational, **8** broken.
+**75** boards — **66** operational, **9** broken.
 
-Reconcile made: 2026-10-19 18:45 UTC
+Reconcile made: 2026-10-21 05:52 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| A64 OLinuXino 01 | 10.0.50.78 | local | 1 GbE | — |
 | Banana Pi CM4IO 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
@@ -30,10 +31,8 @@ Reconcile made: 2026-10-19 18:45 UTC
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
-| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (32) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
-| Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | — |
+| Cubieboard 4 01 | 10.0.50.72 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | TP-Link SG3428X (5) |
@@ -64,6 +63,7 @@ Reconcile made: 2026-10-19 18:45 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
+| Orange Pi 4 02 | 10.0.50.77 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
@@ -85,6 +85,7 @@ Reconcile made: 2026-10-19 18:45 UTC
 | SpacemiT MusePi Pro 01 | 10.0.50.14 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
+| UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | — |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
 **Broken**
@@ -92,7 +93,8 @@ Reconcile made: 2026-10-19 18:45 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| Jetson Nano 01 | 10.0.50.69 | local | 1 GbE | — |
+| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (32) |
 | Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 02 | 10.0.50.73 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
