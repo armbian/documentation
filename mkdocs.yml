@@ -28,6 +28,7 @@ not_in_nav: |
   /software/dns.md
   /software/downloaders.md
   /software/finance.md
+  /software/gaming.md
   /software/home-automation.md
   /software/management.md
   /software/media.md
@@ -351,6 +352,9 @@ nav:
             - 'Ghost': 'software/ghost.md'
             - 'HedgeDoc': 'software/hedgedoc.md'
             - 'SWAG': 'software/swag.md'
+        - 'Gaming':
+            - 'Heroic Launcher': 'software/heroic-launcher.md'
+            - 'Steam': 'software/steam.md'
         # END software-nav
 #        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
   - 'BUILD FRAMEWORK' :
