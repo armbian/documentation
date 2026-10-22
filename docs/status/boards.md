@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**78** boards — **71** operational, **7** broken.
+**80** boards — **73** operational, **7** broken.
 
-Reconcile made: 2026-10-22 09:59 UTC
+Reconcile made: 2026-10-22 10:11 UTC
 
 **Operational**
 
@@ -33,9 +33,10 @@ Reconcile made: 2026-10-22 09:59 UTC
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | — |
+| BananaPi M4 01 | 10.0.50.84 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (47) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
+| Cubieboard 1 01 | 10.0.50.103 | local | 100 MbE | — |
 | Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
@@ -75,6 +76,7 @@ Reconcile made: 2026-10-22 09:59 UTC
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
+| Orange Pi+ 2E 02 | 10.0.50.85 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
