@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**77** boards — **70** operational, **7** broken.
+**78** boards — **71** operational, **7** broken.
 
-Reconcile made: 2026-10-22 09:44 UTC
+Reconcile made: 2026-10-22 09:59 UTC
 
 **Operational**
 
@@ -33,6 +33,7 @@ Reconcile made: 2026-10-22 09:44 UTC
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | — |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (47) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
