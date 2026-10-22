@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**80** boards — **73** operational, **7** broken.
+**80** boards — **74** operational, **6** broken.
 
-Reconcile made: 2026-10-22 10:11 UTC
+Reconcile made: 2026-10-22 10:30 UTC
 
 **Operational**
 
@@ -33,10 +33,10 @@ Reconcile made: 2026-10-22 10:11 UTC
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| BananaPi M4 01 | 10.0.50.84 | local | Wi-Fi 5 | Zyxel NWA130BE |
+| BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (15) |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (47) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
-| Cubieboard 1 01 | 10.0.50.103 | local | 100 MbE | — |
+| Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
 | Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
@@ -68,15 +68,15 @@ Reconcile made: 2026-10-22 10:11 UTC
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Odroid XU4 01 | 10.0.50.20 | local | 1 GbE | Netgear S3300 (40) |
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
-| Orange Pi 4 02 | 10.0.50.77 | local | 1 GbE | Aruba 2540 (15) |
-| Orange Pi 4 LTS 01 | 10.0.50.80 | local | 1 GbE | Aruba 2540 (43) |
+| Orange Pi 4 02 | 10.0.50.77 | local | 1 GbE | Aruba 2540 (39) |
+| Orange Pi 4 LTS 01 | 10.0.50.80 | local | 1 GbE | Aruba 2540 (41) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5 Plus 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
-| Orange Pi+ 2E 02 | 10.0.50.85 | local | Wi-Fi 4 | Zyxel NWA130BE |
+| Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Radxa Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Radxa ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
@@ -86,7 +86,7 @@ Reconcile made: 2026-10-22 10:11 UTC
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
-| Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (39) |
+| Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (43) |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
@@ -94,6 +94,7 @@ Reconcile made: 2026-10-22 10:11 UTC
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
+| ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
 **Broken**
 
@@ -105,6 +106,5 @@ Reconcile made: 2026-10-22 10:11 UTC
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
 | UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | TP-Link SG3428X (21) |
-| ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
 <!-- BOARDS-STOP -->
