@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**80** boards — **75** operational, **5** broken.
+**80** boards — **77** operational, **3** broken.
 
-Reconcile made: 2026-10-22 17:13 UTC
+Reconcile made: 2026-10-22 17:30 UTC
 
 **Operational**
 
@@ -32,6 +32,7 @@ Reconcile made: 2026-10-22 17:13 UTC
 | Banana Pi R3 Mini 01 | 10.0.50.42 | local | 2.5 GbE | Netgear XS508M (5) |
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
+| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (15) |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (47) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
@@ -84,6 +85,7 @@ Reconcile made: 2026-10-22 17:13 UTC
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
+| Rock 5B 02 | 10.0.50.65 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (43) |
@@ -101,9 +103,7 @@ Reconcile made: 2026-10-22 17:13 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
-| Rock 5B 02 | 10.0.50.65 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
 
