@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**80** boards — **74** operational, **6** broken.
+**80** boards — **73** operational, **7** broken.
 
-Reconcile made: 2026-10-22 10:30 UTC
+Reconcile made: 2026-10-22 10:52 UTC
 
 **Operational**
 
@@ -33,7 +33,6 @@ Reconcile made: 2026-10-22 10:30 UTC
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (15) |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | Aruba 2540 (47) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
@@ -100,6 +99,7 @@ Reconcile made: 2026-10-22 10:30 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (15) |
 | Orange Pi Prime 01 | 10.0.50.65 | local | 1 GbE | Aruba 2540 (35) |
 | ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 02 | 10.0.50.73 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
