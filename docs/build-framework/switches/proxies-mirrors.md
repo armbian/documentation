@@ -52,11 +52,11 @@ Selects which mirror of `linux-stable.git` the mainline kernel sources are clone
 
 `string`
 
-Selects which mirror of `u-boot.git` the mainline U-Boot sources are cloned from. Leave it empty to use the official `source.denx.de`; pick one of the mirrors below when the DENX server is slow for you, as it commonly is for users in mainland China.
+Selects the `u-boot.git` source for mainline U-Boot (`MAINLINE_UBOOT_SOURCE`).
 
-- `github`: use the mirror provided by GitHub, the same as `USE_GITHUB_UBOOT_MIRROR=yes`
-- `gitee`: use the mirror provided by Gitee, a Chinese Git service
-- leave empty to use the official `source.denx.de`, which may be very slow for mainland China users
+- empty (default) or `github`: the GitHub mirror, under `GITHUB_SOURCE`
+- `gitee`: the Gitee mirror, for users in mainland China
+- `denx`: the official upstream, `git.u-boot-project.org`. `source.denx.de` redirects there.
 
 #### GITHUB_MIRROR
 
