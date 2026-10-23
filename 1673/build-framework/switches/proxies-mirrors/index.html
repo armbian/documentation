@@ -7150,7 +7150,7 @@
 <p>Fetches mainline kernel sources from the <code>googlesource.com</code> mirror instead of the official <code>git.kernel.org</code>. Off by default; enable it when <code>git.kernel.org</code> is slow or unreliable from your location, as the Google mirror is often faster. This is a shorthand for <code>MAINLINE_MIRROR=google</code>.</p>
 <h4 id="use_github_uboot_mirror">USE_GITHUB_UBOOT_MIRROR<a class="headerlink" href="#use_github_uboot_mirror" title="Permanent link">¶</a></h4>
 <p><code>string</code> · default: <code>no</code></p>
-<p>Fetches mainline U-Boot sources from an unofficial GitHub mirror instead of the official <code>git.denx.de</code>. Off by default; enable it when the DENX server is slow or unreachable from your location, since GitHub is often faster and more reliable. This is a shorthand for <code>UBOOT_MIRROR=github</code>.</p>
+<p>Legacy shorthand for <code>UBOOT_MIRROR=github</code>. The GitHub mirror is already the default. Set it to <code>yes</code> to force GitHub over any <code>UBOOT_MIRROR</code> value, including the <code>gitee</code> mirror from <code>REGIONAL_MIRROR=china</code>.</p>
 <h4 id="download_mirror">DOWNLOAD_MIRROR<a class="headerlink" href="#download_mirror" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>Selects the download mirror used for the cross-toolchain and the Debian/Ubuntu package repositories. Leave it empty to use the official sources; choose one of the regional mirrors below when the defaults are slow, which is typically the case for users in mainland China.</p>
