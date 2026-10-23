@@ -13,7 +13,7 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-10-22 10:51 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-10-23 10:42 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
