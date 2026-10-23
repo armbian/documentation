@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**80** boards — **77** operational, **3** broken.
+**80** boards — **79** operational, **1** broken.
 
-Reconcile made: 2026-10-22 17:30 UTC
+Reconcile made: 2026-10-23 09:07 UTC
 
 **Operational**
 
@@ -84,6 +84,7 @@ Reconcile made: 2026-10-22 17:30 UTC
 | Raspberry Pi 3B | 10.0.50.17 | local | 100 MbE | Netgear S3300 (8) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Raspberry Pi Zero 2W | 10.0.20.187 | local | Wi-Fi 4 | Zyxel NWA130BE |
+| ROCK 2F 01 | 10.0.20.164 | local | — | — |
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B 02 | 10.0.50.65 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
@@ -91,6 +92,7 @@ Reconcile made: 2026-10-22 17:30 UTC
 | Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (43) |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
+| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
 | SpacemiT MusePi Pro 01 | 10.0.50.14 | local | 1 GbE | Netgear S3300 (10) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
@@ -103,8 +105,6 @@ Reconcile made: 2026-10-22 17:30 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| ROCK 2F 01 | 10.0.20.164 | local | — | — |
-| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
 
 <!-- BOARDS-STOP -->
