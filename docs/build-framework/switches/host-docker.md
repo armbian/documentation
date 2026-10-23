@@ -177,6 +177,18 @@ Example:
 ./compile.sh GHCR_MIRROR=dockerproxy GHCR_MIRROR_ADDRESS=ghcr.libcuda.so
 ```
 
+#### GITHUB_TOKEN
+
+`string`
+
+GitHub token for API calls during the build. Some extensions ask the GitHub API for the latest release, for example `uefi-edk2-rk3588`. Without a token, GitHub allows 60 requests per hour per IP address. When that limit is used up, the build fails with `403 (unauthenticated - 60 requests/hour per IP)`. A token raises the limit. The build sends it in a request header, not on the command line, and passes it into the Docker container.
+
+Example:
+
+```sh
+GITHUB_TOKEN=$(gh auth token) ./compile.sh build BOARD=rock-5-itx
+```
+
 #### USERPATCHES_PATH
 
 `string` · default: `userpatches/`
