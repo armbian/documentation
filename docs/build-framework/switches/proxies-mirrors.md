@@ -17,7 +17,7 @@ Fetches mainline kernel sources from the `googlesource.com` mirror instead of th
 
 `string` · default: `no`
 
-Fetches mainline U-Boot sources from an unofficial GitHub mirror instead of the official `git.denx.de`. Off by default; enable it when the DENX server is slow or unreachable from your location, since GitHub is often faster and more reliable. This is a shorthand for `UBOOT_MIRROR=github`.
+Legacy shorthand for `UBOOT_MIRROR=github`. The GitHub mirror is already the default. Set it to `yes` to force GitHub over any `UBOOT_MIRROR` value, including the `gitee` mirror from `REGIONAL_MIRROR=china`.
 
 #### DOWNLOAD_MIRROR
 
