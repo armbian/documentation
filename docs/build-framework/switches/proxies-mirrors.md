@@ -130,14 +130,26 @@ DNS resolver used **inside the build chroot** while packages are downloaded; it 
 
 Base GitHub URL used when the build downloads helper tools and some sources (for example `bat`, `oras` and oh-my-zsh). Defaults to `https://github.com`; override it to route those fetches through a GitHub mirror or a caching proxy. Unlike `GITHUB_MIRROR`, this substitutes the URL directly rather than selecting a named mirror preset.
 
-#### ARMBIAN_FIRMWARE_GIT_SOURCE
+#### ARMBIAN_FIRMWARE_SOURCE
 
 `string` · default: `https://github.com/armbian/firmware`
 
-Git repository the build clones the Armbian firmware blobs from when building the firmware packages. Defaults to `https://github.com/armbian/firmware`; point it at a fork or a local mirror to build against custom firmware or when working behind a firewall. Pair it with `ARMBIAN_FIRMWARE_GIT_BRANCH` to select the branch.
+Git repository of the Armbian firmware blobs, for the firmware packages. Point it at a fork or a local mirror to build custom firmware or to work behind a firewall. Select the ref with `ARMBIAN_FIRMWARE_BRANCH`.
 
-#### ARMBIAN_FIRMWARE_GIT_BRANCH
+The old name `ARMBIAN_FIRMWARE_GIT_SOURCE` still works.
 
-`string` · default: `master`
+#### ARMBIAN_FIRMWARE_BRANCH
 
-Branch of the Armbian firmware repository (`ARMBIAN_FIRMWARE_GIT_SOURCE`) to check out when building the firmware packages. Defaults to `master`; change it to build from a development branch or to pin firmware from a specific branch of your own fork.
+`string` · default: `branch:master`
+
+Git ref of `ARMBIAN_FIRMWARE_SOURCE` for the firmware packages. Use `branch:<name>`, `tag:<name>` or `commit:<sha1>`.
+
+The old name `ARMBIAN_FIRMWARE_GIT_BRANCH` still works. It takes a plain branch name, for example `master`.
+
+#### MAINLINE_FIRMWARE_BRANCH
+
+`string` · default: empty
+
+Git ref of `linux-firmware` for the `armbian-firmware-full` package. Empty selects the newest release tag. The build caches the tag lookup for 6 hours.
+
+Set it to pin a version, for example `tag:20260916` or `commit:<sha1>`. `branch:main` follows upstream every day, so the firmware version changes every day.
