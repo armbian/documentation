@@ -13,16 +13,15 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**80** boards — **79** operational, **1** broken.
+**81** boards — **79** operational, **2** broken.
 
-Reconcile made: 2026-10-23 09:07 UTC
+Reconcile made: 2026-10-23 18:37 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | A64 OLinuXino 01 | 10.0.50.78 | local | 1 GbE | TP-Link SG3428X (13) |
-| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Banana Pi CM4IO 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
@@ -89,6 +88,7 @@ Reconcile made: 2026-10-23 09:07 UTC
 | Rock 5B 02 | 10.0.50.65 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B Plus 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
+| Rockpi 4B 01 | 10.0.50.160 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (43) |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
@@ -105,6 +105,7 @@ Reconcile made: 2026-10-23 09:07 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Arduino UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | SpacemiT MUSE Book 01 | 10.0.50.71 | local | 100 MbE | Netgear XS712T (2) |
 
 <!-- BOARDS-STOP -->
