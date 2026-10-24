@@ -109,7 +109,7 @@ Logical sector size the build passes to `sfdisk --sector-size` and to `losetup -
 
 `integer` (MiB) · default: `0`
 
-Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. Set a size (typically 256) for UEFI images. Do not combine `UEFISIZE>0` with `BOOTSIZE>0` — the two describe mutually exclusive boot layouts.
+Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. Set a size (typically 256) for UEFI images. On GRUB images, set `BOOTFS_TYPE=ext4` (or `ext2`) with `BOOTSIZE` to get a separate `/boot`. The EFI partition then mounts at `/boot/efi`.
 
 #### BIOSSIZE
 
@@ -121,7 +121,7 @@ Size in MiB of a small legacy BIOS boot partition, needed only when a GPT-partit
 
 `integer` · default: `256` (when a separate `/boot` is required)
 
-Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
+Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. GRUB images also get it when `BOOTFS_TYPE` is `ext4` or `ext2`; see `UEFISIZE`. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
 
 #### FIXED_IMAGE_SIZE
 
