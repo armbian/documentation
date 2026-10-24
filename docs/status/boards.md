@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**83** boards — **81** operational, **2** broken.
+**83** boards — **80** operational, **3** broken.
 
-Reconcile made: 2026-10-24 13:29 UTC
+Reconcile made: 2026-10-24 16:38 UTC
 
 **Operational**
 
@@ -70,7 +70,6 @@ Reconcile made: 2026-10-24 13:29 UTC
 | Orange Pi 5+ 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
-| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
 | Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
@@ -107,6 +106,7 @@ Reconcile made: 2026-10-24 13:29 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Prime 01 | 10.0.50.87 | local | 1 GbE | Aruba 2540 (35) |
 | Tinker Board 2 01 | 10.0.50.88 | local | 1 GbE | Aruba 2540 (25) |
 
