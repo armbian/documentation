@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**84** boards — **71** passed, **13** failed. Most recent test of every board; failures first.
+**84** boards — **72** passed, **12** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (13)
+## ❌ Failed (12)
 
 ### ❌ BananaPi W2 01
 
@@ -83,14 +83,6 @@ xychart-beta
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | reachable | ❌ | — | ip=10.0.50.121 · reachable=False · port=22 |
-
-### ❌ MUSE Book 01
-
-`musebook` · **inplace** · image `26.11.0-trunk` · 0 ✅ · 1 ❌ · 0 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.50.29 · reachable=False · port=22 |
 
 ### ❌ MusePi Pro 01
 
@@ -251,7 +243,7 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | — | ip=10.0.50.39 · reachable=False · port=22 |
 
-## ✅ Passed (71)
+## ✅ Passed (72)
 
 ### ✅ A64 OLinuXino 01
 
@@ -715,6 +707,19 @@ xychart-beta
 | dvfs | ✅ | 14 s | performance · 614–2150 MHz (peak 2150) |
 | network-iperf | ✅ | 276 s | eth0 ↑941/↓941 (1GE) · eth1 ↑982/↓4977 (10GE) · wlan0 ↑13/↓71 (Wi-Fi 6) Mbps |
 | store-versions | ✅ | 4 s | 26.11.0-trunk.110 · 6.18.3-legacy-spacemit-k3 |
+
+### ✅ MUSE Book 01
+
+`musebook` · **inplace** · image `26.11.0-trunk` · 5 ✅ · 0 ❌ · 1 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| upgrade | ⏭️ | 52 s | — |
+| reboot | ✅ | 38 s | warm · up 20 s |
+| hw-performance | ✅ | 30 s | AES 29 · mem 5800 · disk W 25 / R 77 MB/s · 51 °C · 1800 MHz |
+| dvfs | ✅ | 27 s | performance · 614–1800 MHz (peak 1800) |
+| network-iperf | ✅ | 64 s | eth0 ↑94/↓94 (10/100ME) · wlan0 ↑31/↓363 (Wi-Fi 6) Mbps |
+| store-versions | ✅ | 6 s | 26.11.0-trunk · 6.18.58-current-spacemit |
 
 ### ✅ NanoPC T6 Plus 01
 
