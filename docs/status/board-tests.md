@@ -41,31 +41,31 @@ xychart-beta
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 165 s | — |
-| reboot | ✅ | 150 s | power-cycle · up 113 s |
-| kernel-switch | ✅ | 361 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.110 · boot_image=? · kernel_before=7.3.0-edge-sunxi64 |
-| reboot | ✅ | 284 s | power-cycle · 2/2 boots · up 115 s |
-| hw-performance | ✅ | 32 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 69.7 °C · None MHz |
+| upgrade | ⏭️ | 159 s | — |
+| reboot | ✅ | 153 s | power-cycle · up 115 s |
+| kernel-switch | ✅ | 356 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.110 · boot_image=? · kernel_before=7.3.0-edge-sunxi64 |
+| reboot | ✅ | 279 s | power-cycle · 2/2 boots · up 115 s |
+| hw-performance | ✅ | 31 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 69.2 °C · None MHz |
+| dvfs | ➖ | 2 s | no cpufreq |
+| network-iperf | ✅ | 56 s | end0 ↑819/↓941 (1GE) · end1 ↑934/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.110 · 7.3.0-edge-sunxi64 |
+| kernel-switch | ❌ | 354 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 280 s | power-cycle · 2/2 boots · up 115 s |
+| hw-performance | ✅ | 31 s | AES 358 · mem 2000 · disk W 21 / R 23 MB/s · 68.8 °C · None MHz |
 | dvfs | ➖ | 10 s | no cpufreq |
-| network-iperf | ✅ | 65 s | end0 ↑823/↓941 (1GE) · end1 ↑941/↓941 (1GE) Mbps |
-| store-versions | ✅ | 6 s | 26.11.0-trunk.110 · 7.3.0-edge-sunxi64 |
-| kernel-switch | ❌ | 356 s | branch=edge · phase=install · dpkg_state=absent |
-| reboot | ✅ | 282 s | power-cycle · 2/2 boots · up 113 s |
-| hw-performance | ✅ | 32 s | AES 357 · mem 2000 · disk W 21 / R 23 MB/s · 69.7 °C · None MHz |
-| dvfs | ➖ | 3 s | no cpufreq |
-| network-iperf | ✅ | 58 s | end0 ↑821/↓940 (1GE) · end1 ↑941/↓941 (1GE) Mbps |
-| store-versions | ✅ | 6 s | 26.11.0-trunk.110 · 7.3.0-edge-sunxi64 |
-| kernel-switch | ✅ | 364 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.110 · boot_image=? · kernel_before=7.3.0-edge-sunxi64 |
-| reboot | ✅ | 159 s | power-cycle · up 115 s |
+| network-iperf | ✅ | 56 s | end0 ↑821/↓941 (1GE) · end1 ↑941/↓940 (1GE) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk.110 · 7.3.0-edge-sunxi64 |
+| kernel-switch | ✅ | 347 s | branch=current · family=sunxi64 · installed=26.11.0-trunk.110 · boot_image=? · kernel_before=7.3.0-edge-sunxi64 |
+| reboot | ✅ | 166 s | power-cycle · up 112 s |
 
-**Power** — min 1.8 W · avg 4.0 W · peak 5.9 W · 1908 samples
+**Power** — min 1.6 W · avg 4.0 W · peak 5.9 W · 1869 samples
 
 ```mermaid
 xychart-beta
     title "Power — Cubie A5E 01"
-    x-axis "sample" 1 --> 1908
+    x-axis "sample" 1 --> 1869
     y-axis "W" 1.5 --> 6.0
-    line [3.8, 4.9, 3.8, 3.4, 3.6, 3.8, 4.9, 3.9, 5.1, 4.1, 4.9, 3.9, 3.7, 3.6, 3.4, 3.6, 3.7, 3.8, 3.9, 5.0, 3.9, 5.1, 4.1, 5.1, 3.7, 3.6, 3.6, 3.4, 3.6, 3.7, 3.9, 4.2, 4.7, 4.2, 4.9, 4.7, 4.4, 3.7, 3.4, 3.6]
+    line [3.8, 4.9, 3.8, 3.5, 3.6, 3.7, 5.0, 3.9, 5.0, 4.1, 5.0, 3.8, 3.6, 3.6, 3.2, 3.6, 3.7, 3.9, 3.9, 4.9, 3.9, 4.9, 4.4, 4.6, 3.7, 3.5, 3.6, 3.3, 3.6, 3.7, 3.8, 4.0, 4.8, 4.0, 5.0, 4.6, 4.3, 3.7, 3.4, 3.6]
 ```
 
 ### ❌ Cubieboard 1 01
