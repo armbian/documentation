@@ -204,18 +204,36 @@ xychart-beta
 
 ### ❌ Tinker Board 2 01
 
-`tinkerboard-2` · **inplace** · image `26.8.0-trunk.236` · 1 ✅ · 2 ❌ · 5 ⏭️
+`tinkerboard-2` · **inplace** · image `26.11.0-trunk` · 10 ✅ · 3 ❌ · 3 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| upgrade | ⏭️ | 55 s | — |
-| reboot | ⏭️ | 3 s | power-cycle |
-| hw-performance | ✅ | 100 s | AES None · mem None · disk W None / R None MB/s · None °C · None MHz |
-| dvfs | ➖ | 7 s | no cpufreq |
-| network-iperf | ⏭️ | 38 s | no iperf3 on board |
-| restore-stable | ❌ | 19 s | stable |
-| reboot | ⏭️ | 3 s | power-cycle |
-| store-versions | ❌ | 37 s | — |
+| upgrade | ⏭️ | 22 s | — |
+| reboot | ✅ | 60 s | power-cycle · up 27 s |
+| kernel-switch | ✅ | 29 s | branch=current · family=rockchip64 · installed=26.11.0-trunk · boot_image=/boot/vmlinuz-6.18.58-current-rockchip64 · kernel_before=6.18.58-current-rockchip64 |
+| reboot | ✅ | 89 s | power-cycle · 2/2 boots · up 25 s |
+| hw-performance | ✅ | 31 s | AES 679 · mem 4500 · disk W 21 / R 22 MB/s · 43.9 °C · 1416 MHz |
+| dvfs | ✅ | 25 s | ondemand · 408–1416 MHz (peak 1416) |
+| network-iperf | ✅ | 32 s | end0 ↑940/↓941 (1GE) Mbps |
+| store-versions | ✅ | 5 s | 26.11.0-trunk · 6.18.58-current-rockchip64 |
+| kernel-switch | ❌ | 25 s | branch=edge · phase=install · dpkg_state=absent |
+| reboot | ✅ | 92 s | power-cycle · 2/2 boots · up 24 s |
+| hw-performance | ✅ | 31 s | AES 680 · mem 4500 · disk W 21 / R 1 MB/s · 44.4 °C · 1416 MHz |
+| dvfs | ➖ | 107 s | ondemand · 408–1416 MHz · no freq read under load |
+| network-iperf | ⏭️ | 20 s | no iperf3 on board |
+| store-versions | ❌ | 13 s | — |
+| kernel-switch | ❌ | 26 s | branch=current · phase=install · dpkg_state=absent |
+| reboot | ✅ | 72 s | power-cycle · up 27 s |
+
+**Power** — min 0.7 W · avg 5.2 W · peak 8.1 W · 550 samples
+
+```mermaid
+xychart-beta
+    title "Power — Tinker Board 2 01"
+    x-axis "sample" 1 --> 550
+    y-axis "W" 0.5 --> 8.5
+    line [4.7, 5.5, 4.7, 4.9, 5.8, 5.9, 5.5, 5.1, 5.2, 6.0, 4.9, 5.6, 6.3, 5.0, 6.2, 5.2, 5.3, 5.3, 5.6, 5.1, 5.3, 5.4, 3.0, 6.4, 5.8, 5.2, 5.9, 5.2, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.8, 5.4]
+```
 
 ### ❌ UEFI/DT arm64 01
 
