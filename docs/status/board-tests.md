@@ -117,14 +117,14 @@ xychart-beta
 
 ### ❌ NanoPi R76S 01
 
-`nanopi-r76s` · **inplace** · image `26.11.0-trunk.108` · 2 ✅ · 1 ❌ · 13 ⏭️
+`nanopi-r76s` · **inplace** · image `26.11.0-trunk.108` · 0 ✅ · 1 ❌ · 15 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
 | upgrade | ⏭️ | 11 s | — |
-| reboot | ✅ | 68 s | power-cycle · up 23 s |
-| kernel-switch | ✅ | 24 s | branch=vendor · family=rk35xx · installed=26.11.0-trunk.110 · boot_image=/boot/vmlinuz-6.1.172-vendor-rk35xx · kernel_before=6.1.172-vendor-rk35xx |
-| reboot | ❌ | 177 s | power-cycle · 2/2 boots · up 104 s |
+| reboot | ❌ | 148 s | power-cycle · up 104 s |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
 | hw-perf | ⏭️ | — | board down after reboot/power-cycle |
 | dvfs | ⏭️ | — | — |
 | net-iperf | ⏭️ | — | board down after reboot/power-cycle |
@@ -138,14 +138,14 @@ xychart-beta
 | kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
 | reboot | ⏭️ | — | reboot |
 
-**Power** — min 0.6 W · avg 3.6 W · peak 6.7 W · 155 samples
+**Power** — min 0.6 W · avg 3.5 W · peak 5.2 W · 91 samples
 
 ```mermaid
 xychart-beta
     title "Power — NanoPi R76S 01"
-    x-axis "sample" 1 --> 155
-    y-axis "W" 0.5 --> 7.0
-    line [3.4, 4.0, 3.8, 3.4, 3.8, 2.0, 1.6, 2.1, 3.2, 5.2, 5.6, 5.1, 5.4, 5.4, 5.2, 4.3, 3.3, 3.2, 1.9, 2.2, 4.8, 4.9, 4.0, 1.6, 2.1, 3.1, 4.7, 4.5, 3.4, 3.4, 3.4, 3.4, 3.4, 3.4, 3.4, 3.5, 3.4, 3.4, 3.4, 3.8]
+    x-axis "sample" 1 --> 91
+    y-axis "W" 0.5 --> 5.5
+    line [4.0, 4.2, 5.2, 4.4, 4.0, 4.0, 4.0, 3.9, 3.3, 3.3, 1.8, 1.9, 2.1, 2.1, 3.0, 4.1, 4.7, 4.8, 3.9, 3.4, 3.4, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.4, 3.3, 3.4, 3.5, 3.3, 3.4, 3.3, 3.5, 3.7]
 ```
 
 ### ❌ Odroid XU4 01
