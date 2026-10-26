@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-10-25 10:23 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-10-26 11:52 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Fri, 23 Oct 2026 | 2279 | `26.8.8` |
-| `trixie` | trixie | Fri, 23 Oct 2026 | 2279 | `26.8.8` |
-| `sid` | sid | Fri, 23 Oct 2026 | 2279 | `26.8.8` |
-| `jammy` | jammy | Fri, 23 Oct 2026 | 2279 | `26.8.8` |
-| `noble` | noble | Fri, 23 Oct 2026 | 2279 | `26.8.8` |
+| `bookworm` | bookworm | Mon, 26 Oct 2026 | 2279 | `26.8.8` |
+| `trixie` | trixie | Mon, 26 Oct 2026 | 2279 | `26.8.8` |
+| `sid` | sid | Mon, 26 Oct 2026 | 2279 | `26.8.8` |
+| `jammy` | jammy | Mon, 26 Oct 2026 | 2279 | `26.8.8` |
+| `noble` | noble | Mon, 26 Oct 2026 | 2279 | `26.8.8` |
 
 ### Core package versions
 
@@ -161,9 +161,9 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `edk2-radxa-dragon-qcs9075` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
 | `edk2-sc8280xp` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
 | `edl-ng` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` |
-| `fastfetch` | `2.69.0` | `2.69.0` | `2.69.0` | `2.69.0` | `2.69.0` |
+| `fastfetch` | `2.70.0` | `2.70.0` | `2.69.0` | `2.70.0` | `2.70.0` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
-| `gh` | `2.103.0` | `2.103.0` | `2.83.2` | `2.103.0` | `2.103.0` |
+| `gh` | `2.103.2` | `2.103.2` | `2.83.2` | `2.103.2` | `2.103.2` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
 | `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | `0.2.0-3fakesync1build6` | — |
@@ -190,6 +190,6 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
 | `unudhcpd` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` |
 | zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-2arter97~ubuntu22.04.1` | `2.4.4-2arter97~ubuntu24.04.1` |
-| zulu21 (JDK) | `21.0.12.1-1` | — | — | — | — |
+| zulu21 (JDK) | `21.0.13-3` | — | — | — | — |
 
 <!-- apt-status:end -->
