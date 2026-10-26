@@ -16,29 +16,28 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 1870 image assets across 406 boards, generated 2026-10-19 14:41 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2222 image assets across 414 boards, generated 2026-10-26 14:16 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
-| Download (dl.armbian.com, per-board releases) | 793 | 169 | 14 versions (…26.8.11) |
-| Community nightly | 532 | 235 | 26.11.0-trunk.100 |
-| Appliance images (kali/omv/homeassistant) | 417 | 133 | 26.8.1 |
-| CI nightly | 124 | 54 | 26.11.0-trunk.102 |
-| (orphaned — no repo) | 4 | 2 | 26.8.12 |
+| Community nightly | 873 | 241 | 26.11.0-trunk.108 |
+| Download (dl.armbian.com, per-board releases) | 795 | 170 | 14 versions (…26.8.12) |
+| Appliance images (kali/omv/homeassistant) | 420 | 134 | 26.8.1 |
+| CI nightly | 126 | 55 | 26.11.0-trunk.111 |
+| (orphaned — no repo) | 8 | 2 | 26.8.7 |
 
-Current download release line: **26.8.11/26.8.10/26.8.9**.
+Current download release line: **26.8.12/26.8.11/26.8.10**.
 
 ## Outdated boards
 
-_**3** boards whose newest `dl.armbian.com` image is behind the current 26.8.11/26.8.10/26.8.9 line._
+_**2** boards whose newest `dl.armbian.com` image is behind the current 26.8.12/26.8.11/26.8.10 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| khadas-vim1 | `conf` | 26.2.5 | 2026-04-25 | 176 d |
-| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 176 d |
-| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 147 d |
+| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 183 d |
+| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 154 d |
 
 ## Non-standard boards
 
@@ -46,6 +45,14 @@ _**1** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-bo
 
 | board | support | newest version | name |
 | --- | --- | --- | --- |
-| pine64 | `csc` | 26.8.1 | Pine64 |
+| pine64 | `csc` | 26.8.1 | Pine A64 / A64+ |
+
+## Missing download images
+
+_**1** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
+
+| board | name | present in |
+| --- | --- | --- |
+| easepi-r1 | EasePi-R1 | CI |
 
 <!-- download-images:end -->
