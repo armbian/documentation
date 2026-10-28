@@ -1,7 +1,7 @@
 ---
 title: "Web Hosting"
 seo_title: "Web Hosting apps for Armbian"
-description: "Web server, LEMP, reverse proxy, Let's Encrypt SSL for Armbian on ARM64 and x86 single-board computers: SWAG, Ghost, HedgeDoc."
+description: "Web server, LEMP, reverse proxy, Let's Encrypt SSL for Armbian on ARM64 and x86 single-board computers: SWAG, Ghost, HedgeDoc, Shlink."
 hub: true
 comments: true
 ---
@@ -13,3 +13,4 @@ Install and configure these applications through [`armbian-config`](/config/) or
 - [SWAG](/software/swag/) — SWAG reverse proxy
 - [Ghost](/software/ghost/) — Ghost CMS install
 - [HedgeDoc](/software/hedgedoc/) — HedgeDoc collaborative markdown editor install
+- [Shlink](/software/shlink/) — Shlink URL shortener
