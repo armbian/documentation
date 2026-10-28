@@ -31,7 +31,7 @@ jobs:
       - name: Set up Python 3.8
         uses: actions/setup-python@v7
         with:
-          python-version: 3.8
+          python-version: "3.12"
 
       - name: Cache pip dependencies
         uses: actions/cache@v6
