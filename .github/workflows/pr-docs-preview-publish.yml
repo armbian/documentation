@@ -3,6 +3,8 @@ name: Publish docs preview on PR
 # Publish what pr-docs-preview.yml built, and remove it when the PR closes.
 # This workflow has a write token, so it never runs code from the PR:
 # it only copies files and treats the artifact as untrusted data.
+# The author of a fork PR controls the artifact, including any HTML and
+# JavaScript. So publish only for PR authors with write or member access.
 
 on:
   workflow_run:
@@ -14,8 +16,9 @@ permissions:
   pull-requests: write
   actions: read
 
+# One group per PR branch: a newer run replaces a pending older run.
 concurrency:
-  group: docs-preview-www
+  group: docs-preview-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
   cancel-in-progress: false
 
 jobs:
@@ -33,6 +36,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       # Accept only a PR whose head is the commit that was built.
+      # Remove the preview when the PR is not open.
       - name: Check preview metadata
         id: meta
         env:
@@ -44,10 +48,16 @@ jobs:
           ACTION=$(head -c 16 preview/action | tr -d '\n')
           [[ "${PR}" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number"; exit 1; }
           [[ "${ACTION}" =~ ^(publish|remove)$ ]] || { echo "::error::Invalid action"; exit 1; }
-          PR_SHA=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}" --jq .head.sha)
+          read -r PR_SHA PR_STATE PR_ASSOC < <(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}" \
+            --jq '"\(.head.sha) \(.state) \(.author_association)"')
           if [[ "${PR_SHA}" != "${HEAD_SHA}" ]]; then
             # A newer push or a wrong PR number. A newer run publishes instead.
             echo "::notice::PR #${PR} head is not ${HEAD_SHA}. Skip."
+            ACTION=skip
+          elif [[ "${PR_STATE}" != "open" ]]; then
+            ACTION=remove
+          elif [[ "${ACTION}" == "publish" && ! "${PR_ASSOC}" =~ ^(OWNER|MEMBER|COLLABORATOR)$ ]]; then
+            echo "::notice::PR #${PR} author is ${PR_ASSOC}. No preview."
             ACTION=skip
           fi
           echo "pr=${PR}" >> "$GITHUB_OUTPUT"
@@ -73,7 +83,7 @@ jobs:
           git config user.email github-actions@github.com
           if [[ "${ACTION}" == "publish" ]]; then
             mkdir -p "${PR}"
-            rsync -a --delete --no-links ../preview/site/ "${PR}/"
+            rsync -a --delete --no-links --exclude='.git*' ../preview/site/ "${PR}/"
             git add -A "${PR}"
             git commit -q -m "Update docs preview for PR #${PR}" || { echo "No changes."; exit 0; }
           else
@@ -98,7 +108,8 @@ jobs:
         run: |
           set -euo pipefail
           MARKER="<!-- docs-preview -->"
-          if gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate --jq '.[].body' | grep -qF "${MARKER}"; then
+          COMMENTS=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate --jq '.[].body')
+          if grep -qF "${MARKER}" <<< "${COMMENTS}"; then
             exit 0
           fi
           gh pr comment "${PR}" -R "${GITHUB_REPOSITORY}" --body "${MARKER}
