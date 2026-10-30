@@ -16,20 +16,20 @@ jobs:
 
     steps:
       - name: Checkout PR branch (documentation)
-        if: github.event.action != 'closed'
+        if: github.event.pull_request.state == 'open'
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: documentation
 
       - name: Set up Python
-        if: github.event.action != 'closed'
+        if: github.event.pull_request.state == 'open'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Cache pip dependencies
-        if: github.event.action != 'closed'
+        if: github.event.pull_request.state == 'open'
         uses: actions/cache@v6
         with:
           path: ~/.cache/pip
@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        if: github.event.action != 'closed'
+        if: github.event.pull_request.state == 'open'
         working-directory: documentation
         run: |
           python -m pip install --upgrade pip
@@ -46,15 +46,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build docs with MkDocs
-        if: github.event.action != 'closed'
+        if: github.event.pull_request.state == 'open'
         working-directory: documentation
         run: mkdocs build --clean --site-dir ../preview/site
 
-      # On close, only the metadata goes up, so the publish workflow removes the preview.
+      # On a closed PR, only the metadata goes up, so the publish workflow removes the preview.
       - name: Write preview metadata
         env:
           PR: ${{ github.event.number }}
-          ACTION: ${{ github.event.action == 'closed' && 'remove' || 'publish' }}
+          ACTION: ${{ github.event.pull_request.state == 'open' && 'publish' || 'remove' }}
         run: |
           mkdir -p preview
           echo "${PR}" > preview/pr
