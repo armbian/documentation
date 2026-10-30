@@ -1,39 +1,35 @@
 name: Create docs preview on PR
 
+# Build only, with a read-only token, so fork PRs work too.
+# pr-docs-preview-publish.yml publishes the result and comments on the PR.
+
 on:
   pull_request:
     types: [opened, reopened, synchronize, labeled, closed]
-  workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   docs-preview:
-    # Build/publish a preview only while the PR is active; on close we clean up instead.
-    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout PR branch (documentation)
+        if: github.event.action != 'closed'
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: documentation
 
-      - name: Checkout `www` branch
-        uses: actions/checkout@v7
-        with:
-          ref: www
-          path: www
-
-      - name: Set up Python 3.8
+      - name: Set up Python
+        if: github.event.action != 'closed'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Cache pip dependencies
+        if: github.event.action != 'closed'
         uses: actions/cache@v6
         with:
           path: ~/.cache/pip
@@ -42,6 +38,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
+        if: github.event.action != 'closed'
         working-directory: documentation
         run: |
           python -m pip install --upgrade pip
@@ -49,72 +46,23 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build docs with MkDocs
+        if: github.event.action != 'closed'
         working-directory: documentation
-        run: mkdocs build --clean
+        run: mkdocs build --clean --site-dir ../preview/site
 
-      # Publishing the preview and commenting need a writable GITHUB_TOKEN,
-      # which pull_request from a fork does not get (token is read-only there).
-      # Skip these steps for fork PRs so the check stays green after the build
-      # step has already validated the docs; internal branches still publish.
-      - name: Publish to `www` branch
-        if: github.event.pull_request.head.repo.full_name == github.repository
-        working-directory: www
-        run: |
-          mkdir -p "${{ github.event.number }}"
-          rsync -av ../documentation/site/. "${{ github.event.number }}"
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Update docs preview for PR #${{ github.event.number }}" || true
-          git push origin www || true
-
-      - name: Comment on PR with preview link
-        if: github.event.pull_request.head.repo.full_name == github.repository
-        uses: devindford/Append_PR_Comment@32dd2619cd96ac8da9907c416c992fe265233ca8 # v1.1.3
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          body-template: |
-            [![Create docs preview on PR](https://github.com/armbian/documentation/actions/workflows/pr-docs-preview.yml/badge.svg)](https://github.com/armbian/documentation/actions/workflows/pr-docs-preview.yml)
-
-            Documentation website preview will be available shortly:
-
-            <a href="https://armbian.github.io/documentation/${{ github.event.number }}"><kbd><br> Open WWW preview <br></kbd></a>
-          body-update-action: suffix
-
-  # When a PR is closed (merged or not), delete its preview build from the `www`
-  # branch so previews stop accumulating there. Without this, every PR left a
-  # full site copy under www/<PR#>/ forever, which grew the GitHub Pages source
-  # past its 1 GB limit and broke deployment.
-  cleanup-preview:
-    if: github.event.action == 'closed' && github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout `www` branch
-        uses: actions/checkout@v7
-        with:
-          ref: www
-
-      - name: Remove preview for closed PR
+      # On close, only the metadata goes up, so the publish workflow removes the preview.
+      - name: Write preview metadata
         env:
           PR: ${{ github.event.number }}
+          ACTION: ${{ github.event.action == 'closed' && 'remove' || 'publish' }}
         run: |
-          set -euo pipefail
-          if [ ! -d "${PR}" ]; then
-            echo "No preview directory for PR #${PR}; nothing to do."
-            exit 0
-          fi
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git rm -r --quiet "${PR}"
-          git commit -m "www: remove docs preview for closed PR #${PR}"
-          # Retry against concurrent preview pushes from other PRs.
-          for attempt in 1 2 3; do
-            if git push origin www; then
-              echo "Removed preview for PR #${PR}."
-              exit 0
-            fi
-            echo "Push failed (attempt ${attempt}); rebasing on latest www..." >&2
-            git pull --rebase origin www
-          done
-          echo "Failed to push preview removal for PR #${PR} after 3 attempts." >&2
-          exit 1
+          mkdir -p preview
+          echo "${PR}" > preview/pr
+          echo "${ACTION}" > preview/action
+
+      - name: Upload preview
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-preview
+          path: preview/
+          retention-days: 1
