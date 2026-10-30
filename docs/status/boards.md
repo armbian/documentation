@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**83** boards — **75** operational, **8** broken.
+**83** boards — **80** operational, **3** broken.
 
-Reconcile made: 2026-10-30 18:36 UTC
+Reconcile made: 2026-10-30 19:13 UTC
 
 **Operational**
 
@@ -33,7 +33,9 @@ Reconcile made: 2026-10-30 18:36 UTC
 | BananaPi BPI-F3 01 | 10.0.50.23 | local | 1 GbE | Netgear S3300 (16) |
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (4) |
+| BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (22) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
+| Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
 | Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
@@ -68,7 +70,10 @@ Reconcile made: 2026-10-30 18:36 UTC
 | Orange Pi 5+ 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
+| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
+| Orange Pi Prime 01 | 10.0.50.87 | local | 1 GbE | Aruba 2540 (35) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
+| Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
@@ -101,11 +106,6 @@ Reconcile made: 2026-10-30 18:36 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (22) |
-| Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
-| Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
-| Orange Pi Prime 01 | 10.0.50.87 | local | 1 GbE | Aruba 2540 (35) |
-| Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | TP-Link SG3428X (21) |
 | UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
