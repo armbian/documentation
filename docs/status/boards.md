@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **83** boards — **75** operational, **8** broken.
 
-Reconcile made: 2026-10-25 00:20 UTC
+Reconcile made: 2026-10-30 18:36 UTC
 
 **Operational**
 
