@@ -1,0 +1,107 @@
+name: Publish docs preview on PR
+
+# Publish what pr-docs-preview.yml built, and remove it when the PR closes.
+# This workflow has a write token, so it never runs code from the PR:
+# it only copies files and treats the artifact as untrusted data.
+
+on:
+  workflow_run:
+    workflows: ["Create docs preview on PR"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: docs-preview-www
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download preview
+        uses: actions/download-artifact@v8
+        with:
+          name: docs-preview
+          path: preview
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Accept only a PR whose head is the commit that was built.
+      - name: Check preview metadata
+        id: meta
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          PR=$(head -c 16 preview/pr | tr -d '\n')
+          ACTION=$(head -c 16 preview/action | tr -d '\n')
+          [[ "${PR}" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number"; exit 1; }
+          [[ "${ACTION}" =~ ^(publish|remove)$ ]] || { echo "::error::Invalid action"; exit 1; }
+          PR_SHA=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}" --jq .head.sha)
+          if [[ "${PR_SHA}" != "${HEAD_SHA}" ]]; then
+            # A newer push or a wrong PR number. A newer run publishes instead.
+            echo "::notice::PR #${PR} head is not ${HEAD_SHA}. Skip."
+            ACTION=skip
+          fi
+          echo "pr=${PR}" >> "$GITHUB_OUTPUT"
+          echo "action=${ACTION}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout `www` branch
+        if: steps.meta.outputs.action != 'skip'
+        uses: actions/checkout@v7
+        with:
+          ref: www
+          path: www
+
+      # Remove previews of closed PRs, so www stays below the 1 GB Pages limit.
+      - name: Update `www` branch
+        if: steps.meta.outputs.action != 'skip'
+        working-directory: www
+        env:
+          PR: ${{ steps.meta.outputs.pr }}
+          ACTION: ${{ steps.meta.outputs.action }}
+        run: |
+          set -euo pipefail
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          if [[ "${ACTION}" == "publish" ]]; then
+            mkdir -p "${PR}"
+            rsync -a --delete --no-links ../preview/site/ "${PR}/"
+            git add -A "${PR}"
+            git commit -q -m "Update docs preview for PR #${PR}" || { echo "No changes."; exit 0; }
+          else
+            [[ -d "${PR}" ]] || { echo "No preview for PR #${PR}."; exit 0; }
+            git rm -r -q "${PR}"
+            git commit -q -m "www: remove docs preview for closed PR #${PR}"
+          fi
+          for attempt in 1 2 3; do
+            git push origin www && exit 0
+            echo "Push failed (attempt ${attempt}). Rebase on the latest www." >&2
+            git pull -q --rebase origin www
+          done
+          echo "::error::Push to www failed after 3 attempts"
+          exit 1
+
+      # One comment per PR. Later runs leave it as it is.
+      - name: Comment on PR with preview link
+        if: steps.meta.outputs.action == 'publish'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.meta.outputs.pr }}
+        run: |
+          set -euo pipefail
+          MARKER="<!-- docs-preview -->"
+          if gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate --jq '.[].body' | grep -qF "${MARKER}"; then
+            exit 0
+          fi
+          gh pr comment "${PR}" -R "${GITHUB_REPOSITORY}" --body "${MARKER}
+          Documentation preview, available a few minutes after each push:
+
+          <a href=\"https://armbian.github.io/documentation/${PR}\"><kbd><br> Open WWW preview <br></kbd></a>"
