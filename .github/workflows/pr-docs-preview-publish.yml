@@ -4,7 +4,8 @@ name: Publish docs preview on PR
 # This workflow has a write token, so it never runs code from the PR:
 # it only copies files and treats the artifact as untrusted data.
 # The author of a fork PR controls the artifact, including any HTML and
-# JavaScript. So publish only for PR authors with write or member access.
+# JavaScript. So publish only for PR authors with write or member access,
+# and only from the base repository or the author's own fork.
 
 on:
   workflow_run:
@@ -16,10 +17,12 @@ permissions:
   pull-requests: write
   actions: read
 
-# One group per PR branch: a newer run replaces a pending older run.
+# One group per PR branch. Queue all pending runs: builds can finish out of
+# order, and the SHA check skips the old ones.
 concurrency:
   group: docs-preview-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
   cancel-in-progress: false
+  queue: max
 
 jobs:
   publish:
@@ -48,16 +51,23 @@ jobs:
           ACTION=$(head -c 16 preview/action | tr -d '\n')
           [[ "${PR}" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number"; exit 1; }
           [[ "${ACTION}" =~ ^(publish|remove)$ ]] || { echo "::error::Invalid action"; exit 1; }
-          read -r PR_SHA PR_STATE PR_ASSOC < <(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}" \
-            --jq '"\(.head.sha) \(.state) \(.author_association)"')
+          read -r PR_SHA PR_STATE PR_ASSOC PR_AUTHOR HEAD_REPO HEAD_OWNER < <(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}" \
+            --jq '"\(.head.sha) \(.state) \(.author_association) \(.user.login) \(.head.repo.full_name) \(.head.repo.owner.login)"')
           if [[ "${PR_SHA}" != "${HEAD_SHA}" ]]; then
             # A newer push or a wrong PR number. A newer run publishes instead.
             echo "::notice::PR #${PR} head is not ${HEAD_SHA}. Skip."
             ACTION=skip
           elif [[ "${PR_STATE}" != "open" ]]; then
             ACTION=remove
-          elif [[ "${ACTION}" == "publish" && ! "${PR_ASSOC}" =~ ^(OWNER|MEMBER|COLLABORATOR)$ ]]; then
+          elif [[ "${ACTION}" == "remove" ]]; then
+            # A late artifact from before a reopen. Keep the preview.
+            ACTION=skip
+          elif [[ ! "${PR_ASSOC}" =~ ^(OWNER|MEMBER|COLLABORATOR)$ ]]; then
             echo "::notice::PR #${PR} author is ${PR_ASSOC}. No preview."
+            ACTION=skip
+          elif [[ "${HEAD_REPO}" != "${GITHUB_REPOSITORY}" && "${HEAD_OWNER}" != "${PR_AUTHOR}" ]]; then
+            # Another user controls the branch and the artifact.
+            echo "::notice::PR #${PR} branch is in ${HEAD_REPO}, not owned by ${PR_AUTHOR}. No preview."
             ACTION=skip
           fi
           echo "pr=${PR}" >> "$GITHUB_OUTPUT"
