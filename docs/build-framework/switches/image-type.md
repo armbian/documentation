@@ -40,3 +40,16 @@ Which desktop environment to install when `BUILD_DESKTOP=yes` — for example `x
 - `full`: the desktop plus the complete bundled application set, including the heavier office and productivity apps
 
 Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience.
+
+#### TUNING_PROFILE
+
+`string` · default: `desktop` for desktop images, else `sbc`
+
+- `sbc`: SD card or eMMC boot. Minimise writes to extend flash life.
+- `balanced`: distribution defaults
+- `desktop`: interactive use. Keep the UI responsive.
+- `builder`: compile or CI host on SSD/NVMe
+- `nas`: file server with large streaming writes
+- `none`: do not apply a profile
+
+The [armbian-config](/config/) tuning profile that the image applies on first boot. The profile sets swappiness, writeback and the ext4 commit interval. Change it later with `armbian-config`.
