@@ -276,17 +276,44 @@ hardware where sleep is known to work.
 
 #### CPUMIN
 
-`integer` (Hz)
+`integer` (kHz)
 
 Minimum CPU frequency the system scales down to. The default differs per family (for
 example `480000` on sunxi8 boards); set it only to override the family default.
 
 #### CPUMAX
 
-`integer` (Hz)
+`integer` (kHz)
 
 Maximum CPU frequency the system scales up to. The default differs per family (for
 example `1400000` on sunxi8 boards); set it only to override the family default.
+
+#### GOVERNOR
+
+`string`
+
+CPU frequency governor, for example `ondemand`, `schedutil` or `performance`. When any
+cluster uses `ondemand`, the ondemand tunables apply at boot.
+
+#### CPUMIN_POLICY*n*, CPUMAX_POLICY*n*, GOVERNOR_POLICY*n*
+
+`integer` (kHz) for `CPUMIN`/`CPUMAX`, `string` for `GOVERNOR`
+
+Override `CPUMIN`, `CPUMAX` and `GOVERNOR` for one CPU cluster on big.LITTLE SoCs. `<n>` is
+the first CPU of the cluster, as in `/sys/devices/system/cpu/cpufreq/policy<n>`. For
+example, `GOVERNOR_POLICY4=performance` sets the Cortex-A72 cluster of RK3399. The build
+rejects frequencies that are not integers.
+
+#### CPUBOOST
+
+`string` · default: `false`
+
+- `true`: enable CPU boost at boot
+- `off`: disable CPU boost at boot
+- `false` (default): keep the kernel default
+
+The build writes all CPU frequency values to `/etc/default/cpufrequtils`.
+`armbian-hardware-optimization` applies them at boot, and `armbian-config` can change them.
 
 ## Software
 
