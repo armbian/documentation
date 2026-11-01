@@ -52,4 +52,4 @@ Controls how much software is preinstalled alongside the desktop, letting you tr
 - `nas`: file server with large streaming writes
 - `none`: do not apply a profile
 
-The [armbian-config](/config/) tuning profile that the image applies on first boot. The profile sets swappiness, writeback and the ext4 commit interval. Change it later with `armbian-config`.
+The [armbian-config tuning profile](/config/storage/#tuning-profile) that the image applies on first boot. The profile sets swappiness, dirty limits, writeback intervals, the ext4 commit interval and the CPU energy bias. Change it later with `armbian-config`.
