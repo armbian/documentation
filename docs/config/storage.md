@@ -689,3 +689,9 @@ armbian-config --cmd TUNE02
 ~~~
 
 
+~~~ bash title="CPU frequency"
+armbian-config --cmd TUNE03
+~~~
+
+
+
