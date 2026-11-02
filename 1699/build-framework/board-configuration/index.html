@@ -6119,6 +6119,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#governor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GOVERNOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumin_policyn-cpumax_policyn-governor_policyn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMIN_POLICY*n*, CPUMAX_POLICY*n*, GOVERNOR_POLICY*n*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpuboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUBOOST
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7598,6 +7631,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#governor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GOVERNOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpumin_policyn-cpumax_policyn-governor_policyn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUMIN_POLICY*n*, CPUMAX_POLICY*n*, GOVERNOR_POLICY*n*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpuboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPUBOOST
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7968,13 +8034,32 @@ desktop image from being built for it.</p>
 suspend/hibernate are unstable on most single-board computers; enable it only on
 hardware where sleep is known to work.</p>
 <h4 id="cpumin">CPUMIN<a class="headerlink" href="#cpumin" title="Permanent link">¶</a></h4>
-<p><code>integer</code> (Hz)</p>
+<p><code>integer</code> (kHz)</p>
 <p>Minimum CPU frequency the system scales down to. The default differs per family (for
 example <code>480000</code> on sunxi8 boards); set it only to override the family default.</p>
 <h4 id="cpumax">CPUMAX<a class="headerlink" href="#cpumax" title="Permanent link">¶</a></h4>
-<p><code>integer</code> (Hz)</p>
+<p><code>integer</code> (kHz)</p>
 <p>Maximum CPU frequency the system scales up to. The default differs per family (for
 example <code>1400000</code> on sunxi8 boards); set it only to override the family default.</p>
+<h4 id="governor">GOVERNOR<a class="headerlink" href="#governor" title="Permanent link">¶</a></h4>
+<p><code>string</code></p>
+<p>CPU frequency governor, for example <code>ondemand</code>, <code>schedutil</code> or <code>performance</code>. When any
+cluster uses <code>ondemand</code>, the ondemand tunables apply at boot.</p>
+<h4 id="cpumin_policyn-cpumax_policyn-governor_policyn">CPUMIN_POLICY*n*, CPUMAX_POLICY*n*, GOVERNOR_POLICY*n*<a class="headerlink" href="#cpumin_policyn-cpumax_policyn-governor_policyn" title="Permanent link">¶</a></h4>
+<p><code>integer</code> (kHz) for <code>CPUMIN</code>/<code>CPUMAX</code>, <code>string</code> for <code>GOVERNOR</code></p>
+<p>Override <code>CPUMIN</code>, <code>CPUMAX</code> and <code>GOVERNOR</code> for one CPU cluster on big.LITTLE SoCs. <code>&lt;n&gt;</code> is
+the first CPU of the cluster, as in <code>/sys/devices/system/cpu/cpufreq/policy&lt;n&gt;</code>. For
+example, <code>GOVERNOR_POLICY4=performance</code> sets the Cortex-A72 cluster of RK3399. The build
+rejects frequencies that are not integers.</p>
+<h4 id="cpuboost">CPUBOOST<a class="headerlink" href="#cpuboost" title="Permanent link">¶</a></h4>
+<p><code>string</code> · default: <code>false</code></p>
+<ul>
+<li><code>true</code>: enable CPU boost at boot</li>
+<li><code>off</code>: disable CPU boost at boot</li>
+<li><code>false</code> (default): keep the kernel default</li>
+</ul>
+<p>The build writes all CPU frequency values to <code>/etc/default/cpufrequtils</code>.
+<code>armbian-hardware-optimization</code> applies them at boot, and <code>armbian-config</code> can change them.</p>
 <h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">¶</a></h2>
 <h4 id="skip_armbian_repo">SKIP_ARMBIAN_REPO<a class="headerlink" href="#skip_armbian_repo" title="Permanent link">¶</a></h4>
 <p><code>boolean</code> · default: <code>no</code></p>

@@ -5218,6 +5218,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tuning_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TUNING_PROFILE
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6807,6 +6818,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tuning_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TUNING_PROFILE
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6868,6 +6890,17 @@
 <li><code>full</code>: the desktop plus the complete bundled application set, including the heavier office and productivity apps</li>
 </ul>
 <p>Controls how much software is preinstalled alongside the desktop, letting you trade image size against out-of-the-box convenience.</p>
+<h4 id="tuning_profile">TUNING_PROFILE<a class="headerlink" href="#tuning_profile" title="Permanent link">¶</a></h4>
+<p><code>string</code> · default: <code>desktop</code> for desktop images, else <code>sbc</code></p>
+<ul>
+<li><code>sbc</code>: SD card or eMMC boot. Minimise writes to extend flash life.</li>
+<li><code>balanced</code>: distribution defaults</li>
+<li><code>desktop</code>: interactive use. Keep the UI responsive.</li>
+<li><code>builder</code>: compile or CI host on SSD/NVMe</li>
+<li><code>nas</code>: file server with large streaming writes</li>
+<li><code>none</code>: do not apply a profile</li>
+</ul>
+<p>The <a href="/config/storage/#tuning-profile">armbian-config tuning profile</a> that the image applies on first boot. The profile sets swappiness, dirty limits, writeback intervals, the ext4 commit interval and the CPU energy bias. Change it later with <code>armbian-config</code>.</p>
 
 
 
