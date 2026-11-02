@@ -79,7 +79,7 @@ Applies kernel security fixes from [armbian/cve](https://github.com/armbian/cve)
 
 - Only stable kernels of the series in `KERNEL_CVE_SERIES` get the fixes. Vendor kernels (`KERNELSOURCE` set by the family) do not.
 - A series applies only when the kernel commit is the series base. armbian/cve verifies that the series applies and builds on that commit. On another commit, the build shows a warning and continues without the fixes.
-- The kernel version gets a `CVE` part with the armbian/cve commit, for example `CVE890d`. Each new armbian/cve commit gives a new kernel version.
+- The kernel version gets a `CVE` part with a short armbian/cve commit prefix, for example `CVE890d`. A new armbian/cve commit usually changes this part, and the kernel builds again.
 - The build log lists each fix as `CVE-ID : subject`.
 - With `OFFLINE_WORK=yes`, the build skips the fixes.
 
