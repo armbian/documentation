@@ -245,11 +245,32 @@ xychart-beta
 
 ### ❌ ZERO 3 01
 
-`radxa-zero3` · **inplace** · image `26.5.1` · 0 ✅ · 1 ❌ · 0 ⏭️
+`radxa-zero3` · **inplace** · image `26.5.1` · 2 ✅ · 1 ❌ · 19 ⏭️
 
 | Module | Status | Time | Detail |
 |:--|:--:|--:|:--|
-| reachable | ❌ | — | ip=10.0.20.185 · reachable=False · port=22 |
+| upgrade | ⏭️ | 35 s | — |
+| reboot | ✅ | 62 s | warm · up 45 s |
+| kernel-switch | ✅ | 502 s | branch=vendor · family=rk35xx · installed=26.8.3 · boot_image=/boot/vmlinuz-6.1.115-vendor-rk35xx · kernel_before=6.18.44-current-rockchip64 |
+| reboot | ❌ | 218 s | warm · 0/2 boots |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
+| hw-perf | ⏭️ | — | board down after reboot/power-cycle |
+| dvfs | ⏭️ | — | — |
+| net-iperf | ⏭️ | — | board down after reboot/power-cycle |
+| store-versions | ⏭️ | — | — |
+| kernel-switch | ⏭️ | — | skipped=board down after reboot/power-cycle |
+| reboot | ⏭️ | — | reboot |
 
 ## ✅ Passed (71)
 
