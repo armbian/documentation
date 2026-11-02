@@ -13,15 +13,14 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**83** boards — **80** operational, **3** broken.
+**83** boards — **77** operational, **6** broken.
 
-Reconcile made: 2026-10-30 19:13 UTC
+Reconcile made: 2026-11-01 18:23 UTC
 
 **Operational**
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
-| A64 OLinuXino 01 | 10.0.50.78 | local | 1 GbE | TP-Link SG3428X (13) |
 | Banana Pi CM4IO 01 | 10.0.50.64 | local | 1 GbE | Netgear S3300 (41) |
 | Banana Pi M2 Ultra 01 | 10.0.50.83 | local | 1 GbE | Netgear S3300 (46) |
 | Banana Pi M2Pro 01 | 10.0.50.13 | local | 1 GbE | Netgear S3300 (47) |
@@ -36,14 +35,12 @@ Reconcile made: 2026-10-30 19:13 UTC
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (22) |
 | Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
-| Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
 | Dragon Q6A 01 | 10.0.50.11 | local | 1 GbE | Netgear S3300 (9) |
 | Edge2 01 | 10.0.50.120 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | Espressobin 01 | 10.0.50.56 | local | 1 GbE | TP-Link SG3428X (11) |
 | Helios4 01 | 10.0.50.75 | local | 1 GbE | TP-Link SG3428X (5) |
 | K3 Pico-ITX 01 | 10.0.50.44 | local | 10 GbE | TP-Link SG3428XPP-M2 (25) |
-| MUSE Book 01 | 10.0.50.89 | local | 100 MbE | Netgear XS712T (2) |
 | MusePi Pro 01 | 10.0.50.14 | local | 1 GbE | Netgear S3300 (10) |
 | NanoPC T6 Plus 01 | 10.0.50.36 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (18) |
 | NanoPi Fire3 01 | 10.0.50.16 | local | 100 MbE | Aruba 2540 (33) |
@@ -66,7 +63,6 @@ Reconcile made: 2026-10-30 19:13 UTC
 | Orange Pi 3 01 | 10.0.50.41 | local | 1 GbE | Aruba 2540 (3) |
 | Orange Pi 4 02 | 10.0.50.77 | local | 1 GbE | Aruba 2540 (39) |
 | Orange Pi 4 LTS 01 | 10.0.50.80 | local | 1 GbE | Aruba 2540 (41) |
-| Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi 5+ 01 | 10.0.50.55 | local | 2.5 GbE | Netgear XS508M (7) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
@@ -93,11 +89,12 @@ Reconcile made: 2026-10-30 19:13 UTC
 | RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Tinker Board 2 01 | 10.0.50.88 | local | 1 GbE | Aruba 2540 (25) |
-| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
+| UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | VIM1S 01 | 10.0.50.32 | local | 100 MbE | Netgear S3300 (33) |
 | VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
+| VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | VIM4 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (21) |
 | ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
@@ -106,8 +103,11 @@ Reconcile made: 2026-10-30 19:13 UTC
 
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
+| A64 OLinuXino 01 | 10.0.50.78 | local | 1 GbE | TP-Link SG3428X (13) |
+| Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
+| MUSE Book 01 | 10.0.50.89 | local | 100 MbE | Netgear XS712T (2) |
+| Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
+| UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | TP-Link SG3428X (21) |
-| UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
-| VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 
 <!-- BOARDS-STOP -->
