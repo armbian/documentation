@@ -5,7 +5,7 @@ description: "Write an Armbian image to an SD card with Armbian Imager, or flash
 ---
 # Writing the image to your media
 
-There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card. 
+There are multiple ways to deploy the image to your board. The easiest and most common option is to write the Armbian Image to your SD-Card.
 
 ## Flash to SD Card
 
@@ -159,6 +159,88 @@ Steps:
 
     The board is not in EDL mode, or the cable is data-only. Re-enter EDL mode as
     in step 1, try a different USB cable or port, and reconnect.
+
+### SpacemiT
+
+SpacemiT boards such as the **Firefly AIBOX-K3** keep their bootloader in SPI
+NOR flash. Their vendor U-Boot may not enumerate removable media, so the image
+is written directly to the board's **UFS** storage with SpacemiT's flashing
+suite, **TitanTools / TitanFlasher**, over USB. The suite runs on Windows, and
+on Linux as an AppImage.
+
+1. Download the Armbian image and unpack it if it is compressed, for example
+   with `unxz`.
+
+2. Split the image into its two partitions. On the AIBOX-K3 the layout is
+   fixed by the vendor firmware: `bootfs` starts at 12 MiB and is 256 MiB,
+   `rootfs` starts at 268 MiB and fills the rest of the image.
+
+    Read the sector size and the sector counts from the image. The AIBOX-K3
+    image uses 4 KiB sectors, so pass the sector size to `fdisk`; otherwise it
+    reports only the protective MBR:
+
+    ``` bash
+    fdisk --sector-size 4096 -l Armbian-...-aibox-k3-....img
+    ```
+
+    Copy exactly the partition. The image ends with a backup copy of the
+    partition table, so a copy without `count` also puts that backup into
+    `rootfs.ext4`:
+
+    ``` bash
+    dd if=Armbian-...-aibox-k3-....img of=bootfs.img  bs=4096 skip=<start> count=<sectors>
+    dd if=Armbian-...-aibox-k3-....img of=rootfs.ext4 bs=4096 skip=<start> count=<sectors>
+    ```
+
+3. Download the firmware package that the board vendor provides and unpack it.
+   It contains the partition layout and the bootloader images.
+
+4. Connect the PC to the board's **Type-C USB 3.0** port. Do not use the USB
+   serial port. Then hold the **Boot** button, connect the 12 V power and
+   release the button after 2~3 seconds.
+
+    Without this order, TitanFlasher may not detect the board.
+
+5. Open TitanFlasher and go to **Dev Tools** and **USB Download**. Click
+   **Scan Devices** and select the board, which is detected as a DFU device.
+   Choose the unpacked vendor directory with **Local Dir**, or the archive with
+   **Local File**. If no partition list appears, enable **Configure Partition
+   File** and select `partition_universal.json` (UFS layout).
+
+    ![TitanFlasher USB Download](../images/titanflasher-usb-download.png)
+
+6. TitanFlasher lists every partition of the layout. Press **Replace** next to
+   `bootfs` and `rootfs` and select the files from step 2. Leave the other
+   partitions as they are.
+
+7. Press **Start Flashing** and wait until the tool reports that flashing is
+   complete. If **Reboot After Flashing** is enabled, the board restarts by
+   itself; otherwise power-cycle it after the tool is done.
+
+    Do not remove the cable or cut power while the flash is running. An
+    interrupted write can leave the UFS unbootable.
+
+!!! note "Replacing the bootloader"
+
+    Only `bootfs` and `rootfs` belong to Armbian. Leave the remaining
+    partitions selected only if you also want to restore the vendor
+    bootloader into SPI NOR. In that case enable **Configure Partition File**
+    and select both `partition_4M.json` (NOR) and `partition_universal.json`
+    (UFS).
+
+![Select partition file](../images/titanflasher-partition-file.png)
+
+!!! note "Sector size"
+
+    Armbian images for these boards use 4 KiB sectors because the UFS reports
+    4096-byte logical sectors. A 512-byte image cannot mount its boot partition
+    on this storage.
+
+!!! tip "Vendor manual"
+
+    See the [SpacemiT flashing tool manual](https://www.spacemit.com/community/document/info?lang=en&nodepath=tools%2Fuser_guide%2Fflasher_user_guide.md)
+    and the [Firefly AIBOX-K3 firmware upgrade guide](https://community.t-firefly.com/en/docs/products/computers/AIBOX-K3/upgrade-firmware)
+    for the full description of the interface.
 
 ---
 
