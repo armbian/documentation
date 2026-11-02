@@ -6109,17 +6109,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-cve-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-cve-patches
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#kernel-debug-tiers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8172,17 +8161,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-cve-patches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kernel-cve-patches
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#kernel-debug-tiers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8791,9 +8769,6 @@ page. Extensions with a dedicated page are linked from their entry.</p>
 <p>Opens an interactive root shell inside the image rootfs during the build, after all other customization. The build continues when the shell exits. Cross-architecture builds run the shell through qemu-user. Needs a terminal; the build stops with an error without one.</p>
 <h2 id="jethub-burn">jethub-burn<a class="headerlink" href="#jethub-burn" title="Permanent link">¶</a></h2>
 <p>Converts the finished <code>.img</code> into an Amlogic USB burn image for JetHub J80/J100/J200 boards. Fetches <code>jethome-iot/jethome-tools</code>, compiles the board DTB partition, extracts the rootfs and packs everything with <code>aml_image_v2_packer_new</code> using <code>u-boot.nosd.bin</code> from the U-Boot deb. Outputs <code>${version}.burn.img</code> alongside the normal image.</p>
-<h2 id="kernel-cve-patches">kernel-cve-patches<a class="headerlink" href="#kernel-cve-patches" title="Permanent link">¶</a></h2>
-<p>Applies kernel security fixes from <a href="https://github.com/armbian/cve">armbian/cve</a> that stable does not carry yet. A series applies only when the kernel commit equals the series base. The fixes add a <code>CVE</code> part to the kernel version. The build enables this extension when <code>KERNEL_CVE_PATCHES=yes</code> and the kernel is a stable kernel of a series in <code>KERNEL_CVE_SERIES</code>.</p>
-<p>See: <a href="/build-framework/switches/kernel-uboot/#kernel_cve_patches">KERNEL_CVE_PATCHES</a></p>
 <h2 id="kernel-debug-tiers">kernel-debug-tiers<a class="headerlink" href="#kernel-debug-tiers" title="Permanent link">¶</a></h2>
 <p>Bakes cumulative kernel debug information into headless boards so serial-console facilities (Magic SysRq, KGDB, pstore) print meaningful symbols instead of raw hex. <code>KERNEL_DEBUG_TIER</code> (0-3, default 1) layers printk/lockup detection, then pstore/ramoops and full kallsyms, then KGDB/KDB over serial. Requires <code>DEBUG_INFO_BTF</code>, so <code>KERNEL_BTF=no</code> is a hard error.</p>
 <h2 id="kernel-rust">kernel-rust<a class="headerlink" href="#kernel-rust" title="Permanent link">¶</a></h2>
