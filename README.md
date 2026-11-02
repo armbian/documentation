@@ -93,13 +93,15 @@ Then open <http://localhost:8000>. The site reloads automatically when you edit 
 
 ### One-shot offline preview
 
-The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" staging steps locally, generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, and serves the site:
+The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" staging steps locally. It generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, rebuilds the software navigation, and serves the site:
 
 ```bash
 ./serve-docs-local.sh           # generate + stage + serve at http://127.0.0.1:8000
 ./serve-docs-local.sh build     # generate + stage + one-shot build into ./site
 ./serve-docs-local.sh clean     # revert staged generated pages
 ```
+
+Override repo locations with `CONFIGNG=/path DOCS=/path` if they aren't the defaults.
 
 ## Generator tools
 
@@ -119,7 +121,7 @@ Additional helpers in `tools/` (see [`tools/README.md`](tools/README.md)):
 
 ## Continuous integration
 
-Automation (PR previews, site release, status-page refreshes, label sync, mirror list pulls, extensions list pulls, etc.) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
+Automation (PR previews, site release, status-page refreshes, label sync, mirror list pulls, extensions list pulls, and pulls from `armbian/configng`) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
 
 - <https://actions.armbian.com/?repo=documentation>
 
