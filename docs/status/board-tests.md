@@ -13,9 +13,9 @@ Legend: ✅ pass · ❌ fail · ⏭️ skipped · ➖ not run.
 
 <!-- FLEET-START -->
 
-**84** boards — **72** passed, **12** failed. Most recent test of every board; failures first.
+**84** boards — **71** passed, **13** failed. Most recent test of every board; failures first.
 
-## ❌ Failed (12)
+## ❌ Failed (13)
 
 ### ❌ BananaPi W2 01
 
@@ -243,7 +243,15 @@ xychart-beta
 |:--|:--:|--:|:--|
 | reachable | ❌ | — | ip=10.0.50.39 · reachable=False · port=22 |
 
-## ✅ Passed (72)
+### ❌ ZERO 3 01
+
+`radxa-zero3` · **inplace** · image `26.5.1` · 0 ✅ · 1 ❌ · 0 ⏭️
+
+| Module | Status | Time | Detail |
+|:--|:--:|--:|:--|
+| reachable | ❌ | — | ip=10.0.20.185 · reachable=False · port=22 |
+
+## ✅ Passed (71)
 
 ### ✅ A64 OLinuXino 01
 
@@ -2168,19 +2176,6 @@ xychart-beta
     y-axis "W" 1.5 --> 9.0
     line [4.0, 4.5, 4.7, 4.3, 4.5, 4.5, 5.8, 4.4, 4.3, 4.4, 3.8, 3.7, 2.6, 4.5, 4.5, 4.8, 4.1, 3.3, 4.3, 4.0, 3.4, 3.7, 4.6, 4.4, 5.2, 5.0, 4.3, 4.4, 3.7, 3.8, 3.9, 3.9, 4.1, 3.8, 4.1, 4.0, 3.7, 3.7, 4.0, 4.2]
 ```
-
-### ✅ ZERO 3 01
-
-`radxa-zero3` · **inplace** · image `26.5.1` · 4 ✅ · 0 ❌ · 2 ⏭️
-
-| Module | Status | Time | Detail |
-|:--|:--:|--:|:--|
-| upgrade | ⏭️ | — | — |
-| reboot | ⏭️ | — | reboot |
-| hw-performance | ✅ | 31 s | AES 719 · mem 4000 · disk W 17 / R 23 MB/s · 50.6 °C · 1416 MHz |
-| dvfs | ✅ | 22 s | ondemand · 408–1416 MHz (peak 1416) |
-| network-iperf | ✅ | 100 s | wlan0 ↑25/↓180 (Wi-Fi 6) Mbps |
-| store-versions | ✅ | 5 s | 26.5.1 · 6.18.44-current-rockchip64 |
 
 ### ✅ ZeroPi 01
 
