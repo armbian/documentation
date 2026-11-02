@@ -200,6 +200,12 @@ Opens an interactive root shell inside the image rootfs during the build, after 
 
 Converts the finished `.img` into an Amlogic USB burn image for JetHub J80/J100/J200 boards. Fetches `jethome-iot/jethome-tools`, compiles the board DTB partition, extracts the rootfs and packs everything with `aml_image_v2_packer_new` using `u-boot.nosd.bin` from the U-Boot deb. Outputs `${version}.burn.img` alongside the normal image.
 
+## kernel-cve-patches
+
+Applies kernel security fixes from [armbian/cve](https://github.com/armbian/cve) that stable does not carry yet. A series applies only when the kernel commit equals the series base. The fixes add a `CVE` part to the kernel version. The build enables this extension when `KERNEL_CVE_PATCHES=yes` and the kernel is a stable kernel of a series in `KERNEL_CVE_SERIES`.
+
+See: [KERNEL_CVE_PATCHES](/build-framework/switches/kernel-uboot/#kernel_cve_patches)
+
 ## kernel-debug-tiers
 
 Bakes cumulative kernel debug information into headless boards so serial-console facilities (Magic SysRq, KGDB, pstore) print meaningful symbols instead of raw hex. `KERNEL_DEBUG_TIER` (0-3, default 1) layers printk/lockup detection, then pstore/ramoops and full kallsyms, then KGDB/KDB over serial. Requires `DEBUG_INFO_BTF`, so `KERNEL_BTF=no` is a hard error.
