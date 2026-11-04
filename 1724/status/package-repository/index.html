@@ -6097,10 +6097,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#external-packages" class="md-nav__link">
+  <a href="#utility-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External packages
+        Utility packages
       
     </span>
   </a>
@@ -6880,10 +6880,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#external-packages" class="md-nav__link">
+  <a href="#utility-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External packages
+        Utility packages
       
     </span>
   </a>
@@ -6936,7 +6936,7 @@ which families have <strong>drifted</strong> behind the release, and where a
 <code>linux-image</code> is missing its matching <code>linux-headers</code>.</p>
 <!-- apt-status:start -->
 <h2 id="armbian-apt-repository-status">Armbian apt repository status<a class="headerlink" href="#armbian-apt-repository-status" title="Permanent link">¶</a></h2>
-<p><em>Generated 2026-11-04 22:26 UTC from <a href="https://apt.armbian.com"><code>https://apt.armbian.com</code></a> — component <code>main</code>, architecture <code>arm64</code>.</em></p>
+<p><em>Generated 2026-11-04 22:39 UTC from <a href="https://apt.armbian.com"><code>https://apt.armbian.com</code></a> — component <code>main</code>, architecture <code>arm64</code>.</em></p>
 <h3 id="suites">Suites<a class="headerlink" href="#suites" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -7562,8 +7562,95 @@ which families have <strong>drifted</strong> behind the release, and where a
 </tr>
 </tbody>
 </table>
-<h3 id="external-packages">External packages<a class="headerlink" href="#external-packages" title="Permanent link">¶</a></h3>
+<h3 id="utility-packages">Utility packages<a class="headerlink" href="#utility-packages" title="Permanent link">¶</a></h3>
 <p>Third-party and source-built packages: see <a href="https://external.armbian.com/">external.armbian.com</a>.</p>
+<p>Other packages of component <code>&lt;suite&gt;-utils</code>, per suite. Split families (JDK, OpenZFS, …) are folded to their newest member, and <code>-dbgsym</code> debug packages omitted.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th style="text-align: center;"><code>bookworm</code></th>
+<th style="text-align: center;"><code>trixie</code></th>
+<th style="text-align: center;"><code>sid</code></th>
+<th style="text-align: center;"><code>jammy</code></th>
+<th style="text-align: center;"><code>noble</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>anubis</code></td>
+<td style="text-align: center;"><code>1.25.0</code></td>
+<td style="text-align: center;"><code>1.25.0</code></td>
+<td style="text-align: center;"><code>1.24.0</code></td>
+<td style="text-align: center;"><code>1.25.0</code></td>
+<td style="text-align: center;"><code>1.25.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aptly</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>1.6.2-2</code></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>base-files</code></td>
+<td style="text-align: center;"><code>26.8.14-12.4+deb12u15-bookworm</code></td>
+<td style="text-align: center;"><code>26.8.14-13.8+deb13u7-trixie</code></td>
+<td style="text-align: center;"><code>26.8.14-14.2-sid</code></td>
+<td style="text-align: center;"><code>26.8.14-12ubuntu4.7-jammy</code></td>
+<td style="text-align: center;"><code>26.8.14-13ubuntu10-noble</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hello</code></td>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;"><code>1.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mkbootimg</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>1:34.0.5-12</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>1:34.0.5-12~bpo12+1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pacstall</code></td>
+<td style="text-align: center;"><code>5.2.1-pacstall1</code></td>
+<td style="text-align: center;"><code>5.2.1-pacstall1</code></td>
+<td style="text-align: center;"><code>5.2.1-pacstall1</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>5.2.1-pacstall1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spice-vdagent</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>0.22.1-3+b2</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>system-monitoring-center</code></td>
+<td style="text-align: center;"><code>2.26.0</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>2.26.0</code></td>
+<td style="text-align: center;"><code>2.26.0</code></td>
+<td style="text-align: center;"><code>2.26.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">zfs (OpenZFS)</td>
+<td style="text-align: center;"><code>2.2.7-1~bpo12+1</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><code>2.2.6-0arter97~ubuntu22.04.1</code></td>
+<td style="text-align: center;"><code>2.2.6-0arter97~ubuntu24.04.1</code></td>
+</tr>
+</tbody>
+</table>
 <!-- apt-status:end -->
 
 
