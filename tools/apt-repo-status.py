@@ -29,19 +29,6 @@ CORE_PACKAGES = [
     "armbian-zsh",
     "armbian-plymouth-theme",
 ]
-def util_family(name):
-    """Fold split/variant util packages into one representative family row."""
-    if name.startswith("zulu"):
-        return re.match(r"(zulu\d+)", name).group(1) + " (JDK)"
-    if re.match(r"^(zfs|libzfs|libzpool|libnvpair|libuutil)", name):
-        return "zfs (OpenZFS)"
-    if name.startswith("libraspberrypi"):
-        return "libraspberrypi"
-    if name.startswith("python3-libcamera"):
-        return "libcamera"
-    return name
-
-
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "armbian-apt-status/1.0"})
     with urllib.request.urlopen(req, timeout=60) as resp:
@@ -222,10 +209,8 @@ def build_report(base, suites, component, arch, kernels=False):
             failed.append(suite)
             continue
         latest = latest_map(pkgs)
-        # 3rd-party / utility tools live in the suite-prefixed "-utils" component.
-        utils = latest_map(get_packages(base, suite, f"{suite}-utils", arch))
         suite_data[suite] = {"release": rel, "latest": latest,
-                             "count": len(latest), "utils": utils}
+                             "count": len(latest)}
 
     # --- Suite overview
     out.append("### Suites")
@@ -348,33 +333,9 @@ def build_report(base, suites, component, arch, kernels=False):
         emit_group("Current", [r for r in rows if not r[0]])
         emit_group(f"Behind `{ref}`", [r for r in rows if r[0]])
 
-    # --- Third-party / utility packages (the "-utils" component), per suite,
-    #     with split/variant packages folded into one family row.
-    out.append("### Third-party & utility packages")
+    out.append("### External packages")
     out.append("")
-    out.append("Upstream tools imported per suite (component `<suite>-utils`); "
-               "split families (JDK, OpenZFS, ...) are folded to their newest member, "
-               "and `-dbgsym` debug packages omitted.")
-    out.append("")
-    # family -> {suite -> newest version among that family's members}
-    fam_versions = {}
-    for suite in active:
-        for name, st in suite_data[suite]["utils"].items():
-            if name.endswith("-dbgsym"):
-                continue
-            ver = st["Version"]
-            fam = util_family(name)
-            cur = fam_versions.setdefault(fam, {}).get(suite)
-            if cur is None or version_gt(ver, cur):
-                fam_versions[fam][suite] = ver
-    out.append("| Package | " + " | ".join(f"`{s}`" for s in active) + " |")
-    out.append("|:--------|" + "|".join(":-:" for _ in active) + "|")
-    for fam in sorted(fam_versions):
-        row = [f"| `{fam}` " if "(" not in fam else f"| {fam} "]
-        for suite in active:
-            v = fam_versions[fam].get(suite)
-            row.append(f"| {('`'+v+'`') if v else '—'} ")
-        out.append("".join(row) + "|")
+    out.append("Third-party and source-built packages: see [external.armbian.com](https://external.armbian.com/).")
     out.append("")
 
     return "\n".join(out), failed

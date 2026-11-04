@@ -13,7 +13,7 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-11-04 13:28 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-11-04 22:26 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
@@ -140,63 +140,8 @@ Newest kernel published per family, with its Linux kernel version. The current r
 | `linux-image-current-wsl2-arm64` | `6.1.158` | `25.11.2` | ✅ |
 | `linux-image-edge-wsl2-arm64` | `6.6.116` | `25.11.2` | ✅ |
 
-### Third-party & utility packages
+### External packages
 
-Upstream tools imported per suite (component `<suite>-utils`); split families (JDK, OpenZFS, ...) are folded to their newest member, and `-dbgsym` debug packages omitted.
-
-| Package | `bookworm` | `trixie` | `sid` | `jammy` | `noble` |
-|:--------|:-:|:-:|:-:|:-:|:-:|
-| `anubis` | `1.25.0` | `1.25.0` | `1.24.0` | `1.25.0` | `1.25.0` |
-| `aptly` | — | — | — | `1.6.2-2` | — |
-| `armbian-imager` | — | `1.2.1` | — | — | — |
-| `base-files` | `26.8.14-12.4+deb12u15-bookworm` | `26.8.14-13.8+deb13u7-trixie` | `26.8.14-14.2-sid` | `26.8.14-12ubuntu4.7-jammy` | `26.8.14-13ubuntu10-noble` |
-| `bluez` | `5.66-1+rpt2+deb12u2` | `5.82-1.1+rpt2` | `5.82-1.1+rpt2` | — | — |
-| `bluez-firmware` | `1.2-9+rpt4` | `1.2-13+rpt2` | `1.2-13+rpt2` | — | — |
-| `charsiu` | `0.1.0` | `0.1.0` | `0.1.0` | `0.1.0` | `0.1.0` |
-| `edk2-qcs6490` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-qcs9075` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-airbox-q900` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-midstream` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-q6a` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-q8b` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-qcs9075` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edk2-sc8280xp` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
-| `edl-ng` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` |
-| `fastfetch` | `2.70.0` | `2.70.0` | `2.70.0` | `2.70.0` | `2.70.0` |
-| `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
-| `gh` | `2.103.3` | `2.103.3` | `2.103.3` | `2.103.3` | `2.103.3` |
-| `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
-| `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
-| `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | `0.2.0-3fakesync1build6` | — |
-| `libcamera-ipa` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | — | — |
-| `libcamera0.5` | `0.5.2+rpt20250903-1~bpo12+1` | — | — | — | — |
-| `libcamera0.7` | — | `0.7.2+rpt20261009-1` | — | — | — |
-| `libcec6` | — | — | — | `6.0.2-2` | — |
-| `libpisp-common` | `1.2.1-1` | `1.7.0-1` | — | — | — |
-| `libpisp1` | `1.2.1-1` | `1.7.0-1` | — | — | — |
-| `libraspberrypi` | `1:2+git20231018~131943+3c97f76-1` | `1:2+git20231018~131943+3c97f76-1` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` |
-| `libtensorflow-lite2.20.0` | — | `2.20.0-1+rpt1` | — | — | — |
-| `linux-firmware-raspi` | — | — | — | — | `12-0ubuntu1` |
-| `min` | `1.35.7` | `1.35.7` | `1.35.7` | `1.35.7` | `1.35.7` |
-| `mkbootimg` | — | `1:34.0.5-12` | — | — | `1:34.0.5-12~bpo12+1` |
-| `os-agent` | `1.7.2` | `1.7.2` | — | `1.7.2` | `1.7.2` |
-| `pacstall` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | — | `5.2.1-pacstall1` |
-| `pi-bluetooth` | `0.1.20` | `0.1.20` | `0.1.20` | — | `0.2ubuntu1` |
-| `raspberrypi-sys-mods` | `20250930~bookworm` | `1:20260914` | `1:20260914` | — | — |
-| `raspi-config` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` | `20221214-0ubuntu1` |
-| `raspi-firmware` | `1:1.20260915-1~bookworm` | `1:1.20260915-1` | `1:1.20260915-1` | — | — |
-| `raspi-gpio` | `0.20231127` | `0.20231127` | `0.20231127` | — | — |
-| `raspi-utils` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `raspi-utils-core` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `raspi-utils-dt` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `raspi-utils-eeprom` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `raspi-utils-otp` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `raspinfo` | `20251002-1~bookworm` | `20260626-1` | `20260626-1` | — | — |
-| `rpi-eeprom` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` | `20.4-1ubuntu2` |
-| `spice-vdagent` | — | `0.22.1-3+b2` | — | — | — |
-| `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
-| `unudhcpd` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` |
-| zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-2arter97~ubuntu22.04.1` | `2.4.4-2arter97~ubuntu24.04.1` |
-| zulu21 (JDK) | `21.0.13.0.3-5` | — | — | — | — |
+Third-party and source-built packages: see [external.armbian.com](https://external.armbian.com/).
 
 <!-- apt-status:end -->
