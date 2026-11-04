@@ -13,7 +13,7 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-11-04 22:39 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-11-04 22:26 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
@@ -140,22 +140,8 @@ Newest kernel published per family, with its Linux kernel version. The current r
 | `linux-image-current-wsl2-arm64` | `6.1.158` | `25.11.2` | ✅ |
 | `linux-image-edge-wsl2-arm64` | `6.6.116` | `25.11.2` | ✅ |
 
-### Utility packages
+### External packages
 
 Third-party and source-built packages: see [external.armbian.com](https://external.armbian.com/).
-
-Other packages of component `<suite>-utils`, per suite. Split families (JDK, OpenZFS, ...) are folded to their newest member, and `-dbgsym` debug packages omitted.
-
-| Package | `bookworm` | `trixie` | `sid` | `jammy` | `noble` |
-|:--------|:-:|:-:|:-:|:-:|:-:|
-| `anubis` | `1.25.0` | `1.25.0` | `1.24.0` | `1.25.0` | `1.25.0` |
-| `aptly` | — | — | — | `1.6.2-2` | — |
-| `base-files` | `26.8.14-12.4+deb12u15-bookworm` | `26.8.14-13.8+deb13u7-trixie` | `26.8.14-14.2-sid` | `26.8.14-12ubuntu4.7-jammy` | `26.8.14-13ubuntu10-noble` |
-| `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
-| `mkbootimg` | — | `1:34.0.5-12` | — | — | `1:34.0.5-12~bpo12+1` |
-| `pacstall` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | — | `5.2.1-pacstall1` |
-| `spice-vdagent` | — | `0.22.1-3+b2` | — | — | — |
-| `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
-| zfs (OpenZFS) | `2.2.7-1~bpo12+1` | — | — | `2.2.6-0arter97~ubuntu22.04.1` | `2.2.6-0arter97~ubuntu24.04.1` |
 
 <!-- apt-status:end -->
