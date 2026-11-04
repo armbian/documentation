@@ -12,12 +12,15 @@ Examples:
 import argparse
 import gzip
 import io
+import json
 import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
 
 DEFAULT_BASE = "https://apt.armbian.com"
+# Third-party and source-built packages have their own status site.
+EXTERNAL_SITE = "https://external.armbian.com"
 
 # Active / supported suites shown by default (override with --suites, or --all).
 DEFAULT_SUITES = ["bookworm", "trixie", "sid", "jammy", "noble"]
@@ -46,6 +49,16 @@ def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "armbian-apt-status/1.0"})
     with urllib.request.urlopen(req, timeout=60) as resp:
         return resp.read()
+
+
+def external_packages(site):
+    """Binary package names that the external package site lists."""
+    data = json.loads(fetch(f"{site}/packages.json"))
+    names = set()
+    for p in data["packages"]:
+        names.update(p.get("binaries", []), p.get("install", []), [p.get("package")])
+    names.discard(None)
+    return names
 
 
 # --- Debian version comparison -------------------------------------------------
@@ -181,7 +194,7 @@ def get_packages(base, suite, component, arch):
 
 
 # --- Report --------------------------------------------------------------------
-def build_report(base, suites, component, arch, kernels=False):
+def build_report(base, suites, component, arch, kernels=False, external=frozenset(), external_site=EXTERNAL_SITE):
     out = []
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     out.append("## Armbian apt repository status")
@@ -350,17 +363,19 @@ def build_report(base, suites, component, arch, kernels=False):
 
     # --- Third-party / utility packages (the "-utils" component), per suite,
     #     with split/variant packages folded into one family row.
-    out.append("### Third-party & utility packages")
+    out.append("### Utility packages")
     out.append("")
-    out.append("Upstream tools imported per suite (component `<suite>-utils`); "
-               "split families (JDK, OpenZFS, ...) are folded to their newest member, "
+    out.append(f"Third-party and source-built packages: see [{external_site.split('//')[-1]}]({external_site}/).")
+    out.append("")
+    out.append("Other packages of component `<suite>-utils`, per suite. "
+               "Split families (JDK, OpenZFS, ...) are folded to their newest member, "
                "and `-dbgsym` debug packages omitted.")
     out.append("")
     # family -> {suite -> newest version among that family's members}
     fam_versions = {}
     for suite in active:
         for name, st in suite_data[suite]["utils"].items():
-            if name.endswith("-dbgsym"):
+            if name.endswith("-dbgsym") or name in external:
                 continue
             ver = st["Version"]
             fam = util_family(name)
@@ -392,6 +407,8 @@ def main():
     ap.add_argument("--component", default="main")
     ap.add_argument("--kernels", action="store_true",
                     help="add a per-family kernel table flagging versions that lag the release")
+    ap.add_argument("--external-site", default=EXTERNAL_SITE,
+                    help="external package site; its packages.json lists the packages to skip")
     ap.add_argument("--output", help="write Markdown here (default: stdout)")
     args = ap.parse_args()
 
@@ -404,8 +421,15 @@ def main():
     if not suites:
         sys.exit("no suites found (network issue?)")
 
+    # Fail closed: without the list, third-party packages would return to the table.
+    try:
+        external = external_packages(args.external_site)
+    except Exception as e:
+        sys.exit(f"error: could not read {args.external_site}/packages.json: {e}")
+
     report, failed = build_report(args.base_url, suites, args.component, args.arch,
-                                  kernels=args.kernels)
+                                  kernels=args.kernels, external=external,
+                                  external_site=args.external_site)
     # Fail closed: if any requested suite could not be fetched, do not publish a
     # partial report — a transient repository outage must not silently drop a
     # suite (or blank the whole page) from an auto-updated status doc.
