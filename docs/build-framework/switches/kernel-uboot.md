@@ -71,6 +71,38 @@ Appends extra flags to the kernel's `KCFLAGS`, passed straight through to the co
 
 Empties the kernel patch directory so the build applies none of Armbian's kernel patches, producing an as-close-to-vanilla upstream kernel as the source allows. Because the out-of-tree Wi-Fi drivers depend on that patched tree, this also forces `EXTRAWIFI=no`. Keep it off for normal images — the patches carry board fixes and features — and turn it on only to test whether a problem is caused by Armbian's patches or exists in mainline as well.
 
+#### KERNEL_CVE_PATCHES
+
+`yes` | `no` (default)
+
+Applies kernel security fixes from [armbian/cve](https://github.com/armbian/cve) that the stable kernel does not carry yet. The fixes apply first, on the clean stable tree.
+
+- Only stable kernels of the series in `KERNEL_CVE_SERIES` get the fixes. Vendor kernels (`KERNELSOURCE` set by the family) do not.
+- A series applies only when the kernel commit is the series base. armbian/cve verifies that the series applies and builds on that commit. On another commit, the build shows a warning and continues without the fixes.
+- The kernel version gets a `CVE` part with a short armbian/cve commit prefix, for example `CVE890d`. A new armbian/cve commit usually changes this part, and the kernel builds again.
+- The build log lists each fix as `CVE-ID : subject`.
+- With `OFFLINE_WORK=yes`, the build skips the fixes.
+
+Without `KERNEL_CVE_PATCHES=yes`, the kernel and its version do not change.
+
+Example:
+
+```sh
+./compile.sh kernel BOARD=rockpro64 BRANCH=current KERNEL_CVE_PATCHES=yes
+```
+
+#### KERNEL_CVE_SERIES
+
+`string` · default: `6.18 7.3`
+
+The kernel series that get fixes when `KERNEL_CVE_PATCHES=yes`. For other series, the build shows a warning and does not change the kernel.
+
+#### KERNEL_CVE_REPO / KERNEL_CVE_BRANCH
+
+`string` · default: `https://github.com/armbian/cve` / `main`
+
+The git repository and branch with the CVE fix series. Change them only to test a fork of armbian/cve.
+
 #### KERNEL_BTF
 
 `string`
