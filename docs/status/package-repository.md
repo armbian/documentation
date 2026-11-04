@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-11-03 13:16 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-11-04 13:28 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Sun, 1 Nov 2026  | 2279 | `26.8.8` |
-| `trixie` | trixie | Sun, 1 Nov 2026  | 2279 | `26.8.8` |
-| `sid` | sid | Sun, 1 Nov 2026  | 2279 | `26.8.8` |
-| `jammy` | jammy | Sun, 1 Nov 2026  | 2279 | `26.8.8` |
-| `noble` | noble | Sun, 1 Nov 2026  | 2279 | `26.8.8` |
+| `bookworm` | bookworm | Wed, 4 Nov 2026  | 2279 | `26.8.14` |
+| `trixie` | trixie | Wed, 4 Nov 2026  | 2279 | `26.8.14` |
+| `sid` | sid | Wed, 4 Nov 2026  | 2279 | `26.8.14` |
+| `jammy` | jammy | Wed, 4 Nov 2026  | 2279 | `26.8.14` |
+| `noble` | noble | Wed, 4 Nov 2026  | 2279 | `26.8.14` |
 
 ### Core package versions
 
@@ -40,42 +40,17 @@ Armbian's own base packages (component `main`) — identical across all suites.
 
 ### Kernel families
 
-Newest kernel published per family, with its Linux kernel version. The current release line is `26.8.8`; families below it were not rebuilt for it.
+Newest kernel published per family, with its Linux kernel version. The current release line is `26.8.14`; families below it were not rebuilt for it.
 
-**60 of 86 families behind `26.8.8`.** **2 with header mismatches.**
+**85 of 86 families behind `26.8.14`.** **2 with header mismatches.**
 
 #### Current
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
-| `linux-image-edge-arm64` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-bcm2711` | `7.2.7` | `26.8.8` | ✅ |
-| `linux-image-edge-cix-p1` | `7.1.13` | `26.8.8` | ✅ |
-| `linux-image-vendor-edge-k3` | `6.18.51` | `26.8.8` | ✅ |
-| `linux-image-edge-filogic` | `6.16.12` | `26.8.8` | ✅ |
-| `linux-image-edge-genio` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-imx8m` | `7.1.13` | `26.8.8` | ✅ |
-| `linux-image-edge-imx93` | `7.1.13` | `26.8.8` | ✅ |
-| `linux-image-edge-k3-beagle` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-k3` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-k3-tq` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-meson64` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-mvebu64` | `7.1.13` | `26.8.8` | ✅ |
-| `linux-image-edge-qcs6490` | `7.2.3` | `26.8.8` | ✅ |
-| `linux-image-edge-qrb2210` | `7.2.3` | `26.8.8` | ✅ |
-| `linux-image-bleedingedge-rockchip64` | `7.3.0-rc5` | `26.8.8` | ✅ |
-| `linux-image-edge-rockchip64` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-s5p6818` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-sc8280xp` | `7.2.3` | `26.8.8` | ✅ |
-| `linux-image-edge-sm8250` | `6.19.14` | `26.8.8` | ✅ |
-| `linux-image-edge-sm8550` | `7.2.3` | `26.8.8` | ✅ |
-| `linux-image-bleedingedge-sm8550-sheng` | `7.2.2` | `26.8.8` | ✅ |
-| `linux-image-edge-sm8550-sheng` | `7.1.8` | `26.8.8` | ✅ |
-| `linux-image-edge-sm8750` | `7.1.13` | `26.8.8` | ✅ |
-| `linux-image-edge-sunxi64` | `7.2.8` | `26.8.8` | ✅ |
-| `linux-image-edge-uefidt` | `7.2.8` | `26.8.8` | ✅ |
+| `linux-image-edge-arm64` | `7.3.1` | `26.8.14` | ✅ |
 
-#### Behind `26.8.8`
+#### Behind `26.8.14`
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
@@ -87,19 +62,29 @@ Newest kernel published per family, with its Linux kernel version. The current r
 | `linux-image-sm8550-arm64` | `6.9.3` | `25.2.3` | ✅ |
 | `linux-image-wdk2023-arm64` | `6.7.0-rc6` | `25.5.1` | ✅ |
 | `linux-image-current-bcm2711` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-bcm2711` | `7.2.7` | `26.8.8` | ✅ |
 | `linux-image-legacy-bcm2711` | `6.12.103` | `26.8.3` | ✅ |
 | `linux-image-current-bcm2712` | `6.6.63` | `24.11.1` | ✅ |
 | `linux-image-edge-bcm2712` | `6.10.14` | `24.11.1` | ✅ |
 | `linux-image-current-cix-p1` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-cix-p1` | `7.1.13` | `26.8.8` | ✅ |
+| `linux-image-vendor-edge-k3` | `6.18.51` | `26.8.8` | ✅ |
 | `linux-image-current-filogic` | `6.12.100` | `26.8.3` | ✅ |
+| `linux-image-edge-filogic` | `6.16.12` | `26.8.8` | ✅ |
 | `linux-image-collabora-genio` | `6.19.0-rc5` | `26.2.1` | ✅ |
+| `linux-image-edge-genio` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-vendor-genio` | `5.15.168` | `25.2.3` | ✅ |
 | `linux-image-current-imx8m` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-imx8m` | `7.1.13` | `26.8.8` | ✅ |
 | `linux-image-vendor-imx8ulp` | `6.1.22` | `26.8.3` | ✅ |
 | `linux-image-current-imx93` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-imx93` | `7.1.13` | `26.8.8` | ✅ |
 | `linux-image-current-k3-beagle` | `6.12.49` | `25.8.2` | ✅ |
+| `linux-image-edge-k3-beagle` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-vendor-k3-beagle` | `6.12.49` | `26.8.3` | ✅ |
 | `linux-image-current-k3` | `6.12.17` | `25.8.2` | ✅ |
+| `linux-image-edge-k3` | `7.2.8` | `26.8.8` | ✅ |
+| `linux-image-edge-k3-tq` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-vendor-k3` | `6.18.13` | `26.8.3` | ✅ |
 | `linux-image-current-ls1046a-ask` | `6.12.49` | `26.8.3` | ✅ |
 | `linux-image-current-media` | `6.1.92` | `24.5.1` | ✅ |
@@ -107,28 +92,41 @@ Newest kernel published per family, with its Linux kernel version. The current r
 | `linux-image-legacy-media` | `5.10.110` | `24.5.1` | ✅ |
 | `linux-image-legacy-meson-s4t7` | `5.15.137` | `26.8.3` | ✅ |
 | `linux-image-current-meson64` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-meson64` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-current-mvebu64` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-mvebu64` | `7.1.13` | `26.8.8` | ✅ |
 | `linux-image-vendor-nuvoton-ma35d1` | `5.10.140` | `26.8.3` | ✅ |
 | `linux-image-current-phytium-embedded` | `6.6.12` | `26.8.3` | ✅ |
 | `linux-image-legacy-phytium-embedded` | `5.10.209` | `26.8.3` | ✅ |
 | `linux-image-current-qcs6490` | `6.18.2` | `26.8.3` | ✅ |
+| `linux-image-edge-qcs6490` | `7.2.3` | `26.8.8` | ✅ |
+| `linux-image-edge-qrb2210` | `7.2.3` | `26.8.8` | ✅ |
 | `linux-image-vendor-realtek-rtd1619b` | `6.6.54` | `26.8.3` | ✅ |
 | `linux-image-legacy-rk35xx` | `5.10.160` | `24.5.1` | ✅ |
 | `linux-image-vendor-rk35xx` | `6.1.115` | `26.8.3` | ✅ |
 | `linux-image-collabora-rockchip-rk3588` | `6.9.0` | `24.5.1` | ✅ |
 | `linux-image-current-rockchip-rk3588` | `6.12.0` | `24.11.2` | ✅ |
 | `linux-image-edge-rockchip-rk3588` | `6.12.1` | `24.11.1` | ✅ |
+| `linux-image-bleedingedge-rockchip64` | `7.3.0-rc5` | `26.8.8` | ✅ |
 | `linux-image-current-rockchip64` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-rockchip64` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-legacy-rockpis` | `4.4.247` | `24.2.1` | ❌ missing |
 | `linux-image-current-rt-k3-beagle` | `6.12.49` | `25.8.2` | ✅ |
 | `linux-image-vendor-rt-k3-beagle` | `6.12.49` | `26.8.3` | ✅ |
 | `linux-image-vendor-rt-k3` | `6.18.13` | `26.8.3` | ✅ |
+| `linux-image-edge-s5p6818` | `7.2.8` | `26.8.8` | ✅ |
+| `linux-image-edge-sc8280xp` | `7.2.3` | `26.8.8` | ✅ |
 | `linux-image-sc8280xp-sc8280xp` | `7.0.14` | `26.8.3` | ✅ |
 | `linux-image-vendor-sc8280xp` | `7.0.11` | `26.8.3` | ✅ |
 | `linux-image-vendor-seeed-rk3576` | `6.1.115` | `26.8.3` | ✅ |
 | `linux-image-vendor-seeed-rk3588` | `6.1.115` | `26.8.3` | ✅ |
 | `linux-image-current-sm8250` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-sm8250` | `6.19.14` | `26.8.8` | ✅ |
 | `linux-image-current-sm8550` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-sm8550` | `7.2.3` | `26.8.8` | ✅ |
+| `linux-image-bleedingedge-sm8550-sheng` | `7.2.2` | `26.8.8` | ✅ |
+| `linux-image-edge-sm8550-sheng` | `7.1.8` | `26.8.8` | ✅ |
+| `linux-image-edge-sm8750` | `7.1.13` | `26.8.8` | ✅ |
 | `linux-image-legacy-sun50iw9-btt` | `6.1.79` | `24.5.1` | ✅ |
 | `linux-image-legacy-sun50iw9` | `4.9.318` | `24.5.1` | ❌ missing |
 | `linux-image-dev-sun55iw3` | `6.14.0-rc1` | `25.5.1` | ✅ |
@@ -136,7 +134,9 @@ Newest kernel published per family, with its Linux kernel version. The current r
 | `linux-image-legacy-sun55iw3-syterkit` | `5.15.154` | `26.8.3` | ✅ |
 | `linux-image-vendor-sun60iw2` | `6.6.98` | `26.8.3` | ✅ |
 | `linux-image-current-sunxi64` | `6.18.44` | `26.8.3` | ✅ |
+| `linux-image-edge-sunxi64` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-legacy-sunxi64` | `6.12.103` | `26.8.3` | ✅ |
+| `linux-image-edge-uefidt` | `7.2.8` | `26.8.8` | ✅ |
 | `linux-image-current-wsl2-arm64` | `6.1.158` | `25.11.2` | ✅ |
 | `linux-image-edge-wsl2-arm64` | `6.6.116` | `25.11.2` | ✅ |
 
@@ -149,28 +149,35 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `anubis` | `1.25.0` | `1.25.0` | `1.24.0` | `1.25.0` | `1.25.0` |
 | `aptly` | — | — | — | `1.6.2-2` | — |
 | `armbian-imager` | — | `1.2.1` | — | — | — |
-| `base-files` | `26.8.3-12.4+deb12u15-bookworm` | `26.8.3-13.8+deb13u6-trixie` | `26.8.3-14.2-sid` | `26.8.3-12ubuntu4.7-jammy` | `26.8.3-13ubuntu10-noble` |
+| `base-files` | `26.8.14-12.4+deb12u15-bookworm` | `26.8.14-13.8+deb13u7-trixie` | `26.8.14-14.2-sid` | `26.8.14-12ubuntu4.7-jammy` | `26.8.14-13ubuntu10-noble` |
 | `bluez` | `5.66-1+rpt2+deb12u2` | `5.82-1.1+rpt2` | `5.82-1.1+rpt2` | — | — |
 | `bluez-firmware` | `1.2-9+rpt4` | `1.2-13+rpt2` | `1.2-13+rpt2` | — | — |
-| `edk2-qcs6490` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-qcs9075` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-airbox-q900` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-midstream` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-q6a` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-q8b` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-radxa-dragon-qcs9075` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
-| `edk2-sc8280xp` | `0.1.0-9` | `0.1.0-9` | — | `0.1.0-9` | `0.1.0-9` |
+| `charsiu` | `0.1.0` | `0.1.0` | `0.1.0` | `0.1.0` | `0.1.0` |
+| `edk2-qcs6490` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-qcs9075` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-airbox-q900` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-midstream` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-q6a` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-q8b` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-radxa-dragon-qcs9075` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
+| `edk2-sc8280xp` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` | `0.1.0-9` |
 | `edl-ng` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` | `1.6.0` |
-| `fastfetch` | `2.70.0` | `2.70.0` | `2.69.0` | `2.70.0` | `2.70.0` |
+| `fastfetch` | `2.70.0` | `2.70.0` | `2.70.0` | `2.70.0` | `2.70.0` |
 | `firmware-brcm80211` | `1:20240709-2~bpo12+1+rpt4` | `1:20260519-1~bpo13+1+rpt1` | `1:20260519-1~bpo13+1+rpt1` | — | — |
-| `gh` | `2.103.3` | `2.103.3` | `2.83.2` | `2.103.3` | `2.103.3` |
+| `gh` | `2.103.3` | `2.103.3` | `2.103.3` | `2.103.3` | `2.103.3` |
 | `hello` | `1.0` | `1.0` | `1.0` | `1.0` | `1.0` |
 | `homeassistant-supervised` | `3.0.0` | `3.0.0` | — | — | — |
 | `libcamera` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | `0.2.0-3fakesync1build6` | — |
+| `libcamera-ipa` | `0.5.2+rpt20250903-1~bpo12+1` | `0.7.2+rpt20261009-1` | — | — | — |
+| `libcamera0.5` | `0.5.2+rpt20250903-1~bpo12+1` | — | — | — | — |
+| `libcamera0.7` | — | `0.7.2+rpt20261009-1` | — | — | — |
 | `libcec6` | — | — | — | `6.0.2-2` | — |
+| `libpisp-common` | `1.2.1-1` | `1.7.0-1` | — | — | — |
+| `libpisp1` | `1.2.1-1` | `1.7.0-1` | — | — | — |
 | `libraspberrypi` | `1:2+git20231018~131943+3c97f76-1` | `1:2+git20231018~131943+3c97f76-1` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` | `0~20230913+gitcc1ca18-0ubuntu2` |
+| `libtensorflow-lite2.20.0` | — | `2.20.0-1+rpt1` | — | — | — |
 | `linux-firmware-raspi` | — | — | — | — | `12-0ubuntu1` |
-| `min` | `1.35.7` | `1.35.7` | `1.35.2` | `1.35.7` | `1.35.7` |
+| `min` | `1.35.7` | `1.35.7` | `1.35.7` | `1.35.7` | `1.35.7` |
 | `mkbootimg` | — | `1:34.0.5-12` | — | — | `1:34.0.5-12~bpo12+1` |
 | `os-agent` | `1.7.2` | `1.7.2` | — | `1.7.2` | `1.7.2` |
 | `pacstall` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | `5.2.1-pacstall1` | — | `5.2.1-pacstall1` |
@@ -190,6 +197,6 @@ Upstream tools imported per suite (component `<suite>-utils`); split families (J
 | `system-monitoring-center` | `2.26.0` | — | `2.26.0` | `2.26.0` | `2.26.0` |
 | `unudhcpd` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` | `0.2.1-1+git230327.73ff39a` |
 | zfs (OpenZFS) | `2.4.1-1` | `2.4.4-1` | — | `2.4.4-2arter97~ubuntu22.04.1` | `2.4.4-2arter97~ubuntu24.04.1` |
-| zulu21 (JDK) | `21.0.13-3` | — | — | — | — |
+| zulu21 (JDK) | `21.0.13.0.3-5` | — | — | — | — |
 
 <!-- apt-status:end -->
