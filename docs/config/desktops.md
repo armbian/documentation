@@ -57,6 +57,7 @@ Some desktops (notably GNOME) require NetworkManager. When installed, NetworkMan
 | i3-wm | Developers, keyboard-driven workflows | ~150 MB |
 | Xmonad | Haskell tiling window manager | ~120 MB |
 | Enlightenment | EFL-based, lightweight and stylish | ~250 MB |
+| Hyprland | Keyboard-driven Wayland tiling, modern look | ~200 MB |
 
 Mid and full tiers add roughly 500 MB and 2 GB on top of these minimum figures, depending on which tier extras your release/architecture combination ships.
 
@@ -642,6 +643,103 @@ armbian-config --cmd ENLT03
 ~~~ bash title="Disable autologin (Enlightenment) [CSC]"
 armbian-config --cmd ENLT04
 ~~~
+
+
+
+
+
+## Hyprland [CSC]
+
+
+Install Hyprland [CSC]
+
+
+<!--- section image START from tools/include/images/HYPR01.png --->
+![Hyprland [CSC]](/images/HYPR01.png)
+<!--- section image STOP from tools/include/images/HYPR01.png --->
+
+
+<!--- header START from tools/include/markdown/HYPR01-header.md --->
+Hyprland is a dynamic tiling Wayland compositor with smooth animations. Armbian installs it with the Omarchy desktop in Armbian style (`armbian-hyprland-shell`). Debian forky only.
+
+!!! info "Keyboard shortcuts"
+
+    The modifier key is **Super** (Windows key). Press **Super+Enter** for a terminal, **Super+Alt+Space** for apps, **Super+Space** for the Armbian menu, **Super+Escape** for the system menu and **Super+K** for all shortcuts.
+
+<!--- header STOP from tools/include/markdown/HYPR01-header.md --->
+
+
+~~~ bash title="Hyprland [CSC]"
+armbian-config --cmd HYPR01
+~~~
+
+
+<!--- footer START from tools/include/markdown/HYPR01-footer.md --->
+=== "Display Manager"
+
+    Hyprland uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/wayland-sessions/omarchy.desktop`
+
+=== "Configuration"
+
+    - `/usr/share/omarchy/default/hypr/`: Omarchy defaults, replaced on update
+    - `~/.config/hypr/`: your settings
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/HYPR01-footer.md --->
+
+
+~~~ bash title="Hyprland mid [CSC]"
+armbian-config --cmd HYPR05
+~~~
+
+
+~~~ bash title="Hyprland full [CSC]"
+armbian-config --cmd HYPR06
+~~~
+
+
+~~~ bash title="Uninstall Hyprland [CSC]"
+armbian-config --cmd HYPR02
+~~~
+
+
+~~~ bash title="Enable autologin (Hyprland) [CSC]"
+armbian-config --cmd HYPR03
+~~~
+
+
+~~~ bash title="Disable autologin (Hyprland) [CSC]"
+armbian-config --cmd HYPR04
+~~~
+
+
+~~~ bash title="Change Hyprland to minimal"
+armbian-config --cmd HYPR07
+~~~
+
+
+~~~ bash title="Change Hyprland to mid"
+armbian-config --cmd HYPR08
+~~~
+
+
+~~~ bash title="Change Hyprland to full"
+armbian-config --cmd HYPR09
+~~~
+
+
+
+
+
 
 
 
