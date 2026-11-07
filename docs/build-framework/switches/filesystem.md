@@ -93,6 +93,7 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - CRYPTROOT_MAPPER name might affect parallel image building
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
     - CRYPTROOT_AUTOUNLOCK stores encryption key in the /etc/rootfs.key
+    - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. An image with CRYPTROOT_PASSPHRASE keeps that passphrase.
 
 ## Partitions, sizes and labels
 
@@ -109,7 +110,7 @@ Logical sector size the build passes to `sfdisk --sector-size` and to `losetup -
 
 `integer` (MiB) · default: `0`
 
-Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. Set a size (typically 256) for UEFI images. On GRUB images, set `BOOTFS_TYPE=ext4` (or `ext2`) with `BOOTSIZE` to get a separate `/boot`. The EFI partition then mounts at `/boot/efi`.
+Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. GRUB images default to 512. On GRUB images, set `BOOTFS_TYPE=ext4` (or `ext2`) with `BOOTSIZE` to get a separate `/boot`. The EFI partition then mounts at `/boot/efi`. With `CRYPTROOT_ENABLE=yes` and no separate `/boot`, the EFI partition is `/boot`: `BOOTSIZE` sets its size, and `UEFISIZE` overrides it.
 
 #### BIOSSIZE
 
@@ -121,7 +122,7 @@ Size in MiB of a small legacy BIOS boot partition, needed only when a GPT-partit
 
 `integer` · default: `256` (when a separate `/boot` is required)
 
-Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. GRUB images also get it when `BOOTFS_TYPE` is `ext4` or `ext2`; see `UEFISIZE`. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
+Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. GRUB images also get it when `BOOTFS_TYPE` is `ext4` or `ext2`; see `UEFISIZE`. On GRUB images with `CRYPTROOT_ENABLE=yes` and no separate `/boot`, `BOOTSIZE` sizes the EFI partition, which is `/boot`. Desktop images need room for two initramfs copies there: use `BOOTSIZE=2048`. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
 
 #### FIXED_IMAGE_SIZE
 
