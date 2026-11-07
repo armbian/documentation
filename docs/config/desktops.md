@@ -45,19 +45,20 @@ You don't need to reinstall to add or remove tier extras. The desktop menu offer
 
 Some desktops (notably GNOME) require NetworkManager. When installed, NetworkManager is configured to coexist with Armbian's existing `systemd-networkd`: wired Ethernet stays managed by `systemd-networkd`, while NetworkManager handles WiFi and VPN connections. This avoids disrupting your existing network configuration.
 
-**Supported desktops**
+**Choosing a desktop**
 
-| Desktop | Best for | Approximate RAM (minimal tier) |
-|---|---|---|
-| XFCE | Single board computers, low-end hardware | ~300 MB |
-| GNOME | Modern desktops, touchscreen devices | ~800 MB |
-| Cinnamon | Users familiar with Windows layout | ~500 MB |
-| MATE | Classic GNOME 2 fans, low-resource systems | ~350 MB |
-| KDE Plasma | Power users, heavy customization | ~600 MB |
-| i3-wm | Developers, keyboard-driven workflows | ~150 MB |
-| Xmonad | Haskell tiling window manager | ~120 MB |
-| Enlightenment | EFL-based, lightweight and stylish | ~250 MB |
-| Hyprland | Keyboard-driven Wayland tiling, modern look | ~200 MB |
+Armbian maintains and tests the **Supported** desktops. Community members maintain the **Community** desktops.
+
+| Desktop | Status | Best for | Approximate RAM (minimal tier) |
+|---|---|---|---|
+| XFCE | Supported | Single board computers, low-end hardware | ~300 MB |
+| GNOME | Supported | Modern desktops, touchscreen devices | ~800 MB |
+| Cinnamon | Supported | Users familiar with Windows layout | ~500 MB |
+| KDE Plasma | Supported | Power users, heavy customization | ~600 MB |
+| Hyprland | Supported | Keyboard-driven Wayland tiling, modern look | ~200 MB |
+| MATE | Community | Classic GNOME 2 fans, low-resource systems | ~350 MB |
+| i3-wm | Community | Developers, keyboard-driven workflows | ~150 MB |
+| Enlightenment | Community | EFL-based, lightweight and stylish | ~250 MB |
 
 Mid and full tiers add roughly 500 MB and 2 GB on top of these minimum figures, depending on which tier extras your release/architecture combination ships.
 
@@ -73,7 +74,12 @@ Mid and full tiers add roughly 500 MB and 2 GB on top of these minimum figures, 
 
 <!--- header STOP from tools/include/markdown/Desktops-header.md --->
 
-## Cinnamon
+## Supported
+
+
+Armbian maintains and tests these desktops.
+
+### Cinnamon
 
 
 Install Cinnamon (minimal)
@@ -162,7 +168,7 @@ armbian-config --cmd CINM09
 
 
 
-## GNOME
+### GNOME
 
 
 Install GNOME (minimal)
@@ -250,7 +256,285 @@ armbian-config --cmd GNME09
 
 
 
-## MATE
+### KDE Plasma
+
+
+Install KDE Plasma (minimal)
+
+
+<!--- section image START from tools/include/images/KDEP01.png --->
+![KDE Plasma](/images/KDEP01.png)
+<!--- section image STOP from tools/include/images/KDEP01.png --->
+
+
+<!--- header START from tools/include/markdown/KDEP01-header.md --->
+KDE Plasma is a feature-rich desktop environment with extensive customization options. It provides a familiar taskbar and start menu layout with modern effects, widgets, and a powerful system settings application.
+
+<!--- header STOP from tools/include/markdown/KDEP01-header.md --->
+
+
+~~~ bash title="KDE Plasma"
+armbian-config --cmd KDEP01
+~~~
+
+
+<!--- footer START from tools/include/markdown/KDEP01-footer.md --->
+=== "Display Manager"
+
+    KDE Plasma uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/plasma.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
+
+
+~~~ bash title="KDE Plasma mid"
+armbian-config --cmd KDEP05
+~~~
+
+
+~~~ bash title="KDE Plasma full"
+armbian-config --cmd KDEP06
+~~~
+
+
+~~~ bash title="Uninstall KDE Plasma"
+armbian-config --cmd KDEP02
+~~~
+
+
+~~~ bash title="Enable autologin (KDE Plasma)"
+armbian-config --cmd KDEP03
+~~~
+
+
+~~~ bash title="Disable autologin (KDE Plasma)"
+armbian-config --cmd KDEP04
+~~~
+
+
+~~~ bash title="Change KDE Plasma to minimal"
+armbian-config --cmd KDEP07
+~~~
+
+
+~~~ bash title="Change KDE Plasma to mid"
+armbian-config --cmd KDEP08
+~~~
+
+
+~~~ bash title="Change KDE Plasma to full"
+armbian-config --cmd KDEP09
+~~~
+
+
+
+
+
+
+
+
+
+
+### Hyprland
+
+
+Install Hyprland
+
+
+<!--- section image START from tools/include/images/HYPR01.png --->
+![Hyprland](/images/HYPR01.png)
+<!--- section image STOP from tools/include/images/HYPR01.png --->
+
+
+<!--- header START from tools/include/markdown/HYPR01-header.md --->
+Hyprland is a dynamic tiling Wayland compositor with smooth animations. Armbian installs it with the Omarchy desktop in Armbian style (`armbian-hyprland-shell`). Debian forky only.
+
+!!! info "Keyboard shortcuts"
+
+    The modifier key is **Super** (Windows key). Press **Super+Enter** for a terminal, **Super+Alt+Space** for apps, **Super+Space** for the Armbian menu, **Super+Escape** for the system menu and **Super+K** for all shortcuts.
+
+<!--- header STOP from tools/include/markdown/HYPR01-header.md --->
+
+
+~~~ bash title="Hyprland"
+armbian-config --cmd HYPR01
+~~~
+
+
+<!--- footer START from tools/include/markdown/HYPR01-footer.md --->
+=== "Display Manager"
+
+    Hyprland uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/wayland-sessions/omarchy.desktop`
+
+=== "Configuration"
+
+    - `/usr/share/omarchy/default/hypr/`: Omarchy defaults, replaced on update
+    - `~/.config/hypr/`: your settings
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/HYPR01-footer.md --->
+
+
+~~~ bash title="Hyprland mid"
+armbian-config --cmd HYPR05
+~~~
+
+
+~~~ bash title="Hyprland full"
+armbian-config --cmd HYPR06
+~~~
+
+
+~~~ bash title="Uninstall Hyprland"
+armbian-config --cmd HYPR02
+~~~
+
+
+~~~ bash title="Enable autologin (Hyprland)"
+armbian-config --cmd HYPR03
+~~~
+
+
+~~~ bash title="Disable autologin (Hyprland)"
+armbian-config --cmd HYPR04
+~~~
+
+
+~~~ bash title="Change Hyprland to minimal"
+armbian-config --cmd HYPR07
+~~~
+
+
+~~~ bash title="Change Hyprland to mid"
+armbian-config --cmd HYPR08
+~~~
+
+
+~~~ bash title="Change Hyprland to full"
+armbian-config --cmd HYPR09
+~~~
+
+
+
+
+
+
+
+
+
+
+### XFCE
+
+
+Install XFCE (minimal)
+
+
+<!--- section image START from tools/include/images/XFCE01.png --->
+![XFCE](/images/XFCE01.png)
+<!--- section image STOP from tools/include/images/XFCE01.png --->
+
+
+<!--- header START from tools/include/markdown/XFCE01-header.md --->
+Xfce is a lightweight, fast, and user-friendly desktop environment for Linux, offering a classic interface, essential apps, and customization. It prioritizes performance, simplicity, and efficiency, making it an excellent choice for devices with limited resources.
+
+<!--- header STOP from tools/include/markdown/XFCE01-header.md --->
+
+
+~~~ bash title="XFCE"
+armbian-config --cmd XFCE01
+~~~
+
+
+<!--- footer START from tools/include/markdown/XFCE01-footer.md --->
+=== "Display Manager"
+
+    Xfce uses **LightDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/xsessions/xfce.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
+
+
+~~~ bash title="XFCE mid"
+armbian-config --cmd XFCE05
+~~~
+
+
+~~~ bash title="XFCE full"
+armbian-config --cmd XFCE06
+~~~
+
+
+~~~ bash title="Uninstall XFCE"
+armbian-config --cmd XFCE02
+~~~
+
+
+~~~ bash title="Enable autologin (XFCE)"
+armbian-config --cmd XFCE03
+~~~
+
+
+~~~ bash title="Disable autologin (XFCE)"
+armbian-config --cmd XFCE04
+~~~
+
+
+~~~ bash title="Change XFCE to minimal"
+armbian-config --cmd XFCE07
+~~~
+
+
+~~~ bash title="Change XFCE to mid"
+armbian-config --cmd XFCE08
+~~~
+
+
+~~~ bash title="Change XFCE to full"
+armbian-config --cmd XFCE09
+~~~
+
+
+
+
+
+
+
+
+
+
+## Community
+
+
+Community members maintain these desktops. Armbian does not test them. They can break after an update.
+
+### MATE
 
 
 Install MATE (minimal)
@@ -338,7 +622,7 @@ armbian-config --cmd MATE09
 
 
 
-## i3
+### i3
 
 
 Install i3 (minimal)
@@ -430,54 +714,20 @@ armbian-config --cmd I3WM09
 
 
 
-## KDE Plasma
+### KDE Neon
 
 
-Install KDE Plasma (minimal)
+Install KDE Neon
 
 
-<!--- section image START from tools/include/images/KDEP01.png --->
-![KDE Plasma](/images/KDEP01.png)
-<!--- section image STOP from tools/include/images/KDEP01.png --->
+<!--- header START from tools/include/markdown/KDEN01-header.md --->
+KDE Neon provides the latest KDE Plasma desktop built on top of Ubuntu. It uses the KDE Neon repository to deliver cutting-edge Plasma releases, offering the newest features and improvements ahead of distribution packages. Ubuntu Noble/Plucky only.
 
+!!! note "KDE Neon vs KDE Plasma"
 
-<!--- header START from tools/include/markdown/KDEP01-header.md --->
-KDE Plasma is a feature-rich desktop environment with extensive customization options. It provides a familiar taskbar and start menu layout with modern effects, widgets, and a powerful system settings application.
+    **KDE Neon** uses the KDE Neon repository for the latest Plasma releases (Ubuntu only). **KDE Plasma** uses distribution packages and works on both Debian and Ubuntu.
 
-<!--- header STOP from tools/include/markdown/KDEP01-header.md --->
-
-
-~~~ bash title="KDE Plasma"
-armbian-config --cmd KDEP01
-~~~
-
-
-<!--- footer START from tools/include/markdown/KDEP01-footer.md --->
-=== "Display Manager"
-
-    KDE Plasma uses **SDDM** as its default display manager.
-
-=== "Session files"
-
-    - `/usr/share/xsessions/plasma.desktop`
-
-=== "Autologin"
-
-    Autologin configuration is stored in:
-
-    - `/etc/sddm.conf.d/autologin.conf`
-
-<!--- footer STOP from tools/include/markdown/KDEP01-footer.md --->
-
-
-~~~ bash title="KDE Plasma mid"
-armbian-config --cmd KDEP05
-~~~
-
-
-~~~ bash title="KDE Plasma full"
-armbian-config --cmd KDEP06
-~~~
+<!--- header STOP from tools/include/markdown/KDEN01-header.md --->
 
 
 ~~~ bash title="KDE Neon"
@@ -504,18 +754,8 @@ armbian-config --cmd KDEN01
 <!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
 
 
-~~~ bash title="Uninstall KDE Plasma"
-armbian-config --cmd KDEP02
-~~~
-
-
 ~~~ bash title="Uninstall KDE Neon"
 armbian-config --cmd KDEN02
-~~~
-
-
-~~~ bash title="Enable autologin (KDE Plasma)"
-armbian-config --cmd KDEP03
 ~~~
 
 
@@ -524,65 +764,36 @@ armbian-config --cmd KDEN03
 ~~~
 
 
-~~~ bash title="Disable autologin (KDE Plasma)"
-armbian-config --cmd KDEP04
-~~~
-
-
 ~~~ bash title="Disable autologin (KDE Neon)"
 armbian-config --cmd KDEN04
 ~~~
 
 
-~~~ bash title="Change KDE Plasma to minimal"
-armbian-config --cmd KDEP07
-~~~
-
-
-~~~ bash title="Change KDE Plasma to mid"
-armbian-config --cmd KDEP08
-~~~
-
-
-~~~ bash title="Change KDE Plasma to full"
-armbian-config --cmd KDEP09
-~~~
 
 
 
+### Budgie
 
 
+Install Budgie
 
 
-
-
-
-
-
-
-
-## Budgie [CSC]
-
-
-Install Budgie [CSC]
-
-
-~~~ bash title="Budgie [CSC]"
+~~~ bash title="Budgie"
 armbian-config --cmd BDGE01
 ~~~
 
 
-~~~ bash title="Uninstall Budgie [CSC]"
+~~~ bash title="Uninstall Budgie"
 armbian-config --cmd BDGE02
 ~~~
 
 
-~~~ bash title="Enable autologin (Budgie) [CSC]"
+~~~ bash title="Enable autologin (Budgie)"
 armbian-config --cmd BDGE03
 ~~~
 
 
-~~~ bash title="Disable autologin (Budgie) [CSC]"
+~~~ bash title="Disable autologin (Budgie)"
 armbian-config --cmd BDGE04
 ~~~
 
@@ -590,28 +801,28 @@ armbian-config --cmd BDGE04
 
 
 
-## Deepin [CSC]
+### Deepin
 
 
-Install Deepin [CSC]
+Install Deepin
 
 
-~~~ bash title="Deepin [CSC]"
+~~~ bash title="Deepin"
 armbian-config --cmd DEEP01
 ~~~
 
 
-~~~ bash title="Uninstall Deepin [CSC]"
+~~~ bash title="Uninstall Deepin"
 armbian-config --cmd DEEP02
 ~~~
 
 
-~~~ bash title="Enable autologin (Deepin) [CSC]"
+~~~ bash title="Enable autologin (Deepin)"
 armbian-config --cmd DEEP03
 ~~~
 
 
-~~~ bash title="Disable autologin (Deepin) [CSC]"
+~~~ bash title="Disable autologin (Deepin)"
 armbian-config --cmd DEEP04
 ~~~
 
@@ -619,28 +830,28 @@ armbian-config --cmd DEEP04
 
 
 
-## Enlightenment [CSC]
+### Enlightenment
 
 
-Install Enlightenment [CSC]
+Install Enlightenment
 
 
-~~~ bash title="Enlightenment [CSC]"
+~~~ bash title="Enlightenment"
 armbian-config --cmd ENLT01
 ~~~
 
 
-~~~ bash title="Uninstall Enlightenment [CSC]"
+~~~ bash title="Uninstall Enlightenment"
 armbian-config --cmd ENLT02
 ~~~
 
 
-~~~ bash title="Enable autologin (Enlightenment) [CSC]"
+~~~ bash title="Enable autologin (Enlightenment)"
 armbian-config --cmd ENLT03
 ~~~
 
 
-~~~ bash title="Disable autologin (Enlightenment) [CSC]"
+~~~ bash title="Disable autologin (Enlightenment)"
 armbian-config --cmd ENLT04
 ~~~
 
@@ -648,120 +859,23 @@ armbian-config --cmd ENLT04
 
 
 
-## Hyprland [CSC]
+### Bianbu
 
 
-Install Hyprland [CSC]
+Install Bianbu (minimal)
 
 
-<!--- section image START from tools/include/images/HYPR01.png --->
-![Hyprland [CSC]](/images/HYPR01.png)
-<!--- section image STOP from tools/include/images/HYPR01.png --->
-
-
-<!--- header START from tools/include/markdown/HYPR01-header.md --->
-Hyprland is a dynamic tiling Wayland compositor with smooth animations. Armbian installs it with the Omarchy desktop in Armbian style (`armbian-hyprland-shell`). Debian forky only.
-
-!!! info "Keyboard shortcuts"
-
-    The modifier key is **Super** (Windows key). Press **Super+Enter** for a terminal, **Super+Alt+Space** for apps, **Super+Space** for the Armbian menu, **Super+Escape** for the system menu and **Super+K** for all shortcuts.
-
-<!--- header STOP from tools/include/markdown/HYPR01-header.md --->
-
-
-~~~ bash title="Hyprland [CSC]"
-armbian-config --cmd HYPR01
-~~~
-
-
-<!--- footer START from tools/include/markdown/HYPR01-footer.md --->
-=== "Display Manager"
-
-    Hyprland uses **SDDM** as its default display manager.
-
-=== "Session files"
-
-    - `/usr/share/wayland-sessions/omarchy.desktop`
-
-=== "Configuration"
-
-    - `/usr/share/omarchy/default/hypr/`: Omarchy defaults, replaced on update
-    - `~/.config/hypr/`: your settings
-
-=== "Autologin"
-
-    Autologin configuration is stored in:
-
-    - `/etc/sddm.conf.d/autologin.conf`
-
-<!--- footer STOP from tools/include/markdown/HYPR01-footer.md --->
-
-
-~~~ bash title="Hyprland mid [CSC]"
-armbian-config --cmd HYPR05
-~~~
-
-
-~~~ bash title="Hyprland full [CSC]"
-armbian-config --cmd HYPR06
-~~~
-
-
-~~~ bash title="Uninstall Hyprland [CSC]"
-armbian-config --cmd HYPR02
-~~~
-
-
-~~~ bash title="Enable autologin (Hyprland) [CSC]"
-armbian-config --cmd HYPR03
-~~~
-
-
-~~~ bash title="Disable autologin (Hyprland) [CSC]"
-armbian-config --cmd HYPR04
-~~~
-
-
-~~~ bash title="Change Hyprland to minimal"
-armbian-config --cmd HYPR07
-~~~
-
-
-~~~ bash title="Change Hyprland to mid"
-armbian-config --cmd HYPR08
-~~~
-
-
-~~~ bash title="Change Hyprland to full"
-armbian-config --cmd HYPR09
-~~~
-
-
-
-
-
-
-
-
-
-
-## Bianbu [CSC]
-
-
-Install Bianbu (minimal) [CSC]
-
-
-~~~ bash title="Bianbu [CSC]"
+~~~ bash title="Bianbu"
 armbian-config --cmd BIAN01
 ~~~
 
 
-~~~ bash title="Bianbu mid [CSC]"
+~~~ bash title="Bianbu mid"
 armbian-config --cmd BIAN05
 ~~~
 
 
-~~~ bash title="Bianbu full [CSC]"
+~~~ bash title="Bianbu full"
 armbian-config --cmd BIAN06
 ~~~
 
@@ -793,94 +907,6 @@ armbian-config --cmd BIAN08
 
 ~~~ bash title="Change Bianbu to full"
 armbian-config --cmd BIAN09
-~~~
-
-
-
-
-
-
-
-
-
-
-## XFCE
-
-
-Install XFCE (minimal)
-
-
-<!--- section image START from tools/include/images/XFCE01.png --->
-![XFCE](/images/XFCE01.png)
-<!--- section image STOP from tools/include/images/XFCE01.png --->
-
-
-<!--- header START from tools/include/markdown/XFCE01-header.md --->
-Xfce is a lightweight, fast, and user-friendly desktop environment for Linux, offering a classic interface, essential apps, and customization. It prioritizes performance, simplicity, and efficiency, making it an excellent choice for devices with limited resources.
-
-<!--- header STOP from tools/include/markdown/XFCE01-header.md --->
-
-
-~~~ bash title="XFCE"
-armbian-config --cmd XFCE01
-~~~
-
-
-<!--- footer START from tools/include/markdown/XFCE01-footer.md --->
-=== "Display Manager"
-
-    Xfce uses **LightDM** as its default display manager.
-
-=== "Session files"
-
-    - `/usr/share/xsessions/xfce.desktop`
-
-=== "Autologin"
-
-    Autologin configuration is stored in:
-
-    - `/etc/lightdm/lightdm.conf.d/22-armbian-autologin.conf`
-
-<!--- footer STOP from tools/include/markdown/XFCE01-footer.md --->
-
-
-~~~ bash title="XFCE mid"
-armbian-config --cmd XFCE05
-~~~
-
-
-~~~ bash title="XFCE full"
-armbian-config --cmd XFCE06
-~~~
-
-
-~~~ bash title="Uninstall XFCE"
-armbian-config --cmd XFCE02
-~~~
-
-
-~~~ bash title="Enable autologin (XFCE)"
-armbian-config --cmd XFCE03
-~~~
-
-
-~~~ bash title="Disable autologin (XFCE)"
-armbian-config --cmd XFCE04
-~~~
-
-
-~~~ bash title="Change XFCE to minimal"
-armbian-config --cmd XFCE07
-~~~
-
-
-~~~ bash title="Change XFCE to mid"
-armbian-config --cmd XFCE08
-~~~
-
-
-~~~ bash title="Change XFCE to full"
-armbian-config --cmd XFCE09
 ~~~
 
 
