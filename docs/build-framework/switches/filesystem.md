@@ -77,8 +77,8 @@ root filesystem subvolume:
 LUKS (Linux Unified Key Setup) is a specification for block device encryption. It establishes an on-disk format for the data, as well as a passphrase/key management policy. LUKS uses the kernel device mapper subsystem via the dm-crypt module.
 
 ```title="When enabled, you need to provide additional information:"
-CRYPTROOT_PASSPHRASE="MYSECRECTPASS"             # Mandatory
-CRYPTROOT_AUTOUNLOCK="yes"                       # Default: no. If set to yes you can omit CRYPTROOT_PASSPHRASE to do unattended unlocking
+CRYPTROOT_PASSPHRASE="MYSECRECTPASS"             # Mandatory, except with CRYPTROOT_AUTOUNLOCK
+CRYPTROOT_AUTOUNLOCK="yes"                       # Default: no. Unattended unlocking with a keyfile; CRYPTROOT_PASSPHRASE is not used
 CRYPTROOT_SSH_UNLOCK="yes"                       # Default: yes
 CRYPTROOT_SSH_UNLOCK_PORT="2222"                 # Default: 2022
 CRYPTROOT_MAPPER=armbian-root                   # Default: armbian-root
@@ -93,8 +93,16 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - CRYPTROOT_MAPPER name might affect parallel image building
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
     - CRYPTROOT_AUTOUNLOCK stores encryption key in the /etc/rootfs.key
-    - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. With CRYPTROOT_AUTOUNLOCK, the build does not use CRYPTROOT_PASSPHRASE. The re-key needs LUKS2, the default; a LUKS1 root (`--type luks1` in CRYPTROOT_PARAMETERS) keeps the image key.
-    - CRYPTROOT_AUTOUNLOCK protects against a reused image key, not against a stolen disk: the key is in the initramfs on the unencrypted `/boot`. For that, disable CRYPTROOT_AUTOUNLOCK and use CRYPTROOT_PASSPHRASE or CRYPTROOT_SSH_UNLOCK.
+    - With CRYPTROOT_AUTOUNLOCK, the build formats the root with a generated keyfile only. It does not use CRYPTROOT_PASSPHRASE.
+    - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. The partition resize runs after the re-key.
+    - The re-key needs LUKS2, the default. A LUKS1 root (`--type luks1` in CRYPTROOT_PARAMETERS) keeps the image key.
+    - When the motd notice is gone, check that the re-key finished: the service is disabled and the log ends with `done`. If it failed, the image key still unlocks the root. A common cause is a full `/boot`: see `BOOTSIZE`. The service tries again on the next boot.
+    - CRYPTROOT_AUTOUNLOCK protects against a reused image key, not against a stolen disk: the key is in the initramfs on the unencrypted `/boot`. To protect a stolen disk, disable CRYPTROOT_AUTOUNLOCK and set CRYPTROOT_PASSPHRASE. CRYPTROOT_SSH_UNLOCK lets you type that passphrase over SSH.
+
+```bash title="Check the first-boot re-key"
+systemctl is-enabled armbian-luks-rekey     # disabled: finished
+tail -n 3 /var/log/armbian-luks-rekey.log   # last line: "<date> | done"
+```
 
 ## Partitions, sizes and labels
 
@@ -111,7 +119,7 @@ Logical sector size the build passes to `sfdisk --sector-size` and to `losetup -
 
 `integer` (MiB) · default: `0`
 
-Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. GRUB images default to 512. On GRUB images, set `BOOTFS_TYPE=ext4` (or `ext2`) with `BOOTSIZE` to get a separate `/boot`. The EFI partition then mounts at `/boot/efi`. With `CRYPTROOT_ENABLE=yes` and no separate `/boot`, the EFI partition is `/boot`: `BOOTSIZE` sets its size, and `UEFISIZE` overrides it.
+Size in MiB of the UEFI/ESP (EFI System Partition) that carries the bootloader on UEFI-booting targets such as x86 and some ARM64 boards; `0` disables it, which is the default because most Armbian boards boot from U-Boot rather than UEFI. GRUB images default to 512. On GRUB images, set `BOOTFS_TYPE=ext4` (or `ext2`) with `BOOTSIZE` to get a separate `/boot`. The EFI partition then mounts at `/boot/efi`. With `CRYPTROOT_ENABLE=yes` and no separate `/boot`, the EFI partition is `/boot`: `BOOTSIZE` sets its size, and `UEFISIZE` overrides it. `BOOTSIZE` 1 to 8 gives the 512 MiB default.
 
 #### BIOSSIZE
 
@@ -123,7 +131,7 @@ Size in MiB of a small legacy BIOS boot partition, needed only when a GPT-partit
 
 `integer` · default: `256` (when a separate `/boot` is required)
 
-Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. GRUB images also get it when `BOOTFS_TYPE` is `ext4` or `ext2`; see `UEFISIZE`. On GRUB images with `CRYPTROOT_ENABLE=yes` and no separate `/boot`, `BOOTSIZE` sizes the EFI partition, which is `/boot`. Desktop images need room for two initramfs copies there: use `BOOTSIZE=2048`. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
+Size in MB of a separate `/boot` partition, created when the root filesystem cannot hold the boot files itself — typically when `ROOTFS_TYPE` is something other than `ext4` (btrfs, f2fs, nilfs2, and so on) or a board otherwise requires a dedicated boot partition. GRUB images also get it when `BOOTFS_TYPE` is `ext4` or `ext2`; see `UEFISIZE`. On GRUB images with `CRYPTROOT_ENABLE=yes` and no separate `/boot`, `BOOTSIZE` sizes the EFI partition, which is `/boot`. Desktop images need room for two initramfs copies there: use `BOOTSIZE=2048`. With less, the first-boot re-key of CRYPTROOT_AUTOUNLOCK can fail. Individual board configs override it where their bootloader needs more room, and the partitioning step falls back to a 256 MB default if a boot partition is required but the value is left empty or unusably small. Leave it alone unless you know the target needs a larger `/boot`.
 
 #### FIXED_IMAGE_SIZE
 
