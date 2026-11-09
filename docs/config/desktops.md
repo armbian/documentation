@@ -714,64 +714,6 @@ armbian-config --cmd I3WM09
 
 
 
-### KDE Neon
-
-
-Install KDE Neon
-
-
-<!--- header START from tools/include/markdown/KDEN01-header.md --->
-KDE Neon provides the latest KDE Plasma desktop built on top of Ubuntu. It uses the KDE Neon repository to deliver cutting-edge Plasma releases, offering the newest features and improvements ahead of distribution packages. Ubuntu Noble/Plucky only.
-
-!!! note "KDE Neon vs KDE Plasma"
-
-    **KDE Neon** uses the KDE Neon repository for the latest Plasma releases (Ubuntu only). **KDE Plasma** uses distribution packages and works on both Debian and Ubuntu.
-
-<!--- header STOP from tools/include/markdown/KDEN01-header.md --->
-
-
-~~~ bash title="KDE Neon"
-armbian-config --cmd KDEN01
-~~~
-
-
-<!--- footer START from tools/include/markdown/KDEN01-footer.md --->
-=== "Display Manager"
-
-    KDE Neon uses **SDDM** as its default display manager.
-
-=== "Session files"
-
-    - `/usr/share/wayland-sessions/plasma.desktop`
-    - `/usr/share/xsessions/plasmax11.desktop`
-
-=== "Autologin"
-
-    Autologin configuration is stored in:
-
-    - `/etc/sddm.conf.d/autologin.conf`
-
-<!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
-
-
-~~~ bash title="Uninstall KDE Neon"
-armbian-config --cmd KDEN02
-~~~
-
-
-~~~ bash title="Enable autologin (KDE Neon)"
-armbian-config --cmd KDEN03
-~~~
-
-
-~~~ bash title="Disable autologin (KDE Neon)"
-armbian-config --cmd KDEN04
-~~~
-
-
-
-
-
 ### Budgie
 
 
@@ -853,6 +795,69 @@ armbian-config --cmd ENLT03
 
 ~~~ bash title="Disable autologin (Enlightenment)"
 armbian-config --cmd ENLT04
+~~~
+
+
+
+
+
+## Unsupported
+
+
+Nobody maintains these desktops. They can fail to install or to start.
+
+### KDE Neon
+
+
+Install KDE Neon
+
+
+<!--- header START from tools/include/markdown/KDEN01-header.md --->
+KDE Neon provides the latest KDE Plasma desktop built on top of Ubuntu. It uses the KDE Neon repository to deliver cutting-edge Plasma releases, offering the newest features and improvements ahead of distribution packages. Not available now: the KDE Neon repository has no base for Ubuntu Resolute.
+
+!!! note "KDE Neon vs KDE Plasma"
+
+    **KDE Neon** uses the KDE Neon repository for the latest Plasma releases (Ubuntu only). **KDE Plasma** uses distribution packages and works on both Debian and Ubuntu.
+
+<!--- header STOP from tools/include/markdown/KDEN01-header.md --->
+
+
+~~~ bash title="KDE Neon"
+armbian-config --cmd KDEN01
+~~~
+
+
+<!--- footer START from tools/include/markdown/KDEN01-footer.md --->
+=== "Display Manager"
+
+    KDE Neon uses **SDDM** as its default display manager.
+
+=== "Session files"
+
+    - `/usr/share/wayland-sessions/plasma.desktop`
+    - `/usr/share/xsessions/plasmax11.desktop`
+
+=== "Autologin"
+
+    Autologin configuration is stored in:
+
+    - `/etc/sddm.conf.d/autologin.conf`
+
+<!--- footer STOP from tools/include/markdown/KDEN01-footer.md --->
+
+
+~~~ bash title="Uninstall KDE Neon"
+armbian-config --cmd KDEN02
+~~~
+
+
+~~~ bash title="Enable autologin (KDE Neon)"
+armbian-config --cmd KDEN03
+~~~
+
+
+~~~ bash title="Disable autologin (KDE Neon)"
+armbian-config --cmd KDEN04
 ~~~
 
 
