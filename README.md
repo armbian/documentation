@@ -119,7 +119,7 @@ Additional helpers in `tools/` (see [`tools/README.md`](tools/README.md)):
 
 ## Continuous integration
 
-Automation (PR previews, site release, status-page refreshes, label sync, mirror list pulls, extensions list pulls, etc.) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
+Automation (PR previews, site release, status-page refreshes, label sync, mirror list pulls, extensions list pulls, and more) is implemented as GitHub Actions workflows under `.github/workflows/`. For a live overview of all runs in this repository, see the Armbian CI dashboard:
 
 - <https://actions.armbian.com/?repo=documentation>
 
