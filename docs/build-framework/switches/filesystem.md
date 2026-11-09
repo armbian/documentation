@@ -93,8 +93,8 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - CRYPTROOT_MAPPER name might affect parallel image building
     - CRYPTROOT_PARAMETERS may not contain `=`; separate switches with spaces
     - CRYPTROOT_AUTOUNLOCK stores encryption key in the /etc/rootfs.key
-    - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. An image with CRYPTROOT_PASSPHRASE keeps that passphrase. The re-key needs LUKS2, the default; a LUKS1 root (`--type luks1` in CRYPTROOT_PARAMETERS) keeps the image key.
-    - CRYPTROOT_AUTOUNLOCK protects against a reused image key, not against a stolen disk: the key is in the initramfs on the unencrypted `/boot`. Use CRYPTROOT_PASSPHRASE or CRYPTROOT_SSH_UNLOCK for that.
+    - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. With CRYPTROOT_AUTOUNLOCK, the build does not use CRYPTROOT_PASSPHRASE. The re-key needs LUKS2, the default; a LUKS1 root (`--type luks1` in CRYPTROOT_PARAMETERS) keeps the image key.
+    - CRYPTROOT_AUTOUNLOCK protects against a reused image key, not against a stolen disk: the key is in the initramfs on the unencrypted `/boot`. For that, disable CRYPTROOT_AUTOUNLOCK and use CRYPTROOT_PASSPHRASE or CRYPTROOT_SSH_UNLOCK.
 
 ## Partitions, sizes and labels
 
