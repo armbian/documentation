@@ -1,0 +1,8 @@
+00-greeter.webp: LightDM login screen
+01-desktop.webp: Desktop with the top panel
+02-applications-menu.webp: Applications menu
+05-appfinder.webp: Application Finder
+06-calendar.webp: Calendar popup
+10-settings-manager.webp: Settings Manager
+15-thunar.webp: Thunar file manager
+16-armbian-config.webp: armbian-config in a terminal
