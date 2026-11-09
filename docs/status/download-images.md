@@ -16,16 +16,16 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 2224 image assets across 415 boards, generated 2026-11-02 17:04 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2527 image assets across 423 boards, generated 2026-11-09 17:29 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
-| Community nightly | 873 | 241 | 26.11.0-trunk.108 |
+| Community nightly | 924 | 247 | 26.11.0-trunk.120 |
 | Download (dl.armbian.com, per-board releases) | 795 | 170 | 14 versions (…26.8.12) |
 | Appliance images (kali/omv/homeassistant) | 420 | 134 | 26.8.1 |
-| CI nightly | 128 | 56 | 26.11.0-trunk.118 |
+| CI nightly | 380 | 171 | 26.11.0-trunk.122 |
 | (orphaned — no repo) | 8 | 2 | 26.8.14 |
 
 Current download release line: **26.8.12/26.8.11/26.8.10**.
@@ -36,8 +36,8 @@ _**2** boards whose newest `dl.armbian.com` image is behind the current 26.8.12/
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 190 d |
-| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 161 d |
+| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 197 d |
+| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 168 d |
 
 ## Non-standard boards
 
@@ -49,11 +49,13 @@ _**1** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-bo
 
 ## Missing download images
 
-_**3** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
+_**5** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
 
 | board | name | present in |
 | --- | --- | --- |
 | boardcon-em3588 | EM3588 | CI |
+| mba62xx-tqma62xx | MBa62xx | CI |
+| mba67xx-tqma67xx | MBa67xx | CI |
 | odroidu2 | Odroid U2 | CI |
 | turris-omnia | Turris Omnia | CI |
 
