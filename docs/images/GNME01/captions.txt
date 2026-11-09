@@ -1,0 +1,8 @@
+00-greeter.webp: GDM login screen
+02-desktop.webp: Desktop with the top bar
+03-activities-overview.webp: Activities overview with workspaces and dash
+04-app-grid.webp: App grid
+06-quick-settings.webp: Quick settings menu
+09-files.webp: Files
+12-appearance.webp: Settings: Appearance
+17-armbian-config.webp: armbian-config in a terminal

@@ -1,0 +1,8 @@
+00-greeter.webp: LightDM login screen
+01-desktop.webp: Desktop with the panel
+02-menu.webp: Main menu
+05-calendar.webp: Calendar popup
+08-expo.webp: Workspace overview (Expo)
+10-file-manager.webp: Nemo file manager
+13-settings.webp: System Settings
+18-armbian-config.webp: armbian-config in a terminal
