@@ -96,12 +96,12 @@ CRYPTROOT_PARAMETERS="custom cryptsetup options" # Default: --pbkdf pbkdf2
     - With CRYPTROOT_AUTOUNLOCK, the build formats the root with a generated keyfile only. It does not use CRYPTROOT_PASSPHRASE.
     - With CRYPTROOT_AUTOUNLOCK, all copies of an image share one key. On first boot, `armbian-luks-rekey` gives each installation its own keyfile and re-encrypts the root online with a new volume key. The system is slower until this finishes. The motd and a desktop notice show the progress. A reboot is safe: the re-encryption continues. The partition resize runs after the re-key.
     - The re-key needs LUKS2, the default. A LUKS1 root (`--type luks1` in CRYPTROOT_PARAMETERS) keeps the image key.
-    - When the motd notice is gone, check that the re-key finished: the service is disabled and the log ends with `done`. If it failed, the image key still unlocks the root. A common cause is a full `/boot`: see `BOOTSIZE`. The service tries again on the next boot.
+    - When the motd notice is gone, check that the re-key finished: the log ends with `done`. The service also disables itself when it skips the re-key, for example on LUKS1. If it failed, the image key still unlocks the root. A common cause is a full `/boot`: see `BOOTSIZE`. The service tries again on the next boot.
     - CRYPTROOT_AUTOUNLOCK protects against a reused image key, not against a stolen disk: the key is in the initramfs on the unencrypted `/boot`. To protect a stolen disk, disable CRYPTROOT_AUTOUNLOCK and set CRYPTROOT_PASSPHRASE. CRYPTROOT_SSH_UNLOCK lets you type that passphrase over SSH.
 
 ```bash title="Check the first-boot re-key"
-systemctl is-enabled armbian-luks-rekey     # disabled: finished
-tail -n 3 /var/log/armbian-luks-rekey.log   # last line: "<date> | done"
+systemctl is-enabled armbian-luks-rekey          # disabled: finished or skipped
+sudo tail -n 3 /var/log/armbian-luks-rekey.log   # last line: "<date> | done"
 ```
 
 ## Partitions, sizes and labels
