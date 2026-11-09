@@ -85,11 +85,6 @@ Armbian maintains and tests these desktops.
 Install Cinnamon (minimal)
 
 
-<!--- section image START from tools/include/images/CINM01.png --->
-![Cinnamon](/images/CINM01.png)
-<!--- section image STOP from tools/include/images/CINM01.png --->
-
-
 <!--- album START from tools/include/images/CINM01/ --->
 <div class="gallery-row" markdown>
 ![LightDM login screen](/images/CINM01/00-greeter.webp){ data-gallery="CINM01" loading=lazy }
@@ -186,11 +181,6 @@ armbian-config --cmd CINM09
 
 
 Install GNOME (minimal)
-
-
-<!--- section image START from tools/include/images/GNME01.png --->
-![GNOME](/images/GNME01.png)
-<!--- section image STOP from tools/include/images/GNME01.png --->
 
 
 <!--- album START from tools/include/images/GNME01/ --->
@@ -290,11 +280,6 @@ armbian-config --cmd GNME09
 Install KDE Plasma (minimal)
 
 
-<!--- section image START from tools/include/images/KDEP01.png --->
-![KDE Plasma](/images/KDEP01.png)
-<!--- section image STOP from tools/include/images/KDEP01.png --->
-
-
 <!--- album START from tools/include/images/KDEP01/ --->
 <div class="gallery-row" markdown>
 ![SDDM login screen](/images/KDEP01/00-greeter.webp){ data-gallery="KDEP01" loading=lazy }
@@ -390,11 +375,6 @@ armbian-config --cmd KDEP09
 
 
 Install Hyprland
-
-
-<!--- section image START from tools/include/images/HYPR01.png --->
-![Hyprland](/images/HYPR01.png)
-<!--- section image STOP from tools/include/images/HYPR01.png --->
 
 
 <!--- album START from tools/include/images/HYPR01/ --->
@@ -501,11 +481,6 @@ armbian-config --cmd HYPR09
 
 
 Install XFCE (minimal)
-
-
-<!--- section image START from tools/include/images/XFCE01.png --->
-![XFCE](/images/XFCE01.png)
-<!--- section image STOP from tools/include/images/XFCE01.png --->
 
 
 <!--- album START from tools/include/images/XFCE01/ --->
