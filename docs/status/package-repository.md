@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-11-09 14:41 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-11-10 13:57 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Mon, 9 Nov 2026  | 2302 | `26.8.14` |
-| `trixie` | trixie | Mon, 9 Nov 2026  | 2302 | `26.8.14` |
-| `sid` | sid | Mon, 9 Nov 2026  | 2302 | `26.8.14` |
-| `jammy` | jammy | Mon, 9 Nov 2026  | 2302 | `26.8.14` |
-| `noble` | noble | Mon, 9 Nov 2026  | 2302 | `26.8.14` |
+| `bookworm` | bookworm | Tue, 10 Nov 2026 | 2303 | `26.11.1` |
+| `trixie` | trixie | Tue, 10 Nov 2026 | 2303 | `26.11.1` |
+| `sid` | sid | Tue, 10 Nov 2026 | 2303 | `26.11.1` |
+| `jammy` | jammy | Tue, 10 Nov 2026 | 2303 | `26.11.1` |
+| `noble` | noble | Tue, 10 Nov 2026 | 2303 | `26.11.1` |
 
 ### Core package versions
 
@@ -40,43 +40,43 @@ Armbian's own base packages (component `main`) — identical across all suites.
 
 ### Kernel families
 
-Newest kernel published per family, with its Linux kernel version. The current release line is `26.8.14`; families below it were not rebuilt for it.
+Newest kernel published per family, with its Linux kernel version. The current release line is `26.11.1`; families below it were not rebuilt for it.
 
-**64 of 91 families behind `26.8.14`.** **2 with header mismatches.**
+**64 of 91 families behind `26.11.1`.** **2 with header mismatches.**
 
 #### Current
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
-| `linux-image-edge-arm64` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-bcm2711` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-cix-p1` | `7.1.13` | `26.8.14` | ✅ |
-| `linux-image-edge-filogic` | `7.2.3` | `26.8.14` | ✅ |
-| `linux-image-edge-genio` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-imx8m` | `7.1.13` | `26.8.14` | ✅ |
-| `linux-image-edge-imx93` | `7.1.13` | `26.8.14` | ✅ |
-| `linux-image-edge-k3-beagle` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-k3` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-k3-tq` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-meson-s4t7` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-meson64` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-mvebu64` | `7.1.13` | `26.8.14` | ✅ |
-| `linux-image-edge-qcs6490` | `7.2.3` | `26.8.14` | ✅ |
-| `linux-image-edge-qrb2210` | `7.2.3` | `26.8.14` | ✅ |
-| `linux-image-edge-realtek-rtd129x` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-rockchip64` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-s5p6818` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-sc8280xp` | `7.2.3` | `26.8.14` | ✅ |
-| `linux-image-edge-sm8250` | `6.19.14` | `26.8.14` | ✅ |
-| `linux-image-edge-sm8550` | `7.2.3` | `26.8.14` | ✅ |
-| `linux-image-edge-sm8550-sheng` | `7.1.8` | `26.8.14` | ✅ |
-| `linux-image-edge-sm8750` | `7.2.11` | `26.8.14` | ✅ |
-| `linux-image-edge-sophgo-sg200x-arm64` | `7.2.15` | `26.8.14` | ✅ |
-| `linux-image-edge-sprd-ums512` | `7.2.9` | `26.8.14` | ✅ |
-| `linux-image-edge-sunxi64` | `7.3.1` | `26.8.14` | ✅ |
-| `linux-image-edge-uefi-arm64-dt` | `7.3.1` | `26.8.14` | ✅ |
+| `linux-image-edge-arm64` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-bcm2711` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-cix-p1` | `7.1.13` | `26.11.1` | ✅ |
+| `linux-image-edge-filogic` | `7.2.3` | `26.11.1` | ✅ |
+| `linux-image-edge-genio` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-imx8m` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-imx93` | `7.1.13` | `26.11.1` | ✅ |
+| `linux-image-edge-k3-beagle` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-k3` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-k3-tq` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-meson-s4t7` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-meson64` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-mvebu64` | `7.1.13` | `26.11.1` | ✅ |
+| `linux-image-edge-qcs6490` | `7.3.1` | `26.11.1` | ✅ |
+| `linux-image-edge-qrb2210` | `7.3.1` | `26.11.1` | ✅ |
+| `linux-image-edge-realtek-rtd129x` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-rockchip64` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-s5p6818` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-sc8280xp` | `7.3.1` | `26.11.1` | ✅ |
+| `linux-image-edge-sm8250` | `6.19.14` | `26.11.1` | ✅ |
+| `linux-image-edge-sm8550` | `7.2.3` | `26.11.1` | ✅ |
+| `linux-image-edge-sm8550-sheng` | `7.1.8` | `26.11.1` | ✅ |
+| `linux-image-edge-sm8750` | `7.2.11` | `26.11.1` | ✅ |
+| `linux-image-edge-sophgo-sg200x-arm64` | `7.2.15` | `26.11.1` | ✅ |
+| `linux-image-edge-sprd-ums512` | `7.2.9` | `26.11.1` | ✅ |
+| `linux-image-edge-sunxi64` | `7.3.3` | `26.11.1` | ✅ |
+| `linux-image-edge-uefi-arm64-dt` | `7.3.3` | `26.11.1` | ✅ |
 
-#### Behind `26.8.14`
+#### Behind `26.11.1`
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
