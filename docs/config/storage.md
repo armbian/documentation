@@ -69,6 +69,23 @@ armbian-config --cmd FLASH2
 
 
 
+## LUKS re-key
+
+
+Make new keys for the encrypted root
+
+
+~~~ bash title="LUKS re-key"
+armbian-config --cmd LUKS01
+~~~
+
+
+~~~ bash title="Show the LUKS re-key progress"
+armbian-config --cmd LUKS02
+~~~
+
+
+
 ## Read Only FS
 
 
