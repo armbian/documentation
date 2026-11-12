@@ -13,17 +13,17 @@ which families have **drifted** behind the release, and where a
 <!-- apt-status:start -->
 ## Armbian apt repository status
 
-_Generated 2026-11-11 13:12 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
+_Generated 2026-11-12 14:15 UTC from [`https://apt.armbian.com`](https://apt.armbian.com) — component `main`, architecture `arm64`._
 
 ### Suites
 
 | Suite | Codename | Updated | Packages | Latest Armbian version |
 |:------|:---------|:--------|--------:|----------------------:|
-| `bookworm` | bookworm | Wed, 11 Nov 2026 | 2303 | `26.11.1` |
-| `trixie` | trixie | Wed, 11 Nov 2026 | 2303 | `26.11.1` |
-| `sid` | sid | Wed, 11 Nov 2026 | 2303 | `26.11.1` |
-| `jammy` | jammy | Wed, 11 Nov 2026 | 2303 | `26.11.1` |
-| `noble` | noble | Wed, 11 Nov 2026 | 2303 | `26.11.1` |
+| `bookworm` | bookworm | Thu, 12 Nov 2026 | 2303 | `26.11.1` |
+| `trixie` | trixie | Thu, 12 Nov 2026 | 2303 | `26.11.1` |
+| `sid` | sid | Thu, 12 Nov 2026 | 2303 | `26.11.1` |
+| `jammy` | jammy | Thu, 12 Nov 2026 | 2303 | `26.11.1` |
+| `noble` | noble | Thu, 12 Nov 2026 | 2303 | `26.11.1` |
 
 ### Core package versions
 
@@ -42,12 +42,13 @@ Armbian's own base packages (component `main`) — identical across all suites.
 
 Newest kernel published per family, with its Linux kernel version. The current release line is `26.11.1`; families below it were not rebuilt for it.
 
-**64 of 91 families behind `26.11.1`.** **2 with header mismatches.**
+**63 of 91 families behind `26.11.1`.** **2 with header mismatches.**
 
 #### Current
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
+| `linux-image-cloud-arm64` | `6.18.62` | `26.11.1` | ✅ |
 | `linux-image-edge-arm64` | `7.3.3` | `26.11.1` | ✅ |
 | `linux-image-edge-bcm2711` | `7.2.15` | `26.11.1` | ✅ |
 | `linux-image-edge-cix-p1` | `7.1.13` | `26.11.1` | ✅ |
@@ -80,7 +81,6 @@ Newest kernel published per family, with its Linux kernel version. The current r
 
 | Kernel package | Kernel | Armbian version | Headers |
 |:---------------|:-------|----------------:|:-------:|
-| `linux-image-cloud-arm64` | `6.18.44` | `26.8.3` | ✅ |
 | `linux-image-current-arm64` | `6.18.44` | `26.8.3` | ✅ |
 | `linux-image-legacy-arm64` | `6.12.103` | `26.8.3` | ✅ |
 | `linux-image-sc8280xp-arm64` | `7.0.10` | `26.5.1` | ✅ |
