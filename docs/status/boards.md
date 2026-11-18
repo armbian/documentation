@@ -13,9 +13,9 @@ update the table — the same mechanism behind the
 
 <!-- BOARDS-START -->
 
-**84** boards — **72** operational, **12** broken.
+**84** boards — **67** operational, **17** broken.
 
-Reconcile made: 2026-11-17 17:53 UTC
+Reconcile made: 2026-11-18 17:49 UTC
 
 **Operational**
 
@@ -33,7 +33,6 @@ Reconcile made: 2026-11-17 17:53 UTC
 | BananaPi BPI-M4-Zero 01 | 10.0.20.129 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | BananaPi M4 01 | 10.0.50.84 | local | 100 MbE | Aruba 2540 (4) |
 | BananaPi W2 01 | 10.0.50.24 | local | 1 GbE | TP-Link SG3428X (22) |
-| Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | Cubieboard 1 01 | 10.0.50.86 | local | 100 MbE | Aruba 2540 (30) |
 | Cubieboard 4 01 | 10.0.50.72 | local | 1 GbE | TP-Link SG3428X (7) |
 | Cubietruck 01 | 10.0.50.82 | local | 1 GbE | Netgear S3300 (24) |
@@ -50,7 +49,6 @@ Reconcile made: 2026-11-17 17:53 UTC
 | NanoPi M4V2 01 | 10.0.50.49 | local | 1 GbE | Aruba 2540 (10) |
 | Nanopi M6 01 | 10.0.50.68 | local | 1 GbE | Aruba 2540 (8) |
 | Nanopi M6 V2 01 | 10.0.50.76 | local | 1 GbE | Netgear S3300 (20) |
-| NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | NanoPi Neo 3 01 | 10.0.50.43 | local | 1 GbE | Netgear S3300 (48) |
 | NanoPi R3S LTS 01 | 10.0.50.70 | local | 1 GbE | TP-Link SG3428X (18) |
 | NanoPi R6S 01 | 10.0.50.35 | local | 2.5 GbE | Netgear XS508M (1) |
@@ -66,7 +64,6 @@ Reconcile made: 2026-11-17 17:53 UTC
 | Orange Pi One+ 01 | 10.0.50.37 | local | 1 GbE | Netgear S3300 (31) |
 | Orange Pi PC + 01 | 10.0.50.38 | local | 100 MbE | Netgear S3300 (38) |
 | Orange Pi Zero2 01 | 10.0.50.74 | local | 1 GbE | Netgear S3300 (45) |
-| Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | OrangePi 3 LTS 01 | 10.0.50.30 | local | 1 GbE | Netgear S3300 (32) |
 | Quadra 01 | 10.0.50.58 | local | 100 MbE | Netgear S3300 (2) |
 | R58HD 01 | 10.0.50.21 | local | 1 GbE | Aruba 2540 (38) |
@@ -77,12 +74,11 @@ Reconcile made: 2026-11-17 17:53 UTC
 | Rock 5B 01 | 10.0.50.53 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (4) |
 | Rock 5B 02 | 10.0.50.65 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (6) |
 | Rock 5B+ 01 | 10.0.50.27 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (2) |
-| Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi 4B 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300 (35) |
 | Rockpi 4C 01 | 10.0.50.79 | local | 1 GbE | Aruba 2540 (43) |
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
-| RockPro 64 01 | 10.0.50.31 | local | 1 GbE | Netgear S3300 (30) |
+| RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
 | Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Tinker Board 2 01 | 10.0.50.88 | local | 1 GbE | Aruba 2540 (25) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
@@ -90,7 +86,6 @@ Reconcile made: 2026-11-17 17:53 UTC
 | VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | VIM1S 01 | 10.0.50.32 | local | 100 MbE | Netgear S3300 (33) |
 | VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
-| VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | VIM4 01 | 10.0.50.19 | local | 1 GbE | Aruba 2540 (21) |
 | ZeroPi 01 | 10.0.50.57 | local | 1 GbE | Aruba 2540 (36) |
 
@@ -99,16 +94,21 @@ Reconcile made: 2026-11-17 17:53 UTC
 | Board | IP address | Boot | Link | Switch |
 |:--|:--|:--|--:|:--|
 | Banana Pi R4 01 | 10.0.50.66 | local | 1 GbE | TP-Link SG3428X (12) |
+| Cubie A5E 01 | 10.0.50.47 | local | 1 GbE | Netgear S3300 (4) |
 | MUSE Book 01 | 10.0.50.89 | local | 100 MbE | Netgear XS712T (2) |
 | NanoPi M5 01 | 10.0.50.59 | local | 1 GbE | TP-Link SG3428X (9) |
+| NanoPi Neo 2 Black 01 | 10.0.50.62 | local | 1 GbE | Aruba 2540 (6) |
 | Odroid N2 01 | 10.0.50.15 | local | 1 GbE | Netgear S3300 (14) |
 | Orange Pi 5 01 | 10.0.50.60 | local | 1 GbE | Netgear S3300 (18) |
 | Orange Pi Lite 2 01 | 10.0.20.125 | local | Wi-Fi 5 | Flasher |
 | Orange Pi Prime 01 | 10.0.50.87 | local | 1 GbE | Aruba 2540 (35) |
+| Orange Pi+ 2E 02 | 10.0.50.85 | local | 1 GbE | Aruba 2540 (29) |
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
+| Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 02 | 10.0.20.127 | local | — | — |
 | UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | TP-Link SG3428X (21) |
+| VIM3 01 | 10.0.50.39 | local | 1 GbE | Netgear S3300 (42) |
 | ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 
 <!-- BOARDS-STOP -->
