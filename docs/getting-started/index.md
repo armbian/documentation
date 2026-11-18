@@ -44,3 +44,5 @@ straight to the one you need.
 7. **[If something goes wrong](troubleshooting.md)** — When a step fails, and how to report a real bug.
 
 Start with **[Choosing an Armbian image](choosing-an-image.md)**.
+
+Do not have a board yet? You can [try an image in QEMU first](/build-framework/testing-with-qemu/) and check that it boots before you flash anything.
