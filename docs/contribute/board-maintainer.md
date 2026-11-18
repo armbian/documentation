@@ -7,7 +7,7 @@ description: "Become an Armbian board maintainer: application steps, requirement
 
 ## How to become a maintainer?
 
-If you are interested in being a maintainer please review [Board Support Rules](/contribute/board-support-rules/). Then [apply here](https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/) and wait for acceptance. Once accepted you will be added to our infrastructure. For this reason we need [additional information](https://www.armbian.com/maintainer-registry/) to complete your registration process.
+If you are interested in being a maintainer please review [Board Support Rules](/contribute/board-support-rules/). Then request to join the [board-maintainers team](https://github.com/orgs/armbian/teams/board-maintainers) and wait for acceptance. See [Requesting access](datacenter.md#requesting-access) for the steps, including the organization membership you need first. Once accepted you will be added to our infrastructure. For this reason we need [additional information](https://www.armbian.com/update-data/) to complete your registration process.
 
 !!! question "Requirements?"
 
@@ -15,7 +15,7 @@ If you are interested in being a maintainer please review [Board Support Rules](
     - You must have a Github ID which should be listed in the documentation
     - You must have a forums account
     - You must keep track of the [GitHub issues](https://github.com/armbian) filed for your board
-    - You must make sure [Armbian management](https://www.armbian.com/maintainer-registry/) has been informed of all of the above IDs for our documentation
+    - You must make sure [Armbian management](https://www.armbian.com/update-data/) has been informed of all of the above IDs for our documentation
     - You should know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console
     - Knowledge in development, writing code and so on is optional but welcome
 
@@ -31,7 +31,7 @@ Maintainers must not necessarily be persons with development experience. They ac
 Take note that it is still up to development team's discretion what gets attention since Armbian has to plan carefully how to spend its very limited resources.
 
 - You must participate in release process. Ideally you attend meetings related to releases. On that occasion you are given the chance to point out critical issues with your board.
-- You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release <https://rsync.armbian.com/incoming/>
+- You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release.
 
 !!! question "What are we looking for?"
 
@@ -46,13 +46,13 @@ Ideally you have multiple microSD cards laying around to test regular updates on
 
 Alternatively you can use auto-built images - they are placed at the very end of each board download page under "Rolling releases".
 
-- You must provide "best effort" support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request "armbianmonitor -u" output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <https://www.armbian.com/download/>
+- You must provide "best effort" support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request "armbianmonitor -u" output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <https://www.armbian.com/boards>
 
 - You must provide "best effort" support on GitHub — review the issues submitted for your board by Armbian's contributors.
 
 ## During a release
 
-Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November) — see the [release model](/releases/release-model/). Attending is optional, but you **must** sign off that your board has been tested and is ready, by filling in the [Release Testing Form](https://www.armbian.com/rc-testing/) for each release candidate.
+Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November), see the [release model](/releases/release-model/). Attending is optional, but you **must** sign off that your board has been tested and is ready for each release candidate.
 
 ## Issue priority
 
