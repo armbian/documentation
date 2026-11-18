@@ -144,6 +144,10 @@ that a board-support-package upgrade does not clobber local edits. Set `yes` on 
 whose boot script must always track the packaged version; roughly two dozen board
 configs do. Leave it unset unless you specifically need that behaviour.
 
+Boards that share the generic bootscript use
+[bootscript templating](/build-framework/bootscript-templating/) instead of a
+plain per-board boot script.
+
 ## Kernel
 
 #### KERNEL_TARGET
