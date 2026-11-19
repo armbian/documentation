@@ -1,0 +1,8 @@
+00-greeter.webp: SDDM login screen
+01-desktop.webp: Desktop with the top bar
+02-armbian-menu.webp: Armbian menu
+03-app-launcher.webp: App launcher
+06-theme-menu.webp: Theme menu
+09-calendar.webp: Calendar popup
+15-armbian-config.webp: armbian-config in a terminal
+16-tiling.webp: Two tiled windows
