@@ -58,7 +58,9 @@ PRESET_CONFIGURATION="http://path/to/config/file"
 | `PRESET_ROOT_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for `root` user |
 | `PRESET_USER_NAME` | `username` | Username to create |
 | `PRESET_USER_PASSWORD` | `password` | Preset created user password<br>**Stored in plaintext**, *SSH keys are safer!* |
-| `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user |
+| `PRESET_USER_KEY` | `https://path/to/key.file` | Fetches public key from specified URL for created user<br>A download error prints a warning. The user is created without the key |
+| `PRESET_DOTFILES_URL` | `https://host/user/armbian-dotfiles.git` | Public git repository with dotfiles. `armbian-dotfiles init` clones it to `~/.armbian-dotfiles` and copies its files into the home directory of the created user. Needs `git` |
+| `PRESET_GIT_ACCOUNT` | `host/user` | Git account that the graphical first-run setup used. Information only |
 | `PRESET_DEFAULT_REALNAME` | `Real Name` | RealName to use for created user |
 | `PRESET_USER_SHELL` | `shell` | Currently only `bash` (default) or `zsh` (`armbian-zsh`) supported; unattended runs default to `bash` |
 
@@ -98,6 +100,7 @@ PRESET_ROOT_KEY=""
 PRESET_USER_NAME="armbian"
 PRESET_USER_PASSWORD="UserPassword"
 PRESET_USER_KEY=""
+PRESET_DOTFILES_URL=""
 PRESET_DEFAULT_REALNAME="Armbian user"
 PRESET_USER_SHELL="bash"
 ```
