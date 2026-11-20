@@ -26,7 +26,19 @@ variable from the build environment. The rendered result is written out as the
 plain bootscript, for example `boot.cmd`, on the boot partition and in the
 board-support package. If any placeholder is left unrendered, the build stops
 with an error, so a board config with a missing value fails loudly instead of
-producing a broken boot script.
+producing a broken boot script. That check only catches placeholders that were
+never replaced: a variable set to an empty value, for example
+`BOOTSCRIPT_TEMPLATE__ALIGN_TO=''`, is replaced with nothing, so the check
+passes and the generated script has no alignment value for its address
+calculation. Give each of the five board inputs a nonempty value.
+
+Two cases change which bootscript the image actually boots. If
+`SRC_EXTLINUX=yes`, the build writes an `extlinux.conf` instead and does not
+deploy the bootscript to the image or the board-support package, so changing
+`BOOTSCRIPT` has no effect there. If `ROOTFS_TYPE=nfs`, the build still
+renders the template, but then replaces `/boot/boot.cmd` on the image with the
+NFS bootscript, while the board-support package can still contain the rendered
+file.
 
 A board selects a template through the `BOOTSCRIPT` variable in its board
 config, written as `source:destination`:
@@ -96,7 +108,7 @@ their own plain bootscript today.
 ## Watch out for family overrides
 
 `BOOTSCRIPT` in a board config can be overridden by a board family file under
-`sources/families/` or `sources/families/includes/`. If a family file sets
+`config/sources/families/` or `config/sources/families/includes/`. If a family file sets
 `BOOTSCRIPT`, the board's value is lost. A family file that wants to keep the
 board's choice should use a fallback instead of a plain assignment:
 
@@ -126,7 +138,10 @@ The device tree is loaded first, then the kernel image, with the initial
 ramdisk last. When U-Boot has the `setexpr` command built in, the bootscript
 calculates the load addresses of the kernel image and the initial ramdisk, so
 they cannot overlap in memory. Without `setexpr`, it falls back to the
-predefined load addresses from U-Boot or its default environment.
+predefined load addresses from U-Boot or its default environment. The probe
+for `setexpr` only runs when `load_addr_calc` is empty, which is the default.
+Setting `load_addr_calc=off` in `/boot/armbianEnv.txt` forces fixed addresses
+even when U-Boot supports `setexpr`.
 
 The generated `boot.cmd` starts with a header saying it was rendered from a
 template. Do not edit the generated file by hand: edit `/boot/armbianEnv.txt`
