@@ -16,28 +16,108 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 2568 image assets across 429 boards, generated 2026-11-16 17:01 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2573 image assets across 429 boards, generated 2026-11-20 03:26 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
 | Community nightly | 935 | 250 | 26.11.0-trunk.130 |
-| Download (dl.armbian.com, per-board releases) | 795 | 170 | 14 versions (…26.8.12) |
+| Download (dl.armbian.com, per-board releases) | 800 | 170 | 13 versions (…26.11.2) |
 | Appliance images (kali/omv/homeassistant) | 443 | 152 | 26.11.1 |
-| CI nightly | 387 | 175 | 26.11.0-trunk.132 |
+| CI nightly | 387 | 175 | 26.11.0-trunk.135 |
 | (orphaned — no repo) | 8 | 2 | 26.8.14 |
 
-Current download release line: **26.8.12/26.8.11/26.8.10**.
+Current download release line: **26.11.2**.
 
 ## Outdated boards
 
-_**2** boards whose newest `dl.armbian.com` image is behind the current 26.8.12/26.8.11/26.8.10 line._
+_**151** boards whose newest `dl.armbian.com` image is behind the current 26.11.2 line._
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| khadas-vim1s | `conf` | 26.2.5 | 2026-04-25 | 204 d |
-| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 175 d |
+| mekotronics-r58-4x4 | `conf` | 26.5.1 | 2026-05-24 | 179 d |
+| aml-c400-plus | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| anbernic-rg-ds | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| anbernic-rg-vita-pro | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| arduino-uno-q | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bananapi | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| bananapicm4io | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bananapim2s | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bananapim4berry | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| bananapim5 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bananapim5pro | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bananapim7 | `conf` | 26.8.1 | 2026-08-05 | 106 d |
+| beaglebadge | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| beagleplay | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| bigtreetech-cb1 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| bigtreetech-cb2 | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| cix-acpi | `conf` | 26.8.1 | 2026-08-09 | 103 d |
+| clearfogpro | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| cubox-i | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| dg-svr-865-tiny | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| easepi-a2 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| easepi-r2 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| espressobin | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| gateway-gz80x | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| helios4 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| helios64 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| inovato-quadra | `conf` | 26.8.1 | 2026-08-10 | 101 d |
+| jethubj100 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| jethubj200 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| jethubj80 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| khadas-edge2 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| khadas-vim2 | `conf` | 26.8.1 | 2026-08-12 | 99 d |
+| khadas-vim3 | `conf` | 26.8.1 | 2026-08-12 | 99 d |
+| lafrite | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| lepotato | `conf` | 26.8.1 | 2026-08-12 | 99 d |
+| lubancat-5io | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| mksklipad50 | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| nanopi-m5 | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| nanopi-r3s-lts | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| nanopi-r4s | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| nanopi-r76s | `conf` | 26.8.1 | 2026-08-11 | 100 d |
+| nanopik1plus | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| nanopik2-s905 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| nanopim4v2 | `conf` | 26.8.1 | 2026-08-10 | 101 d |
+| odroidc1 | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| odroidc2 | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| odroidc4 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| odroidhc4 | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+| odroidm1 | `conf` | 26.8.1 | 2026-08-07 | 104 d |
+| odroidm2 | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| odroidn2 | `conf` | 26.8.1 | 2026-08-07 | 104 d |
+| odroidxu4 | `conf` | 26.8.1 | 2026-08-11 | 100 d |
+| oneplus-kebab | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| orangepi4-lts | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| orangepione | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| orangepipc2 | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| orangepizero3w | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| pine64 | `csc` | 26.8.1 | 2026-08-09 | 102 d |
+| qidi-x6 | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| qidi-x7 | `csc` | 26.8.1 | 2026-08-14 | 97 d |
+| qidi-x4 | `csc` | 26.8.1 | 2026-08-14 | 97 d |
+| radxa-dragon-q6a | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| radxa-dragon-q8b | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| radxa-e24c | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| radxa-zero3 | `conf` | 26.8.1 | 2026-08-12 | 99 d |
+| renegade | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| rock-2a | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| rock-2f | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| rock-3a | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| rock-s0 | `conf` | 26.8.1 | 2026-08-15 | 96 d |
+| rockpi-4bplus | `conf` | 26.8.1 | 2026-08-10 | 101 d |
+| rockpi-e | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| rockpi-s | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| rockpro64 | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| sakurapi-rk3308b | `conf` | 26.8.1 | 2026-08-16 | 95 d |
+| sovol-zero | `conf` | 26.8.1 | 2026-08-09 | 103 d |
+| sweet-potato | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| thinkpad-x13s | `conf` | 26.8.1 | 2026-08-14 | 97 d |
+| tinkerboard | `conf` | 26.8.1 | 2026-08-09 | 102 d |
+| udoo | `conf` | 26.8.1 | 2026-08-08 | 103 d |
+
+_…and 71 more._
 
 ## Non-standard boards
 
