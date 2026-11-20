@@ -61,7 +61,7 @@ qemu-system-x86_64 \
   -m 2048 \
   -display gtk,gl=on \
   -device virtio-net,netdev=net0 \
-  -netdev user,id=net0,hostfwd=tcp::5800-:22 \
+  -netdev user,id=net0,hostfwd=tcp:127.0.0.1:5800-:22 \
   -drive if=none,id=root,file=./Armbian_<version>_Uefi-x86_<release>_cloud_<kernel>_minimal.img.qcow2,format=qcow2 \
   -device virtio-blk,drive=root
 ```
@@ -79,9 +79,11 @@ When you are done, log in and run `poweroff`, or just close the window.
   OpenGL turned on.
 - `-device virtio-net,netdev=net0` plugs in a fast virtio network card,
   connected to a network called `net0`.
-- `-netdev user,id=net0,hostfwd=tcp::5800-:22` gives that network
+- `-netdev user,id=net0,hostfwd=tcp:127.0.0.1:5800-:22` gives that network
   user-mode networking, and forwards port 5800 on your host to port 22
-  (SSH) inside the guest. That is how you reach the guest with SSH.
+  (SSH) inside the guest. The `127.0.0.1` before the port binds the
+  forward to your own computer only, so no other machine can reach the
+  guest over SSH. That is how you reach the guest with SSH.
 - `-drive if=none,id=root,file=...,format=qcow2` attaches your image
   file as a drive called `root`, and tells QEMU it is in qcow2 format.
 - `-device virtio-blk,drive=root` plugs that drive into the machine as
@@ -92,15 +94,17 @@ When you are done, log in and run `poweroff`, or just close the window.
 Log in on the graphical window, or over SSH from your host:
 
 ```bash
-ssh -p 5800 root@localhost
+ssh -p 5800 root@127.0.0.1
 ```
 
 The password is `1234`. First boot asks you to set a new root password
 and create your own user account, the same as on real hardware. See
 [First boot and login](/getting-started/first-boot-and-login/).
 
-If you get a login prompt, the quick test passed: the image boots, it
-has network, and SSH works.
+A login prompt on the graphical window only proves the image boots. The
+quick test has passed only after you log in over SSH with the command
+above: a successful SSH login proves the image boots, has network, and
+accepts SSH.
 
 ## Test an image you built: the QEMU board targets
 
@@ -119,8 +123,12 @@ None of them are published on the download page, so build one yourself:
 Build one like any other board, for example:
 
 ```bash
-./compile.sh build BOARD=qemu-uboot-x86 BRANCH=current RELEASE=trixie
+./compile.sh build BOARD=qemu-uboot-x86 BRANCH=current RELEASE=trixie ENABLE_EXTENSIONS=image-output-qcow2
 ```
+
+Add `ENABLE_EXTENSIONS=image-output-qcow2` for all three targets.
+Without it, the build writes only a raw `.img` file, and the `.img.qcow2`
+file the QEMU commands below expect does not exist.
 
 See [Getting started](/build-framework/getting-started/) for the full
 build setup.
@@ -174,8 +182,10 @@ qemu-system-aarch64 -m 2048 -machine virt -nographic -cpu cortex-a57 \
   -device nvme,drive=armbian,serial=serialnumber
 ```
 
-Log in the same way as above: `root` with password `1234` on first
-boot, then set a new password when asked.
+Log in at the serial console in your terminal: `root` with password
+`1234` on first boot, then set a new password when asked. These commands
+forward no host port to the guest, so SSH from your host does not work
+here.
 
 ## Other ways to test: Incus
 
