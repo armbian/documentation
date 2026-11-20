@@ -15,9 +15,9 @@ The content in this repo is meant for storage and quick glances; the official re
 
 ## How it is built
 
-The site is built with [MkDocs](https://github.com/mkdocs/mkdocs/) using the [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) theme. Pages are written in Markdown and stored under `docs/`; images live under `docs/images/`. Site configuration is in `mkdocs.yml` and theme overrides in `overrides/`.
+The site is built with [MkDocs](https://github.com/mkdocs/mkdocs/) using the [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) theme. Pages are written in Markdown and stored under `docs/`; images live under `docs/images/`. Site configuration is in `mkdocs.yml`, with theme overrides in `overrides/main.html`.
 
-Automation is written in Python (`tools/`) and orchestrated with GitHub Actions workflows under `.github/workflows/`. A local convenience wrapper `serve-docs-local.sh` (Bash) reproduces the CI staging steps for offline preview.
+Automation helpers are written in Python (`tools/`) and orchestrated via GitHub Actions workflows under `.github/workflows/`. A Bash convenience wrapper, `serve-docs-local.sh`, reproduces the CI staging steps for an offline preview.
 
 ## Repository layout
 
@@ -93,7 +93,7 @@ Then open <http://localhost:8000>. The site reloads automatically when you edit 
 
 ### One-shot offline preview
 
-The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" staging steps locally, generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, and serves the site:
+The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" staging steps locally: it generates the software pages from a sibling `armbian/configng` checkout, stages them into `docs/`, rebuilds the software navigation, and serves the site:
 
 ```bash
 ./serve-docs-local.sh           # generate + stage + serve at http://127.0.0.1:8000
@@ -101,9 +101,11 @@ The `serve-docs-local.sh` helper reproduces the "Pull from Armbian config" stagi
 ./serve-docs-local.sh clean     # revert staged generated pages
 ```
 
+Override repo locations with `CONFIGNG=/path DOCS=/path` if they are not next to each other.
+
 ## Generator tools
 
-After adding a new page, either hand-edit `mkdocs.yml`, or re-run `tools/mkArmbianDocs.py` **unless you are changing the structure of the `docs/` folder**.
+After adding a new page, either hand-edit `mkdocs.yml` or re-run `tools/mkArmbianDocs.py` **unless you are changing the structure of the `docs/` folder**:
 
 ```bash
 python3 tools/mkArmbianDocs.py && mkdocs build
