@@ -1,0 +1,8 @@
+00-greeter.webp: SDDM login screen
+01-desktop.webp: Desktop with the panel
+02-launcher.webp: Application launcher
+06-overview.webp: Overview
+09-calendar.webp: Calendar popup
+13-system-settings.webp: System Settings
+15-dolphin.webp: Dolphin file manager
+16-armbian-config.webp: armbian-config in Konsole
