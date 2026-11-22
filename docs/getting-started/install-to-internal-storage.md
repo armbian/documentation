@@ -14,6 +14,7 @@ The installer shows only the options that the board supports.
 !!! warning "Back up your data"
 
     The installer erases the target disk. The only exception is the Windows dual-boot mode.
+    The `split-emmc` mode also erases the internal eMMC. Back up both devices.
 
 ## Steps
 
@@ -51,7 +52,7 @@ The installer offers each mode only when the hardware and the bootloader support
 |---|---|---|
 | `emmc` | eMMC or SD | Bootloader and system on this device. |
 | `sd` | any | Bootloader stays on the current media. The system goes to the target disk. Keep the current media in the board. |
-| `split-emmc` | NVMe, SATA, USB | Bootloader and `/boot` on the internal eMMC. System on the target disk. The rest of the eMMC mounts at `/emmc_storage`. |
+| `split-emmc` | NVMe, SATA, USB | Erases the internal eMMC and the target disk. Bootloader and `/boot` on the eMMC. System on the target disk. The rest of the eMMC mounts at `/emmc_storage`. |
 | `mtd` | NVMe, SATA, USB, UFS | The installer writes the bootloader to SPI flash. Full system on the target disk. |
 | `spi` | NVMe, SATA, USB | The bootloader is already in the on-board SPI flash, for example on the SpacemiT K3. Full system on the target disk. The installer does not change the SPI flash. |
 | `standalone` | NVMe, SATA, USB | The current bootloader can load `/boot` from the target disk. Full system on the target disk. The installer does not change the current media. |
