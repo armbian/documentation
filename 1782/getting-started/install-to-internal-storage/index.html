@@ -6914,7 +6914,8 @@
 <p>The installer shows only the options that the board supports.</p>
 <div class="admonition warning">
 <p class="admonition-title">Back up your data</p>
-<p>The installer erases the target disk. The only exception is the Windows dual-boot mode.</p>
+<p>The installer erases the target disk. The only exception is the Windows dual-boot mode.
+The <code>split-emmc</code> mode also erases the internal eMMC. Back up both devices.</p>
 </div>
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
 <ol>
@@ -6968,7 +6969,7 @@
 <tr>
 <td><code>split-emmc</code></td>
 <td>NVMe, SATA, USB</td>
-<td>Bootloader and <code>/boot</code> on the internal eMMC. System on the target disk. The rest of the eMMC mounts at <code>/emmc_storage</code>.</td>
+<td>Erases the internal eMMC and the target disk. Bootloader and <code>/boot</code> on the eMMC. System on the target disk. The rest of the eMMC mounts at <code>/emmc_storage</code>.</td>
 </tr>
 <tr>
 <td><code>mtd</code></td>
