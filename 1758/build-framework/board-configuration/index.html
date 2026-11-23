@@ -15,14 +15,14 @@
         <link rel="prev" href="../desktops/">
       
       
-        <link rel="next" href="../adding-a-board/">
+        <link rel="next" href="../bootscript-templating/">
       
       
         
       
       
       <link rel="icon" href="../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
   
@@ -6295,6 +6295,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../bootscript-templating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootscript templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../adding-a-board/" class="md-nav__link">
         
   
@@ -6303,6 +6331,34 @@
     
   
     Adding a Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-with-qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with QEMU
   
 
     
@@ -7937,6 +7993,9 @@ does not), so the relevant overlays are switched on per board. Combined with
 that a board-support-package upgrade does not clobber local edits. Set <code>yes</code> on boards
 whose boot script must always track the packaged version; roughly two dozen board
 configs do. Leave it unset unless you specifically need that behaviour.</p>
+<p>Boards that share the generic bootscript use
+<a href="/build-framework/bootscript-templating/">bootscript templating</a> instead of a
+plain per-board boot script.</p>
 <h2 id="kernel">Kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
 <h4 id="kernel_target">KERNEL_TARGET<a class="headerlink" href="#kernel_target" title="Permanent link">¶</a></h4>
 <p><code>comma-separated list of kernel branches</code> · required</p>

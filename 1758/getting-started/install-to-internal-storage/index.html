@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Move Armbian off the SD card with armbian-install: boot from eMMC, NAND, SPI or UEFI disk with the system on eMMC, SATA, USB or NVMe.">
+        <meta name="description" content="Move Armbian off the SD card with armbian-install: eMMC, NVMe, SATA, USB or UFS targets, SPI boot, UEFI dual-boot with Windows, btrfs or f2fs root and LUKS encryption.">
       
       
         <meta name="author" content="Armbian team">
@@ -22,11 +22,11 @@
       
       
       <link rel="icon" href="../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
   
-    <title>Install Armbian to eMMC, SSD or NVMe</title>
+    <title>Install Armbian to eMMC, SSD, NVMe or UFS</title>
   
 
     
@@ -77,10 +77,10 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Install Armbian to eMMC, SSD or NVMe">
-  <meta property="og:description" content="Move Armbian off the SD card with armbian-install: boot from eMMC, NAND, SPI or UEFI disk with the system on eMMC, SATA, USB or NVMe.">
-  <meta name="twitter:title" content="Install Armbian to eMMC, SSD or NVMe">
-  <meta name="twitter:description" content="Move Armbian off the SD card with armbian-install: boot from eMMC, NAND, SPI or UEFI disk with the system on eMMC, SATA, USB or NVMe.">
+  <meta property="og:title" content="Install Armbian to eMMC, SSD, NVMe or UFS">
+  <meta property="og:description" content="Move Armbian off the SD card with armbian-install: eMMC, NVMe, SATA, USB or UFS targets, SPI boot, UEFI dual-boot with Windows, btrfs or f2fs root and LUKS encryption.">
+  <meta name="twitter:title" content="Install Armbian to eMMC, SSD, NVMe or UFS">
+  <meta name="twitter:description" content="Move Armbian off the SD card with armbian-install: eMMC, NVMe, SATA, USB or UFS targets, SPI boot, UEFI dual-boot with Windows, btrfs or f2fs root and LUKS encryption.">
   
     <meta name="twitter:card" content="summary">
   
@@ -850,6 +850,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing to internal storage
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -866,6 +884,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encrypted-root-luks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encrypted root (LUKS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-boot-with-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual-boot with Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloader-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootloader only
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-interactive-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-interactive install
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5723,6 +5837,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../build-framework/bootscript-templating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootscript templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../build-framework/adding-a-board/" class="md-nav__link">
         
   
@@ -5731,6 +5873,34 @@
     
   
     Adding a Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/testing-with-qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with QEMU
   
 
     
@@ -6676,6 +6846,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encrypted-root-luks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encrypted root (LUKS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-boot-with-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual-boot with Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloader-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootloader only
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-interactive-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-interactive install
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6709,33 +6964,157 @@
 
 
 <h1 id="installing-to-internal-storage">Installing to internal storage<a class="headerlink" href="#installing-to-internal-storage" title="Permanent link">¶</a></h1>
-<p>At this stage, nothing has been installed onto the board’s internal drive yet. Using the installer, one can now decide where to install the boot loader and the rest of the system. The installer supports various combinations depending on the availability of onboard eMMC and/or attached SATA, NVME, or USB storage.</p>
-<div class="admonition tip">
-<p class="admonition-title">Armbian Installer support those storage scenarios:</p>
-<ul>
-<li>boot from SD, system on SATA / USB</li>
-<li>boot from eMMC / NAND, system on eMMC/NAND</li>
-<li>boot from eMMC / NAND, system on SATA / USB / NVME</li>
-<li>Boot from SPI - system on SATA, USB or NVMe</li>
-<li>Install/Update the bootloader on SD/eMMC</li>
-<li>Install/Update the bootloader on special eMMC partition</li>
-<li>Install/Update the bootloader on SPI Flash</li>
-<li>Install system to UEFI disk</li>
-</ul>
-</div>
-<!-- TODO: give the user a sensible default -->
-
-<p>Start the install script, make your choice, and follow the instructions:</p>
-<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>armbian-install
+<p><code>armbian-install</code> copies the running system to a different disk. It can also flash only the bootloader. Run it from the SD card or USB stick that you booted:</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbian-install
 </code></pre></div></td></tr></tbody></table></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png" data-desc-position="bottom"><img alt="Installer" src="https://www.armbian.com/wp-content/uploads/2016/12/nandsata.png"></a></p>
-<p>After you have decided for an option, you can choose between the following file systems: <!-- TODO: only for system? --></p>
+<p>The installer shows only the options that the board supports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Back up your data</p>
+<p>The installer erases the target disk. The only exception is the Windows dual-boot mode.
+The <code>split-emmc</code> mode also erases the internal eMMC. Back up both devices.</p>
+</div>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>Select an action.</strong> The installer asks for an action only when the board supports more than one.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-action.png" data-desc-position="bottom"><img alt="Select an action" src="../../images/armbian-install-action.png"></a></p>
+</li>
+<li>
+<p><strong>Select the destination disk.</strong> The list shows SD, eMMC, NVMe, SATA, USB and UFS disks. A disk that is in use does not show.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-disk.png" data-desc-position="bottom"><img alt="Select the destination disk" src="../../images/armbian-install-disk.png"></a></p>
+</li>
+<li>
+<p><strong>Select the boot mode.</strong> See <a href="#boot-modes">Boot modes</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-mode.png" data-desc-position="bottom"><img alt="Select the boot mode" src="../../images/armbian-install-mode.png"></a></p>
+</li>
+<li>
+<p><strong>Select the root file system.</strong> See <a href="#file-systems">File systems</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-fs.png" data-desc-position="bottom"><img alt="Select the root file system" src="../../images/armbian-install-fs.png"></a></p>
+</li>
+<li>
+<p><strong>Select encryption.</strong> You can encrypt the root file system. See <a href="#encrypted-root-luks">Encrypted root</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-encrypt.png" data-desc-position="bottom"><img alt="Encrypt the root file system" src="../../images/armbian-install-encrypt.png"></a></p>
+</li>
+<li>
+<p><strong>Confirm.</strong> The installer partitions the disk, copies the system and writes the bootloader.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-confirm.png" data-desc-position="bottom"><img alt="Confirm the install" src="../../images/armbian-install-confirm.png"></a></p>
+</li>
+</ol>
+<p>Reboot. Remove the boot media, except in the <code>sd</code> and <code>standalone</code> modes.</p>
+<h2 id="boot-modes">Boot modes<a class="headerlink" href="#boot-modes" title="Permanent link">¶</a></h2>
+<p>The installer offers each mode only when the hardware and the bootloader support it.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Target disk</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>emmc</code></td>
+<td>eMMC or SD</td>
+<td>Bootloader and system on this device.</td>
+</tr>
+<tr>
+<td><code>sd</code></td>
+<td>any</td>
+<td>Bootloader stays on the current media. The system goes to the target disk. Keep the current media in the board.</td>
+</tr>
+<tr>
+<td><code>split-emmc</code></td>
+<td>NVMe, SATA, USB</td>
+<td>Erases the internal eMMC and the target disk. Bootloader and <code>/boot</code> on the eMMC. System on the target disk. The rest of the eMMC mounts at <code>/emmc_storage</code>.</td>
+</tr>
+<tr>
+<td><code>mtd</code></td>
+<td>NVMe, SATA, USB, UFS</td>
+<td>The installer writes the bootloader to SPI flash. Full system on the target disk.</td>
+</tr>
+<tr>
+<td><code>spi</code></td>
+<td>NVMe, SATA, USB</td>
+<td>The bootloader is already in the on-board SPI flash, for example on the SpacemiT K3. Full system on the target disk. The installer does not change the SPI flash.</td>
+</tr>
+<tr>
+<td><code>standalone</code></td>
+<td>NVMe, SATA, USB</td>
+<td>The current bootloader can load <code>/boot</code> from the target disk. Full system on the target disk. The installer does not change the current media.</td>
+</tr>
+<tr>
+<td><code>ufs</code></td>
+<td>UFS</td>
+<td>Bootloader on the UFS boot LU. System on the UFS disk.</td>
+</tr>
+<tr>
+<td><code>native</code></td>
+<td>any</td>
+<td>Self-contained install for boards without U-Boot, for example Raspberry Pi.</td>
+</tr>
+<tr>
+<td><code>uefi</code></td>
+<td>any</td>
+<td>UEFI install with GRUB.</td>
+</tr>
+<tr>
+<td><code>bios</code></td>
+<td>any</td>
+<td>Legacy BIOS install with GRUB.</td>
+</tr>
+<tr>
+<td><code>uefi-dualboot</code></td>
+<td>disk with Windows</td>
+<td>Install next to Windows 10 or 11. See <a href="#dual-boot-with-windows">Dual-boot with Windows</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>For boards with SPI flash and an NVMe disk, <code>mtd</code> or <code>spi</code> is the recommended mode. The board then does not need the SD card.</p>
+<h2 id="file-systems">File systems<a class="headerlink" href="#file-systems" title="Permanent link">¶</a></h2>
 <ul>
-<li>ext2,3,4</li>
-<li>btrfs</li>
+<li><code>ext4</code>: the default. Select it if you are not sure.</li>
+<li><code>btrfs</code>: copy-on-write, compression and snapshots. The installer creates the root subvolume <code>@</code> and installs <code>armbian-snapshots</code>.</li>
+<li><code>f2fs</code>: a file system for flash storage.</li>
 </ul>
-<p>For novice users, a sensible default is <code>ext4</code>.</p>
-<p>Congratulation. You have successfully installed Armbian onto your board!</p>
+<p>The installer shows <code>btrfs</code> and <code>f2fs</code> only when the running kernel supports them. U-Boot cannot read <code>btrfs</code>, <code>f2fs</code> or an encrypted root. For these roots, the installer adds a small <code>ext4</code> <code>/boot</code> partition.</p>
+<h2 id="encrypted-root-luks">Encrypted root (LUKS)<a class="headerlink" href="#encrypted-root-luks" title="Permanent link">¶</a></h2>
+<p>The installer can encrypt the root file system with LUKS. <code>/boot</code> stays on its own unencrypted partition. The <code>sd</code> mode does not support encryption.</p>
+<p>Select how the root unlocks at boot:</p>
+<ul>
+<li><strong>passphrase</strong>: type the passphrase on the console.</li>
+<li><strong>ssh</strong>: type the passphrase on the console or over SSH. The initramfs runs dropbear on port 2022 by default. Put your public key in <code>/root/.ssh/authorized_keys</code> first.</li>
+<li><strong>auto</strong>: a keyfile in <code>/boot</code> unlocks the root. This option gives no protection if somebody steals the disk.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-unlock.png" data-desc-position="bottom"><img alt="Select the unlock method" src="../../images/armbian-install-unlock.png"></a></p>
+<h2 id="dual-boot-with-windows">Dual-boot with Windows<a class="headerlink" href="#dual-boot-with-windows" title="Permanent link">¶</a></h2>
+<p>On UEFI systems, the installer offers <code>uefi-dualboot</code> when the disk holds Windows. Windows stays on the disk, and GRUB lets you select the system at boot.</p>
+<ul>
+<li>The installer uses free space first. Then it shrinks the Windows partition.</li>
+<li>The installer can also replace the partitions of an earlier Linux install.</li>
+<li>BitLocker volumes cannot shrink. Run <code>manage-bde -off C:</code> in Windows and wait for the decryption to complete.</li>
+<li>Disable Fast Startup and hibernation in Windows.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-dualboot-mode.png" data-desc-position="bottom"><img alt="Dual-boot with Windows" src="../../images/armbian-install-dualboot-mode.png"></a></p>
+<h2 id="bootloader-only">Bootloader only<a class="headerlink" href="#bootloader-only" title="Permanent link">¶</a></h2>
+<p>Use this option to install or update U-Boot without a change to the system. Select <strong>Flash / update the bootloader only</strong> in the first menu, or use the command line:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/armbian-install-bootloader.png" data-desc-position="bottom"><img alt="Flash the bootloader only" src="../../images/armbian-install-bootloader.png"></a></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbian-install bootloader --target mtd --yes            # SPI flash
+sudo armbian-install bootloader --target ufs --yes            # UFS boot LU
+sudo armbian-install bootloader --target /dev/mmcblk1 --yes   # SD or eMMC
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="non-interactive-install">Non-interactive install<a class="headerlink" href="#non-interactive-install" title="Permanent link">¶</a></h2>
+<p>Use command line options for scripts or for installs over SSH. The installer changes the disk only with <code>--yes</code>.</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbian-install --target /dev/nvme0n1 --boot spi --fs ext4 --yes
+</code></pre></div></td></tr></tbody></table></div>
+<p>Encrypted NVMe install. The installer asks for the passphrase:</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbian-install --target /dev/nvme0n1 --boot spi --fs ext4 --encrypt --yes
+</code></pre></div></td></tr></tbody></table></div>
+<p>Dual-boot with 32 GiB for Armbian:</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo armbian-install --target /dev/nvme0n1 --boot uefi-dualboot --fs ext4 --size 32 --yes
+</code></pre></div></td></tr></tbody></table></div>
+<p>Run <code>armbian-install --help</code> for all options. The installer writes its log to <code>/var/log/armbian-install.log</code>.</p>
 <hr>
 <p><strong>Previous:</strong> <a href="../first-steps/">First steps after login</a></p>
 <p><strong>Next:</strong> <a href="../updating/">Keeping Armbian up to date</a></p>

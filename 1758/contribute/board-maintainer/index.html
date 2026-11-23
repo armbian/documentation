@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
   
@@ -5706,6 +5706,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../build-framework/bootscript-templating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootscript templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../build-framework/adding-a-board/" class="md-nav__link">
         
   
@@ -5714,6 +5742,34 @@
     
   
     Adding a Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/testing-with-qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with QEMU
   
 
     
@@ -6887,7 +6943,7 @@
 
 <h1 id="become-a-board-maintainer">Become a board maintainer<a class="headerlink" href="#become-a-board-maintainer" title="Permanent link">¶</a></h1>
 <h2 id="how-to-become-a-maintainer">How to become a maintainer?<a class="headerlink" href="#how-to-become-a-maintainer" title="Permanent link">¶</a></h2>
-<p>If you are interested in being a maintainer please review <a href="/contribute/board-support-rules/">Board Support Rules</a>. Then <a href="https://forum.armbian.com/staffapplications/application/8-single-board-computer-maintainer/">apply here</a> and wait for acceptance. Once accepted you will be added to our infrastructure. For this reason we need <a href="https://www.armbian.com/maintainer-registry/">additional information</a> to complete your registration process.</p>
+<p>If you are interested in being a maintainer please review <a href="/contribute/board-support-rules/">Board Support Rules</a>. Then request to join the <a href="https://github.com/orgs/armbian/teams/board-maintainers">board-maintainers team</a> and wait for acceptance. See <a href="../datacenter/#requesting-access">Requesting access</a> for the steps, including the organization membership you need first. Once accepted you will be added to our infrastructure. For this reason we need <a href="https://www.armbian.com/update-data/">additional information</a> to complete your registration process.</p>
 <div class="admonition question">
 <p class="admonition-title">Requirements?</p>
 <ul>
@@ -6895,7 +6951,7 @@
 <li>You must have a Github ID which should be listed in the documentation</li>
 <li>You must have a forums account</li>
 <li>You must keep track of the <a href="https://github.com/armbian">GitHub issues</a> filed for your board</li>
-<li>You must make sure <a href="https://www.armbian.com/maintainer-registry/">Armbian management</a> has been informed of all of the above IDs for our documentation</li>
+<li>You must make sure <a href="https://www.armbian.com/update-data/">Armbian management</a> has been informed of all of the above IDs for our documentation</li>
 <li>You should know Armbian basics like how to get an Armbian image run on your hardware and do basic debugging, ideally via serial console</li>
 <li>Knowledge in development, writing code and so on is optional but welcome</li>
 </ul>
@@ -6910,7 +6966,7 @@
 <p>Take note that it is still up to development team’s discretion what gets attention since Armbian has to plan carefully how to spend its very limited resources.</p>
 <ul>
 <li>You must participate in release process. Ideally you attend meetings related to releases. On that occasion you are given the chance to point out critical issues with your board.</li>
-<li>You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release <a href="https://rsync.armbian.com/incoming/">https://rsync.armbian.com/incoming/</a></li>
+<li>You must sign-off that device has been tested, is stable, and ready for release during release process. This basically means you test images that are getting prepared for release.</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">What are we looking for?</p>
@@ -6925,13 +6981,13 @@
 <p>Ideally you have multiple microSD cards laying around to test regular updates on current releases and nightly without having to re-flash the same card every time to switch between branches.</p>
 <p>Alternatively you can use auto-built images - they are placed at the very end of each board download page under “Rolling releases”.</p>
 <ul>
-<li>You must provide “best effort” support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request “armbianmonitor -u” output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <a href="https://www.armbian.com/download/">https://www.armbian.com/download/</a></li>
+<li>You must provide “best effort” support in the forum. Do not let that wording intimidate you. This is not a complicated task. Regarding forums this can include things like answering obvious questions (for example by pointing to our documentation, ideally directly to the solution page), let the questioner know that additional information is needed for further debugging (e.g. request “armbianmonitor -u” output) or for upgrade issues, ask if they can recreate the issue with a fresh untouched image from: <a href="https://www.armbian.com/boards">https://www.armbian.com/boards</a></li>
 </ul>
 <ul>
 <li>You must provide “best effort” support on GitHub — review the issues submitted for your board by Armbian’s contributors.</li>
 </ul>
 <h2 id="during-a-release">During a release<a class="headerlink" href="#during-a-release" title="Permanent link">¶</a></h2>
-<p>Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November) — see the <a href="/releases/release-model/">release model</a>. Attending is optional, but you <strong>must</strong> sign off that your board has been tested and is ready, by filling in the <a href="https://www.armbian.com/rc-testing/">Release Testing Form</a> for each release candidate.</p>
+<p>Release meetings happen about four times a year, roughly a month before each release (end of February, May, August, November), see the <a href="/releases/release-model/">release model</a>. Attending is optional, but you <strong>must</strong> sign off that your board has been tested and is ready for each release candidate.</p>
 <h2 id="issue-priority">Issue priority<a class="headerlink" href="#issue-priority" title="Permanent link">¶</a></h2>
 <p>A rough guide when triaging issues filed for your board:</p>
 <p><strong>Low priority</strong> — usually picked up by the community over time:</p>

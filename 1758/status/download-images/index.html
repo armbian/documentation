@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
   
@@ -5706,6 +5706,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../build-framework/bootscript-templating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootscript templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../build-framework/adding-a-board/" class="md-nav__link">
         
   
@@ -5714,6 +5742,34 @@
     
   
     Adding a Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-framework/testing-with-qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with QEMU
   
 
     
@@ -6871,7 +6927,7 @@ video.</p>
 <!-- download-images:start -->
 
 <h2 id="download-images-report">Download images report<a class="headerlink" href="#download-images-report" title="Permanent link">¶</a></h2>
-<p><em>Source: <code>https://github.armbian.com/armbian-images.json</code> — 2527 image assets across 423 boards, generated 2026-11-09 17:29 UTC.</em></p>
+<p><em>Source: <code>https://github.armbian.com/armbian-images.json</code> — 2545 image assets across 437 boards, generated 2026-11-23 06:42 UTC.</em></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -6885,27 +6941,27 @@ video.</p>
 <tbody>
 <tr>
 <td>Community nightly</td>
-<td>924</td>
-<td>247</td>
-<td>26.11.0-trunk.120</td>
+<td>952</td>
+<td>254</td>
+<td>26.11.0-trunk.137, 26.11.0-trunk.138</td>
 </tr>
 <tr>
 <td>Download (dl.armbian.com, per-board releases)</td>
-<td>795</td>
-<td>170</td>
-<td>14 versions (…26.8.12)</td>
-</tr>
-<tr>
-<td>Appliance images (kali/omv/homeassistant)</td>
-<td>420</td>
-<td>134</td>
-<td>26.8.1</td>
+<td>872</td>
+<td>179</td>
+<td>11 versions (…26.11.2)</td>
 </tr>
 <tr>
 <td>CI nightly</td>
-<td>380</td>
-<td>171</td>
-<td>26.11.0-trunk.122</td>
+<td>403</td>
+<td>182</td>
+<td>26.11.0-trunk.139</td>
+</tr>
+<tr>
+<td>Appliance images (kali/omv/homeassistant)</td>
+<td>310</td>
+<td>119</td>
+<td>26.11.2</td>
 </tr>
 <tr>
 <td>(orphaned — no repo)</td>
@@ -6915,9 +6971,9 @@ video.</p>
 </tr>
 </tbody>
 </table>
-<p>Current download release line: <strong>26.8.12/26.8.11/26.8.10</strong>.</p>
+<p>Current download release line: <strong>26.11.2</strong>.</p>
 <h2 id="outdated-boards">Outdated boards<a class="headerlink" href="#outdated-boards" title="Permanent link">¶</a></h2>
-<p><em><strong>2</strong> boards whose newest <code>dl.armbian.com</code> image is behind the current 26.8.12/26.8.11/26.8.10 line.</em></p>
+<p><em><strong>124</strong> boards whose newest <code>dl.armbian.com</code> image is behind the current 26.11.2 line.</em></p>
 <table>
 <thead>
 <tr>
@@ -6930,21 +6986,568 @@ video.</p>
 </thead>
 <tbody>
 <tr>
-<td>khadas-vim1s</td>
-<td><code>conf</code></td>
-<td>26.2.5</td>
-<td>2026-04-25</td>
-<td>197 d</td>
-</tr>
-<tr>
 <td>mekotronics-r58-4x4</td>
 <td><code>conf</code></td>
 <td>26.5.1</td>
 <td>2026-05-24</td>
-<td>168 d</td>
+<td>182 d</td>
+</tr>
+<tr>
+<td>aml-c400-plus</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>99 d</td>
+</tr>
+<tr>
+<td>bananapi</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>bananapicm4io</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bananapim2s</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bananapim4berry</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>bananapim5</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bananapim5pro</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bananapim7</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-05</td>
+<td>109 d</td>
+</tr>
+<tr>
+<td>beaglebadge</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>beagleplay</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bigtreetech-cb1</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>bigtreetech-cb2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>dg-svr-865-tiny</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>easepi-a2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>easepi-r2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>gateway-gz80x</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>helios64</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>inovato-quadra</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-10</td>
+<td>104 d</td>
+</tr>
+<tr>
+<td>khadas-edge2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>khadas-vim2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-12</td>
+<td>102 d</td>
+</tr>
+<tr>
+<td>khadas-vim3</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-12</td>
+<td>102 d</td>
+</tr>
+<tr>
+<td>lafrite</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>lepotato</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-12</td>
+<td>102 d</td>
+</tr>
+<tr>
+<td>lubancat-5io</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>nanopi-m5</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>nanopi-r3s-lts</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>nanopi-r4s</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>nanopi-r76s</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-11</td>
+<td>104 d</td>
+</tr>
+<tr>
+<td>nanopik1plus</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>99 d</td>
+</tr>
+<tr>
+<td>nanopik2-s905</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>nanopim4v2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-10</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>odroidc1</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>odroidc2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>odroidc4</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>odroidhc4</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>odroidm2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>odroidn2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-07</td>
+<td>107 d</td>
+</tr>
+<tr>
+<td>oneplus-kebab</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>orangepi4-lts</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>orangepione</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>orangepipc2</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>orangepizero3w</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>pine64</td>
+<td><code>csc</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>qidi-x6</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>qidi-x7</td>
+<td><code>csc</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>qidi-x4</td>
+<td><code>csc</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>radxa-e24c</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-14</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>radxa-zero3</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-12</td>
+<td>102 d</td>
+</tr>
+<tr>
+<td>renegade</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>rock-2a</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>rock-2f</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>rock-3a</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>99 d</td>
+</tr>
+<tr>
+<td>rock-s0</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-15</td>
+<td>100 d</td>
+</tr>
+<tr>
+<td>rockpi-4bplus</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-10</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>rockpi-e</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>rockpi-s</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>rockpro64</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>sakurapi-rk3308b</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-16</td>
+<td>98 d</td>
+</tr>
+<tr>
+<td>sovol-zero</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>sweet-potato</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>tinkerboard</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-09</td>
+<td>105 d</td>
+</tr>
+<tr>
+<td>udoo</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>xiaomi-elish</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-05</td>
+<td>109 d</td>
+</tr>
+<tr>
+<td>youyeetoo-r1-v3</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>youyeetoo-yy3588</td>
+<td><code>conf</code></td>
+<td>26.8.1</td>
+<td>2026-08-08</td>
+<td>106 d</td>
+</tr>
+<tr>
+<td>nanopi-r6s</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopi-r6c</td>
+<td><code>csc</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopi-m6v2</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopct6-lts-plus</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopi-m6</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopct6-lts</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>nanopct6</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-11</td>
+<td>42 d</td>
+</tr>
+<tr>
+<td>tanix-tx6s</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-10</td>
+<td>43 d</td>
+</tr>
+<tr>
+<td>verdin-imx8mm</td>
+<td><code>conf</code></td>
+<td>26.8.10</td>
+<td>2026-10-10</td>
+<td>43 d</td>
+</tr>
+<tr>
+<td>boardcon-sbc3568</td>
+<td><code>conf</code></td>
+<td>26.8.11</td>
+<td>2026-10-18</td>
+<td>35 d</td>
+</tr>
+<tr>
+<td>khadas-vim1</td>
+<td><code>conf</code></td>
+<td>26.8.11</td>
+<td>2026-10-18</td>
+<td>35 d</td>
+</tr>
+<tr>
+<td>mekotronics-r58hd</td>
+<td><code>conf</code></td>
+<td>26.8.2</td>
+<td>2026-08-17</td>
+<td>97 d</td>
+</tr>
+<tr>
+<td>mekotronics-r58s2</td>
+<td><code>conf</code></td>
+<td>26.8.2</td>
+<td>2026-08-17</td>
+<td>97 d</td>
+</tr>
+<tr>
+<td>orangepi3-lts</td>
+<td><code>conf</code></td>
+<td>26.8.2</td>
+<td>2026-08-16</td>
+<td>98 d</td>
 </tr>
 </tbody>
 </table>
+<p><em>…and 44 more.</em></p>
 <h2 id="non-standard-boards">Non-standard boards<a class="headerlink" href="#non-standard-boards" title="Permanent link">¶</a></h2>
 <p><em><strong>1</strong> <code>csc</code>/<code>wip</code>/<code>tvb</code> boards with images on <code>dl.armbian.com</code> (the main per-board download).</em></p>
 <table>
@@ -6966,7 +7569,7 @@ video.</p>
 </tbody>
 </table>
 <h2 id="missing-download-images">Missing download images<a class="headerlink" href="#missing-download-images" title="Permanent link">¶</a></h2>
-<p><em><strong>5</strong> <code>conf</code> (standard-support) boards absent from <code>dl.armbian.com</code> — only nightly/appliance, or nowhere.</em></p>
+<p><em><strong>4</strong> <code>conf</code> (standard-support) boards absent from <code>dl.armbian.com</code> — only nightly/appliance, or nowhere.</em></p>
 <table>
 <thead>
 <tr>
@@ -6977,6 +7580,11 @@ video.</p>
 </thead>
 <tbody>
 <tr>
+<td>bananapipro</td>
+<td>Banana Pi Pro</td>
+<td>CI</td>
+</tr>
+<tr>
 <td>boardcon-em3588</td>
 <td>EM3588</td>
 <td>CI</td>
@@ -6984,22 +7592,12 @@ video.</p>
 <tr>
 <td>mba62xx-tqma62xx</td>
 <td>MBa62xx</td>
-<td>CI</td>
+<td>CI, Appliance</td>
 </tr>
 <tr>
 <td>mba67xx-tqma67xx</td>
 <td>MBa67xx</td>
-<td>CI</td>
-</tr>
-<tr>
-<td>odroidu2</td>
-<td>Odroid U2</td>
-<td>CI</td>
-</tr>
-<tr>
-<td>turris-omnia</td>
-<td>Turris Omnia</td>
-<td>CI</td>
+<td>CI, Appliance</td>
 </tr>
 </tbody>
 </table>
