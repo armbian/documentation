@@ -11,7 +11,7 @@ This repository holds the source for the Armbian documentation site published at
 
 ## Rendered output
 
-The content in this repo is meant for storage and quick glances; the official rendered output is the website: [https://docs.armbian.com](https://docs.armbian.com).
+The content in this repo is meant for storage and quick glances; the official rendered output is the website: <https://docs.armbian.com>.
 
 ## How it is built
 
@@ -115,7 +115,6 @@ Additional helpers in `tools/` (see [`tools/README.md`](tools/README.md)):
 
 - `build-software-nav.py` — regenerates the software section of the `mkdocs.yml` nav.
 - `generate-release-index.py` — regenerates `docs/releases/index.md` from the release pages beside it.
-- `apt-repo-status.py`, `build-machinery-status.py`, `download-images-report.py` — generate the auto-updated status pages under `docs/status/`.
 
 ## Continuous integration
 
