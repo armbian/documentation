@@ -7,6 +7,10 @@ description: "Release notes for every Armbian stable release, newest first: what
 
 Notes for each Armbian stable release, newest first. Each page carries the release summary, any board support-tier changes, and the full list of merged pull requests.
 
+* **[Armbian 26.11.3](26.11.md)** &mdash; 25 November 2026
+
+    Armbian 26.11.3, released 25 November 2026, delivers kernel CVE backports, a new Hyprland desktop with first-run GUI, and broad board and U-Boot updates.
+
 * **[Armbian 26.8.3](26.8.md)** &mdash; 23 August 2026
 
     Armbian 26.8.3, released 23 August 2026: broad platform modernization, restructured build and CI pipeline, and major installer and imager upgrades.
@@ -19,13 +23,10 @@ Notes for each Armbian stable release, newest first. Each page carries the relea
 
     Armbian 26.2.1, released 28 February 2026: Linux 6.18 on edge across the families, new SpacemiT MusePi Pro and Mixtile Core 3588E boards, 599 changes.
 
-* **[Armbian 25.11.1](25.11.md)** &mdash; 30 November 2025
-
-    Armbian 25.11.1, released 30 November 2025: the Linux 6.17 rollout, new RK3506 and Radxa Rock 4D support, and 411 merged changes across the project.
-
 
 ## Earlier releases
 
+* [Armbian 25.11.1](25.11.md) &mdash; 30 November 2025
 * [Armbian 25.8.1](25.8.md) &mdash; 26 August 2025
 * [Armbian 25.5.1](25.5.md) &mdash; 26 May 2025
 * [Armbian 25.2.2](25.2.md) &mdash; 25 February 2025
