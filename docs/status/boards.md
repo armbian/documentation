@@ -15,7 +15,7 @@ update the table — the same mechanism behind the
 
 **84** boards — **66** operational, **18** broken.
 
-Reconcile made: 2026-11-24 10:06 UTC
+Reconcile made: 2026-11-24 11:52 UTC
 
 **Operational**
 
@@ -78,9 +78,9 @@ Reconcile made: 2026-11-24 10:06 UTC
 | Rockpi E 01 | 10.0.50.67 | local | 100 MbE | TP-Link SG3428X (15) |
 | Rockpi S 01 | 10.0.50.18 | local | 100 MbE | Netgear S3300 (25) |
 | RockPro 64 01 | 10.0.50.31 | local | 100 MbE | Netgear S3300 (30) |
-| Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | Tinker Board 2 01 | 10.0.50.88 | local | 1 GbE | Aruba 2540 (25) |
 | UEFI x86 01 | 10.0.50.40 | local | 1 GbE | Netgear S3300 (17) |
+| UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | VIM1 01 | 10.0.50.48 | local | 100 MbE | Netgear S3300 (29) |
 | VIM1S 01 | 10.0.50.32 | local | 100 MbE | Netgear S3300 (33) |
 | VIM2 01 | 10.0.50.28 | local | 1 GbE | Netgear S3300 (28) |
@@ -105,10 +105,10 @@ Reconcile made: 2026-11-24 10:06 UTC
 | Raspberry Pi 5B | 10.0.50.10 | local | 1 GbE | Netgear S3300 (1) |
 | Rock 5T 01 | 10.0.50.51 | local | 2.5 GbE | TP-Link SG3428XPP-M2 (22) |
 | Rockpi 4B 01 | 10.0.50.73 | local | 1 GbE | Netgear S3300 (35) |
+| Tinker Board 01 | 10.0.50.33 | local | 1 GbE | Netgear S3300 (15) |
 | UEFI arm64 01 | 10.0.50.45 | local | 10 GbE | Netgear XS712T (6) |
 | UEFI x86 02 | 10.0.20.127 | local | — | — |
 | UEFI/DT arm64 01 | 10.0.50.69 | local | 1 GbE | TP-Link SG3428X (21) |
-| UNO Q 01 | 10.0.20.131 | local | Wi-Fi 5 | Zyxel NWA130BE |
 | ZERO 3 01 | 10.0.20.185 | local | Wi-Fi 6 | Zyxel NWA130BE |
 
 <!-- BOARDS-STOP -->
