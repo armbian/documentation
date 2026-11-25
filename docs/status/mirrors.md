@@ -30,6 +30,7 @@ The [Armbian mirror system](https://github.com/armbian/armbian-router) distribut
 | [SJTU](https://mirror.sjtu.edu.cn) | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | :white_check_mark: |  |  |  |
 | [Digital Streaming Co.](https://mirror.twds.com.tw) | [![Taiwan](https://flagsapi.com/TW/shiny/32.png)](https://www.openstreetmap.org/search?lat=25.0382&lon=121.5636) | :white_check_mark: | :white_check_mark: |  |  |
 | [VineHost.NET](https://mirror.vinehost.net/armbian) | [![United Kingdom](https://flagsapi.com/GB/shiny/32.png)](https://www.openstreetmap.org/search?lat=54.1448&lon=-0.1555) | :white_check_mark: | :white_check_mark: |  |  |
+| [wt0816k](https://mirror.wt0816k.com) | [![Japan](https://flagsapi.com/JP/shiny/32.png)](https://www.openstreetmap.org/search?lat=43.2203&lon=142.8635) | :white_check_mark: |  |  |  |
 | [Yandex](https://mirror.yandex.ru/mirrors/armbian) | [![Russia](https://flagsapi.com/RU/shiny/32.png)](https://www.openstreetmap.org/search?lat=55.7483&lon=37.6171) |  | :white_check_mark: | :white_check_mark: |  |
 | [Alibaba Mirrors](https://mirrors.aliyun.com) | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=34.7732&lon=113.722) | :white_check_mark: | :white_check_mark: |  |  |
 | [BFSU](https://mirrors.bfsu.edu.cn) | [![China](https://flagsapi.com/CN/shiny/32.png)](https://www.openstreetmap.org/search?lat=39.911&lon=116.395) | :white_check_mark: | :white_check_mark: |  |  |
