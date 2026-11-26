@@ -95,9 +95,9 @@ If enough users show interest in a specific configuration, we may **adjust build
 
 Yes! The simple `armbian-upgrade` command wraps APT — it refreshes the package lists, upgrades everything installed, then cleans the package cache and removes what is no longer needed (`apt-get update && apt-get upgrade`, followed by `apt-get clean` and `apt-get autoremove`), elevating itself with `sudo` so you can run it as a normal user. It upgrades **all Armbian-related core packages** (firmware, kernel, BSP) to the most recent version available, just as it upgrades the underlying distribution packages — unless Armbian firmware upgrades are frozen, in which case the kernel, U-Boot and firmware packages are held at their current version (see [firmware upgrades](../config/updates.md)).
 
-## Can I upgrade my userspace flavor, like Bookworm → Trixie or Jammy → Noble?
+## Can I upgrade my userspace flavor, like Bookworm → Trixie or Noble → Resolute?
 
-Distribution upgrades (e.g. Bookworm → Trixie, Jammy → Noble) are **outside the scope of Armbian support**. If you attempt such an upgrade, we cannot assist if problems occur.
+Distribution upgrades are **outside the scope of Armbian support**. If you attempt such an upgrade, we cannot assist if problems occur.
 
 An **experimental upgrade option** is available in [armbian-config](https://docs.armbian.com/config/updates/#stable-distro-upgrade), but it is provided *as-is* and without support.
 
