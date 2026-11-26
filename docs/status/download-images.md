@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 2402 image assets across 437 boards, generated 2026-11-26 12:06 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2402 image assets across 437 boards, generated 2026-11-26 19:14 UTC._
 
 ## Overview
 
@@ -36,7 +36,7 @@ _**1** boards whose newest `dl.armbian.com` image is behind the current 26.11.3 
 
 | board | support | newest download version | date | age |
 | --- | --- | --- | --- | --- |
-| pine64 | `csc` | 26.8.1 | 2026-08-09 | 108 d |
+| pine64 | `csc` | 26.8.1 | 2026-08-09 | 109 d |
 
 ## Non-standard boards
 
