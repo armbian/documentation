@@ -16,7 +16,7 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 2402 image assets across 437 boards, generated 2026-11-26 19:14 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2402 image assets across 437 boards, generated 2026-11-27 10:21 UTC._
 
 ## Overview
 
