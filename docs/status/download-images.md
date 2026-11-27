@@ -16,27 +16,19 @@ video.
 
 ## Download images report
 
-_Source: `https://github.armbian.com/armbian-images.json` — 2402 image assets across 437 boards, generated 2026-11-27 10:21 UTC._
+_Source: `https://github.armbian.com/armbian-images.json` — 2649 image assets across 437 boards, generated 2026-11-27 11:40 UTC._
 
 ## Overview
 
 | channel | images | boards | version(s) |
 | --- | --- | --- | --- |
+| Download (dl.armbian.com, per-board releases) | 967 | 184 | 26.8.1, 26.8.2, 26.11.3 |
 | Community nightly | 952 | 254 | 26.11.0-trunk.137, 26.11.0-trunk.138 |
-| Download (dl.armbian.com, per-board releases) | 729 | 173 | 26.8.1, 26.8.2, 26.11.3 |
 | CI nightly | 403 | 182 | 26.11.0-trunk.140 |
-| Appliance images (kali/omv/homeassistant) | 310 | 119 | 26.11.2 |
+| Appliance images (kali/omv/homeassistant) | 319 | 120 | 26.11.2 |
 | (orphaned — no repo) | 8 | 2 | 26.8.14 |
 
 Current download release line: **26.11.3**.
-
-## Outdated boards
-
-_**1** boards whose newest `dl.armbian.com` image is behind the current 26.11.3 line._
-
-| board | support | newest download version | date | age |
-| --- | --- | --- | --- | --- |
-| pine64 | `csc` | 26.8.1 | 2026-08-09 | 109 d |
 
 ## Non-standard boards
 
@@ -45,24 +37,6 @@ _**2** `csc`/`wip`/`tvb` boards with images on `dl.armbian.com` (the main per-bo
 | board | support | newest version | name |
 | --- | --- | --- | --- |
 | orangepi-cm5 | `wip` | 26.11.3 | OrangePi CM5 |
-| pine64 | `csc` | 26.8.1 | Pine A64 / A64+ |
-
-## Missing download images
-
-_**11** `conf` (standard-support) boards absent from `dl.armbian.com` — only nightly/appliance, or nowhere._
-
-| board | name | present in |
-| --- | --- | --- |
-| thinkpad-x13s | ThinkPad X13s | CI, Appliance |
-| tinkerboard | Tinker Board | CI |
-| tmds62levm | TMDS62LEVM | CI, Appliance |
-| tmds64evm | TMDS64EVM | CI, Appliance |
-| tq-smarc2-tqma8mpxs | TQ-SMARC2-TQMa8MPxS | CI, Appliance |
-| turris-omnia | Turris Omnia | CI |
-| udoo | Udoo | CI |
-| verdin-imx8mm | Verdin iMX8M Mini | CI, Appliance |
-| xiaomi-elish | Elish | CI |
-| youyeetoo-r1-v3 | R1 v3 | CI |
-| youyeetoo-yy3588 | YY3588 | CI |
+| ztl-a568 | `wip` | 26.11.3 | A568 |
 
 <!-- download-images:end -->
